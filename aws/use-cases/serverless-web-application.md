@@ -1,0 +1,39 @@
+# Serverless web application
+
+## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
+
+DuploCloud makes deploying serverless applications a breeze. A step by step tutorial on how to deploy a Lambda application is available.
+
+Deployment is a three-step process.&#x20;
+
+1. [Create a zip file](serverless-web-application.md#1-toc-title)
+2. [Create a S3 bucket](serverless-web-application.md#2-toc-title)
+3. [Create a lambda function](serverless-web-application.md#3-toc-title)
+
+Following is a video version of this tutorial:
+
+{% embed url="https://youtu.be/MW62CrzVO2E" %}
+
+## Step 1: Create a zip file <a href="#1-toc-title" id="1-toc-title"></a>
+
+Generate a Zip package of your Lambda code. The Lambda function code should be at the root of the package. If you are using virtual env, all dependencies should be packaged. Refer to the AWS documentation for detailed instructions on how to generate a package. We personally prefer using tools like zappa and serverless.
+
+## Step 2: Create a S3 Bucket <a href="#2-toc-title" id="2-toc-title"></a>
+
+Navigate to **DevOps > Storage > S3 > +Add** button above the table. Give a name for your bucket or leave it blank and a name will be auto generated. Then Click on AWS Console Button to get into AWS console for this S3 bucket and upload the zip file we just created.
+
+![](https://duplocloud.com/wp-content/uploads/2021/11/createotheraws.png)
+
+## Step 3: Create a lambda function <a href="#3-toc-title" id="3-toc-title"></a>
+
+Navigate to **DevOps > Serverless > Lambda > +Add** button above the table. Give a name for the Lambda function and other values. This will create the lambda function. Click on AWS console to go to the AWS console for this function. Test the function. Refer to [AWS Lambda functions](../guides/lambda.md) for more info. You can also look at one of the following tutorials for [S3 backend web application](s3-backend-web-application.md) or look at AWS documentation.
+
+![](https://duplocloud.com/wp-content/uploads/2021/11/lambdamenu.png)
+
+{% content-ref url="s3-backend-web-application.md" %}
+[s3-backend-web-application.md](s3-backend-web-application.md)
+{% endcontent-ref %}
+
+{% content-ref url="../guides/lambda.md" %}
+[lambda.md](../guides/lambda.md)
+{% endcontent-ref %}
