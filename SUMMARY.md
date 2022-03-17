@@ -11,7 +11,7 @@
   * [Infrastructure](application-focussed-interface/infrastructure.md)
   * [Tenant](application-focussed-interface/tenant.md)
   * [Plan](application-focussed-interface/plan.md)
-  * [App Service and Cloud Service](application-focussed-interface/app-service-and-cloud-service.md)
+  * [App and Cloud Service](application-focussed-interface/app-service-and-cloud-service.md)
   * [Diagnostics](application-focussed-interface/diagnostics.md)
 * [No-Code / Low-Code](no-code-low-code.md)
 
