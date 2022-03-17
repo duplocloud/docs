@@ -2,11 +2,7 @@
 
 ## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
 
-In addition to [notify you about the faults](faults-and-alarms.md), DuploCloud integrates with Sentry, which will send an Email alert for the fault and acts as a single place to look at all the events.
-
-{% content-ref url="faults-and-alarms.md" %}
-[faults-and-alarms.md](faults-and-alarms.md)
-{% endcontent-ref %}
+In addition to notify you about the faults, DuploCloud integrates with Sentry, which will send an Email alert for the fault and acts as a single place to look at all the events.
 
 ## Configure Sentry <a href="#1-toc-title" id="1-toc-title"></a>
 

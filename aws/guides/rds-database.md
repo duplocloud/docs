@@ -8,7 +8,7 @@ Create a MySQL, Microsoft SQL, PostgreSQL or Amazon Aurora database from the men
 
 ## Connect to the database <a href="#1-toc-title" id="1-toc-title"></a>
 
-Once the database is created which takes about 5 to 10 mins then you can expand the created database to fetch the endpoint and credentials. Use this endpoint and credentials to connect to the database from your application running in the EC2 instance. Note that the database is only accessible from inside the EC2 instance (including the containers running within it) in the current tenant.&#x20;
+Once the database is created which takes about 5 to 10 mins then you can expand the created database to fetch the endpoint and credentials. Use this endpoint and credentials to connect to the database from your application running in the EC2 instance. Note that the database is only accessible from inside the EC2 instance (including the containers running within it) in the current tenant.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/rdsdetails.png)
 

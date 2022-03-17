@@ -5,4 +5,4 @@ Once the Infrastructure is created, then create a new Tenant (Administrator --> 
 * Name: dev01
 * Plan: non-prod
 
-&#x20;It may take about 1-2 minutes for the Tenant to be setup. During this time there maybe an additional fault under Administrator-->Faults or top right. If so ignore it for first 2 minutes, it should clear
+It may take about 1-2 minutes for the Tenant to be setup. During this time there maybe an additional fault under Administrator-->Faults or top right. If so ignore it for first 2 minutes, it should clear
