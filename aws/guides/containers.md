@@ -71,7 +71,7 @@ DuploCloud provides you JIT token (15 minutes) to access the kubectl cluster. Yo
 > kubectl config use-context EKS
 ```
 
-With these commands you have configured kubectl to point and access the k8 cluster. You can now apply the deployment templates by running the following command&#x20;
+With these commands you have configured kubectl to point and access the k8 cluster. You can now apply the deployment templates by running the following command
 
 ```shell
 > kubectl apply -f nginx.yaml

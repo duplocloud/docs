@@ -1,7 +1,3 @@
 # SNS topic
 
-Create SNS Topic from under **DevOps > App Integration > SNS tab > +Add** button above the table. Refer to [AWS DynamoDB User Guide](dynamodb.md) to know more about the permissions.
-
-{% content-ref url="dynamodb.md" %}
-[dynamodb.md](dynamodb.md)
-{% endcontent-ref %}
+Create SNS Topic from under **DevOps > App Integration > SNS tab > +Add** button above the table. Refer to AWS DynamoDB User Guide to know more about the permissions.

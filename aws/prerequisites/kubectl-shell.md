@@ -39,4 +39,4 @@ Now we need to expose this service through an ELB. Under Devops-->Containers-->E
 * Application Mode: Docker
 * Health Check: /duplo\_auth
 * Backend Protocol HTTP
-* Certificate: This should be the certificate you added in the [previous step](acm-certificate.md)&#x20;
+* Certificate: This should be the certificate you added in the previous step

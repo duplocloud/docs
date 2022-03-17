@@ -12,5 +12,3 @@ From the UI (Administrator --> Infrastructure) create an infrastructure with the
 This takes about 20 minutes. Kubernetes is the part that takes 15 minutes. Wait for the status to be completed. At the end of it, double check that a "plan" (Administrators--> Plans) has been created with the same name (non-prod).
 
 If it has been more than 20 minutes then click on Faults (Administrator-->Faults) to see if there is an obvious error and if help is needed ping in the DuploCloud slack or teams channel.
-
-![Inputs for Infrastructure Creation](<../../.gitbook/assets/Screen Shot 2022-03-13 at 9.34.02 PM.png>)

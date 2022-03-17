@@ -2,13 +2,9 @@
 
 ## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
 
-In the last tutorial we [deployed a NodeJS based webserver](docker-web-application.md) and accessed it using the DNS name that DuploCloud created for us. In this tutorial we will take it a step further. We will create a text file with a message and upload it to S3. Next, we will modify our NodeJS application to access this file and display the message to every visitor. This purpose of the tutorial is to familiarize yourself with how easy it is to manage resources on AWS using DuploCloud.
+In the last tutorial we deployed a NodeJS based webserver and accessed it using the DNS name that DuploCloud created for us. In this tutorial we will take it a step further. We will create a text file with a message and upload it to S3. Next, we will modify our NodeJS application to access this file and display the message to every visitor. This purpose of the tutorial is to familiarize yourself with how easy it is to manage resources on AWS using DuploCloud.
 
 The code in the Docker container that we used in Part 1 can be found on this repo. It’s a simple NodeJS web server. Clone this repository and make the following changes.
-
-{% content-ref url="docker-web-application.md" %}
-[docker-web-application.md](docker-web-application.md)
-{% endcontent-ref %}
 
 ## Step 1: Setup basic NodeJS server <a href="#1-toc-title" id="1-toc-title"></a>
 

@@ -10,8 +10,4 @@ Now we switch to dev01 tenant. Then go to Devops --> Hosts --> EC2 tab and add. 
 * Agent Platform: EKS Linux
 * Image ID: Make sure it says EKS-... This is the image published by AWS for EKS worker for the version of Kubernetes deployed when we created the infra. If you don't see an image ID starting with EKS .. then look up the ami-id for the desired EKS version from the table here [https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) If you are following this quick start guide then the region should be us-west-2 as that is where we created the infrastructure. Once you have the ami ID then choose "Other" for the Image ID drop down and paste the ami-id. If you need assistance with Image ID ping in the DuploCloud Slack channel
 
-![Menu to create a new Host (EKS worker)](<../../.gitbook/assets/Screen Shot 2022-03-13 at 10.28.02 PM.png>)
-
 The host should get launched and soon get registered with kubernetes and should show in connected state in the DuploCloud UI as shown below
-
-![](<../../.gitbook/assets/Screen Shot 2022-03-13 at 10.34.34 PM.png>)

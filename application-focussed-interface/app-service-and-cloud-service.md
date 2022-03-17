@@ -1,6 +1,6 @@
 # App Service and Cloud Service
 
-A Service could be a Kubernetes Deployment, Stateful set or a Daemon set. It can also be a Lambda function or an ECS task or service. It essentially captures a microservice. Each service (except Lambda) can be given a load balancer to expose itself and be assigned a DNS name.&#x20;
+A Service could be a Kubernetes Deployment, Stateful set or a Daemon set. It can also be a Lambda function or an ECS task or service. It essentially captures a microservice. Each service (except Lambda) can be given a load balancer to expose itself and be assigned a DNS name.
 
 {% hint style="info" %}
 DuploCloud Service should not be confused with a Kubernetes or a ECS service. By service we mean application components that can either be Docker-based or serverless.
@@ -18,4 +18,6 @@ While users specify application level constructs for provisioning cloud resource
 
 ![](<../.gitbook/assets/Screen Shot 2022-03-12 at 8.18.52 PM.png>)
 
-_Important Note:_ All services and cloud features are created within a Tenant.
+{% hint style="info" %}
+**IMPORTANT:** All services and cloud features are created within a Tenant.
+{% endhint %}

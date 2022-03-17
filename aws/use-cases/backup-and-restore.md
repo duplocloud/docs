@@ -8,6 +8,6 @@ Backup of the resources, be it database snaphsots, virtual machine snaphsots/VM 
 
 ## Restoring a snapshot <a href="#1-toc-title" id="1-toc-title"></a>
 
-Once the backups are done, they will be available to be restored on the next instance creation.&#x20;
+Once the backups are done, they will be available to be restored on the next instance creation.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/db-restore.png)

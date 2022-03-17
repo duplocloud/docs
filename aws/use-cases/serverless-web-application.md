@@ -4,11 +4,11 @@
 
 DuploCloud makes deploying serverless applications a breeze. A step by step tutorial on how to deploy a Lambda application is available.
 
-Deployment is a three-step process.&#x20;
+Deployment is a three-step process.
 
-1. [Create a zip file](serverless-web-application.md#1-toc-title)
-2. [Create a S3 bucket](serverless-web-application.md#2-toc-title)
-3. [Create a lambda function](serverless-web-application.md#3-toc-title)
+1. Create a zip file
+2. Create a S3 bucket
+3. Create a lambda function
 
 Following is a video version of this tutorial:
 
@@ -26,14 +26,6 @@ Navigate to **DevOps > Storage > S3 > +Add** button above the table. Give a name
 
 ## Step 3: Create a lambda function <a href="#3-toc-title" id="3-toc-title"></a>
 
-Navigate to **DevOps > Serverless > Lambda > +Add** button above the table. Give a name for the Lambda function and other values. This will create the lambda function. Click on AWS console to go to the AWS console for this function. Test the function. Refer to [AWS Lambda functions](../guides/lambda.md) for more info. You can also look at one of the following tutorials for [S3 backend web application](s3-backend-web-application.md) or look at AWS documentation.
+Navigate to **DevOps > Serverless > Lambda > +Add** button above the table. Give a name for the Lambda function and other values. This will create the lambda function. Click on AWS console to go to the AWS console for this function. Test the function. Refer to AWS Lambda functions for more info. You can also look at one of the following tutorials for S3 backend web application or look at AWS documentation.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/lambdamenu.png)
-
-{% content-ref url="s3-backend-web-application.md" %}
-[s3-backend-web-application.md](s3-backend-web-application.md)
-{% endcontent-ref %}
-
-{% content-ref url="../guides/lambda.md" %}
-[lambda.md](../guides/lambda.md)
-{% endcontent-ref %}

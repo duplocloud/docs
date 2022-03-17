@@ -10,31 +10,25 @@ AWS Data Pipeline helps you easily create complex data processing workloads that
 
 A data pipeline can be created using any of the following ways:
 
-* [Using DuploCloud UI](data-pipeline.md#using-duplocloud-ui)
-* [Using an exported template from AWS console](data-pipeline.md#using-exported-template-in-aws-console)
-* [Cloning an existing template](data-pipeline.md#clone-existing-data-pipeline)
+* Using DuploCloud UI
+* Using an exported template from AWS console
+* Cloning an existing template
 
 ### Using DuploCloud UI
 
 Proceed to **Devops → Analytics -> Data Pipeline**. Click on +**Add** button.
 
-Enter relevant information on the form. Click **Generate** button. The form includes information like - name, description, s3 log folder, cron schedule details, EMR resources, EMR steps, etc.&#x20;
+Enter relevant information on the form. Click **Generate** button. The form includes information like - name, description, s3 log folder, cron schedule details, EMR resources, EMR steps, etc.
 
 {% hint style="info" %}
 Review generated JSON, and make any further changes to generated JSON
 {% endhint %}
 
-![](../../.gitbook/assets/datapipeline1.png)
-
 ### Using exported template in AWS console
 
-Proceed to **Devops → Analytics -> Data Pipeline.** Click on +**Add** button. Click '**Import Pipeline Template'**&#x20;
+Proceed to **Devops → Analytics -> Data Pipeline.** Click on +**Add** button. Click '**Import Pipeline Template'**
 
-In AWS console Proceed to **Data Pipeline -> Choose Existing Data Pipeline -> Click Edit -> Click  Export**. Please review generated **JSON**, and make any further changes to generated JSON. Click **Submit.**
-
-![](../../.gitbook/assets/datapipeline2.png)
-
-![](../../.gitbook/assets/datapipeline3.png)
+In AWS console Proceed to **Data Pipeline -> Choose Existing Data Pipeline -> Click Edit -> Click Export**. Please review generated **JSON**, and make any further changes to generated JSON. Click **Submit.**
 
 ### Clone existing data pipeline
 
@@ -42,26 +36,20 @@ Copy previously exported template from the form. Please do any additional change
 
 Existing Data Pipelines can be **cloned** in List View or Details View.
 
-![](../../.gitbook/assets/datapipeline6.png)
-
 ## List view
 
-To get JIT (Just In Time) access to appropriate AWS console, click on **Data Pipeline, EMR Console, EMR  Jupyter Console**. Click **** row level menu actions to manage the Data Pipeline. e.g. Clone, Edit, Export, Delete etc.&#x20;
-
-![List View](../../.gitbook/assets/datapipeline4a.png)
+To get JIT (Just In Time) access to appropriate AWS console, click on **Data Pipeline, EMR Console, EMR Jupyter Console**. Click \*\*\*\* row level menu actions to manage the Data Pipeline. e.g. Clone, Edit, Export, Delete etc.
 
 ## Details view
 
 Use Details view to update Data Pipeline. Use JIT (Just In Time) access to AWS console. Check Errors and warnings.
 
-![](../../.gitbook/assets/datapipeline5.png)
-
 ## Example data pipeline template
 
 There are two types of Data Pipeline templates:
 
-1. [Exported template in AWS console](data-pipeline.md#aws-console-exported-template)
-2. [Exported template in DuploCloud UI](data-pipeline.md#duplocloud-exported-template)
+1. Exported template in AWS console
+2. Exported template in DuploCloud UI
 
 ### AWS console exported template
 
