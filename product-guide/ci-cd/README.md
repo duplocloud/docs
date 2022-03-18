@@ -1,4 +1,4 @@
-# ♾ CI/CD
+# CI/CD
 
 {% content-ref url="circleci/" %}
 [circleci](circleci/)

@@ -5,7 +5,7 @@ The high level application and compliance requirements are passed onto a DevOps 
 A common misconception is that Terraform automates the DevOps workflow. In fact Terraform is only a programming language. One needs substantial infrastructure know-how to build automation using Terraform. Typically, DevOps engineers are not aware of compliance nuances that go beyond best practices and have to redo a lot of the work on an ongoing basis.
 
 {% hint style="info" %}
-DevOps essentially is a skill that requires one to be a programmer (to write IaC), an operator and a compliance expert. These are three distinct skill sets that have never traditionally co-existing in the IT industry. This is the #1 challenge in the DevOps space.&#x20;
+DevOps essentially is a skill that requires one to be a programmer (to write IaC), an operator and a compliance expert. These are three distinct skill sets that have never traditionally co-existing in the IT industry. This is the #1 challenge in the DevOps space.
 {% endhint %}
 
-![](<../.gitbook/assets/Screen Shot 2022-03-12 at 1.20.05 PM.png>)
+![](<../../.gitbook/assets/Screen Shot 2022-03-12 at 1.20.05 PM.png>)
