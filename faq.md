@@ -2,7 +2,7 @@
 description: Popular and frequently asked questions
 ---
 
-# ❓ FAQ
+# FAQ
 
 {% hint style="info" %}
 **NOTICE:** This document provides frequently asked questions related to the high level architecture and business model. For more detailed technical FAQ please refer to the [AWS FAQ](aws/aws-faq.md) or [Azure FAQ](https://docs.duplocloud.com/docs/v/azure/faq)
