@@ -1,7 +1,7 @@
 # Table of contents
 
-* [💡 Introduction](README.md)
-* [❓ FAQ](faq.md)
+* [Introduction](README.md)
+* [FAQ](faq.md)
 * [Existing DevOps Approach](existing-devops-approach/README.md)
   * [Application Requirements](existing-devops-approach/application-requirements.md)
   * [Compliance Requirements](existing-devops-approach/compliance-requirements.md)
@@ -41,13 +41,9 @@
 
 ## Administrators
 
-* [Configuration scopes](administrators/configuration-scopes.md)
 * [Access control](administrators/access-control/README.md)
   * [Tenant access](administrators/access-control/tenant-access.md)
   * [API tokens](administrators/access-control/api-tokens.md)
-* [Accessing cloud server](administrators/accessing-cloud-server.md)
-* [Sharing encrypted database](administrators/sharing-encrypted-database.md)
-* [SSH EC2 instance](administrators/ssh-ec2-instance.md)
 * [Kubectl setup](administrators/kubectl-setup.md)
 
 ## Extras
@@ -95,14 +91,16 @@
   * [Internet-of-Things (IoT)](aws/guides/internet-of-things-iot.md)
   * [Kinesis stream](aws/guides/kinesis-stream.md)
   * [Lambda](aws/guides/lambda.md)
-  * [RDS database](aws/guides/rds-database.md)
+  * [RDS database](aws/guides/rds-database/README.md)
+    * [Sharing encrypted database](aws/guides/rds-database/sharing-encrypted-database.md)
   * [S3 bucket](aws/guides/s3-bucket.md)
   * [Service discovery (CloudMap)](aws/guides/service-discovery-cloudmap.md)
   * [SNS topic](aws/guides/sns-topic.md)
   * [SQS queue](aws/guides/sqs-queue.md)
   * [Tenants](aws/guides/tenants.md)
   * [Using AWS console](aws/guides/using-aws-console.md)
-  * [Virtual machines](aws/guides/virtual-machines.md)
+  * [Virtual machines](aws/guides/virtual-machines/README.md)
+    * [SSH EC2 instance](aws/guides/virtual-machines/ssh-ec2-instance.md)
   * [Web application firewall (WAF)](aws/guides/web-application-firewall-waf.md)
   * [Workspaces](aws/guides/workspaces.md)
 * [AWS FAQ](aws/aws-faq.md)
