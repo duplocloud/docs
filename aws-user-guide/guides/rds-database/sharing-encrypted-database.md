@@ -6,13 +6,13 @@ Sharing unencrypted database to other accounts is very simple and straightforwar
 
 ## Step 1: Create a managed key <a href="#1-toc-title" id="1-toc-title"></a>
 
-Create a new customer managed key in AWS KMS, in the define key usage permissions area provide the account id of the other account.&#x20;
+Create a new customer managed key in AWS KMS, in the define key usage permissions area provide the account id of the other account.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/KMS-other-account.png)
 
 ## Step 2: Copy and share a snapshot <a href="#2-toc-title" id="2-toc-title"></a>
 
-Once the key is created, go to **RDS > Snapshots**, select the snapshot and click Copy Snapshot. In the encryption change the master key to the key we created before.&#x20;
+Once the key is created, go to **RDS > Snapshots**, select the snapshot and click Copy Snapshot. In the encryption change the master key to the key we created before.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/KMS-copy-snapshot.png)
 
@@ -20,7 +20,7 @@ Once the copied snapshot is ready, as usual share the snapshot to another accoun
 
 ## Step 3: Copy the shared snapshot <a href="#3-toc-title" id="3-toc-title"></a>
 
-Now go to the other **AWS account > RDS > Shared with me**. Select the shared snapshot and click copy-snapshot again and change the encryption key to the encryption key in the account.&#x20;
+Now go to the other **AWS account > RDS > Shared with me**. Select the shared snapshot and click copy-snapshot again and change the encryption key to the encryption key in the account.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/RDS-copysnapshot.png)
 

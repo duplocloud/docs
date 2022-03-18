@@ -17,5 +17,5 @@ Once the database is created which takes about 5 to 10 mins then you can expand 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/rdsdetails.png)
 
 {% hint style="info" %}
-The easier way to pass DB endpoint, name and credentials to your application for security purposes is through environment variables (`ENV`) of the Service. Other was are passing via secrets manager or Kubernetes secrets
+The easier way to pass DB endpoint, name and credentials to your application for security purposes is through environment variables (`ENV`) of the Service as described in the next section. Other was are passing via secrets manager or Kubernetes secrets
 {% endhint %}
