@@ -12,6 +12,12 @@ description: Popular and frequently asked questions
 
 No. DuploCloud is a self-hosted solution that is deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. If the customer desires, DuploCloud also provides a fully managed service to maintain uptime, provide updates and on-going support.
 
+### How is DuploCloud Portal accessing my cloud infrastructure and how is it secured?
+
+DuploCloud is a self-hosted single tenant solution that is deployed within the customer's cloud account. The software runs in a virtual machine and the VM derives permissions to call the cloud provider using permissions granted to the VM. For example in AWS it would be via instance profile and Azure it would be via managed identity.
+
+The Duplocloud VM and Portal is thus secured like any other workload in the cloud. In addition to SSO login to access the portal the VM is placed behind a VPN solution and thus only internal users can load the portal when connected via VPN.
+
 ### What cloud providers are supported?
 
 DuploCloud supports the following public cloud providers:
