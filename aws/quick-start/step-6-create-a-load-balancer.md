@@ -13,7 +13,7 @@ Go under Devops-->Containers --> EKS/native and click on the service we are crea
 
 
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 
 In about 2-3 minutes you will see the load balancer DNS names
 
