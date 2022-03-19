@@ -8,7 +8,9 @@ There are several container orchestration technologies in the state of art. Dupl
 {% hint style="info" %}
 The main advantage of a K8S based deployment is that it allows a cloud agnostic interface and has an open source community that actively provides templates for various cloud products.
 
-But the biggest disadvantages are one that K8S cluster in AWS gets deprecated every 6 months and one has to upgrade them and all the nodes. DuploCloud automates this but nevertheless, the disruption and planning for the same may or may not be worth it especially in small environments. &#x20;
+But the biggest disadvantages are:\
+\- K8S cluster in AWS gets deprecated every 6 months and one has to upgrade them and all the nodes. DuploCloud automates this but nevertheless, the disruption and planning for the same may or may not be worth it especially in small environments.\
+\- For smaller workloads like less than 50 VMs and 10 services, the complexity can be an over-kill. With DuploCloud the user by-and-large does not have to deal with that complexity  but nevertheless there can be occasions when the nodes dont behave etc, debugging can be difficult etc.
 {% endhint %}
 
 * **AWS ECS Fargate**: This is a cloud Native proprietary service from AWS. The key advantage of this is that one does not have to manage any servers especially in terms of patching and capacity management. Patching is less of an issue is because DuploCloud takes care of this. The disadvantage of ECS is that it is a very proprietary interface to AWS and being serverless one cannot easily debug issues unlike in a server based environment where the user can have full control for things like Docker restart, Docker exec, Docker logs etc. &#x20;
