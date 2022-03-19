@@ -19,17 +19,11 @@ A docker based application has by-and-large the following main specifications:
 
 ![](<../../.gitbook/assets/image (14).png>)
 
-## Create a service <a href="#2-toc-title" id="2-toc-title"></a>
-
-1. Next, we can create a Service. A Service is nothing but a container with user specified image and environment variables. Let’s go ahead and click **+Add** button to create a new service.
-2. Name the service “`Test-service`“. For this demo we will use the latest, nodejs-hello image from Duplo’s public Docker hub repository. Fill in “`duplocloud/nodejs-hello:latest`” in the Docker Image field.
-3. Enter the desired number of replicas you want in the swarm. Please note that each replica runs in an individual Host, so the number of replicas must equal the number of Hosts. For the sake of this demo, we will choose 1.
-4. Fill in the desired environment variables, this is ideal for credentials or application specific configurations.
-5. Volume mapping is super easy, simply give the host path and container path as shown. Please note that we highly recommend keeping the Hosts stateless and using S3 for static assets. We will keep this field empty for this demo.
+To create a service go to Devops->Containers->EKS/Native and click on **+ADD** button and fill in the above field.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/N1-service.png)
 
-Press create and wait a moment for the service to initialize.
+Press create and wait a moment for the service to initialize and you should see the containers running.
 
 ## Step 3: Create a load balancer <a href="#3-toc-title" id="3-toc-title"></a>
 
