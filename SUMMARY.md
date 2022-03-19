@@ -32,7 +32,7 @@
   * [Step 4: Create a RDS database](aws/quick-start/step-4-create-a-rds-database.md)
   * [Step 5: Create app (via K8S)](aws/quick-start/step-5-create-app-via-k8s.md)
   * [Step 6: Create a Load Balancer](aws/quick-start/step-6-create-a-load-balancer.md)
-  * [Create DNS Name](aws/quick-start/create-dns-name.md)
+  * [Step 7: Create DNS Name](aws/quick-start/step-7-create-dns-name.md)
 * [AWS services](aws/aws-services/README.md)
   * [API gateway](aws/aws-services/api-gateway.md)
   * [Cloud watch](aws/aws-services/cloud-watch.md)
