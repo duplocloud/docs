@@ -68,7 +68,7 @@ No. DuploCloud is calling your cloud provider API directly. Based on the user re
 
 Terraform and DuploCloud Web UI are both layers on top of the DuploCloud platform.
 
-![User Interaction with the DuploCloud Platform](<.gitbook/assets/image (11).png>)
+![User Interaction with the DuploCloud Platform](<.gitbook/assets/image (11) (1).png>)
 
 DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows the user to configure the cloud infrastructure using DuploCloud constructs, rather than directly using lower level cloud provider constructs. This allows the user to get the benefits of Infrastructure-as-Code while significantly reducing the amount of code that needs to be written. The DuploCloud Terraform Provider simply calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
 

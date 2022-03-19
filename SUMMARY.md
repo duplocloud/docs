@@ -31,6 +31,7 @@
   * [Step 3: Create Host](aws/quick-start/step-3-create-host.md)
   * [Step 4: Create a RDS database](aws/quick-start/step-4-create-a-rds-database.md)
   * [Step 5: Create app (via K8S)](aws/quick-start/step-5-create-app-via-k8s.md)
+  * [Step 6: Create a Load Balancer](aws/quick-start/step-6-create-a-load-balancer.md)
 * [AWS services](aws/aws-services/README.md)
   * [API gateway](aws/aws-services/api-gateway.md)
   * [Cloud watch](aws/aws-services/cloud-watch.md)
@@ -75,6 +76,28 @@
   * [Serverless web application](aws/use-cases/serverless-web-application.md)
 * [AWS FAQ](aws/aws-faq.md)
 
+## CI/CD
+
+* [CircleCI](ci-cd/circleci/README.md)
+  * [First Deployment](ci-cd/circleci/first-deployment.md)
+  * [Configure CircleCI](ci-cd/circleci/configure-circleci.md)
+  * [Build and Push Docker Image](ci-cd/circleci/build-and-push-docker-image.md)
+  * [Update Service](ci-cd/circleci/update-service.md)
+* [Github Actions](ci-cd/github-actions/README.md)
+  * [First deployment](ci-cd/github-actions/first-deployment.md)
+  * [Configuring Github](ci-cd/github-actions/configuring-github.md)
+  * [Build a docker image](ci-cd/github-actions/build-a-docker-image.md)
+  * [Update a service](ci-cd/github-actions/update-a-service.md)
+  * [Update CloudFront](ci-cd/github-actions/update-cloudfront.md)
+  * [Upload to S3](ci-cd/github-actions/upload-to-s3.md)
+* [Katkit CI/CD](ci-cd/katkit/README.md)
+  * [First deployment](ci-cd/katkit/first-deployment.md)
+  * [Environments](ci-cd/katkit/environments.md)
+  * [Link repository](ci-cd/katkit/link-repository.md)
+  * [Phases](ci-cd/katkit/phases.md)
+  * [Kakit config](ci-cd/katkit/kakit-config.md)
+  * [Advanced functions](ci-cd/katkit/advanced-functions.md)
+
 ## Azure user guide <a href="#azure" id="azure"></a>
 
 * [Overview](azure/overview.md)
@@ -111,29 +134,6 @@
 * [Overview](gcp/overview.md)
 * [Quick start](gcp/quick-start.md)
 * [GCP FAQ](gcp/gcp-faq.md)
-
-## Product Guide
-
-* [CI/CD](product-guide/ci-cd/README.md)
-  * [CircleCI](product-guide/ci-cd/circleci/README.md)
-    * [First Deployment](product-guide/ci-cd/circleci/first-deployment.md)
-    * [Configure CircleCI](product-guide/ci-cd/circleci/configure-circleci.md)
-    * [Build and Push Docker Image](product-guide/ci-cd/circleci/build-and-push-docker-image.md)
-    * [Update Service](product-guide/ci-cd/circleci/update-service.md)
-  * [Github Actions](product-guide/ci-cd/github-actions/README.md)
-    * [First deployment](product-guide/ci-cd/github-actions/first-deployment.md)
-    * [Configuring Github](product-guide/ci-cd/github-actions/configuring-github.md)
-    * [Build a docker image](product-guide/ci-cd/github-actions/build-a-docker-image.md)
-    * [Update a service](product-guide/ci-cd/github-actions/update-a-service.md)
-    * [Update CloudFront](product-guide/ci-cd/github-actions/update-cloudfront.md)
-    * [Upload to S3](product-guide/ci-cd/github-actions/upload-to-s3.md)
-  * [Katkit CI/CD](product-guide/ci-cd/katkit/README.md)
-    * [First deployment](product-guide/ci-cd/katkit/first-deployment.md)
-    * [Environments](product-guide/ci-cd/katkit/environments.md)
-    * [Link repository](product-guide/ci-cd/katkit/link-repository.md)
-    * [Phases](product-guide/ci-cd/katkit/phases.md)
-    * [Kakit config](product-guide/ci-cd/katkit/kakit-config.md)
-    * [Advanced functions](product-guide/ci-cd/katkit/advanced-functions.md)
 
 ## Administrators
 
