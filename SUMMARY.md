@@ -30,6 +30,7 @@
   * [Step 2: Tenant](aws/quick-start/step-2-tenant.md)
   * [Step 3: Create Host](aws/quick-start/step-3-create-host.md)
   * [Step 4: Create a RDS database](aws/quick-start/step-4-create-a-rds-database.md)
+  * [Step 5: Create app (via K8S)](aws/quick-start/step-5-create-app-via-k8s.md)
 * [AWS services](aws/aws-services/README.md)
   * [API gateway](aws/aws-services/api-gateway.md)
   * [Cloud watch](aws/aws-services/cloud-watch.md)
