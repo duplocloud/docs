@@ -3,12 +3,13 @@
 Networking is the most foundational piece in the Devops lifecycle and setup the very beginning. The key concepts involved are
 
 * VPC
+* Subnets
 * Region
 * Availability zones
 * NAT Gateway
 * Routing
 
-In DuploCloud the concept of [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md) maps 1:1 to a VPC in a specified region. While creating Infrastructure the user can specify the count of availability zones, region, VPC CIDR and Subnet Mask. Internally the platform will create 2 subnets in each AZ (one private and one public), setup up routes and NAT gateway.&#x20;
+In DuploCloud the concept of [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md) maps one-to-one to a VPC in a specified region. While creating Infrastructure the user can specify the count of availability zones, region, VPC CIDR and a Subnet Mask. Internally the platform will create 2 subnets in each AZ (one private and one public), setup up routes and NAT gateway.&#x20;
 
 ![](<../../.gitbook/assets/image (16) (1).png>)
 
