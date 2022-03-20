@@ -21,7 +21,8 @@
 ## AWS user guide <a href="#aws" id="aws"></a>
 
 * [Overview](aws/overview.md)
-* [Container Orchestration](aws/container-orchestration.md)
+* [Container Deployments](aws/container-deployments/README.md)
+  * [Concepts](aws/container-deployments/concepts.md)
 * [Prerequisites](aws/prerequisites/README.md)
   * [Route 53 Hosted Zone](aws/prerequisites/route-53-hosted-zone.md)
   * [ACM Certificate](aws/prerequisites/acm-certificate.md)
