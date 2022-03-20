@@ -25,4 +25,4 @@ In your PagerDuty account, go to the Service that should receive events. If a Se
 
 Add the integration key under **DevOps > Faults > Update Sentry Config**.&#x20;
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/duplo-sentry.png)
+![](<../../.gitbook/assets/Screen Shot 2022-03-20 at 3.06.51 PM.png>)
