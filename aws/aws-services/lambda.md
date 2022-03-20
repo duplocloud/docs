@@ -1,6 +1,16 @@
 # Lambda
 
-## Create a lambda function <a href="#0-toc-title" id="0-toc-title"></a>
+## Step 1: Create a zip file <a href="#0-toc-title" id="0-toc-title"></a>
+
+Generate a Zip package of your Lambda code. The Lambda function code should be at the root of the package. If you are using virtual env, all dependencies should be packaged. Refer to the AWS documentation for detailed instructions on how to generate a package. We personally prefer using tools like zappa and serverless.
+
+## Step 2: Create a S3 Bucket <a href="#2-toc-title" id="2-toc-title"></a>
+
+Navigate to **DevOps > Storage > S3 > +Add** button above the table. Give a name for your bucket or leave it blank and a name will be auto generated. Then Click on AWS Console Button to get into AWS console for this S3 bucket and upload the zip file we just created.
+
+![](https://duplocloud.com/wp-content/uploads/2021/11/createotheraws.png)
+
+## Create a lambda function <a href="#3-toc-title" id="3-toc-title"></a>
 
 Navigate to **DevOps > Serverless > Lambda tab > +Add** button. Give a name for the Lambda function and other values. This will create the lambda function. Click on **AWS console** to go to the console shell for this function. Test the function. You can look at the tutorial above for the same or look at the AWS documentation.
 
