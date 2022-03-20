@@ -10,7 +10,7 @@ Networking is the most foundational piece in the Devops lifecycle and setup the 
 
 In DuploCloud the concept of [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md) maps 1:1 to a VPC in a specified region. While creating Infrastructure the user can specify the count of availability zones, region, VPC CIDR and Subnet Mask. Internally the platform will create 2 subnets in each AZ (one private and one public), setup up routes and NAT gateway.&#x20;
 
-![](<../../.gitbook/assets/image (16).png>)
+![](<../../.gitbook/assets/image (16) (1).png>)
 
 Infrastructure also maps to a Kubernetes or ECS Cluster. This is optional if the user wants to use Kubernetes or ECS for container orchestration
 
