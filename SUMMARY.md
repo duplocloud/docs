@@ -64,7 +64,7 @@
   * [S3 bucket](aws/aws-services/s3-bucket.md)
   * [Elastic cache](aws/aws-services/elastic-cache.md)
   * [API gateway](aws/aws-services/api-gateway.md)
-  * [Cloud watch](aws/aws-services/cloud-watch.md)
+  * [CloudWatch](aws/aws-services/cloud-watch.md)
   * [CloudFront](aws/aws-services/cloudfront.md)
   * [Containers](aws/aws-services/containers.md)
   * [Data pipeline](aws/aws-services/data-pipeline.md)
