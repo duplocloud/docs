@@ -36,6 +36,7 @@
   * [Step 7: Create DNS Name](aws/quick-start/step-7-create-dns-name.md)
 * [Use cases](aws/use-cases/README.md)
   * [Networking](aws/use-cases/disaster-recovery.md)
+  * [Kubernetes Cluster](aws/use-cases/kubernetes-cluster.md)
   * [Alerting and notifications](aws/use-cases/alerting-and-notifications.md)
   * [Big-data and ETL](aws/use-cases/big-data-and-etl.md)
   * [Central logging](aws/use-cases/central-logging.md)
