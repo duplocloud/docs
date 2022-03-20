@@ -1,5 +1,9 @@
 # Concepts
 
+{% hint style="info" %}
+Following concepts don't apply to ECS because that has proprietary policy model that will be explained in the later section
+{% endhint %}
+
 While deploying Dockerized applications, here are a few concepts and terminologies to be aware of
 
 * **Hosts**: These are virtual machines (EC2 Instances). In case of EKS deployments they are also called Worker nodes. By default apps within a tenant are pinned to VMs in the same Tenant. In case of EKS we have the ability to deploy Hosts in a separate tenant and apps in other tenants can leverage these hosts. This is called the shared host model.  \
@@ -21,4 +25,19 @@ If the host is tagged with a specific value and you have services with same tag 
 In case of Kubernetes deployments the concept of allocation tags is realized by mapping it to labels on nodes and then node selector on the _Deploymentset or Statefulset_
 
 * **Host Networking:** By default Docker containers have their own network addresses. But at times it is desirable that these containers could reuse the same network interface as the VM itself. This is called Host Network Mode.
-* **Load balancer:** Every service&#x20;
+*   **Load balancer:** Every service if it needs to be reached from other services would need to be exposed via a LoadBalancer. Following types of LBs are supported:
+
+    * **Application ELB**: When exposed via an ELB the service will be reachable from anywhere unless it is marked as Internal, in which case it will be reachable only from within the VPC (or infrastructure). This type of LB allows you to also use a certificate for terminating SSL on the LB which provides an advantage that one does not have to deal with SSL and certs from the application. This is a certificate issued from AWS ACM.\
+      In case of Kubernetes behind the scenes the platform creates a NodePort pointing to the DeploymentSet and adds the Host IPs of worker nodes to the ELB. The flow of traffic is Client --> External Port in ELB (Say 443)  --> ELB to Node port (Say 30004 on the Worker Node) ---> K8S Proxy Running on each Worker Node Forwards Node Port to Container
+    * Classic ELB (Only applicable to Built-In Container Orchestration):   When exposed via an ELB the service will be reachable from anywhere unless it is marked as Internal, in which case it will be reachable only from within the VPC (or infrastructure). This type of LB allows you to also use a certificate for terminating SSL on the LB which provides an advantage that one does not have to deal with SSL and certs from the application. This is a certificate issued from AWS ACM.&#x20;
+
+
+
+    {% hint style="info" %}
+    Classic ELB can be used when the application is exposing non HTTP ports and operating on any TCP port.
+    {% endhint %}
+
+
+
+    * Cluster IP (K8S Only): This can be used when we are required to expose the application only within the Kubernetes Cluster.
+
