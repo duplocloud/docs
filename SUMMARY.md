@@ -36,6 +36,7 @@
   * [Step 5: Create app (via K8S)](aws/quick-start/step-5-create-app-via-k8s.md)
   * [Step 6: Create a Load Balancer](aws/quick-start/step-6-create-a-load-balancer.md)
   * [Step 7: Create DNS Name](aws/quick-start/step-7-create-dns-name.md)
+  * [Step 8: Test the Application](aws/quick-start/step-8-test-the-application.md)
 * [Use cases](aws/use-cases/README.md)
   * [Networking](aws/use-cases/disaster-recovery.md)
   * [Kubernetes Cluster](aws/use-cases/kubernetes-cluster.md)
