@@ -49,6 +49,7 @@
   * [Passing secrets](aws/use-cases/passing-secrets.md)
   * [S3 backend web application](aws/use-cases/s3-backend-web-application.md)
   * [Serverless web application](aws/use-cases/serverless-web-application.md)
+  * [Page 1](aws/use-cases/page-1.md)
 * [Broader Scenarios](aws/broader-scenarios/README.md)
   * [Cloud migration (SMS)](aws/broader-scenarios/cloud-migration-sms.md)
   * [Remote working](aws/broader-scenarios/remote-working.md)
