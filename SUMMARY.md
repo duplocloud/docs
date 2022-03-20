@@ -23,6 +23,7 @@
 * [Overview](aws/overview.md)
 * [Container Deployments](aws/container-deployments/README.md)
   * [Concepts](aws/container-deployments/concepts.md)
+  * [Passing Config](aws/container-deployments/passing-config.md)
 * [Prerequisites](aws/prerequisites/README.md)
   * [Route 53 Hosted Zone](aws/prerequisites/route-53-hosted-zone.md)
   * [ACM Certificate](aws/prerequisites/acm-certificate.md)
