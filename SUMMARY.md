@@ -51,6 +51,7 @@
   * [S3 backend web application](aws/use-cases/s3-backend-web-application.md)
   * [Security and compliance](aws/use-cases/security-and-compliance.md)
   * [Serverless web application](aws/use-cases/serverless-web-application.md)
+  * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
 * [AWS services](aws/aws-services/README.md)
   * [Virtual machines](aws/aws-services/virtual-machines/README.md)
     * [SSH EC2 instance](aws/aws-services/virtual-machines/ssh-ec2-instance.md)
