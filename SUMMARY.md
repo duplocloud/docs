@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [FAQ](faq.md)
+* [Design and Business FAQ](faq.md)
 
 ## Getting started
 
