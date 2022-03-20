@@ -2,9 +2,9 @@
 
 ## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
 
-In addition to notify you about the faults, DuploCloud integrates with Sentry, which will send an Email alert for the fault and acts as a single place to look at all the events.
+In addition to notify you about the faults, DuploCloud integrates with Sentry, which will send an Email alert for the fault. It also provides a view that aggregates all alerts and events.
 
-## Configure Sentry <a href="#1-toc-title" id="1-toc-title"></a>
+## Configuring Sentry <a href="#1-toc-title" id="1-toc-title"></a>
 
 To configure Sentry, visit Sentry website and manage your application Under projects create a new project. Then go to **Settings > Projects > \[project-name] > Client keys (DSN)**.
 
