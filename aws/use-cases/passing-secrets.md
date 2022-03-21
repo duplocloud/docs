@@ -1,3 +1,3 @@
 # Configs and Secrets
 
-Reference the documentation [here](../container-deployments/passing-config-and-secrets.md).
+Reference the documentation [here](../container-deployments/passing-config-and-secrets/).
