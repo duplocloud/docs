@@ -1,4 +1,4 @@
-# Container Orchestration
+# Container Deployments
 
 There are several container orchestration technologies in the state of art. DuploCloud abstracts the complexity of these allowing you to purely focus on you being able to achieve the deployment, update and debugging of the your containerized application. User can choose which technology to use. DuploCloud supports all of them and makes it easy for the user to consume
 
@@ -14,3 +14,5 @@ But the biggest disadvantages are:\
 {% endhint %}
 
 * **AWS ECS Fargate**: This is a cloud Native proprietary service from AWS. The key advantage of this is that one does not have to manage any servers especially in terms of patching and capacity management. Patching is less of an issue is because DuploCloud takes care of this. The disadvantage of ECS is that it is a very proprietary interface to AWS and being serverless one cannot easily debug issues unlike in a server based environment where the user can have full control for things like Docker restart, Docker exec, Docker logs etc. &#x20;
+
+<table><thead><tr><th></th><th data-type="rating" data-max="3">Kubernetes</th><th data-type="rating" data-max="3">Built-In</th><th data-type="rating" data-max="5">ECS Fargate</th></tr></thead><tbody><tr><td>Ease of use</td><td>null</td><td>null</td><td>null</td></tr><tr><td>Ecosystem Tools</td><td>null</td><td>null</td><td>null</td></tr><tr><td></td><td>null</td><td>null</td><td>null</td></tr></tbody></table>
