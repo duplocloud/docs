@@ -43,7 +43,7 @@
   * [Tenant (Environment)](aws/use-cases/tenant-environment.md)
   * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
   * [AWS Services](aws/use-cases/aws-services.md)
-  * [Supported Deployments](aws/use-cases/supported-deployments.md)
+  * [App Deployments](aws/use-cases/app-deployments.md)
   * [Configs and Secrets](aws/use-cases/passing-secrets.md)
   * [Central logging](aws/use-cases/central-logging.md)
   * [Monitoring](aws/use-cases/monitoring.md)
