@@ -18,8 +18,6 @@ Once this is done we need to provision the Route53 domain in every DuploCloud Pl
 Do not forget the dot (.) in the beginning of the DNS suffix in the form as shown below
 {% endhint %}
 
-![](<../../.gitbook/assets/image (18).png>)
-
 {% hint style="info" %}
 Note that this domain has to be set in every new plan created as part of the infrastructure
 {% endhint %}

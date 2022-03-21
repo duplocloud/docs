@@ -1,6 +1,6 @@
 # Elastic cache
 
-Create a Redis or Memcache from **DevOps** > **Database** > **Ecache** > **+Add** button above the table.
+Create a REDIS or Memcache from **DevOps** > **Database** > **Ecache** > **+Add** button above the table.
 
 {% hint style="info" %}
 The best way to pass the cache endpoint to your application is through ENV variables of the Service.
