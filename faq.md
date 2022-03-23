@@ -2,7 +2,7 @@
 description: Popular and frequently asked questions
 ---
 
-# FAQ
+# FAQ (Design and Business)
 
 {% hint style="info" %}
 **NOTICE:** This document provides frequently asked questions related to the high level architecture and business model. For more detailed technical FAQ please refer to the [AWS FAQ](aws/aws-faq.md), [Azure FAQ](azure/azure-faq.md) or [Google Cloud FAQ](gcp/gcp-faq.md)
@@ -91,9 +91,9 @@ If DuploCloud is down, its like your DevOps engineer not being reachable and if 
 
 Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or require any cloud expertise in order to operate it. You simply need to understand the basic constructs in DuploCloud by reading the product documentation.
 
-## What happens to my existing Terraform code?
+## **My application developers don't know IaC (Infrastructure-as-Code), but my DevOps engineers do. If my developers make changes via the DuploCloud UI what happens to the Terraform code my DevOps engineers have written?**
 
-**My application developers don't know IaC (Infrastructure-as-Code), but my DevOps engineers do. If my developers make changes via the DuploCloud UI what happens to the Terraform code my DevOps engineers have written?**
+****
 
 This will cause an inconsistency, so you will have create some separation between your developers and your DevOps team. One example is allowing developers to use the Web UI in non-production(dev) environments in order to quickly iterate product changes. Production and critical non-production environments, the cloud services setup, as well as first time application deployment can be done via Terraform code. CI/CD workflows can be built which only update the application (Docker and Lambda) deployments. Any cloud service level change should be done by the DevOps team via Terraform and the developers will have to ask the DevOps team for the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
 
