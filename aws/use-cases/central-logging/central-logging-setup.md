@@ -13,7 +13,11 @@ It takes about 10-15 mins for the control plane to be setup and when ready you s
 ![](<../../../.gitbook/assets/image (15).png>)
 
 **Log Collector:** After the Control plane has been deployed and is active, logging per tenant has to be enabled as well. This can be done from under Administrator --> Diagnostics --> Settings and at the bottom of the page you see the option to enable Tenant logging. **** See figure above\
-Log collection is implemented by using filebeat containers that is deployed in each tenant. You can see these filebeat containers running within the tenant from under Devops --> Containers -->EKS/Native.  Further details are described below.
+Log collection is implemented by using filebeat containers that is deployed in each tenant. You can see these filebeat containers running within the tenant from under Devops --> Containers -->EKS/Native. &#x20;
+
+{% hint style="danger" %}
+For the Log Collector to show meaningful logs, it is necessary for the docker applications to write the logs to stdout. Only then will Docker Engine will collect the logs and place them in the host directory from where those are first mounted into FileBeat container and from there sent to the Elastic Search
+{% endhint %}
 
 ### **Behind the Scenes**
 
