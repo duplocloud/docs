@@ -2,23 +2,18 @@
 
 Setup of Central Logging comprises of two steps or components
 
-**Control Plane:** This comprises of Open search and Kibana which are deployed in Default tenant.  An administrator can view these under Devops-->Containers-->EkS/Native. These are deployed just like any other application.
-
-{% hint style="info" %}
-Central Logging is disabled by default. It can be enabled from under Administrator --> Diagnostics --> Central Logging.
-{% endhint %}
+**Control Plane:** This comprises of Open search and Kibana which are deployed in Default tenant.  To enable central logging go under Administrator --> Diagnostics --> Central Logging.
 
 ![](<../../../.gitbook/assets/image (5).png>)
 
-**Log Collector:** Under each tenant a file beat service is deployed with the replica count equal to the number of hosts. If the number if hosts change, the platform will automatically adjust the replica count to match this. This is achieved by marking the service as a "DaemonSet". &#x20;
-
 {% hint style="info" %}
-After the Control plane has been deployed and is active, logging per tenant has to be enabled as well. Only then will the log collector (File Beat) be deployed. This can be done from under Administrator --> Diagnostics --> Settings and at the bottom of the page you see the option to enable Tenant logging.
+It takes about 10-15 mins for the control plane to be setup and when ready you should see the screen under Administrator--.>Diagnostics --> Setting --> Logging Tab to look like the picture below
 {% endhint %}
 
 ![](<../../../.gitbook/assets/image (15).png>)
 
-You can see these filebeat containers running within the tenant from under Devops --> Containers -->EKS/Native.&#x20;
+**Log Collector:** After the Control plane has been deployed and is active, logging per tenant has to be enabled as well. This can be done from under Administrator --> Diagnostics --> Settings and at the bottom of the page you see the option to enable Tenant logging. **** See figure above\
+Log collection is implemented by using filebeat containers that is deployed in each tenant. You can see these filebeat containers running within the tenant from under Devops --> Containers -->EKS/Native.  Further details are described below.
 
 ### **Behind the Scenes**
 
