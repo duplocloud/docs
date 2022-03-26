@@ -1,6 +1,6 @@
 # Log Dashboards
 
-Logging dashboards per tenants are available under Diagnostics --> Loggings. Note that the logs are in the context of the Tenant (That can be switched using tenant switcher). In addition the logs are segregated per services that also can switched using the service switcher as shown in the picture below
+Logging dashboards per tenants are available under Diagnostics --> Loggings. Note that the logs are in the context of the Tenant (That can be switched using tenant switcher). In addition the logs are segregated per services that also can switched using the "Select Service" option as shown in the picture below
 
 ![](<../../../.gitbook/assets/image (20).png>)
 
