@@ -50,6 +50,7 @@
   * [Central logging](aws/use-cases/central-logging/README.md)
     * [Central Logging Setup](aws/use-cases/central-logging/central-logging-setup.md)
     * [Log Dashboards](aws/use-cases/central-logging/log-dashboards.md)
+    * [Custom Log Collection](aws/use-cases/central-logging/custom-log-collection.md)
   * [Monitoring](aws/use-cases/monitoring.md)
   * [Faults and Alarms](aws/use-cases/faults-and-alarms.md)
   * [Alerting and notifications](aws/use-cases/alerting-and-notifications.md)
