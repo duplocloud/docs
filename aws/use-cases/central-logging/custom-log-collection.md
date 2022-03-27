@@ -6,7 +6,7 @@ There are several use cases for customized log collection. Since the entire cent
 
 &#x20;
 
-![](<../../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (21) (1).png>)
 
 {% hint style="info" %}
 Note that these changes have to be done before enabling the central logging. If you already have the control plane deployed then making an update is like making a change to any other application. In this case the control plane components are deployed under default tenant. Where you can directly make changes like increasing instance size, change docker images etc
