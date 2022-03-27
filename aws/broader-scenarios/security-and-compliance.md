@@ -1,3 +1,6 @@
 # Security and compliance
 
-Please refer to[ Compliance Controls and Security Frameworks](https://portal.duplocloud.net/compliance/Implementation.html?\_\_hstc=199910065.5cb100958892546d1fc484f311cab1cc.1640799817379.1643935000925.1643939246257.67&\_\_hssc=199910065.27.1643939246257&\_\_hsfp=29941011).
+Compliance and security is DuploCloud's bread-and-butter. The core approach is out-of-box compliance where the users don't have to explicitly learn and apply compliance controls. Following are some of the white papers on how DuploCloud implements security and compliance
+
+* [PCI and HIPAA Compliance](https://duplocloud.com/white-papers/pci-and-hipaa-compliance-with-duplocloud/)
+* [SOC 2 Compliance](https://duplocloud.com/white-papers/soc-2-compliance-with-duplocloud/)&#x20;
