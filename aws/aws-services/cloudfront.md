@@ -45,3 +45,15 @@ Create a CloudFront distribution by giving the necessary values, in addition for
 {% endhint %}
 
 Once the deployment status becomes `Deployed`. Then visit the domain name and you should see the invocation of the lambda function
+
+## Maintenance Page setup for website
+
+* Default origin should point to your app url `ui.mysite.com.`
+* Create a new S3 Bucket to store maintenance pages. In the bucket create a prefix/folder called `maintpage.`
+* Upload maintenance page asserts (html,css,js etc) into S3 bucket inside `maintpage` folder.
+* Add new **S3 Origin** pointing to S3 bucket we have maintenance static asserts.
+* Add new **Custom Cache Behaviors** use `/maintpage/*`as path pattern, Target origin should be S3  maintenance asserts origin.
+* Adding **Custom Error Response** mapping**.**
+  * &#x20;**** In **error code** dropdown select the HTTP code for which the maintenance page should be served. **502** gateway timeout is commonly used.
+  * In **Response page path** enter `/maintpage/5xx.html`. 5xx.html should be changed to a page that exists in s3.
+  * HTTP Response code can be either 200 or 502 (same as the actual source origin response code).
