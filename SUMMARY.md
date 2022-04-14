@@ -31,6 +31,7 @@
   * [Route 53 Hosted Zone](aws/prerequisites/route-53-hosted-zone.md)
   * [ACM Certificate](aws/prerequisites/acm-certificate.md)
   * [Kubectl Shell](aws/prerequisites/kubectl-shell.md)
+  * [VPN Setup](aws/prerequisites/vpn-setup.md)
 * [Quick start](aws/quick-start/README.md)
   * [Step 1: Infrastructure](aws/quick-start/step-1-infrastructure.md)
   * [Step 2: Tenant](aws/quick-start/step-2-tenant.md)
