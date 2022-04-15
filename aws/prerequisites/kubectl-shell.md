@@ -1,4 +1,14 @@
-# Kubectl Shell
+# Shell Access
+
+DuploCloud allows shell access into the deployed containers. The way shell access is enabled is different based on the type of the system,  Native vs EKS
+
+### Access to Native container shell
+
+To enable shell for DuploCloud native container system, goto Devops->Container/EKS/Native and click on "Enable Docker Shell". Select a certificate from the drop down, and keep the Visibility to Public. This will provision a new service called _dockerservices-shell_ which will now enable the ability to SSH into the containers of the services.
+
+****![](<../../.gitbook/assets/Screen Shot 2022-04-15 at 10.28.01 AM.png>)****
+
+### Access to Kubectl shell (K8)
 
 This is an optional feature where DuploCloud provides easy just-in-time access to container shell and Kubectl shell directly from the browser. For this functionality to work we need to deploy a service in the default tenant.
 
