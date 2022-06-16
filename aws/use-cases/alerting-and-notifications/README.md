@@ -25,4 +25,4 @@ In your PagerDuty account, go to the Service that should receive events. If a Se
 
 Add the integration key under **DevOps > Faults > Update Sentry Config**.&#x20;
 
-![](<../../.gitbook/assets/Screen Shot 2022-03-20 at 3.06.51 PM.png>)
+![](<../../../.gitbook/assets/Screen Shot 2022-03-20 at 3.06.51 PM.png>)
