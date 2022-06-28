@@ -166,3 +166,7 @@
 
 * [Creating advanced functions](extras/creating-advanced-functions.md)
 * [BYOH](extras/byoh.md)
+
+## WHAT'S NEW
+
+* [Product updates](whats-new/product-updates.md)
