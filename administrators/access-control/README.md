@@ -1,9 +1,9 @@
 # Access control
 
-There are the following types of User roles in the DuploCloud system
+There are the following types of User roles in the DuploCloud system:
 
 * **Administrator**, has access to all tenants plus the administrative functions like plan configuration, system dashboard, system faults etc.
-* **User**, regular users that can be given access to a specific tenant. A tenant could have multiple . users assigned.
+* **User**, regular users that can be given access to a specific tenant. A tenant could have multiple users assigned.
 * **Security,** meant for security and compliance auditors to check on security and compliance dashboards and reports.
 * **Signup,** a specialized role meant for users creating and managing DuploCloud resources via API.
 
