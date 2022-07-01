@@ -2,9 +2,10 @@
 
 ## Docker native <a href="#0-toc-title" id="0-toc-title"></a>
 
-Any docker container can be deployed in the VM. Go to **DevOps** > **Containers** > **EKS/Native** > **+Add** button above the table. Give a name for your services (no spaces); number of replicas; Docker image; volumes (if any). The number of replicas must be less than or equal to the number of hosts in the fleet. You can use `AllocationTags` to deploy the container in a specific set of hosts.
+Any docker container can be deployed in the VM. Go to **DevOps** > **Containers** > **EKS/Native** > **+Add** button above the table. Give a name for your services (no spaces); number of replicas; Docker image; volumes (if any). The number of replicas must be less than or equal to the number of hosts in the fleet. You can use `AllocationTags` to deploy the container in a specific set of hosts.\
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/createrole.png)
+
+![](<../../.gitbook/assets/image (13).png>)
 
 ## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
 
@@ -111,9 +112,19 @@ If you want longer duration tokens you can create them on your own and secure th
 
 Once the deployment command runs successfully, go to the **Services** tab of the Tenant. You can see those deployments. Now you can attach the load balancers for the services.
 
+
+
 ## Load balancers, WAF and other workflows <a href="#8-toc-title" id="8-toc-title"></a>
 
 These all remain the same. See prior sections on creation of these.
+
+## Adding Ingress <a href="#7-toc-title" id="7-toc-title"></a>
+
+Once the Services are deployed and Service load balancer is created successfully, go to the **Ingress** tab.\
+\
+You can create Ingress and add rules. DuploCloud provides support to define multiple paths in ingress.
+
+![](<../../.gitbook/assets/image (14).png>)
 
 ## ECS Fargate <a href="#9-toc-title" id="9-toc-title"></a>
 
