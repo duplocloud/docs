@@ -2,7 +2,7 @@
 
 Logging dashboards per tenants are available under Diagnostics --> Loggings. Note that the logs are in the context of the Tenant (That can be switched using tenant switcher). In addition the logs are segregated per services that also can switched using the "Select Service" option as shown in the picture below
 
-![](<../../../.gitbook/assets/image (20).png>)
+![](<../../../.gitbook/assets/image (20) (1).png>)
 
 Note that these dashboards are native Kibana dashboards with preset-filters. One can easly add their own filter or change existing ones.
 

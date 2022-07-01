@@ -17,7 +17,7 @@ A docker based application has by-and-large the following main specifications:
 * Many other parameters which help ? icon in the UI against each input element in the form describing the purpose.\
 
 
-![](<../../.gitbook/assets/image (14).png>)
+![](<../../.gitbook/assets/image (14) (1).png>)
 
 To create a service go to Devops->Containers->EKS/Native and click on **+ADD** button and fill in the above field.
 

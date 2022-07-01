@@ -1,4 +1,4 @@
-# Faults and Alarms
+# Faults and Alerts
 
 ## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
 
@@ -10,8 +10,10 @@ You can look at Tenant-specific faults under **DevOps > Faults** or all the faul
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/deploy-faults.png)
 
-## Creating Alarms <a href="#2-toc-title" id="2-toc-title"></a>
+## Creating Alerts <a href="#2-toc-title" id="2-toc-title"></a>
 
-You can set the AWS Alarms for the individual metrics, click on the bell icon on any of the metrics. A form to create an alarm shows up. You can provide the necessary information and create the alarm.
+You can set the AWS Alerts for the individual metrics, click on the bell icon on any of the metrics. A form to create an alert shows up. You can provide the necessary information and create the alert.\
+\
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/create-alarm.png)
+
+![](<../../../.gitbook/assets/image (21).png>)
