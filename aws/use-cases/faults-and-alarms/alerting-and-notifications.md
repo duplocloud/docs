@@ -24,7 +24,7 @@ In your PagerDuty account, go to the Service that should receive events. If a Se
 
 ## NewRelic Integration
 
-In your NewRelic account, obtain an integration key to send events to NewRelic [Insights](https://docs.newrelic.com/docs/data-apis/ingest-apis/event-api/introduction-event-api/) and provide that to DuploCloud as below.
+In your NewRelic account, obtain an integration key to send events to NewRelic [Insights](https://docs.newrelic.com/docs/data-apis/ingest-apis/event-api/introduction-event-api/), generate an [API Key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys) and provide that to DuploCloud as below.
 
 ## Setting the key in DuploCloud <a href="#2-toc-title" id="2-toc-title"></a>
 
