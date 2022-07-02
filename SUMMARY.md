@@ -63,7 +63,7 @@
   * [Cost management](aws/use-cases/cost-management/README.md)
     * [Enable billing data](aws/use-cases/cost-management/enable-billing-data.md)
     * [Cost allocation tags](aws/use-cases/cost-management/cost-allocation-tags.md)
-  * [Just-In-Time Access](aws/use-cases/just-in-time-access.md)
+  * [Just-In-Time(JIT) Access](aws/use-cases/just-in-time-jit-access.md)
   * [Resource Quotas](aws/use-cases/resource-quotas.md)
 * [Broader Scenarios](aws/broader-scenarios/README.md)
   * [Security and compliance](aws/broader-scenarios/security-and-compliance.md)
