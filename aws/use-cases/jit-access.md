@@ -1,4 +1,6 @@
-# Just-In-Time(JIT) Access
+# JIT Access
+
+DuploCloud allows Just-In-Time (JIT) to AWS for a user. This access is restricted to the resources in scope of access to the user in the DuploCloud portal. For admin users, JIT access at an Admin level is also available. This access is generated real time and revoked in 1 hour.
 
 ## Access through UI
 
