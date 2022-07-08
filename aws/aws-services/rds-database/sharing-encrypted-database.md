@@ -34,4 +34,4 @@ In the copied snapshot add a tag with Key as “`Name`” and Value as “`duplo
 
 Go to DuploCloud portal select the tenant. **Open RDS > Add new DB (+ icon) > Give** name for the new database. In the snapshot select the new snapshot. Enter instance type and hit submit. In few mins, the database will be created with the data from the snapshot. You must use the existing username and password to access the database.
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/RDS-restoresnapshot.png)
+![](<../../../.gitbook/assets/Screen Shot 2022-07-08 at 11.58.39 AM.png>)
