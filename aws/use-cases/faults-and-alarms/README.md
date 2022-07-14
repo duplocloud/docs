@@ -16,4 +16,4 @@ You can set the AWS Alerts for the individual metrics, click on the bell icon on
 \
 
 
-![](<../../../.gitbook/assets/image (21).png>)
+![](<../../../.gitbook/assets/image (21) (1).png>)
