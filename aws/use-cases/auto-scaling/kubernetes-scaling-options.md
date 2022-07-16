@@ -1,4 +1,4 @@
-# Using Kubernetes Scaling Options
+# Kubernetes Scaling Options
 
 ## Kubernetes Cluster Auto Scaler
 
@@ -55,3 +55,10 @@ minReplicas: 2
 For HPA Configures Services, **Replica** is set as _Auto_ in DuploCloud Portal
 
 ![](<../../../.gitbook/assets/image (8).png>)
+
+#### Setting Container Configuration
+
+It is important to have the Resources set in the **Other Container Config** so that HPA can work. Below is an example:
+
+![](<../../../.gitbook/assets/Screen Shot 2022-07-16 at 12.02.11 PM.png>)
+
