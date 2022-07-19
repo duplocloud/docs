@@ -4,9 +4,9 @@
 Here we are only talking about the setup of the EKS control plane. The actual worker nodes and rest of the workload setup will be described within the Tenant.
 {% endhint %}
 
-In DuploCloud platform a Kubernetes Cluster maps to an [Infrastructure](../aws-services/infrastructure.md) The cluster can be created by creating an infrastructure from Administrator --> Infrastructure --> ADD Button. Creating an Infrastructure with a EKS cluster takes up to 20 minutes. See the Infrastructure section for details for other elements of this form:
+In DuploCloud platform a Kubernetes Cluster maps to an [Infrastructure](../../aws-services/infrastructure.md) The cluster can be created by creating an infrastructure from Administrator --> Infrastructure --> ADD Button. Creating an Infrastructure with a EKS cluster takes up to 20 minutes. See the Infrastructure section for details for other elements of this form:
 
-![](<../../.gitbook/assets/image (15) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (1) (1).png>)
 
 {% hint style="warning" %}
 At this moment per infrastructure only one EKS or ECS cluster is supported. One can have both EKS as well as ECS cluster but only 1 or 0 of each.&#x20;
