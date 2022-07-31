@@ -12,4 +12,6 @@ While there are many concepts in the policy model, the following are the main on
 
 * Infrastructure
 * Plan
+* Tenant
+* App and Cloud Service
 * Diagnostics
