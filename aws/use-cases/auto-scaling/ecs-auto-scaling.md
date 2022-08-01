@@ -1,4 +1,4 @@
-# Using ECS Auto Scaling
+# ECS Auto Scaling
 
 ECS Auto Scaling has the ability to scale the desired count of tasks for the ECS Service configured in your infrastructure.  Average CPU/Memory metrics of your tasks are used to increase/decrease the desired count value.
 
@@ -9,7 +9,7 @@ Navigate to **DevOps** > **Containers** > **ECS** > Select the _ECS Task Definit
 Set the Minimum Capacity (minimum value 2) and Maximum Capacity to complete the configuration.\
 
 
-![](<../../../.gitbook/assets/image (24).png>)
+![](<../../../.gitbook/assets/image (24) (1).png>)
 
 ## Step2: Add Scaling Policy
 
@@ -26,7 +26,7 @@ Provide details below:
 
 This step creates the target tracking scaling policy and attaches it to the Auto Scaling group
 
-![](<../../../.gitbook/assets/image (5).png>)
+![](<../../../.gitbook/assets/image (5) (3).png>)
 
 
 
@@ -36,4 +36,4 @@ View the Scaling Target and Policy Details from the DuploCloud Portal. Update an
 
 
 
-![](<../../../.gitbook/assets/image (23).png>)
+![](<../../../.gitbook/assets/image (23) (1).png>)

@@ -7,4 +7,4 @@ Once the Quota is defined, DuploCloud users are restricted to create new resourc
 
 The quotas are controlled at the Instance Family level, such as, if you define a quota for `t4g.large`, it will be enforced including all lower instance types in the `t4g` family as well. So a quota with a count of 100 for `t4g.large` will mean instances up to that instance type cannot exceed 100.
 
-![](<../../.gitbook/assets/image (19) (1).png>)
+![](<../../.gitbook/assets/image (19) (2).png>)
