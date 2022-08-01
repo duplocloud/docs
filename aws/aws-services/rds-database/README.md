@@ -2,9 +2,11 @@
 
 ## Create a database <a href="#0-toc-title" id="0-toc-title"></a>
 
-Create a MySQL, Microsoft SQL, PostgreSQL or Amazon Aurora database from the menu **DevOps** > **Database** > **Relational Databases** > **+Add** button above the table.
+Create a MySQL, Microsoft SQL, PostgreSQL or Amazon Aurora database from the menu **DevOps** > **Database** > **RDS** > **+Add** button above the table.\
+\
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/createrds.png)
+
+![](<../../../.gitbook/assets/image (47).png>)
 
 ## Connect to the database <a href="#1-toc-title" id="1-toc-title"></a>
 

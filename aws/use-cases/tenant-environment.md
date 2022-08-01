@@ -2,7 +2,7 @@
 
 Tenant is the most foundational concept in DuploCloud platform. Tenant is like an environment.&#x20;
 
-![](<../../.gitbook/assets/image (16) (1).png>)
+![](<../../.gitbook/assets/image (16) (2).png>)
 
 Tenant is fundamentally the following things at the logical level:
 

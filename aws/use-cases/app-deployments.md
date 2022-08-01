@@ -3,7 +3,7 @@
 Applications can be of many forms. Following are common one in AWS
 
 * [Dockerized apps](../container-deployments/): This constitute today 90% of our user workloads. The platform orchestrates containerized app deployments using EKS, ECS Fargate or a built-in container orchestration system as defined in the [previous section](../container-deployments/)
-* [Lambda Functions](../aws-services/lambda.md)
+* [Lambda Functions](../aws-services/lambda/)
 * EMR Workloads
 * AWS Batch
 * Sage maker

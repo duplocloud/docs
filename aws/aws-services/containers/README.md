@@ -2,9 +2,10 @@
 
 ## Docker native <a href="#0-toc-title" id="0-toc-title"></a>
 
-Any docker container can be deployed in the VM. Go to **DevOps** > **Containers** > **EKS/Native** > **+Add** button above the table. Give a name for your services (no spaces); number of replicas; Docker image; volumes (if any). The number of replicas must be less than or equal to the number of hosts in the fleet. You can use `AllocationTags` to deploy the container in a specific set of hosts.
+Any docker container can be deployed in the VM. Go to **DevOps** > **Containers** > **EKS/Native** > **+Add** button above the table. Give a name for your services (no spaces); number of replicas; Docker image; volumes (if any). The number of replicas must be less than or equal to the number of hosts in the fleet. You can use `AllocationTags` to deploy the container in a specific set of hosts.\
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/createrole.png)
+
+![](<../../../.gitbook/assets/image (13) (1).png>)
 
 ## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
 
@@ -26,7 +27,7 @@ These can be set **DevOps** > **Containers** > **EKS/Native** tabs. Docker regis
 
 When we say services, we don’t mean a Kubernetes service, but we mean the DuploCloud term service (See terminology at the top). You can deploy DuploCloud services by clicking **+Add** button under the **EKS/Native** tab. Implicitly, DuploCloud converts these services either into a deployment set or a stateful set. If there are no volume mappings, then it is a deployment set, otherwise it is a stateful set. Most configs are self-explanatory, for example, Images, Replicas and environmental variables.
 
-The other advanced configuration can be provided under the other K8 Config section. The content of this section is a 1:1 mapping of the Kubernetes API. All types of configurations for deployments are stateful sets and are supported, while putting the appropriate JSON under the other K8 Config section. For example, to reference the secrets via config map, the JSON would look like the following:
+The other advanced configuration can be provided under the other K8 Config section. The content of this section is a one-to-one mapping of the Kubernetes API. All types of configurations for deployments are stateful sets and are supported, while putting the appropriate JSON under the other K8 Config section. For example, to reference the secrets via config map, the JSON would look like the following:
 
 ```json
 {
@@ -111,9 +112,19 @@ If you want longer duration tokens you can create them on your own and secure th
 
 Once the deployment command runs successfully, go to the **Services** tab of the Tenant. You can see those deployments. Now you can attach the load balancers for the services.
 
+
+
 ## Load balancers, WAF and other workflows <a href="#8-toc-title" id="8-toc-title"></a>
 
-These all remain the same. See above on creation of these.
+These all remain the same. See prior sections on creation of these.
+
+## Adding Ingress <a href="#7-toc-title" id="7-toc-title"></a>
+
+Once the Services are deployed and Service load balancer is created successfully, go to the **Ingress** tab.\
+\
+You can create Ingress and add rules. DuploCloud provides support to define multiple paths in ingress.
+
+![](<../../../.gitbook/assets/image (14) (2).png>)
 
 ## ECS Fargate <a href="#9-toc-title" id="9-toc-title"></a>
 

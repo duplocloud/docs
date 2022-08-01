@@ -10,19 +10,19 @@ You can configure Cluster AutoCcaler for the Infrastructure created with EKS Ena
 
 Enable Cluster Autoscaler from **Administrator** > **Infrastructure** > **Settings**. Add Setting to enable Autoscaler. Refer screenshot
 
-![](<../../../.gitbook/assets/image (15).png>)
+![](<../../../.gitbook/assets/image (15) (1).png>)
 
 ### Step2: Configure Auto Scaling Group (ASG)
 
 Navigate to **DevOps** > **Hosts** > **ASG.**  Enable **Use for Cluster Autoscaling** toggle button.
 
-This setting allows  managing the cluster auto scaling.
+This setting allows managing the cluster auto scaling.
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (1).png>)
 
 ## Kubernetes Horizontal Pod Autoscaler (HPA)
 
-Horizontal Pod Autoscaler (HPA) automatically scales the Deployment and its ReplicaSet. HPA checks the metrics configured in regular intervals and then scale the replicas up or down accordingly.
+Horizontal Pod Autoscaler (HPA) automatically scales the Deployment and its ReplicaSet. HPA checks the metrics configured in regular intervals and then scales the replicas up or down accordingly.
 
 #### Configuring Services with HPA
 
@@ -32,10 +32,9 @@ Navigate **DevOps** > **Containers** > **EKS/Native.**
 
 Create a new Service. Select **Replication Strategy** as _'Horizontal Pod Scheduler'_
 
-Add below sample configuration in **Horizontal Pod Autoscaler Config** textarea section.  Update  minimum/maximum Replica Count, resource section based on the requirement.
+Add below sample configuration in the **Horizontal Pod Autoscaler Config** textarea section.  Update minimum/maximum Replica Count, resource section based on the requirement.
 
-
-
+{% code title="Horizontal Pod Autoscaler" %}
 ```
 maxReplicas: 5
 metrics:
@@ -47,6 +46,7 @@ metrics:
     type: Resource
 minReplicas: 2
 ```
+{% endcode %}
 
 
 
@@ -54,7 +54,7 @@ minReplicas: 2
 
 For HPA Configures Services, **Replica** is set as _Auto_ in DuploCloud Portal
 
-![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8) (1).png>)
 
 #### Setting Container Configuration
 
