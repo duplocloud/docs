@@ -10,7 +10,7 @@ You can configure Cluster AutoCcaler for the Infrastructure created with EKS Ena
 
 Enable Cluster Autoscaler from **Administrator** > **Infrastructure** > **Settings**. Add Setting to enable Autoscaler. Refer screenshot
 
-![](<../../../.gitbook/assets/image (15) (1).png>)
+![](<../../../.gitbook/assets/image (15) (2).png>)
 
 ### Step2: Configure Auto Scaling Group (ASG)
 
@@ -18,7 +18,7 @@ Navigate to **DevOps** > **Hosts** > **ASG.**  Enable **Use for Cluster Autoscal
 
 This setting allows managing the cluster auto scaling.
 
-![](<../../../.gitbook/assets/image (22) (1).png>)
+![](<../../../.gitbook/assets/image (22).png>)
 
 ## Kubernetes Horizontal Pod Autoscaler (HPA)
 
@@ -50,11 +50,11 @@ minReplicas: 2
 
 
 
-![](<../../../.gitbook/assets/image (9) (2).png>)
+![](<../../../.gitbook/assets/image (9) (1).png>)
 
 For HPA Configures Services, **Replica** is set as _Auto_ in DuploCloud Portal
 
-![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8) (2).png>)
 
 #### Setting Container Configuration
 

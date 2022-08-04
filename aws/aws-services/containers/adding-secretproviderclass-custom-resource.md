@@ -18,7 +18,7 @@ Use the optional **Secret Objects** field to define the desired state of the syn
 
 The following is an example SecretProviderClass configuration where AWS secrets and Kubernetes Secret Objects are configured.
 
-![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (21).png>)
+![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (6).png>)
 
 ### **Step3:** Mount Volumes based on the configured secrets
 
@@ -26,7 +26,7 @@ To ensure your application is using the Secrets Store CSI driver, you need to co
 
 The following is an example of how to configure a pod to mount a volume based on the SecretProviderClass created in prior steps to retrieve secrets from Secrets Manager.
 
-![Service Page](<../../../.gitbook/assets/image (41).png>)
+![Service Page](<../../../.gitbook/assets/image (58).png>)
 
 While creating **Service** (DevOps > Containers > EKS/Native > Service),&#x20;
 
@@ -71,7 +71,7 @@ Referring to the example which we are following from prior steps, we have define
 
 &#x20;The following is an example SecretProviderClass custom resource that will sync a secret from AWS Secrets Manager to a Kubernetes secret:
 
-![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (42).png>)
+![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (4).png>)
 
 #### Configuring Secret Objects in deployment
 
