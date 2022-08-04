@@ -10,13 +10,13 @@ Navigate to  **DevOps** > **Containers** > **EKS/Native > Storage Class**
 
 Configure EFS parameter created at Step1 by clicking on EFS Parameter.
 
-![K8s Storage Class Page](<../../../.gitbook/assets/image (30).png>)
+![K8s Storage Class Page](<../../../.gitbook/assets/image (49).png>)
 
 ### Step3: Create Persistent Volume (PVC) using Storage Class
 
 Here, we are configuring Kubernetes to use Storage Class created in Step2 above, to create a Persistent Volume with 10Gi of storage capacity and ReadWriteMany access mode.
 
-![K8s Storage Class (Persistent Volume Claim Tab)](<../../../.gitbook/assets/image (44).png>)
+![K8s Storage Class (Persistent Volume Claim Tab)](<../../../.gitbook/assets/image (40).png>)
 
 
 
@@ -35,4 +35,4 @@ Configure below in **Volumes** to create your application deployment using this 
 ```
 {% endcode %}
 
-![Services Page](<../../../.gitbook/assets/image (27).png>)
+![Services Page](<../../../.gitbook/assets/image (34).png>)

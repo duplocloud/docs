@@ -109,6 +109,12 @@
   * [Web application firewall (WAF)](aws/aws-services/web-application-firewall-waf.md)
   * [Workspaces](aws/aws-services/workspaces.md)
 * [AWS FAQ](aws/aws-faq.md)
+* [Utilities](aws/utilities/README.md)
+  * [DuploCloud Terraform Exporter](aws/utilities/duplocloud-terraform-exporter/README.md)
+    * [Install Terraform Utility](aws/utilities/duplocloud-terraform-exporter/install-terraform-utility.md)
+    * [Generate Terraform Code](aws/utilities/duplocloud-terraform-exporter/generate-terraform-code.md)
+    * [Using Terraform Generated Code](aws/utilities/duplocloud-terraform-exporter/using-terraform-generated-code.md)
+    * [Troubleshooting Guide](aws/utilities/duplocloud-terraform-exporter/troubleshooting-guide.md)
 
 ## CI/CD
 

@@ -18,21 +18,31 @@ duplo-aws-credential-process needs to obtain an AWS JIT session using a DuploClo
 
 Edit AWS Config file **\~/.aws/config** and add the below content
 
+#### **Access as ADMIN role**
+
 ```
 [profile ENV_NAME]
-region=us-west-2
+region=REGION
 credential_process=duplo-aws-credential-process --admin --host https://ENV_NAME.duplocloud.net --interactive
 ```
 
-Replace the ENV\_NAME with your account name. You can make AWS API calls using this profile:
+#### **Access as USER role**
+
+If you are getting JIT access as a User role and not Admin, make sure you you replace `--admin` above with `--tenant THE-TENANT-YOU-ARE-USING`
+
+Replace the `ENV_NAME` with your account name. You can make AWS API calls using this profile:
+
+Add the appropriate value of `REGION` (for example: `us-west-2`)
+
+#### **Test you access**
 
 \
-**`AWS_PROFILE=ENV_NAME aws ec2 describe-instances`**
+`AWS_PROFILE=ENV_NAME aws ec2 describe-instances`
 
 _<mark style="color:blue;"></mark>_\
 _<mark style="color:blue;"></mark>_When you first make the AWS call, you will be prompted to authorize through your DuploCloud portal as below. Upon successful authorization, A just-in-time token is given which is valid for 1 hour. When ever the token expires, you will be prompted to re-authorize the request.
 
-![](<../../.gitbook/assets/image (18) (1).png>)
+![](<../../.gitbook/assets/image (18) (1) (1).png>)
 
 ### Obtain credentials using an API Key
 
