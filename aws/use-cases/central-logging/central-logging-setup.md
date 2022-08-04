@@ -10,7 +10,7 @@ Setup of Central Logging comprises of two steps or components
 It takes about 10-15 mins for the control plane to be setup and when ready you should see the screen under Administrator--.>Diagnostics --> Setting --> Logging Tab to look like the picture below
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (15) (1) (1).png>)
+![](<../../../.gitbook/assets/image (15) (1) (2).png>)
 
 **Log Collector:** After the Control plane has been deployed and is active, logging per tenant has to be enabled as well. This can be done from under Administrator --> Diagnostics --> Settings and at the bottom of the page you see the option to enable Tenant logging. **** See figure above\
 Log collection is implemented by using filebeat containers that is deployed in each tenant. You can see these filebeat containers running within the tenant from under Devops --> Containers -->EKS/Native. &#x20;

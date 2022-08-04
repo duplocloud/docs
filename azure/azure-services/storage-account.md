@@ -1,3 +1,35 @@
 # Storage account
 
-Documentation TBD. Please [contact DuploCloud team](https://duplocloud.com/company/contact-us/) for assistance.
+DuploCloud Azure Portal provides ability to create Storage Accounts, File Shares and generate Shared Access Signature (SAS). Storage Account with SKU Type `Standard_LRS` is created. User can view additional details of File/Share endpoints from the portal.
+
+### Create Storage Account
+
+Navigate to **DevOps** > **Storage Account** to create Storage Account.
+
+Provide unique name to create Storage Account.
+
+![Add Storage Account screen](<../../.gitbook/assets/image (47).png>)
+
+### View Storage Account
+
+You can view Storage Account Details once created. You can view Endpoint details, and retrieve and copy keys of the Storage Account.
+
+![Storage Account Details Screen](<../../.gitbook/assets/image (48).png>)
+
+### Create and View File Shares
+
+Create File Shares by clicking on **Add**.&#x20;
+
+![View File Share](<../../.gitbook/assets/image (46).png>)
+
+### Generate Shared Access Signature (SAS)
+
+Click on **Actions** > **Shared Access Signature**. Provide access details in the screen below. Review and generate Shared Access Signature(SAS) tokens.
+
+![](<../../.gitbook/assets/image (45).png>)
+
+Once Signature Tokens are generated, Azure user can copy paste the token and URL's in a secure location. They'll only be displayed once and cannot be retrieved once the window is closed.
+
+![](<../../.gitbook/assets/image (49).png>)
+
+\

@@ -8,7 +8,7 @@ It can take as long as 10-15 minutes for the DNS to be active. You can try to co
 
 You can change this under Devops-->Containers-->EKS/Native-->\<ServiceName>-->LoadBalancers and the first card in that tab as shown in the picture below.
 
-&#x20;                                             <img src="../../.gitbook/assets/image (11).png" alt="" data-size="original">
+&#x20;                                             <img src="../../.gitbook/assets/image (11) (2).png" alt="" data-size="original">
 
 
 
