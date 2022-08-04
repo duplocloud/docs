@@ -15,12 +15,12 @@ Navigate **DevOps** > **Hosts** > **ASG** to create an auto-scaling group.
   2. _EKS Linux_**:** Select this option if you want to run services on the Kubernetes Cluster\
 
 
-![](<../../../.gitbook/assets/image (12) (1).png>)
+![](<../../../.gitbook/assets/image (12) (3).png>)
 
 View the Hosts created as part of ASG creation from ASG View Details Page.\
 
 
-![](<../../../.gitbook/assets/image (11) (1).png>)
+![](<../../../.gitbook/assets/image (11).png>)
 
 ## **Creating an Amazon EC2 Auto Scaling policy**
 
@@ -38,4 +38,4 @@ DuploCloud Portal provides the ability to configure Services based on the Platfo
 
 ### **Service with Platform - Linux Docker/Native**
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (13) (3).png>)

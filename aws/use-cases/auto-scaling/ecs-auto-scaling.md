@@ -26,7 +26,7 @@ Provide details below:
 
 This step creates the target tracking scaling policy and attaches it to the Auto Scaling group
 
-![](<../../../.gitbook/assets/image (5) (3).png>)
+![](<../../../.gitbook/assets/image (5) (1).png>)
 
 
 

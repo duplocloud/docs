@@ -6,7 +6,7 @@ Create a MySQL, Microsoft SQL, PostgreSQL or Amazon Aurora database from the men
 \
 
 
-![](<../../../.gitbook/assets/image (47).png>)
+![](<../../../.gitbook/assets/image (10).png>)
 
 ## Connect to the database <a href="#1-toc-title" id="1-toc-title"></a>
 

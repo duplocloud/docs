@@ -6,7 +6,7 @@ Once we have the Infrastructure (Networking, Kubernetes cluster and other common
 * Worker Nodes (Docker Host) if the built-in container orchestration is used.
 * Regular nodes not part of any container orchestration, where a user maybe manually connecting and installing apps. An example use case of this is using Microsoft SQL Server in a VM, Running an IIS application and such custom use cases.
 
-![](<../../.gitbook/assets/image (17) (1).png>)
+![](<../../.gitbook/assets/image (17) (1) (1).png>)
 
 While all the lower level details like IAM roles, Security groups, and others are abstracted away from the user (as they are derived from the Tenant), standard application centric inputs are required to be provided. This includes a Name, Instance size, Availability Zone choice, Disk size, Image ID etc. Most of these are optional, some are published as a list of user friendly choices by the admin in the plan (Image or AMI ID is one such example). Other than these AWS centric parameter there are two DuploCloud platform specific value to be provided:
 

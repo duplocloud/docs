@@ -5,7 +5,7 @@
 Any docker container can be deployed in the VM. Go to **DevOps** > **Containers** > **EKS/Native** > **+Add** button above the table. Give a name for your services (no spaces); number of replicas; Docker image; volumes (if any). The number of replicas must be less than or equal to the number of hosts in the fleet. You can use `AllocationTags` to deploy the container in a specific set of hosts.\
 
 
-![](<../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../.gitbook/assets/image (13) (2).png>)
 
 ## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
 
@@ -124,7 +124,7 @@ Once the Services are deployed and Service load balancer is created successfully
 \
 You can create Ingress and add rules. DuploCloud provides support to define multiple paths in ingress.
 
-![](<../../../.gitbook/assets/image (14) (2).png>)
+![](<../../../.gitbook/assets/image (14) (1).png>)
 
 ## ECS Fargate <a href="#9-toc-title" id="9-toc-title"></a>
 

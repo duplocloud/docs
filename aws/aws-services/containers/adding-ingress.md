@@ -10,7 +10,7 @@ Example:
 
 Let’s create three services to demonstrate how the Ingress routes our request. We’ll run nginx web applications with different paths.
 
-![Services Page](<../../../.gitbook/assets/image (5).png>)
+![Services Page](<../../../.gitbook/assets/image (13).png>)
 
 ### Step2: Create K8s Ingress
 
@@ -24,7 +24,7 @@ Click on **K8s Ingress** Tab.
 
 Create Ingress by defining rules to be configured for the services
 
-![K8s Ingress Tab](<../../../.gitbook/assets/image (25).png>)
+![K8s Ingress Tab](<../../../.gitbook/assets/image (35).png>)
 
 \
 \
@@ -34,13 +34,13 @@ Here we have defined an Ingress to route requests to `/path1`for the first servi
 
 &#x20;Check out the `Ingress rules` table that declares how requests are passed along.
 
-![Ingress Page](<../../../.gitbook/assets/image (51).png>)
+![Ingress Page](<../../../.gitbook/assets/image (36).png>)
 
 ### Step3: View Ingress
 
 Once Ingress is configured, you can access the Services configured based on the ingress rules using **DNS**
 
-![K8s Ingress Tab](<../../../.gitbook/assets/image (50).png>)
+![K8s Ingress Tab](<../../../.gitbook/assets/image (2).png>)
 
 Example:  Based on the Ingress rules configured for the three services, you can see the output results are different. Services configured are accessed based on the DNS specified in the DuploCloud Portal and the paths configured in Steps2.
 
