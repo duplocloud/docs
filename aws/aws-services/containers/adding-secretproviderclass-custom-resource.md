@@ -1,6 +1,6 @@
 # Adding SecretProviderClass custom resource
 
-DuploCloud Portal provides the ability to create Custom Resource `SecretProivder` Class.
+DuploCloud Portal provides the ability to create Custom Resource `SecretProvider` Class.
 
 This capability allows Kubernetes to mount secrets stored in external secrets stores into the pods as volumes. After the volumes are attached, the data is mounted into the container’s file system.
 
@@ -26,13 +26,15 @@ To ensure your application is using the Secrets Store CSI driver, you need to co
 
 The following is an example of how to configure a pod to mount a volume based on the SecretProviderClass created in prior steps to retrieve secrets from Secrets Manager.
 
-![Service Page](<../../../.gitbook/assets/image (58).png>)
-
 While creating **Service** (DevOps > Containers > EKS/Native > Service),&#x20;
 
 {% hint style="info" %}
 Select **Cloud Credentials** value as `From Kubernetes`
 {% endhint %}
+
+![Select Cloud Credentials](<../../../.gitbook/assets/image (34).png>)
+
+![Advance Options Service Page](<../../../.gitbook/assets/image (24).png>)
 
 * Add **Other Pod Config** field **** as the following example.
 
@@ -42,7 +44,7 @@ Volumes:
   - Name: secretvolume-name
     Csi:
       driver: secrets-store.csi.k8s.io
-      readOnlyProperty: true
+      readOnly: true
       VolumeAttributes:
         secretProviderClass: my-secret-provider-class
 
@@ -56,7 +58,7 @@ Volumes:
 VolumesMounts:
   - Name: secretvolume-name
     MountPath: /mnt/secrets
-    readOnlyProperty: true
+    readOnly: true
 
 ```
 {% endcode %}
@@ -84,7 +86,7 @@ In **Other Container Config** field, you can specify mount details with the obje
 VolumesMounts:
   - Name: secretvolume-name
     MountPath: /mnt/secrets
-    readOnlyProperty: true
+    readOnly: true
 EnvFrom:
   - SecretRef:
       Name: secretobject-name

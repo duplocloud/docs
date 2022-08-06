@@ -35,4 +35,4 @@ Configure below in **Volumes** to create your application deployment using this 
 ```
 {% endcode %}
 
-![Services Page](<../../../.gitbook/assets/image (34).png>)
+![Services Page](<../../../.gitbook/assets/image (34) (1).png>)
