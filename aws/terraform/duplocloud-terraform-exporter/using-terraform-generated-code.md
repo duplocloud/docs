@@ -3,14 +3,14 @@
 DuploCloud Terraform Exporter Utility provides scripts to create Infrastructure based on Tenant, using the [terraform generated code](generate-terraform-code.md). Executing the scripts creates Tenant, Services, and Applications. These resource can be viewed in DuploCloud Portal.
 
 {% hint style="info" %}
-Follow the sequence Project wise (`admin-tenant`, `aws-services` and `app).`
+Follow the sequence based on the Project (`admin-tenant`, `aws-services` and `app).`
 
-Perform plan and apply actions in one project prior to switching another project.
+Perform **plan** and **apply** actions in one project prior to switching another project.
 {% endhint %}
 
 ### Project: admin-tenant
 
-This project manages the creation of DuploCloud tenant and tenant-related resources.
+This project manages the creation of DuploCloud tenant and resources related to the tenant.
 
 Execute Script in this sequence:
 

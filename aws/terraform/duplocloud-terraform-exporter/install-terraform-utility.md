@@ -24,7 +24,7 @@ Please [contact the DuploCloud team](https://duplocloud.com/company/contact-us/)
 
 </details>
 
-### Clone Duplo Terraform Exporter Utility Repository
+### Clone DuploCloud Terraform Exporter Utility Repository
 
 [https://github.com/duplocloud/tenant-terraform-generator.git](https://github.com/duplocloud/tenant-terraform-generator.git)
 
@@ -42,7 +42,7 @@ Please [contact the DuploCloud team](https://duplocloud.com/company/contact-us/)
 
 <details>
 
-<summary><em>Need Help in setting Environment Variables</em></summary>
+<summary><em>Need Help in setting Environment Variables?</em></summary>
 
 `customer_name` -  Customer Name hosting Tenants
 
