@@ -109,13 +109,13 @@
   * [Web application firewall (WAF)](aws/aws-services/web-application-firewall-waf.md)
   * [Workspaces](aws/aws-services/workspaces.md)
 * [AWS FAQ](aws/aws-faq.md)
-* [Terraform](aws/terraform/README.md)
-  * [DuploCloud Terraform Provider](aws/terraform/duplocloud-terraform-provider.md)
-  * [DuploCloud Terraform Exporter](aws/terraform/duplocloud-terraform-exporter/README.md)
-    * [Install Terraform Utility](aws/terraform/duplocloud-terraform-exporter/install-terraform-utility.md)
-    * [Generate Terraform Code](aws/terraform/duplocloud-terraform-exporter/generate-terraform-code.md)
-    * [Using Terraform Generated Code](aws/terraform/duplocloud-terraform-exporter/using-terraform-generated-code.md)
-    * [Troubleshooting Guide](aws/terraform/duplocloud-terraform-exporter/troubleshooting-guide.md)
+* [Terraform Support](aws/terraform-support/README.md)
+  * [DuploCloud Terraform Provider](aws/terraform-support/duplocloud-terraform-provider.md)
+  * [DuploCloud Terraform Exporter](aws/terraform-support/duplocloud-terraform-exporter/README.md)
+    * [Install Terraform Exporter](aws/terraform-support/duplocloud-terraform-exporter/install-terraform-exporter.md)
+    * [Generate Terraform](aws/terraform-support/duplocloud-terraform-exporter/generate-terraform.md)
+    * [Using Generated Code](aws/terraform-support/duplocloud-terraform-exporter/using-generated-code.md)
+    * [Troubleshooting Guide](aws/terraform-support/duplocloud-terraform-exporter/troubleshooting-guide.md)
 
 ## CI/CD
 
