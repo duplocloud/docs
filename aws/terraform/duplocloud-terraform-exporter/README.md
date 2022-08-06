@@ -9,11 +9,8 @@ This is often very useful in order to:
 
 ### Follow listed topics on usage
 
-[Install Terraform Exporter Utility](install-terraform-utility.md)
-
-[Generate Terraform Code](generate-terraform-code.md)
-
-[Using Genarated Code to create New Tenant and Resources](using-terraform-generated-code.md)
-
-[Troubleshooting Guide](troubleshooting-guide.md)
+* [Install Terraform Exporter](install-terraform-utility.md)
+* [Generate Terraform Code](generate-terraform-code.md)
+* [Using Genarated Code to create New Tenant and Resources](using-terraform-generated-code.md)
+* [Troubleshooting Guide](troubleshooting-guide.md)
 
