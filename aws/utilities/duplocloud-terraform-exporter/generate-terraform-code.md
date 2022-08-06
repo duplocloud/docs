@@ -8,7 +8,7 @@ Once Terraform Exporter Utility is configured, [export Environment Variables](in
 >
 > make run
 
-![Utility  Execution in-progress](<../../../.gitbook/assets/image (24).png>)
+![Utility  Execution in-progress](<../../../.gitbook/assets/image (24) (2).png>)
 
 ### View the Output
 
