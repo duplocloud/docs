@@ -49,7 +49,7 @@ This project manages data services like Redis, RDS, Kafka, S3 buckets, Cloudfron
 
 This project manages containerized applications inside DuploCloud like EKS Services, ECS, docker native service.
 
-![app project apply execution ](<../../../.gitbook/assets/image (50).png>)
+![app project apply execution ](<../../../.gitbook/assets/image (50) (1).png>)
 
 ### Delete the resources created using Utility
 

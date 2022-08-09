@@ -42,7 +42,7 @@ Add the appropriate value of `REGION` (for example: `us-west-2`)
 _<mark style="color:blue;"></mark>_\
 _<mark style="color:blue;"></mark>_When you first make the AWS call, you will be prompted to authorize through your DuploCloud portal as below. Upon successful authorization, A just-in-time token is given which is valid for 1 hour. When ever the token expires, you will be prompted to re-authorize the request.
 
-![](<../../.gitbook/assets/image (18) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (18) (1).png>)
 
 ### Obtain credentials using an API Key
 

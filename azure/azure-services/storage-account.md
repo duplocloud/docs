@@ -8,28 +8,28 @@ Navigate to **DevOps** > **Storage Account** to create Storage Account.
 
 Provide unique name to create Storage Account.
 
-![Add Storage Account screen](<../../.gitbook/assets/image (2) (2).png>)
+![Add Storage Account screen](<../../.gitbook/assets/image (54).png>)
 
 ### View Storage Account
 
 You can view Storage Account Details once created. You can view Endpoint details, and retrieve and copy keys of the Storage Account.
 
-![Storage Account Details Screen](<../../.gitbook/assets/image (14) (2).png>)
+![Storage Account Details Screen](<../../.gitbook/assets/image (23).png>)
 
 ### Create and View File Shares
 
 Create File Shares by clicking on **Add**.&#x20;
 
-![View File Share](<../../.gitbook/assets/image (20).png>)
+![View File Share](<../../.gitbook/assets/image (33).png>)
 
 ### Generate Shared Access Signature (SAS)
 
 Click on **Actions** > **Shared Access Signature**. Provide access details in the screen below. Review and generate Shared Access Signature(SAS) tokens.
 
-![](<../../.gitbook/assets/image (5) (1).png>)
+![](<../../.gitbook/assets/image (28).png>)
 
 Once Signature Tokens are generated, Azure user can copy paste the token and URL's in a secure location. They'll only be displayed once and cannot be retrieved once the window is closed.
 
-![](<../../.gitbook/assets/image (16) (3).png>)
+![](<../../.gitbook/assets/image (69).png>)
 
 \

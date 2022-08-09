@@ -8,4 +8,4 @@ While there are 8-10 out-of-box dashboard for various services, one can add thei
 
 &#x20;&#x20;
 
-![](<../../../.gitbook/assets/image (17) (1) (2).png>)
+![](<../../../.gitbook/assets/image (17) (2).png>)
