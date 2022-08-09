@@ -4,10 +4,10 @@ Administrator can configure parameters for RDS Parameter Group for DB Instances 
 
 Specify the Database Engines for auto creation of parameter groups.\
 \
-![](<../../../.gitbook/assets/image (38).png>)\
+![](<../../../.gitbook/assets/image (38) (1).png>)\
 \
 Administrator can set the supported parameters to override the values while creating RDS
 
-![Sample configuration](<../../../.gitbook/assets/image (8).png>)
+![Sample configuration](<../../../.gitbook/assets/image (8) (2).png>)
 
 ![Parameters overriden in AWS based on the configuration](<../../../.gitbook/assets/image (54).png>)

@@ -10,7 +10,7 @@ Example:
 
 Let’s create three services to demonstrate how the Ingress routes our request. We’ll run nginx web applications with different paths.
 
-![Services Page](<../../../.gitbook/assets/image (3).png>)
+![Services Page](<../../../.gitbook/assets/image (3) (2).png>)
 
 ### Step2: Create K8s Ingress
 
@@ -24,7 +24,7 @@ Click on **K8s Ingress** Tab.
 
 Create Ingress by defining rules to be configured for the services
 
-![K8s Ingress Tab](<../../../.gitbook/assets/image (30).png>)
+![K8s Ingress Tab](<../../../.gitbook/assets/image (30) (1).png>)
 
 \
 \
@@ -34,7 +34,7 @@ Here we have defined an Ingress to route requests to `/path1`for the first servi
 
 &#x20;Check out the `Ingress rules` table that declares how requests are passed along.
 
-![Ingress Page](<../../../.gitbook/assets/image (9).png>)
+![Ingress Page](<../../../.gitbook/assets/image (9) (2).png>)
 
 ### Step3: View Ingress
 

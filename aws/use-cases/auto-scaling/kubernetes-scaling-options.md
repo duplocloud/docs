@@ -18,7 +18,7 @@ Navigate to **DevOps** > **Hosts** > **ASG.**  Enable **Use for Cluster Autoscal
 
 This setting allows managing the cluster auto scaling.
 
-![](<../../../.gitbook/assets/image (22).png>)
+![](<../../../.gitbook/assets/image (22) (2).png>)
 
 ## Kubernetes Horizontal Pod Autoscaler (HPA)
 
@@ -34,19 +34,15 @@ Create a new Service. Select **Replication Strategy** as _'Horizontal Pod Schedu
 
 Add below sample configuration in the **Horizontal Pod Autoscaler Config** textarea section.  Update minimum/maximum Replica Count, resource section based on the requirement.
 
-{% code title="Horizontal Pod Autoscaler" %}
-```
-maxReplicas: 5
-metrics:
+<pre data-title="Horizontal Pod Autoscaler"><code><strong>maxReplicas: 5
+</strong>metrics:
   - resource:
       name: cpu
       target:
         averageUtilization: 80
         type: Utilization
     type: Resource
-minReplicas: 2
-```
-{% endcode %}
+minReplicas: 2</code></pre>
 
 
 
@@ -54,7 +50,7 @@ minReplicas: 2
 
 For HPA Configures Services, **Replica** is set as _Auto_ in DuploCloud Portal
 
-![](<../../../.gitbook/assets/image (8) (2).png>)
+![](<../../../.gitbook/assets/image (8) (2) (1).png>)
 
 #### Setting Container Configuration
 
