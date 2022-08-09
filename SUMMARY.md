@@ -109,7 +109,7 @@
   * [Web application firewall (WAF)](aws/aws-services/web-application-firewall-waf.md)
   * [Workspaces](aws/aws-services/workspaces.md)
 * [AWS FAQ](aws/aws-faq.md)
-* [Terraform Support](aws/terraform-support/README.md)
+* [Terraform support](aws/terraform-support/README.md)
   * [DuploCloud Terraform Provider](aws/terraform-support/duplocloud-terraform-provider.md)
   * [DuploCloud Terraform Exporter](aws/terraform-support/duplocloud-terraform-exporter/README.md)
     * [Install Terraform Exporter](aws/terraform-support/duplocloud-terraform-exporter/install-terraform-exporter.md)
