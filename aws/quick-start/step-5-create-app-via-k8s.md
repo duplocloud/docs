@@ -11,7 +11,7 @@ A docker based application has by-and-large the following main specifications:
 * **Docker image (Mandatory)**: for example nginx:latest. If the docker image is not in ECR, then you need to add the credentials for the docker registry under Devops-->Containers->EKS/Native-->Docker Credentials button
 * **Replicas (Mandatory)**: In this demo, we will deploy a simple Hello World NodeJS web app. DuploCloud pulls Docker images from Docker Hub. You can choose a public image or provide credentials to access your private repository. For the sake of this demo, we will use a ready-made image available on Duplo’s repository on Docker Hub.
 
-![](<../../.gitbook/assets/image (12) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (12) (1) (1).png>)
 
 * **Env Variables**: These are optional and you can pass environment specific values in this like DB host, port etc. For testing purposes you can also pass credentials in this
 * Many other parameters which help ? icon in the UI against each input element in the form describing the purpose.\

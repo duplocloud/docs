@@ -20,7 +20,7 @@ Navigate **DevOps** > **Hosts** > **ASG** to create an auto-scaling group.
 View the Hosts created as part of ASG creation from ASG View Details Page.\
 
 
-![](<../../../.gitbook/assets/image (11) (2).png>)
+![](<../../../.gitbook/assets/image (11) (1).png>)
 
 ## **Creating an Amazon EC2 Auto Scaling policy**
 

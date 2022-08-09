@@ -8,7 +8,7 @@ DuploCloud Portal supports different configurations to achieve storage options i
 
 Navigate to **DevOps** > **Containers** > **AKS/Native** > **K8S Storage** Tab. Create a Storage Class from the screen below.
 
-![sample StorageClass](<../../../.gitbook/assets/image (25).png>)
+![sample StorageClass](<../../../.gitbook/assets/image (27).png>)
 
 ### Create PersistentVolumeClaims(PVC)
 
@@ -22,7 +22,7 @@ Follow [these steps to mount **** PVC Volume ](storage-options.md#mount-persiste
 
 AKS provides a few out-of-the-box StorageClass objects. To mount the built-in storage classes, configure `Volumes`  as below.
 
-![Service Deployment Page](<../../../.gitbook/assets/image (22).png>)
+![Service Deployment Page](../../../.gitbook/assets/image.png)
 
 <pre data-title="Volumes field"><code><strong>- AccessMode: ReadWriteMany
 </strong>  Name: data
@@ -42,7 +42,7 @@ Copy Storage Account Key and FileShare Name from DuploCloud Portal for creating 
 
 Navigate to **DevOps** > **Containers** > **AKS/Native** > **K8S Secrets**  Tab. Create Kubernetes Secret Object using Storage Account.
 
-![Kubernetes Storage Account Secret](<../../../.gitbook/assets/image (18).png>)
+![Kubernetes Storage Account Secret](<../../../.gitbook/assets/image (34).png>)
 
 {% code title="SecretDetails Example" %}
 ```
@@ -78,4 +78,4 @@ VolumesMounts:
 ```
 {% endcode %}
 
-![Service Deployment Screen with K8s Secret example](<../../../.gitbook/assets/image (24).png>)
+![Service Deployment Screen with K8s Secret example](<../../../.gitbook/assets/image (25).png>)

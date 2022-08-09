@@ -16,4 +16,4 @@ Expand Advanced Option, Enter Username, and Password. Usernames must not include
 
 The host should get launched and soon get registered with Kubernetes and should show in `VM running` status in the DuploCloud UI as shown below
 
-![Azure VM Screen](<../../.gitbook/assets/image (27).png>)
+![Azure VM Screen](<../../.gitbook/assets/image (27) (1).png>)

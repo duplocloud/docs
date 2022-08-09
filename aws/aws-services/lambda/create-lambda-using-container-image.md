@@ -9,7 +9,7 @@ Create and Build your Lambda code using DockerFile.  Refer to the AWS documentat
 ## Step 2: Create ECR Repository <a href="#0-toc-title" id="0-toc-title"></a>
 
 &#x20;Navigate to **DevOps** > **Storage** > **ECR Repository.** Give Name of the Repository\
-![](<../../../.gitbook/assets/image (57).png>)
+![](<../../../.gitbook/assets/image (70).png>)
 
 ## Step 3: Upload Container Images to ECR Repository <a href="#0-toc-title" id="0-toc-title"></a>
 
@@ -24,4 +24,4 @@ Select Package Type as _Image._
 
 Provide the Image URI&#x20;
 
-![Lambda screen](<../../../.gitbook/assets/image (33).png>)
+![Lambda screen](<../../../.gitbook/assets/image (4).png>)

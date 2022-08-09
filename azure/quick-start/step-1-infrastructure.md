@@ -8,7 +8,7 @@ From the DuploCloud Portal (Administrator --> Infrastructure) create an infrastr
 * Subnet CIDR: 10.23.0.0/20
 * Cloud: Azure
 
-![Infrastructure Creation](<../../.gitbook/assets/image (44).png>)
+![Infrastructure Creation](<../../.gitbook/assets/image (44) (1).png>)
 
 This takes about 20 minutes.  Infrastructure status should move to Completed. At the end of it, double check that a "plan" (Administrators --> Plans) has been created with the same name (nonprod).
 

@@ -12,5 +12,5 @@ Now we switch to dev01 tenant. Then go to DevOps --> Hosts --> EC2 tab and add. 
 
 The host should get launched and soon get registered with Kubernetes and should show in Connected state in the DuploCloud UI as shown below.
 
-![](<../../.gitbook/assets/image (28).png>)
+![](<../../.gitbook/assets/image (51).png>)
 
