@@ -37,13 +37,13 @@ Execute Script in this sequence:
 
 > scripts/apply.sh \<new tenant name> **admin-tenant**
 
-![scripts/apply,sh execution in progress](<../../../.gitbook/assets/image (31).png>)
+![scripts/apply,sh execution in progress](<../../../.gitbook/assets/image (31) (1).png>)
 
 ### Project: aws-services
 
 This project manages data services like Redis, RDS, Kafka, S3 buckets, Cloudfront, EMR and Elastic Search inside DuploCloud.
 
-![aws-services project apply execution ](<../../../.gitbook/assets/image (28).png>)
+![aws-services project apply execution ](<../../../.gitbook/assets/image (28) (1).png>)
 
 ### Project: app
 

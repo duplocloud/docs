@@ -18,7 +18,7 @@ Use the optional **Secret Objects** field to define the desired state of the syn
 
 The following is an example SecretProviderClass configuration where AWS secrets and Kubernetes Secret Objects are configured.
 
-![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (6).png>)
+![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (6) (3).png>)
 
 ### **Step3:** Mount Volumes based on the configured secrets
 
@@ -34,7 +34,7 @@ Select **Cloud Credentials** value as `From Kubernetes`
 
 ![Select Cloud Credentials](<../../../.gitbook/assets/image (34).png>)
 
-![Advance Options Service Page](<../../../.gitbook/assets/image (24).png>)
+![Advance Options Service Page](<../../../.gitbook/assets/image (24) (2).png>)
 
 * Add **Other Pod Config** field **** as the following example.
 
@@ -73,7 +73,7 @@ Referring to the example which we are following from prior steps, we have define
 
 &#x20;The following is an example SecretProviderClass custom resource that will sync a secret from AWS Secrets Manager to a Kubernetes secret:
 
-![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (4).png>)
+![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (4) (1).png>)
 
 #### Configuring Secret Objects in deployment
 

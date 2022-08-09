@@ -4,7 +4,7 @@ Setup of Central Logging comprises of two steps or components
 
 **Control Plane:** This comprises of Open search and Kibana which are deployed in Default tenant.  To enable central logging go under Administrator --> Diagnostics --> Central Logging.
 
-![](<../../../.gitbook/assets/image (5) (1).png>)
+![](<../../../.gitbook/assets/image (5) (1) (2).png>)
 
 {% hint style="info" %}
 It takes about 10-15 mins for the control plane to be setup and when ready you should see the screen under Administrator--.>Diagnostics --> Setting --> Logging Tab to look like the picture below
