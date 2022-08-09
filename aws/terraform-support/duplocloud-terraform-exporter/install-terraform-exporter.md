@@ -46,11 +46,11 @@ Please [contact the DuploCloud team](https://duplocloud.com/company/contact-us/)
 
 `customer_name` -  Customer Name hosting Tenants
 
-`tenant-id` - Refer  DuploCloud Portal > **User** > **Profile** > **Tenant Details**
+`tenant_id` - Refer  DuploCloud Portal > **User** > **Profile** > **Tenant Details**
 
 `cert_arn` - certificate ARN used for the Infrastructure
 
-`duplo_hosts`  - DuploCloud Portal URL
+`duplo_host`  - DuploCloud Portal URL
 
 `duplo_token` - Refer DuploCloud Portal > **User Profile** > **Temporary API Token**
 

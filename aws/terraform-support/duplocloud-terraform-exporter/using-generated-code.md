@@ -1,12 +1,25 @@
 # Using Generated Code
 
-DuploCloud Terraform Exporter Utility provides scripts to create Infrastructure based on Tenant, using the [terraform generated code](generate-terraform.md). Executing the scripts creates Tenant, Services, and Applications. These resource can be viewed in DuploCloud Portal.
+DuploCloud Terraform Exporter Utility provides scripts to create Infrastructure based on Tenant, using the [terraform generated code](generate-terraform.md). Executing the scripts creates Tenant, Services, and Applications. These resources can be viewed in DuploCloud Portal.
 
 {% hint style="info" %}
 Follow the sequence based on the Project (`admin-tenant`, `aws-services` and `app).`
 
 Perform **plan** and **apply** actions in one project prior to switching another project.
 {% endhint %}
+
+
+
+Export following environment variables in the shell while running the terraform projects.
+
+Environment Details can be found [here](install-terraform-exporter.md#need-help-in-setting-environment-variables).
+
+```bash
+export AWS_RUNNER=duplo-admin
+export duplo_host="<portal url>"
+export duplo_token="<token>" 
+export aws_account_id="<AWS account id>"
+```
 
 ### Project: admin-tenant
 

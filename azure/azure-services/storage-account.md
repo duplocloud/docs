@@ -20,7 +20,7 @@ You can view Storage Account Details once created. You can view Endpoint details
 
 Create File Shares by clicking on **Add**.&#x20;
 
-![View File Share](../../.gitbook/assets/image.png)
+![View File Share](<../../.gitbook/assets/image (1).png>)
 
 ### Generate Shared Access Signature (SAS)
 
