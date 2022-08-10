@@ -7,7 +7,7 @@ DuploCloud integrates natively with OpenVPN by provisioning VPN users added in t
 
 &#x20; &#x20;
 
-![](<../../.gitbook/assets/image (2) (2).png>)
+![](<../../.gitbook/assets/image (2) (2) (1).png>)
 
 {% hint style="info" %}
 You can find the OpenVPN admin password in the cloud formation stack in your AWS console.
