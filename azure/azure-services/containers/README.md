@@ -20,7 +20,7 @@ Once the deployment command runs successfully, go to the **Services** tab of the
 
 DuploCloud provides a way to connect to the Cluster namespace. You can follow the command, to access the cluster namespace. This option is available DevOps --> Containers --> AKS/Native --> Select KubeCtl Token
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (1).png>)
 
 With these commands, you have configured the `kubectl` to access the kubernetes cluster for your tenant namespace.
 
