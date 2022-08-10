@@ -70,6 +70,12 @@ Navigate to the **DevOps -> Containers -> EKS / Native** page and click the **Ku
 
 Click **Add** to create the secret.
 
+### Create a multi-line Kubernetes Secret
+
+See below example:
+
+![](<../../../.gitbook/assets/Screen Shot 2022-08-10 at 4.25.05 PM.png>)
+
 ### Mount the Kubernetes Secret as a volume
 
 Navigate to the **DevOps -> Containers -> EKS / Native** page and click the **Services** tab.   In the **Actions** column, click the ![](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 11.44.25 AM.png>) edit icon for the service that you want to edit.&#x20;
