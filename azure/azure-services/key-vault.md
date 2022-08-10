@@ -1,3 +1,5 @@
 # Key vault
 
-Documentation TBD. Please [contact DuploCloud team](https://duplocloud.com/company/contact-us/) for assistance.
+DuploCloud provides support to secure the storage of secrets, such as passwords and database connection strings.
+
+User can add a secret to the Keyvault from DevOps --> Keyvault --> Secrets.
