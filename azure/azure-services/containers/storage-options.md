@@ -22,7 +22,7 @@ Follow [these steps to mount **** PVC Volume ](storage-options.md#mount-persiste
 
 AKS provides a few out-of-the-box StorageClass objects. To mount the built-in storage classes, configure `Volumes`  as below.
 
-![Service Deployment Page](../../../.gitbook/assets/image.png)
+![Service Deployment Page](<../../../.gitbook/assets/image (2).png>)
 
 <pre data-title="Volumes field"><code><strong>- AccessMode: ReadWriteMany
 </strong>  Name: data
