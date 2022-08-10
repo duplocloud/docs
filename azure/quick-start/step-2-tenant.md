@@ -1,6 +1,6 @@
 # Step 2: Tenant
 
-Once the Infrastructure is created, then create a new Tenant (Administrator --> Tenants). Give the name as dev01 and choose **p** (the same name as the infrastructure we just created). You just need 2 inputs
+Once the Infrastructure is created, then create a new Tenant (Administrator --> Tenants). Give the name as dev01 (the same name as the infrastructure we just created). You just need 2 inputs
 
 * Name: dev01
 * Plan: nonprod
