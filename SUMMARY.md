@@ -145,7 +145,7 @@
 * [Quick start](azure/quick-start/README.md)
   * [Step 1: Infrastructure](azure/quick-start/step-1-infrastructure.md)
   * [Step 2: Tenant](azure/quick-start/step-2-tenant.md)
-  * [Step 3: Create VM Host](azure/quick-start/step-3-create-vm-host.md)
+  * [Step 3: Create Azure Agent Pool](azure/quick-start/step-3-create-azure-agent-pool.md)
   * [Step 4: Create app (via K8S)](azure/quick-start/step-4-create-app-via-k8s.md)
   * [Step 5: Create a Load Balancer](azure/quick-start/step-5-create-a-load-balancer.md)
   * [Step 6: Test the Application](azure/quick-start/step-6-test-the-application.md)

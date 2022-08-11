@@ -32,7 +32,7 @@ While creating **Service** (DevOps > Containers > EKS/Native > Service),&#x20;
 Select **Cloud Credentials** value as `From Kubernetes`
 {% endhint %}
 
-![Select Cloud Credentials](<../../../.gitbook/assets/image (41).png>)
+![Select Cloud Credentials](<../../../.gitbook/assets/image (41) (3).png>)
 
 ![Advance Options Service Page](<../../../.gitbook/assets/image (65).png>)
 
@@ -73,7 +73,7 @@ Referring to the example which we are following from prior steps, we have define
 
 &#x20;The following is an example SecretProviderClass custom resource that will sync a secret from AWS Secrets Manager to a Kubernetes secret:
 
-![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (37).png>)
+![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (37) (2).png>)
 
 #### Configuring Secret Objects in deployment
 
