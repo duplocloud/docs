@@ -1,6 +1,15 @@
+---
+description: >-
+  Get up and running with DuploCloud running inside a Microsoft Azure cloud
+  environments, and start harnessing the power of generating low-level
+  application infrastructures.
+---
+
 # Quick start
 
-This tutorial shows you how to set up an end-to-end cloud deployment. You should be able to create Azure infrastructure and tenants. By the end of this tutorial, you should be able to view the deployed sample web application.
+{% embed url="https://vimeo.com/738721577" %}
+
+This quick start tutorial shows you how to set up an end-to-end cloud deployment. You should be able to create Azure infrastructure and tenants. By the end of this tutorial, you should be able to view the deployed sample web application.
 
 1. [Create Azure Infrastructure](step-1-infrastructure.md)
 2. [Create a Tenant](step-2-tenant.md)
@@ -9,6 +18,3 @@ This tutorial shows you how to set up an end-to-end cloud deployment. You should
 5. [Create a Load Balancer to access the web application deployed](step-5-create-a-load-balancer.md)
 6. [Test the sample application](step-6-test-the-application.md)
 
-Behind the scenes, the topology that will get created will look like the following lower-level configuration in Azure.
-
-![](<../../.gitbook/assets/image (39).png>)
