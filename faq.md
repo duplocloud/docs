@@ -30,6 +30,12 @@ DuploCloud supports the following public cloud providers:
 
 Absolutely! In fact, more than half of our customers have no DevOps team. The DuploCloud team will act as your extended DevOps team that assists with white glove onboarding setup, as well as daily operations. We cover what is supported in the DuploCloud platform as well as assisting with other issues for your cloud provider. We are available 24x7 via Slack. However, we request that after the initial onboarding of the platform, you engage the DuploCloud team as the second line of defense for any issues by setting up an initial triage process of your own. We can assist with this process.
 
+
+
+## If my company has no DevOps experience at all, can your company provide services to build out our environment and support thereafter?
+
+Absolutely! The DuploCloud team will act as your extended DevOps team that assists with white glove environment setup, as well as daily operations with 24x7 slack and/or email support. Again, we request that after the initial onboarding of the platform, you engage the DuploCloud team as the second line of defense for any issues by setting up an initial triage process of your own.
+
 ## What level of support does the DuploCloud team provide?
 
 The DuploCloud team will act as your extended DevOps team starting with white glove onboarding, setup, and assisting with daily operations. We cover what is supported in the DuploCloud platform as well as assisting with other issues for your cloud provider. We are available 24x7 via Slack. However, we request that after the initial onboarding of the platform, you engage the DuploCloud team as the second line of defense for any issues by setting up an initial triage process of your own. We can assist with this process. Most likely you will find a resolution in the platform and if not, simply ping the DuploCloud team.
