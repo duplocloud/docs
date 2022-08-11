@@ -2,7 +2,7 @@
 
 This tutorial shows you how to setup an end-to-end cloud deployment for the sample topology shown below.
 
-![Sample High Level Topology](https://documents.lucid.app/documents/72886671-e5d7-48a9-90ab-c17df2554f63/pages/G3yFb7wIxEsp?a=933\&x=196\&y=555\&w=968\&h=341\&store=1\&accept=image%2F\*\&auth=LCA%205bef5f890fc0b77dc95541e60b114d2aff5e8ea2-ts%3D1647140256)
+![Sample High Level Topology](../../.gitbook/assets/image.png)
 
 * We will use nginx:latest as a sample for application container.
 * We will create two environments or Tenants. One called Dev01 and other called QA01

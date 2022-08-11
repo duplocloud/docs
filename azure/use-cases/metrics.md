@@ -4,4 +4,4 @@ Metrics of the resources created/managed in DuploCloud can be tracked under **Di
 
 Separate Tabs are available to view the metrics resource type wise.
 
-![Metrics dashboard](<../../.gitbook/assets/image (37).png>)
+![Metrics dashboard](<../../.gitbook/assets/image (37) (3).png>)
