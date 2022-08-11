@@ -18,4 +18,7 @@ If it has been more than 20 minutes, click on Faults (Administrator--> Faults) t
 
 ### Enable AKS Kubernetes Cluster in Infrastructure
 
-View the Infrastructure created in the above step. Goto **Kubernetes** Tab and click on **Configure AKS Cluster** and provide Name for the Cluster (example- nonprod).
+View the Infrastructure created in the above step. Goto **Kubernetes** Tab and **Enable  the Kubernetes Cluster.** Details of the Kubernetes Cluster is listed under Kubernetes Tab.
+
+![Kubernetes details](<../../.gitbook/assets/image (38).png>)
+
