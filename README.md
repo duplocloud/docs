@@ -1,3 +1,12 @@
+---
+description: >-
+  DuploCloud DevOps-as-a-Service platform is a cloud infrastructure automation
+  software, enabling developer self-service guardrails with continuous security
+  and compliance.
+cover: .gitbook/assets/g2-branded-banner-image-v3.png
+coverY: 0
+---
+
 # Introduction
 
 DuploCloud is a DevOps-as-a-Service platform for engineers and operators in organizations hosting infrastructure on the public cloud. Security and compliance are fundamentals enabled by this platform. Users provide high level application specifications that include cloud services, application containers, packages and configurations, inter-connectivity, requirements for multiple environments, and compliance standards that are in scope. With this provided information, the platform auto-generates the required lower level configurations, provisions them in a secure and compliant way, and maintains their ongoing operations. The platform also enables logging, monitoring, alerting, and reporting of the provisioned system. The following figure shows the various functions provided by the platform.
