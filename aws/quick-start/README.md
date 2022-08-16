@@ -2,7 +2,7 @@
 
 This tutorial shows you how to setup an end-to-end cloud deployment for the sample topology shown below.
 
-![Sample High Level Topology](../../.gitbook/assets/image.png)
+![Sample High Level Topology](<../../.gitbook/assets/image (2).png>)
 
 * We will use nginx:latest as a sample for application container.
 * We will create two environments or Tenants. One called Dev01 and other called QA01

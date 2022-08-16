@@ -1,15 +1,13 @@
 # SSH EC2 instance
 
-Once you are connected to VPN. You can use the private key to SSH into EC2 instance.
+Once EC2 Instance is created. You can connect EC2 Instance in two ways from the DuploCloud portal.
 
-1. Download Private key.
-2. Select Tenant and navigate to **Deployments > Hosts**.
-3. Click on the unlock icon as shown in Figure 1.
-4. Click on the key icon to download the private key as shown in Figure 2.
-5. Change the permission to key file as shown and ssh into the ec2 instance.
+Navigate to DevOps --> Hosts and, click on the host to which you need to connect through ssh.
 
-![Figure 1](https://duplocloud.com/wp-content/uploads/2021/11/host-lock-menu.png)
+From Action menu > click on ssh, new browser tab would be launched, you can ssh your host using session id. Connection to the host will be launched in a separate browser tab.
 
-![Figure 2](https://duplocloud.com/wp-content/uploads/2021/11/key-download.png)
+Another way is to download the  key from Actions > Connection Details
 
-Now you should be connected to the server.
+![](../../../.gitbook/assets/image.png)
+
+Follow the instruction listed in the dialog box and you should be connected to the server.
