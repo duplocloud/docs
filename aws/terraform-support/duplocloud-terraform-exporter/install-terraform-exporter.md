@@ -32,7 +32,7 @@ Please [contact the DuploCloud team](https://duplocloud.com/company/contact-us/)
 
 > ```
 > export customer_name="duplo-customer" 
-> export tenant_id="7d1b0f7e-fcc0-4118-ad5a-b448bf0eac41"
+> export tenant_name="specifytenantname"
 > export cert_arn="arn:aws:acm:us-west-2:128329325849:certificate/1234567890-aaaa-bbbb-ccc-66e7dcd609e1"
 > export duplo_host="https://customer.duplocloud.net"
 > export duplo_token="xxx-xxxxx-xxxxxxxx"
@@ -46,7 +46,7 @@ Please [contact the DuploCloud team](https://duplocloud.com/company/contact-us/)
 
 `customer_name` -  Customer Name hosting Tenants
 
-`tenant_id` - Refer  DuploCloud Portal > **User** > **Profile** > **Tenant Details**
+`tenant_name` - Refer  DuploCloud Portal > **User** > **Profile** > **Tenant Details**
 
 `cert_arn` - certificate ARN used for the Infrastructure
 
