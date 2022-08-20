@@ -47,3 +47,12 @@ This means DuploCloud is wanting to remove these containers. The most common rea
 ## How to create host with public IP? <a href="#9-toc-title" id="9-toc-title"></a>
 
 While creating host, click on _show advanced_ and select the public subnet in the list of availability zone.
+
+## How do I look at detailed load balancer settings for my K8 Service?
+
+DuploCloud provisions a load balancer for your K8 service. If you want to look at detailed settings on the load balancer like Idle timeout, Access logs and others, you can find and view them directly in AWS, by following the below steps:
+
+You can find the load balancer name for your service by navigating to _DevOps->Containers->EKS/Native_, goto your service and look at the Load Balancer tab. If your using K8 Ingress then you will have to goto the K8 Ingress tab and find the Load Balancer configuration there.
+
+Once you have the load balancer name, you can goto AWS console via the DuploCloud UI ([here](use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your load balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes)
+
