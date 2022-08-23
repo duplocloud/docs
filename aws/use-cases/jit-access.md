@@ -6,7 +6,7 @@ DuploCloud allows Just-In-Time (JIT) to AWS for a user. This access is restricte
 
 AWS JIT access is possible directly from the DuploCloud UI. Simply goto your user profile and click to generate the JIT access keys.  This page also links directly to the AWS Console
 
-![](<../../.gitbook/assets/Screen Shot 2022-06-29 at 11.58.46 PM.png>)
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-08-22 at 11.05.10 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Access through command line
 
