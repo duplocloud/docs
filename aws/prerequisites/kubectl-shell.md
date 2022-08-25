@@ -22,7 +22,7 @@ In the DuploCloud Portal, switch the tenant to be default in the top panel Tenan
 Launch the VM and wait for it to be connected. Then we need to create a new service. Go to Devops --> Containers --> EKS/Native and click on add. Give the following inputs
 
 * Name: duplo-shell
-* Image: duplocloud/shell:terraform\_kubectl\_v15
+* Image: duplocloud/shell:terraform-kubectl-v19.1
 * Replicas : 1
 * Platform : Linux Docker / Native
 * Environmental variables
