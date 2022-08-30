@@ -93,6 +93,7 @@
     * [Adding Ingress](aws/aws-services/containers/adding-ingress.md)
     * [Adding SecretProviderClass custom resource](aws/aws-services/containers/adding-secretproviderclass-custom-resource.md)
     * [Adding K8s Storage Class](aws/aws-services/containers/adding-k8s-storage-class.md)
+    * [Setting up Probes](aws/aws-services/containers/setting-up-probes.md)
   * [Data pipeline](aws/aws-services/data-pipeline.md)
   * [DynamoDB](aws/aws-services/dynamodb.md)
   * [Elasticsearch](aws/aws-services/elasticsearch.md)
