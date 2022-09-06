@@ -8,7 +8,7 @@ Navigate to  **DevOps** > **Storage** > **Elastic File System**
 
 Users can view EFS details like _File System ID_, _Mount Target Details_ and _Metered Size_ under the Details section of the EFS resource
 
-![EFS Details](<../../.gitbook/assets/image (9) (4).png>)
+![EFS Details](<../../.gitbook/assets/image (9).png>)
 
 User can also view the Mount Targets and Access Points details.
 

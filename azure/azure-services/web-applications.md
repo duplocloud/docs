@@ -8,7 +8,7 @@ App Service Plan can be created from DevOps --> Serverless --> App Service Plan.
 
 Refer below for the sample App Service Plan.
 
-![](<../../.gitbook/assets/image (5).png>)
+![](<../../.gitbook/assets/image (5) (5).png>)
 
 ### Create Web App
 

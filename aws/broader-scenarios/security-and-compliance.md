@@ -1,4 +1,4 @@
-# Security and compliance
+# Security and Compliance
 
 Compliance and security is DuploCloud's bread-and-butter. The core approach is out-of-box compliance where the users don't have to explicitly learn and apply compliance controls. Following are some of the white papers on how DuploCloud implements security and compliance
 

@@ -24,7 +24,7 @@ Click on **K8s Ingress** Tab.
 
 Create Ingress by defining rules to be configured for the services
 
-![K8s Ingress Tab](<../../../.gitbook/assets/image (57).png>)
+![K8s Ingress Tab](<../../../.gitbook/assets/image (57) (1).png>)
 
 \
 \
