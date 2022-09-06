@@ -42,7 +42,7 @@ Copy Storage Account Key and FileShare Name from DuploCloud Portal for creating 
 
 Navigate to **DevOps** > **Containers** > **AKS/Native** > **K8S Secrets**  Tab. Create Kubernetes Secret Object using Storage Account.
 
-![Kubernetes Storage Account Secret](<../../../.gitbook/assets/image (34).png>)
+![Kubernetes Storage Account Secret](<../../../.gitbook/assets/image (34) (1).png>)
 
 {% code title="SecretDetails Example" %}
 ```
@@ -78,4 +78,4 @@ VolumesMounts:
 ```
 {% endcode %}
 
-![Service Deployment Screen with K8s Secret example](<../../../.gitbook/assets/image (25).png>)
+![Service Deployment Screen with K8s Secret example](<../../../.gitbook/assets/image (25) (1).png>)

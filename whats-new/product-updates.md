@@ -2,6 +2,13 @@
 
 DuploCloud product frequently receives updates for features and enhancements. Below are some of the highlights of new capabilities added to the product in the latest updates.
 
+### September 2022
+
+* [Support for Amazon Managed Apache Airflow](../aws/aws-services/managed-airflow.md): Ability to configure AWS Managed Airflow
+* [Configure custom prefix for S3](../aws/aws-services/s3-bucket.md#add-custom-prefix-for-s3-buckets):  Ability to configure a prefix for S3 bucket names.
+* [Azure Support to add Storage account](../azure/azure-services/storage-account.md): Create Storage Accounts, File Shares and generate Shared Access Signature (SAS).&#x20;
+* Multiple [Azure User Enhancements](../azure/azure-services/) were made.
+
 ### August 2022
 
 * [Support for Elastic File System (EFS)](../aws/aws-services/elastic-file-system-efs.md):  Support for adding EFS has been added to DuploCloud. You can create and mount a shared filesystem for an Infrastructure in the DuploCloud Portal.
