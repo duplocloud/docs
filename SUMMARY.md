@@ -17,6 +17,7 @@
   * [App and Cloud Service](getting-started/application-focussed-interface/app-service-and-cloud-service.md)
   * [Diagnostics](getting-started/application-focussed-interface/diagnostics.md)
 * [No-Code / Low-Code](getting-started/no-code-low-code.md)
+* [Security and compliance](getting-started/security-and-compliance.md)
 
 ## AWS user guide <a href="#aws" id="aws"></a>
 
@@ -70,11 +71,7 @@
     * [Cost allocation tags](aws/use-cases/cost-management/cost-allocation-tags.md)
   * [JIT Access](aws/use-cases/jit-access.md)
   * [Resource Quotas](aws/use-cases/resource-quotas.md)
-* [Broader Scenarios](aws/broader-scenarios/README.md)
-  * [Security and compliance](aws/broader-scenarios/security-and-compliance.md)
-  * [Cloud migration (SMS)](aws/broader-scenarios/cloud-migration-sms.md)
-  * [Remote working](aws/broader-scenarios/remote-working.md)
-  * [Big-data and ETL](aws/broader-scenarios/big-data-and-etl.md)
+  * [Big-data and ETL](aws/use-cases/big-data-and-etl.md)
 * [AWS services](aws/aws-services/README.md)
   * [Virtual machines](aws/aws-services/virtual-machines/README.md)
     * [SSH EC2 instance](aws/aws-services/virtual-machines/ssh-ec2-instance.md)
@@ -105,10 +102,10 @@
   * [Service discovery (CloudMap)](aws/aws-services/service-discovery-cloudmap.md)
   * [SNS topic](aws/aws-services/sns-topic.md)
   * [SQS queue](aws/aws-services/sqs-queue.md)
-  * [Tenants](aws/aws-services/tenants.md)
   * [Using AWS console](aws/aws-services/using-aws-console.md)
   * [Web application firewall (WAF)](aws/aws-services/web-application-firewall-waf.md)
   * [Workspaces](aws/aws-services/workspaces.md)
+  * [Managed Airflow](aws/aws-services/managed-airflow.md)
 * [AWS FAQ](aws/aws-faq.md)
 * [Terraform support](aws/terraform-support/README.md)
   * [DuploCloud Terraform Provider](aws/terraform-support/duplocloud-terraform-provider.md)

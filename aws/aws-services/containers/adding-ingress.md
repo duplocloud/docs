@@ -34,7 +34,7 @@ Here we have defined an Ingress to route requests to `/path1`for the first servi
 
 &#x20;Check out the `Ingress rules` table that declares how requests are passed along.
 
-![Ingress Page](<../../../.gitbook/assets/image (13).png>)
+![Ingress Page](<../../../.gitbook/assets/image (13) (4).png>)
 
 ### Step3: View Ingress
 
