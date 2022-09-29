@@ -137,7 +137,7 @@
   * [Environments](ci-cd/katkit/environments.md)
   * [Link repository](ci-cd/katkit/link-repository.md)
   * [Phases](ci-cd/katkit/phases.md)
-  * [Kakit config](ci-cd/katkit/kakit-config.md)
+  * [Katkit config](ci-cd/katkit/katkit-config.md)
   * [Advanced functions](ci-cd/katkit/advanced-functions.md)
 
 ## Azure user guide <a href="#azure" id="azure"></a>
