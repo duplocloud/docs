@@ -2,6 +2,10 @@
 
 DuploCloud product frequently receives updates for features and enhancements. Below are some of the highlights of new capabilities added to the product in the latest updates.
 
+### October 2022
+
+[Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers/#add-multiple-docker-registry-credentials): User can configure multiple docker registry credentials from the plan.
+
 ### September 2022
 
 * [Support for Amazon Managed Apache Airflow](../aws/aws-services/managed-airflow.md): Ability to configure AWS Managed Airflow

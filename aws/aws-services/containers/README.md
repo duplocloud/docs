@@ -7,6 +7,23 @@ Any docker container can be deployed in the VM. Go to **DevOps** > **Containers*
 
 ![](<../../../.gitbook/assets/image (13) (3).png>)
 
+#### Add multiple Docker Registry Credentials
+
+DuploCloud provides support for pulling images from multiple docker registries.\
+You can add multiple docker registry credentials from Administrator > Plan > Under Config Tab
+
+<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+
+Once configured in the Plan, you can refer to the registry config in Service Environment Variable section while creating Service from DevOps > EKS/Native.
+
+reference as below
+
+{% code title="Environment Variables" %}
+```json
+{"DOCKER_REGISTRY_CREDENTIALS_NAME":"registry1"}
+```
+{% endcode %}
+
 ## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
 
 DuploCloud supports EKS and AKS out of box. Kubernetes clusters are created during Infrastructure setup under **Administrator > Infrastructure**. The cluster is created in the same VPC as the Infrastructure. Typically, it takes 10 minutes for an Infrastructure with AKS/EKS cluster to be ready. Next, we will walk you through deploying an application within a Tenant in Kubernetes. The application will comprise of set of VMs, Deploymentset (pods) with an application load balancer. Pods can be deployed either through the DuploCloud Portal or through Kubectl (HelmCharts)
