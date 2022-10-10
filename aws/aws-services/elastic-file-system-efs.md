@@ -4,7 +4,7 @@ Create an Amazon Elastic File System (EFS)  from DuploCloud Portal:
 
 Navigate to  **DevOps** > **Storage** > **Elastic File System**
 
-![](<../../.gitbook/assets/image (24).png>)
+![](<../../.gitbook/assets/image (24) (3).png>)
 
 Users can view EFS details like _File System ID_, _Mount Target Details_ and _Metered Size_ under the Details section of the EFS resource
 
@@ -12,4 +12,4 @@ Users can view EFS details like _File System ID_, _Mount Target Details_ and _Me
 
 User can also view the Mount Targets and Access Points details.
 
-![Mount Target Details Screen](<../../.gitbook/assets/image (8) (4) (1).png>)
+![Mount Target Details Screen](<../../.gitbook/assets/image (8).png>)

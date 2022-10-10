@@ -19,4 +19,4 @@ Once the setup has been done, then while adding a user you can choose to provisi
 
 Users connected to VPN by default can SSH or RDP into EC2 instances and connect to internal load balancers and endpoints of the applications. However, in order to connect to other services like databases and elastic cache, you need to open that port to VPN under Administrator --> Tenant --> select the tenant and add a rule and choose the source as IP address and IP CIDR as VPN as shown below
 
-![](<../../.gitbook/assets/image (3) (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (3).png>)

@@ -177,7 +177,12 @@
 ## GCP user guide <a href="#gcp" id="gcp"></a>
 
 * [Overview](gcp/overview.md)
-* [Quick start](gcp/quick-start.md)
+* [Quick start](gcp/quick-start/README.md)
+  * [Step 1: Infrastructure](gcp/quick-start/step-1-infrastructure.md)
+  * [Step 2: Tenant](gcp/quick-start/step-2-tenant.md)
+  * [Step 3: Create app (via K8S)](gcp/quick-start/step-3-create-app-via-k8s.md)
+  * [Step 4: Create a Load Balancer](gcp/quick-start/step-4-create-a-load-balancer.md)
+  * [Step 5: Test the Application](gcp/quick-start/step-5-test-the-application.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
 ## Administrators
