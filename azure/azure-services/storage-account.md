@@ -14,7 +14,7 @@ Provide unique name to create Storage Account.
 
 You can view Storage Account Details once created. You can view Endpoint details, and retrieve and copy keys of the Storage Account.
 
-![Storage Account Details Screen](<../../.gitbook/assets/image (23).png>)
+![Storage Account Details Screen](<../../.gitbook/assets/image (23) (2).png>)
 
 ### Create and View File Shares
 

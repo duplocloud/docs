@@ -20,5 +20,5 @@ If it has been more than 20 minutes, click on Faults (Administrator--> Faults) t
 
 View the Infrastructure created in the above step. Goto **Kubernetes** Tab and **Enable  the Kubernetes Cluster.** Details of the Kubernetes Cluster is listed under Kubernetes Tab.
 
-![Kubernetes details](<../../.gitbook/assets/image (38) (3).png>)
+![Kubernetes details](<../../.gitbook/assets/image (38).png>)
 

@@ -2,13 +2,13 @@
 
 To enable central logging go under **Administrator** --> **Diagnostics** --> **Settings** --> **Logging**.
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 Setup of Central Logging comprises two steps or components:
 
 **Control Plane:** This comprises of Open Search and Kibana which are deployed in the **Default** tenant.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 It takes about 10-15 mins for the control plane to setup and when ready you should see the screen under Administrator--.>Diagnostics --> Setting --> Logging Tab to look like the picture below
@@ -45,4 +45,4 @@ Log Collector for Tenant in sharing the same Infrastructure will use the logging
 
 This feature is mainly configured,  when the Tenants are spread across in multiple regions or the Administrator wants to create a separate logging setup.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
