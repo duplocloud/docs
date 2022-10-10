@@ -14,7 +14,7 @@ Once Terraform Exporter Utility is configured, [export Environment Variables](in
 
 New Folders would be available under `tenant-terraform-generator\target\<customer-name>\<tenant>`
 
-![Target Folder View](<../../../.gitbook/assets/image (1).png>)
+![Target Folder View](<../../../.gitbook/assets/image (1) (4).png>)
 
 Under `terraform` folder, **admin-tenant**, **aws-services** and **app** projects would be available. These projects would be referenced later to create new tenants and resources.
 

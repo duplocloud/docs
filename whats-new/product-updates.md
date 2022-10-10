@@ -4,7 +4,8 @@ DuploCloud product frequently receives updates for features and enhancements. Be
 
 ### October 2022
 
-[Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers/#add-multiple-docker-registry-credentials): User can configure multiple docker registry credentials from the plan.
+* [Ability to add Logging Infra at Tenant Level](../aws/use-cases/central-logging/central-logging-setup.md#adding-logging-setup-at-tenant-level): Support to configure logging setup other than default tenant.
+* [Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers/#add-multiple-docker-registry-credentials): User can configure multiple docker registry credentials from the plan.
 
 ### September 2022
 

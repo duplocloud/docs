@@ -7,6 +7,8 @@ Any docker container can be deployed in the VM. Go to **DevOps** > **Containers*
 
 ![](<../../../.gitbook/assets/image (13) (3).png>)
 
+## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
+
 #### Add multiple Docker Registry Credentials
 
 DuploCloud provides support for pulling images from multiple docker registries.\

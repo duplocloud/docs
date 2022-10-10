@@ -16,7 +16,7 @@ Select **Key** as  'Prefix all S3 Bucket Name' from the dropdown, and specify th
 Avoid specifying system reserved prefixes like `duploservices-`
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>coustom prefix for S3</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (4).png" alt=""><figcaption><p>coustom prefix for S3</p></figcaption></figure>
 
 #### Enable Tag based Property in DuploCloud
 
