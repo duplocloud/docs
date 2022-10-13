@@ -12,7 +12,7 @@ From the DuploCloud Portal (Administrator --> Infrastructure) create an infrastr
 
 This takes about 20 minutes.  Infrastructure status should move to Completed. At the end of it, double check that a "plan" (Administrators --> Plans) has been created with the same name (nonprod).
 
-![Infrastructure creation complete](<../../.gitbook/assets/image (30).png>)
+![Infrastructure creation complete](<../../.gitbook/assets/image (30) (1).png>)
 
 If it has been more than 20 minutes, click on Faults (Administrator--> Faults) to see if there is an obvious error and if help is needed ping in the DuploCloud slack or teams channel.
 

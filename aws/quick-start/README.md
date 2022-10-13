@@ -4,7 +4,7 @@ This tutorial shows you how to setup an end-to-end cloud deployment for the samp
 
 ![Sample High Level Topology](<../../.gitbook/assets/image (3) (1).png>)
 
-* We will use nginx:latest as a sample for application container.
+* We will use simple Hello World NodeJS web as a sample for application container.
 * We will create two environments or Tenants. One called Dev01 and other called QA01
 * We will create a single Infrastructure (VPC) called non-prod in us-west-2 under which we will have both the tenants.
 * We will deploy the docker containers by leveraging Kubernetes Cluster (AWS EKS)

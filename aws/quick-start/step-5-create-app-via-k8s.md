@@ -8,7 +8,7 @@ DuploCloud exposes a simple application specific interface to Deploy, update and
 A docker based application has by-and-large the following main specifications:
 
 * **Name (Mandatory)** for the service
-* **Docker image (Mandatory)**: for example nginx:latest. If the docker image is not in ECR, then you need to add the credentials for the docker registry under Devops-->Containers->EKS/Native-->Docker Credentials button
+* **Docker image (Mandatory)**: for example duplocloud/nodejs-hello:latest. If the docker image is not in ECR, then you need to add the credentials for the docker registry under Devops-->Containers->EKS/Native-->Docker Credentials button
 * **Replicas (Mandatory)**: In this demo, we will deploy a simple Hello World NodeJS web app. DuploCloud pulls Docker images from Docker Hub. You can choose a public image or provide credentials to access your private repository. For the sake of this demo, we will use a ready-made image available on Duplo’s repository on Docker Hub.
 
 ![](<../../.gitbook/assets/image (12) (1) (1).png>)
@@ -17,10 +17,12 @@ A docker based application has by-and-large the following main specifications:
 * Many other parameters which help ? icon in the UI against each input element in the form describing the purpose.\
 
 
-![](<../../.gitbook/assets/image (14) (1) (1).png>)
+To create a service go to Devops -> Containers -> EKS/Native and click on **+ADD** button and fill in the above field.
 
-To create a service go to Devops->Containers->EKS/Native and click on **+ADD** button and fill in the above field.
+<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/N1-service.png)
+Press create and wait a moment for the service to initialize and you should see the containers running\
+\
+Once the Service is in Running status, you can also check the container logs from Containers Tabs --> Actions --> Logs.
 
-Press create and wait a moment for the service to initialize and you should see the containers running
+<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
