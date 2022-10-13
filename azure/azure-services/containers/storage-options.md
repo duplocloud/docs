@@ -8,7 +8,7 @@ DuploCloud Portal supports different configurations to achieve storage options i
 
 Navigate to **DevOps** > **Containers** > **AKS/Native** > **K8S Storage** Tab. Create a Storage Class from the screen below.
 
-![sample StorageClass](<../../../.gitbook/assets/image (27).png>)
+![sample StorageClass](<../../../.gitbook/assets/image (27) (2).png>)
 
 ### Create PersistentVolumeClaims(PVC)
 
