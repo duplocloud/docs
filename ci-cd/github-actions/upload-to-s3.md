@@ -24,7 +24,7 @@ To use any of the below examples you will need to change:
 
 ### Upload a single directory
 
-The following example uploads a single directory to S3.&#x20;
+The following example uploads a single directory to S3.
 
 It does _not_ show more advanced things like the following items:
 
@@ -60,13 +60,17 @@ jobs:
         uses: duplocloud/ghactions-aws-jit@master
         with:
            tenant: "${{ env.TENANT_NAME }}"
-      - name: Sync files to S3
+       # How to sync an entire folder
+      - name: Sync build folder to S3
         run: aws s3 sync build/ "s3://$BUCKET_NAME/"
+      # How to copy an individual file
+      - name: Copy individual file to S3
+        run: aws s3 cp my-archive.zip "s3://$BUCKET_NAME/"
 ```
 
 ### Uploading directories with cache settings
 
-This example uploads multiple directories to S3.&#x20;
+This example uploads multiple directories to S3.
 
 It assumes that the following is true:
 
