@@ -69,6 +69,7 @@
   * [Cost management](aws/use-cases/cost-management/README.md)
     * [Enable billing data](aws/use-cases/cost-management/enable-billing-data.md)
     * [Cost allocation tags](aws/use-cases/cost-management/cost-allocation-tags.md)
+    * [DuploCloud License Usage](aws/use-cases/cost-management/duplocloud-license-usage.md)
   * [JIT Access](aws/use-cases/jit-access.md)
   * [Resource Quotas](aws/use-cases/resource-quotas.md)
   * [Using AWS Console](aws/use-cases/using-aws-console.md)
