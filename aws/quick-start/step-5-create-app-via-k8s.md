@@ -19,7 +19,7 @@ A docker based application has by-and-large the following main specifications:
 
 To create a service go to Devops -> Containers -> EKS/Native and click on **+ADD** button and fill in the above field.
 
-<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (75) (1).png" alt=""><figcaption></figcaption></figure>
 
 Press create and wait a moment for the service to initialize and you should see the containers running\
 \
