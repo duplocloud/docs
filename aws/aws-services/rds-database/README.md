@@ -3,10 +3,15 @@
 ## Create a database <a href="#0-toc-title" id="0-toc-title"></a>
 
 Create a MySQL, Microsoft SQL, PostgreSQL or Amazon Aurora database from the menu **DevOps** > **Database** > **RDS** > **+Add** button above the table.\
-\
 
 
 ![](<../../../.gitbook/assets/image (38) (2).png>)
+
+#### Create Aurora Serverless V2 Cluster database
+
+User can create Aurora Serverless V2 Database by selecting RDS Database Engine as Aurora-MySQL/Postgres. Select the RDS Engine Version that's compatible with Aurora Serverless v2.
+
+Select **RDS Instance Size** as \`db.serverless\`
 
 ## Connect to the database <a href="#1-toc-title" id="1-toc-title"></a>
 

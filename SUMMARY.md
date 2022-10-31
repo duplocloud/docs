@@ -74,6 +74,7 @@
   * [Resource Quotas](aws/use-cases/resource-quotas.md)
   * [Using AWS Console](aws/use-cases/using-aws-console.md)
   * [Big-data and ETL](aws/broader-scenarios/big-data-and-etl.md)
+  * [Load Balancers](aws/use-cases/load-balancers.md)
 * [AWS services](aws/aws-services/README.md)
   * [Infrastructure (VPC)](aws/aws-services/infrastructure.md)
   * [Virtual machines](aws/aws-services/virtual-machines/README.md)

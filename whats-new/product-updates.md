@@ -2,6 +2,12 @@
 
 DuploCloud product frequently receives updates for features and enhancements. Below are some of the highlights of new capabilities added to the product in the latest updates.
 
+### November 2022
+
+* [Ability to add Path-Based Routing rules](../aws/use-cases/load-balancers.md#2d32): Configure path-based routing rules for application load balancers.
+* [Support for Aurora Serverless V2](../aws/aws-services/rds-database/#create-aurora-serverless-v2-cluster-database): User can create and manage Aurora Serverless V2 RDS.
+* [Billing License Usage](../aws/use-cases/cost-management/duplocloud-license-usage.md): Overview of DuploCloud License Usage according to current service usage.
+
 ### October 2022
 
 * [Ability to add Logging Infra at Tenant Level](../aws/use-cases/central-logging/central-logging-setup.md#adding-logging-setup-at-tenant-level): Support to configure logging setup other than default tenant.
