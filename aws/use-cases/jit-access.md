@@ -58,7 +58,7 @@ Replace the `ENV_NAME` with your account name. You can make AWS API calls using 
 
 Add the appropriate value of `REGION` (for example: `us-west-2`)
 
-#### **Test you access**
+#### **Test your access**
 
 `AWS_PROFILE=ENV_NAME aws ec2 describe-instances`
 
@@ -67,4 +67,12 @@ _<mark style="color:blue;"></mark>_When you first make the AWS call, you will be
 
 ![](<../../.gitbook/assets/image (18) (1).png>)
 
-###
+### Configure session timeout
+
+By default, JIT sessions expire after one hour. This can be configured in the admin section for a tenant. On the Admin->Tenants page, select a tenant and go to the _Settings_ tab. Then you can add the setting to customize the timeout. The timeout is configured in seconds.\
+![](<../../.gitbook/assets/image (2).png>)
+
+If you are increasing the session timeout beyond the AWS default of 1 hour, you will also need to update the maximum session duration value for the IAM role assigned to your DuploCloud tenant. You can get access to AWS Console as an admin using the instructions above. Then you can goto IAM->Roles and modify the value for that tenant.&#x20;
+
+For example: If your tenant is named "dev01", and you need to set the timeout to 2 hours. Find the IAM role called "duploservices-dev01" and modify the value for "Maximum session duration" to 2 hours.
+
