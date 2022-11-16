@@ -28,7 +28,7 @@ If Plugins.zip and requirements.txt is specified while adding airflow, you would
 
 User can also enable logs while creating airflow.
 
-<figure><img src="../../.gitbook/assets/image (5) (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (3).png" alt=""><figcaption></figcaption></figure>
 
 ### **View Airflow Environment**
 

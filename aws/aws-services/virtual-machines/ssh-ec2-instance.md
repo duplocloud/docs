@@ -8,6 +8,6 @@ From Action menu > click on ssh, new browser tab would be launched, you can ssh 
 
 Another way is to download the  key from Actions > Connection Details
 
-![](<../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
 
 Follow the instruction listed in the dialog box and you should be connected to the server.
