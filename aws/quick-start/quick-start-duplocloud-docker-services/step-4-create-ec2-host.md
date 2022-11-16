@@ -10,4 +10,4 @@ Now we switch to the dev01 tenant. Then go to DevOps --> Hosts --> EC2 tab and c
 
 The host should get launched and should show in the Connected state in the DuploCloud UI as shown below.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
