@@ -1,6 +1,2 @@
----
-description: afafafa
----
-
 # SSO Configuration
 

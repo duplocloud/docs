@@ -3,7 +3,7 @@
 Under **Load Balancer** Details, copy the **IP Address** in your web browser and hit the URL.\
 
 
-<figure><img src="../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (5).png" alt=""><figcaption></figcaption></figure>
 
 Congratulations! You have just launched your first web service on DuploCloud!
 
