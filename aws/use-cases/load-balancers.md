@@ -31,4 +31,4 @@ Forward Target Group lists all the Target Groups created for Docker Native, K8s,
 
 You can create multiple routing rules. Details of all the Routing Rules can be viewed/edited/deleted from the screen below.
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22) (2).png" alt=""><figcaption></figcaption></figure>

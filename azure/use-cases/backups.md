@@ -6,7 +6,7 @@ Backup of the resources be it VM Snapshots/VM AMI can be done directly under the
 
 You can take a VM Snapshot from UI, from Actions > Snapshot menu.
 
-![VM Snapshot](<../../.gitbook/assets/image (61) (1).png>)
+![VM Snapshot](<../../.gitbook/assets/image (61).png>)
 
 ### Using VM Snapshot as an Image for creating a new host
 

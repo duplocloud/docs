@@ -14,7 +14,7 @@ Any docker container can be deployed in the VM. Go to **DevOps** > **Containers*
 DuploCloud provides support for pulling images from multiple docker registries.\
 You can add multiple docker registry credentials from Administrator > Plan > Under Config Tab
 
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (47) (2).png" alt=""><figcaption></figcaption></figure>
 
 Once configured in the Plan, you can refer to the registry config in Service Environment Variable section while creating Service from DevOps > EKS/Native.
 

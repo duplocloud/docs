@@ -8,6 +8,7 @@ From the UI (Administrator --> Infrastructure) create an infrastructure with the
 * Subnet CIDR Mask 24
 * Availability Zones 2
 * Enable EKS
+* Enable ECS Cluster
 
 This takes about 20 minutes. Kubernetes is the part that takes 15 minutes. Wait for the status to be completed. At the end of it, double check that a "plan" (Administrators--> Plans) has been created with the same name (non-prod).
 

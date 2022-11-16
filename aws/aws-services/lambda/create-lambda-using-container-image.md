@@ -24,4 +24,4 @@ Select Package Type as _Image._
 
 Provide the Image URI&#x20;
 
-![Lambda screen](<../../../.gitbook/assets/image (4).png>)
+![Lambda screen](<../../../.gitbook/assets/image (4) (3).png>)
