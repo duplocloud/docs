@@ -17,11 +17,11 @@ Go under Devops-->Containers --> EKS/Native and click on the service we are crea
 
 #### Secure Load Balancer
 
-&#x20;if you want to secure the load balancer created, you can follow the steps specified [here.](../quickstart-eks-services/step-7-secure-the-load-balancer.md)
+&#x20;if you want to secure the load balancer created, you can follow the steps specified [here.](../quick-start-eks-services/step-7-secure-the-load-balancer.md)
 
 #### Create DNS Name
 
-Follow the instructions [here](../quickstart-eks-services/step-8-create-dns-name.md).&#x20;
+Follow the instructions [here](../quick-start-eks-services/step-8-create-dns-name.md).&#x20;
 
 For the example we follow in this guide, you should screen as below:
 
