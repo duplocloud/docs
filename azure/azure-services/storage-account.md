@@ -30,6 +30,6 @@ Click on **Actions** > **Shared Access Signature**. Provide access details in th
 
 Once Signature Tokens are generated, Azure user can copy paste the token and URL's in a secure location. They'll only be displayed once and cannot be retrieved once the window is closed.
 
-![](<../../.gitbook/assets/image (69).png>)
+![](<../../.gitbook/assets/image (69) (1).png>)
 
 \

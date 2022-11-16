@@ -6,7 +6,7 @@ Create MySQL Server Database from DevOps --> Database --> MSSQLServer
 
 Provide the required inputs like database name, username, password, and versions.&#x20;
 
-![Create My SQL Server](<../../../.gitbook/assets/image (38) (1).png>)
+![Create My SQL Server](<../../../.gitbook/assets/image (38) (1) (1).png>)
 
 ### View Database details
 
