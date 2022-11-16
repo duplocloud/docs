@@ -202,6 +202,8 @@
   * [Tenant access](administrators/access-control/tenant-access.md)
   * [API tokens](administrators/access-control/api-tokens.md)
 * [Kubectl setup](administrators/kubectl-setup.md)
+* [SSO Configuration](administrators/sso-configuration/README.md)
+  * [Azure AD as IdP](administrators/sso-configuration/azure-ad-as-idp.md)
 
 ## Extras
 
