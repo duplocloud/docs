@@ -1,4 +1,4 @@
-# QuickStart - EKS Services
+# Quick Start - EKS Services
 
 
 
@@ -26,4 +26,4 @@ The steps involved in the setup will be:
 
 Behind the scenes the topology that will get created will look like the following lower level configuration in AWS.
 
-![](https://documents.lucid.app/documents/72886671-e5d7-48a9-90ab-c17df2554f63/pages/0\_0?a=1274\&x=59\&y=128\&w=1782\&h=1144\&store=1\&accept=image%2F\*\&auth=LCA%20fe1f1dee488c25d97f5dd501fc62605eda6d8d8d-ts%3D1647140256)
+<figure><img src="../../../.gitbook/assets/network-diagram.png" alt=""><figcaption></figcaption></figure>

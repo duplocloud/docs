@@ -18,7 +18,7 @@ As AD Administrator, login to your Azure AD Portal.&#x20;
 
 1. Browse to _Manage->App Registrations->New registration_
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>App Registration 1</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>App Registration 1</p></figcaption></figure>
 
 __
 
@@ -31,13 +31,13 @@ __
 1. Click on Register.
 2. Note down the Application (Client) ID. example: _8a6acf76-555e-4782-a8a4-abcd283d889d_
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
 
 ## Step2: Secret Creation
 
 1\. Click on Manage: Certification & Secrets.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
 2\. In the Client Secret Tab, click on ‘New Client Secret’
 
@@ -49,7 +49,7 @@ __
 
 
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -57,13 +57,13 @@ __
 
 1. Click on Manage: Add Permissions
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
 
 2\. Select Microsoft Graph & Delegated Permissions
 
 
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
 3\. Select: User.Read(if not present), openid, email and profile. Click on Add permissions
 
@@ -71,7 +71,7 @@ __
 
 
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
 
 ## Setup Complete!
 
