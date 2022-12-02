@@ -66,7 +66,8 @@ It does three basic things:
 * Pushes your docker image to ECR
 
 ### Create an IAM user to support push to ECR
-Prerequisite - A repository in ECR must have been created before proceeding with the next steps.
+_Prerequisite - A repository in ECR must have been created before proceeding with the next steps._
+
 Login to AWS console using JIT process, and create a user with permission AmazonEC2ContainerRegistryPowerUser. It can be done by logging in to AWS console(refer [JIT Access](https://docs.duplocloud.com/docs/aws/use-cases/jit-access)) and navigating to Services > Security, Identity and Compliance > IAM > Users and then following the on screen steps. Select **Access key - Programmatic access** in first step while creating the user , and assign a policy named **AmazonEC2ContainerRegistryPowerUser** direclty in the second step. This policy allows this user to list, read and write the images in the repository. The final step of the user creation process will have an option to download the access credentials. Please download and save the csv.
 
 Go to GitLab > Settings > CI CD > Variables > Expand and set the follwing additional variables.
