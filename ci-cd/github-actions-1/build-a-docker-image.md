@@ -65,16 +65,13 @@ It does three basic things:
 * Builds and tags your docker image, with the tag based on the GitLab CI Pipeline execution id.
 * Pushes your docker image to ECR
 
-### Create an IAM user to support push to ECR
 _Prerequisite - A repository in ECR must have been created before proceeding with the next steps._
 
-Login to AWS console using JIT process, and create a user with permission AmazonEC2ContainerRegistryPowerUser. It can be done by logging in to AWS console(refer [JIT Access](https://docs.duplocloud.com/docs/aws/use-cases/jit-access)) and navigating to Services > Security, Identity and Compliance > IAM > Users and then following the on screen steps. Select **Access key - Programmatic access** in first step while creating the user , and assign a policy named **AmazonEC2ContainerRegistryPowerUser** direclty in the second step. This policy allows this user to list, read and write the images in the repository. The final step of the user creation process will have an option to download the access credentials. Please download and save the csv.
+This process uses DuploCloud API Token (refer [DuploCloud API Token](https://docs.duplocloud.com/docs/administrators/access-control/api-tokens#permanent-api-tokens)) to gain access to AWS ECR. 
 
-Go to GitLab > Settings > CI CD > Variables > Expand and set the follwing additional variables.
-AWS_DEFAULT_REGION
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
+Go to GitLab > Settings > CI CD > Variables > Expand and ensure that DUPLO_TOKEN variable is set and has correct value. Check the Protect Variable and Masked options for security purposes. You can refer to [Configuring GitLab](https://docs.duplocloud.com/docs/ci-cd/github-actions-1/configuring-github) for the steps to setup a service account and to create a token for the newly configured account. The service account must have admin role.
 
+The script uses amazon/aws-cli image as the base running image and uses Docker-in-Docker (docker/dind)  to run the Docker commands. It uses duplo_utils.sh script from DuploCloud to get configuration from the DuploCloud instance.
 
 ### Example Workflow
 
@@ -83,14 +80,22 @@ Here is an example gitlab workflow that builds a docker image and pushes it to D
 To use it you will need to change:
 
 * `DOCKER_REGISTRY`variable
+* `DOCKER_REPO` variable
+* `DUPLO_HOST` variable
+* `DUPLO_SERVICE_NAME` variable
+* `TENANT_NAME` variable
 * `AWS_DEFAULT_REGION`variable
 * `APP_NAME`variable
 
 ```yaml
 variables:
-  DOCKER_REGISTRY: XXXXXXXXXX.dkr.ecr.<region>.amazonaws.com  #Change It
-  AWS_DEFAULT_REGION: <region>                                #Change It
-  APP_NAME: <container name>                                  #Change It
+  DOCKER_REGISTRY: <xxxxxxxxxxx>.dkr.ecr.<ecr repo region>.amazonaws.com
+  DOCKER_REPO: <xxxxxxxxxxx>.dkr.ecr.<ecr repo region>.amazonaws.com/xxx-yyy
+  AWS_DEFAULT_REGION: <duplo master aws region>
+  APP_NAME: <repo name>
+  DUPLO_HOST: https://<instance>.duplocloud.net  
+  DUPLO_SERVICE_NAME: <duplo service name>
+  TENANT_NAME: <Tenant Name>
   DOCKER_HOST: tcp://docker:2375
 
 stages:
@@ -100,20 +105,29 @@ stages:
 build-and-push-job:
   stage: build
   image:
-    name: amazon/aws-cli                                     #Base image, needed for AWS CLI tools
+    name: amazon/aws-cli
     entrypoint: [""]
   services:
-    - docker:dind                                            #Docker In Docker - needed for docker commands
+    - docker:dind
   before_script:
+    - yum install -y wget jq
     - amazon-linux-extras install docker
-    - aws --version
-    - docker --version
+    - wget https://raw.githubusercontent.com/duplocloud/demo-npm-service/master/.circleci/duplo_utils.sh
+    - chmod +x duplo_utils.sh
+    - source duplo_utils.sh
+    - with_aws>tmp.txt #Get secrets using with_aws script from source duplo_utils.sh
+    - cat tmp.txt
+    - cat tmp.txt|grep -i AWS_>tmp1.txt
+    - cat tmp1.txt
+    - source tmp1.txt
+    - export $(cut -d= -f1 tmp1.txt)
+    - aws ecr get-login-password --region us-east-1| docker login --username AWS --password-stdin $DOCKER_REGISTRY
+    - rm tmp.txt tmp1.txt   #remove the secrets from the runner
   script:
     - |
       tag="$CI_PIPELINE_IID"
       echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
-    - docker build -t "$DOCKER_REGISTRY/$APP_NAME:${tag}" . # Replace . with path to Dockerfile relative to this file if Dockerfile is not in repo root dir
-    - aws ecr get-login-password | docker login --username AWS --password-stdin $DOCKER_REGISTRY
+    - docker build -t "$DOCKER_REGISTRY/$APP_NAME:${tag}" ./nginx/
     - docker push "$DOCKER_REGISTRY/$APP_NAME:${tag}"
     - docker logout #For security
 ```
