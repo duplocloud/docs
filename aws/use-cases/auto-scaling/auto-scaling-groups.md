@@ -38,4 +38,4 @@ DuploCloud Portal provides the ability to configure Services based on the Platfo
 
 ### **Service with Platform - Linux Docker/Native**
 
-![](<../../../.gitbook/assets/image (13) (1).png>)
+![](<../../../.gitbook/assets/image (20) (3).png>)

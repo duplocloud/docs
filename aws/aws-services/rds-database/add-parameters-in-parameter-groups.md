@@ -10,4 +10,4 @@ Administrator can set the supported parameters to override the values while crea
 
 ![Sample configuration](<../../../.gitbook/assets/image (17).png>)
 
-![Parameters overriden in AWS based on the configuration](<../../../.gitbook/assets/image (42) (1).png>)
+![Parameters overriden in AWS based on the configuration](<../../../.gitbook/assets/image (48).png>)
