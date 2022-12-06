@@ -1,4 +1,4 @@
-# Web application firewall (WAF)
+# Web App Firewall (WAF)
 
 Creation of a Web Application Firewall (WAF) is a one time process. Create a WAF in the AWS Console, fetch the ID/ARN and update the plan in DuploCloud. Once the plan has the WAF it can be used attached to the LB.
 
@@ -10,4 +10,4 @@ Creation of a Web Application Firewall (WAF) is a one time process. Create a WAF
 
 DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from left navigation panel: **Security > WAF**.
 
-![WAF Dashboard](<../../.gitbook/assets/waf (1).png>)
+![WAF Dashboard](../../.gitbook/assets/waf.png)
