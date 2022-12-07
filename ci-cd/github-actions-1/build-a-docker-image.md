@@ -92,6 +92,7 @@ variables:
   DOCKER_REGISTRY: <xxxxxxxxxxx>.dkr.ecr.<ecr repo region>.amazonaws.com
   DOCKER_REPO: <xxxxxxxxxxx>.dkr.ecr.<ecr repo region>.amazonaws.com/xxx-yyy
   AWS_DEFAULT_REGION: <duplo master aws region>
+  AWS_ECR_REGION: <ECR region>
   APP_NAME: <repo name>
   DUPLO_HOST: https://<instance>.duplocloud.net  
   DUPLO_SERVICE_NAME: <duplo service name>
@@ -115,13 +116,13 @@ build-and-push-job:
     - wget https://raw.githubusercontent.com/duplocloud/demo-npm-service/master/.circleci/duplo_utils.sh
     - chmod +x duplo_utils.sh
     - source duplo_utils.sh
-    - with_aws>tmp.txt #Get secrets using with_aws script from source duplo_utils.sh
+    - with_aws>tmp.txt  #Get secrets using with_aws script from source duplo_utils.sh
     - cat tmp.txt
     - cat tmp.txt|grep -i AWS_>tmp1.txt
     - cat tmp1.txt
     - source tmp1.txt
     - export $(cut -d= -f1 tmp1.txt)
-    - aws ecr get-login-password --region us-east-1| docker login --username AWS --password-stdin $DOCKER_REGISTRY
+    - aws ecr get-login-password --region $AWS_ECR_REGION | docker login --username AWS --password-stdin $DOCKER_REGISTRY
     - rm tmp.txt tmp1.txt   #remove the secrets from the runner
   script:
     - |
