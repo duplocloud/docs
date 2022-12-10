@@ -1,22 +1,22 @@
 ---
-description: Popular and frequently asked questions
+description: Popular and frequently asked questions about DuploCloud
 ---
 
-# FAQ (Design and Business)
+# FAQ (design and business)
 
 {% hint style="info" %}
-**NOTICE:** This document provides frequently asked questions related to the high level architecture and business model. For more detailed technical FAQ please refer to the [AWS FAQ](aws/aws-faq.md), [Azure FAQ](azure/azure-faq.md) or [Google Cloud FAQ](gcp/gcp-faq.md)
+**NOTICE:** This document provides frequently asked questions related to high-level design and business models. For more detailed technical FAQs, refer to the [AWS FAQ](aws/aws-faq.md), [Azure FAQ](azure/azure-faq.md), or [Google Cloud FAQ](gcp/gcp-faq.md).
 {% endhint %}
 
 ## Is DuploCloud a SaaS product?
 
-No. DuploCloud is a self-hosted solution that is deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. If the customer desires, DuploCloud also provides a fully managed service to maintain uptime, provide updates and on-going support.
+No. DuploCloud is a self-hosted solution deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. If the customer desires, DuploCloud can provide a fully managed service to maintain uptime, provide updates, and supply ongoing support.
 
 ## How is DuploCloud Portal accessing my cloud infrastructure and how is it secured?
 
-DuploCloud is a self-hosted single tenant solution that is deployed within the customer's cloud account. The software runs in a virtual machine and the VM derives permissions to call the cloud provider using permissions granted to the VM. For example in AWS it would be via instance profile and Azure it would be via managed identity.
+DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM) and the VM derives permissions to call the cloud provider using the VM's permissions. For example, in AWS, permissions are derived via an instance profile. In Azure, permissions are derived via managed identity.
 
-The Duplocloud VM and Portal is thus secured like any other workload in the cloud. In addition to SSO login to access the portal the VM is placed behind a VPN solution and thus only internal users can load the portal when connected via VPN.
+The DuploCloud VM and DuploCloud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
 
 ## What cloud providers are supported?
 
@@ -26,104 +26,97 @@ DuploCloud supports the following public cloud providers:
 * Microsoft Azure
 * Google Cloud
 
-## Can I use DuploCloud if I don't have any DevOps expertise in my company?
+## If my company has no DevOps experience, can your company provide services to build out our environment and support us? What level of support does DuploCloud provide?
 
-Absolutely! In fact, more than half of our customers have no DevOps team. The DuploCloud team will act as your extended DevOps team that assists with white glove onboarding setup, as well as daily operations. We cover what is supported in the DuploCloud platform as well as assisting with other issues for your cloud provider. We are available 24x7 via Slack. However, we request that after the initial onboarding of the platform, you engage the DuploCloud team as the second line of defense for any issues by setting up an initial triage process of your own. We can assist with this process.
+Absolutely! In fact, more than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates, etc.
 
+The DuploCloud team acts as your extended DevOps team, assisting with white glove environment setup and daily operations with 24x7 Slack and/or email support. We cover what is supported in the DuploCloud platform, as well as assist with your cloud provider's requirements.&#x20;
 
-
-## If my company has no DevOps experience at all, can your company provide services to build out our environment and support thereafter?
-
-Absolutely! The DuploCloud team will act as your extended DevOps team that assists with white glove environment setup, as well as daily operations with 24x7 slack and/or email support. Again, we request that after the initial onboarding of the platform, you engage the DuploCloud team as the second line of defense for any issues by setting up an initial triage process of your own.
-
-## What level of support does the DuploCloud team provide?
-
-The DuploCloud team will act as your extended DevOps team starting with white glove onboarding, setup, and assisting with daily operations. We cover what is supported in the DuploCloud platform as well as assisting with other issues for your cloud provider. We are available 24x7 via Slack. However, we request that after the initial onboarding of the platform, you engage the DuploCloud team as the second line of defense for any issues by setting up an initial triage process of your own. We can assist with this process. Most likely you will find a resolution in the platform and if not, simply ping the DuploCloud team.
-
-In our managed service offering we will also do your deployments, be the first line of defense for any issues and are constantly involved in daily tasks like CI/CD updates, etc.
+After the initial onboarding of the platform, we recommend that you engage the DuploCloud team as your second line of defense by setting up an internal triage process of your own. We can assist you in setting up this process.&#x20;
 
 {% hint style="info" %}
-DuploCloud is like your extended DevOps team available 24x7 on your slack channel, phone and email.
+DuploCloud is your extended DevOps team! We are available 24x7 on your Slack channel, by phone, and by email.
 {% endhint %}
 
 ## Can I make changes directly in the cloud account managed by DuploCloud?
 
-Yes. In fact many times this is required because DuploCloud may not support all cloud features or configurations. Direct changes to your cloud can be categorized in the following 3 groups:
+Yes. Many times this is required because DuploCloud may not support all cloud features or configurations. Direct changes to your cloud account can be categorized within the following groups:
 
 ### Independent Changes
 
-DuploCloud labels the resources and configurations it manages. If completely independent changes are being made directly at the cloud provider, DuploCloud will not interfere. However, DuploCloud still monitors the changes from a compliance perspective and alerts for any non-compliant configurations.
+DuploCloud labels the resources and configurations it manages. If independent changes are being made directly in your cloud provider, DuploCloud does not interfere. However, DuploCloud still monitors changes for compliance and alerts you to any non-compliant configurations.
 
 ### Non-conflicting changes to DuploCloud managed resources
 
-An example of this could be adding forwarding rules to a load balancer created through DuploCloud. In this case this is a configuration that DuploCloud is not directly managing and there is no problem with making the change directly at the cloud provider.
+For resources that DuploCloud does not directly manage, you make the change directly in your cloud provider. For example, if you add additional forwarding rules to a load balancer created through DuploCloud, DuploCloud does not interfere with the new configuration that you created.&#x20;
 
 ### Conflicting Changes to DuploCloud managed resources
 
-In such a case DuploCloud will detect the conflicts and will either revert the change or raise an alert about the inconsistency.
+For resources that DuploCloud manages, DuploCloud automatically detects the conflicts and either reverts the changes or raises an alert about the inconsistency.
 
 {% hint style="info" %}
-DuploCloud provides full flexibility where a certain feature that is not supported in the platform can programmed directly in the cloud provider. If one is using Terraform, then the DuploCloud Provider as well as the native cloud provider can be used in tandem. An example is shown here [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS)
+DuploCloud provides flexibility when a feature that is not supported by DuploCloud can be programmed directly in your cloud provider. If you are using Terraform, then the DuploCloud provider, as well as the native cloud provider, can be used in tandem. For an example of this use case, see [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS).
 {% endhint %}
 
 ## Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
 
-No. DuploCloud is calling your cloud provider API directly. Based on the user requirements, the software interacts with the cloud provider API asynchronously, maintaining a state machine of operations, with retries built-in to ensure robustness. Any configuration drift, system faults, security and compliance controls are monitored continuously by interacting with the cloud provider.
+No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
 
 ## If DuploCloud is not generating Terraform code behind the scenes, then how can I use Infrastructure-as-code?
 
-Terraform and DuploCloud Web UI are both layers on top of the DuploCloud platform.
+The Terraform and DuploCloud Web UIs are layered on top of the DuploCloud platform.
 
 ![User Interaction with the DuploCloud Platform](<.gitbook/assets/image (11) (1) (1).png>)
 
-DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows the user to configure the cloud infrastructure using DuploCloud constructs, rather than directly using lower level cloud provider constructs. This allows the user to get the benefits of Infrastructure-as-Code while significantly reducing the amount of code that needs to be written. The DuploCloud Terraform Provider simply calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
+DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows the user to configure their cloud infrastructure using DuploCloud constructs, rather than using lower-level cloud provider constructs. This enables the user to get the benefits of Infrastructure-as-Code, while significantly reducing the amount of code that is needed. The DuploCloud Terraform Provider calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
 
-## Am I locked in to DuploCloud? If I wanted to move away from DuploCloud, what work do I need to do?
+## Am I locked into DuploCloud? If I wanted to move away from DuploCloud, what work do I need to do?
 
-DuploCloud is running in your own cloud account where all your workloads are hosted as well. DuploCloud is a provisioning system. Stopping DuploCloud does not impact any of your applications and cloud services.
+DuploCloud is running in your own cloud account, along with your workloads. DuploCloud is a provisioning system, so stopping DuploCloud does not impact any of your applications and cloud services.
 
-The following is a list of automation constructs managed by DuploCloud, and a summary of what a user needs to do in order to maintain them directly instead of DuploCloud.
+The following is a list of automation constructs managed by DuploCloud, and a summary of what you need to do to maintain them directly, instead of through DuploCloud.
 
-1. Cloud Provider Configuration (Terraform): This involves various cloud services, IAM roles, Security groups, VPC, etc. DuploCloud can export your latest cloud configuration into native Terraform code and state files. Once exported, you can maintain them directly going forward.
-2. Kubernetes: All applications and configurations that have been deployed in K8S are available as is in the form of deployments, statefulset, daemonset, K8S Secrets, config maps, etc. One can run simple _kubectl_ commands to export those configurations as _yaml_ files and continue to maintain them going forward.
-3. Compliance monitoring: DuploCloud uses a third party SIEM solution called [Wazuh](https://www.wazuh.com). This is an open source software platform running in an independent VM in your cloud account and you have full permissions to retain it as-is. However, going forward any new systems that need compliance monitoring need to be wired into the SIEM by you.
-4. Diagnostics tools: These include Prometheus, Grafana and Elasticsearch. All of these are open source and run in your cloud account. You can continue to manage them directly.
+1. Cloud Provider Configuration (Terraform): This involves various cloud services, IAM roles, Security groups, VPC, etc. DuploCloud can export your latest cloud configuration into native Terraform code and state files. Once exported, you maintain the configuration.
+2. Kubernetes: All applications and configurations that have been deployed in K8s are available in the form of deployments, StatefulSets, DaemonSet, K8s Secrets, ConfigMaps, etc. One can run `kubectl`commands to export configurations as YAML files and continue to maintain them in the future.
+3. Compliance monitoring: DuploCloud uses a third-party SIEM solution called [Wazuh](https://www.wazuh.com). Wazuh is an open-source software platform running in an independent VM in your cloud account, and you have full permission to retain it "as-is." However, going forward, any new systems that need compliance monitoring need to be integrated into the SIEM by you.
+4. Diagnostics tools: Tools include Prometheus, Grafana, and Elasticsearch. All of these tools are open source and run in your cloud account. You can continue to manage them directly.
 
 {% hint style="info" %}
-If DuploCloud is down, its like your DevOps engineer not being reachable and if DuploCloud needs to be opted-out it's like letting go of the current DevOps team and having the new one take over. DuploCloud is neither a PAAS nor a hosted solution where your workloads are being hosted.
+If DuploCloud is down, it's similar to having an unavailable DevOps engineer. If you need to opt out of DuploCloud, you are replacing your DevOps management. DuploCloud is neither a PaaS nor a hosted solution, which hosts your workloads.
 {% endhint %}
 
-## I don't know IaC (Infrastructure-as-Code), can I still use DuploCloud?
+## I don't know IaC (Infrastructure-as-Code). Can I still use DuploCloud?
 
-Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or require any cloud expertise in order to operate it. You simply need to understand the basic constructs in DuploCloud by reading the product documentation.
+Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have any cloud expertise to operate it. You simply need to understand the basic constructs in DuploCloud by reading the product documentation.
 
-## **My application developers don't know IaC (Infrastructure-as-Code), but my DevOps engineers do. If my developers make changes via the DuploCloud UI what happens to the Terraform code my DevOps engineers have written?**
+## **My application developers don't know IaC (Infrastructure-as-Code), but my DevOps engineers do. If my developers make changes via the DuploCloud UI, what happens to the Terraform code my DevOps engineers have written?**
 
-****
+You should create a separation between your developers and your DevOps team. Allowing developers to use the Web UI in non-production development environments, to quickly iterate product changes, can create an inconsistency.&#x20;
 
-This will cause an inconsistency, so you will have create some separation between your developers and your DevOps team. One example is allowing developers to use the Web UI in non-production(dev) environments in order to quickly iterate product changes. Production and critical non-production environments, the cloud services setup, as well as first time application deployment can be done via Terraform code. CI/CD workflows can be built which only update the application (Docker and Lambda) deployments. Any cloud service level change should be done by the DevOps team via Terraform and the developers will have to ask the DevOps team for the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
+In both production and critical non-production environments, the cloud services setup, as well as first-time application deployment, can be done via Terraform code. CI/CD workflows can be built that only update the application (Docker and Lambda) deployments. Any cloud service level change should be done by the DevOps team via Terraform and developers should ask the DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
 
 ## **Should I use low-code or no-code?**
 
-From the DuploCloud team's experience what is good for me? The answer depends on the following key factors:
+The answer depends on the following key factors:
 
 ### How much Developer self-service is required, and are you an operations-centric organization?
 
-In cases, especially in a fast growing company environment, where architecture is constantly evolving and services are being constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases where there is an operations organization and everything is required to be centralized, then the low-code Terraform solution may be a better option.\
-Note that Terraform is a client side scripting tool and hence it is a single user system, meaning within the scope of a project only one person can be making changes. One may feel constrained if a project has many components and two people cannot operate even if they are dealing with completely independent constructs.
+Especially in a rapid-growth company environment, where architecture is constantly evolving and services are being constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases where there is an established operations organization, with centralized requirements, then a low-code Terraform solution may be a better option.
 
-### Dealing with broad scope of changes vs. small just-in-time changes
+Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate at the same time, even if they are dealing with completely independent constructs.
 
-Terraform projects typically will have a broad coverage with multiple components. At times one needs to make a small targeted change (say a health check url change) but when the change is being executed there may be other "drifts" and the user will be forced to resolve them. This can be very inconvenient and more often than not the user will make the change in the UI. This will end up further drifting the Terraform state for future updates.
+### Dealing with a broad scope of changes vs. small just-in-time changes
+
+Terraform projects typically have a broad scope with multiple components. At times, you need to make small targeted changes (for example, a health check URL change). But when the change is being executed, there may be other drifts and the user is forced to resolve them. This can be inconvenient and often the user will make the change in the UI, resulting in further configuration drifts.
 
 {% hint style="info" %}
-About half of our customer base uses no-code while other half uses Terraform. Ironically software developer centric companies prefer no-code because engineers are able to move fast and stay focussed on their own application code. In DevOps centric organizations people use our low-code Terraform provider.
+About half of our customer base uses no-code, while the other half uses Terraform. Ironically, software developer-centric companies prefer no-code because it enables engineers to be agile and focus on their application code. By contrast, in DevOps-centric organizations, the low-code Terraform provider is often used.
 {% endhint %}
 
 ## How do I use Datadog and others diagnostics tools?
 
-DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with your own toolset like Datadog you would follow their guidelines which typically would be to deploy some collector agents. You can do that like a regular application within the respective tenants.
+DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset, such as Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if you are running an application within the respective DuploCloud tenants.
 
 ## How will CI/CD work with DuploCloud?
 
-CI/CD is the top most layer of the DevOps stack. DuploCloud should be looked at as a deployment and monitoring solution which can be invoked by your CI/CD pipelines written in tools like CircleCI, Jenkins, GitHub Actions, etc. Basically, one would build the images and push to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud does offer its own CI/CD tool as well.
+CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool, as well.
