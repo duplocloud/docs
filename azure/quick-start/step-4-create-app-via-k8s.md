@@ -7,7 +7,7 @@ To create a service go to DevOps -> Containers -> AKS/Native and click on the **
 * **Name (Mandatory)** of the service: example nginx-service
 * **Docker image (Mandatory)**: for example nginx:1.13
 
-![create sample nginx service](<../../.gitbook/assets/image (16) (1).png>)
+![create sample nginx service](<../../.gitbook/assets/image (2) (3).png>)
 
 Press create and wait a moment for the service to initialize.
 

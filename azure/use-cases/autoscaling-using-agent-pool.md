@@ -8,7 +8,7 @@ Agent pools can be scaled when **Enable Autoscaling** option is enabled in Duplo
 
 Navigate to DevOps --> Hosts --> Azure Agent Pool. Provide inputs for Instance Type and Minimum/Maximum Capacity to scale the pool.
 
-![Agent Pool Screen](<../../.gitbook/assets/image (59).png>)
+![Agent Pool Screen](<../../.gitbook/assets/image (41) (1).png>)
 
 ### Step2: Configure Service with HPA
 

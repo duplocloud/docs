@@ -40,7 +40,7 @@ Here we have defined an Ingress to route requests to `/path1`for the first servi
 
 Once Ingress is configured, you can access the Services configured based on the ingress rules using **DNS**
 
-![K8s Ingress Tab](<../../../.gitbook/assets/image (68).png>)
+![K8s Ingress Tab](<../../../.gitbook/assets/image (18) (5).png>)
 
 Example:  Based on the Ingress rules configured for the three services, you can see the output results are different. Services configured are accessed based on the DNS specified in the DuploCloud Portal and the paths configured in Steps2.
 
