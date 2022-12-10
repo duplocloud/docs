@@ -2,6 +2,17 @@
 
 DuploCloud product frequently receives updates for features and enhancements. Below are some of the highlights of new capabilities added to the product in the latest updates.
 
+### December 2022
+
+* AWS
+  * Enable Elastic Kubernetes Service (EKS) for your existing infrastructure.
+* Azure
+  * Edit Azure node pools, used to run Azure Kubernetes (AKS) workloads.
+  * Monitor tenant usage in the Billing feature with weekly or monthly views.
+* Kubernetes (K8s)
+  * Force creation of StatefulSets.
+  * Maintain cluster stability with Ingress Health Checks annotations.&#x20;
+
 ### November 2022
 
 * [Ability to add Path-Based Routing rules](../aws/use-cases/load-balancers.md#2d32): Configure path-based routing rules for application load balancers.
