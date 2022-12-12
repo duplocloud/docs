@@ -24,10 +24,10 @@ __
 
 1. Set the name of application, example: duplo-app1
 2. In Supported account types: Select _“Accounts in any organizational directory (Any Azure AD directory - Multitenant)”_
-3. In Redirect URI (optional): Select Web and add DuploCloud URL as below. Make sure to replace company with your company's DuploCloud deployment
+3. In Redirect URI: Select Web and add DuploCloud URL as below. Make sure to replace company with your company's DuploCloud deployment
 
-[https://company.duplocloud.net/app/signin-microsofturl](https://companyx.duplocloud.net/app/signin-microsofturl)
-
+[https://company.duplocloud.net/app/signin-microsoft](https://companyx.duplocloud.net/app/signin-microsoft)
+ 
 1. Click on Register.
 2. Note down the Application (Client) ID. example: _8a6acf76-555e-4782-a8a4-abcd283d889d_
 
