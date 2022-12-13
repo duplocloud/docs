@@ -46,3 +46,13 @@ You can mount data from a Kubernetes Config Map [as files](mounting-config-as-fi
 ### Secrets
 
 You can mount data from a Kubernetes Secret [as files](mounting-config-as-files.md#mount-a-kubernetes-secret), or you can import it [as environment variables](setting-environment-variables-from-config.md#setting-environment-variables-from-a-kubernetes-secret).
+
+## Via ECS Services
+
+In a ECS Task Definition In secrets fields, set the below config:
+
+`[ { "Name": "X_SERVICE_TOKEN", "ValueFrom": "arn:aws:secretsmanager:us-west-2:xxxxxxxxxxxsecret-name-qCV1K8:X_SERVICE_TOKEN::" } ]`
+
+`X_SERVICE_TOKEN:` Key in the secret value json
+
+The value of `ValueFrom` refers to the AWS secret ARN\
