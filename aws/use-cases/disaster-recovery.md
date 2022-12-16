@@ -1,26 +1,30 @@
-# Networking
+---
+description: Network configuration and how it maps to infrastructures in DuploCloud
+---
 
-Networking is the most foundational piece in the Devops lifecycle and setup the very beginning. The key concepts involved are
+# Networks and DuploCloud infrastructures
 
-* VPC
+Networking is a foundational piece of the DevOps lifecycle and the first thing you must configure when using DuploCloud. Key networking concepts include:
+
+* Virtual Private Cloud (VPC)
 * Subnets
 * Region
-* Availability zones
-* NAT Gateway
+* Availability zones (AZs)
+* Network Address Translation (NAT) gateway
 * Routing
 
-In DuploCloud the concept of [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md) maps one-to-one to a VPC in a specified region. While creating Infrastructure the user can specify the count of availability zones, region, VPC CIDR and a Subnet Mask. Internally the platform will create 2 subnets in each AZ (one private and one public), setup up routes and NAT gateway.&#x20;
+In DuploCloud, an [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md) maps one-to-one to a VPC in a specified region. It also maps to an Elastic Kubernetes Service (EKS) or Elastic Container Service (ECS) cluster that you use for container orchestration.&#x20;
 
-![](<../../.gitbook/assets/image (15) (1) (1) (2) (1) (1).png>)
+When creating an Infrastructure, you specify the number of availability zones, the region, VPC Classless Inter-Domain Routing (CIDR), and a subnet mask. DuploCloud creates two subnets in each availability zone, one private and one public, and sets up routes and a NAT gateway.&#x20;
 
-Infrastructure also maps to a Kubernetes or ECS Cluster. This is optional if the user wants to use Kubernetes or ECS for container orchestration
+![Add Infrastructure form](<../../.gitbook/assets/image (15) (1) (1) (2) (1) (1).png>)
+
+See the [Infrastructure](../aws-services/infrastructure.md) topic for detailed steps about how to create an Infrastructure in the DuploCloud Portal.
 
 {% hint style="warning" %}
-At this moment per infrastructure only one EKS or ECS cluster is supported. One can have both EKS as well as ECS cluster but only 1 or 0 of each.&#x20;
+Up to one instance (0 or 1) of an EKS or ECS is supported for each DuploCloud Infrastructure.
 {% endhint %}
 
+Once the Infrastructure is created, a [Plan ](../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration. The Plan is used to create [Tenants](tenant-environment.md).
 
-
-Once the infrastructure complete, a new [Plan](../../getting-started/application-focussed-interface/plan.md) with the same infrastructure name is automatically created and populated with the details of the newly created infrastructure. This plan can then be used to create the [Tenants](../../getting-started/application-focussed-interface/tenant.md).
-
-![](https://duplocloud.com/wp-content/uploads/2021/11/infra-plan.png)
+![DuploCloud Plan Details](https://duplocloud.com/wp-content/uploads/2021/11/infra-plan.png)

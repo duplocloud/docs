@@ -1,38 +1,58 @@
-# Upgrading EKS version
+---
+description: Upgrade the Elastic Kubernetes Service (EKS) version for AWS
+---
 
-AWS frequently updates the version of EKS based on new features being available in the Kubernetes platform. DuploCloud allows this upgrade to be automated through the UI.
+# Upgrading the EKS version
 
-**IMPORTANT: EKS version upgrade could cause downtime to your application depending on the number of replicas you have configured for your services. To be safe, this upgrade should be scheduled outside of business hours.**
+AWS frequently updates the version of EKS based on new features that are available in the Kubernetes platform. DuploCloud automates this upgrade in the DuploCloud Portal.
 
-### Upgrade Process
+{% hint style="warning" %}
+**IMPORTANT: An EKS version upgrade can cause downtime to your application depending on the number of replicas you have configured for your services. Schedule this upgrade outside of your business hours to minimize disruption.**
+{% endhint %}
 
-At a high level, the process involves:
+### About the upgrade process
 
-* Updating EKS Control Plane to the new version
-* Re-launch all hosts to deploy the new version on all nodes.
-* Apply allocation tags to hosts if needed.
+The upgrade process:
 
-### Starting the Upgrade&#x20;
+* Updates the EKS Control Plane to the latest version
+* Relaunches all Hosts to deploy the latest version on all nodes.
 
-Goto **Administrator->Infrastructure**, click into the Infrastructure where the **EKS** cluster, and then goto EKS tab, it should show something like below:
+After the upgrade process completes successfully, you optionally assign allocation tags to Hosts.
 
-![](<../../../.gitbook/assets/Screen Shot 2022-07-16 at 4.54.35 PM.png>)
+### Starting the upgrade&#x20;
 
-### Monitoring the Upgrade&#x20;
+To upgrade the EKS version, in the DuploCloud Portal:&#x20;
 
-Clicking on Upgrade will start the process and it shows a step by step progress on the Upgrade.
+1. Click **Administrator** -> **Infrastructure.**
+2. Select the Infrastructure that you want to upgrade to the latest EKS version.
+3. Select the **EKS** tab. If an Infrastructure upgrade is available, **Upgrade** appears in the **Value** column.
+4. Click **Upgrade**.
 
-![](<../../../.gitbook/assets/Screen Shot 2022-07-16 at 4.58.59 PM.png>)
+![EKS tab with Upgrade available](<../../../.gitbook/assets/Screen Shot 2022-07-16 at 4.54.35 PM.png>)
 
-### Upgrade Completion
+### Monitoring the upgrade&#x20;
 
-The above screen should show progress through all incremental updates through the versions and all hosts that needs an upgrade should be replaced. You should get a all GREEN checkmark on the checklist status list.
+Monitor the upgrade by using the **EKS Upgrade Details** screen.
 
-### Apply Allocation Tags
+![EKS Upgrade Details screen and the Status list](<../../../.gitbook/assets/Screen Shot 2022-07-16 at 4.58.59 PM.png>)
 
-If any of your hosts used allocation tags, you will have to assign allocation tags to the hosts, as they get online, manually by going to **DevOps->Hosts** and edit the allocation tag for each of the hosts. There is a product improvement planned to make this automated
+### Upgrade completion
 
-&#x20;                                     <img src="../../../.gitbook/assets/Screen Shot 2022-07-16 at 5.03.32 PM.png" alt="" data-size="original">
+The **EKS Upgrade Details** screen displays the progress of updates for all versions and Hosts. Green checkmarks indicate successful completion in the **Status** list.
 
+### Assign allocation tags
 
+If any of your Hosts use allocation tags, you must assign allocation tags to the Hosts:
 
+1. After your Hosts are online and available, navigate to **DevOps** -> **Hosts**.
+2. Select the host group tab (**EC2**, **ASG**, etc.) on the **Hosts** screen.&#x20;
+3. Click the **Add** button.
+4. Name the Host and provide other configuration details on the **Add Host** form.
+5. Select **Advanced Options**.
+6. Edit the **Allocation Tag** field.&#x20;
+7. Click **Create** and define your allocation tags.
+8. Click **Add** to assign the allocation tags to the Host.
+
+<figure><img src="../../../.gitbook/assets/Hosts_Tags_AWS.png" alt=""><figcaption><p>Allocation tags in the <strong>Add Host</strong> screen</p></figcaption></figure>
+
+&#x20;                                    &#x20;
