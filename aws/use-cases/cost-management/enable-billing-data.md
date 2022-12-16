@@ -1,5 +1,14 @@
+---
+description: Grant AIM permissions to view billing data in AWS
+---
+
 # Enable billing data
 
-As a first step, IAM access permissions must be granted in order to view the billing data in AWS. These steps need to be completed by the root user and from the AWS account that manages cost and billing for the AWS organization.
+IAM access permissions must be obtained to view the billing data in AWS.&#x20;
 
-The steps in the following [AWS document](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/control-access-billing.html) need to be followed:
+Follow the steps in this [AWS document](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/control-access-billing.html) to obtain access.
+
+{% hint style="info" %}
+In order to perform the steps in [this document](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/control-access-billing.html), you must be logged in as`root`from the AWS instance that manages cost and billing for the AWS organization.
+{% endhint %}
+
