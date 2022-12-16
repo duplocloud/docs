@@ -1,12 +1,20 @@
+---
+description: Manage costs for resources
+---
+
 # Cost management
 
-Usage cost for the resources can be viewed in the DuploCloud under **Administrator > Billing**. You can also explore the historical costs for resources.
+Usage costs for resources can be viewed and managed in the DuploCloud Portal, by month or Tenant. You can also explore historical resource costs.&#x20;
 
-You need to complete two steps before billing data can be visible in DuploCloud
+To view the **Billing** page for AWS in the DuploCloud Portal, click **Administrator** -> **Billing**. &#x20;
 
-1. Enable access to billing data in AWS
-2. Applying the cost allocation tags for DuploCloud to pull this data.
+{% hint style="info" %}
+You must first enable the billing feature to view or manage usage costs in the DuploCloud Portal.
+{% endhint %}
 
-**Sample billing dashboard**
+To enable the billing feature, you must:
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/billing.png)
+1. Enable access to billing data in AWS.
+2. Apply cost allocation tags so that DuploCloud can retrieve billing data.
+
+![Billing dashboard for AWS](https://duplocloud.com/wp-content/uploads/2021/11/billing.png)

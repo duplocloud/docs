@@ -1,7 +1,3 @@
----
-description: New DuploCloud features and enhancements
----
-
 # Product updates
 
 New features and enhancements added to DuploCloud are listed below.
@@ -12,7 +8,7 @@ New features and enhancements added to DuploCloud are listed below.
   * Enable [Elastic Kubernetes Service (EKS)](../aws/use-cases/kubernetes-cluster/) for your existing infrastructure.
 * Azure
   * Edit Azure node pools, used to run Azure Kubernetes (AKS) workloads.
-  * Monitor tenant usage in the Billing feature with weekly or monthly views.
+  * Monitor tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/7ev96ixoUE2TKhw2W8yw/azure/use-cases/cost-management) with weekly or monthly views.
 * Kubernetes (K8s)
   * Force creation of StatefulSets.
   * Maintain cluster stability with Ingress Health Checks annotations.&#x20;
