@@ -1,17 +1,29 @@
-# Kubernetes Cluster
+---
+description: >-
+  Enable Elastic Kubernetes Service (EKS) for AWS by creating a DuploCloud
+  Infrastructure
+---
+
+# EKS Initial Setup
+
+In the DuploCloud platform, a Kubernetes Cluster maps to a DuploCloud Infrastructure.&#x20;
+
+Start by creating a new Infrastructure in DuploCloud. When prompted to provide details for the new Infrastructure, select **Enable EKS**. In the **EKS Version** field, select the desired release.
+
+The worker nodes and remaining workload setup is described in the [Tenant](../tenant-environment.md) topic.
+
+![Add Infrastructure form with Enable EKS selected ](<../../../.gitbook/assets/image (15) (1) (1) (2) (1).png>)
 
 {% hint style="info" %}
-Here we are only talking about the setup of the EKS control plane. The actual worker nodes and rest of the workload setup will be described within the Tenant.
+Creating an Infrastructure with EKS can take some time. See the Infrastructure section for details about other elements on the Add Infrastructure form.
 {% endhint %}
-
-In DuploCloud platform a Kubernetes Cluster maps to an [Infrastructure](../../aws-services/infrastructure.md) The cluster can be created by creating an infrastructure from Administrator --> Infrastructure --> ADD Button. Creating an Infrastructure with a EKS cluster takes up to 20 minutes. See the Infrastructure section for details for other elements of this form:
-
-![](<../../../.gitbook/assets/image (15) (1) (1) (2) (1).png>)
 
 {% hint style="warning" %}
-At this moment per infrastructure only one EKS or ECS cluster is supported. One can have both EKS as well as ECS cluster but only 1 or 0 of each.&#x20;
+Up to one instance (0 or 1) of an EKS or Elastic Container Service (ECS) is supported for each DuploCloud Infrastructure. &#x20;
 {% endhint %}
 
-Once the Infrastructure is in **ready** state, you can go into the Infrastructure to see the Kubernetes details, including the token and config for Kubectl.&#x20;
+When the Infrastructure is in the ready state, as indicated by a **Status** of **Complete**, select the **Name** of the Infrastructure page to view the Kubernetes configuration details, including the token and configuration for `kubectl`.&#x20;
 
-When you create Tenants under the Infrastructure a separate namespace is created within the Kubernetes Cluster by the name duploservices-\<TenantName>
+<figure><img src="../../../.gitbook/assets/Infrastructure_Complete_AWS.png" alt=""><figcaption><p><strong>Infrastructure</strong> page with <strong>Status Complete</strong> displayed</p></figcaption></figure>
+
+When you create Tenants in an Infrastructure, a namespace is created in the Kubernetes cluster with the name `duploservices-TENANT_NAME`
