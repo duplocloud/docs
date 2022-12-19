@@ -1,15 +1,20 @@
-# AutoScaling using Agent Pool
+---
+description: Dynamically configure Azure agent pools for optimum performance
+---
 
-Azure Kubernetes AutoScaling use case can be achieved by setting up the capacity in Agent Pool required for your application. Further Kubernetes Horizontal Pod Autoscaling can be configured under services to scale your application.
+# Autoscale agent pools
 
-### Step 1: Create Azure Agent Pool
+When you use autoscaling for Azure agent pools, you allow DuploCloud to manage your application's capacity requirements within your limits. To enable autoscaling, you:
 
-Agent pools can be scaled when **Enable Autoscaling** option is enabled in DuploCloud Portal. Each agent pool will contain nodes backed by the virtual host machines.
+1. Create an Azure agent pool with autoscaling enabled.
+2. Configure a service using Kubernetes Horizontal Pod Autoscaling (HPA) to manage autoscaling.
 
-Navigate to DevOps --> Hosts --> Azure Agent Pool. Provide inputs for Instance Type and Minimum/Maximum Capacity to scale the pool.
+### Step 1: Create an autoscaled Azure agent pool
+
+In the DuploCloud Portal, [create an Azure agent pool](../azure-services/agent-pool.md) with the **Enable Autoscaling** option selected. Each agent pool contains nodes backed by the virtual host machines.
 
 ![Agent Pool Screen](<../../.gitbook/assets/image (59).png>)
 
 ### Step 2: Configure Service with HPA
 
-Configure the service by using the [Kubernetes Horizontal Pod Autoscaler (HPA)](../../aws/use-cases/auto-scaling/kubernetes-scaling-options.md#kubernetes-horizontal-pod-autoscaler-hpa).&#x20;
+Configure a service with the [Kubernetes Horizontal Pod Autoscaler (HPA)](../../aws/use-cases/auto-scaling/kubernetes-scaling-options.md#kubernetes-horizontal-pod-autoscaler-hpa) to manage autoscaling for the agent pool.&#x20;
