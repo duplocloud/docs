@@ -179,6 +179,7 @@
   * [Subscription](azure/azure-services/subscription.md)
   * [Tenants](azure/azure-services/tenants.md)
   * [Virtual machine scale set](azure/azure-services/virtual-machine-scale-sets.md)
+  * [Agent pool](azure/azure-services/agent-pool.md)
   * [Serverless Web applications](azure/azure-services/web-applications.md)
   * [Docker web application](azure/azure-services/docker-web-application.md)
   * [Databases](azure/azure-services/databases/README.md)
