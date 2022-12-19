@@ -165,7 +165,7 @@
   * [Faults and alerts](azure/use-cases/faults-and-alerting/README.md)
     * [Alert notifications](azure/use-cases/faults-and-alerting/alert-notifications.md)
   * [Cost management](azure/use-cases/cost-management.md)
-  * [AutoScaling using Agent Pool](azure/use-cases/autoscaling-using-agent-pool.md)
+  * [Autoscale agent pools](azure/use-cases/autoscaling-using-agent-pool.md)
   * [Backups](azure/use-cases/backups.md)
   * [Logs](azure/use-cases/logs.md)
   * [Metrics](azure/use-cases/metrics.md)
