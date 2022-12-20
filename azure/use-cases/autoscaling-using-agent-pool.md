@@ -13,7 +13,7 @@ When you use autoscaling for Azure agent pools, you allow DuploCloud to manage y
 
 In the DuploCloud Portal, [create an Azure agent pool](../azure-services/agent-pool.md) with the **Enable Autoscaling** option selected. Each agent pool contains nodes backed by the virtual host machines.
 
-![Agent Pool Screen](<../../.gitbook/assets/image (59).png>)
+![Input fields on the Add Azure Agent Pool page with Enable Autoscaling selected.](<../../.gitbook/assets/image (59).png>)
 
 ### Step 2: Configure Service with HPA
 
