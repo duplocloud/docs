@@ -25,7 +25,7 @@ Create an Azure agent pool for an existing Host in the DuploCloud Portal:
 5. Optionally, select **Enable Autoscaling** to autoscale the pool.
 6.  Click **Add**. When the agent pool is created, **Succeeded** is displayed in the **Status** column. It may take some time to create the agent pool.
 
-    <figure><img src="../../.gitbook/assets/Agent_Pool_Azure_Agent_Pool_Created_SUCCESS.png" alt=""><figcaption><p>Agent pool with <strong>Succeeded</strong> status</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Agent_Pool_Azure_Agent_Pool_Created_SUCCESS (1).png" alt=""><figcaption><p>Agent pool with <strong>Succeeded</strong> status</p></figcaption></figure>
 
 
 
