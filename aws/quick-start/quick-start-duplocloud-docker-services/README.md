@@ -2,7 +2,7 @@
 
 This tutorial shows you how to setup an end-to-end cloud deployment for the sample topology&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
 
 * We will use simple Nginx web as a sample for the application container.
 * We will use the Tenant and Infrastructure created as part of [Step1](../step-1-infrastructure.md) and [Step2](../step-2-tenant.md).
