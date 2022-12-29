@@ -1,17 +1,24 @@
+---
+description: New features and enhancements in DuploCloud
+---
+
 # Product updates
 
-New features and enhancements added to DuploCloud are listed below.
+### December 2022 and January 2023
 
-### December 2022
-
-* AWS
-  * Enable [Elastic Kubernetes Service (EKS)](../aws/use-cases/kubernetes-cluster/) for your existing infrastructure.
-* Azure
-  * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
-  * Monitor tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/7ev96ixoUE2TKhw2W8yw/azure/use-cases/cost-management) with weekly or monthly views.
+* GCP
+  * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/LIQrEoD3lxoJfvhsSCPM/gcp/use-cases/cost-management) with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
   * [Force creation of StatefulSets](../aws/aws-services/containers/#0-toc-title).
   * Maintain cluster stability with Ingress Health Checks annotations.&#x20;
+* AWS
+  * Enable [Elastic Kubernetes Service (EKS)](../aws/use-cases/kubernetes-cluster/) for your existing infrastructure.
+  * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. In the Tenant view's **shared** card, tax and support costs are now displayed.
+* Azure
+  * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
+  * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/7ev96ixoUE2TKhw2W8yw/azure/use-cases/cost-management) with weekly or monthly views.
+
+
 
 ### November 2022
 

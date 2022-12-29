@@ -4,6 +4,6 @@ All containers are running inside a private network and cannot be accessed from 
 
 In this exercise, we will choose Application Load balancer to access the web application created in the prior steps.
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (5).png" alt=""><figcaption></figcaption></figure>
 
 In about 2-3 minutes you will see the load balancer details available in the portal.
