@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [FAQ (design and business)](faq.md)
+* [FAQ](faq.md)
 
 ## Getting started
 
@@ -197,6 +197,8 @@
   * [Step 3: Create app (via K8S)](gcp/quick-start/step-3-create-app-via-k8s.md)
   * [Step 4: Create a Load Balancer](gcp/quick-start/step-4-create-a-load-balancer.md)
   * [Step 5: Test the Application](gcp/quick-start/step-5-test-the-application.md)
+* [Use Cases](gcp/use-cases/README.md)
+  * [Cost management](gcp/use-cases/cost-management.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
 ## Administrators
