@@ -8,11 +8,13 @@ Usage costs for resources can be viewed and managed in the DuploCloud Portal, by
 
 To view the Billing page for Azure in the DuploCloud Portal, click **Administrator** -> **Billing**. &#x20;
 
+<figure><img src="../../.gitbook/assets/Billing_Azure_1222.png" alt=""><figcaption><p><strong>Billing</strong> page for Azure</p></figcaption></figure>
+
 You can view usage by:
 
 * Time
-  * Select the **Spend by Month** tab to display monthly and weekly spending **** options. &#x20;
+  * Select the **Spend by Month** tab and click **More Details** to display monthly and weekly spending **** options. &#x20;
 * Tenant
   * Select the **Spend by Tenant** tab.
 
-<figure><img src="../../.gitbook/assets/Billing_Azure_1222.png" alt=""><figcaption><p><strong>Billing</strong> page for Azure</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Azure_Week_Month_billing.png" alt=""><figcaption><p><strong>Spend by Month</strong> tab with monthly and weekly options displayed</p></figcaption></figure>
