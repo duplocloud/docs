@@ -12,7 +12,8 @@ description: New features and enhancements in DuploCloud
   * [Force creation of StatefulSets](../aws/aws-services/containers/#0-toc-title).
   * Maintain cluster stability with Ingress Health Checks annotations.&#x20;
 * AWS
-  * Enable [Elastic Kubernetes Service (EKS)](../aws/use-cases/kubernetes-cluster/) for your existing infrastructure.
+  * Enable [Elastic Kubernetes Service (EKS)](../aws/use-cases/kubernetes-cluster/) for your existing infrastructure. EKS versions 1.22 and 1.23 are supported.
+  * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
   * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. In the Tenant view's **shared** card, tax and support costs are now displayed.
 * Azure
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.

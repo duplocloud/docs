@@ -10,7 +10,7 @@ Once we have the Infrastructure (Networking, Kubernetes cluster and other common
 
 While all the lower level details like IAM roles, Security groups, and others are abstracted away from the user (as they are derived from the Tenant), standard application centric inputs are required to be provided. This includes a Name, Instance size, Availability Zone choice, Disk size, Image ID etc. Most of these are optional, some are published as a list of user friendly choices by the admin in the plan (Image or AMI ID is one such example). Other than these AWS centric parameter there are two DuploCloud platform specific value to be provided:
 
-**Agent Platform**: This is applicable if the VM is going to be used as a host for [container orchestration](../container-deployments/) by the platform. The choices are:
+**Agent Platform**: This is applicable if the VM is going to be used as a host for [container orchestration](https://docs.duplocloud.com/docs/aws/container-deployments/container-orchestrators) by the platform. The choices are:
 
 * EKS Linux: If this is to be added to EKS cluster i.e. EKS is the chosen approach for container orchestration
 * Linux Docker: If this is to be used for hosting Linux containers using the [Builtin Container orchestration](../container-deployments/)      &#x20;

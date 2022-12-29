@@ -13,4 +13,4 @@ This security settings can be accessed by navigating to _Services->Load Balancer
 
 
 
-To create and attach a WAF to the load balancer, please go over the corresponding [section](https://docs.duplocloud.com/docs/aws/aws-services/web-application-firewall-waf?q=waf).
+To create and attach a WAF to the load balancer, please go over the corresponding [section](https://docs.duplocloud.com/docs/aws/aws-services/web-application-firewall-waf).

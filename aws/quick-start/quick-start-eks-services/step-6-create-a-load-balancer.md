@@ -7,7 +7,7 @@ All containers are running inside a private network and cannot be accessed exter
 * External Port: This is the port we want the users to access the application. We will choose 80 because we are going to apply a certificate to the LB
 * Application Mode : Choose Docker
 * Health Check : use / for this case because the sample app returns 200 OK at this path.
-* Certificate: Choose a certificate that was created as described in the [Prerequisites](../../prerequisites/) section&#x20;
+* Certificate: Choose a certificate that was created as described in the [Prerequisites](https://docs.duplocloud.com/docs/aws/prerequisites/acm-certificate) section&#x20;
 
 Go under Devops-->Containers --> EKS/Native and click on the service we are creating. Under that click on the Load balancer tab and configure the load balancer
 
