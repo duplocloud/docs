@@ -20,13 +20,15 @@ If the connection from within the container works, then exit from the container 
 
 ## What keys should I use in my application to connect to the AWS resources I have created in DuploCloud like S3, Dynamo, SQS, etc.? <a href="#4-toc-title" id="4-toc-title"></a>
 
-You don’t need any. Use the AWS constructor that takes only the region as the argument (`us-west-2`). DuploCloud setup links your instance profile and the resources. The host in DuploCloud already has access to the resources within the same tenant\project. DuploCloud AWS resources are reachable only from DuploCloud Hosts on the same account.
+If your application is running in a DuploCloud [Tenant](../getting-started/application-focussed-interface/tenant.md) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access.   &#x20;
+
+Use the AWS constructor that takes only the region as the argument (`us-west-2`). DuploCloud setup links your instance profile and the resources. The host in DuploCloud already has access to the resources within the same tenant\project. DuploCloud AWS resources are reachable only from DuploCloud Hosts on the same account.
 
 {% hint style="info" %}
 **IMPORTANT:** You cannot connect to any DuploCloud AWS resource from your local machine.
 {% endhint %}
 
-## What is rolling upgrade and how do I enable it? <a href="#5-toc-title" id="5-toc-title"></a>
+## What is a rolling upgrade and how do I enable it? <a href="#5-toc-title" id="5-toc-title"></a>
 
 If you have multiple replicas in your service i.e., multiple containers, and when you need to update your service, for example change an image or eNV variable then DuploCloud will make this change one container at a time i.e., it will bring down the first container and bring up the new one on that host with the updated config. If the new container fails to start or the health check URL does not return Http 200 status, then DuploCloud will pause the upgrade of remaining containers. A user must intervene by fixing the issue typically by updating the service with a newer image that has a fix. If no health check URL is specified, then DuploCloud only checks for the new container to be running. To specify health check, go the ELB menu and you will find the health check URL suffix.
 

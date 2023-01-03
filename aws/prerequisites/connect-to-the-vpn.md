@@ -23,13 +23,13 @@ User VPN credentials are accessible on the user profile page. It can be accessed
    Modern browsers will call the link unsafe since it is using a self-signed certificate. Proceed to it.
 2. Log in to the OpenVPN Access Server user portal using the credentials from the DuploCloud user profile section.\
    \
-   ![](<../../.gitbook/assets/image (10).png>)
+   ![](<../../.gitbook/assets/image (10) (3).png>)
 3. Install the OpenVPN Connect app for your local machine.\
    \
-   ![](<../../.gitbook/assets/image (8).png>)
+   ![](<../../.gitbook/assets/image (8) (2).png>)
 4. Download the OpenVPN user profile for your account from the link labeled Yourself (user-locked profile).\
    \
-   ![](<../../.gitbook/assets/image (1).png>)
+   ![](<../../.gitbook/assets/image (1) (2).png>)
 5. Open the .ovpn file and click OK at the Import profile dialog. Then click Connect.\
    \
    ![](<../../.gitbook/assets/image (2).png>)

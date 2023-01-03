@@ -115,11 +115,11 @@ About half of our customer base uses no-code, while the other half uses Terrafor
 
 ## How do I use Datadog and others diagnostics tools?
 
-DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset, such as Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if you are running an application within the respective DuploCloud tenants.
+DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset like Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if you are running an application within the respective DuploCloud tenants.
 
-## Do I need an AWS access keys for my application when using AWS?
+## Do I need an AWS access key for my application when using AWS?
 
-If your application is running in a DuploCloud [Tenant](getting-started/application-focussed-interface/tenant.md) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access.   &#x20;
+If your application is running in a DuploCloud [Tenant](getting-started/application-focussed-interface/tenant.md) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access. For more information, see the [AWS FAQ](aws/aws-faq.md).  &#x20;
 
 ## How will CI/CD work with DuploCloud?
 
