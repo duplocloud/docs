@@ -1,3 +1,7 @@
+---
+description: Popular and frequently asked questions about DuploCloud and AWS
+---
+
 # AWS FAQ
 
 ## **How do I ssh into the host?** <a href="#0-toc-title" id="0-toc-title"></a>
@@ -65,3 +69,60 @@ DuploCloud licenses usage is calculated based on the services managed by DuploCl
 * A host is counted as 1 unit. (example: EC2 instance, Azure VM)
 * A serverless function or service is counted as 1/2 unit (example: ECS service, lambda function)
 
+## Why use Terraform when Cloud Formation is AWS native?
+
+Many customers prefer Terraform to Cloud Formation. Many elements in the Cloud DevOps cycle can be non-AWS (such as native Kubernetes, MongoDB, Data Dog, Okta, etc.) and all support Terraform providers.
+
+## AWS Copilot seems to be a low-code tool and developer-friendly. I understand that Copilot relies on existing AWS tools to monitor.
+
+AWS Copilot is used only for ECS cluster management, which is just a small subset of overall Cloud operations. In the chart below, you can see that DuploCloud includes container management in addition to multiple other functions. You can still use Copilot with DuploCloud for ECS management. Other clients have used tools like Harness or using Helm with DuploCloud for Kubernetes management.
+
+<figure><img src="../.gitbook/assets/DC_Capabilities.png" alt=""><figcaption><p>DuploCloud features</p></figcaption></figure>
+
+## Is the Duplocloud instance a single point of failure, and to what extent, if so? Who manages this instance?
+
+No. DuploCloud achieves High Availability (HA) using cluster management. And because you have an AWS account, your data is always secure in AWS.&#x20;
+
+Our customers have never been blocked from performing urgent configuration updates because DuploCloud is unavailable. If DuploCloud is down, it is similar to your DevOps engineer being unavailable. In this case, someone else can take their place by directly configuring AWS.&#x20;
+
+Our customers consider this single-platform approach very beneficial for both centralizing operations and maximizing developer access. DuploCloud runs in a VM in your account. We manage this VM with your permission, and we can also give you simple steps to troubleshoot or install new updates. We are available 24x7 and work as your extended DevOps team.
+
+## With DuploCloud, will we be more secure and compliant out-of-the-box, as opposed to using a default AWS configuration?
+
+Yes. This is a major advantage of using DuploCloud. All controls are mapped to various compliance standards. DuploCloud is also very flexible in enabling you to add custom policies (resource quotas, ability to create public-facing endpoints, etc.)
+
+## Is scaling handled differently from ECS, where you set thresholds and min/max instances to spin up/down?
+
+No. DuploCloud manages scaling in the same way. We expose these thresholds in a simple form that is much easier to configure, even for a user with no DevOps experience. Behind the scenes, DuploCloud maps to the same native AWS constructs.
+
+## Is attaching an RDS instance to each application for spin up/down purposes expensive? Some of our RDS instances are small.
+
+Small instances are generally no problem. DuploCloud can manage dynamic database spinup/down with a single RDS database. Sharing AWS services in dynamic environments also helps reduce costs.
+
+## Can an RDS be left intact if I only want to destroy the application and not the database?
+
+Yes.
+
+## Is Kubernetes required to use DuploCloud? Is using Kubernetes better than using ECS?
+
+DuploCloud supports both AWS ECS and Kubernetes, among other Cloud solutions.&#x20;
+
+The main advantage of Kubernetes is its broad-based, highly-customizable, third-party open-source community that champions and supports it as a delivery platform. For example, Astronomer (managed air flow), Time series database, IsTio Service Mesh, and Kong API Gateway all expect you to have a Kubernetes deployment. But if your business needs and use cases are met with an AWS solution, for example, you may have no need for Kubernetes.
+
+Choose the container management software that best satisfies your use cases and the complexity level of your requirements. DuploCloud supports AWS, Kubernetes, Azure, and GCP. Many customers use software from multiple vendors to create robust business solutions backed by DuploCloud's assurance of compliance and automated low-code/no-code DevOps approach.
+
+## Our current RDS logs are sent to CloudWatch. Does DuploCloud support this?&#x20;
+
+Yes.
+
+## Can you delete an application and all its resources with a single click and confirmation?
+
+Yes.
+
+## Can anything in the UI be automated over an API as well?
+
+Yes. Every element in the DuploCloud UI is populated by calling an API.
+
+## Does DuploCloud make any assumptions that we should be aware of that may impact initial implementation time?
+
+No. DuploCloud segregates resources into environments called [Tenants](../getting-started/application-focussed-interface/tenant.md) that accelerate ramp-up time. For more information about implementation, [contact the DuploCloud support team](https://duplocloud.com/company/contact-us/). &#x20;

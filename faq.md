@@ -117,10 +117,16 @@ About half of our customer base uses no-code, while the other half uses Terrafor
 
 DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset like Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if you are running an application within the respective DuploCloud tenants.
 
+## How will CI/CD work with DuploCloud?
+
+CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool, as well.
+
 ## Do I need an AWS access key for my application when using AWS?
 
 If your application is running in a DuploCloud [Tenant](getting-started/application-focussed-interface/tenant.md) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access. For more information, see the [AWS FAQ](aws/aws-faq.md).  &#x20;
 
-## How will CI/CD work with DuploCloud?
+## With DuploCloud, will we be more secure and compliant out-of-the-box, as opposed to using a default AWS configuration?
 
-CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool, as well.
+Yes. This is a major advantage of using DuploCloud. All controls are mapped to various compliance standards. DuploCloud is also very flexible in enabling you to add custom policies (resource quotas, ability to create public-facing endpoints, etc.)
+
+##
