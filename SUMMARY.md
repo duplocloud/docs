@@ -21,9 +21,9 @@
 
 ## AWS user guide <a href="#aws" id="aws"></a>
 
-* [Overview](aws/overview.md)
-* [Container Deployments](aws/container-deployments/README.md)
-  * [Container Orchestrators](aws/container-deployments/container-orchestrators.md)
+* [AWS overview](aws/overview.md)
+* [Container deployments](aws/container-deployments/README.md)
+  * [Container orchestrators](aws/container-deployments/container-orchestrators.md)
   * [Concepts](aws/container-deployments/concepts.md)
   * [Passing Config and Secrets](aws/container-deployments/passing-config-and-secrets/README.md)
     * [Mounting Config as Files](aws/container-deployments/passing-config-and-secrets/mounting-config-as-files.md)
