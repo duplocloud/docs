@@ -54,4 +54,4 @@ Users connected to a VPN by default can SSH or RDP into EC2 instances. Users can
 6. In the **IP CIDR** field, enter the name of your VPN.
 7. Click **Add**.
 
-![Add Tenant Security pane](<../../.gitbook/assets/image (3) (3).png>)
+![Add Tenant Security pane](<../../.gitbook/assets/image (3) (3) (1).png>)

@@ -70,7 +70,7 @@ _<mark style="color:blue;"></mark>_When you first make the AWS call, you will be
 ### Configure session timeout
 
 By default, JIT sessions expire after one hour. This can be configured in the admin section for a tenant. On the Admin->Tenants page, select a tenant and go to the _Settings_ tab. Then you can add the setting to customize the timeout. The timeout is configured in seconds.\
-![](<../../.gitbook/assets/image (2) (1) (3).png>)
+![](<../../.gitbook/assets/image (2) (1).png>)
 
 If you are increasing the session timeout beyond the AWS default of 1 hour, you will also need to update the maximum session duration value for the IAM role assigned to your DuploCloud tenant. You can get access to AWS Console as an admin using the instructions above. Then you can goto IAM->Roles and modify the value for that tenant.&#x20;
 

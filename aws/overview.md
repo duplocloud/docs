@@ -1,14 +1,20 @@
 ---
-description: DuploCloud user guides overview for AWS specific cloud provider deployments
+description: AWS-specific cloud provider deployments
 ---
 
-# Overview
+# AWS overview
 
 {% hint style="info" %}
-Make sure you have read through the [DuploCloud Platform Overview](broken-reference) and are familiar with the terminologies like _Infrastructure_, _Plan_ and _Tenants_
+Before you begin, read through the [DuploCloud Platform Overview](broken-reference) and are familiar with DuploCloud terms such as [Infrastructure](../getting-started/application-focussed-interface/infrastructure.md), [Plan](../getting-started/application-focussed-interface/plan.md), and [Tenant](../getting-started/application-focussed-interface/tenant.md).
 {% endhint %}
 
-DuploCloud platform installs in an EC2 instance within your AWS account. It can be accessed using a web interface, API and a Terraform provider. Login to the DuploCloud portal is via SSO either through your GSuite or O365 login. Before getting started, make sure that the following pre-requisites are met before getting started:
+The DuploCloud platform installs in an EC2 instance within your AWS account. It can be accessed using a web interface, API, and a Terraform provider.&#x20;
 
-* DuploCloud Portal has been setup and you have access to it.
-* You have access to the slack channel with DuploCloud team for support.
+Login to the DuploCloud portal, using single sign-on (SSO), with your GSuite or O365 login.&#x20;
+
+## Prerequisites
+
+Before getting started:&#x20;
+
+* Set up the DuploCloud Portal and ensure that you have access to it.
+* Connect to the DuploCloud Slack channel for support from the DuploCloud team.&#x20;

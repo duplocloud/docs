@@ -1,3 +1,11 @@
-# Container Deployments
+---
+description: Orchestration across multiple Cloud providers
+---
 
-Majority of workloads deployed on DuploCloud are in the form of Docker containers. Rest being serverless functions, EMR jobs and Sage Maker. DuploCloud supports almost all orchestration techniques across multiple cloud providers with a simplified and cloud neutral interface. These include EKS and ECS on AWS, AKS, WebApps in Azure, GKE on GCP and Oracle Kubernetes in OCP. In addition, DuploCloud platform also has a built-in container management platform that provides an alternative where techniques like Kubernetes can be hard to implement.  &#x20;
+# Container deployments
+
+The majority of workloads deployed on DuploCloud are in Docker containers. The rest consist of serverless functions, Amazon EMR jobs, and SageMaker.&#x20;
+
+DuploCloud supports virtually all orchestration techniques across multiple cloud providers, using a simplified and cloud-neutral interface. Orchestration includes support for Elastic Kubernetes Service (EKS) and Elastic Container Service (ECS) on AWS, Managed Kubernetes Service (AKS), WebApps in Azure, Google Kubernetes Engine (GKE) on GCP, and Oracle Kubernetes in Red Hat OpenShift Container Platform (OCP).&#x20;
+
+In addition, the DuploCloud platform has a built-in container management platform that provides an alternative to Kubernetes, which can be complex to implement.  &#x20;
