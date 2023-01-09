@@ -1,6 +1,8 @@
-# Katkit CI/CD
+---
+description: CI/CD using Katkit
+---
 
-
+# Katkit
 
 DuploCloud provides a CI/CD framework that allows you to build, test and deploy your application from GitHub commits and PRs. We call it Katkit. Katkit is a arbitrary code execution engine which allows the user to run arbitrary code before and after deployment. Katkit follows the same notion of a “Tenant” or environment. Thus, tying together CI and CD. In other words, the tests are run against the application in same underlying AWS topology where one’s code is running as against running them in a separate fleet of servers which does not capture the interactions of the application with the AWS infrastructure like IAM, Security groups ELB etc.
 

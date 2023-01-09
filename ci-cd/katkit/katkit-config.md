@@ -1,4 +1,4 @@
-# Kakit config
+# Katkit config
 
 The above configuration customizations like Phases, ENV, etc. can be saved in the repository in a config file called `katkitconfig.js` Following is an example of one such file
 
@@ -15,7 +15,7 @@ The above configuration customizations like Phases, ENV, etc. can be saved in th
                 "BuildParams": "PHASE=PRE_DEPLOY_BUILD, FOO=BAR",
                 "Order": 0,
                 "Parallelism": 1,
-                "ContinerImage": "duplocloud/zbuilder:v7"
+                "ContainerImage": "duplocloud/zbuilder:v7"
             },
             {
                 "Name": "DEPLOY",
@@ -23,7 +23,7 @@ The above configuration customizations like Phases, ENV, etc. can be saved in th
                 "BuildParams": "PHASE=DEPLOY",
                 "Order": 1,
                 "Parallelism": 1,
-                "ContinerImage": null
+                "ContainerImage": null
             }
         ]
     }
