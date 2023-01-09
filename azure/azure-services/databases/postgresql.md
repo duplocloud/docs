@@ -6,7 +6,7 @@ Create MySQL Server Database from DevOps --> Database --> PostgreSQL
 
 Provide Name, Database username, and password with Tier details to create a PostgreSQL database. DuploCloud portal provides configuration to support backup retention for your database.
 
-![](<../../../.gitbook/assets/image (1) (2).png>)
+![](<../../../.gitbook/assets/image (1) (2) (1).png>)
 
 ### Viewing database details
 
