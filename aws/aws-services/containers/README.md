@@ -9,9 +9,18 @@ description: Add and deploy Docker containers natively and with EKS
 You can deploy any native Docker container in a virtual machine (VM) with the DuploCloud platform.&#x20;
 
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.
-2. Click the **Add** button. The **Add Service** page displays.
+2. Click **Add**. The **Add Service** page displays.
 3. Complete the fields on the page, including **Service Name**, **Docker Image** name, and number of **Replicas**. Use **Allocation Tag**s to deploy the container in a specific set of hosts.
 4. To force the creation of Kubernetes Stateful Sets, select **Yes** in the **Force StatefulSets** field.
+
+### Monitoring Kubernetes Stateful Sets&#x20;
+
+Use the K8s Admin dashboard to monitor the number and availability of Stateful Sets for your service.
+
+1. In the DuploCloud Portal, select **Administrator** -> **Diagnostics** -> **Metrics**.
+2. Click the **k8s** tab. The **K8s Admin** dashboard displays.
+
+<figure><img src="../../../.gitbook/assets/k8_statefulSet_dash.png" alt=""><figcaption><p><strong>K8s Admin</strong> dashboard</p></figcaption></figure>
 
 {% hint style="info" %}
 Do not use spaces when creating Service or Docker image names.
