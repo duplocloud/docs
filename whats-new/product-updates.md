@@ -11,7 +11,7 @@ description: New features and enhancements in DuploCloud
 * Kubernetes (K8s)
   * [Force creation of Stateful Sets](../aws/aws-services/containers/#0-toc-title).
   * Use the K8s Admin dashboard to [monitor Stateful Sets](../aws/aws-services/containers/#monitoring-kubernetes-stateful-sets).
-  * Maintain cluster stability with Ingress Health Checks annotations.&#x20;
+  * Maintain cluster stability with [Ingress Health Checks](../aws/aws-services/containers/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) annotations.&#x20;
 * AWS
   * Enable [Elastic Kubernetes Service (EKS)](../aws/use-cases/kubernetes-cluster/) for your existing infrastructure. EKS versions 1.22 and 1.23 are supported.
   * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;

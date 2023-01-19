@@ -101,7 +101,7 @@
   * [CloudWatch](aws/aws-services/cloud-watch.md)
   * [CloudFront](aws/aws-services/cloudfront.md)
   * [Containers](aws/aws-services/containers/README.md)
-    * [Adding Ingress](aws/aws-services/containers/adding-ingress.md)
+    * [Adding and configuring Ingress](aws/aws-services/containers/adding-ingress.md)
     * [Adding SecretProviderClass custom resource](aws/aws-services/containers/adding-secretproviderclass-custom-resource.md)
     * [Adding K8s Storage Class](aws/aws-services/containers/adding-k8s-storage-class.md)
     * [Setting up Probes](aws/aws-services/containers/setting-up-probes.md)
