@@ -206,6 +206,7 @@
 
 * [Access control](administrators/access-control/README.md)
   * [Tenant access](administrators/access-control/tenant-access.md)
+  * [VPN access](administrators/access-control/vpn-access.md)
   * [API tokens](administrators/access-control/api-tokens.md)
 * [Kubectl setup](administrators/kubectl-setup.md)
 * [SSO Configuration](administrators/sso-configuration/README.md)
