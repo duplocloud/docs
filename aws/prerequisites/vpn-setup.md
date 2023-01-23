@@ -42,7 +42,7 @@ Provision a VPN while creating a user:
 
 ### Deleting VPN access for a user
 
-For information about removing VPN access for a user, see [Deleting a VPN user](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/zv5qBQC5mUqzcKULXq1i/administrators/access-control/vpn-access#deleting-a-vpn-user). To delete VPN access, you must have administrator privileges.&#x20;
+For information about removing VPN access for a user, see [Deleting a VPN user](../../administrators/access-control/vpn-access.md#deleting-a-vpn-user). To delete VPN access, you must have administrator privileges.&#x20;
 
 ## Open a VPN port
 
