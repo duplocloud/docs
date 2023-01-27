@@ -1,19 +1,22 @@
-# Tenant access
+---
+description: Give a user access to a Tenant
+---
 
-## Introduction
+# Add Tenant access for users
 
-In order for a DuploCloud users to have access to a tenant, you will need to add _Tenant Access_ permissions to the user for the tenant. This document will guide you through the necessary steps in order to grant a user access to tenants.&#x20;
+In order for a DuploCloud user to access a Tenant, an **Administrator** must give a user **Tenant Access** permissions.&#x20;
 
 {% hint style="info" %}
-**Note:** Users with the _Administrator_ role have persisted access all tenants. Adding individual tenant access for those users is unnecessary.
+**Note:** Users with the **Administrator** role have persistent access to all Tenants. Administrators do not need to add individual Tenant access for themselves.
 {% endhint %}
 
-## Adding tenant access to users
+Give a non-**Administrator** user access to a Tenant:
 
-Navigate to the **Administrators -> Users** page and click the username in the list to go to a specific user's page. Within the users' detail page select the tab labeled '_Tenant Access_' and click the blue **+ Add** button to open the 'Add Tenant Access' form.&#x20;
+1. In the DuploCloud Portal, navigate to the **Administrators -> Users** page.&#x20;
+2.  Select the user in the **Username** column. The user's permissions page displays.
 
-![](<../../.gitbook/assets/Screen Shot 2022-02-25 at 4.12.05 PM.png>)
+    ![A user's permissions page](<../../.gitbook/assets/Screen Shot 2022-02-25 at 4.12.05 PM.png>)
+3. On the Tenant Access tab, Click **Add**. The **Add User Access** pane displays.
+4. From the **User** field, select the user name and click **Add**. &#x20;
 
-In the dropdown select the desired tenant name you would like to allow the user to access. Next, confirm the changes by clicking the **Add** button.
-
-![](<../../.gitbook/assets/Screen Shot 2022-02-25 at 4.13.24 PM.png>)
+![Add Tenant Access pane](<../../.gitbook/assets/Screen Shot 2022-02-25 at 4.13.24 PM.png>)

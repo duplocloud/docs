@@ -1,17 +1,15 @@
+---
+description: Roles and access types across the DuploCloud Portal
+---
+
 # Access control
 
-There are the following types of User roles in the DuploCloud system:
+The DuploCloud Portal contains the following roles:&#x20;
 
-* **Administrator**, has access to all tenants plus the administrative functions like plan configuration, system dashboard, system faults etc.
-* **User**, regular users that can be given access to a specific tenant. A tenant could have multiple users assigned.
-* **Security,** meant for security and compliance auditors to check on security and compliance dashboards and reports.
-* **Signup,** a specialized role meant for users creating and managing DuploCloud resources via API.
-
-### Creating or Updating a User role
-
-A new user is created by going to Administrator->Users and clicking on **+Add.** Similarly, an existing user can be updated using the same view.
-
-&#x20;                                   ![](<../../.gitbook/assets/Screen Shot 2022-06-30 at 12.16.03 AM.png>)
+* An **Administrator** has access to all Tenants plus access to administrative functions like Plan configuration, system dashboards, system defaults, etc.
+* A **User** is a regular user that can be given access to a specific Tenant. A Tenant can be accessed by multiple users.
+* The **Security** role is for security and compliance auditors, in order to verify security and compliance dashboards and reports.
+* The **Signup** role is for users who create and manage DuploCloud resources via API.
 
 ### Single Sign On (SSO)
 
