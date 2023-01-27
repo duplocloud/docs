@@ -205,8 +205,10 @@
 ## Administrators
 
 * [Access control](administrators/access-control/README.md)
-  * [Tenant access](administrators/access-control/tenant-access.md)
-  * [VPN access](administrators/access-control/vpn-access.md)
+  * [Add, edit, or delete a user](administrators/access-control/add-edit-or-delete-a-user.md)
+  * [Add Tenant access for users](administrators/access-control/tenant-access.md)
+  * [Add Tenant access over a VPN](administrators/access-control/add-tenant-access-over-a-vpn.md)
+  * [Add and Delete VPN access for users](administrators/access-control/add-and-delete-vpn-access-for-users.md)
   * [API tokens](administrators/access-control/api-tokens.md)
 * [Kubectl setup](administrators/kubectl-setup.md)
 * [SSO Configuration](administrators/sso-configuration/README.md)
