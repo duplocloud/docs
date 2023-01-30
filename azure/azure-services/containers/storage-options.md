@@ -1,4 +1,8 @@
-# Storage options
+---
+description: Examples of various storage configurations in Azure
+---
+
+# Examples: storage options
 
 DuploCloud Portal supports different configurations to achieve storage options in Azure.
 
@@ -28,7 +32,8 @@ AKS provides a few out-of-the-box StorageClass objects. To mount the built-in st
 </strong>  Name: data
   Path: /attachedvolume
   StorageClassName: azurefile #if empty default storage class will be used which is disk
-  Size: 20Gi</code></pre>
+  Size: 20Gi
+</code></pre>
 
 ## **3. Using Kubernetes Secret with the Azure Storage connection data**
 

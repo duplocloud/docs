@@ -1,18 +1,24 @@
 ---
-description: Adding Tenants, Hosts, and Services with EKS
+description: Adding Plans, Tenants, Hosts, and Services with AWS EKS
 ---
 
 # Containers
 
-## Adding Tenants <a href="#2-toc-title" id="2-toc-title"></a>
+## Plans <a href="#2-toc-title" id="2-toc-title"></a>
 
-Each tenant is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
+The DuploCloud Portal comes configured with a default Plan. A [Plan](../../../getting-started/application-focussed-interface/plan.md) configures your Tenants using a set of templates whose parameters are applied to the Tenants in your [Infrastructure](../../../azure/azure-services/infrastructure.md).
+
+## Tenants <a href="#2-toc-title" id="2-toc-title"></a>
+
+To add a Tenant, navigate to **Administrator** -> **Tenant** in the DuploCloud Portal and click **Add**.
+
+Each [Tenant ](../../../azure/azure-services/tenants.md)is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
 
 All application components within the Analytics Tenant are placed in the `duploservices-analytics` namespace. Since nodes cannot be part of a Kubernetes Namespace, DuploCloud creates a `tenantname` label for all the nodes that are launched within the Tenant. For example, a node launched in the Analytics Tenant is labeled`tenantname: duploservices-analytics`.&#x20;
 
-Any pods that are launched using the DuploCloud UI have an appropriate Kubernetes nodeSelector that ties the Pod to the nodes within the tenant. If you are deploying via `kubectl,`ensure that your deployment is using the proper nodeSelector.
+Any Pods that are launched using the DuploCloud UI have an appropriate Kubernetes `nodeSelector` that ties the Pod to the nodes within the Tenant. If you are deploying via `kubectl,`ensure that your deployment is using the proper `nodeSelector`.
 
-## Adding Hosts <a href="#3-toc-title" id="3-toc-title"></a>
+## Hosts <a href="#3-toc-title" id="3-toc-title"></a>
 
 Once the tenant is created, navigate to **DevOps** in the DuploCloud Portal and select the Tenant that you created from the **Tenant** list box.&#x20;
 
@@ -26,9 +32,14 @@ Ensure that the value of **Pool** is set to **Eks Linux**, which is the default 
 
 ## Docker registry credentials and Kubernetes secrets <a href="#4-toc-title" id="4-toc-title"></a>
 
-Set Docker registry credentials and Kubernetes secrets by selecting **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane in the DuploCloud Portal and choosing the **EKS/Native** option. Docker registry credentials are passed to the Kubernetes cluster as `kubernetes.io/dockerconfigjson`. In addition, you can set and reference Kubernetes secrets in your deployment by configuring them with the **EKS/Native** option.
+Set Docker registry credentials and Kubernetes secrets:
 
-## Adding Services <a href="#5-toc-title" id="5-toc-title"></a>
+1. In the DuploCloud Portal, navigate to  **DevOps** -> **Containers** -> **EKS/Native**. Docker registry credentials are passed to the Kubernetes cluster as `kubernetes.io/dockerconfigjson`.
+2. Click **Docker Credentials**. The **Set Docker registry Creds** pane displays.
+3. Supply the credentials and click **Submit**.
+4. Enable the Docker Shell Service by clicking **Enable Docker Shell**.
+
+## Services <a href="#5-toc-title" id="5-toc-title"></a>
 
 When you add a [Service](../../../getting-started/application-focussed-interface/app-service-and-cloud-service.md) in the DuploCloud Platform, it is not the same as adding a Kubernetes service.&#x20;
 
@@ -102,6 +113,14 @@ For example:&#x20;
 
 `{"DOCKER_REGISTRY_CREDENTIALS_NAME":"registry1"}`
 {% endhint %}
+
+
+
+### Set Kubernetes Secrets
+
+Optionally, set and reference Kubernetes secrets in your deployment by configuring them with the **EKS/Native** option.&#x20;
+
+<figure><img src="../../../.gitbook/assets/AWS_K8s_secrets.png" alt=""><figcaption></figcaption></figure>
 
 ### EKS/AKS support <a href="#1-toc-title" id="1-toc-title"></a>
 
