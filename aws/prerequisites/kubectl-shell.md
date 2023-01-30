@@ -57,8 +57,8 @@ Now we need to expose this service through an ELB. Under DevOps -->Containers-->
 
 After completing this configuration, you can start using K8s shell from the portal for K8s services by clicking on KubeCtl Shell option.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>access KubeCtl Shell</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>access KubeCtl Shell</p></figcaption></figure>
 
 This configuration also enables users to view the  ECS task shell. This option is available under DevOps --> Containers --> ECS --> Tasks. Under Actions menu, click on ECS Task Shell. A browser will be launched to access the task shell further.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption></figcaption></figure>

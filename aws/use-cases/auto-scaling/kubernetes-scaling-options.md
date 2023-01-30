@@ -42,11 +42,12 @@ Add below sample configuration in the **Horizontal Pod Autoscaler Config** texta
         averageUtilization: 80
         type: Utilization
     type: Resource
-minReplicas: 2</code></pre>
+minReplicas: 2
+</code></pre>
 
 
 
-![](<../../../.gitbook/assets/image (9) (1).png>)
+![](<../../../.gitbook/assets/image (9) (1) (1).png>)
 
 For HPA Configures Services, **Replica** is set as _Auto_ in DuploCloud Portal
 

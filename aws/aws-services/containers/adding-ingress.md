@@ -68,7 +68,7 @@ Once Ingress is configured, you can access Services based on the rules for each 
 
 ![K8s Ingress Tab](<../../../.gitbook/assets/image (68).png>)
 
-In this example, based on the Ingress rules that you configured for the three services, you can see the difference in the output for each service. Configured services are accessed based on the DNS name specified in the DuploCloud Portal and the paths you configured when you added Ingress rules.
+By executing `curl` commands, you can see the difference in the output for each service. Configured services are accessed based on the DNS name specified in the DuploCloud Portal and the paths that you configured when you added Ingress rules.
 
 > `>curl http://sample-ingress.qaapps.duplocloud.net/path1/` \
 > `this is service1`\
