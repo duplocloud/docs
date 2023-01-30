@@ -140,7 +140,7 @@
   * [Configure CircleCI](ci-cd/circleci/configure-circleci.md)
   * [Build and Push Docker Image](ci-cd/circleci/build-and-push-docker-image.md)
   * [Update Service](ci-cd/circleci/update-service.md)
-* [Gitlab CI/CD](ci-cd/gitlab-ci-cd/README.md)
+* [GitLab CI/CD](ci-cd/gitlab-ci-cd/README.md)
   * [First deployment](ci-cd/gitlab-ci-cd/first-deployment.md)
   * [Configuring Gitlab](ci-cd/gitlab-ci-cd/configuring-github.md)
   * [Build a docker image](ci-cd/gitlab-ci-cd/build-a-docker-image.md)
