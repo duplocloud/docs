@@ -5,7 +5,7 @@
 Create a MySQL, Microsoft SQL, PostgreSQL or Amazon Aurora database from the menu **DevOps** > **Database** > **RDS** > **+Add** button above the table.\
 
 
-![](<../../../.gitbook/assets/image (38) (2).png>)
+![](<../../../../.gitbook/assets/image (38) (2).png>)
 
 #### Create Aurora Serverless V2 Cluster database
 
