@@ -4,6 +4,11 @@ description: New features and enhancements in DuploCloud
 
 # Product updates
 
+### February 2023
+
+* AWS
+  * EKS 1.21 version is no longer supported.
+
 ### December 2022 and January 2023
 
 * GCP
@@ -22,8 +27,6 @@ description: New features and enhancements in DuploCloud
   * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/7ev96ixoUE2TKhw2W8yw/azure/use-cases/cost-management) with weekly or monthly views.
 * General updates
   * [Delete VPN connections](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/zv5qBQC5mUqzcKULXq1i/administrators/access-control/vpn-access#deleting-a-vpn-user) for users.
-
-
 
 ### November 2022
 
