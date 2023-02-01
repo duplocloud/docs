@@ -24,7 +24,7 @@ View the Hosts created as part of ASG creation from ASG View Details Page.\
 
 ## **Creating an Amazon EC2 Auto Scaling policy**
 
-Refer to AWS Documentation for detailed steps on creating Scaling policies for the Auto Scaling Group created
+Refer to AWS [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html#as-how-scaling-policies-work) for detailed steps on creating Scaling policies for the Auto Scaling Group created
 
 
 
