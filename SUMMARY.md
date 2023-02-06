@@ -19,6 +19,19 @@
 * [No-Code / Low-Code](getting-started/no-code-low-code.md)
 * [Security and Compliance](aws/broader-scenarios/security-and-compliance.md)
 
+## Administrator Tools
+
+* [Access control](administrator-tools/access-control/README.md)
+  * [Add, edit, or delete a user](administrator-tools/access-control/add-edit-or-delete-a-user.md)
+  * [Add Tenant access for users](administrator-tools/access-control/tenant-access.md)
+  * [Add Tenant access over a VPN](administrator-tools/access-control/add-tenant-access-over-a-vpn.md)
+  * [Add and Delete VPN access for users](administrator-tools/access-control/add-and-delete-vpn-access-for-users.md)
+  * [API tokens](administrator-tools/access-control/api-tokens.md)
+* [Kubectl setup for administrators](administrator-tools/kubectl-setup/README.md)
+  * [Kubectl setup for non-administrators (AWS only)](administrator-tools/kubectl-setup/kubectl-setup-for-non-administrators-aws-only.md)
+* [SSO Configuration](administrator-tools/sso-configuration/README.md)
+  * [Azure AD as IdP](administrator-tools/sso-configuration/azure-ad-as-idp.md)
+
 ## AWS user guide <a href="#aws" id="aws"></a>
 
 * [AWS overview](aws/overview.md)
@@ -204,18 +217,6 @@
 * [Use Cases](gcp/use-cases/README.md)
   * [Cost management](gcp/use-cases/cost-management.md)
 * [GCP FAQ](gcp/gcp-faq.md)
-
-## Administrators
-
-* [Access control](administrators/access-control/README.md)
-  * [Add, edit, or delete a user](administrators/access-control/add-edit-or-delete-a-user.md)
-  * [Add Tenant access for users](administrators/access-control/tenant-access.md)
-  * [Add Tenant access over a VPN](administrators/access-control/add-tenant-access-over-a-vpn.md)
-  * [Add and Delete VPN access for users](administrators/access-control/add-and-delete-vpn-access-for-users.md)
-  * [API tokens](administrators/access-control/api-tokens.md)
-* [Kubectl setup](administrators/kubectl-setup.md)
-* [SSO Configuration](administrators/sso-configuration/README.md)
-  * [Azure AD as IdP](administrators/sso-configuration/azure-ad-as-idp.md)
 
 ## Extras
 
