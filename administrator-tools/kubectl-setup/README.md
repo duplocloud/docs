@@ -10,7 +10,7 @@ As an Administrator, you can access `kubectl`on a local computer to a Kubernetes
 
 1. In the DuploCloud Portal, navigate to **Administrators** -> **Infrastructure.**
 2. In the Name column, select the Infrastructure in which you want to set up `kubectl`.&#x20;
-3. Click the **EKS** (for AWS and GCP) tab or the **AKS** (for Azure) tab.
+3. Click the **EKS** (for AWS) tab, **GKE** (for GCP) tab, or the **AKS** (for Azure) tab.
 4. Click **Download Kube Config** to download the `kubeconfig` file.
 
 ![EKS tab with Download Kube Config button](../../.gitbook/assets/kubectl-config-download.jpg)
