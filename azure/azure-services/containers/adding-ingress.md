@@ -39,7 +39,7 @@ You must create [Services ](./#add-services)to run the ALB and NLB load balancer
 
 ### Adding a Load Balancer Listener
 
-1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> EKS/Native**.
+1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> AKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3.  Click the **Load Balancers** tab.
 

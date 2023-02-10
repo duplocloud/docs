@@ -86,6 +86,7 @@
   * [Metrics](aws/use-cases/monitoring/README.md)
     * [Metrics Setup](aws/use-cases/monitoring/metrics-setup.md)
     * [Metrics Dashboard](aws/use-cases/monitoring/metrics-dashboard.md)
+    * [Kubernetes Administrator dashboard](aws/use-cases/monitoring/kubernetes-administrator-dashboard.md)
   * [Faults and Alerts](aws/use-cases/faults-and-alarms/README.md)
     * [Alert notifications](aws/use-cases/faults-and-alarms/alerting-and-notifications.md)
     * [Automatic alert creation](aws/use-cases/faults-and-alarms/automatic-alert-creation.md)
