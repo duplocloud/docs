@@ -8,7 +8,7 @@ description: New features and enhancements in DuploCloud
 
 * AWS
   * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
-  * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. In the Tenant view's **shared** card, tax and support costs are now displayed.
+  * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/containers/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
   * [Timestream databases](../aws/aws-services/database/timestream-database.md) are now supported.
   * Use the [K8s Admin dashboard to monitor StatefulSets](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
