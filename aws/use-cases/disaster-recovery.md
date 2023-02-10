@@ -19,7 +19,7 @@ When creating an Infrastructure, you specify the number of availability zones, t
 
 ![Add Infrastructure form](<../../.gitbook/assets/image (15) (1) (1) (2) (1) (1).png>)
 
-See the [Infrastructure](../aws-services/infrastructure.md) topic for detailed steps about how to create an Infrastructure in the DuploCloud Portal.
+See the [Infrastructure](../aws-services/infrastructure/) topic for detailed steps about how to create an Infrastructure in the DuploCloud Portal.
 
 {% hint style="warning" %}
 Up to one instance (0 or 1) of an EKS or ECS is supported for each DuploCloud Infrastructure.

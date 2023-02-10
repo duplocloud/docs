@@ -74,14 +74,21 @@ DuploCloud Platform supports defining multiple paths in Ingress.
 7. Add another rule by clicking **Add Rule**. The **Add Ingress Rule** pane displays. In the **Service Name** field, select **s4-nlb:80**. Click **Add Rule** to add the NLB load balancer.
 8. On the **Add Kubernetes Ingress** page, **Add** to finish setting up the load balancer rules.
 
-### Adding a Security Group Rule for a port value other than 80
+### Adding a Security Group Rule
+
+{% hint style="warning" %}
+Port **80** is configured by default when adding Ingress. If you want to use a custom port number other than **80**, set up an additional Security Group Rule for the custom port using this procedure.&#x20;
+{% endhint %}
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
-2. Click the **Security Group Rules** tab.
-3. Click Add. The **Add Infrastructure Security** pane opens.
-4. Define the rule for your custom port number and click Add.
+2. Select the Infrastructure from the **Name** column.
+3. Click the **Security Group Rules** tab.&#x20;
+4.  Click **Add**. The **Add Infrastructure Security** pane displays.
 
-<figure><img src="../../../.gitbook/assets/AKS_Ingress_80.png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab with custom rule for port <strong>81</strong></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Azure_SG_Add_Infra_Security.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure>
+5. Define the rule and click **Add**. The rule is added to the **Security Group Rules** list.
+
+<figure><img src="../../../.gitbook/assets/AKS_Ingress_80 (1).png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab with rule for port <strong>81</strong></p></figcaption></figure>
 
 ## View Ingress
 

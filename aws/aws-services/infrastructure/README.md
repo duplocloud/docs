@@ -26,8 +26,8 @@ When you create the Infrastructure, DuploCloud creates the following components:
 * NAT Gateway
 * Internet Gateway
 * Route tables
-* VPC peering with the master VPC, which is initially configured in DuploCloud
+* [VPC peering](virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
 
-Creating the DuploCloud Infrastructure can take some time. After the Infrastructure is created, a plan (with the same Infrastructure name) is created and populated with the configuration of the Infrastructure. The Plan is used to create [Tenants](../use-cases/tenant-environment.md).
+Creating the DuploCloud Infrastructure can take some time. After the Infrastructure is created, a plan (with the same Infrastructure name) is created and populated with the configuration of the Infrastructure. The Plan is used to create [Tenants](../../use-cases/tenant-environment.md).
 
 ![DuploCloud Plan Details](https://duplocloud.com/wp-content/uploads/2021/11/infra-plan.png)
