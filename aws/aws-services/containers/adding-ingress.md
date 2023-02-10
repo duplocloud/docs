@@ -59,7 +59,7 @@ Using Kubernetes Health Check allows AWS's Application Load Balancer to determin
 3. Click the **Load Balancers** tab.
 4. Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
-6. In the **Health Check** field, add the Kubernetes Health Check URL for this container.&#x20;
+6. Optionally, select **Set Health Check annotations for Ingress** to add Kubernetes Health Checks and Probes.&#x20;
 7. Complete the other fields in the **Add Load Balancer Listener** and click **Add**.
 
 ## View Ingress

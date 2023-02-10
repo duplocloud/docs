@@ -4,27 +4,27 @@ description: New features and enhancements in DuploCloud
 
 # Product updates
 
-### February 2023
-
-* AWS
-  * EKS 1.21 version is no longer supported.
-
 ### December 2022 and January 2023
 
+* AWS
+  * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
+  * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. In the Tenant view's **shared** card, tax and support costs are now displayed.
+  * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/containers/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
+  * [Timestream databases](../aws/aws-services/database/timestream-database.md) are now supported.
+  * Use the [K8s Admin dashboard to monitor StatefulSets](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
+  * [Force creation of StatefulSets](../aws/aws-services/containers/#5-toc-title).
+* Azure
+  * Support for [Kubernetes Ingress](../azure/azure-services/containers/adding-ingress.md).
+  * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/7ev96ixoUE2TKhw2W8yw/azure/use-cases/cost-management) with weekly or monthly views.
+  * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 * GCP
   * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/LIQrEoD3lxoJfvhsSCPM/gcp/use-cases/cost-management) with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
-  * [Force creation of Stateful Sets](../aws/aws-services/containers/#0-toc-title).
-  * Use the K8s Admin dashboard to [monitor Stateful Sets](../aws/aws-services/containers/#monitoring-kubernetes-stateful-sets).
-  * Maintain cluster stability with [Ingress Health Checks](../aws/aws-services/containers/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) annotations.&#x20;
-* AWS
-  * Enable [Elastic Kubernetes Service (EKS)](../aws/use-cases/kubernetes-cluster/) for your existing infrastructure. EKS versions 1.22 and 1.23 are supported.
-  * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
-  * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. In the Tenant view's **shared** card, tax and support costs are now displayed.
-  * [Timestream databases](../aws/aws-services/database/timestream-database.md) are now supported.
-* Azure
+  * Support for Kubernetes Ingress in [Azure](../azure/azure-services/containers/adding-ingress.md).
+  * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/containers/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
+  * [Force creation of StatefulSets in AWS](../aws/aws-services/containers/#5-toc-title).
+  * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
-  * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/7ev96ixoUE2TKhw2W8yw/azure/use-cases/cost-management) with weekly or monthly views.
 * General updates
   * [Delete VPN connections](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/zv5qBQC5mUqzcKULXq1i/administrators/access-control/vpn-access#deleting-a-vpn-user) for users.
 

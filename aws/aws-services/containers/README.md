@@ -41,9 +41,9 @@ Set Docker registry credentials and Kubernetes secrets:
 
 ## Services <a href="#5-toc-title" id="5-toc-title"></a>
 
-When you add a [Service](../../../getting-started/application-focussed-interface/app-service-and-cloud-service.md) in the DuploCloud Platform, it is not the same as adding a Kubernetes service.&#x20;
+Adding a Service in the DuploCloud Platform is not the same as adding a Kubernetes service.&#x20;
 
-Deploying DuploCloud Services, by clicking the **Add** button in the **EKS/Native** tab, implicitly converts Services into either a deployment set or a StatefulSet. If there are no volume mappings, then the service is mapped to a deployment set. Otherwise, it is mapped to a StatefulSet. Most configuration values are self-explanatory, such as **Images**, **Replicas,** and **Environmental Variables**.
+Deploying DuploCloud Services, by clicking the **Add** button in the **EKS/Native** tab, implicitly converts Services into either a deployment set or a StatefulSet. If there are no volume mappings, then the service is mapped to a deployment set. Otherwise, it is mapped to a StatefulSet, which you can force creations of if needed. Most configuration values are self-explanatory, such as **Images**, **Replicas,** and **Environmental Variables**.
 
 You can supply advanced configuration options in the **Other K8 Config** field. The content of this field maps one-to-one with the Kubernetes API. Configurations for deployment are StatefulSets and are supported by placing the appropriate JSON code in the **Other K8 Config** section. For example, to reference Kubernetes Secrets using a YAML config map, create the following JSON code:&#x20;
 
@@ -65,9 +65,9 @@ You can supply advanced configuration options in the **Other K8 Config** field. 
 }
 ```
 
-### Docker <a href="#0-toc-title" id="0-toc-title"></a>
-
+{% hint style="info" %}
 You can deploy any native Docker container in a virtual machine (VM) with the DuploCloud platform.&#x20;
+{% endhint %}
 
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
 2. Click **Add**. The **Add Service** page displays.
@@ -81,15 +81,6 @@ The number of Replicas that you define must be less than or equal to the number 
 {% endhint %}
 
 ![Add Service page](../../../.gitbook/assets/k8\_statefulSet\_force.png)
-
-#### Monitoring Kubernetes StatefulSets&#x20;
-
-Use the K8s Admin dashboard to monitor the number and availability of StatefulSets for your service.
-
-1. In the DuploCloud Portal, select **Administrator** -> **Diagnostics** -> **Metrics**.
-2. Click the **k8s** tab. The **K8s Admin** dashboard displays.
-
-<figure><img src="../../../.gitbook/assets/k8_statefulSet_dash.png" alt=""><figcaption><p><strong>K8s Admin</strong> dashboard</p></figcaption></figure>
 
 ## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
 
