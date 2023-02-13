@@ -4,6 +4,10 @@ description: Popular and frequently asked questions about DuploCloud and AWS
 
 # AWS FAQ
 
+## With DuploCloud, will we be more secure and compliant out-of-the-box, as opposed to using a default AWS configuration?
+
+Yes. This is a major advantage of using DuploCloud. All controls are mapped to various compliance standards. DuploCloud is also very flexible in enabling you to add custom policies (resource quotas, ability to create public-facing endpoints, etc.)
+
 ## **How do I ssh into the host?** <a href="#0-toc-title" id="0-toc-title"></a>
 
 Under each host you can click on Connection details under Action dropdown which will provide the key file and instructions to ssh.
@@ -21,6 +25,12 @@ Under the services status tab, find the host where the container is running. The
 Make sure the DNS name is resolves by running on your local machine: `ping`. Then we need to check if the application is running by testing the same from within the container. Then ssh into the host and then connect to your docker container using docker exec command (see above). From inside the container `curl` the application URL using the IP 127.0.0.1 and port where the application is running. Confirm that this works. Then `curl` the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running `ifconfig` command in the container.
 
 If the connection from within the container works, then exit from the container into the host. Now `curl` the same endpoint from the host i.e., using container IP and port. If this works then under the ELB UI in DuploCloud note down the host port that DuploCloud created for the given container endpoint. This will be in the range 10xxx or the same as container port. Now try connecting to the “`HostIP`” and `DuploMappedHostPort` just obtained. If this works as well but the service URL is still failing, contact your enterprise admin or [duplolive-support@duplocloud.net](mailto:duplolive-support@duplocloud.net).
+
+## Do I need an AWS access key for my application when using AWS?
+
+CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the [CI/CD](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/r966TcV3ISnUcfuJxUa3/ci-cd/continuous-integration-and-deployment-ci-cd) section. DuploCloud offers its own CI/CD tool ([KatKit](../ci-cd/katkit/)), as well.
+
+If your application is running in a DuploCloud [Tenant](../getting-started/application-focussed-interface/tenant.md) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access. For more information, see the [AWS FAQ](aws-faq.md).  &#x20;
 
 ## What keys should I use in my application to connect to the AWS resources I have created in DuploCloud like S3, Dynamo, SQS, etc.? <a href="#4-toc-title" id="4-toc-title"></a>
 
