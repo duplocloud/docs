@@ -142,34 +142,6 @@
     * [Using Generated Code](aws/terraform-support/duplocloud-terraform-exporter/using-generated-code.md)
     * [Troubleshooting Guide](aws/terraform-support/duplocloud-terraform-exporter/troubleshooting-guide.md)
 
-## CI/CD
-
-* [Introduction to CI/CD](ci-cd/introduction-to-ci-cd.md)
-* [GitHub Actions](ci-cd/github-actions/README.md)
-  * [First deployment](ci-cd/github-actions/first-deployment.md)
-  * [Configuring Github](ci-cd/github-actions/configuring-github.md)
-  * [Build a docker image](ci-cd/github-actions/build-a-docker-image.md)
-  * [Update a service](ci-cd/github-actions/update-a-service.md)
-  * [Update CloudFront](ci-cd/github-actions/update-cloudfront.md)
-  * [Upload to S3](ci-cd/github-actions/upload-to-s3.md)
-* [CircleCI](ci-cd/circleci/README.md)
-  * [First Deployment](ci-cd/circleci/first-deployment.md)
-  * [Configure CircleCI](ci-cd/circleci/configure-circleci.md)
-  * [Build and Push Docker Image](ci-cd/circleci/build-and-push-docker-image.md)
-  * [Update Service](ci-cd/circleci/update-service.md)
-* [GitLab CI/CD](ci-cd/gitlab-ci-cd/README.md)
-  * [First deployment](ci-cd/gitlab-ci-cd/first-deployment.md)
-  * [Configuring Gitlab](ci-cd/gitlab-ci-cd/configuring-github.md)
-  * [Build a docker image](ci-cd/gitlab-ci-cd/build-a-docker-image.md)
-  * [Update a service](ci-cd/gitlab-ci-cd/update-a-service.md)
-* [Katkit](ci-cd/katkit/README.md)
-  * [First deployment](ci-cd/katkit/first-deployment.md)
-  * [Environments](ci-cd/katkit/environments.md)
-  * [Link repository](ci-cd/katkit/link-repository.md)
-  * [Phases](ci-cd/katkit/phases.md)
-  * [Katkit config](ci-cd/katkit/katkit-config.md)
-  * [Advanced functions](ci-cd/katkit/advanced-functions.md)
-
 ## Azure user guide <a href="#azure" id="azure"></a>
 
 * [Overview](azure/overview.md)
@@ -219,6 +191,34 @@
 * [Use Cases](gcp/use-cases/README.md)
   * [Cost management](gcp/use-cases/cost-management.md)
 * [GCP FAQ](gcp/gcp-faq.md)
+
+## CI/CD
+
+* [Introduction to CI/CD](ci-cd/introduction-to-ci-cd.md)
+* [GitHub Actions](ci-cd/github-actions/README.md)
+  * [First deployment](ci-cd/github-actions/first-deployment.md)
+  * [Configuring Github](ci-cd/github-actions/configuring-github.md)
+  * [Build a docker image](ci-cd/github-actions/build-a-docker-image.md)
+  * [Update a service](ci-cd/github-actions/update-a-service.md)
+  * [Update CloudFront](ci-cd/github-actions/update-cloudfront.md)
+  * [Upload to S3](ci-cd/github-actions/upload-to-s3.md)
+* [CircleCI](ci-cd/circleci/README.md)
+  * [First Deployment](ci-cd/circleci/first-deployment.md)
+  * [Configure CircleCI](ci-cd/circleci/configure-circleci.md)
+  * [Build and Push Docker Image](ci-cd/circleci/build-and-push-docker-image.md)
+  * [Update Service](ci-cd/circleci/update-service.md)
+* [GitLab CI/CD](ci-cd/gitlab-ci-cd/README.md)
+  * [First deployment](ci-cd/gitlab-ci-cd/first-deployment.md)
+  * [Configuring Gitlab](ci-cd/gitlab-ci-cd/configuring-github.md)
+  * [Build a docker image](ci-cd/gitlab-ci-cd/build-a-docker-image.md)
+  * [Update a service](ci-cd/gitlab-ci-cd/update-a-service.md)
+* [Katkit](ci-cd/katkit/README.md)
+  * [First deployment](ci-cd/katkit/first-deployment.md)
+  * [Environments](ci-cd/katkit/environments.md)
+  * [Link repository](ci-cd/katkit/link-repository.md)
+  * [Phases](ci-cd/katkit/phases.md)
+  * [Katkit config](ci-cd/katkit/katkit-config.md)
+  * [Advanced functions](ci-cd/katkit/advanced-functions.md)
 
 ## Extras
 
