@@ -78,6 +78,7 @@ DuploCloud licenses usage is calculated based on the services managed by DuploCl
 
 * A host is counted as 1 unit. (example: EC2 instance, Azure VM)
 * A serverless function or service is counted as 1/2 unit (example: ECS service, lambda function)
+* A Managed Airflow (MWAA) worker is counted as 1/2 unit. For a MWAA environment the number of workers are calculated as the average of minimum and maximum worker count
 
 ## Why use Terraform when Cloud Formation is AWS native?
 
