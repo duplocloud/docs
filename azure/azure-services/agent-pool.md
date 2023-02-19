@@ -8,7 +8,7 @@ description: >-
 
 When you create agent pools to run Azure Kubernetes (AKS) workloads, you create groups of agents available to a pipeline. When you run the pipeline, the pipeline selects the agent that best meets the performance demands of that pipeline.
 
-Agent pools can be [autoscaled](../use-cases/autoscaling-using-agent-pool.md) when the **Enable Autoscaling** option is selected in the DuploCloud Portal. Each agent pool contains nodes backed by virtual host machines.
+Agent pools can be [autoscaled](broken-reference) when the **Enable Autoscaling** option is selected in the DuploCloud Portal. Each agent pool contains nodes backed by virtual host machines.
 
 Use the DuploCloud Portal **Hosts** page to create and edit Azure agent pools.
 
