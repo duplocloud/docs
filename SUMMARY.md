@@ -144,7 +144,13 @@
 
 ## Azure user guide <a href="#azure" id="azure"></a>
 
-* [Overview](azure/overview.md)
+* [Azure Overview](azure/overview.md)
+* [Container deployments](azure/container-deployments/README.md)
+  * [Container orchestrators](azure/container-deployments/container-orchestrators.md)
+  * [Concepts](azure/container-deployments/concepts.md)
+  * [Passing Configuration and Secrets](azure/container-deployments/passing-config-and-secrets/README.md)
+    * [Mounting ConfigMaps and Secrets as files](azure/container-deployments/passing-config-and-secrets/mounting-config-as-files.md)
+    * [Setting Environment Variables (EVs) from a ConfigMap or Secret](azure/container-deployments/passing-config-and-secrets/setting-environment-variables-from-config.md)
 * [Quick start](azure/quick-start/README.md)
   * [Step 1: Infrastructure](azure/quick-start/step-1-infrastructure.md)
   * [Step 2: Tenant](azure/quick-start/step-2-tenant.md)
@@ -156,7 +162,9 @@
   * [Faults and alerts](azure/use-cases/faults-and-alerting/README.md)
     * [Alert notifications](azure/use-cases/faults-and-alerting/alert-notifications.md)
   * [Cost management](azure/use-cases/cost-management.md)
-  * [Autoscale agent pools](azure/use-cases/autoscaling-using-agent-pool.md)
+  * [Autoscaling](azure/use-cases/autoscaling/README.md)
+    * [Autoscaling Azure Agent Pools](azure/use-cases/autoscaling/autoscaling-azure-agent-pools.md)
+    * [Autoscaling in Kubernetes](azure/use-cases/autoscaling/autoscaling-in-kubernetes.md)
   * [Backups](azure/use-cases/backups.md)
   * [Logs](azure/use-cases/logs.md)
   * [Metrics](azure/use-cases/metrics.md)
