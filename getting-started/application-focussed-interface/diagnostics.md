@@ -2,7 +2,7 @@
 
 The DuploCloud platform automatically orchestrates three main diagnostic functions:
 
-* **Central Logging:** A shared Elasticsearch cluster is deployed and file beat is installed in all worker nodes to fetch the logs from various applications across tenants. The logs are injected with metadata corresponding to Tenant name, service name, container ID, Host name, etc. Further, each tenant has the central logging dashboard which includes the Kibana view of the logs from applications within the service. See the screenshot below:\\
+* **Central Logging:** A shared Elasticsearch cluster is deployed and file beat is installed in all worker nodes to fetch the logs from various applications across tenants. The logs are injected with metadata corresponding to Tenant name, service name, container ID, Host name, etc. Further, each tenant has the central logging dashboard which includes the Kibana view of the logs from applications within the service. See the screenshot below:
 
 ![](<../../.gitbook/assets/Screen Shot 2022-03-12 at 8.23.48 PM.png>)
 
