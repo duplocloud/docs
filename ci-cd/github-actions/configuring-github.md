@@ -2,7 +2,7 @@
 description: This section discusses how you can configure Github to integrate with Duplo
 ---
 
-# Configuring Github
+# Configuring GitHub
 
 In order to call a DuploCloud API from Github, you will need to obtain an API token.
 
