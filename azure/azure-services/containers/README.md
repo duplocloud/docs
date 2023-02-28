@@ -38,7 +38,7 @@ Once the Tenant is created:
 2. Select the Tenant that you created from the **Tenant** list box.&#x20;
 3. Click **Add**.
 
-<figure><img src="../../../.gitbook/assets/Azure_Hosts.png" alt=""><figcaption><p><strong>Azure VM</strong> hosts page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Azure_Hosts (1).png" alt=""><figcaption><p><strong>Azure VM</strong> hosts page</p></figcaption></figure>
 
 ## Configure Kubernetes Storage
 
@@ -47,7 +47,7 @@ You can configure the Storage Class and Persistent Volume Claims (PVCs) from the
 1. In the DuploCloud Portal, navigate to **DevOps** --> **Containers** --> **AKS/Native**.
 2.  Click the **K8S Storage** tab. The **Kubernetes Storage** page displays. From this page, you define your Kubernetes [**Persistent Volume Claims**](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) and [**Storage Classes**](https://kubernetes.io/docs/concepts/storage/storage-classes/). The **Persistent Volume Claims** option is selected by default.
 
-    <figure><img src="../../../.gitbook/assets/Azure_PVC.png" alt=""><figcaption><p>The <strong>Persistent Volume Claims</strong> option on the <strong>Kubernetes Storage</strong> page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Azure_PVC (1).png" alt=""><figcaption><p>The <strong>Persistent Volume Claims</strong> option on the <strong>Kubernetes Storage</strong> page</p></figcaption></figure>
 3.  Click **Add**. The **Add Kubernetes Persistent Volume Claim** page displays.
 
     <figure><img src="../../../.gitbook/assets/Azure_PVC_Add.png" alt=""><figcaption><p>The <strong>Add Kubernetes Persistent Volume Claim</strong> page</p></figcaption></figure>
