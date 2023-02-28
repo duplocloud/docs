@@ -2,7 +2,19 @@
 description: This section discusses how you can configure Gitlab to integrate with Duplo
 ---
 
-# Configuring Gitlab
+# Configure Gitlab
+
+## Prerequisites
+
+To use GitLab CI/CD, you need to:
+
+* Deploy the application with DuploCloud as a Service and test that it works as expected.
+
+{% hint style="info" %}
+GitLab CI/CD is recommended only for upgrades of container images and to run tests that can be written to run either before or after.
+{% endhint %}
+
+## Configuring GitLab
 
 In order to call a DuploCloud API from Gitlab, you will need to obtain an API token.
 
