@@ -19,7 +19,7 @@ In order to call a DuploCloud API from CircleCI, you need to obtain and configur
 {% endcontent-ref %}
 
 1. **(Recommended)** Create a "service account" user in DuploCloud to own the API token.
-2. Give the DuploCloud user access to the desired Tenant. See [adding Tenants to a user](../../administrator-tools/access-control/tenant-access/#adding-tenant-access-for-a-user).
+2. Give the DuploCloud user access to the desired Tenant. See [adding Tenants to a user](../../administrator-tools/access-control/tenant-access.md#adding-tenant-access-for-a-user).
 3. Create an API token for that user. See [creating API Tokens](../../administrator-tools/access-control/api-tokens.md).
 4. Add a CircleCI Environment Variables in the Context created for the organization, to allow CircleCI pipelines to communicate with the DuploCloud Portal.
 
@@ -29,8 +29,8 @@ In order to call a DuploCloud API from CircleCI, you need to obtain and configur
 
 ## Adding Tenant access for users
 
-{% content-ref url="../../administrator-tools/access-control/tenant-access/" %}
-[tenant-access](../../administrator-tools/access-control/tenant-access/)
+{% content-ref url="../../administrator-tools/access-control/tenant-access.md" %}
+[tenant-access.md](../../administrator-tools/access-control/tenant-access.md)
 {% endcontent-ref %}
 
 ## Adding Environment Variables in the organization context
