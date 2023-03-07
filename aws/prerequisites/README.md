@@ -1,3 +1,9 @@
+---
+description: Tasks to perform before you use AWS with DuploCloud
+---
+
 # Prerequisites
 
-The following setup prerequisites should be met. At least one person has admin access to the DuploCloud portal.
+Before using DuploCloud, ensure the following prerequisites are met.&#x20;
+
+Read the [Access Control](../../administrator-tools/access-control/) section to ensure at least one person has administrator access.

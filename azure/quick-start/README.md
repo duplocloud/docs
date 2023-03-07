@@ -1,15 +1,14 @@
 ---
 description: >-
   Get up and running with DuploCloud running inside a Microsoft Azure cloud
-  environments, and start harnessing the power of generating low-level
-  application infrastructures.
+  environment; harness the power of generating application infrastructures.
 ---
 
-# Quick start
+# Quick Start
 
 {% embed url="https://vimeo.com/738721577" %}
 
-This quick start tutorial shows you how to set up an end-to-end cloud deployment. You should be able to create Azure infrastructure and tenants. By the end of this tutorial, you should be able to view the deployed sample web application.
+This Quick Start tutorial shows you how to set up an end-to-end cloud deployment. You will create Azure infrastructure and tenants and by the end of this tutorial, you can view a deployed sample web application.
 
 1. [Create Azure Infrastructure](step-1-infrastructure.md)
 2. [Create a Tenant](step-2-tenant.md)
