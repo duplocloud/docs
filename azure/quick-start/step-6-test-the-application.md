@@ -28,11 +28,30 @@ Display the web page that the application creates:
     <figure><img src="../../.gitbook/assets/Azure_GS_viewebsite_2.png" alt=""><figcaption></figcaption></figure>
 5. In the **Application Gateway IP** card, copy the displayed IP address to your clipboard. In this example, the IP address is **20.84.11.154**.&#x20;
 6. Open a web browser and paste the copied IP address in your browser's URL field.&#x20;
-7. Press **Enter**. Your application runs and your web page renders as shown below.
+7. Press **Enter**. Your application runs and your web page renders as shown below. Congratulations! You just launched your first web service with Azure on DuploCloud!&#x20;
 
 <figure><img src="../../.gitbook/assets/Azure_GS_viewebsite_3.png" alt=""><figcaption><p><strong>Welcome to nginx!</strong> web page</p></figcaption></figure>
 
-## Congratulations!
+## Reviewing what you learned
 
-You just launched your first web service with Azure on DuploCloud!&#x20;
+In this tutorial, your objective was to create a cloud environment to deploy an application for testing purposes, and to understand how the various components of DuploCloud work together.&#x20;
 
+The application rendered a simple web page with text, coded in JavaScript, from software application code residing in a Docker container. You can use this same procedure to deploy much more complex cloud applications.&#x20;
+
+In the previous steps, you:
+
+* [Created a DuploCloud Infrastructure](step-1-infrastructure.md) named **NONPROD**, a Virtual Private Cloud instance, backed by an AKS-enabled Kubernetes cluster.&#x20;
+* [Created a Tenant](step-2-tenant.md) named **DEV01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](step-1-infrastructure.md)) to configure multiple Azure and Kubernetes components needed for your environment.
+* [Created an Azure Agent Pool](step-3-create-azure-agent-pool.md) backed by pre-existing hosts (VMs), so that your application has storage resources with which to run.
+* [Created a Service](step-4-create-app-via-k8s.md) to connect the Docker containers and associated images, in which your application code resides, to the DuploCloud Tenant environment.
+* [Created a Load Balancer Listener](step-5-create-a-load-balancer.md) and a Kubernetes Node Port to expose your application via ports and backend network configurations. You enabled an Azure application gateway and created a Kubernetes Ingress to communicate with the node port and the AKS-enabled Kubernetes cluster in the Infrastructure.
+* [Verified that your web page rendered](step-6-test-the-application.md) as expected by testing the IP address exposed by the  Kubernetes Ingress.
+
+## Cleaning up your tutorial environment
+
+In this tutorial, you created many artifacts for testing purposes. When you are ready, clean them up so that another person can run this tutorial from the start, using the same names for Infrastructure and Tenant.
+
+1. [Delete the **DEV01** Tenant](../../administrator-tools/access-control/tenant-access/deleting-a-tenant.md). As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant cleans up most of your artifacts.
+2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../.gitbook/assets/image.png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
+
+The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
