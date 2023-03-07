@@ -14,7 +14,7 @@ Once we have the Infrastructure (Networking, Kubernetes cluster, and other commo
 
 See the Services documentation for steps to [create Hosts and configure Kubernetes storage options](../azure-services/containers/).&#x20;
 
-<figure><img src="../../.gitbook/assets/Azure_Hosts (1).png" alt=""><figcaption><p><strong>Host</strong> tab on <strong>Azure VM</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Azure_Hosts (1) (1).png" alt=""><figcaption><p><strong>Host</strong> tab on <strong>Azure VM</strong> page</p></figcaption></figure>
 
 ## Host abstraction and isolation&#x20;
 

@@ -23,7 +23,7 @@
 
 * [Access control](administrator-tools/access-control/README.md)
   * [Add, edit, or delete a user](administrator-tools/access-control/add-edit-or-delete-a-user.md)
-  * [Add Tenant access for users](administrator-tools/access-control/tenant-access/README.md)
+  * [Add Tenant access for users](administrator-tools/access-control/tenant-access.md)
     * [Add Tenant access over a VPN](administrator-tools/access-control/tenant-access/add-tenant-access-over-a-vpn.md)
     * [Deleting a Tenant](administrator-tools/access-control/tenant-access/deleting-a-tenant.md)
   * [Add and Delete VPN access for users](administrator-tools/access-control/add-and-delete-vpn-access-for-users.md)
@@ -156,7 +156,7 @@
   * [Import SSL certificates](azure/prerequisites/import-ssl-certificates.md)
   * [Set up config and secret management](azure/prerequisites/passing-config-and-secrets/README.md)
     * [Mounting ConfigMaps and Secrets as files](azure/prerequisites/passing-config-and-secrets/mounting-config-as-files.md)
-    * [Setting Environment Variables (EVs) from a ConfigMap or Secret](azure/prerequisites/passing-config-and-secrets/setting-environment-variables-from-config.md)
+    * [Setting Environment Variables (EVs) from a ConfigMap or Secret](azure/container-deployments/passing-config-and-secrets/setting-environment-variables-from-config.md)
   * [Provision the VPN](azure/prerequisites/vpn-setup.md)
   * [Connect to the VPN](azure/prerequisites/connect-to-the-vpn.md)
 * [Quick Start](azure/quick-start/README.md)

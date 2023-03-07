@@ -10,9 +10,9 @@ AWS JIT access is possible directly from the DuploCloud UI. Go to your user prof
 
 ## Access through command line
 
-Download the latest ZIP from [https://github.com/duplocloud/duplo-aws-jit/releases](https://github.com/duplocloud/duplo-aws-jit/releases) based on your Operating System. Extract the ZIP, and add **duplo-aws-credential-process** to your $PATH environment variable.
+Download the latest ZIP from [https://github.com/duplocloud/duplo-jit/releases](https://github.com/duplocloud/duplo-jit/releases) based on your Operating System. Extract the ZIP, and add **duplo-jit** to your $PATH environment variable.
 
-**duplo-aws-credential-process** needs to obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can either be specified as part of your local AWS config or could be obtained interactively using your DuploCloud portal session. Both options are specified below.
+**duplo-jit** needs to obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can either be specified as part of your local AWS config or could be obtained interactively using your DuploCloud portal session. Both options are specified below.
 
 ### Authentication
 
@@ -25,7 +25,7 @@ Second, Edit AWS Config file **\~/.aws/config** and add the below content
 ```
 [profile ENV_NAME]
 region=us-west-2
-credential_process=duplo-aws-credential-process --admin --host https://ENV_NAME.duplocloud.net --token <DUPLO_TOKEN>
+credential_process=duplo-jit aws --admin --host https://ENV_NAME.duplocloud.net --token <DUPLO_TOKEN>
 ```
 
 #### Obtain credentials interactively
@@ -53,20 +53,20 @@ If you want to obtain a link to the AWS Console, you can run the following, whic
 API Token:
 
 ```
-duplo-aws-credential-process --admin --host "https://ENV_NAME.duplocloud.net" --token <DUPLO_TOKEN> | jq -r .ConsoleUrl | pbcopy
+duplo-jit aws --admin --host "https://ENV_NAME.duplocloud.net" --token <DUPLO_TOKEN> | jq -r .ConsoleUrl | pbcopy
 ```
 
 Interactive:
 
 ```
-duplo-aws-credential-process --admin --host "https://ENV_NAME.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
+duplo-jit aws --admin --host "https://ENV_NAME.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
 ```
 
 Or if you want to get really fancy, add this to your .zshrc:
 
 ```
 function jitnow() {
-  duplo-aws-credential-process --admin --no-cache --host "https://$1.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
+  duplo-jit aws --admin --no-cache --host "https://$1.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
 }
 ```
 
