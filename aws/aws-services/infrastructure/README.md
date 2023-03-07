@@ -1,5 +1,5 @@
 ---
-description: Create a DuploCloud infrastructure for AWS.
+description: Create a DuploCloud infrastructure for AWS
 ---
 
 # Infrastructure (Virtual Private Cloud)

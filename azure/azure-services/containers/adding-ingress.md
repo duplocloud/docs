@@ -11,6 +11,10 @@ As an example, this procedure guides you through enabling and configuring Ingres
 * An Application Load Balancer (ALB). An ALB provides outbound connections to cluster nodes inside the AKS virtual network, translating the private IP address to a public IP address as part of its Outbound Pool.
 * A Network Load Balancer (NLB). An NLB distributes traffic across several servers by using the TCP/IP networking protocol. By combining two or more computers that are running applications into a single virtual cluster, NLB provides reliability and performance for web servers and other mission-critical servers.
 
+{% hint style="info" %}
+To add an SSL certificate to a service using Kubernetes Ingress, see Using the SSL certificate for Ingress in DuploCloud in the [Import SSL Certificates](../../prerequisites/import-ssl-certificates.md) prerequisite for Azure in DuploCloud.
+{% endhint %}
+
 ## Enable the Ingress Controller
 
 Before you add an Ingress rule, you need to enable the Ingress Controller for the application gateway.
@@ -18,10 +22,10 @@ Before you add an Ingress rule, you need to enable the Ingress Controller for th
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select the Infrastructure from the **Name** column.
 3. Click the **Settings** tab.
-4. Click **Add**. The **Infra - Set Custom Data** pane displays.
+4. Click **Add**. The **Infra-Set Custom Data** pane displays.
 5. In the **Setting Name** field, select **Enable App Gateway Ingress Controller**. Click **Enable** and **Set**. In the **Settings** tab, the **Enable App Gateway Ingress Controller** setting contains the **true** value.
 
-<figure><img src="../../../.gitbook/assets/image (3) (5).png" alt=""><figcaption><p><strong>Enable App Gateway Ingress Controller</strong> configured with <strong>true</strong> value</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Azure_Ingress_1.png" alt=""><figcaption><p><strong>Enable App Gateway Ingress Controller</strong> configured with <strong>true</strong> value</p></figcaption></figure>
 
 ## Adding a Load Balancer Listener using the K8S NodePort
 
@@ -66,7 +70,7 @@ DuploCloud Platform supports defining multiple paths in Ingress.
 3. Click **Add**. The **Add Kubernetes Ingress** page displays.
 4.  Supply the **Ingress Name**, select the Ingress Controller **azure-application-gateway**, and set **Visibility** to **Public**.
 
-    <figure><img src="../../../.gitbook/assets/AKS_Ingress_add (1).png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page for AKS</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AKS_Ingress_add (2).png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page for AKS</p></figcaption></figure>
 5. Click **Add Rule**. The **Add Ingress Rule** pane displays. Specify a unique **Path** identifier.
 6.  In the **Service Name** field, select **s1-alb:80**. Click **Add Rule** to add the ALB load balancer.
 
@@ -88,7 +92,7 @@ Port **80** is configured by default when adding Ingress. If you want to use a c
     <figure><img src="../../../.gitbook/assets/Azure_SG_Add_Infra_Security.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure>
 5. Define the rule and click **Add**. The rule is added to the **Security Group Rules** list.
 
-<figure><img src="../../../.gitbook/assets/AKS_Ingress_80.png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab with rule for port <strong>81</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AKS_Ingress_80 (1).png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab with rule for port <strong>81</strong></p></figcaption></figure>
 
 ## View Ingress
 
@@ -105,4 +109,3 @@ By executing `curl` commands, you can see the difference in the output for each 
 > `this is service2`\
 > \
 > `>curl -H "Host: example.com" http://sample-ingress.qaapps.duplocloud.net/ this is service3`
-
