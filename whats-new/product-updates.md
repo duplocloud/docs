@@ -4,13 +4,27 @@ description: New features and enhancements in DuploCloud
 
 # Product updates
 
+### March 2023
+
+* AWS
+  * [Virtual Private Cloud (VPC) peering](../aws/aws-services/infrastructure/virtual-private-cloud-vpc-peering.md) is supported to facilitate data transfer between VPCs.
+* CI/CD
+  * Documentation for [Bitbucket Pipelines](../ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
+
+### February 2023
+
+* AWS
+  * Enable Elastic Kubernetes Service (EKS) for your existing infrastructure. EKS versions 1.22 and 1.23 are supported.
+  * [Timestream databases](../aws/aws-services/database/timestream-database.md) are now supported.
+* General updates
+  * [Delete VPN connections](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/zv5qBQC5mUqzcKULXq1i/administrators/access-control/vpn-access#deleting-a-vpn-user) for users.
+
 ### December 2022 and January 2023
 
 * AWS
   * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
   * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/containers/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
-  * [Timestream databases](../aws/aws-services/database/timestream-database.md) are now supported.
   * Use the [K8s Admin dashboard to monitor StatefulSets](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * [Force creation of StatefulSets](../aws/aws-services/containers/#5-toc-title).
 * Azure
@@ -25,8 +39,6 @@ description: New features and enhancements in DuploCloud
   * [Force creation of StatefulSets in AWS](../aws/aws-services/containers/#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
-* General updates
-  * [Delete VPN connections](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/zv5qBQC5mUqzcKULXq1i/administrators/access-control/vpn-access#deleting-a-vpn-user) for users.
 
 ### November 2022
 
