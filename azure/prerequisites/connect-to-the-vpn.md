@@ -1,6 +1,10 @@
+---
+description: Connecting to the DuploCloud VPN with the OpenVPN client
+---
+
 # Connect to the VPN
 
-DuploCloud integrates natively with OpenVPN by provisioning VPN users added in the Duplocloud portal. As a DuploCloud user, you can access resources in the private network by connecting to the VPN with the OpenVPN client.
+DuploCloud integrates natively with OpenVPN by provisioning VPN users added to the Duplocloud portal. As a DuploCloud user, you can access resources in the private network by connecting to the VPN with the OpenVPN client.
 
 {% hint style="info" %}
 The OpenVPN Access Server is set to forward only traffic destined for network resources in the DuploCloud-managed private networks. Traffic accessing other resources on the internet does not pass through the tunnel.
@@ -18,19 +22,17 @@ User VPN credentials are accessible on the user profile page. It can be accessed
 
 ## Set up the OpenVPN User Profile and Client App
 
-1. Follow the VPN URL link in the VPN Details section of your user profile.\
-   \
-   Modern browsers will call the link unsafe since it is using a self-signed certificate. Proceed to it.
+1. Click the **VPN URL** link in the VPN Details section of your user profile. Browsers will call the link unsafe since it is using a self-signed certificate. Proceed to it.
 2. Log in to the OpenVPN Access Server user portal using the credentials from the DuploCloud user profile section.\
    \
    ![](<../../.gitbook/assets/image (10) (3).png>)
-3. Install the OpenVPN Connect app for your local machine.\
+3. Install the OpenVPN Connect app on your local machine.\
    \
    ![](<../../.gitbook/assets/image (8) (2).png>)
-4. Download the OpenVPN user profile for your account from the link labeled Yourself (user-locked profile).\
+4. Download the OpenVPN user profile for your account from the link labeled **Yourself** (user-locked profile).\
    \
    ![](<../../.gitbook/assets/image (1) (2).png>)
-5. Open the .ovpn file and click OK at the Import profile dialog. Then click Connect.\
+5. Open the **.ovpn** file and click **OK** in the **Import profile** dialog. Click **Connect**.\
    \
    ![](<../../.gitbook/assets/image (2) (5).png>)
 

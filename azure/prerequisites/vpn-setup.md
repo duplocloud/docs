@@ -8,10 +8,7 @@ DuploCloud integrates natively with OpenVPN by provisioning VPN users that you a
 
 ## Accept OpenVPN
 
-Accept OpenVPN Free tier (Bring Your Own License) in the AWS marketplace:&#x20;
-
-1. Log into your AWS account. In the console, navigate to: [https://aws.amazon.com/marketplace/pp?sku=f2ew2wrz425a1jagnifd02u5t](https://aws.amazon.com/marketplace/pp?sku=f2ew2wrz425a1jagnifd02u5t).&#x20;
-2. Accept the agreement. Other than the regular EC2 instance cost, no additional license cost is added.
+Accept OpenVPN in the [Azure marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/openvpn.openvpnas?tab=Overview) and follow the instructions in the [Quick Start Guide](https://openvpn.net/vpn-server-resources/microsoft-azure-byol-appliance-quick-start-guide/).&#x20;
 
 ## Provision the VPN
 
@@ -24,7 +21,7 @@ After the OpenVPN is provisioned, it is ready to use. Behind the scenes, DuploCl
 ![VPN tab in the System Settings page.](<../../.gitbook/assets/image (2) (2) (1).png>)
 
 {% hint style="info" %}
-You can find the OpenVPN admin password in the cloud formation stack in your AWS console.
+You can find the OpenVPN admin password in the cloud formation stack in your Azure console.
 {% endhint %}
 
 ## **Provision the VPN and create a user**
@@ -46,7 +43,7 @@ For information about removing VPN access for a user, see [Deleting a VPN user](
 
 ## Open a VPN port
 
-By default, users connected to a VPN can SSH or RDP into EC2 instances. Users can also connect to internal load balancers and endpoints of the applications. However, to connect to other services, such as databases and elastic cache, you must open the port to the VPN:&#x20;
+By default, users connected to a VPN can SSH or RDP into virtual machines (VMs). Users can also connect to internal load balancers and endpoints of the applications. However, to connect to other services, such as databases and elastic cache, you must open the port to the VPN:&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrator** --> **Tenant**.
 2. Select the Tenant in the **Name** column.
