@@ -4,6 +4,10 @@ description: Network configuration and how it maps to infrastructures in DuploCl
 
 # Networks and DuploCloud infrastructures
 
+{% hint style="info" %}
+DuploCloud automatically deploys [NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) across availability zones (AZs) for all Infrastructures that you create with DuploCloud.
+{% endhint %}
+
 Networking is a foundational piece of the DevOps lifecycle and the first thing you must configure when using DuploCloud. Key networking concepts include:
 
 * Virtual Private Cloud (VPC)
@@ -17,7 +21,7 @@ In DuploCloud, an [Infrastructure](../../getting-started/application-focussed-in
 
 When creating an Infrastructure, you specify the number of availability zones, the region, VPC Classless Inter-Domain Routing (CIDR), and a subnet mask. DuploCloud creates two subnets in each availability zone, one private and one public, and sets up routes and a NAT gateway.&#x20;
 
-![Add Infrastructure form](<../../.gitbook/assets/image (15) (1) (1) (2) (1) (1) (1) (1).png>)
+![Add Infrastructure form](<../../.gitbook/assets/image (15) (1) (1) (2) (1) (1).png>)
 
 See the [Infrastructure](../aws-services/infrastructure/) topic for detailed steps about how to create an Infrastructure in the DuploCloud Portal.
 

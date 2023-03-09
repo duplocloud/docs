@@ -23,7 +23,7 @@
 
 * [Access control](administrator-tools/access-control/README.md)
   * [Add, edit, or delete a user](administrator-tools/access-control/add-edit-or-delete-a-user.md)
-  * [Add Tenant access for users](administrator-tools/access-control/tenant-access.md)
+  * [Tenant access for users](administrator-tools/access-control/tenant-access.md)
     * [Add Tenant access over a VPN](administrator-tools/access-control/tenant-access/add-tenant-access-over-a-vpn.md)
     * [Deleting a Tenant](administrator-tools/access-control/tenant-access/deleting-a-tenant.md)
   * [Allow Cross Tenant Access](administrator-tools/access-control/allow-cross-tenant-access.md)
@@ -132,6 +132,7 @@
       * [Backup and restore](aws/aws-services/database/rds-database/backup-and-restore.md)
       * [Sharing encrypted database](aws/aws-services/database/rds-database/sharing-encrypted-database.md)
       * [Manage RDS Snapshots](aws/aws-services/database/rds-database/manage-rds-snapshots.md)
+      * [Add an RDS read replica](aws/aws-services/database/rds-database/add-an-rds-read-replica.md)
       * [Add parameters in Parameter Groups](aws/aws-services/database/rds-database/add-parameters-in-parameter-groups.md)
     * [Elastic Cache](aws/aws-services/database/elastic-cache.md)
     * [DynamoDB](aws/aws-services/database/dynamodb.md)

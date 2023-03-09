@@ -4,6 +4,10 @@ description: Create a DuploCloud infrastructure for AWS
 
 # Infrastructure (Virtual Private Cloud)
 
+{% hint style="info" %}
+DuploCloud automatically deploys [NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) across availability zones (AZs) for all Infrastructures that you create with DuploCloud.
+{% endhint %}
+
 When you create a DuploCloud Infrastructure, you create an isolated environment that maps to a Kubernetes cluster.&#x20;
 
 Create a DuploCloud Infrastructure in the DuploCloud Portal:

@@ -22,7 +22,7 @@ Any Pods that are launched using the DuploCloud UI have an appropriate Kubernete
 
 Once the tenant is created, navigate to **DevOps** in the DuploCloud Portal and select the Tenant that you created from the **Tenant** list box.&#x20;
 
-<figure><img src="../../../.gitbook/assets/aws_tenant_dropdown (2).png" alt=""><figcaption><p><strong>Tenant</strong> list box in the DevOps section</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/aws_tenant_dropdown.png" alt=""><figcaption><p><strong>Tenant</strong> list box in the DevOps section</p></figcaption></figure>
 
 In **DevOps** -> **Hosts**, create new nodes (**Hosts**).&#x20;
 
@@ -111,7 +111,7 @@ For example:&#x20;
 
 Optionally, set and reference Kubernetes secrets in your deployment by configuring them with the **EKS/Native** option.&#x20;
 
-<figure><img src="../../../.gitbook/assets/AWS_K8s_secrets (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AWS_K8s_secrets.png" alt=""><figcaption></figcaption></figure>
 
 ### EKS/AKS support <a href="#1-toc-title" id="1-toc-title"></a>
 
