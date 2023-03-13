@@ -45,4 +45,4 @@ Log Collector for Tenant in sharing the same Infrastructure will use the logging
 
 This feature is mainly configured,  when the Tenants are spread across in multiple regions or the Administrator wants to create a separate logging setup.
 
-<figure><img src="../../../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>

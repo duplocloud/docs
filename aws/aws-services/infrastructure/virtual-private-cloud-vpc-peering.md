@@ -18,7 +18,7 @@ Enable VPCs for peering:&#x20;
 2. From the **Name** column, select the first Infrastructure (**VPC-A**) for which to enable peering. **VPC-A** and its defined subnet routes are displayed.
 3.  Click the **Peering** tab and the **VPC Peering** page displays.
 
-    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1.png" alt=""><figcaption><p><strong>VPC Peering</strong> page for Infrastructure <strong>VPC-A</strong></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1 (2).png" alt=""><figcaption><p><strong>VPC Peering</strong> page for Infrastructure <strong>VPC-A</strong></p></figcaption></figure>
 4. From the **Choose VPC** list box, select a VPC that you want to peer with **VPC-A**. In this example, we select **VPC-B**.
 5. Select the **Is Peered** checkbox.&#x20;
 6.  Click **Save**.&#x20;
@@ -61,7 +61,7 @@ To maintain accessibility, add Security Group rules for Tenant VPC zones:
     <figure><img src="../../../.gitbook/assets/AWS_SG_Rules.png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab on Infrastructure screen</p></figcaption></figure>
 4.  Click **Add**. The **Add Tenant Security** pane opens.
 
-    <figure><img src="../../../.gitbook/assets/AWS_SG_Add_Tenant_Security.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_SG_Add_Tenant_Security (1).png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure>
 5. Define the rule for your **Port Range** and click **Add**.
 
 ## Delete subnet routes for peered VPCs
@@ -72,7 +72,7 @@ Delete subnet routes that you defined for VPC peer-to-peer communication:
 2. Select one of the Infrastructures containing a VPC that you previously [enabled ](virtual-private-cloud-vpc-peering.md#enable-and-associate-vpcs-for-peering)for peering and for which you defined [subnet routes](virtual-private-cloud-vpc-peering.md#select-subnets-to-use-vpc-peering). Continuing the example above, in this case, we select **VPC-A**.
 3.  Click the **Peering** tab. The **VPC Peering** page displays for **VPC-A**.
 
-    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1 (2).png" alt=""><figcaption><p><strong>VPC Peering</strong> page for Infrastructure <strong>VPC-A</strong></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1 (3).png" alt=""><figcaption><p><strong>VPC Peering</strong> page for Infrastructure <strong>VPC-A</strong></p></figcaption></figure>
 4. Select the **Choose VPC** list box. The peered VPC (**VPC-B**) displays and the **Is Peered** checkbox is selected along with the associated subnet routes defined for communication.
 5.  Clear the checkboxes of the subnet routes you want to remove in the **Select Subnets** column. Using the **CTRL** key, you can select multiple checkboxes and clear them with a single click. In this example, we remove the subnet route **vpc-b-A-private** by clearing its checkbox.
 
@@ -88,7 +88,7 @@ Delete the peering connection between VPCs:
 2. Select one of the Infrastructures containing a VPC that you previously [enabled ](virtual-private-cloud-vpc-peering.md#enable-and-associate-vpcs-for-peering)for peering and for which you defined [subnet routes](virtual-private-cloud-vpc-peering.md#select-subnets-to-use-vpc-peering). Continuing the example above, in this case, we select **VPC-A**.
 3.  Click the **Peering** tab. The **VPC Peering** page displays for **VPC-A**.
 
-    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1 (3).png" alt=""><figcaption><p>Click the <strong>Peering</strong> tab. The <strong>VPC Peering</strong> page displays for <strong>VPC-A</strong>.</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1 (2) (1).png" alt=""><figcaption><p>Click the <strong>Peering</strong> tab. The <strong>VPC Peering</strong> page displays for <strong>VPC-A</strong>.</p></figcaption></figure>
 4. Select the **Choose VPC** list box. The peered VPC (**VPC-B**) displays and the **Is Peered** checkbox is selected along with the associated subnet routes defined for communication.
 5.  Clear the **Is Peered** checkbox.&#x20;
 

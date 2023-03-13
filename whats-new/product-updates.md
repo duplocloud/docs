@@ -8,6 +8,7 @@ description: New features and enhancements in DuploCloud
 
 * AWS
   * [Virtual Private Cloud (VPC) peering](../aws/aws-services/infrastructure/virtual-private-cloud-vpc-peering.md) is supported to facilitate data transfer between VPCs.
+  * [EMR Serverless](../aws/aws-services/emr-serverless.md) is supported to run open-source big data analytics frameworks without configuring, managing, and scaling clusters or servers
 * CI/CD
   * Documentation for [Bitbucket Pipelines](../ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
 

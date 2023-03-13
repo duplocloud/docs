@@ -119,6 +119,7 @@
     * [Setting up Probes](aws/aws-services/containers/setting-up-probes.md)
   * [Data Pipeline](aws/aws-services/data-pipeline.md)
   * [Elasticsearch](aws/aws-services/elasticsearch.md)
+  * [EMR Serverless](aws/aws-services/emr-serverless.md)
   * [Kinesis Stream](aws/aws-services/kinesis-stream.md)
   * [Lambda](aws/aws-services/lambda/README.md)
     * [Create Lambda using Container Image](aws/aws-services/lambda/create-lambda-using-container-image.md)
