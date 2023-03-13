@@ -18,7 +18,7 @@ User VPN credentials are accessible on the user profile page. It can be accessed
 
 
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>VPN Details section of the user profile</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (4).png" alt=""><figcaption><p>VPN Details section of the user profile</p></figcaption></figure>
 
 ## Set up the OpenVPN User Profile and Client App
 
@@ -31,7 +31,7 @@ User VPN credentials are accessible on the user profile page. It can be accessed
    ![](<../../.gitbook/assets/image (8) (2).png>)
 4. Download the OpenVPN user profile for your account from the link labeled **Yourself** (user-locked profile).\
    \
-   ![](<../../.gitbook/assets/image (1) (2).png>)
+   ![](<../../.gitbook/assets/image (3) (4).png>)
 5. Open the **.ovpn** file and click **OK** in the **Import profile** dialog. Click **Connect**.\
    \
    ![](<../../.gitbook/assets/image (2) (5).png>)
