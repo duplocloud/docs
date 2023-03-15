@@ -8,9 +8,13 @@ description: New features and enhancements in DuploCloud
 
 * AWS
   * [Virtual Private Cloud (VPC) peering](../aws/aws-services/infrastructure/virtual-private-cloud-vpc-peering.md) is supported to facilitate data transfer between VPCs.
-  * [EMR Serverless](../aws/aws-services/emr-serverless.md) is supported to run open-source big data analytics frameworks without configuring, managing, and scaling clusters or servers
+  * [EMR Serverless](../aws/aws-services/emr-serverless.md) is supported to run open-source big data analytics frameworks without configuring, managing, and scaling clusters or servers.
+  * DuploCloud users can obtain [Just-In-Time (JIT) access](../aws/use-cases/jit-access.md) to the AWS Console.
+  * [AWS SQS Standard and FIFO queues](../aws/aws-services/sqs-queue.md) are now supported.
 * CI/CD
   * Documentation for [Bitbucket Pipelines](../ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
+* Terraform&#x20;
+  * Added `IdleTimeout` to [`duplocloud_aws_load_balancer` resource](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/resources/aws\_load\_balancer).&#x20;
 
 ### February 2023
 
