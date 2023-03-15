@@ -1,26 +1,31 @@
+---
+description: Use just-in-time (JIT) to provision your devices to connect to AWS IoT
+---
+
 # JIT Access
 
-DuploCloud users can obtain Just-In-Time (JIT) access to AWS Console. This access is restricted to resources the user has access to in the DuploCloud portal. DuploCloud admin users have admin-level access in AWS Console. This access is generated in real time and revoked by default in 1 hour.
+DuploCloud users can obtain Just-In-Time (JIT) access to the AWS Console. This access is restricted to resources that the user has access to in the DuploCloud portal. With JIT access, DuploCloud administrators have admin-level access within the AWS Console and the access is generated in real-time and revoked, by default, in one hour.
 
-## Access through UI
+## Access using the UI
 
-AWS JIT access is possible directly from the DuploCloud UI. Go to your user profile and click _Get JIT AWS Access_ to generate the JIT access keys.  This page also links directly to the AWS Console.
+You can obtain AWS JIT access directly from the DuploCloud UI.&#x20;
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2022-08-22 at 11.05.10 PM.png" alt=""><figcaption><p>DuploCloud User Profile page</p></figcaption></figure>
+1. In the DuploCloud portal, navigate to **User** -> **Profile**.
+2. Click the link **Get JIT AWS Access**.  This page links directly to the AWS Console.
 
-## Access through command line
+<figure><img src="../../.gitbook/assets/JITKEYS.png" alt=""><figcaption><p>DuploCloud User Profile page</p></figcaption></figure>
 
-Download the latest ZIP from [https://github.com/duplocloud/duplo-jit/releases](https://github.com/duplocloud/duplo-jit/releases) based on your Operating System. Extract the ZIP, and add **duplo-jit** to your $PATH environment variable.
+## Access using the command line
 
-**duplo-jit** needs to obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can either be specified as part of your local AWS config or could be obtained interactively using your DuploCloud portal session. Both options are specified below.
+Obtain access through the command line interface (CLI).
 
-### Authentication
+1. Download the latest **.zip** archive from [https://github.com/duplocloud/duplo-jit/releases](https://github.com/duplocloud/duplo-jit/releases) for your operating system.
+2. Extract the archive and add **duplo-jit** to your $PATH environment variable. **duplo-jit** must obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can be specified either as part of your local AWS configuration or can be obtained interactively, using your DuploCloud portal session.&#x20;
 
 #### Obtain credentials using an API Token
 
-First, [Obtain a DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens).&#x20;
-
-Second, Edit AWS Config file **\~/.aws/config** and add the below content
+1. [Obtain a DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens).
+2. Edit the AWS Config file (**\~/.aws/config)** and add the following, as shown in the example below:
 
 ```
 [profile ENV_NAME]
@@ -30,39 +35,51 @@ credential_process=duplo-jit aws --admin --host https://ENV_NAME.duplocloud.net 
 
 #### Obtain credentials interactively
 
-Replace `--token <DUPLO_TOKEN>` in the API Token example with `--interactive`.
+Replace `--token <DUPLO_TOKEN>` in the API Token example above with `--interactive`.
 
-When you first make the AWS call, you will be prompted to authorize through your DuploCloud portal as below. Upon successful authorization, A just-in-time token is given which is valid for 1 hour. When the token expires, you will be prompted to re-authorize the request.
+When you make the first AWS call, you are prompted to grant authorization through the DuploCloud portal, as shown below.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (18) (1).png" alt="A prompt reads &#x22;The duplo-aws-credential-process application on your computer wants to access your Duplo credentials.&#x22; The options are a green button on the right for Authorize and a Red button on the left for Cancel."><figcaption><p>Local Access Requested prompt</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18) (1).png" alt="A prompt reads &#x22;The duplo-aws-credential-process application on your computer wants to access your Duplo credentials.&#x22; The options are a green button on the right for Authorize and a Red button on the left for Cancel."><figcaption><p><strong>Local Access Requested</strong> prompt</p></figcaption></figure>
 
-### Access AWS
+Upon successful authorization, A Just-In-Time token is provided, which is valid for one hour. When the token expires, you are prompted to re-authorize the request.
 
-**Access AWS from the CLI**
+## Accessing the AWS Console
 
-Example:
+Obtain access to the AWS console.
+
+### **Accessing the AWS Console from the CLI**
+
+As long as you use the AWS\_PROFILE that matches the profile name you set in [the section above](jit-access.md#access-using-the-command-line), the AWS CLI obtains the required access credentials.
+
+For example:
 
 `AWS_PROFILE=ENV_NAME aws ec2 describe-instances`
 
-As long as you use the AWS\_PROFILE matching the profile name set in the Authentication section above, AWS CLI obtains the access credentials it requires.
+### **Obtaining a link to the AWS Console Url**
 
-**Obtain the AWS Console Url**
+To obtain a link to the AWS Console, run one of the following commands, which copy the Console URL to your clipboard that you can use in any browser.
 
-If you want to obtain a link to the AWS Console, you can run the following, which will copy the Console URL to your clipboard which you can use in any browser window:
+All of these examples assume Administrator role access, passing the `--admin` flag. If you are obtaining JIT access for a User role (not Administrator), ensure that you replace the `--admin` argument in the following code snippets with `--tenant`` `_`YOUR_TENANT`_.
 
-API Token:
+{% hint style="info" %}
+If you are receiving errors when attempting to retrieve credentials, try running the command with the `--no-cache` argument.
+{% endhint %}
+
+#### Using an API Token
 
 ```
 duplo-jit aws --admin --host "https://ENV_NAME.duplocloud.net" --token <DUPLO_TOKEN> | jq -r .ConsoleUrl | pbcopy
 ```
 
-Interactive:
+#### Obtain a link interactively
 
 ```
 duplo-jit aws --admin --host "https://ENV_NAME.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
 ```
 
-Or if you want to get really fancy, add this to your .zshrc:
+#### Obtain a link by configuring your `zsh` shell
+
+Add the following to your `.zshrc` file:
 
 ```
 function jitnow() {
@@ -70,31 +87,29 @@ function jitnow() {
 }
 ```
 
-usage: `jitnow portalname`
+{% hint style="info" %}
+usage is `jitnow portalname`
+{% endhint %}
 
-``
+### Configuring session timeout
 
-### Other option flags
+By default, JIT sessions expire after one hour. This can be modified in the DuploCloud Portal for a specific Tenant.&#x20;
 
-#### **Access as ADMIN role**
+1. displaysIn the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
+2. Select the Tenant from the **Name** column for which you want to change the expiration period.
+3. Click the **Settings** tab.
+4. Click **Add** to add a custom timeout setting. The Add Tenant Feature pane displays.
+5. Select **AWS Access Token Validity** from the Select Feature list box.
+6. In the field below (the value), specify the desired timeout period in seconds. in the example below, we specify **7200** seconds or two hours, overriding the default of **3600** seconds, or one hour.
+7. Click **Update**. The new **Value** is displayed in the **Tenant Settings** tab.
 
-All of the examples above are written for admin access, passing the `--admin` flag.
+<figure><img src="../../.gitbook/assets/update_tenant_JIT_TO.png" alt=""><figcaption><p><strong>Update Tenant Feature</strong> pane to specify new default timeout in seconds</p></figcaption></figure>
 
-#### **Access as USER role**
+<figure><img src="../../.gitbook/assets/update_tenant_JIT_TO_output.png" alt=""><figcaption><p><strong>AWS Access Token Validity</strong> settings updated with a value of <strong>7200</strong> (seconds)</p></figcaption></figure>
 
-If you are getting JIT access as a User role and not Admin, make sure you you replace `--admin` above with `--tenant THE-TENANT-YOU-ARE-USING`
+{% hint style="warning" %}
+If you are increasing the session timeout beyond the AWS default of 1 hour, you also need to update the maximum session duration value for the IAM role assigned to your DuploCloud tenant.&#x20;
 
-**No credential caching**
-
-If you are getting errors retrieving credentials, try running the command with `--no-cache` added.\
-_<mark style="color:blue;"></mark>_
-
-### Configure session timeout
-
-By default, JIT sessions expire after one hour. This can be configured in the admin section for a tenant. On the Admin->Tenants page, select a tenant and go to the _Settings_ tab. Then you can add the setting to customize the timeout. The timeout is configured in seconds.\
-![](<../../.gitbook/assets/image (2) (1) (3).png>)
-
-If you are increasing the session timeout beyond the AWS default of 1 hour, you will also need to update the maximum session duration value for the IAM role assigned to your DuploCloud tenant. You can get access to AWS Console as an admin using the instructions above. Then you can goto IAM->Roles and modify the value for that tenant.&#x20;
-
-For example: If your tenant is named "dev01", and you need to set the timeout to 2 hours. Find the IAM role called "duploservices-dev01" and modify the value for "Maximum session duration" to 2 hours.
+Access the AWS Console as an Administrator using [the instructions above](jit-access.md#accessing-the-aws-console). In the AWS Console, navigate IAM -> Roles and modify the value for your tenant accordingly. For example, if your Tenant is named DEV01, and you need to set a timeout of two hours (7200 seconds), locate the IAM role **duploservices-dev01** and modify the **Maximum Session Duration** to two hours.
+{% endhint %}
 
