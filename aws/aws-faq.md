@@ -72,14 +72,6 @@ You can find the load balancer name for your service by navigating to _DevOps->C
 
 Once you have the load balancer name, you can goto AWS console via the DuploCloud UI ([here](use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your load balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes)
 
-## How is DuploCloud subscription cost calculated?
-
-DuploCloud licenses usage is calculated based on the services managed by DuploCloud. The service usage is counted in terms of units, with a unit defined as below:
-
-* A host is counted as 1 unit. (example: EC2 instance, Azure VM)
-* A serverless function or service is counted as 1/2 unit (example: ECS service, lambda function)
-* A Managed Airflow (MWAA) worker is counted as 1/2 unit. For a MWAA environment the number of workers are calculated as the average of minimum and maximum worker count
-
 ## Why use Terraform when Cloud Formation is AWS native?
 
 Many customers prefer Terraform to Cloud Formation. Many elements in the Cloud DevOps cycle can be non-AWS (such as native Kubernetes, MongoDB, Data Dog, Okta, etc.) and all support Terraform providers.
