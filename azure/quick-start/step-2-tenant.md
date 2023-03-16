@@ -48,7 +48,7 @@ Create a Tenant for your Infrastructure and Plan:
 
 ## Check your work
 
-Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.
+Navigate to **Administrator** -> **Tenants** and verify that the **DEV01** Tenant displays in the list.
 
 <figure><img src="../../.gitbook/assets/Azure_GS_Tenant_2_Verify (1).png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong></p></figcaption></figure>
 
