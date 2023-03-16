@@ -1,8 +1,8 @@
-# MySQLServer database
+# MSSQLServer database
 
-### Create MySQL Server
+### Create MSSQL Server
 
-Create MySQL Server Database from DevOps --> Database --> MSSQLServer
+Create MSSQL Server Database from DevOps --> Database --> MSSQLServer
 
 Provide the required inputs like database name, username, password, and versions.&#x20;
 
@@ -10,7 +10,7 @@ Provide the required inputs like database name, username, password, and versions
 
 ### View Database details
 
-Users can view the database details and further configure Elastic Pools, Network Rules and Firewall Rules.
+Users can view the database details and further configure Elastic Pools, Network Rules, and Firewall Rules.
 
 DuploCloud Portal provides the ability to configure from UI.
 

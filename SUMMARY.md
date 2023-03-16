@@ -200,7 +200,7 @@
   * [Serverless Web applications](azure/azure-services/web-applications.md)
   * [Docker web application](azure/azure-services/docker-web-application.md)
   * [Databases](azure/azure-services/databases/README.md)
-    * [MySQLServer database](azure/azure-services/databases/sql-database.md)
+    * [MSSQLServer database](azure/azure-services/databases/sql-database.md)
     * [PostgreSQL](azure/azure-services/databases/postgresql.md)
 * [Azure FAQ](azure/azure-faq.md)
 
