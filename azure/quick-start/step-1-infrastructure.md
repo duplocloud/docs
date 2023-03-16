@@ -23,7 +23,8 @@ Before starting this tutorial:
 2.  Click **Add**. The **Add Infrastructure** page displays.
 
     ![Add Infrastructure page for creating a DuploCloud Infrastructure](<../../.gitbook/assets/image (44) (1).png>)
-3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page and click **Create** to create the Infrastructure.&#x20;
+3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.&#x20;
+4. Click **Create** to create the Infrastructure. It may take up to half an hour to create the Infrastructure. While the Infrastructure is being created, a **Pending** status displays in the Infrastructure page **Status** column, often with additional information about what part of the Infrastructure DuploCloud is currently creating. When creation completes, a status of **Complete** displays.&#x20;
 
 | Add Infrastructure page field  | Value                            |
 | ------------------------------ | -------------------------------- |
@@ -36,17 +37,11 @@ Before starting this tutorial:
 
 ![Infrastructure creation with a status of Complete](<../../.gitbook/assets/image (30).png>)
 
-{% hint style="info" %}
-While the Infrastructure is being created, a **Pending** status displays in the Infrastructure page **Status** column, often with additional information about what part of the Infrastructure DuploCloud is currently creating.&#x20;
-
-When creation completes, a status of **Completed** displays.&#x20;
-{% endhint %}
-
 ## Verifying that a Plan exists for your infrastructure
 
 Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the Tenants, or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
 
-Before continuing to the next step in this tutorial, however, confirm that a Plan exists that corresponds to your newly created Infrastructure.
+Before proceeding, confirm that a Plan exists that corresponds to your newly created Infrastructure.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**. The **Plans** page displays.
 2. Verify that a Plan exists with the name **NONPROD,** the name that you gave to the Infrastructure you created.
@@ -55,10 +50,11 @@ Before continuing to the next step in this tutorial, however, confirm that a Pla
 
 Once your Infrastructure and Plan have been created, the final step before creating a Tenant is to enable Azure Kubernetes Service (AKS) to connect with Azure cloud management.
 
-1. In the Infrastructure page, in the **Name** column, select the **NONPROD** Infrastructure that you created.
-2. Click the **Kubernetes** tab. The following message displays: **Kubernetes cluster is not yet enabled. Click Here to enable the Kubernetes Cluster**.
-3. Click on the **Click Here** hyperlink. The **Configure AKS Cluster** pane displays.
-4. Accept the default values and click **Create** to enable the AKS service for your Infrastructure.&#x20;
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
+2. Select the **NONPROD** Infrastructure that you created, in the **NAME** column of the Infrastructure page.
+3. Click the **Kubernetes** tab. The following message displays: **Kubernetes cluster is not yet enabled. Click Here to enable the Kubernetes Cluster**.
+4. Click on the **Click Here** hyperlink. The **Configure AKS Cluster** pane displays.
+5. Accept the default values and click **Create** to enable the AKS service for your Infrastructure.&#x20;
 
 DuploCloud begins creating and configuring an AKS cluster using Kubernetes. You receive an alert message when the Infrastructure has been updated.&#x20;
 
@@ -68,10 +64,10 @@ It may take some time for enablement to complete. Use the **Kubernetes** card in
 
 ## Check your work
 
-You previously verified that your Infrastructure and Plan were created.
+You previously verified that your Infrastructure and Plan were created. Now verify that AKS is Enabled before proceeding to [Create a Tenant](step-2-tenant.md).
 
-When AKS has been **Enabled**, details are listed in the **Kubernetes** tab. The Infrastructure page also displays the **Enabled** status on the **Kubernetes card**.
+When AKS has been **Enabled**, details are listed in the **Kubernetes** tab. The Infrastructure page also displays the **Enabled** status on the **Kubernetes** card.
 
-![Kubernetes tab in the Infrastructure page with a configured AKS cluster ](<../../.gitbook/assets/image (38).png>)
+![Kubernetes tab in the Infrastructure page with details about your configured AKS cluster ](<../../.gitbook/assets/image (38).png>)
 
-<figure><img src="../../.gitbook/assets/Azure_GS_Infra_3_Verify.png" alt=""><figcaption><p>Nonprod <strong>Infrastructure</strong> page with <strong>Kubernetes Enabled</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Azure_GS_Infra_3_Verify.png" alt=""><figcaption><p><strong>NONPROD Infrastructure</strong> page with <strong>Kubernetes Enabled</strong> card</p></figcaption></figure>
