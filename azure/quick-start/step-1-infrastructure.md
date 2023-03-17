@@ -31,7 +31,7 @@ Before starting this tutorial:
 | **Name**                       | `nonprod`                        |
 | **Subscription**               | _`YOUR_AZURE_SUBSCRIPTION_NAME`_ |
 | **VNET CIDR**                  | `10.23.0.0/16`                   |
-| **Subset CIDR**                | `10.23.0.0/20`                   |
+| **Subnet CIDR**                | `10.23.0.0/20`                   |
 | **Cloud**                      | `Azure`                          |
 | **Region**                     | _`YOUR_GEOGRAPHIC_REGION`_       |
 
