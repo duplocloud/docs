@@ -26,10 +26,6 @@ The following Amazon SQS Queue types are supported.
 
 <figure><img src="../../.gitbook/assets/create_SQS_queue (1).png" alt=""><figcaption><p><strong>Create a SQS Queue</strong> pane - <strong>Standard</strong> Queue</p></figcaption></figure>
 
-{% hint style="info" %}
-See the [AWS DynamoDB Getting Started Guide](https://aws.amazon.com/dynamodb/getting-started/?refid=94bf4df1-96e1-4046-a020-b07a2be0d712) for information about permissions.
-{% endhint %}
-
 ## Creating a FIFO Queue
 
 1. in the DuploCloud portal, navigate to **DevOps** -> **AppIntegration**.
