@@ -10,6 +10,8 @@ Now that the [Infrastructure and Plan ](step-1-infrastructure.md)exist and [AKS 
 
 In Azure, Microsoft cloud features such as Azure resource groups, Azure managed identity, Azure application security groups (ASG), and KMS keys are exposed in Tenants, which reference these feature configurations.
 
+_Estimated time to complete Step 2: 10 minutes._
+
 ## Tenant use cases
 
 DuploCloud customers often create at least two Tenants for their production and non-production cloud environments (Infrastructures).&#x20;

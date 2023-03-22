@@ -13,7 +13,7 @@ Create a DuploCloud Infrastructure in the DuploCloud Portal:
 3. Define the Infrastructure by completing the fields on the **Add Infrastructure** page.&#x20;
 4. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page.
 
-<figure><img src="../../.gitbook/assets/GCP_Add_Infra_GKE_Enable.png" alt=""><figcaption><p>Azure <strong>Infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/GCP_Add_Infra_GKE_Enable (1).png" alt=""><figcaption><p>Azure <strong>Infrastructure</strong> page</p></figcaption></figure>
 
 When you create the Infrastructure, DuploCloud creates the following components:
 

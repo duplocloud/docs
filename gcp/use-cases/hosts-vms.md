@@ -22,7 +22,7 @@ See the Services documentation for steps to [create Hosts and configure Kubernet
 
 While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
 
-<figure><img src="../../.gitbook/assets/GCP_HOSTS_Add_BYOH.png" alt=""><figcaption><p><strong>Add BYOH Hosts</strong> page </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/GCP_HOSTS_Add_BYOH (1).png" alt=""><figcaption><p><strong>Add BYOH Hosts</strong> page </p></figcaption></figure>
 
 Most of these inputs are optional and some are available as list box selections, set by the administrator in the Plan (for example, **Image ID**, in Host **Advanced Options**).&#x20;
 

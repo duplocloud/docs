@@ -10,6 +10,8 @@ But because your containers are running inside a private network, you also need 
 
 In this step, we add a Load Balancer Listener to complete this network configuration.
 
+_Estimated time to complete Step 5: 20 minutes._
+
 ## Prerequisites
 
 Before creating your DuploCloud load balancer, ensure that:
