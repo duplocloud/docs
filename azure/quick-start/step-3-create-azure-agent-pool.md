@@ -10,6 +10,8 @@ Instead of managing each agent individually, agents are grouped into [agent pool
 
 DuploCloud ensures that your application development platform conforms to Azure best practices. While you provide only high-level specifications, DuploCloud does the rest, configuring encryption, linking to managed identity, and logging you into a virtual Linux workstation to access Kubernetes constructs like [Pods](https://kubernetes.io/docs/concepts/workloads/pods/), [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), and [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/).&#x20;
 
+_Estimated time to complete Step 3: 10 minutes._
+
 ## Prerequisites
 
 Before creating Azure Agent Pools, verify that you accomplished the tasks in [Step 2](step-2-tenant.md) of this tutorial. In DuploCloud Portal, in the **Administrator** navigation group, confirm that you have:

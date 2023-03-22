@@ -12,7 +12,7 @@ Start by creating a new Infrastructure in DuploCloud. When prompted to provide d
 
 The worker nodes and remaining workload setup is described in the [Tenant](../../aws/use-cases/tenant-environment.md) topic.
 
-![Add Infrastructure form with Enable GKE selected ](<../../.gitbook/assets/GCP\_Add\_Infra\_GKE\_Enable (1).png>)
+![Add Infrastructure form with Enable GKE selected ](../../.gitbook/assets/GCP\_Add\_Infra\_GKE\_Enable.png)
 
 {% hint style="info" %}
 Creating an Infrastructure with GKE can take some time. See the Infrastructure section for details about other elements on the Add Infrastructure form.

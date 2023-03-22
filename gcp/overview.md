@@ -22,4 +22,4 @@ Before you begin, ensure that:
 
 Behind the scenes, a topology is created similar to the following low-level configuration in GCP.
 
-<figure><img src="../.gitbook/assets/GCP_Rough_Top (1).png" alt=""><figcaption><p>DuploCloud Sample Architecture for GCP</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/GCP_Rough_Top.png" alt=""><figcaption><p>DuploCloud Sample Architecture for GCP</p></figcaption></figure>

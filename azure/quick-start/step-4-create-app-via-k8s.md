@@ -10,6 +10,8 @@ In order to deploy applications, you must first create a DuploCloud Service to c
 
 In this step, we create a service to connect a [Docker](https://www.docker.com/) container image with code that displays text on a web page. The Docker container and image name is **nginx:latest**. **nginx** is the image name and **:latest** indicates that the latest version of that image will be used.
 
+_Estimated time to complete Step 4: 15 minutes._
+
 {% hint style="info" %}
 See the Docker documentation for an [overview of containers and images](https://docs.docker.com/get-started/).
 {% endhint %}

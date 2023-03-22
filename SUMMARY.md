@@ -211,7 +211,7 @@
 * [Container deployments](gcp/container-deployments/README.md)
   * [Container orchestration features](gcp/container-deployments/container-orchestrators.md)
   * [Key DuploCloud concepts](gcp/container-deployments/concepts.md)
-* [Prerequisites](gcp/prerequisites/README.md)
+* [Prerequisites](gcp/prerequisites.md)
   * [VPN Setup](gcp/prerequisites/vpn-setup.md)
   * [Connect to the VPN](gcp/prerequisites/connect-to-the-vpn.md)
 * [Quick start](gcp/quick-start/README.md)

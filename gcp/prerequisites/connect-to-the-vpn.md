@@ -14,11 +14,11 @@ The OpenVPN Access Server is set to forward only traffic destined for network re
 
 User VPN credentials are accessible on the User **Profile** page. It can be accessed through the menu on the upper right of the page or through the **User** menu option on the left.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (5) (5).png" alt=""><figcaption><p>User menu accessible from the user icon in the upper right</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>User menu accessible from the user icon in the upper right</p></figcaption></figure>
 
 
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>VPN Details section of the user profile</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption><p>VPN Details section of the user profile</p></figcaption></figure>
 
 ## Set up the OpenVPN User Profile and Client App
 

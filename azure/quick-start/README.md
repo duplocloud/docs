@@ -10,6 +10,8 @@ description: >-
 
 This Quick Start tutorial shows you how to set up an end-to-end cloud deployment. You will create Azure infrastructure and tenants and by the end of this tutorial, you can view a deployed sample web application.
 
+_Estimated time to complete tutorial: 90-100 minutes._
+
 1. [Create Azure Infrastructure](step-1-infrastructure.md)
 2. [Create a Tenant](step-2-tenant.md)
 3. [Create an Azure Agent Pool](step-3-create-azure-agent-pool.md)

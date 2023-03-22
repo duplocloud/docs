@@ -12,7 +12,7 @@ To create a service go to Devops -> Containers -> EKS/Native and click on **+ADD
 
 **Env Variables**: These are optional and you can pass environment specific values in this like DB host, port, etc. For testing purposes, you can also pass credentials in this.
 
-<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Press create and wait a moment for the service to initialize and you should see the containers running.
 

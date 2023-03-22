@@ -77,7 +77,7 @@ Add, update, or manage an IoT certificate with the following procedures.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **IoT**.
 2. Click the **Certificates** tab. The available certificates are displayed and listed by **ID**.
-3. In the row for the certificate you want to update, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> icon in the **Actions** column.
+3. In the row for the certificate you want to update, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> icon in the **Actions** column.
 4.  Select **Edit**. The **Update an IoT Certificate** pane displays.
 
     <figure><img src="../../.gitbook/assets/IOT_update_cert.png" alt=""><figcaption></figcaption></figure>
@@ -88,7 +88,7 @@ Add, update, or manage an IoT certificate with the following procedures.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **IoT**.
 2. Click the **Certificates** tab. Available certificates are displayed and listed by **ID**.
-3. In the row for the certificate you want to update, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> icon in the **Actions** column.
+3. In the row for the certificate you want to update, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> icon in the **Actions** column.
 4.  Select **Console**. The AWS Console launches so that you can manage your certificate using AWS.
 
     <figure><img src="../../.gitbook/assets/IOT_AWS_console.png" alt=""><figcaption><p>AWS Console for managing certificates</p></figcaption></figure>
