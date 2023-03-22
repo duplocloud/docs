@@ -1,17 +1,21 @@
-# PostgreSQL
+---
+description: Create a PostgreSQL database instance in DuploCloud
+---
 
-### Creating database
+# PostgreSQL database
 
-Create MySQL Server Database from DevOps --> Database --> PostgreSQL
+### Creating a Postgre database instance
 
-Provide Name, Database username, and password with Tier details to create a PostgreSQL database. DuploCloud portal provides configuration to support backup retention for your database.
+In the DuploCloud Portal, create a Postgreinstance by navigating to **DevOps** --> **Database** --> **PostgreSQL**. The **Create PostgreSQL Instance** pane displays.
 
-![](<../../../.gitbook/assets/image (1) (2) (1).png>)
+Provide **Name**, Database **Username**, and **Password** with **Service Tier** details to create a PostgreSQL database. DuploCloud portal provides configuration to support backup retention for your database when you complete the other fields in the pane.
+
+![Create PostgreSQL Instance pane](<../../../.gitbook/assets/image (1) (2) (1).png>)
 
 ### Viewing database details
 
-Click on the database link, user can view Name, Tier, Status and Version of the database created.
+By selecting your database in DuploCloud from the **PostgreSQL** page, you can view the created database's **Name**, **Tier**, **Status**, and **Version**.
 
 ### Additional supported actions
 
-Additional actions, like user can perform reboot action for the database. Virtual Network Rules and Firewall Rules configuration is also supported from the DuploCloud portal.
+You can reboot the database instance and configure Virtual Network and Firewall Rules from the **Actions** menu.

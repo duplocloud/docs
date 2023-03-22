@@ -2,7 +2,7 @@
 description: Create a MSSQL Server database in DuploCloud
 ---
 
-# MSSQLServer database
+# MSSQL Server database
 
 ### Creating the MSSQL Server
 
@@ -12,8 +12,8 @@ description: Create a MSSQL Server database in DuploCloud
 
 ![Create My SQL Server](<../../../.gitbook/assets/image (38) (1) (1).png>)
 
-### Viewing Database details
+### Viewing database details
 
-You can view database details and configure **Elastic Pools**, **Network Rules**, and **Firewall Rules** by clicking the appropriate tab.
+You can view database details and configure **Elastic Pools**, **Network Rules**, and **Firewall Rules** by selecting the database from the **MSSQL Server** page in the DuploCloud Portal and clicking the appropriate tab.
 
-![Databases tab](<../../../.gitbook/assets/image (53).png>)
+<figure><img src="../../../.gitbook/assets/Azure_MSSQL.png" alt=""><figcaption><p><strong>MSSQL Server</strong> page</p></figcaption></figure>
