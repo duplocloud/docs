@@ -12,7 +12,7 @@ Start by creating a new Infrastructure in DuploCloud. When prompted to provide d
 
 The worker nodes and remaining workload setup is described in the [Tenant](../tenant-environment.md) topic.
 
-![Add Infrastructure form with Enable EKS selected ](<../../../.gitbook/assets/image (15) (1) (1) (2) (1) (1) (1).png>)
+![Add Infrastructure form with Enable EKS selected ](<../../../.gitbook/assets/image (15) (1) (1) (2) (1).png>)
 
 {% hint style="info" %}
 Creating an Infrastructure with EKS can take some time. See the Infrastructure section for details about other elements on the Add Infrastructure form.

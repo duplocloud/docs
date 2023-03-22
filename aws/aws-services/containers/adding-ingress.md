@@ -2,7 +2,7 @@
 description: Set up Kubernetes Ingress and Load Balancer with K8s NodePort
 ---
 
-# Adding and configuring Ingress
+# Adding Ingress and Load Balancers
 
 ## Enable AWS Application Load Balancer&#x20;
 
@@ -29,7 +29,7 @@ Once Services are deployed, add Ingress:
 2. Click the **K8S Ingress** tab.&#x20;
 3. Click **Add**. The **Add Kubernetes Ingress** page displays.
 
-<figure><img src="../../../.gitbook/assets/AWS_Ingress (2).png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AWS_Ingress (1).png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
 
 ## Add rules to Kubernetes Ingress
 
@@ -66,7 +66,7 @@ Using Kubernetes Health Check allows AWS's Application Load Balancer to determin
 
 Once Ingress is configured, you can access Services based on the rules for each **DNS**.
 
-![K8s Ingress Tab](<../../../.gitbook/assets/image (18) (5).png>)
+![K8s Ingress Tab](<../../../.gitbook/assets/image (68).png>)
 
 By executing `curl` commands, you can see the difference in the output for each service. Configured services are accessed based on the DNS name specified in the DuploCloud Portal and the paths that you configured when you added Ingress rules.
 

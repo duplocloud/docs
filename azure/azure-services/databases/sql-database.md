@@ -1,17 +1,19 @@
+---
+description: Create a MSSQL Server database in DuploCloud
+---
+
 # MSSQLServer database
 
-### Create MSSQL Server
+### Creating the MSSQL Server
 
-Create MSSQL Server Database from DevOps --> Database --> MSSQLServer
-
-Provide the required inputs like database name, username, password, and versions.&#x20;
+1. In the DuploCloud Portal, navigate to **DevOps** --> **Database** --> **MSSQLServer.**
+2. Provide the database **Name**, **Username**, **Password**, and Database **Version**.&#x20;
+3. Click **Submit**.
 
 ![Create My SQL Server](<../../../.gitbook/assets/image (38) (1) (1).png>)
 
-### View Database details
+### Viewing Database details
 
-Users can view the database details and further configure Elastic Pools, Network Rules, and Firewall Rules.
+You can view database details and configure **Elastic Pools**, **Network Rules**, and **Firewall Rules** by clicking the appropriate tab.
 
-DuploCloud Portal provides the ability to configure from UI.
-
-![](<../../../.gitbook/assets/image (53).png>)
+![Databases tab](<../../../.gitbook/assets/image (53).png>)

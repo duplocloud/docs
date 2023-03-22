@@ -24,7 +24,7 @@ To create EMR Serverless applications you first need to create an EMR studio.
 
     <figure><img src="../../.gitbook/assets/AWS_EMR_Studio_button (1).png" alt=""><figcaption><p><strong>EMR Studio</strong> button on <strong>EMR Serverless</strong> tab</p></figcaption></figure>
 4. Click **Add**. The **Add EMR Studio** pane displays.\
-   ![](<../../.gitbook/assets/image (2).png>)\
+   ![](<../../.gitbook/assets/image (5).png>)\
 
 5. Enter a **Description** of the **Studio** for reference.
 6. Select an [S3 Bucket](s3-bucket.md) that you previously defined from the **Logs Default S3 Bucket** list box.
@@ -32,12 +32,12 @@ To create EMR Serverless applications you first need to create an EMR studio.
 8. Click **Create**. The EMR Studio is created and displayed.&#x20;
 9.  Select the EMR Studio name in the **Name** column. The **EMR Studio** page displays. View the **Details** of the EMR Serverless Studio.
 
-    <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>EMR Studio page with <strong>Basic</strong> and <strong>Details</strong> tabs.</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption><p>EMR Studio page with <strong>Basic</strong> and <strong>Details</strong> tabs.</p></figcaption></figure>
 10. Navigate to the **EMR Serverless** tab and click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> icon in the **Actions** column. Use the **Actions** Menu to delete the studio if needed, as well as to view the studio in the AWS Console.&#x20;
 
 
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>EMR Serverless Studio Actions Menu</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>EMR Serverless Studio Actions Menu</p></figcaption></figure>
 
 Now that the EMR Studio exists, you create an application to run analytics with it.\
 The DuploCloud Portal supports `Hive` and `Spark` applications. In this example, we create a Spark Application.
@@ -53,9 +53,9 @@ The DuploCloud Portal supports `Hive` and `Spark` applications. In this example,
 
     <figure><img src="../../.gitbook/assets/EMRC2.png" alt=""><figcaption><p><strong>EMR Serverless</strong> tab with <strong>CREATED</strong> application instance <br><br></p></figcaption></figure>
 
-Before you begin to create a job to run the application, clone an instance of it.
+Before you begin to create a job to run the application, clone an instance of it to run.
 
-### Cloning an Application
+### Cloning an application
 
 1.  On the EMR Serverless page, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> icon in the **Actions** column and select **Clone**.
 
@@ -65,12 +65,12 @@ Before you begin to create a job to run the application, clone an instance of it
 
     <figure><img src="../../.gitbook/assets/EMRC5.png" alt=""><figcaption><p>Original application instance and cloned instance in <strong>EMR Serverless</strong> tab</p></figcaption></figure>
 
-## Creating and cloning a Spark job
+## Creating a job
 
-You have created and cloned the Spark application. Now you must create and clone a Spark job to run it in EMR Serverless.
+You have created and cloned the Spark application. Now you must create and clone a job to run it in EMR Serverless. In this example, we create a Spark job.
 
 {% hint style="info" %}
-If you are new to Spark, use the Info Tips (blue <img src="../../.gitbook/assets/image (6).png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
+If you are new to Spark, use the Info Tips (blue <img src="../../.gitbook/assets/image.png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
 {% endhint %}
 
 1.  Select the application instance that you previously cloned. This instance (**DUPLOSERVICES-DEFAULT-APP1-C-833**, in this example) **** has a **STATE** of **CREATED**.
@@ -85,19 +85,19 @@ If you are new to Spark, use the Info Tips (blue <img src="../../.gitbook/assets
 
     <figure><img src="../../.gitbook/assets/EMRJ_3.png" alt=""><figcaption><p><strong>EMR Serverless</strong> configuration wizard <strong>Job details</strong> step with <strong>Spark Script S3 Bucket</strong> field</p></figcaption></figure>
 6. In the **Spark Script** [**S3 Bucket**](s3-bucket.md) **File** field, enter a path to define where your scripts are stored.
-7. Optionally, in the **Spark Scripts** field, you can specify an array of arguments passed to your JAR or Python script. Each argument in the array must be separated by a comma (**,**). In the example below, the single argument of **"40000"** is entered.&#x20;
+7. Optionally, in the **Spark Scripts** field, you can specify an array of arguments passed to your JAR or Python script. Each argument in the array must be separated by a comma (**,**). In the example below, a single argument of **"40000"** is entered.&#x20;
 8.  Optionally, in the **Spark Submit Parameters** field, you can specify Spark **`--conf`** parameters. See the example below.&#x20;
 
     <figure><img src="../../.gitbook/assets/EMRJ_4.png" alt=""><figcaption><p><strong>EMR Serverless</strong> configuration wizard <strong>Job details</strong> step with <strong>Spark Script Arguments</strong> and <strong>Spark Submit Parameters</strong> fields</p></figcaption></figure>
 9. Click **Next**.
 10. Make any desired changes in the **Configure** step and click **Next** to advance the wizard to the **Confirm** page.
-11. On the **Confirm** page, click **Submit**. In the **Run Jobs** tab for your cloned application, your job **jobfromcloneapp** displays.&#x20;
+11. On the **Confirm** page, click **Submit**. In the **Run Jobs** tab for your cloned application, your job **JOBFROMCLONEAPP** displays.&#x20;
 
     <figure><img src="../../.gitbook/assets/EMRJ_5.png" alt=""><figcaption><p><strong>Run Jobs</strong> tab for cloned application instance <strong>DUPLOSERVICES-DEFAULT-APP1-C-833</strong></p></figcaption></figure>
 
-## Monitoring running Spark jobs
+## Monitoring running jobs
 
-Observe the status of your Spark jobs and makes changes, if needed.
+Observe the status of your jobs and makes changes, if needed. In this example, we monitor the Spark jobs created and cloned in this procedure.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Analytics**.
 2. Click the **EMR Serverless** tab.
