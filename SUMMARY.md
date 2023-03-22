@@ -201,8 +201,11 @@
   * [Serverless Web applications](azure/azure-services/web-applications.md)
   * [Docker web application](azure/azure-services/docker-web-application.md)
   * [Databases](azure/azure-services/databases/README.md)
-    * [MSSQLServer database](azure/azure-services/databases/sql-database.md)
-    * [PostgreSQL](azure/azure-services/databases/postgresql.md)
+    * [MSSQL Server database](azure/azure-services/databases/sql-database.md)
+    * [PostgreSQL database](azure/azure-services/databases/postgresql.md)
+    * [MySQL database](azure/azure-services/databases/mysql-database.md)
+    * [Redis database](azure/azure-services/databases/redis-database.md)
+    * [Azure Managed Instance](azure/azure-services/databases/azure-managed-instance.md)
 * [Azure FAQ](azure/azure-faq.md)
 
 ## GCP user guide <a href="#gcp" id="gcp"></a>
