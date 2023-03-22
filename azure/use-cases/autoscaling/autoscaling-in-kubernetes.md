@@ -52,7 +52,7 @@ minReplicas: 2
 
 For HPA Configures Services, **Replica** is set as _Auto_ in DuploCloud Portal
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Setting Container Configuration
 

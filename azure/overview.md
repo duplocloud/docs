@@ -15,11 +15,11 @@ The DuploCloud platform installs a Virtual Machine resource within your Azure Su
 
 ## Prerequisites
 
-Before you begin:
+Before you begin, ensure that:
 
 * DuploCloud Portal has been set up and you have access to it.
 * You have access to your individual Slack channel for 24x7 support from the DuploCloud team.
 
-![DuploCloud Sample Architecture for Microsoft Azure](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F68cb0s9ce5UIUKWPuYs8%2Fuploads%2FENalQ7CcBZGkVhetVFi1%2Fimage.png?alt=media\&token=ff1c6622-f836-4938-ab0e-a0e36c95ce7e)
+Behind the scenes, a topology is created similar to the following low-level configuration in Azure.
 
-Behind the scenes, the topology that will get created will look like the following lower-level configuration in Azure.
+![DuploCloud Sample Architecture for Microsoft Azure](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F68cb0s9ce5UIUKWPuYs8%2Fuploads%2FENalQ7CcBZGkVhetVFi1%2Fimage.png?alt=media\&token=ff1c6622-f836-4938-ab0e-a0e36c95ce7e)
