@@ -1,9 +1,15 @@
-# Elastic cache
+---
+description: Create Elastic Cache for Redis database and Memcache memory caching
+---
 
-Create a Redis or Memcache from **DevOps** > **Database** > **Ecache** > **+Add** button above the table.
+# Elastic Cache
+
+1. In the DuploCloud Portal, navigate to **DevOps** > **Database.**
+2. Click the **Ecache** tab.
+3. Click **Add**.
 
 {% hint style="info" %}
-The best way to pass the cache endpoint to your application is through ENV variables of the Service.
+Pass the cache endpoint to your application through the [Environment Variables](../../container-deployments/passing-config-and-secrets/) via the AWS Service.
 {% endhint %}
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/createecache.png)
+![Create a Ecache pane for with Type REDIS](../../../.gitbook/assets/AWS\_Redis\_Ecache.png)
