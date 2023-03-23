@@ -12,7 +12,7 @@ To enable shell access for the DuploCloud Docker Native container system:
 
 1.  In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
 
-    <figure><img src="../../.gitbook/assets/AWS_enable_shell_button (1).png" alt=""><figcaption><p><strong>Enable Docker Shell</strong> button on the <strong>Services</strong> page</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/AWS_enable_shell_button.png" alt=""><figcaption><p><strong>Enable Docker Shell</strong> button on the <strong>Services</strong> page</p></figcaption></figure>
 2. Click **Enable Docker Shell**. The **Start Shell Service** pane displays.
 3.  From the **Platform** list box, select **Docker Native**.
 
