@@ -12,6 +12,8 @@ description: New features and enhancements in DuploCloud
   * DuploCloud users can obtain [Just-In-Time (JIT) access](../aws/use-cases/jit-access.md) to the AWS Console.
   * [AWS SQS Standard and FIFO queues](../aws/aws-services/sqs-queue.md) are now supported.
   * Use the DuploCloud Portal to work with AWS [Internet of Things (IoT)](../aws/aws-services/iot-internet-of-things.md).
+  * Support for [Redis database versions](../aws/aws-services/database/elastic-cache.md) when creating Elastic Cache (Ecache).
+  *
 * CI/CD
   * Documentation for [Bitbucket Pipelines](../ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
 * Terraform&#x20;

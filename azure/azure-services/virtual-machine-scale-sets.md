@@ -8,4 +8,4 @@ Provide inputs like Name, Subnet where Virtual Machines need to be created, Inst
 
 From DuploCloud Portal, you can view the details on the set of Virtual Machines created in Azure.
 
-![Virtual Machine Details](<../../.gitbook/assets/image (7) (3) (1).png>)
+![Virtual Machine Details](<../../.gitbook/assets/image (7) (3).png>)

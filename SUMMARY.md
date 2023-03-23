@@ -47,7 +47,7 @@
 * [Prerequisites](aws/prerequisites/README.md)
   * [Route 53 Hosted Zone](aws/prerequisites/route-53-hosted-zone.md)
   * [ACM Certificate](aws/prerequisites/acm-certificate.md)
-  * [Shell Access](aws/prerequisites/kubectl-shell.md)
+  * [Shell access](aws/prerequisites/kubectl-shell.md)
   * [VPN Setup](aws/prerequisites/vpn-setup.md)
   * [Connect to the VPN](aws/prerequisites/connect-to-the-vpn.md)
 * [Quick Start](aws/quick-start/README.md)
