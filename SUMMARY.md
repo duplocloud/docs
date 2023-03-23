@@ -116,7 +116,7 @@
   * [API gateway](aws/aws-services/api-gateway.md)
   * [CloudWatch](aws/aws-services/cloud-watch.md)
   * [CloudFront](aws/aws-services/cloudfront.md)
-  * [Database](aws/aws-services/database/README.md)
+  * [Databases](aws/aws-services/database/README.md)
     * [RDS database](aws/aws-services/database/rds-database/README.md)
       * [Backup and restore](aws/aws-services/database/rds-database/backup-and-restore.md)
       * [Sharing encrypted database](aws/aws-services/database/rds-database/sharing-encrypted-database.md)
