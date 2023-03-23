@@ -21,7 +21,7 @@ In DuploCloud, an [Infrastructure](../../getting-started/application-focussed-in
 
 When creating an Infrastructure, you specify the number of availability zones, the region, VPC Classless Inter-Domain Routing (CIDR), and a subnet mask. DuploCloud creates two subnets in each availability zone, one private and one public, and sets up routes and a NAT gateway.&#x20;
 
-![Add Infrastructure form](<../../.gitbook/assets/image (15) (1) (1) (2) (1) (1).png>)
+![Add Infrastructure form](<../../.gitbook/assets/image (15) (1) (1) (2) (1) (1) (1) (1).png>)
 
 See the [Infrastructure](../aws-services/infrastructure/) topic for detailed steps about how to create an Infrastructure in the DuploCloud Portal.
 

@@ -24,4 +24,4 @@ By creating an AWS RDS Read Replica of your database, you can:
 6. Select an appropriate **Instance Size** from the list box to match or exceed the database you want to replicate.
 7.  Click **Create**. Your replica is displayed in the RDS tab with a **Status** of **Submitted**. When the replica is ready for use, the **Status** is **Available**.
 
-    <figure><img src="../../../../.gitbook/assets/RDSRR_3 (1).png" alt=""><figcaption><p>RDS read replica with <strong>Status</strong> of <strong>Submitted</strong></p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/RDSRR_3.png" alt=""><figcaption><p>RDS read replica with <strong>Status</strong> of <strong>Submitted</strong></p></figcaption></figure>

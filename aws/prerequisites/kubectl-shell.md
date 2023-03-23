@@ -1,64 +1,63 @@
-# Shell Access
+---
+description: Enabling shell access using native Docker or ECS
+---
 
-DuploCloud allows shell access into the deployed containers. The way shell access is enabled is different based on the type of the system,  Native vs EKS
+# Shell access
 
-### Access to Native container shell
+DuploCloud allows shell access into the deployed containers. Shell access is enabled in different ways, depending on if you are using a native Docker method or ECS.
 
-To enable shell for DuploCloud native container system, goto Devops->Container/EKS/Native and click on "Enable Docker Shell". Select a certificate from the drop down, and keep the Visibility to Public. This will provision a new service called _dockerservices-shell_ which will now enable the ability to SSH into the containers of the services.
+### Access to the Docker Native container shell
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2022-04-15 at 10.28.01 AM.png" alt=""><figcaption></figcaption></figure>
+To enable shell access for the DuploCloud Docker Native container system:
+
+1.  In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
+
+    <figure><img src="../../.gitbook/assets/AWS_enable_shell_button (1).png" alt=""><figcaption><p><strong>Enable Docker Shell</strong> button on the <strong>Services</strong> page</p></figcaption></figure>
+2. Click **Enable Docker Shell**. The **Start Shell Service** pane displays.
+3.  From the **Platform** list box, select **Docker Native**.
+
+    <figure><img src="../../.gitbook/assets/AWS_Shell_Service.png" alt=""><figcaption><p><strong>Start Shell Service</strong> pane with <strong>Docker Native</strong> selected for <strong>Platform</strong></p></figcaption></figure>
+4. From the **Certificate** list box, select a certificate name.
+5. From the **Visibility** list box, select **Public**.&#x20;
+6. Click **Update**.
+
+A provisioned service named **dockerservices-shell** is created, enabling you to access the Service containers using SSH.
 
 ### Access to Kubectl shell (K8s) and ECS Task shell
 
-This is an optional feature where DuploCloud provides easy just-in-time access to the container shell and Kubectl shell directly from the browser. For this functionality to work we need to deploy a service in the Default tenant.
+Optionally, DuploCloud provides just-in-time (JIT) access to both the container shell and the `kubectl` shell directly from your browser.&#x20;
 
-In the DuploCloud Portal, Switch the tenant to `default` from the top panel Tenant drop down.
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
+2. Click **Enable Docker Shell**. The **Start Shell Service** pane displays.
+3. From the **Platform** list box, select **Kubernetes**.
+4. From the **Certificate** list box, select a certificate name.
+5. From the **Visibility** list box, select **Public**.&#x20;
+6. Click **Update**.
 
-Go to Devops --> Hosts --> Add. Give the following inputs
+<figure><img src="../../.gitbook/assets/AWS_Start_Shell_Service.png" alt=""><figcaption><p><strong>Start Shell Service</strong> pane with <strong>Kubernetes</strong> (ECS) <strong></strong> selected for <strong>Platform</strong></p></figcaption></figure>
 
-* Name: host01
-* Instance Type: t2.small
-* Image ID: Choose any image name that starts with Duplo-Docker. It might already be the default
-* Agent Platform: Linux Docker / Native
+Now you can begin using the Kubernetes (K8s) shell from the DuploCloud Portal for K8s services by clicking **KubeCtl Shell** on the **Services** page.
 
-Launch the VM and wait for it to be connected. Then we need to create a new service.
+<figure><img src="../../.gitbook/assets/AWS_Kubectl_Shell.png" alt=""><figcaption><p><strong>KubeCtl Shell</strong> button on the <strong>Services</strong> page</p></figcaption></figure>
 
-&#x20;Go to Devops --> Containers --> EKS/Native and click on add. Give the following inputs
+## View the Host and container shell for Native and Kubernetes&#x20;
 
-* Name: `duplo-shell`
-* Image: `duplocloud/shell:terraform-kubectl-v19.1`
-* Replicas : `1`
-* Platform : `Linux Docker / Native`
-* Environmental variables
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
+2. Select a Service from the **Name** column.
+3. Click the **Containers** tab.
+4. To display the shell for any container, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
+5.  Select **Container Shell** or **Host Shell** from the **Actions** menu. The container or host shell launches in AWS Systems Manager.&#x20;
 
-```
-{
-  "AWS_ACCESS_KEY_ID": "",
-  "AWS_SECRET_ACCESS_KEY": "",
-  "AWS_DEFAULT_REGION": "us-west-2",
-  "EXPORT_BUCKET": "",
-  "FLASK_APP_SECRET": "b33d13ab-5b46-ss3d-a19d-4sdds43",
-  "DUPLO_AUTH_URL": "https://<DuploPortalUrl>"
-}
-```
+    <figure><img src="../../.gitbook/assets/AWS_Kubectl_Shell_service_shell.png" alt=""><figcaption><p><strong>Container Shell</strong> and <strong>Host Shell</strong> launch options in the <strong>Actions</strong> column of the <strong>Containers</strong> tab</p></figcaption></figure>
 
-Where DUPLO\_AUTH\_URL is the URL of the DuploCloud portal as you can see in the browser address bar. Leave all other forms as default.
+## View the ECS task shell &#x20;
 
-Now we need to expose this service through an ELB. Under DevOps -->Containers-->EKS/Native click on the service called `duplo-shell` that you created above. Inside that confirm that the container is running. Then click on the load balancer tab and add a new one with the following input
+You can also view the  ECS task shell.&#x20;
 
-* Select Type: Application
-* Container Port: 80
-* External Port: 443
-* Visibility: Public
-* Application Mode: Docker
-* Health Check: /duplo\_auth
-* Backend Protocol HTTP
-* Certificate: This should be the certificate you added in the previous step
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**, displaying the **Services** page.
+2. Click the **Tasks** tab.
+3. To display the ECS task shell for any task, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
+4. A browser launches to give you access to the ECS task shell.
 
-After completing this configuration, you can start using K8s shell from the portal for K8s services by clicking on KubeCtl Shell option.
+<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p><strong>ECS task shell</strong> option in the <strong>Actions</strong> menu of the <strong>Tasks</strong> tab</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption><p>access KubeCtl Shell</p></figcaption></figure>
-
-This configuration also enables users to view the  ECS task shell. This option is available under DevOps --> Containers --> ECS --> Tasks. Under Actions menu, click on ECS Task Shell. A browser will be launched to access the task shell further.
-
-<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption></figcaption></figure>

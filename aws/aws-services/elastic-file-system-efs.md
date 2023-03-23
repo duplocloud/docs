@@ -12,4 +12,4 @@ Users can view EFS details like _File System ID_, _Mount Target Details_ and _Me
 
 User can also view the Mount Targets and Access Points details.
 
-![Mount Target Details Screen](<../../.gitbook/assets/image (8) (3).png>)
+![Mount Target Details Screen](<../../.gitbook/assets/image (8) (4).png>)
