@@ -123,9 +123,9 @@
       * [Manage RDS Snapshots](aws/aws-services/database/rds-database/manage-rds-snapshots.md)
       * [Add an RDS read replica](aws/aws-services/database/rds-database/add-an-rds-read-replica.md)
       * [Add parameters in Parameter Groups](aws/aws-services/database/rds-database/add-parameters-in-parameter-groups.md)
+    * [AWS DynamoDB database tables](aws/aws-services/database/dynamodb.md)
+    * [AWS Timestream database](aws/aws-services/database/timestream-database.md)
     * [Elastic Cache](aws/aws-services/database/elastic-cache.md)
-    * [DynamoDB](aws/aws-services/database/dynamodb.md)
-    * [Timestream database](aws/aws-services/database/timestream-database.md)
   * [Data Pipeline](aws/aws-services/data-pipeline.md)
   * [Elastic File System (EFS)](aws/aws-services/elastic-file-system-efs.md)
   * [Elasticsearch](aws/aws-services/elasticsearch.md)
@@ -233,6 +233,11 @@
 * [GCP Services](gcp/gcp-services/README.md)
   * [Infrastructure (Virtual Private Cloud)](gcp/gcp-services/infrastructure-virtual-private-cloud.md)
   * [Configuring GCP Services](gcp/gcp-services/containers.md)
+  * [Databases](gcp/gcp-services/databases/README.md)
+    * [RDS and SQL databases](gcp/gcp-services/databases/rds-and-sql-databases.md)
+    * [Elastic Cache](gcp/gcp-services/databases/elastic-cache.md)
+    * [AWS DynamoDB database tables](gcp/gcp-services/databases/dynamodb.md)
+    * [AWS Timestream database](gcp/gcp-services/databases/timestream-database.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
 ## CI/CD
