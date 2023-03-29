@@ -1,4 +1,6 @@
-# Setting up Probes
+# Setting up Probes and Health Check
+
+## Liveness, Readiness, and Startup Probes
 
 Liveness, Readiness and Startup probes are well-known methods to detect Pod health in Kubernetes. They are used in regular uptime monitoring as well as enable initial startup health that allows rolling deploys of new service updates.
 
@@ -60,4 +62,8 @@ startupProbe:
 ```
 
 Full details of this K8 feature can be referenced [here](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
+
+## Health Check
+
+Enable Kubernetes Health by adding a [Load Balancer Listener with Health Check enabled](../../../azure/azure-services/containers/adding-ingress.md#adding-a-load-balancer-listener-using-the-k8s-nodeport).
 

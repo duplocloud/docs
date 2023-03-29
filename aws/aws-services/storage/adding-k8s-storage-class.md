@@ -1,4 +1,8 @@
-# Adding K8s Storage Class
+---
+description: Set up Storage Classes and PVCs in Kubernetes
+---
+
+# Storage Class and PVCs
 
 ### **Step1:** Create an Amazon EFS &#x20;
 
