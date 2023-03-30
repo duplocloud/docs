@@ -1,33 +1,37 @@
+---
+description: Steps for sharing encrypted RDS databases in DuploCloud AWS
+---
+
 # Sharing encrypted database
 
 ## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
 
-Sharing unencrypted database to other accounts is very simple and straightforward. Sharing an encrypted database is slightly more difficult. Here we will go through the steps that needs to be followed to share the encrypted database.
+Sharing unencrypted databases to other accounts is very simple and straightforward. Sharing an encrypted database is slightly more difficult. Here we will go through the steps that need to be followed to share the encrypted database.
 
 ## Summary of steps
 
 1. Create a managed key that can be used by both accounts. Share the managed key with the destination account.
 2. Copy the existing snapshot in the source account, but encrypt it with the new key.
 3. Share the new snapshot with the destination account.
-4. In the destination account, make a copy of the shared snapshot which is encrypted with the destination account's key.
-5. Add the Name tag to the new copy in the destination so DuploCloud portal recognizes it
-6. Create a new database from the snapshot&#x20;
+4. In the destination account, make a copy of the shared snapshot encrypted with the destination account's key.
+5. Add the Name tag to the new copy in the destination so the DuploCloud portal recognizes it.
+6. Create a new database from the snapshot.&#x20;
 
 ## Step 1: Create a managed key <a href="#1-toc-title" id="1-toc-title"></a>
 
-Create a new customer managed key in AWS KMS. In the _Define key usage permissions area_ provide the account id of the other account.
+Create a new customer-managed key in AWS KMS. In the **Define key usage permissions area** provide the account id of the other account.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/KMS-other-account.png)
 
 ## Step 2: Encrypt a snapshot copy with the new key <a href="#2-toc-title" id="2-toc-title"></a>
 
-Once the key is created, go to **RDS > Snapshots**, select the snapshot and click Copy Snapshot. In the encryption, use the key we created above.
+Once the key is created, go to **RDS > Snapshots**, select the snapshot, and click Copy Snapshot. In the encryption, use the key we created above.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/KMS-copy-snapshot.png)
 
 ## Step 3: Share the snapshot with the destination account
 
-Once the copied snapshot is ready, share the snapshot to another account by clicking Share snapshot and providing the destination account id.
+Once the copied snapshot is ready, share the snapshot with another account by clicking Share snapshot and providing the destination account id.
 
 ## Step 4: Copy the shared snapshot <a href="#3-toc-title" id="3-toc-title"></a>
 
@@ -43,6 +47,6 @@ In the copied snapshot add a tag with Key as “`Name`” and Value as “`duplo
 
 ## Step 6: Create a new database <a href="#5-toc-title" id="5-toc-title"></a>
 
-Go to DuploCloud portal select the tenant. Open **RDS > Add new DB (+ icon).** Then give a name for the new database. In the snapshot select the new snapshot. Enter instance type and hit submit. In a few minutes, the database will be created with the data from the snapshot. You must use the existing username and password to access the database.
+Go to the DuploCloud portal and select the tenant. Open **RDS > Add new DB (+ icon).** Then give a name for the new database. In the snapshot select the new snapshot. Enter the instance type and click **Submit**. In a few minutes, the database will be created with the data from the snapshot. You must use the existing username and password to access the database.
 
 ![](<../../../../.gitbook/assets/Screen Shot 2022-07-08 at 11.58.39 AM.png>)
