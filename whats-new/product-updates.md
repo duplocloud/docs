@@ -13,8 +13,10 @@ description: New features and enhancements in DuploCloud
   * [AWS SQS Standard and FIFO queues](../aws/aws-services/sqs-queue.md) are now supported.
   * Use the DuploCloud Portal to work with AWS [Internet of Things (IoT)](../aws/aws-services/iot-internet-of-things.md).
   * Support for [Redis database versions](../aws/aws-services/database/elastic-cache.md) when creating Elastic Cache (Ecache).
-  * Enable [shell access for ECS, Kubernetes, and Native docke](../aws/prerequisites/kubectl-shell.md)r containers using a simplified workflow
-  * Reduce storage cost and increase performance by [setting GP3 as your default storage class](../aws/aws-services/storage/using-the-gp3-storage-class.md).
+  * Enable [shell access for ECS, Kubernetes, and Native docke](../aws/prerequisites/kubectl-shell.md)r containers using a simplified workflow.
+  * Reduce storage cost and increase performance by [setting GP3 as your default storage class](../aws/aws-services/storage/gp3-storage-class.md).
+* GCP
+  * Updated documentation for [supported databases for GCP](../gcp/gcp-services/databases/).
 * CI/CD
   * Documentation for [Bitbucket Pipelines](../ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
 * Terraform&#x20;
