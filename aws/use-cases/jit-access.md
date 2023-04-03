@@ -1,5 +1,5 @@
 ---
-description: Use just-in-time (JIT) to provision your devices to connect to AWS IoT
+description: Use just-in-time (JIT) to provision your devices
 ---
 
 # JIT Access
@@ -8,24 +8,44 @@ DuploCloud users can obtain Just-In-Time (JIT) access to the AWS Console. This a
 
 ## Access using the UI
 
-You can obtain AWS JIT access directly from the DuploCloud UI.&#x20;
+You can obtain AWS JIT access directly from the DuploCloud Portal.&#x20;
 
 1. In the DuploCloud portal, navigate to **User** -> **Profile**.
-2. Click the link **Get JIT AWS Access**.  This page links directly to the AWS Console.
+2. Click the **Get JIT AWS Access** link.  The AWS Console opens in a new browser instance.
 
-<figure><img src="../../.gitbook/assets/JITKEYS.png" alt=""><figcaption><p>DuploCloud User Profile page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JITKEYS.png" alt=""><figcaption><p>DuploCloud User <strong>Profile</strong> page with <strong>Get JIT AWS Access</strong> link</p></figcaption></figure>
 
 ## Access using the command line
 
-Obtain access through the command line interface (CLI).
+Obtain access through the command line interface (CLI) with duplo-jit. **duplo-jit** must obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can be specified either as part of your local AWS configuration or can be obtained interactively, using your DuploCloud portal session.
+
+### Install duplo-jit
+
+#### Install with the Chocolatey package manager for Windows
+
+1. Install the [Chocolatey package manager](https://chocolatey.org/install), if you don't already have it installed.
+2. Run the following command: `choco install duplo-jit --version=0.5.2`
+
+#### Install with Homebrew
+
+* Coming April 2023
+
+#### Install from GitHub Releases
 
 1. Download the latest **.zip** archive from [https://github.com/duplocloud/duplo-jit/releases](https://github.com/duplocloud/duplo-jit/releases) for your operating system.
-2. Extract the archive and add **duplo-jit** to your $PATH environment variable. **duplo-jit** must obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can be specified either as part of your local AWS configuration or can be obtained interactively, using your DuploCloud portal session.&#x20;
+2. Extract the archive listed in the table below based on the operating system and processor you are running.&#x20;
+3. Add the path to **duplo-jit** to your $PATH environment variable.&#x20;
 
-#### Obtain credentials using an API Token
+| Processor/Operating System  | Archive                |
+| --------------------------- | ---------------------- |
+| Intel macOS                 | **darwin\_amd64.zip**  |
+| M1 macOS                    | **darwin\_amd64.zip**  |
+| Windows                     | **windows\_amd64.zip** |
+
+### Obtain credentials using an API Token
 
 1. [Obtain a DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens).
-2. Edit the AWS Config file (**\~/.aws/config)** and add the following, as shown in the example below:
+2. Edit the AWS Config file (**\~/.aws/config**) and add the following profile, as shown in the code snippet below:
 
 ```
 [profile ENV_NAME]
@@ -33,11 +53,11 @@ region=us-west-2
 credential_process=duplo-jit aws --admin --host https://ENV_NAME.duplocloud.net --token <DUPLO_TOKEN>
 ```
 
-#### Obtain credentials interactively
+### Obtain credentials interactively
 
-Replace `--token <DUPLO_TOKEN>` in the API Token example above with `--interactive`.
+To obtain credentials interactively, rather than with a token, replace `--token <DUPLO_TOKEN>` in the argument above with `--interactive`.
 
-When you make the first AWS call, you are prompted to grant authorization through the DuploCloud portal, as shown below.&#x20;
+When you make the first AWS call, you are prompted to grant authorization through the DuploCloud portal, as shown below. Click **Authorize** if you consent.
 
 <figure><img src="../../.gitbook/assets/image (18) (1).png" alt="A prompt reads &#x22;The duplo-aws-credential-process application on your computer wants to access your Duplo credentials.&#x22; The options are a green button on the right for Authorize and a Red button on the left for Cancel."><figcaption><p><strong>Local Access Requested</strong> prompt</p></figcaption></figure>
 
