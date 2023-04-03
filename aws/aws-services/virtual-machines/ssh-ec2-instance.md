@@ -17,4 +17,4 @@ Follow the instruction listed in the dialog box and you should be connected to t
 If in case you don't want to show the option for Download Key, you can always disable the option from **Administrator** > **System Settings** > **System Config** Tab.\
 Click on Add and provide the below details:
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>System Settings</strong> Page with Config</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (6).png" alt=""><figcaption><p><strong>System Settings</strong> Page with Config</p></figcaption></figure>

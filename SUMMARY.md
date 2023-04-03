@@ -106,7 +106,7 @@
   * [Infrastructure (Virtual Private Cloud)](aws/aws-services/infrastructure/README.md)
     * [Virtual Private Cloud (VPC) peering](aws/aws-services/infrastructure/virtual-private-cloud-vpc-peering.md)
     * [NAT Gateway for HA](aws/aws-services/infrastructure/nat-gateway-for-ha.md)
-  * [Containers](aws/aws-services/containers/README.md)
+  * [Containers and Services](aws/aws-services/containers/README.md)
     * [Adding Ingress and Load Balancers](aws/aws-services/containers/adding-ingress.md)
     * [Adding SecretProviderClass custom resource](aws/aws-services/containers/adding-secretproviderclass-custom-resource.md)
     * [Setting up Probes and Health Check](aws/aws-services/containers/setting-up-probes.md)
