@@ -39,7 +39,7 @@ Obtain access through the command line interface (CLI) with duplo-jit. **duplo-j
 | Processor/Operating System  | Archive                |
 | --------------------------- | ---------------------- |
 | Intel macOS                 | **darwin\_amd64.zip**  |
-| M1 macOS                    | **darwin\_amd64.zip**  |
+| M1 macOS                    | **darwin\_arm64.zip**  |
 | Windows                     | **windows\_amd64.zip** |
 
 ### Obtain credentials using an API Token
