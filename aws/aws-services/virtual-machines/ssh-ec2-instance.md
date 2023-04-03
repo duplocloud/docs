@@ -11,3 +11,10 @@ Another way is to download the  key from Actions > Connection Details
 ![](<../../../.gitbook/assets/image (1) (1).png>)
 
 Follow the instruction listed in the dialog box and you should be connected to the server.
+
+### Disable the option to download SSH key
+
+If in case you don't want to show the option for Download Key, you can always disable the option from **Administrator** > **System Settings** > **System Config** Tab.\
+Click on Add and provide the below details:
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>System Settings</strong> Page with Config</p></figcaption></figure>
