@@ -2,7 +2,7 @@
 description: Adding Plans, Tenants, Hosts, and Services with AWS EKS
 ---
 
-# Containers
+# Containers and Services
 
 ## Plans <a href="#2-toc-title" id="2-toc-title"></a>
 
@@ -82,15 +82,30 @@ The number of Replicas that you define must be less than or equal to the number 
 
 ![Add Service page](../../../.gitbook/assets/k8\_statefulSet\_force.png)
 
+### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
+
+Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach load balancers for the services.
+
+<figure><img src="../../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
+
+### Restarting Multiple Services <a href="#7-toc-title" id="7-toc-title"></a>
+
+The portal supports the functionality to restart multiple services in a single request.
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select either **EKS/Native** or **ECS**.&#x20;
+2. Click the **Services** tab.&#x20;
+3. Use the checkbox column to select multiple **RUNNING** services. You can select and restart up to twenty (20) services at a time.
+4. Click **Restart Service**.
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Restart Service</strong> button in the <strong>Services</strong> tab</p></figcaption></figure>
+
 ## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
 
 ### Add multiple Docker Registry Credentials
 
-DuploCloud provides support for pulling images from multiple docker registries.&#x20;
+You can pull images from multiple docker registries by adding multiple Docker Registry Credentials.
 
-Add multiple Docker Registry Credentials:
-
-1. In the DuploCloud Portal, select **Administrator**-> **Plan** from the navigation pane. The **Plans** page displays. &#x20;
+1. In the DuploCloud Portal, click **Administrator**-> **Plan**. The **Plans** page displays. &#x20;
 2. Select the Plan in the **Name** column.
 3. Click the **Config** tab.
 4. Click **Add**. The **Add Config** pane displays.
@@ -109,15 +124,19 @@ For example:&#x20;
 
 ### Set Kubernetes Secrets
 
-Optionally, set and reference Kubernetes secrets in your deployment by configuring them with the **EKS/Native** option.&#x20;
+Optionally, set and reference Kubernetes secrets in your deployment by configuring the secrets with the **EKS/Native** option.&#x20;
 
-<figure><img src="../../../.gitbook/assets/AWS_K8s_secrets (1).png" alt=""><figcaption></figcaption></figure>
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.&#x20;
+2. Select the Service from the **Name** column.
+3. Click the **K8S Secrets** tab. The **Kubernetes Secrets** page displays.
 
-### EKS/AKS support <a href="#1-toc-title" id="1-toc-title"></a>
+<figure><img src="../../../.gitbook/assets/AWS_Secrets.png" alt=""><figcaption><p><strong>Kubernetes Secrets</strong> page with <strong>K8S Secrets</strong> tab</p></figcaption></figure>
 
-DuploCloud supports Elastic Kubernetes Service (EKS/AKS) out of the box.&#x20;
+### EKS/ECS support <a href="#1-toc-title" id="1-toc-title"></a>
 
-Kubernetes clusters are created during Infrastructure setup using the **Administrator -> Infrastructure** option in the DuploCloud Portal. The cluster is created in the same Virtual Private Cloud (VPC) as the Infrastructure. Building an Infrastructure with an AKS/EKS cluster may take some time.&#x20;
+DuploCloud supports Elastic Kubernetes Service (EKS/ECS) out of the box.&#x20;
+
+Kubernetes clusters are created during Infrastructure setup using the **Administrator -> Infrastructure** option in the DuploCloud Portal. The cluster is created in the same Virtual Private Cloud (VPC) as the Infrastructure. Building an Infrastructure with an EKS/ECS cluster may take some time.&#x20;
 
 Next, you deploy an application within a Tenant in Kubernetes. The application contains a set of VMs, a Deployment set (Pods), and an application load balancer. Pods can be deployed either through the DuploCloud Portal or through `kubectl,`using HelmCharts.
 
@@ -187,11 +206,7 @@ spec:
 
 If you need security tokens of a longer duration, create them on your own. Secure them outside of the DuploCloud environment.
 
-## Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
-Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach load balancers for the services.
-
-<figure><img src="../../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 
 ## Load Balancers, Web Application Firewalls (WAFs), and other workflows <a href="#8-toc-title" id="8-toc-title"></a>
 
