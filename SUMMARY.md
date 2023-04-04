@@ -114,7 +114,7 @@
     * [Storage Class and PVCs](aws/aws-services/storage/adding-k8s-storage-class.md)
     * [GP3 Storage Class](aws/aws-services/storage/gp3-storage-class.md)
   * [Virtual machines](aws/aws-services/virtual-machines/README.md)
-    * [SSH EC2 instance](aws/aws-services/virtual-machines/ssh-ec2-instance.md)
+    * [Connect EC2 instance](aws/aws-services/virtual-machines/ssh-ec2-instance.md)
   * [S3 bucket](aws/aws-services/s3-bucket.md)
   * [API gateway](aws/aws-services/api-gateway.md)
   * [CloudWatch](aws/aws-services/cloud-watch.md)
