@@ -4,7 +4,7 @@
 
 This tutorial shows you how to set up an end-to-end cloud deployment for the sample topology shown below.
 
-![Sample High Level Topology](<../../../.gitbook/assets/image (3) (1) (3).png>)
+![Sample High Level Topology](<../../../.gitbook/assets/image (3) (1) (3) (1).png>)
 
 * We will use the Tenant and Infrastructure created as part of [Step1](../step-1-infrastructure.md) and [Step2](../step-2-tenant.md).
 * We will deploy the docker containers by leveraging Kubernetes Cluster (AWS EKS)
