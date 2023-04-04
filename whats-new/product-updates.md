@@ -15,6 +15,7 @@ description: New features and enhancements in DuploCloud
   * Support for [Redis database versions](../aws/aws-services/database/elastic-cache.md) when creating Elastic Cache (Ecache).
   * Enable [shell access for ECS, Kubernetes, and Native docke](../aws/prerequisites/kubectl-shell.md)r containers using a simplified workflow.
   * Reduce storage cost and increase performance by [setting GP3 as your default storage class](../aws/aws-services/storage/gp3-storage-class.md).
+  * Enable [NAT Gateways for High Availability (HA)](../aws/aws-services/infrastructure/nat-gateway-for-ha.md).
   * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers/#7-toc-title-1) at once.
 * GCP
   * Updated documentation for [supported databases for GCP](../gcp/gcp-services/databases/).
