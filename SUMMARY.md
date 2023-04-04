@@ -3,6 +3,10 @@
 * [Introduction](README.md)
 * [FAQs](faq.md)
 
+## WHAT'S NEW
+
+* [Product updates](whats-new/product-updates.md)
+
 ## Getting started
 
 * [Existing DevOps Approach](getting-started/existing-devops-approach/README.md)
@@ -275,7 +279,3 @@
 
 * [Creating advanced functions](extras/creating-advanced-functions.md)
 * [BYOH](extras/byoh.md)
-
-## WHAT'S NEW
-
-* [Product updates](whats-new/product-updates.md)
