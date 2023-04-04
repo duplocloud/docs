@@ -7,4 +7,4 @@ Once the Infrastructure is created, then create a new Tenant (Administrator --> 
 
 It may take about 1-2 minutes for the Tenant to be set up. There might be a Fault that shows up under Administrator-->Faults, which is temporary, you can ignore it for the first 2 minutes as it should clear.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>

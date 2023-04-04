@@ -23,7 +23,7 @@ After you select the Host, on the Host's page click the **Actions** menu and sel
 
 
 
-![Connection Info for Host window with Download Key button](<../../../.gitbook/assets/image (1) (1).png>)
+![Connection Info for Host window with Download Key button](<../../../.gitbook/assets/image (1) (1) (2).png>)
 
 
 
@@ -39,7 +39,7 @@ If you don't want to display the Download Key button, disable the button's visib
 6. From the **Value** list box, select **true**.
 7. Click **Submit**.
 
-<figure><img src="../../../.gitbook/assets/image (2) (4).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Disable SSH Key Download Key</strong> selected</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (6).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Disable SSH Key Download Key</strong> selected</p></figcaption></figure>
 
 ### Powershell EC2 Windows instance
 

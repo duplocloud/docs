@@ -1,10 +1,14 @@
 ---
-description: Use just-in-time (JIT) to provision your devices
+description: Use just-in-time (JIT) to access the console in AWS
 ---
 
 # JIT Access
 
 DuploCloud users can obtain Just-In-Time (JIT) access to the AWS Console. This access is restricted to resources that the user has access to in the DuploCloud portal. With JIT access, DuploCloud administrators have admin-level access within the AWS Console and the access is generated in real-time and revoked, by default, in one hour.
+
+{% hint style="info" %}
+Use JIT Acess to access devices in an [AWS Internet of Things (IoT)](../aws-services/iot-internet-of-things.md).
+{% endhint %}
 
 ## Access using the UI
 
@@ -34,7 +38,7 @@ Obtain access through the command line interface (CLI) with duplo-jit. **duplo-j
 
 1. Download the latest **.zip** archive from [https://github.com/duplocloud/duplo-jit/releases](https://github.com/duplocloud/duplo-jit/releases) for your operating system.
 2. Extract the archive listed in the table below based on the operating system and processor you are running.&#x20;
-3. Add the path to **duplo-jit** to your $PATH environment variable.&#x20;
+3. Add the path to **duplo-jit** to your `$PATH` environment variable.&#x20;
 
 | Processor/Operating System  | Archive                |
 | --------------------------- | ---------------------- |
