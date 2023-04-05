@@ -34,8 +34,8 @@
   * [Add and Delete VPN access for users](administrator-tools/access-control/add-and-delete-vpn-access-for-users.md)
   * [Resolving DNS failures](administrator-tools/access-control/resolving-dns-failures.md)
   * [API tokens](administrator-tools/access-control/api-tokens.md)
-* [Kubectl setup for administrators](administrator-tools/kubectl-setup/README.md)
-  * [Kubectl setup for non-administrators (AWS only)](administrator-tools/kubectl-setup/kubectl-setup-for-non-administrators-aws-only.md)
+* [Kubectl setup](administrator-tools/kubectl-setup/README.md)
+  * [Kubectl access for non-administrators](administrator-tools/kubectl-setup/kubectl-access-for-non-administrators.md)
 * [SSO Configuration](administrator-tools/sso-configuration/README.md)
   * [Azure AD as IdP](administrator-tools/sso-configuration/azure-ad-as-idp.md)
 
