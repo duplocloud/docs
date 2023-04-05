@@ -6,7 +6,7 @@ description: Create a Redis database in DuploCloud
 
 ### Creating a Redis database instance
 
-1. In the DuploCloud Portal, navigate to **DevOps** --> **Database** --> **Redis**. **** The **Create Redis Instance** pane displays.
+1. In the DuploCloud Portal, navigate to **DevOps** --> **Database** --> **Redis**. The **Create Redis Instance** pane displays.
 2. Provide the database **Name.**
 3. From the **Subnet** list box, select an available subnet you have defined in your Infrastructure.&#x20;
 4. Modify values for **Service Tier**, **Shards**, and **Non TLS Port**, as needed.

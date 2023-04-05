@@ -11,7 +11,7 @@ Backup of the resources, be it database snaphsots, virtual machine snaphsots/VM 
 Administrator can set the backup retention period from DuploCloud Portal.\
 Navigate to **Administrator** > **System Settings** > **System Config**\
 \
-****
+
 
 ![Configure RDS Backup Retention](<../../../../.gitbook/assets/image (63).png>)
 

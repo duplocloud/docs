@@ -73,7 +73,7 @@ You have created and cloned the Spark application. Now you must create and clone
 If you are new to Spark, use the Info Tips (blue <img src="../../.gitbook/assets/image.png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
 {% endhint %}
 
-1.  Select the application instance that you previously cloned. This instance (**DUPLOSERVICES-DEFAULT-APP1-C-833**, in this example) **** has a **STATE** of **CREATED**.
+1.  Select the application instance that you previously cloned. This instance (**DUPLOSERVICES-DEFAULT-APP1-C-833**, in this example) has a **STATE** of **CREATED**.
 
     <figure><img src="../../.gitbook/assets/EMRJ_1.png" alt=""><figcaption><p><strong>DUPLOSERVICES-DEFAULT-APP1-C-833 with</strong> a <strong>STATE</strong> of <strong>CREATED</strong>.</p></figcaption></figure>
 2. Click **Add**. The configuration wizard launches.

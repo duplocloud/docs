@@ -8,7 +8,7 @@ Create S3 Bucket from **DevOps** > **Storage** > **S3** > **+Add** button above 
 
 DuploCloud provides the capabillity to specify a custom prefix for S3.&#x20;
 
-Refer To enable this option, Goto **Admin** > **System Settings >** Add App Config ****&#x20;
+Refer To enable this option, Goto **Admin** > **System Settings >** Add App Config&#x20;
 
 Select **Key** as  'Prefix all S3 Bucket Name' from the dropdown, and specify the prefix label.
 

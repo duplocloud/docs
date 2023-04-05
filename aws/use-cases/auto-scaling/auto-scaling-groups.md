@@ -30,7 +30,7 @@ Refer to AWS [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/usergui
 
 ## **Creating Services using Auto Scaling Group**
 
-DuploCloud Portal provides the ability to configure Services based on the Platform - _EKS_ **** _Linux_ and _Linux Docker/Native_.  Select the ASG based on the platform used while creating service and auto scaling group
+DuploCloud Portal provides the ability to configure Services based on the Platform - _EKS_ _Linux_ and _Linux Docker/Native_.  Select the ASG based on the platform used while creating service and auto scaling group
 
 ### **Service with Platform - EKS Linux**
 

@@ -245,6 +245,7 @@
     * [Elastic Cache](gcp/gcp-services/databases/elastic-cache.md)
     * [AWS DynamoDB database tables](gcp/gcp-services/databases/dynamodb.md)
     * [AWS Timestream database](gcp/gcp-services/databases/timestream-database.md)
+  * [Storage Buckets](gcp/gcp-services/s3-bucket.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
 ## CI/CD

@@ -20,7 +20,7 @@ Follow [these steps to create PVC ](storage-options.md#create-persistentvolumecl
 
 ### Mount PersistentVolumeClaims(PVC) as Volume in Deployment
 
-Follow [these steps to mount **** PVC Volume ](storage-options.md#mount-persistentvolumeclaims-pvc-as-volume-in-deployment)in the Service Deployment.
+Follow [these steps to mount PVC Volume ](storage-options.md#mount-persistentvolumeclaims-pvc-as-volume-in-deployment)in the Service Deployment.
 
 ## 2. Using Built-In Storage Classes in AKS
 

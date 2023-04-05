@@ -13,7 +13,7 @@ To view the Billing page for AWS in the DuploCloud Portal, click **Administrator
 You can view usage by:
 
 * Time
-  * Select the **Spend by Month** tab and click **More Details** to display monthly and weekly spending **** options. &#x20;
+  * Select the **Spend by Month** tab and click **More Details** to display monthly and weekly spending options. &#x20;
 * Tenant
   * Select the **Spend by Tenant** tab.
 

@@ -33,5 +33,5 @@ There is an additional parameter labeled **Fleet Type**. This is applicable if t
 * **None**: To be used for non-Container Orchestration purposes and contents inside the VM are self-managed by the user.
 
 {% hint style="info" %}
-If a VM is used for container orchestration, ensure that the **Image ID** corresponds to the Image in the container. Any name that begins with **Duplo** is **** an image that DuploCloud generates for Built-in container orchestration &#x20;
+If a VM is used for container orchestration, ensure that the **Image ID** corresponds to the Image in the container. Any name that begins with **Duplo** is an image that DuploCloud generates for Built-in container orchestration &#x20;
 {% endhint %}
