@@ -1,5 +1,5 @@
 ---
-description: Use just-in-time (JIT) to access the console in AWS
+description: Use just-in-time (JIT) and duplo-jit to access the console in AWS
 ---
 
 # JIT Access
@@ -11,15 +11,15 @@ DuploCloud users can obtain Just-In-Time (JIT) access to the AWS Console. This a
 You can obtain AWS JIT access directly from the DuploCloud Portal.&#x20;
 
 1. In the DuploCloud portal, navigate to **User** -> **Profile**.
-2. Click the **Get JIT AWS Access** link.  The AWS Console opens in a new browser instance.
+2. Click the **JIT AWS Console** link.  The AWS Console opens in a new browser instance.
 
-<figure><img src="../../.gitbook/assets/JITKEYS.png" alt=""><figcaption><p>DuploCloud User <strong>Profile</strong> page with <strong>Get JIT AWS Access</strong> link</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/kubeconfig_JIT.png" alt=""><figcaption><p>DuploCloud User <strong>Profile</strong> page with <strong>JIT AWS Console</strong> link</p></figcaption></figure>
 
 ## Access using the command line
 
-Obtain access through the command line interface (CLI) with duplo-jit. **duplo-jit** must obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can be specified either as part of your local AWS configuration or can be obtained interactively, using your DuploCloud portal session.
+Obtain access through the command line interface (CLI) with `duplo-jit`. `duplo-jit` must obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can be specified either as part of your local AWS configuration or can be obtained interactively, using your DuploCloud portal session.
 
-### Install duplo-jit
+### Install `duplo-jit`
 
 #### Install with the Chocolatey package manager for Windows
 
@@ -34,7 +34,7 @@ Obtain access through the command line interface (CLI) with duplo-jit. **duplo-j
 
 1. Download the latest **.zip** archive from [https://github.com/duplocloud/duplo-jit/releases](https://github.com/duplocloud/duplo-jit/releases) for your operating system.
 2. Extract the archive listed in the table below based on the operating system and processor you are running.&#x20;
-3. Add the path to **duplo-jit** to your `$PATH` environment variable.&#x20;
+3. Add the path to `duplo-jit` to your `$PATH` environment variable.&#x20;
 
 | Processor/Operating System  | Archive                |
 | --------------------------- | ---------------------- |
@@ -42,7 +42,9 @@ Obtain access through the command line interface (CLI) with duplo-jit. **duplo-j
 | M1 macOS                    | **darwin\_arm64.zip**  |
 | Windows                     | **windows\_amd64.zip** |
 
-### Obtain credentials using an API Token
+### Obtaining credentials&#x20;
+
+#### Using an API Token
 
 1. [Obtain a DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens).
 2. Edit the AWS Config file (**\~/.aws/config**) and add the following profile, as shown in the code snippet below:
@@ -53,7 +55,7 @@ region=us-west-2
 credential_process=duplo-jit aws --admin --host https://ENV_NAME.duplocloud.net --token <DUPLO_TOKEN>
 ```
 
-### Obtain credentials interactively
+#### Obtain credentials interactively
 
 To obtain credentials interactively, rather than with a token, replace `--token <DUPLO_TOKEN>` in the argument above with `--interactive`.
 
@@ -111,7 +113,7 @@ function jitnow() {
 usage is `jitnow portalname`
 {% endhint %}
 
-### Configuring session timeout
+## Configuring JIT session timeout
 
 By default, JIT sessions expire after one hour. This can be modified in the DuploCloud Portal for a specific Tenant.&#x20;
 

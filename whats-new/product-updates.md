@@ -18,7 +18,7 @@ description: New features and enhancements in DuploCloud
   * Enable [NAT Gateways for High Availability (HA)](../aws/aws-services/infrastructure/nat-gateway-for-ha.md).
   * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers/#7-toc-title-1) at once.
 * GCP
-  * Updated documentation for [supported databases for GCP](../gcp/gcp-services/databases/).
+  * Updated documentation for [supported databases](../gcp/gcp-services/databases/).
 * CI/CD
   * Documentation for [Bitbucket Pipelines](../ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
 * Terraform&#x20;

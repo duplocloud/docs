@@ -97,7 +97,7 @@ The portal supports the functionality to restart multiple services in a single r
 3. Use the checkbox column to select multiple **RUNNING** services. You can select and restart up to twenty (20) services at a time.
 4. Click **Restart Service**.
 
-<figure><img src="../../../.gitbook/assets/image (2) (7).png" alt=""><figcaption><p><strong>Restart Service</strong> button in the <strong>Services</strong> tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Restart Service</strong> button in the <strong>Services</strong> tab</p></figcaption></figure>
 
 ## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
 
