@@ -6,13 +6,13 @@ This capability allows Kubernetes to mount secrets stored in external secrets st
 
 ### Step1: Enable Secret Provider Class
 
-As a pre-requisite, Administrator needs to set the Infrastructure setting for `Enable Secrets CSI Driver` **** as `True`**.** This setting is available (Admin > Infrastructure **** > select your infrastructure > Settings).
+As a pre-requisite, Administrator needs to set the Infrastructure setting for `Enable Secrets CSI Driver` as `True`**.** This setting is available (Admin > Infrastructure > select your infrastructure > Settings).
 
 ### Step2: Create K8s Secret Provider Class
 
 Navigate to DevOps > Container > EKS/Native > **K8s Secret Provider Class.**
 
-You can map the `AWS Secrets` and __ `SSM Parameters` configured in DuploCloud Portal (DevOps > App Integration ) under the Parameters section of the configuration.
+You can map the `AWS Secrets` and `SSM Parameters` configured in DuploCloud Portal (DevOps > App Integration ) under the Parameters section of the configuration.
 
 Use the optional **Secret Objects** field to define the desired state of the synced Kubernetes secret objects.
 
@@ -36,7 +36,7 @@ Select **Cloud Credentials** value as `From Kubernetes`
 
 ![Advance Options Service Page](<../../../.gitbook/assets/image (65).png>)
 
-* Add **Other Pod Config** field **** as the following example.
+* Add **Other Pod Config** field as the following example.
 
 {% code title="Other Pod Config field" %}
 ```yaml

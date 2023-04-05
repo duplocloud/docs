@@ -20,7 +20,7 @@ Once successfully created, Create  `Application Load Balancer` from **Networking
 
 Note: Rules are not supported for Network Load Balancers.
 
-Add the Target Group created in **** the prior step under the Listeners Tab. You can start adding routing rules for this listener now by clicking on the Actions --> **Manage Rules** option.
+Add the Target Group created in the prior step under the Listeners Tab. You can start adding routing rules for this listener now by clicking on the Actions --> **Manage Rules** option.
 
 <figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
 

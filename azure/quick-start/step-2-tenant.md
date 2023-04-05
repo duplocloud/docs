@@ -19,7 +19,7 @@ DuploCloud customers often create at least two Tenants for their production and 
 For example:
 
 * Production Infrastructure &#x20;
-  * Pre-production **** Tenant - for preparing or reviewing production code
+  * Pre-production Tenant - for preparing or reviewing production code
   * Production Tenant - for deploying tested code&#x20;
 * Non-production Infrastructure
   * Development Tenant - for writing and reviewing code

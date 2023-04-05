@@ -29,7 +29,7 @@ You can map Tenants in each or all of your development, testing, staging, Qualit
 For example:
 
 * Production Infrastructure &#x20;
-  * Pre-production **** Tenant - for preparing or reviewing production code
+  * Pre-production Tenant - for preparing or reviewing production code
   * Production Tenant - for deploying tested code&#x20;
 * Non-production Infrastructure
   * Development Tenant - for writing and reviewing code

@@ -104,7 +104,7 @@ By executing `curl` commands, you can see the difference in the output for each 
 
 > `>curl http://sample-ingress.qaapps.duplocloud.net/path1/` \
 > `this is service1`\
-> ``\
+> \
 > `>curl http://sample-ingress.qaapps.duplocloud.net/path2/` \
 > `this is service2`\
 > \

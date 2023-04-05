@@ -6,10 +6,6 @@ description: Use just-in-time (JIT) to access the console in AWS
 
 DuploCloud users can obtain Just-In-Time (JIT) access to the AWS Console. This access is restricted to resources that the user has access to in the DuploCloud portal. With JIT access, DuploCloud administrators have admin-level access within the AWS Console and the access is generated in real-time and revoked, by default, in one hour.
 
-{% hint style="info" %}
-Use JIT Acess to access devices in an [AWS Internet of Things (IoT)](../aws-services/iot-internet-of-things.md).
-{% endhint %}
-
 ## Access using the UI
 
 You can obtain AWS JIT access directly from the DuploCloud Portal.&#x20;
