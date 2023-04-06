@@ -31,6 +31,6 @@ The token that you download is for the selected Tenant only. It is intended for 
 3. Select the Service from the **Name** column.
 4.  Click **KubeCtl Token**. The **Token** window displays.
 
-    <figure><img src="../../.gitbook/assets/AWS_Token_kubectl.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/AWS_Token_kubectl (1).png" alt=""><figcaption></figcaption></figure>
 5. Click **Copy** to copy the `kubectl` commands in the **Token** window to your clipboard.
 6. On the **Services** tab, click **KubeCtl Shell** to launch the shell instance. Paste the copied commands into the shell and run them.

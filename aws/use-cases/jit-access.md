@@ -1,5 +1,5 @@
 ---
-description: Use just-in-time (JIT) and duplo-jit to access the console in AWS
+description: Use just-in-time (JIT) to access the console in AWS
 ---
 
 # JIT Access
@@ -15,20 +15,26 @@ You can obtain AWS JIT access directly from the DuploCloud Portal.&#x20;
 
 <figure><img src="../../.gitbook/assets/kubeconfig_JIT.png" alt=""><figcaption><p>DuploCloud User <strong>Profile</strong> page with <strong>JIT AWS Console</strong> link</p></figcaption></figure>
 
-## Access using the command line
+## Access using the command line and `duplo-jit`
 
 Obtain access through the command line interface (CLI) with `duplo-jit`. `duplo-jit` must obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can be specified either as part of your local AWS configuration or can be obtained interactively, using your DuploCloud portal session.
 
-### Install `duplo-jit`
-
-#### Install with the Chocolatey package manager for Windows
+### Install with the Chocolatey package manager for Windows
 
 1. Install the [Chocolatey package manager](https://chocolatey.org/install), if you don't already have it installed.
-2. Run the following command: `choco install duplo-jit --version=0.5.2`
+2. Run the following command:&#x20;
 
-#### Install with Homebrew
+```
+choco install duplo-jit --version=0.5.2
+```
 
-* Coming April 2023
+### Install with Homebrew
+
+Run the following command:&#x20;
+
+```
+brew install duplocloud/tap/duplo-jit
+```
 
 #### Install from GitHub Releases
 
