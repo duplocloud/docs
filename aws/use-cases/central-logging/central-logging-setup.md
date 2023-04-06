@@ -2,7 +2,7 @@
 
 To enable central logging go under **Administrator** --> **Diagnostics** --> **Settings** --> **Logging**.
 
-<figure><img src="../../../.gitbook/assets/image (2) (2) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 Setup of Central Logging comprises two steps or components:
 

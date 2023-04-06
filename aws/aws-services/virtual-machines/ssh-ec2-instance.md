@@ -23,7 +23,7 @@ After you select the Host, on the Host's page click the **Actions** menu and sel
 
 
 
-![Connection Info for Host window with Download Key button](<../../../.gitbook/assets/image (1) (1).png>)
+![Connection Info for Host window with Download Key button](<../../../.gitbook/assets/image (1) (1) (2).png>)
 
 
 
