@@ -1,3 +1,7 @@
+---
+description: Configuration and Secret management in AWS
+---
+
 # Passing Config and Secrets
 
 There are many ways to pass configuration to the containers at run time.

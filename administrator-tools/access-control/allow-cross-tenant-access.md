@@ -1,8 +1,8 @@
 ---
-description: Allow two Tenants access to the same resources
+description: Allow multiple Tenants access to the same resources
 ---
 
-# Allow Cross Tenant Access
+# Allow Cross-tenant Access
 
 {% hint style="info" %}
 This feature is currently only available for AWS.

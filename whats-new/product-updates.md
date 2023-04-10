@@ -7,7 +7,7 @@ description: New features and enhancements in DuploCloud
 ### March 2023
 
 * AWS
-  * [Virtual Private Cloud (VPC) peering](../aws/aws-services/infrastructure/virtual-private-cloud-vpc-peering.md) is supported to facilitate data transfer between VPCs.
+  * [Virtual Private Cloud (VPC) peering](../aws/aws-services/virtual-private-cloud-vpc-peering.md) is supported to facilitate data transfer between VPCs.
   * [EMR Serverless](../aws/aws-services/emr-serverless.md) is supported to run open-source big data analytics frameworks without configuring, managing, and scaling clusters or servers.
   * DuploCloud users can obtain [Just-In-Time (JIT) access](../aws/use-cases/jit-access.md) to the AWS Console.
   * [AWS SQS Standard and FIFO queues](../aws/aws-services/sqs-queue.md) are now supported.
@@ -15,8 +15,8 @@ description: New features and enhancements in DuploCloud
   * Support for [Redis database versions](../aws/aws-services/database/elastic-cache.md) when creating Elastic Cache (Ecache).
   * Enable [shell access for ECS, Kubernetes, and Native docke](../aws/prerequisites/kubectl-shell.md)r containers using a simplified workflow.
   * Reduce storage cost and increase performance by [setting GP3 as your default storage class](../aws/aws-services/storage/gp3-storage-class.md).
-  * Enable [NAT Gateways for High Availability (HA)](../aws/aws-services/infrastructure/nat-gateway-for-ha.md).
-  * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers/#7-toc-title-1) at once.
+  * Enable [NAT Gateways for High Availability (HA)](../aws/aws-services/nat-gateway-for-ha.md).
+  * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers.md#7-toc-title-1) at once.
 * GCP
   * Updated documentation for [supported databases](../gcp/gcp-services/databases/).
 * CI/CD
@@ -37,9 +37,9 @@ description: New features and enhancements in DuploCloud
 * AWS
   * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
   * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
-  * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/containers/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
+  * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
   * Use the [K8s Admin dashboard to monitor StatefulSets](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
-  * [Force creation of StatefulSets](../aws/aws-services/containers/#5-toc-title).
+  * [Force creation of StatefulSets](../aws/aws-services/containers.md#5-toc-title).
 * Azure
   * Support for [Kubernetes Ingress](../azure/azure-services/containers/adding-ingress.md).
   * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/7ev96ixoUE2TKhw2W8yw/azure/use-cases/cost-management) with weekly or monthly views.
@@ -48,21 +48,21 @@ description: New features and enhancements in DuploCloud
   * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/LIQrEoD3lxoJfvhsSCPM/gcp/use-cases/cost-management) with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
   * Support for Kubernetes Ingress in [Azure](../azure/azure-services/containers/adding-ingress.md).
-  * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/containers/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
-  * [Force creation of StatefulSets in AWS](../aws/aws-services/containers/#5-toc-title).
+  * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
+  * [Force creation of StatefulSets in AWS](../aws/aws-services/containers.md#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 
 ### November 2022
 
-* [Ability to add Path-Based Routing rules](../aws/use-cases/load-balancers.md#2d32): Configure path-based routing rules for application load balancers.
+* [Ability to add Path-Based Routing rules](../aws/aws-services/load-balancers.md#2d32): Configure path-based routing rules for application load balancers.
 * [Support for Aurora Serverless V2](../aws/aws-services/database/rds-database/#create-aurora-serverless-v2-cluster-database): User can create and manage Aurora Serverless V2 RDS.
 * [Billing License Usage](../aws/use-cases/cost-management/duplocloud-license-usage.md): Overview of DuploCloud License Usage according to current service usage.
 
 ### October 2022
 
 * [Ability to add Logging Infra at Tenant Level](../aws/use-cases/central-logging/central-logging-setup.md#adding-logging-setup-at-tenant-level): Support to configure logging setup other than default tenant.
-* [Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers/#add-multiple-docker-registry-credentials): The user can configure multiple docker registry credentials from the plan.
+* [Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers.md#add-multiple-docker-registry-credentials): The user can configure multiple docker registry credentials from the plan.
 
 ### September 2022
 
@@ -75,7 +75,7 @@ description: New features and enhancements in DuploCloud
 
 * [Support for Elastic File System (EFS)](../aws/aws-services/elastic-file-system-efs.md):  Support for adding EFS has been added to DuploCloud. You can create and mount a shared filesystem for an Infrastructure in the DuploCloud Portal.
 * [Support for adding Kubernetes Storage Class:](../aws/aws-services/storage/adding-k8s-storage-class.md) Support for Kubernetes Storage Class and Persistent Volumes is now available.
-* [Support for Kubernetes Secret Provider Class](../aws/aws-services/containers/adding-secretproviderclass-custom-resource.md): This provides the ability to integrate AWS parameters and secrets to be available as Kubernetes secrets.
+* [Support for Kubernetes Secret Provider Class](../aws/aws-services/adding-secretproviderclass-custom-resource.md): This provides the ability to integrate AWS parameters and secrets to be available as Kubernetes secrets.
 * [Ability to add Lambda using Container Images](../aws/aws-services/lambda/create-lambda-using-container-image.md): Users can now configure an AWS Lambda using Container images.
 * [Support to configure RDS Automatic Backup Retention](../aws/aws-services/database/rds-database/backup-and-restore.md#0-toc-title-1):  Administrators can configure RDS Automatic Backup Retention in days at the system level
 * [Export Terraform from an existing Tenant](https://github.com/duplocloud/tenant-terraform-generator): Ability to export DuploCloud terraform provider code for an existing DuploCloud Tenant\

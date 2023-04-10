@@ -11,7 +11,7 @@ description: Create Elastic Cache for Redis database and Memcache memory caching
 5. Click **Create**.
 
 {% hint style="info" %}
-Pass the cache endpoint to your application through the [Environment Variables](../../../aws/container-deployments/passing-config-and-secrets/) via the GCP Service.
+Pass the cache endpoint to your application through the [Environment Variables](../../../aws/use-cases/passing-secrets/passing-config-and-secrets/) via the GCP Service.
 {% endhint %}
 
 ![Create a Ecache pane for Type REDIS](../../../.gitbook/assets/AWS\_Redis\_Ecache.png)

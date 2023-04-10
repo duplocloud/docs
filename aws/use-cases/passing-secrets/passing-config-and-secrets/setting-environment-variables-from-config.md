@@ -1,3 +1,7 @@
+---
+description: Settings EVs from a Kubernetes ConfigMap
+---
+
 # Setting Environment Variables from Config
 
 In Kubernetes, you can populate environment variables from application configuration or secrets.
@@ -13,7 +17,7 @@ The basic steps are:
 
 Navigate to the **DevOps -> Containers -> EKS / Native** page and click the **Kubernetes Config Maps** tab.  Click the blue **+ Add** button to open the 'Add Kubernetes Config Map' form.
 
-![](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.04.45 PM.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.04.45 PM.png>)
 
 * Give your config map a name, such as `my-env-vars`.
 * Add a data key / value pair for each environment variable in your config map.  The key will be the environment variable name, and the value will be the environment variable value.
@@ -22,7 +26,7 @@ Click **Create** to create the config map.
 
 ### Configure Environment Variables
 
-Navigate to the **DevOps -> Containers -> EKS / Native** page and click the **Services** tab.   In the **Actions** column, click the ![](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 11.44.25 AM.png>) edit icon for the service that you want to edit.&#x20;
+Navigate to the **DevOps -> Containers -> EKS / Native** page and click the **Services** tab.   In the **Actions** column, click the ![](<../../../../.gitbook/assets/Screen Shot 2022-03-21 at 11.44.25 AM.png>) edit icon for the service that you want to edit.&#x20;
 
 #### Import the entire ConfigMap as Environment Variables
 
@@ -30,7 +34,7 @@ The simplest approach to import the entire ConfigMap as environment variables.  
 
 The option to import an entire ConfigMap is on the second _(Advanced Options)_ page, so click the **Next ->** button to skip to that page.
 
-![](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.15.35 PM.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.15.35 PM.png>)
 
 In the _Other Container Config_ section, enter the configuration for importing environment variables from a config map.  For example, to import all environment variables from a config map named `my-env-vars`, you could use the following YAML:
 
@@ -71,7 +75,7 @@ The basic steps are:
 
 Navigate to the **DevOps -> Containers -> EKS / Native** page and click the **Kubernetes Secrets** tab.  Click the blue **+ Add** button to open the 'Add Kubernetes Secret' form.
 
-![](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.34.20 PM.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.34.20 PM.png>)
 
 * Give your secret a name, such as `my-env-vars`.
 * Pick the `Opaque` secret type.
@@ -81,7 +85,7 @@ Click **Add** to create the secret.
 
 ### Configure Environment Variables
 
-Navigate to the **DevOps -> Containers -> EKS / Native** page and click the **Services** tab.   In the **Actions** column, click the ![](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 11.44.25 AM.png>) edit icon for the service that you want to edit.&#x20;
+Navigate to the **DevOps -> Containers -> EKS / Native** page and click the **Services** tab.   In the **Actions** column, click the ![](<../../../../.gitbook/assets/Screen Shot 2022-03-21 at 11.44.25 AM.png>) edit icon for the service that you want to edit.&#x20;
 
 #### Import the entire Secret as Environment Variables
 
@@ -89,7 +93,7 @@ The simplest approach to import the entire Secret as environment variables.  You
 
 The option to import an entire Secret is on the second _(Advanced Options)_ page, so click the **Next ->** button to skip to that page.
 
-![](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.39.58 PM.png>)
+![](<../../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.39.58 PM.png>)
 
 In the _Other Container Config_ section, enter the configuration for importing environment variables from a secret.  For example, to import all environment variables from a secret named `my-env-vars`, you could use the following YAML:
 
