@@ -1,47 +1,12 @@
 ---
-description: Adding Plans, Tenants, Hosts, and Services with AWS EKS
+description: Using containers and Services with AWS EKS
 ---
 
 # Containers and Services
 
-## Plans <a href="#2-toc-title" id="2-toc-title"></a>
-
-The DuploCloud Portal comes configured with a default Plan. A [Plan](../../../getting-started/application-focussed-interface/plan.md) configures your Tenants using a set of templates whose parameters are applied to the Tenants in your [Infrastructure](../../../azure/azure-services/infrastructure.md).
-
-## Tenants <a href="#2-toc-title" id="2-toc-title"></a>
-
-To add a Tenant, navigate to **Administrator** -> **Tenant** in the DuploCloud Portal and click **Add**.
-
-Each [Tenant ](../../../azure/azure-services/tenants.md)is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
-
-All application components within the Analytics Tenant are placed in the `duploservices-analytics` namespace. Since nodes cannot be part of a Kubernetes Namespace, DuploCloud creates a `tenantname` label for all the nodes that are launched within the Tenant. For example, a node launched in the Analytics Tenant is labeled`tenantname: duploservices-analytics`.&#x20;
-
-Any Pods that are launched using the DuploCloud UI have an appropriate Kubernetes `nodeSelector` that ties the Pod to the nodes within the Tenant. If you are deploying via `kubectl,`ensure that your deployment is using the proper `nodeSelector`.
-
-## Hosts <a href="#3-toc-title" id="3-toc-title"></a>
-
-Once the tenant is created, navigate to **DevOps** in the DuploCloud Portal and select the Tenant that you created from the **Tenant** list box.&#x20;
-
-<figure><img src="../../../.gitbook/assets/aws_tenant_dropdown (2).png" alt=""><figcaption><p><strong>Tenant</strong> list box in the DevOps section</p></figcaption></figure>
-
-In **DevOps** -> **Hosts**, create new nodes (**Hosts**).&#x20;
-
-{% hint style="info" %}
-Ensure that the value of **Pool** is set to **Eks Linux**, which is the default value.
-{% endhint %}
-
-## Docker registry credentials and Kubernetes secrets <a href="#4-toc-title" id="4-toc-title"></a>
-
-Set Docker registry credentials and Kubernetes secrets:
-
-1. In the DuploCloud Portal, navigate to  **DevOps** -> **Containers** -> **EKS/Native**. Docker registry credentials are passed to the Kubernetes cluster as `kubernetes.io/dockerconfigjson`.
-2. Click **Docker Credentials**. The **Set Docker registry Creds** pane displays.
-3. Supply the credentials and click **Submit**.
-4. Enable the Docker Shell Service by clicking **Enable Docker Shell**.
-
 ## Services <a href="#5-toc-title" id="5-toc-title"></a>
 
-Adding a Service in the DuploCloud Platform is not the same as adding a Kubernetes service.&#x20;
+You can deploy any native Docker container in a virtual machine (VM) with the DuploCloud platform. Adding a Service in the DuploCloud Platform is not the same as adding a Kubernetes service.&#x20;
 
 Deploying DuploCloud Services, by clicking the **Add** button in the **EKS/Native** tab, implicitly converts Services into either a deployment set or a StatefulSet. If there are no volume mappings, then the service is mapped to a deployment set. Otherwise, it is mapped to a StatefulSet, which you can force creations of if needed. Most configuration values are self-explanatory, such as **Images**, **Replicas,** and **Environmental Variables**.
 
@@ -65,28 +30,26 @@ You can supply advanced configuration options in the **Other K8 Config** field. 
 }
 ```
 
-{% hint style="info" %}
-You can deploy any native Docker container in a virtual machine (VM) with the DuploCloud platform.&#x20;
-{% endhint %}
+## Adding a DuploCloud Service
 
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
 2. Click **Add**. The **Add Service** page displays.
 3. Complete the fields on the page, including **Service Name**, **Docker Image** **name**, and number of **Replicas**. Use **Allocation Tags** to deploy the container in a specific set of hosts.&#x20;
 4. To force the creation of Kubernetes StatefulSets, select **Yes** in the **Force StatefulSets** field.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 Do not use spaces when creating Service or Docker image names.
 
 The number of Replicas that you define must be less than or equal to the number of hosts in the fleet.
 {% endhint %}
 
-![Add Service page](../../../.gitbook/assets/k8\_statefulSet\_force.png)
+![Add Service page](../../.gitbook/assets/k8\_statefulSet\_force.png)
 
 ### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
 Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach load balancers for the services.
 
-<figure><img src="../../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 
 ### Restarting Multiple Services <a href="#7-toc-title" id="7-toc-title"></a>
 
@@ -97,20 +60,9 @@ The portal supports the functionality to restart multiple services in a single r
 3. Use the checkbox column to select multiple **RUNNING** services. You can select and restart up to twenty (20) services at a time.
 4. Click **Restart Service**.
 
-<figure><img src="../../../.gitbook/assets/image (2) (7).png" alt=""><figcaption><p><strong>Restart Service</strong> button in the <strong>Services</strong> tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (7).png" alt=""><figcaption><p><strong>Restart Service</strong> button in the <strong>Services</strong> tab</p></figcaption></figure>
 
-## Kubernetes cluster <a href="#1-toc-title" id="1-toc-title"></a>
-
-### Add multiple Docker Registry Credentials
-
-You can pull images from multiple docker registries by adding multiple Docker Registry Credentials.
-
-1. In the DuploCloud Portal, click **Administrator**-> **Plan**. The **Plans** page displays. &#x20;
-2. Select the Plan in the **Name** column.
-3. Click the **Config** tab.
-4. Click **Add**. The **Add Config** pane displays.
-
-<figure><img src="../../../.gitbook/assets/image (47) (2).png" alt=""><figcaption><p><strong>Add Config</strong> pane</p></figcaption></figure>
+###
 
 {% hint style="info" %}
 When you create a service, refer to the registry configuration in **DevOps** -> **Containers** -> **EKS/Native** -> **Services**, in the **Configuration** tab. Note the values in the **Environment Variables** and **Other Docker Config** fields.&#x20;
@@ -120,18 +72,6 @@ For example:&#x20;
 `{"DOCKER_REGISTRY_CREDENTIALS_NAME":"registry1"}`
 {% endhint %}
 
-
-
-### Set Kubernetes Secrets
-
-Optionally, set and reference Kubernetes secrets in your deployment by configuring the secrets with the **EKS/Native** option.&#x20;
-
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.&#x20;
-2. Select the Service from the **Name** column.
-3. Click the **K8S Secrets** tab. The **Kubernetes Secrets** page displays.
-
-<figure><img src="../../../.gitbook/assets/AWS_Secrets.png" alt=""><figcaption><p><strong>Kubernetes Secrets</strong> page with <strong>K8S Secrets</strong> tab</p></figcaption></figure>
-
 ### EKS/ECS support <a href="#1-toc-title" id="1-toc-title"></a>
 
 DuploCloud supports Elastic Kubernetes Service (EKS/ECS) out of the box.&#x20;
@@ -140,7 +80,15 @@ Kubernetes clusters are created during Infrastructure setup using the **Administ
 
 Next, you deploy an application within a Tenant in Kubernetes. The application contains a set of VMs, a Deployment set (Pods), and an application load balancer. Pods can be deployed either through the DuploCloud Portal or through `kubectl,`using HelmCharts.
 
-### Kubectl token and config <a href="#6-toc-title" id="6-toc-title"></a>
+### Managing Docker, Kubernetes, and AWS configs and Secrets <a href="#6-toc-title" id="6-toc-title"></a>
+
+See the [Configs and Secrets](../use-cases/passing-secrets/) section for information about creating and managing:
+
+* Docker Registry Credentials
+* Configuration and secrets in AWS
+* Passing Kubernetes ConfigMaps as Environment Variables (EVs) and files.
+
+### Downloading the Kubectl Token and KubeConfig <a href="#6-toc-title" id="6-toc-title"></a>
 
 DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen minutes, to access the `kubectl` cluster.&#x20;
 
@@ -205,16 +153,6 @@ spec:
 {% endcode %}
 
 If you need security tokens of a longer duration, create them on your own. Secure them outside of the DuploCloud environment.
-
-
-
-## Load Balancers, Web Application Firewalls (WAFs), and other workflows <a href="#8-toc-title" id="8-toc-title"></a>
-
-These do not need to be changed. See the following sections for more information:
-
-* [Load Balancers](../../use-cases/load-balancers.md)
-* [Web Application Firewalls (WAFs)](../web-application-firewall-waf.md)
-* Workflows
 
 ## Elastic Container Service (ECS) Fargate <a href="#9-toc-title" id="9-toc-title"></a>
 

@@ -2,7 +2,7 @@
 description: Set up Kubernetes Ingress and Load Balancer with K8s NodePort
 ---
 
-# Adding Ingress and Load Balancers
+# Ingress
 
 ## Enable AWS Application Load Balancer&#x20;
 
@@ -13,13 +13,13 @@ Your administrator needs to enable the AWS Application Load Balancer controller 
 
 ## Create Tenants, Hosts, and Services with EKS
 
-See the [Containers ](./)topic for steps on how to create [Tenants](../../../getting-started/application-focussed-interface/tenant.md), Hosts, and [Services](../../../getting-started/application-focussed-interface/app-service-and-cloud-service.md).
+See the [Containers ](containers.md)topic for steps on how to create [Tenants](../../getting-started/application-focussed-interface/tenant.md), Hosts, and [Services](../../getting-started/application-focussed-interface/app-service-and-cloud-service.md).
 
 Once your service is deployed, you are ready to add and configure Kubernetes Ingress.
 
 In this example, three Nginx services run with different paths.
 
-![The Services page](<../../../.gitbook/assets/image (16).png>)
+![The Services page](<../../.gitbook/assets/image (16).png>)
 
 ## Add Kubernetes Ingress
 
@@ -29,14 +29,14 @@ Once Services are deployed, add Ingress:
 2. Click the **K8S Ingress** tab.&#x20;
 3. Click **Add**. The **Add Kubernetes Ingress** page displays.
 
-<figure><img src="../../../.gitbook/assets/AWS_Ingress (2).png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_Ingress (2).png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
 
 ## Add rules to Kubernetes Ingress
 
 1. In the **Add Kubernetes Ingress** page, configure Ingress by clicking **Add Rule**. The **Add Ingress Rule pane** displays.&#x20;
 2. Complete the other fields on the page and click **Add Rule**. Add additional rules as needed.
 
-![Add Ingress Rule pane](<../../../.gitbook/assets/image (57) (2).png>)
+![Add Ingress Rule pane](<../../.gitbook/assets/image (57) (2).png>)
 
 {% hint style="info" %}
 DuploCloud Platform supports defining multiple paths in Ingress.
@@ -44,7 +44,7 @@ DuploCloud Platform supports defining multiple paths in Ingress.
 
 Continuing our previous example, we have defined an Ingress to route requests to `/path1/`for **testsvc1**, and requests to `/path2/` for **testsvc2**. For the third service, we have brought out own host (BYOH), **example.com**. In this example, the Ingress rules apply only to **example.com**.
 
-![Kubernetes Ingress rules](<../../../.gitbook/assets/image (13).png>)
+![Kubernetes Ingress rules](<../../.gitbook/assets/image (13).png>)
 
 ## Add Load Balancer with Kubernetes NodePort
 
@@ -66,7 +66,7 @@ Using Kubernetes Health Check allows AWS's Application Load Balancer to determin
 
 Once Ingress is configured, you can access Services based on the rules for each **DNS**.
 
-![K8s Ingress Tab](<../../../.gitbook/assets/image (18) (5).png>)
+![K8s Ingress Tab](<../../.gitbook/assets/image (18) (5).png>)
 
 By executing `curl` commands, you can see the difference in the output for each service. Configured services are accessed based on the DNS name specified in the DuploCloud Portal and the paths that you configured when you added Ingress rules.
 

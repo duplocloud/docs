@@ -19,7 +19,7 @@ When creating an Infrastructure, you specify the number of availability zones, t
 
 ![Azure Infrastructure page](<../../../.gitbook/assets/Azure\_infra\_default (1).png>)
 
-See the [Infrastructure](../../../aws/aws-services/infrastructure/) topic for detailed steps about how to create an Infrastructure in the DuploCloud Portal.
+See the [Infrastructure](broken-reference) topic for detailed steps about how to create an Infrastructure in the DuploCloud Portal.
 
 {% hint style="warning" %}
 Up to one instance (0 or 1) of an AKS is supported for each DuploCloud Infrastructure.

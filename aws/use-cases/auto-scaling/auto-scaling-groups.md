@@ -1,6 +1,6 @@
 # Auto Scaling Groups
 
-Configure Auto Scaling Group to ensure the application load is scaled based on the number of EC2 instances configured. Auto Scaling detects unhealthy instances and launches new EC2 instances. ASG is also cost-effective as EC2 Instances are dynamically created as per the application requirement  within minimum and maximum count limit.
+Configure Auto Scaling Group to ensure the application load is scaled based on the number of EC2 instances configured. Auto Scaling detects unhealthy instances and launches new EC2 instances. ASG is also cost-effective as EC2 Instances are dynamically created as per the application requirement within minimum and maximum count limits.
 
 ## Creating Auto Scaling Group (ASG)
 
@@ -8,8 +8,8 @@ Navigate **DevOps** > **Hosts** > **ASG** to create an auto-scaling group.
 
 * **Name** - Name for the Auto Scaling Group
 * **Instance Count** - Desired capacity for the autoscaling group.
-* **Minimum Instances** - Minimum Instance Count. Auto Scaling group will make sure that total number of instances will always be greater than or equal to the minimum count.
-* **Maximum Instances** - Maximum Instance Count. Auto Scaling group will make sure that total number of instances will always be less than or equal to the maximum count.
+* **Minimum Instances** - Minimum Instance Count. The Auto Scaling group will make sure that the total number of instances will always be greater than or equal to the minimum count.
+* **Maximum Instances** - Maximum Instance Count. The Auto Scaling group will make sure that the total number of instances will always be less than or equal to the maximum count.
 * **Platform** - Select container orchestration platform.
   1. _Linux Docker/Native_**:** Select this option if you want to run docker native services which are Linux based.
   2. _EKS Linux_**:** Select this option if you want to run services on the Kubernetes Cluster\
