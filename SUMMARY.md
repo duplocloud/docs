@@ -73,6 +73,7 @@
 * [Use cases](aws/use-cases/README.md)
   * [Infrastructure (VPC) and Plan (configuration)](aws/use-cases/disaster-recovery.md)
     * [EKS Initial Setup](aws/use-cases/kubernetes-cluster/README.md)
+      * [Enable EKS endpoints](aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md)
       * [Upgrading the EKS version](aws/use-cases/kubernetes-cluster/upgrading-eks-version.md)
   * [Tenant (Environment)](aws/use-cases/tenant-environment.md)
   * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
