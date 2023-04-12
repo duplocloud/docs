@@ -8,9 +8,9 @@ description: Allow multiple Tenants access to the same resources
 These features are currently only available for AWS.
 {% endhint %}
 
-## Allowing Cross-Tenant access to non-restricted services
+## Allowing Cross-Tenant access based on Security Groups
 
-To allow access between two Tenants, for services that are not restricted by IAM policies, perform this procedure using the Tenant **Security** tab. For services that are restricted by IAM policies, see [Cross-Tenant access to restricted policy-based resources](allow-cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
+To allow access between two Tenants, based on Security Groups in the underlying Cloud Platform, perform this procedure using the Tenant **Security** tab. For services that are restricted by IAM policies, see [Cross-Tenant access to restricted policy-based resources](allow-cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. Select the Tenant whose resources you want to share from the **Name** column.
@@ -39,11 +39,11 @@ To allow access, or create a share, between two Tenants for services that are re
 6. From the **Access to Area** list box, select the restricted policy-based resource that you want to share.
 7. Click **Create**. Your Cross-Tenant Access share is created.
 
-### Viewing Cross-Tenant shares to restricted policy-based resources
+### Viewing Cross-Tenant grants to restricted policy-based resources
 
 1. In the DuploCloud portal, navigate to **Administrator** -> **Tenants**. The **Tenants** page displays.
-2. From the **Name** column, select the Tenant whose granted Cross-Tenant shares you want to view.
+2. From the **Name** column, select the Tenant whose Cross-Tenant grants you want to view.
 3. Click the **Grants** tab. Select **Allow **_**TENANT\_NAME**_** to Access Other Tenants**, where _**TENANT\_NAME**_ is the Tenant you selected.
 4. The resources that _**TENANT\_NAME**_ has access to are displayed.
 
-<figure><img src="../../.gitbook/assets/aws_grantC3.png" alt=""><figcaption><p><strong>TEST-TEN</strong> Tenant page displaying shared resource <strong>S3 Buckets,</strong> shared by Tenant <strong>tenant-js</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/aws_grantC3 (1).png" alt=""><figcaption><p><strong>TEST-TEN</strong> Tenant page displaying shared resource <strong>S3 Buckets,</strong> shared by Tenant <strong>tenant-js</strong></p></figcaption></figure>

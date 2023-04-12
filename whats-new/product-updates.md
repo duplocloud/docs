@@ -4,10 +4,9 @@ description: New features and enhancements in DuploCloud
 
 # Product updates
 
-### April 2023
-
-* AWS
-  * Allow [Cross-Tenant access](../administrator-tools/access-control/allow-cross-tenant-access.md) for Services restricted by IAM policies.
+{% hint style="success" %}
+New product updates will be posted no later than the 15th of each month.
+{% endhint %}
 
 ### March 2023
 
