@@ -12,24 +12,24 @@ Once we have the Infrastructure (Networking, Kubernetes cluster, and other commo
 
 ## Creating Hosts <a href="#3-toc-title" id="3-toc-title"></a>
 
-See the Services documentation for steps to [create Hosts and configure Kubernetes storage options](../../azure-services/containers/).&#x20;
+See the Services documentation for steps to [create Hosts and configure Kubernetes storage options](../azure-services/containers/).&#x20;
 
-<figure><img src="../../../.gitbook/assets/Azure_Hosts (1) (1).png" alt=""><figcaption><p><strong>Host</strong> tab on <strong>Azure VM</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Azure_Hosts (1) (1).png" alt=""><figcaption><p><strong>Host</strong> tab on <strong>Azure VM</strong> page</p></figcaption></figure>
 
 ## Host abstraction and isolation&#x20;
 
 While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
 
-<figure><img src="../../../.gitbook/assets/Azure_host_VM.png" alt=""><figcaption><p><strong>Add Virtual Machine</strong> page </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Azure_host_VM.png" alt=""><figcaption><p><strong>Add Virtual Machine</strong> page </p></figcaption></figure>
 
 Most of these inputs are optional and some are available as list box selections, set by the administrator in the Plan (for example, **Image ID**, in Host **Advanced Options**).&#x20;
 
 There are two additional parameters
 
-**Fleet**: This is applicable if the VM is to be used as a host for [container orchestration](../../container-deployments/container-orchestrators.md) by the platform. The choices are:
+**Fleet**: This is applicable if the VM is to be used as a host for [container orchestration](../container-deployments/container-orchestrators.md) by the platform. The choices are:
 
-* **Linux Docker/Native**: To be used for hosting Linux containers using the [Built-in Container orchestration](../../container-deployments/).      &#x20;
-* **Docker Windows**: To be used for hosting Windows containers using the [Built-in Container orchestration](../../container-deployments/).
+* **Linux Docker/Native**: To be used for hosting Linux containers using the [Built-in Container orchestration](../container-deployments/).      &#x20;
+* **Docker Windows**: To be used for hosting Windows containers using the [Built-in Container orchestration](../container-deployments/).
 * **None**: To be used for non-Container Orchestration purposes and contents inside the VM are self-managed by the user.
 
 **Allocation Tags (Optional)**: If the VM is used for containers, you can optionally set a label on the VM. This label is specified during Docker application deployment to ensure that the application containers are pinned to a specific set of nodes, giving you the ability to split a tenant further into separate pools of servers and deploy applications on them.&#x20;

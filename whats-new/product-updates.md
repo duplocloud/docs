@@ -7,7 +7,7 @@ description: New features and enhancements in DuploCloud
 ### April 2023
 
 * AWS
-  * Allow [Cross-Tenant access](../administrator-tools/access-control/cross-tenant-access.md) for Services restricted by IAM policies.
+  * Allow [Cross-Tenant access](../administrator-tools/access-control/allow-cross-tenant-access.md) for Services restricted by IAM policies.
 
 ### March 2023
 
@@ -21,7 +21,7 @@ description: New features and enhancements in DuploCloud
   * Enable [shell access for ECS, Kubernetes, and Native docke](../aws/prerequisites/kubectl-shell.md)r containers using a simplified workflow.
   * Reduce storage cost and increase performance by [setting GP3 as your default storage class](../aws/aws-services/storage/gp3-storage-class.md).
   * Enable [NAT Gateways for High Availability (HA)](../aws/aws-services/nat-gateway-for-ha.md).
-  * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers/#7-toc-title-1) at once.
+  * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers.md#7-toc-title-1) at once.
 * GCP
   * Updated documentation for [supported databases](../gcp/gcp-services/databases/).
 * CI/CD
@@ -35,26 +35,26 @@ description: New features and enhancements in DuploCloud
   * Enable Elastic Kubernetes Service (EKS) for your existing infrastructure. EKS versions 1.22 and 1.23 are supported.
   * [Timestream databases](../aws/aws-services/database/timestream-database.md) are now supported.
 * General updates
-  * [Delete VPN connections](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/zv5qBQC5mUqzcKULXq1i/administrators/access-control/vpn-access#deleting-a-vpn-user) for users.
+  * [Delete VPN connections](../administrator-tools/access-control/add-and-delete-vpn-access-for-users.md) for users.
 
 ### December 2022 and January 2023
 
 * AWS
   * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
-  * Monitor Tenant usage in the [Billing feature](../aws/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
+  * Monitor Tenant usage in [Cost Management for billing](../aws/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
   * Use the [K8s Admin dashboard to monitor StatefulSets](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
-  * [Force creation of StatefulSets](../aws/aws-services/containers/#5-toc-title).
+  * [Force creation of StatefulSets](../aws/aws-services/containers.md#5-toc-title).
 * Azure
   * Support for [Kubernetes Ingress](../azure/azure-services/containers/adding-ingress.md).
-  * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/7ev96ixoUE2TKhw2W8yw/azure/use-cases/cost-management) with weekly or monthly views.
+  * Monitor Tenant usage in the [Cost Management for billing ](../azure/use-cases/cost-management.md)feature with weekly or monthly views.
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 * GCP
-  * Monitor Tenant usage in the [Billing feature](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/LIQrEoD3lxoJfvhsSCPM/gcp/use-cases/cost-management) with weekly or monthly views.&#x20;
+  * Monitor Tenant usage in the [Cost Management for billing](../gcp/use-cases/cost-management.md) feature with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
   * Support for Kubernetes Ingress in [Azure](../azure/azure-services/containers/adding-ingress.md).
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
-  * [Force creation of StatefulSets in AWS](../aws/aws-services/containers/#5-toc-title).
+  * [Force creation of StatefulSets in AWS](../aws/aws-services/containers.md#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 
@@ -67,7 +67,7 @@ description: New features and enhancements in DuploCloud
 ### October 2022
 
 * [Ability to add Logging Infra at Tenant Level](../aws/use-cases/central-logging/central-logging-setup.md#adding-logging-setup-at-tenant-level): Support to configure logging setup other than default tenant.
-* [Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers/#add-multiple-docker-registry-credentials): The user can configure multiple docker registry credentials from the plan.
+* [Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers.md#add-multiple-docker-registry-credentials): The user can configure multiple docker registry credentials from the plan.
 
 ### September 2022
 
