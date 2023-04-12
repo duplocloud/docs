@@ -1,8 +1,8 @@
 ---
-description: Manage costs for resources
+description: Manage costs for billing and resources
 ---
 
-# Cost management
+# Cost management for billing
 
 Usage costs for resources can be viewed and managed in the DuploCloud Portal, by month or week, and by Tenant. You can also explore historical resource costs.&#x20;
 

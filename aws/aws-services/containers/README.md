@@ -43,13 +43,13 @@ Do not use spaces when creating Service or Docker image names.
 The number of Replicas that you define must be less than or equal to the number of hosts in the fleet.
 {% endhint %}
 
-![Add Service page](../../.gitbook/assets/k8\_statefulSet\_force.png)
+![Add Service page](../../../.gitbook/assets/k8\_statefulSet\_force.png)
 
 ### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
 Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach load balancers for the services.
 
-<figure><img src="../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 
 ### Restarting Multiple Services <a href="#7-toc-title" id="7-toc-title"></a>
 
@@ -60,7 +60,7 @@ The portal supports the functionality to restart multiple services in a single r
 3. Use the checkbox column to select multiple **RUNNING** services. You can select and restart up to twenty (20) services at a time.
 4. Click **Restart Service**.
 
-<figure><img src="../../.gitbook/assets/image (2) (7).png" alt=""><figcaption><p><strong>Restart Service</strong> button in the <strong>Services</strong> tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (7).png" alt=""><figcaption><p><strong>Restart Service</strong> button in the <strong>Services</strong> tab</p></figcaption></figure>
 
 ###
 
@@ -82,7 +82,7 @@ Next, you deploy an application within a Tenant in Kubernetes. The application c
 
 ### Managing Docker, Kubernetes, and AWS configs and Secrets <a href="#6-toc-title" id="6-toc-title"></a>
 
-See the [Configs and Secrets](../use-cases/passing-secrets/) section for information about creating and managing:
+See the [Configs and Secrets](../../use-cases/passing-secrets/) section for information about creating and managing:
 
 * Docker Registry Credentials
 * Configuration and secrets in AWS

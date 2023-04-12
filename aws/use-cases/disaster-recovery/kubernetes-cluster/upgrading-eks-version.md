@@ -28,13 +28,13 @@ To upgrade the EKS version, in the DuploCloud Portal:&#x20;
 3. Select the **EKS** tab. If an Infrastructure upgrade is available, **Upgrade** appears in the **Value** column.
 4. Click **Upgrade**.
 
-![EKS tab with Upgrade available](<../../../.gitbook/assets/Screen Shot 2022-07-16 at 4.54.35 PM.png>)
+![EKS tab with Upgrade available](<../../../../.gitbook/assets/Screen Shot 2022-07-16 at 4.54.35 PM.png>)
 
 ### Monitoring the upgrade&#x20;
 
 Monitor the upgrade by using the **EKS Upgrade Details** screen.
 
-![EKS Upgrade Details screen and the Status list](<../../../.gitbook/assets/Screen Shot 2022-07-16 at 4.58.59 PM.png>)
+![EKS Upgrade Details screen and the Status list](<../../../../.gitbook/assets/Screen Shot 2022-07-16 at 4.58.59 PM.png>)
 
 ### Upgrade completion
 
@@ -53,6 +53,6 @@ If any of your Hosts use allocation tags, you must assign allocation tags to the
 7. Click **Create** and define your allocation tags.
 8. Click **Add** to assign the allocation tags to the Host.
 
-<figure><img src="../../../.gitbook/assets/Hosts_Tags_AWS.png" alt=""><figcaption><p>Allocation tags in the <strong>Add Host</strong> screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Hosts_Tags_AWS.png" alt=""><figcaption><p>Allocation tags in the <strong>Add Host</strong> screen</p></figcaption></figure>
 
 &#x20;                                    &#x20;
