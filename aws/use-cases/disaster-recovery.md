@@ -23,7 +23,7 @@ Create a DuploCloud Infrastructure in the DuploCloud Portal:
 5. Optionally, select **Advanced Options** to specify additional configurations (public and private subnets, for example).
 6. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page.
 
-![AWS Add Infrastructure form](<../../../.gitbook/assets/image (15) (1) (1) (2) (1) (1) (1) (1).png>)
+![AWS Add Infrastructure form](<../../.gitbook/assets/image (15) (1) (1) (2) (1) (1) (1) (1).png>)
 
 When you create the Infrastructure, DuploCloud creates the following components:
 
@@ -32,11 +32,11 @@ When you create the Infrastructure, DuploCloud creates the following components:
 * NAT Gateway
 * Internet Gateway
 * Route tables
-* [VPC peering](../../aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
+* [VPC peering](../aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
 
 ## About Plans and Infrastructures
 
-Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](../../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](../tenant-environment.md).
+Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](tenant-environment.md).
 
 ![DuploCloud Plan Details](https://duplocloud.com/wp-content/uploads/2021/11/infra-plan.png)
 

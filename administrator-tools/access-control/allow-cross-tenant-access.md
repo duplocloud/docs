@@ -10,7 +10,7 @@ These features are currently only available for AWS.
 
 ## Allowing Cross-Tenant access to non-restricted services
 
-To allow access between two Tenants, for services that are not restricted by IAM policies, perform this procedure using the Tenant **Security** tab. For services that are restricted by IAM policies, see [Cross-Tenant access to restricted policy-based resources](cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
+To allow access between two Tenants, for services that are not restricted by IAM policies, perform this procedure using the Tenant **Security** tab. For services that are restricted by IAM policies, see [Cross-Tenant access to restricted policy-based resources](allow-cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. Select the Tenant whose resources you want to share from the **Name** column.
@@ -27,7 +27,7 @@ To allow access between two Tenants, for services that are not restricted by IAM
 
 ## Cross-Tenant access to restricted policy-based resources
 
-To allow access, or create a share, between two Tenants for services that are restricted by IAM policies, perform this procedure using the Tenant **Grants** tab. To establish general non-IAM restricted Cross-Tenant access, see [Allowing Cross-Tenant access to non-restricted services](cross-tenant-access.md#allowing-cross-tenant-access-to-non-restricted-services).
+To allow access, or create a share, between two Tenants for services that are restricted by IAM policies, perform this procedure using the Tenant **Grants** tab. To establish general non-IAM restricted Cross-Tenant access, see [Allowing Cross-Tenant access to non-restricted services](allow-cross-tenant-access.md#allowing-cross-tenant-access-to-non-restricted-services).
 
 1. In the DuploCloud portal, navigate to **Administrator** -> **Tenants**. The **Tenants** page displays.
 2. From the **Name** column, select the Tenant with access to the restricted resource that you want to share.
@@ -46,4 +46,4 @@ To allow access, or create a share, between two Tenants for services that are re
 3. Click the **Grants** tab. Select **Allow **_**TENANT\_NAME**_** to Access Other Tenants**, where _**TENANT\_NAME**_ is the Tenant you selected.
 4. The resources that _**TENANT\_NAME**_ has access to are displayed.
 
-<figure><img src="../../.gitbook/assets/aws_grantC3 (1).png" alt=""><figcaption><p><strong>TEST-TEN</strong> Tenant page displaying shared resource <strong>S3 Buckets,</strong> shared by Tenant <strong>tenant-js</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/aws_grantC3.png" alt=""><figcaption><p><strong>TEST-TEN</strong> Tenant page displaying shared resource <strong>S3 Buckets,</strong> shared by Tenant <strong>tenant-js</strong></p></figcaption></figure>
