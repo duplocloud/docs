@@ -10,27 +10,7 @@ description: >-
 
 The DuploCloud Portal comes configured with a default Plan. A [Plan](../../../getting-started/application-focussed-interface/plan.md) configures your Tenants using a set of templates whose parameters are applied to the Tenants in your [Infrastructure](../infrastructure.md).
 
-## Tenants <a href="#2-toc-title" id="2-toc-title"></a>
-
-To add a Tenant, navigate to **Administrator** -> **Tenant** in the DuploCloud Portal and click **Add**.
-
-Each [Tenant ](../tenants.md)is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
-
-All application components within the Analytics Tenant are placed in the `duploservices-analytics` namespace. Since nodes cannot be part of a Kubernetes Namespace, DuploCloud creates a `tenantname` label for all the nodes that are launched within the Tenant. For example, a node launched in the Analytics Tenant is labeled`tenantname: duploservices-analytics`.&#x20;
-
-Any Pods that are launched using the DuploCloud UI have an appropriate Kubernetes `nodeSelector` that ties the Pod to the nodes within the Tenant. If you are deploying via `kubectl,`ensure that your deployment is using the proper `nodeSelector`.
-
-### Kubectl token and config
-
-DuploCloud provides a way to connect directly to the Cluster namespace using the `kubectl` token.&#x20;
-
-1. In the DuploCloud Portal, navigate to **DevOps** --> **Containers** --> **AKS/Native** .
-2. Select **KubeCtl Token.**
-3. Enter the following commands:
-
-![Connecting directly to the Cluster namespace using the kubectl token. ](<../../../.gitbook/assets/image (1) (3).png>)
-
-After entering these commands,  `kubectl` is configured to access the Kubernetes cluster for your Tenant namespace.
+###
 
 ## Hosts <a href="#3-toc-title" id="3-toc-title"></a>
 

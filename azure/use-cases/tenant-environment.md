@@ -41,11 +41,7 @@ Tenants are sometimes created to isolate a single customer workload, allowing mo
 
 When you have a large set of applications that different teams access, it is helpful to map Tenants to team workloads. For example, you could create Tenants for **Dev-analytics**, **Stage-analytics**, and so on.
 
-## Creating Tenants
-
-See the Services documentation for steps to [create Tenants, `kubectl` tokens, and config](../azure-services/containers/).
-
-## Tenant abstraction and isolation
+### Tenant abstraction and isolation
 
 While Infrastructure provides abstraction and isolation at the Virtual Private Cloud (VPC) and Kubernetes/AKG Cluster level, the Tenant supplies the next level of isolation implemented in AKS by segregating Tenants using the following construct _per_ Tenant
 
@@ -55,4 +51,14 @@ While Infrastructure provides abstraction and isolation at the Virtual Private C
 * KMS Key
 * PEM file
 
-AKS Worker nodes or virtual machines (VMs) created within a Tenant are given a label with the Tenant Name, as are the node selectors and namespaces. Consequently, even at the worker node level, two tenants achieve complete isolation and independence, even though they may be sharing the same Kubernetes cluster by a shared Infrastructure&#x20;
+AKS Worker nodes or virtual machines (VMs) created within a Tenant are given a label with the Tenant Name, as are the node selectors and namespaces. Consequently, even at the worker node level, two tenants achieve complete isolation and independence, even though they may be sharing the same Kubernetes cluster by a shared Infrastructure.
+
+## Creating Tenants
+
+To add a Tenant, navigate to **Administrator** -> **Tenant** in the DuploCloud Portal and click **Add**.
+
+Each [Tenant ](../azure-services/tenants.md)is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
+
+All application components within the Analytics Tenant are placed in the `duploservices-analytics` namespace. Since nodes cannot be part of a Kubernetes Namespace, DuploCloud creates a `tenantname` label for all the nodes that are launched within the Tenant. For example, a node launched in the Analytics Tenant is labeled`tenantname: duploservices-analytics`.&#x20;
+
+Any Pods that are launched using the DuploCloud UI have an appropriate Kubernetes `nodeSelector` that ties the Pod to the nodes within the Tenant. If you are deploying via `kubectl,`ensure that your deployment is using the proper `nodeSelector`.
