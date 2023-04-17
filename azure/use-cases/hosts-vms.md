@@ -10,11 +10,20 @@ Once we have the Infrastructure (Networking, Kubernetes cluster, and other commo
 * Worker Nodes (Docker Hosts) if built-in container orchestration is used.
 * Regular nodes that are not part of any container orchestration, where a user manually connects and installs applications. For example, when using a Microsoft SQL Server in a VM, when running an IIS application and in other custom use cases.
 
-## Creating Hosts <a href="#3-toc-title" id="3-toc-title"></a>
+## Adding a Host (VM)
 
-See the Services documentation for steps to [create Hosts and configure Kubernetes storage options](../azure-services/containers/).&#x20;
+Add a Virtual Machine Host. DuploCloud AWS supports **Host** (Azure Host) and **BYOH** (Bring Your Own Host) types. Use **BYOH** for any VM that is not an Azure Host.&#x20;
 
-<figure><img src="../../.gitbook/assets/Azure_Hosts (1) (1).png" alt=""><figcaption><p><strong>Host</strong> tab on <strong>Azure VM</strong> page</p></figcaption></figure>
+1. Ensure you have selected the appropriate Tenant from the **Tenant** list box at the top of the DuploCloud Portal.
+2. In the DuploCloud Portal, navigate to **DevOps -> Hosts**.&#x20;
+3. Click the tab that corresponds to the type of Host you want to create (**HOST** or **BYOH**).
+4. Click **Add**.
+
+{% hint style="info" %}
+It is not necessary to explicitly define Hosts. Instead, you can use [**Azure Agent Pool**s](../azure-services/agent-pool.md) and [**VM Scale Set**s](../azure-services/vm-scale-sets.md).
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/Azure_Hosts (1) (1).png" alt=""><figcaption><p><strong>Azure VM</strong> <strong>Hosts</strong> page with <strong>Host</strong>, <strong>VM Scale Set</strong>, <strong>Azure Agent Pool</strong>, and <strong>BYOH</strong> options, as tabs</p></figcaption></figure>
 
 ## Host abstraction and isolation&#x20;
 

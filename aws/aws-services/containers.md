@@ -1,5 +1,5 @@
 ---
-description: Using containers and Services with AWS EKS
+description: Using containers and DuploCloud Services with AWS EKS
 ---
 
 # Containers and Services
@@ -47,7 +47,7 @@ The number of Replicas that you define must be less than or equal to the number 
 
 ### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
-Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach load balancers for the services.
+Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](load-balancers.md) for the services.
 
 <figure><img src="../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 

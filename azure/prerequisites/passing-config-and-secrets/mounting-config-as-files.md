@@ -4,12 +4,12 @@ description: Mounting application configuration maps and secrets as files
 
 # Mounting ConfigMaps and Secrets as files
 
-In Kubernetes, you can mount application configurations or secrets as files.
+In Kubernetes, you can mount application configurations or secrets as files.&#x20;
 
 ## Creating and Mounting a Kubernetes ConfigMap
 
 {% hint style="warning" %}
-Before you create and mount the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud [Service](../../azure-services/containers/).&#x20;
+Before you create and mount the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud [Service](broken-reference).&#x20;
 {% endhint %}
 
 ### Creating a Kubernetes ConfigMap
@@ -69,7 +69,7 @@ If you want to select individual ConfigMap items, specifying the subpath for mou
 
 ## Creating and Mounting a Kubernetes Secret
 
-Before you create and mount a [Kubernetes Secret](https://kubernetes.io/docs/concepts/configuration/secret/), you must create a DuploCloud [Service](../../azure-services/containers/).
+Before you create and mount a [Kubernetes Secret](https://kubernetes.io/docs/concepts/configuration/secret/), you must create a DuploCloud [Service](broken-reference).
 
 ### Creating a Kubernetes Secret&#x20;
 

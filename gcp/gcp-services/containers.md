@@ -14,7 +14,7 @@ The DuploCloud Portal comes configured with a default Plan. A [Plan](../../getti
 
 To add a Tenant, navigate to **Administrator** -> **Tenant** in the DuploCloud Portal and click **Add**.
 
-Each [Tenant ](../../azure/azure-services/tenants.md)is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
+Each Tenant is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
 
 All application components within the Analytics Tenant are placed in the `duploservices-analytics` namespace. Since nodes cannot be part of a Kubernetes Namespace, DuploCloud creates a `tenantname` label for all the nodes that are launched within the Tenant. For example, a node launched in the Analytics Tenant is labeled`tenantname: duploservices-analytics`.&#x20;
 
@@ -64,7 +64,7 @@ You can configure the Storage Class and Persistent Volume Claims (PVCs) from the
 8. Define the Storage Class **Name**, **Provisioner**, **Reclaim Policy**, and **Volume Binding Mode.** Select other options, such as whether to **Allow Volume Expansion**.
 9. Click **Add**.
 
-Reference these [storage option examples](../../azure/azure-services/containers/storage-options.md) as you create your PVCs and Storage Classes.
+Reference these [storage option examples](../../azure/azure-services/storage/storage-options.md) as you create your PVCs and Storage Classes.
 
 ## Add Services
 

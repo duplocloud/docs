@@ -9,7 +9,7 @@ In Kubernetes, you populate environment variables from application configuration
 ## Setting Environment Variables from a Kubernetes ConfigMap
 
 {% hint style="info" %}
-Before you create the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud [Service](../../azure-services/containers/).&#x20;
+Before you create the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud [Service](../../azure-services/).&#x20;
 {% endhint %}
 
 ### Create the Kubernetes ConfigMap&#x20;
@@ -91,7 +91,7 @@ You can import Kubernetes Secrets as Environment Variables.&#x20;
 ### Configure Environment Variables
 
 {% hint style="info" %}
-Before you configure Environment Variables, you must create a DuploCloud [Service](../../azure-services/containers/).
+Before you configure Environment Variables, you must create a DuploCloud [Service](broken-reference).
 {% endhint %}
 
 #### Import the entire Secret as Environment Variables

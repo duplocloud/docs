@@ -1,8 +1,12 @@
+---
+description: Using Function Apps in DuploCloud Azure
+---
+
 # Functions
 
-Function Apps can be created from DevOps --> Serverless --> Function Apps.
+Function Apps can be created by navigating to **DevOps** --> **Serverless** --> **Function Apps** in the DuploCloud Portal.
 
-Fill in the details: the function app name, the method of publishing, runtime stack, version, and plan type.
+Fill in the details: the function app **Name**, the **Publish** method, **Runtime Stack**, **Version**, and **Plan Type**.
 
 ![](<../../.gitbook/assets/image (6) (3) (1).png>)
 
