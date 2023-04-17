@@ -14,7 +14,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Tenant](tenant-environment.md)
 * [Hosts](../../aws/use-cases/hosts-vms.md)
 * [Autoscaling for Hosts](autoscaling/)
-* [VM Scale Sets](../azure-services/vm-scale-sets.md)
+* [VM Scale Sets](vm-scale-sets.md)
 * [Docker Registry Credentials and Kubernetes Secrets](docker-registry-credentials-and-kubernetes-secrets.md)
 * [Logs](logs.md)
 * [Metrics](metrics.md)

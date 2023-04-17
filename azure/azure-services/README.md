@@ -31,5 +31,5 @@ Supported Services are listed in alphabetical order, following the core services
 * [Serverless Web applications](web-applications.md)
 * [Storage Account](storage-account.md)
 * [Subscriptions](subscription.md)
-* [VM Scale Set](vm-scale-sets.md)s
+* [VM Scale Set](../use-cases/vm-scale-sets.md)s
 * [Workspaces](workspaces.md)

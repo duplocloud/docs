@@ -20,7 +20,7 @@ Add a Virtual Machine Host. DuploCloud AWS supports **Host** (Azure Host) and **
 4. Click **Add**.
 
 {% hint style="info" %}
-It is not necessary to explicitly define Hosts. Instead, you can use [**Azure Agent Pool**s](../azure-services/agent-pool.md) and [**VM Scale Set**s](../azure-services/vm-scale-sets.md).
+It is not necessary to explicitly define Hosts. Instead, you can use [**Azure Agent Pool**s](../azure-services/agent-pool.md) and [**VM Scale Set**s](vm-scale-sets.md).
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/Azure_Hosts (1) (1).png" alt=""><figcaption><p><strong>Azure VM</strong> <strong>Hosts</strong> page with <strong>Host</strong>, <strong>VM Scale Set</strong>, <strong>Azure Agent Pool</strong>, and <strong>BYOH</strong> options, as tabs</p></figcaption></figure>
