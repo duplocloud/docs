@@ -18,14 +18,13 @@ DuploCloud adds new AWS services to the platform on almost a weekly basis, if a 
 
 ## Supported Services for DuploCloud AWS
 
-Supported Services are listed in alphabetical order, following the core services:  Containers, Load Balancers, Storage, and VMs.
+Supported Services are listed in alphabetical order, following the core services:  Containers, Load Balancers, and Storage.
 
 ### Core Services
 
 * [Containers and Services](containers.md)
 * [Load Balancers](load-balancers.md)
 * [Storage for Hosts](storage/)
-* [Hosts (Virtual Machines)](virtual-machines/)
 
 ### Additional Services
 

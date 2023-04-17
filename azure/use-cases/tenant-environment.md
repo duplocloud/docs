@@ -6,7 +6,7 @@ description: Using Tenants in DuploCloud
 
 In Azure, Microsoft cloud features such as Azure resource groups, Azure managed identity, Azure application security groups (ASG), KMS keys, as well as Kubernetes Namespaces, are exposed in Tenants which reference their configurations.
 
-When you create Tenants in an Infrastructure, a namespace is created in the Kubernetes cluster with the name `duploservices-TENANT_NAME.`
+When you create Tenants in an Infrastructure, a namespace is created in the Kubernetes cluster with the name `duploservices-TENANT_NAME.` DuploCloud creates the Network Security Group (NSG) for the Tenant which acts as a security boundary.
 
 ![Create a Tenant pane](<../../.gitbook/assets/image (16) (3).png>)
 
@@ -57,7 +57,7 @@ AKS Worker nodes or virtual machines (VMs) created within a Tenant are given a l
 
 To add a Tenant, navigate to **Administrator** -> **Tenant** in the DuploCloud Portal and click **Add**.
 
-Each [Tenant ](../azure-services/tenants.md)is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
+Each Tenant is mapped to a Namespace in Kubernetes. For example, if a Tenant is called **Analytics** in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
 
 All application components within the Analytics Tenant are placed in the `duploservices-analytics` namespace. Since nodes cannot be part of a Kubernetes Namespace, DuploCloud creates a `tenantname` label for all the nodes that are launched within the Tenant. For example, a node launched in the Analytics Tenant is labeled`tenantname: duploservices-analytics`.&#x20;
 

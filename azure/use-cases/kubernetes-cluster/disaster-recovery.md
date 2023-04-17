@@ -6,6 +6,8 @@ description: How Infrastructures and Plans work together to create a VPC
 
 Infrastructures are abstractions that allow you to create a Virtual Private Cloud (VPC) instance in the DuploCloud Portal. When you create an Infrastructure, a Plan is automatically generated to supply the network configuration necessary for your Infrastructure to run.&#x20;
 
+DuploCloud creates a VNET with a default subnet and a default Network Security Group (NSG). The creation of an Infrastructure takes about ten (10) minutes.&#x20;
+
 ## Creating an Infrastructure
 
 When you create a DuploCloud Infrastructure, you create an isolated environment that maps to a Kubernetes cluster.&#x20;

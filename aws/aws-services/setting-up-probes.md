@@ -1,4 +1,4 @@
-# Setting up Probes and Health Check
+# Probes and Health Check
 
 ## Liveness, Readiness, and Startup Probes
 
@@ -39,7 +39,7 @@ startupProbe:
 ```
 {% endcode %}
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure>
 
 We have seen httpGet example earlier, TCP Probes can also be configured from **Other Container Config** field, here is one  example for reference.
 
@@ -65,5 +65,5 @@ Full details of this K8 feature can be referenced [here](https://kubernetes.io/d
 
 ## Health Check
 
-Enable Kubernetes Health by adding a [Load Balancer Listener with Health Check enabled](../../../azure/azure-services/containers/adding-ingress.md#adding-a-load-balancer-listener-using-the-k8s-nodeport).
+Enable Kubernetes Health by adding a [Load Balancer Listener with Health Check enabled](broken-reference).
 

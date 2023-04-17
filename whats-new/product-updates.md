@@ -45,13 +45,13 @@ New product updates will be posted no later than the 15th of each month.
   * Use the [K8s Admin dashboard to monitor StatefulSets](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * [Force creation of StatefulSets](../aws/aws-services/containers.md#5-toc-title).
 * Azure
-  * Support for [Kubernetes Ingress](../azure/azure-services/containers/adding-ingress.md).
+  * Support for [Kubernetes Ingress](broken-reference).
   * Monitor Tenant usage in the [Cost Management for billing ](../azure/use-cases/cost-management.md)feature with weekly or monthly views.
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 * GCP
   * Monitor Tenant usage in the [Cost Management for billing](../gcp/use-cases/cost-management.md) feature with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
-  * Support for Kubernetes Ingress in [Azure](../azure/azure-services/containers/adding-ingress.md).
+  * Support for Kubernetes Ingress in [Azure](broken-reference).
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
   * [Force creation of StatefulSets in AWS](../aws/aws-services/containers.md#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).

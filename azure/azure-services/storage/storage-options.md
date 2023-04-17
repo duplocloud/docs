@@ -1,8 +1,8 @@
 ---
-description: Examples of various storage configurations in Azure
+description: Examples of storage configurations and customizations in DuploCloud Azure
 ---
 
-# Storage options
+# Storage option configurations
 
 DuploCloud Portal supports different configurations to achieve storage options in Azure.
 
@@ -26,7 +26,7 @@ Follow [these steps to mount PVC Volume ](storage-options.md#mount-persistentvol
 
 AKS provides a few out-of-the-box StorageClass objects. To mount the built-in storage classes, configure `Volumes`  as below.
 
-![Service Deployment Page](<../../../.gitbook/assets/image (2) (4).png>)
+![Service Deployment Page](<../../../.gitbook/assets/image (2) (4) (1).png>)
 
 <pre data-title="Volumes field"><code><strong>- AccessMode: ReadWriteMany
 </strong>  Name: data
