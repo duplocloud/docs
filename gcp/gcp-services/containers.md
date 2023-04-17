@@ -64,7 +64,7 @@ You can configure the Storage Class and Persistent Volume Claims (PVCs) from the
 8. Define the Storage Class **Name**, **Provisioner**, **Reclaim Policy**, and **Volume Binding Mode.** Select other options, such as whether to **Allow Volume Expansion**.
 9. Click **Add**.
 
-Reference these [storage option examples](../../azure/azure-services/storage/storage-options.md) as you create your PVCs and Storage Classes.
+Reference these [storage option examples](../../azure/azure-services/containers/storage-options.md) as you create your PVCs and Storage Classes.
 
 ## Add Services
 

@@ -39,4 +39,4 @@ If a VM is being used for container orchestration make sure that the Image ID  c
 
 ### Connect your EC2 Instance
 
-If you want to connect your EC2 instance remotely using SSH, [follow these steps](hosts-vms/ssh-ec2-instance.md).
+If you want to connect your EC2 instance remotely using SSH, [follow these steps](../aws-services/virtual-machines/ssh-ec2-instance.md).

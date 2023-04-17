@@ -16,7 +16,7 @@ When you create a WAF in DuploCloud, an entry is added to the [AWS Web ACL](http
 2. From the **Name** column, select the Plan you want to update.
 3.  Click **Add**. The **Add WAF** pane displays.
 
-    <figure><img src="../../.gitbook/assets/Azure_WAF.png" alt=""><figcaption><p><strong>Add WAF</strong> pane</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Azure_WAF (1).png" alt=""><figcaption><p><strong>Add WAF</strong> pane</p></figcaption></figure>
 4. In the **Name** field, type the name of your WAF.
 5. In the **WAF ARN** field, enter the Amazon Resource Name (ARN).
 6. Click **Create**.
@@ -31,7 +31,7 @@ Only ALB Load Balancers can be attached to a WAF.
 2. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.
 3. From the **Name** column, select the Service running the ALB Load Balancer.
 4. Click the **Load Balancers** tab.
-5.  Use the **LB Listeners** card to [add a Load Balancer Listener](load-balancers.md#adding-a-load-balancer-listener) for your ALB Load Balancer. If you have a Load Balancer Listener for ALB, click the Edit Icon ( <img src="../../.gitbook/assets/image (2).png" alt="" data-size="line">) to display or **Update** details, as in the graphic below.
+5.  Use the **LB Listeners** card to [add a Load Balancer Listener](load-balancers.md#adding-a-load-balancer-listener) for your ALB Load Balancer. If you have a Load Balancer Listener for ALB, click the Edit Icon ( <img src="../../.gitbook/assets/image.png" alt="" data-size="line">) to display or **Update** details, as in the graphic below.
 
     ![Edit Load Balancer Listener pane displaying details of an ALB Load Balancer for a WAF](../../.gitbook/assets/AWS\_ALB\_LBL\_HTTP.png)
 6.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.

@@ -1,8 +1,8 @@
----
-description: Working with AWS-supported Load Balancers in DuploCloud
----
-
 # Load Balancers
+
+Duplo Cloud provides the ability to configure Load Balancers with type Application Load Balancer, Network Load Balancer, and Classic Load Balancer.
+
+Applications can have distributed microservices where the requests need to serve on the basis of the path to the multiple services and route the traffic based on the application URLs. These rules provide us with a way to achieve this use case.
 
 Duplo Cloud provides the ability to configure Load Balancers with the following types:
 
@@ -35,7 +35,7 @@ To specify a custom classless inter-domain routing (CIDR) value for an NLB Load 
 1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> EKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
-4. In the **LB Listeners** card, select the Edit Icon (<img src="../../.gitbook/assets/image (2).png" alt="" data-size="line">) for the Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
+4. In the **LB Listeners** card, select the Edit Icon (<img src="../../.gitbook/assets/image.png" alt="" data-size="line">) for the Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
 5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pane**.**
 6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. Next, [add Security Groups for the CIDR(s)](load-balancers.md#adding-security-groups-for-custom-cidrs) you added.
 
@@ -79,7 +79,7 @@ To accomplish this, you:
 [Add a Load Balancer Listener with the type **Target Group Only**](load-balancers.md#adding-a-load-balancer-listener). You can create a Load Balancer Listener with a type of **Target Group** **Only** for Docker Native, EKS Enabled, and ECS Services based on your application requirement. &#x20;
 
 {% hint style="success" %}
-Find the name of the created Target Group but clicking the Info Icon ( <img src="../../.gitbook/assets/info_tip_black (1).png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`.
+Find the name of the created Target Group but clicking the Info Icon ( <img src="../../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/AWS_Target3.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for <strong>Target Group Only Type</strong></p></figcaption></figure>
@@ -120,7 +120,7 @@ View the rules you defined for any Load Balancer
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose rules you want to view.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../.gitbook/assets/image (8).png" alt="" data-size="line"> ) and select **Manage Rules**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../.gitbook/assets/image (6).png" alt="" data-size="line"> ) and select **Manage Rules**.
 
 ## Updating Target Group attributes
 
@@ -129,4 +129,26 @@ Update attributes for your defined Target Group.
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose defined Target Group attributes you want to modify.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../.gitbook/assets/image (6).png" alt="" data-size="line"> ) and select **Update attributes**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../.gitbook/assets/image (8).png" alt="" data-size="line"> ) and select **Update attributes**.
+
+## Additional Load Balancer Settings
+
+You can use the **Other Settings** card in the DuploCloud Portal to set the following features:
+
+* WAF Web ACL
+* Enable HTTP to HTTPS redirects
+* Enable Access Logging
+* Set Idle Timeout
+* Drop invalid headers
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.
+2. Select the Service to which your Load Balancer is attached from the **Name** column.
+3. Click the **Load Balancers** tab.
+4.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.
+
+    <figure><img src="../../.gitbook/assets/AWS_LB_Other1.png" alt=""><figcaption></figcaption></figure>
+5.  In the **Other Load Balancer Settings** pane, select any or all options.
+
+    <figure><img src="../../.gitbook/assets/AWS_LB_Other2.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure>
+6. Click **Save**.
+
