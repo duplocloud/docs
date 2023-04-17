@@ -1,8 +1,10 @@
+---
+description: Creating Load Balancers for single and multiple DuploCloud Services
+---
+
 # Load Balancers
 
-Duplo Cloud provides the ability to configure Load Balancers with type Application Load Balancer, Network Load Balancer, and Classic Load Balancer.
-
-Applications can have distributed microservices where the requests need to serve on the basis of the path to the multiple services and route the traffic based on the application URLs. These rules provide us with a way to achieve this use case.
+Duplo Cloud provides the ability to configure Load Balancers with the type of Application Load Balancer, Network Load Balancer, and Classic Load Balancer.
 
 Duplo Cloud provides the ability to configure Load Balancers with the following types:
 
@@ -35,7 +37,7 @@ To specify a custom classless inter-domain routing (CIDR) value for an NLB Load 
 1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> EKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
-4. In the **LB Listeners** card, select the Edit Icon (<img src="../../.gitbook/assets/image.png" alt="" data-size="line">) for the Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
+4. In the **LB Listeners** card, select the Edit Icon (<img src="../../.gitbook/assets/image (3).png" alt="" data-size="line">) for the Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
 5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pane**.**
 6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. Next, [add Security Groups for the CIDR(s)](load-balancers.md#adding-security-groups-for-custom-cidrs) you added.
 
@@ -120,7 +122,7 @@ View the rules you defined for any Load Balancer
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose rules you want to view.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../.gitbook/assets/image (6).png" alt="" data-size="line"> ) and select **Manage Rules**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../.gitbook/assets/image (12).png" alt="" data-size="line"> ) and select **Manage Rules**.
 
 ## Updating Target Group attributes
 
@@ -129,7 +131,7 @@ Update attributes for your defined Target Group.
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose defined Target Group attributes you want to modify.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../.gitbook/assets/image (8).png" alt="" data-size="line"> ) and select **Update attributes**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../.gitbook/assets/image (6).png" alt="" data-size="line"> ) and select **Update attributes**.
 
 ## Additional Load Balancer Settings
 
