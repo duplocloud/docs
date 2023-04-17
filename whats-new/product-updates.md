@@ -5,8 +5,16 @@ description: New features and enhancements in DuploCloud
 # Product updates
 
 {% hint style="success" %}
-New product updates will be posted no later than the 15th of each month.
+New product updates will be posted around the 15th of each month.
 {% endhint %}
+
+### April 2023
+
+* AWS
+  * Define [custom CIDRs](../aws/aws-services/load-balancers.md#adding-a-network-load-balancer-nlb-listener-with-a-custom-cidr) for NLB Load Balancers.
+  * Manage multiple Load Balancer settings using the **Load Balancer** tab's [**Other Settings** card](../aws/aws-services/load-balancers.md#additional-load-balancer-settings). Settings include specifying a Web Application Firewall (WAF) Access Control List (ACL), enabling HTTP to HTTPS redirects, enabling Access Logs, setting an Idle Timeout, and an option to drop invalid headers.
+  * Specify [custom public and private EKS endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) for your DuploCloud Infrastructure.&#x20;
+  * Gain [Cross-Tenant access to restricted policy-based resources](../administrator-tools/access-control/allow-cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
 
 ### March 2023
 
