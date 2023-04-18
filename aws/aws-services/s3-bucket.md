@@ -54,6 +54,14 @@ To enable public access to S3 buckets, set the following key/value pairs:
 <strong>duplo-allow-public-access  = True
 </strong></code></pre>
 
+### Ignore S3 bucket for DuploCloud policy management
+
+To add custom policies to your S3 bucket, and prevent DuploCloud from overriding that, set the following Tag to the S3 bucket in AWS Console
+
+```
+duplo-policy = ignore
+```
+
 ### Add a custom prefix for S3 buckets
 
 DuploCloud provides the capability to specify a custom prefix for S3.&#x20;
