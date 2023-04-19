@@ -31,10 +31,12 @@ To allow access, or create a share, between two Tenants for services that are re
 
 1. In the DuploCloud portal, navigate to **Administrator** -> **Tenants**. The **Tenants** page displays.
 2. From the **Name** column, select the Tenant with access to the restricted resource that you want to share.
-3. Click the **Grants** tab. Select **Allow Other Tenants to access **_**TENANT\_NAME**_, where _**TENANT\_NAME**_ is the Tenant you selected.
+3.  Click the **Grants** tab. Select **Allow Other Tenants to access **_**TENANT\_NAME**_, where _**TENANT\_NAME**_ is the Tenant you selected.
+
+    <figure><img src="../../.gitbook/assets/AWS_GCT_selector.png" alt=""><figcaption><p><strong>Grants</strong> tab with <strong>Allow Other Tenants to access </strong><em><strong>TENANT_NAME</strong></em> option </p></figcaption></figure>
 4.  Click **Add**. The **Grant Cross-Tenant Access** pane displays.
 
-    <figure><img src="../../.gitbook/assets/aws_grantCT2a.png" alt=""><figcaption><p><strong>Grant Cross-Tenant Access</strong> pane</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/AWS_GCT_1.png" alt=""><figcaption><p><strong>Grant Cross-Tenant Access</strong> pane</p></figcaption></figure>
 5. From the **Requesting Tenant** list box, select the Tenant with which you want to share access.
 6. From the **Access to Area** list box, select the restricted policy-based resource that you want to share.
 7. Click **Create**. Your Cross-Tenant Access share is created.
@@ -43,7 +45,7 @@ To allow access, or create a share, between two Tenants for services that are re
 
 1. In the DuploCloud portal, navigate to **Administrator** -> **Tenants**. The **Tenants** page displays.
 2. From the **Name** column, select the Tenant whose Cross-Tenant grants you want to view.
-3. Click the **Grants** tab. Select **Allow **_**TENANT\_NAME**_** to Access Other Tenants**, where _**TENANT\_NAME**_ is the Tenant you selected.
+3. Click the **Grants** tab. Select **Allow Other Tenants to access **_**TENANT\_NAME**_, where _**TENANT\_NAME**_ is the Tenant you selected.
 4. The resources that _**TENANT\_NAME**_ has access to are displayed.
 
-<figure><img src="../../.gitbook/assets/aws_grantC3 (1).png" alt=""><figcaption><p><strong>TEST-TEN</strong> Tenant page displaying shared resource <strong>S3 Buckets,</strong> shared by Tenant <strong>tenant-js</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_GCT_2.png" alt=""><figcaption><p><strong>UAT-01</strong> Tenant page displaying resource <strong>S3 Buckets</strong> shared with <strong>Tenant DEV01</strong></p></figcaption></figure>

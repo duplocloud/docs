@@ -25,7 +25,7 @@ You can obtain Just-In-Time (JIT) access to Kubernetes by using `duplo-jit`. See
 3. Click the **EKS** (for AWS) tab, **GKE** (for GCP) tab, or the **AKS** (for Azure) tab.
 4. Click **Download Kube Config** to download the `kubeconfig` file.
 
-![EKS tab with Download Kube Config button](../../.gitbook/assets/kubectl-config-download.jpg)
+![EKS tab with Download Kube Config button](../../.gitbook/assets/AWS\_EKS\_Tab\_041923\_noupgrade.png)
 
 {% hint style="info" %}
 If you don't have Administrator access, you can use `duplo-jit` to access Kubernetes. When you click **Download Kube Config**, the **Access to Kubernetes from your Workstation** window displays, which provides you the alternative of installing [`duplo-jit`](../../aws/use-cases/jit-access.md) to access your Kubernetes cluster without obtaining permanent access keys.
