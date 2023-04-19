@@ -8,14 +8,31 @@ DuploCloud users can obtain Just-In-Time (JIT) access to the AWS Console. This a
 
 ## Access using the UI
 
-You can obtain AWS JIT access directly from the DuploCloud Portal.&#x20;
+You can obtain AWS JIT access directly from the DuploCloud Portal, as well as obtain temporary AWS credentials to the Tenant, and access to AWS from your workstation.&#x20;
 
-1. In the DuploCloud portal, navigate to **User** -> **Profile**.
-2. Click the **JIT AWS Console** link.  The AWS Console opens in a new browser instance.
+1. In the DuploCloud Portal, navigate to **User** and select the **Username** that needs access.
+2.  In the upper-right corner of the Portal, click the user profile picture and select **Profile**. The **User Profile** page displays.
 
-<figure><img src="../../.gitbook/assets/kubeconfig_JIT.png" alt=""><figcaption><p>DuploCloud User <strong>Profile</strong> page with <strong>JIT AWS Console</strong> link</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/AWS_jit_profile.png" alt=""><figcaption><p>User profile area of the DuploCloud Portal with the <strong>Profile</strong> option</p></figcaption></figure>
+3.  From the **JIT AWS Console** list box, select the appropriate option to open the **JIT AWS Console**, get **Temporary AWS Credentials** to the Tenant, or obtain **AWS Access from my Workstation**.&#x20;
 
-## Access using the command line and `duplo-jit`
+    <figure><img src="../../.gitbook/assets/AWS_jit_profile2.png" alt=""><figcaption><p>DuploCloud User <strong>Profile</strong> page with <strong>JIT AWS Console</strong> list box and available options</p></figcaption></figure>
+
+### Accessing the JIT AWS Console from the UI
+
+When you select **JIT AWS Console**, the AWS Console launches.
+
+### Selecting temporary or permanent access to AWS Credentials
+
+When you select Temporary AWS Credentials, the **Get JIT AWS Access** window displays with available links for **temporary** or **permanent** access, as in the graphic below. For temporary access, click **Get JIT Access**. For permanent access, click the **more permanent** link.
+
+<figure><img src="../../.gitbook/assets/AWS_jit_profile3.png" alt=""><figcaption><p><strong>Get JIT AWS Access</strong> window with tempoary and permanent options</p></figcaption></figure>
+
+### Obtaining AWS access for a workstation
+
+When you select **AWS Access from my Workstation**, the **Get JIT AWS Access** window displays with the **Access to AWS from your Workstation** option. Follow the instructions and links.
+
+## Access the AWS Console using the CLI and `duplo-jit`
 
 Obtain access through the command line interface (CLI) with `duplo-jit`. `duplo-jit` must obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can be specified either as part of your local AWS configuration or can be obtained interactively, using your DuploCloud portal session.
 
@@ -71,13 +88,13 @@ When you make the first AWS call, you are prompted to grant authorization throug
 
 Upon successful authorization, A Just-In-Time token is provided, which is valid for one hour. When the token expires, you are prompted to re-authorize the request.
 
-## Accessing the AWS Console
+## Accessing the AWS Console Using the CLI
 
-Obtain access to the AWS console.
+Obtain access to the AWS console using the Command Line Interface (CLI).
 
-### **Accessing the AWS Console from the CLI**
+### **Accessing the AWS Console**
 
-As long as you use the AWS\_PROFILE that matches the profile name you set in [the section above](jit-access.md#access-using-the-command-line), the AWS CLI obtains the required access credentials.
+As long as you use the AWS\_PROFILE that matches the profile name you set [in the section above](jit-access.md#obtaining-credentials), the AWS CLI obtains the required access credentials.
 
 For example:
 
