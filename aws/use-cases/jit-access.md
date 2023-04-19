@@ -13,7 +13,7 @@ You can obtain AWS JIT access directly from the DuploCloud Portal, as well as ob
 1. In the DuploCloud Portal, navigate to **User** and select the **Username** that needs access.
 2.  In the upper-right corner of the Portal, click the user profile picture and select **Profile**. The **User Profile** page displays.
 
-    <figure><img src="../../.gitbook/assets/AWS_jit_profile.png" alt=""><figcaption><p>User profile area of the DuploCloud Portal with the <strong>Profile</strong> option</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/AWS_jit_profile (1).png" alt=""><figcaption><p>User profile area of the DuploCloud Portal with the <strong>Profile</strong> option</p></figcaption></figure>
 3.  From the **JIT AWS Console** list box, select the appropriate option to open the **JIT AWS Console**, get **Temporary AWS Credentials** to the Tenant, or obtain **AWS Access from my Workstation**.&#x20;
 
     <figure><img src="../../.gitbook/assets/AWS_jit_profile2.png" alt=""><figcaption><p>DuploCloud User <strong>Profile</strong> page with <strong>JIT AWS Console</strong> list box and available options</p></figcaption></figure>
