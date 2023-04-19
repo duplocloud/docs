@@ -10,9 +10,11 @@ In the DuploCloud platform, a Kubernetes Cluster maps to a DuploCloud Infrastruc
 
 Start by creating a new Infrastructure in DuploCloud. When prompted to provide details for the new Infrastructure, select **Enable EKS**. In the **EKS Version** field, select the desired release.
 
+Optionally, [enable logging](../disaster-recovery/kubernetes-cluster/enable-eks-logs.md) and [custom EKS endpoints](../disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md).
+
 The worker nodes and remaining workload setup is described in the [Tenant](../tenant-environment.md) topic.
 
-![Add Infrastructure form with Enable EKS selected ](<../../../.gitbook/assets/image (15) (1) (1) (2) (1) (1) (1).png>)
+<figure><img src="../../../.gitbook/assets/AWS_Infra_logs1 (1).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> form with <strong>Enable EKS</strong> selected </p></figcaption></figure>
 
 {% hint style="info" %}
 Creating an Infrastructure with EKS can take some time. See the Infrastructure section for details about other elements on the Add Infrastructure form.

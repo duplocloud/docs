@@ -130,4 +130,4 @@ View the details of a rule by selecting the rule from the **Topic Rules** tab Na
 
 In the **Topic Rules** tab, edit a Topic Rule by clicking the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) in the row listing your Topic Rule **Name**, and selecting **Edit**.
 
-<figure><img src="../../.gitbook/assets/AWS_IOT_Topic_Rule_Actions.png" alt=""><figcaption><p><strong>Actions</strong> menu with <strong>Edit</strong> option on <strong>Topic Rules</strong> tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_IOT_Topic_Rule_Actions (1).png" alt=""><figcaption><p><strong>Actions</strong> menu with <strong>Edit</strong> option on <strong>Topic Rules</strong> tab</p></figcaption></figure>
