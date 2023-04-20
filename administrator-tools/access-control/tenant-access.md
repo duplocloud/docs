@@ -2,7 +2,7 @@
 description: Give a user access to a Tenant
 ---
 
-# Add Tenant access for users
+# Tenant access for users
 
 In order for a DuploCloud user to access a Tenant, an **Administrator** must give a user **Tenant Access** permissions.&#x20;
 
@@ -10,7 +10,7 @@ In order for a DuploCloud user to access a Tenant, an **Administrator** must giv
 **Note:** Users with the **Administrator** role have persistent access to all Tenants. Administrators do not need to add individual Tenant access for themselves.
 {% endhint %}
 
-Give a non-**Administrator** user access to a Tenant:
+Give a non-Administrator user access to a Tenant:
 
 1. In the DuploCloud Portal, navigate to the **Administrators -> Users** page.&#x20;
 2.  Select the user in the **Username** column. The user's permissions page displays.
