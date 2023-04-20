@@ -40,6 +40,3 @@ If you don't want to display the Download Key button, disable the button's visib
 7. Click **Submit**.
 
 <figure><img src="../../../.gitbook/assets/image (2) (6).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Disable SSH Key Download Key</strong> selected</p></figcaption></figure>
-
-### Powershell EC2 Windows instance
-
