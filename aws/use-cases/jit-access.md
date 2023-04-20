@@ -102,7 +102,7 @@ For example:
 
 ### **Obtaining a link to the AWS Console Url**
 
-To obtain a link to the AWS Console, run one of the following commands, which copy the Console URL to your clipboard that you can use in any browser.
+To obtain a link to the AWS Console, run one of the following commands, which copies the Console URL to your clipboard that you can use in any browser.
 
 All of these examples assume Administrator role access, passing the `--admin` flag. If you are obtaining JIT access for a User role (not Administrator), ensure that you replace the `--admin` argument in the following code snippets with `--tenant`` `_`YOUR_TENANT`_.
 
