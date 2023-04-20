@@ -28,12 +28,12 @@ To upgrade the EKS version, in the DuploCloud Portal:&#x20;
 3.  Select the **EKS** tab. If an Infrastructure upgrade is available, an **Upgrade** link appears in the **Value** column.
 
     ![EKS tab with Upgrade available](<../../../.gitbook/assets/AWS\_EKS\_Upgrade0 (1).png>)
-4. Click the **Upgrade** link. The **Upgrade EKS Cluster** pane displays.
+4.  Click the **Upgrade** link. The **Upgrade EKS Cluster** pane displays.
+
+    <figure><img src="../../../.gitbook/assets/AWS_EKS_Upgrade1.png" alt=""><figcaption><p><strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure>
 5. From the **Target Version** list box, select the version to which you want to upgrade.&#x20;
 6. From the **Host Upgrade Action**, select the method by which you want to upgrade hosts.
 7. Click **Create**. The upgrade process begins.
-
-<figure><img src="../../../.gitbook/assets/AWS_EKS_Upgrade1.png" alt=""><figcaption><p><strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure>
 
 ### Monitoring the upgrade&#x20;
 
@@ -41,13 +41,13 @@ The **EKS Upgrade Details** page displays that the upgrade is **In Progress**.
 
 <figure><img src="../../../.gitbook/assets/AWS_EKS_Upgrade2 (1).png" alt=""><figcaption><p><strong>EKS Upgrade Details</strong> page displaying upgrade <strong>In Progress</strong></p></figcaption></figure>
 
-Find more details about the upgrade by selecting your Infrastructure and clicking the EKS tab, and then click **Show Details**. The **EKS Upgrade Details** window displays.
+Find more details about the upgrade by selecting your Infrastructure from the **Infrastructure** page. Click the **EKS** tab, and then click **Show Details**.&#x20;
 
 <figure><img src="../../../.gitbook/assets/AWS_EKS_Upgrade3.png" alt=""><figcaption><p><strong>Show Details</strong> button on the Infrastructure <strong>EKS</strong> tab with upgrade in progress</p></figcaption></figure>
 
 ### Upgrade completion
 
-The **EKS Upgrade Details** window displays the progress of updates for all versions and Hosts. Green checkmarks indicate successful completion in the **Status** list. Red **X**s indicate **Action**s you must take to complete the upgrade process.
+When you click **Show Details**, the **EKS Upgrade Details** page displays the progress of updates for all versions and Hosts. Green checkmarks indicate successful completion in the **Status** list. Red **X**s indicate **Action**s you must take to complete the upgrade process.
 
 <figure><img src="../../../.gitbook/assets/AWS_EKS_Upgrade4.png" alt=""><figcaption><p><strong>EKS Upgrade Details</strong> window with <strong>Status</strong> list and <strong>Actions</strong> to be performed </p></figcaption></figure>
 
