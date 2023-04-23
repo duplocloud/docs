@@ -13,8 +13,13 @@ New product updates will be posted around the 15th of each month.
 * AWS
   * Define [custom CIDRs](../aws/aws-services/load-balancers.md#adding-a-network-load-balancer-nlb-listener-with-a-custom-cidr) for NLB Load Balancers.
   * Manage multiple Load Balancer settings using the **Load Balancer** tab's [**Other Settings** card](../aws/aws-services/load-balancers.md#additional-load-balancer-settings). Settings include specifying a Web Application Firewall (WAF) Access Control List (ACL), enabling HTTP to HTTPS redirects, enabling Access Logs, setting an Idle Timeout, and an option to drop invalid headers.
-  * Specify [custom public and private EKS endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) for your DuploCloud Infrastructure.&#x20;
+  * Specify [custom public and private EKS endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) for your DuploCloud Infrastructure during or after creating an Infrastructure.&#x20;
   * Gain [Cross-Tenant access to restricted policy-based resources](../administrator-tools/access-control/allow-cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
+  * [JIT Access to the AWS Console is redesigned](../aws/use-cases/jit-access.md#obtaining-aws-access-for-a-workstation) with several usability enhancements.
+  * [Enable Control Plane logging for EKS clusters](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-logs.md).
+  * Improved documentation for [upgrading an EKS cluster version](../aws/use-cases/disaster-recovery/upgrading-eks-version.md).
+* General Updates
+  * [Set read-only access to specific Tenants](../administrator-tools/access-control/tenant-access/read-only-access-to-a-tenant.md) for DuploCloud users.
 
 ### March 2023
 
