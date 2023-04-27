@@ -73,9 +73,9 @@ brew install duplocloud/tap/duplo-jit
 2. Edit the AWS Config file (**\~/.aws/config**) and add the following profile, as shown in the code snippet below:
 
 ```
-[profile ENV_NAME]
+[profile <ENV_NAME>]
 region=us-west-2
-credential_process=duplo-jit aws --admin --host https://ENV_NAME.duplocloud.net --token <DUPLO_TOKEN>
+credential_process=duplo-jit aws --admin --host https://<ENV_NAME>.duplocloud.net --token <DUPLO_TOKEN>
 ```
 
 #### Obtain credentials interactively
@@ -98,13 +98,13 @@ As long as you use the AWS\_PROFILE that matches the profile name you set [in th
 
 For example:
 
-`AWS_PROFILE=ENV_NAME aws ec2 describe-instances`
+`AWS_PROFILE=<ENV_NAME> aws ec2 describe-instances`
 
 ### **Obtaining a link to the AWS Console Url**
 
 To obtain a link to the AWS Console, run one of the following commands, which copies the Console URL to your clipboard that you can use in any browser.
 
-All of these examples assume Administrator role access, passing the `--admin` flag. If you are obtaining JIT access for a User role (not Administrator), ensure that you replace the `--admin` argument in the following code snippets with `--tenant`` `_`YOUR_TENANT`_.
+All of these examples assume Administrator role access, passing the `--admin` flag. If you are obtaining JIT access for a User role (not Administrator), ensure that you replace the `--admin` argument in the following code snippets with `--tenant <YOUR_TENANT>`, for example `--tenant dev01`.  Tenants are lower-case at the CLI.
 
 {% hint style="info" %}
 If you are receiving errors when attempting to retrieve credentials, try running the command with the `--no-cache` argument.
@@ -113,13 +113,13 @@ If you are receiving errors when attempting to retrieve credentials, try running
 #### Using an API Token
 
 ```
-duplo-jit aws --admin --host "https://ENV_NAME.duplocloud.net" --token <DUPLO_TOKEN> | jq -r .ConsoleUrl | pbcopy
+duplo-jit aws --admin --host "https://<ENV_NAME>.duplocloud.net" --token <DUPLO_TOKEN> | jq -r .ConsoleUrl | pbcopy
 ```
 
 #### Obtain a link interactively
 
 ```
-duplo-jit aws --admin --host "https://ENV_NAME.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
+duplo-jit aws --admin --host "https://<ENV_NAME>.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
 ```
 
 #### Obtain a link by configuring your `zsh` shell
@@ -133,7 +133,7 @@ function jitnow() {
 ```
 
 {% hint style="info" %}
-usage is `jitnow portalname`
+usage is `jitnow <ENV_NAME>`
 {% endhint %}
 
 ## Configuring JIT session timeout
