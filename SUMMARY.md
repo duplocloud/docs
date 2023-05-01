@@ -9,6 +9,7 @@
 
 ## Getting started
 
+* [Welcome to DuploCloud](getting-started/welcome-to-duplocloud.md)
 * [Existing DevOps Approach](getting-started/existing-devops-approach/README.md)
   * [Application Requirements](getting-started/existing-devops-approach/application-requirements.md)
   * [Compliance Requirements](getting-started/existing-devops-approach/compliance-requirements.md)
