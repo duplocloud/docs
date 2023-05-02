@@ -4,11 +4,11 @@ description: Creating the DuploCloud Infrastructure and a Plan
 
 # Step 1:  Create Infrastructure and Plan
 
-Each DuploCloud Infrastructure is a Virtual Private Cloud (VPC) instance that resides in a region containing Kubernetes clusters, AKS clusters, GKE clusters, EKS clusters, or a combination of all of these. An Infrastructure can reside On-Premises (On-Prem) or in a Public Cloud.
+Each DuploCloud Infrastructure is a Virtual Private Cloud (VPC) instance that resides in a region that can host Kubernetes clusters, AKS clusters, GKE clusters, EKS clusters, or a combination of these, depending on your public cloud provider. An Infrastructure can reside On-Premises (On-Prem) or in a Public Cloud.
 
 After you supply a few basic inputs DuploCloud creates an Infrastructure for you, within Azure and within DuploCloud, with a few clicks. Behind the scenes, DuploCloud does a lot with what little you supply — generating subnets, NAT gateway, routes, and a cluster in the region.
 
-With the Infrastructure as your foundation, you can customize an extensible, versatile Platform Engineering development environment by adding Tenants, Plans, Hosts, Services, and more.
+With the Infrastructure as your foundation, you can customize an extensible, versatile Platform Engineering development environment by adding Tenants, Hosts, Services, and more.
 
 _Estimated time to complete Step 1: 40 minutes. Much of this time is consumed by DuploCloud's creation of the Infrastructure and enabling your AKS cluster with Kubernetes._
 
@@ -41,7 +41,7 @@ Before starting this tutorial:
 
 ## Verifying that a Plan exists for your infrastructure
 
-Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the Tenants, or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
+Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the [Tenants ](../../getting-started/application-focussed-interface/tenant.md)or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
 
 Before proceeding, confirm that a Plan exists that corresponds to your newly created Infrastructure.
 
