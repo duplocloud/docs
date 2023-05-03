@@ -24,6 +24,8 @@ To use it you will need to change:
 * `SERVICE_NAME` env var
 * `TENANT_NAME` env var
 
+{% hint style="info" %} Note: The `TENANT_NAME` may need to be lowercase even though the UI shows it in uppercase. {% endhint %}
+
 ```yaml
 name: Build and Deploy
 on:
@@ -49,7 +51,7 @@ jobs:
       - name: Get AWS credentials
         uses: duplocloud/ghactions-aws-jit@master
         with:
-          tenant: default
+          tenant: ${{ env.TENANT_NAME }}
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
