@@ -30,7 +30,7 @@ You can supply advanced configuration options in the **Other K8 Config** field. 
 }
 ```
 
-## Adding a DuploCloud Service
+## Adding a DuploCloud EKS/Native Service
 
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
 2. Click **Add**. The **Add Service** page displays.
@@ -153,6 +153,29 @@ spec:
 {% endcode %}
 
 If you need security tokens of a longer duration, create them on your own. Secure them outside of the DuploCloud environment.
+
+## Adding a DuploCloud ECS Service
+
+For an example of how to create an ECS Service, [see this tutorial](../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
+
+### Enabling read-only processing for ECS Services
+
+If you want to grant a service read-only access to root filesystems, add a configuration flag in your DuploCloud Infrastructure.
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Click the **System Config** tab.
+3.  Click **Add**. The **Add Config** pane displays.
+
+    <figure><img src="../../.gitbook/assets/ecsconf.png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>EnableECSReadonlyProcessing Key</strong></p></figcaption></figure>
+4. From the **Config Type** list box, select **Other**. The **Other Config Type** field displays.
+5. In the **Other Config Type** field, enter **Flags**.
+6. In the **Key** field, enter **EnableECSReadonlyProcessing**.
+7. in the **Value** field, enter **true**.
+8. Click **Submit**.
+
+The new configuration is displayed in the **System Config** tab.
+
+<figure><img src="../../.gitbook/assets/ecsdispla.png" alt=""><figcaption><p><strong>EnableECSReadonlyProcessing</strong> configuration enabled with Value of <strong>true</strong> in <strong>System Config</strong> tab</p></figcaption></figure>
 
 ## Elastic Container Service (ECS) Fargate <a href="#9-toc-title" id="9-toc-title"></a>
 
