@@ -4,7 +4,7 @@ description: Create a read replica of an Aurora database
 
 # Aurora RDS replicas
 
-Aurora database replica setup is slightly different from [adding an RDS read replica](./).
+Aurora database replica setup is slightly different from [adding an RDS read replica](../add-an-rds-read-replica.md).
 
 ## Adding an Aurora read replica&#x20;
 

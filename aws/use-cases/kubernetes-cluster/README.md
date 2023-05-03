@@ -1,6 +1,6 @@
 ---
 description: >-
-  Enable Elastic Kubernetes Service (EKS) for AWS by creating a DuploCloud
+  Enable Elastic Kubernetes Service (EKS) for AWS when creating a DuploCloud
   Infrastructure
 ---
 
