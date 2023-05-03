@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Overview](README.md)
 * [FAQs](faq.md)
 
 ## WHAT'S NEW
@@ -127,7 +127,7 @@
       * [Sharing encrypted database](aws/aws-services/database/rds-database/sharing-encrypted-database.md)
       * [Manage RDS Snapshots](aws/aws-services/database/rds-database/manage-rds-snapshots.md)
       * [Add an RDS read replica](aws/aws-services/database/rds-database/add-an-rds-read-replica.md)
-        * [Aurora RDS replicas](aws/aws-services/database/rds-database/add-an-rds-read-replica/aurora-rds-replicas.md)
+        * [Add Aurora RDS replicas](aws/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md)
       * [Add parameters in Parameter Groups](aws/aws-services/database/rds-database/add-parameters-in-parameter-groups.md)
     * [AWS DynamoDB database tables](aws/aws-services/database/dynamodb.md)
     * [AWS Timestream database](aws/aws-services/database/timestream-database.md)
