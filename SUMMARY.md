@@ -139,6 +139,7 @@
   * [Ingress](aws/aws-services/adding-ingress.md)
   * [IoT (Internet of Things)](aws/aws-services/iot-internet-of-things.md)
   * [Kinesis Stream](aws/aws-services/kinesis-stream.md)
+  * [Batch](aws/aws-services/batch.md)
   * [Lambda functions](aws/aws-services/lambda/README.md)
     * [Create Lambda using Container Image](aws/aws-services/lambda/create-lambda-using-container-image.md)
   * [Managed Airflow](aws/aws-services/managed-airflow.md)

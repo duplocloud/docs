@@ -34,7 +34,7 @@ Optionally, DuploCloud provides just-in-time (JIT) access to both the container 
 5. From the **Visibility** list box, select **Public**.&#x20;
 6. Click **Update**.
 
-<figure><img src="../../.gitbook/assets/AWS_Start_Shell_Service.png" alt=""><figcaption><p><strong>Start Shell Service</strong> pane with <strong>Kubernetes</strong> (ECS) <strong></strong> selected for <strong>Platform</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_Start_Shell_Service.png" alt=""><figcaption><p><strong>Start Shell Service</strong> pane with <strong>Kubernetes</strong> (ECS) selected for <strong>Platform</strong></p></figcaption></figure>
 
 Now you can begin using the Kubernetes (K8s) shell from the DuploCloud Portal for K8s services by clicking **KubeCtl Shell** on the **Services** page.
 
@@ -59,5 +59,5 @@ You can also view the  ECS task shell.&#x20;
 3. To display the ECS task shell for any task, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
 4. A browser launches to give you access to the ECS task shell.
 
-<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p><strong>ECS task shell</strong> option in the <strong>Actions</strong> menu of the <strong>Tasks</strong> tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (2) (2).png" alt=""><figcaption><p><strong>ECS task shell</strong> option in the <strong>Actions</strong> menu of the <strong>Tasks</strong> tab</p></figcaption></figure>
 

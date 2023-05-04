@@ -24,7 +24,7 @@ To create EMR Serverless applications you first need to create an EMR studio.
 
     <figure><img src="../../.gitbook/assets/AWS_EMR_Studio_button (1).png" alt=""><figcaption><p><strong>EMR Studio</strong> button on <strong>EMR Serverless</strong> tab</p></figcaption></figure>
 4. Click **Add**. The **Add EMR Studio** pane displays.\
-   ![](<../../.gitbook/assets/image (5).png>)\
+   ![](<../../.gitbook/assets/image (5) (5).png>)\
 
 5. Enter a **Description** of the **Studio** for reference.
 6. Select an [S3 Bucket](s3-bucket.md) that you previously defined from the **Logs Default S3 Bucket** list box.
@@ -32,12 +32,12 @@ To create EMR Serverless applications you first need to create an EMR studio.
 8. Click **Create**. The EMR Studio is created and displayed.&#x20;
 9.  Select the EMR Studio name in the **Name** column. The **EMR Studio** page displays. View the **Details** of the EMR Serverless Studio.
 
-    <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>EMR Studio page with <strong>Basic</strong> and <strong>Details</strong> tabs.</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (4) (4).png" alt=""><figcaption><p>EMR Studio page with <strong>Basic</strong> and <strong>Details</strong> tabs.</p></figcaption></figure>
 10. Navigate to the **EMR Serverless** tab and click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2).png" alt="" data-size="line"> icon in the **Actions** column. Use the **Actions** Menu to delete the studio if needed, as well as to view the studio in the AWS Console.&#x20;
 
 
 
-    <figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>EMR Serverless Studio Actions Menu</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption><p>EMR Serverless Studio Actions Menu</p></figcaption></figure>
 
 Now that the EMR Studio exists, you create an application to run analytics with it.\
 The DuploCloud Portal supports `Hive` and `Spark` applications. In this example, we create a Spark Application.
@@ -70,7 +70,7 @@ Before you begin to create a job to run the application, clone an instance of it
 You have created and cloned the Spark application. Now you must create and clone a job to run it in EMR Serverless. In this example, we create a Spark job.
 
 {% hint style="info" %}
-If you are new to Spark, use the Info Tips (blue <img src="../../.gitbook/assets/image (2) (1).png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
+If you are new to Spark, use the Info Tips (blue <img src="../../.gitbook/assets/image (2).png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
 {% endhint %}
 
 1.  Select the application instance that you previously cloned. This instance (**DUPLOSERVICES-DEFAULT-APP1-C-833**, in this example) has a **STATE** of **CREATED**.
