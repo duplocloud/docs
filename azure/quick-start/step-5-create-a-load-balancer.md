@@ -18,9 +18,9 @@ Before creating your DuploCloud load balancer, ensure that:
 
 * All previous steps in this tutorial to create an [Infrastructure and Plan](step-1-infrastructure.md), [Tenant](step-2-tenant.md), [Azure Agent Pool](step-3-create-azure-agent-pool.md), and [Service](step-4-create-app-via-k8s.md) are complete.
 * [AKS Kubernetes cluster](step-1-infrastructure.md#enabling-the-aks-kubernetes-cluster) is enabled.
-* **DEV01** is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
+* **dev01**  is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01 (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
 
 ## Adding and configuring a load balancer
 

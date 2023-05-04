@@ -14,7 +14,7 @@ Before testing your application, ensure that:&#x20;
 
 * Previous steps in this tutorial to create an [Infrastructure and Plan](step-1-infrastructure.md), [Tenant](step-2-tenant.md), [Azure Agent Pool](step-3-create-azure-agent-pool.md), [Service](step-4-create-app-via-k8s.md), and [Load Balancer Listener](step-5-create-a-load-balancer.md) are complete.
 * [AKS Kubernetes cluster](step-1-infrastructure.md#enabling-the-aks-kubernetes-cluster) is enabled.
-* Tenant **DEV01** is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
+* Tenant **dev01** is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
 * [**nginx-service** is **Running** and the **LB Status** is **Ready**](step-5-create-a-load-balancer.md)**.**
 * You [defined an Ingress and a rule](step-6-test-the-application.md#add-kubernetes-ingress) for your DuploCloud Service to listen on port 80, enabled the [App Gateway Ingress Controller](step-6-test-the-application.md#enable-the-ingress-controller), and configured a Load Balancer Listener that uses [K8S Node Port](step-6-test-the-application.md#adding-and-configuring-a-load-balancer).
 
@@ -43,7 +43,7 @@ The application rendered a simple web page with text, coded in JavaScript, from 
 In the previous steps, you:
 
 * [Created a DuploCloud Infrastructure](step-1-infrastructure.md) named **NONPROD**, a Virtual Private Cloud instance, backed by an AKS-enabled Kubernetes cluster.&#x20;
-* [Created a Tenant](step-2-tenant.md) named **DEV01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](step-1-infrastructure.md)) to configure multiple Azure and Kubernetes components needed for your environment.
+* [Created a Tenant](step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](step-1-infrastructure.md)) to configure multiple Azure and Kubernetes components needed for your environment.
 * [Created an Azure Agent Pool](step-3-create-azure-agent-pool.md) backed by pre-existing hosts (VMs), so that your application has storage resources with which to run.
 * [Created a Service](step-4-create-app-via-k8s.md) to connect the Docker containers and associated images, in which your application code resides, to the DuploCloud Tenant environment.
 * [Created a Load Balancer Listener](step-5-create-a-load-balancer.md) and a Kubernetes Node Port to expose your application via ports and backend network configurations. You enabled an Azure application gateway and created a Kubernetes Ingress to communicate with the node port and the AKS-enabled Kubernetes cluster in the Infrastructure.
@@ -53,7 +53,7 @@ In the previous steps, you:
 
 In this tutorial, you created many artifacts for testing purposes. When you are ready, clean them up so that another person can run this tutorial from the start, using the same names for Infrastructure and Tenant.
 
-1. To delete the **DEV01** tenant [follow these instructions](../../administrator-tools/access-control/tenant-access/deleting-a-tenant.md) and then return to this page. As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant that you created cleans up most of your artifacts.
+1. To delete the **dev01** tenant [follow these instructions](../../administrator-tools/access-control/tenant-access/deleting-a-tenant.md) and then return to this page. As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant that you created cleans up most of your artifacts.
 2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../.gitbook/assets/image (4) (3).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
 
 The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
