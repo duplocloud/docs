@@ -4,9 +4,9 @@ description: Using containers and DuploCloud Services with AWS EKS
 
 # Containers and Services
 
-## Services <a href="#5-toc-title" id="5-toc-title"></a>
+## DuploCloud Services <a href="#5-toc-title" id="5-toc-title"></a>
 
-You can deploy any native Docker container in a virtual machine (VM) with the DuploCloud platform. Adding a Service in the DuploCloud Platform is not the same as adding a Kubernetes service.&#x20;
+You can deploy native Docker containers in virtual machines (VMs) with the DuploCloud platform. Adding a Service in the DuploCloud Platform is not the same as adding a Kubernetes service.&#x20;
 
 Deploying DuploCloud Services, by clicking the **Add** button in the **EKS/Native** tab, implicitly converts Services into either a deployment set or a StatefulSet. If there are no volume mappings, then the service is mapped to a deployment set. Otherwise, it is mapped to a StatefulSet, which you can force creations of if needed. Most configuration values are self-explanatory, such as **Images**, **Replicas,** and **Environmental Variables**.
 
@@ -47,22 +47,33 @@ The number of Replicas that you define must be less than or equal to the number 
 
 ### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
-Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](load-balancers.md) for the services.
+Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](load-balancers.md) for the Services.
 
 <figure><img src="../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 
-### Restarting Multiple Services <a href="#7-toc-title" id="7-toc-title"></a>
+### Starting and stopping multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
 
-The portal supports the functionality to restart multiple services in a single request.
+Using the Services page, you can start and stop multiple services at one time.
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select either **EKS/Native** or **ECS**.&#x20;
+2. Click the **Services** tab.&#x20;
+3. Use the checkbox column to select multiple services that you want to start or stop at once.
+4. From the **Service Actions** menu, select **Start Service** or **Stop Service**.
+
+Your selected services are started or stopped.
+
+### Restarting multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
+
+You can use the Services page to restart multiple services at one time.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select either **EKS/Native** or **ECS**.&#x20;
 2. Click the **Services** tab.&#x20;
 3. Use the checkbox column to select multiple **RUNNING** services. You can select and restart up to twenty (20) services at a time.
-4. Click **Restart Service**.
+4. From the **Service Actions** menu, select **Restart Service**.
 
-<figure><img src="../../.gitbook/assets/image (2) (7).png" alt=""><figcaption><p><strong>Restart Service</strong> button in the <strong>Services</strong> tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/multiple_start_stop.png" alt=""><figcaption><p><strong>Services</strong> page with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
 
-###
+
 
 {% hint style="info" %}
 When you create a service, refer to the registry configuration in **DevOps** -> **Containers** -> **EKS/Native** -> **Services**, in the **Configuration** tab. Note the values in the **Environment Variables** and **Other Docker Config** fields.&#x20;
