@@ -37,7 +37,7 @@ Execute Script in this sequence:
 
 > scripts/apply.sh \<new tenant name> **admin-tenant**
 
-![scripts/apply,sh execution in progress](<../../../.gitbook/assets/image (31) (1).png>)
+![scripts/apply,sh execution in progress](<../../../.gitbook/assets/image (56).png>)
 
 ### Project: aws-services
 

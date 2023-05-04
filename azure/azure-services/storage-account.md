@@ -13,7 +13,7 @@ Provide unique name to create Storage Account.
 ### View Storage Account
 
 You can view Storage Account Details once created. You can view Endpoint details in the Storage Account table view.\
-Click on the  <img src="../../.gitbook/assets/image (1) (1).png" alt="" data-size="line">icons under the Actions Column to view and copy the keys of the Storage Account.
+Click on the  <img src="../../.gitbook/assets/image.png" alt="" data-size="line">icons under the Actions Column to view and copy the keys of the Storage Account.
 
 ![Storage Account Details Screen](<../../.gitbook/assets/image (23) (2).png>)
 
