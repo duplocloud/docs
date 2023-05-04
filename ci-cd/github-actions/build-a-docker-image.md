@@ -4,6 +4,10 @@ description: Use Duplo to build and push a docker image from Github Actions
 
 # Build a docker image
 
+{% hint style="info" %}
+Avoid using capital letters when referencing a DuploCloud construct, such as a Tenant, even when the UI displays the string as all capital letters. Don't specify **DEV01** for example, specify **dev01**.
+{% endhint %}
+
 ## Build and Push to ECR
 
 The goal of this section is to show how you can build a docker image and push it to ECR.
@@ -21,8 +25,8 @@ Here is an example github workflow that builds a docker image and pushes it to E
 To use it you will need to change:
 
 * `duplo_host` env var
-* `SERVICE_NAME` env var
-* `TENANT_NAME` env var
+* _`<SERVICE_NAME>`_ env var
+* _`<TENANT_NAME>`_ env var
 
 ```yaml
 name: Build and Deploy
