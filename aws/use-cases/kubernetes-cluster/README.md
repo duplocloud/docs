@@ -1,10 +1,10 @@
 ---
 description: >-
-  Enable Elastic Kubernetes Service (EKS) for AWS when creating a DuploCloud
+  Enable Elastic Kubernetes Service (EKS) for AWS by creating a DuploCloud
   Infrastructure
 ---
 
-# EKS Initial Setup
+# EKS initial setup
 
 In the DuploCloud platform, a Kubernetes Cluster maps to a DuploCloud Infrastructure.&#x20;
 

@@ -17,8 +17,6 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [EKS Initial setup](kubernetes-cluster/) and [upgrade](disaster-recovery/upgrading-eks-version.md)
 * [Hosts](hosts-vms.md) and [Snapshots](hosts-vms/backups.md)
 * [Auto Scaling host groups](auto-scaling/auto-scaling-groups.md)
-* [Load Balancers](../aws-services/load-balancers.md)
-* [AWS Console](using-aws-console.md)
 * [Configs and secrets](passing-secrets/)
 * [Logging](central-logging/)
 * [Metrics](monitoring/)
@@ -27,5 +25,6 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [JIT Access](jit-access.md)
 * [Resource Quotas](resource-quotas.md)
 * [Big Data and ETL](../broader-scenarios/big-data-and-etl.md)
+* [AWS Console](disaster-recovery/kubernetes-cluster/using-aws-console.md) link
 * [Custom Resource (CR) tags](custom-resource-tags.md)
 

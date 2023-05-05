@@ -7,4 +7,4 @@ The **Manage Snapshots** page shows the list of all manual and automated snapsho
 
 You can view the Snapshot quota limits and numbers of snapshots used and available from this page.
 
-![RDS Manage Snapshot screen](<../../../../.gitbook/assets/image (15) (1).png>)
+![RDS Manage Snapshot screen](<../../../../.gitbook/assets/image (18) (3).png>)
