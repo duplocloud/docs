@@ -21,7 +21,7 @@ New product updates will be posted around the 15th of each month.
   * Support for [Aurora RDS Serverless and MySQL read replicas](../aws/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md) and ability to modify Serverless replica instance size.
   * Improved documentation for [upgrading an EKS cluster version](../aws/use-cases/disaster-recovery/upgrading-eks-version.md).
 * Azure
-  * [Add a direct link to the Azure Console ](../azure/use-cases/disaster-recovery/azure-console-link.md)from a DuploCloud **Host** page **Actions** Menu.
+  * [Add a direct link to the Azure Console ](../azure/azure-services/azure-console-link.md)from a DuploCloud **Host** page **Actions** Menu.
 * General Updates
   * [Set read-only access to specific Tenants](../administrator-tools/access-control/tenant-access/read-only-access-to-a-tenant.md) for DuploCloud users.
 
