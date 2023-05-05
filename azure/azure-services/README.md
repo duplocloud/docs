@@ -22,7 +22,8 @@ Supported Services are listed in alphabetical order, following the core services
 
 ### Additional Services
 
-* [Azure Agent Pool](agent-pool.md)
+* [Agent Pool](agent-pool.md)
+* [Azure Console](azure-console-link.md) link
 * [Databases](databases/)
 * [Docker web application](docker-web-application.md)
 * [Functions](functions.md)
