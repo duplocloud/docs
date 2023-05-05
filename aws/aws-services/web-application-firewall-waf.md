@@ -31,7 +31,7 @@ Only ALB Load Balancers can be attached to a WAF.
 2. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.
 3. From the **Name** column, select the Service running the ALB Load Balancer.
 4. Click the **Load Balancers** tab.
-5.  Use the **LB Listeners** card to [add a Load Balancer Listener](load-balancers.md#adding-a-load-balancer-listener) for your ALB Load Balancer. If you have a Load Balancer Listener for ALB, click the Edit Icon ( <img src="../../.gitbook/assets/image (3) (6).png" alt="" data-size="line">) to display or **Update** details, as in the graphic below.
+5.  Use the **LB Listeners** card to [add a Load Balancer Listener](load-balancers.md#adding-a-load-balancer-listener) for your ALB Load Balancer. If you have a Load Balancer Listener for ALB, click the Edit Icon ( <img src="../../.gitbook/assets/image (3).png" alt="" data-size="line">) to display or **Update** details, as in the graphic below.
 
     ![Edit Load Balancer Listener pane displaying details of an ALB Load Balancer for a WAF](../../.gitbook/assets/AWS\_ALB\_LBL\_HTTP.png)
 6.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.
@@ -45,4 +45,4 @@ Only ALB Load Balancers can be attached to a WAF.
 
 DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from the left navigation panel: **Security > WAF**.
 
-![WAF Dashboard](../../.gitbook/assets/waf.png)
+![WAF Dashboard](<../../.gitbook/assets/waf (1).png>)

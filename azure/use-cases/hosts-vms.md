@@ -10,6 +10,10 @@ Once we have the Infrastructure (Networking, Kubernetes cluster, and other commo
 * Worker Nodes (Docker Hosts) if built-in container orchestration is used.
 * Regular nodes that are not part of any container orchestration, where a user manually connects and installs applications. For example, when using a Microsoft SQL Server in a VM, when running an IIS application and in other custom use cases.
 
+{% hint style="info" %}
+For ease of use, [create a link to the Azure Console](disaster-recovery/azure-console-link.md) from a **Host** page **Action Menu**.
+{% endhint %}
+
 ## Adding a Host (VM)
 
 Add a Virtual Machine Host. DuploCloud AWS supports **Host** (Azure Host) and **BYOH** (Bring Your Own Host) types. Use **BYOH** for any VM that is not an Azure Host.&#x20;

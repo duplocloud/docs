@@ -37,7 +37,7 @@ Before starting this tutorial:
 | **Cloud**                      | `Azure`                          |
 | **Region**                     | _`YOUR_GEOGRAPHIC_REGION`_       |
 
-![Infrastructure creation with a status of Complete](<../../.gitbook/assets/image (30) (2).png>)
+![Infrastructure creation with a status of Complete](<../../.gitbook/assets/image (30).png>)
 
 ## Verifying that a Plan exists for your infrastructure
 

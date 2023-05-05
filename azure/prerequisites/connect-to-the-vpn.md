@@ -14,11 +14,11 @@ The OpenVPN Access Server is set to forward only traffic destined for network re
 
 User VPN credentials are accessible on the user profile page. It can be accessed through the menu on the upper right of the page or through the **User** menu option on the left.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>User menu accessible from the user icon in the upper right</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (5).png" alt=""><figcaption><p>User menu accessible from the user icon in the upper right</p></figcaption></figure>
 
 
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>VPN Details section of the user profile</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (4).png" alt=""><figcaption><p>VPN Details section of the user profile</p></figcaption></figure>
 
 ## Set up the OpenVPN User Profile and Client App
 
@@ -31,9 +31,9 @@ User VPN credentials are accessible on the user profile page. It can be accessed
    ![](<../../.gitbook/assets/image (8) (2).png>)
 4. Download the OpenVPN user profile for your account from the link labeled **Yourself (user-locked profile)**.\
    \
-   ![](<../../.gitbook/assets/image (1) (2).png>)
+   ![](<../../.gitbook/assets/image (3) (4).png>)
 5. Open the **.ovpn** file and click **OK** in the **Import .ovpn profile** dialog.&#x20;
 6. Click **Connect**.\
    \
-   ![](<../../.gitbook/assets/image (2) (4).png>)
+   ![](<../../.gitbook/assets/image (2) (5).png>)
 
