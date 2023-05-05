@@ -27,7 +27,7 @@ Before creating your DuploCloud load balancer, ensure that:
 Add a load balancer for your running service that listens on port **80**:
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **AKS / Native**.
-2. In the **Services** tab, select the **nginx-service** that you started when [creating a service in the previous step](step-4-create-app-via-k8s.md).
+2. In the **Services** tab, select the **nginx-service** you started when [creating a service in the previous step](step-4-create-app-via-k8s.md).
 3. Click the **Load Balancers** tab.
 4. Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.
 5. Select **K8S Node Port** from the **Select Type** list box.
@@ -43,7 +43,11 @@ Add a load balancer for your running service that listens on port **80**:
 
 ## Enable the Ingress Controller
 
-When we created the Load Balancer Listener, we used the **K8S Node Port** type. Even though the Node Port is ready, before you use it, you must enable the [Kubernetes Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) to open the application gateway.&#x20;
+When we created the Load Balancer Listener, we used the [**K8S Node Port**](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport) type, which leverages the capabilities of the [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) object.&#x20;
+
+Ingress is an entry point that front-ends multiple services in a cluster. It can be defined as a collection of routing rules that governs how external users access services running inside a Kubernetes cluster. One of the greatest benefits of Ingress is its ability to secure the network traffic to your application. With Ingress, you can define a TLS private key and certificates by leveraging Kubernetes Secrets, instead of directly defining TLS details in the Ingress resource.
+
+To use Ingress, you first enable the [Kubernetes Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) to open the application gateway for Ingress.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select your Infrastructure from the **Name** column.
@@ -51,13 +55,13 @@ When we created the Load Balancer Listener, we used the **K8S Node Port** type. 
 4. Click **Add**. The **Infra-Set Custom Data** pane displays.
 5. In the **Setting Name** field, select **Enable App Gateway Ingress Controller**.&#x20;
 6. Click **Enable.**
-7. Click **Set**. In the **Settings** tab, the **Enable App Gateway Ingress Controller** setting now contains a value of **true**.
+7. Click **Set**. In the **Settings** tab, the **Enable App Gateway Ingress Controller** setting now contains the **true** in the **Value** column.
 
 <figure><img src="../../.gitbook/assets/Azure_GS_Infra_app_gateway.png" alt=""><figcaption><p><strong>NONPROD Infrastructure</strong> page with <strong>Enable App Gateway Ingress Controller</strong> set to <strong>true</strong></p></figcaption></figure>
 
 ## Add Kubernetes Ingress
 
-Now that your gateway is established and opened, you add a [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) to expose the backend HTTP routes from outside the cluster to your service.&#x20;
+Now that your gateway is established and opened, you add [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) to expose the backend HTTP routes outside the cluster to your service.&#x20;
 
 The Ingress object communicates with the Kubernetes NodePort that your Load Balancer Listener uses. Ingress objects are flexible constructs in Kubernetes, and their use here is an example of how DuploCloud leverages the power of Kubernetes constructs while abstracting away their native complexity. To manually create these components (and maintain them) in Kubernetes, takes a significant amount of developer time.
 
