@@ -19,4 +19,5 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Logs](logs.md)
 * [Metrics](metrics.md)
 * [Faults and alerts](faults-and-alerting/)
+* [Azure Console](azure-console-link.md) link
 * [Cost management for billing](cost-management.md)
