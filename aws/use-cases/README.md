@@ -21,6 +21,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Logging](central-logging/)
 * [Metrics](monitoring/)
 * [Faults and alerts](faults-and-alarms/)
+* [AWS Console](using-aws-console.md) link
 * [Cost management for billing](cost-management/)
 * [JIT Access](jit-access.md)
 * [Resource Quotas](resource-quotas.md)

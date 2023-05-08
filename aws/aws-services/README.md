@@ -29,7 +29,6 @@ Supported Services are listed in alphabetical order, following the core services
 ### Additional Services
 
 * [API Gateway](api-gateway.md)
-* [AWS Console Link](using-aws-console.md)
 * [CloudWatch](cloud-watch.md)
 * [CloudFront](cloudfront.md)
 * [Databases](database/)
