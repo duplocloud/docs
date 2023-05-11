@@ -19,11 +19,11 @@ Create a DuploCloud Infrastructure in the DuploCloud Portal:
 1. Select **Administrator** -> **Infrastructure** from the navigation menu.&#x20;
 2. Click **Add**.
 3. Define the Infrastructure by completing the fields on the **Add Infrastructure** form.&#x20;
-4. Select **Enable EKS** to enable EKS for the Infrastructure.
+4. Select **Enable EKS** to enable EKS for the Infrastructure, or select Enable ECS Cluster to enable an ECS Cluster during Infrastructure creation.
 5. Optionally, select **Advanced Options** to specify additional configurations (such as [**Public** and **Private CIDR** Endpoints](disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md)).
 6. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page.
 
-<figure><img src="../../.gitbook/assets/AWS_Infra_logs1 (1).png" alt=""><figcaption><p>AWS <strong>Add Infrastructure</strong> form</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_Infra_new_enable_switches.png" alt=""><figcaption><p>AWS <strong>Add Infrastructure</strong> page with highlighted <strong>Enable EKS</strong> and <strong>Enable ECS Cluster</strong> options</p></figcaption></figure>
 
 When you create the Infrastructure, DuploCloud creates the following components:
 
