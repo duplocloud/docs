@@ -41,4 +41,8 @@ Before creating your DuploCloud Service, ensure that:
 
 After a few minutes, the Service initializes and starts up. Shortly afterward, you can see the service and the containers running.
 
-![nginx-service page with service RUNNING (1/1)](<../../.gitbook/assets/Azure\_GS\_Service\_run (1).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/Azure_GS_Service_run (1).png" alt="nginx-service page with service RUNNING (1/1)">
+
+</div>

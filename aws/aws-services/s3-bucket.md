@@ -78,7 +78,11 @@ DuploCloud provides the capability to specify a custom prefix for S3.&#x20;
 Avoid specifying system-reserved prefixes such as`duploservices`.
 {% endhint %}
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/AWS_GCP_Bucket_prefix.png" alt=""><figcaption><p><strong>Add Config</strong> pane for <strong>Key Prefix all S3 Bucket Name</strong></p></figcaption></figure>
+
+</div>
 
 ### Enable tag-based properties in the DuploCloud Portal
 

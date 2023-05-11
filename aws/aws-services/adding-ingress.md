@@ -36,7 +36,11 @@ Once Services are deployed, add Ingress:
 1. In the **Add Kubernetes Ingress** page, configure Ingress by clicking **Add Rule**. The **Add Ingress Rule pane** displays.&#x20;
 2. Complete the other fields on the page and click **Add Rule**. Add additional rules as needed.
 
-![Add Ingress Rule pane](<../../.gitbook/assets/image (57) (2).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (57) (2).png" alt="Add Ingress Rule pane">
+
+</div>
 
 {% hint style="info" %}
 DuploCloud Platform supports defining multiple paths in Ingress.

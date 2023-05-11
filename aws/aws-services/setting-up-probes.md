@@ -39,7 +39,11 @@ startupProbe:
 ```
 {% endcode %}
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure>
+
+</div>
 
 We have seen httpGet example earlier, TCP Probes can also be configured from **Other Container Config** field, here is one  example for reference.
 

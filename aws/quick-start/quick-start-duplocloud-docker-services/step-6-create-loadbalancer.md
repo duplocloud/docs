@@ -13,7 +13,11 @@ Go under Devops-->Containers --> EKS/Native and click on the service we are crea
 
 
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 #### Secure Load Balancer
 
@@ -25,4 +29,8 @@ Follow the instructions [here](../quick-start-eks-services/step-8-create-dns-nam
 
 For the example we follow in this guide, you should screen as below:
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+
+</div>

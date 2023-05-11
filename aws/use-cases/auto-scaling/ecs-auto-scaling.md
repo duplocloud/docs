@@ -9,7 +9,11 @@ Navigate to **DevOps** > **Containers** > **ECS** > Select the _ECS Task Definit
 Set the Minimum Capacity (minimum value 2) and Maximum Capacity to complete the configuration.\
 
 
-![](<../../../.gitbook/assets/image (24) (1).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/image (24) (1).png" alt="">
+
+</div>
 
 ## Step2: Add Scaling Policy
 
@@ -26,7 +30,11 @@ Provide details below:
 
 This step creates the target tracking scaling policy and attaches it to the Auto Scaling group
 
-![](<../../../.gitbook/assets/image (5) (3) (1).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/image (5) (3) (1).png" alt="">
+
+</div>
 
 
 

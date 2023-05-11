@@ -1,4 +1,4 @@
-# Adding SecretProviderClass custom resource
+# SecretProviderClass custom resource
 
 DuploCloud Portal provides the ability to create Custom Resource `SecretProvider` Class.
 
@@ -18,7 +18,7 @@ Use the optional **Secret Objects** field to define the desired state of the syn
 
 The following is an example SecretProviderClass configuration where AWS secrets and Kubernetes Secret Objects are configured.
 
-![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (52).png>)
+![K8s Secret Provider Class Page](<../../.gitbook/assets/image (52).png>)
 
 ### **Step3:** Mount Volumes based on the configured secrets
 
@@ -32,9 +32,9 @@ While creating **Service** (DevOps > Containers > EKS/Native > Service),&#x20;
 Select **Cloud Credentials** value as `From Kubernetes`
 {% endhint %}
 
-![Select Cloud Credentials](<../../../.gitbook/assets/image (41) (3).png>)
+![Select Cloud Credentials](<../../.gitbook/assets/image (41) (3).png>)
 
-![Advance Options Service Page](<../../../.gitbook/assets/image (65).png>)
+![Advance Options Service Page](<../../.gitbook/assets/image (65).png>)
 
 * Add **Other Pod Config** field as the following example.
 
@@ -73,7 +73,11 @@ Referring to the example which we are following from prior steps, we have define
 
 &#x20;The following is an example SecretProviderClass custom resource that will sync a secret from AWS Secrets Manager to a Kubernetes secret:
 
-![K8s Secret Provider Class Page](<../../../.gitbook/assets/image (37) (2).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (37) (2).png" alt="K8s Secret Provider Class Page">
+
+</div>
 
 #### Configuring Secret Objects in deployment
 
