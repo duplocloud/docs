@@ -10,7 +10,11 @@ Create a S3 bucket by following the steps [here](s3-bucket.md).
 
 Package and upload your DAG (Directed Acyclic Graph) code to Amazon S3. Amazon MWAA loads this code into Airflow.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/image (57) (1).png" alt=""><figcaption><p>S3 Objects for Aitflow configuration</p></figcaption></figure>
+
+</div>
 
 {% hint style="info" %}
 Make sure Versioning is enabled for the custom plugins in a `plugins.zip`, and Python dependencies in a `requirements.txt` on your Amazon S3 bucket.&#x20;

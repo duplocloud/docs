@@ -34,6 +34,10 @@ Almost there. Since the hello-nodejs image serves on port 3000 we need to create
 
 Select the Test-service and click the plus icon on the load balancer configuration table. Fill the menu as shown below and click submit.
 
-![](<../../.gitbook/assets/image (67).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (67).png" alt="">
+
+</div>
 
 Please wait for \~5 minutes as it can take a while for the Load Balancer to get provisioned.

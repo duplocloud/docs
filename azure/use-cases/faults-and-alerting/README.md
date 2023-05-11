@@ -16,7 +16,11 @@ You can create Azure alerts for the resources from the DuploCloud portal. The su
 
 Alerts can also be configured from the Diagnostics --> Alerts option.
 
-![](<../../../.gitbook/assets/image (7) (4).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/image (7) (4).png" alt="">
+
+</div>
 
 When the alert Threshold is crossed, a Fault is generated in the DuploCloud portal.
 

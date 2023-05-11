@@ -34,7 +34,11 @@ Provide below details:\
 
 Create a Load Balancer Listener for the port specified in the Task Definition (we will be specifying port as 80). Your input should look as the below image.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 Submit the ECS service. It takes a few minutes to create the service.
 

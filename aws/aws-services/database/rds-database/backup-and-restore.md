@@ -13,7 +13,11 @@ Navigate to **Administrator** > **System Settings** > **System Config**\
 \
 
 
-![Configure RDS Backup Retention](<../../../../.gitbook/assets/image (63).png>)
+<div align="left">
+
+<img src="../../../../.gitbook/assets/image (63).png" alt="Configure RDS Backup Retention">
+
+</div>
 
 ## Restoring a snapshot <a href="#1-toc-title" id="1-toc-title"></a>
 

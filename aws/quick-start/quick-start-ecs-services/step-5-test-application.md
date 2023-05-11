@@ -8,4 +8,8 @@ Check the Domain Name value and paste the URL in the browser to test the applica
 
 You should see the sample httpd web service serving the message.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+
+</div>

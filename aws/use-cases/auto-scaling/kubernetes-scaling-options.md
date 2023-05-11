@@ -10,7 +10,11 @@ You can configure Cluster AutoCcaler for the Infrastructure created with EKS Ena
 
 Enable Cluster Autoscaler from **Administrator** > **Infrastructure** > **Settings**. Add Setting to enable Autoscaler. Refer screenshot
 
-![](<../../../.gitbook/assets/image (15) (2).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/image (15) (2).png" alt="">
+
+</div>
 
 ### Step2: Configure Auto Scaling Group (ASG)
 

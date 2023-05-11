@@ -10,7 +10,11 @@ description: Create a MSSQL Server database in DuploCloud
 2. Provide the database **Name**, **Username**, **Password**, and Database **Version**.&#x20;
 3. Click **Submit**.
 
-![Create My SQL Server](<../../../.gitbook/assets/image (38) (1) (1).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/image (38) (1) (1).png" alt="Create My SQL Server">
+
+</div>
 
 ### Viewing database details
 
