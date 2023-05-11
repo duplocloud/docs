@@ -1,25 +1,31 @@
+---
+description: Obtaining a Route 53 hosted zone to program DNS entries
+---
+
 # Route 53 Hosted Zone
 
-DuploCloud platform needs a unique route 53 hosted zone to program DNS entries for the services being deployed. The domain should be created out-of-band and set in DuploCloud. Typically this would be a sub domain like apps.\<mycompany>.com. For example apps.acme.com
+The DuploCloud platform needs a unique route 53-hosted zone to program DNS entries for services that you deploy. The domain must be created out-of-band and set in DuploCloud. The zone is a subdomain such as `apps.[`_`MY-COMPANY`_`].com`.&#x20;
 
 {% hint style="danger" %}
-**You should not use this subdomain for anything else as DuploCloud will own all CNAME entries in this domain and remove anything it does not have a record for.**
+**Never use this subdomain for anything else, as DuploCloud owns all `CNAME` entries in this domain and removes anything entries it has no record of.**
 {% endhint %}
 
-Following are the steps to create the Route53 hosted zone in AWS directly
+To create the Route53 hosted zone using the AWS Console:
 
-* Login to your AWS console
-* Go to route 53 and Hosted Zones. Create a new hosted zone with the desired domain name for example apps.acme.com. Then go inside the hosted zone and note down the name servers.
-* Go to the Domain Name provider of your root domain for example acme.com. This could be another route53 domain in another AWS account or may be in Go Daddy or some other provider. In there, create NS record pointing the domain name of the hosted zone you created above (apps.acme.com) to the list of name servers noted above. You are essentially redirecting all look up for the domain being managed by DuploCloud to the route53 of the AWS account which has DuploCloud.
+1. Log in to the [AWS console](https://aws.amazon.com/console/).
+2. Navigate to **Route 53 and Hosted Zones**.&#x20;
+3. Create a new hosted zone with the desired domain name, for example, `apps.acme.com`.&#x20;
+4. Access the hosted zone and note the [name server](https://docs.aws.amazon.com/Route53/latest/APIReference/API\_domains\_Nameserver.html) names.
+5. Go to your root Domain Provider's site (for `acme.com`, for example), and create a `NS` record that references the domain name of the hosted zone you created (`apps.acme.com`) and add the zone name to the name servers that you noted above.
 
-Once this is done we need to provision the Route53 domain in every DuploCloud Plan. Start by setting this in default plan. The values we need are the Route53 hosted zone ID and domain name preceded with a dot (.)
+Once this is complete, provision the Route53 domain in every DuploCloud Plan, starting with the **default** plan. Add the Route53 hosted zone ID and domain name, preceded with a dot (**.**).
 
-{% hint style="info" %}
-Do not forget the dot (.) in the beginning of the DNS suffix in the form as shown below
+{% hint style="warning" %}
+Do not forget the dot (**.**) at the beginning of the DNS suffix, in the form as shown below.
 {% endhint %}
 
-![](<../../.gitbook/assets/image (18) (2).png>)
+![DNS tab for DEFAULT tenant with External/Internal Suffix Values beginning with a dor (.)](<../../.gitbook/assets/image (18) (2).png>)
 
 {% hint style="info" %}
-Note that this domain has to be set in every new plan created as part of the infrastructure
+Note that this domain must be set in each new Plan you create in your DuploCloud Infrastructure.
 {% endhint %}
