@@ -36,15 +36,6 @@ When you select **AWS Access from my Workstation**, the **Get JIT AWS Access** w
 
 Obtain access through the command line interface (CLI) with `duplo-jit`. `duplo-jit` must obtain an AWS JIT session using a [DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens). This token can be specified either as part of your local AWS configuration or can be obtained interactively, using your DuploCloud portal session.
 
-### Install with the Chocolatey package manager for Windows
-
-1. Install the [Chocolatey package manager](https://chocolatey.org/install), if you don't already have it installed.
-2. Run the following command:&#x20;
-
-```
-choco install duplo-jit --version=0.5.2
-```
-
 ### Install with Homebrew
 
 Run the following command:&#x20;
@@ -53,7 +44,7 @@ Run the following command:&#x20;
 brew install duplocloud/tap/duplo-jit
 ```
 
-#### Install from GitHub Releases
+### Install from GitHub Releases
 
 1. Download the latest **.zip** archive from [https://github.com/duplocloud/duplo-jit/releases](https://github.com/duplocloud/duplo-jit/releases) for your operating system.
 2. Extract the archive listed in the table below based on the operating system and processor you are running.&#x20;
