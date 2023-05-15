@@ -8,6 +8,14 @@ description: New features and enhancements in DuploCloud
 New product updates will be posted around the 15th of each month.
 {% endhint %}
 
+### May 2023
+
+* AWS
+  * [Enable EKS endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) in a DuploCloud Infrastructure, in a more cost-effective and secure manner. Enabling endpoints in DuploCloud allows your network communication to remain internal to the network, without using NAT gateways.&#x20;
+  * Multiple container tasks are now supported in the ECS **Task Definitions** tab.
+* Azure
+  * Support for [Redis databases](../azure/azure-services/databases/redis-database.md) is available.
+
 ### April 2023
 
 * AWS
