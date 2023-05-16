@@ -31,6 +31,9 @@ To use it you will need to change:
 ```yaml
 name: Build and Deploy
 on:
+  # (Optional) Allows users to trigger the workflow manually from the GitHub UI
+  workflow_dispatch:
+
   # Triggers the workflow on push to matching branches
   push:
     branches:
