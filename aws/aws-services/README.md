@@ -29,6 +29,7 @@ Supported Services are listed in alphabetical order, following the core services
 ### Additional Services
 
 * [API Gateway](api-gateway.md)
+* [Batch](batch.md)
 * [CloudWatch](cloud-watch.md)
 * [CloudFront](cloudfront.md)
 * [Databases](database/)
