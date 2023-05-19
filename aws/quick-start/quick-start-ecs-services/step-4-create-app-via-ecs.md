@@ -1,6 +1,6 @@
 # Step 4: Create app (via ECS)
 
-You can enable ECS Cluster Under the Infrastructure -> ECS tab. We have already enabled ECS Cluster while creating Infrastructure at[ Step1](../step-1-infrastructure.md).
+You can enable ECS Cluster Under the Infrastructure -> ECS tab. We have already enabled ECS Cluster while creating Infrastructure at [Step 1](../step-1-infrastructure.md).
 
 You can view the ECS Cluster name under ECS Tab (Under Infrastructure)
 
