@@ -257,6 +257,11 @@
   * [Storage Buckets](gcp/gcp-services/s3-bucket.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
+## Security and Compliance
+
+* [Introduction to Security and Compliance](security-and-compliance/introduction-to-security-and-compliance.md)
+* [SIEM](security-and-compliance/siem.md)
+
 ## CI/CD
 
 * [Introduction to CI/CD](ci-cd/introduction-to-ci-cd.md)
