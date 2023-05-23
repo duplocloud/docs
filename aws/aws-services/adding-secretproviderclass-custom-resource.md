@@ -18,7 +18,7 @@ Use the optional **Secret Objects** field to define the desired state of the syn
 
 The following is an example SecretProviderClass configuration where AWS secrets and Kubernetes Secret Objects are configured.
 
-![K8s Secret Provider Class Page](<../../.gitbook/assets/image (52).png>)
+![K8s Secret Provider Class Page](<../../.gitbook/assets/image (52) (1).png>)
 
 ### **Step3:** Mount Volumes based on the configured secrets
 
