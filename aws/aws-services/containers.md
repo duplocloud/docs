@@ -1,10 +1,18 @@
 ---
-description: Using containers and DuploCloud Services with AWS EKS
+description: Using containers and DuploCloud Services with AWS EKS and ECS
 ---
 
 # Containers and Services
 
-## DuploCloud Services <a href="#5-toc-title" id="5-toc-title"></a>
+## EKS/ECS support for containers and services <a href="#1-toc-title" id="1-toc-title"></a>
+
+DuploCloud supports Elastic Kubernetes Service (EKS/ECS) out of the box.&#x20;
+
+Kubernetes clusters are created during Infrastructure setup using the **Administrator -> Infrastructure** option in the DuploCloud Portal. The cluster is created in the same Virtual Private Cloud (VPC) as the Infrastructure. Building an Infrastructure with an EKS/ECS cluster may take some time.&#x20;
+
+Next, you deploy an application within a Tenant in Kubernetes. The application contains a set of VMs, a Deployment set (Pods), and an application load balancer. Pods can be deployed either through the DuploCloud Portal or through `kubectl,`using HelmCharts.
+
+## DuploCloud Services and Containers <a href="#5-toc-title" id="5-toc-title"></a>
 
 You can deploy native Docker containers in virtual machines (VMs) with the DuploCloud platform. Adding a Service in the DuploCloud Platform is not the same as adding a Kubernetes service.&#x20;
 
@@ -30,7 +38,7 @@ You can supply advanced configuration options in the **Other K8 Config** field. 
 }
 ```
 
-## Adding a DuploCloud EKS/Native Service
+### Adding a DuploCloud EKS/Native Service
 
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
 2. Click **Add**. The **Add Service** page displays.
@@ -44,6 +52,52 @@ The number of Replicas that you define must be less than or equal to the number 
 {% endhint %}
 
 ![Add Service page](../../.gitbook/assets/k8\_statefulSet\_force.png)
+
+### Adding a DuploCloud ECS Service
+
+For an example of how to create an ECS Service, [see this tutorial](../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
+
+#### Enabling read-only processing for ECS Services
+
+If you want to grant a service read-only access to root filesystems, add a configuration flag in your DuploCloud Infrastructure.
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Click the **System Config** tab.
+3. Click **Add**. The **Add Config** pane displays.
+4. From the **Config Type** list box, select **Other**. The **Other Config Type** field displays.
+5. In the **Other Config Type** field, enter **Flags**.
+6. In the **Key** field, enter **EnableECSReadonlyProcessing**.
+7. in the **Value** field, enter **true**.
+8. Click **Submit**.
+
+<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>EnableECSReadonlyProcessing Key</strong></p></figcaption></figure>
+
+The new configuration is displayed in the **System Config** tab.
+
+<figure><img src="../../.gitbook/assets/ecsdispla.png" alt=""><figcaption><p><strong>EnableECSReadonlyProcessing</strong> configuration enabled with Value of <strong>true</strong> in <strong>System Config</strong> tab</p></figcaption></figure>
+
+#### Creating multiple containers for ECS Services <a href="#7-toc-title" id="7-toc-title"></a>
+
+You can create up to five (5) containers for ECS services.
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**.
+2.  In the Task Definitions tab, click **Add**. The **Add Task Definition** page displays.
+
+    <figure><img src="../../.gitbook/assets/ECS_Mult_con_1.png" alt=""><figcaption><p><strong>Add Task Definition</strong> page for adding multiple containers for ECS Services</p></figcaption></figure>
+3. Specify a unique **Name** for the Task Definition.
+4. From the **vCPUs** list box, select the number of CPUs to be consumed by the task and change other defaults, if needed.
+5. In the **Container - 1** area, specify the **Container Name** of the first container you want to create.
+6. In the **Image** field, specify the container Image name, as in the example below.&#x20;
+7. Click the Plus Icon ( <img src="../../.gitbook/assets/plus-sign-icon.png" alt="" data-size="line"> ) to the left of the **Primary** label, which designates that the first container you are defining is the primary container. The **Container - 2** area displays.&#x20;
+8.  Use the  <img src="../../.gitbook/assets/up_chevron_icon.png" alt="" data-size="line"> and  <img src="../../.gitbook/assets/down_chevron_icon (2).png" alt="" data-size="line"> icons to collapse and expand the **Container** areas as needed. Specify **Container Name** and **Image** name for each container that you add. Add more containers by clicking the Add Icon ( <img src="../../.gitbook/assets/plus-sign-icon.png" alt="" data-size="line"> ) to create up to five (5) containers, in each container area. Delete containers by clicking the Delete ( **X** ) **I**con in each container area.
+
+    <figure><img src="../../.gitbook/assets/ECS_Mult_con_2 (2).png" alt=""><figcaption><p><strong>Primary</strong> label with Add and Expand/Collapse Icons in <strong>Container -1</strong>; Delete Icon in <strong>Container - 2</strong>. <strong>Container - 3</strong> is editable.</p></figcaption></figure>
+9. Specify **Port Mappings**, and **Add New** mappings or **Delete** them, if needed.
+10. Click **Submit**. Your Task Definition for multiple ECS Service containers is created.
+
+#### Editing multiple containers for ECS Services <a href="#7-toc-title" id="7-toc-title"></a>
+
+To edit the created Task Definition in order to add or delete multiple containers, select the Task Definition in the Task Definitions tab, and from the **Actions** menu, select **Edit Task Definition**.&#x20;
 
 ### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
@@ -60,7 +114,7 @@ Using the Services page, you can start, stop, and restart multiple services at o
 3. Use the checkbox column to select multiple services that you want to start or stop at once.
 4. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.**
 
-Your selected services are started, stopped, ore restarted as you specified.
+Your selected services are started, stopped, or restarted as you specified.
 
 <figure><img src="../../.gitbook/assets/multiple_start_stop.png" alt=""><figcaption><p><strong>Services</strong> page with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
 
@@ -74,15 +128,7 @@ For example:&#x20;
 `{"DOCKER_REGISTRY_CREDENTIALS_NAME":"registry1"}`
 {% endhint %}
 
-### EKS/ECS support <a href="#1-toc-title" id="1-toc-title"></a>
-
-DuploCloud supports Elastic Kubernetes Service (EKS/ECS) out of the box.&#x20;
-
-Kubernetes clusters are created during Infrastructure setup using the **Administrator -> Infrastructure** option in the DuploCloud Portal. The cluster is created in the same Virtual Private Cloud (VPC) as the Infrastructure. Building an Infrastructure with an EKS/ECS cluster may take some time.&#x20;
-
-Next, you deploy an application within a Tenant in Kubernetes. The application contains a set of VMs, a Deployment set (Pods), and an application load balancer. Pods can be deployed either through the DuploCloud Portal or through `kubectl,`using HelmCharts.
-
-### Managing Docker, Kubernetes, and AWS configs and Secrets <a href="#6-toc-title" id="6-toc-title"></a>
+## Managing Docker, Kubernetes, and AWS configs and Secrets <a href="#6-toc-title" id="6-toc-title"></a>
 
 See the [Configs and Secrets](../use-cases/passing-secrets/) section for information about creating and managing:
 
@@ -155,29 +201,6 @@ spec:
 {% endcode %}
 
 If you need security tokens of a longer duration, create them on your own. Secure them outside of the DuploCloud environment.
-
-## Adding a DuploCloud ECS Service
-
-For an example of how to create an ECS Service, [see this tutorial](../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
-
-### Enabling read-only processing for ECS Services
-
-If you want to grant a service read-only access to root filesystems, add a configuration flag in your DuploCloud Infrastructure.
-
-1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
-2. Click the **System Config** tab.
-3.  Click **Add**. The **Add Config** pane displays.
-
-    <figure><img src="../../.gitbook/assets/ecsconf.png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>EnableECSReadonlyProcessing Key</strong></p></figcaption></figure>
-4. From the **Config Type** list box, select **Other**. The **Other Config Type** field displays.
-5. In the **Other Config Type** field, enter **Flags**.
-6. In the **Key** field, enter **EnableECSReadonlyProcessing**.
-7. in the **Value** field, enter **true**.
-8. Click **Submit**.
-
-The new configuration is displayed in the **System Config** tab.
-
-<figure><img src="../../.gitbook/assets/ecsdispla.png" alt=""><figcaption><p><strong>EnableECSReadonlyProcessing</strong> configuration enabled with Value of <strong>true</strong> in <strong>System Config</strong> tab</p></figcaption></figure>
 
 ## Elastic Container Service (ECS) Fargate <a href="#9-toc-title" id="9-toc-title"></a>
 
