@@ -49,27 +49,18 @@ The number of Replicas that you define must be less than or equal to the number 
 
 Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](load-balancers.md) for the Services.
 
-<figure><img src="../../.gitbook/assets/aws_tenant_services_tile.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Services_display.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 
-### Starting and stopping multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
+### Starting, stopping, and restarting multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
 
-Using the Services page, you can start and stop multiple services at one time.
+Using the Services page, you can start, stop, and restart multiple services at one time.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select either **EKS/Native** or **ECS**.&#x20;
 2. Click the **Services** tab.&#x20;
 3. Use the checkbox column to select multiple services that you want to start or stop at once.
-4. From the **Service Actions** menu, select **Start Service** or **Stop Service**.
+4. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.**
 
-Your selected services are started or stopped.
-
-### Restarting multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
-
-You can use the Services page to restart multiple services at one time.
-
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select either **EKS/Native** or **ECS**.&#x20;
-2. Click the **Services** tab.&#x20;
-3. Use the checkbox column to select multiple **RUNNING** services. You can select and restart up to twenty (20) services at a time.
-4. From the **Service Actions** menu, select **Restart Service**.
+Your selected services are started, stopped, ore restarted as you specified.
 
 <figure><img src="../../.gitbook/assets/multiple_start_stop.png" alt=""><figcaption><p><strong>Services</strong> page with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
 
