@@ -35,16 +35,7 @@ You use CloudFormation to create an initial deployment.
 
 After creating the stack, an EC2 instance is initiated in the AWS account using the associated AMI. The following table lists available AMIs based on the region that you target for the deployment:
 
-| Region         | AMI ID Value          |
-| -------------- | --------------------- |
-| ap-northeast-1 | ami-0191c10b498d55752 |
-| ap-south-1     | ami-0a41b5b9007e7f4cb |
-| ca-central-1   | ami-06e07d062e55ce3ca |
-| eu-west-2      | ami-0a568fd865d942af7 |
-| us-east-1      | ami-019850d7e75ef6461 |
-| us-east-2      | ami-00a7dd0e0dbecb276 |
-| us-west-1      | ami-0bbbdc1ed9dbe79e3 |
-| us-west-2      | ami-00af8b024a7f2935e |
+<table><thead><tr><th width="347">Region</th><th>AMI ID Value</th></tr></thead><tbody><tr><td>ap-northeast-1</td><td>ami-0191c10b498d55752</td></tr><tr><td>ap-south-1</td><td>ami-0a41b5b9007e7f4cb</td></tr><tr><td>ca-central-1</td><td>ami-06e07d062e55ce3ca</td></tr><tr><td>eu-west-2</td><td>ami-0a568fd865d942af7</td></tr><tr><td>us-east-1</td><td>ami-019850d7e75ef6461</td></tr><tr><td>us-east-2</td><td>ami-00a7dd0e0dbecb276</td></tr><tr><td>us-west-1</td><td>ami-0bbbdc1ed9dbe79e3</td></tr><tr><td>us-west-2</td><td>ami-00af8b024a7f2935e</td></tr></tbody></table>
 
 ### Specify CloudFormation stack parameters
 
