@@ -74,6 +74,7 @@
     * [Step 7: Test the Application](aws/quick-start/quick-start-duplocloud-docker-services/step-7-test-the-application.md)
 * [Use cases](aws/use-cases/README.md)
   * [Infrastructure (VPC) and Plan (configuration)](aws/use-cases/disaster-recovery.md)
+    * [Add VPC endpoints](aws/use-cases/disaster-recovery/add-vpc-endpoints.md)
     * [EKS initial setup](aws/use-cases/kubernetes-cluster/README.md)
       * [Enable EKS endpoints](aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md)
       * [Enable EKS logs](aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-logs.md)
