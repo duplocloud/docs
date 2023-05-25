@@ -17,6 +17,7 @@ New product updates will be posted around the 15th of each month.
   * [Add VPC Endpoints](../aws/use-cases/disaster-recovery/add-vpc-endpoints.md) to a DuploCloud Infrastructure to create a private connection to supported AWS services and VPC endpoint services powered by AWS PrivateLink.
   * [Enable logging for ECS containers](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md).
   * Define [S3 bucket policies](../aws/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
+  * The CloudFront feature and associated UI tab have been relocated in the DuploCloud Portal from the **DevOps -> App Integration** menu item to the **DevOps -> Networking** menu item.
 * Azure
   * Support for [Redis databases](../azure/azure-services/databases/redis-database.md) is available.
 
