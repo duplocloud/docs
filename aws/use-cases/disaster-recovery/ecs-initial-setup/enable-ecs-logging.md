@@ -28,7 +28,7 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 
 1.  In the DuploCloud Portal, in the **Tenant** list box at the top left of the DuploCloud Portal, ensure that the Tenant for which you [created a logging container](enable-ecs-logging.md#creating-an-ecs-logging-container) is selected. In the example below, the selected Tenant is named **dev01**.
 
-    <figure><img src="../../../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/tenant_dev01 (3).png" alt=""><figcaption></figcaption></figure>
 2. Navigate to **Administrator** -> **Diagnostics -> Audit**. The **Audit** page displays.
 3. In the **Deployment Status** area, select both **Create Audit Indices** and **Update default plan config**. **Completed** displays to indicate that audit configuration is successful.
 
@@ -43,7 +43,7 @@ You can verify that ECS logging is enabled for a specific container.
 
     <figure><img src="../../../../.gitbook/assets/AWS_ECS_Logging_6.png" alt=""><figcaption><p>The Task Definition Family Name detail page with <strong>Task Defintions</strong> tab</p></figcaption></figure>
 3. Click the **Task Definitions** tab.
-4.  Click the Task Definition Icon ( <img src="../../../../.gitbook/assets/square_edit_icon.png" alt="" data-size="line"> ) to edit the Task Definition. The **Edit Task Definition** page displays your defined **Container**s.
+4.  Click the Task Definition Icon ( <img src="../../../../.gitbook/assets/square_edit_icon (2).png" alt="" data-size="line"> ) to edit the Task Definition. The **Edit Task Definition** page displays your defined **Container**s.
 
     <figure><img src="../../../../.gitbook/assets/AWS_ECS_Logging_5.png" alt=""><figcaption><p><strong>Task Definitions</strong> Icon (highligted) in Task Definitions tab</p></figcaption></figure>
 

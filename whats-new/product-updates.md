@@ -12,7 +12,11 @@ New product updates will be posted around the 15th of each month.
 
 * AWS
   * [Enable EKS endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) in a DuploCloud Infrastructure, in a more cost-effective and secure manner. Enabling endpoints in DuploCloud allows your network communication to remain internal to the network, without using NAT gateways.&#x20;
-  * Multiple container tasks are now supported in the ECS **Task Definitions** tab.
+  * [Multiple containers](../aws/aws-services/containers.md#7-toc-title) are now supported in the ECS **Task Definitions** tab.
+  * [Start, stop, and restart ](../aws/aws-services/containers.md#7-toc-title-3)up to twenty (20) services at one time.
+  * [Add VPC Endpoints](../aws/use-cases/disaster-recovery/add-vpc-endpoints.md) to a DuploCloud Infrastructure to create a private connection to supported AWS services and VPC endpoint services powered by AWS PrivateLink.
+  * [Enable logging for ECS containers](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md).
+  * Define [S3 bucket policies](../aws/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
 * Azure
   * Support for [Redis databases](../azure/azure-services/databases/redis-database.md) is available.
 
