@@ -79,7 +79,7 @@
       * [Enable EKS endpoints](aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md)
       * [Enable EKS logs](aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-logs.md)
     * [Upgrading the EKS version](aws/use-cases/disaster-recovery/upgrading-eks-version.md)
-    * [ECS Initial Setup](aws/use-cases/disaster-recovery/ecs-initial-setup/README.md)
+    * [ECS Initial Setup](aws/use-cases/disaster-recovery/ecs-initial-setup.md)
       * [Enable ECS logging](aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md)
   * [Tenant (Environment)](aws/use-cases/tenant-environment.md)
   * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
