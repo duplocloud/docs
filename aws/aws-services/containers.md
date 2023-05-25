@@ -76,9 +76,9 @@ The new configuration is displayed in the **System Config** tab.
 
 <figure><img src="../../.gitbook/assets/ecsdispla.png" alt=""><figcaption><p><strong>EnableECSReadonlyProcessing</strong> configuration enabled with Value of <strong>true</strong> in <strong>System Config</strong> tab</p></figcaption></figure>
 
-#### Creating multiple containers for ECS Services <a href="#7-toc-title" id="7-toc-title"></a>
+#### Creating multiple containers for ECS Services using a Task Definition <a href="#7-toc-title" id="7-toc-title"></a>
 
-You can create up to five (5) containers for ECS services.
+You can create up to five (5) containers for ECS services by defining a Task Definition.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**.
 2.  In the Task Definitions tab, click **Add**. The **Add Task Definition** page displays.
