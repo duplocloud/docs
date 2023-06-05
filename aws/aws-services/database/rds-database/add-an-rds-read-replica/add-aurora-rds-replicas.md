@@ -29,7 +29,7 @@ Follow one of these procedures to complete the serverless and MySQL replicas set
 To modify instance sizes for an existing Aurora Serverless replica:
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Database** and, in the **RDS** tab, locate the read replica you want to update in the **Name** column.&#x20;
-2.  Click the ( <img src="../../../../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) icon in the **Actions** column and select **Update Instance Size**. The **Update Instance Size** pane displays.
+2.  Click the ( <img src="../../../../../.gitbook/assets/Kabab_three_Vertical_dots (3) (1).png" alt="" data-size="line"> ) icon in the **Actions** column and select **Update Instance Size**. The **Update Instance Size** pane displays.
 
     <figure><img src="../../../../../.gitbook/assets/aurora_mysql_update_is_mysql.png" alt=""><figcaption></figcaption></figure>
 3. From the **RDS Instance Size** list box, select the appropriate instance size.
