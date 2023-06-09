@@ -28,18 +28,12 @@ Only ALB Load Balancers can be attached to a WAF.
 {% endhint %}
 
 1. If you don't yet have an Application Load Balancer (ALB), [create one](load-balancers.md#adding-a-load-balancer).
-2. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.
-3. From the **Name** column, select the Service running the ALB Load Balancer.
-4. Click the **Load Balancers** tab.
-5.  Use the **LB Listeners** card to [add a Load Balancer Listener](load-balancers.md#adding-a-load-balancer-listener) for your ALB Load Balancer. If you have a Load Balancer Listener for ALB, click the Edit Icon ( <img src="../../.gitbook/assets/image (3).png" alt="" data-size="line">) to display or **Update** details, as in the graphic below.
-
-    ![Edit Load Balancer Listener pane displaying details of an ALB Load Balancer for a WAF](../../.gitbook/assets/AWS\_ALB\_LBL\_HTTP.png)
-6.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.
+2.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.
 
     <figure><img src="../../.gitbook/assets/AWS_LB_WAF_Attach.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> for attaching a WAF (via the <strong>Web ACL</strong> field) to an ALB Load Balancer</p></figcaption></figure>
-7. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).&#x20;
-8. Complete the other required fields in the **Other Load Balancer Settings** pane.
-9. Click **Update**.
+3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).&#x20;
+4. Complete the other required fields in the **Other Load Balancer Settings** pane.
+5. Click **Update**.
 
 ## Analyzing inbound traffic with the WAF dashboard <a href="#1-toc-title" id="1-toc-title"></a>
 
