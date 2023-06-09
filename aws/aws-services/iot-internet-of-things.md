@@ -81,7 +81,7 @@ Add, update, or manage an IoT certificate with the following procedures.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **IoT**.
 2. Click the **Certificates** tab. The available certificates are displayed and listed by **ID**.
-3.  In the row for the certificate you want to update, click the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3) (1).png" alt="" data-size="line"> ) and select **Edit**. The **Update an IoT Certificate** pane displays.
+3.  In the row for the certificate you want to update, click the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) and select **Edit**. The **Update an IoT Certificate** pane displays.
 
     <figure><img src="../../.gitbook/assets/IOT_update_cert.png" alt=""><figcaption></figcaption></figure>
 4. From the **Status** list box, select the new status of the certificate.
@@ -128,6 +128,6 @@ View the details of a rule by selecting the rule from the **Topic Rules** tab Na
 
 ### Editing a Topic Rule
 
-In the **Topic Rules** tab, edit a Topic Rule by clicking the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3) (1).png" alt="" data-size="line"> ) in the row listing your Topic Rule **Name**, and selecting **Edit**.
+In the **Topic Rules** tab, edit a Topic Rule by clicking the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) in the row listing your Topic Rule **Name**, and selecting **Edit**.
 
 <figure><img src="../../.gitbook/assets/AWS_IOT_Topic_Rule_Actions (1).png" alt=""><figcaption><p><strong>Actions</strong> menu with <strong>Edit</strong> option on <strong>Topic Rules</strong> tab</p></figcaption></figure>

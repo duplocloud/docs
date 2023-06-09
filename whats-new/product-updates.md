@@ -21,6 +21,8 @@ New product updates will be posted around the 15th of each month.
   * The CloudFront feature and associated UI tab have been relocated in the DuploCloud Portal from the **DevOps -> App Integration** menu item to the **DevOps -> Networking** menu item.
 * Azure
   * Support for [Redis databases](../azure/azure-services/databases/redis-database.md) is available.
+* GCP
+  * [Cloud Armour](../gcp/gcp-services/cloud-armour.md) is supported, to monitor your cloud infrastructures and deployed applications against cyber-attacks.
 
 ### April 2023
 
