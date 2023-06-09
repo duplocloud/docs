@@ -106,7 +106,7 @@ Rules are not supported for Network Load Balancers (NLBs).
 2. Click the **Load Balancer** tab.&#x20;
 3. Select the [Shared Load Balancer you defined in the previous step](load-balancers.md#creating-a-shared-load-balancer-for-the-target-group).
 4. From the **Name** column of the **DevOps** -> **Networking** -> **Load Balancer** page, select the Shared Load Balancer.
-5.  In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3) (1).png" alt="" data-size="line"> ) and select **Manage Rules**. You can also select **Update attributes** from the **Actions** menu, as well, to dynamically update Target Group attributes. The **Listener Rules** page displays.
+5.  In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) and select **Manage Rules**. You can also select **Update attributes** from the **Actions** menu, as well, to dynamically update Target Group attributes. The **Listener Rules** page displays.
 
     <figure><img src="../../.gitbook/assets/AWS_Target5.png" alt=""><figcaption></figcaption></figure>
 6.  The **Add LB Listener rule** page displays.

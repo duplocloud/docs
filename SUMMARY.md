@@ -251,6 +251,7 @@
 * [GCP Services](gcp/gcp-services/README.md)
   * [Infrastructure (Virtual Private Cloud)](gcp/gcp-services/infrastructure-virtual-private-cloud.md)
   * [Configuring GCP Services](gcp/gcp-services/containers.md)
+  * [Cloud Armour](gcp/gcp-services/cloud-armour.md)
   * [Databases](gcp/gcp-services/databases/README.md)
     * [RDS and SQL databases](gcp/gcp-services/databases/rds-and-sql-databases.md)
     * [Elastic Cache](gcp/gcp-services/databases/elastic-cache.md)

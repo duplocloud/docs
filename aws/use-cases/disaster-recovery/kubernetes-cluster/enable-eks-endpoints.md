@@ -33,7 +33,7 @@ To change the visibility for EKS endpoints you have already created:
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
 2. From the **Name** column, select the Infrastructure for which you want to modify EKS endpoints.
 3. Click the **Settings** tab.
-4. In the **EKS Endpoint Visibility** row, in the **Actions** column, click the ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (3) (1).png" alt="" data-size="line"> ) icon and select **Update Setting**. The **Infra - Set Custom Data** pane displays.
+4. In the **EKS Endpoint Visibility** row, in the **Actions** column, click the ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) icon and select **Update Setting**. The **Infra - Set Custom Data** pane displays.
 5. From the **Setting Value** list box, select the desired type of visibility for endpoints (**private**, **public**, or **both**).
 6. Click **Set**.
 
