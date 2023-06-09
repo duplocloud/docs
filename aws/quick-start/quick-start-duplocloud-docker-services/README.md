@@ -5,7 +5,7 @@ This tutorial shows you how to setup an end-to-end cloud deployment for the samp
 <figure><img src="../../../.gitbook/assets/image (3) (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 * We will use simple Nginx web as a sample for the application container.
-* We will use the Tenant and Infrastructure created as part of [Step1](../step-1-infrastructure.md) and [Step2](../step-2-tenant.md).
+* We will use the Tenant and Infrastructure created as part of Step1 and Step2.
 * We will deploy the docker containers by leveraging DuploCloud platform in-built container management capability
 
 Following will be DuploCloud mapping of the above topology into DuploCloud constructs. The steps involved in the setup will be:

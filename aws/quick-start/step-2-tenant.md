@@ -1,8 +1,59 @@
-# Step 2: Tenant
+---
+description: Creating a DuploCloud Tenant that segregates your workloads
+---
 
-Once the Infrastructure is created, then create a new Tenant (Administrator --> Tenants). Give the name as dev01 and choose plan as non-prod (the same name as the infrastructure we just created). You just need 2 inputs
+# Step 2: Create a Tenant
 
-* Name: dev01
-* Plan: non-prod
+Now that the [Infrastructure and Plan](step-1-infrastructure.md) exist and a Kubernetes EKS or ECS cluster has been enabled, create one or more Tenants that use the configuration DuploCloud created.
 
-It may take about 1-2 minutes for the Tenant to be setup. During this time there maybe an additional fault under Administrator-->Faults or top right. If so ignore it for first 2 minutes, it should clear
+[Tenants ](../../getting-started/application-focussed-interface/tenant.md)in DuploCloud are similar to projects or workspaces and have a subordinate relationship to the Infrastructure. Think of the Infrastructure as a virtual "house" (cloud), with Tenants conceptually "residing" in the Infrastructure performing specific workloads that you define. As Infrastructure is an abstraction of a Virtual Private Cloud, Tenants abstract the segregation created by a [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), although Kubernetes Namespaces are only one component that Tenants can contain.
+
+In AWS, cloud features such as resource groups, IAM Service Roles, security groups, and KMS Policies are exposed in Tenants, which reference these feature configurations.
+
+_Estimated time to complete Step 2: 10 minutes._
+
+## Tenant use cases
+
+DuploCloud customers often create at least two Tenants for their production and non-production cloud environments (Infrastructures).&#x20;
+
+For example:
+
+* Production Infrastructure &#x20;
+  * Pre-production Tenant - for preparing or reviewing production code
+  * Production Tenant - for deploying tested code&#x20;
+* Non-production Infrastructure
+  * Development Tenant - for writing and reviewing code
+  * Quality Assurance Tenant - for automated testing
+
+In larger organizations, some customers create Tenants based on application environments, such as creating one Tenant for Data Science applications and another Tenant for web applications, and so on.&#x20;
+
+Tenants are sometimes created to isolate a single customer workload, allowing more granular performance monitoring, scaling flexibility, or tighter security. This is referred to as a _single-Tenant_ setup.
+
+## Prerequisites
+
+Before creating a Tenant, verify that you accomplished the tasks in [Step 1](step-1-infrastructure.md) of this tutorial. Using the DuploCloud Portal, confirm that:
+
+* An [Infrastructure and Plan](step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](step-1-infrastructure.md#check-your-work).&#x20;
+
+## Creating a Tenant&#x20;
+
+Create a Tenant for your Infrastructure and Plan:
+
+1. In the DuploCloud Portal, navigate to **Administrator** --> **Tenants.**
+2. Click **Add**. The **Create a Tenant** pane displays.
+3. Enter **dev01** in the **Name** field.&#x20;
+4. Select the **Plan** that you created in the previous step (**NONPROD**).
+5. Click **Create**.
+
+<figure><img src="../../.gitbook/assets/Azure_GS_Tenant_1_Create_a_Tenant.png" alt=""><figcaption><p><strong>Create a Tenant</strong> pane</p></figcaption></figure>
+
+## Check your work
+
+1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.
+
+    <figure><img src="../../.gitbook/assets/AWS_QS_3.png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong></p></figcaption></figure>
+2.  Navigate to **Administrator** -> **Infrastructure** and select **dev01** from the **Tenant** list box at the top left in the DuploCloud Portal. The **NONPROD** Infrastructure appears in the list of Infrastructures, indicating that the **dev01** Tenant is associated with Infrastructure **NONPROD**.
+
+    <figure><img src="../../.gitbook/assets/AWS_QS_4.png" alt=""><figcaption><p>Tenant list box with <strong>dev01</strong> selected; <strong>NONPROD</strong> Infrastructure with <strong>Status Complete</strong> </p></figcaption></figure>
+

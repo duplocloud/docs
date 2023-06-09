@@ -39,7 +39,7 @@ Before starting this tutorial:
 
 ![Infrastructure creation with a status of Complete](<../../.gitbook/assets/image (30).png>)
 
-## Verifying that a Plan exists for your infrastructure
+## Verifying that a Plan exists for your Infrastructure
 
 Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the [Tenants ](../../getting-started/application-focussed-interface/tenant.md)or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
 
@@ -58,7 +58,7 @@ Once your Infrastructure and Plan have been created, the final step before creat
 4. Click on the **Click Here** hyperlink. The **Configure AKS Cluster** pane displays.
 5. Accept the default values and click **Create** to enable the AKS service for your Infrastructure.&#x20;
 
-DuploCloud begins creating and configuring an AKS cluster using Kubernetes. You receive an alert message when the Infrastructure has been updated.&#x20;
+DuploCloud begins creating and configuring an AKS cluster using Kubernetes.&#x20;
 
 {% hint style="success" %}
 It may take some time for enablement to complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
@@ -66,9 +66,9 @@ It may take some time for enablement to complete. Use the **Kubernetes** card in
 
 ## Check your work
 
-You previously verified that your Infrastructure and Plan were created. Now verify that AKS is Enabled before proceeding to [Create a Tenant](step-2-tenant.md).
+You previously verified that your Infrastructure and Plan were created. Now verify that AKS is enabled before proceeding to [Create a Tenant](step-2-tenant.md).
 
-When AKS has been **Enabled**, details are listed in the **Kubernetes** tab. The Infrastructure page also displays the **Enabled** status on the **Kubernetes** card.
+When AKS has been **Enabled**, details are listed in the **Kubernetes** tab. The Infrastructure page displays the **Enabled** status on the **Kubernetes** card.
 
 ![Kubernetes tab in the Infrastructure page with details about your configured AKS cluster ](<../../.gitbook/assets/image (38).png>)
 

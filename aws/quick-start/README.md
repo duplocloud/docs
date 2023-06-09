@@ -1,12 +1,22 @@
+---
+description: >-
+  Get up and running with DuploCloud running inside an AWS cloud environment;
+  harness the power of generating application infrastructures.
+---
+
 # Quick Start
 
-This QuickStart tutorial guides the end-to-end deployment flow from creating infrastructure to deploying a web application using DuploCloud portal.
+This Quick Start tutorial shows you how to set up an end-to-end cloud deployment. You will create AWS infrastructure and tenants and, by the end of this tutorial, you can view a deployed sample web application.
 
-This guide will help you to follow listed steps:
+_Estimated time to complete tutorial: 90-100 minutes._
 
-* [Create Infrastructure](step-1-infrastructure.md): This sets up the VPC, Subnets, NAT Gateway, Routes, Kubernetes Cluster and ECS.
-* [Create a Tenant](step-2-tenant.md):  Please read [here ](../../getting-started/application-focussed-interface/tenant.md)for Tenant Concept.
-* DuploCloud supports three container orchestration technologies to deploy containerized applications in AWS - EKS, ECS Fargate, and a built-in Container orchestration. Follow the below links for the walk-through:
-  * [Using K8s Service](quick-start-eks-services/)
-  * [Using ECS Service](quick-start-ecs-services/)
-  * [Using Docker Native Service](quick-start-duplocloud-docker-services/)
+## AWS Video demo
+
+Click the card below to open the DuploCloud video page to watch a number of DuploCloud demos.
+
+{% embed url="https://duplocloud.com/videos/" %}
+DuploCloud video demos
+{% endembed %}
+
+## AWS Quick Start workflows
+
