@@ -18,5 +18,3 @@ Click the card below to open the DuploCloud video page to watch a number of Dupl
 DuploCloud video demos
 {% endembed %}
 
-## AWS Quick Start workflows
-
