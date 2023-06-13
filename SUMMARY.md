@@ -56,7 +56,7 @@
 * [Quick Start](aws/quick-start/README.md)
   * [Step 1:  Create Infrastructure and Plan](aws/quick-start/step-1-infrastructure.md)
   * [Step 2: Create a Tenant](aws/quick-start/step-2-tenant.md)
-  * [Step 3: Create a RDS database](aws/quick-start/step-4-create-a-rds-database.md)
+  * [Step 3: Create an RDS database](aws/quick-start/step-4-create-a-rds-database.md)
   * [Quick Start - EKS Services](aws/quick-start/quick-start-eks-services/README.md)
     * [Step 4: Create Host](aws/quick-start/quick-start-eks-services/step-3-create-host.md)
     * [Step 5: Create app (via K8S)](aws/quick-start/quick-start-eks-services/step-5-create-app-via-k8s.md)

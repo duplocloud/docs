@@ -1,21 +1,87 @@
-# Step 4: Create a RDS database
+---
+description: Creating an RDS database to integrate with your DuploCloud Service
+---
 
-## Create a database <a href="#0-toc-title" id="0-toc-title"></a>
-
-Create a MySQL, Microsoft SQL, PostgreSQL or Amazon Aurora database from the menu **DevOps** > **Database** > **Relational Databases** > **+Add** button above the table.
-
-![](https://duplocloud.com/wp-content/uploads/2021/11/createrds.png)
+# Step 3: Create an RDS database
 
 {% hint style="info" %}
-Keep an eye on the faults that may show up on the top right. If there is a fault click on it and see if it is due to DB creation failure. Common cases for these are passwords cannot have special characters like quotes, @, comma. Choosing encryption for small instances like micro, small and medium&#x20;
+Creating an RDS database is not essential to running a DuploCloud Service, although it is used in this tutorial to integrate with the Service you will create later.
 {% endhint %}
 
-## Connect to the database <a href="#1-toc-title" id="1-toc-title"></a>
+An [AWS RDS](https://aws.amazon.com/free/database/?trk=83add82a-8e52-4837-bc73-c323da62d78c\&sc\_channel=ps\&ef\_id=CjwKCAjwp6CkBhB\_EiwAlQVyxYi50yWfBj5SSxs6-gaDSqftnxbBO6Plfy0pYWyyxrZ3zI0goU6bLRoCGkQQAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!610000101516!e!!g!!amazon%20database%20hosting!11086562318!108339552363) is a managed Relational Database Service that is easy to set up and maintain in DuploCloud for AWS public cloud environments. RDSs support many databases including MySQL, PostgreSQL, MariaDB, Oracle BYOL, or SQL Server. &#x20;
 
-Once the database is created which takes about 5 to 10 mins then you can expand the created database to fetch the endpoint and credentials. Use this endpoint and credentials to connect to the database from your application running in the EC2 instance. Note that the database is only accessible from inside the EC2 instance (including the containers running within it) in the current tenant.
+&#x20;See the [DuploCloud AWS Database documentation](../aws-services/database/) for more information.
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/rdsdetails.png)
+## Prerequisites <a href="#0-toc-title" id="0-toc-title"></a>
+
+Before creating an RDS, verify that you accomplished the tasks in [Step 1](step-1-infrastructure.md) and [Step 2](step-2-tenant.md) of this tutorial. Using the DuploCloud Portal, confirm that:
+
+* An [Infrastructure and Plan](step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](step-1-infrastructure.md#check-your-work).&#x20;
+* A Tenant with the name [dev01 has been created](step-2-tenant.md).
+
+## Creating an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**. The **Database** page displays.
+2.  In the **RDS** tab, click **Add**. The **Create a RDS** page displays.
+
+    <figure><img src="../../.gitbook/assets/AWS_QS_5 (1).png" alt=""><figcaption><p><strong>Create a RDS</strong> page</p></figcaption></figure>
+3. From the table below, enter the values that correspond to the fields on the **Create a RDS** page. Accept all other default values for fields not specified.&#x20;
+4. Click **Create**. The **DUPLODOCS** database displays in the **RDS** tab with a **Status** of **Submitted**. Database creation takes approximately ten (10) minutes.&#x20;
 
 {% hint style="info" %}
-The easier way to pass DB endpoint, name and credentials to your application for security purposes is through environment variables (`ENV`) of the Service as described in the next section. Other was are passing via secrets manager or Kubernetes secrets
+DuploCloud prepends **DUPLO** to the name of your RDS database instance.
+{% endhint %}
+
+| Create a RDS page field | Value                                     |
+| ----------------------- | ----------------------------------------- |
+| RDS Name                | **docs**                                  |
+| User Name               | _**YOUR\_DUPLOCLOUD\_ADMIN\_USER\_NAME**_ |
+| User password           | _**YOUR\_DUPLOCLOUD\_ADMIN\_PASSWORD**_   |
+| Rds Engine              | **PostgreSQL**                            |
+| Rds Engine Version      | _**LATEST\_AVAILABLE\_VERSION**_          |
+| Rds Instance Size       | **db.t4g.small**                          |
+| Storage size in GB      | **20**                                    |
+
+## Validating RDS database creation <a href="#1-toc-title" id="1-toc-title"></a>
+
+You monitor the status of database creation using the **RDS** tab and the **Status** column.&#x20;
+
+In the DuploCloud Portal **Database** page, in the **RDS** tab, when the database **Status** is **Available**, the database's endpoint is ready for connection by a DuploCloud Service, which you create and start in the [next step](step-4-create-a-rds-database.md#checking-your-work).
+
+### Troubleshooting database creation failures
+
+Faults are shown in the DuploCloud portal by clicking the ( <img src="../../.gitbook/assets/alert_exclamation_point_circle_fault_icon.png" alt="" data-size="line"> ) icon. Common database faults that cause your database creation to fail include:
+
+* Invalid passwords - Passwords cannot have special characters like quotes, @, commas, etc.
+* Invalid encryption - Encryption is not supported for small database instances (micro, small, or medium).
+
+<figure><img src="../../.gitbook/assets/AWS_QS_8 (1).png" alt=""><figcaption><p><strong>RDS</strong> tab with <strong>DUPLODOCS</strong> database with <strong>Status Available</strong>; Fault/Alert Icon highlighted at top</p></figcaption></figure>
+
+## Verifying database endpoints <a href="#1-toc-title" id="1-toc-title"></a>
+
+1. In the **RDS** tab, select the **DUPLODOCS** database you created.
+2.  Note the database **Endpoint**, the database name, and the database credentials. The database is only accessible from inside an [EC2 instance](https://aws.amazon.com/pm/ec2/?trk=36c6da98-7b20-48fa-8225-4784bced9843\&sc\_channel=ps\&ef\_id=CjwKCAjwp6CkBhB\_EiwAlQVyxcW-7lt7SPn1AnahX32vPOCAEtG0fcDA\_uA0N6sH8R\_LGfg0uwcwHxoCPB8QAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!536392622533!e!!g!!aws%20ec2%20instance%20types!11198711716!118263957108) (including the containers running within it), in the DuploCloud **dev01** Tenant. You will need the Endpoint to connect to the database from an application running in the EC2 instance.
+
+    ![DUPLODOCS database with Endpoint highlighted](<../../.gitbook/assets/AWS\_QS\_9 (1).png>)
+
+
+
+{% hint style="success" %}
+When you place a DuploCloud Service in a live production environment, consider passing the database endpoint, name, and credentials to a DuploCloud Service using [Environment Variables](../use-cases/passing-secrets/passing-config-and-secrets/setting-environment-variables-from-config.md), via [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), or [Kubernetes Secrets](../use-cases/passing-secrets/passing-config-and-secrets/setting-environment-variables-from-config.md#setting-environment-variables-from-a-kubernetes-secret).&#x20;
+{% endhint %}
+
+## Checking your work
+
+When your [database is available](step-4-create-a-rds-database.md#1-toc-title) and you have [verified the endpoint](step-4-create-a-rds-database.md#1-toc-title-1), choose one of these three paths to continue this tutorial.
+
+* [Creating an AWS EKS Service](quick-start-eks-services/) in DuploCloud
+* [Creating an AWS ECS Service](quick-start-ecs-services/)  in DuploCloud
+* [Creating a DuploCloud Docker Service](quick-start-duplocloud-docker-services/)
+
+{% hint style="info" %}
+Not sure what kind of Duplcloud Service you want to create? Keep the following in mind.
+
+* AWS EKS is a managed [Kubernetes ](https://kubernetes.io/)service, while AWS ECS is a fully managed container orchestration service that uses its proprietary technology. For a full discussion of the benefits of both AWS service types, [see this AWS blog](https://aws.amazon.com/blogs/containers/amazon-ecs-vs-amazon-eks-making-sense-of-aws-container-services/).
+* [Docker Containers](https://docs.docker.com/get-started/) are ideal for quick deployments and run on multiple platforms, using GitHub and other open-source tools.
 {% endhint %}
