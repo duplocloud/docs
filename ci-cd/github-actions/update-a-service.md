@@ -48,9 +48,6 @@ jobs:
     needs:
       - build
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      
       # Update the backend service to use the new image.
       - name: Deploy
         uses: duplocloud/ghactions-service-update@master
