@@ -1,21 +1,48 @@
-# Step 4: Create Host
+---
+description: Creating a Host that acts as an EKS Worker node
+---
+
+# Step 4: Create a Host
+
+When you create an [AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html) Service, you are using a combination of technologies from the AWS Portal and the [Kubernetes ](kuberhttps://en.wikipedia.org/wiki/Kubernetesnetes)open-source container orchestration system.
+
+Kubernetes uses worker nodes to distribute workloads within a cluster. The cluster automatically distributes the workload among its nodes, enabling seamless scaling as required system resources expand to support your applications.&#x20;
+
+## Prerequisites
+
+Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual\_machine)), verify that you accomplished the tasks in [Step 1](../step-1-infrastructure.md), [Step 2](../step-2-tenant.md), and [Step 3 ](../step-4-create-a-rds-database.md)of this tutorial. Using the DuploCloud Portal, confirm that:
+
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* A Tenant with the name [dev01 has been created](../step-2-tenant.md).
+* An RDS database with the name [DUPLODOCS has been created](../step-4-create-a-rds-database.md).
+
+### Select the Tenant you created
+
+In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
+
+<figure><img src="../../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
+
+## Creating a host
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**. The **Hosts** page displays.
+2. In the **EC2** tab, click **Add**. The **Add Hosts** page displays.
+3. In the **Name** field, enter **host01**.
+4. Select the **Advanced Options** checkbox to display advanced configuration fields.
+5. From the **Agent Platform** list box, select **EKS Linux**.
+6. From the **Image ID** list box, select any Image ID that is prefixed by **EKS** (for example, **EKS-Oregon-1.23**).
+7.  Click **Add**. The Host is created, initialized, and started. In a few minutes, when the **Status** displays **Running**, the Host is available for use.
+
+    <figure><img src="../../../.gitbook/assets/AWS_QS_16.png" alt=""><figcaption><p><strong>EC2 Add Hosts</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
-Make sure you have switch the Tenant drop down to the desired tenant i.e. dev01 in this case
+The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time. For this tutorial, the region is **us-west-2**, where the **NONPROD** Infrastructure was created.&#x20;
+
+If no **Image ID** is available with a prefix of **EKS**, copy the **AMI ID** for the desired EKS version from [this table](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html). Select **Other** from the **Image ID** list box and paste the copied **AMI ID** in the **Other Image ID** field. Contact the DuploCloud Support team via your Slack channel if you have questions or issues.
 {% endhint %}
 
-## Steps for creating a host
+## Checking your work
 
-Switch to dev01 tenant from the drop down at the top of the page.&#x20;
+Verify that the Host you created has a **Status** of **Running**.
 
-Then go to DevOps --> Hosts --> EC2 tab and Click on +Add. You will need to give the following inputs:
-
-* Name: host01
-* Agent Platform: EKS Linux
-* Image ID: Make sure it is prefixed with **EKS-**&#x20;
-* This is the image published by AWS for EKS worker for the version of Kubernetes deployed when we created the infra. If you don't see an image ID starting with EKS .. then look up the ami-id for the desired EKS version from the table here [https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html) If you are following this quick start guide then the region should be us-west-2 as that is where we created the infrastructure. Once you have the AMI ID then choose "Other" for the Image ID drop down and paste the ami-id. If you need assistance with Image ID ping in the DuploCloud Slack channel
-
-The host should get launched and soon get registered with Kubernetes and should show in Connected state in the DuploCloud UI as shown below.
-
-![](<../../../.gitbook/assets/image (51).png>)
-
+<figure><img src="../../../.gitbook/assets/AWS_QS_15 (1).png" alt=""><figcaption><p><strong>EC2</strong> tab with Host in <strong>Status Running</strong></p></figcaption></figure>
