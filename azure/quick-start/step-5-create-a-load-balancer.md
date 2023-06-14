@@ -20,7 +20,7 @@ Before creating your DuploCloud load balancer, ensure that:
 * [AKS Kubernetes cluster](step-1-infrastructure.md#enabling-the-aks-kubernetes-cluster) is enabled.
 * **dev01**  is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01 (1) (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
 
 ## Adding and configuring a load balancer
 

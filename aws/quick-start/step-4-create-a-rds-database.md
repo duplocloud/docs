@@ -10,7 +10,9 @@ Creating an RDS database is not essential to running a DuploCloud Service, altho
 
 An [AWS RDS](https://aws.amazon.com/free/database/?trk=83add82a-8e52-4837-bc73-c323da62d78c\&sc\_channel=ps\&ef\_id=CjwKCAjwp6CkBhB\_EiwAlQVyxYi50yWfBj5SSxs6-gaDSqftnxbBO6Plfy0pYWyyxrZ3zI0goU6bLRoCGkQQAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!610000101516!e!!g!!amazon%20database%20hosting!11086562318!108339552363) is a managed Relational Database Service that is easy to set up and maintain in DuploCloud for AWS public cloud environments. RDSs support many databases including MySQL, PostgreSQL, MariaDB, Oracle BYOL, or SQL Server. &#x20;
 
-&#x20;See the [DuploCloud AWS Database documentation](../aws-services/database/) for more information.
+See the [DuploCloud AWS Database documentation](../aws-services/database/) for more information.
+
+_Estimated time to complete Step 3: 5 minutes._
 
 ## Prerequisites <a href="#0-toc-title" id="0-toc-title"></a>
 
@@ -73,9 +75,9 @@ When you place a DuploCloud Service in a live production environment, consider p
 
 When your [database is available](step-4-create-a-rds-database.md#1-toc-title) and you have [verified the endpoint](step-4-create-a-rds-database.md#1-toc-title-1), choose one of these three paths to create a DuploCloud Service and continue this tutorial.
 
-* [Creating an AWS EKS Service](quick-start-eks-services/) in DuploCloud
-* [Creating an AWS ECS Service](quick-start-ecs-services/)  in DuploCloud
-* [Creating a DuploCloud Docker Service](quick-start-duplocloud-docker-services/)
+* [Creating an AWS EKS Service](quick-start-eks-services/) in DuploCloud running Docker containers
+* [Creating an AWS ECS Service](quick-start-ecs-services/) in DuploCloud running Docker containers
+* [Creating a DuploCloud native Docker Service](quick-start-duplocloud-docker-services/)
 
 {% hint style="success" %}
 Not sure what kind of Duplcloud Service you want to create? Consider the following:

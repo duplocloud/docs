@@ -1,31 +1,35 @@
-# Quick Start - EKS Services
+---
+description: Finish the Quick Start Tutorial by creating an EKS Service
+---
 
+# Creating an EKS Service
 
+In this tutorial for DuploCloud AWS, you have so far created a VPC instance with configuration templates ([Infrastructure and Plan](../step-1-infrastructure.md)), an isolated workspace ([Tenant](../step-2-tenant.md)), and an [RDS database instance](../step-4-create-a-rds-database.md).
 
-This tutorial shows you how to set up an end-to-end cloud deployment for the sample topology shown below.
+Now you need to create a DuploCloud Service on top of your Infrastructure and configure the Service to run and deploy your application. In this tutorial path, we'll deploy using Docker containers, leveraging [AWS Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/).&#x20;
 
-![Sample High Level Topology](<../../../.gitbook/assets/image (3) (1) (3).png>)
+Alternatively, you can finish this tutorial by:
 
-* We will use the Tenant and Infrastructure created as part of Step1 and Step2.
-* We will deploy the docker containers by leveraging Kubernetes Cluster (AWS EKS)
+* [Creating an AWS ECS Service in DuploCloud](../quick-start-ecs-services/) running Docker containers
+* [Creating a DuploCloud native Docker Service](../quick-start-duplocloud-docker-services/)
 
-Following will be DuploCloud mapping of the above topology into DuploCloud constructs.
+For a full discussion of the benefits of EKS vs. ECS, consult[ this AWS blog](https://aws.amazon.com/blogs/containers/amazon-ecs-vs-amazon-eks-making-sense-of-aws-container-services/).
 
-## Deployment Steps
+_Estimated time to complete remaining tutorial steps: 30-40 minutes_
 
-The steps involved in the setup will be:
+## Deploying an AWS EKS Service in DuploCloud
 
-1. Refer to the Infrastructure and Tenant created in earlier steps.
-2. Create a Host (EC2 Instance) which will be an EKS worker
-3. Create a MySQL RDS Database
-4. Create a micro-service called **webapp** with the docker image `duplocloud/nodejs-hello:latest`
-5. Expose the web app using a load balancer and a DNS name.&#x20;
-6. Test the web app.
-7. Obtain access to the container shell and `kubectl` for debugging.
+For the remaining steps in this tutorial, you will:&#x20;
+
+1. Create a Host (EC2 Instance), which serves as an [AWS EKS worker node](https://docs.aws.amazon.com/eks/latest/userguide/eks-compute.html).
+2. Create a Service and applications (**webapp)** using the premade Docker image `duplocloud/nodejs-hello:latest.`
+3. Expose the Service by creating and sharing a load balancer and DNS name.&#x20;
+4. Test the application.
+5. Obtain access to the container shell and `kubectl` for debugging.
 
 ## Network Architecture and Configurations
 
-Behind the scenes, the topology that will get created will look like the following lower-level configuration in AWS.
+Behind the scenes, the topology that DuploCloud creates resembles this low-level configuration in AWS.
 
 <figure><img src="../../../.gitbook/assets/network-diagram.png" alt=""><figcaption><p>AWS architecture and configuration</p></figcaption></figure>
 
