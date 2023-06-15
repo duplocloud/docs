@@ -21,7 +21,7 @@ Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org
 
 In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
 
-<figure><img src="../../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/tenant_dev01 (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
 
 ## Creating a host
 
@@ -45,4 +45,4 @@ If no **Image ID** is available with a prefix of **EKS**, copy the **AMI ID** fo
 
 Verify that the Host you created has a **Status** of **Running**.
 
-<figure><img src="../../../.gitbook/assets/AWS_QS_15 (1).png" alt=""><figcaption><p><strong>EC2</strong> tab with Host in <strong>Status Running</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AWS_QS_15.png" alt=""><figcaption><p><strong>EC2</strong> tab with Host in <strong>Status Running</strong></p></figcaption></figure>

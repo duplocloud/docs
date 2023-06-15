@@ -1,33 +1,63 @@
-# Lambda
+---
+description: Creating Lambda functions for DuploCloud AWS
+---
 
-## Step 1: Create a zip file <a href="#0-toc-title" id="0-toc-title"></a>
+# Lambda Functions
 
-Generate a Zip package of your Lambda code. The Lambda function code should be at the root of the package. If you are using virtual env, all dependencies should be packaged. Refer to the AWS documentation for detailed instructions on how to generate a package. We personally prefer using tools like zappa and serverless.
+[Lambda ](https://aws.amazon.com/pm/lambda/?trk=73f686c8-9606-40ad-852f-7b2bcafa68fe\&sc\_channel=ps\&ef\_id=CjwKCAjwm4ukBhAuEiwA0zQxk0SFVZUD3BCwJFOwlrHAFxzGF6anGJulF49mrridyhHjXRxfSHnmGxoCQw0QAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!651212652666!e!!g!!amazon%20lambda!909122559!45462427876)is a serverless computing platform provided by AWS that allows you to run code without provisioning or managing servers. It enables you to build and run applications in response to events or triggers from Lambda Functions.
 
-## Step 2: Create a S3 Bucket <a href="#2-toc-title" id="2-toc-title"></a>
+Lambda Functions are event-driven and designed to perform small, specific tasks or functions. They can be written in supported programming languages such as Python, JavaScript (`Node.js`), Java, C#, PowerShell, or Ruby. Once you create a Lambda function, you can configure it to respond to various types of events, such as changes in data stored in an Amazon [S3 bucket](../s3-bucket.md), updates in an Amazon [DynamoDB](../database/dynamodb.md) table, incoming HTTP requests via Amazon API Gateway, or custom events triggered by other [AWS services](../).
 
-Navigate to **DevOps > Storage > S3 > +Add** button above the table. Give a name for your bucket or leave it blank and a name will be auto generated. Then Click on AWS Console Button to get into AWS console for this S3 bucket and upload the zip file we just created.
+Using Lambda, you write your code and upload it to AWS. Lambda executes and scales the code as needed, abstracting away the underlying infrastructure, and allowing you to focus on writing the actual business logic of your application. Lambda Functions are the principal resource of the Lambda serverless platform.&#x20;
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/createotheraws.png)
+## Generating a Zip package of Lambda code <a href="#0-toc-title" id="0-toc-title"></a>
 
-## Create a lambda function <a href="#3-toc-title" id="3-toc-title"></a>
+In a Zip package, the Lambda Function code resides at the root of the package. If you are using a virtual environment, all dependencies should be packaged.&#x20;
 
-Navigate to **DevOps > Serverless > Lambda tab > +Add** button. Give a name for the Lambda function and other values. This will create the lambda function. Click on **AWS console** to go to the console shell for this function. Test the function. You can look at the tutorial above for the same or look at the AWS documentation.
+Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html) for detailed instructions on how to generate the package, using tools such as [Zappa ](https://github.com/zappa/Zappa)and [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/functions).
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/lambdamenu.png)
+## Creating an S3 Bucket <a href="#2-toc-title" id="2-toc-title"></a>
 
-## Updating lambda function and configuration <a href="#1-toc-title" id="1-toc-title"></a>
+1. [Create an S3 Bucket](../s3-bucket.md).
+2. Use [JIT ](../../use-cases/jit-access.md)to access the AWS Console.
+3. Upload the Zip package in the AWS Console.
 
-To update the code for the Lambda function, create a new package with a different name and upload in S3 bucket again. Then select the lambda function in the table and click Edit under dropdown menu in Actions column. Make sure the right S3 bucket has been selected and provide the name of the function. To update a function configuration like timeout memory, etc. use the edit configuration button.
+## Creating a Lambda function <a href="#3-toc-title" id="3-toc-title"></a>
 
-## Integrating with other resources <a href="#2-toc-title" id="2-toc-title"></a>
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Serverless**.
+2. Click the **Lambda** tab. The **Lambda Function** page displays.
+3.  Click **Add**. The **Create a Lambda Function** page displays.
 
-DuploCloud enables you to create a classic micro-services based architecture where your Lambda function can integrate with any other resource within your tenant like S3, Dynamo, RDS or other Docker based microservices. DuploCloud will implicitly enable the Lambda function to communicate with other resources but block any communication outside the tenant (except ELB).
+    ![Create a Lambda Function page](../../../.gitbook/assets/L1.png)
+4. In the **Name** field, enter the name of your Lambda Function.
+5. From the **Runtime** list box, select the runtime engine for your programming language.
+6. In the **Function Handler** field, enter the name of the method within your code that Lambda calls to execute your function. This is required if the deployment package type is a `Zip` file archive.
+7. In the **Function Package** field, enter the S3 key of an object containing the function's deployment package.
+8. Click **Submit**. The Lambda Function is created.
+9. On the **Lambda Function** page, from the **Name** column, select the function you created.
+10. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.
 
-## Trigger and event sources <a href="#3-toc-title" id="3-toc-title"></a>
+    <figure><img src="../../../.gitbook/assets/L2 (1).png" alt=""><figcaption><p><strong>Actions</strong> menu on the selected Lambda Function page</p></figcaption></figure>
+11. Test the function using the AWS Console.
 
-To setup a trigger or event source, the resource needs to be created via the DuploCloud Portal. Subsequently, one could trigger directly from that resource to the Lambda function in the AWS console menu of your Lambda function. Resources could be S3 buckets, API Gateway, DynamoDB, SNS etc. An example trigger via API Gateway was described in the tutorial.
+### Integrating with other resources <a href="#2-toc-title" id="2-toc-title"></a>
 
-## Passing secrets <a href="#4-toc-title" id="4-toc-title"></a>
+DuploCloud enables you to create a classic micro-services-based architecture where your Lambda function integrates with any resource within your Tenant, such as S3 Buckets, Dynamo database instances, RDS database instances, or Docker-based microservices. DuploCloud implicitly enables the Lambda function to communicate with other resources but blocks any communication outside the Tenant, except Elastic Load Balancers (ELB).
 
-Passing secrets to a Lambda function can be done in much the same way as passing secrets to your Docker based service i.e., using environmental variables. For example, you can create a relational database from the **Database > RDS** menu in DuploCloud, provide username and password, then in the Lambda menu give the same username and password. No secrets need to be stored anywhere outside like vault, git repo, etc.
+### Trigger and event sources <a href="#3-toc-title" id="3-toc-title"></a>
+
+To set up a trigger or event source, create the resource in the DuploCloud Portal. You can then trigger directly from the resource to the Lambda function in the AWS console menu of your Lambda function. Resources can be S3 Buckets, API gateways, DynamoDB database instances, and so on.&#x20;
+
+### Passing secrets <a href="#4-toc-title" id="4-toc-title"></a>
+
+Passing secrets to a Lambda function can be done in much the same manner as passing secrets to a Docker-based service using Environmental Variables. For example, you can create a relational database from the **Database -> RDS** menu in DuploCloud, providing a Username and Password. In the Lambda menu, supply the same credentials. No secrets need to be stored in an AWS Key Vault, a Git repository, and so on.
+
+## Updating Lambda Functions and configurations <a href="#1-toc-title" id="1-toc-title"></a>
+
+To update the code for the Lambda function:
+
+1. Create a new Zip package with a different name and upload it in the S3 bucket.
+2. Select the Lambda Function (with the updated S3 Bucket). From the **Actions** menu, click **Edit**.&#x20;
+3. Enter the updated **Name** of the Lambda Function.
+4. Use the **Image Configuration** field to update an additional configuration parameter.
+5. Click **Submit**.
