@@ -31,9 +31,9 @@ DuploCloud begins creating and configuring your IInfrastructure and EKS/ECS clus
 
 | Add Infrastructure page field | Value           |
 | ----------------------------- | --------------- |
-| Name                          | `nonprod`       |
-| VPC CIDR                      | `10.221.0.0/16` |
-| Subnet CIDR Bits              | `24`            |
+| **Name**                      | `nonprod`       |
+| **VPC CIDR**                  | `10.221.0.0/16` |
+| **Subnet CIDR Bits**          | `24`            |
 
 <figure><img src="../../.gitbook/assets/AWS_QS_1.png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
 

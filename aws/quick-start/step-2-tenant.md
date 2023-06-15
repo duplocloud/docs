@@ -31,7 +31,7 @@ Tenants are sometimes created to isolate a single customer workload, allowing mo
 
 ## Prerequisites
 
-Before creating a Tenant, verify that you accomplished the tasks in [Step 1](step-1-infrastructure.md) of this tutorial. Using the DuploCloud Portal, confirm that:
+Before creating a Tenant, verify that you accomplished the tasks in the previous tutorial steps.  Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](step-1-infrastructure.md) exist, both with the name **NONPROD**.
 * The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](step-1-infrastructure.md#check-your-work).&#x20;

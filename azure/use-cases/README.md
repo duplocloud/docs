@@ -1,8 +1,8 @@
 ---
-description: Use cases supported for DuploCloud Azure
+description: Use Cases supported for DuploCloud Azure
 ---
 
-# Use cases
+# Azure Use Cases
 
 ## Organization of use cases
 

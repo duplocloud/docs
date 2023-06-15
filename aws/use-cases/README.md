@@ -1,8 +1,8 @@
 ---
-description: Use cases supported for DuploCloud AWS
+description: Use Cases supported for DuploCloud AWS
 ---
 
-# Use cases
+# AWS Use Cases
 
 This section details common user cases for DuploCloud AWS.
 
