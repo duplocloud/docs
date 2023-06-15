@@ -4,9 +4,7 @@ description: Create a load balancer to access your application
 
 # Step 5: Create a Load Balancer
 
-Now that your service is running, you have a mechanism to expose the containers and images in which your application resides.
-
-But because your containers are running inside a private network, you also need a load balancer to listen on the correct ports in order to access the application.
+Now that your DuploCloud Service is running, you have a mechanism to expose the containers and images in which your application resides. But because your containers are running inside a private network, you also need a load balancer to listen on the correct ports in order to access the application.
 
 In this step, we add a Load Balancer Listener to complete this network configuration.
 

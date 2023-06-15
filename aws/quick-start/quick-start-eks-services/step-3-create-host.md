@@ -10,18 +10,16 @@ Kubernetes uses worker nodes to distribute workloads within a cluster. The clust
 
 ## Prerequisites
 
-Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual\_machine)), verify that you accomplished the tasks in [Step 1](../step-1-infrastructure.md), [Step 2](../step-2-tenant.md), and [Step 3 ](../step-4-create-a-rds-database.md)of this tutorial. Using the DuploCloud Portal, confirm that:
+Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual\_machine)), verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
 * The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
-* A Tenant with the name [dev01 has been created](../step-2-tenant.md).
-* An RDS database with the name [DUPLODOCS has been created](../step-4-create-a-rds-database.md).
+* A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
+* An RDS database with the name [**DUPLODOCS** has been created](../step-4-create-a-rds-database.md).
 
 ### Select the Tenant you created
 
 In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
-
-<figure><img src="../../../.gitbook/assets/tenant_dev01 (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
 
 ## Creating a host
 

@@ -1,8 +1,8 @@
 ---
-description: Use cases supported for DuploCloud GCP
+description: Use Cases supported for DuploCloud GCP
 ---
 
-# Use Cases
+# GCP Use Cases
 
 ## Organization of use cases
 

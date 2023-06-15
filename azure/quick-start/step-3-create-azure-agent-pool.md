@@ -21,7 +21,7 @@ Before creating Azure Agent Pools, verify that you accomplished the tasks in [St
 * A [Tenant ](step-2-tenant.md)named **DEV01**
 * Selected Tenant **DEV01** in the **Tenant** list box, at the top of the DuploCloud Portal.
 
-<figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01 (3).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
 
 ## Create an Azure Agent Pool
 
@@ -33,8 +33,8 @@ Before creating Azure Agent Pools, verify that you accomplished the tasks in [St
 
 | Azure Agent Pool page fields and options | Value or action |
 | ---------------------------------------- | --------------- |
-| **Id**                                   | 1               |
-| **Instance Type**                        | (4 CPU 16GB)    |
+| **Id**                                   | `1`             |
+| **Instance Type**                        | `(4 CPU 16GB)`  |
 
 ![Add Azure Agent Pool page ](<../../.gitbook/assets/image (42).png>)
 

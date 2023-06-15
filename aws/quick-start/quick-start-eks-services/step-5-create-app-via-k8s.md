@@ -1,28 +1,62 @@
-# Step 5: Create app (via K8S)
+---
+description: Creating a Service to run a Docker-containerized application
+---
+
+# Step 5: Create a Service
+
+DuploCloud supports three container orchestration technologies to deploy containerized applications in AWS:
+
+* Native EKS
+* Native ECS Fargate
+* Built-in container orchestration in DuploCloud using EKS/ECS Kubernetes
+
+You can use any of these methods, which all employ Docker containers. This tutorial uses DuploCloud's built-in container orchestration using EKS and Kubernetes
 
 {% hint style="info" %}
-DuploCloud supports three container orchestration technologies to deploy containerized applications in AWS. EKS, ECS Fargate and a built-in Container orchestration. If you don't care how the containers are deployed then you are not required to have Kubernetes or ECS expertise or even familiarity. But familiarity with Docker itself is indeed desired\
-DuploCloud exposes a simple application specific interface to Deploy, update and debug containerized application.
+You don't have to have experience with Kubernetes to deploy an application in the DuploCloud Portal. However, it is helpful to be familiar with the [Docker ](https://docs.docker.com/)platform. Docker runs on any platform and provides an easy-to-use UI for creating, running, and managing containers, in which your application code resides.&#x20;
 {% endhint %}
 
-A docker based application has the following main specifications:
+This tutorial will access a pre-built Docker container to deploy a simple `Hello World NodeJS` web app. When you run the application, DuploCloud accesses Docker images in a preconfigured Docker Hub.&#x20;
 
-* **Name (Mandatory)** for the service
-* **Docker image (Mandatory)**: for example duplocloud/nodejs-hello:latest. If the docker image is not in ECR, then you need to add the credentials for the docker registry under Devops-->Containers->EKS/Native-->Docker Credentials button
-* **Replicas (Mandatory)**: In this demo, we will deploy a simple Hello World NodeJS web app. DuploCloud pulls Docker images from Docker Hub. You can choose a public image or provide credentials to access your private repository. For the sake of this demo, we will use a ready-made image available on DuploCloud repository on Docker Hub.
+When you run your own applications, you will choose a public image or provide credentials to access your private repository.  Before you deploy your own applications, [configure your Docker Registry credentials in DuploCloud](../../use-cases/docker-registry-credentials-and-kubernetes-secrets.md).
 
-![](<../../../.gitbook/assets/image (12) (1) (1).png>)
+_Estimated time to complete Step 5: 10 minutes._
 
-* **ENV Variables**: These are optional and you can pass environment specific values in this like DB host, port etc. For testing purposes you can also pass credentials in this
-* Many other parameters which help ? icon in the UI against each input element in the form describing the purpose.\
+## Prerequisites
 
+Before creating a Service, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
 
-To create a service go to Devops -> Containers -> EKS/Native and click on **+ADD** button and fill in the above field.
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
+* An RDS database with the name [**DUPLODOCS** has been created](../step-4-create-a-rds-database.md).
+* A host with the name [**host01** has been created](step-3-create-host.md).
 
-<figure><img src="../../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+### Select the Tenant you created
 
-Press **Create** and wait a moment for the service to initialize and you should see the containers in **Running** state.\
-\
-Once the Service is in Running status, you can also check the container logs from Containers Tabs --> Actions --> Logs.
+In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
 
-<figure><img src="../../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+## Adding a Service
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.&#x20;
+2.  Click **Add**. The **Add Service** page displays.
+
+    <figure><img src="../../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+3. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept all other default values for fields not specified.&#x20;
+4. Click **Next**. The **Advanced Options** page is displayed.
+5. At the bottom of the **Advanced Options** page, click **Create**. Your Service is created and initialized. In about five (5) minutes, in the **Containers** tab, your DuploCloud Service displays a **Current** status of **Running**.&#x20;
+
+| Add a Service page field | Value                            |
+| ------------------------ | -------------------------------- |
+| **Service Name**         | `demo-service`                   |
+| **Docker Image**         | `duplocloud/nodejs-hello:latest` |
+
+{% hint style="info" %}
+Use the **Containers** tab to monitor the Service creation status, between **Desired** (**Running**) and **Current**.
+{% endhint %}
+
+## Check your work
+
+Verify that your DuploCloud Service, **demo-service**, has a **Current** status of **Running**.
+
+<figure><img src="../../../.gitbook/assets/AWS_QS_17.png" alt=""><figcaption><p><strong>Containers</strong> tab displaying <strong>Desired</strong> and <strong>Current</strong> status (both <strong>Running</strong>)</p></figcaption></figure>
