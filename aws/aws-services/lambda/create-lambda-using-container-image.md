@@ -1,27 +1,36 @@
-# Create Lambda using Container Image
+---
+description: Using Container Images to configure Lambda
+---
 
-DuploCloud provides the ability to configure Lambda using Container Images.
+# Configure Lambda with Container Images
 
-## Step 1: Build Container Image <a href="#0-toc-title" id="0-toc-title"></a>
+## Building Container Images <a href="#0-toc-title" id="0-toc-title"></a>
 
-Create and Build your Lambda code using DockerFile.  Refer to the AWS documentation for detailed instructions on how to build and test Container Images.
+Create and Build your Lambda code using `DockerFile`.  Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html) for detailed instructions on how to build and test container Images.
 
-## Step 2: Create ECR Repository <a href="#0-toc-title" id="0-toc-title"></a>
+## Creating the ECR Repository <a href="#0-toc-title" id="0-toc-title"></a>
 
-&#x20;Navigate to **DevOps** > **Storage** > **ECR Repository.** Give Name of the Repository\
-![](<../../../.gitbook/assets/image (70).png>)
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Storage**.
+2. Click the **ECR Repository** tab. The **ECR Repository** page displays.
+3. Click **Add**. The **Create an ECR Repository** page displays.
+4. In the **ECR Repository Name** field, enter the ECR Repository Name.
+5.  Click **Create**.
 
-## Step 3: Upload Container Images to ECR Repository <a href="#0-toc-title" id="0-toc-title"></a>
+    <figure><img src="../../../.gitbook/assets/L3.png" alt=""><figcaption><p><strong>Create an ECR Repository</strong> pane</p></figcaption></figure>
 
-As a first step, login to ECR. You would need to tag the built Images and push the Images to the ECR Repository created at Step2.&#x20;
+## Uploading Container Images to an ECR Repository <a href="#0-toc-title" id="0-toc-title"></a>
 
-Refer to the AWS Documentation on detail steps for uploading Container Images
+1. Login to ECR
+2. Tag the images you have built.
+3. Push the images to the ECR Repository that you created.
 
-## Step 4: Configure Lambda with Container Images
+Refer to the [AWS Documentation](https://docs.aws.amazon.com/AmazonECR/latest/userguide/docker-push-ecr-image.html) for more details about uploading Container Images.
 
-Navigate to **DevOps** > **Serverless** > **Lambda**\
-Select Package Type as _Image._
+## Configuring Lambda with Container Images
 
-Provide the Image URI&#x20;
+1. Follow the steps for [creating a Lambda Function](./), specifying **Image** in the Package Name field.
+2. In the **Image URL** field, enter the URL of the image.
+3.  Click **Submit**.
 
-![Lambda screen](<../../../.gitbook/assets/image (4) (3) (1).png>)
+    ![Create a Lambda Function page](<../../../.gitbook/assets/image (4) (3) (1).png>)
+
