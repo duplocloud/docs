@@ -8,6 +8,8 @@ When you create an [AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/wh
 
 Kubernetes uses worker nodes to distribute workloads within a cluster. The cluster automatically distributes the workload among its nodes, enabling seamless scaling as required system resources expand to support your applications.&#x20;
 
+_Estimated time to complete Step 4: 5 minutes._
+
 ## Prerequisites
 
 Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual\_machine)), verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
