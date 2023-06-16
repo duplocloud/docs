@@ -1,16 +1,60 @@
-# Step 7: Secure the Load Balancer
+---
+description: Adding a security layer to your Load Balancer
+---
 
-If the user created an Application load balancer, there are a way to secure the load balancer by:
+# Step 7: Secure the Load Balancer (Optional)
 
-* Attaching a WAF to the load balancer
-* Setting up HTTP to HTTPs redirect&#x20;
-* Enabling access logging to monitor request details
-* Protecting from requests that contain invalid headers
+{% hint style="warning" %}
+This step is optional and not necessary to run the example application in this tutorial.
 
-This security settings can be accessed by navigating to _Services->Load Balancers->Other Settings-> Edit :_
+However, while it's not as important to secure a load balancer for a small web application in a tutorial, your production cloud apps require an elevated level of protection.&#x20;
 
-![](<../../../.gitbook/assets/Screen Shot 2022-05-25 at 12.20.28 PM.png>)
+To set up a Web Application Firewall (WAF) for a production application, follow the steps in the [Web Application Firewall procedure](../../aws-services/web-application-firewall-waf.md). You won't set up a WAF in this tutorial.
+{% endhint %}
 
+In this tutorial step, for the Application Load Balancer (ALB) you created in [Step 6](../quick-start-duplocloud-docker-services/step-6-create-loadbalancer.md), you'll:&#x20;
 
+* Set up HTTP to HTTPS [redirects. ](https://en.wikipedia.org/wiki/URL\_redirection)
+* Enable access logging to monitor [HTTP message](https://en.wikipedia.org/wiki/HTTP\_message\_body) details.
+* Protect against requests that contain [invalid headers](https://en.wikipedia.org/wiki/List\_of\_HTTP\_header\_fields).
 
-To create and attach a WAF to the load balancer, please go over the corresponding [section](https://docs.duplocloud.com/docs/aws/aws-services/web-application-firewall-waf).
+## Prerequisites
+
+Before securing a Load Balancer, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
+
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
+* An RDS database with the name [**DUPLODOCS** has been created](../step-4-create-a-rds-database.md).
+* A Host with the name [**host01** has been created](step-3-create-host.md).
+* A Service with the name [**demo-service** has been created](step-5-create-app-via-k8s.md).
+* An [HTTPS ALB Load Balancer](../quick-start-duplocloud-docker-services/step-6-create-loadbalancer.md) has been created with DNS Names.&#x20;
+
+### Select the Tenant you created
+
+In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
+
+## Securing the Load Balancer
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.
+2. From the **Name** column, select the Service to which your Load Balancer is attached (**demo-service**).
+3. Click the **Load Balancers** tab.
+4.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.
+
+    <figure><img src="../../../.gitbook/assets/AWS_QS_19 (1).png" alt=""><figcaption></figcaption></figure>
+5. In the **Web ACL** list box, select **None**, because you are not connecting a Web Application Firewall.
+6.  Select the **Enable HTTP to HTTPS Redirect**, **Enable Access Logs**, and **Drop Invalid Headers** options.
+
+    <figure><img src="../../../.gitbook/assets/AWS_QS_20.png" alt=""><figcaption></figcaption></figure>
+7. Accept the **Idle Timeout** default setting and click **Save**. The **Other Settings** card in the **Load Balancers** tab is updated with your selections.
+
+## Check your work
+
+Verify that the **Other Settings** card contains the selections you made above for:
+
+* **Web ACL** - `None`
+* **HTTP to HTTPS Redirect** - `True`
+* **Enable Access Logs** - `True`
+* **Drop Invalid Headers** - `True`
+
+<figure><img src="../../../.gitbook/assets/AWS_QS_21.png" alt=""><figcaption></figcaption></figure>

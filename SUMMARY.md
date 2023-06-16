@@ -61,7 +61,7 @@
     * [Step 4: Create a Host](aws/quick-start/quick-start-eks-services/step-3-create-host.md)
     * [Step 5: Create a Service](aws/quick-start/quick-start-eks-services/step-5-create-app-via-k8s.md)
     * [Step 6: Create a Load Balancer](aws/quick-start/quick-start-eks-services/step-6-create-a-load-balancer.md)
-    * [Step 7: Secure the Load Balancer](aws/quick-start/quick-start-eks-services/step-7-secure-the-load-balancer.md)
+    * [Step 7: Secure the Load Balancer (Optional)](aws/quick-start/quick-start-eks-services/step-7-secure-the-load-balancer.md)
     * [Step 8: Create DNS Name](aws/quick-start/quick-start-eks-services/step-8-create-dns-name.md)
     * [Step 9: Test the Application](aws/quick-start/quick-start-eks-services/step-9-test-the-application.md)
   * [Quick Start - ECS Services](aws/quick-start/quick-start-ecs-services/README.md)
