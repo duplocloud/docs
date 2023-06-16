@@ -14,12 +14,13 @@ When you create a WAF in DuploCloud, an entry is added to the [AWS Web ACL](http
 
     ![Plans page with WAF tab](https://duplocloud.com/wp-content/uploads/2021/11/plan-waf.png)
 2. From the **Name** column, select the Plan you want to update.
-3.  Click **Add**. The **Add WAF** pane displays.
+3. Click the **WAF** tab.
+4.  Click **Add**. The **Add WAF** pane displays.
 
     <figure><img src="../../.gitbook/assets/Azure_WAF (1).png" alt=""><figcaption><p><strong>Add WAF</strong> pane</p></figcaption></figure>
-4. In the **Name** field, type the name of your WAF.
-5. In the **WAF ARN** field, enter the Amazon Resource Name (ARN).
-6. Click **Create**.
+5. In the **Name** field, type the name of your WAF.
+6. In the **WAF ARN** field, enter the Amazon Resource Name (ARN).
+7. Click **Create**.
 
 ## Attaching the WAF to a Load Balancer
 

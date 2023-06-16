@@ -26,7 +26,7 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
 
 In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
 
-<figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01 (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Creating an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
 
@@ -59,7 +59,7 @@ In the DuploCloud Portal **Database** page, in the **RDS** tab, when the databas
 
 ### Troubleshooting database creation failures
 
-Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src="../../.gitbook/assets/alert_exclamation_point_circle_fault_icon (1).png" alt="" data-size="line"> ) Icon. Common database faults that may cause database creation to fail include:
+Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src="../../.gitbook/assets/alert_exclamation_point_circle_fault_icon.png" alt="" data-size="line"> ) Icon. Common database faults that may cause database creation to fail include:
 
 * Invalid passwords - Passwords cannot have special characters like quotes, @, commas, etc. Use a combination of upper and lower-case letters and numbers.
 * Invalid encryption - Encryption is not supported for small database instances (micro, small, or medium).
