@@ -26,7 +26,7 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
 
 In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption></figcaption></figure>
 
 ## Creating an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
 
@@ -71,7 +71,7 @@ Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src
 1. In the **RDS** tab, select the **DUPLODOCS** database you created.
 2.  Note the database **Endpoint**, the database name, and the database credentials. The database is only accessible from inside an [EC2 instance](https://aws.amazon.com/pm/ec2/?trk=36c6da98-7b20-48fa-8225-4784bced9843\&sc\_channel=ps\&ef\_id=CjwKCAjwp6CkBhB\_EiwAlQVyxcW-7lt7SPn1AnahX32vPOCAEtG0fcDA\_uA0N6sH8R\_LGfg0uwcwHxoCPB8QAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!536392622533!e!!g!!aws%20ec2%20instance%20types!11198711716!118263957108) (including the containers running within it), in the DuploCloud **dev01** Tenant. You need the Endpoint to connect to the database from an application running in the EC2 instance.
 
-    <figure><img src="../../.gitbook/assets/AWS_QS_13 (1).png" alt=""><figcaption><p><strong>DUPLODOCS</strong> database <strong>Endpoint</strong> highlighted</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/AWS_QS_13.png" alt=""><figcaption><p><strong>DUPLODOCS</strong> database <strong>Endpoint</strong> highlighted</p></figcaption></figure>
 
 {% hint style="info" %}
 When you place a DuploCloud Service in a live production environment, consider passing the database endpoint, name, and credentials to a DuploCloud Service using [Environment Variables](../use-cases/passing-secrets/passing-config-and-secrets/setting-environment-variables-from-config.md), via [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), or [Kubernetes Secrets](../use-cases/passing-secrets/passing-config-and-secrets/setting-environment-variables-from-config.md#setting-environment-variables-from-a-kubernetes-secret).&#x20;

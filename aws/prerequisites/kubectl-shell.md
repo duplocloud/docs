@@ -27,12 +27,15 @@ A provisioned service named **dockerservices-shell** is created, enabling you to
 
 Optionally, DuploCloud provides just-in-time (JIT) access to both the container shell and the `kubectl` shell directly from your browser.&#x20;
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
-2. Click **Enable Docker Shell**. The **Start Shell Service** pane displays.
-3. From the **Platform** list box, select **Kubernetes**.
-4. From the **Certificate** list box, select a certificate name.
-5. From the **Visibility** list box, select **Public**.&#x20;
-6. Click **Update**.
+In the DuploCloud Portal:
+
+1. In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **Default** Tenant.
+2. Navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
+3. Click **Enable Docker Shell**. The **Start Shell Service** pane displays.
+4. From the **Platform** list box, select **Kubernetes**.
+5. From the **Certificate** list box, select a certificate name.
+6. From the **Visibility** list box, select **Public**.&#x20;
+7. Click **Update**.
 
 <figure><img src="../../.gitbook/assets/AWS_Start_Shell_Service.png" alt=""><figcaption><p><strong>Start Shell Service</strong> pane with <strong>Kubernetes</strong> (ECS) selected for <strong>Platform</strong></p></figcaption></figure>
 
