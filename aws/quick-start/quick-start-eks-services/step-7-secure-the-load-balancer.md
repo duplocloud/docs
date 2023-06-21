@@ -45,7 +45,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 5. In the **Web ACL** list box, select **None**, because you are not connecting a Web Application Firewall.
 6.  Select the **Enable HTTP to HTTPS Redirect**, **Enable Access Logs**, and **Drop Invalid Headers** options.
 
-    <figure><img src="../../../.gitbook/assets/AWS_QS_20 (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_QS_20.png" alt=""><figcaption></figcaption></figure>
 7. Accept the **Idle Timeout** default setting and click **Save**. The **Other Settings** card in the **Load Balancers** tab is updated with your selections.
 
 ## Check your work
