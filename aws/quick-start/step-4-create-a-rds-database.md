@@ -26,7 +26,7 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
 
 In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption></figcaption></figure>
 
 ## Creating an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
 
