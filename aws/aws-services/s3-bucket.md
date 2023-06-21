@@ -51,9 +51,13 @@ From the **S3 Bucket** page, you can set bucket permissions directly in the AWS 
 
 ## Add a custom prefix for S3 buckets
 
-DuploCloud provides the capability to specify a custom prefix for S3.&#x20;
+DuploCloud provides the capability to specify a custom prefix for S3.
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+{% hint style="warning" %}
+**IMPORTANT:** Before you add custom prefixes for S3 buckets, contact the DuploCloud Support Team and ask them to set the `ENABLEAWSRESOURCEMGMTUSINGTAGS` property to`True` in the DuploCloud System. After this property is set, use this procedure to add custom prefixes.
+{% endhint %}
+
+1. IMPORTATIn the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
 3. Click **Add**. The **Add Config** pane displays.
 4. From the **Config Type** list box, select **AppConfig**.
@@ -71,6 +75,4 @@ Avoid specifying system-reserved prefixes such as`duploservices`.
 
 </div>
 
-### Enable tag-based properties in the DuploCloud Portal
-
-To use custom prefixes, ensure that the `ENABLEAWSRESOURCEMGMTUSINGTAGS` property is set to`True` in the DuploCloud System. Please get in touch with DuploCloud Support Team for assistance with this feature.
+###
