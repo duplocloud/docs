@@ -1,3 +1,7 @@
+---
+description: Activating cost allocation tags in DuploCloud AWS
+---
+
 # Apply cost allocation tags
 
 The **duplo-project** cost allocation tag must be activated after you enable IAM access to billing data. Use the same AWS user and account that you used to enable IAM access to activate cost allocation tags.
