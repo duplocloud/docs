@@ -1,15 +1,28 @@
 ---
-description: 'Billing : DuploCloud Node Usage Services List:'
+description: Displaying Node Usage for billing
 ---
 
 # DuploCloud License Usage
 
-* EC2 host count&#x20;
-* ECS service count / 2
-* Lambda Functions / 4
-* Midpoint of Airflow Worker count
+DuploCloud calculates license usage by Node for the following categories:
 
-<figure><img src="../../../.gitbook/assets/bnill-res-all.png" alt=""><figcaption><p>All Resources</p></figcaption></figure>
+* Elastic Compute Cloud
+* Elastic Container Services
+* AWS Lambda Functions
+* Managed Workflows for Apache Airflow
 
-<figure><img src="../../../.gitbook/assets/bnill-res-tenant.png" alt=""><figcaption><p>Tenant-wise Resources</p></figcaption></figure>
+## Viewing Node Usage for billing
 
+1. In the DuploCloud portal, navigate to **Administrator** -> **Billing**. The **Billing** page displays.
+2.  Click the **DuploCloud License Usage** tab.
+
+    <figure><img src="../../../.gitbook/assets/LIC1.png" alt=""><figcaption><p><strong>DuploCloud License Usage</strong> tab on the <strong>Billing</strong> page in the DuploCloud Portal</p></figcaption></figure>
+3.  Click **More Details** in any **License Usage** card for additional breakdown of Node Usage statistics per Tenant.
+
+    <figure><img src="../../../.gitbook/assets/LIC3.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Click the **DuploCloud license documentation** link to download a copy of the license document.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/LIC2.png" alt=""><figcaption><p>Month-view of Node Usage for billing with <strong>DuploCloud license documentation</strong> link highlighted</p></figcaption></figure>
