@@ -31,7 +31,7 @@
   * [Tenant access for users](administrator-tools/access-control/tenant-access.md)
     * [Add Tenant access over a VPN](administrator-tools/access-control/tenant-access/add-tenant-access-over-a-vpn.md)
     * [Read-only access to a Tenant](administrator-tools/access-control/tenant-access/read-only-access-to-a-tenant.md)
-    * [Set Tenant Expiration](administrator-tools/access-control/tenant-access/set-tenant-expiration.md)
+    * [Set Tenant expiration and session duration](administrator-tools/access-control/tenant-access/set-tenant-expiration-and-session-duration.md)
     * [Deleting a Tenant](administrator-tools/access-control/tenant-access/deleting-a-tenant.md)
   * [Cross-Tenant Access](administrator-tools/access-control/allow-cross-tenant-access.md)
   * [Add and Delete VPN access for users](administrator-tools/access-control/add-and-delete-vpn-access-for-users.md)
