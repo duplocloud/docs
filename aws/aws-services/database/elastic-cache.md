@@ -1,13 +1,13 @@
 ---
-description: Create Elastic Cache for Redis database and Memcache memory caching
+description: Create ElastiCache for Redis database and Memcache memory caching
 ---
 
-# Elastic Cache
+# Amazon ElastiCache
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Database.**
 2. Click the **Ecache** tab.
 3. Click **Add**. The **Create a Ecache** pane displays.
-4. Select the Elastic Cache **Type** and complete the required fields based on your type selection.
+4. Select the ElastiCache **Type** and complete the required fields based on your type selection.
 5. Click **Create**.
 
 {% hint style="info" %}
