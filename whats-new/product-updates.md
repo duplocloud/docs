@@ -13,7 +13,7 @@ New product updates will be posted around the 15th of each month.
 * AWS
   * Manage [Tenant expiration and Tenant session durations](../administrator-tools/access-control/tenant-access/set-tenant-expiration-and-session-duration.md).
 * GCP
-  * Support for [Redis database instances](../gcp/gcp-services/databases/aws-redis-database-instance.md).
+  * Support for [Redis database instances](../gcp/gcp-services/databases/redis-database-instance.md).
 
 ### May 2023
 
