@@ -135,6 +135,7 @@
       * [Manage RDS Snapshots](aws/aws-services/database/rds-database/manage-rds-snapshots.md)
       * [Add an RDS read replica](aws/aws-services/database/rds-database/add-an-rds-read-replica/README.md)
         * [Add Aurora RDS replicas](aws/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md)
+      * [Add monitoring interval](aws/aws-services/database/rds-database/add-monitoring-interval.md)
       * [Add parameters in Parameter Groups](aws/aws-services/database/rds-database/add-parameters-in-parameter-groups.md)
   * [Data Pipeline](aws/aws-services/data-pipeline.md)
   * [Elastic File System (EFS)](aws/aws-services/elastic-file-system-efs.md)
