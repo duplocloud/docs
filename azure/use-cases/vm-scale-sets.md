@@ -23,4 +23,6 @@ For more information about VM Scale Sets, see the [Azure Documentation](https://
 9. Specify a **Username** and **Password**.
 10. Click **Add**. The VM Scale Set is created.
 
-<figure><img src="../../.gitbook/assets/Azure_VM_ScaleSet.png" alt=""><figcaption><p>Azure <strong>Add VM Scale Set</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/vmscale1.png" alt=""><figcaption><p>Azure <strong>Add VM Scale Set</strong> page</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/vmscale2.png" alt=""><figcaption><p><strong>VM Scale Set</strong> tab with <strong>scaler-test</strong> set displaying <strong>Status</strong> of <strong>Succeeded</strong></p></figcaption></figure>
