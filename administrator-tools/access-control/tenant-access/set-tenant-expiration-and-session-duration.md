@@ -51,7 +51,7 @@ For more information about IAM roles and session times in relation to a user, ap
 3.  Click **Add**. The **App Config** pane displays.\
 
 
-    <figure><img src="../../../.gitbook/assets/Dy1.png" alt=""><figcaption><p><strong>Add Config</strong> pane to set <strong>Key Maximum Session Duration</strong> for all <strong>Tenants</strong><br></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Dy1 (1).png" alt=""><figcaption><p><strong>Add Config</strong> pane to set <strong>Key Maximum Session Duration</strong> for all <strong>Tenants</strong><br></p></figcaption></figure>
 4. From the **Config Type** list box, select **AppConfig**.
 5. From the **Key** list box, select **Maximum Session Duration**.
 6. From the **Select Duration Hour** list box, select the maximum session time in hours or set a **Custom Duration** in seconds.

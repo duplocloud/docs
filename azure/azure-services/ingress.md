@@ -1,3 +1,7 @@
+---
+description: Adding an Ingress for DuploCloud Azure load balancers
+---
+
 # Ingress
 
 Ingress controllers abstract the complexity of routed Kubernetes application traffic, providing a bridge between Kubernetes services and services that you define.
@@ -85,10 +89,10 @@ Port **80** is configured by default when adding Ingress. If you want to use a c
 3. Click the **Security Group Rules** tab.&#x20;
 4.  Click **Add**. The **Add Infrastructure Security** pane displays.
 
-    <figure><img src="../../.gitbook/assets/Azure_SG_Add_Infra_Security.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/addazuresc.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure>
 5. Define the rule and click **Add**. The rule is added to the **Security Group Rules** list.
 
-<figure><img src="../../.gitbook/assets/AKS_Ingress_80.png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab with rule for port <strong>81</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/addazuresc2.png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab with rule for ports <strong>1-81</strong></p></figcaption></figure>
 
 ## View Ingress
 
