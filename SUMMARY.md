@@ -255,11 +255,8 @@
   * [Configuring GCP Services](gcp/gcp-services/containers.md)
   * [Cloud Armour](gcp/gcp-services/cloud-armour.md)
   * [Databases](gcp/gcp-services/databases/README.md)
-    * [DynamoDB database tables](gcp/gcp-services/databases/dynamodb.md)
-    * [ElastiCache](gcp/gcp-services/databases/elastic-cache.md)
     * [RDS and SQL databases](gcp/gcp-services/databases/rds-and-sql-databases.md)
     * [Redis database instance](gcp/gcp-services/databases/redis-database-instance.md)
-    * [Timestream database](gcp/gcp-services/databases/timestream-database.md)
 * [Storage Buckets](gcp/s3-bucket.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
