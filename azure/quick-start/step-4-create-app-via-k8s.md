@@ -24,7 +24,7 @@ Before creating your DuploCloud Service, ensure that:
 * The [AKS Kubernetes cluster](step-1-infrastructure.md#enabling-the-aks-kubernetes-cluster) is enabled.
 * Tenant **DEV01** is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (2) (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01 (2) (2).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
 
 ## Creating a Service
 

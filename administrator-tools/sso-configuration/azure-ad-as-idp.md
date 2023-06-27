@@ -1,78 +1,60 @@
-# Azure AD as IdP
+---
+description: Configure Single Sign-On for Azure using the Application Deployment Portal
+---
 
-This section describes the steps to configure SSO for DuploCloud using Azure AD as IDP.&#x20;
+# Azure SSO Configuration
 
-## Configuration Steps
+Configure SSO for DuploCloud using the Azure Application Deployment (AD) Portal as an Identity Provider (IDP). To configure Azure SSO, you must:
 
-1\.     App Registration
+* Register your application in the Azure AD Portal.
+* Create a secret for authentication.
+* Assign API Permissions.
 
-2\.    Secret Creation
+## Register your application in the Azure AD Portal
 
-3\.    Assign API Permissions
+1. Log in to the Azure AD Portal as an Administrator.
+2.  In the Azure AD Portal, navigate to **Manage** -> **App Registrations**. The **App registrations** page displays.
 
+    <figure><img src="../../.gitbook/assets/azure_sso_1.png" alt=""><figcaption><p><strong>App Registrations</strong> page with <strong>New registration</strong> button</p></figcaption></figure>
+3. Click **New registration**. The **Register an application** page displays.
+4.  Enter a **Name** for the application, for example, _**duplo-app1**_.
 
+    <figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption><p><strong>Register an Application</strong> page</p></figcaption></figure>
+5. In the **Supported account types** area, select **Accounts in any organizational directory (Any Azure AD directory - Multitenant).**
+6. In the **Redirect UTI** field, select Web and type the DuploCloud URL **https://**_**company**_**.duplocloud.net/app/signin-microsoft** replacing company with your company's DuploCloud deployment.
+7. Click **Register**.
 
-## Step1: App Registration
+Note the **Application** (Client) **ID** for future reference; for example, _**8a6acf76-555e-4782-a8a4-abcd283d889d**_.
 
-As AD Administrator, login to your Azure AD Portal.&#x20;
+## Create a secret for authentication.
 
-1. Browse to _Manage->App Registrations->New registration_
+1.  In the Azure AD Portal, navigate to **Manage** -> **Certificates & secrets**.
 
-<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption><p>App Registration 1</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>Certificates &#x26; secrets</strong> option</p></figcaption></figure>
+2. In the **Client Secret** tab, click **New Client Secret**.
+3. In the **Add a client secret** window, enter a **Description** for the secret.
+4.  In the **Expires** list box, select **12 months** for the expiration duration.
 
-__
+    <figure><img src="../../.gitbook/assets/Screen Shot 2022-11-15 at 6.52.29 PM.png" alt=""><figcaption><p><strong>Add a client secret</strong> window</p></figcaption></figure>
 
-1. Set the name of application, example: duplo-app1
-2. In Supported account types: Select _“Accounts in any organizational directory (Any Azure AD directory - Multitenant)”_
-3. In Redirect URI: Select Web and add DuploCloud URL as below. Make sure to replace company with your company's DuploCloud deployment
+Note the Value displayed in the client secrets tab; for example,  _**hFFC8Q\~z.bHooBGcwftnh2LRgp53M62XJdLIrXxyz**_.
 
-[https://company.duplocloud.net/app/signin-microsoft](https://companyx.duplocloud.net/app/signin-microsoft)
- 
-1. Click on Register.
-2. Note down the Application (Client) ID. example: _8a6acf76-555e-4782-a8a4-abcd283d889d_
-
-<figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
-
-## Step2: Secret Creation
-
-1\. Click on Manage: Certification & Secrets.
-
-<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
-
-2\. In the Client Secret Tab, click on ‘New Client Secret’
-
-<figure><img src="../../.gitbook/assets/Screen Shot 2022-11-15 at 6.52.29 PM.png" alt=""><figcaption></figcaption></figure>
-
-3\. In Add a client Secret window, enter ‘Description’ and select 12 months for ‘Expires’ duration.
-
-4\. Note down the ‘Value’ shown in the client secrets tab. example: hFFC8Q\~z.bHooBGcwftnh2LRgp53M62XJdLIrXxyz
-
-
-
-<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption><p><strong>Client secrets</strong> tab with secret <strong>Value</strong> displayed</p></figcaption></figure>
 
 ## Step3: Assign API Permissions
 
-1. Click on Manage: Add Permissions
+1.  In the Azure AD Portal, navigate to **Manage** -> **API Permissions**.
 
-<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>API Permissions</strong> option</p></figcaption></figure>
+2. Click **Microsoft Graph & Delegated Permissions**. The **Request API Permissions** page displays.
+3.  On the **Select permissions** area of the **Request API Permissions** page, select **openid**, **email,** and **profile**. Add the **User.Read** permission if it is not present by entering **User.Read** in the search box and selecting it from the search results.&#x20;
 
-2\. Select Microsoft Graph & Delegated Permissions
+    <figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption><p><strong>Request API Permissions</strong> page with <strong>Select permissions</strong> area</p></figcaption></figure>
+4. Click **Add permissions**.
+5.  In the **Configured Permissions** area of the **Request API Permissions** page, click **Grant admin consent for Default Directory** and confirm by clicking **Yes**.
 
+    <figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption><p><strong>Configured permissions</strong> area of <strong>Request API Permissions</strong> page</p></figcaption></figure>
 
+## Next Steps
 
-<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
-
-3\. Select: User.Read(if not present), openid, email and profile. Click on Add permissions
-
-4\. Click on the Grant admin consent for Default Directory and select “Yes”.
-
-
-
-<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
-
-## Setup Complete!
-
-Give details of Application ID and Client Secret to DuploCloud to integrate Login Authentication with your Azure AD.
+When setup is complete, supply the **Application ID** and **Client Secret** to DuploCloud to integrate Login Authentication with your Azure AD.

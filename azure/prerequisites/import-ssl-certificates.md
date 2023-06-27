@@ -56,7 +56,7 @@ After you generate the PFX file, sign in to the Azure Portal and access Azure Ke
 8.  On the **Certificates** page, select the certificate from the list, and open the **CURRENT VERSION** of the certificate, as shown below, to obtain the Secret Identifier.&#x20;
 
     <figure><img src="../../.gitbook/assets/SSL_Import5.png" alt=""><figcaption><p>CURRENT VERSION of certificate </p></figcaption></figure>
-9. In the **Certificate Version** form, copy the **Secret Identifier** using the Copy Icon (![](../../.gitbook/assets/copy\_icon.png)).&#x20;
+9. In the **Certificate Version** form, copy the **Secret Identifier** using the Copy Icon (![](<../../.gitbook/assets/copy\_icon (1).png>)).&#x20;
 
 {% hint style="info" %}
 You will paste the ARN when you [configure the certificate in DuploCloud](import-ssl-certificates.md#configuring-the-certificate-in-duplocloud).

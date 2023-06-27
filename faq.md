@@ -33,6 +33,18 @@ Use these FAQ documents to quickly find answers to popular questions about using
 
 No. DuploCloud is a self-hosted solution deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. If the customer desires, DuploCloud can provide a fully managed service to maintain uptime, provide updates, and supply ongoing support.
 
+### What happens during the DuploCloud onboarding process?
+
+1. DuploCloud creates a private Slack channel so your organization can communicate directly with the DuploCloud Support Staff to resolve any issues and answer questions during the onboarding process.
+2. You create a separate AWS account for DuploCloud, so we don't interfere with any pre-existing AWS accounts and configurations.&#x20;
+3. DuploCloud installs the DuploCloud Portal for you and then schedules a call to orient you to the Portal and do additional configuration, such as creating DuploCloud Services, as required.
+4. During the initial call with DuploCloud, you have the option of completing the set-up yourself, with help from our engineers. You can also create some Services and let our engineers set up the rest for you.
+5. After your DuploCloud Portal has been installed and configured, DuploCloud Infrastructures (VPCs) are running, Kubernetes has been enabled and configured, and logging, monitoring, alerting, CI/CD, and Soc2 Controls have been implemented.
+
+Even though the entire onboarding process can take from thirty to seventy (30-70) hours, the DuploCloud staff performs about 90% of the work for you. Feel free to check in with our Support staff at any time with questions or concerns.&#x20;
+
+In addition, during setup, we perform penetration testing and vulnerability assessments for your applications. With our SIEM solution, we also assess the vulnerabilities of the DuploCloud Hosts in the Infrastructure.
+
 ### How is DuploCloud Portal accessing my cloud infrastructure and how is it secured?
 
 DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM) and the VM derives permissions to call the cloud provider using the VM's permissions. For example, in AWS, permissions are derived via an instance profile. In Azure, permissions are derived via managed identity.
