@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Overview](README.md)
+* [Free Trial Edition](free-trial.md)
 * [FAQs](faq.md)
 
 ## WHAT'S NEW
@@ -40,14 +41,14 @@
 * [Kubectl setup](administrator-tools/kubectl-setup/README.md)
   * [Kubectl access for non-administrators](administrator-tools/kubectl-setup/kubectl-access-for-non-administrators.md)
 * [SSO Configuration](administrator-tools/sso-configuration/README.md)
-  * [Azure AD as IdP](administrator-tools/sso-configuration/azure-ad-as-idp.md)
+  * [Azure SSO Configuration](administrator-tools/sso-configuration/azure-ad-as-idp.md)
 
 ## AWS user guide <a href="#aws" id="aws"></a>
 
 * [AWS overview](aws/overview.md)
 * [Container deployments](aws/container-deployments/README.md)
   * [Container orchestrators](aws/container-deployments/container-orchestrators.md)
-  * [Concepts](aws/container-deployments/concepts.md)
+  * [Key DuploCloud concepts](aws/container-deployments/concepts.md)
 * [Prerequisites](aws/prerequisites/README.md)
   * [Route 53 Hosted Zone](aws/prerequisites/route-53-hosted-zone.md)
   * [ACM Certificate](aws/prerequisites/acm-certificate.md)

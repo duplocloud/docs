@@ -6,6 +6,8 @@ description: Key concepts for using DuploCloud with Docker and Azure
 
 While deploying Dockerized applications, familiarize yourself with some key concepts and terminologies.
 
+See [Use Cases](../use-cases/) for a description of DuploCloud Infrastructures and Tenants.
+
 ## Hosts
 
 These are virtual machines. In AKS deployments, they are also called Worker nodes. By default, apps within a tenant are pinned to VMs in the same Tenant. DuploCloud has the ability to deploy Hosts in a separate Tenant and apps in other Tenants that leverage these Hosts. This is called Shared Host Model and is not applicable to Azure.

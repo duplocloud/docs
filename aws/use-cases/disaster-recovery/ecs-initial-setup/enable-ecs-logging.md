@@ -28,7 +28,7 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 
 1.  In the DuploCloud Portal, in the **Tenant** list box at the top left of the DuploCloud Portal, ensure that the Tenant for which you [created a logging container](enable-ecs-logging.md#creating-an-ecs-logging-container) is selected. In the example below, the selected Tenant is named **dev01**.
 
-    <figure><img src="../../../../.gitbook/assets/tenant_dev01 (3) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/tenant_dev01 (3).png" alt=""><figcaption></figcaption></figure>
 2. Navigate to **Administrator** -> **Diagnostics -> Audit**. The **Audit** page displays.
 3. In the **Deployment Status** area, select both **Create Audit Indices** and **Update default plan config**. **Completed** displays to indicate that audit configuration is successful.
 
