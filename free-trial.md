@@ -31,7 +31,7 @@ To participate in the free 30-day DuploCloud trial, you must have:
 1.  Navigate to the [free trial sign-up form](https://duplocloud.com/free-trial/) and complete it using your corporate email address. Select the checkbox to consent to receive communications from DuploCloud so that we can store and process your personal information within the 30-day trial period.
 
     <figure><img src=".gitbook/assets/FTX0.png" alt=""><figcaption><p><strong>DuploCloud 30-day Trial</strong> sign-up form</p></figcaption></figure>
-2.  Click **Submit**. A **Thank you for signing up** page is displayed with instructions to check your email inbox for account activation and setup instructions. The page also contains a link to the [AWS Quick Start Guide](aws/quick-start/).
+2.  Click **Register for free trial**. A **Thank you for signing up** page is displayed with instructions to check your email inbox for account activation and setup instructions. The page also contains a link to the [AWS Quick Start Guide](aws/quick-start/).
 
     <figure><img src=".gitbook/assets/FTX1.png" alt=""><figcaption><p><strong>Thank you for signing up</strong> page displays after successful sign-up</p></figcaption></figure>
 
@@ -68,9 +68,9 @@ The AWS CloudFormation must be running in the **us-west-2** region. Please do no
     <figure><img src=".gitbook/assets/FTX5.png" alt=""><figcaption><p>AWS Portal <strong>Stacks</strong> page with <strong>Stacks</strong> tasks highlighted, displaying status <strong>CREATE_COMPLETE</strong></p></figcaption></figure>
 
 
-6.  In the AWS Portal, click your AWS Profile _username_, to the left of the **Oregon** region name. The AWS Profile list box expands, listing your **Account ID**.
+6.  In the AWS Portal, click your AWS Profile _username_, to the right of the **Oregon** region name. The AWS Profile list box expands, listing your **Account ID**.
 
-    <figure><img src=".gitbook/assets/FT4 (1).png" alt=""><figcaption><p>AWS Profile list box expanded with <em>username</em> and <strong>Account ID</strong> highlighted</p></figcaption></figure>
+    <figure><img src=".gitbook/assets/FT4.png" alt=""><figcaption><p>AWS Profile list box expanded with <em>username</em> and <strong>Account ID</strong> highlighted</p></figcaption></figure>
 7. From the AWS Profile list box, copy your AWS **Account ID** to the clipboard by clicking the Copy Icon ( <img src=".gitbook/assets/copy_icon.png" alt="" data-size="line"> ).
 8. Return to the **Thank You for signing up** page to complete the setup.
 9.  In Step **3** on the **Thank You for signing up** page, paste the AWS **Account ID** that you copied to your clipboard. \

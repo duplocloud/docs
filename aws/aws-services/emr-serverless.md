@@ -33,7 +33,7 @@ To create EMR Serverless applications you first need to create an EMR studio.
 9.  Select the EMR Studio name in the **Name** column. The **EMR Studio** page displays. View the **Details** of the EMR Serverless Studio.
 
     <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>EMR Studio page with <strong>Basic</strong> and <strong>Details</strong> tabs.</p></figcaption></figure>
-10. Navigate to the **EMR Serverless** tab and click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1).png" alt="" data-size="line"> icon in the **Actions** column. Use the **Actions** Menu to delete the studio if needed, as well as to view the studio in the AWS Console.&#x20;
+10. Navigate to the **EMR Serverless** tab and click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1) (1).png" alt="" data-size="line"> icon in the **Actions** column. Use the **Actions** Menu to delete the studio if needed, as well as to view the studio in the AWS Console.&#x20;
 
 
 
@@ -57,7 +57,7 @@ Before you begin to create a job to run the application, clone an instance of it
 
 ### Cloning an application
 
-1.  On the EMR Serverless page, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1).png" alt="" data-size="line"> icon in the **Actions** column and select **Clone**.
+1.  On the EMR Serverless page, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1) (1).png" alt="" data-size="line"> icon in the **Actions** column and select **Clone**.
 
     <figure><img src="../../.gitbook/assets/EMRC6.png" alt=""><figcaption><p><strong>Actions</strong> menu with <strong>Clone</strong> option on <strong>EMR Serverless</strong> tab.</p></figcaption></figure>
 2. Make any desired changes while advancing through the **Basics**, **Capacity**, **Limits**, and **Configure** steps, clicking **Next** to advance the wizard to the next page. DuploCloud gives your cloned app a unique generated name by default (**app1-c-833**, in this example).
