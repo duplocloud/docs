@@ -124,7 +124,7 @@
     * [GP3 Storage Class](aws/aws-services/storage/gp3-storage-class.md)
   * [API gateway](aws/aws-services/api-gateway.md)
   * [Batch](aws/aws-services/batch.md)
-  * [CloudWatch Eventbridge](aws/aws-services/cloud-watch.md)
+  * [Eventbridge](aws/aws-services/cloud-watch.md)
   * [CloudFront](aws/aws-services/cloudfront.md)
   * [Databases](aws/aws-services/database/README.md)
     * [Amazon ElastiCache](aws/aws-services/database/elastic-cache.md)
