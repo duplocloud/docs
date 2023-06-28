@@ -57,4 +57,4 @@ Verify that the **Other Settings** card contains the selections you made above f
 * **Enable Access Logs** - `True`
 * **Drop Invalid Headers** - `True`
 
-<figure><img src="../../../.gitbook/assets/AWS_QS_26.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>Other Settings</strong> card, including set options </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AWS_QS_26 (1).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>Other Settings</strong> card, including set options </p></figcaption></figure>
