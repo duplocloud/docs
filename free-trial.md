@@ -70,7 +70,7 @@ The AWS CloudFormation must be running in the **us-west-2** region. Please do no
 
 6.  In the AWS Portal, click your AWS Profile _username_, to the left of the **Oregon** region name. The AWS Profile list box expands, listing your **Account ID**.
 
-    <figure><img src=".gitbook/assets/FT4.png" alt=""><figcaption><p>AWS Profile list box expanded with <em>username</em> and <strong>Account ID</strong> highlighted</p></figcaption></figure>
+    <figure><img src=".gitbook/assets/FT4 (1).png" alt=""><figcaption><p>AWS Profile list box expanded with <em>username</em> and <strong>Account ID</strong> highlighted</p></figcaption></figure>
 7. From the AWS Profile list box, copy your AWS **Account ID** to the clipboard by clicking the Copy Icon ( <img src=".gitbook/assets/copy_icon.png" alt="" data-size="line"> ).
 8. Return to the **Thank You for signing up** page to complete the setup.
 9.  In Step **3** on the **Thank You for signing up** page, paste the AWS **Account ID** that you copied to your clipboard. \

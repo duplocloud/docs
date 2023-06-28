@@ -29,7 +29,6 @@ Before creating a Service, verify that you accomplished the tasks in the previou
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
 * The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
-* An RDS database with the name [**DUPLODOCS** has been created](../step-4-create-a-rds-database.md).
 * A host with the name [**host01** has been created](step-3-create-host.md).
 
 ### Select the Tenant you created

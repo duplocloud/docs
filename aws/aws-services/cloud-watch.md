@@ -14,7 +14,7 @@ DuploCloud provides a way to automatically install these agents on all the hosts
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.
 2. Click the **EventBridge** tab.
-3.  Click **Add**. The **Add CloudWatch EventBridge Rule** page displays; or to update an existing rule, select the       ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.
+3.  Click **Add**. The **Add CloudWatch EventBridge Rule** page displays; or to update an existing rule, select the       ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2).png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.
 
     <figure><img src="../../.gitbook/assets/CW3.png" alt=""><figcaption><p><strong>Add EventBridge Rule</strong> page</p></figcaption></figure>
 4. In the **Rule Name** field, specify or change the rule name.

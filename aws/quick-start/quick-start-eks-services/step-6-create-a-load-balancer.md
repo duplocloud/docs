@@ -17,7 +17,6 @@ Before creating a Load Balancer, verify that you accomplished the tasks in the p
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
 * The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
-* An RDS database with the name [**DUPLODOCS** has been created](../step-4-create-a-rds-database.md).
 * A Host with the name [**host01** has been created](step-3-create-host.md).
 * A Service with the name [**demo-service** has been created](step-5-create-app-via-k8s.md).
 
@@ -43,7 +42,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 8. From the **Visibility** list box, select **Public**.
 9. From the **Application Mode** list box, select **Docker Mode**.
 10. Type **/** (forward-slash) in the **Health Check** field to indicate that the cluster we want Kubernetes to perform Health Checks on is located at the `root` level.
-11. In the **Backend Protocol** list box, select **HTTPS**.
+11. In the **Backend Protocol** list box, select **HTTP**.
 12. Click **Add**. The Load Balancer is created and initialized. Monitor the **LB Status** card on the **Services** page. When the Load Balancer is ready for use the **LB Status** card displays **Ready**.&#x20;
 
 ## Check your work

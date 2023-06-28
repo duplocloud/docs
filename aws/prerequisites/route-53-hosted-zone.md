@@ -1,5 +1,5 @@
 ---
-description: Obtaining a Route 53 hosted zone to program DNS entries
+description: Creating a Route 53 hosted zone to program DNS entries
 ---
 
 # Route 53 Hosted Zone

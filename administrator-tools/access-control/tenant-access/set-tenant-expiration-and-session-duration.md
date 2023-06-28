@@ -58,7 +58,7 @@ For more information about IAM roles and session times in relation to a user, ap
 7.  Click **Submit**. The **Maximum Session Duration Key** and **Value** are displayed in the **System Config** tab. Note that the **Value** you set for maximum session time in hours is displayed in seconds. You can **Delete** or **Update** the setting in the row's **Actions** menu. \
 
 
-    <figure><img src="../../../.gitbook/assets/Dy2.png" alt=""><figcaption><p><strong>System Config</strong> tab on <strong>System Settings</strong> page displaying <strong>MaximumSessionDuration</strong> for all Tenants</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Dy2 (1).png" alt=""><figcaption><p><strong>System Config</strong> tab on <strong>System Settings</strong> page displaying <strong>MaximumSessionDuration</strong> for all Tenants</p></figcaption></figure>
 
 ### Configuring session duration for a single Tenant
 
