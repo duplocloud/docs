@@ -81,7 +81,7 @@ To accomplish this, you:
 [Add a Load Balancer Listener with the type **Target Group Only**](load-balancers.md#adding-a-load-balancer-listener). You can create a Load Balancer Listener with a type of **Target Group** **Only** for Docker Native, EKS Enabled, and ECS Services based on your application requirement. &#x20;
 
 {% hint style="success" %}
-Find the name of the created Target Group but clicking the Info Icon ( <img src="../../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`.
+Find the name of the created Target Group but clicking the Info Icon ( <img src="../../.gitbook/assets/info_tip_black (2).png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/AWS_Target3.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for <strong>Target Group Only Type</strong></p></figcaption></figure>
