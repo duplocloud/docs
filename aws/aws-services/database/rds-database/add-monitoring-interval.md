@@ -10,7 +10,7 @@ Add or update a monitoring interval for an RDS database configuration.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
 2. Click the **RDS** tab.
-3. In the row for the RDS database that you want to update, click the ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (4).png" alt="" data-size="line"> ) icon in the **Actions** column, and select **Update Monitoring Interval**. The **Update Monitoring Interval** pane displays.
+3. In the row for the RDS database that you want to update, click the ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon in the **Actions** column, and select **Update Monitoring Interval**. The **Update Monitoring Interval** pane displays.
 4. From the **Monitoring Internal** list box, select an interval, in seconds. To remove a previously set interval, select **Disable**.
 5. Click **Submit**.
 
