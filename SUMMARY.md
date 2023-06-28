@@ -297,6 +297,5 @@
 
 ## Extras
 
-* [Deploy a DuploCloud Portal in AWS](extras/deploy-a-duplocloud-portal-in-aws.md)
 * [Creating advanced functions](extras/creating-advanced-functions.md)
 * [BYOH](extras/byoh.md)
