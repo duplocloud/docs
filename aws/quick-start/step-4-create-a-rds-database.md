@@ -2,10 +2,10 @@
 description: Creating an RDS database to integrate with your DuploCloud Service
 ---
 
-# Step 3: Create an RDS database
+# Step 3: Create an RDS database (optional)
 
 {% hint style="info" %}
-Creating an RDS database is not essential to running a DuploCloud Service, although it is used in this tutorial to integrate with the Service you will create later.
+Creating an RDS database is not essential to running a DuploCloud Service. However, as most services also incorporate an RDS, it is included to demonstrate the ease of creating a database in DuploCloud.
 {% endhint %}
 
 An [AWS RDS](https://aws.amazon.com/free/database/?trk=83add82a-8e52-4837-bc73-c323da62d78c\&sc\_channel=ps\&ef\_id=CjwKCAjwp6CkBhB\_EiwAlQVyxYi50yWfBj5SSxs6-gaDSqftnxbBO6Plfy0pYWyyxrZ3zI0goU6bLRoCGkQQAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!610000101516!e!!g!!amazon%20database%20hosting!11086562318!108339552363) is a managed Relational Database Service that is easy to set up and maintain in DuploCloud for AWS public cloud environments. RDSs support many databases including MySQL, PostgreSQL, MariaDB, Oracle BYOL, or SQL Server. &#x20;
@@ -26,7 +26,7 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
 
 In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption></figcaption></figure>
 
 ## Creating an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
 
@@ -48,7 +48,7 @@ DuploCloud prepends **DUPLO** to the name of your RDS database instance.
 | **User password**       | _`YOUR_DUPLOCLOUD_ADMIN_PASSWORD`_  |
 | **Rds Engine**          | `MySQL`                             |
 | **Rds Engine Version**  | _`LATEST_AVAILABLE_VERSION`_        |
-| **Rds Instance Size**   | `db.t4g.small`                      |
+| **Rds Instance Size**   | `db.t4g.medium`                     |
 | **Storage size in GB**  | `20`                                |
 
 ## Validating RDS database creation <a href="#1-toc-title" id="1-toc-title"></a>

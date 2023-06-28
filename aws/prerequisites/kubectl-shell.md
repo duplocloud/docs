@@ -48,7 +48,7 @@ Now you can begin using the Kubernetes (K8s) shell from the DuploCloud Portal fo
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
 2. Select a Service from the **Name** column.
 3. Click the **Containers** tab.
-4. To display the shell for any container, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
+4. To display the shell for any container, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
 5.  Select **Container Shell** or **Host Shell** from the **Actions** menu. The container or host shell launches in AWS Systems Manager.&#x20;
 
     <figure><img src="../../.gitbook/assets/AWS_Kubectl_Shell_service_shell.png" alt=""><figcaption><p><strong>Container Shell</strong> and <strong>Host Shell</strong> launch options in the <strong>Actions</strong> column of the <strong>Containers</strong> tab</p></figcaption></figure>
@@ -59,7 +59,7 @@ You can also view the  ECS task shell.&#x20;
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**, displaying the **Services** page.
 2. Click the **Tasks** tab.
-3. To display the ECS task shell for any task, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
+3. To display the ECS task shell for any task, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
 4. A browser launches to give you access to the ECS task shell.
 
 <figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p><strong>ECS task shell</strong> option in the <strong>Actions</strong> menu of the <strong>Tasks</strong> tab</p></figcaption></figure>

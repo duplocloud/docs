@@ -24,7 +24,7 @@ Before starting this tutorial:
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
 2. Click **Add**. The **Add Infrastructure** page displays.
 3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.&#x20;
-4. Select either **Enable EKS** or **Enable ECS Cluster** options.
+4. Select either **Enable EKS** or **Enable ECS Cluster** options. You will follow different paths in the tutorial for creating Services with [EKS](quick-start-eks-services/), [ECS](quick-start-ecs-services/), or [DuploCloud Docker](quick-start-duplocloud-docker-services/).
 5. Click **Create** to create the Infrastructure. It may take up to half an hour to create the Infrastructure. While the Infrastructure is being created, a **Pending** status displays in the Infrastructure page **Status** column, often with additional information about what part of the Infrastructure DuploCloud is currently creating. When creation completes, a status of **Complete** displays.&#x20;
 
 DuploCloud begins creating and configuring your IInfrastructure and EKS/ECS clusters using Kubernetes.&#x20;
