@@ -34,7 +34,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 3.  Click the **Load Balancers** tab. The ALB Load Balancer configuration is displayed.\
 
 
-    <figure><img src="../../../.gitbook/assets/AWS_QS_26.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card </p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_QS_26 (1).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card </p></figcaption></figure>
 
 
 4. In the **DNS Name** card, click **Edit**. The prefix in the DNS Name is editable.

@@ -28,9 +28,23 @@ Refer to the [AWS Documentation](https://docs.aws.amazon.com/AmazonECR/latest/us
 
 ## Configuring Lambda with Container Images
 
-1. Follow the steps for [creating a Lambda Function](./), specifying **Image** in the Package Name field.
-2. In the **Image URL** field, enter the URL of the image.
-3.  Click **Submit**.
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Serverless**.
+2. Click the **Lambda** tab. The **Lambda Function** page displays.
+3.  Click **Add**. The **Create a Lambda Function** page displays.\
 
-    ![Create a Lambda Function page](<../../../.gitbook/assets/image (4) (3) (1).png>)
+
+    ![Create a Lambda Function page using Type Image
+    ](<../../../.gitbook/assets/L9 (1).png>)
+4. In the **Name** field, enter the name of your Lambda Function.
+5. In the **Description** field, enter a useful description of the function.
+6. From the **Package Type** list box, select **Image**. For type **Zip**, see the [Lambda Functions](./) topic.
+7. Optionally, enter an **Image Configuration**. Refer to the informational ToolTip ( <img src="../../../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for examples.
+8. In the **Image URL** field, enter the URL of the image.
+9. Click **Submit**. The Lambda function is created.
+10. On the **Lambda Function** page, from the **Name** column, select the function you created.
+11. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
+
+
+    <figure><img src="../../../.gitbook/assets/L11.png" alt=""><figcaption><p><strong>Actions</strong> menu on the selected <strong>Lambda Function</strong> page</p></figcaption></figure>
+12. Test the function using the AWS Console.
 

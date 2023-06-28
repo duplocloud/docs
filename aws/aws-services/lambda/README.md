@@ -26,17 +26,21 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 2. Click the **Lambda** tab. The **Lambda Function** page displays.
 3.  Click **Add**. The **Create a Lambda Function** page displays.
 
-    ![Create a Lambda Function page](../../../.gitbook/assets/L1.png)
+    <figure><img src="../../../.gitbook/assets/L10.png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page using <strong>Type Zip</strong></p></figcaption></figure>
 4. In the **Name** field, enter the name of your Lambda Function.
-5. From the **Runtime** list box, select the runtime engine for your programming language.
-6. In the **Function Handler** field, enter the name of the method within your code that Lambda calls to execute your function. This is required if the deployment package type is a `Zip` file archive.
-7. In the **Function Package** field, enter the S3 key of an object containing the function's deployment package.
-8. Click **Submit**. The Lambda Function is created.
-9. On the **Lambda Function** page, from the **Name** column, select the function you created.
-10. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.
+5. In the **Description** field, enter a useful description of the function.
+6. From the **Package Type** list box, select **Zip**. For type **Image**, see the [Configure Lambda with Container Images](create-lambda-using-container-image.md) topic.
+7. In the **Runtime** field, enter the runtime for the programming language you are using.
+8. In the **Function Handler** field, enter the method name that Lambda calls to execute your function.&#x20;
+9. Click **Submit**. The Lambda Function is created.
+10. On the **Lambda Function** page, from the **Name** column, select the function you created.
+11. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
 
-    <figure><img src="../../../.gitbook/assets/L2 (1).png" alt=""><figcaption><p><strong>Actions</strong> menu on the selected Lambda Function page</p></figcaption></figure>
-11. Test the function using the AWS Console.
+
+    <figure><img src="../../../.gitbook/assets/L11 (1).png" alt=""><figcaption><p><strong>Actions</strong> menu on the selected <strong>Lambda Function</strong> page</p></figcaption></figure>
+
+
+12. Test the function using the AWS Console.
 
 ### Integrating with other resources <a href="#2-toc-title" id="2-toc-title"></a>
 
