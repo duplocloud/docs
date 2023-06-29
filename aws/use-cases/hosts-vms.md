@@ -20,6 +20,10 @@ Add a Virtual Machine Host. DuploCloud AWS supports **EC2**, **ASG**, and **BYOH
 3. Click the tab that corresponds to the type of Host you want to create (**EC2**, **ASG**, or **BYOH**).
 4. Click **Add**.
 
+{% hint style="danger" %}
+If you add custom user data, using the **Base64 Data** field and the EC2 instance of ASG is for EKS, your custom data removes the code needed to start the host and the host cannot connect to EKS. Instead, [use this procedure](hosts-vms.md#adding-custom-user-data-for-ec2-and-asg-hosts-in-eks) to add your custom user data directly to EKS.
+{% endhint %}
+
 ![Add Host page for EC2](<../../.gitbook/assets/image (17) (1) (1).png>)
 
 While all the lower-level details like IAM roles, Security groups, and others are abstracted away from the user (as they are derived from the Tenant), standard application-centric inputs are required to be provided. This includes a Name, Instance size, Availability Zone choice, Disk size, Image ID, etc. Most of these are optional, some are published as a list of user-friendly choices by the admin in the plan (Image or AMI ID is one such example). Other than these AWS centric parameter there is two DuploCloud platform-specific value to be provided:
@@ -40,3 +44,21 @@ If a VM is being used for container orchestration make sure that the Image ID  c
 ### Connect your EC2 Instance
 
 If you want to connect your EC2 instance remotely using SSH, [follow these steps](../aws-services/virtual-machines/ssh-ec2-instance.md).
+
+## Adding custom user data for EC2 and ASG hosts in EKS
+
+If you add custom user data, using the **Base64 Data** field and the EC2 instance of ASG is for EKS, your custom data removes the code needed to start the host and the host cannot connect to EKS.
+
+To avoid this issue, add the following `bash` code directly in EKS using the AWS Portal, replacing:
+
+* MYINFRA with the name of the DuploCloud Infrastructure, and
+* MYTENANT with the name of the DuploCloud Tenant
+
+```bash
+#!/bin/bash
+set -o xtrace
+/etc/eks/bootstrap.sh duploinfra-MYINFRA --kubelet-extra-args '--node-labels=tenantname=duploservices-MYTENANT'
+
+# Custom user data (code)
+echo "hello world"
+```
