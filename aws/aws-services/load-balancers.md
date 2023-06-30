@@ -122,7 +122,7 @@ View the rules you defined for any Load Balancer
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose rules you want to view.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../.gitbook/assets/image (12).png" alt="" data-size="line"> ) and select **Manage Rules**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../.gitbook/assets/image (12) (6).png" alt="" data-size="line"> ) and select **Manage Rules**.
 
 ## Updating Target Group attributes
 
