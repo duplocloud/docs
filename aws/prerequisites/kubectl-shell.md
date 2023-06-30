@@ -55,12 +55,11 @@ Now you can begin using the Kubernetes (K8s) shell from the DuploCloud Portal fo
 
 ## View the ECS task shell &#x20;
 
-You can also view the  ECS task shell.&#x20;
+You can also view the ECS task shell and select the container shell to which you want to connect.&#x20;
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**, displaying the **Services** page.
 2. Click the **Tasks** tab.
 3. To display the ECS task shell for any task, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2).png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
-4. A browser launches to give you access to the ECS task shell.
+4. Select **Console** for AWS Console access, **Logs** to browse log data, or a **container task shell** of your choice. A browser launches to give you access to the resource you select.
 
-<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption><p><strong>ECS task shell</strong> option in the <strong>Actions</strong> menu of the <strong>Tasks</strong> tab</p></figcaption></figure>
-
+<figure><img src="../../.gitbook/assets/ecst.png" alt=""><figcaption><p><strong>ECS task shell</strong> option in the <strong>Actions</strong> menu of the <strong>Tasks</strong> tab</p></figcaption></figure>
