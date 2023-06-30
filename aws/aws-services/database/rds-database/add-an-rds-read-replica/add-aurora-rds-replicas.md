@@ -10,7 +10,7 @@ Aurora database replica setup is slightly different from [adding an RDS read rep
 
 1. [Create an Aurora RDS database](../).
 2. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
-3. In the **RDS** tab, click the ( <img src="../../../../../.gitbook/assets/image (12).png" alt="" data-size="line"> ) icon in the **Actions** column and select **Add Replica**. The **Add Replica** pane displays.
+3. In the **RDS** tab, click the ( <img src="../../../../../.gitbook/assets/image (12) (6).png" alt="" data-size="line"> ) icon in the **Actions** column and select **Add Replica**. The **Add Replica** pane displays.
 
 Follow one of these procedures to complete the serverless and MySQL replicas setup.
 

@@ -28,14 +28,14 @@
 ## Administrator Tools
 
 * [Access control](administrator-tools/access-control/README.md)
-  * [Add, edit, or delete a user](administrator-tools/access-control/add-edit-or-delete-a-user.md)
+  * [User access to DuploCloud](administrator-tools/access-control/add-edit-or-delete-a-user.md)
   * [Tenant access for users](administrator-tools/access-control/tenant-access.md)
     * [Add Tenant access over a VPN](administrator-tools/access-control/tenant-access/add-tenant-access-over-a-vpn.md)
     * [Read-only access to a Tenant](administrator-tools/access-control/tenant-access/read-only-access-to-a-tenant.md)
     * [Set Tenant expiration and session duration](administrator-tools/access-control/tenant-access/set-tenant-expiration-and-session-duration.md)
+    * [Cross-Tenant Access](administrator-tools/access-control/tenant-access/cross-tenant-access.md)
     * [Deleting a Tenant](administrator-tools/access-control/tenant-access/deleting-a-tenant.md)
-  * [Cross-Tenant Access](administrator-tools/access-control/allow-cross-tenant-access.md)
-  * [Add and Delete VPN access for users](administrator-tools/access-control/add-and-delete-vpn-access-for-users.md)
+  * [VPN access for users](administrator-tools/access-control/add-and-delete-vpn-access-for-users.md)
   * [Resolving DNS failures](administrator-tools/access-control/resolving-dns-failures.md)
   * [API tokens](administrator-tools/access-control/api-tokens.md)
 * [Kubectl setup](administrator-tools/kubectl-setup/README.md)
