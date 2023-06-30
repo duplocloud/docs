@@ -1,15 +1,58 @@
+---
+description: Create an Amazon Elastic File System (EFS) from the DuploCloud Portal
+---
+
 # Elastic File System (EFS)
 
-Create an Amazon Elastic File System (EFS)  from DuploCloud Portal:
+Amazon Elastic File System (Amazon EFS) is a scalable, fully managed file storage service. It offers a simple and scalable file storage solution for use with AWS cloud services and on-premises resources. It is designed to provide shared file storage for multiple instances, enabling concurrent access, as well.
 
-Navigate to  **DevOps** > **Storage** > **Elastic File System**
+See the [AWS Documentation](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
 
-![](<../../.gitbook/assets/image (24) (3).png>)
+## Creating an EFS in the DuploCloud Portal
 
-Users can view EFS details like _File System ID_, _Mount Target Details_ and _Metered Size_ under the Details section of the EFS resource
+1. In the DuploClod Portal, navigate to **DevOps ->** **Storage.**
+2. Click the **EFS** tab.&#x20;
+3.  Click **Add**. The **Add Elastic File System** page displays.\
 
-![EFS Details](<../../.gitbook/assets/image (9) (4).png>)
 
-User can also view the Mount Targets and Access Points details.
+    ![Add Elastic File System page](<../../.gitbook/assets/image (24) (3).png>)
 
-![Mount Target Details Screen](<../../.gitbook/assets/image (8).png>)
+
+4. In the **Name** field, enter a name for the EFS you want to create.
+5. In the **Creation Token** field, enter a string of up to 64 ASCII characters.
+6. From the **Performance Mode** list box, select **General** or **Max I/O**. Select General for most file systems. Selecting **Max I/O** allows scaling to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. You can not change this setting after the file system has been created.&#x20;
+7. From the **Throughput Mode** list box, select **Bursting** or **Provisioned**. If you select Provisioned, you must also set a value from **1** to **1024** for **Provisioned Throughput (in MiB)**. After you create the file system, you can decrease the file system's throughput in Provisioned mode or change between the throughput modes, as long as more than 24 hours have passed since the last decrease in throughput or throughput mode change.
+8.  Change other defaults as needed as click **Create**. The EFS is created and displayed in the **EFS** tab. Select the EFS from the **Name** column and view the configuration in the **Details** tab.\
+
+
+    ![EFS Details](<../../.gitbook/assets/image (9) (4).png>)
+
+{% hint style="info" %}
+**Max I/O** mode is not supported on file systems using [One Zone storage classes](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html).
+{% endhint %}
+
+Information about EFS **Mount Targets** and **Access Points** is available in their respective tabs.
+
+![Mount Target tab details](<../../.gitbook/assets/image (8).png>)
+
+## Updating EFS Lifecycle Policies
+
+You can update the policies for EFS Lifecycle management in the DuploCloud Portal. See the [AWS Documentation](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
+
+1. In the DuploClod Portal, navigate to **DevOps ->** **Storage.**
+2. Click the **EFS** tab.&#x20;
+3.  Select the EFS from the **Name** column. The EFS page displays.\
+
+
+    <figure><img src="../../.gitbook/assets/efs_lc1.png" alt=""><figcaption><p>EFS page with <strong>Actions</strong> menu and <strong>Update Lifecycle Policies</strong> highlighted</p></figcaption></figure>
+
+
+4.  From the **Actions** menu, select **Update Lifecycle Policies**. The **Update EFS Lifecycle Policies** pane displays.
+
+    <figure><img src="../../.gitbook/assets/efs_lc2.png" alt=""><figcaption><p><strong>Update EFS Lifecycle Policies</strong> pane</p></figcaption></figure>
+5. From the **Transition to IA** list box, select the time duration (in **days**) to elapse before transitioning files to the IA storage class.
+6. Optionally, select **Transition to Primary Storage Class**, if appropriate.
+7.  Click **Submit**. The EFS Lifecycle Policies are updated and can be viewed in the **Lifecycle Policies** tab.\
+
+
+    <figure><img src="../../.gitbook/assets/efs_lc3.png" alt=""><figcaption><p><strong>Lifecycle Policies</strong> tab</p></figcaption></figure>
