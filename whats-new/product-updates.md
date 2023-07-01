@@ -12,8 +12,15 @@ New product updates will be posted around the 15th of each month.
 
 * AWS
   * Manage [Tenant expiration and Tenant session durations](../administrator-tools/access-control/tenant-access/set-tenant-expiration-and-session-duration.md).
+  * Set a [monitoring interval for an RDS](../aws/aws-services/database/rds-database/add-monitoring-interval.md) database.
+  * Add [custom Lambda image configurations](../aws/aws-services/lambda/create-lambda-using-container-image.md) and URLs.
+  * Enable [Object Lock in S3 Buckets](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
+  * Update [Lifecycle Policies for EFS storage](../aws/aws-services/elastic-file-system-efs.md#updating-efs-lifecycle-policies).
+  * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DUploCloud Portal.
 * GCP
   * Support for [Redis database instances](../gcp/gcp-services/databases/redis-database-instance.md).
+* General updates
+  * **Last Login** card available for determining the last user sign-in when [viewing user access](../administrator-tools/access-control/add-edit-or-delete-a-user.md#view-users).
 
 ### May 2023
 
