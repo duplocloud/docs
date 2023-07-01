@@ -1,5 +1,5 @@
 ---
-description: Use CloudWatch in AWS to collect and display real-time event data
+description: Collect and display real-time event data in AWS with DuploCloud
 ---
 
 # Eventbridge
@@ -10,20 +10,18 @@ By default, the metrics for a resource are available on the Metrics page in Dupl
 
 DuploCloud provides a way to automatically install these agents on all the hosts whenever they are provisioned. For more information, refer to the DuploCloud Security White Paper _PCI and HIPAA Compliance with DuploCloud_, and read the **General** section, **Agent Models**, to learn about installing agents for compliance controls and security frameworks[.](https://portal.duplocloud.net/compliance/Implementation.html?\_\_hstc=199910065.5cb100958892546d1fc484f311cab1cc.1640799817379.1643935000925.1643939246257.67&\_\_hssc=199910065.5.1643939246257&\_\_hsfp=29941011#agent-modules)
 
-## Adding and updating a EventBridge rule
+## Adding and updating an EventBridge rule
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.
 2. Click the **EventBridge** tab.
-3.  Click **Add**. The **Add CloudWatch EventBridge Rule** page displays; or to update an existing rule, select the       ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1).png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.
+3.  Click **Add**. The **Add EventBridge Rule** page displays; or to update an existing rule, select the       ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1).png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.
 
-    <figure><img src="../../.gitbook/assets/CW3.png" alt=""><figcaption><p><strong>Add EventBridge Rule</strong> page</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/ebr1.png" alt=""><figcaption><p><strong>Add EventBridge Rule</strong> page</p></figcaption></figure>
 4. In the **Rule Name** field, specify or change the rule name.
 5. In the **Description** field, specify or change the rule description.
 6. In the **Schedule Expression** field, enter or edit the interval for which you want this rule to run. Use the format: **rate(**_x_ _interval_**)**, where x is a numeric value and _interval_ is **seconds**, **minutes**, **hours**, or **days**. Ensure that you include a blank space between the numeric value _x_ and the _interval_.
-7. From the State list box, select **ENABLED**.
+7. From the State list box, select **Enabled**.
 8.  Click **Submit**. The rule is displayed in the **EventBridge** tab.
-
-    <figure><img src="../../.gitbook/assets/CW4.png" alt=""><figcaption><p><strong>EventBridge</strong> tab with CloudWatch EventBridge rule <strong>ENABLED</strong></p></figcaption></figure>
 
 
 
@@ -45,5 +43,5 @@ You define targets and associated types in DuploCloud. DuploCloud supports types
 8. In the **Task Version** field, enter a numeric version number.
 9.  Click **Submit**. The Target you added is displayed in the **Target** tab.
 
-    <figure><img src="../../.gitbook/assets/CW6.png" alt=""><figcaption><p><strong>Target</strong> tab for a CloudWatch EventBridge rule displaying targets for <strong>Target Type</strong> <strong>ECS Task</strong> and <strong>Lambda</strong></p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/CW6.png" alt=""><figcaption><p><strong>Target</strong> tab for an EventBridge rule displaying targets for <strong>Target Type</strong> <strong>ECS Task</strong> and <strong>Lambda</strong></p></figcaption></figure>
 

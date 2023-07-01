@@ -95,7 +95,7 @@ The AWS CloudFormation must be running in the **us-west-2** region. Please do no
 
 12. The DuploCloud Portal launches, set to the **Default** Tenant. &#x20;
 
-<figure><img src=".gitbook/assets/FTX9.png" alt=""><figcaption><p><strong>Tenant</strong> list box, highlighted, set to the <strong>Default</strong> Tenant</p></figcaption></figure>
+<figure><img src=".gitbook/assets/FTX9 (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box, highlighted, set to the <strong>Default</strong> Tenant</p></figcaption></figure>
 
 {% hint style="success" %}
 Congratulations! Your Free Trial Edition has been activated and is ready for use.
