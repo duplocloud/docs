@@ -39,6 +39,10 @@ Information about EFS **Mount Targets** and **Access Points** is available in th
 
 You can update the policies for EFS Lifecycle management in the DuploCloud Portal. See the [AWS Documentation](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
 
+{% hint style="warning" %}
+If you want to disable an EFS Lifecycle Management Policy that you previously created, you must do so in the AWS Portal. You can not disable a Lifecycle Management Policy by using the DuploCloud portal.
+{% endhint %}
+
 1. In the DuploClod Portal, navigate to **DevOps ->** **Storage.**
 2. Click the **EFS** tab.&#x20;
 3.  Select the EFS from the **Name** column. The EFS page displays.\
