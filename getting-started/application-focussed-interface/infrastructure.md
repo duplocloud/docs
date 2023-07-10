@@ -10,4 +10,3 @@ If the Infrastructure requirement is to configure in custom Private/Public Subne
 A common use for Infrastructure is having for instance 2 infrastructures, one for prod and one for non-prod. Another one is having an infrastructure in a different region either for DR or localized deployments for clients in that region.
 {% endhint %}
 
-***
