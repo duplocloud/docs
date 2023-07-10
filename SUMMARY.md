@@ -36,6 +36,7 @@
     * [Cross-Tenant Access](administrator-tools/access-control/tenant-access/cross-tenant-access.md)
     * [Deleting a Tenant](administrator-tools/access-control/tenant-access/deleting-a-tenant.md)
   * [VPN access for users](administrator-tools/access-control/add-and-delete-vpn-access-for-users.md)
+  * [Database access for users](administrator-tools/access-control/database-access-for-users.md)
   * [Resolving DNS failures](administrator-tools/access-control/resolving-dns-failures.md)
   * [API tokens](administrator-tools/access-control/api-tokens.md)
 * [Kubectl setup](administrator-tools/kubectl-setup/README.md)
