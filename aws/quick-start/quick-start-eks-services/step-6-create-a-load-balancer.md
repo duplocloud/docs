@@ -29,13 +29,16 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.&#x20;
 2. From the **Name** column, select **demo-service**.
 3. Click the **Load Balancers** tab.
-4.  Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.
+4.  Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.\
+
 
     <div align="left">
 
     <figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
 
     </div>
+
+
 5. From the **Type** list box, select **Application LB**.
 6. In the **Container Port** field, enter **3000**. This is the configured port on which the application inside the Docker Container Image `duplocloud/nodejs-hello:latest` is running.&#x20;
 7. In the **External Port** field, enter **80**. This is the port through which users will access the web application.
