@@ -34,7 +34,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Screenshot 2023-07-11 132858.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
 
     </div>
 
