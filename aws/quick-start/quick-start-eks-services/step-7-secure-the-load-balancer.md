@@ -10,6 +10,8 @@ This step is optional and not necessary to run the example application in this t
 However, while it's not as important to secure a load balancer for a small web application in a tutorial, your production cloud apps require an elevated level of protection.&#x20;
 
 To set up a Web Application Firewall (WAF) for a production application, follow the steps in the [Web Application Firewall procedure](../../aws-services/web-application-firewall-waf.md). You won't set up a WAF in this tutorial.
+
+Otherwise, to skip this step, proceed to the [next page in this tutorial](step-8-create-dns-name.md).
 {% endhint %}
 
 In this tutorial step, for the Application Load Balancer (ALB) you created in [Step 6](../quick-start-duplocloud-docker-services/step-6-create-loadbalancer.md), you will:&#x20;
