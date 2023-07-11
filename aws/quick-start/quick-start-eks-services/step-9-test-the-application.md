@@ -26,7 +26,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 ## Testing the Application
 
 {% hint style="info" %}
-Note that if you skipped [Step 7](step-7-secure-the-load-balancer.md) and/or [Step 8](step-8-create-dns-name.md), the configuration in the **Other Settings** and **DNS** cards, appears slightly different from the configuration in the graphic below. These changes do not impact you in testing your application, as these steps are optional. You can proceed to test your app without completing the optional steps with no change in the displayed output.
+Note that if you skipped [Step 7](step-7-secure-the-load-balancer.md) and/or [Step 8](step-8-create-dns-name.md), the configuration in the **Other Settings** and **DNS** cards appears slightly different from the configuration depicted in the screenshot below. These changes do not impact you in testing your application, as these steps are optional. You can proceed to test your app with no visible change in the output of the deployable application.
 {% endhint %}
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.
