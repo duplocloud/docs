@@ -64,17 +64,16 @@ If you want to grant a service read-only access to root filesystems, add a confi
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
 3. Click **Add**. The **Add Config** pane displays.
-4. From the **Config Type** list box, select **Other**. The **Other Config Type** field displays.
-5. In the **Other Config Type** field, enter **Flags**.
-6. In the **Key** field, enter **EnableECSReadonlyProcessing**.
-7. in the **Value** field, enter **true**.
-8. Click **Submit**.
+4. From the **Config Type** list box, select **Flags**.
+5. In the **Key** field, enter **Enable ECS Readonly Processing**.
+6. in the **Value** field, enter **true**.
+7. Click **Submit**.
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>EnableECSReadonlyProcessing Key</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ecs_re1 (1).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Key Enable ECS Readonly Processing</strong> </p></figcaption></figure>
 
 The new configuration is displayed in the **System Config** tab.
 
-<figure><img src="../../.gitbook/assets/ecsdispla.png" alt=""><figcaption><p><strong>EnableECSReadonlyProcessing</strong> configuration enabled with Value of <strong>true</strong> in <strong>System Config</strong> tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ecs_re2.png" alt=""><figcaption><p><strong>Enable ECS Readonly Processing</strong> enabled with Value of <strong>true</strong> in <strong>System Config</strong> tab</p></figcaption></figure>
 
 #### Creating multiple containers for ECS Services using a Task Definition <a href="#7-toc-title" id="7-toc-title"></a>
 
