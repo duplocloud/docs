@@ -5,7 +5,7 @@ description: Creating an RDS database to integrate with your DuploCloud Service
 # Step 3: Create an RDS database (optional)
 
 {% hint style="info" %}
-Creating an RDS database is not essential to running a DuploCloud Service. However, as most services also incorporate an RDS, it is included to demonstrate the ease of creating a database in DuploCloud.
+Creating an RDS database is not essential to running a DuploCloud Service. However, as most services also incorporate an RDS, this step is included to demonstrate the ease of creating a database in DuploCloud. To skip this step, proceed to the [Services section of this tutorial](quick-start-eks-services/).
 {% endhint %}
 
 An [AWS RDS](https://aws.amazon.com/free/database/?trk=83add82a-8e52-4837-bc73-c323da62d78c\&sc\_channel=ps\&ef\_id=CjwKCAjwp6CkBhB\_EiwAlQVyxYi50yWfBj5SSxs6-gaDSqftnxbBO6Plfy0pYWyyxrZ3zI0goU6bLRoCGkQQAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!610000101516!e!!g!!amazon%20database%20hosting!11086562318!108339552363) is a managed Relational Database Service that is easy to set up and maintain in DuploCloud for AWS public cloud environments. RDSs support many databases including MySQL, PostgreSQL, MariaDB, Oracle BYOL, or SQL Server. &#x20;
