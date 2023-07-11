@@ -45,9 +45,12 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
     <figure><img src="../../../.gitbook/assets/AWS_QS_19 (1).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>Other Settings</strong> card </p></figcaption></figure>
 5. In the **Web ACL** list box, select **None**, because you are not connecting a Web Application Firewall.
-6.  For this tutorial, select only the **Enable Access Logs** and **Drop Invalid Headers** options.
+6.  For this tutorial, select only the **Enable Access Logs** and **Drop Invalid Headers** options.\
+
 
     <figure><img src="../../../.gitbook/assets/AWS_QS_25.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure>
+
+
 7. Accept the **Idle Timeout** default setting and click **Save**. The **Other Settings** card in the **Load Balancers** tab is updated with your selections.
 
 ## Check your work
