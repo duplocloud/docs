@@ -21,7 +21,7 @@ Add a Virtual Machine Host. DuploCloud AWS supports **EC2**, **ASG**, and **BYOH
 4. Click **Add**.
 
 {% hint style="danger" %}
-If you add custom user data, using the **Base64 Data** field and the EC2 instance of ASG is for EKS, your custom data removes the code needed to start the host and the host cannot connect to EKS. Instead, [use this procedure](hosts-vms.md#adding-custom-user-data-for-ec2-and-asg-hosts-in-eks) to add your custom user data directly to EKS.
+If you add custom code for EC2 or ASG hosts using the **Base64 Data** field, your custom code overrides the code needed to start the EC2 or ASG hosts and the hosts cannot connect to EKS. Instead, [use this procedure](hosts-vms.md#adding-custom-code-for-ec2-and-asg-hosts-in-eks) to add custom code directly in EKS.&#x20;
 {% endhint %}
 
 ![Add Host page for EC2](<../../.gitbook/assets/image (17) (1) (1).png>)
@@ -45,11 +45,11 @@ If a VM is being used for container orchestration make sure that the Image ID  c
 
 If you want to connect your EC2 instance remotely using SSH, [follow these steps](../aws-services/virtual-machines/ssh-ec2-instance.md).
 
-## Adding custom user data for EC2 and ASG hosts in EKS
+## Adding custom code for EC2 and ASG hosts in EKS
 
-If you add custom user data, using the **Base64 Data** field and the EC2 instance of ASG is for EKS, your custom data removes the code needed to start the host and the host cannot connect to EKS.
+If you add custom code for EC2 or ASG hosts using the **Base64 Data** field, your custom code overrides the code needed to start the EC2 or ASG hosts and the hosts cannot connect to EKS.&#x20;
 
-To avoid this issue, add the following `bash` code directly in EKS using the AWS Portal, replacing:
+To avoid this issue, add the following `bash` command in your EKS instance to include your custom code, replacing:
 
 * MYINFRA with the name of the DuploCloud Infrastructure, and
 * MYTENANT with the name of the DuploCloud Tenant
@@ -59,6 +59,6 @@ To avoid this issue, add the following `bash` code directly in EKS using the AWS
 set -o xtrace
 /etc/eks/bootstrap.sh duploinfra-MYINFRA --kubelet-extra-args '--node-labels=tenantname=duploservices-MYTENANT'
 
-# Custom user data (code)
+# Custom user code:
 echo "hello world"
 ```
