@@ -120,14 +120,24 @@ Terraform projects typically have a broad scope with multiple components. At tim
 About half of our customer base uses no-code, while the other half uses Terraform. Ironically, software developer-centric companies prefer no-code because it enables engineers to be agile and focus on their application code. By contrast, in DevOps-centric organizations, the low-code Terraform provider is often used.
 {% endhint %}
 
-### How is DuploCloud subscription cost calculated?
+### How is the DuploCloud subscription cost calculated?
 
-DuploCloud licenses usage is calculated based on the services managed by DuploCloud. The service usage is counted in terms of units, with a unit defined as below:
+DuploCloud license usage is calculated based on the services managed by DuploCloud. The service usage is counted in terms of units, with a unit defined as below:
 
 * A host is counted as 1 unit. (example: EC2 instance, Azure VM)
 * A serverless function or service is counted as 1/4 unit (example: Lambda function)
 * A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
-* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For a MWAA environment the number of workers are calculated as the average of minimum and maximum worker count
+* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For a MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count
+
+## General Cloud Technical Issue FAQs
+
+### I'm receiving the error message `Could not load credentials from any providers`.&#x20;
+
+Your `duplo-jit` local cache must be cleared. To do this, run the following command:
+
+```bash
+rm -rf ~/Library/Caches/duplo-jit/
+```
 
 ## Kubernetes (K8s) FAQs
 
@@ -150,7 +160,7 @@ Instead, do the following to stop the service from running:
 
 No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
 
-### If DuploCloud is not generating Terraform code behind the scenes, then how can I use Infrastructure-as-code?
+### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
 
 The Terraform and DuploCloud Web UIs are layered on top of the DuploCloud platform.
 
@@ -172,6 +182,6 @@ CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a
 
 ## Diagnostic Tool FAQ
 
-### How do I use Datadog and others diagnostics tools?
+### How do I use Datadog and other diagnostics tools?
 
 DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset like Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if you are running an application within the respective DuploCloud tenants.
