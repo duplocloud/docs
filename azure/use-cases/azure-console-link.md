@@ -6,6 +6,12 @@ description: Create a link to the Azure Console from DuploCloud
 
 Creating a direct link to the Azure Portal from your DuploCloud Infrastructure saves you time when you work with DuploCloud Azure Hosts. Instead of toggling between the DuploCloud Portal and the Microsoft Azure Portal, get instant access to the Azure Portal from DuploCloud.
 
+{% hint style="warning" %}
+Failure to follow these steps when creating a link to the Azure Portal from the DuploCloud Portal results in the error message:&#x20;
+
+`Error while fetching Azure portal link: Portal url config does not exist`
+{% endhint %}
+
 ## Creating a link to the Azure Console&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
@@ -14,7 +20,7 @@ Creating a direct link to the Azure Portal from your DuploCloud Infrastructure s
 4. Click **Add**. The **Add Infrastructure Tag** pane displays.
 5.  In the **Key** field, enter **AzurePortalLink**.
 
-    <figure><img src="../../../.gitbook/assets/azure_portal.png" alt=""><figcaption><p><strong>Add infrastructure Tag</strong> pane with <strong>Key AzurePortalLink</strong></p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/azure_portal.png" alt=""><figcaption><p><strong>Add infrastructure Tag</strong> pane with <strong>Key AzurePortalLink</strong></p></figcaption></figure>
 6. In the **Value** field, enter the URL for your Azure Portal.&#x20;
 7. Click **Create**.
 
@@ -30,4 +36,4 @@ After you [create a link to the Azure Console](azure-console-link.md#creating-a-
 2. From the **Name** column, select the Host you are working with.
 3. From the **Actions** menu, select **Azure Portal**.
 
-<figure><img src="../../../.gitbook/assets/aws-con_app.png" alt=""><figcaption><p><strong>HOST1</strong> host page with <strong>Action Menu</strong> displaying <strong>Azure Portal</strong> link</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/aws-con_app.png" alt=""><figcaption><p><strong>HOST1</strong> host page with <strong>Action Menu</strong> displaying <strong>Azure Portal</strong> link</p></figcaption></figure>
