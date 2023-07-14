@@ -79,6 +79,10 @@ The new configuration is displayed in the **System Config** tab.
 
 You can create up to five (5) containers for ECS services by defining a Task Definition.
 
+{% hint style="info" %}
+To designate a container as Essential, see [Defining an Essential Container](containers.md#7-toc-title-2).
+{% endhint %}
+
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**.
 2.  In the Task Definitions tab, click **Add**. The **Add Task Definition** page displays.
 
@@ -86,7 +90,7 @@ You can create up to five (5) containers for ECS services by defining a Task Def
 3. Specify a unique **Name** for the Task Definition.
 4. From the **vCPUs** list box, select the number of CPUs to be consumed by the task and change other defaults, if needed.
 5. In the **Container - 1** area, specify the **Container Name** of the first container you want to create.
-6. In the **Image** field, specify the container Image name, as in the example below.&#x20;
+6. In the **Image** field, specify the container Image name, as in the example above.&#x20;
 7. Click the Plus Icon ( <img src="../../.gitbook/assets/plus-sign-icon.png" alt="" data-size="line"> ) to the left of the **Primary** label, which designates that the first container you are defining is the primary container. The **Container - 2** area displays.&#x20;
 8.  Use the  <img src="../../.gitbook/assets/up_chevron_icon.png" alt="" data-size="line"> and  <img src="../../.gitbook/assets/down_chevron_icon (2).png" alt="" data-size="line"> icons to collapse and expand the **Container** areas as needed. Specify **Container Name** and **Image** name for each container that you add. Add more containers by clicking the Add Icon ( <img src="../../.gitbook/assets/plus-sign-icon.png" alt="" data-size="line"> ) to create up to five (5) containers, in each container area. Delete containers by clicking the Delete ( **X** ) **I**con in each container area.
 
@@ -97,6 +101,16 @@ You can create up to five (5) containers for ECS services by defining a Task Def
 #### Editing multiple containers for ECS Services <a href="#7-toc-title" id="7-toc-title"></a>
 
 To edit the created Task Definition in order to add or delete multiple containers, select the Task Definition in the Task Definitions tab, and from the **Actions** menu, select **Edit Task Definition**.&#x20;
+
+#### Defining an Essential Container <a href="#7-toc-title" id="7-toc-title"></a>
+
+In AWS ECS, an essential container is a key component of a task definition. An essential container is one that must successfully complete for the task to be considered healthy. If an essential container fails or stops for any reason, the entire task is marked as failed. Essential containers are commonly used to run the main application or service within the task.
+
+By designating containers as essential or non-essential, you define the dependencies and relationships between the containers in your task definition. This allows ECS to properly manage and monitor the overall health and lifecycle of the task, ensuring that the essential containers are always running and healthy.
+
+To designate a container as Essential, follow the [Creating multiple containers for ECS Services using a Task Definition](containers.md#7-toc-title) procedure to create your containers, but before creating the container you want to designate as Essential, in the **Container** definition, select the **Essential Container** option, as in the example below.
+
+<figure><img src="../../.gitbook/assets/ecs.png" alt=""><figcaption><p>Editing a <strong>Container</strong> definition with the <strong>Essential Container</strong> option selected.</p></figcaption></figure>
 
 ### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
