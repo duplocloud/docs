@@ -16,9 +16,12 @@ New product updates will be posted around the 15th of each month.
   * Add [custom Lambda image configurations](../aws/aws-services/lambda/create-lambda-using-container-image.md) and URLs.
   * Enable [Object Lock in S3 Buckets](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
   * Update [Lifecycle Policies for EFS storage](../aws/aws-services/elastic-file-system-efs.md#updating-efs-lifecycle-policies).
-  * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DUploCloud Portal.
+  * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
+  * Ability to designate [Essential Containers](../aws/aws-services/containers.md#7-toc-title-2) in Task definitions for ECS Services.
+  * Enhanced support for [Startup Probes](../aws/aws-services/setting-up-probes.md).
 * GCP
   * Support for [Redis database instances](../gcp/gcp-services/databases/redis-database-instance.md).
+  * Support for [SQL databases](../gcp/gcp-services/databases/sql-databases.md).
 * General updates
   * **Last Login** card available for determining the last user sign-in when [viewing user access](../administrator-tools/access-control/add-edit-or-delete-a-user.md#view-users).
 
