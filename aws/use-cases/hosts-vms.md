@@ -45,6 +45,28 @@ If a VM is being used for container orchestration make sure that the Image ID  c
 
 If you want to connect your EC2 instance remotely using SSH, [follow these steps](../aws-services/virtual-machines/ssh-ec2-instance.md).
 
+## Auto-rebooting a host&#x20;
+
+You can configure a host to reboot automatically if it fails an automated status check in AWS. To do so, add the following configuration to the DuploCloud Tenant in which the EC2 Host resides.
+
+1. In the DuploCloud Portal, Navigate to **Adminstrator** -> **Tenant**.
+2. From the **Name** column, select the Tenant in which the EC2 Host is defined.
+3. Click the **Settings** tab.
+4.  Click **Add**. The **Add Tenant Feature** pane displays.\
+
+
+    <figure><img src="../../.gitbook/assets/AR1.png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane with <strong>Enable auto reboot EC2 status check feature</strong> selected</p></figcaption></figure>
+
+
+5. From the **Select Feature** list box select **Enable auto reboot EC2 status check**.
+6. In the field below the **Select Feature** box, enter a numeric value for the number of minutes that the system waits before auto-rebooting the host, following a status check failure in AWS.
+7.  Click **Add**. The **Enable auto reboot EC2 status check** configuration appears in the **Settings** tab.\
+
+
+    <figure><img src="../../.gitbook/assets/AR2.png" alt=""><figcaption><p>Tenant Settings tab with  <strong>Enable auto reboot EC2 status check feature</strong> configured</p></figcaption></figure>
+
+
+
 ## Adding custom code for EC2 and ASG hosts in EKS
 
 If you add custom code for EC2 or ASG hosts using the **Base64 Data** field, your custom code overrides the code needed to start the EC2 or ASG hosts and the hosts cannot connect to EKS.&#x20;

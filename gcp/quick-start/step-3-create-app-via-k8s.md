@@ -7,7 +7,7 @@ To create a service go to DevOps -> Containers -> GKE /Native and click on the *
 * **Name (Mandatory)** of the service: example nginx-demo
 * **Docker image (Mandatory)**: for example nginx:latest
 
-<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 Press create and wait a moment for the service to initialize.
 
