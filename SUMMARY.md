@@ -258,8 +258,8 @@
   * [Configuring GCP Services](gcp/gcp-services/containers.md)
   * [Cloud Armour](gcp/gcp-services/cloud-armour.md)
   * [Databases](gcp/gcp-services/databases/README.md)
-    * [RDS and SQL databases](gcp/gcp-services/databases/rds-and-sql-databases.md)
     * [Redis database instance](gcp/gcp-services/databases/redis-database-instance.md)
+    * [SQL databases](gcp/gcp-services/databases/sql-databases.md)
 * [Storage Buckets](gcp/s3-bucket.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
