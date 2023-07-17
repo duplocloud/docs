@@ -24,11 +24,11 @@ DuploCloud is your all-in-one DevOps/SecOps self-service Platform Engineering so
 To participate in the free 30-day DuploCloud trial, you must have:
 
 * An active [Amazon Web Services subscription and account](https://aws.amazon.com/free/?trk=78b916d7-7c94-4cab-98d9-0ce5e648dd5f\&sc\_channel=ps\&ef\_id=CjwKCAjwpuajBhBpEiwA\_ZtfhU8KT036RgM6RbsbKcPmNuRz49DKHeb0LfMuQ5n--Iuhf064JpgG-hoCQtEQAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!432339156162!e!!g!!aws%20sign%20up!9572385111!102212379327\&all-free-tier.sort-by=item.additionalFields.SortRank\&all-free-tier.sort-order=asc\&awsf.Free%20Tier%20Types=\*all\&awsf.Free%20Tier%20Categories=\*all)
-* An email account with a corporate domain, such as _user@companyname.com_
+* A Microsoft or Google email account that you have signed into with Google single sign-on (SSO).
 
 ## Sign-up for the trial
 
-1.  Navigate to the [free trial sign-up form](https://duplocloud.com/free-trial/) and complete it using your corporate email address. Select the checkbox to consent to receive communications from DuploCloud so that we can store and process your personal information within the 30-day trial period.
+1.  Navigate to the [free trial sign-up form](https://duplocloud.com/free-trial/) and complete it. Select the checkbox to consent to receive communications from DuploCloud so that we can store and process your personal information within the 30-day trial period.
 
     <figure><img src=".gitbook/assets/FTX0.png" alt=""><figcaption><p><strong>DuploCloud 30-day Trial</strong> sign-up form</p></figcaption></figure>
 2.  Click **Register for free trial**. A **Thank you for signing up** page is displayed with instructions to check your email inbox for account activation and setup instructions. The page also contains a link to the [AWS Quick Start Guide](aws/quick-start/).
