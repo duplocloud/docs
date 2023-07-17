@@ -4,9 +4,9 @@ Each infrastructure is a unique VPC, in a region with a Kubernetes (or ECS clust
 
 ![Infrastructure Creation Screen](<../../.gitbook/assets/image (12) (4).png>)
 
-If the Infrastructure requirement is to configure in custom Private/Public Subnet CIDR, it can be achieved using  **Advanced Options.**
+If the Infrastructure requirement includes custom Private/Public Subnet CIDR, it can be achieved using  **Advanced Options.**
 
 {% hint style="info" %}
-A common use for Infrastructure is having for instance 2 infrastructures, one for prod and one for non-prod. Another one is having an infrastructure in a different region either for DR or localized deployments for clients in that region.
+A common use for Infrastructure is having two infrastructures, one for prod and one for non-prod. Another one is having an infrastructure in a different region either for DR or localized deployments for clients in that region.
 {% endhint %}
 

@@ -5,5 +5,5 @@ For organizations operating in regulated industries, the infrastructure needs to
 ![](<../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
 
 {% hint style="info" %}
-The AWS PCI guide is 3400 pages long! [Operational Best Practices for PCI DSS 3.2.1 - AWS Config (amazon.com)](https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-pci-dss.html) Even if one were to scope it to 20 commonly used services the control set is overwhelming!\\
+The AWS PCI guide is 3400 pages long! [Operational Best Practices for PCI DSS 3.2.1 - AWS Config (amazon.com)](https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-pci-dss.html) Even if one were to scope it to 20 commonly used services the control set is overwhelming!
 {% endhint %}

@@ -8,7 +8,7 @@ Now that the [Infrastructure and Plan](step-1-infrastructure.md) exist and a Kub
 
 [Tenants ](../../getting-started/application-focussed-interface/tenant.md)in DuploCloud are similar to projects or workspaces and have a subordinate relationship to the Infrastructure. Think of the Infrastructure as a virtual "house" (cloud), with Tenants conceptually "residing" in the Infrastructure performing specific workloads that you define. As Infrastructure is an abstraction of a Virtual Private Cloud, Tenants abstract the segregation created by a [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), although Kubernetes Namespaces are only one component that Tenants can contain.
 
-In AWS, cloud features such as resource groups, IAM Service Roles, security groups, and KMS Policies are exposed in Tenants, which reference these feature configurations.
+In AWS, cloud features such as IAM Roles, security groups, and KMS keys are exposed in Tenants, which reference these feature configurations.
 
 _Estimated time to complete Step 2: 10 minutes._
 
@@ -55,7 +55,6 @@ Create a Tenant for your Infrastructure and Plan:
 
     <figure><img src="../../.gitbook/assets/AWS_QS_3.png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong><br></p></figcaption></figure>
 2.  Navigate to **Administrator** -> **Infrastructure** and select **dev01** from the **Tenant** list box at the top left in the DuploCloud Portal. The **NONPROD** Infrastructure appears in the list of Infrastructures, indicating that the **dev01** Tenant is associated with Infrastructure **NONPROD**.\
-
 
     <figure><img src="../../.gitbook/assets/AWS_QS_4.png" alt=""><figcaption><p>Tenant list box with <strong>dev01</strong> selected; <strong>NONPROD</strong> Infrastructure with <strong>Status Complete</strong> </p></figcaption></figure>
 

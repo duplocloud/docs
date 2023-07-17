@@ -64,7 +64,7 @@ This means DuploCloud is wanting to remove these containers. The most common rea
 
 While creating host, click on _show advanced_ and select the public subnet in the list of availability zone.
 
-## How do I look at detailed load balancer settings for my K8 Service?
+## How do I look at detailed load balancer settings for my K8S Service?
 
 DuploCloud provisions a load balancer for your K8 service. If you want to look at detailed settings on the load balancer like Idle timeout, Access logs and others, you can find and view them directly in AWS, by following the below steps:
 
@@ -84,7 +84,7 @@ AWS Copilot is used only for ECS cluster management, which is just a small subse
 
 ## Is the Duplocloud instance a single point of failure, and to what extent, if so? Who manages this instance?
 
-No. DuploCloud achieves High Availability (HA) using cluster management. And because you have an AWS account, your data is always secure in AWS.&#x20;
+No. DuploCloud achieves High Availability (HA) using cluster management. And because you own your AWS account, your data is always secure in AWS.&#x20;
 
 Our customers have never been blocked from performing urgent configuration updates because DuploCloud is unavailable. If DuploCloud is down, it is similar to your DevOps engineer being unavailable. In this case, someone else can take their place by directly configuring AWS.&#x20;
 
@@ -108,7 +108,7 @@ Yes.
 
 ## Is Kubernetes required to use DuploCloud? Is using Kubernetes better than using ECS?
 
-DuploCloud supports both AWS ECS and Kubernetes, among other Cloud solutions.&#x20;
+No, Kubernetes is not required.  DuploCloud supports both AWS ECS and Kubernetes, among other Cloud solutions.&#x20;
 
 The main advantage of Kubernetes is its broad-based, highly-customizable, third-party open-source community that champions and supports it as a delivery platform. For example, Astronomer (managed air flow), Time series database, IsTio Service Mesh, and Kong API Gateway all expect you to have a Kubernetes deployment. But if your business needs and use cases are met with an AWS solution, for example, you may have no need for Kubernetes.
 

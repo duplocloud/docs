@@ -4,7 +4,7 @@ description: Creating a Host that acts as an EKS Worker node
 
 # Step 4: Create a Host
 
-When you create an [AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html) Service, you are using a combination of technologies from the AWS Portal and the [Kubernetes ](kuberhttps://en.wikipedia.org/wiki/Kubernetesnetes)open-source container orchestration system.
+When you create an [AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html) Service, you are using a combination of technologies from AWS and the [Kubernetes](kuberhttps://en.wikipedia.org/wiki/Kubernetesnetes) open-source container orchestration system.
 
 Kubernetes uses worker nodes to distribute workloads within a cluster. The cluster automatically distributes the workload among its nodes, enabling seamless scaling as required system resources expand to support your applications.&#x20;
 
