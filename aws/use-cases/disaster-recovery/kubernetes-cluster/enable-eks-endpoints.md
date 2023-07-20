@@ -14,10 +14,6 @@ For more information about AWS Endpoints, see the [AWS documentation](https://do
 
 ## Specifying custom EKS endpoints and visibility
 
-{% hint style="info" %}
-To access a private endpoint for an EKS Cluster using VPN, [whitelist the VPN private IP address in the EKS Cluster Security Group](https://aws.amazon.com/blogs/security/how-to-control-access-to-your-amazon-elasticsearch-service-domain/).
-{% endhint %}
-
 1. Follow the steps in the section [Creating an Infrastructure](../../disaster-recovery.md). Before clicking **Create**, specify **EKS Endpoint Visibility**.
 2. From the **EKS Endpoint Visibility** list box, select **Public**, **Private**, or **Both public and private**.&#x20;
 3. Click **Advanced Options.**
