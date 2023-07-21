@@ -19,12 +19,12 @@ Accept OpenVPN Free tier (Bring Your Own License) in the AWS marketplace:&#x20;
 2. Click the **VPN** tab.
 3. Click **Provision VPN.**
 
-After the OpenVPN is provisioned, it is ready to use. Behind the scenes, DuploCloud launches a cloud formation script to provision the OpenVPN.   &#x20;
+After the OpenVPN is provisioned, it is ready to use. Behind the scenes, DuploCloud launches a CloudFormation script to provision the OpenVPN.   &#x20;
 
 ![VPN tab in the System Settings page.](<../../.gitbook/assets/image (2) (2) (1).png>)
 
 {% hint style="info" %}
-You can find the OpenVPN admin password in the cloud formation stack in your AWS console.
+You can find the OpenVPN admin password in the CloudFormation stack in your AWS console.
 {% endhint %}
 
 ## **Provision the VPN and create a user**
@@ -46,7 +46,7 @@ For information about removing VPN access for a user, see [Deleting a VPN user](
 
 ## Open a VPN port
 
-By default, users connected to a VPN can SSH or RDP into EC2 instances. Users can also connect to internal load balancers and endpoints of the applications. However, to connect to other services, such as databases and elastic cache, you must open the port to the VPN:&#x20;
+By default, users connected to a VPN can SSH or RDP into EC2 instances. Users can also connect to internal load balancers and endpoints of the applications. However, to connect to other services, such as databases and ElastiCache, you must open the port to the VPN:&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrator** --> **Tenant**.
 2. Select the Tenant in the **Name** column.
