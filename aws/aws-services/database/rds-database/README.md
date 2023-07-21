@@ -17,7 +17,7 @@ DuploCloud supports the following RDS databases in AWS:
 * Aurora PostgreSQL
 * Aurora PostgreSQL Serverless
 
-## Create an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
+## Creating an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
 2. Click **Add**. The **Create a RDS** page displays.
@@ -29,7 +29,7 @@ DuploCloud supports the following RDS databases in AWS:
 
 You can create Aurora Serverless V2 Databases by selecting **Aurora-MySql-Serverless-V2** or **Aurora-PostgreSql-Serverless-V2** from the **RDS Database Engine** list box. Select the RDS Engine Version compatible with Aurora Serverless v2. The **RDS Instance Size** of `db.serverless` applies to both engines.
 
-## Connect to the database <a href="#1-toc-title" id="1-toc-title"></a>
+## Connecting to the database <a href="#1-toc-title" id="1-toc-title"></a>
 
 Once the database is created, select it and use the Instances tab to view the endpoint and credentials. Use the endpoint and credentials to connect to the database from your application running in an EC2 instance. The database is only accessible from inside the EC2 instance in the current Tenant, including the containers running within.
 
