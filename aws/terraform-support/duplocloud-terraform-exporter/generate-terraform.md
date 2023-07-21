@@ -4,15 +4,15 @@
 
 Once Terraform Exporter Utility is configured, [export Environment Variables](install-terraform-exporter.md#prepare-environment-variable-in-bash) and execute listed commands.
 
-> cd `tenant-terraform-generator`
+> `cd tenant-terraform-generator`
 >
-> make run
+> `make run`
 
 ![Utility  Execution in-progress](<../../../.gitbook/assets/image (24) (2).png>)
 
 ### View the Output
 
-New Folders would be available under `tenant-terraform-generator\target\<customer-name>\<tenant>`
+New Folders would be available under `tenant-terraform-generator/target/<customer-name>/<tenant>`
 
 ![Target Folder View](<../../../.gitbook/assets/image (6) (1) (1).png>)
 

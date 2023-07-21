@@ -8,7 +8,7 @@ Now that the [Infrastructure and Plan](step-1-infrastructure.md) exist and a Kub
 
 [Tenants ](../../getting-started/application-focussed-interface/tenant.md)in DuploCloud are similar to projects or workspaces and have a subordinate relationship to the Infrastructure. Think of the Infrastructure as a virtual "house" (cloud), with Tenants conceptually "residing" in the Infrastructure performing specific workloads that you define. As Infrastructure is an abstraction of a Virtual Private Cloud, Tenants abstract the segregation created by a [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), although Kubernetes Namespaces are only one component that Tenants can contain.
 
-In AWS, cloud features such as resource groups, IAM Service Roles, security groups, and KMS Policies are exposed in Tenants, which reference these feature configurations.
+In AWS, cloud features such as IAM Roles, security groups, and KMS keys are exposed in Tenants, which reference these feature configurations.
 
 _Estimated time to complete Step 2: 10 minutes._
 
@@ -44,7 +44,8 @@ Create a Tenant for your Infrastructure and Plan:
 2. Click **Add**. The **Create a Tenant** pane displays.
 3. Enter **dev01** in the **Name** field.&#x20;
 4. Select the **Plan** that you created in the previous step (**NONPROD**).
-5. Click **Create**.
+5. Click **Create**.\
+
 
 <figure><img src="../../.gitbook/assets/Azure_GS_Tenant_1_Create_a_Tenant.png" alt=""><figcaption><p><strong>Create a Tenant</strong> pane</p></figcaption></figure>
 

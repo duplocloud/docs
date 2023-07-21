@@ -17,7 +17,7 @@ Add the following code to your AWS profile:
 ```yaml
 [profile NAME] # Supply your AWS profile name
 region=us-east-1
-credential_process=duplo-aws-credential-process --tenant YOUR_TENANT --host  --interactive
+credential_process=duplo-aws-credential-process --tenant YOUR_TENANT --host --interactive
 ```
 
 ## Downloading the `kubectl` token

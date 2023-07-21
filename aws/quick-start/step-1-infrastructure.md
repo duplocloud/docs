@@ -4,13 +4,13 @@ description: Creating the DuploCloud Infrastructure and a Plan
 
 # Step 1:  Create Infrastructure and Plan
 
-Each DuploCloud Infrastructure is a Virtual Private Cloud (VPC) instance that resides in a region that can host Kubernetes clusters, AKS clusters, GKE clusters, EKS or EC2 clusters, or a combination of these, depending on your public cloud provider. An Infrastructure can reside On-Premises (On-Prem) or in a Public Cloud.
+Each DuploCloud Infrastructure is a Virtual Private Cloud (VPC) network that resides in a region that can host Kubernetes clusters, EKS or ECS clusters, or a combination of these, depending on your public cloud provider.&#x20;
 
 After you supply a few basic inputs DuploCloud creates an Infrastructure for you, within AWS and within DuploCloud, with a few clicks. Behind the scenes, DuploCloud does a lot with what little you supply — generating the VPC, Subnets, NAT Gateway, Routes, and [EKS ](https://docs.aws.amazon.com/eks/)or [ECS ](https://docs.aws.amazon.com/ecs/)cluster.
 
 With the Infrastructure as your foundation, you can customize an extensible, versatile Platform Engineering development environment by adding Tenants, Hosts, Services, and more.
 
-_Estimated time to complete Step 1: 40 minutes. Much of this time is consumed by DuploCloud's creation of the Infrastructure and enabling your AKS cluster with Kubernetes._
+_Estimated time to complete Step 1: 40 minutes. Much of this time is consumed by DuploCloud's creation of the Infrastructure and enabling your EKS cluster with Kubernetes._
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ Before starting this tutorial:
 4. Select either **Enable EKS** or **Enable ECS Cluster** options. You will follow different paths in the tutorial for creating Services with [EKS](quick-start-eks-services/), [ECS](quick-start-ecs-services/), or [DuploCloud Docker](quick-start-duplocloud-docker-services/).
 5. Click **Create** to create the Infrastructure. It may take up to half an hour to create the Infrastructure. While the Infrastructure is being created, a **Pending** status displays in the Infrastructure page **Status** column, often with additional information about what part of the Infrastructure DuploCloud is currently creating. When creation completes, a status of **Complete** displays.&#x20;
 
-DuploCloud begins creating and configuring your IInfrastructure and EKS/ECS clusters using Kubernetes.&#x20;
+DuploCloud begins creating and configuring your Infrastructure and EKS/ECS clusters using Kubernetes.&#x20;
 
 | Add Infrastructure page field | Value           |
 | ----------------------------- | --------------- |
@@ -35,7 +35,7 @@ DuploCloud begins creating and configuring your IInfrastructure and EKS/ECS clus
 | **VPC CIDR**                  | `10.221.0.0/16` |
 | **Subnet CIDR Bits**          | `24`            |
 
-<figure><img src="../../.gitbook/assets/AWS_QS_1.png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_QS_1.png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page<br></p></figcaption></figure>
 
 {% hint style="info" %}
 It may take up to forty-five (45) minutes for your Infrastructure to be created and Kubernetes (EKS/ECS) enablement to be complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
