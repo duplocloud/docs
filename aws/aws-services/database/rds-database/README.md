@@ -4,8 +4,6 @@ description: Create and connect to an RDS database instance
 
 # RDS database
 
-## DuploCl <a href="#0-toc-title" id="0-toc-title"></a>
-
 DuploCloud supports the following RDS databases in AWS:
 
 * MySQL
