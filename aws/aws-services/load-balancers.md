@@ -37,7 +37,7 @@ To specify a custom classless inter-domain routing (CIDR) value for an NLB Load 
 1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> EKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
-4. In the **LB Listeners** card, select the Edit Icon (<img src="../../.gitbook/assets/image (3).png" alt="" data-size="line">) for the Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
+4. In the **LB Listeners** card, select the Edit Icon (<img src="../../.gitbook/assets/image (3) (7).png" alt="" data-size="line">) for the Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
 5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pane**.**
 6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. Next, [add Security Groups for the CIDR(s)](load-balancers.md#adding-security-groups-for-custom-cidrs) you added.
 
