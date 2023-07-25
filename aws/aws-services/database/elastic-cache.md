@@ -14,4 +14,4 @@ description: Create ElastiCache for Redis database and Memcache memory caching
 Pass the cache endpoint to your application through the [Environment Variables](../../use-cases/passing-secrets/passing-config-and-secrets/) via the AWS Service.
 {% endhint %}
 
-![Create a Ecache pane for Type REDIS](../../../.gitbook/assets/AWS\_Redis\_Ecache.png)
+![Create a Ecache pane for Type REDIS](../../../.gitbook/assets/prefix2.png)
