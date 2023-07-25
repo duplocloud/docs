@@ -13,7 +13,7 @@ Your administrator needs to enable the AWS Application Load Balancer controller 
 
 ## Create Tenants, Hosts, and Services with EKS
 
-See the [Containers ](containers.md)topic for steps on how to create [Tenants](../../getting-started/application-focussed-interface/tenant.md), Hosts, and [Services](../../getting-started/application-focussed-interface/app-service-and-cloud-service.md).
+See the [Containers ](containers.md)topic for steps on how to create [Tenants](../../getting-started/application-focussed-interface/tenant.md), Hosts, and [Services](../../getting-started/application-focussed-interface/app-service-and-cloud-services.md).
 
 Once your service is deployed, you are ready to add and configure Kubernetes Ingress.
 

@@ -70,7 +70,7 @@ Before you begin to create a job to run the application, clone an instance of it
 You have created and cloned the Spark application. Now you must create and clone a job to run it in EMR Serverless. In this example, we create a Spark job.
 
 {% hint style="info" %}
-If you are new to Spark, use the Info Tips (blue <img src="../../.gitbook/assets/image (2) (1) (5).png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
+If you are new to Spark, use the Info Tips (blue <img src="../../.gitbook/assets/image (2) (1).png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
 {% endhint %}
 
 1.  Select the application instance that you previously cloned. This instance (**DUPLOSERVICES-DEFAULT-APP1-C-833**, in this example) has a **STATE** of **CREATED**.
