@@ -8,6 +8,22 @@ Amazon Elastic File System (Amazon EFS) is a scalable, fully managed file storag
 
 See the [AWS Documentation](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
 
+## Prerequisites
+
+Before you create an EFS, you must configure the EFS Volume Controller for your Infrastructure.
+
+1. In the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
+2. Select your Infrastructure from the **Name** column.&#x20;
+3. Click the **Settings** tab.
+4. Click **Add**. The **Infra - Set Custom Data** pane displays.
+5. From the **Settings Name** list box, select **Enable EFS Volume Controller**.
+6. Select **Enable**.
+7. Click **Set**.
+
+In the **Settings** tab, your configuration **Enable EFS Volume Controller** is set to **true**.&#x20;
+
+<figure><img src="../../.gitbook/assets/EKS_VC.png" alt=""><figcaption><p>Infrastructure page Settings tab with configuration <strong>Enable EFS Volume Controller</strong> set to <strong>true</strong>.</p></figcaption></figure>
+
 ## Creating an EFS in the DuploCloud Portal
 
 1. In the DuploClod Portal, navigate to **DevOps ->** **Storage.**
