@@ -32,6 +32,7 @@ DuploCloud begins creating and configuring your Infrastructure and EKS/ECS clust
 | Add Infrastructure page field | Value           |
 | ----------------------------- | --------------- |
 | **Name**                      | `nonprod`       |
+| **Region**                    | `us-west-2`     |
 | **VPC CIDR**                  | `10.221.0.0/16` |
 | **Subnet CIDR Bits**          | `24`            |
 
