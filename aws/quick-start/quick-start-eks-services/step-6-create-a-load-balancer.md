@@ -51,8 +51,11 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 ## Check your work
 
 1. Verify that the Load Balancer has an **LB Status** of **Ready**.&#x20;
-2. On the **Services** page, in the **LB Configuration** card, note the **DNS Name** of the **ALB** Load Balancer that you created.&#x20;
-3. In the **LB Listeners** area of the **Services** page, note the configuration details of the Load Balancer's **HTTPS** protocol, which you specified, when you added it above.
+2. On the **Services** page, note the **DNS** Name of the Load Balancer that you created.&#x20;
+3. In the **LB Listeners** area of the **Services** page, note the configuration details of the Load Balancer's **HTTP** protocol, which you specified, when you added it above.
 
-<figure><img src="../../../.gitbook/assets/AWS_QS_18.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab containing <strong>LB Configuration</strong> card displaying <strong>Type ALB</strong> Load Balancer and <strong>DNS Name</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/awsredux.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab containing <strong>LB Configuration</strong> card displaying <strong>Type ALB</strong> Load Balancer</p></figcaption></figure>
 
+
+
+<figure><img src="../../../.gitbook/assets/awsredux2 (1).png" alt=""><figcaption><p><strong>DNS</strong> name for <strong>demo-service</strong></p></figcaption></figure>

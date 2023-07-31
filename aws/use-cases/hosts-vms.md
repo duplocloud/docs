@@ -20,6 +20,12 @@ Add a Virtual Machine Host. DuploCloud AWS supports **EC2**, **ASG**, and **BYOH
 3. Click the tab that corresponds to the type of Host you want to create (**EC2**, **ASG**, or **BYOH**).
 4. Click **Add**.
 
+{% hint style="info" %}
+The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time. For this tutorial, the region is **us-west-2**, where the **NONPROD** Infrastructure was created.&#x20;
+
+If no **Image ID** is available with a prefix of **EKS**, copy the **AMI ID** for the desired EKS version by referring to this [AWS documentation](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-amis.html). Select **Other** from the **Image ID** list box and paste the copied **AMI ID** in the **Other Image ID** field. Contact the DuploCloud Support team via your Slack channel if you have questions or issues.
+{% endhint %}
+
 {% hint style="danger" %}
 If you add custom code for EC2 or ASG hosts using the **Base64 Data** field, your custom code overrides the code needed to start the EC2 or ASG hosts and the hosts cannot connect to EKS. Instead, [use this procedure](hosts-vms.md#adding-custom-code-for-ec2-and-asg-hosts-in-eks) to add custom code directly in EKS.&#x20;
 {% endhint %}

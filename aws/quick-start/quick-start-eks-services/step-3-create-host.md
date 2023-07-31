@@ -38,7 +38,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 {% hint style="info" %}
 The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time. For this tutorial, the region is **us-west-2**, where the **NONPROD** Infrastructure was created.&#x20;
 
-If no **Image ID** is available with a prefix of **EKS**, copy the **AMI ID** for the desired EKS version from [this table](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html). Select **Other** from the **Image ID** list box and paste the copied **AMI ID** in the **Other Image ID** field. Contact the DuploCloud Support team via your Slack channel if you have questions or issues.
+If no **Image ID** is available with a prefix of **EKS**, copy the **AMI ID** for the desired EKS version by referring to this [AWS documentation](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-amis.html). Select **Other** from the **Image ID** list box and paste the copied **AMI ID** in the **Other Image ID** field. Contact the DuploCloud Support team via your Slack channel if you have questions or issues.
 {% endhint %}
 
 ## Checking your work
