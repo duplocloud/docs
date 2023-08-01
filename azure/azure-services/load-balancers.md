@@ -16,13 +16,13 @@ Using Kubernetes Health Check allows AKS's Application Load Balancer to determin
 
 ### Before you begin
 
-You must create [Services ](broken-reference)to run load balancers. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
+You must create [Services ](broken-reference)before adding load balancers and listeners. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
 
 <figure><img src="../../.gitbook/assets/AKS_Ingress.png" alt=""><figcaption><p><strong>Services</strong> running ALB and NLB</p></figcaption></figure>
 
 ### Adding a Load Balancer Listener
 
-1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> AKS/Native**.
+1. In the DuploCloud Portal, navigate **DevOps** -> **Containers** -> **AKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3.  Click the **Load Balancers** tab.
 

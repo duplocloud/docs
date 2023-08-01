@@ -26,8 +26,9 @@ In this example, three Nginx services run with different paths.
 Once Services are deployed, add Ingress:
 
 1. Select **DevOpos** -> **Containers -> EKS/Native** from the navigation pane.
-2. Click the **K8S Ingress** tab.&#x20;
-3. Click **Add**. The **Add Kubernetes Ingress** page displays.
+2. From the **Name** column on the **Services** page, select the Service to which you want to add Ingress.
+3. Click the **K8S Ingress** tab.&#x20;
+4. Click **Add**. The **Add Kubernetes Ingress** page displays.
 
 <figure><img src="../../.gitbook/assets/AWS_Ingress (2).png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
 
