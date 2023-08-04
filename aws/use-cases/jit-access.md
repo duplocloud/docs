@@ -4,6 +4,10 @@ description: Use just-in-time (JIT) to access the console in AWS
 
 # JIT Access
 
+{% hint style="info" %}
+Access the [AWS Console](using-aws-console.md) for specific resources created in DuploCloud, such as S3 Buckets and Dynamo databases, by clicking the **Console** link in the title bar of the resource page.
+{% endhint %}
+
 DuploCloud users can obtain Just-In-Time (JIT) access to the AWS Console. This access is restricted to resources that the user has access to in the DuploCloud portal. With JIT access, DuploCloud administrators have admin-level access within the AWS Console and the access is generated in real-time and revoked, by default, in one hour.
 
 ## Access using the UI
