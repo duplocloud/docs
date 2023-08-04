@@ -13,6 +13,10 @@ Navigate to **Administrator** > **System Settings** > **System Config**\
 \
 
 
+{% hint style="info" %}
+The backup retention period would be applied to the new databases created after configuring the system setting.&#x20;
+{% endhint %}
+
 <div align="left">
 
 <img src="../../../../.gitbook/assets/image (63).png" alt="Configure RDS Backup Retention">
