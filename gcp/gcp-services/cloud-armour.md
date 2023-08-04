@@ -45,6 +45,24 @@ The Security Policy displays in the Load Balancer's Other Settings card.
 
 <figure><img src="../../.gitbook/assets/CA4.png" alt=""><figcaption><p><strong>Other Settings</strong> card with <strong>Security Policy</strong> displayed</p></figcaption></figure>
 
+## Modifying a Cloud Armour Configuration Security Policy
+
+To change your Cloud Armour configuration to use a different security policy, edit the **Security Policy** in the DuploCloud [Plan](infrastructure-virtual-private-cloud.md).
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**. The **Plans** page displays.
+2. From the **Name** column, select the Plan that corresponds to your Infrastructure.
+3.  Click the **Security Policy** tab.\
 
 
-&#x20;
+    <figure><img src="../../.gitbook/assets/GCPS1.png" alt=""><figcaption><p>Plan <strong>Security Policy</strong> tab</p></figcaption></figure>
+
+
+4.  In the row listing your security policy, click the Edit Icon ( <img src="../../.gitbook/assets/square_edit_icon (3).png" alt="" data-size="line"> ) to change the Security Policy ID. The **Update Security Policy** pane displays.\
+
+
+    <figure><img src="../../.gitbook/assets/GCPS2.png" alt=""><figcaption><p><strong>Update Security Policy</strong> pane</p></figcaption></figure>
+
+
+5. Modify the Security Policy **Name** and the **Security Policy ID** as appropriate.
+6. Click **Update**. The changes are saved and displayed in the **Security Policy** tab.
+
