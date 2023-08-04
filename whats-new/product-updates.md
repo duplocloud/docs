@@ -16,7 +16,7 @@ New product updates will be posted around the 15th of each month.
   * [Enable or disable logging for an RDS ](../aws/aws-services/database/rds-database/enable-or-disable-rds-logging.md)database.
   * Add [custom Lambda image configurations](../aws/aws-services/lambda/create-lambda-using-container-image.md) and URLs.
   * Enable [Object Lock in S3 Buckets](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
-  * Configure an [S3 Bucket for auditing](../aws/aws-services/s3-bucket.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
+  * Configure a [custom S3 Bucket for auditing](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging-and-auditing.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
   * Update [Lifecycle Policies for EFS storage](../aws/aws-services/elastic-file-system-efs.md#updating-efs-lifecycle-policies).
   * [Customize a Node Selector for EKS Services](../aws/aws-services/containers.md#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
   * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
@@ -38,7 +38,7 @@ New product updates will be posted around the 15th of each month.
   * [Multiple containers](../aws/aws-services/containers.md#7-toc-title) are now supported in the ECS **Task Definitions** tab.
   * [Start, stop, and restart ](../aws/aws-services/containers.md#7-toc-title-3)up to twenty (20) services at one time.
   * [Add VPC Endpoints](../aws/use-cases/disaster-recovery/add-vpc-endpoints.md) to a DuploCloud Infrastructure to create a private connection to supported AWS services and VPC endpoint services powered by AWS PrivateLink.
-  * [Enable logging for ECS containers](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md).
+  * [Enable logging for ECS containers](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging-and-auditing.md).
   * Define [S3 bucket policies](../aws/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
   * Support for [Lambda Layers](../aws/aws-services/lambda/lambda-layers.md) has been added.
   * [CloudWatch EventBridge](../aws/aws-services/cloud-watch.md) rules and targets are supported.
