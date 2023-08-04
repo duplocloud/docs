@@ -102,10 +102,15 @@ Once Ingress is configured, you can access Services based on the rules for each 
 
 By executing `curl` commands, you can see the difference in the output for each service. Configured services are accessed based on the DNS name specified in the DuploCloud Portal and the paths that you configured when you added Ingress rules.
 
-> `>curl http://sample-ingress.qaapps.duplocloud.net/path1/` \
-> `this is service1`\
+> `>curl http://ig-nev-ingress-ing-t2-1.duplopoc.net/`
+>
+> `this is IG-NEV`\
 > \
-> `>curl http://sample-ingress.qaapps.duplocloud.net/path2/` \
-> `this is service2`\
+> `>curl http://ing-doc-ingress-ing-t2-1.duplopoc.net/`
+>
+> `this is ING-DOC`
+>
 > \
-> `>curl -H "Host: example.com" http://sample-ingress.qaapps.duplocloud.net/ this is service3`
+> `>curl http://ing-public-ingress-ing-t2.1.duplopoc.net/`
+>
+> `this is ING2-PUBLIC`
