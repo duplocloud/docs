@@ -8,22 +8,28 @@ description: New features and enhancements in DuploCloud
 New product updates will be posted around the 15th of each month.
 {% endhint %}
 
-### June 2023
+### June 2023 and July 2023
 
 * AWS
   * Manage [Tenant expiration and Tenant session durations](../administrator-tools/access-control/tenant-access/set-tenant-expiration-and-session-duration.md).
   * Set a [monitoring interval for an RDS](../aws/aws-services/database/rds-database/add-monitoring-interval.md) database.
+  * [Enable or disable logging for an RDS ](../aws/aws-services/database/rds-database/enable-or-disable-rds-logging.md)database.
   * Add [custom Lambda image configurations](../aws/aws-services/lambda/create-lambda-using-container-image.md) and URLs.
   * Enable [Object Lock in S3 Buckets](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
+  * Configure an [S3 Bucket for auditing](../aws/aws-services/s3-bucket.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
   * Update [Lifecycle Policies for EFS storage](../aws/aws-services/elastic-file-system-efs.md#updating-efs-lifecycle-policies).
+  * [Customize a Node Selector for EKS Services](../aws/aws-services/containers.md#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
   * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
   * Ability to designate [Essential Containers](../aws/aws-services/containers.md#7-toc-title-2) in Task definitions for ECS Services.
+  * [Enable auto-reboot on EC2 hosts](../aws/use-cases/hosts-vms.md#auto-rebooting-a-host) that fail a status check.
   * Enhanced support for [Startup Probes](../aws/aws-services/setting-up-probes.md).
 * GCP
   * Support for [Redis database instances](../gcp/gcp-services/databases/redis-database-instance.md).
   * Support for [SQL databases](../gcp/gcp-services/databases/sql-databases.md).
+  * Change [Cloud Armour Security Policies](../gcp/gcp-services/cloud-armour.md#modifying-a-cloud-armour-configuration-security-policy).
 * General updates
   * **Last Login** card available for determining the last user sign-in when [viewing user access](../administrator-tools/access-control/add-edit-or-delete-a-user.md#view-users).
+  * [Grant access to specific databases](../administrator-tools/access-control/database-access-for-users.md) to non-administrators.
 
 ### May 2023
 
