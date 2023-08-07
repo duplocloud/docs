@@ -108,6 +108,7 @@
   * [Faults and Alerts](aws/use-cases/faults-and-alarms/README.md)
     * [Alert notifications](aws/use-cases/faults-and-alarms/alerting-and-notifications.md)
     * [Automatic alert creation](aws/use-cases/faults-and-alarms/automatic-alert-creation.md)
+    * [Automatic fault healing](aws/use-cases/faults-and-alarms/automatic-fault-healing.md)
   * [AWS Console link](aws/use-cases/using-aws-console.md)
   * [Cost management for billing](aws/use-cases/cost-management/README.md)
     * [Enable billing data](aws/use-cases/cost-management/enable-billing-data.md)
