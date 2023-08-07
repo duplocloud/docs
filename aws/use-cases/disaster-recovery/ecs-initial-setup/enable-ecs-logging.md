@@ -2,7 +2,7 @@
 description: Enable ECS Elasticsearch logging for containers at the Tenant level
 ---
 
-# Enable ECS logging and auditing
+# Enable ECS logging
 
 To generate logs for AWS ECS clusters, you must first create an Elasticsearch logging container. Once auditing is enabled, your container logging data can be captured for analysis.
 
@@ -26,7 +26,7 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 
 ## Enable Auditing for ECS Logging
 
-1.  In the DuploCloud Portal, in the **Tenant** list box at the top left of the DuploCloud Portal, ensure that the Tenant for which you [created a logging container](enable-ecs-logging-and-auditing.md#creating-an-ecs-logging-container) is selected. In the example below, the selected Tenant is named **dev01**.
+1.  In the DuploCloud Portal, in the **Tenant** list box at the top left of the DuploCloud Portal, ensure that the Tenant for which you [created a logging container](enable-ecs-logging.md#creating-an-ecs-logging-container) is selected. In the example below, the selected Tenant is named **dev01**.
 
     <figure><img src="../../../../.gitbook/assets/tenant_dev01 (3) (1).png" alt=""><figcaption></figcaption></figure>
 2. Navigate to **Administrator** -> **Diagnostics -> Audit**. The **Audit** page displays.
@@ -50,70 +50,3 @@ You can verify that ECS logging is enabled for a specific container.
 In the **Container - 1** area, in the **Container Other Config** field, your `LogConfiguration` is displayed.
 
 <figure><img src="../../../../.gitbook/assets/AWS_ECS_Logging_3 (1).png" alt=""><figcaption><p><strong>Container Other Config</strong> field in the <strong>Container - 1</strong> area of the Task Definition editor</p></figcaption></figure>
-
-## Configuring a custom S3 bucket for auditing in another AWS account
-
-You can create an S3 bucket for auditing in another account, other than the DuploCloud Master Account.&#x20;
-
-### Prerequisites
-
-1. Verify that the S3 bucket exists in another account, and note the bucket name. In this example, we assume a BUCKET\_REGION of **us-west-2** and a BUCKET name of **audit-s2-bucket-another-account**.
-2. Ensure that your S3 bucket has `Duplo Master` permission to access the `S3:PutObject`. Refer to the code snippet below for an example.
-
-```
-{
-  "Version": "2012-10-17",
-  "Statement": [
-  {
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::accountid:role/duplomaster"
-            },
-            "Action": "S3:PutObject",
-            "Resource": [
-                "arn:aws:s3:::arn:aws:s3:::bucknetname/*",
-                "arn:aws:s3:::arn:aws:s3:::bucketname"
-            ]
-        }
-  ]
-}
-```
-
-## Configuring S3 bucket region and bucket name
-
-1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
-2. Click the **System Config** tab.
-
-### Configuring the S3 Bucket Region
-
-Continuing the example above, configure the **S3BUCKET\_REGION**.
-
-1. Click **Add**. The **Add Config** pane displays.
-2. From the **Config Type** list box, select **AppConfig**.
-3. in the **Key** list box, enter **DUPLO\_AUDIT\_S3BUCKET\_REGION**.
-4. In the **Value** field, enter **us-west-2**.
-5. Click **Submit**.
-
-### Configuring Bucket Name
-
-Continuing the example above, configure the **S3BUCKET** name.
-
-1. Click **Add**. The **Add Config** pane displays.
-2. From the **Config Type** list box, select **AppConfig**.
-3. in the **Key** list box, enter **DUPLO\_AUDIT\_S3BUCKET**.
-4. In the **Value** field, enter **audit-s2-bucket-another-account**.
-5. Click **Submit**.
-
-Your S3 bucket region and name configurations are displayed in the **System Config** tab.&#x20;
-
-<figure><img src="../../../../.gitbook/assets/RM1.png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>AppConfig</strong>s for S3 bucket region and name</p></figcaption></figure>
-
-{% hint style="info" %}
-Contact your DuploCloud Support team if you have additional questions or issues.
-{% endhint %}
-
-## Viewing detailed auditing diagnostics
-
-To view complete auditing reports and logs, navigate to the **Diagnostics** -> **Audit** page in the DuploCloud Portal.
-
-<figure><img src="../../../../.gitbook/assets/audit1.png" alt=""><figcaption><p>Audit page in the DuploCloud Portal</p></figcaption></figure>

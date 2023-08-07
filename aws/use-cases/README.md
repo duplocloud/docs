@@ -13,17 +13,20 @@ Topics in this section are covered in the order of typical usage. Use cases that
 ## Supported use cases for DuploCloud AWS
 
 * [Infrastructure and Plan](disaster-recovery.md)
-* [Tenant](tenant-environment.md)
 * [EKS Initial setup](kubernetes-cluster/) and [upgrade](disaster-recovery/upgrading-eks-version.md)
+* [ECS Initial setup](disaster-recovery/ecs-initial-setup.md)
+* [Tenant](tenant-environment.md)
 * [Hosts](hosts-vms.md) and [Snapshots](hosts-vms/backups.md)
 * [Auto Scaling host groups](auto-scaling/auto-scaling-groups.md)
 * [Configs and secrets](passing-secrets/)
+* [Docker Registry Credentials and Kubernetes Secrets](docker-registry-credentials-and-kubernetes-secrets.md)
+* [Auditing](auditing.md)
 * [Logging](central-logging/)
-* [Metrics](monitoring/)
+* [Diagnostics and Metrics](monitoring/)
 * [Faults and alerts](faults-and-alarms/)
 * [AWS Console](using-aws-console.md) link
-* [Cost management for billing](cost-management/)
 * [JIT Access](jit-access.md)
+* [Cost management for billing](cost-management/)
 * [Resource Quotas](resource-quotas.md)
 * [Big Data and ETL](../broader-scenarios/big-data-and-etl.md)
 * [Custom Resource (CR) tags](custom-resource-tags.md)
