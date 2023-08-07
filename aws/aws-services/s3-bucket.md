@@ -7,7 +7,7 @@ description: Create an S3 bucket for AWS storage
 Amazon Simple Storage Service (Amazon S3) is an object storage service offering scalability, data availability, security, and performance. You can store and protect any data for data lakes, cloud-native applications, and mobile apps. Read more about S3 and its capabilities [here](https://aws.amazon.com/s3/).
 
 {% hint style="info" %}
-To configure an S3 bucket for auditing, see the [Enable ECS logging and auditing topic](../use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging-and-auditing.md).
+To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditing.md)topic.
 {% endhint %}
 
 ## Creating an S3 bucket
