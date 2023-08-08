@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Set up for docker build
       - name: Get AWS credentials
@@ -63,7 +63,7 @@ jobs:
 
       # Build and push the docker image
       - name: Docker Build and Push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           context: .
           push: true
