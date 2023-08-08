@@ -86,6 +86,7 @@
       * [Enable ECS logging](aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md)
   * [Tenant (Environment)](aws/use-cases/tenant-environment.md)
   * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
+    * [Hibernate an EC2 Host](aws/use-cases/hosts-vms/hibernate-an-ec2-host.md)
     * [Connect EC2 instance](aws/aws-services/virtual-machines/ssh-ec2-instance.md)
     * [Snapshots](aws/use-cases/hosts-vms/backups.md)
   * [Autoscaling for Hosts](aws/use-cases/auto-scaling/README.md)
