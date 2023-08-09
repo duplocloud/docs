@@ -21,7 +21,7 @@ New product updates will be posted around the 15th of each month.
   * [Customize a Node Selector for EKS Services](../aws/aws-services/containers.md#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
   * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
   * Ability to designate [Essential Containers](../aws/aws-services/containers.md#7-toc-title-2) in Task definitions for ECS Services.
-  * [Enable auto-reboot on EC2 hosts](../aws/use-cases/hosts-vms.md#auto-rebooting-a-host) that fail a status check.
+  * [Enable auto-reboot on EC2 hosts](../aws/use-cases/faults-and-alarms/automatic-fault-healing.md#auto-rebooting-a-host-upon-failed-aws-status-check) that fail a status check.
   * Enhanced support for [Startup Probes](../aws/aws-services/setting-up-probes.md).
 * GCP
   * Support for [Redis database instances](../gcp/gcp-services/databases/redis-database-instance.md).
