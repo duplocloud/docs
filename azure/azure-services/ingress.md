@@ -98,7 +98,7 @@ Port **80** is configured by default when adding Ingress. If you want to use a c
 
 Once Ingress is configured, you can access Services based on the rules for each **DNS**.
 
-<figure><img src="../../.gitbook/assets/AKS_View_Ingress.png" alt=""><figcaption><p><strong>K8S Ingress</strong> tab on the AKS <strong>Ingress</strong> page </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/az-ing.png" alt=""><figcaption><p><strong>K8S Ingress</strong> tab on the AKS <strong>Ingress</strong> page </p></figcaption></figure>
 
 By executing `curl` commands, you can see the difference in the output for each service. Configured services are accessed based on the DNS name specified in the DuploCloud Portal and the paths that you configured when you added Ingress rules.
 
