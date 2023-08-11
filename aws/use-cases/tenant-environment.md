@@ -19,7 +19,7 @@ Any Pods that are launched using the DuploCloud UI have an appropriate Kubernete
 At the logical level, the Tenant is:
 
 * **A Container of resources**: All resources (except ones corresponding to the Infrastructure) are created within the Tenant. If a tenant is deleted, all the resources in the Tenant are terminated.
-* **A Security Boundary:** All resources within a Tenant can talk to each other. For example, a Docker container deployed in an AKG instance within the tenant will have access to Azure Blob storage and Azure SQL databases within the same tenant. SQL database instances in another tenant cannot be reached, for example, by default. Tenants expose endpoints to each other using load balancers or explicit inter-Tenant security groups and identity management policies.
+* **A Security Boundary:** All resources within a Tenant can talk to each other. For example, a Docker container deployed in an EKS instance within the tenant will have access to S# storage and RDS databases within the same tenant. RDS database instances in another tenant cannot be reached, for example, by default. Tenants expose endpoints to each other using load balancers or explicit inter-Tenant security groups and identity management policies.
 * **User Access Control:** Self-service is the bedrock of the DuploCloud platform. To that end, users can be granted Tenant level access. For example, John and Jim are developers who can be granted access to the **DEV01** tenant, Joe is an administrator who has access to all tenants, and Anna is a data scientist who has access _only_ to the **DATASCI** tenant.
 * **A Billing Unit**: Because the Tenant is a container of resources, all resources in the Tenant are tagged with the Tenant's name in the cloud provider, making it easy to segregate usage by Tenant.
 * **A mechanism for alerting**: All alerts represent Faults in any resource within the Tenants.
@@ -49,7 +49,7 @@ When you have a large set of applications that different teams access, it is hel
 
 ### Tenant abstraction and isolation
 
-While Infrastructure provides abstraction and isolation at the Virtual Private Cloud (VPC) and Kubernetes/AKG Cluster level, the Tenant supplies the next level of isolation implemented in AKS by segregating Tenants using the following construct _per_ Tenant
+While Infrastructure provides abstraction and isolation at the Virtual Private Cloud (VPC) and Kubernetes level, the Tenant supplies the next level of isolation implemented in EKS by segregating Tenants using the following construct _per_ Tenant
 
 * A set of security groups
 * An identity management role and profile
@@ -57,7 +57,7 @@ While Infrastructure provides abstraction and isolation at the Virtual Private C
 * KMS Key
 * PEM file
 
-AKS Worker nodes or virtual machines (VMs) created within a Tenant are given a label with the Tenant Name, as are the node selectors and namespaces. Consequently, even at the worker node level, two tenants achieve complete isolation and independence, even though they may be sharing the same Kubernetes cluster by a shared Infrastructure.
+EKS Worker nodes or virtual machines (VMs) created within a Tenant are given a label with the Tenant Name, as are the node selectors and namespaces. Consequently, even at the worker node level, two tenants achieve complete isolation and independence, even though they may be sharing the same Kubernetes cluster by a shared Infrastructure.
 
 ## Creating a Tenant <a href="#2-toc-title" id="2-toc-title"></a>
 
