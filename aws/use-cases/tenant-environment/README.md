@@ -14,7 +14,7 @@ All application components within the Analytics Tenant are placed in the `duplos
 
 Any Pods that are launched using the DuploCloud UI have an appropriate Kubernetes `nodeSelector` that ties the Pod to the nodes within the Tenant. If you are deploying via `kubectl,`ensure that your deployment is using the proper `nodeSelector`.
 
-![](<../../.gitbook/assets/image (16) (3).png>)
+![](<../../../.gitbook/assets/image (16) (3).png>)
 
 At the logical level, the Tenant is:
 

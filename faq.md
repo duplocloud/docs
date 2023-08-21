@@ -127,7 +127,7 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 * A host is counted as 1 unit. (example: EC2 instance, Azure VM)
 * A serverless function or service is counted as 1/4 unit (example: Lambda function)
 * A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
-* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For a MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count
+* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count
 
 ## General Cloud Technical Issue FAQs
 
@@ -138,6 +138,17 @@ Your `duplo-jit` local cache must be cleared. To do this, run the following comm
 ```bash
 rm -rf ~/Library/Caches/duplo-jit/
 ```
+
+### When creating an Infrastructure, I'm receiving the DuploCloud Fault `maximum number of VPCs reached` when attempting to create an Infrastructure.&#x20;
+
+There is an [AWS quota of 5 five VPCs per Region](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html). Ensure you are not trying to exceed that limit when creating a new Infrastructure.
+
+### When creating a Service, I'm receiving the DuploCloud Fault `Conditions Unschedulable because 0/N nodes are available: 1 node(s) didn't match pod anti-affinity rules, 1 node(s) were unschedulable....`
+
+Two possible reasons for receiving this fault message are:
+
+* You are not allocating enough hosts to process your workload.
+* The [allocation tags](gcp/container-deployments/concepts.md#allocation-tags) you have assigned to your existing hosts are limiting additional Service workloads.
 
 ## Kubernetes (K8s) FAQs
 

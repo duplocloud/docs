@@ -1,46 +1,14 @@
 ---
-description: Manage Tenant expiration and Tenant session durations
+description: Manage Tenant session durations in the AWS Portal
 ---
 
-# Set Tenant expiration and session duration
+# Set Tenant session duration
 
-{% hint style="info" %}
-This feature is only supported for DuploCloud in AWS.
-{% endhint %}
-
-In the DuploCloud Portal, you can manage Tenants in two ways:
-
-* [Managing Tenant expiration](set-tenant-expiration-and-session-duration.md#managing-tenant-expiration) - Set a specific date and time when a Tenant will be auto-deleted.&#x20;
-* [Managing Tenant session duration](set-tenant-expiration-and-session-duration.md#managing-tenant-session-duration) - Set a specific session duration for a Tenant. At the end of the session, the Tenant ceases to be active for a particular user, application, or Service.
-
-## Managing Tenant expiration
-
-You can specify a date and time when a Tenant will expire. At the specified date and time, the Tenant is deleted from the DuploCloud Portal.
-
-### Setting a Tenant's expiration date&#x20;
-
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**. The **Tenants** page displays.
-2. From the **Name** column, select the Tenant for which you want to set an expiration date.
-3.  Click the **Actions** menu and select **Set Expiry**. The **Tenant - Set Expiry** pane displays.
-
-    <figure><img src="../../../.gitbook/assets/ex1.png" alt=""><figcaption><p><strong>Actions</strong> menu on Tenant <strong>dev01</strong> page with <strong>Set Expiry</strong> option</p></figcaption></figure>
-4.  Use the calendar to set a date and time for the Tenant to be deleted.
-
-    <figure><img src="../../../.gitbook/assets/ex2.png" alt=""><figcaption><p>Setting a Tenant expiration date with the <strong>Tenant - Set Expiry</strong> pane, with calendar</p></figcaption></figure>
-5. Click **Set**.
-
-### Updating or removing a Tenant's expiration date&#x20;
-
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**. The **Tenants** page displays.
-2. From the **Name** column, select the Tenant for which you want to update or remove an expiration date.
-3.  Click the **Actions** menu and select **Set Expiry**. The **Tenant - Set Expiry** pane displays.
-
-    <figure><img src="../../../.gitbook/assets/ex3.png" alt=""><figcaption><p>Updating a Tenant expiration date with the <strong>Tenant - Set Expiry</strong> pane, with calendar, and <strong>Remove</strong> button</p></figcaption></figure>
-4. Use the calendar to change the date and time when you want the Tenant deleted and click **Set**. To remove a Tenant's expiration date, click **Remove**.&#x20;
+Using [AWS Session Management](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html), you can set session durations for a Tenant. At the end of the session, the Tenant ceases to be active for a particular user, application, or Service.
 
 ## Managing Tenant session duration &#x20;
 
-In the DuploCloud Portal, you can configure the session duration time for all Tenants or for a single Tenant.
+In the DuploCloud Portal, configure the session duration time for all Tenants or for a single Tenant.
 
 For more information about IAM roles and session times in relation to a user, application, or Service, see the [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_roles\_use.html).
 

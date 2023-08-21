@@ -36,7 +36,7 @@ When you create the Infrastructure, DuploCloud creates the following components:
 
 ## About Plans and Infrastructures
 
-Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](tenant-environment.md).
+Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](tenant-environment/).
 
 ![DuploCloud Plan Details](https://duplocloud.com/wp-content/uploads/2021/11/infra-plan.png)
 

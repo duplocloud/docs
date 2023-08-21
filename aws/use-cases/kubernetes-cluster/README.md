@@ -12,7 +12,7 @@ Start by creating a new Infrastructure in DuploCloud. When prompted to provide d
 
 Optionally, [enable logging](../disaster-recovery/kubernetes-cluster/enable-eks-logs.md) and [custom EKS endpoints](../disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md).
 
-The worker nodes and remaining workload setup is described in the [Tenant](../tenant-environment.md) topic.
+The worker nodes and remaining workload setup is described in the [Tenant](../tenant-environment/) topic.
 
 <figure><img src="../../../.gitbook/assets/AWS_Infra_logs1 (1).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> form with <strong>Enable EKS</strong> selected </p></figcaption></figure>
 
