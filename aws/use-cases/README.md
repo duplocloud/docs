@@ -15,7 +15,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Infrastructure and Plan](disaster-recovery.md)
 * [EKS Initial setup](kubernetes-cluster/) and [upgrade](disaster-recovery/upgrading-eks-version.md)
 * [ECS Initial setup](disaster-recovery/ecs-initial-setup.md)
-* [Tenant](tenant-environment.md)
+* [Tenant](tenant-environment/)
 * [Hosts](hosts-vms.md) and [Snapshots](hosts-vms/backups.md)
 * [Auto Scaling host groups](auto-scaling/auto-scaling-groups.md)
 * [Configs and secrets](passing-secrets/)

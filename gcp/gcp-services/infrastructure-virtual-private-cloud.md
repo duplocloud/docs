@@ -23,4 +23,4 @@ When you create the Infrastructure, DuploCloud creates the following components:
 * Internet Gateway
 * Route tables
 
-Creating the DuploCloud Infrastructure can take some time. After the Infrastructure is created, a plan (with the same Infrastructure name) is created and populated with the configuration of the Infrastructure. The Plan is used to create [Tenants](../../aws/use-cases/tenant-environment.md).
+Creating the DuploCloud Infrastructure can take some time. After the Infrastructure is created, a plan (with the same Infrastructure name) is created and populated with the configuration of the Infrastructure. The Plan is used to create [Tenants](../../aws/use-cases/tenant-environment/).
