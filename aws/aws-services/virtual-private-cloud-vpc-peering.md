@@ -14,6 +14,8 @@ This procedure describes how to peer two VPCs, using subnet routes, and how to m
 
 Enable VPCs for peering:&#x20;
 
+We will be referring following steps to peer 2 VPCs **VPC-A** and **VPC-B**.
+
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays. In this example, the Infrastructures are named **VPC-A** and **VPC-B**.
 2. From the **Name** column, select the first Infrastructure (**VPC-A**) for which to enable peering. **VPC-A** and its defined subnet routes are displayed.
 3.  Click the **Peering** tab and the **VPC Peering** page displays.
@@ -24,6 +26,8 @@ Enable VPCs for peering:&#x20;
 6.  Click **Save**.&#x20;
 
     <figure><img src="../../.gitbook/assets/AWS_VPC_Peering_2 (1).png" alt=""><figcaption><p>Saving <strong>VPC-A</strong> and <strong>VPC-B</strong> peering association</p></figcaption></figure>
+7. Click on **Peer again**.
+8. Follow similar from the above-listed steps 2 to 6 for **VPC-B** Infrastructure.
 
 ## Select subnet routes for VPC peering
 
@@ -37,6 +41,8 @@ Now that your two VPCs (**VPC-A** and **VPC-B**) are connected, define the subne
 
     <figure><img src="../../.gitbook/assets/AWS_VPC_Peering_3.png" alt=""><figcaption><p>Defining subnet routes for use by VPC-A and VPC-B</p></figcaption></figure>
 6. Click **Save**.&#x20;
+7. Click on **Peer again**.
+8. Follow similar from the above-listed steps 2 to 6 for **VPC-B** Infrastructure.
 
 ## Verify peering between associated VPCs
 
@@ -61,7 +67,11 @@ To maintain accessibility, add Security Group rules for Tenant VPC zones:
     <figure><img src="../../.gitbook/assets/AWS_SG_Rules.png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab on Infrastructure screen</p></figcaption></figure>
 4.  Click **Add**. The **Add Tenant Security** pane opens.
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/AWS_SG_Add_Tenant_Security (1).png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure>
+
+    </div>
 5. Define the rule for your **Port Range** and click **Add**.
 
 ## Delete subnet routes for peered VPCs
