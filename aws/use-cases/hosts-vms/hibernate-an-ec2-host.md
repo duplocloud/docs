@@ -27,3 +27,6 @@ After you configure your EC2 hosts for Hibernation in AWS:
 
 
 4. Click **Confirm**. On the EC2 tab, the host's status displays as **hibernated**.
+
+## Identifying Taints in a Hibernated Host
+
