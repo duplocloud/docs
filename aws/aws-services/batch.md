@@ -6,13 +6,9 @@ description: Run AWS batch jobs without installing software or servers
 
 You can perform AWS batch processing directly in the DuploCloud Portal without the additional overhead of installed software, allowing you to focus on analyzing results and diagnosing problems.
 
-{% hint style="warning" %}
-Batch jobs can only be processed with appropriate [permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin).
-{% endhint %}
-
 ## Preparing the AWS Batch environment
 
-Before you can use DuploCloud's lightweight AWS Batch processing feature, ensure you complete AWS Batch [prerequisites](https://docs.aws.amazon.com/batch/latest/userguide/get-set-up-for-aws-batch.html).
+Before you can use DuploCloud's lightweight AWS Batch processing feature, review the AWS Batch [prerequisites](https://docs.aws.amazon.com/batch/latest/userguide/get-set-up-for-aws-batch.html).
 
 ## Configuring Compute Environments
 
@@ -69,7 +65,7 @@ After you define job definitions, create queues in which your batch jobs are run
 
 ### Create batch job scheduling policies&#x20;
 
-Finally, create scheduling policies to define when your batch job run.&#x20;
+Finally, create scheduling policies to define when your batch job runs.&#x20;
 
 1. From the DuploCloud Portal **DevOps** -> **Batch** page, click the **Scheduling Policies** tab.
 2.  Click **Add**. The **Create Batch Scheduling Policy** page displays.
