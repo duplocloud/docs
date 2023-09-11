@@ -17,3 +17,13 @@ You can set the AWS Alerts for the individual metrics, click on the bell icon on
 
 
 ![](<../../../.gitbook/assets/image (21) (2).png>)
+
+## Viewing Alerts
+
+* View general alerts from the DuploCloud Portal in the **Diagnostics -> Alerts**.
+* Select the **Alerts** tab for alerts pertaining to a specific resource, such as **Hosts**.
+
+<figure><img src="../../../.gitbook/assets/alerts2.png" alt=""><figcaption><p>General <strong>Alerts</strong> page under <strong>Diagnostics</strong> in the DuploCloud Portal</p></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/alerts1.png" alt=""><figcaption><p><strong>Alerts</strong> tab under <strong>DevOps -> Hosts</strong> in the DuploCloud Portal</p></figcaption></figure>
+
