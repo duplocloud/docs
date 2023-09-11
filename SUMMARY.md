@@ -91,6 +91,7 @@
     * [Hibernate an EC2 Host](aws/use-cases/hosts-vms/hibernate-an-ec2-host.md)
     * [Snapshots](aws/use-cases/hosts-vms/backups.md)
     * [Taints on EC2 Hosts](aws/use-cases/hosts-vms/taints-on-ec2-hosts.md)
+    * [Disable Source Destination Check](aws/use-cases/hosts-vms/disable-source-destination-check.md)
   * [Autoscaling for Hosts](aws/use-cases/auto-scaling/README.md)
     * [Auto Scaling Groups](aws/use-cases/auto-scaling/auto-scaling-groups.md)
     * [ECS Auto Scaling](aws/use-cases/auto-scaling/ecs-auto-scaling.md)
