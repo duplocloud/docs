@@ -31,7 +31,7 @@ You can create Aurora Serverless V2 Databases by selecting **Aurora-MySql-Server
 
 ## Connecting to the database <a href="#1-toc-title" id="1-toc-title"></a>
 
-Once the database is created, select it and use the Instances tab to view the endpoint and credentials. Use the endpoint and credentials to connect to the database from your application running in an EC2 instance. The database is only accessible from inside the EC2 instance in the current Tenant, including the containers running within.
+Once the database is created, select it and use the **Instances** tab to view the endpoint and credentials. Use the **Endpoints** and credentials to connect to the database from your application running in an EC2 instance. The database is only accessible from inside the EC2 instance in the current Tenant, including the containers running within.
 
 ![RDS Instances tab](../../../../.gitbook/assets/RDS5.png)
 
