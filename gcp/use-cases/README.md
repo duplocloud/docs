@@ -19,5 +19,5 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Logs](../../azure/use-cases/logs.md)
 * [Metrics](../../azure/use-cases/metrics.md)
 * [Faults and alerts](../../azure/use-cases/faults-and-alerting/)
-* [Azure Console](../../azure/use-cases/azure-console-link.md) link
+* [Azure Console](../../azure/use-cases/azure-portal-link.md) link
 * [Cost management for billing](../../azure/use-cases/cost-management.md)
