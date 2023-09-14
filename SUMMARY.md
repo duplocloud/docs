@@ -214,7 +214,7 @@
   * [Metrics](azure/use-cases/metrics.md)
   * [Faults and alerts](azure/use-cases/faults-and-alerting/README.md)
     * [Alert notifications](azure/use-cases/faults-and-alerting/alert-notifications.md)
-  * [Azure Console link](azure/use-cases/azure-console-link.md)
+  * [Azure Portal link](azure/use-cases/azure-portal-link.md)
   * [Cost management for billing](azure/use-cases/cost-management.md)
 * [Azure services](azure/azure-services/README.md)
   * [Containers and Services](azure/azure-services/containers-and-services.md)
