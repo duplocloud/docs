@@ -25,7 +25,7 @@ Before you create and mount the Kubernetes [ConfigMap](https://kubernetes.io/doc
 
 ### Editing the DuploCloud Service
 
-1. In the DuploCloud Portal, navigate to the **DevOps -> Containers -> AKG/ Native** page.
+1. In the DuploCloud Portal, navigate to the **DevOps -> Containers -> AKS/ Native** page.
 2. Click the **Services** tab.
 3. Select the service you want to modify from the **Name** column.
 4. Click the **Actions** menu and select **Edit**.
@@ -73,7 +73,7 @@ Before you create and mount a [Kubernetes Secret](https://kubernetes.io/docs/con
 
 ### Creating a Kubernetes Secret&#x20;
 
-1. In the DuploCloud Portal, navigate to the **DevOps -> Containers -> AKG/ Native** page.
+1. In the DuploCloud Portal, navigate to the **DevOps -> Containers -> AKS/ Native** page.
 2. Click the **K8S Secrets** tab.
 3. Click **Add**. The **Add Kubernetes Secret** pane displays.
 4. Enter the **Secret Name that** you want to create, such as **my-secret-files**.
