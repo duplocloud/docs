@@ -25,7 +25,7 @@ Before you create the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts
 
 ### Editing the DuploCloud Service
 
-1. In the DuploCloud Portal, navigate to the **DevOps -> Containers -> AKG/ Native** page.
+1. In the DuploCloud Portal, navigate to the **DevOps -> Containers -> AKS/ Native** page.
 2. Click the **Services** tab.
 3. Select the service you want to modify from the **Name** column.
 4. Click the **Actions** menu and select **Edit**.
@@ -78,7 +78,7 @@ You can import Kubernetes Secrets as Environment Variables.&#x20;
 
 ### Create the Kubernetes Secret
 
-1. In the DuploCloud Portal, navigate to the **DevOps -> Containers -> AKG/ Native** page.
+1. In the DuploCloud Portal, navigate to the **DevOps -> Containers -> AKS/ Native** page.
 2. Click the **K8S Secrets** tab.
 3. Click **Add**. The **Add Kubernetes Secret** page opens.
 4. Create a Secret Name, such as `my-env-vars`.

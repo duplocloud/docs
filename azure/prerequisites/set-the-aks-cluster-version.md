@@ -26,7 +26,11 @@ To set the default AKS cluster version and enable Kubernetes cluster creation:
 6. In the **Key** list box, type **AKS\_DEFAULT\_CLUSTER\_VERSION**.
 7.  In the **Value** field, enter the default AKS cluster version number (for example, **1.23.12**). When you upgrade your AKS cluster, you will need to update the value of **AKS\_DEFAULT\_CLUSTER\_VERSION**.
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/Azure_AKS_Version_Config.png" alt=""><figcaption><p><strong>Add Config</strong> pane</p></figcaption></figure>
+
+    </div>
 8. Click **Submit**. The key and value are displayed in the **System Config** tab.
 
 <figure><img src="../../.gitbook/assets/Azure_AKS_Cluster_Version_Key.png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>AKS_DEFAULT_VERSION_NUMBER</strong> configured</p></figcaption></figure>
