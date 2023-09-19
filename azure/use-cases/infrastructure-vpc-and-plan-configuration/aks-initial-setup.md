@@ -2,7 +2,7 @@
 description: Enable Azure Kubernetes Service (AKS) to connect with Azure
 ---
 
-# AKS Setup
+# AKS initial setup
 
 ## Enabling the AKS Kubernetes Cluster
 
