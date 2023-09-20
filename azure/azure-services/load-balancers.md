@@ -4,15 +4,18 @@ description: Add and configure Load Balancers with DuploCloud Azure
 
 # Load Balancers
 
-Load Balancers are essential when running a service. They expose the containers and images in which your application resides. And when your containers are run inside a private network, you need a load balancer to listen on the correct ports to access the application.
+Load Balancers are essential when running a service. They expose the containers and images in which your application resides. When your containers are run inside a private network, you need a load balancer to listen on the correct ports to access the application.
 
 ## Add a Load Balancer Listener&#x20;
 
 Add a load balancer listener that uses the Kubernetes NodePort (K8S NodePort).
 
-{% hint style="info" %}
-Using Kubernetes Health Check allows AKS's Application Load Balancer to determine whether your service is running properly.&#x20;
-{% endhint %}
+Several Load Balancers are available for Azure. See the [Azure Documentation](https://learn.microsoft.com/en-us/azure/load-balancer/skus) for a comparison of each option.
+
+* **Application LB** (Standard load balancer)
+* **Shared App Gateway**
+* **Classic** (Basic load balancer)
+* **Health Check** - Selecting this load balancer allows the **Application LB** (Standard load balancer) to use Kubernetes Health Check to determine whether your service is running properly.
 
 ### Before you begin
 
@@ -36,4 +39,4 @@ You must create [Services ](broken-reference)before adding load balancers and li
 
 Rules specify specific configurations for various types of Load Balancers.
 
-See the [Ingress ](ingress.md)use case for an example of how to configure Load Balancers using rules for an inbound Application Load Balancer (ALB) and an outbound Network Load Balancer (NLB).&#x20;
+See the [Ingress ](ingress.md)use case for an example of how to configure Load Balancers using rules.&#x20;
