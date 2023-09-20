@@ -202,7 +202,7 @@
   * [Infrastructure (VPC) and Plan (configuration)](azure/use-cases/infrastructure-vpc-and-plan-configuration/README.md)
     * [AKS initial setup](azure/use-cases/infrastructure-vpc-and-plan-configuration/aks-initial-setup.md)
     * [Kubectl token and config](azure/use-cases/infrastructure-vpc-and-plan-configuration/kubectl-token-and-config.md)
-    * [Upgrading the AKG version](azure/use-cases/infrastructure-vpc-and-plan-configuration/upgrading-the-akg-version.md)
+    * [Upgrading the AKS version](azure/use-cases/infrastructure-vpc-and-plan-configuration/upgrading-the-aks-version.md)
   * [Tenant (Environment)](azure/use-cases/tenant-environment.md)
   * [Hosts (VMs)](azure/use-cases/hosts-vms.md)
     * [Snapshots](azure/use-cases/backups.md)

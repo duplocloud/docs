@@ -6,11 +6,6 @@ description: Adding an Ingress for DuploCloud Azure load balancers
 
 Ingress controllers abstract the complexity of routed Kubernetes application traffic, providing a bridge between Kubernetes services and services that you define.
 
-As an example, this procedure guides you through enabling and configuring Ingress to support two load balancers:
-
-* An Application Load Balancer (ALB). An ALB provides outbound connections to cluster nodes inside the AKS virtual network, translating the private IP address to a public IP address as part of its Outbound Pool.
-* A Network Load Balancer (NLB). An NLB distributes traffic across several servers by using the TCP/IP networking protocol. By combining two or more computers that are running applications into a single virtual cluster, NLB provides reliability and performance for web servers and other mission-critical servers.
-
 {% hint style="info" %}
 To add an SSL certificate to a service using Kubernetes Ingress, see Using the SSL certificate for Ingress in DuploCloud in the [Import SSL Certificates](../prerequisites/import-ssl-certificates.md) prerequisite for Azure in DuploCloud.
 {% endhint %}
@@ -37,17 +32,20 @@ Using Kubernetes Health Check allows AKS's Application Load Balancer to determin
 
 ### Before you begin
 
-You must create [Services](./) to run the ALB and NLB load balancers. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
+You must create [Services](./) to run the load balancers. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
 
-<figure><img src="../../.gitbook/assets/AKS_Ingress.png" alt=""><figcaption><p><strong>Services</strong> running ALB and NLB</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AKS_Ingress.png" alt=""><figcaption><p><strong>Services</strong> running </p></figcaption></figure>
 
 ### Adding a Load Balancer Listener
 
 1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> AKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
-3.  Click the **Load Balancers** tab.
+3.  Click the **Load Balancers** tab.\
+
 
     <figure><img src="../../.gitbook/assets/AKS_Load_Bal.png" alt=""><figcaption><p><strong>Load Balancer</strong> tab on the <strong>AKS Service</strong>s page</p></figcaption></figure>
+
+
 4. Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
 6. In the **Health Check** field, add the Kubernetes Health Check URL for this container.&#x20;
@@ -55,7 +53,7 @@ You must create [Services](./) to run the ALB and NLB load balancers. In this ex
 
 ## Add the Kubernetes Ingress rule
 
-Add an Ingress rule to listen on port 80 (in this example) using both ALB and NLB load balancers.
+Add an Ingress rule to listen on port 80 (in this example) using both load balancers.
 
 {% hint style="warning" %}
 If you use a port other than 80, you must define an additional Security Group rule for that port. See [this section](ingress.md#adding-a-security-group-rule-for-a-port-value-other-than-80) for more information.
@@ -72,10 +70,10 @@ DuploCloud Platform supports defining multiple paths in Ingress.
 
     <figure><img src="../../.gitbook/assets/AKS_Ingress_add (1).png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page for AKS</p></figcaption></figure>
 5. Click **Add Rule**. The **Add Ingress Rule** pane displays. Specify a unique **Path** identifier.
-6.  In the **Service Name** field, select **s1-alb:80**. Click **Add Rule** to add the ALB load balancer.
+6.  In the **Service Name** field, select **s1-alb:80**. Click **Add Rule** to add the load balancer.
 
     <figure><img src="../../.gitbook/assets/AKS_Ingress_add_ALB.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
-7. Add another rule by clicking **Add Rule**. The **Add Ingress Rule** pane displays. In the **Service Name** field, select **s4-nlb:80**. Click **Add Rule** to add the NLB load balancer.
+7. Add another rule by clicking **Add Rule**. The **Add Ingress Rule** pane displays. In the **Service Name** field, select **s4-nlb:80**. Click **Add Rule** to add the load balancer.
 8. On the **Add Kubernetes Ingress** page, **Add** to finish setting up the load balancer rules.
 
 ### Adding a Security Group Rule

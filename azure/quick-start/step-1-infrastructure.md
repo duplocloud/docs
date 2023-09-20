@@ -22,15 +22,22 @@ Before starting this tutorial:
 ## Creating a DuploCloud Infrastructure
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
-2.  Click **Add**. The **Add Infrastructure** page displays. Notice that the **Enable Kubernetes** switch is selected by default. Enabling Kubernetes allows the Azure Kubernetes Service (AKS) to connect with Azure cloud management.
+2.  Click **Add**. The **Add Infrastructure** page displays. \
 
-    ![Add Infrastructure page for creating a DuploCloud Infrastructure](../../.gitbook/assets/azure\_infra\_enable\_k8s.png)
+
+    ![Add Infrastructure page for creating a DuploCloud Infrastructure](../../.gitbook/assets/azureinfrare.png)
 3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.&#x20;
-4. Click **Create** to create the Infrastructure. It may take up to an hour to create the Infrastructure and enable Kubernetes. While the Infrastructure is being created, a **Pending** status displays in the **Infrastructure** page **Status** column, with additional information about what part of the Infrastructure DuploCloud is currently creating. When creation completes, a status of **Complete** displays.&#x20;
+4. Click **Create** to create the Infrastructure. It may take up to half an hour to create the Infrastructure. When creation completes, a status of **Complete** displays.&#x20;
 
-{% hint style="success" %}
-It may take some time for enablement to complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
-{% endhint %}
+## Enable Kubernetes for Azure
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
+2. Select the Infrastructure you created.
+3. Click the **Kubernetes** tab.
+4. Select the **Click Here** link. The **Configure AKS Cluster** pane displays.
+5. Enter a **Cluster Name**.
+6. Select the **Node VM Size** from the list box.
+7. Click Create. It may take some time for enablement to complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
 
 | Add Infrastructure page field  | Value                            |
 | ------------------------------ | -------------------------------- |
