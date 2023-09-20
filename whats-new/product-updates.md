@@ -59,7 +59,7 @@ New product updates will be posted around the 15th of each month.
   * [Enable Control Plane logging for EKS clusters](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-logs.md).
   * Enable [Read-only processing for ECS services](../aws/aws-services/containers.md#enabling-read-only-processing-for-ecs-services).
   * Support for [Aurora RDS Serverless and MySQL read replicas](../aws/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md) and ability to modify Serverless replica instance size.
-  * Improved documentation for [upgrading an EKS cluster version](../aws/use-cases/disaster-recovery/upgrading-eks-version.md).
+  * Improved documentation for [upgrading an EKS cluster version](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
 * Azure
   * [Add a direct link to the Azure Console ](../azure/use-cases/azure-portal-link.md)from a DuploCloud **Host** page **Actions** Menu.
 * General Updates
