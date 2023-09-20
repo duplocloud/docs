@@ -12,16 +12,16 @@ Start by creating a new Infrastructure in DuploCloud. When prompted to provide d
 
 Optionally, [enable logging](../disaster-recovery/kubernetes-cluster/enable-eks-logs.md) and [custom EKS endpoints](../disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md).
 
-The worker nodes and remaining workload setup is described in the [Tenant](../tenant-environment/) topic.
+The worker nodes and remaining workload setup are described in the [Tenant](../tenant-environment/) topic.
 
 <figure><img src="../../../.gitbook/assets/AWS_Infra_logs1 (1).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> form with <strong>Enable EKS</strong> selected </p></figcaption></figure>
 
-{% hint style="info" %}
-Creating an Infrastructure with EKS can take some time. See the Infrastructure section for details about other elements on the Add Infrastructure form.
+{% hint style="warning" %}
+Up to one instance (0 or 1) of an EKS is supported for each DuploCloud Infrastructure. &#x20;
 {% endhint %}
 
-{% hint style="warning" %}
-Up to one instance (0 or 1) of an EKS or Elastic Container Service (ECS) is supported for each DuploCloud Infrastructure. &#x20;
+{% hint style="info" %}
+Creating an Infrastructure with EKS can take some time. See the [Infrastructure ](../disaster-recovery.md)section for details about other elements on the Add Infrastructure form.
 {% endhint %}
 
 When the Infrastructure is in the ready state, as indicated by a **Status** of **Complete**, select the **Name** of the Infrastructure page to view the Kubernetes configuration details, including the token and configuration for `kubectl`.&#x20;
