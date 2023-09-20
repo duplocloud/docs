@@ -48,7 +48,7 @@ Add a load balancer listener that uses Kubernetes (K8s) NodePort. Kubernetes Hea
 
 Once Services are deployed, add Ingress:
 
-1. Select **DevOpos** -> **Containers -> EKS/Native** from the navigation pane.
+1. Select **DevOps** -> **Containers -> EKS/Native** from the navigation pane.
 2. From the **Name** column on the **Services** page, select the Service to which you want to add Ingress.
 3. Click the **K8S Ingress** tab.&#x20;
 4. Click **Add**. The **Add Kubernetes Ingress** page displays.
