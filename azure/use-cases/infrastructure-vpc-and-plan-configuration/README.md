@@ -21,9 +21,11 @@ Create a DuploCloud Infrastructure in the DuploCloud Portal:
 1. Select **Administrator** -> **Infrastructure** from the navigation menu.&#x20;
 2. Click **Add**.
 3. Define the Infrastructure by completing the fields on the **Add Infrastructure** form.&#x20;
-4. Select **Enable EKS** to enable EKS for the Infrastructure.
-5. Optionally, select **Advanced Options** to specify additional configurations (public and private subnets, for example).
-6. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page.
+4. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page.
+
+## Enable Kubernetes for AKS
+
+To enable an AKS cluster for Azure, follow [these steps in the Azure Quick Start](./#enable-kubernetes-for-aks).
 
 ![Azure Add Infrastructure page](<../../../.gitbook/assets/Azure\_infra\_default (1).png>)
 
