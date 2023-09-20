@@ -18,9 +18,9 @@ New product updates will be posted around the 15th of each month.
   * Enable [Object Lock in S3 Buckets](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
   * Configure a [custom S3 Bucket for auditing](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
   * Update [Lifecycle Policies for EFS storage](../aws/aws-services/elastic-file-system-efs.md#updating-efs-lifecycle-policies).
-  * [Customize a Node Selector for EKS Services](../aws/aws-services/containers.md#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
+  * [Customize a Node Selector for EKS Services](../aws/aws-services/containers/#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
   * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
-  * Ability to designate [Essential Containers](../aws/aws-services/containers.md#7-toc-title-2) in Task definitions for ECS Services.
+  * Ability to designate [Essential Containers](../aws/aws-services/containers/#7-toc-title-2) in Task definitions for ECS Services.
   * [Enable auto-reboot on EC2 hosts](../aws/use-cases/faults-and-alarms/automatic-fault-healing.md#auto-rebooting-a-host-upon-failed-aws-status-check) that fail a status check.
   * Enhanced support for [Startup Probes](../aws/aws-services/setting-up-probes.md).
 * GCP
@@ -35,8 +35,8 @@ New product updates will be posted around the 15th of each month.
 
 * AWS
   * [Enable EKS endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) in a DuploCloud Infrastructure, in a more cost-effective and secure manner. Enabling endpoints in DuploCloud allows your network communication to remain internal to the network, without using NAT gateways.&#x20;
-  * [Multiple containers](../aws/aws-services/containers.md#7-toc-title) are now supported in the ECS **Task Definitions** tab.
-  * [Start, stop, and restart ](../aws/aws-services/containers.md#7-toc-title-3)up to twenty (20) services at one time.
+  * [Multiple containers](../aws/aws-services/containers/#7-toc-title) are now supported in the ECS **Task Definitions** tab.
+  * [Start, stop, and restart ](../aws/aws-services/containers/#7-toc-title-3)up to twenty (20) services at one time.
   * [Add VPC Endpoints](../aws/use-cases/disaster-recovery/add-vpc-endpoints.md) to a DuploCloud Infrastructure to create a private connection to supported AWS services and VPC endpoint services powered by AWS PrivateLink.
   * [Enable logging for ECS containers](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md).
   * Define [S3 bucket policies](../aws/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
@@ -57,7 +57,7 @@ New product updates will be posted around the 15th of each month.
   * Gain [Cross-Tenant access to restricted policy-based resources](../administrator-tools/access-control/tenant-access/cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
   * [JIT Access to the AWS Console is redesigned](../aws/use-cases/jit-access.md#obtaining-aws-access-for-a-workstation) with several usability enhancements.
   * [Enable Control Plane logging for EKS clusters](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-logs.md).
-  * Enable [Read-only processing for ECS services](../aws/aws-services/containers.md#enabling-read-only-processing-for-ecs-services).
+  * Enable [Read-only processing for ECS services](../aws/aws-services/containers/#enabling-read-only-processing-for-ecs-services).
   * Support for [Aurora RDS Serverless and MySQL read replicas](../aws/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md) and ability to modify Serverless replica instance size.
   * Improved documentation for [upgrading an EKS cluster version](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
 * Azure
@@ -77,7 +77,7 @@ New product updates will be posted around the 15th of each month.
   * Enable [shell access for ECS, Kubernetes, and Native docke](../aws/prerequisites/kubectl-shell.md)r containers using a simplified workflow.
   * Reduce storage cost and increase performance by [setting GP3 as your default storage class](../aws/aws-services/storage/gp3-storage-class.md).
   * Enable [NAT Gateways for High Availability (HA)](../aws/aws-services/nat-gateway-for-ha.md).
-  * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers.md#7-toc-title-1) at once.
+  * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers/#7-toc-title-1) at once.
 * GCP
   * Updated documentation for [supported databases](../gcp/gcp-services/databases/).
 * CI/CD
@@ -100,7 +100,7 @@ New product updates will be posted around the 15th of each month.
   * Monitor Tenant usage in [Cost Management for billing](../aws/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
   * Use the [K8s Admin dashboard to monitor StatefulSets](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
-  * [Force creation of StatefulSets](../aws/aws-services/containers.md#5-toc-title).
+  * [Force creation of StatefulSets](../aws/aws-services/containers/#5-toc-title).
 * Azure
   * Support for [Kubernetes Ingress](broken-reference).
   * Monitor Tenant usage in the [Cost Management for billing ](../azure/use-cases/cost-management.md)feature with weekly or monthly views.
@@ -110,7 +110,7 @@ New product updates will be posted around the 15th of each month.
 * Kubernetes (K8s)
   * Support for Kubernetes Ingress in [Azure](broken-reference).
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
-  * [Force creation of StatefulSets in AWS](../aws/aws-services/containers.md#5-toc-title).
+  * [Force creation of StatefulSets in AWS](../aws/aws-services/containers/#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 
@@ -123,7 +123,7 @@ New product updates will be posted around the 15th of each month.
 ### October 2022
 
 * [Ability to add Logging Infra at Tenant Level](../aws/use-cases/central-logging/central-logging-setup.md#adding-logging-setup-at-tenant-level): Support to configure logging setup other than default tenant.
-* [Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers.md#add-multiple-docker-registry-credentials): The user can configure multiple docker registry credentials from the plan.
+* [Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers/#add-multiple-docker-registry-credentials): The user can configure multiple docker registry credentials from the plan.
 
 ### September 2022
 

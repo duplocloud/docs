@@ -8,8 +8,8 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 
 ## Before you begin
 
-* [Create a Task Definition](../../../aws-services/containers.md#7-toc-title)
-* Define at least one [service and container](../../../aws-services/containers.md).
+* [Create a Task Definition](../../../aws-services/containers/#7-toc-title)
+* Define at least one [service and container](../../../aws-services/containers/).
 
 ## Creating an ECS Logging Container
 

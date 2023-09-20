@@ -22,7 +22,7 @@ Supported Services are listed in alphabetical order, following the core services
 
 ### Core Services
 
-* [Containers and Services](containers.md)
+* [Containers and Services](containers/)
 * [Load Balancers](load-balancers.md)
 * [Storage for Hosts](storage/)
 
