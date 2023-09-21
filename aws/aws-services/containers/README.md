@@ -44,7 +44,11 @@ You can supply advanced configuration options in the **Other K8 Config** field. 
 
 Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers.md) for the Services.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/Services_display.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
+
+</div>
 
 ### Starting, stopping, and restarting multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
 
@@ -57,7 +61,11 @@ Using the Services page, you can start, stop, and restart multiple services at o
 
 Your selected services are started, stopped, or restarted as you specified.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/multiple_start_stop.png" alt=""><figcaption><p><strong>Services</strong> page with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
+
+</div>
 
 
 

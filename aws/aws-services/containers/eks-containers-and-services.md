@@ -13,7 +13,11 @@ Do not use spaces when creating Service or Docker image names.
 The number of Replicas you define must be less than or equal to the number of hosts in the fleet.
 {% endhint %}
 
-![Add Service page](../../../.gitbook/assets/k8\_statefulSet\_force.png)
+<div align="left">
+
+<img src="../../../.gitbook/assets/k8_statefulSet_force.png" alt="Add Service page">
+
+</div>
 
 ### Adding a Customized Node Selector to an EKS Service
 
@@ -25,4 +29,8 @@ For example, to specify specific Tenants or Allocation Tags in an existing EKS c
 When specifying parameters such as `tenantname`, specify the fully-qualified system-generated name, such as `duploservices-<tenant-name>`.
 {% endhint %}
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/ns1.png" alt=""><figcaption><p><strong>Other Pod Config</strong> area on the <strong>Advanced Options</strong> page when adding a Service</p></figcaption></figure>
+
+</div>
