@@ -117,6 +117,12 @@ duplo-jit aws --admin --host "https://<ENV_NAME>.duplocloud.net" --token <DUPLO_
 duplo-jit aws --admin --host "https://<ENV_NAME>.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
 ```
 
+#### Obtain a link interactively in PowerShell
+
+```
+duplo-jit aws --admin --host "https://<ENV_NAME>.duplocloud.net" --interactive | ConvertFrom-Json | Select-Object -ExpandProperty ConsoleUrl | Set-Clipboard
+```
+
 #### Obtain a link by configuring your `zsh` shell
 
 Add the following to your `.zshrc` file:
