@@ -8,7 +8,14 @@ description: New features and enhancements in DuploCloud
 New product updates will be posted around the 15th of each month.
 {% endhint %}
 
-### June 2023 and July 2023
+## August 2023 and September 2023
+
+* AWS
+  * [Hibernate an EC2](../aws/use-cases/hosts-vms/hibernate-an-ec2-host.md) host instance.
+  * Display [Taints in ECS hosts on unreachable Nodes](../aws/use-cases/hosts-vms/taints-on-ec2-hosts.md).
+  * Display [SNS Topic Alerts](../aws/use-cases/faults-and-alarms/sns-topic-alerts.md) per Tenant.
+
+## June 2023 and July 2023
 
 * AWS
   * Manage [Tenant expiration and Tenant session durations](../aws/use-cases/tenant-environment/set-tenant-session-duration.md).
@@ -31,7 +38,7 @@ New product updates will be posted around the 15th of each month.
   * **Last Login** card available for determining the last user sign-in when [viewing user access](../administrator-tools/access-control/add-edit-or-delete-a-user.md#view-users).
   * [Grant access to specific databases](../administrator-tools/access-control/database-access-for-users.md) to non-administrators.
 
-### May 2023
+## May 2023
 
 * AWS
   * [Enable EKS endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) in a DuploCloud Infrastructure, in a more cost-effective and secure manner. Enabling endpoints in DuploCloud allows your network communication to remain internal to the network, without using NAT gateways.&#x20;
@@ -48,7 +55,7 @@ New product updates will be posted around the 15th of each month.
 * GCP
   * [Cloud Armour](../gcp/gcp-services/cloud-armour.md) is supported, to monitor your cloud infrastructures and deployed applications against cyber-attacks.
 
-### April 2023
+## April 2023
 
 * AWS
   * Define [custom CIDRs](../aws/aws-services/load-balancers.md#adding-a-network-load-balancer-nlb-listener-with-a-custom-cidr) for NLB Load Balancers.
@@ -65,7 +72,7 @@ New product updates will be posted around the 15th of each month.
 * General Updates
   * [Set read-only access to specific Tenants](../administrator-tools/access-control/tenant-access/read-only-access-to-a-tenant.md) for DuploCloud users.
 
-### March 2023
+## March 2023
 
 * AWS
   * [Virtual Private Cloud (VPC) peering](../aws/aws-services/virtual-private-cloud-vpc-peering.md) is supported to facilitate data transfer between VPCs.
@@ -85,7 +92,7 @@ New product updates will be posted around the 15th of each month.
 * Terraform&#x20;
   * Added `IdleTimeout` to [`duplocloud_aws_load_balancer` resource](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/resources/aws\_load\_balancer).&#x20;
 
-### February 2023
+## February 2023
 
 * AWS
   * Enable Elastic Kubernetes Service (EKS) for your existing infrastructure. EKS versions 1.22 and 1.23 are supported.
@@ -93,7 +100,7 @@ New product updates will be posted around the 15th of each month.
 * General updates
   * [Delete VPN connections](../administrator-tools/access-control/add-and-delete-vpn-access-for-users.md) for users.
 
-### December 2022 and January 2023
+## December 2022 and January 2023
 
 * AWS
   * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
@@ -114,25 +121,25 @@ New product updates will be posted around the 15th of each month.
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 
-### November 2022
+## November 2022
 
 * [Ability to add Path-Based Routing rules](../aws/aws-services/load-balancers.md#2d32): Configure path-based routing rules for application load balancers.
 * [Support for Aurora Serverless V2](../aws/aws-services/database/rds-database/#create-aurora-serverless-v2-cluster-database): User can create and manage Aurora Serverless V2 RDS.
 * [Billing License Usage](../aws/use-cases/cost-management/duplocloud-license-usage.md): Overview of DuploCloud License Usage according to current service usage.
 
-### October 2022
+## October 2022
 
 * [Ability to add Logging Infra at Tenant Level](../aws/use-cases/central-logging/central-logging-setup.md#adding-logging-setup-at-tenant-level): Support to configure logging setup other than default tenant.
 * [Support multiple docker registry credentials in a single tenant](../aws/aws-services/containers/#add-multiple-docker-registry-credentials): The user can configure multiple docker registry credentials from the plan.
 
-### September 2022
+## September 2022
 
 * [Support for Amazon Managed Apache Airflow](../aws/aws-services/managed-airflow.md): Ability to configure AWS Managed Airflow
 * [Configure custom prefix for S3](../aws/aws-services/s3-bucket.md#add-custom-prefix-for-s3-buckets):  Ability to configure a prefix for S3 bucket names.
 * [Azure Support to add Storage account](../azure/azure-services/storage-account.md): Create Storage Accounts, File Shares, and generate Shared Access Signature (SAS).&#x20;
 * Multiple [Azure User Enhancements](../azure/azure-services/) were made.
 
-### August 2022
+## August 2022
 
 * [Support for Elastic File System (EFS)](../aws/aws-services/elastic-file-system-efs.md):  Support for adding EFS has been added to DuploCloud. You can create and mount a shared filesystem for an Infrastructure in the DuploCloud Portal.
 * [Support for adding Kubernetes Storage Class:](../aws/aws-services/storage/adding-k8s-storage-class.md) Support for Kubernetes Storage Class and Persistent Volumes is now available.
@@ -142,7 +149,7 @@ New product updates will be posted around the 15th of each month.
 * [Export Terraform from an existing Tenant](https://github.com/duplocloud/tenant-terraform-generator): Ability to export DuploCloud terraform provider code for an existing DuploCloud Tenant\
 
 
-### July 2022
+## July 2022
 
 * [Ability to Automatically generate Alert](https://docs.duplocloud.com/docs/aws/use-cases/alerting-and-notifications/automatic-alert-creation):  Users can now configure automated alarm creation in AWS, to make sure any new resource added to their environment is not missed from monitoring.
 * [Ability to set resource allocation quotas by an Admin](https://docs.duplocloud.com/docs/aws/use-cases/resource-quotas): Administrators would often like to restrict the type of resources that should or should not be provisioned in their environments. This feature allows them a way to configure those rules via a DuploCloud Plan.
