@@ -32,15 +32,13 @@ You will need to generate an keys from each of these vendor systems, and then pr
 1. In the [PagerDuty ](https://www.pagerduty.com/)website home page, select the **Services** tab and navigate to the service that receives Events. If a Service does not exist, click **New Service.** When prompted, enter a friendly **Name** (for example, your DuploCloud Tenant name) and click **Next.**
 2. Assign an **Escalation** policy, or use an existing policy.
 3. Click **Integration**.
-4. Click the **Reduce Noise** tab. &#x20;
-5. Click **Events API V2**.
-6. Select the **Create Service New** page. Your generated **Integration Key** is displayed as the second item on the right side of the page. This is the Routing Key you will supply to DuploCloud.
-7. Copy the **Integration Key** to your Clipboard.
-8. In the DuploCloud Portal, navigate to **DevOps** -> **Faults**.
-9. Click **Update Notifications Config**. The **Set Alert Notifications Config** pane displays.
-10. In the **Pager Duty - Routing Key** field, enter the key you generated from PagerDuty.
-11. In the **Alerts Frequency (Seconds)** field, enter a time interval in seconds when you want alerts to be displayed.
-12. Click **Update**.
+4. Click **Events API V2**. Your generated **Integration Key** is displayed as the second item on the right side of the page. This is the Routing Key you will supply to DuploCloud.
+5. Copy the **Integration Key** to your Clipboard.
+6. In the DuploCloud Portal, navigate to **DevOps** -> **Faults**.
+7. Click **Update Notifications Config**. The **Set Alert Notifications Config** pane displays.
+8. In the **Pager Duty - Routing Key** field, enter the key you generated from PagerDuty.
+9. In the **Alerts Frequency (Seconds)** field, enter a time interval in seconds when you want alerts to be displayed.
+10. Click **Update**.
 
 ## Generating an Integration Key from NewRelic
 
