@@ -9,7 +9,7 @@ description: Enable Azure Kubernetes Service (AKS) to connect with Azure
 Once your Infrastructure and Plan have been created, the final step before creating a Tenant is to enable Azure Kubernetes Service (AKS) to connect with Azure cloud management.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
-2. Select the **NONPROD** Infrastructure that you created, in the **NAME** column of the Infrastructure page.
+2. Select the Infrastructure that you created, in the **NAME** column of the Infrastructure page.
 3. Click the **Kubernetes** tab. The following message displays: **Kubernetes cluster is not yet enabled. Click Here to enable the Kubernetes Cluster**.
 4. Click on the **Click Here** hyperlink. The **Configure AKS Cluster** pane displays.
 5. Accept the default values and click **Create** to enable the AKS service for your Infrastructure.&#x20;
