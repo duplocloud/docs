@@ -211,7 +211,6 @@
     * [Snapshots](azure/use-cases/backups.md)
   * [Autoscaling for Hosts](azure/use-cases/autoscaling/README.md)
     * [Autoscaling Azure Agent Pools](azure/use-cases/autoscaling/autoscaling-azure-agent-pools.md)
-    * [Autoscaling in Kubernetes](azure/use-cases/autoscaling/autoscaling-in-kubernetes.md)
   * [Docker Registry Credentials and Kubernetes Secrets](azure/use-cases/docker-registry-credentials-and-kubernetes-secrets.md)
   * [Logs](azure/use-cases/logs.md)
   * [Metrics](azure/use-cases/metrics.md)

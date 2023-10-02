@@ -25,7 +25,7 @@ Create a DuploCloud Infrastructure in the DuploCloud Portal:
 
 ## Enable Kubernetes for AKS
 
-To enable an AKS cluster for Azure, follow [these steps in the Azure Quick Start](./#enable-kubernetes-for-aks).
+To enable an AKS cluster for Azure, follow [these steps](aks-initial-setup.md#enabling-the-aks-kubernetes-cluster).
 
 ![Azure Add Infrastructure page](<../../../.gitbook/assets/Azure\_infra\_default (1).png>)
 
