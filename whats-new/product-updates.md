@@ -13,7 +13,6 @@ New product updates will be posted around the 15th of each month.
 * AWS
   * [Hibernate an EC2](../aws/use-cases/hosts-vms/hibernate-an-ec2-host.md) host instance.
   * Display [Taints in ECS hosts on unreachable Nodes](../aws/use-cases/hosts-vms/taints-on-ec2-hosts.md).
-  * Display [SNS Topic Alerts](../aws/use-cases/faults-and-alarms/sns-topic-alerts.md) per Tenant.
 
 ## June 2023 and July 2023
 

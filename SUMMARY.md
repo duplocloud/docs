@@ -115,7 +115,6 @@
     * [Alert notifications](aws/use-cases/faults-and-alarms/alerting-and-notifications.md)
     * [Automatic alert creation](aws/use-cases/faults-and-alarms/automatic-alert-creation.md)
     * [Automatic fault healing](aws/use-cases/faults-and-alarms/automatic-fault-healing.md)
-    * [SNS Topic Alerts](aws/use-cases/faults-and-alarms/sns-topic-alerts.md)
   * [AWS Console link](aws/use-cases/using-aws-console.md)
   * [JIT Access](aws/use-cases/jit-access.md)
   * [Cost management for billing](aws/use-cases/cost-management/README.md)
