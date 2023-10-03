@@ -42,6 +42,10 @@ When you create the Infrastructure, DuploCloud creates the following components:
 * Route tables
 * [VPC peering](../../../aws/aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
 
+## Enabling an encrypted Azure storage account
+
+You can choose to [encrypt your Azure storage account](../hosts-vms/encrypted-storage-account.md) by configuring a Key/Value pair in the Infrastructure.&#x20;
+
 ## About Plans and Infrastructures
 
 Once the Infrastructure is created, a [Plan ](../../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration. The Plan is used to create [Tenants](../tenant-environment.md).
