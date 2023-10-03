@@ -22,7 +22,7 @@ New product updates will be posted around the 15th of each month.
   * [Enable or disable logging for an RDS ](../aws/aws-services/database/rds-database/enable-or-disable-rds-logging.md)database.
   * Add [custom Lambda image configurations](../aws/aws-services/lambda/create-lambda-using-container-image.md) and URLs.
   * Enable [Object Lock in S3 Buckets](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
-  * Configure a [custom S3 Bucket for auditing](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
+  * Configure a [custom S3 Bucket for auditing](../aws/use-cases/disaster-recovery/ecs-setup/enable-ecs-logging.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
   * Update [Lifecycle Policies for EFS storage](../aws/aws-services/elastic-file-system-efs.md#updating-efs-lifecycle-policies).
   * [Customize a Node Selector for EKS Services](../aws/aws-services/containers/#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
   * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
@@ -44,7 +44,7 @@ New product updates will be posted around the 15th of each month.
   * [Multiple containers](../aws/aws-services/containers/#7-toc-title) are now supported in the ECS **Task Definitions** tab.
   * [Start, stop, and restart ](../aws/aws-services/containers/#7-toc-title-3)up to twenty (20) services at one time.
   * [Add VPC Endpoints](../aws/use-cases/disaster-recovery/add-vpc-endpoints.md) to a DuploCloud Infrastructure to create a private connection to supported AWS services and VPC endpoint services powered by AWS PrivateLink.
-  * [Enable logging for ECS containers](../aws/use-cases/disaster-recovery/ecs-initial-setup/enable-ecs-logging.md).
+  * [Enable logging for ECS containers](../aws/use-cases/disaster-recovery/ecs-setup/enable-ecs-logging.md).
   * Define [S3 bucket policies](../aws/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
   * Support for [Lambda Layers](../aws/aws-services/lambda/lambda-layers.md) has been added.
   * [CloudWatch EventBridge](../aws/aws-services/cloud-watch.md) rules and targets are supported.
@@ -57,8 +57,8 @@ New product updates will be posted around the 15th of each month.
 ## April 2023
 
 * AWS
-  * Define [custom CIDRs](../aws/aws-services/load-balancers.md#adding-a-network-load-balancer-nlb-listener-with-a-custom-cidr) for NLB Load Balancers.
-  * Manage multiple Load Balancer settings using the **Load Balancer** tab's [**Other Settings** card](../aws/aws-services/load-balancers.md#additional-load-balancer-settings). Settings include specifying a Web Application Firewall (WAF) Access Control List (ACL), enabling HTTP to HTTPS redirects, enabling Access Logs, setting an Idle Timeout, and an option to drop invalid headers.
+  * Define [custom CIDRs](../aws/aws-services/load-balancers/#adding-a-network-load-balancer-nlb-listener-with-a-custom-cidr) for NLB Load Balancers.
+  * Manage multiple Load Balancer settings using the **Load Balancer** tab's [**Other Settings** card](../aws/aws-services/load-balancers/#additional-load-balancer-settings). Settings include specifying a Web Application Firewall (WAF) Access Control List (ACL), enabling HTTP to HTTPS redirects, enabling Access Logs, setting an Idle Timeout, and an option to drop invalid headers.
   * Specify [custom public and private EKS endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) for your DuploCloud Infrastructure during or after creating an Infrastructure.&#x20;
   * Gain [Cross-Tenant access to restricted policy-based resources](../administrator-tools/access-control/tenant-access/cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
   * [JIT Access to the AWS Console is redesigned](../aws/use-cases/jit-access.md#obtaining-aws-access-for-a-workstation) with several usability enhancements.
@@ -122,7 +122,7 @@ New product updates will be posted around the 15th of each month.
 
 ## November 2022
 
-* [Ability to add Path-Based Routing rules](../aws/aws-services/load-balancers.md#2d32): Configure path-based routing rules for application load balancers.
+* [Ability to add Path-Based Routing rules](../aws/aws-services/load-balancers/#2d32): Configure path-based routing rules for application load balancers.
 * [Support for Aurora Serverless V2](../aws/aws-services/database/rds-database/#create-aurora-serverless-v2-cluster-database): User can create and manage Aurora Serverless V2 RDS.
 * [Billing License Usage](../aws/use-cases/cost-management/duplocloud-license-usage.md): Overview of DuploCloud License Usage according to current service usage.
 

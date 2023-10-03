@@ -47,16 +47,28 @@ Create a Tenant for your Infrastructure and Plan:
 5. Click **Create**.\
 
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/Azure_GS_Tenant_1_Create_a_Tenant.png" alt=""><figcaption><p><strong>Create a Tenant</strong> pane</p></figcaption></figure>
 
-## Check your work
+</div>
+
+## Checking your work
 
 1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.\
 
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/AWS_QS_3.png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong><br></p></figcaption></figure>
+
+    </div>
 2.  Navigate to **Administrator** -> **Infrastructure** and select **dev01** from the **Tenant** list box at the top left in the DuploCloud Portal. The **NONPROD** Infrastructure appears in the list of Infrastructures, indicating that the **dev01** Tenant is associated with Infrastructure **NONPROD**.\
 
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/AWS_QS_4.png" alt=""><figcaption><p>Tenant list box with <strong>dev01</strong> selected; <strong>NONPROD</strong> Infrastructure with <strong>Status Complete</strong> </p></figcaption></figure>
+
+    </div>
 

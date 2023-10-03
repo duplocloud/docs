@@ -5,7 +5,7 @@ description: Key terms and concepts in DuploCloud AWS
 # Key DuploCloud concepts
 
 {% hint style="info" %}
-The following concepts do not apply to ECS. ECS uses a proprietary policy model, which is explained in a [later section](../use-cases/disaster-recovery/ecs-initial-setup.md).
+The following concepts do not apply to ECS. ECS uses a proprietary policy model, which is explained in a [later section](../use-cases/disaster-recovery/ecs-setup/).
 {% endhint %}
 
 While deploying containerized applications in DuploCloud, be familiar with these DuploCloud concepts and terms. See [Use Cases](../use-cases/) for a description of DuploCloud Infrastructures and Tenants.

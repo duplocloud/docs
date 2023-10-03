@@ -1,15 +1,15 @@
-# ECS Containers and Services
+# ECS Containers and Task Definitions
 
-## Adding a DuploCloud ECS Service
-
-For an example of how to create an ECS Service, [see this tutorial](../../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
+{% hint style="success" %}
+For an end-to-end example of how to create an ECS Task Definition, Service, and Load Balancer, [see this tutorial](../../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
+{% endhint %}
 
 ## Creating multiple containers for ECS Services using a Task Definition <a href="#7-toc-title" id="7-toc-title"></a>
 
 You can create up to five (5) containers for ECS services by defining a Task Definition.
 
 {% hint style="info" %}
-To designate a container as Essential, see [Defining an Essential Container](ecs-containers-and-services.md#7-toc-title-2).
+To designate a container as Essential, see [Defining an Essential Container](ecs-containers-and-task-definitions.md#7-toc-title-2).
 {% endhint %}
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**.
@@ -51,7 +51,7 @@ In AWS ECS, an essential container is a key component of a task definition. An e
 
 By designating containers as essential or non-essential, you define the dependencies and relationships between the containers in your task definition. This allows ECS to properly manage and monitor the overall health and lifecycle of the task, ensuring that the essential containers are always running and healthy.
 
-To designate a container as Essential, follow the [Creating multiple containers for ECS Services using a Task Definition](ecs-containers-and-services.md#7-toc-title) procedure to create your containers, but before creating the container you want to designate as Essential, in the **Container** definition, select the **Essential Container** option, as in the example below.
+To designate a container as Essential, follow the [Creating multiple containers for ECS Services using a Task Definition](ecs-containers-and-task-definitions.md#7-toc-title) procedure to create your containers, but before creating the container you want to designate as Essential, in the **Container** definition, select the **Essential Container** option, as in the example below.
 
 <div align="left">
 
@@ -64,3 +64,7 @@ To designate a container as Essential, follow the [Creating multiple containers 
 Fargate is a technology that you can use with ECS to run containers without having to manage servers or clusters of EC2 instances.
 
 For information about Fargate, [contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).
+
+## Create an ECS Service and Load Balancer&#x20;
+
+Follow [this procedure](../load-balancers/ecs-services-and-load-balancers.md) to create the ECS Service from your Task Definition and define an associated Load Balancer to expose your application on the network.
