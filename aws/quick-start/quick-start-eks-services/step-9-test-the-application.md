@@ -10,14 +10,14 @@ _Estimated time to complete Step 9 and finish tutorial: 10 minutes._
 
 ## Prerequisites
 
-Before securing a Load Balancer, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
+Before testing your application, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* The **NONPROD** infrastructure has EKS[ **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
 * A Host with the name [**host01** has been created](step-3-create-host.md).
 * A Service with the name [**demo-service** has been created](step-5-create-app-via-k8s.md).
-* An [HTTPS ALB Load Balancer](../quick-start-duplocloud-docker-services/step-6-create-loadbalancer.md) has been created.&#x20;
+* An [HTTPS Application Load Balancer](step-6-create-a-load-balancer.md) has been created.&#x20;
 
 ### Select the Tenant you created
 
@@ -31,17 +31,25 @@ Note that if you skipped [Step 7](step-7-secure-the-load-balancer.md) and/or [St
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.
 2. From the **Name** column, select **demo-service**.
-3. Click the **Load Balancers** tab. The ALB Load Balancer configuration is displayed.
+3. Click the **Load Balancers** tab. The Application Load Balancer configuration is displayed.
 4.  In the **DNS** status card on the right side of the Portal, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/AWS_QS_28.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS</strong> status card highlighted</p></figcaption></figure>
+
+    </div>
 
 
 5. Open a browser instance and **Paste** the DNS in the URL field of your browser.
 6. Press **ENTER**. A web page with the text **Hello World!** is displayed, from the JavaScript program residing in your Docker Container that is running in **demo-service**, which is exposed to the web by your Load Balancer.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/AWS_QS_29.png" alt=""><figcaption><p>Web page with <strong>Hello World!</strong> displayed</p></figcaption></figure>
+
+</div>
 
 {% hint style="info" %}
 It can take from five to fifteen (5-15) minutes for the DNS Name to become active once you launch your browser instance to test your application.
@@ -62,7 +70,7 @@ In the previous steps, you:
 * [Created an EC2 host](step-3-create-host.md) named **host01**, so that your application has storage resources with which to run.
 * [Created a Service](step-5-create-app-via-k8s.md) named **demo-service** to connect the Docker containers and associated images, in which your application code resides, to the DuploCloud Tenant environment.
 * [Created an ALB Load Balancer Listener](step-6-create-a-load-balancer.md) to expose your application via ports and backend network configurations.&#x20;
-* [Verified that your web page rendered](step-9-test-the-application.md) as expected by testing the IP address exposed by the  Load Balancer Listener.
+* [Verified that your web page rendered](step-9-test-the-application.md#testing-the-application) as expected by testing the IP address exposed by the  Load Balancer Listener.
 
 ## Cleaning up your tutorial environment
 

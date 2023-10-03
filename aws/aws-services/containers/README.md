@@ -42,7 +42,7 @@ You can supply advanced configuration options in the **Other K8 Config** field. 
 
 ## Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
-Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers.md) for the Services.
+Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers/) for the Services.
 
 <div align="left">
 

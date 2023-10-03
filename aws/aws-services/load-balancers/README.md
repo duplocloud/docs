@@ -18,7 +18,7 @@ Load Balancers can be configured for Docker Native, EKS-Enabled, and ECS Service
 * **Shared and Global load balancers** - Application or Network Load Balancers that can be used as a shared Load Balancer between Services and for Global Server Load Balancing (GSLB). (Navigate to **DevOps** -> **Networking** -> **Load Balancers**).
 
 {% hint style="info" %}
-[To share a load balancer between multiple Services](load-balancers.md#2d32), create a Service Load Balancer of type **Target Group Only**.
+[To share a load balancer between multiple Services](./#2d32), create a Service Load Balancer of type **Target Group Only**.
 {% endhint %}
 
 ## Adding a Load Balancer Listener
@@ -31,23 +31,23 @@ Load Balancers can be configured for Docker Native, EKS-Enabled, and ECS Service
 6.  Complete other fields as required and click **Add** to add the Load Balancer Listener.\
 
 
-    <figure><img src="../../.gitbook/assets/LBL1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/LBL1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
 
 ### Adding a Network Load Balancer (NLB) Listener with a custom CIDR
 
 To specify a custom classless inter-domain routing (CIDR) value for an NLB Load Balancer, edit the Load Balancer Listener configuration in the DuploCloud Portal.&#x20;
 
-Before completing this task, you must [add a Load Balancer Listener of **Type Network LB**](load-balancers.md#adding-a-load-balancer-listener).
+Before completing this task, you must [add a Load Balancer Listener of **Type Network LB**](./#adding-a-load-balancer-listener).
 
 1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> EKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
-4. In the **LB Listeners** area, select the Edit Icon (<img src="../../.gitbook/assets/image (3).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
+4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../.gitbook/assets/image (3).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
 5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pane**.**
-6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. After the CIDRs are added, you [add Security Groups for Custom CIDR(s)](load-balancers.md#adding-security-groups-for-custom-cidrs).\
+6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. After the CIDRs are added, you [add Security Groups for Custom CIDR(s)](./#adding-security-groups-for-custom-cidrs).\
 
 
-<figure><img src="../../.gitbook/assets/LBL7.png" alt=""><figcaption><p><strong>Edit Load Balancer Listener</strong> pane with <strong>Custom CIDRs</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/LBL7.png" alt=""><figcaption><p><strong>Edit Load Balancer Listener</strong> pane with <strong>Custom CIDRs</strong></p></figcaption></figure>
 
 ### Adding Security Groups for NLBs with custom CIDRs
 
@@ -66,7 +66,7 @@ Repeat this procedure for each custom CIDR that you want to add.
 
 Repeat this procedure to add additional CIDRs.
 
-<figure><img src="../../.gitbook/assets/LBL8.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane for adding <strong>Custom CIDRs</strong> to Securty Groups</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/LBL8.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane for adding <strong>Custom CIDRs</strong> to Securty Groups</p></figcaption></figure>
 
 ## Adding a Shared Load Balancer
 
@@ -75,7 +75,7 @@ Repeat this procedure to add additional CIDRs.
 3.  Click **Add**. The **Create a Load Balancer** pane displays.\
 
 
-    <figure><img src="../../.gitbook/assets/AWS_alb_lb_create.png" alt=""><figcaption><p><strong>Create a Load Balancer</strong> pane for a shared <strong>Application</strong> load balancer</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_alb_lb_create.png" alt=""><figcaption><p><strong>Create a Load Balancer</strong> pane for a shared <strong>Application</strong> load balancer</p></figcaption></figure>
 4. In the **Name** field, enter a name for the Load Balancer.
 5. From the **Type** list box, select a Load Balancer type.
 6. From the **Visibility** list box, select **Public** or **Internal**.
@@ -99,52 +99,52 @@ To accomplish this, you:
 4. If no Load Balancers exist, click the **Configure Load Balancer** link. If other Load Balancers exist, click **Add** in the **LB listeners** card. The **Add Load Balancer Listener** pane displays.
 5. From the **Select Type** list box, select **Target Group Only**.
 6. You can create a Load Balancer Listener with a type of **Target Group** **Only** for Docker Mode or  **Native** EKS and ECS Services based on your application requirement.  Complete the other required fields and click **Add**.&#x20;
-7.  Note the name of the created Target Group by clicking the Info Icon ( <img src="../../.gitbook/assets/info_tip_black (2).png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`. You will select the Target Group when you [create a Shared Load Balancer for the Target Group](load-balancers.md#creating-a-shared-load-balancer-for-the-target-group).\
+7.  Note the name of the created Target Group by clicking the Info Icon ( <img src="../../../.gitbook/assets/info_tip_black (2).png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`. You will select the Target Group when you [create a Shared Load Balancer for the Target Group](./#creating-a-shared-load-balancer-for-the-target-group).\
 
 
-    <figure><img src="../../.gitbook/assets/AWS_Target3.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for <strong>Target Group Only Type</strong></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_Target3.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for <strong>Target Group Only Type</strong></p></figcaption></figure>
 
-The **Target Group Only** Service Load Balancer displays in the **LB Listeners** area in the **Load Balancers** tab on the **Services** page.
+The **Target Group Only** Service Load Balancer is displayed in the **LB Listeners** area in the **Load Balancers** tab on the **Services** page.
 
-<figure><img src="../../.gitbook/assets/LBL9.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/LBL9.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab</p></figcaption></figure>
 
 ### Creating a Shared Load Balancer for the Target Group
 
-[Add a Shared Load Balancer](load-balancers.md#adding-a-shared-load-balancer) before performing this procedure.
+[Add a Shared Load Balancer](./#adding-a-shared-load-balancer) before performing this procedure.
 
 1.  In the **Load Balancer** tab of the **DevOps** -> **Networking** page, select the Shared Load Balancer you created. The **Load Balancer** page with the **Listeners** tab displays.\
 
 
-    <figure><img src="../../.gitbook/assets/LBL18.png" alt=""><figcaption><p><strong>Networking</strong> page displaying Shared Application Load Balancer<br></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/LBL18.png" alt=""><figcaption><p><strong>Networking</strong> page displaying Shared Application Load Balancer<br></p></figcaption></figure>
 
-    <figure><img src="../../.gitbook/assets/LBL19.png" alt=""><figcaption><p><strong>Load Balancers</strong> page with <strong>Listeners</strong> tab</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/LBL19.png" alt=""><figcaption><p><strong>Load Balancers</strong> page with <strong>Listeners</strong> tab</p></figcaption></figure>
 
     ###
 2.  In the **Listeners** tab, click **Add**. The **Load Balancer Listener** pane displays.\
 
 
-    <figure><img src="../../.gitbook/assets/LBL12.png" alt=""><figcaption><p><strong>Load Balancer Listener</strong> pane with <strong>Target Group</strong> specified</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/LBL12.png" alt=""><figcaption><p><strong>Load Balancer Listener</strong> pane with <strong>Target Group</strong> specified</p></figcaption></figure>
 
 
-3. Complete all fields, specifying the **Target Group** that was created when you [added a Load Balancer with the **Type Target Group Only** in the previous step](load-balancers.md#creating-a-service-load-balancer-with-the-type-target-group-only).
+3. Complete all fields, specifying the **Target Group** that was created when you [added a Load Balancer with the **Type Target Group Only** in the previous step](./#creating-a-service-load-balancer-with-the-type-target-group-only).
 4.  Click **Save**. The Shared Load Balancer for the Target Group displays in the **Listeners** tab.\
 
 
-    <figure><img src="../../.gitbook/assets/LBL20.png" alt=""><figcaption><p>Shared Load Balancer for the Target Group</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/LBL20.png" alt=""><figcaption><p>Shared Load Balancer for the Target Group</p></figcaption></figure>
 
 ### Adding Routing Rules to the Shared Load Balancer
 
-[Create a Shared Load Balancer for the Target Group](load-balancers.md#creating-a-shared-load-balancer-for-the-target-group) before performing this procedure.
+[Create a Shared Load Balancer for the Target Group](./#creating-a-shared-load-balancer-for-the-target-group) before performing this procedure.
 
 {% hint style="warning" %}
 Rules are not supported for Network Load Balancers (NLBs).
 {% endhint %}
 
-1.  In the **Listeners** tab, in the **Target Group** row, click the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) and select **Manage Rules**. You can also select **Update attributes** from the **Actions** menu, as well, to dynamically update Target Group attributes. The **Listener Rules** page displays.
+1.  In the **Listeners** tab, in the **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) and select **Manage Rules**. You can also select **Update attributes** from the **Actions** menu, as well, to dynamically update Target Group attributes. The **Listener Rules** page displays.
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/LBL13 (2).png" alt=""><figcaption><p><strong>Actions</strong> menu for <strong>Target Group</strong> with <strong>Manage Rules</strong> and <strong>Update attributes</strong> options</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/LBL13 (2).png" alt=""><figcaption><p><strong>Actions</strong> menu for <strong>Target Group</strong> with <strong>Manage Rules</strong> and <strong>Update attributes</strong> options</p></figcaption></figure>
 
     </div>
 
@@ -152,13 +152,13 @@ Rules are not supported for Network Load Balancers (NLBs).
 2.  Click **Add**. The **Add LB Listener rule** page displays.\
 
 
-    <figure><img src="../../.gitbook/assets/LBL21.png" alt=""><figcaption><p><strong>Add</strong> button on <strong>Listener Rules</strong> page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/LBL21.png" alt=""><figcaption><p><strong>Add</strong> button on <strong>Listener Rules</strong> page</p></figcaption></figure>
 
 
 3.  Create routing rules for the Target Group by setting appropriate **Conditions**. Add Routing Rules by specifying **Rule Type**, **Values**, and **Forward Target Group**. Forward Target Group lists all the Target Groups created for Docker Native, K8s, and ECS Services. Specify **Priority** for multiple rules. Use the **X** button to delete specific **Values**.\
 
 
-    <figure><img src="../../.gitbook/assets/LBL14.png" alt=""><figcaption><p><strong>Add LB Listener</strong> rule page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/LBL14.png" alt=""><figcaption><p><strong>Add LB Listener</strong> rule page</p></figcaption></figure>
 
 
 4. Click **Submit**.&#x20;
@@ -170,9 +170,9 @@ View the rules you defined for any Shared Load Balancer.
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose rules you want to view.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../.gitbook/assets/image (12).png" alt="" data-size="line"> ) and select **Manage Rules**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../../.gitbook/assets/image (12).png" alt="" data-size="line"> ) and select **Manage Rules**.
 
-<figure><img src="../../.gitbook/assets/LBL22.png" alt=""><figcaption><p><strong>Listener Rules</strong> page displaying Shared Load Balancer rules</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/LBL22.png" alt=""><figcaption><p><strong>Listener Rules</strong> page displaying Shared Load Balancer rules</p></figcaption></figure>
 
 ## Updating Target Group attributes
 
@@ -181,7 +181,7 @@ Update attributes for your defined Target Group.
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose defined Target Group attributes you want to modify.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../.gitbook/assets/image (6).png" alt="" data-size="line"> ) and select **Update attributes**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/image (6).png" alt="" data-size="line"> ) and select **Update attributes**.
 
 ## Additional Load Balancer Settings
 
@@ -199,13 +199,13 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 4.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.\
 
 
-    <figure><img src="../../.gitbook/assets/AWS_LB_Other1.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab with <strong>Other Settings</strong> card</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_LB_Other1.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab with <strong>Other Settings</strong> card</p></figcaption></figure>
 
 
 5.  In the **Other Load Balancer Settings** pane, select any or all options.\
 
 
-    <figure><img src="../../.gitbook/assets/AWS_LB_Other2.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_LB_Other2.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure>
 
 
 6. Click **Save**.

@@ -27,7 +27,7 @@ _Estimated time to complete Step 5: 10 minutes._
 Before creating a Service, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* The **NONPROD** infrastructure has [EKS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
 * A host with the name [**host01** has been created](step-3-create-host.md).
 
@@ -38,9 +38,10 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 ## Adding a Service
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.&#x20;
-2.  Click **Add**. The **Add Service** page displays.
+2.  Click **Add**. The **Add Service** page displays.\
 
-    <figure><img src="../../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+
+    <figure><img src="../../../.gitbook/assets/image (75).png" alt=""><figcaption><p><strong>Add Service</strong> page</p></figcaption></figure>
 3. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept all other default values for fields not specified.&#x20;
 4. Click **Next**. The **Advanced Options** page is displayed.
 5. At the bottom of the **Advanced Options** page, click **Create**. Your Service is created and initialized. In about five (5) minutes, in the **Containers** tab, your DuploCloud Service displays a **Current** status of **Running**.&#x20;
@@ -54,8 +55,12 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 Use the **Containers** tab to monitor the Service creation status, between **Desired** (**Running**) and **Current**.
 {% endhint %}
 
-## Check your work
+## Checking your work
 
 Verify that your DuploCloud Service, **demo-service**, has a **Current** status of **Running**.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/AWS_QS_17.png" alt=""><figcaption><p><strong>Containers</strong> tab displaying <strong>Desired</strong> and <strong>Current</strong> status (both <strong>Running</strong>)</p></figcaption></figure>
+
+</div>

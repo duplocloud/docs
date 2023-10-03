@@ -19,7 +19,7 @@ _Estimated time to complete Step 8: 5 minutes._
 Before securing a Load Balancer, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* The **NONPROD** infrastructure has [EKS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
 * A Host with the name [**host01** has been created](step-3-create-host.md).
 * A Service with the name [**demo-service** has been created](step-5-create-app-via-k8s.md).
@@ -36,7 +36,11 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 3.  Click the **Load Balancers** tab. The ALB Load Balancer configuration is displayed.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/AWS_QS_26.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card </p></figcaption></figure>
+
+    </div>
 
 
 4. In the **DNS Name** card, click **Edit**. The prefix in the DNS Name is editable.
@@ -45,10 +49,14 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 An entry for your new DNS name is now registered with **demo-service**.
 
-## Check your work
+## Checking your work
 
 The **DNS Name** card displays your modified DNS Name.   &#x20;
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/AWS_QS_27.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card, displaying new <strong>DNS Name</strong></p></figcaption></figure>
+
+</div>
 
 &#x20;                                        &#x20;
