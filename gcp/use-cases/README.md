@@ -13,7 +13,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Infrastructure and Plan](../../aws/use-cases/disaster-recovery.md)
 * [Tenant](../../azure/use-cases/tenant-environment.md)
 * [Hosts](../../aws/use-cases/hosts-vms.md)
-* [Autoscaling for Hosts](../../azure/use-cases/autoscaling/)
+* [Autoscaling for Hosts](../../azure/use-cases/hosts-vms/autoscaling/)
 * [VM Scale Sets](../../azure/use-cases/vm-scale-sets.md)
 * [Docker Registry Credentials and Kubernetes Secrets](../../azure/use-cases/docker-registry-credentials-and-kubernetes-secrets.md)
 * [Logs](../../azure/use-cases/logs.md)
