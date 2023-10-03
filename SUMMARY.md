@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Free Trial Edition](free-trial.md)
 * [FAQs](faq.md)
 
 ## WHAT'S NEW
