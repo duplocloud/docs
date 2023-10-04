@@ -19,18 +19,6 @@ The number of Replicas you define must be less than or equal to the number of ho
 
 </div>
 
-### Adding a Customized Node Selector to an EKS Service
-
-Specifying a node selector allows you to control which Amazon EC2 instances (nodes) in your EKS cluster should be used to run Kubernetes pods. When you specify a node selector for a pod, the Kubernetes scheduler ensures that the pod is only scheduled on nodes that match the criteria you specify
-
-For example, to specify specific Tenants or Allocation Tags in an existing EKS cluster, add a Customized Node Selector in the **Other Pod Config** area, on the **Advanced Options** page, when you [add an EKS Service](eks-containers-and-services.md#adding-a-duplocloud-eks-native-service). This prevents the specified parameters from being overridden by default values, as in the example below.
-
 {% hint style="info" %}
-When specifying parameters such as `tenantname`, specify the fully-qualified system-generated name, such as `duploservices-<tenant-name>`.
+If custom `allocationtag` and `tenantname` is specified in the `NodeSelector` section of **Other Pod Config**, values will be ignored. These are the reserved keys by DuploCloud
 {% endhint %}
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/ns1.png" alt=""><figcaption><p><strong>Other Pod Config</strong> area on the <strong>Advanced Options</strong> page when adding a Service</p></figcaption></figure>
-
-</div>
