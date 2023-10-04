@@ -4,11 +4,11 @@ description: Creating Load Balancers for single and multiple DuploCloud Services
 
 # Load Balancers
 
-Duplo Cloud provides the ability to configure Load Balancers with the type of Application Load Balancer, Network Load Balancer, and Classic Load Balancer.
+DuploCloud provides the ability to configure Load Balancers with the type of Application Load Balancer, Network Load Balancer, and Classic Load Balancer.
 
-Duplo Cloud provides the ability to configure Load Balancers with the following types:
+DuploCloud provides the ability to configure Load Balancers with the following types:
 
-* **Application Load Balancer** - An ALB provides outbound connections to cluster nodes inside the AKS virtual network, translating the private IP address to a public IP address as part of its Outbound Pool.
+* **Application Load Balancer** - An ALB provides outbound connections to cluster nodes inside the EKS virtual network, translating the private IP address to a public IP address as part of its Outbound Pool.
 * **Network Load Balancer** - An NLB distributes traffic across several servers by using the TCP/IP networking protocol. By combining two or more computers that are running applications into a single virtual cluster, NLB provides reliability and performance for web servers and other mission-critical servers.
 * **Classic Load Balancer** - The legacy AWS Load Balancer (which was retired from AWS support, as of August 2022).
 
@@ -31,7 +31,11 @@ Load Balancers can be configured for Docker Native, EKS-Enabled, and ECS Service
 6.  Complete other fields as required and click **Add** to add the Load Balancer Listener.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/LBL1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
+
+    </div>
 
 ### Adding a Network Load Balancer (NLB) Listener with a custom CIDR
 
@@ -47,7 +51,11 @@ Before completing this task, you must [add a Load Balancer Listener of **Type Ne
 6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. After the CIDRs are added, you [add Security Groups for Custom CIDR(s)](./#adding-security-groups-for-custom-cidrs).\
 
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/LBL7.png" alt=""><figcaption><p><strong>Edit Load Balancer Listener</strong> pane with <strong>Custom CIDRs</strong></p></figcaption></figure>
+
+</div>
 
 ### Adding Security Groups for NLBs with custom CIDRs
 
@@ -66,7 +74,11 @@ Repeat this procedure for each custom CIDR that you want to add.
 
 Repeat this procedure to add additional CIDRs.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/LBL8.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane for adding <strong>Custom CIDRs</strong> to Securty Groups</p></figcaption></figure>
+
+</div>
 
 ## Adding a Shared Load Balancer
 
@@ -75,7 +87,11 @@ Repeat this procedure to add additional CIDRs.
 3.  Click **Add**. The **Create a Load Balancer** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/AWS_alb_lb_create.png" alt=""><figcaption><p><strong>Create a Load Balancer</strong> pane for a shared <strong>Application</strong> load balancer</p></figcaption></figure>
+
+    </div>
 4. In the **Name** field, enter a name for the Load Balancer.
 5. From the **Type** list box, select a Load Balancer type.
 6. From the **Visibility** list box, select **Public** or **Internal**.
@@ -102,7 +118,11 @@ To accomplish this, you:
 7.  Note the name of the created Target Group by clicking the Info Icon ( <img src="../../../.gitbook/assets/info_tip_black (2).png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`. You will select the Target Group when you [create a Shared Load Balancer for the Target Group](./#creating-a-shared-load-balancer-for-the-target-group).\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/AWS_Target3.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for <strong>Target Group Only Type</strong></p></figcaption></figure>
+
+    </div>
 
 The **Target Group Only** Service Load Balancer is displayed in the **LB Listeners** area in the **Load Balancers** tab on the **Services** page.
 
@@ -123,7 +143,11 @@ The **Target Group Only** Service Load Balancer is displayed in the **LB Listene
 2.  In the **Listeners** tab, click **Add**. The **Load Balancer Listener** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/LBL12.png" alt=""><figcaption><p><strong>Load Balancer Listener</strong> pane with <strong>Target Group</strong> specified</p></figcaption></figure>
+
+    </div>
 
 
 3. Complete all fields, specifying the **Target Group** that was created when you [added a Load Balancer with the **Type Target Group Only** in the previous step](./#creating-a-service-load-balancer-with-the-type-target-group-only).
@@ -205,7 +229,11 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 5.  In the **Other Load Balancer Settings** pane, select any or all options.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/AWS_LB_Other2.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure>
+
+    </div>
 
 
 6. Click **Save**.
