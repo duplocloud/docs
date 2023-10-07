@@ -1,65 +1,59 @@
-# Kubernetes Scaling Options
+---
+description: Autoscale your DuploCloud deployment using HPA
+---
 
-## Kubernetes Cluster Auto Scaler
-
-The Kubernetes Cluster Auto Scaler automatically adjusts the number of nodes in your cluster when pods fail or are rescheduled onto other nodes.&#x20;
-
-### Step1: Enable Cluster AutoScaler in Infrastructure
-
-You can configure Cluster AutoCcaler for the Infrastructure created with EKS Enabled
-
-Enable Cluster Autoscaler from **Administrator** > **Infrastructure** > **Settings**. Add Setting to enable Autoscaler. Refer screenshot
-
-<div align="left">
-
-<img src="../../../.gitbook/assets/image (15) (2).png" alt="">
-
-</div>
-
-### Step2: Configure Auto Scaling Group (ASG)
-
-Navigate to **DevOps** > **Hosts** > **ASG.**  Enable **Use for Cluster Autoscaling** toggle button.
-
-This setting allows managing the cluster auto scaling.
-
-![](<../../../.gitbook/assets/image (22) (1).png>)
+# Kubernetes Horizontal Pod Autoscaler (HPA)
 
 ## Kubernetes Horizontal Pod Autoscaler (HPA)
 
 Horizontal Pod Autoscaler (HPA) automatically scales the Deployment and its ReplicaSet. HPA checks the metrics configured in regular intervals and then scales the replicas up or down accordingly.
 
-#### Configuring Services with HPA
+### Configuring Services with HPA
 
-You can configure HPA while creating Deployment Service from DuploCloud Portal.
+You can configure HPA while creating a Deployment Service from the DuploCloud Portal.
 
-Navigate **DevOps** > **Containers** > **EKS/Native.**
-
-Create a new Service. Select **Replication Strategy** as _'Horizontal Pod Scheduler'_
-
-Add below sample configuration in the **Horizontal Pod Autoscaler Config** textarea section.  Update minimum/maximum Replica Count, resource section based on the requirement.
-
-<pre data-title="Horizontal Pod Autoscaler"><code><strong>maxReplicas: 5
-</strong>metrics:
-  - resource:
-      name: cpu
-      target:
-        averageUtilization: 80
-        type: Utilization
-    type: Resource
-minReplicas: 2
-</code></pre>
+1. In the DuploCloud Portal, navigate **DevOps** > **Containers** > **EKS/Native.**
+2. In the **Service** tab, create a new [Service](../../aws-services/containers/) by clicking **Add**.
+3.  In **Add Service - Basic Options**, from the **Replication Strategy** list box, select **Horizontal Pod Scheduler**_._ \
 
 
+    <div align="left">
 
-![](<../../../.gitbook/assets/image (9) (1) (1).png>)
+    <img src="../../../.gitbook/assets/hpa1.png" alt="Basic Options on the Add Service page, with Replication Strategy list box and Horizontal Pod Autoscaler Config fields">
 
-For HPA Configures Services, **Replica** is set as _Auto_ in DuploCloud Portal
+    </div>
 
-![](<../../../.gitbook/assets/image (8) (3).png>)
 
-#### Setting Container Configuration
+4.  In the **Horizontal Pod Autoscaler Config** field, add a sample configuration, as shown below. Update the minimum/maximum Replica Count in the `resource` attributes, based on your requirements. \
 
-It is important to have the Resources set in the **Other Container Config** so that HPA can work. Below is an example:
 
-![](<../../../.gitbook/assets/Screen Shot 2022-07-16 at 12.02.11 PM.png>)
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/hpa_Code_block.png" alt=""><figcaption><p><strong>Horizontal Pod Autoscaler Config</strong> field in <strong>Basic Options</strong>, on the <strong>Add Service</strong> page</p></figcaption></figure>
+
+    </div>
+
+
+5. Click **Next** to navigate to **Advanced Options**.
+6.  In **Advanced Options**, in the **Other Container Config** field, ensure your resource attributes, such as `Limits` and `Requests`, are set to work with your HPA configuration, as in the example below.\
+
+
+    <div align="left">
+
+    <img src="../../../.gitbook/assets/Screen Shot 2022-07-16 at 12.02.11 PM.png" alt="Other Container Config field in Advanced Options on the Add Service page">
+
+    </div>
+7. At the bottom of the **Advanced Options** page, click **Create**.
+
+{% hint style="info" %}
+For HPA Configures Services, **Replica** is set as _Auto_ in the DuploCloud Portal
+{% endhint %}
+
+When your services are running, **Replicas: Auto** is displayed on the Service page.
+
+<div align="left">
+
+<img src="../../../.gitbook/assets/image (8) (3).png" alt="Service page with Replicas: Auto and Status: Running displayed">
+
+</div>
 
