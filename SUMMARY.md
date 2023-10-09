@@ -83,7 +83,6 @@
       * [Upgrading the EKS version](aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md)
       * [Enable Cluster Autoscaler](aws/use-cases/disaster-recovery/kubernetes-cluster/enable-cluster-autoscaler.md)
     * [ECS Setup](aws/use-cases/disaster-recovery/ecs-setup/README.md)
-      * [Enable read-only processing for an ECS cluster](aws/use-cases/disaster-recovery/ecs-setup/enable-read-only-processing-for-an-ecs-cluster.md)
       * [Enable ECS logging](aws/use-cases/disaster-recovery/ecs-setup/enable-ecs-logging.md)
   * [Tenant (Environment)](aws/use-cases/tenant-environment/README.md)
     * [Set Tenant expiration](aws/use-cases/tenant-environment/set-tenant-expiration.md)
