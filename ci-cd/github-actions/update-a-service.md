@@ -1,8 +1,8 @@
 ---
-description: Use Duplo to update a service's container from Github Actions
+description: Use Duplo to update a Service container from Github Actions
 ---
 
-# Update a service
+# Update a Service
 
 ## Update the docker image for a service
 

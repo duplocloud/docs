@@ -1,3 +1,7 @@
+---
+description: Use Lambda to deploy serverless functions in DuploCloud
+---
+
 # Lambda Functions
 
 [Lambda ](https://aws.amazon.com/pm/lambda/?trk=73f686c8-9606-40ad-852f-7b2bcafa68fe\&sc\_channel=ps\&ef\_id=CjwKCAjwm4ukBhAuEiwA0zQxk0SFVZUD3BCwJFOwlrHAFxzGF6anGJulF49mrridyhHjXRxfSHnmGxoCQw0QAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!651212652666!e!!g!!amazon%20lambda!909122559!45462427876)is a serverless computing platform provided by AWS that allows you to run code without provisioning or managing servers. It enables you to build and run applications in response to events or triggers from Lambda Functions.
@@ -5,6 +9,10 @@
 Lambda Functions are event-driven and designed to perform small, specific tasks or functions. They can be written in supported programming languages such as Python, JavaScript (`Node.js`), Java, C#, PowerShell, or Ruby. Once you create a Lambda function, you can configure it to respond to various types of events, such as changes in data stored in an Amazon [S3 bucket](../s3-bucket.md), updates in an Amazon [DynamoDB](../database/dynamodb.md) table, incoming HTTP requests via Amazon API Gateway, or custom events triggered by other [AWS services](../).
 
 Using Lambda, you write your code and upload it to AWS. Lambda executes and scales the code as needed, abstracting away the underlying infrastructure, and allowing you to focus on writing the actual business logic of your application. Lambda Functions are the principal resource of the Lambda serverless platform.&#x20;
+
+{% hint style="info" %}
+Use [CI/CD GitHub Actions to update Lambda functions](../../../ci-cd/github-actions/update-a-lambda-function.md) with images or S3 bucket updates.
+{% endhint %}
 
 ## Generating a Zip package of Lambda code <a href="#0-toc-title" id="0-toc-title"></a>
 
