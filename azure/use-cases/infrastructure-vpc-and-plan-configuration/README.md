@@ -44,7 +44,7 @@ When you create the Infrastructure, DuploCloud creates the following components:
 
 ## Enabling an encrypted Azure storage account
 
-You can choose to [encrypt your Azure storage account](encrypted-storage-account.md) by configuring a Key/Value pair in the Infrastructure.&#x20;
+You can choose to [encrypt your Azure storage account](../hosts-vms/encrypted-storage-account.md) by configuring a Key/Value pair in the Infrastructure.&#x20;
 
 ## About Plans and Infrastructures
 
