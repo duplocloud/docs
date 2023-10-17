@@ -206,7 +206,7 @@
   * [Infrastructure (VPC) and Plan (configuration)](azure/use-cases/infrastructure-vpc-and-plan-configuration/README.md)
     * [AKS initial setup](azure/use-cases/infrastructure-vpc-and-plan-configuration/aks-initial-setup.md)
     * [Kubectl token and config](azure/use-cases/infrastructure-vpc-and-plan-configuration/kubectl-token-and-config.md)
-    * [Encrypted storage account](azure/use-cases/infrastructure-vpc-and-plan-configuration/encrypted-storage-account.md)
+    * [Encrypted storage account](azure/use-cases/hosts-vms/encrypted-storage-account.md)
     * [Upgrading the AKS version](azure/use-cases/infrastructure-vpc-and-plan-configuration/upgrading-the-akg-version.md)
   * [Tenant (Environment)](azure/use-cases/tenant-environment.md)
   * [Hosts (VMs)](azure/use-cases/hosts-vms.md)
@@ -311,5 +311,5 @@
 
 ## Extras
 
-* [Creating advanced functions](extras/creating-advanced-functions.md)
+* [Allocation Tagging for Hosts](extras/creating-advanced-functions.md)
 * [BYOH](extras/byoh.md)
