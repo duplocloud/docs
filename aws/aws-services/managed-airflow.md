@@ -1,14 +1,18 @@
+---
+description: Configure Apache Airflow for AWS
+---
+
 # Managed Airflow
 
-Configure Apache Airflow by following the listed steps.
+[Amazon Managed Workflows for Apache Airflow (Amazon MWAA)](https://aws.amazon.com/managed-workflows-for-apache-airflow/) orchestrates your workflows using Directed Acyclic Graphs (DAGs) written in Python. You provide MWAA an Amazon S3 bucket where your DAGs, plugins, and Python requirements reside. You can run and monitor your DAGs using the AWS Management Console, a command line interface (CLI), a software development kit (SDK), or the Apache Airflow user interface (UI).
 
-### Step1: Create S3 Bucket
+## Creating an S3 bucket for Managed Airflow
 
 Create a S3 bucket by following the steps [here](s3-bucket.md).
 
-### Step2:  Upload DAGs in S3 **Bucket**
+## Uploading DAGs to an S3 **Bucket**
 
-Package and upload your DAG (Directed Acyclic Graph) code to Amazon S3. Amazon MWAA loads this code into Airflow.
+Package and upload your DAG (Directed Acyclic Graph) code to Amazon S3. Amazon MWAA loads the following folders and files into Airflow.
 
 <div align="left">
 
@@ -17,25 +21,30 @@ Package and upload your DAG (Directed Acyclic Graph) code to Amazon S3. Amazon M
 </div>
 
 {% hint style="info" %}
-Make sure Versioning is enabled for the custom plugins in a `plugins.zip`, startup shell script file  and Python dependencies in a `requirements.txt` on your Amazon S3 bucket.&#x20;
+Ensure Versioning is enabled for the custom plugins in a `plugins.zip`, the `startup` shell script file  and Python dependencies in a `requirements.txt` on your Amazon S3 bucket.&#x20;
 {% endhint %}
 
-Refer to[ Amazon documentation ](https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags.html)on DAGs for more details.
+Refer to the[ Amazon documentation ](https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags.html)on DAGs for more details.
 
-### Step3:  Configure Airflow Environment
+## Configuring the Managed Airflow Environment
 
-Navigate to **DevOps** > **Analytics** > **Airflow**
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Analytics.**
+2. Click the **Airflow** tab.
+3. Click **Add**. The **New Managed Airflow Environment** wizard displays.
+4. Provide the required information, such as Airflow Environment Name, Airflow Version, S3 bucket, and DAGs folder location by navigating through the wizard. You can also enable Logging for Managed Airflow.
 
-Provide the required information like airflow version, name, S3 bucket, DAGs folder location.
+<div align="left">
 
-If Plugins.zip, requirements.txt, and Startup Script are specified while adding airflow, you would need to provide the S3 Version ID of these files. (For example, lSHNqFtO5Z7\_6K6YfGpKnpyjqP2JTvSf). Keeping the Version blank will refer to the latest Version ID of the files specified from S3 Bucket.
+<figure><img src="../../.gitbook/assets/MA.png" alt=""><figcaption><p>The <strong>New Managed Airflow Environment</strong> wizard </p></figcaption></figure>
 
-User can also enable logs while creating airflow.
+</div>
 
-<figure><img src="../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
+{% hint style="warning" %}
+If you specify `plugins.zip`, `requirements.txt`, and `startup` script while setting up the Airflow Environment, you must provide the S3 Version ID of these files (for example, `lSHNqFtO5Z7_6K6YfGpKnpyjqP2JTvSf`). If the Version ID is blank, the default reference is to the latest Version ID of the files specified from S3 Bucket.
+{% endhint %}
 
-### **View Airflow Environment**
+## **Viewing the Managed Airflow Environment**
 
-User can view Airflow Environment details from DuploCloud Portal. You can view AIrflow Envrionment in AWS Console by click Webserver URL.
+After setup, view the Managed Airflow Environment from the DuploCloud Portal, using the **Airflow** tab. You can view the Airflow Environment in the AWS Console by clicking the **WebserverURL**.
 
-<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption><p><strong>Airflow</strong> tab containing details of the Managed Airflow Environment</p></figcaption></figure>

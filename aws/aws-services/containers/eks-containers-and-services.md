@@ -20,5 +20,5 @@ The number of Replicas you define must be less than or equal to the number of ho
 </div>
 
 {% hint style="info" %}
-If custom `allocationtag` and `tenantname` is specified in the `NodeSelector` section of **Other Pod Config**, values will be ignored. These are the reserved keys by DuploCloud
+`allocationtag` and `tenantname` are reserved DuploCloud keys. If you specify custom values for  `allocationtag` and `tenantname` keys in the `NodeSelector` section of **Other Pod Config**, these values are ignored.&#x20;
 {% endhint %}
