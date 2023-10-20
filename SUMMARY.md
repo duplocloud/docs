@@ -85,7 +85,6 @@
     * [ECS Setup](aws/use-cases/disaster-recovery/ecs-setup/README.md)
       * [Enable ECS logging](aws/use-cases/disaster-recovery/ecs-setup/enable-ecs-logging.md)
   * [Tenant (Environment)](aws/use-cases/tenant-environment/README.md)
-    * [Set Tenant expiration](aws/use-cases/tenant-environment/set-tenant-expiration.md)
     * [Set Tenant session duration](aws/use-cases/tenant-environment/set-tenant-session-duration.md)
   * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
     * [Connect EC2 instance](aws/aws-services/virtual-machines/ssh-ec2-instance.md)
