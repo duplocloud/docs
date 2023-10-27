@@ -39,6 +39,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [EventBridge](cloud-watch.md)
 * [(Kubernetes) Ingress](adding-ingress.md)
 * [IoT (Internet of Things)](iot-internet-of-things.md)
+* [Kafka Cluster](kafka-cluster.md)
 * [Kinesis Stream](kinesis-stream.md)
 * [Lambda functions](lambda/)
 * [Managed Airflow](managed-airflow.md)
