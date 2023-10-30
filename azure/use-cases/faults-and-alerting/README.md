@@ -1,3 +1,7 @@
+---
+description: Checking Faults and Alerts in the DuploCloud Portal
+---
+
 # Faults and alerts
 
 ## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
