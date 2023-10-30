@@ -88,6 +88,7 @@
     * [Set Tenant session duration](aws/use-cases/tenant-environment/set-tenant-session-duration.md)
   * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
     * [Connect EC2 instance](aws/aws-services/virtual-machines/ssh-ec2-instance.md)
+    * [Dedicated Host](aws/use-cases/hosts-vms/dedicated-host.md)
     * [Hibernate an EC2 Host](aws/use-cases/hosts-vms/hibernate-an-ec2-host.md)
     * [Snapshots](aws/use-cases/hosts-vms/backups.md)
     * [Taints on EC2 Hosts](aws/use-cases/hosts-vms/taints-on-ec2-hosts.md)
