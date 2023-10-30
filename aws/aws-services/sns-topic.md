@@ -1,3 +1,7 @@
-# SNS topic
+---
+description: Enable setting of SNS Topic Alerts for specific Tenants
+---
 
-Create SNS Topic from under **DevOps > App Integration > SNS tab > +Add** button above the table. Refer to AWS DynamoDB User Guide to know more about the permissions.
+# SNS Topic Alerts
+
+SNS Topic Alerts provide a flexible and scalable means of sending notifications and alerts across different AWS services and external endpoints, allowing you to stay informed about important events and incidents happening in your AWS environment.SNS is a fully managed service that enables you to publish messages to topics. The messages can be delivered to subscribers or endpoints, such as email, SMS, mobile push notifications, or even HTTP endpoints.Configuring this setting will attach the SNS Topic to the alerts in the OK and Alarm state. Configuring Tenants to set SNS Topic Alerts 1.In the DuploCloud Portal, navigate to Administrator -> Tenants. The Tenants page displays. 2.Select the Tenant for which you want to set SNS Topic Alerts from the Name column. 3.Click Settings. 4.Click Add. The Add Tenant Feature pane displays. 5.From the Select Feature list box, select Set SNS Topic Alerts. 6.In the field below the Select Feature list box, enter a valid SNS Topic ARN.Add Tenant Feature pane for Set SNS Topic Alerts feature​ 7.Click Add. The configuration is displayed in the Settings tab.Settings tab displaying Set SNS Topic Alerts ARN
