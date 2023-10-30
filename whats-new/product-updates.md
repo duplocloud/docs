@@ -4,9 +4,10 @@ description: New features and enhancements in DuploCloud
 
 # Product updates
 
-{% hint style="success" %}
-New product updates will be posted around the 15th of each month.
-{% endhint %}
+## Q4 2023
+
+* AWS
+  * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
 
 ## August 2023 and September 2023
 
