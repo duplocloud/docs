@@ -2,15 +2,15 @@
 description: Using dedicated hosts to launch Amazon EC2 instances
 ---
 
-# Dedicated Host
+# Launch Instances in Dedicated Host
 
-## Adding dedicated hosts to launch EC2 instances
+## Configuring dedicated hosts to launch EC2 instances
 
-Use dedicated hosts to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server; enabling you to use the same physical server, if needed
+Use dedicated hosts to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server; enabling you to use the same physical server, if needed.
 
 ### Prerequisites
 
-Configure the DuploCloud Portal to allow for the creation of dedicated hosts.
+Configure the DuploCloud Portal to allow dedicated host sharing.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
@@ -29,12 +29,12 @@ Configure the DuploCloud Portal to allow for the creation of dedicated hosts.
 6. In the **Value** field, select **true**.
 7. Click **Submit**. The configuration is displayed in the **System Config** tab.
 
-### Creating dedicated hosts to launch EC2 instances
+### Configuring dedicated hosts to launch EC2 instances
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**.
 2. In the EC2 tab, click **Add**. The **Add Host** page displays.
 3. After completing the required fields to configure your Host, select **Advanced Options**. The advanced options display.
-4.  In the **Dedicated Host ID** field, enter the ID of the dedicated host. The ID is used to launch a specific instance on a dedicated host. See the screenshot below for an example.\
+4.  In the **Dedicated Host ID** field, enter the ID of the dedicated host created in AWS. The ID is used to launch a specific instance on a dedicated host. See the screenshot below for an example.\
 
 
     <div align="left">
@@ -46,9 +46,9 @@ Configure the DuploCloud Portal to allow for the creation of dedicated hosts.
 
 5. Click **Add**. The dedicated host is displayed in the **EC2** tab.
 
-### Viewing dedicated hosts to launch EC2 instances
+### Viewing EC2 instances launched in a Dedicated host
 
-After you create dedicated hosts, view them by doing the following:
+After you create ec2 instances, view them by doing the following:
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**.
 2.  In the **EC2** tab, select the **Host** from the Name column. The **Dedicated Host ID** card on the Host page displays the ID of the dedicated host.\
