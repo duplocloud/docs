@@ -89,7 +89,7 @@
   * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
     * [Configure Auto-reboot](aws/use-cases/hosts-vms/configure-auto-reboot.md)
     * [Connect EC2 instance](aws/aws-services/virtual-machines/ssh-ec2-instance.md)
-    * [Launch Instances in Dedicated Host](aws/use-cases/hosts-vms/launch-instances-in-dedicated-host.md)
+    * [Launch Instances in Dedicated Host](aws/use-cases/hosts-vms/dedicated-host.md)
     * [Create Amazon Machine Image (AMI)](aws/use-cases/hosts-vms/create-amazon-machine-image-ami.md)
     * [Hibernate an EC2 Host](aws/use-cases/hosts-vms/hibernate-an-ec2-host.md)
     * [Snapshots](aws/use-cases/hosts-vms/backups.md)
