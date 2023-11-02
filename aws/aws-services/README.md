@@ -47,7 +47,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [(Kubernetes) Probes and Health Check](setting-up-probes.md)
 * [S3 bucket](s3-bucket.md)
 * [(Kubernetes) SecretProviderClass custom resource (CR)](adding-secretproviderclass-custom-resource.md)
-* [SNS](../use-cases/faults-and-alarms/sns-topic-alerts.md)&#x20;
+* [SNS](sns-topic.md) Topic creation
 * [SQS queue](sqs-queue.md)
 * [VPC (Virtual Private Cloud) Peering ](virtual-private-cloud-vpc-peering.md)
 * [Web App Firewall (WAF)](web-application-firewall-waf.md)
