@@ -170,6 +170,7 @@
   * [Probes and Health Check](aws/aws-services/setting-up-probes.md)
   * [S3 bucket](aws/aws-services/s3-bucket.md)
   * [SecretProviderClass custom resource](aws/aws-services/adding-secretproviderclass-custom-resource.md)
+  * [SNS Topic](aws/aws-services/sns-topic.md)
   * [SQS queue](aws/aws-services/sqs-queue.md)
   * [Virtual Private Cloud (VPC) peering](aws/aws-services/virtual-private-cloud-vpc-peering.md)
   * [Web App Firewall (WAF)](aws/aws-services/web-application-firewall-waf.md)
