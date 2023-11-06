@@ -20,7 +20,11 @@ For more information about AWS Endpoints, see the [AWS documentation](https://do
 4. Using the **Private Subnet CIDR** and **Public Subnet CIDR** fields, specify CIDRs for alternate public and private endpoints.&#x20;
 5. Click **Create**.
 
-<figure><img src="../../../../.gitbook/assets/Infra_Endpoints_5.png" alt=""><figcaption><p><strong>Infrastructure</strong> page with <strong>EKS Endpoint Visibility</strong> field and <strong>Advanced Options</strong> for specifying custom subnet CIDRs</p></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../../../.gitbook/assets/infraend5.png" alt=""><figcaption><p><strong>Infrastructure</strong> page with <strong>EKS Endpoint Visibility</strong> field and <strong>Advanced Options</strong> for specifying custom subnet CIDRs</p></figcaption></figure>
+
+</div>
 
 ## Updating existing EKS endpoint visibility
 
@@ -33,5 +37,36 @@ To change the visibility for EKS endpoints you have already created:
 5. From the **Setting Value** list box, select the desired type of visibility for endpoints (**private**, **public**, or **both**).
 6. Click **Set**.
 
+<div align="left">
+
 <figure><img src="../../../../.gitbook/assets/Infra_Endpoints_1.png" alt=""><figcaption><p><strong>Infra - Custom Data</strong> pane with <strong>Setting Value</strong> for <strong>EKS Endpoint Visibility</strong></p></figcaption></figure>
 
+</div>
+
+## Configuring EKS endpoint for private visibility using a VPN
+
+To configure EKS for private visibility, you must use a VPN.
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
+2. From the **Name** column, select the Infrastructure for which you want to modify EKS endpoints.
+3. Click the **Settings** tab.
+4. In the **EKS Endpoint Visibility** row, in the **Actions** column, click the ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) icon and select **Update Setting**. The **Infra - Set Custom Data** pane displays.
+5.  From the **Setting Name** list box, select **Enable VPN Access to EKS Cluster**.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../../.gitbook/assets/infraend1.png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane with <strong>Enable VPN Access to EKS Cluster</strong> option</p></figcaption></figure>
+
+    </div>
+
+
+6. Select **Enable** to enable VPN.
+7. Click **Set**.&#x20;
+8. [Create an Infrastructure](../../disaster-recovery.md) with private EKS Endpoint Visibility, using a VPN, with no additional configuration.
+
+<div align="left">
+
+<figure><img src="../../../../.gitbook/assets/infraend2.png" alt=""><figcaption><p><strong>Infrastructure</strong> page with <strong>EKS Endpoint Visibility Private</strong> option preconfigured</p></figcaption></figure>
+
+</div>
