@@ -4,7 +4,7 @@ description: Security Information and Event Management (SIEM) in AWS
 
 # SIEM
 
-SIEM is an AWS solution that provides cloud customers with visibility into their infrastructure and applications, to facilitate data-driven decisions. SIEM uses [AWS Control Tower](https://aws.amazon.com/marketplace/solutions/control-tower/siem) to monitor workloads in real-time, identify security issues, and expedite root-cause analysis.
+SIEM is an AWS solution that provides cloud customers with visibility into their infrastructure and applications, to facilitate data-driven decisions. SIEM uses [AWS Control Tower](https://aws.amazon.com/marketplace/solutions/control-tower/siem) to monitor workloads in real-time, identify security issues, provide virus and malware protection, and expedite root-cause analysis.
 
 You can monitor and manage your AWS cloud using SIEM in the DuploCloud Portal.
 
