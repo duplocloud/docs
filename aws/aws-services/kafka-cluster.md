@@ -8,13 +8,11 @@ Apache Kafka (Kafka) is an open-source, distributed streaming platform that enab
 
 A data pipeline reliably processes and moves data from one system to another, and a streaming application is an application that consumes streams of data. Streaming platforms enable developers to build applications that continuously consume and process streams at high speeds, with a high level of accuracy.
 
+{% hint style="warning" %}
+When creating a Kafka Cluster in DuploCloud, if you want to select a **Cluster Configuration** and **Configuration Revision**, you must add the configuration or revision in the AWS console before creating the DuploCloud Kafka cluster.&#x20;
+{% endhint %}
+
 For complete documentation on Apache Kafka, see the [AWS documentation](https://docs.aws.amazon.com/msk/latest/developerguide/what-is-msk.html).
-
-## Prerequisites
-
-Before creating a Kafka Cluster. configure the cluster in AWS.&#x20;
-
-DuploCloud uses the Kafka Cluster Name you configured in the AWS Portal to locate and import the **Cluster Configuration** and **Configuration Revision** fields in the DuploCloud **Creating a Kafka Cluster** pane.
 
 ## Creating a Kafka Cluster
 
@@ -22,8 +20,9 @@ DuploCloud uses the Kafka Cluster Name you configured in the AWS Portal to locat
 2. Click the **Kafka** tab.
 3. Click **Add**. The **Create a Kafka Cluster** pane displays.
 4. Enter a **Kafka Cluster Name**.
-5. From the field list boxes, select a **Version** of Kafka, the **Size** of the cluster you want to create, the **Volume** size in gigabytes, and the **Transit Encryption** mode. The **Cluster Configuration** and **Configuration Revision** fields are populated [if you define the cluster in the AWS Portal](kafka-cluster.md#prerequisites).
-6.  Optionally, select **Availability Zones** or **Number of BrokerNodes**. You must specify a minimum of two (2) **Availability Zones** zones.\
+5. From the field list boxes, select a **Version** of Kafka, the **Size** of the cluster you want to create, the **Volume** size in gigabytes, and the **Transit Encryption** mode.&#x20;
+6. Optionally, select **Availability Zones** or **Number of BrokerNodes**. You must specify a minimum of two (2) **Availability Zones** zones.&#x20;
+7.  Optionally, select a **Cluster Configuration** and **Configuration Revision** when creating a Kafka Cluster in DuploCloud. The **Cluster Configuration** and **Configuration Revision** list boxes are prepopulated with configurations and revisions previously defined in the AWS Portal.\
 
 
     <div align="left">
@@ -31,7 +30,7 @@ DuploCloud uses the Kafka Cluster Name you configured in the AWS Portal to locat
     <figure><img src="../../.gitbook/assets/kafka_Prereq1 (2).png" alt=""><figcaption><p><strong>Create a Kafka Cluster</strong> pane<br></p></figcaption></figure>
 
     </div>
-7.  Click **Submit**. The cluster is created and displayed as **Active** in the **Kafka** tab. It may take up to half an hour to create the cluster.\
+8.  Click **Submit**. The cluster is created and displayed as **Active** in the **Kafka** tab. It may take up to half an hour to create the cluster.\
 
 
     <div align="left">
