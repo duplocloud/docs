@@ -1,5 +1,6 @@
 ---
 description: AWS-specific cloud provider deployments
+coverY: 0
 ---
 
 # AWS overview
