@@ -10,6 +10,17 @@ Infrastructures are abstractions that allow you to create a Virtual Private Clou
 DuploCloud automatically deploys [NAT gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) across availability zones (AZs) for all Infrastructures that you create with DuploCloud.
 {% endhint %}
 
+## Configuring EKS features (optional)
+
+You can customize your EKS configuration:
+
+* [Add VPC endpoints](disaster-recovery/add-vpc-endpoints.md).
+* Enable EKS endpoints, logs, Cluster Autoscaler, and more. See the [EKS Setup](kubernetes-cluster/) topics for information about configuration options.
+
+## Configuring ECS features (optional)
+
+You can customize your ECS configuration. See the [ECS Setup](disaster-recovery/ecs-setup/) topic for information about configuration options.
+
 ## Creating an Infrastructure
 
 When you create a DuploCloud Infrastructure, you create an isolated environment that maps to a Kubernetes cluster.&#x20;
@@ -38,7 +49,15 @@ When you create the Infrastructure, DuploCloud creates the following components:
 * Route tables
 * [VPC peering](../aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
 
-## About Plans and Infrastructures
+## Viewing Infrastructure settings
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
+2. From the **Name** column, select the Infrastructure containing settings that you want to view.
+3. Click the **Settings** tab. The Infrastructure settings display.
+
+<figure><img src="../../.gitbook/assets/eksv (1).png" alt=""><figcaption><p><strong>Settings</strong> tab on the <strong>Infrastructure</strong> page</p></figcaption></figure>
+
+## Plans and Infrastructures
 
 Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](tenant-environment/).
 
@@ -47,8 +66,6 @@ Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](.
 <img src="https://duplocloud.com/wp-content/uploads/2021/11/infra-plan.png" alt="DuploCloud Plan Details">
 
 </div>
-
-Next, you [set up, enable, and configure EKS (Elastic Kubernetes Service)](kubernetes-cluster/).
 
 {% hint style="warning" %}
 Up to one instance (0 or 1) of an EKS or ECS is supported for each DuploCloud Infrastructure.
