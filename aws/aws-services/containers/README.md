@@ -18,28 +18,6 @@ You can deploy native Docker containers in virtual machines (VMs) with the Duplo
 
 Deploying DuploCloud Services implicitly converts Services into either a deployment set or a StatefulSet. If there are no volume mappings, then the service is mapped to a deployment set. Otherwise, it is mapped to a StatefulSet, which you can force creations of if needed. Most configuration values are self-explanatory, such as **Images**, **Replicas,** and **Environmental Variables**.
 
-### Advanced configurations with Kubernetes
-
-You can supply advanced configuration options in the **Other K8s Config** field. The content of this field maps one-to-one with the Kubernetes API. Configurations for deployment are StatefulSets and are supported by placing the appropriate JSON code in the **Other K8s Config** section. For example, to reference Kubernetes Secrets using a YAML config map, create the following JSON code:&#x20;
-
-```json
-	"Volumes": [
-		{
-			"name": "config-volume",
-			"configMap": {
-				"name": "game-config"
-			}
-		}
-	],
-	"VolumesMounts": [
-		{
-			"name": "config-volume",
-			"mountPath": "/etc/config"
-		}
-	]
-}
-```
-
 ## Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
 Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers/) for the Services.
@@ -84,69 +62,3 @@ See the [Configs and Secrets](../../use-cases/passing-secrets/) section for info
 * Docker Registry Credentials
 * Configuration and secrets in AWS
 * Passing Kubernetes ConfigMaps as Environment Variables (EVs) and files.
-
-### Downloading the Kubectl Token and KubeConfig <a href="#6-toc-title" id="6-toc-title"></a>
-
-DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen minutes, to access the `kubectl` cluster.&#x20;
-
-1. In the DuploCloud Portal, select **Administrator**-> **Infrastructure** from the navigation pane.&#x20;
-2. Select the Infrastructure in the **Name** column.
-3. Click the **EKS** tab.&#x20;
-4. Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Value**s from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.
-5. Run the following commands, locally:
-
-```shell
-> kubectl config --kubeconfig=config-demo set-cluster EKS_CLUSTER --server=[EKS_API_URL] --insecure-skip-tls-verify
-```
-
-```shell
-> kubectl config --kubeconfig=config-demo set-credentials tempadmin --token=[TOKEN]
-```
-
-```shell
-> kubectl config --kubeconfig=config-demo set-context EKS --cluster=EKS_CLUSTER --user=tempadmin --namespace=duploservices-[TENANTNAME]
-```
-
-```shell
-> export KUBECONFIG=config-demo
-```
-
-```shell
-> kubectl config use-context EKS
-```
-
-You have now configured `kubectl` to point and access the Kubernetes cluster. You can apply deployment templates by running the following command:
-
-```shell
-> kubectl apply -f nginx.yaml
-```
-
-{% code title="nginx.yaml" %}
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment-g
-  labels:
-    app: nginx-deployment-g
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: nginx-deployment-g
-  template:
-    metadata:
-      labels:
-        app: nginx-deployment-g
-    spec:
-      nodeSelector:
-        tenantname: "duploservices-stgeast1"
-      containers:
-      - name: nginx
-        image: nginx:latest
-        ports:
-        - containerPort: 80
-```
-{% endcode %}
-
-If you need security tokens of a longer duration, create them on your own. Secure them outside of the DuploCloud environment.
