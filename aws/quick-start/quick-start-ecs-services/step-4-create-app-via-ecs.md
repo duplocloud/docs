@@ -45,6 +45,6 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
 5. In the **Container - 1** section, in the **Container Name** field, enter **sample-task-def-c1**. Container names are required for Docker images in AWS ECS.
 6. In the **Image** field, enter **duplocloud/nodejs-hello:latest**.
 7. From the **vCPU** list box, select **0.50 vCPU**.
-8. From the **Memory** list box, select **0.5 GB**.
+8. From the **Memory** list box, select **1 GB**.
 9. In the **Port Mappings** section, in the **Port** field, enter **80**. Port mappings allow containers to access ports for the host container instance to send or receive traffic.&#x20;
 10. Click **Submit**.
