@@ -78,4 +78,4 @@ In the **Service Details** tab, information about the Service and Load Balancer 
 
 Verify that the Service and Load Balancer configuration details in the Service Details tab are correct.&#x20;
 
-<figure><img src="../../../.gitbook/assets/ecs_8 (1).png" alt=""><figcaption><p><strong>Service Details</strong> tab displayng Service and Load Balancer configuration details</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ecs_8 (1).png" alt=""><figcaption><p><strong>Service Details</strong> tab displaying Service and Load Balancer configuration details</p></figcaption></figure>
