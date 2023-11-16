@@ -45,11 +45,11 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
     </div>
 
 
-3. From the table below, enter the values that correspond to the fields on the **Create a RDS** page. Accept all other default values for fields not specified.&#x20;
+3. From the table below, enter the values that correspond to the fields on the **Create a RDS** page.  DuploCloud prepends **DUPLO** to the name of your RDS database instance. Accept all other default values for fields not specified.&#x20;
 4. Click **Create**. The **DUPLODOCS** database displays in the **RDS** tab with a **Status** of **Submitted**. Database creation takes approximately ten (10) minutes.&#x20;
 
 {% hint style="info" %}
-DuploCloud prepends **DUPLO** to the name of your RDS database instance.
+The **Password** field supports the following characters: \[**a**-**z**] \[**A**-**Z**] \[**0**-**9**] \[**- \* ! $ % &**].
 {% endhint %}
 
 | Create a RDS page field | Value                               |
@@ -72,7 +72,7 @@ In the DuploCloud Portal **Database** page, in the **RDS** tab, when the databas
 
 Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src="../../.gitbook/assets/alert_exclamation_point_circle_fault_icon.png" alt="" data-size="line"> ) Icon. Common database faults that may cause database creation to fail include:
 
-* Invalid passwords - Passwords cannot have special characters like quotes, @, commas, etc. Use a combination of upper and lower-case letters and numbers.
+* Invalid passwords - Passwords can use a combination of upper and lower-case letters and numbers and some special characters (! $ % &). Passwords cannot contain other special characters like quotes, @, commas, etc.&#x20;
 * Invalid encryption - Encryption is not supported for small database instances (micro, small, or medium).
 
 <div align="left">
