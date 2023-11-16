@@ -4,7 +4,7 @@ description: Working with Load Balancers in a Native Docker Service
 
 # Native Docker Load Balancers
 
-## Creating a Load Balancer using native Docker
+## Adding a Load Balancer using Native Docker
 
 {% hint style="info" %}
 For an end-to-end example of deploying an application using a Native Docker Service, see the [AWS Quick Start Tutorial](../../quick-start/) and choose the [Creating a Native Docker Service](../../quick-start/quick-start-duplocloud-docker-services/) option.

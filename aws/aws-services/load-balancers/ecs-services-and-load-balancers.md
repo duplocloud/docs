@@ -8,7 +8,7 @@ description: Working with Load Balancers using AWS ECS
 
 Before you create an ECS Service and Load Balancer, you must create a [Task Definition](../containers/ecs-containers-and-task-definitions.md) to run the Service. You can define multiple containers in your Task Definition.
 
-## Creating an ECS Service and Load Balancer Listener
+## Adding an ECS Service and Load Balancer Listener
 
 {% hint style="info" %}
 For an end-to-end example of deploying an application using an ECS Service, see the [AWS Quick Start Tutorial](../../quick-start/) and choose the [Creating an ECS Service](../../quick-start/quick-start-ecs-services/) option.
