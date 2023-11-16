@@ -22,13 +22,13 @@ Before testing your application, verify that you accomplished the tasks in the p
 
 In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
 
+<figure><img src="../../../.gitbook/assets/tenant_dev01 (2).png" alt=""><figcaption><p>DuploCloud <strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
+
 ## Testing the Application
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**.&#x20;
-2. Click the **Services** tab.
-3. From the **Name** column, select _**DUPLOCLOUD\_PREPENDED\_NAME\_**_**sample-httpd-app**.
-4. Click the **Service Details** tab. The Application Load Balancer configuration is displayed.
-5.  In the Domain Name card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.\
+2. Click the **Service Details** tab. The Application Load Balancer configuration is displayed.
+3.  In the **DNS Name** card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address to your clipboard.\
 
 
     <div align="left">
@@ -38,8 +38,8 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
     </div>
 
 
-6. Open a browser instance and **Paste** the DNS address in the URL field of your browser.
-7. Press **ENTER**. A web page with the text **It works!** displays, from the JavaScript program residing in your Docker Container that is running in **sample-httpd-app**, which is exposed to the web by your Application Load Balancer.
+4. Open a browser instance and **Paste** the DNS address in the URL field of your browser.
+5. Press **ENTER**. A web page with the text **It works!** displays, from the JavaScript program residing in your Docker Container that is running in **sample-httpd-app**, which is exposed to the web by your Application Load Balancer.
 
 <div align="left">
 
@@ -65,7 +65,7 @@ In the previous steps, you:
 * [Created a Tenant](../step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](../step-1-infrastructure.md)) to configure multiple Azure and Kubernetes components needed for your environment.
 * [Created a Task Definition](step-4-create-app-via-ecs.md) named **sample-task-def**, used to create a service to run your application.
 * [Created a Service](../quick-start-eks-services/step-5-create-app-via-k8s.md) named **sample-httpd-app** to connect the Docker containers and associated images, in which your application code resides, to the DuploCloud Tenant environment. In the same step, you c[reated an ALB Load Balancer Listener](step-5-create-the-ecs-service-and-load-balancer.md) to expose your application via ports and backend network configurations.&#x20;
-* [Verified that your web page rendered](step-5-test-application.md#testing-the-application) as expected by testing the IP address exposed by the  Load Balancer Listener.
+* [Verified that your web page rendered](step-5-test-application.md#testing-the-application) as expected by testing the DNS Name exposed by the  Load Balancer Listener.
 
 ## Cleaning up your tutorial environment
 

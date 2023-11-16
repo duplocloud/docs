@@ -40,7 +40,13 @@ Tasks run until an error occurs or a user terminates the Task in the ECS Cluster
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/ecs_5.png" alt=""><figcaption><p><strong>Service Details</strong> tab </p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/ecs_5.png" alt=""><figcaption><p><strong>Service Details</strong> tab <br></p></figcaption></figure>
+
+    </div>
+
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/ecs_6.png" alt=""><figcaption><p><strong>Add ECS Service</strong> page</p></figcaption></figure>
 
     </div>
 
@@ -51,31 +57,23 @@ Tasks run until an error occurs or a user terminates the Task in the ECS Cluster
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/image (103).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for an ECS Service</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/dockerq.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for an ECS Service</p></figcaption></figure>
 
     </div>
 
 
 7. From the **Select Type** list box, select **Application LB**.
-8. In the **Container Port** field, enter **80**.
+8. In the **Container Port** field, enter **3000**.
 9. In the **External Port** field, enter **80**.
 10. From the **Visibility** list box, select **Public**.
-11. In the **Heath Check** field, enter **/**, specifying `root`, for the location of Kubernetes Health Check logs.
+11. In the **Heath Check** field, enter **/**, specifying `root`, the location of Kubernetes Health Check logs.
 12. From the **Backend Protocol** list box, select **HTTP**.
 13. From the **Protocol Policy** list box, select **HTTP1**.
 14. Select other options as needed and click **Add**.
 15. On the **Add ECS Service** page, click **Submit**.&#x20;
 
-In the **Service Details** tab, information about the Service and Load Balancer you created is displayed.
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/ecs_6.png" alt=""><figcaption><p>Add ECS Service page</p></figcaption></figure>
-
-</div>
-
 ## Checking Your Work
 
-Verify that the Service and Load Balancer configuration details in the Service Details tab are correct.&#x20;
+In the **Service Details** tab, information about the Service and Load Balancer you created is displayed. Verify that the Service and Load Balancer configuration details in the **Service Details** tab are correct.&#x20;
 
 <figure><img src="../../../.gitbook/assets/ecs_8 (1).png" alt=""><figcaption><p><strong>Service Details</strong> tab displaying Service and Load Balancer configuration details</p></figcaption></figure>

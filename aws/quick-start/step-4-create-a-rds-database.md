@@ -28,7 +28,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01 (4).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -40,16 +40,16 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/AWS_QS_11 (1).png" alt=""><figcaption><p><strong>Create a RDS</strong> page</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/dockera.png" alt=""><figcaption><p><strong>Create a RDS</strong> page</p></figcaption></figure>
 
     </div>
 
 
-3. From the table below, enter the values that correspond to the fields on the **Create a RDS** page.  DuploCloud prepends **DUPLO** to the name of your RDS database instance. Accept all other default values for fields not specified.&#x20;
+3. From the table below, enter the values that correspond to the fields on the **Create a RDS** page. Accept all other default values for fields not specified.&#x20;
 4. Click **Create**. The **DUPLODOCS** database displays in the **RDS** tab with a **Status** of **Submitted**. Database creation takes approximately ten (10) minutes.&#x20;
 
 {% hint style="info" %}
-The **Password** field supports the following characters: \[**a**-**z**] \[**A**-**Z**] \[**0**-**9**] \[**- \* ! $ % &**].
+DuploCloud prepends **DUPLO** to the name of your RDS database instance.
 {% endhint %}
 
 | Create a RDS page field | Value                               |
@@ -59,20 +59,20 @@ The **Password** field supports the following characters: \[**a**-**z**] \[**A**
 | **User password**       | _`YOUR_DUPLOCLOUD_ADMIN_PASSWORD`_  |
 | **Rds Engine**          | `MySQL`                             |
 | **Rds Engine Version**  | _`LATEST_AVAILABLE_VERSION`_        |
-| **Rds Instance Size**   | `db.t4g.medium`                     |
-| **Storage size in GB**  | `20`                                |
+| **Rds Instance Size**   | `db.t3.medium`                      |
+| **Storage size in GB**  | `30`                                |
 
 ## Validating RDS database creation <a href="#1-toc-title" id="1-toc-title"></a>
 
 You can monitor the status of database creation using the **RDS** tab and the **Status** column.&#x20;
 
-In the DuploCloud Portal **Database** page, in the **RDS** tab, when the database **Status** is **Available**, the database's endpoint is ready for connection by a DuploCloud Service, which you create and start in the [next step](step-4-create-a-rds-database.md#checking-your-work).
+In the DuploCloud Portal **Database** page, in the **RDS** tab, when the database **Status** is **Available**, the database's endpoint is ready for connection to a DuploCloud Service, which you create and start in the [next step](step-4-create-a-rds-database.md#checking-your-work).
 
 ### Troubleshooting database creation failures
 
 Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src="../../.gitbook/assets/alert_exclamation_point_circle_fault_icon.png" alt="" data-size="line"> ) Icon. Common database faults that may cause database creation to fail include:
 
-* Invalid passwords - Passwords can use a combination of upper and lower-case letters and numbers and some special characters (! $ % &). Passwords cannot contain other special characters like quotes, @, commas, etc.&#x20;
+* Invalid passwords - Passwords cannot have special characters like quotes, @, commas, etc. Use a combination of upper and lower-case letters and numbers.
 * Invalid encryption - Encryption is not supported for small database instances (micro, small, or medium).
 
 <div align="left">
@@ -84,7 +84,7 @@ Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src
 ## Verifying database endpoints <a href="#1-toc-title" id="1-toc-title"></a>
 
 1. In the **RDS** tab, select the **DUPLODOCS** database you created.
-2.  Note the database **Endpoint**, the database name, and the database credentials. For security, the database is automatically placed in a private subnet to prevent all access from the internet. Access to the database is automatically set up for all resources (EC2 instances, containers, Lambdas, etc) inthe DuploCloud **dev01** Tenant. You need the Endpoint to connect to the database from an application running in the EC2 instance.\
+2.  Note the database **Endpoint**, the database name, and the database credentials. For security, the database is automatically placed in a private subnet to prevent all access from the internet. Access to the database is automatically set up for all resources (EC2 instances, containers, Lambdas, etc) in the DuploCloud **dev01** Tenant. You need the Endpoint to connect to the database from an application running in the EC2 instance.\
 
 
     <div align="left">
@@ -111,5 +111,5 @@ When your [database is available](step-4-create-a-rds-database.md#1-toc-title) a
 Not sure what kind of Duplcloud Service you want to create? Consider the following:
 
 * AWS EKS is a managed [Kubernetes ](https://kubernetes.io/)service. AWS ECS is a fully managed container orchestration service using AWS technology. For a full discussion of the benefits of EKS vs. ECS, consult this [AWS blog](https://aws.amazon.com/blogs/containers/amazon-ecs-vs-amazon-eks-making-sense-of-aws-container-services/).
-* [Docker Containers](https://docs.docker.com/get-started/) are ideal for lightweight deployments and run on any platform,, using GitHub and other open-source tools.
+* [Docker Containers](https://docs.docker.com/get-started/) are ideal for lightweight deployments and run on any platform, using GitHub and other open-source tools.
 {% endhint %}
