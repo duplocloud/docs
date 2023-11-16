@@ -6,6 +6,10 @@ description: Working with Load Balancers using AWS EKS
 
 ## Adding a Load Balancer Listener
 
+{% hint style="info" %}
+For an end-to-end example of deploying an application using an EKS Service, see the [AWS Quick Start Tutorial](../../quick-start/) and choose the [Creating an EKS Service](../../quick-start/quick-start-eks-services/) option.
+{% endhint %}
+
 1. In the DuploCloud Portal, navigate **DevOps** -> **Containers** -> **EKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.

@@ -10,6 +10,10 @@ Before you create an ECS Service and Load Balancer, you must create a [Task Defi
 
 ## Creating an ECS Service and Load Balancer Listener
 
+{% hint style="info" %}
+For an end-to-end example of deploying an application using an ECS Service, see the [AWS Quick Start Tutorial](../../quick-start/) and choose the [Creating an ECS Service](../../quick-start/quick-start-ecs-services/) option.
+{% endhint %}
+
 Tasks run until an error occurs or a user terminates the Task in the ECS Cluster.
 
 1. Navigate to **DevOps** -> **Containers** -> **ECS**.
@@ -30,7 +34,7 @@ Tasks run until an error occurs or a user terminates the Task in the ECS Cluster
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/image (103).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for an ECS Service</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/dockerq (1).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for an ECS Service</p></figcaption></figure>
 
     </div>
 

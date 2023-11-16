@@ -23,19 +23,11 @@ Load Balancers can be configured for Docker Native, EKS-Enabled, and ECS Service
 
 ## Adding a Load Balancer Listener
 
-1. In the DuploCloud Portal, navigate **DevOps** -> **Containers** -> **EKS/Native**.
-2. On the **Services** page, select the Service name in the **Name** column.
-3. Click the **Load Balancers** tab.
-4. If no Load Balancers exist, click the **Configure Load Balancer** link. If other Load Balancers exist, click **Add** in the **LB listeners** card. The **Add Load Balancer Listener** pane displays.
-5. From the **Select Type** list box, select a Load Balancer Listener type based on your Load Balancer.
-6.  Complete other fields as required and click **Add** to add the Load Balancer Listener.\
+See the following pages for specific information on adding Load Balancer Listeners for:
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/LBL1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
-
-    </div>
+* [EKS Load Balancers](eks-load-balancers.md)
+* [ECS Service and Load Balancers](ecs-services-and-load-balancers.md)
+* [Native Docker Load Balancers](native-docker-load-balancers.md)
 
 ### Adding a Network Load Balancer (NLB) Listener with a custom CIDR
 

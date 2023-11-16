@@ -29,22 +29,22 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**. The **Hosts** page displays.
 2. In the **EC2** tab, click **Add**. The **Add Hosts** page displays.
-3. In the **Friendly Name** field, enter **host02**.
+3. In the **Friendly Name** field, enter **host01**.
 4. From the **Instance Type** list box, select **2 CPU 4 GB - t3.medium**.
 5. Select the **Advanced Options** checkbox to display advanced configuration fields.
 6. From the **Agent Platform** list box, select **Linux/Docker Native**.
-7. From the **Image ID** list box, select **Docker-Duplo** or any Ubuntu image. &#x20;
+7. From the **Image ID** list box, select any **Docker-Duplo** or **Ubuntu** image. &#x20;
 8.  Click **Add**. The Host is created, initialized, and started. In a few minutes, when the **Status** displays **Running**, the Host is available for use.\
 
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/doc1 (2).png" alt=""><figcaption><p><strong>EC2 Add Hosts</strong> page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/dockerd.png" alt=""><figcaption><p><strong>EC2 Add Hosts</strong> page</p></figcaption></figure>
 
     </div>
 
 ## Checking your work
 
-Verify that **host02** has a **Status** of **Running**.
+Verify that **host01** has a **Status** of **Running**.
 
-<figure><img src="../../../.gitbook/assets/image (9) (5).png" alt=""><figcaption><p><strong>EC2</strong> tab displaying <strong>host02</strong> with <strong>Status</strong> of <strong>Running</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/dockere.png" alt=""><figcaption><p><strong>EC2</strong> tab displaying <strong>host01</strong> with <strong>Status</strong> of <strong>Running</strong></p></figcaption></figure>

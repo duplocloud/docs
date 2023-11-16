@@ -70,7 +70,7 @@ In the previous steps, you:
 * [Created an EC2 host](step-3-create-host.md) named **host01**, so that your application has storage resources with which to run.
 * [Created a Service](step-5-create-app-via-k8s.md) named **demo-service** to connect the Docker containers and associated images, in which your application code resides, to the DuploCloud Tenant environment.
 * [Created an ALB Load Balancer Listener](step-6-create-a-load-balancer.md) to expose your application via ports and backend network configurations.&#x20;
-* [Verified that your web page rendered](step-9-test-the-application.md#testing-the-application) as expected by testing the IP address exposed by the  Load Balancer Listener.
+* [Verified that your web page rendered](step-9-test-the-application.md#testing-the-application) as expected by testing the DNS Name exposed by the  Load Balancer Listener.
 
 ## Cleaning up your tutorial environment
 

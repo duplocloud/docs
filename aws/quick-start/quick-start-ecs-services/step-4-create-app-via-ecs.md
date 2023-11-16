@@ -36,7 +36,7 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/ecs_4.png" alt=""><figcaption><p><strong>Add Task Definition</strong> page for AWS ECS</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/ecs_4 (1).png" alt=""><figcaption><p><strong>Add Task Definition</strong> page for AWS ECS</p></figcaption></figure>
 
     </div>
 
@@ -46,5 +46,5 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
 6. In the **Image** field, enter **duplocloud/nodejs-hello:latest**.
 7. From the **vCPU** list box, select **0.50 vCPU**.
 8. From the **Memory** list box, select **1 GB**.
-9. In the **Port Mappings** section, in the **Port** field, enter **80**. Port mappings allow containers to access ports for the host container instance to send or receive traffic.&#x20;
+9. In the **Port Mappings** section, in the **Port** field, enter **3000**. Port mappings allow containers to access ports for the host container instance to send or receive traffic.&#x20;
 10. Click **Submit**.
