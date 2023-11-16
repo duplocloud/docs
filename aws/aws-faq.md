@@ -8,17 +8,17 @@ description: Popular and frequently asked questions about DuploCloud and AWS
 
 Yes. This is a major advantage of using DuploCloud. All controls are mapped to various compliance standards. DuploCloud is also very flexible in enabling you to add custom policies (resource quotas, ability to create public-facing endpoints, etc.)
 
-## **How do I ssh into the host?** <a href="#0-toc-title" id="0-toc-title"></a>
+## **How do I SSH into the host?** <a href="#0-toc-title" id="0-toc-title"></a>
 
-Under each Host, you can click on Connection details under Action dropdown which will provide the key file and instructions to ssh.
+Under each Host, you can click on **Connection Details** under **Action** dropdown which will provide the key file and instructions to **SSH**.
 
-## My host is Windows how do I RDP? <a href="#1-toc-title" id="1-toc-title"></a>
+## My host is Windows, how do I RDP? <a href="#1-toc-title" id="1-toc-title"></a>
 
-Under Host, click on Connection details under the Actions dropdown, it will provide the password and instructions to rdp.
+Under **Host**, click on **Connection Details** under the **Actions** dropdown, it will provide the password and instructions to **RDP**.
 
 ## How do I get into the container where my code is running? <a href="#2-toc-title" id="2-toc-title"></a>
 
-Under the services status tab, find the host where the container is running. Then ssh into the host (see instructions above) and then run `sudo docker ps` and get the ID of the container. Then run `sudo docker exec -it <containerid> bash`“. You can tell which one is your container by using the image id. Don’t forget the sudo in Docker commands
+Under the **Services Status** tab, find the host where the container is running. Then SSH into the host (see instructions above) and then run `sudo docker ps` and get the ID of the container. Then run `sudo docker exec -it <containerid> bash`“. You can tell which one is your container by using the image id. Don’t forget the sudo in Docker commands
 
 ## I cannot connect to my service URL, how do I debug? <a href="#3-toc-title" id="3-toc-title"></a>
 
@@ -68,13 +68,13 @@ While creating a Host, click on _show advanced_ and select the public subnet in 
 
 DuploCloud provisions a load balancer for your K8 service. If you want to look at detailed settings on the load balancer like Idle timeout, Access logs, and others, you can find and view them directly in AWS, by following the below steps:
 
-You can find the load balancer name for your service by navigating to _DevOps->Containers->EKS/Native_, go to your service, and look at the Load Balancer tab. If you're using K8 Ingress then you will have to go to the K8 Ingress tab and find the Load Balancer configuration there.
+You can find the load balancer name for your service by navigating to _DevOps->Containers->EKS/Native_, go to your service, and look at the Load Balancer tab. If you're using K8s Ingress then you will have to go to the K8s Ingress tab and find the Load Balancer configuration there.
 
 Once you have the load balancer name, you can go to the AWS console via the DuploCloud UI ([here](use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your load balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes)
 
 ## Why use Terraform when Cloud Formation is AWS native?
 
-Many customers prefer Terraform to Cloud Formation. Many elements in the Cloud DevOps cycle can be non-AWS (such as native Kubernetes, MongoDB, Data Dog, Okta, etc.), and all support Terraform providers.
+Many customers prefer Terraform to CloudFormation. Many elements in the Cloud DevOps cycle can be non-AWS (such as native Kubernetes, MongoDB, Data Dog, Okta, etc.), and all support Terraform providers.
 
 ## AWS Copilot seems to be a low-code tool and developer-friendly. I understand that Copilot relies on existing AWS tools to monitor.
 

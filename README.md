@@ -17,7 +17,7 @@ In addition, logging, monitoring, alerting, and reporting of the provisioned sys
 
 ![The DuploCloud Platform Features Diagram](.gitbook/assets/one-unified-platform-infographic-1280x720.png)
 
-DuploCloud is a single-tenant software platform installed in the customer's cloud account. The customer interfaces with DuploCloud via the browser UI, the DuploCloud Terraform provider, and/or API calls while the data and configuration stay within the customer's cloud account. All configurations created and applied by DuploCloud can be reviewed and edited in the customer's cloud account.
+DuploCloud is a single-Tenant software platform installed in the customer's cloud account. The customer interfaces with DuploCloud via the browser UI, the DuploCloud Terraform provider, and/or API calls while the data and configuration stay within the customer's cloud account. All configurations created and applied by DuploCloud can be reviewed and edited in the customer's cloud account.
 
 ## Quick demo
 
