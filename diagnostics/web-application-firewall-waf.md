@@ -27,7 +27,7 @@ When you create a WAF in DuploCloud, an entry is added to the [Web ACL](https://
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/Azure_WAF (1).png" alt=""><figcaption><p><strong>Add WAF</strong> pane</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/Azure_WAF (1).png" alt=""><figcaption><p><strong>Add WAF</strong> pane</p></figcaption></figure>
 
     </div>
 
@@ -42,11 +42,11 @@ When you create a WAF in DuploCloud, an entry is added to the [Web ACL](https://
 Only ALB Load Balancers can be attached to a WAF.
 {% endhint %}
 
-1. If you don't yet have an Application Load Balancer (ALB), [create one](load-balancers/#adding-a-load-balancer).
+1. If you don't yet have an Application Load Balancer (ALB), [create one](../aws/aws-services/load-balancers/#adding-a-load-balancer).
 2.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.\
 
 
-    <figure><img src="../../.gitbook/assets/AWS_LB_WAF_Attach.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> for attaching a WAF (via the <strong>Web ACL</strong> field) to an ALB Load Balancer<br></p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/AWS_LB_WAF_Attach.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> for attaching a WAF (via the <strong>Web ACL</strong> field) to an ALB Load Balancer<br></p></figcaption></figure>
 3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).&#x20;
 4. Complete the other required fields in the **Other Load Balancer Settings** pane.
 5. Click **Update**.
@@ -55,4 +55,4 @@ Only ALB Load Balancers can be attached to a WAF.
 
 DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from the left navigation panel: **Security > WAF**.
 
-![WAF Dashboard](<../../.gitbook/assets/waf (1).png>)
+![WAF Dashboard](<../.gitbook/assets/waf (1).png>)

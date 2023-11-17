@@ -2,7 +2,7 @@
 description: Managing Azure services and related components
 ---
 
-# Azure services
+# Azure Services
 
 DuploCloud provides a number of configurable components when running Microsoft Azure's Managed Kubernetes Service (AKS).
 
@@ -18,7 +18,7 @@ Supported Services are listed in alphabetical order, following the core services
 
 * [Containers and Services](containers-and-services.md)
 * [Load Balancers](load-balancers.md)
-* [Storage](storage/)
+* [Kubernetes](kubernetes/)
 
 ### Additional Services
 

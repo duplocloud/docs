@@ -2,7 +2,7 @@
 description: Integrate with OpenVPN by provisioning VPN users
 ---
 
-# VPN Setup
+# VPN Setup (optional)
 
 DuploCloud integrates natively with OpenVPN by provisioning VPN users that you add to the Duplocloud Portal. OpenVPN setup is a two-step process.
 
@@ -42,7 +42,7 @@ Provision a VPN while creating a user:
 
 ### Deleting VPN access for a user
 
-For information about removing VPN access for a user, see [Deleting a VPN user](../../administrator-tools/access-control/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user). To delete VPN access, you must have administrator privileges.&#x20;
+For information about removing VPN access for a user, see [Deleting a VPN user](../../user-administration/access-control/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user). To delete VPN access, you must have administrator privileges.&#x20;
 
 ## Open a VPN port
 

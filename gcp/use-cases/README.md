@@ -10,14 +10,11 @@ Topics in this section are covered in the order of typical usage. Use cases that
 
 ## Supported use cases for DuploCloud GCP
 
-* [Infrastructure and Plan](../../aws/use-cases/disaster-recovery.md)
-* [Tenant](../../azure/use-cases/tenant-environment.md)
-* [Hosts](../../aws/use-cases/hosts-vms.md)
-* [Autoscaling for Hosts](../../azure/use-cases/autoscaling/)
-* [VM Scale Sets](../../azure/use-cases/vm-scale-sets.md)
-* [Docker Registry Credentials and Kubernetes Secrets](../../azure/use-cases/docker-registry-credentials-and-kubernetes-secrets.md)
-* [Logs](../../azure/use-cases/logs.md)
-* [Metrics](../../azure/use-cases/metrics.md)
-* [Faults and alerts](../../azure/use-cases/faults-and-alerting/)
-* [Azure Console](../../azure/use-cases/azure-portal-link.md) link
-* [Cost management for billing](../../azure/use-cases/cost-management.md)
+* [Infrastructure and Plan](broken-reference)
+* [Tenant](tenant-environment.md)
+* [Hosts](hosts-vms.md)
+* [Configs and Secrets](passing-secrets/)
+* [Logs](../../diagnostics/logs.md)
+* [Metrics](../../diagnostics/monitoring/)
+* [Faults and alerts](../../diagnostics/faults-and-alarms/)
+* [Cost management for billing](cost-management.md)
