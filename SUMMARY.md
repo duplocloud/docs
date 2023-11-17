@@ -9,7 +9,7 @@
 
 ## Getting started
 
-* [Welcome to DuploCloud](getting-started/welcome-to-duplocloud.md)
+* [Getting Started with DuploCloud](getting-started/getting-started-with-duplocloud.md)
 * [Existing DevOps Approach](getting-started/existing-devops-approach/README.md)
   * [Application Requirements](getting-started/existing-devops-approach/application-requirements.md)
   * [Compliance Requirements](getting-started/existing-devops-approach/compliance-requirements.md)
@@ -23,24 +23,6 @@
   * [Diagnostics](getting-started/application-focussed-interface/diagnostics.md)
 * [No-Code / Low-Code](getting-started/no-code-low-code.md)
 * [Security and Compliance](aws/broader-scenarios/security-and-compliance.md)
-
-## Administrator Tools
-
-* [Access control](administrator-tools/access-control/README.md)
-  * [User access to DuploCloud](administrator-tools/access-control/add-edit-or-delete-a-user.md)
-  * [Tenant access for users](administrator-tools/access-control/tenant-access.md)
-    * [Add Tenant access over a VPN](administrator-tools/access-control/tenant-access/add-tenant-access-over-a-vpn.md)
-    * [Read-only access to a Tenant](administrator-tools/access-control/tenant-access/read-only-access-to-a-tenant.md)
-    * [Cross-Tenant Access](administrator-tools/access-control/tenant-access/cross-tenant-access.md)
-    * [Deleting a Tenant](administrator-tools/access-control/tenant-access/deleting-a-tenant.md)
-  * [VPN access for users](administrator-tools/access-control/add-and-delete-vpn-access-for-users.md)
-  * [Database access for users](administrator-tools/access-control/database-access-for-users.md)
-  * [Resolving DNS failures](administrator-tools/access-control/resolving-dns-failures.md)
-  * [API tokens](administrator-tools/access-control/api-tokens.md)
-* [Kubectl setup](administrator-tools/kubectl-setup/README.md)
-  * [Kubectl access for non-administrators](administrator-tools/kubectl-setup/kubectl-access-for-non-administrators.md)
-* [SSO Configuration](administrator-tools/sso-configuration/README.md)
-  * [Azure SSO Configuration](administrator-tools/sso-configuration/azure-ad-as-idp.md)
 
 ## AWS user guide <a href="#aws" id="aws"></a>
 
@@ -228,8 +210,8 @@
 * [Azure Services](azure/azure-services/README.md)
   * [Containers and Services](azure/azure-services/containers-and-services.md)
   * [Load Balancers](azure/azure-services/load-balancers.md)
-  * [Storage](azure/azure-services/storage/README.md)
-    * [Storage option configurations](azure/azure-services/containers/storage-options.md)
+  * [Kubernetes](azure/azure-services/kubernetes/README.md)
+    * [Storage option configurations](azure/azure-services/kubernetes/storage-options.md)
   * [Agent pool](azure/azure-services/agent-pool.md)
   * [Databases](azure/azure-services/databases/README.md)
     * [MSSQL Server database](azure/azure-services/databases/sql-database.md)
@@ -271,24 +253,25 @@
   * [Tenant (Environment)](gcp/use-cases/tenant-environment.md)
   * [Hosts (Virtual Machines)](gcp/use-cases/hosts-vms.md)
   * [Cost management for billing](gcp/use-cases/cost-management.md)
+  * [Configs and Secrets](gcp/use-cases/passing-secrets/README.md)
+    * [Passing Config and Secrets](gcp/use-cases/passing-secrets/passing-config-and-secrets/README.md)
+      * [Setting Environment Variables from Config](gcp/use-cases/passing-secrets/passing-config-and-secrets/setting-environment-variables-from-config.md)
+      * [Mounting Config and Secrets as Files](gcp/use-cases/passing-secrets/passing-config-and-secrets/mounting-config-as-files.md)
+    * [Docker Registry credentials and Kubernetes secrets](gcp/use-cases/passing-secrets/docker-registry-credentials-and-kubernetes-secrets.md)
 * [GCP Services](gcp/gcp-services/README.md)
-  * [Infrastructure (Virtual Private Cloud)](gcp/gcp-services/infrastructure-virtual-private-cloud.md)
-  * [Configuring GCP Services](gcp/gcp-services/containers.md)
+  * [Containers and Services](gcp/gcp-services/containers.md)
+  * [Load Balancers](gcp/gcp-services/step-4-create-a-load-balancer.md)
+  * [Kubernetes](gcp/gcp-services/containers-1.md)
   * [Cloud Armour](gcp/gcp-services/cloud-armour.md)
   * [Databases](gcp/gcp-services/databases/README.md)
     * [Redis database instance](gcp/gcp-services/databases/redis-database-instance.md)
     * [SQL databases](gcp/gcp-services/databases/sql-databases.md)
-* [Storage Buckets](gcp/s3-bucket.md)
+  * [Storage Buckets](gcp/gcp-services/s3-bucket.md)
 * [GCP FAQ](gcp/gcp-faq.md)
-
-## Security and Compliance
-
-* [Introduction to Security and Compliance](security-and-compliance/introduction-to-security-and-compliance.md)
-* [SIEM](security-and-compliance/siem.md)
 
 ## CI/CD
 
-* [Introduction to CI/CD](ci-cd/introduction-to-ci-cd.md)
+* [CI/CD Overview](ci-cd/introduction-to-ci-cd.md)
 * [GitHub Actions](ci-cd/github-actions/README.md)
   * [Configue Github](ci-cd/github-actions/configuring-github.md)
   * [Build a Docker image](ci-cd/github-actions/build-a-docker-image.md)
@@ -315,7 +298,47 @@
   * [Katkit config](ci-cd/katkit/katkit-config.md)
   * [Advanced functions](ci-cd/katkit/advanced-functions.md)
 
+## Security and Compliance
+
+* [Security and Compliance Overview](security-and-compliance/security-and-compliance-overview.md)
+* [SIEM](security-and-compliance/siem.md)
+
+## User Administration
+
+* [Access control](user-administration/access-control/README.md)
+  * [User access to DuploCloud](user-administration/access-control/add-edit-or-delete-a-user.md)
+  * [Tenant access for users](user-administration/access-control/tenant-access/README.md)
+    * [Add Tenant access over a VPN](user-administration/access-control/tenant-access/add-tenant-access-over-a-vpn.md)
+    * [Read-only access to a Tenant](user-administration/access-control/tenant-access/read-only-access-to-a-tenant.md)
+    * [Cross-Tenant Access](user-administration/access-control/tenant-access/cross-tenant-access.md)
+    * [Deleting a Tenant](user-administration/access-control/tenant-access/deleting-a-tenant.md)
+  * [VPN access for users](user-administration/access-control/add-and-delete-vpn-access-for-users.md)
+  * [Database access for users](user-administration/access-control/database-access-for-users.md)
+  * [Resolving DNS failures](user-administration/access-control/resolving-dns-failures.md)
+  * [API tokens](user-administration/access-control/api-tokens.md)
+* [Kubectl setup](user-administration/kubectl-setup/README.md)
+  * [Kubectl access for non-administrators](user-administration/kubectl-setup/kubectl-access-for-non-administrators.md)
+* [SSO Configuration](user-administration/sso-configuration/README.md)
+  * [Azure SSO Configuration](user-administration/sso-configuration/azure-ad-as-idp.md)
+
+## Diagnostics
+
+* [Diagnostics Overview](diagnostics/diagnostics-overview.md)
+* [Metrics](diagnostics/monitoring/README.md)
+  * [Metrics Setup](diagnostics/monitoring/metrics-setup.md)
+  * [Metrics Dashboard](diagnostics/monitoring/metrics-dashboard.md)
+  * [Kubernetes Administrator dashboard](diagnostics/monitoring/kubernetes-administrator-dashboard.md)
+* [Faults and Alerts](diagnostics/faults-and-alarms/README.md)
+  * [Alert notifications](diagnostics/faults-and-alarms/alerting-and-notifications.md)
+  * [Automatic alert creation](diagnostics/faults-and-alarms/automatic-alert-creation.md)
+  * [SNS Topic Alerts](diagnostics/faults-and-alarms/sns-topic-alerts.md)
+  * [Automatic fault healing](diagnostics/faults-and-alarms/automatic-fault-healing.md)
+* [Logs](diagnostics/logs.md)
+* [Auditing](diagnostics/auditing.md)
+* [Web App Firewall (WAF)](diagnostics/web-application-firewall-waf.md)
+
 ## Extras
 
+* [Extras Overview](extras/extras-overview.md)
 * [Allocation Tagging for Hosts](extras/creating-advanced-functions.md)
 * [BYOH](extras/byoh.md)

@@ -1,5 +1,6 @@
 ---
 description: Roles and access types across the DuploCloud Portal
+coverY: 0
 ---
 
 # Access control

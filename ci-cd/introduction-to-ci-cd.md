@@ -2,9 +2,10 @@
 description: >-
   Ensuring continuous integration, delivery, and deployment of your Cloud
   applications
+coverY: 0
 ---
 
-# Introduction to CI/CD
+# CI/CD Overview
 
 DuploCloud supports nearly all available CI/CD platforms, including some of the most popular such as GitHub Actions, CircleCI, and GitLab. This ease of supportability is due to the fact that DuploCloud views CI/CD platforms agnostically, using [cURL commands](https://en.wikipedia.org/wiki/CURL) to communicate requests.
 
