@@ -18,9 +18,12 @@ You will need to generate an keys from each of these vendor systems, and then pr
 1. In the [Sentry ](https://sentry.io/welcome/?utm\_source=google\&utm\_medium=cpc\&utm\_campaign=19655969969\&utm\_content=g\&utm\_term=sentry\&device=c\&gclid=CjwKCAjw5pShBhB\_EiwAvmnNV2cqd7lWEuiy\_n0HSuCc17JGB9vVYqdwm5\_QiDgJEXIWuz34u9h18hoCpbEQAvD\_BwE\&gclid=CjwKCAjw5pShBhB\_EiwAvmnNV2cqd7lWEuiy\_n0HSuCc17JGB9vVYqdwm5\_QiDgJEXIWuz34u9h18hoCpbEQAvD\_BwE)website, navigate to **Projects** -> **Create a New Project**.
 2. Click **Settings -> Projects -> **_**project-name**_** -> Client keys**. The **Client Keys** page displays.
 3. Complete the **DSN** fields on the screen.
-4.  Click **Generate New Key**.&#x20;
+4.  Click **Generate New Key**. \
+
 
     ![Client Keys page on Sentry website with DSN fields](https://duplocloud.com/wp-content/uploads/2021/11/sentry.png)
+
+
 5. In the DuploCloud Portal, navigate to **DevOps** -> **Faults**.
 6. Click **Update Notifications Config**. The **Set Alert Notifications Config** pane displays.
 7. In the **Sentry - DSN** field, enter the key you received from Sentry.
