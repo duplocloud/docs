@@ -331,8 +331,6 @@
 * [Faults and Alerts](diagnostics/faults-and-alarms/README.md)
   * [Alert notifications](diagnostics/faults-and-alarms/alerting-and-notifications.md)
   * [Automatic alert creation](diagnostics/faults-and-alarms/automatic-alert-creation.md)
-  * [SNS Topic Alerts](diagnostics/faults-and-alarms/sns-topic-alerts.md)
-  * [Automatic fault healing](diagnostics/faults-and-alarms/automatic-fault-healing.md)
 * [Logs](diagnostics/logs.md)
 * [Auditing](diagnostics/auditing.md)
 * [Web App Firewall (WAF)](diagnostics/web-application-firewall-waf.md)
