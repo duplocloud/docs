@@ -17,6 +17,10 @@ DuploCloud supports the following RDS databases in AWS:
 * Aurora PostgreSQL
 * Aurora PostgreSQL Serverless
 
+{% hint style="warning" %}
+Support for the Aurora Serverless V1 database engines has been deprecated. When using Terraform, do not create V1 engines.
+{% endhint %}
+
 ## Creating an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
