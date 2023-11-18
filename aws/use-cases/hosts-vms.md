@@ -124,3 +124,43 @@ set -o xtrace
 # Custom user code:
 echo "hello world"
 ```
+
+
+
+## Supported Host Actions
+
+From the **Actions** list box, you can select **Connect**, **Host Settings**, or **Host State** to perform the following supported actions: \
+
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/Shot 1 connection.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Connect</strong> selected.<br></p></figcaption></figure>
+
+</div>
+
+<table data-header-hidden><thead><tr><th width="133"></th><th width="180"></th><th></th></tr></thead><tbody><tr><td><strong>Connect</strong></td><td><strong>SSH</strong></td><td>Establish a SSH connection to work directly in AWS Console.</td></tr><tr><td></td><td><strong>Connection Details</strong></td><td>View connection details (connection type, address, user name, visibility) and download the Key.</td></tr><tr><td></td><td><strong>Host Details</strong></td><td>View host details.</td></tr></tbody></table>
+
+
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/Shot 2 Host Connections.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Host Settings</strong> selected.<br></p></figcaption></figure>
+
+</div>
+
+<table data-header-hidden><thead><tr><th width="158"></th><th width="208"></th><th></th></tr></thead><tbody><tr><td><strong>Host Settings</strong></td><td><strong>Create AMI</strong></td><td>Set the AMI.</td></tr><tr><td></td><td><strong>Create Snapshot</strong></td><td>Create a snapshot of the host at a specific point. </td></tr><tr><td></td><td><strong>Update User Data</strong></td><td>Update the user data for the host.</td></tr><tr><td></td><td><strong>Change Instance Size</strong></td><td>Resize your instance to accommodate the workload. </td></tr><tr><td></td><td><strong>Update Auto Reboot Status Check</strong></td><td>Enable or disable Auto Reboot. Set the number of minutes AWS Instance Status Check fails before automatically rebooting. </td></tr></tbody></table>
+
+
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/Shot 3 Host State.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Host State</strong> selected.</p></figcaption></figure>
+
+</div>
+
+<table data-header-hidden><thead><tr><th width="145"></th><th width="163"></th><th></th></tr></thead><tbody><tr><td><strong>Host State</strong></td><td><strong>Start</strong></td><td>Start the host.</td></tr><tr><td></td><td><strong>Reboot</strong></td><td>Reboot the host.</td></tr><tr><td></td><td><strong>Stop</strong> </td><td>Stop the host. </td></tr><tr><td></td><td><strong>Hibernate</strong></td><td>Hibernate (temporarily freeze) the host.</td></tr><tr><td></td><td><strong>Terminate Host</strong></td><td>Terminate the host. </td></tr></tbody></table>
+
+
+
+
+
