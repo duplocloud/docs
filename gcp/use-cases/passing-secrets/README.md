@@ -1,5 +1,5 @@
 ---
-description: Configuration and Secrets in Docker, Kubernetes, and AWS
+description: Configuration and Secrets in Docker and Kubernetes
 ---
 
 # Configs and Secrets
