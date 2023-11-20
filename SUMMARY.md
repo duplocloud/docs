@@ -6,6 +6,7 @@
 ## WHAT'S NEW
 
 * [Product updates](whats-new/product-updates.md)
+* [Supported Features Matrix](whats-new/supported-features-matrix.md)
 
 ## Getting started
 
@@ -305,6 +306,7 @@
 
 ## User Administration
 
+* [User Administration Overview](user-administration/user-administration-overview.md)
 * [Access control](user-administration/access-control/README.md)
   * [User access to DuploCloud](user-administration/access-control/add-edit-or-delete-a-user.md)
   * [Tenant access for users](user-administration/access-control/tenant-access/README.md)
