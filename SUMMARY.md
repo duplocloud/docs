@@ -6,7 +6,6 @@
 ## WHAT'S NEW
 
 * [Product updates](whats-new/product-updates.md)
-* [Supported Features Matrix](whats-new/supported-features-matrix.md)
 
 ## Getting started
 
