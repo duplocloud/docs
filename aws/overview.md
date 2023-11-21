@@ -17,5 +17,5 @@ Login to the DuploCloud portal, using single sign-on (SSO), with your GSuite or 
 
 Before getting started:&#x20;
 
-* Set up the DuploCloud Portal and ensure that you have [access to it](../user-administration/access-control/).
+* Set up the DuploCloud Portal and ensure that you have [access to it](../administrator-tools/access-control/).
 * Connect to the DuploCloud Slack channel for support from the DuploCloud team.&#x20;

@@ -3,7 +3,7 @@ description: Roles and access types across the DuploCloud Portal
 coverY: 0
 ---
 
-# Access control
+# Access control and permissions
 
 The DuploCloud Portal contains the following roles:&#x20;
 

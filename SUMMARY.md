@@ -9,7 +9,7 @@
 
 ## Getting started
 
-* [Getting Started with DuploCloud](getting-started/getting-started-with-duplocloud.md)
+* [Getting Started with DuploCloud](getting-started/welcome-to-duplocloud.md)
 * [Existing DevOps Approach](getting-started/existing-devops-approach/README.md)
   * [Application Requirements](getting-started/existing-devops-approach/application-requirements.md)
   * [Compliance Requirements](getting-started/existing-devops-approach/compliance-requirements.md)
@@ -225,6 +225,7 @@
   * [Ingress](azure/azure-services/ingress.md)
   * [Key vault](azure/azure-services/key-vault.md)
   * [Serverless Web applications](azure/azure-services/web-applications.md)
+  * [Service Bus](azure/azure-services/service-bus.md)
   * [Storage account](azure/azure-services/storage-account.md)
   * [Subscription](azure/azure-services/subscription.md)
   * [VM Scale Sets](azure/use-cases/vm-scale-sets.md)
@@ -306,7 +307,7 @@
 ## User Administration
 
 * [User Administration Overview](user-administration/user-administration-overview.md)
-* [Access control](user-administration/access-control/README.md)
+* [Access control and permissions](administrator-tools/access-control/README.md)
   * [User access to DuploCloud](user-administration/access-control/add-edit-or-delete-a-user.md)
   * [Tenant access for users](user-administration/access-control/tenant-access/README.md)
     * [Add Tenant access over a VPN](user-administration/access-control/tenant-access/add-tenant-access-over-a-vpn.md)
