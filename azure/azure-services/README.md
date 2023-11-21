@@ -29,6 +29,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [Ingress](ingress.md)
 * [Key Vault](key-vault.md)
 * [Serverless Web applications](web-applications.md)
+* [Service Bus](service-bus.md)
 * [Storage Account](storage-account.md)
 * [Subscriptions](subscription.md)
 * [VM Scale Set](../use-cases/vm-scale-sets.md)s

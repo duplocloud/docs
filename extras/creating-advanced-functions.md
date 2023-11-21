@@ -1,5 +1,6 @@
 ---
 description: Pin a container to a set of hosts using allocation tagging
+coverY: 0
 ---
 
 # Allocation Tagging for Hosts

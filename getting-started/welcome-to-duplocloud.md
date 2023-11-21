@@ -1,5 +1,5 @@
 ---
-description: From onboarding to productivity in the DuploCloud Platform
+description: An overview of the DuploCloud Portal
 coverY: 0
 ---
 
