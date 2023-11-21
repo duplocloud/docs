@@ -111,7 +111,7 @@
   * [Custom Resource tags](aws/use-cases/custom-resource-tags.md)
 * [AWS Services](aws/aws-services/README.md)
   * [Containers and Services](aws/aws-services/containers/README.md)
-    * [EKS Containers and Services](aws/aws-services/containers/eks-containers-and-services.md)
+    * [EKS/Native Containers and Services](aws/aws-services/containers/eks-native-containers-and-services.md)
     * [ECS Containers and Task Definitions](aws/aws-services/containers/ecs-containers-and-task-definitions.md)
   * [Load Balancers](aws/aws-services/load-balancers/README.md)
     * [EKS Load Balancers](aws/aws-services/load-balancers/eks-load-balancers.md)
