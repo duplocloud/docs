@@ -13,6 +13,8 @@ coverY: 0
   * Use [dedicated hosts](../aws/use-cases/hosts-vms/dedicated-host.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server
 * Azure
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
+* General updates
+  * The DuploCloud UI contains numerous design, navigational, and usability improvements.
 
 ## August 2023 and September 2023
 
