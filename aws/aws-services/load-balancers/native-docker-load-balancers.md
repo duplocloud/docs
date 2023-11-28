@@ -17,8 +17,8 @@ For an end-to-end example of deploying an application using a Native Docker Serv
 5. From the **Select Type** list box, select your Load Balancer type.
 6. Complete other fields as required and click **Add** to add the Load Balancer Listener.
 
-<figure><img src="../../../.gitbook/assets/image (105).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (105) (1).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
 
 When the **LB Status** card displays **Ready**, your Load Balancer is running and ready for use.
 
-<figure><img src="../../../.gitbook/assets/image (106).png" alt=""><figcaption><p><strong>Services</strong> page with <strong>LB Status</strong> card displaying <strong>Ready</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (106) (1).png" alt=""><figcaption><p><strong>Services</strong> page with <strong>LB Status</strong> card displaying <strong>Ready</strong></p></figcaption></figure>
