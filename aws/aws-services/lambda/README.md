@@ -14,11 +14,9 @@ Using Lambda, you write your code and upload it to AWS. Lambda executes and scal
 Use [CI/CD GitHub Actions to update Lambda functions](../../../ci-cd/github-actions/update-a-lambda-function.md) with images or S3 bucket updates.
 {% endhint %}
 
-## Generating a Zip package of Lambda code <a href="#0-toc-title" id="0-toc-title"></a>
+## Creating a Zip file <a href="#0-toc-title" id="0-toc-title"></a>
 
-## Step 1: Create a zip file <a href="#0-toc-title" id="0-toc-title"></a>
-
-In a Zip package, the Lambda Function code resides at the root of the package. If you are using a virtual environment, all dependencies should be packaged.&#x20;
+In a Zip file, the Lambda Function code resides at the root of the package. If you are using a virtual environment, all dependencies should be packaged.&#x20;
 
 Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html) for detailed instructions on how to generate the package, using tools such as [Zappa ](https://github.com/zappa/Zappa)and [Serverless](https://www.serverless.com/framework/docs/providers/aws/guide/functions).
 
@@ -32,9 +30,10 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Serverless**.
 2. Click the **Lambda** tab. The **Lambda Function** page displays.
-3.  Click **Add**. The **Create a Lambda Function** page displays.
+3.  Click **Add**. The **Create a Lambda Function** page displays.\
 
-    <figure><img src="../../../.gitbook/assets/L10.png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page using <strong>Type Zip</strong></p></figcaption></figure>
+
+    <figure><img src="../../../.gitbook/assets/L10.png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page using <strong>Type Zip</strong><br></p></figcaption></figure>
 4. In the **Name** field, enter the name of your Lambda Function.
 5. In the **Description** field, enter a useful description of the function.
 6. From the **Package Type** list box, select **Zip**. For type **Image**, see the [Configure Lambda with Container Images](create-lambda-using-container-image.md) topic.

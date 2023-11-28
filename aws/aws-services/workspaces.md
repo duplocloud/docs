@@ -1,9 +1,9 @@
 # Workspaces
 
-Individual workspaces/Devspaces can be created for the user in DuploCloud. These workspaces will have access to all the resources in the tenant which user has access. To create a workspace go to **Administrator > Users > Select user > Devspace** tab.
+You can use [Amazon WorkSpaces](https://aws.amazon.com/workspaces/faqs/) through DuploCloud to create individual workspaces/DevSpaces for users. WorkSpaces is a managed, secure cloud desktop service that can provision Windows, Amazon Linux, or Ubuntu Linux desktops. These workspaces have access to all the resources the user can access in the Tenant.&#x20;
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/devspace.png)
+<div align="left">
 
-Once the workspace is created, it can be accessed from the Code next to Diagnostics.
+<img src="https://duplocloud.com/wp-content/uploads/2021/11/devspace.png" alt="The confirmation pane displays when creating a workspace/DevSpace.">
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/devspace-code.png)
+</div>

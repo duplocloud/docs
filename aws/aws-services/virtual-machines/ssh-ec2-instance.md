@@ -6,22 +6,18 @@ description: Connect an EC2 instance with SSH by Session ID or by downloading a 
 
 Once an EC2 Instance is created, you connect it with SSH either by using Session ID or by downloading a key.
 
-In the DuploCloud Portal, navigate to **DevOps** --> **Hosts** and select the host to which you want to connect.
+## Connecting to an EC2 Linux instance using SSH
 
-## SSH EC2 Linux instance
+In the DuploCloud Portal, navigate to **DevOps** -> **Hosts** and select the host to which you want to connect.
 
-### SSH using session id
+### Connect using session ID
 
 After you select the Host, on the Host's page click the **Actions** menu and select **SSH**. A new browser tab opens and you can connect your Host using SSH with by session ID. Connection to the host launches in a new browser tab.
 
-<figure><img src="../../../.gitbook/assets/SSH1.png" alt=""><figcaption><p>Host page with <strong>Actions</strong> menu and <strong>SSH</strong> option</p></figcaption></figure>
+### Connect by downloading a key
 
-### &#x20;SSH by downloading key
-
-1. After you select the Host, on the Host's page click the **Actions** menu and select **Connection Details**. The **Connection Info for Host** window opens. Follow the instructions to connect to the server.
+1. After you select the Host, on the Host's page click the **Actions** menu and select **Connect** -> **Connection Details**. The **Connection Info for Host** window opens. Follow the instructions to connect to the server.
 2. Click **Download Key**.
-
-
 
 <div align="left">
 
@@ -29,11 +25,9 @@ After you select the Host, on the Host's page click the **Actions** menu and sel
 
 </div>
 
-
-
 #### Disable the option to download the SSH key
 
-If you don't want to display the Download Key button, disable the button's visibility.
+If you don't want to display the **Download Key** button, disable the button's visibility.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.

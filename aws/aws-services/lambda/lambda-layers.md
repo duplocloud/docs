@@ -14,16 +14,27 @@ You must add a Key/Value pair in the DuploCloud Portal's **System Config** setti
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
-3.  Click **Add**. The **Add Config** pane displays.
+3.  Click **Add**. The **Add Config** pane displays.\
+
+
+    <div align="left">
 
     <figure><img src="../../../.gitbook/assets/L5.png" alt=""><figcaption><p><strong>Add Config</strong> pane</p></figcaption></figure>
+
+    </div>
+
+
 4. From the **Config Type** list box, select **Other**. The **Other Config Type** field displays.
 5. In the **Other Config Type** field, enter **AppConfig**.
 6. In the **Key** field, enter **ListAllLambdaLayers**.
 7. In the **Value** field, enter **True**.
 8. Click **Submit**. The **Key**/**Value** pair is displayed in the **System Config** tab.
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/L4 (1).png" alt=""><figcaption><p><strong>System Settings</strong> with <strong>ListAllLambdaLayers AppConfig Type</strong> set to <strong>Value</strong> of <strong>True</strong></p></figcaption></figure>
+
+</div>
 
 After you set **ListAllLambdaLayers** to **True**:
 
@@ -36,12 +47,22 @@ Before you add a Lambda Layer, you must have defined at least one [Lambda Functi
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Serverless**.
 2. In the **Lambda** tab, select the Lambda Function to which you want to add Lambda Layers.&#x20;
-3.  Click the **Actions** menu and select **Edit**. The **Edit Lambda Function** page displays.
+3.  Click the **Actions** menu and select **Edit**. The **Edit Lambda Function** page displays.\
+
+
+    <div align="left">
 
     <figure><img src="../../../.gitbook/assets/L7.png" alt=""><figcaption></figcaption></figure>
-4.  In the Layers area, click the **+** button. The **Add Lambda Layer** pane displays.
 
-    <figure><img src="../../../.gitbook/assets/L6.png" alt=""><figcaption></figcaption></figure>
+    </div>
+4.  In the Layers area, click the **+** button. The **Add Lambda Layer** pane displays.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/L6.png" alt=""><figcaption><p><strong>Add a Lambda Layer</strong> pane<br></p></figcaption></figure>
+
+    </div>
 5. From the **Layer** list box, select the Lambda Layer to add.
 6. From the **Version** list box, select the layer version.
 7. Click **Add Layer**. The layer you added is displayed in the **Layers** area of the **Edit Lambda Function** page.
