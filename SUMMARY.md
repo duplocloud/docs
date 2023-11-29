@@ -313,7 +313,7 @@
   * [Tenant access for users](user-administration/access-control/tenant-access/README.md)
     * [Add Tenant access over a VPN](user-administration/access-control/tenant-access/add-tenant-access-over-a-vpn.md)
     * [Read-only access to a Tenant](user-administration/access-control/tenant-access/read-only-access-to-a-tenant.md)
-    * [Cross-Tenant Access](user-administration/access-control/tenant-access/cross-tenant-access.md)
+    * [Cross-tenant Access](user-administration/access-control/tenant-access/cross-tenant-access.md)
     * [Deleting a Tenant](user-administration/access-control/tenant-access/deleting-a-tenant.md)
   * [VPN access for users](user-administration/access-control/add-and-delete-vpn-access-for-users.md)
   * [Database access for users](user-administration/access-control/database-access-for-users.md)
