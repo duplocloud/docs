@@ -1,5 +1,5 @@
 ---
-description: Creating and Using a WAF
+description: Creating and Using a WAF in DuploCloud AWS
 ---
 
 # Web App Firewall (WAF)
