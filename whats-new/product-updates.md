@@ -14,7 +14,7 @@ coverY: 0
   * [Automatically reboot a host](../aws/use-cases/hosts-vms/configure-auto-reboot.md) upon StatusCheck faults or Host disconnection.
   * Support for [SNS Topic Alerts](../aws/use-cases/faults-and-alarms/sns-topic-alerts.md), enabling notifications and alerts across different AWS services and external endpoints.
   * [Establish VPN connections for private endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md#enabling-vpn-for-private-visibility-optional) when creating an Infrastructure.
-  * Restore an RDS to a particular point in time.
+  * Restore an [RDS to a particular point in time](../aws/aws-services/database/rds-database/backup-and-restore.md#restoring-snapshots-to-a-point-in-time).
   * Dynamically [change the configuration of a Kafka Cluster](../aws/aws-services/kafka-cluster.md#changing-the-configuration-of-a-kafka-cluster).
   * Fields for Sort Key and Key Type are now available when [creating a DynamoDB](../aws/aws-services/database/dynamodb.md).
 * Azure

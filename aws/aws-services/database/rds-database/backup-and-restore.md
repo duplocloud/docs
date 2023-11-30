@@ -1,61 +1,63 @@
 ---
-description: >-
-  Backing up your resources with snapshots, virtual machine snapshots/VM AMI,
-  and automated backup.
+description: Manage backup and restore for Relational Database Services (RDS)
 ---
 
 # Backup and restore
 
 ## Creating a snapshot <a href="#0-toc-title" id="0-toc-title"></a>
 
-1. In the DuploCloud Portal, select **DevOps** -> **Database**
-2. &#x20;Click the **RDS** tab, and **select your database name**.&#x20;
-3. From the **Actions** item list, select **Backup & Restore**
-4. Select **Create Snapshot**.&#x20;
-5. The **confirmation pane** displays. Click **Confirm**.
+Create a [snapshot ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_WorkingWithAutomatedBackups.html)of an RDS.
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
+2. In the **RDS** tab, in the row containing your RDS instance, click the **Actions** menu icon ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) and select **Backup & Restore** -> **Create Snapshot**.&#x20;
+3. **Confirm** the snapshot request. Once taken, the snapshot displays in the **Snapshot** tab.
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/Screenshot (149).png" alt=""><figcaption><p>The <strong>Actions</strong> menu on the <strong>DevOps</strong> <strong>Database</strong> page, <strong>RDS</strong> tab.</p></figcaption></figure>
-
-</div>
-
-## Viewing RDS database  <a href="#0-toc-title" id="0-toc-title"></a>
-
-You can view your RDS instance/cluster in JSON or directly on the AWS Console.&#x20;
-
-1. In the DuploCloud Portal, select **DevOps** -> **Database**
-2. Click the **RDS** tab, and **select your database name**.&#x20;
-3. From the **Actions** item list, select **View**.
-4. Select **View JSON** or **Console** to view your RDS database in JSON or directly on the AWS Console.&#x20;
-
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/Screenshot (150).png" alt=""><figcaption><p>The <strong>Actions</strong> menu with <strong>View</strong> selected to view an RDS database.</p></figcaption></figure>
-
-</div>
-
-## Enabling Automated Backup Retention period <a href="#0-toc-title" id="0-toc-title"></a>
-
-1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
-2. Click the **System Config** tab.
-3. Click **Add**. The **Add Config** pane displays.
-4. From the **Config Type** list box, select **AppConfig**.
-5. From the **Name** list box, select **RDS Automated Backup Retention days**.
-6. In the **Value** field, enter the **number of days (1-35)** you would like your backups to be retained.
-
-{% hint style="info" %}
-The backup retention period would be applied to the new databases created after configuring the system settings.&#x20;
-{% endhint %}
-
-<div align="left">
-
-<img src="../../../../.gitbook/assets/image (63).png" alt="Configure RDS Backup Retention">
+<img src="../../../../.gitbook/assets/RDSpit1 (1).png" alt="RDS Tab with Actions menu for DUPLODEV01-DOCS instance with Create Snapshot option highlighted">
 
 </div>
 
 ## Restoring a snapshot <a href="#1-toc-title" id="1-toc-title"></a>
 
-Once the backups are done, they will be available to be restored on the next instance creation.
+Once backups are available, you can restore them on the next instance creation when you [create an RDS](./#0-toc-title).
 
-![Create a RDS page](https://duplocloud.com/wp-content/uploads/2021/11/db-restore.png)
+<div align="left">
+
+<img src="../../../../.gitbook/assets/res5 (1).png" alt="Create a RDS page with Create from Snapshot option">
+
+</div>
+
+## Restoring snapshots to a point in time
+
+You can restore available RDS snapshots to a specific point in time.
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
+2. In the **RDS** tab, select an RDS instance containing [snapshots](backup-and-restore.md#0-toc-title).
+3. Click the **Snapshots** tab.
+4. Click the Actions menu and select **Backup & Restore** -> **Restore to Point in Time**. The **Restore Point in Time** pane displays.
+5. In the **Target Name** field, append the RDS name to the prefilled _`TENANT_NAME`_ prefix.
+6. Select either the **Last Restorable Time** or **Custom date and time** option. If you select the **Custom date and time** option, specify the date and time in the format indicated.
+7. Click **Submit**. Your selected RDS is restored to the point in time you specified.&#x20;
+
+## Setting an RDS automated backup retention period <a href="#0-toc-title" id="0-toc-title"></a>
+
+Administrators can set backup retention periods in the DuploCloud Portal.
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Select the **System Config** tab.
+3. Click **Add**. The Config pane displays.
+4. From the **Config Type** list box, select **AppConfig**.
+5. From the **Key** list box, select **RDS Automated Backup Retention days**.
+6. In the **Value** field, enter the number of days to retain the backup, from one (**1**) to thirty-five (**35**) days.
+7. Click Submit. The System Configs area in the System Config tab is updated with the retention period you entered for the **RDS Automated Backup Retention days** key.
+
+<div align="left">
+
+<img src="../../../../.gitbook/assets/res4.png" alt="Add Config pane with Key RDS Automated Backup Retention days">
+
+</div>
+
+{% hint style="info" %}
+The backup retention period would be applied to the new databases created after configuring the system setting.&#x20;
+{% endhint %}
