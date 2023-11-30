@@ -10,11 +10,18 @@ coverY: 0
 * AWS
   * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
   * Create an [Amazon Machine Image (AMI)](../aws/use-cases/hosts-vms/create-amazon-machine-image-ami.md).
-  * Use [dedicated hosts](../aws/use-cases/hosts-vms/adding-dedicated-hosts.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server
+  * Use [dedicated hosts](../aws/use-cases/hosts-vms/adding-dedicated-hosts.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server.
+  * [Automatically reboot a host](../aws/use-cases/hosts-vms/configure-auto-reboot.md) upon StatusCheck faults or Host disconnection.
+  * Support for [SNS Topic Alerts](../aws/use-cases/faults-and-alarms/sns-topic-alerts.md), enabling notifications and alerts across different AWS services and external endpoints.
+  * [Establish VPN connections for private endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md#enabling-vpn-for-private-visibility-optional) when creating an Infrastructure.
+  * Restore an RDS to a particular point in time.
+  * Dynamically [change the configuration of a Kafka Cluster](../aws/aws-services/kafka-cluster.md#changing-the-configuration-of-a-kafka-cluster).
+  * Fields for Sort Key and Key Type are now available when [creating a DynamoDB](../aws/aws-services/database/dynamodb.md).
 * Azure
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
+  * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
 * General updates
-  * The DuploCloud UI contains numerous design, navigational, and usability improvements.
+  * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an [RDS ](../aws/aws-services/database/rds-database/)and [Hosts](../aws/use-cases/hosts-vms.md).
 
 ## August 2023 and September 2023
 
@@ -35,7 +42,7 @@ coverY: 0
   * [Customize a Node Selector for EKS Services](../aws/aws-services/containers/#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
   * Access [ECS container task shells](../aws/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
   * Ability to designate [Essential Containers](../aws/aws-services/containers/#7-toc-title-2) in Task definitions for ECS Services.
-  * [Enable auto-reboot on EC2 hosts](../aws/use-cases/faults-and-alarms/automatic-fault-healing.md#auto-rebooting-a-host-upon-failed-aws-status-check) that fail a status check.
+  * [Automate fault healing](../aws/use-cases/faults-and-alarms/automatic-fault-healing.md) on EC2 Hosts that fail a status check.
   * Enhanced support for [Startup Probes](../aws/aws-services/setting-up-probes.md).
 * GCP
   * Support for [Redis database instances](../gcp/gcp-services/databases/redis-database-instance.md).
