@@ -2,7 +2,7 @@
 description: How Infrastructures and Plans work together to create a VPC
 ---
 
-# Infrastructure (VPC) and Plan (configuration)
+# Infrastructure and Plan
 
 Infrastructures are abstractions that allow you to create a Virtual Private Cloud (VPC) instance in the DuploCloud Portal. When you create an Infrastructure, a Plan is automatically generated to supply the network configuration necessary for your Infrastructure to run.&#x20;
 
@@ -44,7 +44,7 @@ When you create the Infrastructure, DuploCloud creates the following components:
 
 ## Enabling an encrypted Azure storage account
 
-You can choose to [encrypt your Azure storage account](../hosts-vms/encrypted-storage-account.md) by configuring a Key/Value pair in the Infrastructure.&#x20;
+You can choose to [encrypt your Azure storage account](encrypted-storage-account.md) by configuring a Key/Value pair in the Infrastructure.&#x20;
 
 ## About Plans and Infrastructures
 
