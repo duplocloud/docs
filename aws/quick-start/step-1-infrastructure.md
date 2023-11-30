@@ -4,7 +4,7 @@ description: Creating the DuploCloud Infrastructure and a Plan
 
 # Step 1:  Create Infrastructure and Plan
 
-Each DuploCloud Infrastructure is a Virtual Private Cloud (VPC) network that resides in a region that can host Kubernetes clusters, EKS or ECS clusters, or a combination of these, depending on your public cloud provider.&#x20;
+Each DuploCloud Infrastructure is a connection to a unique Virtual Private Cloud (VPC) network that resides in a region that can host Kubernetes clusters, EKS or ECS clusters, or a combination of these, depending on your public cloud provider.&#x20;
 
 After you supply a few basic inputs DuploCloud creates an Infrastructure for you, within AWS and within DuploCloud, with a few clicks. Behind the scenes, DuploCloud does a lot with what little you supply — generating the VPC, Subnets, NAT Gateway, Routes, and [EKS ](https://docs.aws.amazon.com/eks/)or [ECS ](https://docs.aws.amazon.com/ecs/)cluster.
 

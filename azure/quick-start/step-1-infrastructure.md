@@ -4,7 +4,7 @@ description: Creating the DuploCloud Infrastructure and a Plan
 
 # Step 1:  Create Infrastructure and Plan
 
-Each DuploCloud Infrastructure is a Virtual Private Cloud (VPC) instance that resides in a region that can host Kubernetes clusters, AKS clusters, GKE clusters, EKS clusters, or a combination of these, depending on your public cloud provider. An Infrastructure can reside On-Premises (On-Prem) or in a Public Cloud.
+Each DuploCloud Infrastructure is a connection to a unique Virtual Private Cloud (VPC) network that resides in a region that can host Kubernetes clusters. An Infrastructure can reside On-Premises (On-Prem) or in a Public Cloud.
 
 After you supply a few basic inputs DuploCloud creates an Infrastructure for you, within Azure and within DuploCloud, with a few clicks. Behind the scenes, DuploCloud does a lot with what little you supply — generating subnets, NAT gateway, routes, and a cluster in the region.
 
