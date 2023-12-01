@@ -21,7 +21,7 @@ After you select the Host, on the Host's page click the **Actions** menu and sel
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/image (1) (1) (2).png" alt="Connection Info for Host window with Download Key button">
+<img src="../../../.gitbook/assets/image (1) (1) (2) (1).png" alt="Connection Info for Host window with Download Key button">
 
 </div>
 

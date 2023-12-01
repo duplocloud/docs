@@ -34,4 +34,4 @@ Optionally, set and reference Kubernetes secrets in your deployment by configuri
 2. Select the Service from the **Name** column.
 3. Click the **K8S Secrets** tab. The **Kubernetes Secrets** page displays.
 
-<figure><img src="../../.gitbook/assets/awssec.png" alt=""><figcaption><p><strong>Kubernetes Secrets</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/cont5.png" alt=""><figcaption><p><strong>Kubernetes Secrets</strong> page</p></figcaption></figure>
