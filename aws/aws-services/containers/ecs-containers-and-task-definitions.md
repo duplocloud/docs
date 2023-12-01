@@ -5,10 +5,38 @@ description: Managing Containers and Service with ECS
 # ECS Containers and Task Definitions
 
 {% hint style="success" %}
-For an end-to-end example of how to create an ECS Task Definition, Service, and Load Balancer, [see this tutorial](../../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
+For an end-to-end example of creating an ECS Task Definition, Service, and Load Balancer, [see this tutorial](../../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
 {% endhint %}
 
-## Creating multiple containers for ECS Services using a Task Definition <a href="#7-toc-title" id="7-toc-title"></a>
+## Services
+
+Using the **Services** tab in the DuploCloud Portal, you can display and manage the Services you have defined.
+
+Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) in each Service row to **Edit** or **Delete** Services, as shown below. The checkboxes in the first column of a Service row can be used to select multiple Services for use with [Service Actions](ecs-containers-and-task-definitions.md#7-toc-title-1).
+
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p><strong>Services</strong> tab displaying DuploCloud Services with highlighted Options Menu</p></figcaption></figure>
+
+</div>
+
+## Kubernetes Containers
+
+Using the **Containers** tab in the DuploCloud Portal, you can display and manage the Containers you have defined.
+
+Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
+
+| Option              | Functionality                                                                                                                                                  |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Logs**            | Displays container logs.                                                                                                                                       |
+| **State**           | Displays container state configuration, in YAML code, in a separate window.                                                                                    |
+| **Container Shell** | Accesses the Container Shell. To access the **Container Shell** option, you must first set up [Shell access for Docker](../../prerequisites/kubectl-shell.md). |
+| **Host Shell**      | Accesses the Host Shell.                                                                                                                                       |
+| **Delete**          | Deletes the container.                                                                                                                                         |
+
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
+
+### Creating multiple containers for ECS Services using a Task Definition <a href="#7-toc-title" id="7-toc-title"></a>
 
 You can create up to five (5) containers for ECS services by defining a Task Definition.
 
@@ -45,7 +73,7 @@ To designate a container as Essential, see [Defining an Essential Container](ecs
 9. Specify **Port Mappings**, and **Add New** mappings or **Delete** them, if needed.
 10. Click **Submit**. Your Task Definition for multiple ECS Service containers is created.
 
-## Editing multiple containers for ECS Services <a href="#7-toc-title" id="7-toc-title"></a>
+### Editing multiple containers for ECS Services <a href="#7-toc-title" id="7-toc-title"></a>
 
 To edit the created Task Definition in order to add or delete multiple containers, select the Task Definition in the Task Definitions tab, and from the **Actions** menu, select **Edit Task Definition**.&#x20;
 

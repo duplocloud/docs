@@ -66,7 +66,7 @@ Verify that **demo-service-d01** has a **Current** Status of **Running**.
 
 
 {% hint style="info" %}
-Once the Service is **Running**, you can check logs for informational messages by clicking the menu icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) to the left of the running Service **Name** on the Service page and selecting the **Logs** option.&#x20;
+Once the Service is **Running**, you can check logs for informational messages by clicking the menu icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (4).png" alt="" data-size="line"> ) to the left of the running Service **Name** on the Service page and selecting the **Logs** option.&#x20;
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/dockerh (1).png" alt=""><figcaption><p>Menu icon with Logs option, located to the left of the Running Service <strong>demo-service-d01-1</strong></p></figcaption></figure>

@@ -2,19 +2,25 @@
 description: Enabling shell access using native Docker or ECS
 ---
 
-# Shell access
+# Shell access for Docker or ECS
 
-DuploCloud allows shell access into the deployed containers. Shell access is enabled in different ways, depending on if you are using a native Docker method or ECS.
+DuploCloud allows shell access into the deployed containers. Shell access is enabled differently, depending on whether you use native Docker or ECS.
 
 ### Access to the Docker Native container shell
 
 To enable shell access for the DuploCloud Docker Native container system:
 
-1.  In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
+2.  Click the Options Menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) on the top row of the Services page, as in the example below. Select  **Enable Docker Shell**. The **Start Shell Service** pane displays.\
 
-    <figure><img src="../../.gitbook/assets/AWS_enable_shell_button.png" alt=""><figcaption><p><strong>Enable Docker Shell</strong> button on the <strong>Services</strong> page</p></figcaption></figure>
-2. Click **Enable Docker Shell**. The **Start Shell Service** pane displays.
-3.  From the **Platform** list box, select **Docker Native**.
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/cont3 (2).png" alt=""><figcaption><p><strong>Enable Docker Shell</strong> option in the Options Menu for the <strong>Services</strong> page<br></p></figcaption></figure>
+
+    </div>
+3.  From the **Platform** list box, select **Docker Native**.\
+
 
     <figure><img src="../../.gitbook/assets/AWS_Shell_Service.png" alt=""><figcaption><p><strong>Start Shell Service</strong> pane with <strong>Docker Native</strong> selected for <strong>Platform</strong></p></figcaption></figure>
 4. From the **Certificate** list box, select a certificate name.
@@ -48,10 +54,11 @@ Now you can begin using the Kubernetes (K8s) shell from the DuploCloud Portal fo
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**, displaying the **Services** page.
 2. Select a Service from the **Name** column.
 3. Click the **Containers** tab.
-4. To display the shell for any container, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2).png" alt="" data-size="line"> icon in the **Actions** column of the appropriate row.
-5.  Select **Container Shell** or **Host Shell** from the **Actions** menu. The container or host shell launches in AWS Systems Manager.&#x20;
+4. To display the shell for any container, click the Options Menu (<img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2).png" alt="" data-size="line">) icon in the appropriate row.
+5.  Select **Container Shell** or **Host Shell** from the **Actions** menu. The container or host shell launches in AWS Systems Manager. \
 
-    <figure><img src="../../.gitbook/assets/AWS_Kubectl_Shell_service_shell.png" alt=""><figcaption><p><strong>Container Shell</strong> and <strong>Host Shell</strong> launch options in the <strong>Actions</strong> column of the <strong>Containers</strong> tab</p></figcaption></figure>
+
+    <figure><img src="../../.gitbook/assets/cont6 (1).png" alt=""><figcaption><p><strong>Container Shell</strong> and <strong>Host Shell</strong> launch options in the <strong>Actions</strong> column of the <strong>Containers</strong> tab</p></figcaption></figure>
 
 ## View the ECS task shell &#x20;
 
