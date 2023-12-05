@@ -6,6 +6,7 @@
 ## WHAT'S NEW
 
 * [Product updates](whats-new/product-updates.md)
+* [Supported Third-party Tools](whats-new/supported-third-party-tools.md)
 
 ## Getting started
 
