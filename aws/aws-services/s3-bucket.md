@@ -14,13 +14,21 @@ To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditin
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Storage**.
 2. Click the **S3** tab.
-3.  Click **Add**. The **Create an S3 Bucket pane displays**.
-
-    ![Create S3](../../.gitbook/assets/S3\_OL1.png)
+3. Click **Add**. The **Create an S3 Bucket pane displays**.
 4. In the **Name** field, enter a name for the S3 bucket.
 5. In the **Region** list box, select the region. You can select **Tenant Region**, **Default Region**, or **Global Region**, and specify **Other Region** to enter a custom region you have defined.
-6. Optionally, select **Object Lock**. By using Object Lock, you can store objects using a _write-once-read-many_ (WORM) model. This can prevent objects from being deleted or overwritten for a fixed amount of time or indefinitely. You can also use Object Lock to meet regulatory requirements that require WORM storage or to add another layer of protection against object changes and deletion.&#x20;
+6. Optionally, select [**Enable Bucket Versioning**](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html) and/or [**Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html).  &#x20;
 7. Click **Create**.
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/new s3 bucket save for git.png" alt=""><figcaption><p>The <strong>Create an S3 Bucket pane</strong> with <strong>Enable Bucket Versioning</strong> and <strong>Object Lock</strong> options selected</p></figcaption></figure>
+
+</div>
+
+{% hint style="info" %}
+**Bucket Versioning** must be enabled to use **Object Lock**.&#x20;
+{% endhint %}
 
 ## Setting S3 bucket permissions and policies
 
