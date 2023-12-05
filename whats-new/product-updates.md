@@ -8,6 +8,7 @@ coverY: 0
 ## Q4 2023
 
 * AWS
+  * Enable bucket versioning when [creating an S3 bucket](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
   * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
   * Create an [Amazon Machine Image (AMI)](../aws/use-cases/hosts-vms/create-amazon-machine-image-ami.md).
   * Use [dedicated hosts](../aws/use-cases/hosts-vms/adding-dedicated-hosts.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server.
