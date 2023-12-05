@@ -37,6 +37,22 @@ The number of Replicas you define must be less than or equal to the number of ho
 
 </div>
 
+### Adding a Service Using a Native Kubernetes Deployment <a href="#7-toc-title" id="7-toc-title"></a>
+
+1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
+2. Click **Add**. The **Add Service** page displays.
+3. Click the **Import Kubernetes Deployment** button in the upper right. **The Import Kubernetes Deployment** pane displays.&#x20;
+4. Paste the deployment **YAML code** into the **Import Kubernetes Deployment** pane.&#x20;
+5. Click **Import**.
+6. In the **Add Service** page, click **Next.**
+7. Click **Create.**
+
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/Import K8s Deployment.png" alt=""><figcaption><p><strong>Import Kubernetes Deploymen</strong>t pane with <strong>YAML</strong> code</p></figcaption></figure>
+
+</div>
+
 ### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
 
 Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers/) for the Services.
