@@ -18,7 +18,7 @@ You don't have to have experience with Kubernetes to deploy an application in th
 
 This tutorial will access a pre-built Docker container to deploy a simple `Hello World NodeJS` web app. When you run the application, DuploCloud accesses Docker images in a preconfigured Docker Hub.&#x20;
 
-When you run your own applications, you will choose a public image or provide credentials to access your private repository.  Before you deploy your own applications, [configure your Docker Registry credentials in DuploCloud](../../use-cases/docker-registry-credentials-and-kubernetes-secrets.md).
+When you run your own applications, you will choose a public image or provide credentials to access your private repository.  Before you deploy your own applications, [configure your Docker Registry credentials in DuploCloud](../../aws-services/containers/docker-registry-credentials.md).
 
 _Estimated time to complete Step 5: 10 minutes._
 

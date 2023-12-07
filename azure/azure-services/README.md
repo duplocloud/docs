@@ -16,9 +16,8 @@ Supported Services are listed in alphabetical order, following the core services
 
 ### Core Services
 
-* [Containers and Services](containers-and-services.md)
+* [Containers and Services](containers-and-services/)
 * [Load Balancers](load-balancers.md)
-* [Kubernetes](kubernetes/)
 
 ### Additional Services
 

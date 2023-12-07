@@ -14,7 +14,7 @@ For a Native Docker Services example, see [this tutorial](../../quick-start/quic
 
 Using the **Services** tab in the DuploCloud Portal, you can display and manage the Services you have defined.
 
-Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) in each Service row to **Edit** or **Delete** Services, as shown below. The checkboxes in the first column of a Service row can be used to select multiple Services for use with [Service Actions](eks-native-containers-and-services.md#7-toc-title-1).
+Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Service row to **Edit** or **Delete** Services, as shown below. The checkboxes in the first column of a Service row can be used to select multiple Services for use with [Service Actions](eks-native-containers-and-services.md#7-toc-title-1).
 
 <figure><img src="../../../.gitbook/assets/cont1.png" alt=""><figcaption><p><strong>Services</strong> tab displaying DuploCloud Services with highlighted Options Menu</p></figcaption></figure>
 
@@ -76,7 +76,7 @@ Your selected services are started, stopped, or restarted as you specified.
 
 Using the **Containers** tab in the DuploCloud Portal, you can display and manage the Containers you have defined.
 
-Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
+Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
 
 <table><thead><tr><th width="374">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs.</td></tr><tr><td><strong>State</strong></td><td>Displays container state configuration, in YAML code, in a separate window.</td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
 

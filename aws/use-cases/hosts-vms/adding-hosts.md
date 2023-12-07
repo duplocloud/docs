@@ -23,6 +23,10 @@ The EKS **Image ID** is the image published by AWS specifically for an EKS worke
 If no **Image ID** is available with a prefix of **EKS**, copy the **AMI ID** for the desired EKS version by referring to this [AWS documentation](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-amis.html). Select **Other** from the **Image ID** list box and paste the copied **AMI ID** in the **Other Image ID** field. Contact the DuploCloud Support team via your Slack channel if you have questions or issues.
 {% endhint %}
 
+## Creating Kubernetes StorageClass and PVC constructs in the DuploCloud Portal.
+
+See [Kubernetes StorageClass and PVC](../../../kubernetes/kubernetes-storageclass-and-pvc/).
+
 ## Supported Host Actions
 
 From the **Actions** list box, you can select **Connect**, **Host Settings**, or **Host State** to perform the following supported actions: \

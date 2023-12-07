@@ -10,13 +10,17 @@ Once we have the Infrastructure (Networking, Kubernetes cluster, and other commo
 * Worker Nodes (Docker Hosts) if built-in container orchestration is used.
 * Regular nodes that are not part of any container orchestration, where a user manually connects and installs applications.&#x20;
 
-## Creating Hosts <a href="#3-toc-title" id="3-toc-title"></a>
+## Adding a GCP Host <a href="#3-toc-title" id="3-toc-title"></a>
 
 In GCP, you use the BYOH (Bring Your Own Host) option, which allows you to define accessible hosts to the DuploCloud GCP environment.
 
-See the Services documentation for steps to [create Hosts and configure Kubernetes storage options](../gcp-services/containers.md).&#x20;
+See the Services documentation for steps to [create Hosts and configure Kubernetes storage options](../gcp-services/containers/).&#x20;
 
 <figure><img src="../../.gitbook/assets/GCP_HOSTS.png" alt=""><figcaption><p><strong>BYOH</strong> host tab on <strong>GCP Hosts</strong> page</p></figcaption></figure>
+
+## Creating Kubernetes StorageClass and PVC constructs in the DuploCloud Portal.
+
+See [Kubernetes StorageClass and PVC](../../kubernetes/kubernetes-storageclass-and-pvc/).
 
 ## Host abstraction and isolation&#x20;
 

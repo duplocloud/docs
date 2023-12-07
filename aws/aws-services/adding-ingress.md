@@ -73,7 +73,7 @@ You must define [rules ](https://kubernetes.io/docs/concepts/services-networking
 
 2. Specify the **Path** (**/path1/** in the example above).
 3. From the **Service Name** list box, select the Service exposed through the K8S Node Port (**js-service1** in the example above). The **Container port** field is completed automatically.&#x20;
-4. Optionally, complete **Path Type** and **Host**. In this example, we specify a **Path Type** of **Exact**. Clicking the Info Tip icon ( <img src="../../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) provides more information for these optional fields.
+4. Optionally, complete **Path Type** and **Host**. In this example, we specify a **Path Type** of **Exact**. Clicking the Info Tip icon ( <img src="../../.gitbook/assets/info_tip_black (1).png" alt="" data-size="line"> ) provides more information for these optional fields.
 5.  Click **Add Rule**. The rule is displayed on the **Add Kubernetes Ingress** page. Add additional rules by repeating the preceding steps.\
 
 

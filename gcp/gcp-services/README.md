@@ -16,7 +16,7 @@ Supported Services are listed in alphabetical order, following the core services
 
 ### Core Services
 
-* [Containers and Services](../../azure/azure-services/containers-and-services.md)
+* [Containers and Services](../../azure/azure-services/containers-and-services/)
 * [Load Balancers](../../azure/azure-services/load-balancers.md)
 * [Kubernetes](containers-1.md)
 
