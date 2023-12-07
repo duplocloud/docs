@@ -40,5 +40,5 @@ Once the database is created, select it and use the **Instances** tab to view th
 ![RDS Instances tab](../../../../.gitbook/assets/RDS5.png)
 
 {% hint style="info" %}
-Pass the endpoint, name, and credentials to your application [using environment variables](../../../use-cases/passing-secrets/passing-config-and-secrets/) for maximum security.&#x20;
+Pass the endpoint, name, and credentials to your application [using environment variables](../../containers/passing-config-and-secrets.md) for maximum security.&#x20;
 {% endhint %}

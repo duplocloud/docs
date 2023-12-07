@@ -29,9 +29,13 @@ It is not necessary to explicitly define Hosts. Instead, you can use [**Azure Ag
 
 <figure><img src="../../.gitbook/assets/Azure_Hosts (1) (1).png" alt=""><figcaption><p><strong>Azure VM</strong> <strong>Hosts</strong> page with <strong>Host</strong>, <strong>VM Scale Set</strong>, <strong>Azure Agent Pool</strong>, and <strong>BYOH</strong> options, as tabs</p></figcaption></figure>
 
+## Creating Kubernetes StorageClass and PVC constructs in the DuploCloud Portal.
+
+See [Kubernetes StorageClass and PVC](../../kubernetes/kubernetes-storageclass-and-pvc/).
+
 ## Host abstraction and isolation&#x20;
 
-While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
+While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the Tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
 
 <figure><img src="../../.gitbook/assets/Azure_host_VM.png" alt=""><figcaption><p><strong>Add Virtual Machine</strong> page </p></figcaption></figure>
 

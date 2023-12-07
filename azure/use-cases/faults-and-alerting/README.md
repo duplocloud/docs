@@ -12,7 +12,7 @@ Faults that happen in the system be it Infrastructure creation, Container deploy
 
 You can look at Tenant specific faults under **Deployments > Faults** or all the faults in the system under **Admin > Faults**. In addition to notifying you about the faults, DuploCloud integrates with Sentry, which will send an Email alert for the fault and also acts as a single place to look at all the events.
 
-![](<../../../.gitbook/assets/image (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (1) (1) (1) (1).png>)
 
 ## Creating alerts
 

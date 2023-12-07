@@ -50,7 +50,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 
 {% hint style="info" %}
-On the Add Service Basic Options page, you can also specify optional **Environment Variables** (EVs) such as database Host, port, and so on. You can also pass [Docker credentials](../../use-cases/docker-registry-credentials-and-kubernetes-secrets.md) using EVs for testing purposes.&#x20;
+On the Add Service Basic Options page, you can also specify optional **Environment Variables** (EVs) such as database Host, port, and so on. You can also pass [Docker credentials](../../aws-services/containers/docker-registry-credentials.md) using EVs for testing purposes.&#x20;
 {% endhint %}
 
 ## Checking your work

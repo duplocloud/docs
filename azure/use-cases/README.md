@@ -15,7 +15,6 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Hosts](../../aws/use-cases/hosts-vms.md)
 * [Autoscaling for Hosts](autoscaling/)
 * [VM Scale Sets](vm-scale-sets.md)
-* [Docker Registry Credentials and Kubernetes Secrets](docker-registry-credentials-and-kubernetes-secrets.md)
 * [Logs](logs.md)
 * [Metrics](metrics.md)
 * [Faults and alerts](faults-and-alerting/)

@@ -12,11 +12,11 @@ For an end-to-end example of creating an ECS Task Definition, Service, and Load 
 
 Using the **Services** tab in the DuploCloud Portal, you can display and manage the Services you have defined.
 
-Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) in each Service row to **Edit** or **Delete** Services, as shown below. The checkboxes in the first column of a Service row can be used to select multiple Services for use with [Service Actions](ecs-containers-and-task-definitions.md#7-toc-title-1).
+Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Service row to **Edit** or **Delete** Services, as shown below. The checkboxes in the first column of a Service row can be used to select multiple Services for use with [Service Actions](ecs-containers-and-task-definitions.md#7-toc-title-1).
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p><strong>Services</strong> tab displaying DuploCloud Services with highlighted Options Menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p><strong>Services</strong> tab displaying DuploCloud Services with highlighted Options Menu</p></figcaption></figure>
 
 </div>
 
@@ -24,7 +24,7 @@ Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_d
 
 Using the **Containers** tab in the DuploCloud Portal, you can display and manage the Containers you have defined.
 
-Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
+Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
 
 | Option              | Functionality                                                                                                                                                  |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_d
 | **Host Shell**      | Accesses the Host Shell.                                                                                                                                       |
 | **Delete**          | Deletes the container.                                                                                                                                         |
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
 
 ### Creating multiple containers for ECS Services using a Task Definition <a href="#7-toc-title" id="7-toc-title"></a>
 
