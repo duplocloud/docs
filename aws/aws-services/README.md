@@ -51,5 +51,4 @@ Supported Services are listed in alphabetical order, following the core services
 * [SQS queue](sqs-queue.md)
 * [VPC (Virtual Private Cloud) Peering ](virtual-private-cloud-vpc-peering.md)
 * [Web App Firewall (WAF)](web-application-firewall-waf.md)
-* [Workspaces](workspaces.md)
 
