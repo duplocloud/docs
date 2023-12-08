@@ -69,7 +69,7 @@ You can also use a Job to run multiple Pods in [parallel](https://kubernetes.io/
 
     <div align="left">
 
-    <figure><img src="../.gitbook/assets/j3.png" alt=""><figcaption><p>Examples for <strong>Other Spec Configuration</strong> field in <strong>Advanced Configuration</strong> step for <strong>Init Container - 1</strong><br></p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/j3.png" alt=""><figcaption><p>Info Tip examples for <strong>Other Spec Configuration</strong> field in <strong>Advanced Configuration</strong> step for <strong>Init Container - 1</strong><br></p></figcaption></figure>
 
     </div>
 
@@ -82,7 +82,7 @@ You can also use a Job to run multiple Pods in [parallel](https://kubernetes.io/
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/j13.png" alt=""><figcaption><p><strong>K8s Job</strong> tab displaying Kubernetes Job <strong>PERL123</strong> with <strong>Active Status</strong></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/j13.png" alt=""><figcaption><p><strong>K8S Job</strong> tab displaying Kubernetes Job <strong>PERL123</strong> with <strong>Active Status</strong></p></figcaption></figure>
 
 </div>
 
@@ -123,12 +123,12 @@ You can filter Container Names by using the search field at the top of the page,
 3. Select the K8s Job you want to edit.&#x20;
 4. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and select **Edit**.
 
-You can Edit a Kubernetes Job in the DuploCloud Portal and modify the following fields:
+You can edit a Kubernetes Job in the DuploCloud Portal and modify the following fields:
 
-* Cleanup After Finished in Seconds
-* Other Spec Configuration
-* Metadata Annotations
-* Labels
+* **Cleanup After Finished in Seconds**
+* **Other Spec Configuration**
+* **Metadata Annotations**
+* **Labels**
 
 <figure><img src="../.gitbook/assets/j11.png" alt=""><figcaption><p>Job Option Menu with <strong>Edit</strong> option highlighted</p></figcaption></figure>
 
@@ -136,7 +136,7 @@ You can Edit a Kubernetes Job in the DuploCloud Portal and modify the following 
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.
 2. Click the **K8s Job** tab.
-3. Select the K8s Job you want to edit.&#x20;
+3. Select the K8s Job you want to delete.&#x20;
 4. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
 
 <figure><img src="../.gitbook/assets/j10 (1).png" alt=""><figcaption><p>Job Option Menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
