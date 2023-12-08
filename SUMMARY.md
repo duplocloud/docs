@@ -156,7 +156,6 @@
   * [SQS queue](aws/aws-services/sqs-queue.md)
   * [Virtual Private Cloud (VPC) peering](aws/aws-services/virtual-private-cloud-vpc-peering.md)
   * [Web App Firewall (WAF)](aws/aws-services/web-application-firewall-waf.md)
-  * [Workspaces](aws/aws-services/workspaces.md)
 * [AWS FAQ](aws/aws-faq.md)
 * [Terraform support](aws/terraform-support/README.md)
   * [DuploCloud Terraform Provider](aws/terraform-support/duplocloud-terraform-provider.md)
@@ -224,7 +223,6 @@
   * [Storage account](azure/azure-services/storage-account.md)
   * [Subscription](azure/azure-services/subscription.md)
   * [VM Scale Sets](azure/use-cases/vm-scale-sets.md)
-  * [Workspaces](azure/azure-services/workspaces.md)
 * [Azure FAQ](azure/azure-faq.md)
 
 ## GCP user guide <a href="#gcp" id="gcp"></a>
