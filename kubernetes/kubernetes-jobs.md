@@ -30,7 +30,7 @@ You can also use a Job to run multiple Pods in [parallel](https://kubernetes.io/
     <figure><img src="../.gitbook/assets/j12.png" alt=""><figcaption><p>Add Kubernetes Job page</p></figcaption></figure>
 
 
-6.  In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon       ( <img src="../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for examples. Select and **Copy** commands as needed.\
+6.  In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.\
 
 
     <div align="left">
@@ -64,7 +64,7 @@ You can also use a Job to run multiple Pods in [parallel](https://kubernetes.io/
 
 8. In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.
 9. Click **Next** to open the **Advanced Configuration** step.
-10. In the **Other Spec Configuration** field, specify the Job spec (in YAML) for **Init Container - 1**. Click the Info Tip icon       ( <img src="../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for examples. Select and **Copy** commands as needed.\
+10. In the **Other Spec Configuration** field, specify the Job spec (in YAML) for **Init Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.\
 
 
     <div align="left">
