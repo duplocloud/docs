@@ -16,19 +16,19 @@ See the Kubernetes documentation on [CronJobs](https://kubernetes.io/docs/concep
 2. Click the **K8s CronJob** tab.
 3. Click **Add**. The **Add Kubernetes CronJob** page displays.
 4. In the **Basic Options** step, specify the Kubernetes CronJob **Name**.
-5. In the **Schedule** field, specify the Cron Schedule in Cron Format. Click the Info Tip icon       ( <img src="../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for examples. When specifying a **Schedule** in Cron Format, ensure you separate each value with a space. For example, `0 0 * * 0` is a valid Cron Format input; `00**0` is not. See the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#writing-a-cronjob-spec) for detailed information about Cron Format.
+5. In the **Schedule** field, specify the Cron Schedule in Cron Format. Click the Info Tip icon for examples. When specifying a **Schedule** in Cron Format, ensure you separate each value with a space. For example, `0 0 * * 0` is a valid Cron Format input; `00**0` is not. See the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#writing-a-cronjob-spec) for detailed information about Cron Format.
 6.  In the **Container - 1** area, specify the **Container Name** and associated **Docker Image**.\
 
 
     <figure><img src="../.gitbook/assets/j15.png" alt=""><figcaption><p>Add Kubernetes CronJob page</p></figcaption></figure>
 
 
-7.  In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon       ( <img src="../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for examples. Select and **Copy** commands as needed.\
+7.  In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.\
 
 
     <div align="left">
 
-    <figure><img src="../.gitbook/assets/j16.png" alt=""><figcaption><p>Examples for <strong>Command</strong> field in <strong>Container - 1</strong> area of <strong>Add Kubernetes CronJob</strong> page<br></p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/j16.png" alt=""><figcaption><p>Info Tip examples for <strong>Command</strong> field in <strong>Container - 1</strong> area of <strong>Add Kubernetes CronJob</strong> page<br></p></figcaption></figure>
 
     </div>
 
@@ -110,19 +110,19 @@ You can filter Container Names by using the search field at the top of the page,
 
 <figure><img src="../.gitbook/assets/j30.png" alt=""><figcaption><p>Highlighted search field on the <strong>Containers</strong> page </p></figcaption></figure>
 
-## Editing a Kubernetes Job
+## Editing a Kubernetes CronJob
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.
 2. Click the **K8s Job** tab.
 3. Select the K8s Job you want to edit.&#x20;
 4. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and select **Edit**.
 
-You can Edit a Kubernetes Job in the DuploCloud Portal and modify the following fields:
+You can edit a Kubernetes Job in the DuploCloud Portal and modify the following fields:
 
-* Cleanup After Finished in Seconds
-* Other Spec Configuration
-* Metadata Annotations
-* Labels
+* **Cleanup After Finished in Seconds**
+* **Other Spec Configuration**
+* **Metadata Annotations**
+* **Labels**
 
 <figure><img src="../.gitbook/assets/j27.png" alt=""><figcaption><p>Job Option Menu with <strong>Edit</strong> option highlighted</p></figcaption></figure>
 
@@ -130,7 +130,7 @@ You can Edit a Kubernetes Job in the DuploCloud Portal and modify the following 
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.
 2. Click the **K8s Job** tab.
-3. Select the K8s Job you want to edit.&#x20;
+3. Select the K8s Job you want to delete.&#x20;
 4. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
 
 <figure><img src="../.gitbook/assets/j28.png" alt=""><figcaption><p>Job Option Menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
