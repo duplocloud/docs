@@ -37,15 +37,46 @@ The number of Replicas you define must be less than or equal to the number of ho
 
 </div>
 
-### Adding a Service Using a Native Kubernetes Deployment <a href="#7-toc-title" id="7-toc-title"></a>
+### Importing a Native Kubernetes Service <a href="#7-toc-title" id="7-toc-title"></a>
+
+Using the **Import Kubernetes Deployment** pane, you can add a **Service** to an existing Kubernetes namespace using your own **Kubernetes YAML.**
 
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
 2. Click **Add**. The **Add Service** page displays.
 3. Click the **Import Kubernetes Deployment** button in the upper right. **The Import Kubernetes Deployment** pane displays.&#x20;
-4. Paste the deployment **YAML code** into the **Import Kubernetes Deployment** pane.&#x20;
+4. Paste the deployment **YAML code** as in the example into the **Import Kubernetes Deployment** pane.&#x20;
 5. Click **Import**.
 6. In the **Add Service** page, click **Next.**
 7. Click **Create.**
+
+
+
+{% code title="Sample YAML Code:" %}
+```yaml
+//apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: duploservices-my-tenant
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx1
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+```
+{% endcode %}
 
 <div align="left">
 
