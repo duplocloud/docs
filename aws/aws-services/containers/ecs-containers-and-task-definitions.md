@@ -10,13 +10,13 @@ For an end-to-end example of creating an ECS Task Definition, Service, and Load 
 
 ## Services
 
-Using the **Services** tab in the DuploCloud Portal, you can display and manage the Services you have defined.
+Using the **Services** tab in the DuploCloud Portal (**DevOps** -> **Containers** -> **ECS** -> **Services**), you can display and manage the Services you have defined.
 
-Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Service row to **Edit** or **Delete** Services, as shown below. The checkboxes in the first column of a Service row can be used to select multiple Services for use with [Service Actions](ecs-containers-and-task-definitions.md#7-toc-title-1).
+For ECS Services, select the Service **Name** and click the **Actions** menu to **Edit** or **Delete** Services, in addition to performing other actions, as shown below.&#x20;
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p><strong>Services</strong> tab displaying DuploCloud Services with highlighted Options Menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ECS_S (1).png" alt=""><figcaption><p>Actions menu for ECS Service</p></figcaption></figure>
 
 </div>
 
