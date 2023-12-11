@@ -22,7 +22,7 @@ Before you create an EFS, you must configure the EFS Volume Controller for your 
 
 In the **Settings** tab, your configuration **Enable EFS Volume Controller** is set to **true**.&#x20;
 
-<figure><img src="../../.gitbook/assets/EKS_VC.png" alt=""><figcaption><p>Infrastructure page Settings tab with configuration <strong>Enable EFS Volume Controller</strong> set to <strong>true</strong>.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/EKS_VC.png" alt=""><figcaption><p>Infrastructure page Settings tab with configuration <strong>Enable EFS Volume Controller</strong> set to <strong>true</strong>.</p></figcaption></figure>
 
 ## Creating an EFS in the DuploCloud Portal
 
@@ -31,7 +31,7 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 3.  Click **Add**. The **Add Elastic File System** page displays.\
 
 
-    ![Add Elastic File System page](<../../.gitbook/assets/image (24) (3).png>)
+    ![Add Elastic File System page](<../../../.gitbook/assets/image (24) (3).png>)
 
 
 4. In the **Name** field, enter a name for the EFS you want to create.
@@ -41,7 +41,7 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 8.  Change other defaults as needed as click **Create**. The EFS is created and displayed in the **EFS** tab. Select the EFS from the **Name** column and view the configuration in the **Details** tab.\
 
 
-    ![EFS Details](<../../.gitbook/assets/image (9) (4).png>)
+    ![EFS Details](<../../../.gitbook/assets/image (9) (4).png>)
 
 {% hint style="info" %}
 **Max I/O** mode is not supported on file systems using [One Zone storage classes](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html).
@@ -49,7 +49,25 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 
 Information about EFS **Mount Targets** and **Access Points** is available in their respective tabs.
 
-![Mount Target tab details](<../../.gitbook/assets/image (8).png>)
+![Mount Target tab details](<../../../.gitbook/assets/image (8).png>)
+
+##
+
+```bash
+btoa(`#!/bin/bash
+sudo su
+echo "confirm it is running" >> /tmp/startup_log
+apt-get install -y nfs-common
+cd /
+mkdir efs
+mount -t nfs4 -o 
+nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,nore
+svport fs-121345b8.efs.us-west-2.amazonaws.com:/ efs
+echo "fs-121345b8.efs.us-west-2.amazonaws.com:/ /efs nfs4 
+defaults,_netdev 0 0" >> /etc/fstab`);
+```
+
+1.
 
 ## Updating EFS Lifecycle Policies
 
@@ -64,15 +82,15 @@ If you want to disable an EFS Lifecycle Management Policy that you previously cr
 3.  Select the EFS from the **Name** column. The EFS page displays.\
 
 
-    <figure><img src="../../.gitbook/assets/efs_lc1.png" alt=""><figcaption><p>EFS page with <strong>Actions</strong> menu and <strong>Update Lifecycle Policies</strong> highlighted</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/efs_lc1.png" alt=""><figcaption><p>EFS page with <strong>Actions</strong> menu and <strong>Update Lifecycle Policies</strong> highlighted</p></figcaption></figure>
 
 
 4.  From the **Actions** menu, select **Update Lifecycle Policies**. The **Update EFS Lifecycle Policies** pane displays.
 
-    <figure><img src="../../.gitbook/assets/efs_lc2.png" alt=""><figcaption><p><strong>Update EFS Lifecycle Policies</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/efs_lc2.png" alt=""><figcaption><p><strong>Update EFS Lifecycle Policies</strong> pane</p></figcaption></figure>
 5. From the **Transition to IA** list box, select the time duration (in **days**) to elapse before transitioning files to the IA storage class.
 6. Optionally, select **Transition to Primary Storage Class**, if appropriate.
 7.  Click **Submit**. The EFS Lifecycle Policies are updated and can be viewed in the **Lifecycle Policies** tab.\
 
 
-    <figure><img src="../../.gitbook/assets/efs_lc3.png" alt=""><figcaption><p><strong>Lifecycle Policies</strong> tab</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/efs_lc3.png" alt=""><figcaption><p><strong>Lifecycle Policies</strong> tab</p></figcaption></figure>

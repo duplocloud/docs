@@ -12,11 +12,11 @@ For a Native Docker Services example, see [this tutorial](../../quick-start/quic
 
 ## Services
 
-Using the **Services** tab in the DuploCloud Portal, you can display and manage the Services you have defined.
+Using the **Services** tab in the DuploCloud Portal (**DevOps** -> **Containers** -> **EKS** -> **Services**), you can display and manage the Services you have defined.
 
-Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Service row to **Edit** or **Delete** Services, as shown below. The checkboxes in the first column of a Service row can be used to select multiple Services for use with [Service Actions](eks-native-containers-and-services.md#7-toc-title-1).
+For EKS Services, select the Service **Name** and click the **Actions** menu to **Edit** or **Delete** Services, in addition to performing other actions, as shown below.&#x20;
 
-<figure><img src="../../../.gitbook/assets/cont1.png" alt=""><figcaption><p><strong>Services</strong> tab displaying DuploCloud Services with highlighted Options Menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ECS_S_2.png" alt=""><figcaption><p>Actions menu for EKS Service</p></figcaption></figure>
 
 ### Adding a DuploCloud EKS/Native Service
 

@@ -33,7 +33,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [CloudFront](cloudfront.md)
 * [Databases](database/)
 * [Data Pipeline](data-pipeline.md)
-* [Elastic File System (EFS)](elastic-file-system-efs.md)
+* [Elastic File System (EFS)](elastic-file-system-efs/)
 * [Elasticsearch](elasticsearch.md)
 * [EMR Serverless](emr-serverless.md)
 * [EventBridge](cloud-watch.md)
