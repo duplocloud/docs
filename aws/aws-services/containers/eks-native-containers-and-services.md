@@ -14,9 +14,9 @@ For a Native Docker Services example, see [this tutorial](../../quick-start/quic
 
 Using the **Services** tab in the DuploCloud Portal (**DevOps** -> **Containers** -> **EKS** -> **Services**), you can display and manage the Services you have defined.
 
-For EKS Services, select the Service **Name** and click the **Actions** menu to **Edit** or **Delete** Services, in addition to performing other actions, as shown below.&#x20;
+For EKS Services, select the Service **Name** and click the [**Actions** menu](eks-native-containers-and-services.md#7-toc-title-2) to **Edit** or **Delete** Services, in addition to performing other actions, as shown below.&#x20;
 
-<figure><img src="../../../.gitbook/assets/ECS_S_2.png" alt=""><figcaption><p>Actions menu for EKS Service</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/sv_2.png" alt=""><figcaption><p><strong>Actions</strong> menu for EKS Service</p></figcaption></figure>
 
 ### Adding a DuploCloud EKS/Native Service
 
@@ -33,23 +33,49 @@ The number of Replicas you define must be less than or equal to the number of ho
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/k8_statefulSet_force.png" alt="Add Service page">
+<img src="../../../.gitbook/assets/sv_1.png" alt="Add Service page">
 
 </div>
 
+### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
+
+Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers/) for the Services.
+
+<figure><img src="../../../.gitbook/assets/sv_3 (1).png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
+
+### Starting, stopping, and restarting multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
+
+Using the Services page, you can start, stop, and restart multiple services simultaneously.
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select **EKS/Native** or **ECS**.&#x20;
+2. Click the **Services** tab.&#x20;
+3. Use the checkbox column to select multiple services you want to start or stop at once.
+4. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.**
+
+Your selected services are started, stopped, or restarted as you specified.
+
+<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption><p><strong>Services</strong> tab with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
+
 ### Importing a Native Kubernetes Service <a href="#7-toc-title" id="7-toc-title"></a>
 
-Using the **Import Kubernetes Deployment** pane, you can add a **Service** to an existing Kubernetes namespace using your own **Kubernetes YAML.**
+Using the **Import Kubernetes Deployment** pane, you can add a Service to an existing Kubernetes namespace using Kubernetes YAML.
 
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
 2. Click **Add**. The **Add Service** page displays.
 3. Click the **Import Kubernetes Deployment** button in the upper right. **The Import Kubernetes Deployment** pane displays.&#x20;
-4. Paste the deployment **YAML code** as in the example into the **Import Kubernetes Deployment** pane.&#x20;
+4.  Paste the deployment YAML code, as in the example below, into the **Import Kubernetes Deployment** pane. \
+
+
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>YAML code for importing a Native Kubernetes Service</p></figcaption></figure>
+
+    </div>
+
+
 5. Click **Import**.
 6. In the **Add Service** page, click **Next.**
-7. Click **Create.**
-
-
+7. Click **Create**. Your Native Kubernetes Service is created.
 
 {% code title="Sample YAML Code:" %}
 ```yaml
@@ -77,31 +103,6 @@ spec:
         - containerPort: 80
 ```
 {% endcode %}
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Import K8s Deployment.png" alt=""><figcaption><p><strong>Import Kubernetes Deploymen</strong>t pane with <strong>YAML</strong> code</p></figcaption></figure>
-
-</div>
-
-### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
-
-Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers/) for the Services.
-
-<figure><img src="../../../.gitbook/assets/image (107).png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
-
-### Starting, stopping, and restarting multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
-
-Using the Services page, you can start, stop, and restart multiple services simultaneously.
-
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select **EKS/Native** or **ECS**.&#x20;
-2. Click the **Services** tab.&#x20;
-3. Use the checkbox column to select multiple services you want to start or stop at once.
-4. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.**
-
-Your selected services are started, stopped, or restarted as you specified.
-
-<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption><p><strong>Services</strong> tab with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
 
 ## Kubernetes Containers
 
