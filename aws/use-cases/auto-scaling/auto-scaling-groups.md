@@ -22,14 +22,14 @@ The Use for Cluster Autoscaling option will not be available until you enable th
 8.  From the **Platform** list box, select **Linux Docker/Native** to run a Docker service or select **EKS Linux** to run services using EKS.\
 
 
-    ![Add ASG page with Use for Cluster Autoscaling option selected](<../../../../.gitbook/assets/image (22) (1).png>)
+    ![Add ASG page with Use for Cluster Autoscaling option selected](<../../../.gitbook/assets/image (22) (1).png>)
 9. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
 
 ## Viewing Hosts in Autoscaling Groups
 
 View the Hosts created as part of ASG creation from ASG View Details Page.
 
-![Hosts tab on the ASG page](<../../../../.gitbook/assets/image (11) (1).png>)
+![Hosts tab on the ASG page](<../../../.gitbook/assets/image (11) (1).png>)
 
 ## **Creating an Amazon EC2 Autoscaling Policy**
 
@@ -39,6 +39,6 @@ Refer to AWS [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/usergui
 
 The DuploCloud Portal provides the ability to configure Services based on the platforms **EKS Linux** and **Linux Docker/Native**.  Select the ASG based on the platform used when creating services and Autoscaling groups.
 
-![ASG name with EKS Linux](<../../../../.gitbook/assets/image (17) (1).png>)
+![ASG name with EKS Linux](<../../../.gitbook/assets/image (17) (1).png>)
 
-![ASG name using Linux Docker/Native](<../../../../.gitbook/assets/image (13) (1).png>)
+![ASG name using Linux Docker/Native](<../../../.gitbook/assets/image (13) (1).png>)
