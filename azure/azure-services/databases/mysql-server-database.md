@@ -1,22 +1,14 @@
 ---
-description: Create a MySQL Server single server database in DuploCloud
+description: View a MySQL Server database
 ---
 
 # MySQL Server database
 
-## Creating a MySQL instance
-
-1. In the DuploCloud Portal, navigate to **DevOps** --> **Database** --> **MySQL.**
-2. Click **Add**.
-3. Provide the database **Name**, **Username**, **Password**, and Database **Version**.&#x20;
-4. Click **Submit**.
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Azure_MySQL.png" alt=""><figcaption><p><strong>Create MySQL Instance</strong> pane</p></figcaption></figure>
-
-</div>
+{% hint style="danger" %}
+Azure Database for MySQL Single Server has been deprecated. You can no longer create a database with MySQL Single Server. Use [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/what-is-azure-cli) to create a new MySQL Single Server instance.
+{% endhint %}
 
 ## Viewing database details
 
-You can view database details and configure other options by selecting the MySQL instance you created, from the **MySQL** page in the DuploCloud Portal.
+In the DuploCloud Portal, navigate to **DevOps** -> **Database** -> **MySQL** to view database details, reboot, delete a database, and perform supported actions by selecting the MySQL instance you created, from the Name column on the **MySQL** page.
+
