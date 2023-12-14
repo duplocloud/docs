@@ -121,8 +121,13 @@ DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen mi
 1. In the DuploCloud Portal, select **Administrator**-> **Infrastructure** from the navigation pane.&#x20;
 2. Select the Infrastructure in the **Name** column.
 3. Click the **EKS** tab.&#x20;
-4. Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Value**s from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.
-5. Run the following commands, locally:
+4.  Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Value**s from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.\
+
+
+    <figure><img src="../../../.gitbook/assets/k8s3.png" alt=""><figcaption><p><strong>EKS</strong> tab with <strong>Download KubeConfig</strong> button</p></figcaption></figure>
+
+
+5. Run the following commands, in a local Bash shell instance:
 
 ```shell
 > kubectl config --kubeconfig=config-demo set-cluster EKS_CLUSTER --server=[EKS_API_URL] --insecure-skip-tls-verify
@@ -179,6 +184,14 @@ spec:
 {% endcode %}
 
 If you need security tokens of a longer duration, create them on your own. Secure them outside of the DuploCloud environment.
+
+### Downloading and configuring KubeCtl Token
+
+[See this section](../../../kubernetes/kubectl-setup/kubernetes-kubectl-token.md) in the DuploCloud Kubernetes documentation.
+
+### Setting Up Docker Registry Credentials
+
+[See this section](docker-registry-credentials.md) in the DuploCloud documentation.
 
 ### Advanced configurations with Kubernetes
 
