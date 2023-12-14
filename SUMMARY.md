@@ -269,7 +269,7 @@
 * [Kubernetes Jobs](kubernetes/kubernetes-jobs.md)
 * [Kubernetes CronJobs](kubernetes/kubernetes-cronjobs.md)
 * [Kubectl setup](kubernetes/kubectl-setup/README.md)
-  * [Kubernetes Kubectl Token](kubernetes/kubectl-setup/kubernetes-kubectl-token.md)
+  * [Kubernetes KubeCtl Token](kubernetes/kubectl-setup/kubernetes-kubectl-token.md)
   * [Kubectl Token for non-administrators (AWS only)](kubernetes/kubectl-setup/kubectl-token-for-non-administrators-aws-only.md)
 * [Kubernetes Configs and Secrets](kubernetes/kubernetes-configs-and-secrets/README.md)
   * [Setting Kubernetes Secrets](kubernetes/kubernetes-configs-and-secrets/setting-kubernetes-secrets.md)

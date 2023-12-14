@@ -2,7 +2,7 @@
 description: Accessing kubectl without administrator privileges
 ---
 
-# Kubectl access for non-administrators
+# Kubectl Token for non-administrators (AWS only)
 
 If you don't have administrator privileges, use this procedure to access `kubeconfig` using the `kubectl` token. `kubeconfig` is a YAML file that stores cluster authentication information for kubectl. It contains a list of contexts to which kubectl refers when running commands. By default, `kubeconfig` is saved in the `$HOME/` directory in the Linux operating system.
 
@@ -29,8 +29,11 @@ The token that you download is for the selected Tenant only. It is intended for 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> EKS/Native.
 2. Click the **Services** tab. The **Services** page displays.
 3. Select the Service from the **Name** column.
-4.  Click **KubeCtl Token**. The **Token** window displays.
+4.  Click **KubeCtl Token**. The **Token** window displays.\
 
-    <figure><img src="../../.gitbook/assets/AWS_Token_kubectl (1).png" alt=""><figcaption></figcaption></figure>
+
+    <figure><img src="../../.gitbook/assets/AWS_Token_kubectl (1).png" alt=""><figcaption><p><strong>Token</strong> window with <code>kubectl</code> commands for creating token</p></figcaption></figure>
+
+
 5. Click **Copy** to copy the `kubectl` commands in the **Token** window to your clipboard.
 6. On the **Services** tab, click **KubeCtl Shell** to launch the shell instance. Paste the copied commands into the shell and run them.
