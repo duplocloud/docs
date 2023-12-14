@@ -185,6 +185,10 @@ spec:
 
 If you need security tokens of a longer duration, create them on your own. Secure them outside of the DuploCloud environment.
 
+### Passing Kubernetes Configs and Secrets
+
+[See this section](../../../kubernetes/kubernetes-configs-and-secrets/) in the Duplocloud Kubernetes documentation.
+
 ### Downloading and configuring KubeCtl Token
 
 [See this section](../../../kubernetes/kubectl-setup/kubernetes-kubectl-token.md) in the DuploCloud Kubernetes documentation.

@@ -4,7 +4,9 @@ description: Configuration and Secret management in AWS
 
 # Passing Configs and Secrets
 
-There are many ways to pass configurations to containers at run-time. Although simple to set up, using Environmental Variables can become complex if there are too many configurations, especially files and certificates. In Kubernetes, you also have the option to populate environment variables from [Config Maps](broken-reference) or [Secrets](broken-reference).
+There are many ways to pass configurations to containers at run-time. Although simple to set up, using Environmental Variables can become complex if there are too many configurations, especially files and certificates.&#x20;
+
+In Kubernetes, you also have the option to populate environment variables from [Config Maps or Secrets](../../../kubernetes/kubernetes-configs-and-secrets/).
 
 ## **Using AWS Services to pass configurations and secrets**
 
