@@ -9,7 +9,6 @@ coverY: 0
 
 * AWS
   * Enable bucket versioning when [creating an S3 bucket](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
-  * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
   * Create an [Amazon Machine Image (AMI)](../aws/use-cases/hosts-vms/create-amazon-machine-image-ami.md).
   * Use [dedicated hosts](../aws/use-cases/hosts-vms/adding-dedicated-hosts.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server.
   * [Automatically reboot a host](../aws/use-cases/hosts-vms/configure-auto-reboot.md) upon StatusCheck faults or Host disconnection.
@@ -21,8 +20,13 @@ coverY: 0
 * Azure
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
   * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
+* Kubernetes
+  * Create [Kubernetes Jobs (K8s Jobs)](../kubernetes/kubernetes-jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
+  * Create [Kubernetes CronJobs (K8s CronJobs)](../kubernetes/kubernetes-cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 * General updates
-  * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an [RDS ](../aws/aws-services/database/rds-database/)and [Hosts](../aws/use-cases/hosts-vms.md).
+  * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
+  * Use the [Supported Third-Party Tools](supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
+  * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
 
 ## August 2023 and September 2023
 
