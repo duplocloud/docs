@@ -277,6 +277,7 @@
   * [Mounting ConfigMaps and Secrets as files](kubernetes/kubernetes-configs-and-secrets/mounting-config-as-files.md)
   * [Using Kubernetes Secrets with Azure Storage connection data](kubernetes/kubernetes-configs-and-secrets/using-kubernetes-secrets-with-azure-storage-connection-data.md)
 * [Kubernetes HPA](kubernetes/kubernetes-hpa.md)
+* [Kubernetes Pod Toleration](kubernetes/kubernetes-pod-toleration.md)
 * [Kubernetes StorageClass and PVC](kubernetes/kubernetes-storageclass-and-pvc/README.md)
   * [Native Azure Storage Classes](kubernetes/kubernetes-storageclass-and-pvc/storage-options.md)
 
