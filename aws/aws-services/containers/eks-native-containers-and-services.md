@@ -199,6 +199,10 @@ If you need security tokens of a longer duration, create them on your own. Secur
 
 ### Advanced configurations with Kubernetes
 
+{% hint style="info" %}
+See [Kubernetes Pod Toleration](../../../kubernetes/kubernetes-pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.
+{% endhint %}
+
 You can supply advanced configuration options in the **Other K8s Config** field. The content of this field maps one-to-one with the Kubernetes API. Configurations for deployment are StatefulSets and are supported by placing the appropriate JSON code in the **Other K8s Config** section. For example, to reference Kubernetes Secrets using a YAML config map, create the following JSON code:&#x20;
 
 ```yaml
@@ -219,6 +223,6 @@ You can supply advanced configuration options in the **Other K8s Config** field.
 }
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 `allocationtag` and `tenantname` are reserved DuploCloud keys. If you specify custom values for  `allocationtag` and `tenantname` keys in the `NodeSelector` section of **Other Pod Config**, these values are ignored.&#x20;
 {% endhint %}
