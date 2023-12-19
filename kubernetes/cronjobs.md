@@ -4,9 +4,9 @@ description: >-
   DuploCloud Portal
 ---
 
-# Kubernetes CronJobs
+# CronJobs
 
-A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](kubernetes-jobs.md), with the exception that you can schedule a CronJob to run at periodic intervals.
+A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](jobs.md), with the exception that you can schedule a CronJob to run at periodic intervals.
 
 See the Kubernetes documentation on [CronJobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) for more information.
 

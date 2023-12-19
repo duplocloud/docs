@@ -2,7 +2,7 @@
 description: Create Kubernetes Jobs in AWS and GCP from the DuploCloud Portal
 ---
 
-# Kubernetes Jobs
+# Jobs
 
 In Kubernetes, a [Job ](https://kubernetes.io/docs/concepts/workloads/controllers/job/)is a controller object that represents a task or a set of tasks that runs until successful completion. It is designed to manage short-lived, batch workloads in a Kubernetes cluster. You use a Job when you need to run a task or a set of tasks once, to completion, rather than continuously, as in other types of controllers such as [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
@@ -16,7 +16,7 @@ In the DuploCloud Portal, you can create K8s Jobs to create one or more Pods. Th
 
 You typically create one Job object to reliably run one Pod to completion. The Job object starts a new Pod if the first Pod fails or is deleted (for example, in case of a node hardware failure or a node reboot).
 
-You can also use a Job to run multiple Pods in [parallel](https://kubernetes.io/docs/tasks/job/parallel-processing-expansion/). If you want to run a Job (either a single task, or several in parallel) on a schedule, see [CronJobs](kubernetes-cronjobs.md).
+You can also use a Job to run multiple Pods in [parallel](https://kubernetes.io/docs/tasks/job/parallel-processing-expansion/). If you want to run a Job (either a single task, or several in parallel) on a schedule, see [CronJobs](cronjobs.md).
 
 ## Creating a Kubernetes Job in the DuploCloud Portal
 

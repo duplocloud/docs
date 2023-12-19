@@ -21,12 +21,18 @@ After entering these commands,  `kubectl` is configured to access the Kubernetes
 You can configure the Storage Class and Persistent Volume Claims (PVCs) from the DuploCloud Portal.&#x20;
 
 1. In the DuploCloud Portal, navigate to **DevOps** --> **Containers** --> **GKE/Native**.
-2.  Click the **K8S Storage** tab. The **Kubernetes Storage** page displays. From this page, you define your Kubernetes [**Persistent Volume Claims**](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) and [**Storage Classes**](https://kubernetes.io/docs/concepts/storage/storage-classes/). The **Persistent Volume Claims** option is selected by default.
+2.  Click the **K8S Storage** tab. The **Kubernetes Storage** page displays. From this page, you define your Kubernetes [**Persistent Volume Claims**](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) and [**Storage Classes**](https://kubernetes.io/docs/concepts/storage/storage-classes/). The **Persistent Volume Claims** option is selected by default.\
+
 
     <figure><img src="../../.gitbook/assets/GCP_K8S_Storage_PVC.png" alt=""><figcaption><p>The <strong>Persistent Volume Claims</strong> option on the <strong>Kubernetes Storage</strong> page</p></figcaption></figure>
-3.  Click **Add**. The **Add Kubernetes Persistent Volume Claim** page displays.
+
+
+3.  Click **Add**. The **Add Kubernetes Persistent Volume Claim** page displays.\
+
 
     <figure><img src="../../.gitbook/assets/GCP_K8S_Storage_PVC_Form.png" alt=""><figcaption><p>The <strong>Add Kubernetes Persistent Volume Claim</strong> page</p></figcaption></figure>
+
+
 4. Define the PVC **Name**, **Storage Class Name**, **Volume Name**, **Volume Mode**, and other details such as volume **Access Modes**.
 5. Click **Add**.
 6.  On the **Kubernetes Storage** page, select the **Storage Class** option.&#x20;

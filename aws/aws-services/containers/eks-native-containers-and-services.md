@@ -220,4 +220,4 @@ You can supply advanced configuration options with Kubernetes in the DuploCloud 
 
 #### Add Pod Toleration spec to a Container configuration
 
-See [Kubernetes Pod Toleration](../../../kubernetes/kubernetes-pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.
+See [Kubernetes Pod Toleration](../../../kubernetes/pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.
