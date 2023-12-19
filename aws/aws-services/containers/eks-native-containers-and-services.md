@@ -199,30 +199,25 @@ If you need security tokens of a longer duration, create them on your own. Secur
 
 ### Advanced configurations with Kubernetes
 
-{% hint style="info" %}
+You can supply advanced configuration options with Kubernetes in the DuploCloud Portal in several ways, including the advanced use cases in this section.
+
+#### Enable DuploCloud Master IP access to an EKS Security Group
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Click the **System Config** tab.
+3. Click **Add**. The **Add Config** pane displays.
+4. From the **Config Type** list box, select, **Flags**.
+5. From the **Key** list box, select **Block Master VPC CIDR Allow in EKS SG**.
+6.  From the **Value** list box, select **True**.\
+
+
+    <figure><img src="../../../.gitbook/assets/sg1.png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure>
+
+
+7. Click **Submit**. The setting is displayed as **ENABLE\_STORAGE\_ACCOUNT\_INFRA\_ENCRYTPION** in the **System Config** tab.
+
+<figure><img src="../../../.gitbook/assets/sg2.png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>Flag ENABLE_STORAGE_ACCOUNT_INFRA_ENCRYTPION</strong> set to <strong>true</strong></p></figcaption></figure>
+
+#### Add Pod Toleration spec to a Container configuration
+
 See [Kubernetes Pod Toleration](../../../kubernetes/kubernetes-pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.
-{% endhint %}
-
-You can supply advanced configuration options in the **Other K8s Config** field. The content of this field maps one-to-one with the Kubernetes API. Configurations for deployment are StatefulSets and are supported by placing the appropriate JSON code in the **Other K8s Config** section. For example, to reference Kubernetes Secrets using a YAML config map, create the following JSON code:&#x20;
-
-```yaml
-	"Volumes": [
-		{
-			"name": "config-volume",
-			"configMap": {
-				"name": "game-config"
-			}
-		}
-	],
-	"VolumesMounts": [
-		{
-			"name": "config-volume",
-			"mountPath": "/etc/config"
-		}
-	]
-}
-```
-
-{% hint style="warning" %}
-`allocationtag` and `tenantname` are reserved DuploCloud keys. If you specify custom values for  `allocationtag` and `tenantname` keys in the `NodeSelector` section of **Other Pod Config**, these values are ignored.&#x20;
-{% endhint %}
