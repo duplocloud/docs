@@ -21,8 +21,8 @@ coverY: 0
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
   * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
 * Kubernetes
-  * Create [Kubernetes Jobs (K8s Jobs)](../kubernetes/kubernetes-jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
-  * Create [Kubernetes CronJobs (K8s CronJobs)](../kubernetes/kubernetes-cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
+  * Create [Kubernetes Jobs (K8s Jobs)](../kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
+  * Create [Kubernetes CronJobs (K8s CronJobs)](../kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 * General updates
   * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
   * Use the [Supported Third-Party Tools](supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
