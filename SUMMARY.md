@@ -84,7 +84,7 @@
     * [Disable Source Destination Check](aws/use-cases/hosts-vms/disable-source-destination-check.md)
   * [Auditing](aws/use-cases/auditing.md)
   * [Logs](aws/use-cases/central-logging/README.md)
-    * [Central Logging Setup](aws/use-cases/central-logging/central-logging-setup.md)
+    * [Logging Setup](aws/use-cases/central-logging/central-logging-setup.md)
     * [Log Dashboards](aws/use-cases/central-logging/log-dashboards.md)
     * [Custom Log Collection](aws/use-cases/central-logging/custom-log-collection.md)
   * [Diagnostics and Metrics](aws/use-cases/monitoring/README.md)
