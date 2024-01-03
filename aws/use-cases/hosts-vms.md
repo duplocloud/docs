@@ -1,5 +1,5 @@
 ---
-description: Managing EC2 hosts in DuploCloud AWS
+description: Adding EC2 hosts in DuploCloud AWS
 ---
 
 # Hosts (VMs)

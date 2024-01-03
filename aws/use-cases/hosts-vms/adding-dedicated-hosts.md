@@ -22,7 +22,7 @@ Configure the DuploCloud Portal to allow for the creation of Dedicated Hosts.
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (106).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Key</strong> for <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (106) (2).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Key</strong> for <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure>
 
 </div>
 
@@ -36,7 +36,7 @@ Configure the DuploCloud Portal to allow for the creation of Dedicated Hosts.
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (109).png" alt=""><figcaption><p><strong>EC2</strong> page with <strong>Advanced Options</strong> displayed including <strong>Dedciated Host ID</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (109) (1).png" alt=""><figcaption><p><strong>EC2</strong> page with <strong>Advanced Options</strong> displayed including <strong>Dedciated Host ID</strong></p></figcaption></figure>
 
 </div>
 
@@ -49,7 +49,7 @@ After you create Dedicated Hosts, view them by doing the following:
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (110).png" alt=""><figcaption><p><strong>Dedicated Host ID</strong> card on the Host page displaying ID of the Dedicated Host</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (110) (1).png" alt=""><figcaption><p><strong>Dedicated Host ID</strong> card on the Host page displaying ID of the Dedicated Host</p></figcaption></figure>
 
 </div>
 

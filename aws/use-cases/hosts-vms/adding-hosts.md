@@ -15,7 +15,7 @@ DuploCloud AWS supports **EC2**, **ASG**, and **BYOH** (Bring Your Own Host) typ
 
 To connect to the Host using SSH, [follow this procedure](../../aws-services/virtual-machines/ssh-ec2-instance.md).
 
-<figure><img src="../../../.gitbook/assets/image (105).png" alt=""><figcaption><p><strong>Add Host</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (105) (2).png" alt=""><figcaption><p><strong>Add Host</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
 The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time.
