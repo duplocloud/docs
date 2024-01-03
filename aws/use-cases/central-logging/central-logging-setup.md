@@ -4,9 +4,9 @@ description: Set up logging for the DuploCloud Portal
 
 # Logging Setup
 
-## Prerequisite: ensure Docker containers use stdout
+## Prerequisite: ensure Docker containers use `stdout`
 
-Before setting up logging, ensure that your Docker applications use `stdout` for writing log files.  This is necessary for Docker to collect logs and place them in the host directory, mount them into [Filebeat ](https://www.elastic.co/beats/filebeat)containers, and send them to [AWS Elasticsearch](https://aws.amazon.com/what-is/elasticsearch/)
+Before setting up logging, ensure that your Docker applications use `stdout` for writing log files.  This is necessary for Docker to collect logs and place them in the Host directory, mount them into [Filebeat ](https://www.elastic.co/beats/filebeat)containers, and send them to [AWS Elasticsearch](https://aws.amazon.com/what-is/elasticsearch/)
 
 ## Setting up logging&#x20;
 
