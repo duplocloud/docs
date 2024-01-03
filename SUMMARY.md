@@ -6,7 +6,6 @@
 ## WHAT'S NEW
 
 * [Product updates](whats-new/product-updates.md)
-* [Supported Third-party Tools](whats-new/supported-third-party-tools.md)
 
 ## Getting started
 
@@ -352,3 +351,4 @@
 * [Allocation Tagging for Hosts](extras/creating-advanced-functions.md)
 * [Managed Service Accounts (RBAC)](extras/managed-service-accounts-rbac.md)
 * [BYOH](extras/byoh.md)
+* [Supported Third-party Tools](extras/supported-third-party-tools.md)

@@ -12,9 +12,9 @@ The DuploCloud Portal integrates with numerous third-party tools to provide dive
 | ------------------- | ---------------------------------------- |
 | SIEM Solution       | WAZUH                                    |
 | Antivirus           | ClamAV                                   |
-| Alerting            | Sentry, PagerDuty                        |
+| Alerting            | Sentry, PagerDuty, NewRelic, OpsGenie    |
 | Incident Management | Jira                                     |
-| Collection          | Sumo Logic                               |
+| Collection          | Filebeat                                 |
 | Metrics             | Prometheus/Grafana                       |
 | Auditing            | CloudWatch                               |
 | HIDS                | OSSEC                                    |
@@ -24,4 +24,4 @@ The DuploCloud Portal integrates with numerous third-party tools to provide dive
 | Alerting            | Jaeger                                   |
 | NIDS                | Suricata                                 |
 | Code Analysis       | SonarQube                                |
-| Penetration Testing | DuploCloud                               |
+| Penetration Testing | ZAP Proxy                                |
