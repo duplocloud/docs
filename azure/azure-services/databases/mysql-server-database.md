@@ -1,5 +1,5 @@
 ---
-description: View a MySQL Server database
+description: Create a MySQL Server single server database in DuploCloud
 ---
 
 # MySQL Server database
