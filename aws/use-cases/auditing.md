@@ -4,6 +4,25 @@ description: Set up features for auditing and view auditing reports and logs
 
 # Auditing
 
+The DuploCloud Portal provides a comprehensive audit trail, including reports and logs, for security and compliance purposes. Using the **Show Audit Records for** list box, you can display real-time audit data for:
+
+* **Auth** (Authentications)
+* **Admin** (Administrators)
+* **Tenants** (DuploCloud Tenants)
+* **Compliance** (such as HIPAA, SOC 2, and HIGHTRUST, among others)
+* [**Kat-Kit**](../../ci-cd/katkit/) (DuploCloud's CI/CD Tool)
+
+<figure><img src="../../.gitbook/assets/audit13.png" alt=""><figcaption><p>The <strong>Audit</strong> page with <strong>Admin</strong> audit records selected using the <strong>Show Audit Records</strong> for list box</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/audit12.png" alt=""><figcaption><p>The <strong>Audit</strong> page with audit records selected for the <strong>DEV01</strong> Tenant</p></figcaption></figure>
+
+## Enabling Audit
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Diagnostics** -> **Audit**. The **Audit** page displays.
+2. Click the **Enable Audit** link.&#x20;
+
+<figure><img src="../../.gitbook/assets/audit11.png" alt=""><figcaption><p><strong>Enable Audit</strong> link on the <strong>Audit</strong> page</p></figcaption></figure>
+
 ## Viewing detailed auditing diagnostics
 
 To view complete auditing reports and logs, navigate to the **Diagnostics** -> **Audit** page in the DuploCloud Portal.
