@@ -275,6 +275,7 @@
   * [Setting Environment Variables (EVs) from a ConfigMap or Secret](kubernetes/kubernetes-configs-and-secrets/setting-environment-variables-from-config.md)
   * [Mounting ConfigMaps and Secrets as files](kubernetes/kubernetes-configs-and-secrets/mounting-config-as-files.md)
   * [Using Kubernetes Secrets with Azure Storage connection data](kubernetes/kubernetes-configs-and-secrets/using-kubernetes-secrets-with-azure-storage-connection-data.md)
+* [Kubernetes Lifecycle Hooks](kubernetes/kubernetes-lifecycle-hooks.md)
 * [HPA](kubernetes/hpa.md)
 * [Pod Toleration](kubernetes/pod-toleration.md)
 * [Kubernetes StorageClass and PVC](kubernetes/kubernetes-storageclass-and-pvc/README.md)
