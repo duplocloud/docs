@@ -21,9 +21,19 @@ For EKS Services, select the Service **Name** and click the [**Actions** menu](e
 ### Adding a DuploCloud EKS/Native Service
 
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
-2. Click **Add**. The **Add Service** page displays.
+2. Click **Add**. The **Basic Options** section of the **Add Service** page displays.
 3. Complete the fields on the page, including **Service Name**, **Docker Image** **name**, and number of **Replicas**. Use **Allocation Tags** to deploy the container in a specific set of hosts.&#x20;
-4. To force the creation of Kubernetes StatefulSets, select **Yes** in the **Force StatefulSets** field.
+4.  To force the creation of Kubernetes StatefulSets, select **Yes** in the **Force StatefulSets** field.\
+
+
+    <div align="left">
+
+    <img src="../../../.gitbook/assets/sv_1.png" alt="Add Service page">
+
+    </div>
+5. Click **Next.** The **Advanced Options** section of the **Add Service** page displays.
+6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../kubernetes/kubernetes-lifecycle-hooks.md), by adding the YAML to the **Other Container Config** field (optional).&#x20;
+7. Click **Create**. The Service is created.&#x20;
 
 {% hint style="warning" %}
 Do not use spaces when creating Service or Docker image names.
@@ -31,19 +41,15 @@ Do not use spaces when creating Service or Docker image names.
 The number of Replicas you define must be less than or equal to the number of hosts in the fleet.
 {% endhint %}
 
-<div align="left">
+### &#x20;<a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-<img src="../../../.gitbook/assets/sv_1.png" alt="Add Service page">
-
-</div>
-
-### Displaying Services <a href="#7-toc-title" id="7-toc-title"></a>
+### Displaying Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers/) for the Services.
 
 <figure><img src="../../../.gitbook/assets/sv_3 (1).png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 
-### Starting, stopping, and restarting multiple DuploCloud Services <a href="#7-toc-title" id="7-toc-title"></a>
+### Starting, stopping, and restarting multiple DuploCloud Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 Using the Services page, you can start, stop, and restart multiple services simultaneously.
 
@@ -56,7 +62,7 @@ Your selected services are started, stopped, or restarted as you specified.
 
 <figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption><p><strong>Services</strong> tab with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
 
-### Importing a Native Kubernetes Service <a href="#7-toc-title" id="7-toc-title"></a>
+### Importing a Native Kubernetes Service <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 Using the **Import Kubernetes Deployment** pane, you can add a Service to an existing Kubernetes namespace using Kubernetes YAML.
 
@@ -114,7 +120,7 @@ Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_d
 
 <figure><img src="../../../.gitbook/assets/cont6.png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
 
-### Downloading the Kubectl Token and KubeConfig <a href="#6-toc-title" id="6-toc-title"></a>
+### Downloading the Kubectl Token and KubeConfig <a href="#id-6-toc-title" id="id-6-toc-title"></a>
 
 DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen minutes, to access the `kubectl` cluster.&#x20;
 
