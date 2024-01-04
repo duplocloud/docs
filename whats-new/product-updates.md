@@ -23,10 +23,20 @@ coverY: 0
 * Kubernetes
   * Create [Kubernetes Jobs (K8s Jobs)](../kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
   * Create [Kubernetes CronJobs (K8s CronJobs)](../kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
-* General updates
-  * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
-  * Use the [Supported Third-Party Tools](../extras/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
-  * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
+*   General updates
+
+    * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
+    * Quickly search the DuploCloud Portal for any navigation menus or tab labels, such as **Kubernetes Secrets** and **Spend by Month**, by using the **Search** box at the top center of the DuploCloud Portal.\
+
+
+    <div align="left">
+
+    <figure><img src="../.gitbook/assets/search_menu.png" alt=""><figcaption><p>The Search box in the DuploCloud Portal<br></p></figcaption></figure>
+
+    </div>
+
+    * Use the [Supported Third-Party Tools](../extras/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
+    * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
 
 ## August 2023 and September 2023
 
