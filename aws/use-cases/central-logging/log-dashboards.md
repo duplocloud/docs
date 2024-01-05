@@ -1,11 +1,30 @@
-# Log Dashboards
+---
+description: Display logs for the DuploCloud Portal, components, services, and containers
+---
 
-Logging dashboards per tenants are available under Diagnostics --> Loggings. Note that the logs are in the context of the Tenant (That can be switched using tenant switcher). In addition the logs are segregated per services that also can switched using the "Select Service" option as shown in the picture below
+# Display logs
 
-![](<../../../.gitbook/assets/image (20) (1).png>)
+## Displaying logs for Service and Tenant with the Central Logging Dashboard
 
-Note that these dashboards are native Kibana dashboards with preset-filters. One can easly add their own filter or change existing ones.
+The central logging dashboard displays detailed logs per Service and Tenant.  The dashboard uses Kibana and preset filters that you can modify.
+
+1. In the DuploCloud Portal, navigate to **Diagnostics** -> **Logging**.
+2. Select the Tenant from the **Tenant** list box at the top of the DuploCloud Portal.
+3. Select the Service from the **Select Service** list box.
+4. Modify the **DQL** to modify Tenant selection, if needed.
+5. Adjust the date range by clicking **Show dates**.
+6. **Add filter**s, if needed.
+
+{% hint style="success" %}
+Confirm that your hosts and services are running or runnable to view relevant log data.
+{% endhint %}
+
+![The Central Logging Dashboard in the DuploCloud Portal for a selected Service and Tenant](<../../../.gitbook/assets/image (20) (1).png>)
 
 {% hint style="info" %}
-The separation of logs across tenants is only a filter. All logs are in a single index. Today one tenant user can see other tenant logs by changing filters. The central logging control plane is shared with no per tenant access control.&#x20;
+DuploCloud pre-filters logs per Tenant. All DuploCloud logs are stored in a single index. You can see any Tenant or combination of Tenants (using the DQL option) but the central logging control plane is shared, with no per-Tenant access.&#x20;
 {% endhint %}
+
+## Displaying Container Logs
+
+See [Kubernetes Containers](../../aws-services/containers/eks-native-containers-and-services.md#kubernetes-containers) for information on displaying logs per container.

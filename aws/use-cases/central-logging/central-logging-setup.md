@@ -2,11 +2,12 @@
 description: Set up logging for the DuploCloud Portal
 ---
 
-# Logging Setup
+# Set up logging
 
-## Prerequisite&#x20;
+## Prerequisites
 
-Before setting up logging, ensure that your Docker applications use `stdout` for writing log files.  This is necessary for Docker to collect logs and place them in the Host directory, mount them into [Filebeat ](https://www.elastic.co/beats/filebeat)containers, and send them to [AWS Elasticsearch](https://aws.amazon.com/what-is/elasticsearch/)
+* If you need to make changes to the Control Plane Configuration, follow this procedure to do so, before enabling logging. Note that you cannot modify the Control Plane Configuration after you set up logging.
+* Docker applications use `stdout` for writing log files, collecting logs, placing them in the Host directory, mounting them into [Filebeat ](https://www.elastic.co/beats/filebeat)containers, and sending them to [AWS Elasticsearch](https://aws.amazon.com/what-is/elasticsearch/).  If you need to customize log collection use folders other than `stdout`, for example, [follow this procedure](custom-log-collection.md#customizing-log-collection).  Note that you cannot customize the log collection after you set up logging.
 
 ## Setting up logging&#x20;
 
@@ -44,7 +45,9 @@ Before setting up logging, ensure that your Docker applications use `stdout` for
     ![Logging tab with logging setup complete](<../../../.gitbook/assets/image (15) (1) (1).png>)
 
 {% hint style="info" %}
-&#x20;The Log Collector uses Filebeat containers that are deployed within each Tenant. You can view the Filebeat containers by navigating to **DevOps** -> **Containers** -> **EKS/Native** in the DuploCloud Portal and selecting the **Containers** tab.
+The Log Collector uses Filebeat containers that are deployed within each Tenant.&#x20;
+
+When you enable a Tenant for logging by selecting it, the Filebeat service starts up and begins log collection. You can view the Filebeat containers by navigating to **DevOps** -> **Containers** -> **EKS/Native** in the DuploCloud Portal and selecting the **Containers** tab.
 {% endhint %}
 
 ## How DuploCloud configures logging for you

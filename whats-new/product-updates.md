@@ -31,7 +31,7 @@ coverY: 0
 
     <div align="left">
 
-    <figure><img src="../.gitbook/assets/search_menu.png" alt=""><figcaption><p>The Search box in the DuploCloud Portal<br></p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/search_menu.png" alt=""><figcaption><p>The <strong>Search</strong> box in the DuploCloud Portal<br></p></figcaption></figure>
 
     </div>
 

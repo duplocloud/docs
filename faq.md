@@ -127,9 +127,13 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 * A host is counted as 1 unit. (example: EC2 instance, Azure VM)
 * A serverless function or service is counted as 1/4 unit (example: Lambda function)
 * A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
-* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count
+* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count.
 
-## General Cloud Technical Issue FAQs
+### I can't edit the Service Description to update my control plane configuration.
+
+You must make control plane modifications before [enabling central logging](aws/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
+
+## Error Messages
 
 ### I'm receiving the error message `Could not load credentials from any providers`.&#x20;
 
@@ -149,6 +153,10 @@ Two possible reasons for receiving this fault message are:
 
 * You are not allocating enough hosts to process your workload.
 * The [allocation tags](gcp/container-deployments/concepts.md#allocation-tags) you have assigned to your existing hosts are limiting additional Service workloads.
+
+### I'm not seeing logs displayed for a Tenant. I get the error `Docker native collection agent Filebeat is not running for Tenant`.
+
+Ensure that [logging is set up](aws/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.&#x20;
 
 ## Kubernetes (K8s) FAQs
 
