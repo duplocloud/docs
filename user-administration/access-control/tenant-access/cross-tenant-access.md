@@ -15,6 +15,15 @@ Configure Cross-tenant access to:
 * [Grant a Tenant full access to another Tenant in the DuploCloud Portal](cross-tenant-access.md#granting-full-cross-tenant-access-between-tenants).
 * [Share specific services between Tenants in the DuploCloud Portal](cross-tenant-access.md#granting-cross-tenant-access-to-specific-iam-restricted-services) that are restricted by IAM policies.
 
+## Prerequisites
+
+Before you can use Cross-tenant access, you must do the following:
+
+* Add a [Security Group rule](../../../aws/use-cases/disaster-recovery/security-group-rules.md) to allow port access between each of the Tenants requiring Cross-tenant access in the Security Group.
+* Include the full application Namespace when accessing the domain, in this format: **https://**_**NAMESPACE**_**.duploservices-**_**TENANT\_NAME**_**:**_**PORT**_
+
+For example, If Tenant **dev01** is running an app named **myapp** on port **8080**, then access the domain using the URL `https://myapp.duploservices-dev01:8080`.&#x20;
+
 ## Granting general non-IAM restricted access between Tenants
 
 When you grant general non-IAM restricted access between Tenants, you allow one DuploCloud  Tenant full access to another Tenant's workspace or Namespace. Restrictions are defined by your Security Groups in your underlying Cloud Platform. In the DuploCloud Portal, you configure general access between Tenants using a Tenant's **Security** tab.
