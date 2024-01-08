@@ -8,15 +8,16 @@ coverY: 0
 ## Q4 2023
 
 * AWS
+  * Set a [default automated backup retention period](../aws/aws-services/database/rds-database/backup-and-restore.md#id-0-toc-title-1) for databases.
   * Enable bucket versioning when [creating an S3 bucket](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
   * Create an [Amazon Machine Image (AMI)](../aws/use-cases/hosts-vms/create-amazon-machine-image-ami.md).
   * Use [dedicated hosts](../aws/use-cases/hosts-vms/adding-dedicated-hosts.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server.
   * [Automatically reboot a host](../aws/use-cases/hosts-vms/configure-auto-reboot.md) upon StatusCheck faults or Host disconnection.
   * Support for [SNS Topic Alerts](../aws/use-cases/faults-and-alarms/sns-topic-alerts.md), enabling notifications and alerts across different AWS services and external endpoints.
-  * [Establish VPN connections for private endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md#enabling-vpn-for-private-visibility-optional) when creating an Infrastructure.
-  * Restore an [RDS to a particular point in time](../aws/aws-services/database/rds-database/backup-and-restore.md#restoring-snapshots-to-a-point-in-time).
-  * Dynamically [change the configuration of a Kafka Cluster](../aws/aws-services/kafka-cluster.md#changing-the-configuration-of-a-kafka-cluster).
-  * Fields for Sort Key and Key Type are now available when [creating a DynamoDB](../aws/aws-services/database/dynamodb.md).
+* [Establish VPN connections for private endpoints](../aws/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md#enabling-vpn-for-private-visibility-optional) when creating an Infrastructure.
+* Restore an [RDS to a particular point in time](../aws/aws-services/database/rds-database/backup-and-restore.md#restoring-snapshots-to-a-point-in-time).
+* Dynamically [change the configuration of a Kafka Cluster](../aws/aws-services/kafka-cluster.md#changing-the-configuration-of-a-kafka-cluster).
+* Fields for Sort Key and Key Type are now available when [creating a DynamoDB](../aws/aws-services/database/dynamodb.md).
 * Azure
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
   * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
@@ -37,6 +38,8 @@ coverY: 0
 
     * Use the [Supported Third-Party Tools](../extras/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
     * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
+*
+*
 
 ## August 2023 and September 2023
 

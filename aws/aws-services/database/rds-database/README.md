@@ -26,8 +26,9 @@ Support for the Aurora Serverless V1 database engines has been deprecated. When 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
 2. Click **Add**. The **Create a RDS** page displays.
 3. Fill out the form based on your requirements, and **Enable Logging**, if needed.
+4. Optionally, in the **Backup Retention Period in Days** field, enter a number of days to retain automated backups between one (**1**) and thirty-five (**35**). If a value is not entered, the Backup Retention Period value configured in Systems Settings will be applied.&#x20;
 
-![Create a RDS page](../../../../.gitbook/assets/RDS1.png)
+<figure><img src="../../../../.gitbook/assets/createRDS.png" alt=""><figcaption><p><strong>Create a RDS</strong> window.</p></figcaption></figure>
 
 #### Create Aurora Serverless V2 Cluster database
 
