@@ -6,8 +6,8 @@ description: Set up logging for the DuploCloud Portal
 
 ## Prerequisites
 
-* If you need to make changes to the Control Plane Configuration, follow this procedure to do so, before enabling logging. Note that you cannot modify the Control Plane Configuration after you set up logging.
-* Docker applications use `stdout` for writing log files, collecting logs, placing them in the Host directory, mounting them into [Filebeat ](https://www.elastic.co/beats/filebeat)containers, and sending them to [AWS Elasticsearch](https://aws.amazon.com/what-is/elasticsearch/).  If you need to customize log collection use folders other than `stdout`, for example, [follow this procedure](custom-log-collection.md#customizing-log-collection).  Note that you cannot customize the log collection after you set up logging.
+* If you need to make changes to the [Control Plane Configuration, follow this procedure to do so](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description), before enabling logging. Note that you cannot modify the Control Plane Configuration after you set up logging.
+* Docker applications use `stdout` for writing log files, collecting logs, placing them in the Host directory, mounting them into [Filebeat ](https://www.elastic.co/beats/filebeat)containers, and sending them to [AWS Elasticsearch](https://aws.amazon.com/what-is/elasticsearch/).  If you need to customize the log collection and you use folders other than `stdout`, for example, [follow this procedure](custom-log-collection.md#customizing-elastic-filebeat-logging).  Note that you cannot customize the log collection after you set up logging.
 
 ## Setting up logging&#x20;
 
@@ -23,7 +23,7 @@ description: Set up logging for the DuploCloud Portal
     </div>
 
 
-4.  Use the **Enable Logging** page to deploy logging for the Control Plane, which uses Open Search and KIbana to retrieve and display log data for the Default Tenant. In the Cert ARN field, enter the certificate of the ARN for the Default Tenant.\
+4.  Use the **Enable Logging** page to deploy logging for the Control Plane, which uses OpenSearch and Kibana to retrieve and display log data for the **Default** Tenant. In the **Cert ARN** field, enter the ARN certificate for the **Default** Tenant. Find the ARN by selecting the **Default** Tenant from the **Tenant** list box at the top of the DuploCloud Portal; navigating to **Administrator** -> **Plans**; selecting the Plan that matches your Infrastructure **Name**; and clicking the **Certificates** tab.\
 
 
     <div align="left">
@@ -33,34 +33,36 @@ description: Set up logging for the DuploCloud Portal
     </div>
 
 
-5. Click **Submit**. Data gathering takes about fifteen (15) minutes. When data gathering is complete, graphical logging data is displayed in the Logging tab.&#x20;
-6. After logging has been enabled for the Control Plane, finish the logging setup by enabling the Log Collector to collect logs per Tenant. This feature is useful for Tenants that are spread across multiple regions and the administrator wants to create a separate logging setup. In the DuploCloud Portal, navigate to **Administrator** -> **Diagnostics** -> **Settings**. &#x20;
+5. Click **Submit**. Data gathering takes about fifteen (15) minutes. When data gathering is complete, graphical logging data is displayed in the **Logging** tab.&#x20;
+6. After logging has been enabled for the Control Plane, finish the logging setup by enabling the Log Collector to collect logs per Tenant. This feature is especially useful for Tenants that are spread across multiple regions. In the DuploCloud Portal, navigate to **Administrator** -> **Diagnostics** -> **Settings**. &#x20;
 7.  In the **Logging** tab, on the **Logging Infrastructure Tenants** page, click **Add.**\
 
 
     <figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p><strong>Add</strong> button on the <strong>Logging Infrastructure Tenants</strong> page</p></figcaption></figure>
-8.  Select the Tenants for which you want to configure logging, as in the example below. The Control Plane configuration you previously set up will be deployed for each Tenant you select in the Infrastructure specified in **Infrastructure Details**.\
+8.  Select the Tenants for which you want to configure logging, using the **Select Tenants to enable logging** area, as in the example below. The [Control Plane configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description) is deployed for each Tenant that you select in the Infrastructure, specified in **Infrastructure Details**.\
 
 
     ![Logging tab with logging setup complete](<../../../.gitbook/assets/image (15) (1) (1).png>)
 
-{% hint style="info" %}
-The Log Collector uses Filebeat containers that are deployed within each Tenant.&#x20;
 
-When you enable a Tenant for logging by selecting it, the Filebeat service starts up and begins log collection. You can view the Filebeat containers by navigating to **DevOps** -> **Containers** -> **EKS/Native** in the DuploCloud Portal and selecting the **Containers** tab.
+
+{% hint style="info" %}
+The Log Collector uses [Elastic Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html) containers that are deployed within each Tenant.&#x20;
+
+When you enable a Tenant for logging, the Filebeat service starts up and begins log collection. View the Filebeat containers by navigating to **DevOps** -> **Containers** -> **EKS/Native** in the DuploCloud Portal and selecting the **Containers** tab.
 {% endhint %}
 
 ## How DuploCloud configures logging for you
 
-When you perform the steps above to configure logging, DuploCloud does the following for you.
+When you perform the steps above to configure logging, DuploCloud does the following:
 
-### Control Plan deployment
+### Control Plane deployment
 
 1. **An EC2 Host is added** in the Default tenant, for example, **duploservices-default-oc-diagnostics**.
 2. **Services are added** in the Default tenant, one for OpenSearch and one for Kibana. Both services are pinned to the EC2 host using [allocation tags](../../../extras/creating-advanced-functions.md). Kibana is set up to point to ElasticSearch and exposed using an internal load balancer.
-3. **Security rules from within the internal network to port 443 are added** in the Default tenant to allow the log collectors that run on Tenant hosts to send logs to ElasticSearch. &#x20;
+3. **Security rules from within the internal network to port 443 are added** in the **Default** Tenant to allow log collectors that run on Tenant hosts to send logs to ElasticSearch. &#x20;
 
 ### Log Collector deployment
 
 1. A Filebeat service (`filebeat-duploinfrasvc)` is deployed for each Tenant where central logging is enabled.&#x20;
-2. The /var/lib/docker/Containers are mounted from the Host into the Filebeat container. The Filebeat container references ElasticSearch, which runs in the Default Tenant. Inside the container, Filebeat is configured so that every log line is added with metadata information comprising the Tenant name, Service names, Container ID, and Host name, enabling ease of searching by these parameters using ElasticSearch.   &#x20;
+2. The `/var/lib/docker/Containers` are mounted from the Host into the Filebeat container. The Filebeat container references ElasticSearch, which runs in the **Default** Tenant. Inside the container, Filebeat is configured so that every log line is added with metadata information consisting of the Tenant name, Service names, Container ID, and Hostname, enabling ease of search using these parameters with ElasticSearch.   &#x20;

@@ -4,12 +4,12 @@ description: Manage backup and restore for Relational Database Services (RDS)
 
 # Backup and restore
 
-## Creating a snapshot <a href="#0-toc-title" id="0-toc-title"></a>
+## Creating a snapshot <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 Create a [snapshot ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_WorkingWithAutomatedBackups.html)of an RDS.
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
-2. In the **RDS** tab, in the row containing your RDS instance, click the **Actions** menu icon ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) and select **Backup & Restore** -> **Create Snapshot**.&#x20;
+2. In the **RDS** tab, in the row containing your RDS instance, click the **Actions** menu icon ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (5) (1).png" alt="" data-size="line"> ) and select **Backup & Restore** -> **Create Snapshot**.&#x20;
 3. **Confirm** the snapshot request. Once taken, the snapshot displays in the **Snapshot** tab.
 
 <div align="left">
@@ -18,7 +18,7 @@ Create a [snapshot ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER
 
 </div>
 
-## Restoring a snapshot <a href="#1-toc-title" id="1-toc-title"></a>
+## Restoring a snapshot <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
 Once backups are available, you can restore them on the next instance creation when you [create an RDS](./#0-toc-title).
 
@@ -40,7 +40,7 @@ You can restore available RDS snapshots to a specific point in time.
 6. Select either the **Last Restorable Time** or **Custom date and time** option. If you select the **Custom date and time** option, specify the date and time in the format indicated.
 7. Click **Submit**. Your selected RDS is restored to the point in time you specified.&#x20;
 
-## Setting an RDS automated backup retention period <a href="#0-toc-title" id="0-toc-title"></a>
+## Setting an RDS automated backup retention period <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 Administrators can set backup retention periods in the DuploCloud Portal.
 

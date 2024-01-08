@@ -85,7 +85,7 @@ See the Kubernetes documentation on [CronJobs](https://kubernetes.io/docs/concep
 2. Click the **K8s CronJob** tab.
 3. Select the K8s Job you want to view and click the **Overview, Schedule**, and **Details** tabs for more information about the job schedule and job history.&#x20;
 
-You can also view details of a Kubernetes Job by clicking the Job Menu Icon ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and selecting **View**.
+You can also view details of a Kubernetes Job by clicking the Job Menu Icon ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the Job name and selecting **View**.
 
 <div align="left">
 
@@ -115,7 +115,7 @@ You can filter Container Names by using the search field at the top of the page,
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.
 2. Click the **K8s Job** tab.
 3. Select the K8s Job you want to edit.&#x20;
-4. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and select **Edit**.
+4. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the Job name and select **Edit**.
 
 You can edit a Kubernetes Job in the DuploCloud Portal and modify the following fields:
 
@@ -131,7 +131,7 @@ You can edit a Kubernetes Job in the DuploCloud Portal and modify the following 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**.
 2. Click the **K8s Job** tab.
 3. Select the K8s Job you want to delete.&#x20;
-4. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
+4. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
 
 <figure><img src="../.gitbook/assets/j28.png" alt=""><figcaption><p>Job Option Menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
 

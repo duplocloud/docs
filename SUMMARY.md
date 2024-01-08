@@ -66,6 +66,7 @@
       * [Enable Cluster Autoscaler](aws/use-cases/disaster-recovery/kubernetes-cluster/enable-cluster-autoscaler.md)
     * [ECS Setup](aws/use-cases/disaster-recovery/ecs-setup/README.md)
       * [Enable ECS logging](aws/use-cases/disaster-recovery/ecs-setup/enable-ecs-logging.md)
+    * [Security Group rules](aws/use-cases/disaster-recovery/security-group-rules.md)
   * [Tenant (Environment)](aws/use-cases/tenant-environment/README.md)
     * [Set Tenant session duration](aws/use-cases/tenant-environment/set-tenant-session-duration.md)
   * [Hosts (VMs)](aws/use-cases/hosts-vms.md)
