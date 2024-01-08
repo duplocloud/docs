@@ -39,7 +39,7 @@ Setup Database Backup and choose the number of days (1-35) to backup databases i
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/Screenshot (249).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane filled to enable Azure Default Redundant Backup. </p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Screenshot (249) (1).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane filled to enable Azure Default Redundant Backup. </p></figcaption></figure>
 
     </div>
 
