@@ -1,5 +1,5 @@
 ---
-description: Manage backup and restore settings for Relational Database Services (RDS).
+description: Manage backup and restore for Relational Database Services (RDS)
 ---
 
 # Backup and restore
