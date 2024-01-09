@@ -57,7 +57,7 @@ Use the **Containers** tab to monitor the Service creation status, between **Des
 
 ### Deploying a Service on Spot Instances (optional)
 
-Follow the steps in [Creating Services using Autoscaling Groups](../../use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-services-using-autoscaling-groups). In the **Add Service** page, **Basic Options**, Select **Tolerate spot instances**.&#x20;
+Follow the steps in [Creating Services using Autoscaling Groups](../../use-cases/auto-scaling/auto-scaling-groups.md#creating-services-using-autoscaling-groups). In the **Add Service** page, **Basic Options**, Select **Tolerate spot instances**.&#x20;
 
 ## Checking your work
 

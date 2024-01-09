@@ -12,7 +12,7 @@ Spot Instances are only supported for Auto-scaling Groups (ASG) with EKS
 
 ## Enabling Spot Instances when Creating Autoscaling Groups
 
-Follow the steps in the section [Creating Autoscaling Groups (ASG)](./#creating-autoscaling-groups-asg). Before clicking **Add**, Click the box to access **Advanced Options**. Enable **Use Spot Instances** and enter your bid, in dollars, in the **Maximum Spot Price** field.&#x20;
+Follow the steps in the section [Creating Autoscaling Groups (ASG)](../../../auto-scaling/auto-scaling-groups.md#creating-autoscaling-groups-asg). Before clicking **Add**, Click the box to access **Advanced Options**. Enable **Use Spot Instances** and enter your bid, in dollars, in the **Maximum Spot Price** field.&#x20;
 
 <div align="left">
 
@@ -22,7 +22,7 @@ Follow the steps in the section [Creating Autoscaling Groups (ASG)](./#creating-
 
 ## Creating Services using Spot Instances
 
-Follow the steps in [Creating Services using Autoscaling Groups](./#creating-services-using-autoscaling-groups). In the **Add Service** page, **Basic Options**, Select **Tolerate spot instances**.&#x20;
+Follow the steps in [Creating Services using Autoscaling Groups](../../../auto-scaling/auto-scaling-groups.md#creating-services-using-autoscaling-groups). In the **Add Service** page, **Basic Options**, Select **Tolerate spot instances**.&#x20;
 
 <div align="left">
 
