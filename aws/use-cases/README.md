@@ -17,7 +17,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [ECS Initial setup](disaster-recovery/ecs-setup/)
 * [Tenant](tenant-environment/)
 * [Hosts](hosts-vms.md) and [Snapshots](hosts-vms/backups.md)
-* [Auto Scaling host groups](hosts-vms/auto-scaling/auto-scaling-groups/)
+* [Auto Scaling host groups](auto-scaling/auto-scaling-groups.md)
 * [Kubernetes Jobs](../../kubernetes/jobs.md) and [CronJobs](../../kubernetes/cronjobs.md)
 * [Auditing](auditing.md)
 * [Logging](central-logging/)
