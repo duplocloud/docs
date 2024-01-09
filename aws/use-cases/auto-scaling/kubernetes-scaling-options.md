@@ -8,7 +8,7 @@ description: Autoscale your DuploCloud Kubernetes deployment
 
 Before autoscaling can be configured for your Kubernetes service, make sure that:
 
-1. [Autoscaling Group (ASG)](auto-scaling-groups.md) is setup in the DuploCloud tenant
+1. [Autoscaling Group (ASG)](../hosts-vms/auto-scaling/auto-scaling-groups/) is setup in the DuploCloud tenant
 2. [Cluster Autoscaler](../disaster-recovery/kubernetes-cluster/enable-cluster-autoscaler.md) is enabled for your DuploCloud infrastructure
 
 ## Kubernetes Horizontal Pod Autoscaler (HPA)
