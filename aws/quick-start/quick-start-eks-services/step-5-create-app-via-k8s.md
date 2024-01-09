@@ -55,6 +55,10 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 Use the **Containers** tab to monitor the Service creation status, between **Desired** (**Running**) and **Current**.
 {% endhint %}
 
+### Deploying a Service on Spot Instances (optional)
+
+Follow the steps in [Creating Services using Autoscaling Groups](../../use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-services-using-autoscaling-groups). In the **Add Service** page, **Basic Options**, Select **Tolerate spot instances**.&#x20;
+
 ## Checking your work
 
 Verify that your DuploCloud Service, **demo-service**, has a **Current** status of **Running**.

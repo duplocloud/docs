@@ -122,6 +122,8 @@ Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_d
 
 </div>
 
+### Downloading the Kubectl Token and KubeConfig <a href="#id-6-toc-title" id="id-6-toc-title"></a>
+
 <div align="left">
 
 <figure><img src="../../../.gitbook/assets/customlogs2.png" alt=""><figcaption><p><strong>Container Logs</strong> window with <strong>Follow Logs</strong> option enabled</p></figcaption></figure>
