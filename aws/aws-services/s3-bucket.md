@@ -4,7 +4,7 @@ description: Create an S3 bucket for AWS storage
 
 # S3 bucket
 
-Amazon Simple Storage Service (Amazon S3) is an object storage service offering scalability, data availability, security, and performance. You can store and protect any data for data lakes, cloud-native applications, and mobile apps. Read more about S3 and its capabilities [here](https://aws.amazon.com/s3/).
+Amazon Simple Storage Service (Amazon S3) is an object-storage service offering scalability, data availability, security, and performance. You can store and protect any data for data lakes, cloud-native applications, and mobile apps. Read more about S3 and its capabilities [here](https://aws.amazon.com/s3/).
 
 {% hint style="info" %}
 To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditing.md)topic.
@@ -14,20 +14,19 @@ To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditin
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Storage**.
 2. Click the **S3** tab.
-3. Click **Add**. The **Create an S3 Bucket pane displays**.
+3. Click **Add**. The **Create an S3** **Bucket** pane displays.
 4. In the **Name** field, enter a name for the S3 bucket.
-5. In the **Region** list box, select the region. You can select **Tenant Region**, **Default Region**, or **Global Region**, and specify **Other Region** to enter a custom region you have defined.
-6. Optionally, select [**Enable Bucket Versioning**](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html) and/or [**Object Lock**](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html).  &#x20;
-7. Click **Create**.
+5.  In the **Region** list box, select the region. You can select **Tenant Region**, **Default Region**, or **Global Region**, and specify **Other Region** to enter a custom region you have defined.\
 
-<div align="left">
 
-<figure><img src="../../.gitbook/assets/new s3 bucket save for git.png" alt=""><figcaption><p>The <strong>Create an S3 Bucket pane</strong> with <strong>Enable Bucket Versioning</strong> and <strong>Object Lock</strong> options selected</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Screenshot (255).png" alt=""><figcaption></figcaption></figure>
+6.  Optionally, select **Enable Bucket Versioning** and/or **Object Lock.** Both of these settings are disabled by default, unless you Enable Bucket Versioning Tenant-wide in **Tenant** **Settings**. For more information about S3 bucket versioning, see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html).&#x20;
 
-</div>
+
+7. Click **Create**. An S3 bucket is created.
 
 {% hint style="info" %}
-**Bucket Versioning** must be enabled to use **Object Lock**.&#x20;
+**Enable Bucket Versioning** must be selected to use **Object Lock**.&#x20;
 {% endhint %}
 
 ## Setting S3 bucket permissions and policies
