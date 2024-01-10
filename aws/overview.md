@@ -11,7 +11,7 @@ Before you begin, read through the [DuploCloud Platform Overview](../) and are f
 
 The DuploCloud platform installs in an EC2 instance within your AWS account. It can be accessed using a web interface, API, and a Terraform provider.&#x20;
 
-Login to the DuploCloud portal, using single sign-on (SSO), with your GSuite or O365 login.&#x20;
+Log in to the DuploCloud portal, using single sign-on (SSO), with your GSuite or O365 login.&#x20;
 
 ## Prerequisites
 
