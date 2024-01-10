@@ -29,6 +29,36 @@ To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditin
 **Enable Bucket Versioning** must be selected to use **Object Lock**.&#x20;
 {% endhint %}
 
+### Enabling bucket versioning for S3 buckets at the Tenant level
+
+You can configure the [Tenant ](../use-cases/tenant-environment/#2-toc-title)to enable bucket versioning by default.&#x20;
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
+2. Click on the **Tenant** name in the list.
+3. In the **Settings** tab, click **Add**. The **Add Tenant Feature** pane displays.
+4. Click **Add**. The **Create an S3 Bucket** pane displays.
+5. From the **Select Tenant Feature** list box, select **Default: Enable bucket versioning for new S3 buckets**.
+6.  Select **Enable.**\
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/add tenant feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane filled to enable bucket versioning for this Tenant.<br></p></figcaption></figure>
+
+    </div>
+7.  Click **Add**. Bucket versioning will be enabled by default on the **Create an S3 Bucket** pane when [creating a new S3 bucket](s3-bucket.md#creating-an-s3-bucket).\
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/Screenshot (257).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the <strong>Tenant</strong> page shows bucket versioning is enabled for new S3 buckets.</p></figcaption></figure>
+
+    </div>
+
+{% hint style="info" %}
+With this setting configured, all new S3 buckets in the Tenant will automatically have bucket versioning enabled.&#x20;
+{% endhint %}
+
 ## Setting S3 bucket permissions and policies
 
 You can set specific AWS S3 bucket [permissions and policies](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html#about-access-permissions-create-bucket) using the DuploCloud Portal. Permissions for virtual machines, Lambda functions, and containers are provisioned automatically through Instance profiles, so no access key is required in your application code. However, when coding your application, be aware of these guidelines:
