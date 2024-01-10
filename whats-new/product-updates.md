@@ -39,8 +39,6 @@ coverY: 0
 
     * Use the [Supported Third-Party Tools](../extras/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
     * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
-*
-*
 
 ## August 2023 and September 2023
 
