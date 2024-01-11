@@ -58,7 +58,7 @@ Using the Services page, you can start, stop, and restart multiple services simu
 
 Your selected services are started, stopped, or restarted as you specified.
 
-<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption><p><strong>Services</strong> tab with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (117).png" alt=""><figcaption><p><strong>Services</strong> tab with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
 
 ### Importing a Native Kubernetes Service <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
@@ -67,21 +67,18 @@ Using the **Import Kubernetes Deployment** pane, you can add a Service to an exi
 1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
 2. Click **Add**. The **Add Service** page displays.
 3. Click the **Import Kubernetes Deployment** button in the upper right. **The Import Kubernetes Deployment** pane displays.&#x20;
-4.  Paste the deployment YAML code, as in the example below, into the **Import Kubernetes Deployment** pane. \
-
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>YAML code for importing a Native Kubernetes Service</p></figcaption></figure>
-
-    </div>
-
-
+4. Paste the deployment YAML code, as in the example below, into the **Import Kubernetes Deployment** pane.&#x20;
 5. Click **Import**.
 6. In the **Add Service** page, click **Next.**
 7. Click **Create**. Your Native Kubernetes Service is created.
 
-{% code title="Sample YAML Code:" %}
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/image (116).png" alt=""><figcaption><p>YAML code for importing a Native Kubernetes Service</p></figcaption></figure>
+
+</div>
+
+{% code title="Sample YAML code" %}
 ```yaml
 //apiVersion: apps/v1
 kind: Deployment
@@ -107,6 +104,32 @@ spec:
         - containerPort: 80
 ```
 {% endcode %}
+
+## Advanced configurations with EKS
+
+You can supply advanced configuration options with EKS in the DuploCloud Portal in several ways, including the advanced use cases in this section.
+
+### Enable DuploCloud Master IP access to an EKS Security Group
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Click the **System Config** tab.
+3. Click **Add**. The **Add Config** pane displays.
+4. From the **Config Type** list box, select, **Flags**.
+5.  From the **Key** list box, select **Block Master VPC CIDR Allow in EKS SG**.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/image (114).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure>
+
+    </div>
+
+
+6. From the **Value** list box, select **True**.
+7.  Click **Submit**. The setting is displayed as **BlockMasterVpcCidrAllowInEksSg** in the **System Config** tab.\
+
+
+    <figure><img src="../../../.gitbook/assets/image (115).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>Flag BlockMasterVpcCidrAllowInEksSg</strong> set to <strong>true</strong></p></figcaption></figure>
 
 ## Kubernetes Containers
 
@@ -212,27 +235,6 @@ If you need security tokens of a longer duration, create them on your own. Secur
 ### Setting Up Docker Registry Credentials
 
 [See this section](docker-registry-credentials.md) in the DuploCloud documentation.
-
-### Advanced configurations with Kubernetes
-
-You can supply advanced configuration options with Kubernetes in the DuploCloud Portal in several ways, including the advanced use cases in this section.
-
-#### Enable DuploCloud Master IP access to an EKS Security Group
-
-1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
-2. Click the **System Config** tab.
-3. Click **Add**. The **Add Config** pane displays.
-4. From the **Config Type** list box, select, **Flags**.
-5. From the **Key** list box, select **Block Master VPC CIDR Allow in EKS SG**.
-6.  From the **Value** list box, select **True**.\
-
-
-    <figure><img src="../../../.gitbook/assets/sg1.png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure>
-
-
-7. Click **Submit**. The setting is displayed as **ENABLE\_STORAGE\_ACCOUNT\_INFRA\_ENCRYTPION** in the **System Config** tab.
-
-<figure><img src="../../../.gitbook/assets/sg2.png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>Flag ENABLE_STORAGE_ACCOUNT_INFRA_ENCRYTPION</strong> set to <strong>true</strong></p></figcaption></figure>
 
 #### Add Pod Toleration spec to a Container configuration
 
