@@ -129,6 +129,7 @@
     * [AWS DynamoDB database tables](aws/aws-services/database/dynamodb.md)
     * [AWS Timestream database](aws/aws-services/database/timestream-database.md)
     * [RDS database](aws/aws-services/database/rds-database/README.md)
+      * [IAM authentication](aws/aws-services/database/rds-database/iam-authentication.md)
       * [Backup and restore](aws/aws-services/database/rds-database/backup-and-restore.md)
       * [Sharing encrypted database](aws/aws-services/database/rds-database/sharing-encrypted-database.md)
       * [Manage RDS Snapshots](aws/aws-services/database/rds-database/manage-rds-snapshots.md)
