@@ -230,7 +230,7 @@ If you need security tokens of a longer duration, create them on your own. Secur
 
 ### Downloading and configuring KubeCtl Token
 
-[See this section](../../../kubernetes/kubectl-setup/kubernetes-kubectl-token.md) in the DuploCloud Kubernetes documentation.
+[See this section](../../../kubernetes/kubectl-setup/kubectl-token.md) in the DuploCloud Kubernetes documentation.
 
 ### Setting Up Docker Registry Credentials
 

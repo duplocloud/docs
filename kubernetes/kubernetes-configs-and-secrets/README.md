@@ -1,13 +1,12 @@
 ---
-description: Using Kubernetes ConfigMaps and Secrets
+description: Setting, mounting, and managing Kubernetes ConfigMaps and Kubernetes Secrets
 ---
 
 # Kubernetes Configs and Secrets
 
-Set and reference Kubernetes secrets in your deployment by configuring the secrets in the DuploCloud Portal.
+You can use the DuploCloud Portal to:
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> _**CONTAINER\_TYPE**_, where _**CONTAINER\_TYPE**_ is **EKS/Native**, **AKS/Native** or **GKE/Native**.
-2. Select the Service from the **Name** column.
-3. Click the **K8S Secrets** tab. The **Kubernetes Secrets** page displays.
-
-<figure><img src="../../.gitbook/assets/cont5.png" alt=""><figcaption><p><strong>Kubernetes Secrets</strong> page</p></figcaption></figure>
+* [Set Kubernetes (K8s) Secrets](setting-kubernetes-secrets.md)
+* [Set Environment Variables from a K8s ConfigMap or Secret](setting-environment-variables-from-config.md)
+* [Mount ConfigMaps and Secrets as files](mounting-config-as-files.md)
+* [Use K8s Secrets with Azure Storage connection data](using-kubernetes-secrets-with-azure-storage-connection-data.md)
