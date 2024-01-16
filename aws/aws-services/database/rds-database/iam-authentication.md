@@ -4,7 +4,7 @@ description: Using IAM for secure log-ins to RDS databases
 
 # IAM authentication
 
-Authenticate to **MySQL**, **PostgreSQL**, and **MariaDB** RDS instances using [AWS Identity and Access Management (IAM) database authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html).
+Authenticate to **MySQL**, **PostgreSQL**, **Aurora MySQL**, **Aurora PostgreSQL**, and **MariaDB** RDS instances using [AWS Identity and Access Management (IAM) database authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html).
 
 Using IAM for authenticating an RDS instance offers the following benefits:
 
