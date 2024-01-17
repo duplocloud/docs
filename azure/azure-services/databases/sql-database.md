@@ -4,7 +4,7 @@ description: Create a MSSQL Server database in DuploCloud
 
 # MSSQL Server database
 
-### Creating the MSSQL Server
+## Creating the MSSQL Server
 
 1. In the DuploCloud Portal, navigate to **DevOps** --> **Database** --> **MSSQLServer.**
 2. Click **Add**.
@@ -17,7 +17,7 @@ description: Create a MSSQL Server database in DuploCloud
 
 </div>
 
-### Viewing database details
+## Viewing database details
 
 You can view database details and configure **Elastic Pools**, **Network Rules**, and **Firewall Rules** by selecting the database from the **MSSQL Server** page in the DuploCloud Portal and clicking the appropriate tab.
 

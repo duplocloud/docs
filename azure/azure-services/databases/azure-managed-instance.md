@@ -4,7 +4,7 @@ description: Create an Azure Managed Instances in DuploCloud
 
 # Azure Managed Instance
 
-### Creating an Azure Managed Instance
+## Creating an Azure Managed Instance
 
 1. In the DuploCloud Portal, navigate to **DevOps** --> **Database** --> **Managed Instances**. The **Create Managed SQL Instance** pane displays.
 2. Click **Add**.
@@ -15,4 +15,4 @@ description: Create an Azure Managed Instances in DuploCloud
 
 ## Viewing instance details
 
-You can view Azure Managed Instances and configure other options by selecting the instance you created, from the M**anaged Instances** page in the DuploCloud Portal.
+You can view Azure Managed Instances and configure other options by selecting the instance you created, from the **Managed Instances** page in the DuploCloud Portal.
