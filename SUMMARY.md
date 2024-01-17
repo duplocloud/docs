@@ -199,6 +199,7 @@
     * [Autoscaling for Hosts](azure/use-cases/autoscaling/README.md)
       * [Autoscaling Azure Agent Pools](azure/use-cases/autoscaling/autoscaling-azure-agent-pools.md)
     * [Snapshots](azure/use-cases/backups.md)
+  * [JIT Access](azure/use-cases/jit-access.md)
   * [Logs](azure/use-cases/logs.md)
   * [Metrics](azure/use-cases/metrics.md)
   * [Faults and alerts](azure/use-cases/faults-and-alerting/README.md)

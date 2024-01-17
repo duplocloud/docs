@@ -62,6 +62,8 @@ brew install duplocloud/tap/duplo-jit
 
 ### Obtaining credentials&#x20;
 
+Obtain credentials using a DuploCloud API Token or interactively.
+
 #### Using an API Token
 
 1. [Obtain a DuploCloud API Token](https://docs.duplocloud.com/docs/administrator-tools/access-control/api-tokens).
@@ -83,19 +85,19 @@ When you make the first AWS call, you are prompted to grant authorization throug
 
 Upon successful authorization, A Just-In-Time token is provided, which is valid for one hour. When the token expires, you are prompted to re-authorize the request.
 
-## Accessing the AWS Console Using the CLI
+## Accessing the AWS Console using the CLI
 
 Obtain access to the AWS console using the Command Line Interface (CLI).
 
 ### **Accessing the AWS Console**
 
-As long as you use the AWS\_PROFILE that matches the profile name you set [in the section above](jit-access.md#obtaining-credentials), the AWS CLI obtains the required access credentials.
+As long as you use the `AWS_PROFILE` that matches the profile name you set [in the section above](jit-access.md#obtaining-credentials), the AWS CLI obtains the required access credentials.
 
 For example:
 
 `AWS_PROFILE=<ENV_NAME> aws ec2 describe-instances`
 
-### **Obtaining a link to the AWS Console Url**
+### **Obtaining a link to the AWS Console URL**
 
 To obtain a link to the AWS Console, run one of the following commands, which copies the Console URL to your clipboard that you can use in any browser.
 
