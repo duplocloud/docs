@@ -11,14 +11,7 @@ You can perform [AWS batch job](https://docs.aws.amazon.com/batch/latest/usergui
 Create scheduling policies to define when your batch job runs.&#x20;
 
 1. From the DuploCloud Portal, navigate to **DevOps** -> **Batch** page, and click the **Scheduling Policies** tab.
-2.  Click **Add**. The **Create Batch Scheduling Policy** page displays.\
-
-
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/scheduling new 2.png" alt=""><figcaption><p><strong>Create Batch Queue</strong> page in DuploCloud Portal</p></figcaption></figure>
-
-    </div>
+2.  Click **Add**. The **Create Batch Scheduling Policy** page displays.
 
 
 3.  In the **Create Batch Scheduling Policy** page, create batch job scheduling policies using the [AWS documentation](https://docs.aws.amazon.com/batch/latest/userguide/scheduling-policies.html). The fields in the AWS documentation map to the fields on the DuploCloud **Create Batch Scheduling Policy** page.\
