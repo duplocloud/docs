@@ -223,6 +223,7 @@
   * [Functions](azure/azure-services/functions.md)
   * [Ingress](azure/azure-services/ingress.md)
   * [Key vault](azure/azure-services/key-vault.md)
+  * [Public IP Address Prefix](azure/azure-services/public-ip-address-prefix.md)
   * [Serverless Web applications](azure/azure-services/web-applications.md)
   * [Service Bus](azure/azure-services/service-bus.md)
   * [Storage account](azure/azure-services/storage-account.md)
