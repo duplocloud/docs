@@ -6,7 +6,7 @@ description: This section discusses how you can configure Github to integrate wi
 
 ## Prerequisites
 
-### Deploy and test the applicatoin
+### Deploy and test the application
 
 To use GitHub CI/CD, you need to deploy the application with DuploCloud as a Service and test that it works as expected.
 
