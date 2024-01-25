@@ -12,7 +12,7 @@ Using IAM for authenticating an RDS instance offers the following benefits:
 * Centrally manage access to your database resources, instead of managing access individually for each DB instance.
 * For applications running on Amazon EC2 hosts, you can use profile credentials specific to your EC2 instance to access your database, instead of using a password, for greater security.
 
-## Configuring IAM in DuploCloud
+## Configuring RDS IAM Authentication in DuploCloud
 
 Use the System Config tab to enable IAM authentication before enabling it for a specific RDS instance.
 
