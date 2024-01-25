@@ -40,3 +40,22 @@ You can create [Amazon Machine Images (AMIs)](https://docs.aws.amazon.com/AWSEC2
 
 </div>
 
+## Disabling Host creation for custom AMIs
+
+You can disable host creation by non-administrators (Users) for custom AMIs by configuring the option in DuploCloud. &#x20;
+
+### Configuring the Disable Host Creation with Custom AMI option&#x20;
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Click the **System Config** tab.
+3. Click **Add**. The **Add Config** pane displays.
+4. In the **Config Type** list box, select **Flags**.
+5. In the **Key** list box, select **Disable Host Creation with Custom AMI**.
+6. In the **Value** list box, select **true**.
+7. Click **Submit**.
+
+<figure><img src="../../../.gitbook/assets/amidis3.png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Key Disable Host Creation with Custom AMI</strong> selected</p></figcaption></figure>
+
+When this setting is configured, the **Other** option in the **Image ID** list box in the **Add Host** page, will be disabled, preventing hosts with custom AMIs from being created.
+
+<figure><img src="../../../.gitbook/assets/amidis2.png" alt=""><figcaption><p><strong>Add Host</strong> page with <strong>Other</strong> option in the <strong>Image ID</strong> list box disabled.</p></figcaption></figure>
