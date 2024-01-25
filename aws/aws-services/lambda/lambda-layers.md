@@ -47,20 +47,20 @@ Before you add a Lambda Layer, you must have defined at least one [Lambda Functi
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Serverless**.
 2. In the **Lambda** tab, select the Lambda Function to which you want to add Lambda Layers.&#x20;
-3.  Click the **Actions** menu and select **Edit**. The **Edit Lambda Function** page displays.\
+3. Click the **Actions** menu and select **Edit**. The **Edit Lambda Function** page displays.
+4.  In the **Layers** area, click the + button. The **Add Lambda Layer** pane displays.\
+    \
 
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/L7.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/lam_eph5 (1).png" alt=""><figcaption><p>Lambda Layers area with add (<strong>+</strong>) and <strong>Delete</strong> options<br><br></p></figcaption></figure>
 
     </div>
-4.  In the Layers area, click the **+** button. The **Add Lambda Layer** pane displays.\
-
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/L6.png" alt=""><figcaption><p><strong>Add a Lambda Layer</strong> pane<br></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/lam_eph6.png" alt=""><figcaption><p><strong>Add a Lambda Layer</strong> pane<br></p></figcaption></figure>
 
     </div>
 5. From the **Layer** list box, select the Lambda Layer to add.
