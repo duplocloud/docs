@@ -8,6 +8,8 @@ coverY: 0
 ## Q4 2023
 
 * AWS
+  * Enable [Spot Instances](../aws/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md) for EKS Autoscaling Groups (ASG).
+  * Implement [Kubernetes Lifecycle Hooks](../kubernetes/kubernetes-lifecycle-hooks.md) while Adding a DuploCloud EKS/Native Service.&#x20;
   * Enable [shared hosts](../aws/use-cases/hosts-vms/adding-shared-hosts.md) to allow K8s Pods in a Tenant to run on Hosts in another Tenant.&#x20;
   * Set a [default automated backup retention period](../aws/aws-services/database/rds-database/backup-and-restore.md#id-0-toc-title-1) for databases.
   * Enable bucket versioning when [creating an S3 bucket](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
@@ -23,6 +25,8 @@ coverY: 0
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
   * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
 * Kubernetes
+  * [Follow logs](../aws/aws-services/containers/eks-native-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
+  * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](../kubernetes/pod-toleration.md).&#x20;
   * Create [Kubernetes Jobs (K8s Jobs)](../kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
   * Create [Kubernetes CronJobs (K8s CronJobs)](../kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 *   General updates
