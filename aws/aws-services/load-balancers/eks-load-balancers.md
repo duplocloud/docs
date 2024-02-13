@@ -29,7 +29,7 @@ Before completing this task, you must [add a Load Balancer Listener of **Type Ne
 1. In the DuploCloud Portal, navigate **DevOps** -> **Containers -> EKS/Native**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
-4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../.gitbook/assets/image (3) (1) (1).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
+4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
 5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pane**.**
 6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. After the CIDRs are added, you [add Security Groups for Custom CIDR(s)](eks-load-balancers.md#adding-security-groups-for-custom-cidrs).\
 
@@ -68,7 +68,7 @@ Repeat this procedure to add additional CIDRs.
 6. From the **Visibility** list box, select **Public** or **Internal**.
 7. Click **Create**.
 
-## Creating a Target Group Only Load Balancer for multiple services <a href="#2d32" id="2d32"></a>
+## Creating a Target Group Only Load Balancer for multiple services <a href="#id-2d32" id="id-2d32"></a>
 
 Instead of creating a unique Load Balancer for each Service you create, you can share a single Load Balancer between multiple Services. This is helpful when your applications run distributed microservices where the requests use multiple services and route traffic based on application URLs, which you can define with Load Balancer Listener Rules.&#x20;
 

@@ -33,7 +33,7 @@ You can configure the Storage Class and Persistent Volume Claims (PVCs) from the
 3. Click **Add**. The **Add Kubernetes Storage Class** page displays.
 4. Create a Storage Class, as in the example below.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Add Kubernetes Storage Class</strong> page </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><strong>Add Kubernetes Storage Class</strong> page </p></figcaption></figure>
 
 {% hint style="info" %}
 For information on using Native Azure StorageClasses, [see this section](storage-options.md).
