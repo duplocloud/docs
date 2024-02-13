@@ -8,19 +8,23 @@ description: Popular and frequently asked questions about DuploCloud and AWS
 
 Yes. This is a major advantage of using DuploCloud. All controls are mapped to various compliance standards. DuploCloud is also very flexible in enabling you to add custom policies (resource quotas, ability to create public-facing endpoints, etc.)
 
-## **How do I SSH into the host?** <a href="#0-toc-title" id="0-toc-title"></a>
+### When creating an Infrastructure, I'm receiving the DuploCloud Fault `maximum number of VPCs reached` when attempting to create an Infrastructure.&#x20;
+
+There is an [AWS quota of 5 five VPCs per Region](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html). Ensure you are not trying to exceed that limit when creating a new Infrastructure.
+
+## **How do I SSH into the host?** <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 Under each Host, you can click on **Connection Details** under **Action** dropdown which will provide the key file and instructions to **SSH**.
 
-## My host is Windows, how do I RDP? <a href="#1-toc-title" id="1-toc-title"></a>
+## My host is Windows, how do I RDP? <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
 Under **Host**, click on **Connection Details** under the **Actions** dropdown, it will provide the password and instructions to **RDP**.
 
-## How do I get into the container where my code is running? <a href="#2-toc-title" id="2-toc-title"></a>
+## How do I get into the container where my code is running? <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
 Under the **Services Status** tab, find the host where the container is running. Then SSH into the host (see instructions above) and then run `sudo docker ps` and get the ID of the container. Then run `sudo docker exec -it <containerid> bash`“. You can tell which one is your container by using the image id. Don’t forget the sudo in Docker commands
 
-## I cannot connect to my service URL, how do I debug? <a href="#3-toc-title" id="3-toc-title"></a>
+## I cannot connect to my service URL, how do I debug? <a href="#id-3-toc-title" id="id-3-toc-title"></a>
 
 Make sure the DNS name is resolved by running on your local machine: `ping`. Then we need to check if the application is running by testing the same from within the container. Then ssh into the host and then connect to your docker container using the Docker `exec` command (see above). From inside the container `curl` the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then `curl` the same URL uses the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
 
@@ -32,7 +36,7 @@ CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a
 
 If your application is running in a DuploCloud [Tenant](../getting-started/application-focussed-interface/tenant.md) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access. For more information, see the [AWS FAQ](aws-faq.md).  &#x20;
 
-## What keys should I use in my application to connect to the AWS resources I have created in DuploCloud (S3, Dynamo, SQS)? <a href="#4-toc-title" id="4-toc-title"></a>
+## What keys should I use in my application to connect to the AWS resources I have created in DuploCloud (S3, Dynamo, SQS)? <a href="#id-4-toc-title" id="id-4-toc-title"></a>
 
 If your application is running in a DuploCloud [Tenant](../getting-started/application-focussed-interface/tenant.md) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access.   &#x20;
 
@@ -42,25 +46,25 @@ Use the AWS constructor that takes only the region as the argument (`us-west-2`)
 **IMPORTANT:** You cannot connect to any DuploCloud AWS resource from your local machine.
 {% endhint %}
 
-## What is a rolling upgrade and how do I enable it? <a href="#5-toc-title" id="5-toc-title"></a>
+## What is a rolling upgrade and how do I enable it? <a href="#id-5-toc-title" id="id-5-toc-title"></a>
 
 If you have multiple replicas in your service i.e., multiple containers, and when you need to update your service, for example, change an image or eNV variable then DuploCloud will make this change one container at a time i.e., it will bring down the first container and bring up the new one on that host with the updated config. If the new container fails to start or the health check URL does not return Http 200 status, then DuploCloud will pause the upgrade of the remaining containers. A user must intervene by fixing the issue typically by updating the service with a newer image that has a fix. If no health check URL is specified, then DuploCloud only checks for the new container to be running. To specify health check, go to the ELB menu and you will find the health check URL suffix.
 
-## I want to have multiple replicas of my MVC service, how do I make sure that only one of them runs migration? <a href="#6-toc-title" id="6-toc-title"></a>
+## I want to have multiple replicas of my MVC service, how do I make sure that only one of them runs migration? <a href="#id-6-toc-title" id="id-6-toc-title"></a>
 
 Enable health check for your service and make sure that the API does not return Http 200 status till migration is done. Since DuploCloud waits for the health check to be complete before upgrading the next service it is guaranteed that only one instance runs migration.
 
-## One or more of my containers are showing in a pending state, how can I debug? <a href="#7-toc-title" id="7-toc-title"></a>
+## One or more of my containers are showing in a pending state, how can I debug? <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 If the status is Pending when the desired state is Running, then the image is being downloaded so wait a few minutes. If it’s been more than five minutes check the faults from the button below the table. Check if your image name is correct and does not have spaces. Image names are case sensitive so it should be all lower case i.e., the image name in DockerHub should also be lower case.
 
 If the current state is Pending when the desired state is Delete then it means this container is the old version of the service. It is still running as the system is in rolling upgrade and the previous replica is not successfully upgraded yet. Check the faults in other containers of this service for which the Current State is _Pending_ with Desired State as _Running_.
 
-## Some of my container status says “pending delete” what does it mean? <a href="#8-toc-title" id="8-toc-title"></a>
+## Some of my container status says “pending delete” what does it mean? <a href="#id-8-toc-title" id="id-8-toc-title"></a>
 
 This means DuploCloud is wanting to remove these containers. The most common reason for this is that another replica of the same service was upgraded but is now not operational. Hence DuploCloud has blocked the upgrade. You might see the other replicas in even a **Running** state, but it is possible that the health check is failing and that’s why the rolling upgrade is blocked. To unblock, fix the service configuration (image, env, etc.) to an error-free state.
 
-## How to create a Host with public IP? <a href="#9-toc-title" id="9-toc-title"></a>
+## How to create a Host with public IP? <a href="#id-9-toc-title" id="id-9-toc-title"></a>
 
 While creating a Host, click on _show advanced_ and select the public subnet in the list of availability zone.
 
