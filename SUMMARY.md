@@ -15,6 +15,7 @@
   * [Compliance Requirements](getting-started/existing-devops-approach/compliance-requirements.md)
   * [DevOps responsibility](getting-started/existing-devops-approach/devops-responsibility.md)
 * [DuploCloud Approach](getting-started/duplocloud-approach.md)
+* [DuploCloud Support Model](getting-started/duplocloud-support-model.md)
 * [Application Focused Interface](getting-started/application-focussed-interface/README.md)
   * [Infrastructure](getting-started/application-focussed-interface/infrastructure.md)
   * [Tenant](getting-started/application-focussed-interface/tenant.md)
