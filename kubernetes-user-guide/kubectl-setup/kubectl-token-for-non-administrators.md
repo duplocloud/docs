@@ -2,7 +2,7 @@
 description: Accessing kubectl without administrator privileges
 ---
 
-# Kubectl Token for non-administrators (AWS only)
+# Kubectl Token for non-administrators
 
 If you don't have administrator privileges, use this procedure to access `kubeconfig` using the `kubectl` token. `kubeconfig` is a YAML file that stores cluster authentication information for kubectl. It contains a list of contexts to which kubectl refers when running commands. By default, `kubeconfig` is saved in the `$HOME/` directory in the Linux operating system.
 
@@ -10,7 +10,7 @@ If you don't have administrator privileges, use this procedure to access `kubeco
 Before beginning, refer to this article for more information about[`kubeconfig`](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
 {% endhint %}
 
-## Updating the AWS Profile
+## (AWS Only) Updating the AWS Profile
 
 Add the following code to your AWS profile:
 
