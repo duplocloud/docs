@@ -36,7 +36,7 @@ No. DuploCloud is a self-hosted solution deployed within the customer's cloud ac
 ### What happens during the DuploCloud onboarding process?
 
 1. DuploCloud creates a private Slack channel so your organization can communicate directly with the DuploCloud Support Staff to resolve any issues and answer questions during the onboarding process.
-2. You create a separate AWS account for DuploCloud, so we don't interfere with any pre-existing AWS accounts and configurations.&#x20;
+2. Typically clients create a separate AWS account, GCP project or Azure subscription for DuploCloud, so we don't interfere with any pre-existing AWS accounts and configurations. The goal is to setup dev environment that the client team validates and switches over to, followed by staging and finally a migration of Production. DuploCloud can also be integrated into an existing environment or there can be a hybrid where some infrastructure is moved over to Duplo managed environment that connects to existing environment.
 3. DuploCloud installs the DuploCloud Portal for you and then schedules a call to orient you to the Portal and do additional configuration, such as creating DuploCloud Services, as required.
 4. During the initial call with DuploCloud, you have the option of completing the set-up yourself, with help from our engineers. You can also create some Services and let our engineers set up the rest for you.
 5. After your DuploCloud Portal has been installed and configured, DuploCloud Infrastructures (VPCs) are running, Kubernetes has been enabled and configured, and logging, monitoring, alerting, CI/CD, and Soc2 Controls have been implemented.
