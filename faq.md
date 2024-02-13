@@ -4,6 +4,12 @@ description: Popular and frequently asked questions about DuploCloud
 
 # FAQs
 
+## Inclusive DuploCloud support
+
+{% content-ref url="https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/snippet/7295" %}
+[DuploCloud Support Model](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/snippet/7295)
+{% endcontent-ref %}
+
 ## What cloud providers does DuploCloud support?
 
 DuploCloud supports the following public cloud providers:
