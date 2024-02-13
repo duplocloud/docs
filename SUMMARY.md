@@ -175,6 +175,7 @@
 * [GCP Overview](gcp/overview.md)
 * [Container deployments](gcp/container-deployments.md)
 * [Prerequisites](gcp/prerequisites.md)
+  * [Cloud DNS Zone](gcp/prerequisites/route-53-hosted-zone.md)
   * [Docker Registry Credentials](gcp/prerequisites/docker-registry-credentials.md)
   * [Shell Access for Docker](gcp/prerequisites/shell-access-for-docker.md)
   * [VPN Setup](gcp/prerequisites/vpn-setup.md)
