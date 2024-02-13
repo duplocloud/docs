@@ -13,7 +13,7 @@ DuploCloud offers hands-on 24/7 Support for all customers via Slack or email as 
 * Use the customer Slack channel created during the Onboarding process.
 * Send us an email at support@duplocloud.com.
 
-Typical response time is within 24-36 hours.
+Typical response time is within 1-2 hours via Slack.
 
 ## Included Support features
 
@@ -40,3 +40,5 @@ Very little is not supported by our staff of DevOps professionals, and some feat
 
 * Patching an application inside a Docker image
 * Monitoring alerts in a Network Operations Center (NOC)&#x20;
+* Troubleshooting of application code
+* Database configuration
