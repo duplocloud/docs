@@ -2,11 +2,12 @@
 
 The application engineers start off by giving a set of requirements to the operations or DevOps team. This typically includes:
 
-1. **High level architecture.** Like the example shown in the figure below which depicts the following:\
+1. **High level architecture.** Like the AWS example shown in the figure below which depicts the following:\
    \- A set of docker containers to be deployed connected to a SQL database along with a Redis instance and an S3 bucket.\
    \- Part of the containers needs to be behind a public ELB, part behind an internal LB.\
    \- Data science team may want a Spark cluster connected to ES\
-   \- Lambda functions behind API gateway are to be deployed.
+   \- Lambda functions behind API gateway are to be deployed.\
+   One could draw similar examples for other cloud providers
 
 ![High Level Engineering Requirements](<../../.gitbook/assets/Screen Shot 2022-03-12 at 1.08.33 PM.png>)
 
