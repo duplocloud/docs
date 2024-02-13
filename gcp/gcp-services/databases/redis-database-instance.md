@@ -2,7 +2,7 @@
 description: Support for Redis database instances
 ---
 
-# AWS Redis database instance
+# Redis database instance
 
 DuploCloud supports the [AWS Redis](https://aws.amazon.com/redis/) database instances. Redis stands for Remote Dictionary Server and is a fast, open-source, in-memory, key-value data store. Redis can function as a database, cache, message broker, and queue.
 
@@ -10,7 +10,7 @@ Redis delivers sub-millisecond response times, enabling millions of requests per
 
 ## Adding a Redis database instance
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. Click the **Redis** tab.
 3.  Click **Add**. The **Add Redis Instance** page displays.\
 

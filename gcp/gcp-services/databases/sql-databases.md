@@ -12,7 +12,7 @@ Use this procedure to create:
 * SQL databases with PostGres engines
 * SQL databases with SQLServer engines
 
-1. In the DuploCloud Portal, navigate to **DevOps** --> **Database**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** --> **Database**.
 2. Click the **SQL** tab.
 3. Click **Add**. The **Add SQL DB** page displays.&#x20;
 4. For MySQL databases and SQL databases with PostGres engines, provide the **Name**, **SQL Version**, and **Tier** (Machine Type/CPU). For SQL databases with SQLServer engines, provide the same inputs, in addition to **Root Password** and **Disk Size** in gigabytes (GB).

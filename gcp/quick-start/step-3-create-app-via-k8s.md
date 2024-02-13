@@ -2,7 +2,7 @@
 
 In this exercise, we will create a simple Google Cloud Nginx service.
 
-To create a service go to DevOps -> Containers -> GKE /Native and click on the **+ADD** button and fill in the below minimum fields.
+To create a service go to **Kubernetes->Services** and click on the **+Add** button and fill in the below minimum fields.
 
 * **Name (Mandatory)** of the service: example nginx-demo
 * **Docker image (Mandatory)**: for example nginx:latest

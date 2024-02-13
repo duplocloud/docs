@@ -9,8 +9,11 @@ From the DuploCloud Portal (Administrator --> Infrastructure) create an infrastr
 * Region: us-east1
 * Subnet CIDR: 22
 * Enable GKE: enabled
+* Cluster Mode: GKE Autopilot
 
-<figure><img src="../../.gitbook/assets/image (6) (3).png" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 5.08.04 PM.png" alt=""><figcaption></figcaption></figure>
 
 This takes about 20 minutes.  Infrastructure status should move to Completed. At the end of it, double-check that a "plan" (Administrators --> Plans) has been created with the same name (nonprod).
 
