@@ -2,7 +2,7 @@
 description: How Infrastructures and Plans work together to create a VPC
 ---
 
-# Infrastructure (VPC) and Plan (configuration)
+# Infrastructure and Plan
 
 Infrastructures are abstractions that allow you to create a Virtual Private Cloud (VPC) instance in the DuploCloud Portal. When you create an Infrastructure, a Plan is automatically generated to supply the network configuration necessary for your Infrastructure to run.&#x20;
 
@@ -22,16 +22,15 @@ Create a DuploCloud Infrastructure in the DuploCloud Portal:
 2. Click **Add**.
 3. Define the Infrastructure by completing the fields on the **Add Infrastructure** form.&#x20;
 4. Select **Enable GKE** to enable GKE for the Infrastructure.
-5. Optionally, select **Advanced Options** to specify additional configurations (public and private subnets, for example).
-6. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page.
-
-![GCP Add Infrastructure page](<../../../.gitbook/assets/GCP\_Infra\_Add (1).png>)
+5. Select **Cluster Mode**, to pick either GKE Standard or Autopilot.
+6. Optionally, select **Advanced Options** to specify additional configurations (public and private subnets, for example).
+7. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page.
 
 {% hint style="warning" %}
-Up to one instance (0 or 1) of a GKS, EKS/Native, or ECS is supported for each DuploCloud Infrastructure.
+Up to one instance (0 or 1) of a GKE Cluster is supported when you create the Infrastructure&#x20;
 {% endhint %}
 
-When you create the Infrastructure, DuploCloud creates the following components:
+### DuploCloud creates the following components:
 
 * VPC with 2 subnets (private, public) in each availability zone
 * Required security groups

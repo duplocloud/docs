@@ -249,6 +249,8 @@
   * [Step 5: Test the Application](gcp/quick-start/step-5-test-the-application.md)
 * [GCP Use Cases](gcp/use-cases/README.md)
   * [Infrastructure and Plan](gcp/use-cases/disaster-recovery/README.md)
+    * [Creating GKE Autopilot Cluster](gcp/use-cases/disaster-recovery/creating-gke-autopilot-cluster.md)
+    * [Creating GKE Standard Cluster](gcp/use-cases/disaster-recovery/creating-gke-standard-cluster.md)
     * [Kubectl token and config](gcp/use-cases/disaster-recovery/kubectl-token-and-config.md)
     * [Upgrading the GKE version](gcp/use-cases/disaster-recovery/upgrading-eks-version.md)
   * [Tenant](gcp/use-cases/tenant-environment.md)

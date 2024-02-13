@@ -34,9 +34,9 @@ Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_d
 | **Host Shell**      | Accesses the Host Shell.                                                                                                                                       |
 | **Delete**          | Deletes the container.                                                                                                                                         |
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
 
-### Creating multiple containers for ECS Services using a Task Definition <a href="#7-toc-title" id="7-toc-title"></a>
+### Creating multiple containers for ECS Services using a Task Definition <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 You can create up to five (5) containers for ECS services by defining a Task Definition.
 
@@ -73,11 +73,11 @@ To designate a container as Essential, see [Defining an Essential Container](ecs
 9. Specify **Port Mappings**, and **Add New** mappings or **Delete** them, if needed.
 10. Click **Submit**. Your Task Definition for multiple ECS Service containers is created.
 
-### Editing multiple containers for ECS Services <a href="#7-toc-title" id="7-toc-title"></a>
+### Editing multiple containers for ECS Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 To edit the created Task Definition in order to add or delete multiple containers, select the Task Definition in the Task Definitions tab, and from the **Actions** menu, select **Edit Task Definition**.&#x20;
 
-### Defining an Essential Container <a href="#7-toc-title" id="7-toc-title"></a>
+### Defining an Essential Container <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 In AWS ECS, an essential container is a key component of a task definition. An essential container is one that must successfully complete for the task to be considered healthy. If an essential container fails or stops for any reason, the entire task is marked as failed. Essential containers are commonly used to run the main application or service within the task.
 
@@ -91,7 +91,7 @@ To designate a container as Essential, follow the [Creating multiple containers 
 
 </div>
 
-## Elastic Container Service (ECS) Fargate <a href="#9-toc-title" id="9-toc-title"></a>
+## Elastic Container Service (ECS) Fargate <a href="#id-9-toc-title" id="id-9-toc-title"></a>
 
 Fargate is a technology that you can use with ECS to run containers without having to manage servers or clusters of EC2 instances.
 
