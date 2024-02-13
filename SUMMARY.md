@@ -201,11 +201,13 @@
     * [Passing Config and Secrets](gcp/gcp-services/containers/passing-config-and-secrets.md)
   * [Load Balancers](gcp/gcp-services/step-4-create-a-load-balancer.md)
   * [Kubernetes](gcp/gcp-services/containers-1.md)
+  * [Cloud SQL](gcp/gcp-services/cloud-sql.md)
+  * [Managed Redis](gcp/gcp-services/managed-redis.md)
+  * [Cloud Storage](gcp/gcp-services/s3-bucket.md)
+  * [Cloud Functions](gcp/gcp-services/s3-bucket-1.md)
+  * [Pub/Sub](gcp/gcp-services/s3-bucket-2.md)
+  * [Cloud Scheduler](gcp/gcp-services/s3-bucket-3.md)
   * [Cloud Armour](gcp/gcp-services/cloud-armour.md)
-  * [Databases](gcp/gcp-services/databases/README.md)
-    * [Redis database instance](gcp/gcp-services/databases/redis-database-instance.md)
-    * [SQL databases](gcp/gcp-services/databases/sql-databases.md)
-  * [Storage Buckets](gcp/gcp-services/s3-bucket.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
 ## Azure user guide <a href="#azure" id="azure"></a>
