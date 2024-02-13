@@ -150,7 +150,7 @@ rm -rf ~/Library/Caches/duplo-jit/
 Two possible reasons for receiving this fault message are:
 
 * You are not allocating enough hosts to process your workload.
-* The [allocation tags](gcp/container-deployments/concepts.md#allocation-tags) you have assigned to your existing hosts are limiting additional Service workloads.
+* The [allocation tags](broken-reference) you have assigned to your existing hosts are limiting additional Service workloads.
 
 ### I'm not seeing logs displayed for a Tenant. I get the error `Docker native collection agent Filebeat is not running for Tenant`.
 

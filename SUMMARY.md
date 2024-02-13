@@ -173,9 +173,7 @@
 ## GCP user guide <a href="#gcp" id="gcp"></a>
 
 * [GCP Overview](gcp/overview.md)
-* [Container deployments](gcp/container-deployments/README.md)
-  * [Container orchestration features](gcp/container-deployments/container-orchestrators.md)
-  * [Key DuploCloud concepts](gcp/container-deployments/concepts.md)
+* [Container deployments](gcp/container-deployments.md)
 * [Prerequisites](gcp/prerequisites.md)
   * [Docker Registry Credentials](gcp/prerequisites/docker-registry-credentials.md)
   * [Shell Access for Docker](gcp/prerequisites/shell-access-for-docker.md)
