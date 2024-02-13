@@ -29,6 +29,28 @@
 * [Container orchestrators](containers/container-orchestrators.md)
 * [Terminologies in Container Orchestration](containers/concepts.md)
 
+## Kubernetes User Guide
+
+* [Kubernetes Overview](kubernetes-user-guide/kubernetes-overview.md)
+* [Kubernetes Quick start](kubernetes-user-guide/kubernetes-quick-start.md)
+* [Kubectl setup](kubernetes-user-guide/kubectl-setup/README.md)
+  * [KubeCtl Token](kubernetes-user-guide/kubectl-setup/kubectl-token.md)
+  * [Kubectl Shell](kubernetes-user-guide/kubectl-setup/kubectl-shell.md)
+  * [Kubectl Token for non-administrators](kubernetes-user-guide/kubectl-setup/kubectl-token-for-non-administrators.md)
+* [Jobs](kubernetes-user-guide/jobs.md)
+* [CronJobs](kubernetes-user-guide/cronjobs.md)
+* [Kubernetes Configs and Secrets](kubernetes-user-guide/kubernetes-configs-and-secrets/README.md)
+  * [Setting Kubernetes Secrets](kubernetes-user-guide/kubernetes-configs-and-secrets/setting-kubernetes-secrets.md)
+  * [Setting Environment Variables (EVs) from a ConfigMap or Secret](kubernetes-user-guide/kubernetes-configs-and-secrets/setting-environment-variables-from-config.md)
+  * [Mounting ConfigMaps and Secrets as files](kubernetes-user-guide/kubernetes-configs-and-secrets/mounting-config-as-files.md)
+  * [Using Kubernetes Secrets with Azure Storage connection data](kubernetes-user-guide/kubernetes-configs-and-secrets/using-kubernetes-secrets-with-azure-storage-connection-data.md)
+  * [SecretProviderClass custom resource](kubernetes-user-guide/kubernetes-configs-and-secrets/adding-secretproviderclass-custom-resource.md)
+* [Kubernetes Lifecycle Hooks](kubernetes-user-guide/kubernetes-lifecycle-hooks.md)
+* [HPA](kubernetes-user-guide/hpa.md)
+* [Pod Toleration](kubernetes-user-guide/pod-toleration.md)
+* [Kubernetes StorageClass and PVC](kubernetes-user-guide/kubernetes-storageclass-and-pvc/README.md)
+  * [Native Azure Storage Classes](kubernetes-user-guide/kubernetes-storageclass-and-pvc/storage-options.md)
+
 ## AWS user guide <a href="#aws" id="aws"></a>
 
 * [AWS overview](aws/overview.md)
@@ -271,27 +293,6 @@
   * [Subscription](azure/azure-services/subscription.md)
   * [VM Scale Sets](azure/use-cases/vm-scale-sets.md)
 * [Azure FAQ](azure/azure-faq.md)
-
-## Kubernetes User Guide
-
-* [Kubernetes Overview](kubernetes-user-guide/kubernetes-overview.md)
-* [Kubectl setup](kubernetes-user-guide/kubectl-setup/README.md)
-  * [KubeCtl Token](kubernetes-user-guide/kubectl-setup/kubectl-token.md)
-  * [Kubectl Shell](kubernetes-user-guide/kubectl-setup/kubectl-shell.md)
-  * [Kubectl Token for non-administrators](kubernetes-user-guide/kubectl-setup/kubectl-token-for-non-administrators.md)
-* [Jobs](kubernetes-user-guide/jobs.md)
-* [CronJobs](kubernetes-user-guide/cronjobs.md)
-* [Kubernetes Configs and Secrets](kubernetes-user-guide/kubernetes-configs-and-secrets/README.md)
-  * [Setting Kubernetes Secrets](kubernetes-user-guide/kubernetes-configs-and-secrets/setting-kubernetes-secrets.md)
-  * [Setting Environment Variables (EVs) from a ConfigMap or Secret](kubernetes-user-guide/kubernetes-configs-and-secrets/setting-environment-variables-from-config.md)
-  * [Mounting ConfigMaps and Secrets as files](kubernetes-user-guide/kubernetes-configs-and-secrets/mounting-config-as-files.md)
-  * [Using Kubernetes Secrets with Azure Storage connection data](kubernetes-user-guide/kubernetes-configs-and-secrets/using-kubernetes-secrets-with-azure-storage-connection-data.md)
-  * [SecretProviderClass custom resource](kubernetes-user-guide/kubernetes-configs-and-secrets/adding-secretproviderclass-custom-resource.md)
-* [Kubernetes Lifecycle Hooks](kubernetes-user-guide/kubernetes-lifecycle-hooks.md)
-* [HPA](kubernetes-user-guide/hpa.md)
-* [Pod Toleration](kubernetes-user-guide/pod-toleration.md)
-* [Kubernetes StorageClass and PVC](kubernetes-user-guide/kubernetes-storageclass-and-pvc/README.md)
-  * [Native Azure Storage Classes](kubernetes-user-guide/kubernetes-storageclass-and-pvc/storage-options.md)
 
 ## CI/CD
 
