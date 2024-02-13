@@ -37,7 +37,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [Elasticsearch](elasticsearch.md)
 * [EMR Serverless](emr-serverless.md)
 * [EventBridge](cloud-watch.md)
-* [(Kubernetes) Ingress](adding-ingress.md)
+* [(Kubernetes) Ingress](../../kubernetes-user-guide/ingress-loadbalancer/adding-ingress.md)
 * [IoT (Internet of Things)](iot-internet-of-things.md)
 * [Kafka Cluster](kafka-cluster.md)
 * [Kinesis Stream](kinesis-stream.md)

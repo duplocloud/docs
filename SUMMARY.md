@@ -50,6 +50,10 @@
 * [Pod Toleration](kubernetes-user-guide/pod-toleration.md)
 * [Kubernetes StorageClass and PVC](kubernetes-user-guide/kubernetes-storageclass-and-pvc/README.md)
   * [Native Azure Storage Classes](kubernetes-user-guide/kubernetes-storageclass-and-pvc/storage-options.md)
+* [Ingress Loadbalancer](kubernetes-user-guide/ingress-loadbalancer/README.md)
+  * [EKS Ingress](kubernetes-user-guide/ingress-loadbalancer/adding-ingress.md)
+  * [GKE Ingress](kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
+  * [Azure Ingress](kubernetes-user-guide/ingress-loadbalancer/azure-ingress.md)
 
 ## AWS user guide <a href="#aws" id="aws"></a>
 
@@ -168,7 +172,6 @@
   * [Elasticsearch](aws/aws-services/elasticsearch.md)
   * [EMR Serverless](aws/aws-services/emr-serverless.md)
   * [Eventbridge](aws/aws-services/cloud-watch.md)
-  * [Ingress](aws/aws-services/adding-ingress.md)
   * [IoT (Internet of Things)](aws/aws-services/iot-internet-of-things.md)
   * [Kafka Cluster](aws/aws-services/kafka-cluster.md)
   * [Kinesis Stream](aws/aws-services/kinesis-stream.md)

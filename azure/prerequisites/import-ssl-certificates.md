@@ -85,7 +85,7 @@ With the Secret Identifier in your Clipboard, you are now ready to configure the
 ## Using the SSL Certificate for Ingress in DuploCloud
 
 {% hint style="warning" %}
-Before attaching certificates with K8S Ingress in the DuploCloud Portal, [create and configure an **azure-application-gateway**](../../aws/aws-services/adding-ingress.md).
+Before attaching certificates with K8S Ingress in the DuploCloud Portal, [create and configure an **azure-application-gateway**](../../kubernetes-user-guide/ingress-loadbalancer/adding-ingress.md).
 {% endhint %}
 
 If you use Kubernetes Ingress, you can attach the certificate to the appropriate DuploCloud service in the DuploCloud portal by using the **AKS / Native K8S Ingress** option.
