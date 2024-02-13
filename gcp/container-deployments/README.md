@@ -12,7 +12,7 @@ In addition, the DuploCloud platform has a built-in container management platfor
 
 DuploCloud supports many types of applications in GCP, including but not limited to:
 
-* [Dockerized apps](../../aws/container-deployments/) constitute about 90% of our user workloads. The platform orchestrates containerized application deployments using GKE, or built-in container orchestrations as defined in the [Container orchestration features](container-orchestrators.md) section.
+* [Dockerized apps](broken-reference) constitute about 90% of our user workloads. The platform orchestrates containerized application deployments using GKE, or built-in container orchestrations as defined in the [Container orchestration features](container-orchestrators.md) section.
 
 {% hint style="info" %}
 If you need other services, please get in touch with your DuploCloud support team. The typical turnaround time for creating a custom service is a business week.&#x20;

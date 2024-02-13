@@ -24,12 +24,15 @@
 * [No-Code / Low-Code](getting-started/no-code-low-code.md)
 * [Security and Compliance](aws/broader-scenarios/security-and-compliance.md)
 
+***
+
+* [Container Deployments](container-deployments/README.md)
+  * [Container orchestrators](container-deployments/container-orchestrators.md)
+  * [DuploCloud Terminology Within Container Orchestration](container-deployments/concepts.md)
+
 ## AWS user guide <a href="#aws" id="aws"></a>
 
 * [AWS overview](aws/overview.md)
-* [Container deployments](aws/container-deployments/README.md)
-  * [Container orchestrators](aws/container-deployments/container-orchestrators.md)
-  * [Key DuploCloud concepts](aws/container-deployments/concepts.md)
 * [Prerequisites](aws/prerequisites/README.md)
   * [Route 53 Hosted Zone](aws/prerequisites/route-53-hosted-zone.md)
   * [ACM Certificate](aws/prerequisites/acm-certificate.md)
