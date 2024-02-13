@@ -34,7 +34,7 @@ Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_d
 | **Host Shell**      | Accesses the Host Shell.                                                                                                                                       |
 | **Delete**          | Deletes the container.                                                                                                                                         |
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
 
 ### Creating multiple containers for ECS Services using a Task Definition <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 

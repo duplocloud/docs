@@ -66,8 +66,8 @@ coverY: 0
   * [Automate fault healing](../aws/use-cases/faults-and-alarms/automatic-fault-healing.md) on EC2 Hosts that fail a status check.
   * Enhanced support for [Startup Probes](../aws/aws-services/setting-up-probes.md).
 * GCP
-  * Support for [Redis database instances](../gcp/gcp-services/databases/redis-database-instance.md).
-  * Support for [SQL databases](../gcp/gcp-services/databases/sql-databases.md).
+  * Support for [Redis database instances](../gcp/gcp-services/managed-redis.md).
+  * Support for [SQL databases](../gcp/gcp-services/cloud-sql.md).
   * Change [Cloud Armour Security Policies](../gcp/gcp-services/cloud-armour.md#modifying-a-cloud-armour-configuration-security-policy).
 * General updates
   * **Last Login** card available for determining the last user sign-in when [viewing user access](../user-administration/access-control/add-edit-or-delete-a-user.md#view-users).
@@ -121,7 +121,7 @@ coverY: 0
   * Enable [NAT Gateways for High Availability (HA)](../aws/aws-services/nat-gateway-for-ha.md).
   * [Restart up to twenty DuploCloud Services](../aws/aws-services/containers/#7-toc-title-1) at once.
 * GCP
-  * Updated documentation for [supported databases](../gcp/gcp-services/databases/).
+  * Updated documentation for [supported databases](broken-reference).
 * CI/CD
   * Documentation for [Bitbucket Pipelines](../ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
 * Terraform&#x20;

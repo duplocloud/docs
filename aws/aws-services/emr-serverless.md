@@ -37,7 +37,7 @@ To create EMR Serverless applications you first need to create an EMR studio.
 
 
 
-    <figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption><p>EMR Serverless Studio Actions Menu</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>EMR Serverless Studio Actions Menu</p></figcaption></figure>
 
 Now that the EMR Studio exists, you create an application to run analytics with it.\
 The DuploCloud Portal supports `Hive` and `Spark` applications. In this example, we create a Spark Application.
