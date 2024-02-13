@@ -324,6 +324,7 @@
   * [Configure Azure DevOps](ci-cd/azure-pipelines/configure-azure-devops.md)
   * [Build a Docker image from Azure DevOps](ci-cd/azure-pipelines/build-a-docker-image-from-azure-devops.md)
   * [Update a Service](ci-cd/azure-pipelines/update-a-service.md)
+  * [Troubleshooting](ci-cd/azure-pipelines/troubleshooting.md)
 * [Katkit](ci-cd/katkit/README.md)
   * [Environments](ci-cd/katkit/environments.md)
   * [Link repository](ci-cd/katkit/link-repository.md)
