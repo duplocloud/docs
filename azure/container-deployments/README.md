@@ -12,7 +12,7 @@ In addition, the DuploCloud platform has a built-in container management platfor
 
 DuploCloud supports many types of applications in Azure, including but not limited to:
 
-* [Dockerized apps](../../aws/container-deployments/) constitute about 90% of our user workloads. The platform orchestrates containerized application deployments using AKS or built-in container orchestrations as defined in the [Container orchestration features](../../gcp/container-deployments/container-orchestrators.md) section.
+* [Dockerized apps](broken-reference) constitute about 90% of our user workloads. The platform orchestrates containerized application deployments using AKS or built-in container orchestrations as defined in the [Container orchestration features](../../gcp/container-deployments/container-orchestrators.md) section.
 * Sagemaker
 * Glue&#x20;
 
