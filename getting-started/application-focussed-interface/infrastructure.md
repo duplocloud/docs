@@ -1,6 +1,6 @@
 # Infrastructure
 
-Each Infrastructure represents a network connection to a unique VPC, in a region with a Kubernetes (or ECS cluster or both). Infrastructure can be created with 4 basic inputs: Name, VPC CIDR, Number of AZs, Region, and the option to enable or disable a K8S/ECS cluster. Behind the scenes, the system will automatically create the subnets, NAT gateway, routes, and clusters in the given region.
+Each Infrastructure represents a network connection to a unique VPC/VNET, in a region with a Kubernetes. In case of AWS it can also include an ECS. Infrastructure can be created with 4 basic inputs: Name, VPC CIDR, Number of AZs, Region, and the option to enable or disable a K8S/ECS cluster. Behind the scenes, the system will automatically create the subnets, NAT gateway, routes, and clusters in the given region.
 
 ![Infrastructure Creation Screen](<../../.gitbook/assets/image (12) (4).png>)
 
