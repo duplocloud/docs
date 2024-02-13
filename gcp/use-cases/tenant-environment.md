@@ -2,7 +2,7 @@
 description: Using Tenants in DuploCloud
 ---
 
-# Tenant (Environment)
+# Tenant
 
 In GCP, cloud features such as Resource Groups, Identity and Access Management (IAM), Security Groups, Cloud KMS, as well as Kubernetes Namespaces, are exposed in Tenants which reference their configurations.
 
@@ -13,7 +13,7 @@ When you create Tenants in an Infrastructure, a namespace is created in the Kube
 At the logical level, the Tenant is:
 
 * **A Container of resources**: All resources (except ones corresponding to the Infrastructure) are created within the Tenant. If a tenant is deleted, all the resources in the Tenant are terminated.
-* **A Security Boundary:** All resources within a Tenant can talk to each other. For example, a Docker container deployed in a GKS instance within the tenant will have access to Google Cloud Storage and Google Cloud databases within the same tenant. SQL database instances in another tenant cannot be reached, for example, by default. Tenants expose endpoints to each other using load balancers or explicit inter-Tenant security groups and identity management policies.
+* **A Security Boundary:** All resources within a Tenant can talk to each other. For example, a Docker container deployed in a GKE instance within the tenant will have access to Google Cloud Storage and Google Cloud databases within the same tenant. SQL database instances in another tenant cannot be reached, for example, by default. Tenants expose endpoints to each other using load balancers or explicit inter-Tenant security groups and identity management policies.
 * **User Access Control:** Self-service is the bedrock of the DuploCloud platform. To that end, users can be granted Tenant level access. For example, John and Jim are developers who can be granted access to the **DEV01** tenant, Joe is an administrator who has access to all tenants, and Anna is a data scientist who has access _only_ to the **DATASCI** tenant.
 * **A Billing Unit**: Because the Tenant is a container of resources, all resources in the Tenant are tagged with the Tenant's name in the cloud provider, making it easy to segregate usage by Tenant.
 * **A mechanism for alerting**: All alerts represent Faults in any resource within the Tenants.

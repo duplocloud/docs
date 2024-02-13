@@ -6,7 +6,7 @@ description: Set Docker registry credentials
 
 ## Set Docker Registry Credentials&#x20;
 
-1. In the DuploCloud Portal, navigate to  **DevOps** -> **Containers** -> **GKE/Native**. Docker registry credentials are passed to the Kubernetes cluster as `kubernetes.io/dockerconfigjson`.
+1. In the DuploCloud Portal, navigate to  **Docker->Services**. Docker registry credentials are passed to the Kubernetes cluster as `kubernetes.io/dockerconfigjson`.
 2. Click **Docker Credentials**. The **Set Docker registry Creds** pane displays.
 3. Supply the credentials and click **Submit**.
 4. Enable the Docker Shell Service by clicking **Enable Docker Shell**.
