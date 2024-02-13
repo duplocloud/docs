@@ -14,4 +14,4 @@ When a DuploCloud Tenant is created with Kubernetes access, DuploCloud creates t
 * `duploservices--readonly-user` - This service account is assigned to the `duploservices-<tenant>-readonly-role` role binding. It provides read-only access to resources in the Tenant
 * `duploservices--edit-user` - This service account is assigned to the `duploservices-<tenant>-edit-role` role binding. It provides edit access to resources in the Tenant. This is the service account that is assigned to a new Pod, unless you explicitly override it
 
-Service accounts can be applied to Pods using the DuploCloud Service's **Other Pod Configuration** field when you Add a [Service](../container-deployments/concepts.md).
+Service accounts can be applied to Pods using the DuploCloud Service's **Other Pod Configuration** field when you Add a [Service](../containers/concepts.md).

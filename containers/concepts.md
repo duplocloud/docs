@@ -1,8 +1,8 @@
 ---
-description: Key terms and concepts in DuploCloud AWS
+description: Key terms and concepts in DuploCloud Container Orchestration
 ---
 
-# DuploCloud Terminology Within Container Orchestration
+# Terminologies in Container Orchestration
 
 {% hint style="info" %}
 The following concepts do not apply to ECS. ECS uses a proprietary policy model, which is explained in a [later section](../aws/use-cases/disaster-recovery/ecs-setup/).

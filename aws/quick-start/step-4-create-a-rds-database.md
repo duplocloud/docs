@@ -14,7 +14,7 @@ See the [DuploCloud AWS Database documentation](../aws-services/database/) for m
 
 _Estimated time to complete Step 3: 5 minutes._
 
-## Prerequisites <a href="#0-toc-title" id="0-toc-title"></a>
+## Prerequisites <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 Before creating an RDS, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
@@ -32,7 +32,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 </div>
 
-## Creating an RDS database <a href="#0-toc-title" id="0-toc-title"></a>
+## Creating an RDS database <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**. The **Database** page displays.
 2.  In the **RDS** tab, click **Add**. The **Create a RDS** page displays.\
@@ -62,7 +62,7 @@ DuploCloud prepends **DUPLO** to the name of your RDS database instance.
 | **Rds Instance Size**   | `db.t3.medium`                      |
 | **Storage size in GB**  | `30`                                |
 
-## Validating RDS database creation <a href="#1-toc-title" id="1-toc-title"></a>
+## Validating RDS database creation <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
 You can monitor the status of database creation using the **RDS** tab and the **Status** column.&#x20;
 
@@ -81,7 +81,7 @@ Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src
 
 </div>
 
-## Verifying database endpoints <a href="#1-toc-title" id="1-toc-title"></a>
+## Verifying database endpoints <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
 1. In the **RDS** tab, select the **DUPLODOCS** database you created.
 2.  Note the database **Endpoint**, the database name, and the database credentials. For security, the database is automatically placed in a private subnet to prevent all access from the internet. Access to the database is automatically set up for all resources (EC2 instances, containers, Lambdas, etc) in the DuploCloud **dev01** Tenant. You need the Endpoint to connect to the database from an application running in the EC2 instance.\
@@ -96,7 +96,7 @@ Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src
 
 
 {% hint style="info" %}
-When you place a DuploCloud Service in a live production environment, consider passing the database endpoint, name, and credentials to a DuploCloud Service using [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), or [Kubernetes Configs and Secrets](../../kubernetes/kubernetes-configs-and-secrets/).
+When you place a DuploCloud Service in a live production environment, consider passing the database endpoint, name, and credentials to a DuploCloud Service using [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), or [Kubernetes Configs and Secrets](../../kubernetes-user-guide/kubernetes-configs-and-secrets/).
 {% endhint %}
 
 ## Checking your work

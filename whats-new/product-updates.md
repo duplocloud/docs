@@ -9,7 +9,7 @@ coverY: 0
 
 * AWS
   * Enable [Spot Instances](../aws/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md) for EKS Autoscaling Groups (ASG).
-  * Implement [Kubernetes Lifecycle Hooks](../kubernetes/kubernetes-lifecycle-hooks.md) while Adding a DuploCloud EKS/Native Service.&#x20;
+  * Implement [Kubernetes Lifecycle Hooks](../kubernetes-user-guide/kubernetes-lifecycle-hooks.md) while Adding a DuploCloud EKS/Native Service.&#x20;
   * Enable [shared hosts](../aws/use-cases/hosts-vms/adding-shared-hosts.md) to allow K8s Pods in a Tenant to run on Hosts in another Tenant.&#x20;
   * Set a [default automated backup retention period](../aws/aws-services/database/rds-database/backup-and-restore.md#id-0-toc-title-1) for databases.
   * Enable bucket versioning when [creating an S3 bucket](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
@@ -26,9 +26,9 @@ coverY: 0
   * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
 * Kubernetes
   * [Follow logs](../aws/aws-services/containers/eks-native-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
-  * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](../kubernetes/pod-toleration.md).&#x20;
-  * Create [Kubernetes Jobs (K8s Jobs)](../kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
-  * Create [Kubernetes CronJobs (K8s CronJobs)](../kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
+  * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](../kubernetes-user-guide/pod-toleration.md).&#x20;
+  * Create [Kubernetes Jobs (K8s Jobs)](../kubernetes-user-guide/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
+  * Create [Kubernetes CronJobs (K8s CronJobs)](../kubernetes-user-guide/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 *   General updates
 
     * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
@@ -178,7 +178,7 @@ coverY: 0
 
 * [Support for Elastic File System (EFS)](../aws/aws-services/elastic-file-system-efs/):  Support for adding EFS has been added to DuploCloud. You can create and mount a shared filesystem for an Infrastructure in the DuploCloud Portal.
 * [Support for adding Kubernetes Storage Class:](../aws/aws-services/storage/adding-k8s-storage-class.md) Support for Kubernetes Storage Class and Persistent Volumes is now available.
-* [Support for Kubernetes Secret Provider Class](../kubernetes/kubernetes-configs-and-secrets/adding-secretproviderclass-custom-resource.md): This provides the ability to integrate AWS parameters and secrets to be available as Kubernetes secrets.
+* [Support for Kubernetes Secret Provider Class](../kubernetes-user-guide/kubernetes-configs-and-secrets/adding-secretproviderclass-custom-resource.md): This provides the ability to integrate AWS parameters and secrets to be available as Kubernetes secrets.
 * [Ability to add Lambda using Container Images](../aws/aws-services/lambda/create-lambda-using-container-image.md): Users can now configure an AWS Lambda using Container images.
 * [Support to configure RDS Automatic Backup Retention](../aws/aws-services/database/rds-database/backup-and-restore.md#0-toc-title-1):  Administrators can configure RDS Automatic Backup Retention in days at the system level
 * [Export Terraform from an existing Tenant](https://github.com/duplocloud/tenant-terraform-generator): Ability to export DuploCloud terraform provider code for an existing DuploCloud Tenant\

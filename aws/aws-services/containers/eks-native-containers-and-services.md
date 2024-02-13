@@ -32,7 +32,7 @@ For EKS Services, select the Service **Name** and click the [**Actions** menu](e
 
     </div>
 5. Click **Next.** The **Advanced Options** section of the **Add Service** page displays.
-6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../kubernetes/kubernetes-lifecycle-hooks.md), by adding the YAML to the **Other Container Config** field (optional).&#x20;
+6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../kubernetes-user-guide/kubernetes-lifecycle-hooks.md), by adding the YAML to the **Other Container Config** field (optional).&#x20;
 7. Click **Create**. The Service is created.&#x20;
 
 {% hint style="warning" %}
@@ -226,11 +226,11 @@ If you need security tokens of a longer duration, create them on your own. Secur
 
 ### Passing Kubernetes Configs and Secrets
 
-[See this section](../../../kubernetes/kubernetes-configs-and-secrets/) in the Duplocloud Kubernetes documentation.
+[See this section](../../../kubernetes-user-guide/kubernetes-configs-and-secrets/) in the Duplocloud Kubernetes documentation.
 
 ### Downloading and configuring KubeCtl Token
 
-[See this section](../../../kubernetes/kubectl-setup/kubectl-token.md) in the DuploCloud Kubernetes documentation.
+[See this section](../../../kubernetes-user-guide/kubectl-setup/kubectl-token.md) in the DuploCloud Kubernetes documentation.
 
 ### Setting Up Docker Registry Credentials
 
@@ -238,4 +238,4 @@ If you need security tokens of a longer duration, create them on your own. Secur
 
 #### Add Pod Toleration spec to a Container configuration
 
-See [Kubernetes Pod Toleration](../../../kubernetes/pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.
+See [Kubernetes Pod Toleration](../../../kubernetes-user-guide/pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.

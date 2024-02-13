@@ -18,7 +18,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Tenant](tenant-environment/)
 * [Hosts](hosts-vms.md) and [Snapshots](hosts-vms/backups.md)
 * [Auto Scaling host groups](auto-scaling/auto-scaling-groups.md)
-* [Kubernetes Jobs](../../kubernetes/jobs.md) and [CronJobs](../../kubernetes/cronjobs.md)
+* [Kubernetes Jobs](../../kubernetes-user-guide/jobs.md) and [CronJobs](../../kubernetes-user-guide/cronjobs.md)
 * [Auditing](auditing.md)
 * [Logging](central-logging/)
 * [Diagnostics and Metrics](monitoring/)
