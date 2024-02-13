@@ -32,7 +32,7 @@ While lower-level details such as IAM roles and security groups are abstracted, 
 
 Most of these inputs are optional and some are available as list box selections, set by the administrator in the Plan (for example, **Image ID**, in Host **Advanced Options**).&#x20;
 
-There is an additional parameter labeled **Fleet Type**. This is applicable if the VM is to be used as a host for [container orchestration](../container-deployments/container-orchestrators.md) by the platform. The choices are:
+There is an additional parameter labeled **Fleet Type**. This is applicable if the VM is to be used as a host for [container orchestration](broken-reference) by the platform. The choices are:
 
 * **Linux Docker/Native**: To be used for hosting Linux containers using the Built-in Container orchestration.      &#x20;
 * **Docker Windows**: To be used for hosting Windows containers using the Built-in Container orchestration.
