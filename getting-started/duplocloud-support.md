@@ -4,16 +4,14 @@ description: >-
   Support
 ---
 
-# DuploCloud Support Model
+# DuploCloud Support
 
-DuploCloud offers hands-on 24/7 Support for all customers via Slack or email as part of your subscription. Automation and Developer Self-Service are the heart of the DuploCloud platform.  We are dedicated to helping you achieve hands-off automation in the fastest time possible, via rapid deployment of managed service or customized Terraform scripts using our exclusive Terraform provider.
+DuploCloud offers hands-on 24/7 Support for all customers via Slack or email as part of your subscription. Automation and Developer Self-Service are at the heart of the DuploCloud platform.  We are dedicated to helping you achieve hands-off automation in the fastest time possible, via rapid deployment of managed service or customized Terraform scripts using our exclusive Terraform provider.
 
 ## How to contact DuploCloud for support
 
-* Use the customer Slack channel created during the Onboarding process.
-* Send us an email at support@duplocloud.com.
-
-Typical response time is within 1-2 hours via Slack.
+* Use the customer Slack or Microsoft Teams channel created during the Onboarding process.
+* Send us an email at support@duplocloud.net.
 
 ## Included Support features
 
@@ -23,7 +21,6 @@ Some of the ways we support our customers in real-time include, but are not limi
 * Hands-on support for setting up CI/CD pipelines
 * Cloud Migration from any existing platform
 * Proactive, tailored EKS cluster upgrades designed for minimum downtime impact
-* Custom services
 * Accelerated onboarding of existing Services
 * Troubleshooting and debugging&#x20;
   * Apps and services crashing&#x20;
@@ -36,7 +33,7 @@ Some of the ways we support our customers in real-time include, but are not limi
 
 ### What DuploCloud does not support or supports conditionally
 
-Very little is not supported by our staff of DevOps professionals, and some features and functions we can help troubleshoot, but do not monitor. These include:
+We cover most of your DevOps needs, but there are some we do not cover or only partially support. Some examples of these include, but are not limited to:
 
 * Patching an application inside a Docker image
 * Monitoring alerts in a Network Operations Center (NOC)&#x20;
