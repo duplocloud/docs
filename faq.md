@@ -6,9 +6,7 @@ description: Popular and frequently asked questions about DuploCloud
 
 ## Inclusive DuploCloud support
 
-{% content-ref url="https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/snippet/7295" %}
-[DuploCloud Support Model](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/snippet/7295)
-{% endcontent-ref %}
+See [DuploCloud Support](getting-started/duplocloud-support-model.md) for complete information.
 
 ## What cloud providers does DuploCloud support?
 
