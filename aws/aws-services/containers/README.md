@@ -1,5 +1,5 @@
 ---
-description: Using containers and DuploCloud Services with AWS
+description: Using containers and DuploCloud Services with AWS EKS and ECS
 ---
 
 # Containers and Services

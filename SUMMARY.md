@@ -195,6 +195,11 @@
     * [Generate Terraform](aws/terraform-support/duplocloud-terraform-exporter/generate-terraform.md)
     * [Using Generated Code](aws/terraform-support/duplocloud-terraform-exporter/using-generated-code.md)
     * [Troubleshooting Guide](aws/terraform-support/duplocloud-terraform-exporter/troubleshooting-guide.md)
+* [Security Configurations](aws/security-configurations/README.md)
+  * [Tenant Security settings](aws/security-configurations/tenant-security-settings.md)
+  * [Infrastructure Security settings](aws/security-configurations/infrastructure-security-settings.md)
+  * [System Security settings](aws/security-configurations/system-security-settings.md)
+  * [AWS Account Security settings](aws/security-configurations/aws-account-security-settings.md)
 
 ## GCP user guide <a href="#gcp" id="gcp"></a>
 
