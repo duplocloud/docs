@@ -4,9 +4,9 @@ description: Popular and frequently asked questions about DuploCloud
 
 # FAQs
 
-## Inclusive DuploCloud support
+## What support features are included with my DuploCloud subscription&#x20;
 
-See [DuploCloud Support](getting-started/duplocloud-support-model.md) for complete information.
+See [DuploCloud Support](getting-started/duplocloud-support-model.md) for examples of what we do and do not support, in addition to how to contact us.
 
 ## What cloud providers does DuploCloud support?
 
