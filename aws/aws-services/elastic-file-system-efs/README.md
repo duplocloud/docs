@@ -49,7 +49,7 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 
 Information about EFS **Mount Targets** and **Access Points** is available in their respective tabs.
 
-![Mount Target tab details](<../../../.gitbook/assets/image (8).png>)
+![Mount Target tab details](<../../../.gitbook/assets/image (8) (1).png>)
 
 ##
 

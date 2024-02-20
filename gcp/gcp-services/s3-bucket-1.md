@@ -13,5 +13,5 @@ In GCP, Cloud Functions are for serverless execution of code.
     <figure><img src="../../.gitbook/assets/GCP_Bucket_page.png" alt=""><figcaption><p><strong>Buckets</strong> page in the DuploCloud Portal</p></figcaption></figure>
 2. Next under Cloud Services -> Serverless, click **Add**. Then **Create a new serverless function** using the following self-discriptive menu.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (119).png" alt=""><figcaption></figcaption></figure>
 

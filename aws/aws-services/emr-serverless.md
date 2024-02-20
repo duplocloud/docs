@@ -24,7 +24,7 @@ To create EMR Serverless applications you first need to create an EMR studio.
 
     <figure><img src="../../.gitbook/assets/AWS_EMR_Studio_button (1).png" alt=""><figcaption><p><strong>EMR Studio</strong> button on <strong>EMR Serverless</strong> tab</p></figcaption></figure>
 4. Click **Add**. The **Add EMR Studio** pane displays.\
-   ![](<../../.gitbook/assets/image (5).png>)\
+   ![](<../../.gitbook/assets/image (5) (2).png>)\
 
 5. Enter a **Description** of the **Studio** for reference.
 6. Select an [S3 Bucket](s3-bucket.md) that you previously defined from the **Logs Default S3 Bucket** list box.
