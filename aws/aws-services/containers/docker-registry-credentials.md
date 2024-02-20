@@ -24,4 +24,4 @@ You can pull images from multiple Docker registries by adding multiple Docker Re
 
 ### Passing Docker Credentials using Environment Variables
 
-You can pass Docker Credentials using the Environment Variables config field in the **Add Service Basic Options** page. See the [Kubernetes Configs and Secrets](../../../kubernetes-user-guide/kubernetes-configs-and-secrets/) section for details.
+You can pass Docker Credentials using the Environment Variables config field in the **Add Service Basic Options** page. See the [Kubernetes Configs and Secrets](../../../kubernetes/kubernetes-configs-and-secrets/) section for details.

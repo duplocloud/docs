@@ -96,7 +96,7 @@ Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src
 
 
 {% hint style="info" %}
-When you place a DuploCloud Service in a live production environment, consider passing the database endpoint, name, and credentials to a DuploCloud Service using [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), or [Kubernetes Configs and Secrets](../../kubernetes-user-guide/kubernetes-configs-and-secrets/).
+When you place a DuploCloud Service in a live production environment, consider passing the database endpoint, name, and credentials to a DuploCloud Service using [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), or [Kubernetes Configs and Secrets](../../kubernetes/kubernetes-configs-and-secrets/).
 {% endhint %}
 
 ## Checking your work
