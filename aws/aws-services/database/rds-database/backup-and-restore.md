@@ -61,3 +61,19 @@ You can restore available RDS snapshots to a specific point in time.
 {% hint style="info" %}
 The backup retention period  new databases.&#x20;
 {% endhint %}
+
+## Updating or skipping final snapshot
+
+To update or skip the final snapshot, navigate to **Cloud Services** -> **Database**, and click the **RDS** tab. Select the name of the RDS database for which you want to update or skip the final snapshot.&#x20;
+
+From the **Actions** menu list box, select **Backup & Restore** -> **Update Final Snapshot**.
+
+<figure><img src="../../../../.gitbook/assets/rds snapshot.png" alt=""><figcaption><p>The <strong>Actions</strong> menu for the DUPLOINVDB database with <strong>Update Final Snapshot</strong> highlighted</p></figcaption></figure>
+
+The **Update Final Snapshot** pane for the database displays. To skip the final snapshot upon database deletion, select **Skip Final Snapshot**. Click **Update**.&#x20;
+
+<div align="left">
+
+<figure><img src="../../../../.gitbook/assets/rde snadhyas.png" alt=""><figcaption></figcaption></figure>
+
+</div>
