@@ -12,19 +12,26 @@ Configure Autoscaling Groups (ASG) to ensure the application load is scaled base
 The Use for Cluster Autoscaling option will not be available until you enable the [Cluster Autoscaler option in your Infrastructure](auto-scaling-groups.md#configuring-cluster-autoscaler-for-your-infrastructure).
 {% endhint %}
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
 2. In the **ASG** tab, click **Add**. The **Add ASG** page is displayed.
-3. Select **Use for Cluster Autoscaling**.
-4. In the **Friendly Name** field, enter the name of the ASG.
-5. In the **Instance Count** field, enter the desired capacity for the Autoscaling group.
-6. In the **Minimum Instances** field, enter the minimum number of instances. The Autoscaling group ensures that the total number of instances is always greater than or equal to the minimum number of instances.
-7. In the **Maximum Instances** field, enter the maximum number of instances. The Autoscaling group ensures that the total number of instances is always less than or equal to the maximum number of instances.
-8. From the **Platform** list box, select **Linux Docker/Native** to run a Docker service or select **EKS Linux** to run services using EKS.
-9.  Optionally, enable [Spot Instances](../hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md#enabling-spot-instances-when-creating-autoscaling-groups).\
+3. In the **Friendly Name** field, enter the name of the ASG.
+4. Select the **Availability Zone** and **Instance Type**.
+5. In the **Minimum Instances** field, enter the minimum number of instances. The Autoscaling group ensures that the total number of instances is always greater than or equal to the minimum number of instances.
+6. In the **Maximum Instances** field, enter the maximum number of instances. The Autoscaling group ensures that the total number of instances is always less than or equal to the maximum number of instances.
+7.  Enable **Use for Cluster Autoscaling**.\
 
 
-    ![Add ASG page with Use for Cluster Autoscaling option selected](<../../../.gitbook/assets/image (22) (1).png>)
-10. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
+    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-12_36_38.png" alt=""><figcaption><p><strong>Add ASG page</strong> with <strong>Use for Cluster Autoscaling</strong> option selected</p></figcaption></figure>
+8. Select the box to open **Advanced Options.**
+9. Select the appropriate **Image ID**.
+10. From the **Agent** **Platform** list box, select **Linux Docker/Native** to run a Docker service or select **EKS Linux** to run services using EKS.
+11. Fill in additional fields as needed for your ASG.
+12. Optionally, enable [Spot Instances](../hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md#enabling-spot-instances-when-creating-autoscaling-groups).
+13. Optionally, for **EKS only**, enable **Scale from zero (BETA)** (this option is enabled in the example). When Scale from zero (BETA) is enabled, DuploCloud will scale up the host in this ASG to run pods that can not be scheduled otherwise.
+
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-12_34_04.png" alt=""><figcaption><p><strong>Add ASG page</strong> Advanced Options area with <strong>Scale from zero (BETA)</strong> option selected.</p></figcaption></figure>
+
+11. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
 
 ## Viewing Hosts in Autoscaling Groups
 
