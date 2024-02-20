@@ -13,9 +13,14 @@ You need to be an **Administrator** to add, edit, or delete permissions.
 Add a new user and give them appropriate permissions:&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**.&#x20;
-2.  Click **Add**. The **Create User** pane displays.
+2.  Click **Add**. The **Create User** pane displays.\
+
+
+    <div align="left">
 
     <figure><img src="../../.gitbook/assets/Create_User.png" alt=""><figcaption><p><strong>Create User</strong> pane</p></figcaption></figure>
+
+    </div>
 3. Define a **Username**, select a **Role**, and **Provision VPN** access and **Read Only Access**, if required.
 4. Click **Submit**.
 
@@ -47,6 +52,21 @@ View users and their permissions:
 {% hint style="info" %}
 Use the **Last Login** card for the date and time of the user's last log-in.
 {% endhint %}
+
+## Enable inactive user notification
+
+Configure the system to generate faults when a user has been inactive or has not logged in for a period of time.
+
+1. From the DuploCloud portal, navigate to **Administrator** -> **Systems Settings**. Select the **Config** tab, and click **Add.**&#x20;
+2. For **Config Type** select **App Config**, for **Key**, select **Enable Inactive User Notification**, and in the **Value** field, enter the **number of days** of inactivity that should generate a fault.&#x20;
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/inactive user notifcaion.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane configured to generate faults when a user has been inactive for 100 days. </p></figcaption></figure>
+
+</div>
+
+1. Click **Submit**. DuploCloud will generate a fault when a user has been inactive or has not logged in in the set number of days.
 
 ## Delete an existing user
 
