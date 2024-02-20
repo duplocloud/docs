@@ -4,6 +4,10 @@ description: Create and connect to an RDS database instance
 
 # RDS database
 
+{% hint style="warning" %}
+Support for the Aurora Serverless V1 database engines has been deprecated. When using Terraform, do not create V1 engines.
+{% endhint %}
+
 DuploCloud supports the following RDS databases in AWS:
 
 * MySQL
@@ -17,8 +21,8 @@ DuploCloud supports the following RDS databases in AWS:
 * Aurora PostgreSQL
 * Aurora PostgreSQL Serverless
 
-{% hint style="warning" %}
-Support for the Aurora Serverless V1 database engines has been deprecated. When using Terraform, do not create V1 engines.
+{% hint style="info" %}
+When upgrading RDS versions, use AWS Console and see your Cloud Provider for compatibility requirements. Note that while versions 5.7.40, 5.7.41, and 5.7.42 cannot be upgraded to version 8.0.28, you can upgrade these versions to version 8.0.32 and higher.
 {% endhint %}
 
 ## Creating an RDS database <a href="#id-0-toc-title" id="id-0-toc-title"></a>
@@ -43,3 +47,4 @@ Once the database is created, select it and use the **Instances** tab to view th
 {% hint style="info" %}
 Pass the endpoint, name, and credentials to your application [using environment variables](../../containers/passing-config-and-secrets.md) for maximum security.&#x20;
 {% endhint %}
+

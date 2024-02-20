@@ -110,6 +110,10 @@ Small instances are generally no problem. DuploCloud can manage dynamic database
 
 Yes.
 
+## Can I upgrade RDS versions?
+
+Yes. Use [AWS Console](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_UpgradeDBInstance.Upgrading.html) and see your Cloud Provider for compatibility requirements. Note that while versions 5.7.40, 5.7.41, and 5.7.42 cannot be upgraded to version 8.0.28, you can upgrade these versions to version 8.0.32 and higher.&#x20;
+
 ## Is Kubernetes required to use DuploCloud? Is using Kubernetes better than using ECS?
 
 No, Kubernetes is not required. DuploCloud supports both AWS ECS and Kubernetes, among other Cloud solutions.&#x20;
