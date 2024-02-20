@@ -14,7 +14,7 @@ Copy Storage Account Key and FileShare Name from DuploCloud Portal for creating 
 
 Navigate to **DevOps** > **Containers** > **AKS/Native** > **K8S Secrets**  Tab. Create a Kubernetes Secret Object using an Azure Storage Account.&#x20;
 
-For more information, see [Kubernetes Configs and Secrets](./).
+For more information, see [Kubernetes Configs and Secrets](../../kubernetes/kubernetes-configs-and-secrets/).
 
 <figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption><p>Kubernetes Storage Account Secret</p></figcaption></figure>
 
