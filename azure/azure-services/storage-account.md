@@ -1,6 +1,6 @@
 # Storage account
 
-DuploCloud Azure Portal provides ability to create Storage Accounts, File Shares and generate Shared Access Signature (SAS). Storage Account with SKU Type `Standard_LRS` is created. User can view additional details of File/Share endpoints from the portal.
+DuploCloud Azure Portal provides the ability to create Storage Accounts, File Shares, and generate Shared Access Signatures (SAS). Storage Accounts with a SKU Type `Standard_LRS` are created. Users can view additional details of File Share endpoints from the Portal.
 
 ### Create Storage Account
 
@@ -39,10 +39,30 @@ Click on **Actions** > **Shared Access Signature**. Provide access details in th
 
 Once Signature Tokens are generated, Azure user can copy paste the token and URL's in a secure location. They'll only be displayed once and cannot be retrieved once the window is closed.
 
-<div align="left">
+### Block Public Access to Storage Accounts
 
-<img src="../../.gitbook/assets/image (69) (1).png" alt="">
+You can configure the **Tenant** to block public network access to **Storage Accounts.**
 
-</div>
+1. From the DuploCloud Portal navigation, select **Administrator** -> **Tenants**.&#x20;
+2. Select your **Tenant** name from the list.&#x20;
+3. In the **Settings** tab, click **Add**. The **Add Tenant Feature** pane displays.&#x20;
+4. From the **Select Feature** item list, select **Other**.&#x20;
+5.  In the **Configuration** field, enter **block\_public\_network\_to\_azure\_storage**. \
 
-\
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/Screenshot (233).png" alt=""><figcaption><p>The <strong>Update Tenant Feature</strong> window filled to block public access to Azure <strong>Storage Accounts.</strong> </p></figcaption></figure>
+
+    </div>
+6. In the empty field, enter "**True**".&#x20;
+7.  Click **Add**. Public access to storage accounts is blocked. \
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/Screenshot (234).png" alt=""><figcaption><p>The <strong>Settings</strong> tab showing public access to <strong>Storage Accounts</strong> blocked.</p></figcaption></figure>
+
+    </div>
+
+###
