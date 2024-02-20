@@ -186,7 +186,7 @@ View the rules you defined for any Shared Load Balancer.
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose rules you want to view.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../../.gitbook/assets/image (12).png" alt="" data-size="line"> ) and select **Manage Rules**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../../.gitbook/assets/image (12) (1).png" alt="" data-size="line"> ) and select **Manage Rules**.
 
 <figure><img src="../../../.gitbook/assets/LBL22.png" alt=""><figcaption><p><strong>Listener Rules</strong> page displaying Shared Load Balancer rules</p></figcaption></figure>
 
@@ -197,7 +197,7 @@ Update attributes for your defined Target Group.
 1. In the DuploCloud portal, navigate to **DevOps** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose defined Target Group attributes you want to modify.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/image (6).png" alt="" data-size="line"> ) and select **Update attributes**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/image (6) (1).png" alt="" data-size="line"> ) and select **Update attributes**.
 
 ## Additional Load Balancer Settings
 

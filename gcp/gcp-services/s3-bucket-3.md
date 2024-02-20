@@ -6,7 +6,7 @@ description: Create cloud scheduler in GCP
 
 Go under Cloud Services in the left nav bar and you can find the Cloud Scheduler menu. One can create a cloud scheduler to trigger from a pub/sub topic created in the previous section, an HTTP endpoint or an App Engine.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
