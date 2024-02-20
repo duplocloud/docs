@@ -5,6 +5,20 @@ coverY: 0
 
 # Product updates
 
+## Q1 2024
+
+* AWS
+  * [Update or skip a final RDS snapshot](../aws/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
+  * [Billing option is available per Tenant](../aws/use-cases/cost-management/#view-billing-details-by-tenant).
+  * [Scale to or from zero (0)](../aws/use-cases/auto-scaling/auto-scaling-groups.md#creating-autoscaling-groups-asg) using Auto-Scaling Groups.
+  * Create [Lambdas with Ephemeral Storage](../aws/aws-services/lambda/#id-3-toc-title).
+  * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), in seconds.
+* GCP
+  * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title).
+  * [GKE Standard and AutoPilot modes](../gcp/use-cases/disaster-recovery/#creating-an-infrastructure) are supported when creating DuploCloud Infrastructures.
+* General&#x20;
+  * SIEM - [Configure agents to install on specific Tenants](../security-and-compliance/security-and-compliance-overview/agents.md#configuring-agents-to-install-on-specified-tenants).
+
 ## Q4 2023
 
 * AWS
