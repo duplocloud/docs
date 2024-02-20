@@ -10,7 +10,7 @@ description: Create Node Pool for GCE in the DuploCloud Portal
 
 [Add a Tenant](../use-cases/tenant-environment.md), specifying the DuploCloud **Plan** corresponding to a [GKE Standard Cluster](../use-cases/disaster-recovery/creating-gke-standard-cluster.md).
 
-### Adding a Node Pool
+## Adding a Node Pool
 
 1. In the DuploCloud Portal, navigate to **Kubernetes**  -> **Nodes.**
 2. Click the **Node Pool** tab.
