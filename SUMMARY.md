@@ -340,8 +340,14 @@
 
 ## Security and Compliance
 
-* [Security and Compliance Overview](security-and-compliance/security-and-compliance-overview.md)
-* [SIEM](security-and-compliance/siem.md)
+* [Security and Compliance Overview](security-and-compliance/security-and-compliance-overview/README.md)
+  * [SIEM](security-and-compliance/security-and-compliance-overview/siem.md)
+  * [Agents](security-and-compliance/security-and-compliance-overview/agents.md)
+  * [Standards](security-and-compliance/security-and-compliance-overview/standards.md)
+  * [Vulnerabilities](security-and-compliance/security-and-compliance-overview/vulnerabilities.md)
+  * [Inventory](security-and-compliance/security-and-compliance-overview/inventory.md)
+  * [Alerts](security-and-compliance/security-and-compliance-overview/alerts.md)
+  * [Faults](security-and-compliance/security-and-compliance-overview/faults.md)
 
 ## User Administration
 
