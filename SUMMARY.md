@@ -134,6 +134,7 @@
     * [Enable billing data](aws/use-cases/cost-management/enable-billing-data.md)
     * [Apply cost allocation tags](aws/use-cases/cost-management/cost-allocation-tags.md)
     * [DuploCloud License Usage](aws/use-cases/cost-management/duplocloud-license-usage.md)
+    * [View billing data](aws/use-cases/cost-management/view-billing-data.md)
   * [Resource Quotas](aws/use-cases/resource-quotas.md)
   * [Big Data and ETL](aws/broader-scenarios/big-data-and-etl.md)
   * [Custom Resource tags](aws/use-cases/custom-resource-tags.md)
@@ -340,8 +341,8 @@
 
 ## Security and Compliance
 
-* [Security and Compliance Overview](security-and-compliance/security-and-compliance-overview/README.md)
-  * [SIEM](security-and-compliance/security-and-compliance-overview/siem.md)
+* [Security and Compliance Overview](security-and-compliance/security-and-compliance-overview.md)
+  * [SIEM](security-and-compliance/siem.md)
   * [Agents](security-and-compliance/security-and-compliance-overview/agents.md)
   * [Standards](security-and-compliance/security-and-compliance-overview/standards.md)
   * [Vulnerabilities](security-and-compliance/security-and-compliance-overview/vulnerabilities.md)

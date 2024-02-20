@@ -14,10 +14,12 @@ DuploCloud calculates license usage by Node for the following categories:
 ## Viewing Node Usage for billing
 
 1. In the DuploCloud portal, navigate to **Administrator** -> **Billing**. The **Billing** page displays.
-2.  Click the **DuploCloud License Usage** tab.
+2.  Click the **DuploCloud License Usage** tab.\
+
 
     <figure><img src="../../../.gitbook/assets/LIC1.png" alt=""><figcaption><p><strong>DuploCloud License Usage</strong> tab on the <strong>Billing</strong> page in the DuploCloud Portal</p></figcaption></figure>
-3.  Click **More Details** in any **License Usage** card for additional breakdown of Node Usage statistics per Tenant.
+3.  Click **More Details** in any **License Usage** card for additional breakdown of Node Usage statistics per Tenant.\
+
 
     <figure><img src="../../../.gitbook/assets/LIC3.png" alt=""><figcaption></figcaption></figure>
 
