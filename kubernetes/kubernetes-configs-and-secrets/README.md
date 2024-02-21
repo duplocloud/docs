@@ -1,5 +1,5 @@
 ---
-description: Using Kubernetes (K8s) ConfigMaps and Secrets
+description: Setting, mounting, and managing Kubernetes ConfigMaps and Kubernetes Secrets
 ---
 
 # Kubernetes Configs and Secrets

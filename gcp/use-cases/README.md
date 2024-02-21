@@ -13,7 +13,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Infrastructure and Plan](broken-reference)
 * [Tenant](tenant-environment.md)
 * [Hosts](hosts-vms.md)
-* [Kubernetes Jobs](../../kubernetes-user-guide/jobs.md) and [CronJobs](../../kubernetes-user-guide/cronjobs.md)
+* [Kubernetes Jobs](../../kubernetes/jobs.md) and [CronJobs](../../kubernetes/cronjobs.md)
 * [Logs](../../diagnostics/logs.md)
 * [Metrics](../../diagnostics/monitoring/)
 * [Faults and alerts](../../diagnostics/faults-and-alarms/)

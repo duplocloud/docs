@@ -1,6 +1,6 @@
 # Step 1: Infrastructure
 
-From the DuploCloud Portal (Administrator --> Infrastructure) create an infrastructure with the following inputs:
+From the DuploCloud Portal (Administrator -> Infrastructure) create an infrastructure with the following inputs:
 
 * Name: nonprod
 * Account: Google Cloud account
