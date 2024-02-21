@@ -14,9 +14,9 @@ Every time a user logs in to Duplo, a temporary API token is created for that us
 
 ### Getting a Temporary API token
 
-Any user can retrieve _their own_ temporary API token from Duplo. Navigate to the **User -> Profile** page. Click the copy icon ![](<../../.gitbook/assets/Screen Shot 2022-02-24 at 2.19.23 PM.png>) in the **Temporary API Token** pane
+Any user can retrieve _their own_ temporary API token from Duplo. Navigate to the **User** -> **Profile** page. Click the copy icon ![](<../../.gitbook/assets/Screen Shot 2022-02-24 at 2.19.23 PM.png>) in the **Temporary API Token** pane.
 
-![](<../../.gitbook/assets/Screen Shot 2022-02-24 at 2.16.50 PM.png>)
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 ## Permanent API tokens
 
@@ -30,7 +30,7 @@ Only administrators can create permanent API tokens. Permanent tokens are always
 
 Navigate to the **Administrator -> Users** page. Click the username in the list, to go to a specific user's page. Click the **Tokens** tab.
 
-![](<../../.gitbook/assets/Screen Shot 2022-02-24 at 2.26.24 PM.png>)
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 Click the blue **+ Add** button. Give your token a memorable name and click **Create**.
 

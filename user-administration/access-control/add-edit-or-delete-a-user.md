@@ -13,18 +13,16 @@ You need to be an **Administrator** to add, edit, or delete permissions.
 Add a new user and give them appropriate permissions:&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**.&#x20;
-2. Click **Add**. The **Create User** pane displays.
+2.  Click **Add**. The **Create User** pane displays.\
 
-<div align="left">
 
-<figure><img src="../../.gitbook/assets/Tenant drop down.png" alt=""><figcaption><p>The <strong>Create User</strong> pane.</p></figcaption></figure>
+    <div align="left">
 
-</div>
+    <figure><img src="../../.gitbook/assets/Create_User.png" alt=""><figcaption><p><strong>Create User</strong> pane</p></figcaption></figure>
 
-3. Define a **Username**, and select a **Role**.
-4. Assign the user to a **Tenant** by selecting a Tenant from the list box.&#x20;
-5. **Provision VPN** access and **Read Only Access**, if required.
-6. Click **Submit**.
+    </div>
+3. Define a **Username**, select a **Role**, and **Provision VPN** access and **Read Only Access**, if required.
+4. Click **Submit**.
 
 ## Edit permissions for an existing user
 
