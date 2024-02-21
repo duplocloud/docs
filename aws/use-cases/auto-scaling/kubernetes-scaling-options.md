@@ -64,3 +64,15 @@ When your services are running, **Replicas: Auto** is displayed on the Service p
 
 </div>
 
+### Stopping a running Kubernetes service that is using an HPA
+
+If a Kubernetes Service is running with a Horizontal Pod AutoScaler (HPA), you cannot stop the Service by clicking **Stop** in the service's **Actions** menu in the DuploCloud Portal.&#x20;
+
+Instead, do the following to stop the service from running:
+
+1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select the Service you want to stop.
+2. From the **Actions** menu, select **Edit**.
+3. From the **Replication Strategy** list box, select **Static Count**.
+4. In the **Replicas** field, enter **0** (zero).&#x20;
+5. Click **Next** to navigate to the **Advanced Options** page.
+6. Click **Update** to update the service.&#x20;

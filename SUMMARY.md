@@ -47,7 +47,7 @@
   * [Using Kubernetes Secrets with Azure Storage connection data](kubernetes-user-guide/kubernetes-configs-and-secrets/using-kubernetes-secrets-with-azure-storage-connection-data.md)
   * [SecretProviderClass custom resource](kubernetes-user-guide/kubernetes-configs-and-secrets/adding-secretproviderclass-custom-resource.md)
 * [Kubernetes Lifecycle Hooks](kubernetes-user-guide/kubernetes-lifecycle-hooks.md)
-* [HPA](kubernetes-user-guide/hpa.md)
+* [HPA](kubernetes/hpa.md)
 * [Pod Toleration](kubernetes-user-guide/pod-toleration.md)
 * [Kubernetes StorageClass and PVC](kubernetes-user-guide/kubernetes-storageclass-and-pvc/README.md)
   * [Native Azure Storage Classes](kubernetes-user-guide/kubernetes-storageclass-and-pvc/storage-options.md)
