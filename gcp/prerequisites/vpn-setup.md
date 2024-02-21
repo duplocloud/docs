@@ -15,13 +15,17 @@ Accept OpenVPN Free tier (Bring Your Own License) in the GCP marketplace:&#x20;
 
 ## Provision the VPN
 
-1. In the DuploCloud Portal, navigate to **Administrator** --> **System Settings**.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **VPN** tab.
 3. Click **Provision VPN.**
 
 After the OpenVPN is provisioned, it is ready to use. Behind the scenes, DuploCloud launches a cloud formation script to provision the OpenVPN.   &#x20;
 
-![VPN tab in the System Settings page.](<../../.gitbook/assets/image (2) (2) (1).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (2) (2) (1).png" alt="VPN tab in the System Settings page.">
+
+</div>
 
 {% hint style="info" %}
 You can find the OpenVPN admin password in the cloud formation stack in your GCP console.
@@ -38,7 +42,11 @@ Provision a VPN while creating a user:
 5. Select **Provision VPN**.
 6. Click **Submit**.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/VPN_Create_User.png" alt=""><figcaption><p><strong>Create User</strong> pane</p></figcaption></figure>
+
+</div>
 
 ### Deleting VPN access for a user
 
@@ -48,7 +56,7 @@ For information about removing VPN access for a user, see [Deleting a VPN user](
 
 By default, users connected to a VPN can SSH or RDP into virtual machines (VMs). Users can also connect to internal load balancers and endpoints of the applications. However, to connect to other services, such as databases and elastic cache, you must open the port to the VPN:&#x20;
 
-1. In the DuploCloud Portal, navigate to **Administrator** --> **Tenant**.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. Select the Tenant in the **Name** column.
 3. Click the **Security** tab.
 4. Click **Add**. The Add Tenant Security pane displays.
@@ -56,4 +64,8 @@ By default, users connected to a VPN can SSH or RDP into virtual machines (VMs).
 6. In the **IP CIDR** field, enter the name of your VPN.
 7. Click **Add**.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/Add_Tenant_Security.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure>
+
+</div>

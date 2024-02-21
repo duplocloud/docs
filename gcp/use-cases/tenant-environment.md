@@ -8,7 +8,11 @@ In GCP, cloud features such as Resource Groups, Identity and Access Management (
 
 When you create Tenants in an Infrastructure, a namespace is created in the Kubernetes cluster with the name `duploservices-TENANT_NAME.`
 
-![Create a Tenant pane](<../../.gitbook/assets/image (16) (3).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (16) (3).png" alt="Create a Tenant pane">
+
+</div>
 
 At the logical level, the Tenant is:
 

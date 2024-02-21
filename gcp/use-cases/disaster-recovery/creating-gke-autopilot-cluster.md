@@ -11,6 +11,10 @@ Navigate from **Administrator** -> **Infrastructure** -> **Add** to create Infra
 * Enable GKE: enabled
 * Cluster Mode: GKE Autopilot
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (6).png" alt=""><figcaption></figcaption></figure>
+<div align="left">
 
-This takes about 20 minutes.  Infrastructure status should move to Completed. At the end of it, double-check that a "plan" (Administrators --> Plans) has been created with the same name (nonprod).
+<figure><img src="../../../.gitbook/assets/image (2) (1) (6).png" alt=""><figcaption><p><strong>Add infrastructure</strong> page</p></figcaption></figure>
+
+</div>
+
+This takes about 20 minutes.  Infrastructure status should move to Completed. Once the Infrastructure status shows Complete, navigate to **Administrators** -> **Plans** to verify that a plan has been created with the same name (nonprod).
