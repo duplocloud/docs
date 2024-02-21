@@ -1,7 +1,6 @@
 # Step 5: Test the Application
 
-Under **Load Balancer** Details, copy the **IP Address** in your web browser and hit the URL.\
-
+Navigate to the **Load Balancers** tab. From the **LB Configuration** card, copy the **IP Address**. Paste the IP Address into your web browser and press enter.
 
 <div align="left">
 

@@ -80,8 +80,8 @@ coverY: 0
   * [Automate fault healing](../aws/use-cases/faults-and-alarms/automatic-fault-healing.md) on EC2 Hosts that fail a status check.
   * Enhanced support for [Startup Probes](../aws/aws-services/setting-up-probes.md).
 * GCP
-  * Support for [Redis database instances](../gcp/gcp-services/managed-redis.md).
-  * Support for [SQL databases](../gcp/gcp-services/cloud-sql.md).
+  * Support for [Redis database instances](../gcp/gcp-services/databases/redis-database-instance.md).
+  * Support for [SQL databases](../gcp/gcp-services/databases/sql-databases.md).
   * Change [Cloud Armour Security Policies](../gcp/gcp-services/cloud-armour.md#modifying-a-cloud-armour-configuration-security-policy).
 * General updates
   * **Last Login** card available for determining the last user sign-in when [viewing user access](../user-administration/access-control/add-edit-or-delete-a-user.md#view-users).

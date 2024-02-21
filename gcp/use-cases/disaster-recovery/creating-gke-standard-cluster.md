@@ -13,7 +13,7 @@ Navigate from **Administrator** -> **Infrastructure** -> **Add** to create Infra
 
 <figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Create Infrastructure with GKE Standard</p></figcaption></figure>
 
-This takes about 20 minutes.  Infrastructure status should move to Completed. At the end of it, double-check that a "plan" (Administrators --> Plans) has been created with the same name (nonprod).
+This takes about 20 minutes.  Infrastructure status should move to Completed. Once the Infrastructure status shows Complete, navigate to **Administrators** -> **Plans** to verify that a plan has been created with the same name (nonprod).
 
 ### View GKE Cluster details
 

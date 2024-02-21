@@ -14,8 +14,8 @@ Using DuploCloud, you can create unlimited Services within each Tenant, using ap
 
 In addition to GKE standard and auto-pilot the following  GCP native services are supported and more added every month.
 
-* [Cloud SQL](cloud-sql.md)
-* [Redis](managed-redis.md)
+* [Cloud SQL](databases/sql-databases.md)
+* [Redis](databases/redis-database-instance.md)
 * [Cloud Storage](s3-bucket.md)
 * [Cloud Functions](s3-bucket-1.md)
 * [Pub/Sub](s3-bucket-2.md)
