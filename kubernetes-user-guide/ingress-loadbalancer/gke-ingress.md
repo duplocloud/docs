@@ -35,7 +35,11 @@ Add a load balancer listener that uses Kubernetes (K8s) ClusterIP type service. 
 3. Click the **Load Balancers** tab.
 4. Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/image (122).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
+
+</div>
 
 5. In the **Select Type** field, select **K8S Cluster IP**.&#x20;
 6. Complete the other required fields in the **Add Load Balancer Listener** pane and click **Add**. The Load Balancer displays in the **Load Balancers** tab.
@@ -78,7 +82,11 @@ You must define [rules ](https://kubernetes.io/docs/concepts/services-networking
 
 1. In the **Add Kubernetes Ingress** page, configure Ingress by clicking **Add Rule**. The **Add Ingress Rule pane** displays.&#x20;
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/image (125).png" alt="" width="375"><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
+
+</div>
 
 2. Specify the **Path** (**/samplePath/** in the example above).
 3. From the **Service Name** list box, select the Service exposed through the K8S ClusterIP (**nginx-test** in the example above). The **Container port** field is completed automatically.&#x20;

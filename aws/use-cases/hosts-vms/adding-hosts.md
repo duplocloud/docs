@@ -25,7 +25,7 @@ If no **Image ID** is available with a prefix of **EKS**, copy the **AMI ID** fo
 
 ## Creating Kubernetes StorageClass and PVC constructs in the DuploCloud Portal.
 
-See [Kubernetes StorageClass and PVC](../../../kubernetes-user-guide/kubernetes-storageclass-and-pvc/).
+See [Kubernetes StorageClass and PVC](../../../kubernetes/kubernetes-storageclass-and-pvc/).
 
 ## Supported Host Actions
 

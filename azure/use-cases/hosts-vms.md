@@ -31,7 +31,7 @@ It is not necessary to explicitly define Hosts. Instead, you can use [**Azure Ag
 
 ## Creating Kubernetes StorageClass and PVC constructs in the DuploCloud Portal.
 
-See [Kubernetes StorageClass and PVC](../../kubernetes-user-guide/kubernetes-storageclass-and-pvc/).
+See [Kubernetes StorageClass and PVC](../../kubernetes/kubernetes-storageclass-and-pvc/).
 
 ## Host abstraction and isolation&#x20;
 
