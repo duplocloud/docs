@@ -29,7 +29,11 @@ The SIEM dashboard displays modules, grouped by the following categories:
 
 Clicking the Navigation Menu icon ( <img src="../.gitbook/assets/menu_three-lines (1).png" alt="" data-size="line"> ) allows you to access a number of integrated tools that DuploCloud has plugged into the portal such as Wazuh, Kibana, and Open Distro for ElasticSearch, which connect you to the SIEM application in AWS. You also can use Management functions such as Dev Tools, to access the SIEM console for creating queries and the Stack Management function in Kibana.&#x20;
 
+<div align="left">
+
 <figure><img src="../.gitbook/assets/SIEM_2.png" alt=""><figcaption><p>Navigation Menu icon on the <strong>SIEM</strong> page</p></figcaption></figure>
+
+</div>
 
 ## Using the DuploCloud Modules window menu
 

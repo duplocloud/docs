@@ -1,11 +1,9 @@
 # Metrics Dashboard
 
-Under Diagnostics --> Metrics we have the various metrics per Tenant.&#x20;
+Under **Observability** -> **Metrics** we have the various metrics per Tenant.&#x20;
 
 {% hint style="info" %}
-While there are 8-10 out-of-box dashboard for various services, one can add their own dashboards and make them appear in Duplo Dashboard through a configuration&#x20;
+While there are 8-10 out-of-box dashboards for various services, one can add their own dashboards and make them appear in Duplo Dashboard through a configuration&#x20;
 {% endhint %}
 
-&#x20;&#x20;
-
-![](<../../.gitbook/assets/image (17) (2).png>)
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-16_01_31.png" alt=""><figcaption></figcaption></figure>

@@ -9,13 +9,11 @@ By default, DuploCloud spreads container replicas across hosts. Using an Allocat
 
 ## Adding an Allocation Tag to a Host
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**. The **Hosts** page displays.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. Select a Host from the **Name** column. If the Host is part of an Auto-Scaling Group (ASG), select the **ASG** tab and select the ASG.
-3.  Click the **Allocation Tag** Edit Icon ( <img src="../.gitbook/assets/square_edit_icon.png" alt="" data-size="line">). The **Set Allocation Tag** displays.\
+3. Click the **Allocation Tag** Edit Icon ( <img src="../.gitbook/assets/square_edit_icon.png" alt="" data-size="line">). The **Set Allocation Tag** displays.
 
-
-    <figure><img src="../.gitbook/assets/AT1.png" alt=""><figcaption><p>Allocation Tag Edit Icon</p></figcaption></figure>
-
+<figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_29_49.png" alt=""><figcaption></figcaption></figure>
 
 4. In the **Allocation Tag** field, enter a tag name. Use only alphanumeric characters. Hyphens ( **-** ) are supported as special characters if needed. For example, **highmemory-highcpu** is a valid tag name.
 5.  Click **Set**. The Allocation Tag that you set displays in the heading banner for the Host or ASG you select.\

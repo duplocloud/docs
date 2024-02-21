@@ -2,7 +2,7 @@
 description: Manage VPN access for users
 ---
 
-# Add and Delete VPN access for users
+# VPN access for users
 
 {% hint style="warning" %}
 To add or delete VPN access for users you must have **Administrator** privileges.&#x20;
@@ -12,13 +12,18 @@ To add or delete VPN access for users you must have **Administrator** privileges
 
 Add a VPN connection for a user:
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**.
-2. Click the **VPN** tab.&#x20;
-3. Click **Set VPN**. The Set VPN pane displays.
-4. Select the appropriate options, including **Reallocate VPN Address** and **Regenerate Password**.
-5. Click **Create**.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**. The **Users** page displays.
+2. Select the name of the user that will have VPN access.&#x20;
+3. Click the **VPN** tab.&#x20;
+4. Click **Set VPN**. The Set VPN pane displays.
+5. Select the appropriate options, including **Reallocate VPN Address** and **Regenerate Password**.
+6. Click **Create**.
+
+<div align="left">
 
 <figure><img src="../../.gitbook/assets/Set_VPN.png" alt=""><figcaption><p><strong>Set VPN</strong> pane</p></figcaption></figure>
+
+</div>
 
 ## Deleting a VPN user
 

@@ -18,7 +18,11 @@ A non-administrator user can view and use database engine types created by an ad
 6.  Select the **Value** list box and select the types of databases you want non-administrator users to access. In this example, the user is granted access to any **Aurora-MySql** and **Aurora-PostgreSql** database engines that the Administrator creates.\
 
 
-    <figure><img src="../../.gitbook/assets/useraccess_db.png" alt=""><figcaption><p><strong>Add Config</strong> pane for granting non-administrator users view rights to <strong>Aurora-MySql</strong> and <strong>Aurora-PostgreSql</strong> database engines</p></figcaption></figure>
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/useraccess_db.png" alt=""><figcaption><p><strong>Add Config</strong> pane </p></figcaption></figure>
+
+    </div>
 
 
 7.  Click **Submit**. The **AppConfig** configuration setting is displayed on the **System Settings** page.\

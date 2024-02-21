@@ -62,8 +62,8 @@ From the DuploCloud Portal, navigate to **Security** -> **Agents**. From the men
 | **View Agent Details** | View agent details in the **Agent Details** YAML screen.                                     |
 | ---------------------- | -------------------------------------------------------------------------------------------- |
 | **Repair Agent**       | Restore the functionality or integrity of the agent.                                         |
-| **Exclude Host**       | Exclude the Host from monitoring.                                                            |
-| **Force Exclude Host** | Exclude the Host from monitoring, overriding default or configured criteria, if applicable.  |
+| **Exclude Host**       | Exclude the host from monitoring.                                                            |
+| **Force Exclude Host** | Exclude the host from monitoring, overriding default or configured criteria, if applicable.  |
 
 <div align="left">
 

@@ -6,9 +6,9 @@ description: Monitoring Kubernetes status with the K8s Admin dashboard
 
 #### Monitoring Kubernetes StatefulSets&#x20;
 
-Use the **K8s Admin** dashboard to monitor various statistics and statuses for Kubernetes, including the number and availability of StatefulSets defined for a service.
+Use the **k8s Admin** dashboard to monitor various statistics and statuses for Kubernetes, including the number and availability of StatefulSets defined for a service.
 
-1. In the DuploCloud Portal, select **Administrator** -> **Diagnostics** -> **Metrics**.
+1. In the DuploCloud Portal, select **Administrator** -> **Observability** -> **Metrics**.
 2. Click the **k8s** tab. The **K8s Admin** dashboard displays.
 
 <figure><img src="../../.gitbook/assets/k8_statefulSet_dash (1).png" alt=""><figcaption><p><strong>K8s Admin</strong> Dashboard displaying StatefulSet status</p></figcaption></figure>

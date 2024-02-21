@@ -10,7 +10,9 @@ The creation of a Web Application Firewall (WAF) is a one-time process. Create a
 
 When you create a WAF in DuploCloud, an entry is added to the [Web ACL](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html). You use this entry [in a later step](web-application-firewall-waf.md#attaching-the-waf-to-a-load-balancer) to attach an ALB Load Balancer to your WAF.
 
-1.  In the DuploCloud Portal, navigate to **Administrator** -> **Plans**. The **Plans** page displays.\
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**.&#x20;
+2. From the **Name** column, select the Plan you want to update.
+3.  Click the **WAF** tab.\
 
 
     <div align="left">
@@ -18,10 +20,6 @@ When you create a WAF in DuploCloud, an entry is added to the [Web ACL](https://
     <img src="https://duplocloud.com/wp-content/uploads/2021/11/plan-waf.png" alt="Plans page with WAF tab">
 
     </div>
-
-
-2. From the **Name** column, select the Plan you want to update.
-3. Click the **WAF** tab.
 4.  Click **Add**. The **Add WAF** pane displays.\
 
 
@@ -46,13 +44,17 @@ Only ALB Load Balancers can be attached to a WAF.
 2.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../.gitbook/assets/AWS_LB_WAF_Attach.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> for attaching a WAF (via the <strong>Web ACL</strong> field) to an ALB Load Balancer<br></p></figcaption></figure>
+
+    </div>
 3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).&#x20;
 4. Complete the other required fields in the **Other Load Balancer Settings** pane.
 5. Click **Update**.
 
-## Analyzing inbound traffic with the WAF dashboard <a href="#1-toc-title" id="1-toc-title"></a>
+## Analyzing inbound traffic with the WAF dashboard <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
-DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from the left navigation panel: **Security > WAF**.
+DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from the left navigation panel: **Observability** -> **WAF**.
 
 ![WAF Dashboard](<../.gitbook/assets/waf (1).png>)
