@@ -98,7 +98,7 @@ coverY: 0
   * Define [S3 bucket policies](../aws/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
   * Support for [Lambda Layers](../aws/aws-services/lambda/lambda-layers.md) has been added.
   * [CloudWatch EventBridge](../aws/aws-services/cloud-watch.md) rules and targets are supported.
-  * The CloudFront feature and associated UI tab have been relocated in the DuploCloud Portal from the **DevOps -> App Integration** menu item to the **DevOps -> Networking** menu item.
+  * The CloudFront feature and associated UI tab have been relocated in the DuploCloud Portal from the **Cloud Services -> App Integration** menu item to the **Cloud Services -> Networking** menu item.
 * Azure
   * Support for [Redis databases](../azure/azure-services/databases/redis-database.md) is available.
 * GCP

@@ -160,21 +160,6 @@ Two possible reasons for receiving this fault message are:
 
 Ensure that [logging is set up](aws/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.&#x20;
 
-## Kubernetes (K8s) FAQs
-
-### How do I stop a running Kubernetes service that is using an HPA?
-
-If a Kubernetes service is running with a Horizontal Pod AutoScaler (HPA), you cannot stop the service by clicking **Stop** in the service's **Actions** menu in the DuploCloud Portal.&#x20;
-
-Instead, do the following to stop the service from running:
-
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select the Service you want to stop.
-2. From the **Actions** menu, select **Edit**.
-3. From the **Replication Strategy** list box, select **Static Count**.
-4. In the **Replicas** field, enter **0** (zero).&#x20;
-5. Click **Next** to navigate to the **Advanced Options** page.
-6. Click **Update** to update the service.&#x20;
-
 ## Terraform FAQs
 
 ### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
