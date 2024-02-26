@@ -243,6 +243,7 @@
   * [Cloud Scheduler](gcp/gcp-services/s3-bucket-3.md)
   * [Cloud Armour](gcp/gcp-services/cloud-armour.md)
   * [Node Pools](gcp/gcp-services/node-pools.md)
+  * [Ingress](gcp/gcp-services/ingress.md)
 * [GCP FAQ](gcp/gcp-faq.md)
 
 ## Azure user guide <a href="#azure" id="azure"></a>
