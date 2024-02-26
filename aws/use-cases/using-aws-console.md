@@ -8,11 +8,11 @@ description: Access specific resources in the AWS Console using the DuploCloud P
 Use [Just-In-Time (JIT)](jit-access.md) to launch the AWS console and work with a specific Tenant configuration, or to obtain Administrator privileges.
 {% endhint %}
 
-DuploCloud users have AWS console access for advanced configurations of S3 Buckets, Dynamo databases, SQS, SNS Topic, Kinesis stream, and API Gateway resources that are created in DuploCloud. ELB and EC2 areas of the console are not supported.&#x20;
+DuploCloud users have AWS Console access for advanced configurations of S3 Buckets, Dynamo databases, SQS, SNS Topic, Kinesis stream, and API Gateway resources that are created in DuploCloud. ELB and EC2 areas of the console are not supported.&#x20;
 
 Using the DuploCloud Portal, click on the **Console** link in the title bar of the AWS resource you created in DuploCloud, as in the example for S3 Bucket, below.
 
-![S3 bucket page with highlighted Console link](../../.gitbook/assets/awsbutton.png)
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-17_54_06.png" alt=""><figcaption><p>S3 bucket page with highlighted Console link</p></figcaption></figure>
 
 Clicking the **Console** link launches the AWS console and gives you access to the resource, with permissions scoped to the current Tenant.&#x20;
 

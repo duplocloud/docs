@@ -1,29 +1,34 @@
 # Faults and Alerts
 
-## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
+## Introduction <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 Faults that happen in the system, be it Infrastructure creation, container deployments, Application health checks, or any Triggered Alarms can be tracked in the DuploCloud portal under Faults Menu.
 
-## Viewing Faults <a href="#1-toc-title" id="1-toc-title"></a>
+## Viewing Faults <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
-You can look at Tenant-specific faults under **DevOps > Faults** or all the faults in the system under **Administrator > Faults**.
+You can look at Tenant-specific faults under **Observability** -> **Faults** or all the faults in the system under **Administrator** -> **Faults**.
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/deploy-faults.png)
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-15_42_22.png" alt=""><figcaption></figcaption></figure>
 
-## Creating Alerts <a href="#2-toc-title" id="2-toc-title"></a>
+## Creating Alerts <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
-You can set the AWS Alerts for the individual metrics, click on the bell icon on any of the metrics. A form to create an alert shows up. You can provide the necessary information and create the alert.\
-\
+You can set the AWS Alerts for individual metrics.&#x20;
 
+1. From the DuploCloud portal, navigate to **Observability** -> **Alerts** and click **Add**. The **Create Alert** pane displays.&#x20;
+2. Enter the **Resource Type** and select the resource from the **Resource type** list box. Click **Nex**t.&#x20;
+3. Fill in the necessary information and click **Create**. The Alert is created.
 
-![](<../../../.gitbook/assets/image (21) (2).png>)
+<div align="left">
+
+<img src="../../../.gitbook/assets/image (21) (2).png" alt="">
+
+</div>
 
 ## Viewing Alerts
 
-* View general alerts from the DuploCloud Portal in the **Diagnostics -> Alerts**.
+* View general alerts from the DuploCloud Portal in the **Observability** -> **Alerts**.
 * Select the **Alerts** tab for alerts pertaining to a specific resource, such as **Hosts**.
 
-<figure><img src="../../../.gitbook/assets/alerts2.png" alt=""><figcaption><p>General <strong>Alerts</strong> page under <strong>Diagnostics</strong> in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-15_44_16.png" alt=""><figcaption><p>General <strong>Alerts</strong> page under <strong>Observability</strong> in the DuploCloud Portal</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/alerts1.png" alt=""><figcaption><p><strong>Alerts</strong> tab under <strong>DevOps -> Hosts</strong> in the DuploCloud Portal</p></figcaption></figure>
-
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-17_31_12.png" alt=""><figcaption><p><strong>Alerts</strong> tab under <strong>Cloud Services -> Hosts</strong> in the DuploCloud Portal</p></figcaption></figure>

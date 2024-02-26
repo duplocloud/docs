@@ -14,11 +14,13 @@ DuploCloud users can obtain Just-In-Time (JIT) access to the AWS Console. This a
 
 You can obtain AWS JIT access directly from the DuploCloud Portal, as well as obtain temporary AWS credentials to the Tenant, and access to AWS from your workstation.&#x20;
 
-1. In the DuploCloud Portal, navigate to **User** and select the **Username** that needs access.
-2.  In the upper-right corner of the Portal, click the user profile picture and select **Profile**. The **User Profile** page displays.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **User** and select the **Username** that needs access.
+2.  In the upper-right corner of the Portal, click the user profile picture and select **Profile**. The **User Profile** page displays.\
+
 
     <figure><img src="../../.gitbook/assets/AWS_jit_profile (1).png" alt=""><figcaption><p>User profile area of the DuploCloud Portal with the <strong>Profile</strong> option</p></figcaption></figure>
-3.  From the **JIT AWS Console** list box, select the appropriate option to open the **JIT AWS Console**, get **Temporary AWS Credentials** to the Tenant, or obtain **AWS Access from my Workstation**.&#x20;
+3.  From the **JIT AWS Console** list box, select the appropriate option to open the **JIT AWS Console**, get **Temporary AWS Credentials** to the Tenant, or obtain **AWS Access from my Workstation**. \
+
 
     <figure><img src="../../.gitbook/assets/AWS_jit_profile2.png" alt=""><figcaption><p>DuploCloud User <strong>Profile</strong> page with <strong>JIT AWS Console</strong> list box and available options</p></figcaption></figure>
 
@@ -143,15 +145,19 @@ usage is `jitnow <ENV_NAME>`
 
 By default, JIT sessions expire after one hour. This can be modified in the DuploCloud Portal for a specific Tenant.&#x20;
 
-1. displaysIn the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
-2. Select the Tenant from the **Name** column for which you want to change the expiration period.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
+2. Select the **Tenant** for which you want to change the expiration period from the **NAME** column.
 3. Click the **Settings** tab.
-4. Click **Add** to add a custom timeout setting. The Add Tenant Feature pane displays.
-5. Select **AWS Access Token Validity** from the Select Feature list box.
-6. In the field below (the value), specify the desired timeout period in seconds. in the example below, we specify **7200** seconds or two hours, overriding the default of **3600** seconds, or one hour.
-7. Click **Update**. The new **Value** is displayed in the **Tenant Settings** tab.
+4. Click **Add** to add a custom timeout setting. The **Add Tenant Feature** pane displays.
+5. Select **AWS Access Token Validity** from the **Select Feature** list box.
+6. In the field below (the value), specify the desired timeout period in seconds. in the example below, we specify **7200** seconds or two (2) hours, overriding the default of **3600** seconds, or one (1) hour.
+7. Click **Update**. The new setting is displayed in the **Tenants, Settings** tab.
+
+<div align="left">
 
 <figure><img src="../../.gitbook/assets/update_tenant_JIT_TO.png" alt=""><figcaption><p><strong>Update Tenant Feature</strong> pane to specify new default timeout in seconds</p></figcaption></figure>
+
+</div>
 
 <figure><img src="../../.gitbook/assets/update_tenant_JIT_TO_output.png" alt=""><figcaption><p><strong>AWS Access Token Validity</strong> settings updated with a value of <strong>7200</strong> (seconds)</p></figcaption></figure>
 
