@@ -26,17 +26,11 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 ## Testing the Application
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**.&#x20;
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **ECS**.&#x20;
 2. Click the **Service Details** tab. The Application Load Balancer configuration is displayed.
-3.  In the **DNS Name** card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address to your clipboard.\
+3. In the **DNS Name** card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address to your clipboard.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/ecs_9.png" alt=""><figcaption><p><strong>Service Details</strong> tab with <strong>Doman Name</strong> status card </p></figcaption></figure>
-
-    </div>
-
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-17_14_14.png" alt=""><figcaption><p><strong>Service Details</strong> tab with <strong>DNS Name</strong> card highlighted</p></figcaption></figure>
 
 4. Open a browser instance and **Paste** the DNS address in the URL field of your browser.
 5. Press **ENTER**. A web page with the text **It works!** displays, from the JavaScript program residing in your Docker Container that is running in **sample-httpd-app**, which is exposed to the web by your Application Load Balancer.

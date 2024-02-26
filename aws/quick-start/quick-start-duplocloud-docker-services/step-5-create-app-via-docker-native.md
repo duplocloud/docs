@@ -28,9 +28,9 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 </div>
 
-## Creating a Service using native Docker&#x20;
+## Creating a Service using Native Docker&#x20;
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native.**
+1. In the DuploCloud Portal, navigate to **Docker** -> **Services.**
 2. Click **Add**. The **Add Service** **Basic Options** page displays.
 3. In the **Service Name** field, enter **demo-service-d01**.
 4. From the **Platform** list box, select **Linux/Docker Native**.
@@ -38,16 +38,9 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 6.  From the **Docker Networks** list box, select **Docker Default**.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/dockerf.png" alt=""><figcaption><p><strong>Add Service Basic Options</strong> page for <strong>Linux/Docker Native</strong> Service</p></figcaption></figure>
-
-    </div>
-
-
+    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-18_07_25.png" alt=""><figcaption><p><strong>Add Service Basic Options</strong> page for <strong>Linux/Docker Native</strong> Service</p></figcaption></figure>
 7. Click **Next**. The **Advanced Options** page displays.
-8. Click **Create**.\
-
+8. Click **Create**.
 
 {% hint style="info" %}
 On the Add Service Basic Options page, you can also specify optional **Environment Variables** (EVs) such as database Host, port, and so on. You can also pass [Docker credentials](../../aws-services/containers/docker-registry-credentials.md) using EVs for testing purposes.&#x20;
@@ -57,16 +50,10 @@ On the Add Service Basic Options page, you can also specify optional **Environme
 
 Verify that **demo-service-d01** has a **Current** Status of **Running**.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/dockerg.png" alt=""><figcaption><p><strong>demo-service-d01</strong> Service page displaying a <strong>Running</strong> status</p></figcaption></figure>
-
-</div>
-
-
+<figure><img src="../../../.gitbook/assets/ishwtaitis.png" alt=""><figcaption><p><strong>demo-service-d01</strong> Service page displaying a <strong>Running</strong> status</p></figcaption></figure>
 
 {% hint style="info" %}
 Once the Service is **Running**, you can check logs for informational messages by clicking the menu icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (4).png" alt="" data-size="line"> ) to the left of the running Service **Name** on the Service page and selecting the **Logs** option.&#x20;
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/dockerh (1).png" alt=""><figcaption><p>Menu icon with Logs option, located to the left of the Running Service <strong>demo-service-d01-1</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/grouped.png" alt=""><figcaption><p>Menu for <strong>demo-service-d01-1</strong> Service with <strong>Logs</strong> highlighted </p></figcaption></figure>

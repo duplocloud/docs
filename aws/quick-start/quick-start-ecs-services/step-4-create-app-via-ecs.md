@@ -10,7 +10,7 @@ Once you create a Task Definition, you can run it as a Task or as a Service. In 
 
 _Estimated time to complete Step 4: 10 minutes._
 
-## Prerequisites <a href="#0-toc-title" id="0-toc-title"></a>
+## Prerequisites <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 Before creating an RDS, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
@@ -30,16 +30,10 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
     </div>
 
 
-2. Navigate to **DevOps** -> **Containers** -> **ECS**.
-3.  In the **Task Definition** tab, click **Add**. The **Add Task Definition** page displays.\
+2. Navigate to **Cloud Services** -> **ECS**.
+3. In the **Task Definition** tab, click **Add**. The **Add Task Definition** page displays.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/ecs_4 (1).png" alt=""><figcaption><p><strong>Add Task Definition</strong> page for AWS ECS</p></figcaption></figure>
-
-    </div>
-
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_40_37 (1).png" alt=""><figcaption><p><strong>Add Task Definition</strong> page for AWS ECS</p></figcaption></figure>
 
 4. In the **Name** field, enter **sample-task-def**.&#x20;
 5. In the **Container - 1** section, in the **Container Name** field, enter **sample-task-def-c1**. Container names are required for Docker images in AWS ECS.
