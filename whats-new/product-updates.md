@@ -19,6 +19,8 @@ coverY: 0
   * Support for [GKE Ingress.](../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
   * Create [Node Pools](../gcp/gcp-services/node-pools.md) with support for accelerators and taints.
   * [GKE Standard mode](../gcp/use-cases/disaster-recovery/#creating-an-infrastructure) is supported when creating DuploCloud Infrastructures.
+* CI/CD
+  * [Update a service with a stream-lined, read-to-use GitHub Actions script](../ci-cd/github-actions/update-a-service.md).
 * General&#x20;
   * SIEM - [Configure agents to install on specific Tenants](../security-and-compliance/security-and-compliance-overview/agents.md#configuring-agents-to-install-on-specified-tenants).
 
