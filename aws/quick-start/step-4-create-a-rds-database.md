@@ -34,17 +34,11 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 ## Creating an RDS database <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**. The **Database** page displays.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**. The **Database** page displays.
 2.  In the **RDS** tab, click **Add**. The **Create a RDS** page displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/dockera.png" alt=""><figcaption><p><strong>Create a RDS</strong> page</p></figcaption></figure>
-
-    </div>
-
-
+    <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-14_50_28.png" alt=""><figcaption><p><strong>Add RDS</strong> page</p></figcaption></figure>
 3. From the table below, enter the values that correspond to the fields on the **Create a RDS** page. Accept all other default values for fields not specified.&#x20;
 4. Click **Create**. The **DUPLODOCS** database displays in the **RDS** tab with a **Status** of **Submitted**. Database creation takes approximately ten (10) minutes.&#x20;
 
@@ -75,25 +69,14 @@ Faults are shown in the DuploCloud Portal by clicking the Fault/Alert ( <img src
 * Invalid passwords - Passwords cannot have special characters like quotes, @, commas, etc. Use a combination of upper and lower-case letters and numbers.
 * Invalid encryption - Encryption is not supported for small database instances (micro, small, or medium).
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/AWS_QS_14.png" alt=""><figcaption><p><strong>RDS</strong> tab with <strong>DUPLODOCS</strong> database with <strong>Status Available</strong>; Fault/Alert Icon highlighted at top</p></figcaption></figure>
-
-</div>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-15_05_25.png" alt=""><figcaption><p><strong>RDS</strong> tab with <strong>DUPLODOCS</strong> database with <strong>Status Available</strong>; Fault/Alert Icon highlighted at top</p></figcaption></figure>
 
 ## Verifying database endpoints <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
 1. In the **RDS** tab, select the **DUPLODOCS** database you created.
-2.  Note the database **Endpoint**, the database name, and the database credentials. For security, the database is automatically placed in a private subnet to prevent all access from the internet. Access to the database is automatically set up for all resources (EC2 instances, containers, Lambdas, etc) in the DuploCloud **dev01** Tenant. You need the Endpoint to connect to the database from an application running in the EC2 instance.\
+2. Note the database **Endpoint**, the database name, and the database credentials. For security, the database is automatically placed in a private subnet to prevent all access from the internet. Access to the database is automatically set up for all resources (EC2 instances, containers, Lambdas, etc) in the DuploCloud **dev01** Tenant. You need the Endpoint to connect to the database from an application running in the EC2 instance.
 
-
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/AWS_QS_13.png" alt=""><figcaption><p><strong>DUPLODOCS</strong> database <strong>Endpoint</strong> highlighted</p></figcaption></figure>
-
-    </div>
-
-
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-15_07_42.png" alt=""><figcaption><p><strong>DUPLODOCS</strong> database details with the endpoint highlighted</p></figcaption></figure>
 
 {% hint style="info" %}
 When you place a DuploCloud Service in a live production environment, consider passing the database endpoint, name, and credentials to a DuploCloud Service using [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), or [Kubernetes Configs and Secrets](../../kubernetes/kubernetes-configs-and-secrets/).
