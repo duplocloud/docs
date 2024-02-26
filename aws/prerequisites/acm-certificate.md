@@ -16,7 +16,7 @@ Once the certificate is issued, add the Amazon Resource Name (ARN) of the certif
 
 1. In the DuploCloud Platform, navigate to **Administrator** -> **Plans**. The **Plans** page displays.
 2. Select the **DEFAULT** Plan from the **Name** column.
-3. Click the **Certificate** tab.
+3. Click the **Certificates** tab.
 4. Click **Add**.
 5. In the **Name** field, enter a certificate name.
 6. In the **Certificate ARN** field, enter the ARN.
