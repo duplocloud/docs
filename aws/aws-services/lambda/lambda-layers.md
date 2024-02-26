@@ -45,7 +45,7 @@ After you set **ListAllLambdaLayers** to **True**:
 
 Before you add a Lambda Layer, you must have defined at least one [Lambda Function](./).
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Serverless**.
+1. In the DuploCloud Portal, navigate to C**loud Services** -> **Serverless**.
 2. In the **Lambda** tab, select the Lambda Function to which you want to add Lambda Layers.&#x20;
 3. Click the **Actions** menu and select **Edit**. The **Edit Lambda Function** page displays.
 4.  In the **Layers** area, click the + button. The **Add Lambda Layer** pane displays.\

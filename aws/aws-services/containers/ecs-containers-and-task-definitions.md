@@ -10,19 +10,15 @@ For an end-to-end example of creating an ECS Task Definition, Service, and Load 
 
 ## Services
 
-Using the **Services** tab in the DuploCloud Portal (**DevOps** -> **Containers** -> **ECS** -> **Services**), you can display and manage the Services you have defined.
+Using the **Services** tab in the DuploCloud Portal (navigate to **Cloud Services** -> **ECS** and select the **Services** tab), you can display and manage the Services you have defined.
 
 For ECS Services, select the Service **Name** and click the **Actions** menu to **Edit** or **Delete** Services, in addition to performing other actions, as shown below.&#x20;
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/ECS_S (1).png" alt=""><figcaption><p>Actions menu for ECS Service</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_47_39.png" alt=""><figcaption><p>Actions menu for ECS Service</p></figcaption></figure>
 
 ## Kubernetes Containers
 
-Using the **Containers** tab in the DuploCloud Portal, you can display and manage the Containers you have defined.
+You can display and manage the Containers you have defined in the DuploCloud portal. Navigate to **Kubernetes** -> **Containers**.
 
 Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
 
@@ -34,7 +30,7 @@ Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_d
 | **Host Shell**      | Accesses the Host Shell.                                                                                                                                       |
 | **Delete**          | Deletes the container.                                                                                                                                         |
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_50_21.png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
 
 ### Creating multiple containers for ECS Services using a Task Definition <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
@@ -44,16 +40,10 @@ You can create up to five (5) containers for ECS services by defining a Task Def
 To designate a container as Essential, see [Defining an Essential Container](ecs-containers-and-task-definitions.md#7-toc-title-2).
 {% endhint %}
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**.
-2.  In the Task Definitions tab, click **Add**. The **Add Task Definition** page displays.\
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **ECS**.
+2. In the Task Definitions tab, click **Add**. The **Add Task Definition** page displays.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/ECS_Mult_con_1.png" alt=""><figcaption><p><strong>Add Task Definition</strong> page for adding multiple containers for ECS Services</p></figcaption></figure>
-
-    </div>
-
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_56_38.png" alt=""><figcaption><p><strong>Add Task Definition</strong> page for adding multiple containers for ECS Services</p></figcaption></figure>
 
 3. Specify a unique **Name** for the Task Definition.
 4. From the **vCPUs** list box, select the number of CPUs to be consumed by the task and change other defaults, if needed.

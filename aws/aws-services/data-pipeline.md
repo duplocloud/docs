@@ -1,4 +1,4 @@
-# Data pipeline
+# Data Pipeline
 
 ## Introduction
 
@@ -16,7 +16,7 @@ A data pipeline can be created using any of the following ways:
 
 ### Using DuploCloud UI
 
-Proceed to **Devops → Analytics -> Data Pipeline**. Click on +**Add** button.
+Proceed to **Cloud Services** → **Analytics** -> **Data Pipeline**. Click on +**Add** button.
 
 Enter relevant information on the form. Click **Generate** button. The form includes information like - name, description, s3 log folder, cron schedule details, EMR resources, EMR steps, etc.
 
@@ -26,7 +26,7 @@ Review generated JSON, and make any further changes to generated JSON
 
 ### Using exported template in AWS console
 
-Proceed to **Devops → Analytics -> Data Pipeline.** Click on +**Add** button. Click '**Import Pipeline Template'**
+Proceed to **Cloud Services → Analytics -> Data Pipeline.** Click on +**Add** button. Click '**Import Pipeline Template'**
 
 In AWS console Proceed to **Data Pipeline -> Choose Existing Data Pipeline -> Click Edit -> Click Export**. Please review generated **JSON**, and make any further changes to generated JSON. Click **Submit.**
 

@@ -12,17 +12,15 @@ To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditin
 
 ## Creating an S3 bucket
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Storage**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage**.
 2. Click the **S3** tab.
 3. Click **Add**. The **Create an S3** **Bucket** pane displays.
 4. In the **Name** field, enter a name for the S3 bucket.
-5.  In the **Region** list box, select the region. You can select **Tenant Region**, **Default Region**, or **Global Region**, and specify **Other Region** to enter a custom region you have defined.\
+5. In the **Region** list box, select the region. You can select **Tenant Region**, **Default Region**, or **Global Region**, and specify **Other Region** to enter a custom region you have defined.
 
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-14_38_40.png" alt=""><figcaption><p>The <strong>Create an S3 Bucket</strong> pane</p></figcaption></figure>
 
-    <figure><img src="../../.gitbook/assets/Screenshot (255).png" alt=""><figcaption></figcaption></figure>
-6.  Optionally, select **Enable Bucket Versioning** and/or **Object Lock.** Both of these settings are disabled by default, unless you Enable Bucket Versioning Tenant-wide in **Tenant** **Settings**. For more information about S3 bucket versioning, see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html).&#x20;
-
-
+6. Optionally, select **Enable Bucket Versioning** and/or **Object Lock.** Both of these settings are disabled by default, unless you Enable Bucket Versioning Tenant-wide in **Tenant** **Settings**. For more information about S3 bucket versioning, see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html).&#x20;
 7. Click **Create**. An S3 bucket is created.
 
 {% hint style="info" %}
@@ -68,7 +66,7 @@ You can set specific AWS S3 bucket [permissions and policies](https://docs.aws.a
 
 Set S3 Bucket permissions in the DuploCloud Portal:
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Storage**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage**.
 2. Click the **S3** tab.
 3. From the **Name** column, select the bucket for which you want to set permissions. The **S3 Bucket** page for your bucket displays.
 4. In the **Settings** tab, click **Edit**. The **Edit a S3 Bucket** pane displays.

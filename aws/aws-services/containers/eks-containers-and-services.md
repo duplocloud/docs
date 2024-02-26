@@ -2,7 +2,7 @@
 description: Managing Containers and Service with EKS and Native Docker Services
 ---
 
-# EKS/Native Containers and Services
+# EKS Containers and Services
 
 {% hint style="info" %}
 For an end-to-end example of creating an EKS Service, see [this tutorial](../../quick-start/quick-start-eks-services/).&#x20;
@@ -12,25 +12,21 @@ For a Native Docker Services example, see [this tutorial](../../quick-start/quic
 
 ## Services
 
-Using the **Services** tab in the DuploCloud Portal (**DevOps** -> **Containers** -> **EKS** -> **Services**), you can display and manage the Services you have defined.
+Using the **Services** tab in the DuploCloud Portal (**Kubernetes** -> **Services**), you can display and manage the Services you have defined.
 
-For EKS Services, select the Service **Name** and click the [**Actions** menu](eks-native-containers-and-services.md#7-toc-title-2) to **Edit** or **Delete** Services, in addition to performing other actions, as shown below.&#x20;
+For EKS Services, select the Service **Name** and click the [**Actions** menu](eks-containers-and-services.md#7-toc-title-2) to **Edit** or **Delete** Services, in addition to performing other actions, as shown below.&#x20;
 
-<figure><img src="../../../.gitbook/assets/sv_2.png" alt=""><figcaption><p><strong>Actions</strong> menu for EKS Service</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_33_17.png" alt=""><figcaption><p><strong>Actions</strong> menu for EKS Service</p></figcaption></figure>
 
-### Adding a DuploCloud EKS/Native Service
+### Adding a DuploCloud EKS Service
 
-1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services** for an EKS Service.&#x20;
 2. Click **Add**. The **Basic Options** section of the **Add Service** page displays.
 3. Complete the fields on the page, including **Service Name**, **Docker Image** **name**, and number of **Replicas**. Use **Allocation Tags** to deploy the container in a specific set of hosts.&#x20;
-4.  To force the creation of Kubernetes StatefulSets, select **Yes** in the **Force StatefulSets** field.\
+4. To force the creation of Kubernetes StatefulSets, select **Yes** in the **Force StatefulSets** field.
 
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_30_56.png" alt=""><figcaption><p><strong>Add Service</strong> page</p></figcaption></figure>
 
-    <div align="left">
-
-    <img src="../../../.gitbook/assets/sv_1.png" alt="Add Service page">
-
-    </div>
 5. Click **Next.** The **Advanced Options** section of the **Add Service** page displays.
 6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../kubernetes/kubernetes-lifecycle-hooks.md), by adding the YAML to the **Other Container Config** field (optional).&#x20;
 7. Click **Create**. The Service is created.&#x20;
@@ -43,28 +39,27 @@ The number of Replicas you define must be less than or equal to the number of ho
 
 ### Displaying Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers/) for the Services.
+Once the deployment commands run successfully, navigate to **Administrator** -> **Tenants**. Select the Tenant from the **NAME** column. Your deployments are displayed and you can now attach [load balancers](../load-balancers/) for the Services.
 
-<figure><img src="../../../.gitbook/assets/sv_3 (1).png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_34_59.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 
 ### Starting, stopping, and restarting multiple DuploCloud Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 Using the Services page, you can start, stop, and restart multiple services simultaneously.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select **EKS/Native** or **ECS**.&#x20;
-2. Click the **Services** tab.&#x20;
-3. Use the checkbox column to select multiple services you want to start or stop at once.
-4. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.**
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
+2. Use the checkbox column to select multiple services you want to start or stop at once.
+3. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.**
 
 Your selected services are started, stopped, or restarted as you specified.
 
-<figure><img src="../../../.gitbook/assets/image (117).png" alt=""><figcaption><p><strong>Services</strong> tab with checkbox column (highlighted) and <strong>Service Actions</strong> menu</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_40_57.png" alt=""><figcaption></figcaption></figure>
 
 ### Importing a Native Kubernetes Service <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 Using the **Import Kubernetes Deployment** pane, you can add a Service to an existing Kubernetes namespace using Kubernetes YAML.
 
-1. In the DuploCloud Portal, select **DevOps** -> **Containers** -> **EKS/Native** from the navigation pane.&#x20;
+1. In the DuploCloud Portal, select **Kubernetes -> Services** from the navigation pane.&#x20;
 2. Click **Add**. The **Add Service** page displays.
 3. Click the **Import Kubernetes Deployment** button in the upper right. **The Import Kubernetes Deployment** pane displays.&#x20;
 4. Paste the deployment YAML code, as in the example below, into the **Import Kubernetes Deployment** pane.&#x20;
@@ -72,11 +67,7 @@ Using the **Import Kubernetes Deployment** pane, you can add a Service to an exi
 6. In the **Add Service** page, click **Next.**
 7. Click **Create**. Your Native Kubernetes Service is created.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (116).png" alt=""><figcaption><p>YAML code for importing a Native Kubernetes Service</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_42_33.png" alt=""><figcaption><p>YAML code for importing a Native Kubernetes Service</p></figcaption></figure>
 
 {% code title="Sample YAML code" %}
 ```yaml
@@ -133,17 +124,13 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 
 ## Kubernetes Containers
 
-Using the **Containers** tab in the DuploCloud Portal, you can display and manage the Containers you have defined.
+You can display and manage the Containers you have defined in the DuploCloud portal. Navigate to **Kubernetes** -> **Containers**.
 
 Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
 
 <table><thead><tr><th width="347">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs. When you select this option, the Container Logs window displays. Use the <strong>Follow Logs</strong> option (enabled by default) to monitor logging in real-time for a running container. See the graphic below for an example of the Container Logs window.</td></tr><tr><td><strong>State</strong></td><td>Displays container state configuration, in YAML code, in a separate window.</td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/cont6.png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_44_56.png" alt=""><figcaption><p><strong>Containers</strong> page displaying defined containers with highlighted Options Menu</p></figcaption></figure>
 
 ### Downloading the Kubectl Token and KubeConfig <a href="#id-6-toc-title" id="id-6-toc-title"></a>
 
@@ -157,10 +144,10 @@ Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_d
 
 DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen minutes, to access the `kubectl` cluster.&#x20;
 
-1. In the DuploCloud Portal, select **Administrator**-> **Infrastructure** from the navigation pane.&#x20;
+1. In the DuploCloud Portal, select **Administrator** -> **Infrastructure** from the navigation pane.&#x20;
 2. Select the Infrastructure in the **Name** column.
 3. Click the **EKS** tab.&#x20;
-4.  Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Value**s from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.\
+4.  Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Values** from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.\
 
 
     <figure><img src="../../../.gitbook/assets/k8s3.png" alt=""><figcaption><p><strong>EKS</strong> tab with <strong>Download KubeConfig</strong> button</p></figcaption></figure>

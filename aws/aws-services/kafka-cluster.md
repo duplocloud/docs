@@ -16,7 +16,7 @@ For complete documentation on Apache Kafka, see the [AWS documentation](https://
 
 ## Creating a Kafka Cluster
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Analytics**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Analytics**.
 2. Click the **Kafka** tab.
 3. Click **Add**. The **Create a Kafka Cluster** pane displays.
 4. Enter a **Kafka Cluster Name**.
@@ -30,37 +30,40 @@ For complete documentation on Apache Kafka, see the [AWS documentation](https://
     <figure><img src="../../.gitbook/assets/kafka_Prereq1 (2).png" alt=""><figcaption><p><strong>Create a Kafka Cluster</strong> pane<br></p></figcaption></figure>
 
     </div>
-8.  Click **Submit**. The cluster is created and displayed as **Active** in the **Kafka** tab. It may take up to half an hour to create the cluster.\
+8. Click **Submit**. The cluster is created and displayed as **Active** in the **Kafka** tab. It may take up to half an hour to create the cluster.
 
-
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/k2.png" alt=""><figcaption><p><strong>Kafka</strong> tab with Kafka clusters<br></p></figcaption></figure>
-
-    </div>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_15_17.png" alt=""><figcaption><p><strong>Kafka</strong> tab with Kafka clusters</p></figcaption></figure>
 
 ## Viewing Kafka Clusters
 
-View Kafka Clusters by navigating to **DevOps** -> **Analytics** in the DuploCloud Portal and selecting the **Kafka** tab.
+View Kafka Clusters by navigating to **Cloud Services** -> **Analytics** in the DuploCloud Portal and selecting the **Kafka** tab.
 
 ## Changing the Configuration of a Kafka Cluster
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Analytics**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Analytics**.
 2. Click the **Kafka** tab.&#x20;
 3. Select the Kafka Cluster with **Active Status** from the **Name** column. The **Kafka Cluster** page displays.&#x20;
 4.  Click the **Actions** menu and select **Change Configuration**. The **Change Cluster Configuration** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/kafka_Prereq2.png" alt=""><figcaption><p>Kafka Cluster page <strong>Actions</strong> menu displaying <strong>Change Configuration</strong> option</p></figcaption></figure>
+
+    </div>
 
 
 5.  From the **Cluster Configuration** list box, select the new cluster configuration.\
 
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/kafka_Prereq3.png" alt=""><figcaption><p><strong>Change Cluster Configuration</strong> pane .</p></figcaption></figure>
+
+    </div>
 
 
 6. From the **Configuration Revision** list box, select the revision of the new cluster configuration.
 7. Click **Submit**. The configuration change is displayed on the **Kafka Cluster** page
 
-<figure><img src="../../.gitbook/assets/kafka_Prereq4.png" alt=""><figcaption><p><strong>Kafka Cluster</strong> page with available tabs detailing configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_19_47.png" alt=""><figcaption><p><strong>Kafka</strong> tab with Kafka clusters</p></figcaption></figure>

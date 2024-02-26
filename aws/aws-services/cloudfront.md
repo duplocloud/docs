@@ -14,7 +14,7 @@ The S3 bucket needs to be created and static asserts need to be uploaded to the 
 [s3-bucket.md](s3-bucket.md)
 {% endcontent-ref %}
 
-Create Cloudfront distribution from **DevOps** > **Networking** > **CloudFront** (tab)**+Add** button above the table.&#x20;
+Create Cloudfront distribution by navigating to **Cloud Services** -> **Networking** and selecting the **CloudFront** tab. Then click **+Add**.&#x20;
 
 * Name - Friendly name for the distribution.
 * Root Object - Default root object that will be returned while accessing the root of the domain. Example: index.html. Should not start with "/".

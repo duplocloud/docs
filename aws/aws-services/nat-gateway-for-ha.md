@@ -20,4 +20,8 @@ See this [AWS Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vp
 6. Select **Enable**.
 7. Click **Set**.
 
-<figure><img src="../../../.gitbook/assets/AWS_infra_set_nat.png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane with <strong>Enable HA NAT Gateway</strong> setting</p></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/AWS_infra_set_nat.png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane with <strong>Enable HA NAT Gateway</strong> setting</p></figcaption></figure>
+
+</div>

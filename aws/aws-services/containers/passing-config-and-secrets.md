@@ -29,7 +29,7 @@ aws s3 cp s3://$S3_BUCKET_NAME/myconfig.json /app/config/config.json
 
 ### SSM parameter Store
 
-Similar to using an S3 bucket, you can create values in an SSM parameter store (**Devops -> AppIntegration -> SSM Parameters)** and set the Name of the parameter in the Environmental Variable. You then use a startup script in the AWS CLI to pull values from SSM and set them for the application in the container, either as an Environmental Variable or as a file.
+Similar to using an S3 bucket, you can create values in an SSM parameter store (navigate to **Cloud Services** -> **App Integration,** and select the **SSM Parameters** tab) and set the Name of the parameter in the Environmental Variable. You then use a startup script in the AWS CLI to pull values from SSM and set them for the application in the container, either as an Environmental Variable or as a file.
 
 ### **AWS Secrets Manager**
 

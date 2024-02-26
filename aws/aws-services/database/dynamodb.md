@@ -10,7 +10,7 @@ When using DynamoDB in DuploCloud AWS, the required permissions to access the Dy
 When you write application code for DynamoDB in DuploCloud AWS, use the IAM role/Instance profile to connect to these services. Use the AWS SDK constructor, which uses the region, if possible.
 {% endhint %}
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Database.**
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database.**
 2. Click the **DynamoDB** tab.
 3.  Click **Add**. The **Create a DynamoDB Table** pane displays.\
 

@@ -1,5 +1,5 @@
-# Elasticsearch
+# OpenSearch
 
-Create an Elasticsearch domain from **DevOps** > **Analytics** > **Elasticsearch** > **+Add** button above the table.
+To create an OpenSearch domain from the DuploCloud portal, navigate to **Cloud Services** -> **Analytics, select the OpenSearch** tab, and click the **+Add** button above the table.
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/aws-es.png)
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_53_50.png" alt=""><figcaption></figcaption></figure>

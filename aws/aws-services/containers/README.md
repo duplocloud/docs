@@ -25,7 +25,7 @@ DuploCloud supports three container orchestration technologies to deploy contain
 [Docker](https://docs.docker.com/get-started/overview/) is the foundational containerization technology. It is not managed, so the user manually controls the containers and orchestration. Although Docker requires considerably more user input than ECS or EKS, it offers greater control over the VM infrastructure, strong isolation between applications, and supreme portability.
 
 {% hint style="info" %}
-When you create a service, refer to the registry configuration in **DevOps** -> **Containers** -> **EKS/Native** **| ECS** -> **Services**, in the **Configuration** tab. Note the values in the **Environment Variables** and **Other Docker Config** fields.&#x20;
+When you create a service, refer to the registry configuration in **Docker** -> **Services | Kubernetes** -> **Services** **| Cloud Services** -> **ECS** -> **Services**. Select the Service from the **NAME** column and select the **Configuration** tab. Note the values in the **Environment Variables** and **Other Docker Config** fields.&#x20;
 
 For example:&#x20;
 
