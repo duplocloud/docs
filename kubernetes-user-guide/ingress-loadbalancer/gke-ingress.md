@@ -1,24 +1,24 @@
 ---
-description: Setup GKE Ingress Controller and Resource with DuploCloud Portal
+description: Create a GKE Ingress using the DuploCloud Portal
 ---
 
 # GKE Ingress
 
 ## Creating GKE Ingress Controller
 
-GCP's Ingress Controller for GKE automatically manages traffic routing to Kubernetes services, integrating Kubernetes workloads with Google Cloud's load balancing infrastructure. It simplifies external access to applications, handling SSL termination and global load distribution.
+GCP's Ingress Controller for GKE automatically manages traffic routing to Kubernetes services, integrating Kubernetes workloads with Google Cloud's load-balancing infrastructure. It simplifies external access to applications, handling SSL termination and global load distribution.
 
-GCP offers its own Ingress Controller, specifically tailored for Google Kubernetes Engine (GKE), to seamlessly integrate Kubernetes services with Google Cloud's advanced load balancing features.
+GCP offers its own Ingress Controller, specifically created for Google Kubernetes Engine (GKE), to seamlessly integrate Kubernetes services with Google Cloud's advanced load balancing features.
 
 ### Container Native Load Balancing with GKE Ingress
 
-Container-native load balancing on Google Cloud Platform (GCP) allows load balancers to directly target Kubernetes pods instead of going through a node-based proxy. This approach improves performance by enabling more efficient routing, reduces latency by eliminating extra hops, and provides better health checking capabilities.&#x20;
+Container-native load balancing on Google Cloud Platform (GCP) allows load balancers to directly target Kubernetes Pods instead of using a node-based proxy. This approach improves performance by enabling more efficient routing, reducing latency by eliminating extra hops, and provides better health-checking capabilities.&#x20;
 
 It leverages the network endpoint groups (NEGs) feature to ensure that traffic is directed to the appropriate container instances, enabling more granular and efficient load distribution for applications running on GKE.
 
 <figure><img src="../../.gitbook/assets/image (121).png" alt="" width="563"><figcaption><p><strong>GKE Container Native Load Balancing</strong></p></figcaption></figure>
 
-With the help of DuploCloud, we can create Container Native Load Balancing Ingress with ease!
+Using DuploCloud, create Container Native Load Balancing Ingress with ease!
 
 ### Pre-requisits: Creating Tenants and Services
 
