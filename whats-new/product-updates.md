@@ -15,6 +15,7 @@ coverY: 0
   * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), in seconds.
 * GCP
   * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title).
+  * Support for [GKE Ingress.](../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
   * Create [Node Pools](../gcp/gcp-services/node-pools.md) with support for accelerators and taints.
   * [GKE Standard mode](../gcp/use-cases/disaster-recovery/#creating-an-infrastructure) is supported when creating DuploCloud Infrastructures.
 * General&#x20;
