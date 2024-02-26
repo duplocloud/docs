@@ -48,18 +48,18 @@ You can enable shared Hosts in the DuploCloud Portal. First, configure one Tenan
 ## Creating a Service that uses a shared Host
 
 1. From the **Tenant** list box at the top of the DuploCloud Portal, select the name of the Tenant that will run K8s Pods on the shared Host.
-2. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**-> **Services**.
+2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 3. In the **Services** tab, click **Add**. The **Add Service** window displays.
-4.  Fill in the **Service Name**, **Cloud**, **Platform**, and **Docker Image** fields. Click **Next**.\
+4. Fill in the **Service Name**, **Cloud**, **Platform**, and **Docker Image** fields. Click **Next**.
 
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_00_08.png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Basic Options.</p></figcaption></figure>
 
-    <figure><img src="../../../.gitbook/assets/Screenshot (274) (1).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Basic Options.</p></figcaption></figure>
 5.  In the **Advanced Options** window, from the **Run on Any Hos**t item list, select **Yes**. \
 
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/Screenshot (276).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (96).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure>
 
     </div>
 6. Click **Create**. A Service running the shared Host is created.&#x20;

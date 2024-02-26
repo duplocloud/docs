@@ -18,13 +18,10 @@ Follow the steps in the [AWS documentation](https://docs.aws.amazon.com/AWSEC2/l
 
 After you configure your EC2 hosts for Hibernation in AWS:
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
 2. In the **EC2** tab, select the Host you want to Hibernate.
-3.  Click the **Actions** menu, and select **Hibernate Host**. A confirmation message displays.\
+3. Click the **Actions** menu, and select **Hibernate Host**. A confirmation message displays.
 
-
-    <figure><img src="../../../.gitbook/assets/H1.png" alt=""><figcaption><p><strong>EC2</strong> page for <strong>Host1</strong>, displaying <strong>Actions</strong> menu with highlighted <strong>Hibernate Host</strong> option.</p></figcaption></figure>
-
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-14_39_26.png" alt=""><figcaption><p><strong>EC2</strong> page for a <strong>Host</strong>, displaying the <strong>Actions</strong> menu with <strong>Hibernate Host</strong> highlighted</p></figcaption></figure>
 
 4. Click **Confirm**. On the EC2 tab, the host's status displays as **hibernated**.
-

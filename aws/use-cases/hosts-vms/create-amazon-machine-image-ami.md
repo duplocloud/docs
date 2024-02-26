@@ -8,7 +8,7 @@ You can create [Amazon Machine Images (AMIs)](https://docs.aws.amazon.com/AWSEC2
 
 ## Adding an AMI
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**. The **Hosts** page displays.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. Select the Host on which you want to base your AMI from the **Name** column.
 3.  Click the **Actions** menu and select **Host Settings** -> **Create AMI**. The **Set AMI** pane displays. \
 
@@ -23,22 +23,12 @@ You can create [Amazon Machine Images (AMIs)](https://docs.aws.amazon.com/AWSEC2
 
 ## Viewing an AMI
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**. The **Hosts** page displays.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. Select the **AMI** tab. Your AMIs are displayed on the **AMI** page. Selecting an AMI from this page displays the **Overview** and **Details** tabs for more information.
 
-<div align="left">
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-14_34_01.png" alt=""><figcaption><p><strong>AMI</strong> page</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/ami2.png" alt=""><figcaption><p><strong>AMI</strong> page</p></figcaption></figure>
-
-</div>
-
-
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/ami3.png" alt=""><figcaption><p><strong>Overview</strong> and <strong>Details</strong> tabs for an AMI</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-14_35_23.png" alt=""><figcaption><p><strong>Overview</strong> and <strong>Details</strong> tabs for an AMI</p></figcaption></figure>
 
 ## Disabling Host creation for custom AMIs
 
@@ -54,8 +44,12 @@ You can disable host creation by non-administrators (Users) for custom AMIs by c
 6. In the **Value** list box, select **true**.
 7. Click **Submit**.
 
-<figure><img src="../../../.gitbook/assets/amidis3.png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Key Disable Host Creation with Custom AMI</strong> selected</p></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/amidis3.png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Disable Host Creation with Custom AMI</strong> selected</p></figcaption></figure>
+
+</div>
 
 When this setting is configured, the **Other** option in the **Image ID** list box in the **Add Host** page, will be disabled, preventing hosts with custom AMIs from being created.
 
-<figure><img src="../../../.gitbook/assets/amidis2.png" alt=""><figcaption><p><strong>Add Host</strong> page with <strong>Other</strong> option in the <strong>Image ID</strong> list box disabled.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-14_37_53.png" alt=""><figcaption><p><strong>Add Host</strong> page with <strong>Other</strong> option in the <strong>Image ID</strong> list box disabled.</p></figcaption></figure>

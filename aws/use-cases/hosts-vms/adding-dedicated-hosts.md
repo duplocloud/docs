@@ -22,34 +22,26 @@ Configure the DuploCloud Portal to allow for the creation of Dedicated Hosts.
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (106) (2).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Key</strong> for <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (106) (2).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure>
 
 </div>
 
 ### Creating Dedicated Hosts to launch EC2 instances
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
 2. In the EC2 tab, click **Add**. The **Add Host** page displays.
 3. After completing the required fields to configure your Host, select **Advanced Options**. The advanced options display.
 4. In the **Dedicated Host ID** field, enter the ID of the Dedicated Host. The ID is used to launch a specific instance on a Dedicated Host. See the screenshot below for an example.
 5. Click **Add**. The Dedicated Host is displayed in the **EC2** tab.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (109) (1).png" alt=""><figcaption><p><strong>EC2</strong> page with <strong>Advanced Options</strong> displayed including <strong>Dedciated Host ID</strong></p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_07_38.png" alt=""><figcaption><p><strong>EC2</strong> page with <strong>Advanced Options</strong> displayed including <strong>Dedciated Host ID</strong></p></figcaption></figure>
 
 ### Viewing Dedicated Hosts to launch EC2 instances
 
 After you create Dedicated Hosts, view them by doing the following:
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
 2. In the **EC2** tab, select the **Host** from the Name column. The **Dedicated Host ID** card on the Host page displays the ID of the Dedicated Host.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (110) (1).png" alt=""><figcaption><p><strong>Dedicated Host ID</strong> card on the Host page displaying ID of the Dedicated Host</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/newshot.png" alt=""><figcaption><p><strong>Dedicated Host ID</strong> card on the Host page displaying ID of the Dedicated Host</p></figcaption></figure>
 

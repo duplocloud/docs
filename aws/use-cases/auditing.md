@@ -12,22 +12,24 @@ The DuploCloud Portal provides a comprehensive audit trail, including reports an
 * **Compliance** (such as HIPAA, SOC 2, and HIGHTRUST, among others)
 * [**Kat-Kit**](../../ci-cd/katkit/) (DuploCloud's CI/CD Tool)
 
-<figure><img src="../../.gitbook/assets/audit13.png" alt=""><figcaption><p>The <strong>Audit</strong> page with <strong>Admin</strong> audit records selected using the <strong>Show Audit Records</strong> for list box</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.21-14_33_18.png" alt=""><figcaption><p>The <strong>Audit</strong> page with <strong>Admin</strong> audit records selected using the <strong>Show Audit Records</strong> for list box</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/audit12.png" alt=""><figcaption><p>The <strong>Audit</strong> page with audit records selected for the <strong>DEV01</strong> Tenant</p></figcaption></figure>
+
+
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.21-14_35_02.png" alt=""><figcaption><p>The <strong>Audit</strong> page with audit records selected for the <strong>DEV01</strong> Tenant</p></figcaption></figure>
 
 ## Enabling Audit
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Diagnostics** -> **Audit**. The **Audit** page displays.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Settings,** and select the **Audit** tab. The **Audit** page displays.
 2. Click the **Enable Audit** link.&#x20;
 
 <figure><img src="../../.gitbook/assets/audit11.png" alt=""><figcaption><p><strong>Enable Audit</strong> link on the <strong>Audit</strong> page</p></figcaption></figure>
 
 ## Viewing detailed auditing diagnostics
 
-To view complete auditing reports and logs, navigate to the **Diagnostics** -> **Audit** page in the DuploCloud Portal.
+To view complete auditing reports and logs, navigate to the **Observability** -> **Audit** page in the DuploCloud Portal.
 
-<figure><img src="../../.gitbook/assets/audit1 (1).png" alt=""><figcaption><p><strong>Audit</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.21-14_38_32.png" alt=""><figcaption><p><strong>Audit</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 ## Configuring a custom S3 bucket for auditing in another AWS account
 
