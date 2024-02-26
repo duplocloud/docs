@@ -29,18 +29,12 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 Note that if you skipped [Step 7](step-7-secure-the-load-balancer.md) and/or [Step 8](step-8-create-dns-name.md), the configuration in the **Other Settings** and **DNS** cards appears slightly different from the configuration depicted in the screenshot below. These changes do not impact you in testing your application, as these steps are optional. You can proceed to test your app with no visible change in the output of the deployable application.
 {% endhint %}
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 2. From the **Name** column, select **demo-service**.
 3. Click the **Load Balancers** tab. The Application Load Balancer configuration is displayed.
-4.  In the **DNS** status card on the right side of the Portal, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.\
+4. In the **DNS** status card on the right side of the Portal, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/AWS_QS_28.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS</strong> status card highlighted</p></figcaption></figure>
-
-    </div>
-
+<figure><img src="../../../.gitbook/assets/dns name.png" alt=""><figcaption></figcaption></figure>
 
 5. Open a browser instance and **Paste** the DNS in the URL field of your browser.
 6. Press **ENTER**. A web page with the text **Hello World!** is displayed, from the JavaScript program residing in your Docker Container that is running in **demo-service**, which is exposed to the web by your Load Balancer.

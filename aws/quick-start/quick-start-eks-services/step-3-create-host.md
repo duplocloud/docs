@@ -24,21 +24,16 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 ## Creating a host
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**. The **Hosts** page displays.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. In the **EC2** tab, click **Add**. The **Add Hosts** page displays.
 3. In the **Friendly Name** field, enter **host01**.
 4. From the **Instance Type** list box, select **2 CPU 4 GB - t3.medium**.
 5. Select the **Advanced Options** checkbox to display advanced configuration fields.
 6. From the **Agent Platform** list box, select **EKS Linux**.
 7. From the **Image ID** list box, select any Image ID that is prefixed by **EKS** (for example, **EKS-Oregon-1.23**).
-8.  Click **Add**. The Host is created, initialized, and started. In a few minutes, when the **Status** displays **Running**, the Host is available for use.\
+8. Click **Add**. The Host is created, initialized, and started. In a few minutes, when the **Status** displays **Running**, the Host is available for use.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/AWS_QS_22.png" alt=""><figcaption><p><strong>EC2 Add Hosts</strong> page</p></figcaption></figure>
-
-    </div>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-15_18_15.png" alt=""><figcaption><p><strong>EC2 Add Hosts</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
 The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time. For this tutorial, the region is **us-west-2**, where the **NONPROD** Infrastructure was created.&#x20;
@@ -50,8 +45,5 @@ If no **Image ID** is available with a prefix of **EKS**, copy the **AMI ID** fo
 
 Verify that the Host you created has a **Status** of **Running**.
 
-<div align="left">
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-15_20_43 (1).png" alt=""><figcaption><p><strong>EC2</strong> tab with Host status <strong>Running</strong></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/AWS_QS_15.png" alt=""><figcaption><p><strong>EC2</strong> tab with Host in <strong>Status Running</strong></p></figcaption></figure>
-
-</div>

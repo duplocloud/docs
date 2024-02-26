@@ -38,7 +38,13 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 2.  In the **RDS** tab, click **Add**. The **Create a RDS** page displays.\
 
 
-    <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-14_50_28.png" alt=""><figcaption><p><strong>Add RDS</strong> page</p></figcaption></figure>
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/dockera.png" alt=""><figcaption><p><strong>Create a RDS</strong> page</p></figcaption></figure>
+
+    </div>
+
+
 3. From the table below, enter the values that correspond to the fields on the **Create a RDS** page. Accept all other default values for fields not specified.&#x20;
 4. Click **Create**. The **DUPLODOCS** database displays in the **RDS** tab with a **Status** of **Submitted**. Database creation takes approximately ten (10) minutes.&#x20;
 

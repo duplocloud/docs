@@ -38,18 +38,12 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 ## Securing the Load Balancer
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 2. From the **Name** column, select the Service to which your Load Balancer is attached (**demo-service**).
 3. Click the **Load Balancers** tab.
-4.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.\
+4. In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/AWS_QS_19 (1).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>Other Settings</strong> card </p></figcaption></figure>
-
-    </div>
-
+<figure><img src="../../../.gitbook/assets/LB final fakeout.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>Other Settings</strong> card</p></figcaption></figure>
 
 5. In the **Web ACL** list box, select **None**, because you are not connecting a Web Application Firewall.
 6.  For this tutorial, select only the **Enable Access Logs** and **Drop Invalid Headers** options.\
@@ -74,8 +68,5 @@ Verify that the **Other Settings** card contains the selections you made above f
 * **Enable Access Logs** - `True`
 * **Drop Invalid Headers** - `True`
 
-<div align="left">
+<figure><img src="../../../.gitbook/assets/ihatethis.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>Other Settings</strong> card, including set options </p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/AWS_QS_26 (1).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>Other Settings</strong> card, including set options </p></figcaption></figure>
-
-</div>
