@@ -21,9 +21,9 @@ Unlike AWS EKS, creating and deploying services and apps with ECS requires creat
 
 To deploy your app with AWS ECS in this ECS tutorial, you:&#x20;
 
-1. Create a Task Definition using ECS.
+1. Create a **Task Definition** using ECS.
 2. Create a DuploCloud Service named **webapp**, backed by a Docker image.
-3. Expose the app to the web with a Load Balancer.
+3. Expose the app to the web with a **Load Balancer**.
 4. Complete the tutorial by testing your application.
 
 _Estimated time to complete remaining tutorial steps: 30-40 minutes_

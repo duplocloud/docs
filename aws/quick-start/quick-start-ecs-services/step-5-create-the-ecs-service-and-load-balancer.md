@@ -10,7 +10,7 @@ Once a Service is created, you must create a Load Balancer to expose the Service
 
 _Estimated time to complete Step 5: 10 minutes._
 
-## Prerequisites <a href="#0-toc-title" id="0-toc-title"></a>
+## Prerequisites <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 Before creating the ECS Service and Load Balancer, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
@@ -33,23 +33,13 @@ Tasks run until an error occurs or a user terminates the Task in the ECS Cluster
     </div>
 
 
-2. Navigate to **DevOps** -> **Containers** -> **ECS**.
-3. In the **Task Definitions** tab, select the Task Definition Family Name, **DUPLOSERVICES-DEV01-ECS-TEST-sample-task-def**. This is the [Task Definition **Name** that you created ](step-4-create-app-via-ecs.md#creating-a-task-definition)prepended by a unique identified, which includes your Tenant name (**DEV01**) and part of your Infrastructure name (**ECS-TEST**).&#x20;
-4.  In the **Service Details** tab, click the **Configure ECS Service** link. The **Add ECS Service** page displays.\
+2. Navigate to **Cloud Services** -> **ECS**.
+3. In the **Task Definitions** tab, select the Task Definition Family Name, **DUPLOSERVICES-DEV01-SAMPLE-TASK-DEF**. This is the [Task Definition **Name** that you created ](step-4-create-app-via-ecs.md#creating-a-task-definition)prepended by a unique identified, which includes your Tenant name (**DEV01**) and part of your Infrastructure name (**ECS-TEST**).&#x20;
+4. In the **Service Details** tab, click the **Configure ECS Service** link. The **Add ECS Service** page displays.
 
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_53_00.png" alt=""><figcaption><p><strong>Service Details</strong> tab </p></figcaption></figure>
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/ecs_5.png" alt=""><figcaption><p><strong>Service Details</strong> tab <br></p></figcaption></figure>
-
-    </div>
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/ecs_6.png" alt=""><figcaption><p><strong>Add ECS Service</strong> page</p></figcaption></figure>
-
-    </div>
-
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_57_05.png" alt=""><figcaption><p><strong>Add ECS Service</strong> page</p></figcaption></figure>
 
 5. In the **Name** field, enter **sample-httpd-app** as the Service name.
 6.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.\
@@ -74,6 +64,6 @@ Tasks run until an error occurs or a user terminates the Task in the ECS Cluster
 
 ## Checking Your Work
 
-In the **Service Details** tab, information about the Service and Load Balancer you created is displayed. Verify that the Service and Load Balancer configuration details in the **Service Details** tab are correct.&#x20;
+In the **Service Details** tab, information about the Service and Load Balancer you created is displayed. Verify that the Service and Load Balancer configuration details in the **Service Details** tab are correct.
 
-<figure><img src="../../../.gitbook/assets/ecs_8 (1).png" alt=""><figcaption><p><strong>Service Details</strong> tab displaying Service and Load Balancer configuration details</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-17_10_40.png" alt=""><figcaption><p><strong>Service Details</strong> tab displaying Service and Load Balancer configuration details</p></figcaption></figure>

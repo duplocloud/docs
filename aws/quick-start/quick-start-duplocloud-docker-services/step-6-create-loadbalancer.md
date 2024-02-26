@@ -29,10 +29,10 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 </div>
 
-## Creating a Load Balancer using native Docker
+## Creating a Load Balancer using Native Docker
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native.**
-2. In the Services tab, select the Service **demo-service-d01** [that you created](step-5-create-app-via-docker-native.md).
+1. In the DuploCloud Portal, navigate to **Docker** -> **Services**.
+2. Select the Service **demo-service-d01** [that you created](step-5-create-app-via-docker-native.md).
 3. Click the **Load Balancers** tab.
 4. Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.
 5. From the **Select Type** list box, select **Application LB**.
@@ -52,7 +52,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 When the **LB Status** card displays **Ready**, your Load Balancer is running and ready for use.
 
-<figure><img src="../../../.gitbook/assets/dockero.png" alt=""><figcaption><p><strong>Services</strong> page with <strong>LB Status</strong> card displaying <strong>Ready</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/help.png" alt=""><figcaption><p><strong>Services</strong> page with <strong>LB Status</strong> card displaying <strong>Ready</strong></p></figcaption></figure>
 
 ### Securing the Load Balancer
 
@@ -62,8 +62,4 @@ If you want to secure the load balancer created, you can follow the steps specif
 
 You can modify the DNS name by clicking Edit in the DNS Name card in the Load Balancers tab. For additional information see [this page](../quick-start-eks-services/step-8-create-dns-name.md).
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/dockerk.png" alt=""><figcaption><p><strong>DNS Name</strong> card in the <strong>Load Balancers</strong> tab with the <strong>Edit</strong> option</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/shitpic.png" alt=""><figcaption><p><strong>DNS Name</strong> card in the <strong>Load Balancers</strong> tab with the <strong>Edit</strong> option</p></figcaption></figure>

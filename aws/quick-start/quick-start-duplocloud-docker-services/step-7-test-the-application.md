@@ -26,17 +26,13 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 ## Testing the Application
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.
+1. In the DuploCloud Portal, navigate to **Docker** -> **Services**. The **Services** page displays.
 2. From the **Name** column, select **demo-service-d01**.
 3. Click the **Load Balancers** tab. The Application Load Balancer configuration is displayed.
 4.  In the **DNS** status card on the right side of the Portal, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/dockero (1).png" alt=""><figcaption><p>Service page with <strong>Load Balancers</strong> tab and <strong>DNS</strong> card that includes Copy Icon<br></p></figcaption></figure>
-
-    </div>
+    <figure><img src="../../../.gitbook/assets/services new.png" alt=""><figcaption><p>Service page with <strong>Load Balancers</strong> tab selected<br></p></figcaption></figure>
 5. Open a browser instance and **Paste** the DNS in the URL field of your browser.
 6. Press **ENTER**. A web page with the text **Hello World!** is displayed, from the JavaScript program residing in your Docker Container that is running in **demo-service-d01**, which is exposed to the web by your Load Balancer.
 
