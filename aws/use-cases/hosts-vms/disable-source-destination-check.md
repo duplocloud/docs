@@ -12,19 +12,21 @@ There are times when you may want to override this default behavior, such as whe
 
 Set AWS CloudFormation `SourceDestCheck` to `false` for an EC2 Host:
 
-1. In the DuploCloud Portal, navigate to **DevOps -> Hosts**.
+1. In the DuploCloud Portal, navigate to **Cloud Services -> Hosts**.
 2. In the **EC2** tab, select the Host for which you want to disable `SourceDestCheck`.
 3. Click the **Metadata** tab.
 4.  Click **Add**. The **Add Metadata** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/SDC1.png" alt=""><figcaption><p><strong>Add Metadata</strong> pane for <strong>Key SourceDestCheck</strong></p></figcaption></figure>
+
+    </div>
 
 
 5. In the **Key** field, enter **SourceDestCheck**.
 6. In the **Value** field, enter **False**.
-7.  Click **Create**. The **Key**/**Value** pair is displayed in the **Metadata** tab.\
+7. Click **Create**. The **Key**/**Value** pair is displayed in the **Metadata** tab.
 
-
-    <figure><img src="../../../.gitbook/assets/SDC2.png" alt=""><figcaption><p>EC2 Host <strong>Metadata</strong> tab displaying <strong>SourceDestCheck Value</strong> of <strong>false</strong></p></figcaption></figure>
-
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-14_47_44.png" alt=""><figcaption><p><strong>EC2 Host</strong> page <strong>Metadata</strong> tab displaying <strong>SourceDestCheck Value</strong> of <strong>False</strong></p></figcaption></figure>

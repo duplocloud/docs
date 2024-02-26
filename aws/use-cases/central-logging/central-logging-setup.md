@@ -11,7 +11,7 @@ description: Set up logging for the DuploCloud Portal
 
 ## Setting up logging&#x20;
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Diagnostics** -> **Settings** -> **Logging**.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Settings** -> **Logging**.
 2. From the **Tenant** list box at the top of the DuploCloud Portal, select the **Default** Tenant.
 3.  Click the **Create Logging** link. The **Enable Logging** page displays.\
 
@@ -34,22 +34,19 @@ description: Set up logging for the DuploCloud Portal
 
 
 5. Click **Submit**. Data gathering takes about fifteen (15) minutes. When data gathering is complete, graphical logging data is displayed in the **Logging** tab.&#x20;
-6. After logging has been enabled for the Control Plane, finish the logging setup by enabling the Log Collector to collect logs per Tenant. This feature is especially useful for Tenants that are spread across multiple regions. In the DuploCloud Portal, navigate to **Administrator** -> **Diagnostics** -> **Settings**. &#x20;
+6. After logging has been enabled for the Control Plane, finish the logging setup by enabling the Log Collector to collect logs per Tenant. This feature is especially useful for Tenants that are spread across multiple regions. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Settings -> Logging**. &#x20;
 7.  In the **Logging** tab, on the **Logging Infrastructure Tenants** page, click **Add.**\
 
 
     <figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p><strong>Add</strong> button on the <strong>Logging Infrastructure Tenants</strong> page</p></figcaption></figure>
-8.  Select the Tenants for which you want to configure logging, using the **Select Tenants to enable logging** area, as in the example below. The [Control Plane configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description) is deployed for each Tenant that you select in the Infrastructure, specified in **Infrastructure Details**.\
+8. Select the Tenants for which you want to configure logging, using the **Select Tenants to enable logging** area, as in the example below. The [Control Plane configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description) is deployed for each Tenant that you select in the Infrastructure, specified in **Infrastructure Details**.
 
-
-    ![Logging tab with logging setup complete](<../../../.gitbook/assets/image (15) (1) (1).png>)
-
-
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.21-14_43_41.png" alt=""><figcaption><p><strong>Logging</strong> tab with logging setup complete</p></figcaption></figure>
 
 {% hint style="info" %}
 The Log Collector uses [Elastic Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html) containers that are deployed within each Tenant.&#x20;
 
-When you enable a Tenant for logging, the Filebeat service starts up and begins log collection. View the Filebeat containers by navigating to **DevOps** -> **Containers** -> **EKS/Native** in the DuploCloud Portal and selecting the **Containers** tab.
+When you enable a Tenant for logging, the Filebeat service starts up and begins log collection. View the Filebeat containers by navigating to **Kubernetes** -> **Containers** in the DuploCloud Portal. In the row of the container for which you want to view the logs, click on the menu icon and select **Logs**.
 {% endhint %}
 
 ## How DuploCloud configures logging for you

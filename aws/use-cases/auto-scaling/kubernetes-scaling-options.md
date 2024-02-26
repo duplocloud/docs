@@ -19,8 +19,8 @@ Horizontal Pod Autoscaler (HPA) automatically scales the Deployment and its Repl
 
 You can configure HPA while creating a Deployment Service from the DuploCloud Portal.
 
-1. In the DuploCloud Portal, navigate **DevOps** > **Containers** > **EKS/Native.**
-2. In the **Service** tab, create a new [Service](../../aws-services/containers/) by clicking **Add**.
+1. In the DuploCloud Portal, navigate **Kubernetes** -> **Services**, displaying the **Services** page.
+2. Create a new [Service](../../aws-services/containers/) by clicking **Add**.
 3.  In **Add Service - Basic Options**, from the **Replication Strategy** list box, select **Horizontal Pod Scheduler**_._ \
 
 
@@ -70,7 +70,7 @@ If a Kubernetes Service is running with a Horizontal Pod AutoScaler (HPA), you c
 
 Instead, do the following to stop the service from running:
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** and select the Service you want to stop.
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Containers** and select the Service you want to stop.
 2. From the **Actions** menu, select **Edit**.
 3. From the **Replication Strategy** list box, select **Static Count**.
 4. In the **Replicas** field, enter **0** (zero).&#x20;

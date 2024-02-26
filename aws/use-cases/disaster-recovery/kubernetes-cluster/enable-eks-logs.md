@@ -22,7 +22,11 @@ Enable EKS logging for an Infrastructure that you have created.
 6. In the **Setting Value** field, enter: `api;audit;authenticator;controllerManager;scheduler`
 7. Click **Set**. The **EKS ControlPlane Logs** setting is displayed in the **Settings** tab.
 
+<div align="left">
+
 <figure><img src="../../../../.gitbook/assets/AWS_Infra_logs3.png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane for setting <strong>EKS ControlPlane Logs</strong></p></figcaption></figure>
+
+</div>
 
 <figure><img src="../../../../.gitbook/assets/AWS_logging_display.png" alt=""><figcaption><p><strong>Settings</strong> tab with <strong>EKS ControlPlane Logs</strong> <strong>Value</strong> set</p></figcaption></figure>
 

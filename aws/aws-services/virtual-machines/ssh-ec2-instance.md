@@ -8,7 +8,7 @@ Once an EC2 Instance is created, you connect it with SSH either by using Session
 
 ## Connecting to an EC2 Linux instance using SSH
 
-In the DuploCloud Portal, navigate to **DevOps** -> **Hosts** and select the host to which you want to connect.
+In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts** and select the host to which you want to connect.
 
 ### Connect using session ID
 

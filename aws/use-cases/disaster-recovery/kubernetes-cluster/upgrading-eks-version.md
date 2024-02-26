@@ -25,12 +25,18 @@ To upgrade the EKS version, in the DuploCloud Portal:&#x20;
 
 1. Click **Administrator** -> **Infrastructure.**
 2. Select the Infrastructure that you want to upgrade to the latest EKS version.
-3.  Select the **EKS** tab. If an Infrastructure upgrade is available, an **Upgrade** link appears in the **Value** column.
+3.  Select the **EKS** tab. If an Infrastructure upgrade is available, an **Upgrade** link appears in the **Value** column.\
+
 
     ![EKS tab with Upgrade available](<../../../../.gitbook/assets/AWS\_EKS\_Upgrade0 (1).png>)
-4.  Click the **Upgrade** link. The **Upgrade EKS Cluster** pane displays.
+4.  Click the **Upgrade** link. The **Upgrade EKS Cluster** pane displays.\
+
+
+    <div align="left">
 
     <figure><img src="../../../../.gitbook/assets/AWS_EKS_Upgrade1.png" alt=""><figcaption><p><strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure>
+
+    </div>
 5. From the **Target Version** list box, select the version to which you want to upgrade.&#x20;
 6. From the **Host Upgrade Action**, select the method by which you want to upgrade hosts.
 7. Click **Create**. The upgrade process begins.
@@ -55,7 +61,7 @@ When you click **Show Details**, the **EKS Upgrade Details** page displays the p
 
 If any of your Hosts use allocation tags, you must assign allocation tags to the Hosts:
 
-1. After your Hosts are online and available, navigate to **DevOps** -> **Hosts**.
+1. After your Hosts are online and available, navigate to **Cloud Services** -> **Hosts**.
 2. Select the host group tab (**EC2**, **ASG**, etc.) on the **Hosts** screen.&#x20;
 3. Click the **Add** button.
 4. Name the Host and provide other configuration details on the **Add Host** form.
@@ -64,10 +70,6 @@ If any of your Hosts use allocation tags, you must assign allocation tags to the
 7. Click **Create** and define your allocation tags.
 8. Click **Add** to assign the allocation tags to the Host.
 
-<figure><img src="../../../../.gitbook/assets/Hosts_Tags_AWS.png" alt=""><figcaption><p>Allocation tags in the <strong>Add Host</strong> screen</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_29_01.png" alt=""><figcaption><p>Allocation tags in the <strong>Add Host</strong> screen</p></figcaption></figure>
 
-
-
-&#x20; &#x20;
-
-&#x20;                                 &#x20;
+&#x20;                             &#x20;

@@ -19,14 +19,17 @@ For more information about IAM roles and session times in relation to a user, ap
 3.  Click **Add**. The **App Config** pane displays.\
 
 
-    <figure><img src="../../../.gitbook/assets/Dy1.png" alt=""><figcaption><p><strong>Add Config</strong> pane to set <strong>Key Maximum Session Duration</strong> for all <strong>Tenants</strong><br></p></figcaption></figure>
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/Dy1.png" alt=""><figcaption><p><strong>Add Config</strong> pane to set Key <strong>Maximum Session Duration</strong> for all <strong>Tenants</strong><br></p></figcaption></figure>
+
+    </div>
 4. From the **Config Type** list box, select **AppConfig**.
 5. From the **Key** list box, select **Maximum Session Duration**.
 6. From the **Select Duration Hour** list box, select the maximum session time in hours or set a **Custom Duration** in seconds.
-7.  Click **Submit**. The **Maximum Session Duration Key** and **Value** are displayed in the **System Config** tab. Note that the **Value** you set for maximum session time in hours is displayed in seconds. You can **Delete** or **Update** the setting in the row's **Actions** menu. \
+7. Click **Submit**. The **Maximum Session Duration Key** and **Value** are displayed in the **System Config** tab. Note that the **Value** you set for maximum session time in hours is displayed in seconds. You can **Delete** or **Update** the setting in the row's **Actions** menu.&#x20;
 
-
-    <figure><img src="../../../.gitbook/assets/Dy2 (1).png" alt=""><figcaption><p><strong>System Config</strong> tab on <strong>System Settings</strong> page displaying <strong>MaximumSessionDuration</strong> for all Tenants</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_54_33.png" alt=""><figcaption><p><strong>System Config</strong> tab on <strong>System Settings</strong> page displaying <strong>Maximum Session Duration</strong> for all Tenants</p></figcaption></figure>
 
 ### Configuring session duration for a single Tenant
 
@@ -36,10 +39,14 @@ For more information about IAM roles and session times in relation to a user, ap
 4.  Click **Add**. The **Add Tenant Feature** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/Dy3.png" alt=""><figcaption><p>Add Tenant Feature pane to set Maximum Session Duration for a single Tenant<br></p></figcaption></figure>
+
+    </div>
 5. From the **Select Feature** list box, select **Maximum Session Duration**.
 6. From the **Select Duration Hour** list box, select the maximum session time in hours or set a **Custom Duration** in seconds.
 7.  Click **Add**. The **Maximum Session Duration Name** and **Value** are displayed in the **Settings** tab. Note that the **Value** you set for maximum session time in hours is displayed in seconds. You can **Delete** or **Update** the setting in the row's **Actions** menu. \
 
 
-    <figure><img src="../../../.gitbook/assets/Dy4.png" alt=""><figcaption><p><strong>Settings</strong> tab on Tenant page displaying <strong>MaximumSessionDuration</strong> for Tenant <strong>dev01</strong> </p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Dy4.png" alt=""><figcaption><p><strong>Settings</strong> tab on Tenant page displaying <strong>Maximum Session Duration</strong> for Tenant <strong>dev01</strong> </p></figcaption></figure>

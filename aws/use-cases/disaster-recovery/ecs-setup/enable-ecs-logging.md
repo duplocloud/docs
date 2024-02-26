@@ -12,7 +12,7 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 * Define at least one [service and container](../../../aws-services/containers/).
 * Enable the Audit feature.
 
-## Enabl ECS Elastic Search Logging for a Tenant
+## Enable ECS Elastic Search Logging for a Tenant
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**. The **Tenant** page displays.
 2. From the **Name** column, select the Tenant that is running the container for which you want to enable logging.
@@ -33,25 +33,15 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 
 You can verify that ECS logging is enabled for a specific container.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **ECS**.
-2.  In the **Task Definitions** tab, select the **Task Definition Family Name** in which your container is defined. The Task Definition Family Name detail page displays. In the example below, the Task Definition Family Name is **DUPLOSERVICES-UX-TEAM-BGTD1**.\
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **ECS**.
+2.  In the **Task Definitions** tab, select the **Task Definition Family Name** in which your container is defined. \
 
 
-    <div align="left">
-
-    <figure><img src="../../../../.gitbook/assets/AWS_ECS_Logging_6.png" alt=""><figcaption><p>The Task Definition Family Name detail page with <strong>Task Defintions</strong> tab</p></figcaption></figure>
-
-    </div>
-
-
+    <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_37_06.png" alt=""><figcaption><p>The Task Definition Family Name detail page with <strong>Task Definitions</strong> tab selected</p></figcaption></figure>
 3. Click the **Task Definitions** tab.
-4. In the **Task Definitions tab**, click the Edit Icon ( <img src="../../../../.gitbook/assets/square_edit_icon (2).png" alt="" data-size="line"> ) to edit the Task Definition. The **Edit Task Definition** page displays your defined **Container**s.
+4. Menu icon ( <img src="../../../../.gitbook/assets/image (53).png" alt="" data-size="line">) in the row of the task definition and select **Edit Task Definition**. The **Edit Task Definition** page displays your defined **Container**s.
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/AWS_ECS_Logging_5.png" alt=""><figcaption><p><strong>Task Definitions</strong> Icon (highligted) in Task Definitions tab</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_40_32.png" alt=""><figcaption><p><strong>Task Definitions</strong> tab menu with <strong>Edit Task Definitio</strong>n highlighted</p></figcaption></figure>
 
 In the **Container - 1** area, in the **Container Other Config** field, your `LogConfiguration` is displayed.
 

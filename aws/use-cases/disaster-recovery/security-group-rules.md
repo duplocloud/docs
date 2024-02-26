@@ -14,7 +14,11 @@ description: >-
 4.  Click **Add**. The **Add Infrastructure Security** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/xtenant1.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane defining port range for Cross-tenant access</p></figcaption></figure>
+
+    </div>
 
 
 5. From the **Source Type** list box, select **Tenant** or **IP Address**.
