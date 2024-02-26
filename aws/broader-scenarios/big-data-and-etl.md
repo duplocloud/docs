@@ -1,6 +1,6 @@
-# Big-data and ETL
+# Big Data and ETL
 
-## Introduction <a href="#0-toc-title" id="0-toc-title"></a>
+## Introduction <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 * **Use case:**
   * **Collection of data from using various methods/sources**
@@ -25,7 +25,7 @@
     * Create history for models/hyper parameters and data at various stages.
 * **Deploying Apache Spark™ cluster**
 
-## Creating a Spark cluster with a Jupyter notebook <a href="#1-toc-title" id="1-toc-title"></a>
+## Creating a Spark cluster with a Jupyter notebook <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
 In this tutorial we will create a Spark cluster with a Jupyter notebook. A typical use case is ETL jobs, for example reading parquet files from S3, processing and pushing reports to databases. The aim is to process GBs of data in faster and cost-effective way.
 
@@ -36,27 +36,27 @@ The high-level steps are:
 
 ### **Create a host for Spark master**
 
-Navigate to **DevOps > Hosts > EC2 > +Add** button to create hosts and click **show advanced**. Change the value of instance type to ‘`m4.xlarge`‘ and add an allocation tag ‘`sparkmaster`‘.
+From the DuploCloud portal, navigate to **Cloud Services -> Hosts -> EC2.** Click **+Add** and check the **Advanced Options** box. Change the value of instance type to ‘`m4.xlarge`‘ and add an allocation tag ‘`sparkmaster`‘.
 
-![Figure 1](https://duplocloud.com/wp-content/uploads/2021/11/N1-host.png)
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_06_50.png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
 
 ### **Create a host for Spark worker**
 
-Create another host for the worker. Change the value of instance type to ‘`m4.4xlarge`‘ and add an allocation tag ‘`sparkworker`‘. Click on submit. The number of workers depends on how much load you want to process. You should add one host for each worker. They should all have the same allocation tag ‘`sparkworker`‘. You can add and remove workers and scale up or down the Spark worker service as many times as you want. We will see in the following steps.
+Create another host for the worker. Change the value of instance type to ‘`m4.4xlarge`‘ and add an allocation tag ‘`sparkworker`‘. Click Submit. The number of workers depends on how much load you want to process. You should add one host for each worker. They should all have the same allocation tag ‘`sparkworker`‘. You can add and remove workers and scale up or down the Spark worker service as many times as you want. We will see in the following steps.
 
-![Figure 2](https://duplocloud.com/wp-content/uploads/2021/11/spark-worker-host.png)
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_06_17.png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
 
 ### **Create a host for Jupyter**
 
 Create one more host for Jupyter notebook. Choose the value of instance type to ‘`m4.4xlarge`‘ and add the allocation tag as ‘`jupyter`‘.
 
-![Figure 3](https://duplocloud.com/wp-content/uploads/2021/11/N1-host.png)
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_09_35.png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
 
 ### **Create a Spark master Docker service**
 
-Navigate to **Containers > EKS/ Native > Services** and create new service. Under name choose ‘`sparkmaster`‘, image ‘`duplocloud/anyservice:spark_v6'`, add the allocation tag ‘`sparkmaster`‘. In the Docker host config select Host network. By setting this in Docker Host config you are making the container networking the same as the VM i.e., container IP is same as VM.
+Navigate to **Docker** -> **Services** and click **Add.** In the **Service** **Name** field, enter ‘`sparkmaster`‘ and in the Docker Image field, enter ‘`duplocloud/anyservice:spark_v6'`, add the allocation tag ‘`sparkmaster`‘. From the **Docker Networks** list box, select **Host Network**. By setting this in Docker Host config you are making the container networking the same as the VM i.e., container IP is same as VM.
 
-![Figure 4Z](https://duplocloud.com/wp-content/uploads/2021/11/spark-master-service.png)
+![](https://duplocloud.com/wp-content/uploads/2021/11/spark-master-service.png)
 
 ### **Create a Jupyter service**
 
@@ -74,7 +74,7 @@ Replace the brackets `<>` with the IP you just got. See figure 5.
 
 ### **Create Spark workers**
 
-Create another service named ‘`sparkworker1`\`, image ‘`duplocloud/anyservice:spark_v7`‘, add the allocation tag ‘`sparkworker`‘ and select Host network for Docker Host Config. Also provide the environment variables
+Create another service named ‘`sparkworker1`\`, image ‘`duplocloud/anyservice:spark_v7`‘, add the allocation tag ‘`sparkworker`‘ and select **Host Network** for **Docker Networ**k. Also provide the environment variables
 
 `{"node": "worker", "masterip": "<>"}`
 
@@ -108,7 +108,7 @@ In your browser, navigate to the Jupyter URL and you should be able to see the U
 
 Now you can use Jupyter to connect to data sources and destinations and do ETL jobs. Sources and destinations can include various SQL and NoSQL databases, S3 and various reporting tools including big data and GPU-based Deep learning.
 
-## Creating a Jupyter notebook with an ETL use-case <a href="#12-toc-title" id="12-toc-title"></a>
+## Creating a Jupyter notebook with an ETL use-case <a href="#id-12-toc-title" id="id-12-toc-title"></a>
 
 In this following we will create a Jupyter notebook and show some basic web scraping, using Spark for preprocessing, exporting into schema, do ETLs, join multiple dataframes (parquets), and export reports into MySQL.
 
