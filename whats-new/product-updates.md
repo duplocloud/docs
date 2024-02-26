@@ -13,6 +13,7 @@ coverY: 0
   * [Scale to or from zero (0)](../aws/use-cases/auto-scaling/auto-scaling-groups.md#creating-autoscaling-groups-asg) using Auto-Scaling Groups.
   * Create [Lambdas with Ephemeral Storage](../aws/aws-services/lambda/#id-3-toc-title).
   * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), in seconds.
+  * [Security Configurations Settings](../aws/security-configurations/) documentation section
 * GCP
   * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title).
   * Support for [GKE Ingress.](../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
