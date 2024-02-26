@@ -26,7 +26,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 ## Creating a Load Balancer
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.&#x20;
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.&#x20;
 2. From the **Name** column, select **demo-service**.
 3. Click the **Load Balancers** tab.
 4.  Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.\
@@ -55,16 +55,6 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 2. On the **Services** page, note the **DNS** Name of the Load Balancer that you created.&#x20;
 3. In the **LB Listeners** area of the **Services** page, note the configuration details of the Load Balancer's **HTTP** protocol, which you specified, when you added it above.
 
-<div align="left">
+<figure><img src="../../../.gitbook/assets/done fake.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab containing <strong>LB Configuration</strong> card displaying <strong>Type ALB</strong> Load Balancer</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/awsredux.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab containing <strong>LB Configuration</strong> card displaying <strong>Type ALB</strong> Load Balancer</p></figcaption></figure>
-
-</div>
-
-
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/awsredux2 (1).png" alt=""><figcaption><p><strong>DNS</strong> name for <strong>demo-service</strong></p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/final faker.png" alt=""><figcaption><p><strong>DNS</strong> name for demo-service</p></figcaption></figure>

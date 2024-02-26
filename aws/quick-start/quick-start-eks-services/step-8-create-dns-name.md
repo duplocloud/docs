@@ -31,17 +31,11 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 ## Creating a Custom DNS Name
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 2. From the **Name** column, select **demo-service**.
-3.  Click the **Load Balancers** tab. The ALB Load Balancer configuration is displayed.\
+3. Click the **Load Balancers** tab. The ALB Load Balancer configuration is displayed.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/AWS_QS_26.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card </p></figcaption></figure>
-
-    </div>
-
+<figure><img src="../../../.gitbook/assets/ihatethis.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card </p></figcaption></figure>
 
 4. In the **DNS Name** card, click **Edit**. The prefix in the DNS Name is editable.
 5. Edit the **DNS Name** and select a meaningful DNS Name prefix.
@@ -53,10 +47,6 @@ An entry for your new DNS name is now registered with **demo-service**.
 
 The **DNS Name** card displays your modified DNS Name.   &#x20;
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/AWS_QS_27.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card, displaying new <strong>DNS Name</strong></p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/cropped shot.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card, displaying new <strong>DNS Name</strong></p></figcaption></figure>
 
 &#x20;                                        &#x20;

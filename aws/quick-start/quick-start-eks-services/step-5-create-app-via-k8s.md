@@ -46,6 +46,12 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 4. Click **Next**. The **Advanced Options** page is displayed.
 5. At the bottom of the **Advanced Options** page, click **Create**. Your Service is created and initialized. In about five (5) minutes, in the **Containers** tab, your DuploCloud Service displays a **Current** status of **Running**.&#x20;
 
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-15_24_19.png" alt=""><figcaption><p><strong>Add Service</strong> page</p></figcaption></figure>
+
+3. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept all other default values for fields not specified.&#x20;
+4. Click **Next**. The **Advanced Options** page is displayed.
+5. At the bottom of the **Advanced Options** page, click **Create**. Your Service is created and initialized. In about five (5) minutes, in the **Containers** tab, your DuploCloud Service displays a **Current** status of **Running**.&#x20;
+
 | Add a Service page field | Value                            |
 | ------------------------ | -------------------------------- |
 | **Service Name**         | `demo-service`                   |
@@ -63,8 +69,4 @@ Follow the steps in [Creating Services using Autoscaling Groups](../../use-cases
 
 Verify that your DuploCloud Service, **demo-service**, has a **Current** status of **Running**.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/AWS_QS_17.png" alt=""><figcaption><p><strong>Containers</strong> tab displaying <strong>Desired</strong> and <strong>Current</strong> status (both <strong>Running</strong>)</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-15_41_54.png" alt=""><figcaption><p><strong>Services</strong> page displaying <strong>demo-service</strong> running</p></figcaption></figure>
