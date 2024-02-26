@@ -2,7 +2,7 @@
 description: Enhance performance and cut costs by using the AWS GP3 Storage Class
 ---
 
-# Using the GP3 Storage Class
+# GP3 Storage Class
 
 GP3, the new storage class from AWS, offers significant performance benefits as well as cost savings when you set it as your default storage class. By using GP3 storage classes instead of GP2 storage classes, you get a baseline of 3000 IOPS, without any additional fees. You can also configure workloads that used a gp2 volume of up to 1000 GiB in capacity with a gp3 volume.
 
@@ -25,4 +25,8 @@ To set GP3 as your default Storage Class for future allocations, you must add a 
 7. in the **Setting Value** field, enter **gp3**.
 8. Click **Set**.&#x20;
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/GP3_storage_infra.png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane with <strong>gp3</strong> selected for <strong>DefaultK8sStorageClass</strong></p></figcaption></figure>
+
+</div>

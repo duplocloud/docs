@@ -8,11 +8,15 @@ A SNS Topic is a logical access point that acts as a communication channel. It l
 
 ## Creating a SNS Topic
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2.  Click **Add**. The **Create a SNS Topic** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/snst1.png" alt=""><figcaption><p><strong>Create a SNS Topic</strong> pane</p></figcaption></figure>
+
+    </div>
 
 
 3. In the **Name** field, enter the SNS Topic name.

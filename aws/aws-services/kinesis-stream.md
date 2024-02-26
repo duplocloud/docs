@@ -1,3 +1,3 @@
-# Kinesis stream
+# Kinesis Stream
 
-Create Kinesis Stream from under **DevOps > Analytics > Kinesis tab > +Add** button above the table. Refer to AWS DynamoDB User Guide to know more about the permissions.
+You can create a Kinesis Stream. From the DuploCloud portal, navigate to **Cloud Services** -> **Analytics** and select the **Kinesis Stream** tab. Click the **+Add** button above the table. Refer to AWS DynamoDB User Guide to know more about the permissions.

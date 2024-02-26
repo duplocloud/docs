@@ -16,18 +16,9 @@ For an end-to-end example of deploying an application using an ECS Service, see 
 
 Tasks run until an error occurs or a user terminates the Task in the ECS Cluster.
 
-1. Navigate to **DevOps** -> **Containers** -> **ECS**.
+1. Navigate to **Cloud Services** -> **ECS**.
 2. In the **Task Definitions** tab, select the Task Definition Family Name. This is the [Task Definition **Name** that you created ](../containers/ecs-containers-and-task-definitions.md)prepended by a unique DuploCloud identifier. &#x20;
-3.  In the **Service Details** tab, click the **Configure ECS Service** link. The **Add ECS Service** page displays.\
-
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/ecs_5.png" alt=""><figcaption><p><strong>Service Details</strong> tab </p></figcaption></figure>
-
-    </div>
-
-
+3. In the **Service Details** tab, click the **Configure ECS Service** link. The **Add ECS Service** page displays.
 4. In the **Name** field, enter the Service name.
 5.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.\
 
@@ -51,12 +42,8 @@ Tasks run until an error occurs or a user terminates the Task in the ECS Cluster
 
 In the **Service Details** tab, information about the Service and Load Balancer you created is displayed.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/ecs_6.png" alt=""><figcaption><p>Add ECS Service page</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-14_27_18.png" alt=""><figcaption><p>Add ECS Service page</p></figcaption></figure>
 
 Verify that the Service and Load Balancer configuration details in the Service Details tab are correct.&#x20;
 
-<figure><img src="../../../.gitbook/assets/ecs_8 (1).png" alt=""><figcaption><p><strong>Service Details</strong> tab displayng Service and Load Balancer configuration details</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ecs_8 (1).png" alt=""><figcaption><p><strong>Service Details</strong> tab displaying Service and Load Balancer configuration details</p></figcaption></figure>

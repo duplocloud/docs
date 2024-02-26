@@ -8,31 +8,23 @@ description: Manage backup and restore for Relational Database Services (RDS)
 
 Create a [snapshot ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_WorkingWithAutomatedBackups.html)of an RDS.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. In the **RDS** tab, in the row containing your RDS instance, click the **Actions** menu icon ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (5) (1).png" alt="" data-size="line"> ) and select **Backup & Restore** -> **Create Snapshot**.&#x20;
 3. **Confirm** the snapshot request. Once taken, the snapshot displays in the **Snapshot** tab.
 
-<div align="left">
-
-<img src="../../../../.gitbook/assets/RDSpit1 (1).png" alt="RDS Tab with Actions menu for DUPLODEV01-DOCS instance with Create Snapshot option highlighted">
-
-</div>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_22_14.png" alt=""><figcaption><p><strong>RDS</strong> Tab with <strong>Actions</strong> menu for <strong>DUPLODEV01-DOCS</strong> instance with <strong>Create Snapshot</strong> option highlighted</p></figcaption></figure>
 
 ## Restoring a snapshot <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
 Once backups are available, you can restore them on the next instance creation when you [create an RDS](./#0-toc-title).
 
-<div align="left">
-
-<img src="../../../../.gitbook/assets/res5 (1).png" alt="Create a RDS page with Create from Snapshot option">
-
-</div>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_24_36.png" alt=""><figcaption><p><strong>Create a RDS</strong> page with <strong>Create from Snapshot</strong> option</p></figcaption></figure>
 
 ## Restoring snapshots to a point in time
 
 You can restore available RDS snapshots to a specific point in time.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. In the **RDS** tab, select an RDS instance containing [snapshots](backup-and-restore.md#0-toc-title).
 3. Click the **Snapshots** tab.
 4. Click the Actions menu and select **Backup & Restore** -> **Restore to Point in Time**. The **Restore Point in Time** pane displays.

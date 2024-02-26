@@ -4,13 +4,13 @@ description: Set up Storage Classes and PVCs in Kubernetes
 
 # Storage Class and PVCs
 
-### **Step1:** Create an Amazon EFS &#x20;
+### **Step 1:** Create an Amazon EFS &#x20;
 
 &#x20;Refer to steps [here](../elastic-file-system-efs/)
 
-### Step2:  Create Storage Class with EFS Parameter
+### Step 2:  Create Storage Class with EFS Parameter
 
-Navigate to  **DevOps** > **Containers** > **EKS/Native > Storage Class**
+Navigate to  **Kubernetes** -> **Storage** -> **Storage Class**
 
 Configure EFS parameter created at Step1 by clicking on EFS Parameter.
 
@@ -39,4 +39,4 @@ Configure below in **Volumes** to create your application deployment using this 
 ```
 {% endcode %}
 
-![Services Page](<../../../.gitbook/assets/image (66).png>)
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_11_54.png" alt=""><figcaption><p>Services Page</p></figcaption></figure>

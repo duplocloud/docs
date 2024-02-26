@@ -43,11 +43,11 @@ You can also enable IAM for any MySQL, PostgreSQL, and MariaDB instance during R
 
 Select the **Enable IAM auth** option when you [create an RDS database](./#id-0-toc-title).
 
-<figure><img src="../../../../.gitbook/assets/IAM3 (2).png" alt=""><figcaption><p><strong>Create a RDS</strong> page with <strong>Enable IAM Auth</strong> option highlighted</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_20_02.png" alt=""><figcaption><p><strong>Create a RDS</strong> page with <strong>Enable IAM Auth</strong> option highlighted</p></figcaption></figure>
 
 ### Enabling IAM after RDS creation
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. In the **RDS** tab, select the database for which you want to enable IAM.
 3.  Click the **Actions** menu and select **RDS Settings** -> **Update IAM Auth**. The **Update IAM Auth** pane displays.\
 
@@ -74,7 +74,7 @@ Select the **Enable IAM auth** option when you [create an RDS database](./#id-0-
 
 To download a token which you can use for IAM authentication:
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Database**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. In the **RDS** tab, select the database for which you want to enable IAM.
 3.  Click the **Actions** menu and select **View** -> **Get DB Auth Token**. The **RDS Credentials window** displays.\
 

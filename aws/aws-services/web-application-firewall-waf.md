@@ -46,13 +46,17 @@ Only ALB Load Balancers can be attached to a WAF.
 2.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.\
 
 
+    <div align="left">
+
     <figure><img src="../../.gitbook/assets/AWS_LB_WAF_Attach.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> for attaching a WAF (via the <strong>Web ACL</strong> field) to an ALB Load Balancer<br></p></figcaption></figure>
+
+    </div>
 3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).&#x20;
 4. Complete the other required fields in the **Other Load Balancer Settings** pane.
 5. Click **Update**.
 
-## Analyzing inbound traffic with the WAF dashboard <a href="#1-toc-title" id="1-toc-title"></a>
+## Analyzing inbound traffic with the WAF dashboard <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
-DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from the left navigation panel: **Security > WAF**.
+DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from the left navigation panel: **Observability** -> **WAF**.
 
 ![WAF Dashboard](<../../.gitbook/assets/waf (1).png>)

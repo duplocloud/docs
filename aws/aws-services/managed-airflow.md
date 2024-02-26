@@ -28,16 +28,12 @@ Refer to the[ Amazon documentation ](https://docs.aws.amazon.com/mwaa/latest/use
 
 ## Configuring the Managed Airflow Environment
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Analytics.**
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Analytics.**
 2. Click the **Airflow** tab.
 3. Click **Add**. The **New Managed Airflow Environment** wizard displays.
 4. Provide the required information, such as Airflow Environment Name, Airflow Version, S3 bucket, and DAGs folder location by navigating through the wizard. You can also enable Logging for Managed Airflow.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/MA.png" alt=""><figcaption><p>The <strong>New Managed Airflow Environment</strong> wizard </p></figcaption></figure>
-
-</div>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-14_35_55.png" alt=""><figcaption><p>The <strong>New Managed Airflow Environment</strong> wizard </p></figcaption></figure>
 
 {% hint style="warning" %}
 If you specify `plugins.zip`, `requirements.txt`, and `startup` script while setting up the Airflow Environment, you must provide the S3 Version ID of these files (for example, `lSHNqFtO5Z7_6K6YfGpKnpyjqP2JTvSf`). If the Version ID is blank, the default reference is to the latest Version ID of the files specified from S3 Bucket.

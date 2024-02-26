@@ -12,18 +12,17 @@ DuploCloud provides a way to automatically install these agents on all the hosts
 
 ## Adding and updating an EventBridge rule
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Click the **EventBridge** tab.
-3.  Click **Add**. The **Add EventBridge Rule** page displays; or to update an existing rule, select the       ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1).png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.
+3.  Click **Add**. The **Add EventBridge Rule** page displays; or to update an existing rule, select the menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1).png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.\
+
 
     <figure><img src="../../.gitbook/assets/ebr1.png" alt=""><figcaption><p><strong>Add EventBridge Rule</strong> page</p></figcaption></figure>
 4. In the **Rule Name** field, specify or change the rule name.
 5. In the **Description** field, specify or change the rule description.
 6. In the **Schedule Expression** field, enter or edit the interval for which you want this rule to run. Use the format: **rate(**_x_ _interval_**)**, where x is a numeric value and _interval_ is **seconds**, **minutes**, **hours**, or **days**. Ensure that you include a blank space between the numeric value _x_ and the _interval_.
 7. From the State list box, select **Enabled**.
-8.  Click **Submit**. The rule is displayed in the **EventBridge** tab.
-
-
+8. Click **Submit**. The rule is displayed in the **EventBridge** tab.
 
 ## Adding and Viewing Targets for EventBridge
 
@@ -31,17 +30,19 @@ An EventBridge [_target_ ](https://docs.aws.amazon.com/eventbridge/latest/usergu
 
 You define targets and associated types in DuploCloud. DuploCloud supports types **ECS Task** and **Lambda**.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Click the **EventBridge** tab. The rules you defined are displayed.
 3. [Select the EventBridge rule you added or updated](cloud-watch.md#adding-and-updating-a-cloudwatch-eventbridge-rule).&#x20;
-4.  In the **Target** tab, click **Add**. The **Add Rule Target** page displays.
+4. In the **Target** tab, click **Add**. The **Add Rule Target** page displays.
+5.  In the **Target** tab, click **Add**. The **Add Rule Target** page displays.\
 
-    <figure><img src="../../.gitbook/assets/CW5.png" alt=""><figcaption><p><strong>Target</strong> tab for an EventBridge rule with <strong>Target Type ECS Task</strong></p></figcaption></figure>
-5. In the **Name** field, enter a target name.
-6. From the **Target Type** list box, select a target type.
-7. From the **Task Definition Family** list box, select a task definition family.
-8. In the **Task Version** field, enter a numeric version number.
-9.  Click **Submit**. The Target you added is displayed in the **Target** tab.
+
+    <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_22_27.png" alt=""><figcaption><p><strong>Target</strong> tab for an EventBridge rule with <strong>Target Type ECS Task</strong></p></figcaption></figure>
+6. In the **Name** field, enter a target name.
+7. From the **Target Type** list box, select a target type.
+8. From the **Task Definition Family** list box, select a task definition family.
+9. In the **Task Version** field, enter a numeric version number.
+10. Click **Submit**. The Target you added is displayed in the **Target** tab.\
+
 
     <figure><img src="../../.gitbook/assets/CW6.png" alt=""><figcaption><p><strong>Target</strong> tab for an EventBridge rule displaying targets for <strong>Target Type</strong> <strong>ECS Task</strong> and <strong>Lambda</strong></p></figcaption></figure>
-

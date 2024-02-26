@@ -1,6 +1,6 @@
 # Add parameters in Parameter Groups
 
-Administrator can configure parameters for RDS Parameter Group for DB Instances and Clusters from **System Settings** --> **System Config** Page.
+Administrator can configure parameters for RDS Parameter Group for DB Instances and Clusters from **Administrator** -> **System Settings** -> **System Config**.
 
 Specify the Database Engines for auto creation of parameter groups.\
 \

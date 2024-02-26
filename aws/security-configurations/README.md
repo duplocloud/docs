@@ -1,7 +1,3 @@
----
-description: Detailed Security Configurations and examples for AWS in the DuploCloud Portal
----
-
 # Security Configuration Settings
 
 Use the sections below to get detailed settings and values for various AWS security configurations

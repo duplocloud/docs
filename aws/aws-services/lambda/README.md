@@ -28,7 +28,7 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 
 ## Creating a Lambda function <a href="#id-3-toc-title" id="id-3-toc-title"></a>
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Serverless**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Serverless**.
 2. Click the **Lambda** tab. The **Lambda Function** page displays.
 3.  Click **Add**. The **Create a Lambda Function** page displays.\
 
@@ -47,7 +47,11 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 14. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
 
 
+    <div align="left">
+
     <figure><img src="../../../.gitbook/assets/L11.png" alt=""><figcaption><p><strong>Actions</strong> menu on the selected <strong>Lambda Function</strong> page</p></figcaption></figure>
+
+    </div>
 
 
 15. Test the function using the AWS Console.
@@ -62,7 +66,7 @@ To set up a trigger or event source, create the resource in the DuploCloud Porta
 
 ### Passing secrets <a href="#id-4-toc-title" id="id-4-toc-title"></a>
 
-Passing secrets to a Lambda function can be done in much the same manner as passing secrets to a Docker-based service using Environmental Variables. For example, you can create a relational database from the **Database -> RDS** menu in DuploCloud, providing a Username and Password. In the Lambda menu, supply the same credentials. No secrets need to be stored in an AWS Key Vault, a Git repository, and so on.
+Passing secrets to a Lambda function can be done in much the same manner as passing secrets to a Docker-based service using Environmental Variables. For example, you can create a relational database from the **Cloud Services** -> **Database** -> **RDS** menu in DuploCloud, providing a Username and Password. In the Lambda menu, supply the same credentials. No secrets need to be stored in an AWS Key Vault, a Git repository, and so on.
 
 ## Updating Lambda Functions and configurations <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 

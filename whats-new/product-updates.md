@@ -42,7 +42,7 @@ coverY: 0
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
   * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
 * Kubernetes
-  * [Follow logs](../aws/aws-services/containers/eks-native-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
+  * [Follow logs](../aws/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
   * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](../kubernetes/pod-toleration.md).&#x20;
   * Create [Kubernetes Jobs (K8s Jobs)](../kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
   * Create [Kubernetes CronJobs (K8s CronJobs)](../kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
@@ -157,7 +157,7 @@ coverY: 0
 * AWS
   * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
   * Monitor Tenant usage in [Cost Management for billing](../aws/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
-  * Maintain cluster stability with [Ingress Health Checks annotations](../kubernetes-user-guide/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
+  * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
   * Use the [K8s Admin dashboard to monitor StatefulSets](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * [Force creation of StatefulSets](../aws/aws-services/containers/#5-toc-title).
 * Azure
@@ -168,7 +168,7 @@ coverY: 0
   * Monitor Tenant usage in the [Cost Management for billing](../gcp/use-cases/cost-management.md) feature with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
   * Support for Kubernetes Ingress in [Azure](broken-reference).
-  * Maintain cluster stability with [Ingress Health Checks annotations](../kubernetes-user-guide/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
+  * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
   * [Force creation of StatefulSets in AWS](../aws/aws-services/containers/#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../aws/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.

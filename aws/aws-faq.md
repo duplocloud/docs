@@ -8,10 +8,6 @@ description: Popular and frequently asked questions about DuploCloud and AWS
 
 Yes. This is a major advantage of using DuploCloud. All controls are mapped to various compliance standards. DuploCloud is also very flexible in enabling you to add custom policies (resource quotas, ability to create public-facing endpoints, etc.)
 
-### When creating an Infrastructure, I'm receiving the DuploCloud Fault `maximum number of VPCs reached` when attempting to create an Infrastructure.&#x20;
-
-There is an [AWS quota of 5 five VPCs per Region](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html). Ensure you are not trying to exceed that limit when creating a new Infrastructure.
-
 ## **How do I SSH into the host?** <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 Under each Host, you can click on **Connection Details** under **Action** dropdown which will provide the key file and instructions to **SSH**.
@@ -72,7 +68,7 @@ While creating a Host, click on _show advanced_ and select the public subnet in 
 
 DuploCloud provisions a load balancer for your K8 service. If you want to look at detailed settings on the load balancer like Idle timeout, Access logs, and others, you can find and view them directly in AWS, by following the below steps:
 
-You can find the load balancer name for your service by navigating to _DevOps->Containers->EKS/Native_, go to your service, and look at the Load Balancer tab. If you're using K8s Ingress then you will have to go to the K8s Ingress tab and find the Load Balancer configuration there.
+You can find the load balancer name for your service by navigating to **Kubernetes** _->_  **Services**, selecting your Service from the list, and looking at the Load Balancer tab. If you're using K8s Ingress then you will have to go to the K8s Ingress tab and find the Load Balancer configuration there.
 
 Once you have the load balancer name, you can go to the AWS console via the DuploCloud UI ([here](use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your load balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes)
 
