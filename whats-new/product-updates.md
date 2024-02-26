@@ -15,7 +15,8 @@ coverY: 0
   * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), in seconds.
 * GCP
   * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title).
-  * [GKE Standard and AutoPilot modes](../gcp/use-cases/disaster-recovery/#creating-an-infrastructure) are supported when creating DuploCloud Infrastructures.
+  * Create [Node Pools](../gcp/gcp-services/node-pools.md) with support for accelerators and taints.
+  * [GKE Standard mode](../gcp/use-cases/disaster-recovery/#creating-an-infrastructure) is supported when creating DuploCloud Infrastructures.
 * General&#x20;
   * SIEM - [Configure agents to install on specific Tenants](../security-and-compliance/security-and-compliance-overview/agents.md#configuring-agents-to-install-on-specified-tenants).
 
