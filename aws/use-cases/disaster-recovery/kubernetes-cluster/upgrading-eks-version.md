@@ -28,13 +28,13 @@ To upgrade the EKS version, in the DuploCloud Portal:&#x20;
 3.  Select the **EKS** tab. If an Infrastructure upgrade is available, an **Upgrade** link appears in the **Value** column.\
 
 
-    ![EKS tab with Upgrade available](<../../../../.gitbook/assets/AWS\_EKS\_Upgrade0 (1).png>)
+    <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-13_23_09.png" alt=""><figcaption><p>EKS tab with <strong>Upgrade</strong> available</p></figcaption></figure>
 4.  Click the **Upgrade** link. The **Upgrade EKS Cluster** pane displays.\
 
 
     <div align="left">
 
-    <figure><img src="../../../../.gitbook/assets/AWS_EKS_Upgrade1.png" alt=""><figcaption><p><strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/image (10) (5).png" alt=""><figcaption><p><strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure>
 
     </div>
 5. From the **Target Version** list box, select the version to which you want to upgrade.&#x20;
