@@ -33,7 +33,7 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 3.  Click **Add**. The **Create a Lambda Function** page displays.\
 
 
-    <figure><img src="../../../.gitbook/assets/lam_eph4.png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page using <strong>Package Type Zip</strong><br></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Lambda function.png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page using <strong>Package Type Zip</strong><br></p></figcaption></figure>
 4. In the **Name** field, enter the name of your Lambda Function.
 5. In the **Description** field, enter a useful description of the function.
 6. From the **Package Type** list box, select **Zip**. For type **Image**, see the [Configure Lambda with Container Images](create-lambda-using-container-image.md) topic.
@@ -42,9 +42,10 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 9. In the **Function Handler** field, enter the method name that Lambda calls to execute your function.
 10. In the **S3 Bucket** list box, select an existing [S3 bucket](../s3-bucket.md).
 11. In the **Function Package** field, enter the name of the **Zip** package containing your Lambda Function.&#x20;
-12. Click **Submit**. The Lambda Function is created.
-13. On the **Lambda Function** page, from the **Name** column, select the function you created.
-14. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
+12. In the **Dead Letter Queue** list box, select an Amazon Simple Queue Service (SQS) queue or Amazon Simple Notification Service (SNS) topic.
+13. Click **Submit**. The Lambda Function is created.
+14. On the **Lambda Function** page, from the **Name** column, select the function you created.
+15. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
 
 
     <div align="left">
@@ -54,7 +55,7 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
     </div>
 
 
-15. Test the function using the AWS Console.
+16. Test the function using the AWS Console.
 
 ### Integrating with other resources <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
