@@ -9,16 +9,19 @@ coverY: 0
 
 * AWS
   * [Update or skip a final RDS snapshot](../aws/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
+  * [Upgrade EKS Cluster components](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
+  * Create an [OpenSearch](../aws/aws-services/elasticsearch.md) domain. &#x20;
   * [Billing option is available per Tenant](../aws/use-cases/cost-management/#view-billing-details-by-tenant).
   * [Scale to or from zero (0)](../aws/use-cases/auto-scaling/auto-scaling-groups.md#creating-autoscaling-groups-asg) using Auto-Scaling Groups.
   * Create [Lambdas with Ephemeral Storage](../aws/aws-services/lambda/#id-3-toc-title).
-  * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), in seconds.
-  * [Security Configurations Settings](../aws/security-configurations/) documentation section
+  * Support for [Lambda Dead Letter Queues](../aws/aws-services/lambda/#id-3-toc-title).
+  * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), using increments of seconds.
+  * [Security Configurations Settings](../aws/security-configurations/) documentation section added.
 * GCP
-  * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title) and [GKE VMs](../gcp/use-cases/hosts-vms.md#gce-vm).
-  * Support for [GKE Ingress.](../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
-  * Create [Node Pools](../gcp/gcp-services/node-pools.md) with support for accelerators and taints.
   * [GKE Standard mode](../gcp/use-cases/disaster-recovery/#creating-an-infrastructure) is supported when creating DuploCloud Infrastructures.
+  * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title) and [GKE VMs](../gcp/use-cases/hosts-vms.md#gce-vm).
+  * Create [Node Pools](../gcp/gcp-services/node-pools.md) with support for accelerators and taints.
+  * Support for [GKE Ingress.](../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
 * CI/CD
   * [Update a service with a stream-lined, read-to-use GitHub Actions script](../ci-cd/github-actions/update-a-service.md).
 * General&#x20;
