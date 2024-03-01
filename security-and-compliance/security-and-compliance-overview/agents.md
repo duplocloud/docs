@@ -1,5 +1,5 @@
 ---
-description: View and configure running agents from AWS and DuploCloud
+description: View and configure running agents from DuploCloud
 ---
 
 # Agents
