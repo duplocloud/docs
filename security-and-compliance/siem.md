@@ -1,24 +1,24 @@
 ---
-description: Security Information and Event Management (SIEM) in AWS
+description: Security Information and Event Management (SIEM)
 ---
 
 # SIEM
 
-SIEM is an AWS solution that provides cloud customers with visibility into their infrastructure and applications, to facilitate data-driven decisions. SIEM uses [AWS Control Tower](https://aws.amazon.com/marketplace/solutions/control-tower/siem) to monitor workloads in real-time, identify security issues, provide virus and malware protection, and expedite root-cause analysis.
+SIEM is a Cloud Solution that provides cloud customers with visibility into their infrastructure and applications, to facilitate data-driven decisions. SIEM monitors workloads in real-time, identify security issues, provide virus and malware protection, and expedite root-cause analysis.
 
-You can monitor and manage your AWS cloud using SIEM in the DuploCloud Portal.
+You can monitor and manage your Cloud account using SIEM in the DuploCloud Portal.
 
-## Configuring the DuploCloud Portal to access AWS SIEM
+## Configuring the DuploCloud Portal to access SIEM
 
-To connect your AWS SIEM account with the DuploCloud Portal, contact our DuploCloud Support Team using your DuploCloud Slack channel or email the team.
+To connect your  SIEM with the DuploCloud Portal, contact our DuploCloud Support Team using your DuploCloud Slack channel or email the team.
 
 ## Using the SIEM Dashboard
 
-After DuploCloud has connected your AWS SIEM account to the DuploCloud Portal, you'll have full access to your SIEM modules without having to log in to the AWS Portal. You can open multiple dashboard instances by clicking **Open New Tab** on the SIEM page.
+After DuploCloud has connected your SIEM account to the DuploCloud Portal, you'll have full access to your SIEM modules without having to log in to the Cloud Portal. You can open multiple dashboard instances by clicking **Open New Tab** on the SIEM page.
 
 The SIEM dashboard displays modules, grouped by the following categories:
 
-* **Security Information Management** - Investigate Security Events and Alerts related to AWS services.
+* **Security Information Management** - Investigate Security Events and Alerts related to Cloud services.
 * **Auditing and Policy Monitoring** - Examine security policies and auditing reports. Scan your assets and work with Configuration Assessment reports that audit your environment.
 * **Threat Detection and Response** - Analyze data about cyber threats, vulnerabilities, and security attack strategies identified by the **MITRE ATT\&CK** database.
 * **Regulatory Compliance** - Gather comprehensive details about all of your regulatory and compliance controls and how well your installation is measuring up. Detailed statistics covering your compliance with **PSI**, **TSC**, **HIPAA**, **NIST 800-53**, and **GDPR** regulations are available in one place.
@@ -27,7 +27,7 @@ The SIEM dashboard displays modules, grouped by the following categories:
 
 ## Using the Navigation Menu
 
-Clicking the Navigation Menu icon ( <img src="../.gitbook/assets/menu_three-lines (1).png" alt="" data-size="line"> ) allows you to access a number of integrated tools that DuploCloud has plugged into the portal such as Wazuh, Kibana, and Open Distro for ElasticSearch, which connect you to the SIEM application in AWS. You also can use Management functions such as Dev Tools, to access the SIEM console for creating queries and the Stack Management function in Kibana.&#x20;
+Clicking the Navigation Menu icon ( <img src="../.gitbook/assets/menu_three-lines (1).png" alt="" data-size="line"> ) allows you to access a number of integrated tools that DuploCloud has plugged into the portal such as Wazuh, Kibana, and Open Distro for ElasticSearch, which connect you to the SIEM application in the Cloud. You also can use Management functions such as Dev Tools, to access the SIEM console for creating queries and the Stack Management function in Kibana.&#x20;
 
 <div align="left">
 
