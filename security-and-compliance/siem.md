@@ -51,7 +51,7 @@ The **Management directory** includes a number of tools for **Administration**, 
 
 ### Agents&#x20;
 
-The **Agents** option allows you to view a dashboard of all running agents from AWS and DuploCloud.&#x20;
+The **Agents** option allows you to view a dashboard of all running agents from DuploCloud.&#x20;
 
 <figure><img src="../.gitbook/assets/SIEM_Agents.png" alt=""><figcaption><p><strong>Agents</strong> dashboard</p></figcaption></figure>
 
