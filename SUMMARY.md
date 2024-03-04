@@ -202,6 +202,7 @@
   * [Infrastructure Security settings](aws/security-configurations/infrastructure-security-settings.md)
   * [System Security settings](aws/security-configurations/system-security-settings.md)
   * [AWS Account Security settings](aws/security-configurations/aws-account-security-settings.md)
+  * [Compliance Controls](aws/security-configuration-settings/compliance-controls.md)
 
 ## GCP user guide <a href="#gcp" id="gcp"></a>
 
