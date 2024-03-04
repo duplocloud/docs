@@ -16,6 +16,7 @@ coverY: 0
   * Create [Lambdas with Ephemeral Storage](../aws/aws-services/lambda/#id-3-toc-title).
   * Support for [Lambda Dead Letter Queues](../aws/aws-services/lambda/#id-3-toc-title).
   * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), using increments of seconds.
+  * Configure [Vanta compliance controls](../aws/security-configuration-settings/vanta-compliance-controls.md) for DuploCloud Tenants.
   * [Security Configurations Settings](../aws/security-configurations/) documentation section added.
 * GCP
   * [GKE Standard mode](../gcp/use-cases/disaster-recovery/#creating-an-infrastructure) is supported when creating DuploCloud Infrastructures.
