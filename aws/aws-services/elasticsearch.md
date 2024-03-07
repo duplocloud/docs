@@ -14,7 +14,7 @@ description: Create an OpenSearch domain from the DuploCloud portal
 8. If needed, select a **Master Instance Count** and **Master Instance Size**.&#x20;
 9. Use the toggle switches to enable encryption options (**Require SSL/HTTPS, Use Latest TLS Cipher,** or **Enable Node-to-Node Encryption**), if needed.
 
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_53_50.png" alt=""><figcaption><p>The <strong>Add OpenSearch Domain</strong> page.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.04-14_45_54.png" alt=""><figcaption><p>The <strong>Add OpenSearch Domain</strong> page.</p></figcaption></figure>
 
 10. Optionally, use the toggle switch to **Enable UltraWarm data nodes** (nodes that are optimized for storing large volumes of data cost-effectively). When this option is enabled, additional fields display. Select a **Warm Instance type**, enter **Number of warm data nodes**, and **Enable Cold Storage** as your application requires.\
 
