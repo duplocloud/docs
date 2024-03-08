@@ -4,7 +4,7 @@ description: Support for Redis database instances
 
 # Managed Redis
 
-DuploCloud supports the [AWS Redis](https://aws.amazon.com/redis/) database instances. Redis stands for Remote Dictionary Server and is a fast, open-source, in-memory, key-value data store. Redis can function as a database, cache, message broker, and queue.
+DuploCloud supports Redis database instances. Redis stands for Remote Dictionary Server and is a fast, open-source, in-memory, key-value data store. Redis can function as a database, cache, message broker, and queue.
 
 Redis delivers sub-millisecond response times, enabling millions of requests per second for real-time applications.
 
