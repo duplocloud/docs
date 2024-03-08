@@ -1,10 +1,10 @@
 # Metrics Setup
 
-Metrics setup comprises of two parts
+The metrics setup is made up of two components:
 
-**Control Plane:** This comprises of a Grafana service for dashboard and a Prometheus container for fetching VM and container metrics. Cloud service metrics are directly pulled by Grafana from AWS without requiring Prometheus.&#x20;
+**Control Plane:** This comprises a Grafana dashboard service and a Prometheus container for fetching VM and container metrics. Grafana directly pulls cloud service metrics from AWS without requiring Prometheus.&#x20;
 
-&#x20;To enable Metrics, from the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Settings**, and select the **Monitoring** tab. Click on **Enable Monitorin**g.&#x20;
+&#x20;From the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Settings**, and select the **Monitoring** tab to enable Metrics. Click on **Enable Monitoring**.&#x20;
 
 ![](<../../.gitbook/assets/image (21) (1).png>)
 
