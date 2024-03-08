@@ -372,19 +372,19 @@
 * [SSO Configuration](user-administration/sso-configuration/README.md)
   * [Azure SSO Configuration](user-administration/sso-configuration/azure-ad-as-idp.md)
 
-## Diagnostics
+## Observability
 
-* [Diagnostics Overview](diagnostics/diagnostics-overview.md)
-* [Metrics](diagnostics/monitoring/README.md)
-  * [Metrics Setup](diagnostics/monitoring/metrics-setup.md)
-  * [Metrics Dashboard](diagnostics/monitoring/metrics-dashboard.md)
-  * [Kubernetes Administrator dashboard](diagnostics/monitoring/kubernetes-administrator-dashboard.md)
-* [Faults and Alerts](diagnostics/faults-and-alarms/README.md)
-  * [Alert notifications](diagnostics/faults-and-alarms/alerting-and-notifications.md)
-  * [Automatic alert creation](diagnostics/faults-and-alarms/automatic-alert-creation.md)
-* [Logs](diagnostics/logs.md)
-* [Auditing](diagnostics/auditing.md)
-* [Web App Firewall (WAF)](diagnostics/web-application-firewall-waf.md)
+* [Diagnostics Overview](observability/diagnostics-overview.md)
+* [Metrics](observability/monitoring/README.md)
+  * [Metrics Setup](observability/monitoring/metrics-setup.md)
+  * [Metrics Dashboard](observability/monitoring/metrics-dashboard.md)
+  * [Kubernetes Administrator dashboard](observability/monitoring/kubernetes-administrator-dashboard.md)
+* [Faults and Alerts](observability/faults-and-alarms/README.md)
+  * [Alert notifications](observability/faults-and-alarms/alerting-and-notifications.md)
+  * [Automatic alert creation](observability/faults-and-alarms/automatic-alert-creation.md)
+* [Logs](observability/logs.md)
+* [Auditing](observability/auditing.md)
+* [Web App Firewall (WAF)](observability/web-application-firewall-waf.md)
 
 ## Extras
 
