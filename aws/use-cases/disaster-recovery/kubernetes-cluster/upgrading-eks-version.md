@@ -10,54 +10,71 @@ AWS frequently updates the version of EKS based on new features that are availab
 **IMPORTANT: An EKS version upgrade can cause downtime to your application depending on the number of replicas you have configured for your services. Schedule this upgrade outside of your business hours to minimize disruption.**
 {% endhint %}
 
-### About the upgrade process
+## About the upgrade process
 
-The upgrade process:
+Updating the EKS version:
 
 * Updates the EKS Control Plane to the latest version
+* Updates all add-ons and components
 * Relaunches all Hosts to deploy the latest version on all nodes.
 
 After the upgrade process completes successfully, you optionally assign allocation tags to Hosts.
 
-### Starting the upgrade&#x20;
+## Starting the upgrade&#x20;
 
-To upgrade the EKS version, in the DuploCloud Portal:&#x20;
+### Upgrading the EKS version
 
 1. Click **Administrator** -> **Infrastructure.**
 2. Select the Infrastructure that you want to upgrade to the latest EKS version.
-3.  Select the **EKS** tab. If an Infrastructure upgrade is available, an **Upgrade** link appears in the **Value** column.\
+3. Select the **EKS** tab. If an upgrade is available for the Infrastructure, an **Upgrade** link appears in the **Value** column.
+4. Click the **Upgrade** link. The **Upgrade EKS Cluster** pane displays.
 
+<div align="left">
 
-    <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-13_23_09.png" alt=""><figcaption><p>EKS tab with <strong>Upgrade</strong> available</p></figcaption></figure>
-4.  Click the **Upgrade** link. The **Upgrade EKS Cluster** pane displays.\
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.04-15_02_49.png" alt=""><figcaption><p>The <strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure>
 
+</div>
 
-    <div align="left">
-
-    <figure><img src="../../../../.gitbook/assets/image (10) (5).png" alt=""><figcaption><p><strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure>
-
-    </div>
 5. From the **Target Version** list box, select the version to which you want to upgrade.&#x20;
 6. From the **Host Upgrade Action**, select the method by which you want to upgrade hosts.
-7. Click **Create**. The upgrade process begins.
+7. Click **Start**. The upgrade process begins.
 
-### Monitoring the upgrade&#x20;
+### Updating EKS Components (Add-ons)
+
+1. Click **Administrator** -> **Infrastructure.**
+2. Select the Infrastructure with components you want to upgrade.
+3.  Select the **EKS** tab. If an upgrade is available for the Infrastructure components, an **Upgrade Components** link appears in the **Value** column.\
+
+
+    <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-13_23_09.png" alt=""><figcaption><p>EKS tab with component <strong>Upgrade</strong> available</p></figcaption></figure>
+4. Click the **Upgrade** link. The **Upgrade EKS Cluster** **Components** pane displays.
+
+<div align="left">
+
+<figure><img src="../../../../.gitbook/assets/image (10) (5).png" alt=""><figcaption><p><strong>Upgrade EKS Cluster Components</strong> pane</p></figcaption></figure>
+
+</div>
+
+5. From the **Host Upgrade Action**, select the method by which you want to upgrade hosts.
+6. Click **Start**. The upgrade process begins.
+
+## Monitoring upgrades&#x20;
 
 The **EKS Upgrade Details** page displays that the upgrade is **In Progress**.
 
-<figure><img src="../../../../.gitbook/assets/AWS_EKS_Upgrade2 (1).png" alt=""><figcaption><p><strong>EKS Upgrade Details</strong> page displaying upgrade <strong>In Progress</strong></p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/EKS upgrade.png" alt=""><figcaption><p><strong>EKS Upgrade Details</strong> page displaying upgrade <strong>In Progress</strong></p></figcaption></figure>
 
 Find more details about the upgrade by selecting your Infrastructure from the **Infrastructure** page. Click the **EKS** tab, and then click **Show Details**.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/AWS_EKS_Upgrade3.png" alt=""><figcaption><p><strong>Show Details</strong> button on the Infrastructure <strong>EKS</strong> tab with upgrade in progress</p></figcaption></figure>
 
-### Upgrade completion
+## Upgrade completion
 
 When you click **Show Details**, the **EKS Upgrade Details** page displays the progress of updates for all versions and Hosts. Green checkmarks indicate successful completion in the **Status** list. Red **X**s indicate **Action**s you must take to complete the upgrade process.
 
 <figure><img src="../../../../.gitbook/assets/AWS_EKS_Upgrade4.png" alt=""><figcaption><p><strong>EKS Upgrade Details</strong> window with <strong>Status</strong> list and <strong>Actions</strong> to be performed </p></figcaption></figure>
 
-### Assign allocation tags
+## Assign allocation tags
 
 If any of your Hosts use allocation tags, you must assign allocation tags to the Hosts:
 
