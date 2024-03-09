@@ -76,3 +76,27 @@ Instead, do the following to stop the service from running:
 4. In the **Replicas** field, enter **0** (zero).&#x20;
 5. Click **Next** to navigate to the **Advanced Options** page.
 6. Click **Update** to update the service.&#x20;
+
+### Allowing real-time alerts for autoscaling Kubernetes nodes
+
+When the **Cluster Autoscaler** flag is set and a Tenant has one or more ASGs, an unschedulable-pod alert will be delayed by five (5) minutes to allow for autoscaling. You can configure the Infrastructure settings to bypass the delay and send the alerts in real-time.
+
+1. From the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
+2. Click on the Infrastructure you want to configure settings for in the **Name** list.&#x20;
+3. Select the **Settings** tab.
+4.  Click the **Add** button. The **Infra - Set Custom Data** pane displays.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.01-16_40_53.png" alt=""><figcaption><p>The <strong>Infra - Set Custom Data</strong> pane with <strong>Enables faults prior to autoscaling Kubernetes nodes</strong> enabled</p></figcaption></figure>
+
+    </div>
+5. In the **Setting Name** list box, select **Enables faults prior to autoscaling Kubernetes nodes**.&#x20;
+6. Set the **Enable** toggle switch to enable the setting.
+7. Click **Set**. DuploCloud will now generate faults for unschedulable K8s nodes immediately (before autoscaling).
+
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.01-16_43_50.png" alt=""><figcaption><p>The <strong>Infrastructure-Settings</strong> tab with <strong>Enables faults prior to autoscaling Kubernetes nodes</strong> enabled</p></figcaption></figure>
+
+
+
