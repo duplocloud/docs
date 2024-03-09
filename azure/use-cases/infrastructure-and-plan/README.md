@@ -48,6 +48,6 @@ You can choose to [encrypt your Azure storage account](encrypted-storage-account
 
 ## About Plans and Infrastructures
 
-Once the Infrastructure is created, a [Plan ](../../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration. The Plan is used to create [Tenants](../tenant-environment.md).
+Once the Infrastructure is created, a [Plan ](../../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration. The Plan is used to create [Tenants](../tenant-environment/).
 
 ![DuploCloud Plan Details for Infrastructure](../../../.gitbook/assets/Azure\_plan\_details.png)

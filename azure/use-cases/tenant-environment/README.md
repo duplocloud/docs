@@ -8,7 +8,7 @@ In Azure, Microsoft cloud features such as Azure resource groups, Azure managed 
 
 When you create Tenants in an Infrastructure, a namespace is created in the Kubernetes cluster with the name `duploservices-TENANT_NAME.` DuploCloud creates the Network Security Group (NSG) for the Tenant which acts as a security boundary.
 
-![Create a Tenant pane](<../../.gitbook/assets/image (16) (3).png>)
+![Create a Tenant pane](<../../../.gitbook/assets/image (16) (3).png>)
 
 At the logical level, the Tenant is:
 

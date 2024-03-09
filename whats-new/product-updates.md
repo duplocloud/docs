@@ -77,7 +77,7 @@ coverY: 0
 ## June 2023 and July 2023
 
 * AWS
-  * Manage [Tenant expiration and Tenant session durations](../aws/use-cases/tenant-environment/set-tenant-session-duration.md).
+  * Manage [Tenant expiration and Tenant session durations](../aws/use-cases/tenant-environment/tenant-session-duration.md).
   * Set a [monitoring interval for an RDS](../aws/aws-services/database/rds-database/add-monitoring-interval.md) database.
   * [Enable or disable logging for an RDS ](../aws/aws-services/database/rds-database/enable-or-disable-rds-logging.md)database.
   * Add [custom Lambda image configurations](../aws/aws-services/lambda/create-lambda-using-container-image.md) and URLs.

@@ -10,7 +10,7 @@ When you create Tenants in an Infrastructure, a namespace is created in the Kube
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (16) (3).png" alt="Create a Tenant pane">
+<img src="../../../.gitbook/assets/image (16) (3).png" alt="Create a Tenant pane">
 
 </div>
 

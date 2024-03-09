@@ -1,14 +1,12 @@
 ---
-description: Manage Tenant session durations in the AWS Portal
+description: Manage Tenant session duration settings in the DuploCloud Portal
 ---
 
-# Set Tenant session duration
-
-Using [AWS Session Management](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html), you can set session durations for a Tenant. At the end of the session, the Tenant ceases to be active for a particular user, application, or Service.
+# Tenant session duration
 
 ## Managing Tenant session duration &#x20;
 
-In the DuploCloud Portal, configure the session duration time for all Tenants or for a single Tenant.
+In the DuploCloud Portal, configure the session duration time for all Tenants or a single Tenant. At the end of a session, the Tenants or Tenant ceases to be active for a particular user, application, or Service.&#x20;
 
 For more information about IAM roles and session times in relation to a user, application, or Service, see the [AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id\_roles\_use.html).
 
@@ -48,4 +46,4 @@ For more information about IAM roles and session times in relation to a user, ap
 6. From the **Select Duration Hour** list box, select the maximum session time in hours or set a **Custom Duration** in seconds.
 7. Click **Add**. The **AWS Role Max Session Duration** and **Value** are displayed in the **Settings** tab. Note that the **Value** you set for maximum session time in hours is displayed in seconds. You can **Delete** or **Update** the setting in the row's **Actions** menu.&#x20;
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-12_54_45.png" alt=""><figcaption><p><strong>Settings</strong> tab on Tenant page displaying <strong>AWS Role Max Session Duration</strong> for Tenant <strong>sa-auto2602</strong> </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Session duration.png" alt=""><figcaption><p>The <strong>Tenants</strong> details page with <strong>AWS Role Max Session Duration</strong> enabled</p></figcaption></figure>
