@@ -11,7 +11,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 ## Supported use cases for DuploCloud Azure
 
 * [Infrastructure and Plan](../../aws/use-cases/disaster-recovery.md)
-* [Tenant](tenant-environment.md)
+* [Tenant](tenant-environment/)
 * [Hosts](../../aws/use-cases/hosts-vms.md)
 * [Autoscaling for Hosts](autoscaling/)
 * [VM Scale Sets](vm-scale-sets.md)
