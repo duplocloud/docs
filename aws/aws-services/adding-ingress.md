@@ -10,7 +10,7 @@ Ingress controllers abstract the complexity of routed Kubernetes application tra
 
 ### Creating Tenants, Hosts, and Services with EKS
 
-See the [Containers ](containers/)topic for steps on how to create [Tenants](../../getting-started/application-focussed-interface/tenant.md), Hosts, and [Services](../../getting-started/application-focussed-interface/app-service-and-cloud-services.md).
+See the [Containers ](containers/)topic for steps on how to create [Tenants](../../getting-started/application-focussed-interface/tenant/), Hosts, and [Services](../../getting-started/application-focussed-interface/app-service-and-cloud-services.md).
 
 Once your service is deployed, you are ready to add and configure Kubernetes Ingress by [enabling the AWS Application Load Balancer](adding-ingress.md#enabling-the-aws-application-load-balancer).
 
