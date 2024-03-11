@@ -1,11 +1,34 @@
+---
+description: >-
+  Get up and running with DuploCloud inside a Google Cloud Platform environment;
+  harness the power of generating application infrastructures.
+---
+
 # Quick start
 
-Get up and running with DuploCloud running inside a Google Cloud cloud environments, and start harnessing the power of generating low-level application infrastructures.
+This quick-start tutorial shows you how to set up an end-to-end cloud deployment. You will create Google Cloud Platform infrastructure and Tenants. By the end of this tutorial, you should be able to view the deployed sample web application.
 
-This quick start tutorial shows you how to set up an end-to-end cloud deployment. You should be able to create Google Cloud infrastructure and tenants. By the end of this tutorial, you should be able to view the deployed sample web application.
+_Estimated time to complete tutorial: 60-70 minutes._
 
-1. [Create Google Cloud Infrastructure](step-1-infrastructure.md)
-2. [Create a Tenant](step-2-tenant.md)
-3. [Create and deploy a sample app service](step-3-create-app-via-k8s.md)
-4. [Create a Load Balancer to access the web application deployed](step-4-create-a-load-balancer.md)
-5. [Test the sample application](step-5-test-the-application.md)
+## GCP Tutorial Roadmap
+
+When you complete the GCP Quick Start Tutorial, you have two options or paths, as shown in the table below.
+
+* Using GKE Autopilot - You create an app and service in DuploCloud using Google Kubernetes Engine-Autopilot and expose it using a load balancer within DuploCloud.
+* Using GKE Standard - You create an app, service and a node pool in DuploCloud using Google Kubernetes Engine-Standard and expose it using a load balancer within DuploCloud.
+
+For beginners, we recommend you use GKE Autopilot. GKE Autopilot manages the infrastructure, including the nodes, node pools, and underlying infrastructure resources such as networking and storage. You do not need to manage or configure node pools, node instance types, or autoscaling policies.&#x20;
+
+GKE Standard offers more granular control over resource management, including the ability to configure node pools with specific types of instances, set scaling policies, and manage node upgrades.
+
+For a high-level comparison of GKE Autopilot and GKE Standard and to help you choose which method best suits your needs, skills, and environments, see this [Google Cloud](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison) documentation.
+
+<table data-full-width="false"><thead><tr><th width="85">Step</th><th>GKE Autopilot</th><th>GKE Standard</th></tr></thead><tbody><tr><td>1</td><td>Create Infrastructure and Plan</td><td>Create Infrastructure and Plan</td></tr><tr><td>2</td><td>Create Tenant</td><td>Create Tenant</td></tr><tr><td>3</td><td>Create Service</td><td>Create Service</td></tr><tr><td>4</td><td>Create Load Balancer</td><td>Create a Node Pool</td></tr><tr><td>5</td><td>Test the app</td><td>Create Load Balancer</td></tr><tr><td>6</td><td></td><td>Test the app</td></tr></tbody></table>
+
+\* - Optional Step
+
+## GCP Video demo
+
+Click the card below to watch a DuploCloud GCP demo.
+
+{% embed url="https://duplocloud.com/solutions/gcp/#gallery" %}

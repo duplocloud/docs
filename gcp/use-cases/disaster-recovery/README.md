@@ -22,7 +22,7 @@ Create a DuploCloud Infrastructure in the DuploCloud Portal:
 2. Click **Add**.
 3. Define the Infrastructure by completing the fields on the **Add Infrastructure** form.&#x20;
 4. Click **Enable GKE** to enable GKE for the Infrastructure.
-5. Click the **Cluster Mode** list box, and select either **GKE Standard** or **Autopilot**.
+5. Click the **Cluster Mode** list box, and select either **GKE Standard** or **GKE** **Autopilot**.
 6. Optionally, select **Advanced Options** to specify additional configurations (public and private subnets, for example).
 7. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page.
 
