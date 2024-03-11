@@ -8,6 +8,11 @@ coverY: 0
 ## Q1 2024
 
 * AWS
+  * [Configure K8s Ingress redirect ](../aws/aws-services/adding-ingress.md#add-kubernetes-ingress)using a container port name.
+  * [Disable faults for Target Groups without instances.](../aws/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
+  * Enable UltraWarm Data nodes for [OpenSearch domains](../aws/aws-services/elasticsearch.md).
+  * Support for [upgrading EKS components](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).&#x20;
+  * [Add a Web App Firewall URL](../aws/aws-services/web-application-firewall-waf.md#id-1-toc-title) when creating or updating a Plan.
   * [Update or skip a final RDS snapshot](../aws/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
   * [Upgrade EKS Cluster components](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
   * Create an [OpenSearch](../aws/aws-services/elasticsearch.md) domain. &#x20;
@@ -27,6 +32,8 @@ coverY: 0
 * CI/CD
   * [Update a service with a stream-lined, read-to-use GitHub Actions script](../ci-cd/github-actions/update-a-service.md).
 * General&#x20;
+  * [Set Tenants to expire](../aws/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
+  * Configure settings for all new Tenants under a Plan using [Tenant Config tab](../getting-started/application-focussed-interface/tenant/tenant-config-settings.md).
   * SIEM - [Configure agents to install on specific Tenants](../security-and-compliance/security-and-compliance-overview/agents.md#configuring-agents-to-install-on-specified-tenants).
 
 ## Q4 2023
@@ -48,6 +55,8 @@ coverY: 0
 * Azure
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
   * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
+* GCP
+  * Create a Firestore Database from the DuploCloud portal.
 * Kubernetes
   * [Follow logs](../aws/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
   * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](../kubernetes/pod-toleration.md).&#x20;
