@@ -319,6 +319,8 @@
   * [Subscription](azure/azure-services/subscription.md)
   * [VM Scale Sets](azure/use-cases/vm-scale-sets.md)
 * [Azure FAQ](azure/azure-faq.md)
+* [Security Configuration](azure/security-configuration/README.md)
+  * [Tenant Settings](azure/security-configuration/tenant-settings.md)
 
 ## CI/CD
 
