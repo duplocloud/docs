@@ -4,7 +4,7 @@ description: Create Autoscaling groups to scale EC2 instances to your workload
 
 # Autoscaling Groups (ASG)
 
-Configure Autoscaling Groups (ASG) to ensure the application load is scaled based on the number of EC2 instances configured. Autoscaling detects unhealthy instances and launches new EC2 instances. ASG is also cost-effective as EC2 Instances are dynamically created as per the application requirement within minimum and maximum count limits.&#x20;
+Configure Autoscaling Groups (ASG) to ensure the application load is scaled based on the number of EC2 instances configured. Autoscaling detects unhealthy instances and launches new EC2 instances. ASG is also cost-effective as EC2 Instances are dynamically created per the application requirement within minimum and maximum count limits.&#x20;
 
 ## Creating Autoscaling Groups (ASG)
 
@@ -14,27 +14,35 @@ The Use for Cluster Autoscaling option will not be available until you enable th
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
 2. In the **ASG** tab, click **Add**. The **Add ASG** page is displayed.
-3. Select **Use for Cluster Autoscaling**.
-4. In the **Friendly Name** field, enter the name of the ASG.
+3. In the **Friendly Name** field, enter the name of the ASG.
+4. Select **Availability Zone** and **Instance Type**.
 5. In the **Instance Count** field, enter the desired capacity for the Autoscaling group.
 6. In the **Minimum Instances** field, enter the minimum number of instances. The Autoscaling group ensures that the total number of instances is always greater than or equal to the minimum number of instances.
 7. In the **Maximum Instances** field, enter the maximum number of instances. The Autoscaling group ensures that the total number of instances is always less than or equal to the maximum number of instances.
-8. From the **Platform** list box, select **Linux Docker/Native** to run a Docker service or select **EKS Linux** to run services using EKS.
-9. Optionally, enable [Spot Instances](../hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md#enabling-spot-instances-when-creating-autoscaling-groups).
+8.  Select **Use for Cluster Autoscaling**.\
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_40_03.png" alt=""><figcaption><p><strong>Add ASG page</strong> with <strong>Use for Cluster Autoscaling</strong> option selected</p></figcaption></figure>
 
-10. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
+    <figure><img src="../../../.gitbook/assets/asg2.png" alt=""><figcaption><p><strong>Add ASG page</strong> with <strong>Use for Cluster Autoscaling</strong> enabled</p></figcaption></figure>
+
+
+9. Select **Advanced Options**.
+10. Select the appropriate **Image ID**.&#x20;
+11. From the Agent Platform list box, select **Linux Docker/Native** to run a Docker service or select **EKS Linux** to run services using EKS. Fill in additional fields as needed for your ASG.&#x20;
+12. Optionally, enable [**Spot Instances**](../hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md).&#x20;
+13. Optionally, for EKS only, enable **Scale from zero**. When **Scale from zero** is enabled, DuploCloud scales up the Host in this ASG to run Pods that can not be scheduled otherwise.
+14. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
+
+<figure><img src="../../../.gitbook/assets/asg3.png" alt=""><figcaption><p>ASG <strong>Advanced Options</strong> </p></figcaption></figure>
 
 ## Viewing Hosts in Autoscaling Groups
 
-View the Hosts created as part of ASG creation from ASG View Details Page.
+View the Hosts created as part of ASG creation from the ASG **Hosts** tab.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_52_12.png" alt=""><figcaption><p><strong>Hosts</strong> tab on the <strong>ASG</strong> page</p></figcaption></figure>
 
 ## **Creating an Amazon EC2 Autoscaling Policy**
 
-Refer to AWS [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html#as-how-scaling-policies-work) for detailed steps on creating Scaling policies for the Autoscaling Group created
+Refer to AWS [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html#as-how-scaling-policies-work) for detailed steps on creating Scaling policies for the Autoscaling Group.
 
 ## **Creating Services using Autoscaling Groups**
 
