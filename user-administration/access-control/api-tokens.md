@@ -59,7 +59,7 @@ You can configure DuploCloud system settings to generate faults and send notific
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (4) (7).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to generate faults when API tokens will expire in 15 days. </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (7) (1).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to generate faults when API tokens will expire in 15 days. </p></figcaption></figure>
 
 </div>
 
