@@ -181,7 +181,7 @@ coverY: 0
   * Monitor Tenant usage in the [Cost Management for billing ](../azure/use-cases/cost-management.md)feature with weekly or monthly views.
   * Edit [Azure agent pools](../azure/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 * GCP
-  * Monitor Tenant usage in the [Cost Management for billing](../gcp/use-cases/cost-management.md) feature with weekly or monthly views.&#x20;
+  * Monitor Tenant usage in the [Cost Management for billing](../gcp/use-cases/cost-management/) feature with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
   * Support for Kubernetes Ingress in [Azure](broken-reference).
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;

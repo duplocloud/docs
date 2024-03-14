@@ -10,7 +10,7 @@ To view the Billing page for GCP in the DuploCloud Portal, click **Administrator
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/GCP_Billing.png" alt=""><figcaption><p><strong>Billing</strong> dashboard for GCP</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/GCP_Billing.png" alt=""><figcaption><p><strong>Billing</strong> dashboard for GCP</p></figcaption></figure>
 
 </div>
 
@@ -23,7 +23,7 @@ You can view usage by:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/GCP_Week_Month_billing.png" alt=""><figcaption><p><strong>Spend by Month</strong> tab with monthly and weekly options displayed</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/GCP_Week_Month_billing.png" alt=""><figcaption><p><strong>Spend by Month</strong> tab with monthly and weekly options displayed</p></figcaption></figure>
 
 </div>
 

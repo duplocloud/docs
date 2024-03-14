@@ -18,13 +18,13 @@ description: Create Node Pool for GCE in the DuploCloud Portal
 4. Provide **Name**, **Availability Zone**, **Instance Type**, and **Node Counts**.&#x20;
 5. Click **Submit**.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Add Node Pool</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (12).png" alt=""><figcaption><p><strong>Add Node Pool</strong> page</p></figcaption></figure>
 
 ### Adding a Node Pool with Advanced Options
 
 DuploCloud Portal provides additional options when configuring a Node Pool, as depicted below. To use Advanced Options select **Advanced Options** in the **Add Node Pool** page.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p><strong>Add Node Pool</strong> with <strong>Advanced Options</strong> enabled</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (7).png" alt=""><figcaption><p><strong>Add Node Pool</strong> with <strong>Advanced Options</strong> enabled</p></figcaption></figure>
 
 ### Adding a Node Pool with Accelerator Type
 
@@ -93,7 +93,7 @@ You can Edit or Delete a Taint by selecting the Node Pool **Name**, clicking the
 
 View Node Pools by clicking the **Node Pool** tab and selecting the Node Pool **Name**.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>The <strong>Node Pool</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (9).png" alt=""><figcaption><p>The <strong>Node Pool</strong> page</p></figcaption></figure>
 
 Nodes created as part of a Node Pool, are displayed in the **GCE VM** tab.\
 

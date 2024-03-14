@@ -17,4 +17,4 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Logs](../../observability/logs.md)
 * [Metrics](../../observability/monitoring/)
 * [Faults and alerts](../../observability/faults-and-alarms/)
-* [Cost management for billing](cost-management.md)
+* [Cost management for billing](cost-management/)

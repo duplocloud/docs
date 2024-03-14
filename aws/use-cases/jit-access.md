@@ -32,7 +32,7 @@ When you select **JIT AWS Console**, the AWS Console launches.
 
 When you select Temporary AWS Credentials, the **Get JIT AWS Access** window displays with available links for **temporary** or **permanent** access, as in the graphic below. For temporary access, click **Get JIT Access**. For permanent access, click the **more permanent** link.
 
-<figure><img src="../../.gitbook/assets/AWS_jit_profile3.png" alt=""><figcaption><p><strong>Get JIT AWS Access</strong> window with tempoary and permanent options</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_jit_profile3.png" alt=""><figcaption><p><strong>Get JIT AWS Access</strong> window with temporary and permanent options</p></figcaption></figure>
 
 ### Obtaining AWS access for a workstation
 
