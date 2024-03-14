@@ -107,6 +107,7 @@
     * [Adding Dedicated Hosts](aws/use-cases/hosts-vms/adding-dedicated-hosts.md)
     * [Autoscaling Hosts](aws/use-cases/auto-scaling/README.md)
       * [Autoscaling Groups (ASG)](aws/use-cases/auto-scaling/auto-scaling-groups.md)
+        * [Scale to or from Zero](aws/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/scale-to-or-from-zero.md)
         * [Spot Instances](aws/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md)
       * [ECS Autoscaling](aws/use-cases/auto-scaling/ecs-auto-scaling.md)
       * [Autoscaling in Kubernetes](aws/use-cases/auto-scaling/kubernetes-scaling-options.md)

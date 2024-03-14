@@ -17,7 +17,7 @@ coverY: 0
   * [Upgrade EKS Cluster components](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
   * Create an [OpenSearch](../aws/aws-services/elasticsearch.md) domain. &#x20;
   * [Billing option is available per Tenant](../aws/use-cases/cost-management/#view-billing-details-by-tenant).
-  * [Scale to or from zero (0)](../aws/use-cases/auto-scaling/auto-scaling-groups.md#creating-autoscaling-groups-asg) using Auto-Scaling Groups.
+  * [Scale to or from zero (0) using Auto-Scaling Groups](../aws/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/scale-to-or-from-zero.md).&#x20;
   * Create [Lambdas with Ephemeral Storage](../aws/aws-services/lambda/#id-3-toc-title).
   * Support for [Lambda Dead Letter Queues](../aws/aws-services/lambda/#id-3-toc-title).
   * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), using increments of seconds.

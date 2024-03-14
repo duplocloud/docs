@@ -29,7 +29,7 @@ The Use for Cluster Autoscaling option will not be available until you enable th
 10. Select the appropriate **Image ID**.&#x20;
 11. From the Agent Platform list box, select **Linux Docker/Native** to run a Docker service or select **EKS Linux** to run services using EKS. Fill in additional fields as needed for your ASG.&#x20;
 12. Optionally, enable [**Spot Instances**](../hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md).&#x20;
-13. Optionally, for EKS only, enable **Scale from zero**. When **Scale from zero** is enabled, DuploCloud scales up the Host in this ASG to run Pods that can not be scheduled otherwise.
+13. Optionally, for EKS only, enable [**Scale from zero**](../hosts-vms/auto-scaling/auto-scaling-groups/scale-to-or-from-zero.md).&#x20;
 14. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
 
 <figure><img src="../../../.gitbook/assets/asg3.png" alt=""><figcaption><p>ASG <strong>Advanced Options</strong> </p></figcaption></figure>
