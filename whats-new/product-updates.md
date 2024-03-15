@@ -8,25 +8,25 @@ coverY: 0
 ## Q1 2024
 
 * AWS
-  * [Configure K8s Ingress redirect ](../aws/aws-services/adding-ingress.md#add-kubernetes-ingress)using a container port name.
+  * [Configure K8s Ingress redirect ](../aws/aws-services/adding-ingress.md#add-rules-to-kubernetes-ingress-and-complete-ingress-setup)using a container port name.
   * [Disable faults for Target Groups without instances.](../aws/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
   * Enable UltraWarm Data nodes for [OpenSearch domains](../aws/aws-services/elasticsearch.md).
   * Support for [upgrading EKS components](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).&#x20;
-  * [Add a Web App Firewall URL](../aws/aws-services/web-application-firewall-waf.md#id-1-toc-title) when creating or updating a Plan.
+  * [Add a Web App Firewall URL](../aws/aws-services/web-application-firewall-waf.md#creating-a-web-application-firewall-waf) when creating or updating a Plan.
   * [Update or skip a final RDS snapshot](../aws/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
-  * [Upgrade EKS Cluster components](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
+  * [Upgrade the EKS Cluster](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
   * Create an [OpenSearch](../aws/aws-services/elasticsearch.md) domain. &#x20;
   * [Billing option is available per Tenant](../aws/use-cases/cost-management/#view-billing-details-by-tenant).
   * [Scale to or from zero (0) using Auto-Scaling Groups](../aws/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/scale-to-or-from-zero.md).&#x20;
   * Create [Lambdas with Ephemeral Storage](../aws/aws-services/lambda/#id-3-toc-title).
   * Support for [Lambda Dead Letter Queues](../aws/aws-services/lambda/#id-3-toc-title).
-  * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md), using increments of seconds.
+  * [Set a delivery delay for SQS Queues](../aws/aws-services/sqs-queue.md#creating-a-standard-queue), using increments of seconds.
   * Configure [Vanta compliance controls](../aws/security-configuration-settings/vanta-compliance-controls.md) for DuploCloud Tenants.
   * Support for [OpenSearch storage options](../aws/aws-services/elasticsearch.md).
   * [Security Configurations Settings](../aws/security-configurations/) documentation section added.
 * GCP
-  * [GKE Standard mode](../gcp/use-cases/disaster-recovery/#creating-an-infrastructure) is supported when creating DuploCloud Infrastructures.
-  * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title) and [GKE VMs](../gcp/use-cases/hosts-vms.md#gce-vm).
+  * [GKE Standard mode](../gcp/use-cases/disaster-recovery/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
+  * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title) and [GCE VMs](../gcp/use-cases/hosts-vms.md#gce-vm).
   * Create [Node Pools](../gcp/gcp-services/node-pools.md) with support for accelerators and taints.
   * Support for [GKE Ingress.](../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
 * CI/CD
@@ -55,8 +55,6 @@ coverY: 0
 * Azure
   * Create a [MySQL Flexible Serve](../azure/azure-services/databases/mysql-flexible-server.md)r managed database service.
   * Add an [Azure Service Bus](../azure/azure-services/service-bus.md).
-* GCP
-  * Create a Firestore Database from the DuploCloud portal.
 * Kubernetes
   * [Follow logs](../aws/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
   * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](../kubernetes/pod-toleration.md).&#x20;

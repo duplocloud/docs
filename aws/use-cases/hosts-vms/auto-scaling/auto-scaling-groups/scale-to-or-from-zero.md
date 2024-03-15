@@ -4,7 +4,7 @@ description: Scale to or from zero when creating Autoscaling Groups in DuploClou
 
 # Scale to or from Zero
 
-DuploCloud allows you to scale to or from zero when creating [Autoscaling Groups](../../../auto-scaling/auto-scaling-groups.md) in EKS clusters by enabling the **Scale from zero** option in the Advanced Options when creating an [Autoscaling Group](../../../auto-scaling/auto-scaling-groups.md).
+DuploCloud allows you to scale to or from zero in EKS clusters by enabling the **Scale from zero** option in the Advanced Options when creating an [Autoscaling Group](../../../auto-scaling/auto-scaling-groups.md).
 
 Scaling to or from zero with AWS Autoscaling Groups (ASG) offers several advantages depending on the context and requirements of your application:
 
