@@ -242,6 +242,7 @@
   * [Hosts (VMs)](gcp/use-cases/hosts-vms.md)
   * [Cost management for billing](gcp/use-cases/cost-management/README.md)
     * [Export Billing to BigQuery](gcp/use-cases/cost-management/export-billing-to-bigquery.md)
+    * [Manage cross project billing in GCP](gcp/use-cases/cost-management/manage-cross-project-billing-in-gcp.md)
 * [GCP Services](gcp/gcp-services/README.md)
   * [Containers and Services](gcp/gcp-services/containers/README.md)
     * [Docker Registry credentials](gcp/gcp-services/containers/docker-registry-credentials.md)
