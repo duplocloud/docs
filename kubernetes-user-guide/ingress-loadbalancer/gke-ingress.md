@@ -20,7 +20,7 @@ It leverages the network endpoint groups (NEGs) feature to ensure that traffic i
 
 Using DuploCloud, create Container Native Load Balancing Ingress with ease!
 
-### Pre-requisits: Creating Tenants and Services
+### Prerequisites: Creating Tenants and Services
 
 See the [Containers ](../../aws/aws-services/containers/)topic for steps on how to create [Tenants](../../getting-started/application-focussed-interface/tenant/), and [Services](../../getting-started/application-focussed-interface/app-service-and-cloud-services.md).
 
