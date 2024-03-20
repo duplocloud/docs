@@ -216,6 +216,7 @@
 * [Prerequisites](gcp/prerequisites.md)
   * [Cloud DNS Zone](gcp/prerequisites/route-53-hosted-zone.md)
   * [Docker Registry Credentials](gcp/prerequisites/docker-registry-credentials.md)
+  * [Enable DuploCloud Shell in GCP](gcp/prerequisites/enable-duplocloud-shell-in-gcp.md)
   * [Shell Access for Docker](gcp/prerequisites/shell-access-for-docker.md)
   * [VPN Setup](gcp/prerequisites/vpn-setup.md)
   * [Connect to the VPN](gcp/prerequisites/connect-to-the-vpn.md)
