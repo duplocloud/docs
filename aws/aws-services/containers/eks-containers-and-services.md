@@ -213,7 +213,7 @@ If you need security tokens of a longer duration, create them on your own. Secur
 
 ### Passing Kubernetes Configs and Secrets
 
-[See this section](../../../kubernetes/kubernetes-configs-and-secrets/) in the Duplocloud Kubernetes documentation.
+[See this section](../../../kubernetes-user-guide/configs-and-secrets/) in the Duplocloud Kubernetes documentation.
 
 ### Downloading and configuring KubeCtl Token
 

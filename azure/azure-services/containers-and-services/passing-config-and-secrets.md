@@ -14,4 +14,4 @@ In the Portal, navigate to **DevOps** -> **Keyvault** to add, store, and delete 
 
 ## **Kubernetes**
 
-See the [Kubernetes Configs and Secrets](../../../kubernetes/kubernetes-configs-and-secrets/) section.
+See the [Kubernetes Configs and Secrets](../../../kubernetes-user-guide/configs-and-secrets/) section.
