@@ -6,7 +6,7 @@ description: Configuration and Secret management in AWS
 
 There are many ways to pass configurations to containers at run-time. Although simple to set up, using Environmental Variables can become complex if there are too many configurations, especially files and certificates.&#x20;
 
-In Kubernetes, you also have the option to populate environment variables from [Config Maps or Secrets](../../../kubernetes/kubernetes-configs-and-secrets/).
+In Kubernetes, you also have the option to populate environment variables from [Config Maps or Secrets](../../../kubernetes-user-guide/configs-and-secrets/).
 
 ## **Using AWS Services to pass configurations and secrets**
 
@@ -55,4 +55,4 @@ Where _`X_SERVICE_TOKEN`_ is the `Secret` defined in the JSON and _`VALUE_FROM`_
 
 ## Using Kubernetes **to pass configurations and secrets**
 
-See the [Kubernetes Configs and Secrets](../../../kubernetes/kubernetes-configs-and-secrets/) section.
+See the [Kubernetes Configs and Secrets](../../../kubernetes-user-guide/configs-and-secrets/) section.
