@@ -4,10 +4,6 @@
 
 DuploCloud typically runs Kubernetes services in GCP on GKE in Autopilot mode. Autopilot dynamically provisions nodes as needed to run your pods. This can add a couple of minutes to pod start time. You may see warnings from Kubernetes about being unable to place pods while autopilot hosts are starting, but they’ll clear once the hosts are available.
 
-### How do I add a certificate to an internal load balancer?
-
-Instructions need to be written. You can’t use Google Managed certificates. You can import a certificate from somewhere else or use a self-signed certificate. The self-signed option is reasonable for internal LBs because you control authentication at the IP level. We have Terraform that can be used as a reference.
-
 ### One or more of my containers are showing in a pending state, how can I debug? <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 [Click here for the details](../aws/aws-faq.md#7-toc-title)
