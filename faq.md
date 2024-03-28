@@ -238,7 +238,7 @@ CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a
 
 ## Diagnostic Tool FAQ
 
-### How do I use Datadog and other diagnostics tools?
+### How do I use Datadog and other diagnostics tools? 
 
 DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset like Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if you are running an application within the respective DuploCloud tenants.
 
