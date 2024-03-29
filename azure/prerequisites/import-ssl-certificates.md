@@ -15,7 +15,7 @@ If you haven't already done so, contact the DuploCloud support staff via email o
 * Contact the DuploCloud support staff via email or by using your private Slack channel to request the following for SSL certificate setup and configuration:&#x20;
   * Security Certificate (`.crt`) file&#x20;
   * Certificate Private Key
-  * Certificate Bundle (`.crt`) containing the Intermediate and Root Certificates. You can download the Certificate Bundle from [https://help.configuressl.com/alphassl-wildcard-intermediate-root-ca-certificates-g4/](https://help.configuressl.com/alphassl-wildcard-intermediate-root-ca-certificates-g4/).
+  * Certificate Bundle (`.crt`) containing the Intermediate and Root Certificates. You can download the Certificate Bundle from [https://support.globalsign.com/ca-certificates/intermediate-certificates/alphassl-intermediate-certificates](https://support.globalsign.com/ca-certificates/intermediate-certificates/alphassl-intermediate-certificates).
 
 ## Generating the PFX file
 
