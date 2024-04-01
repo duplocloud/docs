@@ -2,7 +2,7 @@
 description: Use Duplo to build and push a docker image from Github Actions
 ---
 
-# Build a docker image
+# Build a Docker image
 
 {% hint style="info" %}
 Avoid using capital letters when referencing a DuploCloud construct, such as a Tenant, even when the UI displays the string as all capital letters. Don't specify **DEV01** for example, specify **dev01**.
@@ -24,9 +24,9 @@ Here is an example github workflow that builds a docker image and pushes it to E
 
 To use it you will need to change:
 
-* `duplo_host` env var
-* _`<SERVICE_NAME>`_ env var
-* _`<TENANT_NAME>`_ env var
+* `DUPLO_HOST` env var
+* `SERVICE_NAME` env var
+* `TENANT_NAME` env var
 
 ```yaml
 name: Build and Deploy
@@ -39,8 +39,8 @@ on:
     branches:
       - master
 env:
-  duplo_host: https://mysystem.duplocloud.net  # CHANGE ME!
-  duplo_token: "${{ secrets.DUPLO_TOKEN }}"
+  DUPLO_HOST: https://mysystem.duplocloud.net  # CHANGE ME!
+  DUPLO_TOKEN: "${{ secrets.DUPLO_TOKEN }}"
   SERVICE_NAME: myservice                      # CHANGE ME!
   TENANT_NAME: mytenant                        # CHANGE ME!
 
