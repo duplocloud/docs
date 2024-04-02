@@ -12,16 +12,18 @@ To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditin
 
 ## Creating an S3 bucket
 
+When creating an S3 bucket using the `duplocloud_s3_bucket` resource in Terraform, you might notice a random sequence of numbers appended to the bucket name. This sequence is actually the AWS account ID, which, along with a prefix that includes the tenant name (`duploservices-<tenant_name>-`), ensures the global uniqueness of the S3 bucket names across AWS. This naming convention allows for the creation of buckets with the same name across multiple tenants without conflict.
+
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage**.
 2. Click the **S3** tab.
 3. Click **Add**. The **Create an S3** **Bucket** pane displays.
-4. In the **Name** field, enter a name for the S3 bucket.
+4. In the **Name** field, enter a name for the S3 bucket. Consider the automatic addition of your AWS account ID and tenant name prefix to ensure uniqueness.
 5. In the **Region** list box, select the region. You can select **Tenant Region**, **Default Region**, or **Global Region**, and specify **Other Region** to enter a custom region you have defined.
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-14_38_40.png" alt=""><figcaption><p>The <strong>Create an S3 Bucket</strong> pane</p></figcaption></figure>
 
 6. Optionally, select **Enable Bucket Versioning** and/or **Object Lock.** Both of these settings are disabled by default, unless you Enable Bucket Versioning Tenant-wide in **Tenant** **Settings**. For more information about S3 bucket versioning, see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html).&#x20;
-7. Click **Create**. An S3 bucket is created.
+7. Click **Create**. An S3 bucket is created with a unique name that includes your AWS account ID and tenant name prefix.
 
 {% hint style="info" %}
 **Enable Bucket Versioning** must be selected to use **Object Lock**.&#x20;
@@ -38,14 +40,12 @@ You can configure the [Tenant ](../use-cases/tenant-environment/#2-toc-title)to 
 5. From the **Select Tenant Feature** list box, select **Default: Enable bucket versioning for new S3 buckets**.
 6.  Select **Enable.**\
 
-
     <div align="left">
 
     <figure><img src="../../.gitbook/assets/add tenant feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane filled to enable bucket versioning for this Tenant.<br></p></figcaption></figure>
 
     </div>
 7.  Click **Add**. Bucket versioning will be enabled by default on the **Create an S3 Bucket** pane when [creating a new S3 bucket](s3-bucket.md#creating-an-s3-bucket).\
-
 
     <div align="left">
 
@@ -92,22 +92,18 @@ From the **S3 Bucket** page, you can set bucket permissions directly in the AWS 
 
 ## Add a custom prefix for S3 buckets
 
-DuploCloud provides the capability to specify a custom prefix for S3.
+DuploCloud provides the capability to specify a custom prefix for S3 buckets, enhancing the ability to organize and manage your storage resources effectively. Before adding custom prefixes, it's crucial to contact the DuploCloud Support Team to enable the `ENABLEAWSRESOURCEMGMTUSINGTAGS` property. This step ensures that the system can manage resources based on the specified tags, including custom prefixes.
 
-{% hint style="warning" %}
-**IMPORTANT:** Before you add custom prefixes for S3 buckets, contact the DuploCloud Support Team and ask them to set the `ENABLEAWSRESOURCEMGMTUSINGTAGS` property to`True` in the DuploCloud System. After this property is set, use this procedure to add custom prefixes.
-{% endhint %}
-
-1. IMPORTATIn the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
 3. Click **Add**. The **Add Config** pane displays.
 4. From the **Config Type** list box, select **AppConfig**.
 5. From the **Key** list box, select **Prefix all S3 Bucket Names**.
-6. In the **Value** field, enter the custom prefix.
+6. In the **Value** field, enter the custom prefix you wish to use for your S3 buckets.
 7. Click **Submit**.
 
 {% hint style="warning" %}
-Avoid specifying system-reserved prefixes such as`duploservices`.
+Avoid specifying system-reserved prefixes such as`duploservices`. This is to prevent conflicts with the system's internal naming conventions.
 {% endhint %}
 
 <div align="left">
@@ -115,3 +111,5 @@ Avoid specifying system-reserved prefixes such as`duploservices`.
 <figure><img src="../../.gitbook/assets/AWS_GCP_Bucket_prefix.png" alt=""><figcaption><p><strong>Add Config</strong> pane for <strong>Key Prefix all S3 Bucket Name</strong></p></figcaption></figure>
 
 </div>
+
+For more detailed instructions on adding a custom prefix to your S3 buckets, please refer to the [DuploCloud documentation](https://docs.duplocloud.com/docs/aws/aws-services/s3-bucket#add-a-custom-prefix-for-s3-buckets). 
