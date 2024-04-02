@@ -1,8 +1,12 @@
+---
+description: Temporary and permanent API Tokens
+---
+
 # API tokens
 
 ## Introduction
 
-Duplo supports two kinds of API tokens, temporary API tokens and permanent API tokens. For normal use cases, we recommend using a temporary API token. For CI/CD or other DevOps automation, a permanent API token is warranted.
+DuploCloud supports two kinds of API tokens, temporary API tokens and permanent API tokens. For normal use cases, we recommend using a temporary API token. For CI/CD or other DevOps automation, a permanent API token is warranted.
 
 {% hint style="warning" %}
 Permanent API tokens will expire after one year.
@@ -10,11 +14,11 @@ Permanent API tokens will expire after one year.
 
 ## Temporary API tokens
 
-Every time a user logs in to Duplo, a temporary API token is created for that user that only lasts for the duration of their session.
+Every time a user logs in to DuploCloud, a temporary API token is created for that user that only lasts for the duration of their session.
 
 ### Getting a Temporary API token
 
-Any user can retrieve _their own_ temporary API token from Duplo. Navigate to the **User** -> **Profile** page. Click the copy icon ![](<../../.gitbook/assets/Screen Shot 2022-02-24 at 2.19.23 PM.png>) in the **Temporary API Token** pane.
+Any user can retrieve _their own_ temporary API token from DuploCloud. Navigate to the **User** -> **Profile** page. Click the copy icon ![](<../../.gitbook/assets/Screen Shot 2022-02-24 at 2.19.23 PM.png>) in the **Temporary API Token** pane.
 
 <figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 

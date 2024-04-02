@@ -10,94 +10,122 @@ Instead of deploying your Lambda code in the same pipeline as your infrastructur
 For general information about deploying serverless applications with GitHub Actions in AWS, reference this [blog](https://aws.amazon.com/blogs/compute/using-github-actions-to-deploy-serverless-applications/).
 {% endhint %}
 
-## Update a Lambda container image&#x20;
+### Update a Function Using an Image&#x20;
 
-Use the following code as a template to update a Lambda container image with GitHub Actions. In this example, the Lambda container image in the `mytenant` Tenant is built and deployed.
+Use the following code as a template to update a Lambda container image with GitHub Actions. In this example, the Lambda container image in the `dev01` Tenant is updated and redeployed.
 
-```bash
-name: Build and Deploy
-on:
-  # (Optional) Allows users to trigger the workflow manually from the GitHub UI
+You must ensure the following are configured in your environment and your specific situation.&#x20;
+
+* The name of lambda is set on the action to your actual lambda
+* Duplocloud context configured correctly
+
+<pre class="language-yaml"><code class="lang-yaml">name: Update Lambda
+
+on: 
   workflow_dispatch:
+    inputs:
+      environment:
+        description: The environment to deploy to
+        type: environment
+        default: dev01
+      image:
+        description: The full image
+        type: string
+        required: true
 
-  # Triggers the workflow on push to matching branches
-  push:
-    branches:
-      - develop
-env:
-  duplo_host: https://mysystem.duplocloud.net   # DuploCloud URL
-  duplo_token: "${{secrets.DUPLO_TOKEN }}"	# DuploCloud Token
-  TENANT_NAME: mytenant				# DuploCloud Tenant name
-  DUPLO_TENANT_ID: tenant_id			# DuploCloud Tenant Id where lambda is deployed
-  LAMBDA_NAME: mylambda				# Name of the lambda
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build:
-  # YOU SHOULD ALREADY HAVE THIS FROM THE PREVIOUS DOCUMENTATION SECTION
-  # ...
-  # ...    
-  deploy:
+  update_service:
+    name: Update Lambda
     runs-on: ubuntu-latest
-    needs:
-      - build
-    steps:
-	# Deploy the new image to Lambda  
-      - name: Deploy Lambda
-        run: |
-            curl -Ssf -H 'Content-type: application/json' \
-              -H "Authorization: Bearer $duplo_token" -XPOST \
-              "${duplo_host}/subscriptions/$DUPLO_TENANT_ID/UpdateLambdaFunction" \
-              -d "{
-                'FunctionName': 'duploservices-$TENANT_NAME-$LAMBDA_NAME',
-                'ImageUri': \"${{ needs.build.outputs.image }}\"
-            }"
-```
+    environment: 
+      name: ${{ inputs.environment }}
+    env:
+      DUPLO_TOKEN: ${{ secrets.DUPLO_TOKEN }}
+      DUPLO_HOST: ${{ vars.DUPLO_HOST  }}
+      DUPLO_TENANT: ${{ inputs.environment }}
+    steps: 
+    
+    # configures duplocloud and aws
+    - name: Cloud CI Setup
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@v0.0.3</a>
+
+    # uses duploctl from above
+    - name: Update Lambda
+      uses: <a data-footnote-ref href="#user-content-fn-2">duplocloud/actions/update-image@v0.0.3</a>
+      with:
+        type: lambda
+        name: mylambda
+        image: ${{ inputs.image }}
+</code></pre>
 
 ## Update Lambda based on package in Amazon S3
 
-Use the following code as a template to deploy your Lambda functions to an S3 bucket with GitHub Actions. In this example, the Lambda container image in the `mytenant` Tenant is built, deployed, and updated using an S3 bucket that contains `helloworld.zip`
+Use the following code as a template to deploy your Lambda functions to an S3 bucket with GitHub Actions. In this example, the Lambda in the `dev01` Tenant is updated using an S3 bucket that contains `mylambda-v1.zip`
 
-<pre class="language-bash"><code class="lang-bash">  name: Build and Deploy
-  on:
-    # (Optional) Allows users to trigger the workflow manually from the GitHub UI
-    workflow_dispatch:
-  
-    # Triggers the workflow on push to matching branches
-    push:
-      branches:
-        - develop
-  env:
-    duplo_host: https://mysystem.duplocloud.net  # DuploCloud URL
-    duplo_token: "${{secrets.DUPLO_TOKEN }}"	 # DuploCloud Token
-    TENANT_NAME: mytenant			 # DuploCloud Tenant name
-    DUPLO_TENANT_ID: tenant_id			 # DuploCloud Tenant Id where lambda is deployed
-    LAMBDA_NAME: mylambda			 # Name of the lambda
-  
-  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-  jobs:
-    build:
-    # YOU SHOULD ALREADY HAVE THIS FROM THE PREVIOUS DOCUMENTATION SECTION
-    # ...
-    # ...    
-    deploy:
-      runs-on: ubuntu-latest
-      needs:
-        - build
-  deploy:
+You must ensure the following are configured in your environment and your specific situation.&#x20;
+
+* Duplocloud context configured correctly
+* `S3KEY`
+* `S3BUCKET`
+* `LAMBDA_NAME`
+
+```yaml
+name: Update Lambda
+
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: The environment to deploy to
+        type: environment
+        default: dev01
+      s3key:
+        description: The key name in the s3 bucket with the version to deploy.
+        type: string
+        required: false
+        default: mylambda-v1.zip
+
+jobs:
+  update_service:
+    name: Update Lambda
     runs-on: ubuntu-latest
-    needs:
-      - build
-    steps:
-	# Deploy by updating S3 bucket 
-      - name: Deploy Lambda
-        run: |
-            curl --location --request POST '${duplo_host}/subscriptions/$DUPLO_TENANT_ID/UpdateLambdaFunction' \
-            --header 'Authorization: Bearer &#x3C;CHANGE_DUPLO_TOKEM>' \
-            --header 'Content-Type: application/json' \
-<strong>            --data-raw '{
-</strong>                "FunctionName": "duploservices-test-helloworld-128329325849",
-                "S3Bucket": "duploservices-test-cftest-128329325849",
-                "S3Key": "helloworld.zip"
-<strong>            }'
-</strong></code></pre>
+    environment: 
+      name: ${{ inputs.environment }}
+    env:
+      DUPLO_TOKEN: ${{ secrets.DUPLO_TOKEN }}
+      DUPLO_HOST: ${{ vars.DUPLO_HOST  }}
+      DUPLO_TENANT: ${{ inputs.environment }}
+    steps: 
+    
+    # configures duplocloud and aws
+    - name: Cloud CI Setup
+      uses: duplocloud/actions/setup@v0.0.3
+      
+    # we can build the bucket name using context from setup
+    - name: Discover True Bucket Name
+      env:
+        S3BUCKET: mybucket
+      run: echo "S3BUCKET=duploservices-${DUPLO_TENANT}-${S3BUCKET}-${AWS_ACCOUNT_ID}" >> $GITHUB_ENV
+
+    # uses duploctl from above to run update lambda function
+    - name: Update Lambda from S3
+      env:
+        LAMBDA_NAME: mylambda
+        S3KEY: ${{ inputs.s3key }}
+      run: duploctl lambda update_s3 $LAMBDA_NAME $S3BUCKET $S3KEY
+```
+
+### References
+
+* [Duploctl Lambda Resource](https://github.com/duplocloud/duploctl/wiki/Lambda)
+* [AWS Working with Lambda container images](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html)
+* Dockerhub Lambda Base Images
+  * [Python](https://hub.docker.com/r/amazon/aws-lambda-python)
+  * [NodeJS](https://hub.docker.com/r/amazon/aws-lambda-nodejs)
+  * [GoLang](https://hub.docker.com/r/amazon/aws-lambda-go)
+  * [Ruby](https://hub.docker.com/r/amazon/aws-lambda-ruby)
+* [AWS Deploying Lambda functions as .zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html)
+
+[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
+
+[^2]: [https://github.com/duplocloud/actions/tree/main/update-image](https://github.com/duplocloud/actions/tree/main/update-image)

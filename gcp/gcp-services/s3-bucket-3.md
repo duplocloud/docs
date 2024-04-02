@@ -1,9 +1,16 @@
 ---
-description: Create cloud scheduler in GCP
+description: Create pub/sub in GCP
 ---
 
-# Cloud Scheduler
+# Pub/Sub
 
-Go under Cloud Services in the left nav bar and you can find the Cloud Scheduler menu. One can create a cloud scheduler to trigger from a pub/sub topic created in the previous section, an HTTP endpoint or an App Engine.
+Creation of a pub sub topic is quite self explanatory with just a couple fields.
 
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-13_38_40.png" alt=""><figcaption><p><strong>Cloud Scheduler Add Job</strong> page</p></figcaption></figure>
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+
+

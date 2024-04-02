@@ -15,14 +15,15 @@ This example makes some assumptions:
 * Your workflow already has a `build` job - we created one in the previous section
 * Your `build` job declares an output named `image` - also done in the previous section
 
-To use it you will need to change:
+To use it you will need to ensure your GHA Environment has the following:
 
 * `DUPLO_HOST` env var
-* `SERVICE_NAME` env var
-* `TENANT_NAME` env var
+* `DUPLO_TENANT` env var
+* `DUPLO_TOKEN` env var
 
-```yaml
-name: Update Service
+You need to change the service name below from `my-service` to the name of your actual service.&#x20;
+
+<pre class="language-yaml"><code class="lang-yaml">name: Update Service
 
 on: 
   workflow_dispatch:
@@ -51,7 +52,7 @@ jobs:
     
     # install and login to the cloud
     - name: Duplo Setup
-      uses: duplocloud/actions/setup@v0.0.3
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@</a>v0.0.5
       # only required on gcp and azure
       with:
         account-id: ${{ vars.CLOUD_ACCOUNT }}
@@ -59,8 +60,12 @@ jobs:
 
     # uses duploctl from above
     - name: Update Service
-      uses: duplocloud/actions/update-service@v0.0.3
+      uses: <a data-footnote-ref href="#user-content-fn-2">duplocloud/actions/update-image@</a>v0.0.5
       with:
-        service: my-service
+        name: my-service
         image: ${{ inputs.image }}
-```
+</code></pre>
+
+[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
+
+[^2]: [https://github.com/duplocloud/actions/tree/main/update-image](https://github.com/duplocloud/actions/tree/main/update-image)

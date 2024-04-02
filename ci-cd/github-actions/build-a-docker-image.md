@@ -15,62 +15,78 @@ The goal of this section is to show how you can build a docker image and push it
 It does three basic things:
 
 * Logs in to AWS ECR (using just-in-time AWS credentials from Duplo)
-* Builds and tags your docker image, with the tag based on the git commit SHA.
+* Builds and tags your docker image, with the tag based on the git commit SHA and ref.
 * Pushes your docker image
 
 ### Example Workflow
 
 Here is an example github workflow that builds a docker image and pushes it to ECR.
 
-To use it you will need to change:
+To use it you will need to ensure the following are configured correctly:
 
 * `DUPLO_HOST` env var
-* `SERVICE_NAME` env var
-* `TENANT_NAME` env var
+* `DUPLO_TOKEN` env var
 
-```yaml
-name: Build and Deploy
+<pre class="language-yaml"><code class="lang-yaml">name: Publish Image
 on:
-  # (Optional) Allows users to trigger the workflow manually from the GitHub UI
-  workflow_dispatch:
-
   # Triggers the workflow on push to matching branches
   push:
     branches:
-      - master
-env:
-  DUPLO_HOST: https://mysystem.duplocloud.net  # CHANGE ME!
-  DUPLO_TOKEN: "${{ secrets.DUPLO_TOKEN }}"
-  SERVICE_NAME: myservice                      # CHANGE ME!
-  TENANT_NAME: mytenant                        # CHANGE ME!
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      # Set up for docker build
-      - name: Get AWS credentials
-        uses: duplocloud/ghactions-aws-jit@master
-        with:
-          tenant: default
-      - name: Login to Amazon ECR
-        id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v1
-
-      # Build and push the docker image
-      - name: Docker Build and Push
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: |
-            ${{ steps.login-ecr.outputs.registry }}/${{ env.SERVICE_NAME }}:${{ github.sha }}
-            
-    # This part is important - it will be used by the deploy job
+    - main
+  # (Optional) Allows users to trigger the workflow manually from the GitHub UI
+  workflow_dispatch: {}
+  # (Optional) Allow other workflows to use this workflow ant its outputs
+  workflow_call: 
     outputs:
-      image: "${{ steps.login-ecr.outputs.registry }}/${{ env.SERVICE_NAME }}:${{ github.sha }}"
-```
+      image:
+        description: The URI of the image
+        value: ${{ jobs.build_image.outputs.image }}
+    secrets:
+      DUPLO_TOKEN:
+        description: The token to use for Duplo API calls
+        required: true
+
+env:
+  DUPLO_HOST: ${{ vars.DUPLO_HOST }}
+  DUPLO_TOKEN: ${{ secrets.DUPLO_TOKEN }}
+  # Images are usually stored in a dediacted tenant, so the name doesn't change
+  DUPLO_TENANT: devops
+
+jobs:
+  build_image:
+    name: Build and Push Image
+    runs-on: ubuntu-latest
+    outputs:
+      image: ${{ steps.build_image.outputs.uri }}
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # configures duplocloud and host cloud, eg aws
+    - name: Cloud CI Setup
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@</a>v0.0.5
+    
+    # logs into registry, configures docker, builds image, lastly pushes
+    - name: Build and Push Docker Image
+      id: build_image
+      uses: <a data-footnote-ref href="#user-content-fn-2">duplocloud/actions/build-image@</a>v0.0.5
+      with:
+        platforms: linux/amd64,linux/arm64
+        push: true # false for dry runs
+        build-args: >
+          foo=bar
+          ice_cream=chocolate
+          name=${{ github.repository }}
+</code></pre>
+
+### References
+
+* [Duplocloud Build Image Action for Github](https://github.com/duplocloud/actions/tree/main/build-image)
+* [NPM Pipeline Example using this workflow](https://github.com/duplocloud/npm-pipeline-example/tree/main/.github/workflows)
+* [Github on Publishing Docker Images](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images)
+* [Dockers Introduction to GitHub Actions](https://docs.docker.com/build/ci/github-actions/)
+
+[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
+
+[^2]: [https://github.com/duplocloud/actions/tree/main/build-image](https://github.com/duplocloud/actions/tree/main/build-image)
