@@ -25,6 +25,7 @@ coverY: 0
   * Support for [OpenSearch storage options](../aws/aws-services/elasticsearch.md).
   * [Security Configurations Settings](../aws/security-configurations/) documentation section added.
 * GCP
+  * Create a [Firestore Database](../gcp/gcp-services/firestore-database.md#creating-a-firestore-database) in the DuploCloud Portal.
   * [GKE Standard mode](../gcp/use-cases/disaster-recovery/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
   * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title) and [GCE VMs](../gcp/use-cases/hosts-vms.md#gce-vm).
   * Create [Node Pools](../gcp/gcp-services/node-pools.md) with support for accelerators and taints.

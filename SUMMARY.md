@@ -255,6 +255,7 @@
   * [Managed Redis](gcp/gcp-services/databases/redis-database-instance.md)
   * [Cloud Credentials](gcp/gcp-services/cloud-credentials.md)
   * [Cloud Storage](gcp/gcp-services/s3-bucket.md)
+  * [Firestore Database](gcp/gcp-services/firestore-database.md)
   * [Cloud Functions](gcp/gcp-services/s3-bucket-1.md)
   * [Cloud Scheduler](gcp/gcp-services/s3-bucket-2.md)
   * [Cloud Armour](gcp/gcp-services/cloud-armour.md)
