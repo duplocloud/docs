@@ -6,7 +6,7 @@ description: Specify EKS endpoints for an Infrastructure
 
 AWS SDKs and the AWS Command Line Interface (AWS CLI) automatically use the default public endpoint for each service in an AWS Region. However, when you create an Infrastructure in DuploCloud, you can specify a custom **Private** endpoint, a custom **Public** endpoint, or **Both public and private** custom endpoints. If you specify no endpoints, the default **Public** endpoint is used.
 
-For more information about AWS Endpoints, see the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/rande.html).
+For more information about AWS Endpoints, see the [AWS documentation](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html#private-access).&#x20;
 
 ## Specifying public and private subnets
 
