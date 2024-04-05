@@ -19,5 +19,5 @@ In addition to GKE standard and auto-pilot the following  GCP native services ar
 * [Cloud Storage](s3-bucket.md)
 * [Cloud Functions](s3-bucket-1.md)
 * [Pub/Sub](s3-bucket-3.md)
-* [Cloud Scheduler](s3-bucket-2.md)
+* [Cloud Scheduler](<s3-bucket-3 (1).md>)
 * [Cloud Armour](cloud-armour.md)

@@ -6,6 +6,10 @@ description: Add and configure Load Balancers with DuploCloud Azure
 
 Load Balancers are essential when running a service. They expose the containers and images in which your application resides. When your containers are run inside a private network, you need a load balancer to listen on the correct ports to access the application.
 
+## Creating an AKS Ingress
+
+If you need to create an Ingress Load Balancer, refer to the[ AKS Ingress](../../kubernetes-user-guide/ingress-loadbalancer/aks-ingress.md) page in the DuploCloud Kubernetes User Guide.&#x20;
+
 ## Add a Load Balancer Listener&#x20;
 
 Add a load balancer listener that uses the Kubernetes NodePort (K8S NodePort).
@@ -39,4 +43,4 @@ You must create [Services ](broken-reference)before adding load balancers and li
 
 Rules specify specific configurations for various types of Load Balancers.
 
-See the [Ingress ](ingress.md)use case for an example of how to configure Load Balancers using rules.&#x20;
+See the [Ingress ](../../kubernetes-user-guide/ingress-loadbalancer/aks-ingress.md)use case for an example of how to configure Load Balancers using rules.&#x20;

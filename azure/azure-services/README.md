@@ -25,7 +25,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [Databases](databases/)
 * [Docker web application](docker-web-application.md)
 * [Functions](functions.md)
-* [Ingress](ingress.md)
+* [Ingress](../../kubernetes-user-guide/ingress-loadbalancer/aks-ingress.md)
 * [Key Vault](key-vault.md)
 * [Serverless Web applications](web-applications.md)
 * [Service Bus](service-bus.md)
