@@ -4,6 +4,10 @@ description: Working with Load Balancers using AWS EKS
 
 # EKS Load Balancers
 
+## Creating an EKS Ingress
+
+If you need to create an Ingress Load Balancer, refer to the [EKS Ingress](../adding-ingress.md) page in the DuploCloud Kubernetes User Guide.&#x20;
+
 ## Adding a Load Balancer Listener
 
 {% hint style="info" %}

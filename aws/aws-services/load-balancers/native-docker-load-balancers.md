@@ -11,7 +11,7 @@ For an end-to-end example of deploying an application using a Native Docker Serv
 {% endhint %}
 
 1. In the DuploCloud Portal, navigate to **Docker** -> **Services.**
-2. Select the Service **demo-service-d01** [that you created](../../quick-start/quick-start-duplocloud-docker-services/step-5-create-app-via-docker-native.md).
+2. Select the Service [that you created](../../quick-start/quick-start-duplocloud-docker-services/step-5-create-app-via-docker-native.md).
 3. Click the **Load Balancers** tab.
 4. Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.
 5. From the **Select Type** list box, select your Load Balancer type.
