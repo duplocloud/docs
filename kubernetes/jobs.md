@@ -24,32 +24,31 @@ You can also use a Job to run multiple Pods in [parallel](https://kubernetes.io/
 2. Navigate to **Kubernetes** -> **Job**.
 3. Click **Add**. The **Add Kubernetes Job** page displays.
 4. In the **Basic Options** step, specify the Kubernetes Job **Name**.
-5.  In the **Container - 1** area, specify the **Container Name** and associated **Docker Image**.\
+5. In the **Container - 1** area, specify the **Container Name** and associated **Docker Image**.
 
+<figure><img src="../.gitbook/assets/help me.png" alt=""><figcaption><p>The <strong>Add Kubernetes Job</strong> page</p></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.13-21_30_16.png" alt=""><figcaption><p><strong>Add Kubernetes Job</strong> page.</p></figcaption></figure>
-6.  In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.\
+6. In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.
 
+<figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.13-21_36_00.png" alt=""><figcaption><p>The <strong>Add Kubernetes Job</strong> page with the <strong>Command</strong> info window open.<br></p></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.13-21_36_00.png" alt=""><figcaption><p>The <strong>Add Kubernetes Job</strong> page with the <strong>Command</strong> info window.<br></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/pi1 final if theres a god (1).png" alt=""><figcaption><p>The <strong>Add Kubernetes Job</strong> page with <strong>Container - 1</strong> details added.<br></p></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.13-21_37_24.png" alt=""><figcaption><p>Completed <strong>Command</strong> field for <strong>Container - 1.</strong></p></figcaption></figure>
 7. To run the Job to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line">button and select the **Add Init Container** option. The **Init Container - 1** area displays.
 8.  In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.\
 
 
-    <figure><img src="../.gitbook/assets/init job.png" alt=""><figcaption><p><strong>Add Init Container</strong> option on <strong>Add Container</strong> button in <strong>Container - 1</strong> area.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/newpi2.png" alt=""><figcaption><p>The <strong>Add Kubernetes Job</strong> page with <strong>Init Container</strong> added.</p></figcaption></figure>
 9. Click **Next** to open the **Advanced Configuration** step.
 10. In the **Other Spec Configuration** field, specify the Job spec (in YAML) for **Init Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.\
 
 
-    <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-12_41_36.png" alt=""><figcaption><p>Info Tip examples for <strong>Other Spec Configuration</strong> field in <strong>Advanced Configuration</strong> step for <strong>Init Container - 1.</strong><br></p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-12_41_36.png" alt=""><figcaption><p>Info Tip examples for the <strong>Other Spec Configuration</strong> field<strong>.</strong><br></p></figcaption></figure>
 
-    <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-12_55_12.png" alt=""><figcaption><p>Completed <strong>Other Spec Configuration</strong> field for <strong>Init Container - 1.</strong> </p></figcaption></figure>
-11. Click **Create**. The job is created and displayed on the **Job** page with a status of **Active**. \
+    <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-12_55_12.png" alt=""><figcaption><p><strong>Add Kubernetes Job</strong> page with completed <strong>Other Spec Configuration</strong> field<strong>.</strong> </p></figcaption></figure>
+11. Click **Create**. The job is created and displayed on the **Job** page with a status of **Active**.&#x20;
 
-
-    <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-13_02_21.png" alt=""><figcaption><p><strong>K8S Job</strong> tab displaying Kubernetes job <strong>MY-K8S-INVOICE-JOB</strong> with <strong>Active Status.</strong></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/complete pi.png" alt=""><figcaption><p><strong>K8s Job</strong> tab showin<strong>g</strong> the Active <strong>CALCULATEPI</strong> Job.</p></figcaption></figure>
 
 ## Viewing a Kubernetes Job&#x20;
 
@@ -58,7 +57,7 @@ You can also use a Job to run multiple Pods in [parallel](https://kubernetes.io/
 
 You can also view details of a job by clicking the menu icon ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the job name and selecting **View**.
 
-<figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-13_04_25.png" alt=""><figcaption><p><strong>Overview and Details</strong> tabs for Kubernetes job <strong>MY-K8S-INVOICE-JOB.</strong></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-13_04_25.png" alt=""><figcaption><p><strong>Overview and Details</strong> tabs for a Kubernetes job<strong>.</strong></p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/view.png" alt=""><figcaption><p>Job option menu with <strong>View</strong> option highlighted.</p></figcaption></figure>
 
