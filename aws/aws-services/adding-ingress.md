@@ -61,36 +61,48 @@ You must define [rules ](https://kubernetes.io/docs/concepts/services-networking
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_50_26.png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page with highlighted <strong>Add Rule</strong> option</p></figcaption></figure>
 
-### Add rules to Kubernetes Ingress and complete Ingress setup
+### Configure Ingress with redirect config and annotations
 
-1.  In the **Add Kubernetes Ingress** page, configure Ingress by clicking **Add Rule**. The **Add Ingress Rule pane** displays. \
+1. In the **Add Kubernetes Ingress** page, configure Ingress by clicking **Add Rule**. The **Add** or **Edit Ingress Rule pane** displays.&#x20;
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/ingress edit shot (1).png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+2. Specify the **Path** (**/** in the example above).
+3. To use a container port name (optional), use the toggle switch to enable **Use Container Port Name**.
+4. If you enabled **Use Container Port Name** in step 3., type a Service name in the Service Name field (**redirect:use-annotation** in the example) and a container port name in the **Container Port** field (**use-annotation** in the example). &#x20;
+5. If you did not enable **Use Container Port Name** in step 3., from the **Service Name** list box, select the Service exposed through the K8S Node Port. The **Container Port** field is completed automatically.
+6. Optionally, complete **Path Type** and **Host**. In this example, we specify a **Path Type** of **Exact**. Clicking the Info Tip icon ( <img src="../../.gitbook/assets/info_tip_black (1).png" alt="" data-size="line"> ) provides more information for these optional fields.
+7.  Click **Add Rule**. The rule is displayed on the **Add Kubernetes Ingress** page. Add additional rules by repeating the preceding steps.\
+
+
+    <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.04-15_57_54.png" alt=""><figcaption><p>The <strong>Add Ingress</strong> page</p></figcaption></figure>
+8. On the **Add Kubernetes Ingress** page, specify the **Ingress Name**.
+9. From the **Ingress Controller** list box, select the [Ingress Controller that you defined previously](adding-ingress.md#enabling-the-aws-application-load-balancer).
+10. From the **Visibility** list box, select either **Internal Only** or **Public**.&#x20;
+11. From the **Certificate ARN** list box, select the appropriate ARN.
+12. Click **Add Redirect Config**. The **Add Redirect Config** pane displays.\
 
 
     <div align="left">
 
-    <img src="../../.gitbook/assets/k8aws7.png" alt="Add Ingress Rule pane">
+    <figure><img src="../../.gitbook/assets/redirect config.png" alt=""><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure>
 
     </div>
-
-
-2. Specify the **Path** (**/path1/** in the example above).
-3. From the **Service Name** list box, select the Service exposed through the K8S Node Port (**js-service1** in the example above). The **Container port** field is completed automatically.&#x20;
-4. Optionally, complete **Path Type** and **Host**. In this example, we specify a **Path Type** of **Exact**. Clicking the Info Tip icon ( <img src="../../.gitbook/assets/info_tip_black (1).png" alt="" data-size="line"> ) provides more information for these optional fields.
-5. Click **Add Rule**. The rule is displayed on the **Add Kubernetes Ingress** page. Add additional rules by repeating the preceding steps.
-
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_53_23.png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
-
-6. On the **Add Kubernetes Ingress** page, specify the **Ingress Name**.
-7. From the **Ingress Controller** list box, select the [Ingress Controller that you defined previously](adding-ingress.md#enabling-the-aws-application-load-balancer).
-8. From the **Visibility** list box, select either **Internal Only** or **Public**.&#x20;
-9. From the **Certificate ARN** list box, select the appropriate ARN.
-10. Click **Add** to add the Kubernetes Ingress with defined rules. The Ingress you added displays in the **K8S Ingress** tab.\
+13. Fill the fields as shown in the example above.&#x20;
+14. Click **Add** to add the Kubernetes Ingress with defined rules. The Ingress you added displays in the **K8S Ingress** tab.\
 
 
     <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_57_51.png" alt=""><figcaption><p> <strong>The Ingress</strong> page displaying the added Ingress</p></figcaption></figure>
 
 
-11. DuploCloud Platform supports defining multiple paths in Ingress. We defined an Ingress rule with an **Exact Path Type** to route requests to `/path1/`for **js-service1**. To continue this example, we added a rule with a **Prefix Path Type** to route requests to `/path2/` for **testsvc2.** Additionally, we added a rule with a **Prefix Path Type** to route requests via a [BYOH Host](../../extras/byoh.md) (Bring-Your-Own-Host) named **example.com**, for a third service, **testsvc3**.
+
+{% hint style="info" %}
+DuploCloud Platform supports defining multiple paths in Ingress. For example, you could define an Ingress rule with an **Exact Path Type** to route requests to `/path1/`for **js-service1**, add a rule with a **Prefix Path Type** to route requests to `/path2/` for **testsvc2.** Additionally, you could add a rule with a **Prefix Path Type** to route requests via a [BYOH Host](../../extras/byoh.md) (Bring-Your-Own-Host) named **example.com**, for a third service, **testsvc3**.
+{% endhint %}
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-15_02_12.png" alt=""><figcaption><p>Multiple paths defined for an <strong>Ingress</strong> in the DuploCloud Portal</p></figcaption></figure>
 

@@ -8,7 +8,7 @@ coverY: 0
 ## Q1 2024
 
 * AWS
-  * [Configure K8s Ingress redirect ](../aws/aws-services/adding-ingress.md#add-rules-to-kubernetes-ingress-and-complete-ingress-setup)using a container port name.
+  * [Configure K8s Ingress redirect ](../aws/aws-services/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](../aws/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
   * Enable UltraWarm Data nodes for [OpenSearch domains](../aws/aws-services/elasticsearch.md).
   * Support for [upgrading EKS components](../aws/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).&#x20;
@@ -25,8 +25,8 @@ coverY: 0
   * Support for [OpenSearch storage options](../aws/aws-services/elasticsearch.md).
   * [Security Configurations Settings](../aws/security-configurations/) documentation section added.
 * GCP
-  * Create a [Firestore Database](../gcp/gcp-services/firestore-database.md#creating-a-firestore-database) in the DuploCloud Portal.
   * [GKE Standard mode](../gcp/use-cases/disaster-recovery/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
+  * Support for [Firestore ](../gcp/gcp-services/firestore-database.md)databases.
   * Support for [GCP Hosts](../gcp/use-cases/hosts-vms.md#id-3-toc-title) and [GCE VMs](../gcp/use-cases/hosts-vms.md#gce-vm).
   * Create [Node Pools](../gcp/gcp-services/node-pools.md) with support for accelerators and taints.
   * Support for [GKE Ingress.](../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
