@@ -179,7 +179,30 @@ Update attributes for your defined Target Group.
 1. In the DuploCloud portal, navigate to **Cloud Services** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose defined Target Group attributes you want to modify.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/image (6) (1).png" alt="" data-size="line"> ) and select **Update attributes**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/image (6) (1).png" alt="" data-size="line"> ) and select **Update Target Group attributes**.
+
+<figure><img src="../../../.gitbook/assets/update target group.png" alt=""><figcaption><p>The <strong>LB Listener</strong> menu with the <strong>Update Target Group attributes</strong> option highlighted. </p></figcaption></figure>
+
+5. The **Update Target Group Attributes** pane displays.&#x20;
+
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/not sticky new.png" alt=""><figcaption><p>The <strong>Update Target Group Attributes</strong> pane</p></figcaption></figure>
+
+</div>
+
+5. &#x20;Find the attribute you want to update in the **Attribute** column and update the associated value in the **Value** column.&#x20;
+6. Click **Update** to save the changes.&#x20;
+
+### Updating Target Group Attributes to enable stickiness&#x20;
+
+To enable stickiness, complete steps 1-5 for [Updating Target Group Attributes](eks-load-balancers.md#updating-target-group-attributes) above. On the **Update Target Group Attributes** pane, in the **Value** field for **stickiness.enabled**, enter **true**. Update additional stickiness attributes, if needed. Click **Update** to save the changes.&#x20;
+
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/smallest.png" alt=""><figcaption><p>The <strong>Update Target Group Attributes</strong> pane configured to enable stickiness. </p></figcaption></figure>
+
+</div>
 
 ## Additional Load Balancer Settings
 
