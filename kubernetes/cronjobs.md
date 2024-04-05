@@ -28,7 +28,7 @@ See the Kubernetes documentation on [CronJobs](https://kubernetes.io/docs/concep
 
 7. To run the CronJob to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line">button and select the **Add Init Container** option. The **Init Container - 1** area displays.
 
-<figure><img src="../.gitbook/assets/cron4.png" alt=""><figcaption><p><strong>Add Init Container</strong> area.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cron4 (1).png" alt=""><figcaption><p><strong>Add Init Container</strong> area.</p></figcaption></figure>
 
 8. In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.
 9. Click **Next** to open the **Advanced Configuration** step.
