@@ -106,6 +106,14 @@ DuploCloud provides flexibility when a feature that is not supported by DuploClo
 
 Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have any cloud expertise to operate it. You simply need to understand the basic constructs in DuploCloud by reading the product documentation.
 
+### Isn't No Code just Click Ops? Everyone says I shouldn't do that.
+
+"Click Ops" is when engineers create infrastructure resources manually in cloud and other UIs. It's often called a bad practice because there are so many components and configurations that it's easy to make mistakes. You can skip past default settings that aren't secure, copy configuration incorrectly between environments, etc. You need hundreds or thousands of clicks and a lot of DevSecOps knowledge.
+
+DuploCloud manages infrastructure resources for you. You pick application-level functionality like "services" and "load balancers", then DuploCloud creates the complex cloud resources needed to deliver that functionality. It ensures the underlying compute instances, firewall rules, IAM policies, and other components are configured to good practices. You only need a few clicks, and you don't need to know DevSecOps because DuploCloud knows it for you.
+
+Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to make sure you don't.
+
 ### **Should I use low-code or no-code?**
 
 The answer depends on the following key factors:
