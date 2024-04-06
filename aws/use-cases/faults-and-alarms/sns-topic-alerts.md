@@ -8,6 +8,10 @@ SNS Topic Alerts provide a flexible and scalable means of sending notifications 
 
 SNS is a fully managed service that enables you to publish messages to topics. The messages can be delivered to subscribers or endpoints, such as email, SMS, mobile push notifications, or even HTTP endpoints.&#x20;
 
+{% hint style="info" %}
+SNS Alerts can only be configured for the specific resources included under **Observability** -> **Alerts** in the DuploCloud Portal. Integrating external monitoring programs (e.g., Sentry) allows you to view all of the faults for a particular Tenant under **Observability** -> **Faults**.&#x20;
+{% endhint %}
+
 Configuring this setting will attach the SNS Topic to the alerts in the **OK** and **Alarm** state.
 
 ### Configuring Tenants to set SNS Topic Alerts <a href="#configuring-tenants-to-set-sns-topic-alerts" id="configuring-tenants-to-set-sns-topic-alerts"></a>
