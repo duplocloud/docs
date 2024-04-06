@@ -2,7 +2,7 @@
 description: How Infrastructures and Plans work together to create a VPC
 ---
 
-# Infrastructure (VPC) and Plan (configuration)
+# Infrastructure and Plan
 
 Infrastructures are abstractions that allow you to create a Virtual Private Cloud (VPC) instance in the DuploCloud Portal. When you create an Infrastructure, a Plan is automatically generated to supply the network configuration necessary for your Infrastructure to run.&#x20;
 
@@ -48,6 +48,10 @@ When you create the Infrastructure, DuploCloud creates the following components:
 * Internet Gateway
 * Route tables
 * [VPC peering](../aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
+
+{% hint style="warning" %}
+Cloud providers limit the number of Infrastructures that can run in each region. Refer to your cloud provider for further guidelines on the number of Infrastructures you can create.
+{% endhint %}
 
 ## Viewing Infrastructure settings
 

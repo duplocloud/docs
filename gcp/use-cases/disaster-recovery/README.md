@@ -39,6 +39,10 @@ When you create the Infrastructure, DuploCloud creates the following components:
 * Route tables
 * [VPC peering](../../../aws/aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
 
+{% hint style="warning" %}
+Cloud providers limit the number of Infrastructures that can run in each region. If you have completed the steps to create an Infrastructure and it doesn't show a Status of Complete, try selecting a different region.&#x20;
+{% endhint %}
+
 ## About Plans and Infrastructures
 
 Once the Infrastructure is created, a [Plan ](../../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration. The Plan is used to create [Tenants](../../../azure/use-cases/tenant-environment/).

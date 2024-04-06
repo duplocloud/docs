@@ -23,6 +23,10 @@ For an end-to-end example of deploying an application using a GCP Service, see t
 5. From the **Select Type** list box, select a Load Balancer Listener type based on your Load Balancer.
 6. Complete other fields as required and click **Add** to add the Load Balancer Listener.
 
+{% hint style="info" %}
+DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service.
+{% endhint %}
+
 <div align="left">
 
 <figure><img src="../../.gitbook/assets/image (12) (5).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure>
