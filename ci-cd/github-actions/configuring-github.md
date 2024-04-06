@@ -1,5 +1,5 @@
 ---
-description: Configure GitHub to integrate with DuploCloud
+description: This section discusses how you can configure Github to integrate with Duplo
 ---
 
 # Configure GitHub
