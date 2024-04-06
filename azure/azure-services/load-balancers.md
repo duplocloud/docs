@@ -10,6 +10,10 @@ Load Balancers are essential when running a service. They expose the containers 
 
 If you need to create an Ingress Load Balancer, refer to the[ AKS Ingress](../../kubernetes-user-guide/ingress-loadbalancer/aks-ingress.md) page in the DuploCloud Kubernetes User Guide.&#x20;
 
+{% hint style="info" %}
+DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service.
+{% endhint %}
+
 ## Add a Load Balancer Listener&#x20;
 
 Add a load balancer listener that uses the Kubernetes NodePort (K8S NodePort).
@@ -23,7 +27,7 @@ Several Load Balancers are available for Azure. See the [Azure Documentation](ht
 
 ### Before you begin
 
-You must create [Services ](broken-reference)before adding load balancers and listeners. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
+You must create [Services ](containers-and-services/#adding-a-duplocloud-service)before adding load balancers and listeners. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
 
 <figure><img src="../../.gitbook/assets/AKS_Ingress.png" alt=""><figcaption><p><strong>Services</strong> running ALB and NLB</p></figcaption></figure>
 

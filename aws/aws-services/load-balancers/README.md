@@ -18,7 +18,7 @@ Load Balancers can be configured for Docker Native, EKS-Enabled, and ECS Service
 * **Shared and Global load balancers** - Application or Network Load Balancers that can be used as a shared Load Balancer between Services and for Global Server Load Balancing (GSLB). (Navigate to **Cloud Services** -> **Networking** and select the **Load Balancers** tab).
 
 {% hint style="info" %}
-[To share a load balancer between multiple Services](./#2d32), create a Service Load Balancer of type **Target Group Only**.
+DuploCloud allows one Load Balancer per DuploCloud Service. [To share a load balancer between multiple Services](./#2d32), create a Service Load Balancer of type **Target Group Only**.
 {% endhint %}
 
 ## Adding a Load Balancer Listener
@@ -211,4 +211,3 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 </div>
 
 6. Click **Save**.
-

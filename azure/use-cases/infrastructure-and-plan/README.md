@@ -42,6 +42,10 @@ When you create the Infrastructure, DuploCloud creates the following components:
 * Route tables
 * [VPC peering](../../../aws/aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
 
+{% hint style="warning" %}
+Cloud providers limit the number of Infrastructures that can run in each region. If you have completed the steps to create an Infrastructure and it doesn't show a Status of Complete, try selecting a different region.&#x20;
+{% endhint %}
+
 ## Enabling an encrypted Azure storage account
 
 You can choose to [encrypt your Azure storage account](encrypted-storage-account.md) by configuring a Key/Value pair in the Infrastructure.&#x20;
