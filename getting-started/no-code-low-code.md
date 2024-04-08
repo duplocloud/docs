@@ -19,3 +19,5 @@ DuploCloud uses APIs behind the scenes, beyond processing user requests, generat
 
 \
 Terraform, or any scripting approach, is meant to be run with human supervision. There is no synchronicity and retries --- scripts start and end, processed as single threads.
+
+For more information about No-Code/Low-Code and how it relates to Click Ops, [see this FAQ](../faq.md#isnt-no-code-just-click-ops-everyone-says-i-shouldnt-do-that).&#x20;
