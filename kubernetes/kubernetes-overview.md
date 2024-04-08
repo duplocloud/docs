@@ -11,4 +11,4 @@ As DuploCloud supports Kubernetes Cluster enablement on all public cloud platfor
 
 Use the topics in this section to implement many Kubernetes features with little or no hard coding, using DuploCloud's no-code/low-code approach.
 
-For information about public-cloud provider-specific Kubernetes container features, see the [Kubernetes Containers documentation](../aws/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) in AWS EKS, for example.
+For information about public-cloud provider-specific Kubernetes container features, see the [Kubernetes Containers documentation](../aws-user-guide/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) in AWS EKS, for example.

@@ -22,7 +22,7 @@ By default, DuploCloud spreads container replicas across hosts. Using an Allocat
     <figure><img src="../.gitbook/assets/AT2.png" alt=""><figcaption><p>Auto-Scaling Group (ASG) with <strong>Allocation Tag</strong> set</p></figcaption></figure>
 
 
-6. Create a [Service](../aws/aws-services/). During creation, on the **Add Service** page, enter the tag name you created in the **Allocation Tag** field. DuploCloud attempts to select a host or ASG with a matching tag.
+6. Create a [Service](../aws-user-guide/aws-services/). During creation, on the **Add Service** page, enter the tag name you created in the **Allocation Tag** field. DuploCloud attempts to select a host or ASG with a matching tag.
 
 ## Editing or deleting an Allocation Tag
 

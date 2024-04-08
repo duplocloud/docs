@@ -4,7 +4,7 @@ description: Use GitHub Actions to deploy a Lambda Image or S3 bucket update
 
 # Update a Lambda function
 
-Instead of deploying your Lambda code in the same pipeline as your infrastructure, you can use CI/CD and GitHub Actions pipelines. With DuploCloud's GitHub Actions integration, you can build and deploy [Lambda functions](../../aws/aws-services/lambda/) in your AWS account by deploying a Lambda image or by a package uploaded to an S3 bucket.
+Instead of deploying your Lambda code in the same pipeline as your infrastructure, you can use CI/CD and GitHub Actions pipelines. With DuploCloud's GitHub Actions integration, you can build and deploy [Lambda functions](../../aws-user-guide/aws-services/lambda/) in your AWS account by deploying a Lambda image or by a package uploaded to an S3 bucket.
 
 {% hint style="info" %}
 For general information about deploying serverless applications with GitHub Actions in AWS, reference this [blog](https://aws.amazon.com/blogs/compute/using-github-actions-to-deploy-serverless-applications/).

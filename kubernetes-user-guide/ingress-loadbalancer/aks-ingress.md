@@ -7,7 +7,7 @@ description: Adding an Ingress for DuploCloud Azure load balancers
 Ingress controllers abstract the complexity of routed Kubernetes application traffic, providing a bridge between Kubernetes services and services that you define.
 
 {% hint style="info" %}
-To add an SSL certificate to a service using Kubernetes Ingress, see Using the SSL certificate for Ingress in DuploCloud in the [Import SSL Certificates](../../azure/prerequisites/import-ssl-certificates.md) prerequisite for Azure in DuploCloud.
+To add an SSL certificate to a service using Kubernetes Ingress, see Using the SSL certificate for Ingress in DuploCloud in the [Import SSL Certificates](../../azure-user-guide/prerequisites/import-ssl-certificates.md) prerequisite for Azure in DuploCloud.
 {% endhint %}
 
 ## Enable the Ingress Controller
@@ -32,7 +32,7 @@ Using Kubernetes Health Check allows AKS's Application Load Balancer to determin
 
 ### Before you begin
 
-You must create [Services](../../azure/azure-services/) to run the load balancers. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
+You must create [Services](../../azure-user-guide/azure-services/) to run the load balancers. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
 
 <figure><img src="../../.gitbook/assets/AKS_Ingress.png" alt=""><figcaption><p><strong>Services</strong> running </p></figcaption></figure>
 

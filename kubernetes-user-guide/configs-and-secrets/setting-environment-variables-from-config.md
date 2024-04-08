@@ -9,7 +9,7 @@ In Kubernetes, you populate environment variables from application configuration
 ## Setting Environment Variables from a Kubernetes ConfigMap
 
 {% hint style="info" %}
-Before you create the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud [Service](../../azure/azure-services/).&#x20;
+Before you create the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud [Service](../../azure-user-guide/azure-services/).&#x20;
 {% endhint %}
 
 ### Create the Kubernetes ConfigMap&#x20;

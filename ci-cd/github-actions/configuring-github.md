@@ -8,7 +8,7 @@ description: This section discusses how you can configure Github to integrate wi
 
 **Deploy and test the application** - To use GitHub CI/CD, deploy your application with DuploCloud as a Service and test that it works as expected.
 
-[**Add Google Cloud Credentials**](../../gcp/gcp-services/cloud-credentials.md) - Add a Service Account, setting up Cloud Credentials for GCP in DuploCloud.
+[**Add Google Cloud Credentials**](../../gcp-user-guide/gcp-services/cloud-credentials.md) - Add a Service Account, setting up Cloud Credentials for GCP in DuploCloud.
 
 {% hint style="info" %}
 GitHub CI/CD is recommended only for upgrades of container images and to run tests that can be written before or after the upgrade.

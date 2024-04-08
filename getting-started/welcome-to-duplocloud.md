@@ -20,6 +20,6 @@ To integrate your identity and access management service logins with your DuploC
 
 These tutorials are specific to various public cloud environments and demonstrate some of DuploCloud's most common use cases:
 
-* [Amazon Web Services (AWS) with DuploCloud tutorial](../aws/quick-start/)
-* [Azure with DuploCloud tutorial](../azure/quick-start/)
-* [Google Cloud Platform (GCP) with DuploCloud tutorial ](../gcp/quick-start/)
+* [Amazon Web Services (AWS) with DuploCloud tutorial](../aws-user-guide/quick-start/)
+* [Azure with DuploCloud tutorial](../azure-user-guide/quick-start/)
+* [Google Cloud Platform (GCP) with DuploCloud tutorial ](../gcp-user-guide/quick-start/)
