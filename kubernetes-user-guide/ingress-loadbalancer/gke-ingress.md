@@ -22,7 +22,7 @@ It leverages the network endpoint groups (NEGs) feature to ensure that traffic i
 
 ### Creating Tenants and Services
 
-See the [Containers ](../../aws/aws-services/containers/)topic for steps on how to create [Tenants](../../getting-started/application-focussed-interface/tenant/), and [Services](../../getting-started/application-focussed-interface/app-service-and-cloud-services.md).
+See the [Containers ](../../aws-user-guide/aws-services/containers/)topic for steps on how to create [Tenants](../../getting-started/application-focussed-interface/tenant/), and [Services](../../getting-started/application-focussed-interface/app-service-and-cloud-services.md).
 
 Once your services are deployed, you are ready to add and configure a GKE Ingress controller in GCP.
 

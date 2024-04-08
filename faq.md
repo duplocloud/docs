@@ -19,16 +19,16 @@ DuploCloud supports the following public cloud providers:
 
 Use these FAQ documents to quickly find answers to popular questions about using AWS, Azure, and GCP with DuploCloud.
 
-{% content-ref url="aws/aws-faq.md" %}
-[aws-faq.md](aws/aws-faq.md)
+{% content-ref url="aws-user-guide/aws-faq.md" %}
+[aws-faq.md](aws-user-guide/aws-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="azure/azure-faq.md" %}
-[azure-faq.md](azure/azure-faq.md)
+{% content-ref url="azure-user-guide/azure-faq.md" %}
+[azure-faq.md](azure-user-guide/azure-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="gcp/gcp-faq.md" %}
-[gcp-faq.md](gcp/gcp-faq.md)
+{% content-ref url="gcp-user-guide/gcp-faq.md" %}
+[gcp-faq.md](gcp-user-guide/gcp-faq.md)
 {% endcontent-ref %}
 
 ## General FAQs
@@ -143,7 +143,7 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 
 ### I can't edit the Service Description to update my control plane configuration.
 
-You must make control plane modifications before [enabling central logging](aws/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
+You must make control plane modifications before [enabling central logging](aws-user-guide/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
 
 ### How do I SSH into the host?
 
@@ -212,11 +212,11 @@ rm -rf ~/Library/Caches/duplo-jit/
 Two possible reasons for receiving this fault message are:
 
 * You are not allocating enough hosts to process your workload.
-* The [allocation tags](gcp/container-deployments/concepts.md#allocation-tags) you have assigned to your existing hosts are limiting additional Service workloads.
+* The [allocation tags](gcp-user-guide/container-deployments/concepts.md#allocation-tags) you have assigned to your existing hosts are limiting additional Service workloads.
 
 ### I'm not seeing logs displayed for a Tenant. I get the error `Docker native collection agent Filebeat is not running for Tenant`.
 
-Ensure that [logging is set up](aws/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.&#x20;
+Ensure that [logging is set up](aws-user-guide/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.&#x20;
 
 ## Terraform FAQs
 

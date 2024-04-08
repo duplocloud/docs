@@ -19,7 +19,7 @@ Configure Cross-tenant access to:
 
 Before you can use Cross-tenant access, you must do the following:
 
-* Add a [Security Group rule](../../../aws/use-cases/disaster-recovery/security-group-rules.md) to allow port access between each of the Tenants requiring Cross-tenant access in the Security Group.
+* Add a [Security Group rule](../../../aws-user-guide/use-cases/disaster-recovery/security-group-rules.md) to allow port access between each of the Tenants requiring Cross-tenant access in the Security Group.
 * Include the full application Namespace when accessing the domain, in this format: **https://**_**NAMESPACE**_**.duploservices-**_**TENANT\_NAME**_**:**_**PORT**_
 
 For example, If Tenant **dev01** is running an app named **myapp** on port **8080**, then access the domain using the URL `https://myapp.duploservices-dev01:8080`.&#x20;
@@ -55,8 +55,8 @@ To establish general non-IAM restricted Cross-tenant access, see [the previous s
 
 You can share access to the following Services between Tenants:
 
-* [S3 Buckets](../../../aws/aws-services/s3-bucket.md)
-* [DynamoDB Tables](../../../aws/aws-services/database/dynamodb.md)
+* [S3 Buckets](../../../aws-user-guide/aws-services/s3-bucket.md)
+* [DynamoDB Tables](../../../aws-user-guide/aws-services/database/dynamodb.md)
 * KMS Keys
 
 {% hint style="warning" %}

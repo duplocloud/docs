@@ -6,7 +6,7 @@ description: Using K8s Secrets with Azure Storage Accounts
 
 ### **Create Storage Account and File Shares**
 
-Refer to steps to [configure the new Storage Account and FileShare](../../azure/azure-services/storage-account.md) in Azure.
+Refer to steps to [configure the new Storage Account and FileShare](../../azure-user-guide/azure-services/storage-account.md) in Azure.
 
 Copy Storage Account Key and FileShare Name from DuploCloud Portal for creating Kubernetes Secrets in the next step.
 
@@ -28,7 +28,7 @@ azurestorageaccountname: <storage-account-name>
 
 ### Mount the Azure Storage Connection in your deployment
 
-While creating a deployment, under **Other Pod Config** and **Other Container Config**, provide the configuration below to create and mount the storage volume for your service. In the configuration below, `shareName`attribute should be the [File Share name ](../../azure/azure-services/storage-account.md#create-and-view-file-shares)which you can get from the Storage Account screen.
+While creating a deployment, under **Other Pod Config** and **Other Container Config**, provide the configuration below to create and mount the storage volume for your service. In the configuration below, `shareName`attribute should be the [File Share name ](../../azure-user-guide/azure-services/storage-account.md#create-and-view-file-shares)which you can get from the Storage Account screen.
 
 {% code title="Other Pod Config" overflow="wrap" %}
 ```

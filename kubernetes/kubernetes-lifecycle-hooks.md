@@ -9,7 +9,7 @@ A [Kubernetes Lifecycle Hook](https://kubernetes.io/docs/concepts/containers/con
 
 ## Implementing Kubernetes Lifecycle Hooks
 
-You can implement Kubernetes Lifecycle Hooks while [Adding a DuploCloud EKS/Native Service](../aws/aws-services/containers/eks-containers-and-services.md#adding-a-duplocloud-eks-native-service) by adding the YAML like the example below to the **Other Container Config** field.&#x20;
+You can implement Kubernetes Lifecycle Hooks while [Adding a DuploCloud EKS/Native Service](../aws-user-guide/aws-services/containers/eks-containers-and-services.md#adding-a-duplocloud-eks-native-service) by adding the YAML like the example below to the **Other Container Config** field.&#x20;
 
 ```yaml
 #lifecycle hook sample

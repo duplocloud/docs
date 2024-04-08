@@ -16,7 +16,7 @@ Avoid using capital letters when referencing a DuploCloud construct, such as a T
 
 To build a Docker image and push it to the ECR, use a pipeline script. The script:
 
-* Logs you into AWS ECR, using [Just-In-Time credentials from DuploCloud](../../aws/use-cases/jit-access.md).
+* Logs you into AWS ECR, using [Just-In-Time credentials from DuploCloud](../../aws-user-guide/use-cases/jit-access.md).
 * Builds and tags the Docker image. The tag name is based on the `git commit` SHA (Simple Hashing Algorithm).
 * Pushes the Docker image to the ECR.
 
