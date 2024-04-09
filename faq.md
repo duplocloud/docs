@@ -139,7 +139,8 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 * A host is counted as 1 unit. (example: EC2 instance, Azure or GCP VM)
 * A serverless function or service is counted as 1/4 unit (example: Lambda function)
 * A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
-* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count.
+* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environme```
+nt, the number of workers is calculated as the average of the minimum and maximum worker count.
 
 ### I can't edit the Service Description to update my control plane configuration.
 
@@ -156,6 +157,10 @@ Under Host, click on Connection Details under the Actions dropdown, it will prov
 ### How do I get into the container where my code is running?
 
 Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps`  to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID.
+
+### Setting up MFA for OpenVPN Authentication
+
+To enhance security, users can set up Multi-Factor Authentication (MFA) for OpenVPN. Begin by logging into Duplo, navigating to your user profile at the top right corner, and clicking on the VPN URL to enter your credentials. Upon your first login, you'll be prompted to scan a barcode to register your device for MFA. After downloading the profile and adding it to OpenVPN Connect, MFA will be required for subsequent logins, ensuring an added layer of security for your VPN access.
 
 ### I cannot connect to my service URL, how do I debug?
 
@@ -175,7 +180,8 @@ Enable health check for your service and make sure that the API does not return 
 
 If the current status is Pending and the desired status is Running, wait a few minutes for the image to finish downloading. If it’s been more than five minutes, check the faults from the button below the table. Ensure that your image name is correct and does not have spaces. Image names are case sensitive, so it should be all lower case, including the image name in DockerHub.
 
-If the current state is Pending when the desired state is Delete, the container is the old version of the service. It is still running because the system is in rolling upgrade and the previous replica is not upgraded yet. Check the faults in other containers of this service for which the Current State is Pending and the desired state is Running.
+If the current state is Pending when the desired state is Delete, the container is the old version of the service. It is still running because the system is in roll
+```ing upgrade and the previous replica is not upgraded yet. Check the faults in other containers of this service for which the Current State is Pending and the desired state is Running.
 
 ### Some of my container statuses say “pending delete.” What does this mean?
 
