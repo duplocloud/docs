@@ -1,3 +1,4 @@
+```
 ---
 description: Popular and frequently asked questions about DuploCloud
 ---
@@ -51,11 +52,12 @@ In addition, during setup, we perform penetration testing and vulnerability asse
 
 ### How is DuploCloud Portal accessing my cloud infrastructure and how is it secured?
 
-DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM) and the VM derives permissions to call the cloud provider using the VM's permissions. For example, in AWS, permissions are derived via an instance profile. In Azure, permissions are derived via managed identity and service account in GCP.
+DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM) and the VM derives permissions to call the cloud provider using the VM's permissions. Specifically, in AWS, DuploCloud utilizes an IAM role, known as an instance profile, to access the AWS account, ensuring secure access without the need for access keys. In Azure, permissions are derived via managed identity and service account in GCP.
 
 The DuploCloud VM and DuploCloud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
 
-### Am I locked into DuploCloud? If I wanted to move away from DuploCloud, what work do I need to do?
+### Am I locked into DuploCloud? If I wanted to move away from DuploCloud, what work do I need t
+```o do?
 
 DuploCloud is running in your own cloud account, along with your workloads. DuploCloud is a provisioning system, so stopping DuploCloud does not impact any of your applications and cloud services.
 
