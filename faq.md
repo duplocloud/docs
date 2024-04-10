@@ -37,6 +37,10 @@ Use these FAQ documents to quickly find answers to popular questions about using
 
 No. DuploCloud is a self-hosted solution deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. If the customer desires, DuploCloud can provide a fully managed service to maintain uptime, provide updates, and supply ongoing support.
 
+### What is DuploCloud?
+
+DuploCloud is a technology startup that collaborates with Company A, offering a self-hosted solution that enables a SaaS-like experience for managing cloud infrastructure. It supports a wide range of public cloud providers including Amazon AWS, Microsoft Azure, Google Cloud, and On-Premises environments.
+
 ### What happens during the DuploCloud onboarding process?
 
 1. DuploCloud creates a private Slack channel so your organization can communicate directly with the DuploCloud Support Staff to resolve any issues and answer questions during the onboarding process.
