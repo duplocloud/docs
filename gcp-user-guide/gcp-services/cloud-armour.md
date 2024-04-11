@@ -24,7 +24,7 @@ Before you can use DuploCloud with Cloud Armour, define a Security Policy in the
 
     </div>
 5. In the **Name** field, enter an appropriate name for the Security Policy.
-6. In the **Security Policy ID** field, enter the URL that points to your GCP Cloud Armour Security Policy.&#x20;
+6. In the **Security Policy ID** field, enter the name of your GCP Cloud Armour Security Policy.&#x20;
 7.  Click **Create**. The Security Policy that you specified is displayed in the **Security Policy** tab.\
 
 
@@ -51,8 +51,9 @@ Now that the Cloud Armour Security Policy has been defined in your DuploCloud Pl
     </div>
 5. From the Security Policy list box, select the [Security Policy you added in the previous step](cloud-armour.md#adding-a-security-policy-in-the-duplocloud-plan).
 6. Select the **Enable HTTP to HTTPS Redirect** option.
-7. In the **Idle Timeout** field, enter the number of minutes for timeout, in seconds.
-8. Click **Save**.&#x20;
+7. Select **Enable Access Logs** to view rule evaluations.
+8. In the **Idle Timeout** field, enter the number of minutes for timeout, in seconds.
+9. Click **Save**.&#x20;
 
 The Security Policy displays in the Load Balancer's Other Settings card.
 
