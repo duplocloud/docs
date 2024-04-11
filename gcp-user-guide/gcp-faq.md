@@ -1,3 +1,7 @@
+---
+description: Common questions about using DuploCloud GCP
+---
+
 # GCP FAQ
 
 ### My Kubernetes service was “pending” for several minutes waiting to start a new pod. After that, it was able to start and stop pods quickly. What happened?
