@@ -10,10 +10,6 @@ description: This section discusses how you can configure Github to integrate wi
 
 [**Add Google Cloud Credentials**](../../gcp-user-guide/gcp-services/cloud-credentials.md) - Add a Service Account, setting up Cloud Credentials for GCP in DuploCloud.
 
-{% hint style="info" %}
-GitHub CI/CD is recommended only for upgrades of container images and to run tests that can be written before or after the upgrade.
-{% endhint %}
-
 ## Obtaining and configuring an API token
 
 To call a DuploCloud API from Github, obtain an [API token](../../user-administration/access-control/api-tokens.md).
