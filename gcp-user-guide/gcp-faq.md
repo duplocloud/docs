@@ -8,6 +8,10 @@ DuploCloud typically runs Kubernetes services in GCP on GKE in Autopilot mode. A
 
 [Click here for the details](../aws-user-guide/aws-faq.md#7-toc-title)
 
+### How do I add a certificate to an internal load balancer?
+
+Use a self-signed certificate, because it enables you to control authentication at the IP address level. You cannot use Google Managed Certificates.
+
 ### How do I grant a user access to only one Tenant in my GCP project?
 
 To give a user access to a specific Tenant, navigate the Users page. For a new user, click Add and enter the user's information. From the Role list box, select User. When the user role is selected, the Tenant list box displays. In the Tenant list box, select the Tenant(s) you would like to give the user access to. Click Submit. For an established user, navigate to the Users page and select the name of the user whose access you would like to update. From the Actions menu, click Update. From the Role list, select User, and from the Tenant list box, select the Tenant(s) to which you want to give them access. Click Submit.&#x20;
