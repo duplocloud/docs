@@ -1,5 +1,5 @@
 ---
-description: Grant AIM permissions to view billing data in AWS
+description: Grant IAM permissions to view billing data in AWS
 ---
 
 # Enable billing data
