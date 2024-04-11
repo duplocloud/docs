@@ -63,7 +63,7 @@ Cloud providers limit the number of Infrastructures that can run in each region.
 
 ## Plans and Infrastructures
 
-Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](../../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](../tenant-environment/).
+Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](../../../getting-started-1/application-focussed-interface/plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](../tenant-environment/).
 
 <div align="left">
 

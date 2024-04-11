@@ -6,8 +6,8 @@ description: Set up logging for the DuploCloud Portal
 
 ## Prerequisites
 
-* If you need to make changes to the [Control Plane Configuration, follow this procedure to do so](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description), before enabling logging. Note that you cannot modify the Control Plane Configuration after you set up logging.
-* Docker applications use `stdout` for writing log files, collecting logs, placing them in the Host directory, mounting them into [Filebeat ](https://www.elastic.co/beats/filebeat)containers, and sending them to [AWS Elasticsearch](https://aws.amazon.com/what-is/elasticsearch/).  If you need to customize the log collection and you use folders other than `stdout`, for example, [follow this procedure](custom-log-collection.md#customizing-elastic-filebeat-logging).  Note that you cannot customize the log collection after you set up logging.
+* If you need to make changes to the [Control Plane Configuration, follow this procedure to do so](../../../aws-user-guide/use-cases/central-logging/custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description), before enabling logging. Note that you cannot modify the Control Plane Configuration after you set up logging.
+* Docker applications use `stdout` for writing log files, collecting logs, placing them in the Host directory, mounting them into [Filebeat ](https://www.elastic.co/beats/filebeat)containers, and sending them to [AWS Elasticsearch](https://aws.amazon.com/what-is/elasticsearch/).  If you need to customize the log collection and you use folders other than `stdout`, for example, [follow this procedure](../../../aws-user-guide/use-cases/central-logging/custom-log-collection.md#customizing-elastic-filebeat-logging).  Note that you cannot customize the log collection after you set up logging.
 
 ## Setting up logging&#x20;
 
@@ -39,7 +39,7 @@ description: Set up logging for the DuploCloud Portal
 
 
     <figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p><strong>Add</strong> button on the <strong>Logging Infrastructure Tenants</strong> page</p></figcaption></figure>
-8. Select the Tenants for which you want to configure logging, using the **Select Tenants to enable logging** area, as in the example below. The [Control Plane configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description) is deployed for each Tenant that you select in the Infrastructure, specified in **Infrastructure Details**.
+8. Select the Tenants for which you want to configure logging, using the **Select Tenants to enable logging** area, as in the example below. The [Control Plane configuration](../../../aws-user-guide/use-cases/central-logging/custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description) is deployed for each Tenant that you select in the Infrastructure, specified in **Infrastructure Details**.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.21-14_43_41.png" alt=""><figcaption><p><strong>Logging</strong> tab with logging setup complete</p></figcaption></figure>
 
@@ -56,7 +56,7 @@ When you perform the steps above to configure logging, DuploCloud does the follo
 ### Control Plane deployment
 
 1. **An EC2 Host is added** in the Default tenant, for example, **duploservices-default-oc-diagnostics**.
-2. **Services are added** in the Default tenant, one for OpenSearch and one for Kibana. Both services are pinned to the EC2 host using [allocation tags](../../../extras/creating-advanced-functions.md). Kibana is set up to point to ElasticSearch and exposed using an internal load balancer.
+2. **Services are added** in the Default tenant, one for OpenSearch and one for Kibana. Both services are pinned to the EC2 host using [allocation tags](../../../extras-1/creating-advanced-functions.md). Kibana is set up to point to ElasticSearch and exposed using an internal load balancer.
 3. **Security rules from within the internal network to port 443 are added** in the **Default** Tenant to allow log collectors that run on Tenant hosts to send logs to ElasticSearch. &#x20;
 
 ### Log Collector deployment

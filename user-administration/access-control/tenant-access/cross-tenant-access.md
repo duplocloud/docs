@@ -8,7 +8,7 @@ description: Allow multiple Tenants access to the same resources
 These features are currently only available for AWS.
 {% endhint %}
 
-You can configure the DuploCloud Portal to support various types of _Cross-tenant access_. Cross-tenant access enables you to share access to resources and services between two DuploCloud [Tenants](../../../getting-started/application-focussed-interface/tenant/).
+You can configure the DuploCloud Portal to support various types of _Cross-tenant access_. Cross-tenant access enables you to share access to resources and services between two DuploCloud [Tenants](../../../getting-started-1/application-focussed-interface/tenant/).
 
 Configure Cross-tenant access to:
 
@@ -55,7 +55,7 @@ To establish general non-IAM restricted Cross-tenant access, see [the previous s
 
 You can share access to the following Services between Tenants:
 
-* [S3 Buckets](../../../aws-user-guide/aws-services/s3-bucket.md)
+* [S3 Buckets](../../../aws/aws-services/s3-bucket.md)
 * [DynamoDB Tables](../../../aws-user-guide/aws-services/database/dynamodb.md)
 * KMS Keys
 

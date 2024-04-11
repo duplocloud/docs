@@ -8,4 +8,4 @@ In addition to the visibility of faults in the UI, DuploCloud also supports send
 * AWS WorkDocs
 * OpsGenie
 
-Refer to the link [here ](../../../aws-user-guide/use-cases/faults-and-alarms/alerting-and-notifications.md)for the detailed configuration.
+Refer to the link [here ](../../../aws/use-cases/faults-and-alarms/alerting-and-notifications.md)for the detailed configuration.

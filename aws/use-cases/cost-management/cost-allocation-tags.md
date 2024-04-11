@@ -11,3 +11,4 @@ To apply and activate cost allocation tags, follow the steps in [this document](
 After you activate the tag successfully, you should see this screen:&#x20;
 
 ![Successful activation of cost allocation tags.](../../../.gitbook/assets/cost-tags.png)
+

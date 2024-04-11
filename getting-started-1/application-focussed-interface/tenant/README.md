@@ -13,3 +13,9 @@ A Tenant is fundamentally four things, at the logical level:
 {% hint style="info" %}
 A common use case for Tenant in an organization that contains 4 tenants: Dev and QA are under the non-prod infrastructure, while the Pre-prod and Prod tenants are under the Prod Infrastructure. In larger organizations, one could have tenants by groups as well like a tenant for Data Science, Tenant for web application, etc. We have seen companies creating dedicated tenants for each of their end user clients in cases where the application is single Tenant. Tenant is a logical concept that can be used either way.
 {% endhint %}
+
+DuploCloud comes with two preexisting Tenants: Default and Compliance.&#x20;
+
+The Default Tenant is a global instance of the DuploCloud platform that contains the platform infrastructure, UI, and user-generated DuploCloud resources. Users share access to the Default Tenant but create their own Tenants within it. This isolation ensures that, although users share the same instance of the DuploCloud platform, their resources and data remain separate and secure. Except in a couple of specific cases outlined in the DuploCloud documentation (like [enabling logging](../../../aws/use-cases/central-logging/central-logging-setup.md)), users should not make any changes to the Default Tenant.&#x20;
+
+The Compliance Tenant is a segregated, separate environment within the DuploCloud platform deployed for users requiring adherence to strict compliance regulations. This Tenant has configurations and controls in place to ensure that data handling and security measures meet specific compliance requirements such as GDPR (General Data Protection Regulation), HIPAA (Health Insurance Portability and Accountability Act), PCI DSS (Payment Card Industry Data Security Standard), SOC (Service Organization Control), and more. Users do not make any changes to the Compliance Tenant.&#x20;
