@@ -32,3 +32,11 @@ DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service
 <figure><img src="../../.gitbook/assets/image (12) (5).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure>
 
 </div>
+
+## Viewing Load Balancer logs
+
+To view GCP Load Balancer logs:
+
+1. Locate the Security Policy in the GCP Console.
+2. Click the **Logs** tab.
+3. Click the designated link on the Logs tab to view the Load Balancer logs.
