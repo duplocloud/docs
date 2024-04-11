@@ -35,7 +35,7 @@ coverY: 0
 * General&#x20;
   * [Set Tenants to expire](../aws-user-guide/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
   * Configure settings for all new Tenants under a Plan using [Tenant Config tab](../getting-started/application-focussed-interface/tenant/tenant-config-settings.md).
-  * SIEM - [Configure agents to install on specific Tenants](../security-and-compliance/security-and-compliance-overview/agents.md#configuring-agents-to-install-on-specified-tenants).
+  * SIEM - [Configure agents to install on specific Tenants](../security-and-compliance/security-and-compliance-standards/agents.md#configuring-agents-to-install-on-specified-tenants).
 
 ## Q4 2023
 
