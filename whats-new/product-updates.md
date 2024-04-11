@@ -16,7 +16,7 @@ coverY: 0
   * [Update or skip a final RDS snapshot](../aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
   * [Upgrade the EKS Cluster](../aws-user-guide/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
   * Create an [OpenSearch](../aws-user-guide/aws-services/elasticsearch.md) domain. &#x20;
-  * [Billing option is available per Tenant](../aws-user-guide/use-cases/cost-management/#view-billing-details-by-tenant).
+  * [Billing option is available per Tenant](../aws/use-cases/cost-management/#view-billing-details-by-tenant).
   * [Scale to or from zero (0) using Auto-Scaling Groups](../aws-user-guide/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/scale-to-or-from-zero.md).&#x20;
   * Create [Lambdas with Ephemeral Storage](../aws-user-guide/aws-services/lambda/#id-3-toc-title).
   * Support for [Lambda Dead Letter Queues](../aws-user-guide/aws-services/lambda/#id-3-toc-title).
@@ -34,8 +34,8 @@ coverY: 0
   * [Update a service with a stream-lined, read-to-use GitHub Actions script](../ci-cd/github-actions/update-a-service.md).
 * General&#x20;
   * [Set Tenants to expire](../aws-user-guide/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
-  * Configure settings for all new Tenants under a Plan using [Tenant Config tab](../getting-started/application-focussed-interface/tenant/tenant-config-settings.md).
-  * SIEM - [Configure agents to install on specific Tenants](../security-and-compliance/security-and-compliance-standards/agents.md#configuring-agents-to-install-on-specified-tenants).
+  * Configure settings for all new Tenants under a Plan using [Tenant Config tab](../getting-started-1/application-focussed-interface/tenant/tenant-config-settings.md).
+  * SIEM - [Configure agents to install on specific Tenants](../security-and-compliance-1/security-and-compliance-standards/agents.md#configuring-agents-to-install-on-specified-tenants).
 
 ## Q4 2023
 
@@ -44,11 +44,11 @@ coverY: 0
   * Implement [Kubernetes Lifecycle Hooks](../kubernetes/kubernetes-lifecycle-hooks.md) while Adding a DuploCloud EKS/Native Service.&#x20;
   * Enable [shared hosts](../aws-user-guide/use-cases/hosts-vms/adding-shared-hosts.md) to allow K8s Pods in a Tenant to run on Hosts in another Tenant.&#x20;
   * Set a [default automated backup retention period](../aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#id-0-toc-title-1) for databases.
-  * Enable bucket versioning when [creating an S3 bucket](../aws-user-guide/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
+  * Enable bucket versioning when [creating an S3 bucket](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
   * Create an [Amazon Machine Image (AMI)](../aws-user-guide/use-cases/hosts-vms/create-amazon-machine-image-ami.md).
   * Use [dedicated hosts](../aws-user-guide/use-cases/hosts-vms/adding-dedicated-hosts.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server.
   * [Automatically reboot a host](../aws-user-guide/use-cases/hosts-vms/configure-auto-reboot.md) upon StatusCheck faults or Host disconnection.
-  * Support for [SNS Topic Alerts](../aws-user-guide/use-cases/faults-and-alarms/sns-topic-alerts.md), enabling notifications and alerts across different AWS services and external endpoints.
+  * Support for [SNS Topic Alerts](../aws/use-cases/faults-and-alarms/sns-topic-alerts.md), enabling notifications and alerts across different AWS services and external endpoints.
   * [Establish VPN connections for private endpoints](../aws-user-guide/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md#enabling-vpn-for-private-visibility-optional) when creating an Infrastructure.
   * Restore an [RDS to a particular point in time](../aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#restoring-snapshots-to-a-point-in-time).
   * Dynamically [change the configuration of a Kafka Cluster](../aws-user-guide/aws-services/kafka-cluster.md#changing-the-configuration-of-a-kafka-cluster).
@@ -73,7 +73,7 @@ coverY: 0
 
     </div>
 
-    * Use the [Supported Third-Party Tools](../extras/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
+    * Use the [Supported Third-Party Tools](../extras-1/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
     * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
 
 ## August 2023 and September 2023
@@ -89,7 +89,7 @@ coverY: 0
   * Set a [monitoring interval for an RDS](../aws-user-guide/aws-services/database/rds-database/add-monitoring-interval.md) database.
   * [Enable or disable logging for an RDS ](../aws-user-guide/aws-services/database/rds-database/enable-or-disable-rds-logging.md)database.
   * Add [custom Lambda image configurations](../aws-user-guide/aws-services/lambda/create-lambda-using-container-image.md) and URLs.
-  * Enable [Object Lock in S3 Buckets](../aws-user-guide/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
+  * Enable [Object Lock in S3 Buckets](../aws/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
   * Configure a [custom S3 Bucket for auditing](../aws-user-guide/use-cases/disaster-recovery/ecs-setup/enable-ecs-logging.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
   * Update [Lifecycle Policies for EFS storage](../aws-user-guide/aws-services/elastic-file-system-efs/#updating-efs-lifecycle-policies).
   * [Customize a Node Selector for EKS Services](../aws-user-guide/aws-services/containers/#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
@@ -113,7 +113,7 @@ coverY: 0
   * [Start, stop, and restart ](../aws-user-guide/aws-services/containers/#7-toc-title-3)up to twenty (20) services at one time.
   * [Add VPC Endpoints](../aws-user-guide/use-cases/disaster-recovery/add-vpc-endpoints.md) to a DuploCloud Infrastructure to create a private connection to supported AWS services and VPC endpoint services powered by AWS PrivateLink.
   * [Enable logging for ECS containers](../aws-user-guide/use-cases/disaster-recovery/ecs-setup/enable-ecs-logging.md).
-  * Define [S3 bucket policies](../aws-user-guide/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
+  * Define [S3 bucket policies](../aws/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
   * Support for [Lambda Layers](../aws-user-guide/aws-services/lambda/lambda-layers.md) has been added.
   * [CloudWatch EventBridge](../aws-user-guide/aws-services/cloud-watch.md) rules and targets are supported.
   * The CloudFront feature and associated UI tab have been relocated in the DuploCloud Portal from the **Cloud Services -> App Integration** menu item to the **Cloud Services -> Networking** menu item.
@@ -171,7 +171,7 @@ coverY: 0
 
 * AWS
   * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
-  * Monitor Tenant usage in [Cost Management for billing](../aws-user-guide/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
+  * Monitor Tenant usage in [Cost Management for billing](../aws/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
   * Maintain cluster stability with [Ingress Health Checks annotations](../aws/aws-services/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
   * Use the [K8s Admin dashboard to monitor StatefulSets](../aws-user-guide/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * [Force creation of StatefulSets](../aws-user-guide/aws-services/containers/#5-toc-title).
@@ -192,17 +192,17 @@ coverY: 0
 
 * [Ability to add Path-Based Routing rules](../aws-user-guide/aws-services/load-balancers/#2d32): Configure path-based routing rules for application load balancers.
 * [Support for Aurora Serverless V2](../aws-user-guide/aws-services/database/rds-database/#create-aurora-serverless-v2-cluster-database): User can create and manage Aurora Serverless V2 RDS.
-* [Billing License Usage](../aws-user-guide/use-cases/cost-management/duplocloud-license-usage.md): Overview of DuploCloud License Usage according to current service usage.
+* [Billing License Usage](../aws/use-cases/cost-management/duplocloud-license-usage.md): Overview of DuploCloud License Usage according to current service usage.
 
 ## October 2022
 
-* [Ability to add Logging Infra at Tenant Level](../aws-user-guide/use-cases/central-logging/central-logging-setup.md#adding-logging-setup-at-tenant-level): Support to configure logging setup other than default tenant.
+* [Ability to add Logging Infra at Tenant Level](../aws/use-cases/central-logging/central-logging-setup.md#adding-logging-setup-at-tenant-level): Support to configure logging setup other than default tenant.
 * [Support multiple docker registry credentials in a single tenant](../aws-user-guide/aws-services/containers/#add-multiple-docker-registry-credentials): The user can configure multiple docker registry credentials from the plan.
 
 ## September 2022
 
 * [Support for Amazon Managed Apache Airflow](../aws-user-guide/aws-services/managed-airflow.md): Ability to configure AWS Managed Airflow
-* [Configure custom prefix for S3](../aws-user-guide/aws-services/s3-bucket.md#add-custom-prefix-for-s3-buckets):  Ability to configure a prefix for S3 bucket names.
+* [Configure custom prefix for S3](../aws/aws-services/s3-bucket.md#add-custom-prefix-for-s3-buckets):  Ability to configure a prefix for S3 bucket names.
 * [Azure Support to add Storage account](../azure-user-guide/azure-services/storage-account.md): Create Storage Accounts, File Shares, and generate Shared Access Signature (SAS).&#x20;
 * Multiple [Azure User Enhancements](../azure-user-guide/azure-services/) were made.
 

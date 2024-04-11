@@ -7,7 +7,7 @@ description: Create an S3 bucket for AWS storage
 Amazon Simple Storage Service (Amazon S3) is an object-storage service offering scalability, data availability, security, and performance. You can store and protect any data for data lakes, cloud-native applications, and mobile apps. Read more about S3 and its capabilities [here](https://aws.amazon.com/s3/).
 
 {% hint style="info" %}
-To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditing.md)topic.
+To configure an S3 bucket for auditing, see the [Auditing ](../../aws-user-guide/use-cases/auditing.md)topic.
 {% endhint %}
 
 ## Creating an S3 bucket
@@ -29,7 +29,7 @@ To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditin
 
 ### Enabling bucket versioning for S3 buckets at the Tenant level
 
-You can configure the [Tenant ](../use-cases/tenant-environment/#2-toc-title)to enable bucket versioning by default.&#x20;
+You can configure the [Tenant ](../../aws-user-guide/use-cases/tenant-environment/#2-toc-title)to enable bucket versioning by default.&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. Click on the **Tenant** name in the list.

@@ -14,7 +14,7 @@ In Kubernetes, you also have the option to populate environment variables from [
 
 You can use an S3 Bucket to store and pass configuration to the containers:
 
-1. [Create an S3 bucket](../s3-bucket.md) in the Tenant and add the needed configurations in an S3 Bucket as a file.
+1. [Create an S3 bucket](../../../aws/aws-services/s3-bucket.md) in the Tenant and add the needed configurations in an S3 Bucket as a file.
 2. Set the S3 Bucket name as an Environmental Variable.
 3. Create a start-up script that defines the entry point of the container to download the file from the S3 bucket into the container, referenced by the Environmental Variable. Do this by:&#x20;
    * Using a [`S3 cp`](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/s3/cp.html) command, copying the config file in S3 to a location in the container;&#x20;

@@ -16,7 +16,7 @@ _Estimated time to complete Step 1: 20 minutes. Much of this time is consumed by
 
 Before starting this tutorial:
 
-* Learn more about DuploCloud [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md)s,[ Plans](../../getting-started/application-focussed-interface/plan.md), and [Tenant](../../getting-started/application-focussed-interface/tenant/)[s](../../getting-started/application-focussed-interface/tenant/).
+* Learn more about DuploCloud [Infrastructure](../../getting-started-1/application-focussed-interface/infrastructure.md)s,[ Plans](../../getting-started-1/application-focussed-interface/plan.md), and [Tenant](../../getting-started-1/application-focussed-interface/tenant/)[s](../../getting-started-1/application-focussed-interface/tenant/).
 * Reference the [Access Control](../../administrator-tools/access-control/) documentation to create User IDs with the **Administrator** role. To perform the tasks in this tutorial, you must have Administrator privileges.
 
 ## Creating a DuploCloud Infrastructure
@@ -49,7 +49,7 @@ It may take up to twenty (20) minutes for your Infrastructure to be created and 
 
 ## Verifying that a Plan exists for your Infrastructure
 
-Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the [Tenants ](../../getting-started/application-focussed-interface/tenant/)or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
+Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the [Tenants ](../../getting-started-1/application-focussed-interface/tenant/)or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
 
 Before proceeding, confirm that a Plan exists that corresponds to your newly created Infrastructure.
 

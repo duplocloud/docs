@@ -10,8 +10,8 @@ description: Configuring a CloudFront distribution in DuploCloud
 
 The S3 bucket needs to be created and static asserts need to be uploaded to the S3 bucket. Please follow the steps in the link below to create the S3 bucket.
 
-{% content-ref url="s3-bucket.md" %}
-[s3-bucket.md](s3-bucket.md)
+{% content-ref url="../../aws/aws-services/s3-bucket.md" %}
+[s3-bucket.md](../../aws/aws-services/s3-bucket.md)
 {% endcontent-ref %}
 
 Create Cloudfront distribution by navigating to **Cloud Services** -> **Networking** and selecting the **CloudFront** tab. Then click **+Add**.&#x20;
