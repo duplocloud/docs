@@ -101,7 +101,7 @@ You must define [rules ](https://kubernetes.io/docs/concepts/services-networking
 
 
 {% hint style="info" %}
-DuploCloud Platform supports defining multiple paths in Ingress. For example, you could define an Ingress rule with an **Exact Path Type** to route requests to `/path1/`for **js-service1**, add a rule with a **Prefix Path Type** to route requests to `/path2/` for **testsvc2.** Additionally, you could add a rule with a **Prefix Path Type** to route requests via a [BYOH Host](../../extras/byoh.md) (Bring-Your-Own-Host) named **example.com**, for a third service, **testsvc3**.
+DuploCloud Platform supports defining multiple paths in Ingress. For example, you could define an Ingress rule with an **Exact Path Type** to route requests to `/path1/`for **js-service1**, add a rule with a **Prefix Path Type** to route requests to `/path2/` for **testsvc2.** Additionally, you could add a rule with a **Prefix Path Type** to route requests via a [BYOH Host](../../extras-1/byoh.md) (Bring-Your-Own-Host) named **example.com**, for a third service, **testsvc3**.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-15_02_12.png" alt=""><figcaption><p>Multiple paths defined for an <strong>Ingress</strong> in the DuploCloud Portal</p></figcaption></figure>

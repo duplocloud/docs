@@ -17,7 +17,7 @@ _Estimated time to complete Step 1: 20 minutes. Much of this time is consumed by
 Before starting this tutorial:
 
 * Learn more about DuploCloud [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md)s,[ Plans](../../getting-started/application-focussed-interface/plan.md), and [Tenant](../../getting-started/application-focussed-interface/tenant/)[s](../../getting-started/application-focussed-interface/tenant/).
-* Reference the [Access Control](../../administrator-tools/access-control/) documentation to create User IDs with the **Administrator** role. To perform the tasks in this tutorial, you must have Administrator privileges.
+* Reference the [Access Control](../../user-administration-1/access-control/) documentation to create User IDs with the **Administrator** role. To perform the tasks in this tutorial, you must have Administrator privileges.
 
 ## Creating a DuploCloud Infrastructure
 

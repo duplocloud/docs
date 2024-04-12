@@ -5,7 +5,7 @@ description: Using Tenants in DuploCloud
 # Tenant (Environment)
 
 {% hint style="info" %}
-For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../user-administration/access-control/tenant-access/cross-tenant-access.md).&#x20;
+For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../user-administration-1/access-control/tenant-access/cross-tenant-access.md).&#x20;
 {% endhint %}
 
 In AWS, cloud features such as AWS resource groups, AWS IAM, AWS security groups, KMS keys, as well as Kubernetes Namespaces, are exposed in Tenants which reference their configurations.
@@ -63,7 +63,7 @@ While Infrastructure provides abstraction and isolation at the Virtual Private C
 
 EKS Worker nodes or virtual machines (VMs) created within a Tenant are given a label with the Tenant Name, as are the node selectors and namespaces. Consequently, even at the worker node level, two tenants achieve complete isolation and independence, even though they may be sharing the same Kubernetes cluster by a shared Infrastructure.
 
-## Creating a Tenant <a href="#2-toc-title" id="2-toc-title"></a>
+## Creating a Tenant <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
 To add a Tenant, navigate to **Administrator** -> **Tenant** in the DuploCloud Portal and click **Add**.
 
