@@ -11,7 +11,7 @@ There are several use cases for customized log collection. The central logging s
 The version of OpenSearch, the EC2 host size, and the control plane configuration are all deployed based on the configuration you define in the Service Description. Use this procedure to customize the Service Description according to your requirements.&#x20;
 
 {% hint style="warning" %}
-You must make Service Description changes before you [enable central logging](../../../aws/use-cases/central-logging/central-logging-setup.md). If central logging is enabled, you cannot edit the description using the **Service Description** window.
+You must make Service Description changes before you [enable central logging](central-logging-setup.md). If central logging is enabled, you cannot edit the description using the **Service Description** window.
 {% endhint %}
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
@@ -32,7 +32,7 @@ Note that Control Plane Components are deployed in the DuploCloud **Default** Te
 You can modify [Elastic Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html) logging configurations, including mounting folders other than `/var/lib/docker` for writing logs to folders other than `stdout`.&#x20;
 
 {% hint style="info" %}
-You need to customize the log collection before [enabling logging](../../../aws/use-cases/central-logging/central-logging-setup.md) for a Tenant.&#x20;
+You need to customize the log collection before [enabling logging](central-logging-setup.md) for a Tenant.&#x20;
 
 If logging is enabled, you can update the Filebeat configuration for each tenant by editing the Filebeat Service Description (see the procedure in [Defining Control Plane Configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description)).&#x20;
 
