@@ -74,7 +74,7 @@ coverY: 0
 
     </div>
 
-    * Use the [Supported Third-Party Tools](../extras-1/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
+    * Use the [Supported Third-Party Tools](../extras/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
     * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
 
 ## August 2023 and September 2023
@@ -103,8 +103,8 @@ coverY: 0
   * Support for [SQL databases](../gcp-user-guide/gcp-services/cloud-sql.md).
   * Change [Cloud Armour Security Policies](../gcp-user-guide/gcp-services/cloud-armour.md#modifying-a-cloud-armour-configuration-security-policy).
 * General updates
-  * **Last Login** card available for determining the last user sign-in when [viewing user access](../user-administration-1/access-control/add-edit-or-delete-a-user.md#view-users).
-  * [Grant access to specific databases](../user-administration-1/access-control/database-access-for-users.md) to non-administrators.
+  * **Last Login** card available for determining the last user sign-in when [viewing user access](../user-administration/access-control/add-edit-or-delete-a-user.md#view-users).
+  * [Grant access to specific databases](../user-administration/access-control/database-access-for-users.md) to non-administrators.
 
 ## May 2023
 
@@ -129,7 +129,7 @@ coverY: 0
   * Define [custom CIDRs](../aws-user-guide/aws-services/load-balancers/#adding-a-network-load-balancer-nlb-listener-with-a-custom-cidr) for NLB Load Balancers.
   * Manage multiple Load Balancer settings using the **Load Balancer** tab's [**Other Settings** card](../aws-user-guide/aws-services/load-balancers/#additional-load-balancer-settings). Settings include specifying a Web Application Firewall (WAF) Access Control List (ACL), enabling HTTP to HTTPS redirects, enabling Access Logs, setting an Idle Timeout, and an option to drop invalid headers.
   * Specify [custom public and private EKS endpoints](../aws-user-guide/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) for your DuploCloud Infrastructure during or after creating an Infrastructure.&#x20;
-  * Gain [Cross-Tenant access to restricted policy-based resources](../user-administration-1/access-control/tenant-access/cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
+  * Gain [Cross-Tenant access to restricted policy-based resources](../user-administration/access-control/tenant-access/cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
   * [JIT Access to the AWS Console is redesigned](../aws-user-guide/use-cases/jit-access.md#obtaining-aws-access-for-a-workstation) with several usability enhancements.
   * [Enable Control Plane logging for EKS clusters](../aws-user-guide/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-logs.md).
   * Enable [Read-only processing for ECS services](../aws-user-guide/aws-services/containers/#enabling-read-only-processing-for-ecs-services).
@@ -138,7 +138,7 @@ coverY: 0
 * Azure
   * [Add a direct link to the Azure Console ](../azure-user-guide/use-cases/azure-portal-link.md)from a DuploCloud **Host** page **Actions** Menu.
 * General Updates
-  * [Set read-only access to specific Tenants](../user-administration-1/access-control/tenant-access/read-only-access-to-a-tenant.md) for DuploCloud users.
+  * [Set read-only access to specific Tenants](../user-administration/access-control/tenant-access/read-only-access-to-a-tenant.md) for DuploCloud users.
 
 ## March 2023
 
@@ -166,7 +166,7 @@ coverY: 0
   * Enable Elastic Kubernetes Service (EKS) for your existing infrastructure. EKS versions 1.22 and 1.23 are supported.
   * [Timestream databases](../aws-user-guide/aws-services/database/timestream-database.md) are now supported.
 * General updates
-  * [Delete VPN connections](../user-administration-1/access-control/add-and-delete-vpn-access-for-users.md) for users.
+  * [Delete VPN connections](../user-administration/access-control/add-and-delete-vpn-access-for-users.md) for users.
 
 ## December 2022 and January 2023
 
