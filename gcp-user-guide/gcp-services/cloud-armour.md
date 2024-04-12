@@ -20,11 +20,11 @@ Before you can use DuploCloud with Cloud Armour, define a Security Policy in the
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/CA1.png" alt=""><figcaption><p><strong>Add Security Policy</strong> pane</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/add-qa-deny-security-policy.png" alt=""><figcaption></figcaption></figure>
 
     </div>
-5. In the **Name** field, enter an appropriate name for the Security Policy.
-6. In the **Security Policy ID** field, enter the name of your GCP Cloud Armour Security Policy.&#x20;
+5. In the **Name** field, enter an appropriate name for the Security Policy. This is the name used in the DuploCloud portal. It is convenient to keep it the same as the **Security Policy ID**, but not required.
+6. In the **Security Policy ID** field, enter the name of your GCP Cloud Armour Security Policy. This is the name used in the GCP console.
 7.  Click **Create**. The Security Policy that you specified is displayed in the **Security Policy** tab.\
 
 
@@ -91,4 +91,14 @@ To change your Cloud Armour configuration to use a different security policy, ed
 
 5. Modify the Security Policy **Name** and the **Security Policy ID** as appropriate.
 6. Click **Update**. The changes are saved and displayed in the **Security Policy** tab.
+
+## Viewing Security Policy logs
+
+Logs will only be visible if you **Enable Access Logs** in the Load Balancer's Other Settings card.
+
+To view Cloud Armor Security Policy logs:
+
+1. Locate the Security Policy in the GCP Console.
+2. Click the **Logs** tab.
+3. Click the **View policy logs** link on the Logs tab to view logs of the policy's rule evaluations.
 
