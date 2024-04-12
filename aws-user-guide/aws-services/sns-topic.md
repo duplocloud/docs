@@ -27,7 +27,7 @@ A SNS Topic is a logical access point that acts as a communication channel. It l
 
 SNS Topic Alerts provide a flexible and scalable means of sending notifications and alerts across different AWS services and external endpoints, allowing you to stay informed about important events and incidents happening in your AWS environment.
 
-To set alerts for SNS Topics, [see this procedure](../../aws/use-cases/faults-and-alarms/sns-topic-alerts.md).
+To set alerts for SNS Topics, [see this procedure](../use-cases/faults-and-alarms/sns-topic-alerts.md).
 
 {% hint style="info" %}
 SNS Topics are used in event processing in conjunction with DynamoDB and Lambda, among other services. See the [AWS DynamoDB Developer's Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) for information, permissions information, and examples.

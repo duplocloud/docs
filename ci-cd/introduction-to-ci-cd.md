@@ -9,7 +9,7 @@ coverY: 0
 
 DuploCloud supports nearly all available CI/CD platforms, including some of the most popular such as GitHub Actions, CircleCI, and GitLab. This ease of supportability is due to the fact that DuploCloud views CI/CD platforms agnostically, using [cURL commands](https://en.wikipedia.org/wiki/CURL) to communicate requests.
 
-In addition to third-party CI/CD products, DuploCloud provides [Katkit](katkit/), a built-in CI/CD platform that allows you to build, test, and deploy your application from GitHub commits and pull requests. Katkit is an arbitrary code execution engine that allows you to run any code before and after deployment. Conforming to DuploCloud's architecture, Katkit uses [Tenants](../getting-started-1/application-focussed-interface/tenant/), tying together CI and CD.
+In addition to third-party CI/CD products, DuploCloud provides [Katkit](katkit/), a built-in CI/CD platform that allows you to build, test, and deploy your application from GitHub commits and pull requests. Katkit is an arbitrary code execution engine that allows you to run any code before and after deployment. Conforming to DuploCloud's architecture, Katkit uses [Tenants](../getting-started/application-focussed-interface/tenant/), tying together CI and CD.
 
 Some of the CI/CD toolchains that are directly supported by DuploCloud include, but are not limited, to the following:
 

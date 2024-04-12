@@ -45,7 +45,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [Managed Airflow](managed-airflow.md)
 * [NAT Gateway for High Availability (HA)](nat-gateway-for-ha.md)
 * [(Kubernetes) Probes and Health Check](setting-up-probes.md)
-* [S3 bucket](../../aws/aws-services/s3-bucket.md)
+* [S3 bucket](s3-bucket.md)
 * [SNS](sns-topic.md) Topic creation
 * [SQS queue](sqs-queue.md)
 * [VPC (Virtual Private Cloud) Peering ](virtual-private-cloud-vpc-peering.md)

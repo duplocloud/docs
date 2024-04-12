@@ -12,7 +12,7 @@ DuploCloud creates a VNET with a default subnet and a default Network Security G
 
 When you create a DuploCloud Infrastructure, you create an isolated environment that maps to a Kubernetes cluster.&#x20;
 
-In DuploCloud, an [Infrastructure](../../../getting-started-1/application-focussed-interface/infrastructure.md) maps one-to-one to a VPC in a specified region. It also maps to a [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine) (GKE) cluster you use for container orchestration.&#x20;
+In DuploCloud, an [Infrastructure](../../../getting-started/application-focussed-interface/infrastructure.md) maps one-to-one to a VPC in a specified region. It also maps to a [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine) (GKE) cluster you use for container orchestration.&#x20;
 
 When creating an Infrastructure, specify the number of availability zones, the region, VPC Classless Inter-Domain Routing (CIDR), and a subnet mask. DuploCloud creates two subnets in each availability zone, one private and one public, and sets up routes and a NAT gateway.&#x20;
 
@@ -45,7 +45,7 @@ Cloud providers limit the number of Infrastructures that can run in each region.
 
 ## About Plans and Infrastructures
 
-Once the Infrastructure is created, a [Plan ](../../../getting-started-1/application-focussed-interface/plan.md)(with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration. The Plan is used to create [Tenants](../../../azure-user-guide/use-cases/tenant-environment/).
+Once the Infrastructure is created, a [Plan ](../../../getting-started/application-focussed-interface/plan.md)(with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration. The Plan is used to create [Tenants](../../../azure-user-guide/use-cases/tenant-environment/).
 
 <div align="left">
 

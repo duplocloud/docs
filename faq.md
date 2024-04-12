@@ -6,7 +6,7 @@ description: Popular and frequently asked questions about DuploCloud
 
 ## What support features are included with my DuploCloud subscription&#x20;
 
-See [DuploCloud Support](getting-started-1/duplocloud-support.md) for examples of what we do and do not support, in addition to how to contact us.
+See [DuploCloud Support](getting-started/duplocloud-support-model.md) for examples of what we do and do not support, in addition to how to contact us.
 
 ## What cloud providers does DuploCloud support?
 
@@ -143,7 +143,7 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 
 ### I can't edit the Service Description to update my control plane configuration.
 
-You must make control plane modifications before [enabling central logging](aws/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
+You must make control plane modifications before [enabling central logging](aws-user-guide/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
 
 ### How do I SSH into the host?
 
@@ -216,7 +216,7 @@ Two possible reasons for receiving this fault message are:
 
 ### I'm not seeing logs displayed for a Tenant. I get the error `Docker native collection agent Filebeat is not running for Tenant`.
 
-Ensure that [logging is set up](aws/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.&#x20;
+Ensure that [logging is set up](aws-user-guide/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.&#x20;
 
 ## Terraform FAQs
 
