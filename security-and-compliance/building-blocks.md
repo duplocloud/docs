@@ -29,3 +29,4 @@ Cloud Infrastructure security can be approached to have the following building b
   * Application Security Testing
     * DAST
     * Manual VAPT &#x20;
+* Compliance Frameworks
