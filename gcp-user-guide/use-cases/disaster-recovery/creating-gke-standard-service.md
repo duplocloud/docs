@@ -1,4 +1,4 @@
-# Creating GKE Standard Cluster
+# Creating GKE Standard Service
 
 Navigate from **Administrator** -> **Infrastructure** -> **Add** to create Infrastructure with GKE Standard Cluster.
 
@@ -11,7 +11,7 @@ Navigate from **Administrator** -> **Infrastructure** -> **Add** to create Infra
 * Enable GKE: enabled
 * Cluster Mode: GKE Standard
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Create Infrastructure with GKE Standard</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (2).png" alt=""><figcaption><p>Create Infrastructure with GKE Standard</p></figcaption></figure>
 
 This takes about 20 minutes.  Infrastructure status should move to Completed. Once the Infrastructure status shows Complete, navigate to **Administrators** -> **Plans** to verify that a plan has been created with the same name (nonprod).
 
@@ -19,5 +19,5 @@ This takes about 20 minutes.  Infrastructure status should move to Completed. On
 
 You can view the details and download the kubeconfig file to connect the cluster from GKE Tab available in the infrastructure created.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (2).png" alt=""><figcaption><p>View GKE Standard Cluster</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (2) (1).png" alt=""><figcaption><p>View GKE Standard Cluster</p></figcaption></figure>
 

@@ -13,7 +13,7 @@ Navigate from **Administrator** -> **Infrastructure** -> **Add** to create Infra
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (6).png" alt=""><figcaption><p><strong>Add infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (6) (1).png" alt=""><figcaption><p><strong>Add infrastructure</strong> page</p></figcaption></figure>
 
 </div>
 

@@ -1,4 +1,4 @@
-# Isolation
+# Isolation and Firewall
 
 Isolation of concerns and environments is the most basic principle in any infrastructure security implementation. The cloud providers allow many constructs to implement this isolation to varying degrees. As an example one can isolate two workloads in completely different "cloud accounts", or different "VPCs" within the same account or different "security groups" within the same VPC. Then there are other constructs like IAM (AWS Roles, Azure managed Identity, GCP service accounts) or Kubernetes namespace and so forth. A big challenge is how do we bring together dozens of these security constructs and map them to an application centric isolation model.&#x20;
 
@@ -12,6 +12,6 @@ DuploCloud brings these constructs together in an application centric model show
 **Tenant is like a Kubernetes namespace but at a extended cloud provider scope**. Most cloud resources directly consumed by applications are within a tenant like databases, queues, storage, vms etc. Some are of course can be shared as well like VPC, VMs, Encryption Keys, SSL certs etc. One can also create resources in one tenant and allow others to consume those via inter-tenant access policies.  &#x20;
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 &#x20; &#x20;
