@@ -2,15 +2,11 @@
 description: Create, edit, view, or delete users and assign appropriate roles
 ---
 
-# User access to DuploCloud
+# Network Segmentation
 
-{% hint style="warning" %}
-You need to be an **Administrator** to add, edit, or delete permissions.
-{% endhint %}
 
-## Add a new user
 
-Add a new user and give them appropriate permissions:&#x20;
+DuploCloud construct of Infrastructure maps to a VPC Add a new user and give them appropriate permissions:&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**.&#x20;
 2.  Click **Add**. The **Create User** pane displays.\
