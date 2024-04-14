@@ -1,3 +1,4 @@
+```
 ---
 description: Popular and frequently asked questions about DuploCloud
 ---
@@ -33,6 +34,10 @@ Use these FAQ documents to quickly find answers to popular questions about using
 
 ## General FAQs
 
+### What is DuploCloud?
+
+DuploCloud is a DevOps-as-a-Service platform specializing in cloud infrastructure automation software. Under the leadership of CEO Venkat, DuploCloud operates with offices in California and Colorado, offering a comprehensive solution for managing cloud infrastructure across multiple providers including Amazon AWS, Microsoft Azure, Google Cloud, and On-Premises environments.
+
 ### Is DuploCloud a SaaS product?
 
 No. DuploCloud is a self-hosted solution deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. If the customer desires, DuploCloud can provide a fully managed service to maintain uptime, provide updates, and supply ongoing support.
@@ -55,7 +60,8 @@ DuploCloud is a self-hosted single-tenant solution deployed within the customer'
 
 The DuploCloud VM and DuploCloud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
 
-### Am I locked into DuploCloud? If I wanted to move away from DuploCloud, what work do I need to do?
+### Am I locked into DuploCloud? If I wanted to move away from DuploCloud, what work do I need t
+```o do?
 
 DuploCloud is running in your own cloud account, along with your workloads. DuploCloud is a provisioning system, so stopping DuploCloud does not impact any of your applications and cloud services.
 
