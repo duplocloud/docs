@@ -12,6 +12,6 @@ DuploCloud brings these constructs together in an application centric model show
 **Tenant is like a Kubernetes namespace but at a extended cloud provider scope**. Most cloud resources directly consumed by applications are within a tenant like databases, queues, storage, vms etc. Some are of course can be shared as well like VPC, VMs, Encryption Keys, SSL certs etc. One can also create resources in one tenant and allow others to consume those via inter-tenant access policies.  &#x20;
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 &#x20; &#x20;

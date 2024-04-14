@@ -5,10 +5,10 @@ Each tenant is its own security group and within the tenant the security group a
 An administrator can allow inter-tenant traffic by explictly opening them under Administrator -> Tenants->Security menu. \
 
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 In Azure network security is implemented at the virtual network level and all traffic within the VNET is allowed. This behavior can be overridden by placing a low priority deny rule for all VNET traffic. Azure ASGs allow intra-tenant traffic. So if the user desires they can treat tenant as a security boundry with the above suggested approach. The menu to manage security group rules is under administrator --> Infrastructure -> Security.&#x20;
 
 &#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
