@@ -32,6 +32,8 @@ coverY: 0
   * Support for [GKE Ingress.](../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
 * CI/CD
   * [Update a service with a stream-lined, read-to-use GitHub Actions script](../ci-cd/github-actions/update-a-service.md).
+* Kubernetes
+  * [Enable real-time alerts for autoscaling Kubernetes nodes.](../aws-user-guide/use-cases/hosts-vms/auto-scaling/kubernetes-scaling-options.md#allowing-real-time-alerts-for-autoscaling-kubernetes-nodes)
 * General&#x20;
   * [Customize the DuploCloud login screen banner.](../extras/login-banner-customization.md)
   * [Set Tenants to expire](../aws-user-guide/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
