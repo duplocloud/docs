@@ -57,3 +57,11 @@ Refer to the [AWS Documentation](https://docs.aws.amazon.com/AmazonECR/latest/us
     </div>
 12. Test the function using the AWS Console.
 
+## References
+
+* [AWS Working with Lambda container images](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html)
+* Dockerhub Lambda Base Images
+  * [Python](https://hub.docker.com/r/amazon/aws-lambda-python)
+  * [NodeJS](https://hub.docker.com/r/amazon/aws-lambda-nodejs)
+  * [GoLang](https://hub.docker.com/r/amazon/aws-lambda-go)
+  * [Ruby](https://hub.docker.com/r/amazon/aws-lambda-ruby)

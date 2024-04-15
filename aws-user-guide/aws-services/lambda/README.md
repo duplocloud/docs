@@ -78,3 +78,9 @@ To update the code for the Lambda function:
 3. Enter the updated **Name** of the Lambda Function.
 4. Use the **Image Configuration** field to update an additional configuration parameter.
 5. Click **Submit**.
+
+## References
+
+* [Duplocloud Lambda](https://docs.duplocloud.com/docs/aws-user-guide/aws-services/lambda)
+* [Duploctl Lambda Resource](https://github.com/duplocloud/duploctl/wiki/Lambda)
+* [AWS Deploying Lambda functions as .zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html)

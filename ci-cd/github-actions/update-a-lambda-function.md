@@ -117,14 +117,15 @@ jobs:
 
 ### References
 
+* [Duplocloud Lambda](https://docs.duplocloud.com/docs/aws-user-guide/aws-services/lambda)
 * [Duploctl Lambda Resource](https://github.com/duplocloud/duploctl/wiki/Lambda)
+* [AWS Deploying Lambda functions as .zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html)
 * [AWS Working with Lambda container images](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html)
 * Dockerhub Lambda Base Images
   * [Python](https://hub.docker.com/r/amazon/aws-lambda-python)
   * [NodeJS](https://hub.docker.com/r/amazon/aws-lambda-nodejs)
   * [GoLang](https://hub.docker.com/r/amazon/aws-lambda-go)
   * [Ruby](https://hub.docker.com/r/amazon/aws-lambda-ruby)
-* [AWS Deploying Lambda functions as .zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html)
 
 [^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
 
