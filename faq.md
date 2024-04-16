@@ -55,6 +55,10 @@ DuploCloud is a self-hosted single-tenant solution deployed within the customer'
 
 The DuploCloud VM and DuploCloud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
 
+### Troubleshooting SQS Queue Deletion Issues
+
+When attempting to delete SQS queues with Duplomaster, it's important to note that Duplomaster can only delete queues named with the prefix `"arn:aws:sqs:*:*:duploservices-*"`. This is because Duplomaster's role is restricted to managing only Duplo-managed resources, as indicated by the `duploservices` prefix. If a queue does not follow this naming convention, Duplomaster will not have the permission to delete it. Additionally, users might experience a delay in the deletion of SQS queues due to the background execution of the `aws sqs delete-queue` request. This delay can initially suggest a failure, but the process may still complete successfully after some time.
+
 ### Am I locked into DuploCloud? If I wanted to move away from DuploCloud, what work do I need to do?
 
 DuploCloud is running in your own cloud account, along with your workloads. DuploCloud is a provisioning system, so stopping DuploCloud does not impact any of your applications and cloud services.
