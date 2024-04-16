@@ -1,6 +1,6 @@
 # Control Groups
 
-Cloud Infrastructure security can be approached to have the following control groups or building blocks and each of these have to applied to each cloud resource being provisioned. These configurations when applied to various cloud resources come to 200+ controls per cloud provider. All of these come out-of-box with DuploCloud platform and are implicitly implemented while the users can focus on deploying the application.
+Cloud Infrastructure security can be approached by having the following control groups or building blocks and each of these have to be applied to each cloud resource being provisioned. These configurations when applied to various cloud resources come to 200+ controls per cloud provider. All of these come out-of-box with DuploCloud platform and are implicitly implemented while the users can focus on deploying the application.
 
 * Isolation and Firewall
   * Network Segmentation
