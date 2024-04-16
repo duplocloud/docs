@@ -232,17 +232,18 @@ The Terraform and DuploCloud Web UIs are layered on top of the DuploCloud platfo
 
 DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows the user to configure their cloud infrastructure using DuploCloud constructs, rather than using lower-level cloud provider constructs. This enables the user to get the benefits of Infrastructure-as-Code, while significantly reducing the amount of code that is needed. The DuploCloud Terraform Provider calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
 
-### **If my developers make changes via the DuploCloud UI, what happens to the Terraform code my DevOps engineers have written?**
+### **If my developers make changes via the DuploC```
+loud UI, what happens to the Terraform code my DevOps engineers have written?**
 
 You should create a separation between your developers and your DevOps team. Allowing developers to use the Web UI in non-production development environments, to quickly iterate product changes, can create an inconsistency.&#x20;
 
-In both production and critical non-production environments, the cloud services setup, as well as first-time application deployment, can be done via Terraform code. CI/CD workflows can be built that only update the application (Docker and Lambda) deployments. Any cloud service level change should be done by the DevOps team via Terraform and developers should ask the DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
+In both production and critical non-production environments, the cloud services setup, as well as first-time application deployment, can be done via Terraform code. CI/CD workflows can be built that only update the application (Docker and Lambda) deployments. Any cloud service level change should be done by the DevOps team via Terraform and developers should ask the DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement. When managing resources like RDS, it's essential to ensure version consistency across environments to prevent errors. If discrepancies in RDS versions are detected, upgrading to match the production environment's version during a maintenance window is advisable. This uniformity minimizes errors and facilitates smoother operations.
 
 ## CI/CD FAQs
 
 ### How does CI/CD work with DuploCloud?
 
-CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool, as well.
+CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool, as well. It's important to note that inconsistencies in infrastructure versions, such as RDS, can be triggered by automatic minor version upgrades recommended for security patches. These discrepancies should be addressed by aligning Terraform code with the live environment versions to ensure consistency across all deployment stages.
 
 ## Diagnostic Tool FAQ
 
@@ -251,3 +252,6 @@ CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a
 DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset like Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if you are running an application within the respective DuploCloud tenants.
 
 [^1]: 
+
+```
+This integration maintains the document's original structure and tone, adding valuable information on handling RDS version discrepancies and the importance of version consistency for smooth operations and error minimization.
