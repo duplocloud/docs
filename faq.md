@@ -55,6 +55,16 @@ DuploCloud is a self-hosted single-tenant solution deployed within the customer'
 
 The DuploCloud VM and DuploCloud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
 
+### Can we install DuploCloud in our existing cloud account?
+
+While you can install DuploCloud in your existing environment, we prefer that we do the setup in a separate account. This does not mean you have to migrate all your existing data sources especially say you have Tbs of files in S3 bucket. The workload in DuploCloud environments can connect to existing data sources and endpoints over peering and cross account access. Here are the top reasons why people prefer Duplocloud in a separate account:
+
+* It is considered a very safe and non-intrusive way, without touching the existing account, to validate the new setup and at times new architecture like say Kubernetes.
+* From a compliance perspective new account is a clean slate and is very easy to pass audits as DuploCloud will guarantee all aspects of it. If we were to fit in an existing account, there maybe be many thing that may be quite hard and in some cases impossible to fix. As an example if things were operated in a non compliant way then that history will be stored in a cloud trails. This opens a pandora's box with an auditor and create a lot of questions around scope leading to exceptions in the report.
+* Some of the DuploCloud security features when turned on can impact existing non compliant resources and impact an existing workload. While it is rare, something we need to be careful about.
+
+In summary while one can deploy the platform in an existing account, even import a VPC and Kubernetes clusters, but avoid it can cause more overhead than benefit that a new account with either data migrated or connected to existing data sources over cross account access. &#x20;
+
 ### Am I locked into DuploCloud? If I wanted to move away from DuploCloud, what work do I need to do?
 
 DuploCloud is running in your own cloud account, along with your workloads. DuploCloud is a provisioning system, so stopping DuploCloud does not impact any of your applications and cloud services.
