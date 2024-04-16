@@ -45,7 +45,7 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 **Max I/O** mode is not supported on file systems using [One Zone storage classes](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html).
 {% endhint %}
 
-Information about EFS **Mount Targets** and **Access Points** is available in their respective tabs.
+Information about EFS **Mount Targets** and **Access Points** is available in their respective tabs. The integration of EFS with Kubernetes (K8s) can leverage dynamic provisioning, where the EFS driver automatically creates an access point with specific UID and GID based on storage class parameters. This facilitates the segregation of permissions and volume roots within EFS, catering to different departmental needs. However, for applications not requiring specific permissions or volume roots, such as in the current setup, using an access point may be unnecessary. It's crucial to align with NIST guidelines and simplify the setup by avoiding unnecessary access points, especially when they lack proper UID/GID configurations.
 
 ![Mount Target tab details](<../../../.gitbook/assets/image (8) (1).png>)
 
@@ -91,3 +91,4 @@ If you want to disable an EFS Lifecycle Management Policy that you previously cr
 
 
     <figure><img src="../../../.gitbook/assets/efs_lc3.png" alt=""><figcaption><p><strong>Lifecycle Policies</strong> tab</p></figcaption></figure>
+
