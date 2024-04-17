@@ -22,3 +22,7 @@ description: Create an OpenSearch domain from the DuploCloud portal
     <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-14_39_49.png" alt=""><figcaption><p><strong>Enable UltraWarm data nodes</strong> selected, displaying additional options <strong>(Warm Instance type</strong>, <strong>Number of warm data nodes</strong>, and <strong>Enable Cold Storage</strong>)</p></figcaption></figure>
 11. Click **Submit**. The OpenSearch domain is created.&#x20;
 
+## Managing OpenSearch Logging
+
+See the[ Logging documentation](../use-cases/central-logging/custom-log-collection.md).
+

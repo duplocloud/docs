@@ -27,6 +27,21 @@ You can update the Control Plane configuration by editing the Service Descriptio
 
 Note that Control Plane Components are deployed in the DuploCloud **Default** Tenant. Using the **Default** Tenant, you can change instance size, Docker images, and more.
 
+### Updating the OpenSearch log retention period
+
+&#x20;You can update the log retention period using the OpenSearch native dashboard by completing the following steps.
+
+1. From the DuploCloud portal, navigate to **Administrator** -> **Observability** -> **Logging**.
+2. Click **Open New Tab** to access the OpenSearch dashboard.
+3. Navigate to **Pancake** -> **Index management** -> **State management policies**.
+4. Edit the **FileBeat** YAML file and update the retention period.
+
+For more information see the [OpenSearch documentation](https://opensearch.org/docs/latest/).&#x20;
+
+{% hint style="info" %}
+The new retention period settings will only apply to logs generated after the retention period was updated. Older logs will still be deleted according to the previous retention period settings.
+{% endhint %}
+
 ## **Customizing Elastic Filebeat logging**
 
 You can modify [Elastic Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html) logging configurations, including mounting folders other than `/var/lib/docker` for writing logs to folders other than `stdout`.&#x20;
