@@ -13,7 +13,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 ## Supported use cases for DuploCloud AWS
 
 * [Infrastructure and Plan](disaster-recovery/)
-* [EKS Initial setup](disaster-recovery/kubernetes-cluster/) and [upgrade](disaster-recovery/kubernetes-cluster/upgrading-eks-version.md)
+* [EKS Initial setup](disaster-recovery/kubernetes-cluster/) and [upgrade](disaster-recovery/upgrading-eks-version.md)
 * [ECS Initial setup](disaster-recovery/ecs-setup/)
 * [Tenant](tenant-environment/)
 * [Hosts](hosts-vms/) and [Snapshots](hosts-vms/backups.md)
