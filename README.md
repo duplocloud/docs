@@ -21,6 +21,6 @@ DuploCloud is a single-Tenant software platform installed in the customer's clou
 
 ## Quick demo
 
-**Got 2 minutes?** Check out a video overview of a DuploCloud deployment:
+**Got 5 minutes?** Check out a video overview of a DuploCloud deployment:
 
-{% embed url="https://player.vimeo.com/video/577816574?h=b57b807ed2" %}
+{% embed url="https://vimeo.com/935624281" %}
