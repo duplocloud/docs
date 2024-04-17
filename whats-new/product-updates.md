@@ -11,10 +11,10 @@ coverY: 0
   * [Configure K8s Ingress redirect ](../aws/aws-services/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](../aws-user-guide/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
   * Enable UltraWarm Data nodes for [OpenSearch domains](../aws-user-guide/aws-services/elasticsearch.md).
-  * Support for [upgrading EKS components](../aws-user-guide/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).&#x20;
+  * Support for [upgrading EKS components](../aws-user-guide/use-cases/disaster-recovery/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).&#x20;
   * [Add a Web App Firewall URL](../aws-user-guide/aws-services/web-application-firewall-waf.md#creating-a-web-application-firewall-waf) when creating or updating a Plan.
   * [Update or skip a final RDS snapshot](../aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
-  * [Upgrade the EKS Cluster](../aws-user-guide/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
+  * [Upgrade the EKS Cluster](../aws-user-guide/use-cases/disaster-recovery/upgrading-eks-version.md).
   * Create an [OpenSearch](../aws-user-guide/aws-services/elasticsearch.md) domain. &#x20;
   * [Billing option is available per Tenant](../aws-user-guide/use-cases/cost-management/#view-billing-details-by-tenant).
   * [Scale to or from zero (0) using Auto-Scaling Groups](../aws-user-guide/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/scale-to-or-from-zero.md).&#x20;
@@ -136,7 +136,7 @@ coverY: 0
   * [Enable Control Plane logging for EKS clusters](../aws-user-guide/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-logs.md).
   * Enable [Read-only processing for ECS services](../aws-user-guide/aws-services/containers/#enabling-read-only-processing-for-ecs-services).
   * Support for [Aurora RDS Serverless and MySQL read replicas](../aws-user-guide/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md) and ability to modify Serverless replica instance size.
-  * Improved documentation for [upgrading an EKS cluster version](../aws-user-guide/use-cases/disaster-recovery/kubernetes-cluster/upgrading-eks-version.md).
+  * Improved documentation for [upgrading an EKS cluster version](../aws-user-guide/use-cases/disaster-recovery/upgrading-eks-version.md).
 * Azure
   * [Add a direct link to the Azure Console ](../azure-user-guide/use-cases/azure-portal-link.md)from a DuploCloud **Host** page **Actions** Menu.
 * General Updates
