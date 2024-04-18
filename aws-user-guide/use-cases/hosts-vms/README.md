@@ -9,6 +9,10 @@ Once you have the Infrastructure (Networking, Kubernetes cluster, and other comm
 * EKS Worker Nodes
 * Worker Nodes (Docker Host), if the built-in container orchestration is used.
 
+{% hint style="info" %}
+DuploCloud AWS requires at least one Host (VM) to be defined per AWS account.
+{% endhint %}
+
 You also create VMs if Regular nodes are not part of any container orchestration; for example, where a user manually connects and installs apps, as when using Microsoft SQL Server in a VM, Running an IIS application, and such custom use cases.
 
 While all the lower-level details like IAM roles, Security groups, and others are abstracted away from the user (as they are derived from the Tenant), standard application-centric inputs are required to be provided. This includes a Name, Instance size, Availability Zone choice, Disk size, Image ID, etc. Most of these are optional, some are published as a list of user-friendly choices by the admin in the plan (Image or AMI ID is one such example). Other than these AWS centric parameter there is two DuploCloud platform-specific value to be provided:
