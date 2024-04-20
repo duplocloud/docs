@@ -208,6 +208,7 @@
     * [Shell Access for Docker](gcp-user-guide/prerequisites/shell-access-for-docker.md)
     * [VPN Setup](gcp-user-guide/prerequisites/vpn-setup.md)
     * [Connect to the VPN](gcp-user-guide/prerequisites/connect-to-the-vpn.md)
+    * [Create Managed SSL Certificates for GCP](gcp-user-guide/prerequisites/create-managed-ssl-certificates-for-gcp.md)
   * [Quick start](gcp-user-guide/quick-start/README.md)
     * [Step 1: Create Infrastructure and Plan](gcp-user-guide/quick-start/step-1-infrastructure.md)
     * [Step 2: Create a Tenant](gcp-user-guide/quick-start/step-2-tenant.md)
