@@ -23,12 +23,13 @@ Supported Services are listed in alphabetical order, following the core services
 
 * [Agent Pool](agent-pool.md)
 * [Databases](databases/)
-* [Docker web application](docker-web-application.md)
+* [Docker Web Application](docker-web-application.md)
 * [Functions](functions.md)
-* [Ingress](../../kubernetes-user-guide/ingress-loadbalancer/aks-ingress.md)
+* [Ingress (Kubernetes)](../../kubernetes-user-guide/ingress-loadbalancer/aks-ingress.md)
 * [Key Vault](key-vault.md)
-* [Serverless Web applications](web-applications.md)
+* [Public IP Address Prefix](public-ip-address-prefix.md)
+* [Serverless Web Applications](web-applications.md)
 * [Service Bus](service-bus.md)
 * [Storage Account](storage-account.md)
-* [Subscriptions](subscription.md)
+* [Subscription](subscription.md)
 * [VM Scale Set](vm-scale-sets.md)s
