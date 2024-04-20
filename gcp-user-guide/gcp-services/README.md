@@ -12,12 +12,23 @@ Using DuploCloud, you can create unlimited Services within each Tenant, using ap
 
 ## Supported Services for DuploCloud GCP
 
-In addition to GKE standard and auto-pilot the following  GCP native services are supported and more added every month.
+In addition to GKE standard and auto-pilot, the following services are supported. Supported Services are listed in alphabetical order.
 
-* [Cloud SQL](cloud-sql.md)
-* [Redis](managed-redis.md)
-* [Cloud Storage](s3-bucket.md)
-* [Cloud Functions](s3-bucket-1.md)
-* [Pub/Sub](s3-bucket-3.md)
-* [Cloud Scheduler](s3-bucket-2.md)
+### Core Services
+
+* [Containers and Services](containers/)
+* [Load Balancers](step-4-create-a-load-balancer.md)
+
+### Additional Services
+
 * [Cloud Armour](cloud-armour.md)
+* [Cloud Credentials](cloud-credentials.md)
+* [Cloud Functions](s3-bucket.md)
+* [Cloud Scheduler](s3-bucket-1.md)
+* [Cloud SQL](cloud-sql.md)
+* [Cloud Storage](s3-bucket-2.md)
+* [Firestore Database](firestore-database.md)
+* [Ingress (Kubernetes)](../../kubernetes-user-guide/ingress-loadbalancer/gke-ingress.md)
+* [Managed Redis](managed-redis.md)
+* [Node Pools](node-pools.md)
+* [Pub/Sub](s3-bucket-3.md)
