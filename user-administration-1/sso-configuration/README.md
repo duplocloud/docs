@@ -6,4 +6,4 @@ description: Configure Single Sign-On for DuploCloud
 
 Use these pages to configure SSO for cloud platforms with custom procedures.
 
-To configure SSO for AWS or GCP, contact DuploCloud for support.
+To configure SSO through GCP, Microsoft Azure, or Okta as an identity provider, contact DuploCloud for support.

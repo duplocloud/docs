@@ -15,7 +15,7 @@ DuploCloud gathers these constructs together in a single application-centric mod
 * **Security group and IAM (a.k.a **_**DuploCloud Tenant**_**)**: Within the same account and same VPC, we can isolate by having separate security groups, IAM roles (Managed Identity in AWS, Service accounts in GCP), encryption keys, etc. A DuploCloud Tenant is similar to an environment. Two Tenants can reside in the same VPC, in different VPCs, or within different VPCs in various accounts.
 
 {% hint style="info" %}
-**A Tenant is similar to a Kubernetes namespace with an extended cloud provider scope**. Most cloud resources directly consumed by applications reside within a Tenant, such as databases, queues, storage, VMs, etc. Some resources are shared, including but not limited to VPC, VMs, Encryption Keys, SSL certs, etc. You can also create resources in one Tenant and allow other Tenants to consume those via [inter-tenant access policies](../../user-administration/access-control/tenant-access/cross-tenant-access.md).  &#x20;
+**A Tenant is similar to a Kubernetes namespace with an extended cloud provider scope**. Most cloud resources directly consumed by applications reside within a Tenant, such as databases, queues, storage, VMs, etc. Some resources are shared, including but not limited to VPC, VMs, Encryption Keys, SSL certs, etc. You can also create resources in one Tenant and allow other Tenants to consume those via [inter-tenant access policies](../../user-administration-1/access-control/tenant-access/cross-tenant-access.md).  &#x20;
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/duplocloud-customer-walkthroughs-diagram.png" alt=""><figcaption><p>DuploCloud Application-centric Deployment Model</p></figcaption></figure>
