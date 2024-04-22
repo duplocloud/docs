@@ -22,5 +22,5 @@ To give a user access to a specific Tenant, navigate the Users page. For a new u
 
 ### How do I create a Google Managed certificate for use with DuploCloud?&#x20;
 
-To create a Google Managed certificate for use with DuploCloud, see the DuploCloud documentation on [creating managed certificates with GCP](create-managed-certificates-with-gcp.md).
+To create a Google Managed certificate for use with DuploCloud, see the DuploCloud documentation on [creating managed certificates with GCP](prerequisites/create-managed-ssl-certificates-for-gcp.md).
 
