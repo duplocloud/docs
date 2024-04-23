@@ -8,6 +8,7 @@ coverY: 0
 ## Q1 2024
 
 * AWS
+  * [Enable automatic AWS ACM (SSL) Certificates](../aws-user-guide/prerequisites/acm-certificate.md#enabling-automatic-aws-acm-certificate-creation) for a Plan.
   * [Configure K8s Ingress redirect ](../aws/aws-services/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](../aws-user-guide/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
   * Enable UltraWarm Data nodes for [OpenSearch domains](../aws-user-guide/aws-services/elasticsearch.md).

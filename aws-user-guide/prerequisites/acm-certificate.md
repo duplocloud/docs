@@ -25,3 +25,15 @@ Once the certificate is issued, add the Amazon Resource Name (ARN) of the certif
 {% hint style="info" %}
 Note that the ARN Certificate must be set for every new Plan created in a DuploCloud Infrastructure.
 {% endhint %}
+
+## Enabling automatic AWS ACM Certificate creation
+
+Configure DuploCloud to automatically generate Amazon Certificate Manager (ACM) Certificates for your Plan's DNS.
+
+1. From the DuploCloud portal, navigate to **Administrator** -> **Systems Settings**.
+2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.
+3. From the **Config Type** list box, select **Flags**.
+4. From the **Key** list box, select **Other**.&#x20;
+5. In the **Key** field that displays, enter `enabledefaultdomaincert`.
+6. In the **Value** list box, select **True**.&#x20;
+7. Click **Submit**.
