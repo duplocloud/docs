@@ -104,7 +104,7 @@ DuploCloud labels the resources and configurations it manages. If independent ch
 
 For resources that DuploCloud does not directly manage, you make the change directly in your cloud provider. For example, if you add additional forwarding rules to a load balancer created through DuploCloud, DuploCloud does not interfere with the new configuration that you created.&#x20;
 
-#### Conflicting Changes to DuploCloud managed resources
+#### Conflicting Changes to DuploCloud-managed resources
 
 For resources that DuploCloud manages, DuploCloud automatically detects the conflicts and either reverts the changes or raises an alert about the inconsistency.
 
@@ -116,11 +116,11 @@ DuploCloud provides flexibility when a feature that is not supported by DuploClo
 
 Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have any cloud expertise to operate it. You simply need to understand the basic constructs in DuploCloud by reading the product documentation.
 
-### Isn't No Code just Click Ops? Everyone says I shouldn't do that.
+### Isn't No Code just Click Ops?&#x20;
 
-"Click Ops" is when engineers create infrastructure resources manually in cloud and other UIs. It's often called a bad practice because there are so many components and configurations that it's easy to make mistakes. You can skip past default settings that aren't secure, copy configuration incorrectly between environments, etc. You need hundreds or thousands of clicks and a lot of DevSecOps knowledge.
+"Click Ops" is when engineers create infrastructure resources manually in cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. You can skip past default settings that aren't secure, copy configuration incorrectly between environments, etc. You need hundreds or thousands of clicks and a lot of DevSecOps knowledge.
 
-DuploCloud manages infrastructure resources for you. You pick application-level functionality like "services" and "load balancers", then DuploCloud creates the complex cloud resources needed to deliver that functionality. It ensures the underlying compute instances, firewall rules, IAM policies, and other components are configured to good practices. You only need a few clicks, and you don't need to know DevSecOps because DuploCloud knows it for you.
+DuploCloud manages infrastructure resources for you. You pick application-level functionality like "services" and "load balancers", then DuploCloud creates the complex cloud resources needed to deliver that functionality. It ensures the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks, and you don't need to know DevSecOps because DuploCloud knows it for you.
 
 Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to make sure you don't.
 
@@ -151,50 +151,6 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 * A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
 * AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count.
 
-### I can't edit the Service Description to update my control plane configuration.
-
-You must make control plane modifications before [enabling central logging](aws-user-guide/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
-
-### How do I SSH into the host?
-
-Under each Host, you can click on Connection Details under the Actions dropdown, which will provide the key file and instructions to SSH.
-
-### My host is Windows, how do I RDP?
-
-Under Host, click on Connection Details under the Actions dropdown, it will provide the password and instructions to RDP.
-
-### How do I get into the container where my code is running?
-
-Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps`  to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID.
-
-### I cannot connect to my service URL, how do I debug?
-
-Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
-
-If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range 10xxx or the same as the container port. Now try connecting to the “HostIP” and DuploMappedHostPort just obtained. If this works as well but the service URL is still failing, contact your enterprise admin or duplolive-support@duplocloud.net.
-
-### What is a rolling upgrade and how do I enable it?
-
-When you update (e.g., change an image or ENV variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start, or the health check URL does not return Http 200 status, DuploCloud will pause the upgrade of the remaining containers. This can typically be remedied by updating the service with a newer image that has a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. [To specify health check, go to the Elastic Load Balancer menu to find the health check URL suffix](#user-content-fn-1)[^1].
-
-### I want to have multiple replicas of my MVC service, how do I make sure that only one of them runs migration?
-
-Enable health check for your service and make sure that the API does not return Http 200 status until migration is done. Since DuploCloud waits for a complete health check on one service before upgrading the next service, only one instance will run migration at a time.
-
-### One or more of my containers are pending. How can I debug?
-
-If the current status is Pending and the desired status is Running, wait a few minutes for the image to finish downloading. If it’s been more than five minutes, check the faults from the button below the table. Ensure that your image name is correct and does not have spaces. Image names are case sensitive, so it should be all lower case, including the image name in DockerHub.
-
-If the current state is Pending when the desired state is Delete, the container is the old version of the service. It is still running because the system is in rolling upgrade and the previous replica is not upgraded yet. Check the faults in other containers of this service for which the Current State is Pending and the desired state is Running.
-
-### Some of my container statuses say “pending delete.” What does this mean?
-
-This means DuploCloud is going to remove these containers. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check is failing and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
-
-### How to create a Host with public IP?
-
-While creating a Hos**t**, click on Show Advanced to display advanced options and select the public subnet from the list of availability zones.
-
 ### Can you delete an application and all its resources with a single click and confirmation?
 
 Yes.
@@ -206,6 +162,68 @@ Yes. Every element in the DuploCloud UI is populated by calling an API.
 ### Does DuploCloud make any assumptions that we should be aware of that may impact initial implementation time?
 
 No. DuploCloud segregates resources into environments called Tenants that accelerate ramp-up time. For more information about implementation,[ contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).&#x20;
+
+## Connectivity and Availability FAQs
+
+### I can't edit the Service Description to update my control plane configuration.
+
+You must make control plane modifications before [enabling central logging](aws-user-guide/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
+
+### How to create a Host with public IP?
+
+While creating a Host, click on Show Advanced to display advanced options and select the public subnet from the list of availability zones.
+
+### How do I SSH into the host?
+
+Under each Host, you can click on Connection Details under the Actions dropdown, which will provide the key file and instructions to SSH.
+
+### My host is Windows, how do I use RDP (Remote Desktop Protocol)?
+
+Under Host, click on Connection Details under the Actions dropdown, it will provide the password and instructions to connect to RDP.
+
+### How do I get into the container where my code is running?
+
+Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps`  to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID.
+
+### I cannot connect to my service URL, how do I debug?
+
+Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
+
+If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range 10xxx or the same as the container port. Now try connecting to the “HostIP” and DuploMappedHostPort just obtained. If this works as well but the service URL is still failing, contact your enterprise admin or duplolive-support@duplocloud.net.
+
+## Kubernetes FAQs
+
+### Is Kubernetes required to use DuploCloud? Is using Kubernetes better than using ECS?
+
+No, Kubernetes is not required. DuploCloud supports both AWS ECS and Kubernetes, among other Cloud solutions.&#x20;
+
+The main advantage of Kubernetes is its broad-based, highly-customizable, third-party open-source community that champions and supports it as a delivery platform. For example, Astronomer (managed air flow), Time series database, IsTio Service Mesh, and Kong API Gateway all expect you to have a Kubernetes deployment. But if your business needs and use cases are met with an AWS solution, for example, you may not need Kubernetes.
+
+Choose the container management software that best satisfies your use cases and the complexity level of your requirements. DuploCloud supports AWS, Kubernetes, Azure, and GCP. Many customers use software from multiple vendors to create robust business solutions backed by DuploCloud's assurance of compliance and automated low-code/no-code DevOps approach.
+
+## Upgrade FAQs
+
+### What is a rolling upgrade and how do I enable it?
+
+When you update (e.g., change an image or ENV variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start, or the health check URL does not return Http 200 status, DuploCloud will pause the upgrade of the remaining containers. This can typically be remedied by updating the service with a newer image that has a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. [To specify health check, go to the Elastic Load Balancer menu to find the health check URL suffix](#user-content-fn-1)[^1].
+
+## Kubernetes FAQs
+
+### I want to have multiple replicas of my MVC (Model-View-Controller) service. How do I make sure that only one of them runs migration?
+
+Enable Health Check for your service and make sure that the API does not return Http 200 status until migration is done. Since DuploCloud waits for a complete Health Check on one service before upgrading the next service, only one instance will run migration at a time.
+
+## Container/Docker FAQs
+
+### One or more of my containers are pending. How can I debug?
+
+If the current status is Pending and the desired status is Running, wait a few minutes for the image to finish downloading. If it’s been more than five minutes, check the faults from the button below the table. Ensure that your image name is correct and does not have spaces. Image names are case sensitive, so it should be all lower case, including the image name in DockerHub.
+
+If the current state is Pending when the desired state is Delete, the container is the old version of the service. It is still running because the system is in rolling upgrade and the previous replica is not upgraded yet. Check the faults in other containers of this service for which the Current State is Pending and the desired state is Running.
+
+### Some of my container statuses say “pending delete.” What does this mean?
+
+This means DuploCloud is going to remove these containers. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check is failing and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
 
 ## Error Messages
 
@@ -254,7 +272,7 @@ In both production and critical non-production environments, the cloud services 
 
 CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool, as well.
 
-## Diagnostic Tool FAQ
+## Diagnostic Tool FAQs
 
 ### How do I use Datadog and other diagnostics tools?
 
