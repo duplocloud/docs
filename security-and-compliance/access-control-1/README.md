@@ -1,5 +1,12 @@
+---
+description: Encryption support in DuploCloud
+---
+
 # Encryption
 
-Encryption falls in two categories one is at rest and other is at transit &#x20;
+Encryption falls into two categories:&#x20;
+
+* [At Rest](at-rest-encryption.md)
+* [In Transit](in-transit-encryption.md)
 
 &#x20; &#x20;
