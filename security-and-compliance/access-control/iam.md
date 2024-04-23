@@ -1,9 +1,13 @@
+---
+description: The DuploCloud Tenant as an IAM boundary
+---
+
 # IAM
 
-Access to many PAAS services by cloud providers are not network policy based but based on the provider's IAM framework. For example in AWS it is IAM polcies, in Azure its via managed identities and in GCP it is via service accounts. Similarly in a Kubernetes cluster it is via service accounts.
+Access to PaaS services by cloud providers is not network policy-based but based on the provider's IAM framework. For example, AWS uses IAM policies, Azure uses managed identities and GCP uses service accounts. Similarly, in a Kubernetes cluster,  service accounts are used.
 
-DuploCloud tenant is an IAM boundry. Any PAAS resource within a tenant is automatically accessed by any compute workload via IAM. For example:
+DuploCloud Tenant is an IAM boundary. Any PaaS resource within a Tenant is automatically accessed by the compute workload using IAM. For example:
 
-* In AWS each tenant is an IAM role and compute like VM, Lambda functions, EMR, Airflow JOBs etc are given the IAM role which in turn is configured to have access to all PAAs services in that tenant like  S3 buckets, DynamoDB tables, secrets manager, SSM parameter, SQS queues etc.
-* In Azure each tenant is a managed identity and compute like VM, Functions etc are attached with this managed identity which in turn is configured to have access all PAAS services in that tenant like Azure storage, Keyvault etc.&#x20;
-* In GCP each tenant is a service account and compute like VM, functions etc are attached to this service account  which in turn is configured to have access all PAAS services in that tenant like cloud storage, pubsub etc.
+* In AWS, each Tenant is an IAM role and computing resource, as VMs, Lambda functions, EMR, Airflow Jobs, etc are given the IAM role which in turn is configured to have access to all PAAs services in that Tenant like  S3 buckets, DynamoDB tables, secrets manager, SSM parameter, SQS queues etc.
+* In Azure, each Tenant is a managed identity and computing resource, as VMs, Lambda functions, etc are attached to this managed identity which in turn is configured to have access to all PaaS services in that Tenant like Azure storage, Keyvault, etc.&#x20;
+* In GCP, each Tenant is a service account and computing resource, as VMs, functions, etc are attached to this service account which in turn is configured to have access to all PaaS services in that Tenant like cloud storage, Pub/Sub, etc.
