@@ -84,13 +84,17 @@ If DuploCloud is down, it's similar to having an unavailable DevOps engineer. If
 
 Absolutely! In fact, more than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates, etc.
 
-The DuploCloud team acts as your extended DevOps team, assisting with white glove environment setup and daily operations with 24x7 Slack and/or email support. We cover what is supported in the DuploCloud platform, as well as assist with your cloud provider's requirements.&#x20;
+The DuploCloud team acts as your extended DevOps team, assisting with white glove environment setup and daily operations with 24x7 Slack and/or email support. We cover what is supported in the DuploCloudplatform, as well as assist with your cloud provider's requirements.
 
-After the initial onboarding of the platform, we recommend that you engage the DuploCloud team as your second line of defense by setting up an internal triage process of your own. We can assist you in setting up this process.&#x20;
+After the initial onboarding of the platform, we recommend that you engage the DuploCloud team as your second line of defense by setting up an internal triage process of your own. We can assist you in setting up this process.
 
 {% hint style="info" %}
 DuploCloud is your extended DevOps team! We are available 24x7 on your Slack channel, by phone, and by email.
 {% endhint %}
+
+### Integrating DuploCloud with Jira
+
+To enhance your project management capabilities, DuploCloud can be integrated with Jira. Follow the specific configuration steps outlined in the DuploCloud documentation or user guide to connect DuploCloud with your Jira account, ensuring a seamless integration that allows for efficient tracking and management of your projects directly from DuploCloud.
 
 ### Can I make changes directly in the cloud account managed by DuploCloud?
 
@@ -102,7 +106,7 @@ DuploCloud labels the resources and configurations it manages. If independent ch
 
 #### Non-conflicting changes to DuploCloud managed resources
 
-For resources that DuploCloud does not directly manage, you make the change directly in your cloud provider. For example, if you add additional forwarding rules to a load balancer created through DuploCloud, DuploCloud does not interfere with the new configuration that you created.&#x20;
+For resources that DuploCloud does not directly manage, you make the change directly in your cloud provider. For example, if you add additional forwarding rules to a load balancer created through DuploCloud, DuploCloud does not interfere with the new configuration that you created.
 
 #### Conflicting Changes to DuploCloud-managed resources
 
@@ -116,7 +120,7 @@ DuploCloud provides flexibility when a feature that is not supported by DuploClo
 
 Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have any cloud expertise to operate it. You simply need to understand the basic constructs in DuploCloud by reading the product documentation.
 
-### Isn't No Code just Click Ops?&#x20;
+### Isn't No Code just Click Ops?
 
 "Click Ops" is when engineers create infrastructure resources manually in cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. You can skip past default settings that aren't secure, copy configuration incorrectly between environments, etc. You need hundreds or thousands of clicks and a lot of DevSecOps knowledge.
 
