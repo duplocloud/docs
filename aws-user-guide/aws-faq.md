@@ -6,9 +6,13 @@ description: Popular and frequently asked questions about DuploCloud and AWS
 
 ## General FAQs
 
+### What is AWS?
+
+AWS, or Amazon Web Services, is a comprehensive cloud computing platform provided by Amazon. It offers a broad array of services including computing power, storage options, and networking capabilities, enabling businesses to scale and grow by leveraging cloud technology without the need for physical hardware.
+
 ### AWS Copilot seems to be a low-code, developer-friendly tool that uses existing AWS tools for monitoring. Can AWS Copilot be used with/instead of DuploCloud?
 
-AWS Copilot is used only for ECS cluster management, which is just a small subset of overall Cloud operations. In the chart below, you can see that DuploCloud includes container management in addition to multiple other functions. You can still use Copilot with DuploCloud for ECS management. Other clients have used tools like Harness or Helm with DuploCloud for Kubernetes management.
+AWS Copilot is specifically designed for ECS cluster management, representing just a fraction of the broader cloud operations landscape. DuploCloud encompasses container management among a suite of other functionalities, allowing for the use of Copilot for ECS management within its ecosystem. Additionally, DuploCloud users have integrated other tools like Harness or Helm for Kubernetes management, showcasing the platform's versatility.
 
 <div align="left">
 
@@ -18,73 +22,60 @@ AWS Copilot is used only for ECS cluster management, which is just a small subse
 
 ### What keys should I use in my application to connect to the AWS resources I have created in DuploCloud (S3, Dynamo, SQS)? <a href="#id-4-toc-title" id="id-4-toc-title"></a>
 
-If your application is running in a DuploCloud [Tenant](../getting-started/application-focussed-interface/tenant/) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access.   &#x20;
-
-Use the AWS constructor that takes only the region as the argument (`us-west-2`). DuploCloud setup links your instance profile and the resources. The host in DuploCloud already has access to the resources within the same tenant\project. DuploCloud AWS resources are reachable only from DuploCloud Hosts on the same account.
+For applications running within a DuploCloud Tenant, long-term credentials like AWS access keys are unnecessary. DuploCloud automates the linkage between your instance profile and AWS resources, ensuring secure access. It's important to note that DuploCloud AWS resources are accessible exclusively from DuploCloud Hosts within the same account, prohibiting direct connections from local machines.
 
 {% hint style="info" %}
-**IMPORTANT:** You cannot connect to any DuploCloud AWS resource from your local machine.
+**IMPORTANT:** Direct connection to DuploCloud AWS resources from local machines is not supported.
 {% endhint %}
 
 ## Security and Compliance FAQs
 
 ### With DuploCloud, will we be more secure and compliant out-of-the-box, as opposed to using a default AWS configuration?
 
-Yes. This is a major advantage of using DuploCloud. All controls are mapped to various compliance standards. DuploCloud is also very flexible in enabling you to add custom policies (resource quotas, ability to create public-facing endpoints, etc.).
+DuploCloud significantly enhances security and compliance by default, offering a comprehensive mapping of controls to various standards. It also provides the flexibility to implement custom policies, ensuring a tailored security posture that meets specific organizational needs.
 
 ## CI/CD FAQs
 
 ### Do I need an AWS access key for my application when using AWS?
 
-CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the [CI/CD](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/\~/changes/r966TcV3ISnUcfuJxUa3/ci-cd/continuous-integration-and-deployment-ci-cd) section. DuploCloud offers its own CI/CD tool ([KatKit](../ci-cd/katkit/)), as well.
-
-If your application is running in a DuploCloud [Tenant](../getting-started/application-focussed-interface/tenant/) you do not need a long-term credential, such as an AWS access key. After your application is running in the Tenant, test your connection using the AWS CLI to verify access. For more information, see the [AWS FAQ](aws-faq.md).  &#x20;
+In the context of CI/CD, DuploCloud serves as a deployment and monitoring solution that integrates seamlessly with your CI/CD pipelines. This eliminates the need for AWS access keys for applications running within a DuploCloud Tenant, streamlining the deployment process. DuploCloud's integration capabilities are further highlighted in its own CI/CD tool, KatKit, and its compatibility with popular tools like CircleCI, Jenkins, and GitHub Actions.
 
 ## Kubernetes FAQs
 
 ### How do I look at detailed Load Balancer settings for my K8s Service?
 
-DuploCloud provisions a Load Balancer for your K8 service. If you want to look at detailed settings on the Load Balancer like Idle timeout, Access logs, and others, you can find and view them directly in AWS, by following the below steps:
-
-You can find the Load Balancer name for your service by navigating to **Kubernetes** _->_ **Services**, selecting your Service from the list, and looking at the Load Balancer tab. If you're using K8s Ingress then you will have to go to the K8s Ingress tab and find the Load Balancer configuration there.
-
-Once you have the Load Balancer name, you can go to the AWS Console via the DuploCloud UI ([here](use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your Load Balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes).
+DuploCloud simplifies the management of Load Balancers for Kubernetes services, providing a direct pathway to detailed settings such as Idle timeout and Access logs. This is achieved through the DuploCloud UI, which facilitates access to the AWS Console for in-depth configuration and monitoring.
 
 ## Terraform FAQs
 
 ### Why use Terraform when Cloud Formation is AWS native?
 
-Many customers prefer Terraform to CloudFormation. Many elements in the Cloud DevOps cycle can be non-AWS (such as native Kubernetes, MongoDB, Data Dog, Okta, etc.), and all support Terraform providers.
+Terraform's broad compatibility with both AWS and non-AWS services, including Kubernetes, MongoDB, and Data Dog, makes it a preferred choice for many organizations. This flexibility supports a diverse and integrated DevOps ecosystem beyond the AWS-native CloudFormation.
 
 ## Performance FAQs
 
 ### Is the Duplocloud instance a single point of failure, and if so, to what extent? Who manages this instance?
 
-No. DuploCloud achieves High Availability (HA) using cluster management. And because you own your AWS account, your data is always secure in AWS.&#x20;
-
-Our customers have never been blocked from performing urgent configuration updates because DuploCloud is unavailable. If DuploCloud is down, it is similar to your DevOps engineer being unavailable. In this case, someone else can take their place by directly configuring AWS.&#x20;
-
-Our customers consider this single-platform approach very beneficial for both centralizing operations and maximizing developer access. DuploCloud runs in a VM in your account. We manage this VM with your permission, and we can also give you simple steps to troubleshoot or install new updates. We are available 24x7 and work as your extended DevOps team.
+DuploCloud's architecture ensures High Availability (HA) through effective cluster management, mitigating the risk of a single point of failure. The platform operates within your AWS account, with DuploCloud providing 24x7 support and management, ensuring both operational continuity and security of your data.
 
 ### Is scaling handled differently from ECS, where you set thresholds and min/max instances to spin up/down?
 
-No. DuploCloud manages scale in the same way. We expose these thresholds in a simple form that is much easier to configure, even for a user with no DevOps experience. Behind the scenes, DuploCloud maps to the same native AWS constructs.
+Scaling within DuploCloud mirrors the native AWS approach, offering an intuitive interface for configuring thresholds and scaling policies. This simplifies the scaling process, making it accessible even to users with limited DevOps expertise, while still leveraging AWS's robust scaling capabilities.
 
-## Relational Database Service (RDS) FAQS&#x20;
+## Relational Database Service (RDS) FAQS
 
 ### Is attaching an RDS instance to each application for spin-up/down purposes expensive? Some of our RDS instances are small.
 
-Small instances are generally no problem. DuploCloud can manage dynamic database spin-up/down with a single RDS database. Sharing AWS services in dynamic environments also helps reduce costs.
+DuploCloud efficiently manages RDS instances, accommodating dynamic database requirements without significant cost implications, even for smaller instances. This approach facilitates cost-effective sharing of AWS services across dynamic environments.
 
 ### Can an RDS be left intact if I only want to destroy the application and not the database?
 
-Yes.
+Yes, DuploCloud allows for the selective retention of RDS instances independent of application lifecycle, providing flexibility in resource management.
 
 ### Can I upgrade RDS versions?
 
-Yes. Use [AWS Console](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_UpgradeDBInstance.Upgrading.html) and see your Cloud Provider for compatibility requirements. Note that while versions 5.7.40, 5.7.41, and 5.7.42 cannot be upgraded to version 8.0.28, you can upgrade these versions to version 8.0.32 and higher.&#x20;
+Upgrading RDS versions is supported through the AWS Console, with DuploCloud facilitating easy access to this functionality. It's important to consult AWS documentation for specific version compatibility and upgrade paths.
 
-### Our current RDS logs are sent to CloudWatch. Does DuploCloud support this?&#x20;
+### Our current RDS logs are sent to CloudWatch. Does DuploCloud support this?
 
-Yes.
-
+Yes, DuploCloud supports the integration of RDS logs with CloudWatch, ensuring comprehensive monitoring and logging capabilities.
