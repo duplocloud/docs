@@ -130,7 +130,8 @@ The answer depends on the following key factors:
 
 #### How much Developer self-service do you require?
 
-Especially in a rapid-growth company environment, where architecture is constantly evolving and services are being constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases where there is an established operations organization, with centralized requirements, then a low-code Terraform solution may be a better option.
+Especially in a rapid-growth company environment, where architecture is constantly evolving and services are being constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases where there is an established operations organization, with centralized requirements, then a low-code Terraform solution may be a bet
+ter option.
 
 Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate at the same time, even if they are dealing with completely independent constructs.
 
@@ -187,7 +188,12 @@ Under the Services Status tab, find the host where the container is running. SSH
 
 ### I cannot connect to my service URL, how do I debug?
 
-Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
+Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside 
+
+### Enabling MFA on OpenVPN for Enhanced Security
+
+To bolster security with Multi-Factor Authentication (MFA) for OpenVPN access, users can follow a straightforward setup process. Initially, users must log into Duplo, navigate to their user profile at the top right corner, and select the VPN URL to enter their credentials. Upon the first login, a barcode will be displayed for scanning, registering the device for MFA. After downloading and adding the profile to OpenVPN Connect, subsequent logins will prompt for an authentication code, ensuring an added layer of security.
+the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
 
 If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range 10xxx or the same as the container port. Now try connecting to the “HostIP” and DuploMappedHostPort just obtained. If this works as well but the service URL is still failing, contact your enterprise admin or duplolive-support@duplocloud.net.
 
