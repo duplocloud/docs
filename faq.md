@@ -163,6 +163,10 @@ Yes. Every element in the DuploCloud UI is populated by calling an API.
 
 No. DuploCloud segregates resources into environments called Tenants that accelerate ramp-up time. For more information about implementation,[ contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).&#x20;
 
+### Custom S3 Bucket Naming
+
+DuploCloud supports the creation of S3 buckets with custom prefixes, enabling unique bucket names without the default numeric suffix. This feature can be activated by configuring a specific setting in the system, allowing for more personalized and easily identifiable bucket names that comply with S3's uniqueness requirements.
+
 ## Connectivity and Availability FAQs
 
 ### I can't edit the Service Description to update my control plane configuration.
@@ -187,7 +191,7 @@ Under the Services Status tab, find the host where the container is running. SSH
 
 ### I cannot connect to my service URL, how do I debug?
 
-Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
+Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From insidethe container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
 
 If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range 10xxx or the same as the container port. Now try connecting to the “HostIP” and DuploMappedHostPort just obtained. If this works as well but the service URL is still failing, contact your enterprise admin or duplolive-support@duplocloud.net.
 
