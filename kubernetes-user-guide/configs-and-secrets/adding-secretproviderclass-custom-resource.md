@@ -6,7 +6,7 @@ This capability allows Kubernetes to mount secrets stored in external secrets st
 
 ### Step 1: Enable Secret Provider Class
 
-As a pre-requisite, Administrator needs to set the Infrastructure setting for `Enable Secrets CSI Driver` as `True`**.** This setting is available by navigating to **Administrator** -> **Infrastructure**, selecting your Infrastructure, and clicking **Settings**).
+As a pre-requisite, Administrator needs to set the Infrastructure setting for `Enable Secrets CSI Driver` as `True`. This setting is available by navigating to **Administrator** -> **Infrastructure**, selecting your Infrastructure, and clicking **Settings**).
 
 ### Step 2: Create K8s Secret Provider Class
 
@@ -22,11 +22,11 @@ The following is an example SecretProviderClass configuration where AWS secrets 
 
 ### **Step 3:** Mount Volumes based on the configured secrets
 
-To ensure your application is using the Secrets Store CSI driver, you need to configure your deployment to use the  reference of the `SecretProviderClass` resource created in the previous step.
+To ensure your application is using the Secrets Store CSI driver, you need to configure your deployment to use the reference of the `SecretProviderClass` resource created in the previous step.
 
-The following is an example of how to configure a pod to mount a volume based on the SecretProviderClass created in prior steps to retrieve secrets from Secrets Manager.
+It's important to note that SPC timeouts can occur due to issues related to Secret Auto Rotation, which is enabled by default. This feature checks every two minutes if the secrets need to be updated from the values in AWS Secrets Manager. During a service deployment, if a secret is deleted due to a redeployment while a rotation check is attempted, it can lead to timeouts. This deletion happens because the secret is generated from the volume mount in the service pod, and when the pod is destroyed, the secret is also destroyed.
 
-While creating **Service** (**Kubernetes** -> **Service**),&#x20;
+While creating **Service** (**Kubernetes** -> **Service**),
 
 {% hint style="info" %}
 Select **Cloud Credentials** value as `From Kubernetes`
@@ -71,8 +71,6 @@ You can use the optional secretObjects field to define the desired state of your
 
 Referring to the example which we are following from prior steps, we have defined `SecretObjects` in **Secret Object** field (K8s Secret Provider Class).
 
-&#x20;The following is an example SecretProviderClass custom resource that will sync a secret from AWS Secrets Manager to a Kubernetes secret:
-
 <div align="left">
 
 <img src="../../.gitbook/assets/image (37) (2).png" alt="K8s Secret Provider Class Page">
@@ -113,3 +111,4 @@ Refer following example. Specify below in **Environment Variables** field
 ```
 {% endcode %}
 
+This integration of secrets into Kubernetes deployments, while powerful, requires careful management to avoid issues such as SPC timeouts. Understanding the underlying mechanisms, such as Secret Auto Rotation and the lifecycle of secrets in pod deployments, is crucial for smooth operations.
