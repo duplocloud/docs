@@ -201,17 +201,21 @@ The main advantage of Kubernetes is its broad-based, highly-customizable, third-
 
 Choose the container management software that best satisfies your use cases and the complexity level of your requirements. DuploCloud supports AWS, Kubernetes, Azure, and GCP. Many customers use software from multiple vendors to create robust business solutions backed by DuploCloud's assurance of compliance and automated low-code/no-code DevOps approach.
 
-## Upgrade FAQs
+DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. Additionally, DuploCloud's built-in monitoring feature displays resource utilization by tenant or container, simplifying the tracking of usage and offering a cost-effective alternative to solutions like Datadog.
 
 ### What is a rolling upgrade and how do I enable it?
 
 When you update (e.g., change an image or ENV variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start, or the health check URL does not return Http 200 status, DuploCloud will pause the upgrade of the remaining containers. This can typically be remedied by updating the service with a newer image that has a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. [To specify health check, go to the Elastic Load Balancer menu to find the health check URL suffix](#user-content-fn-1)[^1].
+
+DuploCloud automates the management of AWS IAM roles, streamlining the access control for services within a tenant and facilitating AWS-integrated tasks without code modifications. This includes a 'duplomaster' role for administrative tasks in the AWS console, enhancing security and operational efficiency.
 
 ## Kubernetes FAQs
 
 ### I want to have multiple replicas of my MVC (Model-View-Controller) service. How do I make sure that only one of them runs migration?
 
 Enable Health Check for your service and make sure that the API does not return Http 200 status until migration is done. Since DuploCloud waits for a complete Health Check on one service before upgrading the next service, only one instance will run migration at a time.
+
+DuploCloud's approach to container deployment emphasizes applications being self-contained and fungible, which facilitates independent updates of each service. Kubernetes automatically manages failing containers, with DuploCloud supporting the use of Health Checks, including Liveness and Readiness Probes, to ensure containers are functioning correctly and are ready to receive work.
 
 ## Container/Docker FAQs
 
@@ -223,7 +227,7 @@ If the current state is Pending when the desired state is Delete, the container 
 
 ### Some of my container statuses say “pending delete.” What does this mean?
 
-This means DuploCloud is going to remove these containers. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check is failing and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
+This means DuploCloud is going to remove these containers. DuploCloud also supports the creation of on-demand testing environments, facilitating quick setup and teardown of environments with different configurations through the console or Terraform. This capability is crucial for testing and development workflows, ensuring flexibility and efficiency in managing containerized applications.s. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check is failing and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
 
 ## Error Messages
 
