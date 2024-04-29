@@ -38,14 +38,12 @@ You can configure the [Tenant ](../use-cases/tenant-environment/#2-toc-title)to 
 5. From the **Select Tenant Feature** list box, select **Default: Enable bucket versioning for new S3 buckets**.
 6.  Select **Enable.**\
 
-
     <div align="left">
 
     <figure><img src="../../.gitbook/assets/add tenant feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane filled to enable bucket versioning for this Tenant.<br></p></figcaption></figure>
 
     </div>
 7.  Click **Add**. Bucket versioning will be enabled by default on the **Create an S3 Bucket** pane when [creating a new S3 bucket](s3-bucket.md#creating-an-s3-bucket).\
-
 
     <div align="left">
 
@@ -58,6 +56,8 @@ With this setting configured, all new S3 buckets in the Tenant will automaticall
 {% endhint %}
 
 ## Setting S3 bucket permissions and policies
+
+To update a bucket defined in duplo-terraform for SES, you may need to manage your own bucket policies if Duplo overwrites the custom policy. This can be done by setting `managed_policies ignore` in the DuploCloud Terraform provider or selecting "Ignore bucket policies" in the console. For SES-specific buckets not managed by Duplo, managing the bucket independently is advisable. Note that Duplo's default bucket policy enforces encryption, which complements SES's automatic encryption for incoming emails.
 
 You can set specific AWS S3 bucket [permissions and policies](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html#about-access-permissions-create-bucket) using the DuploCloud Portal. Permissions for virtual machines, Lambda functions, and containers are provisioned automatically through Instance profiles, so no access key is required in your application code. However, when coding your application, be aware of these guidelines:
 
@@ -75,30 +75,19 @@ Set S3 Bucket permissions in the DuploCloud Portal:
 7. Select an available **Bucket Policy: Require SSL/HTTPS** or **Allow Public Read**. To select the **Allow Public Read** policy, you must select the **Allow Public Access** permission. To ignore all bucket policies for the bucket, select **Ignore Bucket Policies**.
 8. Click **Save**. In the **Details** tab, your changed permissions are displayed.
 
-Use this table to map the permission and policies options above with the YAML key/value pair.&#x20;
-
-| Edit a S3 Bucket Option    | Key                         | Value        |
-| -------------------------- | --------------------------- | ------------ |
-| **Allow Public Access**    | `duplo-allow-public-access` | `true`       |
-| **Enable Access Logs**     | `duplo-enable-access-logs`  | `true`       |
-| **Enable Versioning**      | `enable-versioning`         | `true`       |
-| **Require SSL / HTTPS**    | `duplo-policy`              | `ssl`        |
-| **Allow Public Read**      | `duplo-policy`              | `publicread` |
-| **Ignore Bucket Policies** | `duplo-policy`              | `ignore`     |
-
 {% hint style="info" %}
 From the **S3 Bucket** page, you can set bucket permissions directly in the AWS Console by clicking the **>\_Console** icon. You have permission to configure the bucket within the AWS Console session, but no access or security-level permissions are available.
 {% endhint %}
 
 ## Add a custom prefix for S3 buckets
 
-DuploCloud provides the capability to specify a custom prefix for S3.
+DuploCloud provides the capability to specify a custom prefix for S3 buckets. Before adding custom prefixes, ensure to contact DuploCloud Support to enable AWS resource management using tags. This setting allows for more granular control over S3 bucket naming conventions, aiding in better organization and management of resources.
 
 {% hint style="warning" %}
 **IMPORTANT:** Before you add custom prefixes for S3 buckets, contact the DuploCloud Support Team and ask them to set the `ENABLEAWSRESOURCEMGMTUSINGTAGS` property to`True` in the DuploCloud System. After this property is set, use this procedure to add custom prefixes.
 {% endhint %}
 
-1. IMPORTATIn the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
 3. Click **Add**. The **Add Config** pane displays.
 4. From the **Config Type** list box, select **AppConfig**.
