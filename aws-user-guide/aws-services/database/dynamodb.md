@@ -12,8 +12,7 @@ When you write application code for DynamoDB in DuploCloud AWS, use the IAM role
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database.**
 2. Click the **DynamoDB** tab.
-3.  Click **Add**. The **Create a DynamoDB Table** pane displays.\
-
+3. Click **Add**. The **Create a DynamoDB Table** pane displays.
 
     <div align="left">
 
@@ -21,10 +20,17 @@ When you write application code for DynamoDB in DuploCloud AWS, use the IAM role
 
     </div>
 
-
 4. Specify the **DynamoDB Table Name** and other required fields, including **Primary Key**, **Key Type**, **Attribute Type**, **Sort Key**, and **Sort Key Type**.
-5. Click **Create**.&#x20;
+5. Click **Create**.
+
+For detailed guidance on configuring `duplocloud_aws_dynamodb_table`, refer to the [official documentation](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/resources/aws_dynamodb_table). This resource allows for the creation and management of AWS DynamoDB tables within DuploCloud.
 
 {% hint style="info" %}
-Perform additional configuration, as needed, in the [AWS Console](../../use-cases/using-aws-console.md) by clicking the **Console**      ( **>\_** ) icon. In the AWS console, you have permission to configure application-specific details of DynamoDB database tables. However, no access or security-level permissions are provided.
+Perform additional configuration, as needed, in the [AWS Console](../../use-cases/using-aws-console.md) by clicking the **Console** ( **>\_** ) icon. In the AWS console, you have permission to configure application-specific details of DynamoDB database tables. However, no access or security-level permissions are provided.
+{% endhint %}
+
+After creating a DynamoDB table, you can retrieve the final name of the table using the `.fullname` attribute, which is available in the read-only section of the documentation. This feature is particularly useful for applications that need to dynamically access table names post-creation.
+
+{% hint style="info" %}
+If you encounter any issues or need further assistance, please refer to the documentation or contact support.
 {% endhint %}
