@@ -187,7 +187,11 @@ Under the Services Status tab, find the host where the container is running. SSH
 
 ### I cannot connect to my service URL, how do I debug?
 
-Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
+Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside 
+
+### Enabling MFA on OpenVPN
+
+For enhanced security, users can set up Multi-Factor Authentication (MFA) for OpenVPN access. This process involves logging into Duplo, navigating to the user profile, and following the VPN URL to enter credentials. Upon first login, a barcode will be displayed for device registration. After downloading and adding the profile to OpenVPN Connect, MFA will be required for subsequent logins, ensuring an additional layer of security for VPN access.the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
 
 If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range 10xxx or the same as the container port. Now try connecting to the “HostIP” and DuploMappedHostPort just obtained. If this works as well but the service URL is still failing, contact your enterprise admin or duplolive-support@duplocloud.net.
 
