@@ -207,6 +207,10 @@ Choose the container management software that best satisfies your use cases and 
 
 When you update (e.g., change an image or ENV variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start, or the health check URL does not return Http 200 status, DuploCloud will pause the upgrade of the remaining containers. This can typically be remedied by updating the service with a newer image that has a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. [To specify health check, go to the Elastic Load Balancer menu to find the health check URL suffix](#user-content-fn-1)[^1].
 
+## Enabling MFA on OpenVPN
+
+For enhanced security, DuploCloud users can set up Multi-Factor Authentication (MFA) for OpenVPN. This process involves logging into Duplo, navigating to the user profile, and following the VPN URL to enter credentials. Upon the first login, a barcode will be displayed for scanning to register the device for MFA. After downloading and adding the profile to OpenVPN Connect, users will be prompted for an authentication code on subsequent logins, ensuring an additional layer of security for VPN access.
+
 ## Kubernetes FAQs
 
 ### I want to have multiple replicas of my MVC (Model-View-Controller) service. How do I make sure that only one of them runs migration?
@@ -223,7 +227,7 @@ If the current state is Pending when the desired state is Delete, the container 
 
 ### Some of my container statuses say “pending delete.” What does this mean?
 
-This means DuploCloud is going to remove these containers. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check is failing and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
+This means DuploCloud is going to remove these containers, indicating a system update or service upgrade process is in progress. This status often appears during rolling upgrades, where DuploCloud systematically replaces old container versions with new ones to ensure service continuity and minimal downtime.s. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check is failing and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
 
 ## Error Messages
 
