@@ -223,7 +223,8 @@ If the current state is Pending when the desired state is Delete, the container 
 
 ### Some of my container statuses say “pending delete.” What does this mean?
 
-This means DuploCloud is going to remove these containers. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check is failing and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
+This means DuploCloud is going to remove these container
+s. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check is failing and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
 
 ## Error Messages
 
@@ -244,13 +245,13 @@ Two possible reasons for receiving this fault message are:
 
 ### I'm not seeing logs displayed for a Tenant. I get the error `Docker native collection agent Filebeat is not running for Tenant`.
 
-Ensure that [logging is set up](aws-user-guide/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.&#x20;
+Ensure that [logging is set up](aws-user-guide/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information. If logs are still not appearing in the DuploCloud console and Filebeat indicates a `temporary bulk send failure`, it may be due to Elasticsearch running out of disk space. Check the disk space on the diagnostics history in the default tenant. If necessary, follow the steps to recognize and expand the volume on Linux as outlined in the AWS documentation to resolve this issue.
 
 ## Terraform FAQs
 
 ### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
 
-No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
+No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
 
 ### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
 
@@ -270,7 +271,8 @@ In both production and critical non-production environments, the cloud services 
 
 ### How does CI/CD work with DuploCloud?
 
-CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool, as well.
+CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution that is invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Act
+ions, etc. You build images and push them to container registries without involving DuploCloud, but invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool, as well.
 
 ## Diagnostic Tool FAQs
 
