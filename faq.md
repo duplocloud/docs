@@ -205,17 +205,15 @@ The main advantage of Kubernetes is its broad-based, highly-customizable, third-
 
 Choose the container management software that best satisfies your use cases and the complexity level of your requirements. DuploCloud supports AWS, Kubernetes, Azure, and GCP. Many customers use software from multiple vendors to create robust business solutions backed by DuploCloud's assurance of compliance and automated low-code/no-code DevOps approach.
 
+### I want to have multiple replicas of my MVC (Model-View-Controller) service. How do I make sure that only one of them runs migration?
+
+Enable Health Check for your service and make sure that the API does not return Http 200 status until migration is done. Since DuploCloud waits for a complete Health Check on one service before upgrading the next service, only one instance will run migration at a time.
+
 ## Upgrade FAQs
 
 ### What is a rolling upgrade and how do I enable it?
 
 When you update (e.g., change an image or ENV variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start, or the health check URL does not return Http 200 status, DuploCloud will pause the upgrade of the remaining containers. This can typically be remedied by updating the service with a newer image that has a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. To specify health check, go to the Elastic Load Balancer menu to find the health check URL suffix.
-
-## Kubernetes FAQs
-
-### I want to have multiple replicas of my MVC (Model-View-Controller) service. How do I make sure that only one of them runs migration?
-
-Enable Health Check for your service and make sure that the API does not return Http 200 status until migration is done. Since DuploCloud waits for a complete Health Check on one service before upgrading the next service, only one instance will run migration at a time.
 
 ## Container/Docker FAQs
 
@@ -269,6 +267,12 @@ DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provi
 You should create a separation between your developers and your DevOps team. Allowing developers to use the Web UI in non-production development environments, to quickly iterate product changes, can create an inconsistency.
 
 In both production and critical non-production environments, the cloud services setup, as well as first-time application deployment, can be done via Terraform code. CI/CD workflows can be built that only update the application (Docker and Lambda) deployments. Any cloud service level change should be done by the DevOps team via Terraform and developers should ask the DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
+
+## Security and Compliance FAQs
+
+### How can I set up Multi-Factor Authentication (MFA) for OpenVPN authentication?
+
+From the DuploCloud portal, click on your name in the top right corner and select Profile. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the profile, and add it to the OpenVPN Connect. The next time you log in with OpenVPN, you will be prompted to enter the authentication code.&#x20;
 
 ## CI/CD FAQs
 
