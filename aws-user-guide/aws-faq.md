@@ -26,6 +26,10 @@ Use the AWS constructor that takes only the region as the argument (`us-west-2`)
 **IMPORTANT:** You cannot connect to any DuploCloud AWS resource from your local machine.
 {% endhint %}
 
+## Does Duplo use an AWS instance profile or access keys to access  AWS accounts?
+
+Duplo uses an IAM role, specifically an instance profile, for accessing AWS accounts. There are no access keys involved in this methodology.
+
 ## Security and Compliance FAQs
 
 ### With DuploCloud, will we be more secure and compliant out-of-the-box, as opposed to using a default AWS configuration?
