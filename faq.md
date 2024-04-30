@@ -4,7 +4,7 @@ description: Popular and frequently asked questions about DuploCloud
 
 # FAQs
 
-## What support features are included with my DuploCloud subscription
+## What support features are included with my DuploCloud subscription&#x20;
 
 See [DuploCloud Support](getting-started/duplocloud-support-model.md) for examples of what we do and do not support, in addition to how to contact us.
 
@@ -31,20 +31,24 @@ Use these FAQ documents to quickly find answers to popular questions about using
 [gcp-faq.md](gcp-user-guide/gcp-faq.md)
 {% endcontent-ref %}
 
-### How much will DuploCloud will add to my company's cloud spend?
+## How much will DuploCloud add to my company's cloud spend?
 
 We estimate that DuploCloud will increase your company's cloud costs by approximately $100 to $200 per month.
 
 ## General FAQs
 
+### Can companies with private clouds use DuploCloud?
+
+Yes, DuploCloud's On-prem services support companies with private clouds.&#x20;
+
 ### Is DuploCloud a SaaS product?
 
-No. DuploCloud is a self-hosted solution deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. If the customer desires, DuploCloud can provide a fully managed service to maintain uptime, provide updates, and supply ongoing support.
+No. DuploCloud is a self-hosted solution deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. DuploCloud can provide a fully managed service to maintain uptime, provide updates, and supply ongoing support.
 
 ### What happens during the DuploCloud onboarding process?
 
 1. DuploCloud creates a private Slack channel so your organization can communicate directly with the DuploCloud Support Staff to resolve any issues and answer questions during the onboarding process.
-2. Typically clients create a separate AWS account, GCP project or Azure subscription for DuploCloud, so we don't interfere with any pre-existing AWS accounts and configurations. The goal is to setup dev environment that the client team validates and switches over to, followed by staging and finally a migration of Production. DuploCloud can also be integrated into an existing environment or there can be a hybrid where some infrastructure is moved over to Duplo managed environment that connects to existing environment.
+2. Typically clients create a separate AWS account, GCP project, or Azure subscription for DuploCloud, so we don't interfere with any pre-existing AWS accounts and configurations. The goal is to set up a development environment that the client team validates and switches over to, followed by staging and finally a migration of Production. DuploCloud can also be integrated into an existing environment or there can be a hybrid where some infrastructure is moved over to DuploCloud managed environment that connects to existing environment.
 3. DuploCloud installs the DuploCloud Portal for you and then schedules a call to orient you to the Portal and do additional configuration, such as creating DuploCloud Services, as required.
 4. During the initial call with DuploCloud, you have the option of completing the set-up yourself, with help from our engineers. You can also create some Services and let our engineers set up the rest for you.
 5. After your DuploCloud Portal has been installed and configured, DuploCloud Infrastructures (VPCs) are running, Kubernetes has been enabled and configured, and logging, monitoring, alerting, CI/CD, and Soc2 Controls have been implemented.
@@ -55,21 +59,21 @@ In addition, during setup, we perform penetration testing and vulnerability asse
 
 ### How is DuploCloud Portal accessing my cloud infrastructure and how is it secured?
 
-DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM) and the VM derives permissions to call the cloud provider using the VM's permissions. Specifically, in AWS, DuploCloud utilizes an IAM role, known as an instance profile, to access AWS accounts, ensuring secure access without the need for access keys. In Azure, permissions are derived via managed identity and service account in GCP.
+DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM) and the VM derives permissions to call the cloud provider using the VM's permissions. Specifically, in AWS, DuploCloud utilizes an IAM role, known as an instance profile, to access AWS accounts, ensuring secure access without needing access keys. In Azure, permissions are derived via managed identity and service accounts in GCP.
 
 The DuploCloud VM and DuploCloud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
 
 ### Can we install DuploCloud in our existing cloud account?
 
-While you can install DuploCloud in your existing environment, we prefer that we do the setup in a separate account. This does not mean you have to migrate all your existing data sources especially say you have Tbs of files in S3 bucket. The workload in DuploCloud environments can connect to existing data sources and endpoints over peering and cross account access. Here are the top reasons why people prefer Duplocloud in a separate account:
+While you can install DuploCloud in your existing environment, we prefer that we do the setup in a separate account. This does not mean you must migrate all your existing data sources, especially if you have terabytes of files in the S3 bucket. The workload in DuploCloud environments can connect to existing data sources and endpoints over peering and cross-account access. Here are the top reasons why people prefer Duplocloud in a separate account:
 
 * It is considered a very safe and non-intrusive way, without touching the existing account, to validate the new setup and at times new architecture like say Kubernetes.
-* From a compliance perspective new account is a clean slate and is very easy to pass audits as DuploCloud will guarantee all aspects of it. If we were to fit in an existing account, there maybe be many thing that may be quite hard and in some cases impossible to fix. As an example if things were operated in a non compliant way then that history will be stored in a cloud trails. This opens a pandora's box with an auditor and create a lot of questions around scope leading to exceptions in the report.
-* Some of the DuploCloud security features when turned on can impact existing non compliant resources and impact an existing workload. While it is rare, something we need to be careful about.
+* From a compliance perspective, a new account is a clean slate and is very easy to pass audits as DuploCloud will guarantee all aspects of it. If we were to fit in an existing account, there may be many things that may be quite hard and in some cases impossible to fix. For example, if things were operated non-compliantly, that history is stored in a cloud trail. This opens a pandora's box with an auditor and creates a lot of questions around scope leading to exceptions in the report.
+* Some DuploCloud security features can impact existing non-compliant resources and an existing workload. While it is rare, it is something to consider.
 
-In summary while one can deploy the platform in an existing account, even import a VPC and Kubernetes clusters, but avoid it can cause more overhead than benefit that a new account with either data migrated or connected to existing data sources over cross account access.
+In summary, while one can deploy the platform in an existing account, even import a VPC and Kubernetes clusters, avoiding it can cause more overhead than benefit than a new account with either data migrated or connected to existing data sources over cross-account access.
 
-### Am I locked into DuploCloud? If I wanted to move away from DuploCloud, what work do I need to do?
+### Am I locked into DuploCloud? If I want to move away from DuploCloud, what work do I need to do?
 
 DuploCloud is running in your own cloud account, along with your workloads. DuploCloud is a provisioning system, so stopping DuploCloud does not impact any of your applications and cloud services.
 
@@ -86,9 +90,9 @@ If DuploCloud is down, it's similar to having an unavailable DevOps engineer. If
 
 ### Our company has no DevOps experience, can DuploCloud provide services to build our environment and support us?
 
-Absolutely! In fact, more than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates, etc.
+Absolutely! More than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates, etc.
 
-The DuploCloud team acts as your extended DevOps team, assisting with white glove environment setup and daily operations with 24x7 Slack and/or email support. We cover what is supported in the DuploCloud platform, as well as assist with your cloud provider's requirements.
+The DuploCloud team acts as your extended DevOps team, assisting with white glove environment setup and daily operations with 24x7 Slack and email support. We cover what is supported in the DuploCloud platform, as well as assist with your cloud provider's requirements.
 
 After the initial onboarding of the platform, we recommend that you engage the DuploCloud team as your second line of defense by setting up an internal triage process of your own. We can assist you in setting up this process.
 
@@ -120,9 +124,9 @@ DuploCloud provides flexibility when a feature that is not supported by DuploClo
 
 Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have any cloud expertise to operate it. You simply need to understand the basic constructs in DuploCloud by reading the product documentation.
 
-### Isn't No Code just Click Ops?
+### Isn't No Code Click Ops?
 
-"Click Ops" is when engineers create infrastructure resources manually in cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. You can skip past default settings that aren't secure, copy configuration incorrectly between environments, etc. You need hundreds or thousands of clicks and a lot of DevSecOps knowledge.
+"Click Ops" is when engineers create infrastructure resources manually in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. You can skip past default settings that aren't secure, copy configuration incorrectly between environments, etc. You need hundreds or thousands of clicks and a lot of DevSecOps knowledge.
 
 DuploCloud manages infrastructure resources for you. You pick application-level functionality like "services" and "load balancers", then DuploCloud creates the complex cloud resources needed to deliver that functionality. It ensures the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks, and you don't need to know DevSecOps because DuploCloud knows it for you.
 
