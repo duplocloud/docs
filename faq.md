@@ -151,6 +151,8 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 * A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
 * AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count.
 
+Additionally, it's estimated that DuploCloud will add approximately $100 to $200 per month to a company's cloud spend, providing a cost-effective solution for managing cloud resources efficiently.
+
 ### Can you delete an application and all its resources with a single click and confirmation?
 
 Yes.
@@ -187,7 +189,7 @@ Under the Services Status tab, find the host where the container is running. SSH
 
 ### I cannot connect to my service URL, how do I debug?
 
-Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
+Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From insidethe container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. Then curl the same URL using the IP address of the container instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
 
 If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range 10xxx or the same as the container port. Now try connecting to the “HostIP” and DuploMappedHostPort just obtained. If this works as well but the service URL is still failing, contact your enterprise admin or duplolive-support@duplocloud.net.
 
