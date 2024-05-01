@@ -92,3 +92,23 @@ Yes. Use [AWS Console](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/US
 
 Yes.
 
+## EKS Version Upgrade FAQs
+
+### What is the process for EKS upgrades and how does DuploCloud support them?
+
+DuploCloud creates and tests changes to the DuploCloud platform to support the new EKS version. Once testing is complete, updates are rolled out on the DuploCloud customer platform. Then, users can update the EKS version.
+
+### **How do EKS and DuploCloud version upgrades align?**&#x20;
+
+There may be a delay between the release of a new EKS version and a DuploCloud version that supports it. This is due to the time needed to develop and test changes to the DuploCloud platform. DuploCloud ensures customers are on a supported/non-deprecated version of EKS at all times.
+
+### **How will we be notified when we are ready for an EKS upgrade?**
+
+DuploCloud notifies users when an EKS upgrade is planned.
+
+### **What is the upgrade plan scope?**&#x20;
+
+The upgrade plan scope includes everything (by DuploCloud or Helm) deployed on the cluster.
+
+
+
