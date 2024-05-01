@@ -22,15 +22,15 @@ Before testing your application, ensure that:&#x20;
 
 Display the web page that the application creates:
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **AKS / Native**.
-2. Click the **K8S Ingress** tab.
-3. Select the **VIEWWEBSITE** Ingress from the **Name** column.
-4.  Click the **Configuration** tab.
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Ingress**.
+2. Select the **VIEWWEBSITE** Ingress from the **Name** column.
+3.  Click the **Configuration** tab.\
 
-    <figure><img src="../../.gitbook/assets/Azure_GS_viewebsite_2.png" alt=""><figcaption></figcaption></figure>
-5. In the **Application Gateway IP** card, copy the displayed IP address to your clipboard. In this example, the IP address is **20.84.11.154**.&#x20;
-6. Open a web browser and paste the copied IP address in your browser's URL field.&#x20;
-7. Press **Enter**. Your application runs and your web page renders as shown below. Congratulations! You just launched your first web service with Azure on DuploCloud!&#x20;
+
+    <figure><img src="../../.gitbook/assets/reallyfixed.png" alt=""><figcaption></figcaption></figure>
+4. In the **Application Gateway IP** card, copy the displayed IP address to your clipboard. In this example, the IP address is **20.84.11.154**.&#x20;
+5. Open a web browser and paste the copied IP address in your browser's URL field.&#x20;
+6. Press **Enter**. Your application runs and your web page renders as shown below. Congratulations! You just launched your first web service with Azure on DuploCloud!&#x20;
 
 <figure><img src="../../.gitbook/assets/Azure_GS_viewebsite_3.png" alt=""><figcaption><p><strong>Welcome to nginx!</strong> web page</p></figcaption></figure>
 

@@ -10,5 +10,5 @@ Azure Database for MySQL Single Server has been deprecated. You can no longer cr
 
 ## Viewing database details
 
-In the DuploCloud Portal, navigate to **DevOps** -> **Database** -> **MySQL** to view database details, reboot, delete a database, and perform supported actions by selecting the MySQL instance you created, from the Name column on the **MySQL** page.
+In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** -> **MySQL** to view database details, reboot, delete a database, and perform supported actions by selecting the MySQL instance you created, from the Name column on the **MySQL** page.
 

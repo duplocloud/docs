@@ -6,7 +6,7 @@ description: Create a PostgreSQL database instance in DuploCloud
 
 ## Creating a Postgre database instance
 
-1. In the DuploCloud Portal, navigate to **DevOps** --> **Database** --> **PostgreSQL.**
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** -> **PostgreSQL.**
 2. Click **Add**. The **Create PostgreSQL Instance** pane displays.
 3. Provide **Name**, Database **Username**, and **Password** with **Service Tier** details to create a PostgreSQL database. DuploCloud provides a configuration to support backup retention for your database when you complete the other fields in the pane.
 4. Click **Submit**.

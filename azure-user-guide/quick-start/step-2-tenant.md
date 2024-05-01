@@ -6,7 +6,7 @@ description: Creating a DuploCloud Tenant that segregates your workloads
 
 Now that the [Infrastructure and Plan ](step-1-infrastructure.md)exist and [AKS has been enabled](step-1-infrastructure.md#enabling-the-aks-kubernetes-cluster), create one or more Tenants that use the configuration DuploCloud created.
 
-[Tenants ](../../getting-started/application-focussed-interface/tenant/)in DuploCloud are similar to projects or workspaces and have a subordinate relationship to the Infrastructure. Think of the Infrastructure as a virtual "house" (cloud), with Tenants conceptually "residing" in the Infrastructure performing specific workloads that you define. As Infrastructure is an abstraction of a Virtual Private Cloud, Tenants abstract the segregation created by a [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), although Kubernetes Namespaces are only one component that Tenants can contain.
+[Tenants ](../../getting-started/application-focussed-interface/tenant/)in DuploCloud are similar to projects or workspaces and have a subordinate relationship to the Infrastructure. Think of the Infrastructure as a virtual "house" (cloud), with Tenants conceptually "residing" in the Infrastructure performing specific workloads that you define. As Infrastructure is an abstraction of a Virtual Private Cloud. Tenants abstract the segregation created by a [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), although Kubernetes Namespaces are only one component that Tenants can contain.
 
 In Azure, Microsoft cloud features such as Azure resource groups, Azure managed identity, Azure application security groups (ASG), and KMS keys are exposed in Tenants, which reference these feature configurations.
 
@@ -40,20 +40,26 @@ Before creating a Tenant, verify that you accomplished the tasks in [Step 1](ste
 
 Create a Tenant for your Infrastructure and Plan:
 
-1. In the DuploCloud Portal, navigate to **Administrator** --> **Tenants.**
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants.**
 2. Click **Add**. The **Create a Tenant** pane displays.
 3. Enter **dev01** in the **Name** field.&#x20;
 4. Select the **Plan** that you created in the previous step (**NONPROD**).
 5. Click **Create**.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/Azure_GS_Tenant_1_Create_a_Tenant.png" alt=""><figcaption><p><strong>Create a Tenant</strong> pane</p></figcaption></figure>
+
+</div>
 
 ## Check your work
 
-1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.
+1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.\
+
 
     <figure><img src="../../.gitbook/assets/Azure_GS_Tenant_2_Verify (1).png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong></p></figcaption></figure>
-2.  Navigate to **Administrator** -> **Infrastructure** and select **dev01** from the **Tenant** list box at the top left in the DuploCloud Portal. The **NONPROD** Infrastructure appears in the list of Infrastructures, indicating that the **dev01** Tenant is associated with Infrastructure **NONPROD**.
+2.  Navigate to **Administrator** -> **Infrastructure** and select **dev01** from the **Tenant** list box at the top left in the DuploCloud Portal. The **NONPROD** Infrastructure appears in the list of Infrastructures, indicating that the **dev01** Tenant is associated with Infrastructure **NONPROD**.\
+
 
     <figure><img src="../../.gitbook/assets/Azure_GS_Tenant_3_Verify.png" alt=""><figcaption><p>Tenant list box with <strong>dev01</strong> selected; <strong>NONPROD</strong> Infrastructure with <strong>Status Complete</strong> </p></figcaption></figure>
 

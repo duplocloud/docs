@@ -2,11 +2,11 @@
 description: Creating the DuploCloud Infrastructure and a Plan
 ---
 
-# Step 1:  Create Infrastructure and Plan
+# Step 1: Create Infrastructure and Plan
 
 Each DuploCloud Infrastructure is a connection to a unique Virtual Private Cloud (VPC) network that resides in a region that can host Kubernetes clusters. An Infrastructure can reside On-Premises (On-Prem) or in a Public Cloud.
 
-After you supply a few basic inputs DuploCloud creates an Infrastructure for you, within Azure and within DuploCloud, with a few clicks. Behind the scenes, DuploCloud does a lot with what little you supply — generating subnets, NAT gateway, routes, and a cluster in the region.
+After you supply a few basic inputs DuploCloud creates an Infrastructure for you, within Azure and within DuploCloud, with a few clicks. Behind the scenes, DuploCloud does a lot with what little you supply—generating subnets, NAT gateway, routes, and a cluster in the region.
 
 With the Infrastructure as your foundation, you can customize an extensible, versatile Platform Engineering development environment by adding Tenants, Hosts, Services, and more.
 
@@ -16,7 +16,7 @@ _Estimated time to complete Step 1: 40 minutes. Much of this time is consumed by
 
 Before starting this tutorial:
 
-* Learn more about DuploCloud [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md)s, [Plan](../../getting-started/application-focussed-interface/plan.md)s, and [Tenant](../../getting-started/application-focussed-interface/tenant/)s.
+* Learn more about DuploCloud [Infrastructure](../../getting-started/application-focussed-interface/infrastructure.md)s, [Plan](../../getting-started/application-focussed-interface/plan.md)s, and [Tenants](../../getting-started/application-focussed-interface/tenant/).
 * Reference the [Access Control](../../user-administration/access-control/) documentation to create User IDs with the **Administrator** role. In order to perform the tasks in this tutorial, you must have Administrator privileges.
 
 ## Creating a DuploCloud Infrastructure
@@ -29,16 +29,6 @@ Before starting this tutorial:
 3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.&#x20;
 4. Click **Create** to create the Infrastructure. It may take up to half an hour to create the Infrastructure. When creation completes, a status of **Complete** displays.&#x20;
 
-## Enable Kubernetes for Azure
-
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
-2. Select the Infrastructure you created.
-3. Click the **Kubernetes** tab.
-4. Select the **Click Here** link. The **Configure AKS Cluster** pane displays.
-5. Enter a **Cluster Name**.
-6. Select the **Node VM Size** from the list box.
-7. Click Create. It may take some time for enablement to complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
-
 | Add Infrastructure page field  | Value                            |
 | ------------------------------ | -------------------------------- |
 | **Name**                       | `nonprod`                        |
@@ -49,6 +39,16 @@ Before starting this tutorial:
 | **Region**                     | _`YOUR_GEOGRAPHIC_REGION`_       |
 
 ![Infrastructure creation with a status of Complete](<../../.gitbook/assets/image (30).png>)
+
+## Enable Kubernetes for Azure
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
+2. Select the Infrastructure you created.
+3. Click the **AKS** tab.
+4. Select the **Click Here** link. The **Configure AKS Cluster** pane displays.
+5. Enter a **Cluster Name**.
+6. Select the **Node VM Size** from the list box.
+7. Click Create. It may take some time for enablement to complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
 
 ## Verifying that a Plan exists for your Infrastructure
 

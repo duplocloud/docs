@@ -8,8 +8,8 @@ Create Virtual Machine (VM) snapshots in the DuploCloud Portal.
 
 ### Creating a Virtual Machine(VM) Host Snapshot
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**. The **Hosts** page displays.
-2. From the **Name** column, select the Host you want to backup.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
+2. Select the **Host** you want to backup from the **Name** column.
 3. Click **Actions** and select **Snapshot**.
 
 <div align="left">

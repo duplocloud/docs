@@ -18,7 +18,8 @@ Failure to follow these steps when creating a link to the Azure Portal from the 
 2. From the **Name** column, select the Infrastructure for which you want to add a link to the Azure Console.
 3. Click the **Metadata** tab.
 4. Click **Add**. The **Add Infrastructure Tag** pane displays.
-5.  In the **Key** field, enter **AzurePortalLink**.
+5.  In the **Key** field, enter **AzurePortalLink**.\
+
 
     <div align="left">
 
@@ -36,8 +37,9 @@ The **Value** in the example above is DuploCloud's internal Azure Portal link.
 
 After you [configure Azure Portal link ](azure-portal-link.md#creating-a-link-to-the-azure-portal)to an Infrastructure, access the Azure Console from the DuploCloud Portal in the **Actions** menu for Azure **Hosts**.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**. The **Hosts** page displays.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. From the **Name** column, select the Host you are working with.
-3. From the **Actions** menu, select **Azure Portal**.
+3.  From the **Actions** menu, select **Connect** -> **Azure Portal**.\
 
-<figure><img src="../../.gitbook/assets/aws-con_app.png" alt=""><figcaption><p><strong>HOST1</strong> host page with <strong>Action Menu</strong> displaying <strong>Azure Portal</strong> link</p></figcaption></figure>
+
+    <figure><img src="../../.gitbook/assets/azureVM.png" alt=""><figcaption><p><strong>HOST1</strong> host page with <strong>Action Menu</strong> displaying <strong>Azure Portal</strong> link</p></figcaption></figure>

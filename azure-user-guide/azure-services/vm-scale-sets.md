@@ -12,7 +12,7 @@ For more information about VM Scale Sets, see the [Azure Documentation](https://
 
 ## Creating a VM Scale Set
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Hosts**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
 2. Click the **VM Scale Set** tab.
 3. Click **Add**. The **Add VM Scale Set** page displays.
 4. In the **Name** field, enter a name for the VM Scale Set.
@@ -23,6 +23,10 @@ For more information about VM Scale Sets, see the [Azure Documentation](https://
 9. Specify a **Username** and **Password**.
 10. Click **Add**. The VM Scale Set is created.
 
-<figure><img src="../../.gitbook/assets/vmscale1.png" alt=""><figcaption><p>Azure <strong>Add VM Scale Set</strong> page</p></figcaption></figure>
+<div align="left">
 
-<figure><img src="../../.gitbook/assets/vmscale2.png" alt=""><figcaption><p><strong>VM Scale Set</strong> tab with <strong>scaler-test</strong> set displaying <strong>Status</strong> of <strong>Succeeded</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/VMpatched1.png" alt=""><figcaption><p>Azure <strong>Add VM Scale Set</strong> page</p></figcaption></figure>
+
+</div>
+
+<figure><img src="../../.gitbook/assets/VMpathced2.png" alt=""><figcaption><p><strong>VM Scale Set</strong> tab with <strong>scaler-test</strong> set displaying <strong>Status</strong> of <strong>Succeeded</strong></p></figcaption></figure>
