@@ -8,8 +8,8 @@ Use a [Microsoft Azure MySQL Flexible Server](https://learn.microsoft.com/en-us/
 
 ## Creating a MySQL Flexible Server
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Database** -> **MySQL Flexible.**
-2. Click **Add**. The **MySQL FLexible** page displays.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** -> **MySQL Flexible.**
+2. Click **Add**. The **MySQL Flexible** page displays.
 3. Provide the database **Name**, **User Name**, **Service Tier**, **Password**, Database **Version**, and other required fields. As you complete the fields on the page, additional fields display, such as **High Availability**, if applicable.
 4. Click **Submit**.
 
@@ -17,11 +17,7 @@ Use a [Microsoft Azure MySQL Flexible Server](https://learn.microsoft.com/en-us/
 You cannot change the value of the High Availability field, once the MySQL Flexible Server is created.
 {% endhint %}
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Flex1.png" alt=""><figcaption><p><strong>MySQL Flexible</strong> page</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/flexfixed.png" alt=""><figcaption><p><strong>MySQL Flexible</strong> page</p></figcaption></figure>
 
 ## Setting up Database Backup
 
@@ -34,14 +30,9 @@ Setup Database Backup and choose the number of days (1-35) to backup databases i
 3. Click **Add**. The **Add Config** pane displays.
 4. From the **Config Type** list box, select **AppConfig**.
 5. From the **Key** list box, select "**AZURE\_DEFAULT\_MYSQL\_GEO\_REDUNDANT\_BACKUP\_ENABLED**".
-6.  In the **Value** field, enter "**True**". Click **Submit**. Redundant backup is enabled. \
+6. In the **Value** field, enter "**True**". Click **Submit**. Redundant backup is enabled.&#x20;
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/Screenshot (249) (1).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane filled to enable Azure Default Redundant Backup. </p></figcaption></figure>
-
-    </div>
+<figure><img src="../../../.gitbook/assets/toedit.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane filled to enable Azure Default Redundant Backup. </p></figcaption></figure>
 
 ### Set the Backup Retention Period
 
@@ -57,13 +48,7 @@ Setup Database Backup and choose the number of days (1-35) to backup databases i
 Once set, the Backup Retention Period will apply to all new databases. When creating a new database, you can override this by entering a value into the **Backup Retention** field on the **Create MySQL Flexible Instance** page.
 {% endhint %}
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Screenshot (236).png" alt=""><figcaption><p>The <strong>Add Confi</strong>g pane configured to retain backups for 35 days. </p></figcaption></figure>
-
-</div>
-
-
+<figure><img src="../../../.gitbook/assets/edit2.png" alt=""><figcaption><p>The <strong>Add Confi</strong>g pane configured to retain backups for 35 days. </p></figcaption></figure>
 
 <div align="left">
 
@@ -75,14 +60,10 @@ Once set, the Backup Retention Period will apply to all new databases. When crea
 
 You can view details and configure other options by selecting the MySQL Flexible Server you created, from the **MySQL Flexible** page in the DuploCloud Portal.
 
-<figure><img src="../../../.gitbook/assets/Flex2.png" alt=""><figcaption><p><strong>MySQL Flexible</strong> page with <strong>Overview</strong> tab displayed</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/myflex1saved.png" alt=""><figcaption><p><strong>MySQL Flexible</strong> page with <strong>Overview</strong> tab displayed</p></figcaption></figure>
 
 ## Additional supported actions
 
 From the **MySQL Flexible** page, you can click the **Actions** menu for each **Flexible Server** and select the appropriate option to enter the **Azure Portal**, **Reboot** the server, or **Stop** the server.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Flex3.png" alt=""><figcaption><p><strong>MySQL Flexible</strong> page with <strong>Actions</strong> menu expanded, displaying options for the <strong>MY-INSTANCE</strong> Flexible Server</p></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/myflex2saved.png" alt=""><figcaption><p><strong>MySQL Flexible</strong> page with <strong>Actions</strong> menu expanded, displaying options for the <strong>MY-INSTANCE</strong> Flexible Server</p></figcaption></figure>

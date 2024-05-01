@@ -1,10 +1,10 @@
-# Storage account
+# Storage Account
 
 DuploCloud Azure Portal provides the ability to create Storage Accounts, File Shares, and generate Shared Access Signatures (SAS). Storage Accounts with a SKU Type `Standard_LRS` are created. Users can view additional details of File Share endpoints from the Portal.
 
 ### Create Storage Account
 
-Navigate to **DevOps** > **Storage Account** to create Storage Account.
+Navigate to **Cloud Services** -> **Storage Account** to create Storage Account.
 
 Provide unique name to create Storage Account.
 
@@ -19,17 +19,19 @@ Provide unique name to create Storage Account.
 You can view Storage Account Details once created. You can view Endpoint details in the Storage Account table view.\
 Click on the  <img src="../../.gitbook/assets/image (1) (1) (2).png" alt="" data-size="line">icons under the Actions Column to view and copy the keys of the Storage Account.
 
-![Storage Account Details Screen](<../../.gitbook/assets/image (23) (2).png>)
+<figure><img src="../../.gitbook/assets/storage1fixed.png" alt=""><figcaption></figcaption></figure>
 
 ### Create and View File Shares
 
 Create File Shares by clicking on **Add**.&#x20;
 
-![View File Share](<../../.gitbook/assets/image (33).png>)
+
+
+<figure><img src="../../.gitbook/assets/storage 2 fixed.png" alt=""><figcaption><p>View File Share</p></figcaption></figure>
 
 ### Generate Shared Access Signature (SAS)
 
-Click on **Actions** > **Shared Access Signature**. Provide access details in the screen below. Review and generate Shared Access Signature(SAS) tokens.
+Click on **Actions** -> **Shared Access Signature**. Provide access details in the screen below. Review and generate Shared Access Signature(SAS) tokens.
 
 <div align="left">
 
@@ -65,4 +67,3 @@ You can configure the **Tenant** to block public network access to **Storage Acc
 
     </div>
 
-###

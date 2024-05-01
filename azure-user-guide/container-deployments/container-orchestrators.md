@@ -8,7 +8,7 @@ DuploCloud abstracts the complexity of container orchestration technologies, all
 
 Among the technologies supported are:
 
-* **Azure Kubernetes Service \[AKS]**: DuploCloud platform uses AKS, providing you with a user-friendly interface that conceals the complexities of Kubernetes. Using the UI you can add K8S configurations around Pods, Containers, Secrets, and so on.&#x20;
+* **Azure Kubernetes Service \[AKS]**: The DuploCloud platform uses AKS, providing you with a user-friendly interface that conceals the complexities of Kubernetes (K8s). Using the UI, you can add K8S configurations around Pods, Containers, Secrets, and so on.&#x20;
 * **Built-in (DuploCloud)**: DuploCloud platform's built-in container management has the same interface as the `docker run` command, except that it can be scaled to hundreds of containers across many hosts, providing capabilities such as associated load balancers, DNS, and more.
 
 ## Container orchestration feature matrix

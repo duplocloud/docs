@@ -24,14 +24,23 @@ Before creating your DuploCloud Service, ensure that:
 * The [AKS Kubernetes cluster](step-1-infrastructure.md#enabling-the-aks-kubernetes-cluster) is enabled.
 * Tenant **DEV01** is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/tenant_dev01 (2) (1) (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
+
+</div>
 
 ## Creating a Service
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **AKS/Native**.
-2.  Click **Add**. The **Add Service** page displays.
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
+2.  Click **Add**. The **Add Service** page displays.\
 
-    ![Add Service page to add nginx-service](<../../.gitbook/assets/image (2) (3) (1).png>)
+
+    <div align="left">
+
+    <img src="../../.gitbook/assets/image (2) (3) (1).png" alt="Add Service page to add nginx-service">
+
+    </div>
 3. In the **Service Name** field, enter **nginx-service**.
 4. Specify the Docker image that you use to run the application. In the Docker Image field, enter **nginx:latest**.&#x20;
 5. Click **Next**, accepting all other defaults. The **Advanced Options** page displays.
@@ -41,8 +50,4 @@ Before creating your DuploCloud Service, ensure that:
 
 After a few minutes, the Service initializes and starts up. Shortly afterward, you can see the service and the containers running.
 
-<div align="left">
-
-<img src="../../.gitbook/assets/Azure_GS_Service_run (1).png" alt="nginx-service page with service RUNNING (1/1)">
-
-</div>
+<figure><img src="../../.gitbook/assets/service running.png" alt=""><figcaption></figcaption></figure>

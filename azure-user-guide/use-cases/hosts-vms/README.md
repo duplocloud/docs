@@ -19,7 +19,7 @@ For ease of use, [create a link to the Azure Console](../azure-portal-link.md) f
 Add a Virtual Machine Host. DuploCloud AWS supports **Host** (Azure Host) and **BYOH** (Bring Your Own Host) types. Use **BYOH** for any VM that is not an Azure Host.&#x20;
 
 1. Ensure you have selected the appropriate Tenant from the **Tenant** list box at the top of the DuploCloud Portal.
-2. In the DuploCloud Portal, navigate to **DevOps -> Hosts**.&#x20;
+2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.&#x20;
 3. Click the tab that corresponds to the type of Host you want to create (**HOST** or **BYOH**).
 4. Click **Add**.
 
@@ -27,7 +27,7 @@ Add a Virtual Machine Host. DuploCloud AWS supports **Host** (Azure Host) and **
 It is not necessary to explicitly define Hosts. Instead, you can use [**Azure Agent Pool**s](../../azure-services/agent-pool.md) and [**VM Scale Set**s](../../azure-services/vm-scale-sets.md).
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/Azure_Hosts (1) (1).png" alt=""><figcaption><p><strong>Azure VM</strong> <strong>Hosts</strong> page with <strong>Host</strong>, <strong>VM Scale Set</strong>, <strong>Azure Agent Pool</strong>, and <strong>BYOH</strong> options, as tabs</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/newvm.png" alt=""><figcaption><p><strong>Azure VM</strong> <strong>Hosts</strong> page with <strong>Host</strong>, <strong>VM Scale Set</strong>, <strong>Azure Agent Pool</strong>, and <strong>BYOH</strong> options, as tabs</p></figcaption></figure>
 
 ## Creating Kubernetes StorageClass and PVC constructs in the DuploCloud Portal.
 
@@ -37,7 +37,7 @@ See [Kubernetes StorageClass and PVC](../../../kubernetes/kubernetes-storageclas
 
 While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the Tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
 
-<figure><img src="../../../.gitbook/assets/Azure_host_VM.png" alt=""><figcaption><p><strong>Add Virtual Machine</strong> page </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/add vm.png" alt=""><figcaption><p><strong>Add Virtual Machine</strong> page </p></figcaption></figure>
 
 Most of these inputs are optional and some are available as list box selections, set by the administrator in the Plan (for example, **Image ID**, in Host **Advanced Options**).&#x20;
 

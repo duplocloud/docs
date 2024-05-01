@@ -33,11 +33,16 @@ You must create [Services ](containers-and-services/#adding-a-duplocloud-service
 
 ### Adding a Load Balancer Listener
 
-1. In the DuploCloud Portal, navigate **DevOps** -> **Containers** -> **AKS/Native**.
+1. In the DuploCloud Portal, navigate **Kubernetes** -> **Services**.
 2. On the **Services** page, select the Service name in the **Name** column.
-3.  Click the **Load Balancers** tab.
+3.  Click the **Load Balancers** tab.\
+
+
+    <div align="left">
 
     <figure><img src="../../.gitbook/assets/AKS_Load_Bal.png" alt=""><figcaption><p><strong>Load Balancer</strong> tab on the <strong>AKS Service</strong>s page</p></figcaption></figure>
+
+    </div>
 4. Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.
 5. Select a type (such as **K8S Node Port)** in the **Select Type** field.&#x20;
 6. Add the Kubernetes Health Check URL for this container in the **Health Check** field.&#x20;

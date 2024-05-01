@@ -16,7 +16,7 @@ When you have created the Namespace, Queue, and Access Policy, the Service Bus i
 
 ## Creating a Service Bus Namespace
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. In the **Service Bus** tab, click **Add**. The **Create Namespace** page displays.
 3. In the **Name** field, enter the Service Bus name.
 4. From the **Pricing Tier** list box, select a pricing tier based on your projected usage.
@@ -24,37 +24,21 @@ When you have created the Namespace, Queue, and Access Policy, the Service Bus i
 6.  Select **Local Authentication** to disable local or SAS key authentication for the Service Bus namespace, allowing only [Microsoft Entra authentication](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-authentication-and-authorization#microsoft-entra-id).\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/abus1.png" alt=""><figcaption><p><strong>Create Namespace</strong> page for Service Bus</p></figcaption></figure>
-
-    </div>
-
-
+    <figure><img src="../../.gitbook/assets/sbus1.png" alt=""><figcaption><p><strong>Create Namespace</strong> page for Service Bus</p></figcaption></figure>
 7.  Click **Submit**. When your Service Bus Namespace is available, an **Active Status** is displayed in the **Service Bus** tab.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/abus7.png" alt=""><figcaption><p><strong>Service Bus</strong> tab with <strong>Active</strong> Service Bus displayed</p></figcaption></figure>
-
-    </div>
+    <figure><img src="../../.gitbook/assets/sbus2.png" alt=""><figcaption><p><strong>Service Bus</strong> tab with <strong>Active</strong> Service Bus displayed</p></figcaption></figure>
 
 ## Creating a Service Bus Queue
 
-After you have created a [Service Bus Namespace](service-bus.md#creating-a-service-bus-namespace), you create a queue to enable communication between Web and Worker roles in a multi-tier Azure application. A Web role is a Microsoft server VM running Internet Information Services (IIS); a Worker role is a Microsoft server VM not running IIS. Service Bus queues also enable communication between on-premises apps and Azure-hosted apps in a hybrid solution.
+After you have created a [Service Bus Namespace](service-bus.md#creating-a-service-bus-namespace), you create a queue to enable communication between Web and Worke\
+r roles in a multi-tier Azure application. A Web role is a Microsoft server VM running Internet Information Services (IIS); a Worker role is a Microsoft server VM not running IIS. Service Bus queues also enable communication between on-premises apps and Azure-hosted apps in a hybrid solution.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. In the **Service Bus** tab, select the Service Bus for which you want to add a Service Bus Queue.
 3. Click the **Queue** tab.
-4.  Click **Add**. The **Create Queue** page displays.\
-
-
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/abus2.png" alt=""><figcaption><p><strong>Create Queue</strong> page for Service Bus<br></p></figcaption></figure>
-
-    </div>
+4. Click **Add**. The **Create Queue** page displays.
 5. In the **Name** field, enter a name for the Service Bus Queue.
 6. Edit or accept the defaults for **Max Queue Size**, **Lock duration (in seconds)**, and **Max Delivery Count**.
 7. Optionally, select **Enable dead lettering or message expiration** and **Enable partitioning**. See the [Azure Documentation](https://learn.microsoft.com/en-us/azure/service-bus-messaging/) for detailed descriptions of these options.
@@ -62,11 +46,7 @@ After you have created a [Service Bus Namespace](service-bus.md#creating-a-servi
 9.  Click **Submit**. When your Service Bus Queue is available, an **Active Status** is displayed in the **Queue** tab.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/abus3.png" alt=""><figcaption><p><strong>Queue</strong> tab on Service Bus page</p></figcaption></figure>
-
-    </div>
+    <figure><img src="../../.gitbook/assets/sbus4.png" alt=""><figcaption><p><strong>Queue</strong> tab on Service Bus page</p></figcaption></figure>
 
 ## Creating a Service Bus Access Policy
 
@@ -74,38 +54,21 @@ After you create a Service Bus NameSpace and Queue, finish adding your Service B
 
 In Azure, Shared Access Signatures (SAS) and policies give you granular control over the type of access you grant to the clients. SAS authentication enables you to grant a user access to Service Bus resources with specific rights. You create an access policy to configure a cryptographic key with associated rights on a Service Bus resource.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.&#x20;
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.&#x20;
 2. In the **Service Bus** tab, select the Service Bus for which you want to add a Service Bus Access Policy.&#x20;
 3. Click the **Access Policy** tab.&#x20;
-4.  Click **Add**. The **Create Access Policy** page displays.\
-
-
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/abus4.png" alt=""><figcaption><p><strong>Create Access Policy</strong> page for Service Bus</p></figcaption></figure>
-
-    </div>
-
-
+4. Click **Add**. The **Create Access Policy** page displays.
 5. In the **Name** field, enter the Access Policy name.
 6. Define access rights to the policy by selecting **Manage** (which automatically selects both **Send** and **Listen**), **Send**, or **Listen**. See the [Azure documentation](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-sas) for additional information on these options.
 7.  Click **Submit**. The Access Policy is displayed in the **Access Policy** tab.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/abus5.png" alt=""><figcaption><p><strong>Access Policy</strong> tab for Service Bus</p></figcaption></figure>
-
-    </div>
+    <figure><img src="../../.gitbook/assets/sbus6.png" alt=""><figcaption><p><strong>Access Policy</strong> tab for Service Bus</p></figcaption></figure>
 
 ## Viewing the Service Bus
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **App Integration**.&#x20;
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.&#x20;
 2.  In the **Service Bus** tab, select the Service Bus you want to view. The **Overview**, **Queue**, **Access Policy**, and **Details** tabs display additional information about the Service Bus and its components.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/abus6.png" alt=""><figcaption><p><strong>Overview</strong> tab for Service Bus</p></figcaption></figure>
-
-    </div>
+    <figure><img src="../../.gitbook/assets/sbus7.png" alt=""><figcaption><p><strong>Overview</strong> tab for Service Bus</p></figcaption></figure>

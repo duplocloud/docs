@@ -18,26 +18,40 @@ Before creating your DuploCloud load balancer, ensure that:
 * [AKS Kubernetes cluster](step-1-infrastructure.md#enabling-the-aks-kubernetes-cluster) is enabled.
 * **dev01**  is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/tenant_dev01 (1) (1) (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
+
+</div>
 
 ## Adding and configuring a load balancer
 
 Add a load balancer for your running service that listens on port **80**:
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **AKS / Native**.
-2. In the **Services** tab, select the **nginx-service** you started when [creating a service in the previous step](step-4-create-app-via-k8s.md).
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
+2. On the **Services** page, select the **nginx-service** you started when [creating a service in the previous step](step-4-create-app-via-k8s.md).
 3. Click the **Load Balancers** tab.
 4. Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.
 5. Select **K8S Node Port** from the **Select Type** list box.
 6. Enter **80** in the **Container port** field.
 7. Enter **30008** in the **External port** field.
 8. Type **/** (forward-slash) in the **Health Check** field to indicate that the cluster we want Kubernetes to perform Health Checks on is located at the `root` level.
-9.  Select **TCP** from the **Backend Protocol** list box.
+9.  Select **TCP** from the **Backend Protocol** list box.\
 
-    <figure><img src="../../.gitbook/assets/Azure_GS_LBL_1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane using <strong>K8S Node Port</strong></p></figcaption></figure>
-10. Click **Add**. The Load Balancer is created and started. After a few minutes, the **LB Status** card displays a status of **Ready**, indicating that the Load Balancer is ready for use.
 
-<figure><img src="../../.gitbook/assets/Azure_GS_LBL_2.png" alt=""><figcaption><p><strong>nginx-service Load Balancers</strong> tab with <strong>LB Status Ready</strong></p></figcaption></figure>
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/Azure_GS_LBL_1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane using <strong>K8S Node Port</strong><br></p></figcaption></figure>
+
+    </div>
+10. Click **Add**. The Load Balancer is created and started. After a few minutes, the **LB Status** card displays a status of **Ready**, indicating that the Load Balancer is ready for use.\
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/LB running.png" alt=""><figcaption></figcaption></figure>
+
+    </div>
 
 ## Enable the Ingress Controller
 
@@ -63,25 +77,29 @@ Now that your gateway is established and opened, you add [Kubernetes Ingress](ht
 
 The Ingress object communicates with the Kubernetes NodePort that your Load Balancer Listener uses. Ingress objects are flexible constructs in Kubernetes, and their use here is an example of how DuploCloud leverages the power of Kubernetes constructs while abstracting away their native complexity. To manually create these components (and maintain them) in Kubernetes, takes a significant amount of developer time.
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **AKS / Native**.
-2. Click the **K8S Ingress** tab.
-3. Click **Add**. The **Add Kubernetes Ingress** page displays.
-4. In the **Ingress Name** field, type **viewwebsite**.
-5. In the **Ingress Controller** list box, select **azure-application-gateway**.
-6. In the **Visibility** list box, select **Public**.
-7.  Click **Add Rule**. The **Add Ingress Rule** pane displays.
-
-    <figure><img src="../../.gitbook/assets/Azure_GS_Ingressadd (1).png" alt=""><figcaption><p><strong>Add Rule</strong> option on the <strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Ingress**.
+2. Click **Add**. The **Add Kubernetes Ingress** page displays.
+3. In the **Ingress Name** field, type **viewwebsite**.
+4. In the **Ingress Controller** list box, select **azure-application-gateway**.
+5. In the **Visibility** list box, select **Public**.
+6.  Click **Add Rule**. The **Add Ingress Rule** pane displays.\
 
 
-8. In the **Path** field, type **/** (forward-slash).
-9. In the **Service Name** field, select **nginx-service:80**.&#x20;
-10. Click **Add Rule** to add the rule and to close the **Add Ingress Rule** pane. You should be back to viewing the **Add Kubernetes Ingress** page.
+    <figure><img src="../../.gitbook/assets/ingress repaired.png" alt=""><figcaption></figcaption></figure>
+7. In the **Path** field, type **/** (forward-slash).
+8. In the **Service Name** field, select **nginx-service:80**.&#x20;
+9.  Click **Add Rule** to add the rule and to close the **Add Ingress Rule** pane. You should be back to viewing the **Add Kubernetes Ingress** page.\
+
+
+    <div align="left">
 
     <figure><img src="../../.gitbook/assets/Azure_GS_Ingressaddrule.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
-11. On the **Add Kubernetes Ingress** page, click **Add** to add Ingress. On the **K8S Ingress** tab, the **VIEWWEBSITE** Ingress that you defined, with an **Ingress Class** of **azure-application-gateway**, displays.
 
-<figure><img src="../../.gitbook/assets/Azure_GS_viewebsite.png" alt=""><figcaption><p><strong>K8S Ingress</strong> tab displaying <strong>VIEWWEBSITE</strong> Ingress</p></figcaption></figure>
+    </div>
+10. On the **Add Kubernetes Ingress** page, click **Add** to add Ingress. On the **Ingress** page, the **VIEWWEBSITE** Ingress that you defined, with an **Ingress Class** of **azure-application-gateway**, displays.\
+
+
+    <figure><img src="../../.gitbook/assets/goodingress.png" alt=""><figcaption><p> <strong>Ingress</strong> page displaying <strong>VIEWWEBSITE</strong> Ingress</p></figcaption></figure>
 
 ## Check your work
 
