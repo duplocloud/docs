@@ -26,7 +26,7 @@ Use the AWS constructor that takes only the region as the argument (`us-west-2`)
 **IMPORTANT:** You cannot connect to any DuploCloud AWS resource from your local machine.
 {% endhint %}
 
-## Does Duplo use an AWS instance profile or access keys to access  AWS accounts?
+### Does Duplo use an AWS instance profile or access keys to access  AWS accounts?
 
 Duplo uses an IAM role, specifically an instance profile, for accessing AWS accounts. There are no access keys involved in this methodology.
 
@@ -35,6 +35,14 @@ Duplo uses an IAM role, specifically an instance profile, for accessing AWS acco
 ### With DuploCloud, will we be more secure and compliant out-of-the-box, as opposed to using a default AWS configuration?
 
 Yes. This is a major advantage of using DuploCloud. All controls are mapped to various compliance standards. DuploCloud is also very flexible in enabling you to add custom policies (resource quotas, ability to create public-facing endpoints, etc.).
+
+### We are considering enabling Amazon GuardDuty for our account. How much does it cost per month?&#x20;
+
+To estimate Amazon GuardDuty pricing, you can use the [AWS pricing calculator](https://calculator.aws/#/createCalculator/guardduty).&#x20;
+
+### If we enable Amazon GuardDuty, will we lose vulnerability and security standards insights from DuploCloud?
+
+No, enabling or disabling Amazon GuardDuty has no effect on the vulnerabilities and security standards insights DuploCloud provides.
 
 ## CI/CD FAQs
 
