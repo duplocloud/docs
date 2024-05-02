@@ -240,7 +240,7 @@
     * [Load Balancers](gcp-user-guide/gcp-services/step-4-create-a-load-balancer.md)
     * [Cloud Armour](gcp-user-guide/gcp-services/cloud-armour.md)
     * [Cloud Credentials](gcp-user-guide/gcp-services/cloud-credentials.md)
-    * [Cloud Functions](gcp-user-guide/gcp-services/s3-bucket.md)
+    * [Cloud Functions](gcp-user-guide/gcp-services/cloud-functions.md)
     * [Cloud Scheduler](gcp-user-guide/gcp-services/s3-bucket-1.md)
     * [Cloud SQL](gcp-user-guide/gcp-services/cloud-sql.md)
     * [Cloud Storage](gcp-user-guide/gcp-services/s3-bucket-2.md)
