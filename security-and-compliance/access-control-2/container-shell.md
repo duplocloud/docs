@@ -1,4 +1,9 @@
+---
+description: Access to the container shell in the DuploCloud Portal
+---
+
 # Container Shell
 
-Users can get into the shell of container. No keys, one click and secure. The platform manages the access depending on wether its [K8S](../../aws-user-guide/prerequisites/kubectl-shell.md), [ECS](../../aws-user-guide/prerequisites/kubectl-shell.md) or [Docker Native](../../aws-user-guide/prerequisites/kubectl-shell.md) based deployment. &#x20;
+Users can access the container's shell. No keys are required; you can access it securely with one- click. The platform manages access for Kubernetes, ECS, or Docker Native-based deployments. &#x20;
 
+Access the container by selecting the Host/VM and clicking the **Containers** tab. Then, click the options menu next to the selected container ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (9).png" alt="" data-size="line"> ) and select **Container Shell**.
