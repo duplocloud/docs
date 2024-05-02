@@ -23,7 +23,7 @@ In addition to GKE standard and auto-pilot, the following services are supported
 
 * [Cloud Armour](cloud-armour.md)
 * [Cloud Credentials](cloud-credentials.md)
-* [Cloud Functions](s3-bucket.md)
+* [Cloud Functions](cloud-functions.md)
 * [Cloud Scheduler](s3-bucket-1.md)
 * [Cloud SQL](cloud-sql.md)
 * [Cloud Storage](s3-bucket-2.md)

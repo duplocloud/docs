@@ -14,7 +14,7 @@ Agent installation menu is under Security->Agents. There are 2 steps in the agen
 *   **Create an Agent Type**: Each unique vendor or agent software can be considered a type. For example ossec, clamav, laceworks, crowdstrike are all different agent types. To add a new agent type, under Security -> Agents click on + and it requires only a name as shown below.\
 
 
-    <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 
 * **Create an agent deployment:** Under the desired agent tab add a deployment which will deploy the agent to the hosts. You need to create at least one deployment per kubernetes cluster. There are a few deployment options:
@@ -34,10 +34,10 @@ You can create multiple deployments for multiple tenants. In case of Kubernetes 
 *   Deployment type is either DaemonSet meaning kubernetes or Docker Native for built-in container orchestration.\
 
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
 Once deployed you can view the deployed instances of the agents under the respective agent tab as shown in picture below
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
