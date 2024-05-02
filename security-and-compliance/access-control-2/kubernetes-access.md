@@ -1,3 +1,9 @@
+---
+description: Access Kubernetes constructs directly in the DuploCloud platform
+---
+
 # Kubernetes Access
 
-The platform enables access to every tenant's namespace that the user has access to. It provides a kubeconfig that is temporary and requires a SSO authentication.  The permissions are scoped to the kubernetes namespace. For admin K8S access same principle applies to admin kubeconfig available from under administrator ->infrastructure -> K8S. See here for detailed [instructions](../../kubernetes/kubectl-setup/kubectl-token.md)
+The DuploCloud Platform enables access to every Tenant's namespace to which the use has access. You can temporarily access config maps via SSO authentication to`kubeconfig`.  Permissions are scoped to the Kubernetes namespace.&#x20;
+
+For administrators, Kubernetes access via SSO is available from the **Administrator** -> **Infrastructure** -> **K8S**. See these detailed [instructions](../../kubernetes/kubectl-setup/kubectl-token.md).
