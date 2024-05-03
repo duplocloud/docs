@@ -1,5 +1,9 @@
+---
+description: Monitoring file integrity using the DuploCloud Platform
+---
+
 # File Integrity Monitoring
 
-The platform leverages ossec to implement FIM. Agents on the hosts will monitor the key files for any changes, verifying the checksum and attributes of the monitored files. The System Check will happen every 12 hours. To check the file integrity monitoring, go to “SIEM Dashboard Integrity Monitoring”. For more information, refer to the [Wazuh Vulnerability Detection Guide](https://documentation.wazuh.com/3.9/user-manual/capabilities/file-integrity/index.html).
+The DuploCloud platform leverages OSSEC to implement File Integrity Monitoring (FIM). Agents on Hosts monitor the key files for any changes, verifying the checksum and attributes of the monitored files. A System Check runs every twelve (12) hours. To verify FIM, navigate to **SIEM** and click I**ntegrity Monitoring**. For more information, refer to the [Wazuh Vulnerability Detection Guide](https://documentation.wazuh.com/3.9/user-manual/capabilities/file-integrity/index.html).
 
-<figure><img src="../../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (150).png" alt=""><figcaption><p>The SIEM <strong>Integrity Monitoring</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>

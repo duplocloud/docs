@@ -1,9 +1,13 @@
+---
+description: Detect security vulnerabilities in Hosts in he DuploCloud Portal
+---
+
 # Vulnerabilities
 
-We use ossec for vulnerability detection in hosts. The data is ingested into the SIEM and part of the dashboard. DuploCloud operations team typically patches the VMs every quarter. Go under SIEM -> Dashboard -> Vulnerabilities for the vulnerabilities dashboard. For more information on the implementation, refer to the [Wazuh Vulnerability Detection Guide](https://documentation.wazuh.com/3.9/user-manual/capabilities/vulnerability-detection.html).
+DuploCloud uses OSSEC for vulnerability detection in Hosts. The data is ingested into the SIEM and is displayed in the dashboard. The DuploCloud operations team typically patches VMs every quarter. To access the vulnerability dashboard, navigate to **SIEM** -> **Dashboard** -> **Vulnerabilities**. For more information on implementation, refer to the [Wazuh Vulnerability Detection Guide](https://documentation.wazuh.com/3.9/user-manual/capabilities/vulnerability-detection.html).
 
-<figure><img src="../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (143).png" alt=""><figcaption><p>The <strong>Inventory</strong> tab of the <strong>SIEM Vulnerabilities</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>
 
-In AWS the platform also integrates with AWS inspector for vulnerability scanning.
+In AWS, the platform integrates with AWS inspector for vulnerability scanning.
 
-<figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (144).png" alt=""><figcaption><p>Hosts listed in the <strong>By Vulneratility</strong> tab</p></figcaption></figure>

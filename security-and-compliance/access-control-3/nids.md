@@ -1,3 +1,7 @@
+---
+description: Network Intrusion Detection System (NIDS) in the DuploCloud Portal
+---
+
 # NIDS
 
-We leverage AWS Guard duty for NIDS and those alerts are integrated into the SIEM. For GCP and Azure this needs to be setup directly in their portal.
+We leverage AWS GuardDuty for NIDS, and those alerts are integrated into the DuploCloud SIEM dashboard. For GCP and Azure, this needs to be set up directly in their respective portals.
