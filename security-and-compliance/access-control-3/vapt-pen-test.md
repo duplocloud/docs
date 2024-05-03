@@ -1,3 +1,11 @@
+---
+description: >-
+  Vulnerability and Penetration Testing (VAPT) or Pen Test in the DuploCloud
+  Platform
+---
+
 # VAPT (Pen Test)
 
-DuploCloud provides annual penetration testing services for their clients with DevSecOps or higher packages. This is a combination of manual and automated scans. The automated scans involve both passive and active scans. Please reach out to us for a detailed description of the test methodology.
+DuploCloud provides annual penetration testing services for customers with DevSecOps or higher packages. This is a combination of manual and automated scans.&#x20;
+
+The automated scans involve both passive and active scans. For a detailed description of the test methodology, please contact us via your Slack channel or email.
