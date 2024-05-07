@@ -14,48 +14,32 @@ This example makes some assumptions:
 
 * Your workflow already has a `build` job - we created one in the previous section
 
-
-
-```yaml
-variables:
-  DOCKERHUB_USERNAME: duplocloud               # CHANGE ME!
-  DOCKERHUB_REPO: mydockerhubid/myrepo         # CHANGE ME!
-  DUPLO_HOST: https://mysystem.duplocloud.net  # CHANGE ME!
-  DUPLO_SERVICE_NAME: myservice                # CHANGE ME!
-  TENANT_NAME: mytenant
-
-docker-build:
-  # Use the official docker image.
-  image: docker:latest
-  stage: build
-  services:
-    - docker:dind
-  before_script:
-    - docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
-  script:
-    - |
-      tag=":$CI_COMMIT_SHA"
-      echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
-    - docker build --pull -t "$DOCKERHUB_REPO${tag}" .
-    - docker push "$DOCKERHUB_REPO${tag}"
-  # Run this job in a branch where a Dockerfile exists
+<pre class="language-yaml"><code class="lang-yaml"><strong>deploy:
+</strong>  stage: deploy
+  image:
+    name: duplocloud/duploctl:v0.2.27
+    entrypoint: [""]
+  # this will have DUPLO_HOST and DUPLO_TOKEN
+  environment:
+    name: $TIER/$DUPLO_TENANT
+    url: ${MYAPPS_URL}
   rules:
-    - if: $CI_COMMIT_BRANCH
-      exists:
-        - Dockerfile
-docker-deploy:
-  # Use the official docker image.
-  image: docker:latest
-  stage: deploy
-  services:
-    - docker:dind
+  # run when a new tag is pushed
+  - if: $CI_COMMIT_TAG &#x26;&#x26; $CI_PIPELINE_SOURCE == "pipeline"
+    when: always
+  variables:
+    # build your image here
+    CI_IMAGE: ${IMAGE_REGISTRY}/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}:${CI_COMMIT_TAG}
+    GIT_STRATEGY: none # no need to pull the repo
+  needs:
+  - job: publish_image
+    optional: true
   before_script:
-    - apk add --update curl jq && rm -rf /var/cache/apk/*
-  script:
-    - |
-      tag=":$CI_COMMIT_SHA"
-      wget https://raw.githubusercontent.com/duplocloud/demo-npm-service/master/.circleci/duplo_utils.sh
-      chmod +x duplo_utils.sh
-      source duplo_utils.sh
-      update_service_api $(get_tenant_id $TENANT_NAME) "$DOCKERHUB_REPO${tag}"
-```
+  - echo "Updating service ${CI_PROJECT_NAME} with image ${CI_IMAGE}"
+  script: duploctl service update_image $CI_PROJECT_NAME $CI_IMAGE
+</code></pre>
+
+## References
+
+* [Duploctl Service Resource](https://cli.duplocloud.com/Service/)
+* Duplocloud Services
