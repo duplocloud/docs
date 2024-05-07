@@ -2,7 +2,7 @@
 description: Use Duplo to build and push a docker image from Gitlab CI/CD
 ---
 
-# Build a docker image
+# Build a Docker image
 
 ## Case: Build and Push to DockerHub
 
@@ -55,7 +55,7 @@ docker-build:
         - Dockerfile
 ```
 
-## Case: Build and Push to Amazon ECR (Elastic Container Reggistry)
+## Case: Build and Push to Amazon ECR (Elastic Container Registry)
 
 The goal of this section is to show how you can build a docker image and push it to Amazon ECR.
 
@@ -67,11 +67,11 @@ It does three basic things:
 
 _Prerequisite - A repository in ECR must have been created before proceeding with the next steps._
 
-This process uses DuploCloud API Token (refer [DuploCloud API Token](https://docs.duplocloud.com/docs/administrators/access-control/api-tokens#permanent-api-tokens)) to gain access to AWS ECR. 
+This process uses DuploCloud API Token (refer [DuploCloud API Token](https://docs.duplocloud.com/docs/administrators/access-control/api-tokens#permanent-api-tokens)) to gain access to AWS ECR.
 
-Go to GitLab > Settings > CI CD > Variables > Expand and ensure that DUPLO_TOKEN variable is set and has correct value. Check the Protect Variable and Masked options for security purposes. You can refer to [Configuring GitLab](https://docs.duplocloud.com/docs/ci-cd/github-actions-1/configuring-github) for the steps to setup a service account and to create a token for the newly configured account. The service account must have admin role.
+Go to GitLab > Settings > CI CD > Variables > Expand and ensure that DUPLO\_TOKEN variable is set and has correct value. Check the Protect Variable and Masked options for security purposes. You can refer to [Configuring GitLab](https://docs.duplocloud.com/docs/ci-cd/github-actions-1/configuring-github) for the steps to setup a service account and to create a token for the newly configured account. The service account must have admin role.
 
-The script uses amazon/aws-cli image as the base running image and uses Docker-in-Docker (docker/dind)  to run the Docker commands. It uses duplo_utils.sh script from DuploCloud to get configuration from the DuploCloud instance.
+The script uses amazon/aws-cli image as the base running image and uses Docker-in-Docker (docker/dind) to run the Docker commands. It uses duplo\_utils.sh script from DuploCloud to get configuration from the DuploCloud instance.
 
 ### Example Workflow
 

@@ -21,8 +21,9 @@ Add a new user and give them appropriate permissions:&#x20;
     <figure><img src="../../.gitbook/assets/Create_User.png" alt=""><figcaption><p><strong>Create User</strong> pane</p></figcaption></figure>
 
     </div>
-3. Define a **Username**, select a **Role**, and **Provision VPN** access and **Read Only Access**, if required.
-4. Click **Submit**.
+3. In the **Username** field, enter the email or service account name. A service account is a special account used by an application, compute workload, or CI/CD tool, rather than a person. A users username must be an email to match up to the SSO to access the web portal.&#x20;
+4. Select a **Role**, and **Provision VPN** access and **Read Only Access**, if required.
+5. Click **Submit**.
 
 ## Edit permissions for an existing user
 
