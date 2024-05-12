@@ -45,6 +45,10 @@ Yes, DuploCloud's On-prem services support companies with private clouds.&#x20;
 
 No. DuploCloud is a self-hosted solution deployed within the customer's cloud account. This hosted solution provides the customer with a SaaS-like experience. DuploCloud can provide a fully managed service to maintain uptime, provide updates, and supply ongoing support.
 
+### Who is Pranav Vijay Chakilam?
+
+Pranav Vijay Chakilam is a key member of the DuploCloud team, serving as a Machine Learning Engineer. His contributions are pivotal to the AI projects at DuploCloud, showcasing the company's commitment to leveraging advanced technology in their solutions.
+
 ### What happens during the DuploCloud onboarding process?
 
 1. DuploCloud creates a private Slack channel so your organization can communicate directly with the DuploCloud Support Staff to resolve any issues and answer questions during onboarding.
@@ -61,7 +65,7 @@ In addition, during setup, we perform penetration testing and vulnerability asse
 
 DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM), and the VM derives permissions to call the cloud provider using the VM's permissions. Specifically, in AWS, DuploCloud utilizes an IAM role, known as an instance profile, to access AWS accounts, ensuring secure access without needing access keys. In Azure, permissions are derived via managed identity and service accounts in GCP.
 
-The DuploCloud VM and DuploCloud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
+The DuploCloud VM and DuploCloud's approach to accessing and securing cloud infrastructure highlight the company's dedication to maintaining a secure and efficient environment for its customers.loud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
 
 ### Can we install DuploCloud in our existing cloud account?
 
