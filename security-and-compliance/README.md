@@ -2,7 +2,7 @@
 description: An Overview of Security and Compliance features in the DuploCloud Portal
 ---
 
-# Introduction
+# Security and Compliance
 
 Automation, security, and compliance are the three core value propositions of the DuploCloud platform. The majority of our clients buy DuploCloud for security and compliance first. The following are the fundamental tenants of DuploCloud's approach to security:
 
