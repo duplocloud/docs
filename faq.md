@@ -6,7 +6,7 @@ description: Popular and frequently asked questions about DuploCloud
 
 ## What support features are included with my DuploCloud subscription&#x20;
 
-See [DuploCloud Support](getting-started/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.
+See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.
 
 ## What cloud providers does DuploCloud support?
 
@@ -19,16 +19,16 @@ DuploCloud supports the following:
 
 Use these FAQ documents to quickly find answers to popular questions about using AWS, Azure, and GCP with DuploCloud.
 
-{% content-ref url="aws-user-guide/aws-faq.md" %}
-[aws-faq.md](aws-user-guide/aws-faq.md)
+{% content-ref url="overview/aws-faq.md" %}
+[aws-faq.md](overview/aws-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="azure-user-guide/azure-faq.md" %}
-[azure-faq.md](azure-user-guide/azure-faq.md)
+{% content-ref url="overview-2/azure-faq.md" %}
+[azure-faq.md](overview-2/azure-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="gcp-user-guide/gcp-faq.md" %}
-[gcp-faq.md](gcp-user-guide/gcp-faq.md)
+{% content-ref url="overview-1/gcp-faq.md" %}
+[gcp-faq.md](overview-1/gcp-faq.md)
 {% endcontent-ref %}
 
 ## How much will DuploCloud add to my company's cloud spend?
@@ -175,7 +175,7 @@ No. DuploCloud segregates resources into environments called Tenants, which acce
 
 ### I can't edit the Service Description to update my control plane configuration.
 
-You must make control plane modifications before [enabling central logging](aws-user-guide/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
+You must make control plane modifications before [enabling central logging](overview/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
 
 ### How do you create a Host with a public IP?
 
@@ -246,11 +246,11 @@ rm -rf ~/Library/Caches/duplo-jit/
 Two possible reasons for receiving this fault message are:
 
 * You are not allocating enough hosts to process your workload.
-* The [allocation tags](gcp-user-guide/container-deployments/concepts.md#allocation-tags) you assigned to your existing Hosts limit additional Service workloads.
+* The [allocation tags](overview-1/container-deployments/concepts.md#allocation-tags) you assigned to your existing Hosts limit additional Service workloads.
 
 ### I do not see logs displayed for a Tenant. I get the error `Docker native collection agent Filebeat is not running for Tenant`.
 
-Ensure that [logging is set up](aws-user-guide/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.
+Ensure that [logging is set up](overview/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.
 
 ## Terraform FAQs
 
