@@ -12,7 +12,7 @@ For general information about deploying serverless applications with GitHub Acti
 
 ### Update a Function Using an Image&#x20;
 
-Use the following code as a template to update a Lambda container image with GitHub Actions. In this example, the Lambda container image in the `dev01` Tenant is updated and redeployed.
+Use the following code as a template to update a Lambda container image with GitHub Actions. In this example, the Lambda container image in the `dev01` The tenant is updated and redeployed.
 
 You must ensure the following are configured in your environment and your specific situation.&#x20;
 
@@ -47,20 +47,20 @@ jobs:
     
     # configures duplocloud and aws
     - name: Cloud CI Setup
-      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@v0.0.3</a>
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@v0.0.</a>5
 
     # uses duploctl from above
     - name: Update Lambda
-      uses: <a data-footnote-ref href="#user-content-fn-2">duplocloud/actions/update-image@v0.0.3</a>
+      uses: <a data-footnote-ref href="#user-content-fn-2">duplocloud/actions/update-image@v0.0.</a>5
       with:
         type: lambda
         name: mylambda
         image: ${{ inputs.image }}
 </code></pre>
 
-## Update Lambda based on package in Amazon S3
+## Update Lambda based on a package in Amazon S3
 
-Use the following code as a template to deploy your Lambda functions to an S3 bucket with GitHub Actions. In this example, the Lambda in the `dev01` Tenant is updated using an S3 bucket that contains `mylambda-v1.zip`
+Use the following code as a template to deploy your Lambda functions to an S3 bucket with GitHub Actions. In this example, the Lambda in the `dev01` The tenant is updated using an S3 bucket that contains `mylambda-v1.zip`
 
 You must ensure the following are configured in your environment and your specific situation.&#x20;
 
@@ -99,7 +99,7 @@ jobs:
     
     # configures duplocloud and aws
     - name: Cloud CI Setup
-      uses: duplocloud/actions/setup@v0.0.3
+      uses: duplocloud/actions/setup@v0.0.5
       
     # we can build the bucket name using context from setup
     - name: Discover True Bucket Name
