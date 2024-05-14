@@ -167,7 +167,7 @@ Yes.
 
 ### Can anything in the UI be automated over an API as well?
 
-Yes. Every element in the DuploCloud UI is populated by calling an API.
+Yes. Every element in the DuploCloud UI is populated by calling an API. Additionally, Duplo maintains a comprehensive log file that records the creation of all resources, including compute instances, storage options, and databases, facilitating tracking and auditing of resource provisioning.
 
 ### Does DuploCloud make any assumptions we should be aware of that may impact initial implementation time?
 
