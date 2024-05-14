@@ -24,11 +24,11 @@ Supported Services are listed in alphabetical order, following the core services
 
 * [Containers and Services](containers/)
 * [Load Balancers](load-balancers/)
-* [Storage](storage/)
+* [Storage](../../aws-user-guide/aws-services/storage/)
 
 ### Additional Services
 
-* [API Gateway](api-gateway.md)
+* [API Gateway](../../aws-user-guide/aws-services/api-gateway.md)
 * [Batch](batch.md)
 * [CloudFront](cloudfront.md)
 * [Databases](database/)
