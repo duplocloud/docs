@@ -4,7 +4,7 @@ description: Popular and frequently asked questions about DuploCloud
 
 # FAQs
 
-## What support features are included with my DuploCloud subscription&#x20;
+## What support features are included with my DuploCloud subscription
 
 See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.
 
@@ -39,7 +39,7 @@ We estimate that DuploCloud will increase your company's cloud costs by approxim
 
 ### Can companies with private clouds use DuploCloud?
 
-Yes, DuploCloud's On-prem services support companies with private clouds.&#x20;
+Yes, DuploCloud's On-prem services support companies with private clouds.
 
 ### Is DuploCloud a SaaS product?
 
@@ -167,7 +167,7 @@ Yes.
 
 ### Can anything in the UI be automated over an API as well?
 
-Yes. Every element in the DuploCloud UI is populated by calling an API. Additionally, Duplo maintains a comprehensive log file that records the creation of all resources, including compute instances, storage options, and databases, facilitating tracking and auditing of resource provisioning.
+Yes. Every element in the DuploCloud UI is populated by calling an API. Additionally, DuploCloud maintains a comprehensive log file that records the creation of all resources, including compute instances, storage options, and databases, facilitating tracking and auditing of resource provisioning.
 
 ### Does DuploCloud make any assumptions we should be aware of that may impact initial implementation time?
 
@@ -278,7 +278,7 @@ In both production and critical non-production environments, the cloud services 
 
 ### How can I set up Multi-Factor Authentication (MFA) for OpenVPN authentication?
 
-From the DuploCloud portal, click on your name in the top right corner and select Profile. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the profile, and add it to the OpenVPN Connect. The next time you log in with OpenVPN, you will be prompted to enter the authentication code.&#x20;
+From the DuploCloud portal, click on your name in the top right corner and select Profile. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the profile, and add it to the OpenVPN Connect. The next time you log in with OpenVPN, you will be prompted to enter the authentication code.
 
 ## CI/CD FAQs
 
