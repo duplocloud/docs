@@ -12,7 +12,7 @@ When working with Kubernetes services configured with Horizontal Pod Autoscaler 
 
 ### Stopping a Service with HPA
 
-To stop a service that is stuck in the Running state due to HPA, directly deleting pods will not suffice as new ones will be created to maintain the set number of replicas. Instead, you should remove the HPA configuration and adopt a static replication strategy by setting the replica count to 0. This ensures the service is effectively stopped without attempting to set `minReplicas` to 0, which is an invalid configuration for HPA.
+To stop a service that is stuck in the Running state due to HPA, you cannot directly deleting pods, as new ones are created to maintain the set number of replicas. Instead, remove the HPA configuration and adopt a static replication strategy by setting the replica count to 0. This ensures the service is effectively stopped without attempting to set `minReplicas` to 0, which is an invalid configuration for HPA.
 
 ### Troubleshooting
 
