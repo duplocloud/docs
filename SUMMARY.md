@@ -104,7 +104,7 @@
       * [Disable Source Destination Check](overview/use-cases/hosts-vms/disable-source-destination-check.md)
     * [Auditing](overview/use-cases/auditing.md)
     * [Logs](overview/use-cases/central-logging/README.md)
-      * [Set up logging](overview/use-cases/central-logging/central-logging-setup.md)
+      * [Set up central logging](overview/use-cases/central-logging/central-logging-setup.md)
       * [Display logs](overview/use-cases/central-logging/log-dashboards.md)
       * [Create custom logs](overview/use-cases/central-logging/custom-log-collection.md)
     * [Diagnostics and Metrics](overview/use-cases/monitoring/README.md)
