@@ -4,19 +4,6 @@ description: Popular and frequently asked questions about DuploCloud
 
 # FAQs
 
-## What support features are included with my DuploCloud subscription
-
-See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.
-
-## What cloud providers does DuploCloud support?
-
-DuploCloud supports the following:
-
-* Amazon AWS
-* Microsoft Azure
-* Google Cloud
-* On-Premises
-
 Use these FAQ documents to quickly find answers to popular questions about using AWS, Azure, and GCP with DuploCloud.
 
 {% content-ref url="overview/aws-faq.md" %}
@@ -31,11 +18,24 @@ Use these FAQ documents to quickly find answers to popular questions about using
 [gcp-faq.md](overview-1/gcp-faq.md)
 {% endcontent-ref %}
 
-## How much will DuploCloud add to my company's cloud spend?
-
-We estimate that DuploCloud will increase your company's cloud costs by approximately $100 to $200 per month.
-
 ## General FAQs
+
+### What cloud providers does DuploCloud support?
+
+DuploCloud supports the following:
+
+* Amazon AWS
+* Microsoft Azure
+* Google Cloud
+* On-Premises
+
+### What support features come with my DuploCloud subscription
+
+See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.
+
+### How much will DuploCloud add to my company's cloud budget?
+
+We estimate that DuploCloud will increase your company's monthly cloud costs by approximately $100 to $200.
 
 ### Can companies with private clouds use DuploCloud?
 
@@ -47,11 +47,11 @@ No. DuploCloud is a self-hosted solution deployed within the customer's cloud ac
 
 ### What happens during the DuploCloud onboarding process?
 
-1. DuploCloud creates a private Slack channel so your organization can communicate directly with the DuploCloud Support Staff to resolve any issues and answer questions during onboarding.
-2. Typically clients create a separate AWS account, GCP project, or Azure subscription for DuploCloud, so we don't interfere with any pre-existing AWS accounts and configurations. The goal is to set up a development environment that the client team validates and switches over to, followed by staging and, finally, a Production migration. DuploCloud can also be integrated into an existing environment, or there can be a hybrid where some infrastructure is moved over to a DuploCloud-managed environment that connects to the existing environment.
-3. DuploCloud installs the DuploCloud Portal for you and then schedules a call to orient you to the Portal and do additional configuration, such as creating DuploCloud Services, as required.
-4. During the initial call with DuploCloud, you have the option of completing the set-up yourself, with help from our engineers. You can also create some Services and let our engineers set up the rest for you.
-5. After your DuploCloud Portal has been installed and configured, DuploCloud Infrastructures (VPCs) are running, Kubernetes has been enabled and configured, and logging, monitoring, alerting, CI/CD, and Soc2 Controls have been implemented.
+1. DuploCloud creates a private Slack channel so your organization can communicate directly with the DuploCloud Support Staff to resolve issues and answer questions during onboarding.
+2. Typically, clients create separate AWS accounts, GCP projects, or Azure subscriptions for DuploCloud so we don't interfere with any pre-existing AWS accounts and configurations. The goal is to set up a development environment the client team can validate and switch to, followed by staging and production migration. DuploCloud is integrated into an existing environment, or there can be a hybrid where some infrastructure is moved to a DuploCloud-managed environment that connects to the existing environment.
+3. DuploCloud installs the portal for you and then schedules a call to orient you to the portal and perform additional configuration, such as creating DuploCloud Services, as required.
+4. During the initial call with DuploCloud, you can complete the setup with help from our engineers. You can also create some Services and let our engineers set up the rest for you.
+5. After your DuploCloud Portal has been installed and configured, DuploCloud Infrastructures (VPCs) will run, Kubernetes will be enabled and configured, and logging, monitoring, alerting, CI/CD, and Soc2 Controls will be implemented.
 
 Even though the onboarding process can take thirty to seventy (30-70) hours, the DuploCloud staff performs about 90% of the work for you. Feel free to contact our Support staff anytime with questions or concerns.
 
@@ -59,31 +59,31 @@ In addition, during setup, we perform penetration testing and vulnerability asse
 
 ### How is DuploCloud Portal accessing my cloud infrastructure, and how is it secured?
 
-DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM), and the VM derives permissions to call the cloud provider using the VM's permissions. Specifically, in AWS, DuploCloud utilizes an IAM role, known as an instance profile, to access AWS accounts, ensuring secure access without needing access keys. In Azure, permissions are derived via managed identity and service accounts in GCP.
+DuploCloud is a self-hosted single-tenant solution deployed within the customer's cloud account. The software runs in a virtual machine (VM), and the VM derives permissions to call the cloud provider using the VM's permissions. Specifically, in AWS, DuploCloud utilizes an IAM role, an instance profile, to access AWS accounts, ensuring secure access without needing access keys. In Azure, permissions derive from Managed Identity. Permissions derive from service accounts in GCP.
 
 ### Multi-AWS Account Setup with DuploCloud
 
-For those looking to manage workloads across multiple AWS accounts, it's necessary to install a DuploCloud appliance in each account. This ensures effective management of the workloads in different environments, aligning with DuploCloud's comprehensive support for multi-cloud and hybrid cloud setups.loud Portal are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
+Installing a DuploCloud appliance in each account is necessary to manage workloads across multiple AWS accounts. This strategy ensures effective management of the workloads in different environments, aligning with DuploCloud's comprehensive support for multi-cloud and hybrid-cloud setups. Cloud Portals are secured, as is any other workload in the cloud. In addition to SSO login for portal access, the VM runs optionally behind a VPN. Therefore, only internal users can load the portal when connected to a VPN.
 
 ### Can we install DuploCloud in our existing cloud account?
 
-While you can install DuploCloud in your existing environment, we prefer that we do the setup in a separate account. This does not mean you must migrate all your existing data sources, especially if you have terabytes of files in the S3 bucket. The workload in DuploCloud environments can connect to existing data sources and endpoints over peering and cross-account access. Here are the top reasons why people prefer Duplocloud in a separate account:
+While you can install DuploCloud in your existing environment, we prefer that we do the setup in a separate account. You do not have to migrate all your existing data sources, especially if you have terabytes of files in the S3 bucket. The workload in DuploCloud environments can connect to existing data sources and endpoints over peering and cross-account access. Here are the top reasons why people prefer Duplocloud in a separate account:
 
-* It is considered a very safe and non-intrusive way to validate the new setup and, at times, new architecture, like Kubernetes, without touching the existing account.
-* From a compliance perspective, a new account is a clean slate and is very easy to pass audits as DuploCloud will guarantee all aspects of it. If we were to fit in an existing account, there may be many things that are quite hard and, in some cases, impossible to fix. For example, if things were operated non-compliantly, that history is stored in a cloud trail. This can indicate irregularities to an auditor and creates a lot of questions around scope, leading to exceptions in the report.
+* It is considered a safe and non-intrusive way to validate the new setup and, at times, new architecture, like Kubernetes, without touching the existing account.
+* From a compliance perspective, a new account is a clean slate and is very easy to pass audits as DuploCloud will guarantee all aspects of it. If we were to fit in an existing account, there may be many things that are pretty hard and, in some cases, impossible to fix. For example, in a non-compliant scenario, that history is stored in a cloud trail, indicating irregularities to an auditor and creating questions around scope, leading to exceptions in the report.
 * Some DuploCloud security features can impact existing non-compliant resources and workloads. While this is rare, it is something to consider.
 
-In summary, while one can deploy the platform in an existing account, even import a VPC and Kubernetes clusters, avoiding it can cause more overhead than benefit than a new account with either data migrated or connected to existing data sources over cross-account access.
+In summary, while one can deploy the platform in an existing account and even import a VPC and Kubernetes clusters, avoiding it can cause more overhead than benefit compared to a new account with either data migrated or connected to existing data sources over cross-account access.
 
-### Am I locked into DuploCloud? If so, what work do I need to do to move away from it?
+### Am I locked into DuploCloud? If so, what work must I do to move away from it?
 
-DuploCloud is running in your own cloud account, along with your workloads. DuploCloud is a provisioning system, so stopping DuploCloud does not impact any of your applications and cloud services.
+DuploCloud is running in your cloud account, along with your workloads. DuploCloud is a provisioning system, so stopping DuploCloud does not impact any of your applications and cloud services.
 
 The following is a list of automation constructs managed by DuploCloud and a summary of what you need to do to maintain them directly instead of through DuploCloud.
 
 1. Cloud Provider Configuration (Terraform): This involves various cloud services, IAM roles, Security groups, VPC, etc. DuploCloud can export your latest cloud configuration into native Terraform code and state files. Once exported, you maintain the configuration.
 2. Kubernetes: All applications and configurations that have been deployed in K8s are available in the form of deployments, StatefulSets, DaemonSet, K8s Secrets, ConfigMaps, etc. One can run `kubectl`commands to export configurations as YAML files and continue to maintain them in the future.
-3. Compliance monitoring: DuploCloud uses a third-party SIEM solution called [Wazuh](https://www.wazuh.com). Wazuh is an open-source software platform running in an independent VM in your cloud account, and you have full permission to retain it "as-is." However, going forward, you need to integrate any new systems that need compliance monitoring into the SIEM.
+3. Compliance monitoring: DuploCloud uses a third-party SIEM solution called [Wazuh](https://www.wazuh.com). Wazuh is an open-source software platform running in an independent VM in your cloud account, and you have full permission to retain it "as-is." However, in the future, you need to integrate any new systems that need compliance monitoring into the SIEM.
 4. Diagnostics tools: These include Prometheus, Grafana, and Elasticsearch. They are all open source and run in your cloud account, so you can continue to manage them directly.
 
 {% hint style="info" %}
@@ -94,7 +94,7 @@ If DuploCloud is down, it's similar to having an unavailable DevOps engineer. If
 
 Absolutely! More than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates.
 
-The DuploCloud team is your extended DevOps team, assisting with white glove environment setup and daily operations with 24x7 Slack and email support. We cover what is supported in the DuploCloud platform and assist with your cloud provider's requirements.
+The DuploCloud team is your extended DevOps team. We assist with white-glove environment setup and daily operations with 24x7 Slack and email support. We cover what the DuploCloud platform supports and assist with your cloud provider's requirements.
 
 After the initial onboarding of the platform, we recommend that you engage the DuploCloud team as your second line of defense by setting up an internal triage process of your own. We can assist you in setting up this process.
 
@@ -108,7 +108,7 @@ Yes. This is often required because DuploCloud may not support all cloud feature
 
 #### Independent Changes
 
-DuploCloud labels the resources and configurations it manages. If independent changes are being made directly with your cloud provider, DuploCloud will not interfere. However, DuploCloud still monitors changes for compliance and alerts you to non-compliant configurations.
+DuploCloud labels the resources and configurations it manages. If independent changes are being made directly with your cloud provider, DuploCloud will not interfere. However, DuploCloud still monitors compliance changes and alerts you to non-compliant configurations.
 
 #### Non-conflicting changes to DuploCloud managed resources
 
@@ -130,7 +130,7 @@ Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to k
 
 "Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. You can skip past default settings that aren't secure, copy configuration incorrectly between environments, etc. You need hundreds or thousands of clicks and a lot of DevSecOps knowledge.
 
-DuploCloud manages infrastructure resources for you. You pick application-level functionality like "services" and "load balancers," then, DuploCloud creates the complex cloud resources needed to deliver that functionality. It ensures the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
+DuploCloud manages infrastructure resources for you. You pick application-level functionality like "services" and "load balancers," and then DuploCloud creates the complex cloud resources needed to deliver that functionality. It ensures the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
 Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure you don't.
 
@@ -140,7 +140,7 @@ The answer depends on the following key factors:
 
 #### How much Developer self-service do you require?
 
-Especially in a rapidly growing company environment, where architecture is constantly evolving and services are constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases where there is an established operations organization with centralized requirements, a low-code Terraform solution may be a better option.
+Especially in a rapidly growing company environment, where architecture is constantly evolving, and services are constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases with an established operations organization with centralized requirements, a low-code Terraform solution may be a better option.
 
 Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with completely independent constructs.
 
@@ -209,17 +209,17 @@ No, Kubernetes is not required. DuploCloud supports both AWS ECS and Kubernetes,
 
 The main advantage of Kubernetes is its broad-based, highly customizable, third-party, open-source community that champions and supports it as a delivery platform. For example, Astronomer (managed air flow), Time series database, IsTio Service Mesh, and Kong API Gateway all expect you to have a Kubernetes deployment. However, if your business needs and use cases are met with an AWS solution, you may not need Kubernetes.
 
-Choose the container management software that best meets your use cases and requirements' complexity level. DuploCloud supports AWS, Kubernetes, Azure, and GCP. Many customers use software from multiple vendors to create robust business solutions backed by DuploCloud's compliance assurance and automated low-code/no-code DevOps approach.
+Choose the container management software that best meets the complexity level of your use cases and requirements. DuploCloud supports AWS, Kubernetes, Azure, and GCP. Many customers use software from multiple vendors to create robust business solutions backed by DuploCloud's compliance assurance and automated low-code/no-code DevOps approach.
 
 ### I want to have multiple replicas of my MVC (Model-View-Controller) service. How do I make sure that only one of them runs migration?
 
 Enable Health Check for your service and ensure the API does not return HTTP 200 status until migration is done. Since DuploCloud waits for a complete Health Check on one service before upgrading to the next service, only one instance will run migration at a time.
 
-## Upgrade FAQs
+## Storage FAQs
 
-### What is a rolling upgrade, and how do I enable it?
+### Does DuploCloud Support custom S3 bucket naming?
 
-When you update (e.g., change an image or ENV variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start or the health check URL does not return HTTP 200 status, DuploCloud will pause the upgrade of the remaining containers. This can typically be remedied by updating the service with a newer image with a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. To specify Health Check, use the Elastic Load Balancer menu to find the Health Check URL suffix.
+DuploCloud supports the creation of S3 buckets with custom prefixes, enabling unique bucket names without the default numeric suffix. This feature can be activated by configuring a specific setting in the system, allowing for more personalized and easily identifiable bucket names that comply with S3's uniqueness requirements.
 
 ## Container/Docker FAQs
 
@@ -233,9 +233,53 @@ If the current state is Pending when the desired state is Delete, the container 
 
 A Pending Delete status indicates that DuploCloud intends to remove these containers, indicating that a system update or service upgrade is in progress. This status often appears during rolling upgrades, where DuploCloud systematically replaces old container versions with new ones to ensure service continuity and minimal downtime. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running status even though the Health Check failed and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, environment, etc.) to an error-free state.
 
+## Terraform FAQs
+
+### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
+
+No. DuploCloud calls the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a state machine of operations with built-in retries to ensure robustness. Interacting with the cloud provider continuously monitors configuration drift, system faults, security, and compliance controls.&#x20;
+
+### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
+
+The Terraform and DuploCloud Web UIs layer on top of the DuploCloud platform.
+
+![User Interaction with the DuploCloud Platform](<.gitbook/assets/image (11) (1) (1).png>)
+
+DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows users to configure their cloud infrastructure using DuploCloud constructs rather than lower-level cloud provider constructs. It enables users to benefit from Infrastructure-as-Code while significantly reducing the needed code. The DuploCloud Terraform Provider calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
+
+### **If my developers make changes via the DuploCloud UI, what happens to the Terraform code my DevOps engineers have written?**
+
+It is best to create separation between your developers and your DevOps team. Allowing developers to use the Web UI in non-production development environments to iterate product changes quickly can create inconsistency.
+
+You use Terraform for setting up Cloud services and first-time application deployment in both production and critical non-production environments. In addition, build CI/CD workflows to update only the application (Docker and Lambda) deployments. The DevOps team should make any cloud service level changes via Terraform, and developers should ask the DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
+
+## Security and Compliance FAQs
+
+### How can I set up Multi-Factor Authentication (MFA) for OpenVPN authentication?
+
+From the DuploCloud portal, click on your name in the top right corner and select Profile. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the profile and add it to the OpenVPN Connect. The next time you log in with OpenVPN, enter the authentication code when prompted.
+
+## CI/CD FAQs
+
+### How does CI/CD work with DuploCloud?
+
+CI/CD is the topmost layer of the DevOps stack. DuploCloud is a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool.
+
+## Upgrade FAQs
+
+### What is a rolling upgrade, and how do I enable it?
+
+When you update (e.g., change an image or ENV variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start or the health check URL does not return HTTP 200 status, DuploCloud will pause the upgrade of the remaining containers. Update the service with a newer image with a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. To specify Health Check, use the Elastic Load Balancer menu to find the Health Check URL suffix.
+
+## Diagnostic Tool FAQs
+
+### How do I use Datadog and other diagnostics tools?
+
+DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset like Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if running an application within the respective DuploCloud tenants.
+
 ## Error Messages
 
-### I'm receiving the error message `Could not load credentials from any providers`.
+### I'm receiving the error message: "`Could not load credentials from any providers"`.
 
 Your `duplo-jit` local cache must be cleared. To do this, run the following command:
 
@@ -243,51 +287,13 @@ Your `duplo-jit` local cache must be cleared. To do this, run the following comm
 rm -rf ~/Library/Caches/duplo-jit/
 ```
 
-### When creating a Service, I'm receiving the DuploCloud Fault `Conditions Unschedulable because 0/N nodes are available: 1 node(s) didn't match pod anti-affinity rules, 1 node(s) were unschedulable....`
+### When creating a Service, I'm receiving the "DuploCloud Fault `Conditions Unschedulable" message because 0/N nodes are available: 1 node(s) didn't match pod anti-affinity rules, 1 node(s) were unschedulable....`
 
 Two possible reasons for receiving this fault message are:
 
 * You are not allocating enough hosts to process your workload.
 * The [allocation tags](overview-1/container-deployments/concepts.md#allocation-tags) you assigned to your existing Hosts limit additional Service workloads.
 
-### I do not see logs displayed for a Tenant. I get the error `Docker native collection agent Filebeat is not running for Tenant`.
+### I do not see logs displayed for a Tenant. I get the error: "`Docker native collection agent Filebeat is not running for Tenant"`.
 
 Ensure that [logging is set up](overview/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.
-
-## Terraform FAQs
-
-### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
-
-No. DuploCloud calls the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a state machine of operations with built-in retries to ensure robustness. Interacting with the cloud provider continuously monitors any configuration drift, system faults, security, and compliance controls.
-
-### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
-
-The Terraform and DuploCloud Web UIs are layered on top of the DuploCloud platform.
-
-![User Interaction with the DuploCloud Platform](<.gitbook/assets/image (11) (1) (1).png>)
-
-DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows users to configure their cloud infrastructure using DuploCloud constructs rather than lower-level cloud provider constructs. This enables the user to get the benefits of Infrastructure-as-Code while significantly reducing the needed code. The DuploCloud Terraform Provider calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
-
-### **If my developers make changes via the DuploCloud UI, what happens to the Terraform code my DevOps engineers have written?**
-
-You should create a separation between your developers and your DevOps team. Allowing developers to use the Web UI in non-production development environments to quickly iterate product changes can create inconsistency.
-
-In both production and critical non-production environments, the cloud services setup and first-time application deployment can be done via Terraform code. CI/CD workflows can be built that only update the application (Docker and Lambda) deployments. The DevOps team should do any cloud service level change via Terraform, and developers should ask the DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
-
-## Security and Compliance FAQs
-
-### How can I set up Multi-Factor Authentication (MFA) for OpenVPN authentication?
-
-From the DuploCloud portal, click on your name in the top right corner and select Profile. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the profile, and add it to the OpenVPN Connect. The next time you log in with OpenVPN, you will be prompted to enter the authentication code.
-
-## CI/CD FAQs
-
-### How does CI/CD work with DuploCloud?
-
-CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool.
-
-## Diagnostic Tool FAQs
-
-### How do I use Datadog and other diagnostics tools?
-
-DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset like Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if you are running an application within the respective DuploCloud tenants.
