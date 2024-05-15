@@ -140,7 +140,7 @@ The answer depends on the following key factors:
 
 #### How much Developer self-service do you require?
 
-Especially in a rapidly growing company environment, where architecture is constantly evolving, and services are constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases with an established operations organization with centralized requirements, a low-code Terraform solution may be a better option.
+Especially in a rapidly growing company environment, where architecture is constantly evolving, and services are constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
 
 Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with completely independent constructs.
 
@@ -197,7 +197,7 @@ Under the Services Status tab, find the host where the container is running. SSH
 
 ### I cannot connect to my service URL. How do I debug it?
 
-Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host, and connect to your Docker container using the Docker exec command `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. From inside the container, curl the application URL using the IP 127.0.0.1 and the port where the application is running. Confirm that this works. CURL the same URL using the container's IP address instead of 127.0.0.1. The IP address can be obtained by running the `ifconfig` command in the container.
+Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host and connect to your Docker container using the Docker command `sudo docker exec -t`_`CONTAINER_ID`_`bash`. From inside the container, curl the application URL using the IP `127.0.0.1` and the port where the application is running. Confirm that this works. CURL is the same URL using the container's IP address instead of `127.0.0.1`. The IP address can be obtained by running the `ifconfig` command in the container.
 
 If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range of 10xxx or the same as the container port. Now try connecting to the “HostIP,” and DuploMappedHostPort just obtained. If this also works but the service URL fails, contact your enterprise admin or duplolive-support@duplocloud.net.
 
@@ -296,4 +296,8 @@ Two possible reasons for receiving this fault message are:
 
 ### I do not see logs displayed for a Tenant. I get the error: "`Docker native collection agent Filebeat is not running for Tenant"`.
 
-Ensure that [logging is set up](overview/use-cases/central-logging/central-logging-setup.md) and that you have selected the Tenant for which you want to collect logging information.
+Ensure you set up [logging](overview/use-cases/central-logging/central-logging-setup.md) and select the Tenant you want to collect logging information for.
+
+### I'm receiving the message: "It took too long to check if you are authorized to access DuploCloud. Try refreshing the page and logging in again".
+
+Clear your browser cache or use a private browsing window. Should the problem persist, please request further assistance from DuploCloud to ensure a smooth login experience.
