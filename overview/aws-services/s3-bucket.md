@@ -2,7 +2,7 @@
 description: Create an S3 bucket for AWS storage
 ---
 
-# S3 bucket
+# S3 Bucket
 
 Amazon Simple Storage Service (Amazon S3) is an object-storage service offering scalability, data availability, security, and performance. You can store and protect any data for data lakes, cloud-native applications, and mobile apps. Read more about S3 and its capabilities [here](https://aws.amazon.com/s3/).
 
@@ -16,11 +16,11 @@ To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditin
 2. Click the **S3** tab.
 3. Click **Add**. The **Create an S3** **Bucket** pane displays.
 4. In the **Name** field, enter a name for the S3 bucket.
-5. In the **Region** list box, select the region. You can select **Tenant Region**, **Default Region**, or **Global Region**, and specify **Other Region** to enter a custom region you have defined.
+5. In the **Region** list box, select the region. You can choose Region Tenant, **Default Region**, or **Global Region** and specify **Other Region** to enter a custom region you have defined.
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-14_38_40.png" alt=""><figcaption><p>The <strong>Create an S3 Bucket</strong> pane</p></figcaption></figure>
 
-6. Optionally, select **Enable Bucket Versioning** and/or **Object Lock.** Both of these settings are disabled by default, unless you Enable Bucket Versioning Tenant-wide in **Tenant** **Settings**. For more information about S3 bucket versioning, see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html).&#x20;
+6. Optionally, select **Enable Bucket Versioning** or **Object Lock.** These settings are disabled by default unless you Enable Bucket Versioning Tenant-wide in **Tenant** **Settings**. For more information about S3 bucket versioning, see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html).&#x20;
 7. Click **Create**. An S3 bucket is created.
 
 {% hint style="info" %}
@@ -54,10 +54,19 @@ You can configure the [Tenant ](../use-cases/tenant-environment/#2-toc-title)to 
     </div>
 
 {% hint style="info" %}
-With this setting configured, all new S3 buckets in the Tenant will automatically have bucket versioning enabled.&#x20;
+With this setting configured, all new S3 buckets in the Tenant will automatically enable bucket versioning.&#x20;
 {% endhint %}
 
 ## Setting S3 bucket permissions and policies
+
+{% hint style="warning" %}
+For SES-specific buckets not managed by DuploCloud, it is advisable to manage the bucket independently. Note that Duplo's default bucket policy enforces encryption, which complements SES's automatic encryption for incoming emails. \
+\
+You should manage your bucket policies if DuploCloud overwrites the custom policy to update an S3 Bucket defined in DuploCloud for SES. \
+
+
+Manage your S3 Bucket by setting `managed_policies ignore` in the DuploCloud Terraform provider, select **Ignore bucket policies** in the DuploCloud Portal when creating or editing your S3 Bucket.&#x20;
+{% endhint %}
 
 You can set specific AWS S3 bucket [permissions and policies](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html#about-access-permissions-create-bucket) using the DuploCloud Portal. Permissions for virtual machines, Lambda functions, and containers are provisioned automatically through Instance profiles, so no access key is required in your application code. However, when coding your application, be aware of these guidelines:
 
@@ -72,33 +81,24 @@ Set S3 Bucket permissions in the DuploCloud Portal:
 4. In the **Settings** tab, click **Edit**. The **Edit a S3 Bucket** pane displays.
 5. From the **KMS** list box, select the key management system scope (**AWS Default KMS Key**, **Tenant KMS Key**, etc.).
 6. Select permissions: **Allow Public Access**, **Enable Access Logs**, or **Enable Versioning**.&#x20;
-7. Select an available **Bucket Policy: Require SSL/HTTPS** or **Allow Public Read**. To select the **Allow Public Read** policy, you must select the **Allow Public Access** permission. To ignore all bucket policies for the bucket, select **Ignore Bucket Policies**.
+7. Select an available **Bucket Policy: Require SSL/HTTPS** or **Allow Public Read**. To select the **Allow Public Read** policy, you must select the **Allow Public Access** permission. To ignore all bucket policies for the bucket, choose Ignore Bucket **Policies**.
 8. Click **Save**. In the **Details** tab, your changed permissions are displayed.
 
-Use this table to map the permission and policies options above with the YAML key/value pair.&#x20;
-
-| Edit a S3 Bucket Option    | Key                         | Value        |
-| -------------------------- | --------------------------- | ------------ |
-| **Allow Public Access**    | `duplo-allow-public-access` | `true`       |
-| **Enable Access Logs**     | `duplo-enable-access-logs`  | `true`       |
-| **Enable Versioning**      | `enable-versioning`         | `true`       |
-| **Require SSL / HTTPS**    | `duplo-policy`              | `ssl`        |
-| **Allow Public Read**      | `duplo-policy`              | `publicread` |
-| **Ignore Bucket Policies** | `duplo-policy`              | `ignore`     |
+Use this table to map the permission and policies options above with the YAML key/value pair.
 
 {% hint style="info" %}
 From the **S3 Bucket** page, you can set bucket permissions directly in the AWS Console by clicking the **>\_Console** icon. You have permission to configure the bucket within the AWS Console session, but no access or security-level permissions are available.
 {% endhint %}
 
-## Add a custom prefix for S3 buckets
+## Add a custom prefix for S3 Buckets
 
-DuploCloud provides the capability to specify a custom prefix for S3.
+DuploCloud allows you to specify a custom prefix for S3 buckets. Before adding custom prefixes, contact DuploCloud Support to enable AWS resource management using tags. This setting gives you more granular control over S3 bucket naming conventions, enhancing your ability to organize and manage resources effectively.
 
 {% hint style="warning" %}
 **IMPORTANT:** Before you add custom prefixes for S3 buckets, contact the DuploCloud Support Team and ask them to set the `ENABLEAWSRESOURCEMGMTUSINGTAGS` property to`True` in the DuploCloud System. After this property is set, use this procedure to add custom prefixes.
 {% endhint %}
 
-1. IMPORTATIn the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
 3. Click **Add**. The **Add Config** pane displays.
 4. From the **Config Type** list box, select **AppConfig**.
