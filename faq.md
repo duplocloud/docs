@@ -213,7 +213,9 @@ Choose the container management software that best meets the complexity level of
 
 ### I want to have multiple replicas of my MVC (Model-View-Controller) service. How do I make sure that only one of them runs migration?
 
-Enable Health Check for your service and ensure the API does not return HTTP 200 status until migration is done. Since DuploCloud waits for a complete Health Check on one service before upgrading to the next service, only one instance will run migration at a time.
+Enable Health Check for your service and ensure the API does not return `HTTP 200` status until migration is done. Since DuploCloud waits for a complete Health Check on one service before upgrading to the next service, only one instance will run migration at a time.
+
+DuploCloud's approach to container deployment emphasizes applications being self-contained and fungible, which facilitates independent updates of each service. Kubernetes automatically manages failing containers, and DuploCloud supports the use of Health Checks, including Liveness and Readiness Probes, to ensure containers are functioning correctly and ready to receive work.
 
 ## Storage FAQs
 
@@ -231,7 +233,7 @@ If the current state is Pending when the desired state is Delete, the container 
 
 ### Some of my container statuses say “pending delete.” What does this mean?
 
-A Pending Delete status indicates that DuploCloud intends to remove these containers, indicating that a system update or service upgrade is in progress. This status often appears during rolling upgrades, where DuploCloud systematically replaces old container versions with new ones to ensure service continuity and minimal downtime. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running status even though the Health Check failed and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, environment, etc.) to an error-free state.
+This means DuploCloud is going to remove these containers. DuploCloud also supports the creation of on-demand testing environments, facilitating quick setup and teardown of environments with different configurations through the console or Terraform. This capability is crucial for testing and development workflows, ensuring flexibility and efficiency in managing containerized applications.s. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check fails and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
 
 ## Terraform FAQs
 
@@ -267,9 +269,13 @@ CI/CD is the topmost layer of the DevOps stack. DuploCloud is a deployment and m
 
 ## Upgrade FAQs
 
+DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. Additionally, DuploCloud's built-in monitoring feature displays resource utilization by tenant or container, simplifying usage tracking and offering a cost-effective alternative to solutions like Datadog.
+
 ### What is a rolling upgrade, and how do I enable it?
 
-When you update (e.g., change an image or ENV variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start or the health check URL does not return HTTP 200 status, DuploCloud will pause the upgrade of the remaining containers. Update the service with a newer image with a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. To specify Health Check, use the Elastic Load Balancer menu to find the Health Check URL suffix.
+When you update (for example, when you change an image or environment variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start or the health check URL does not return `HTTP 200` status, DuploCloud will pause the upgrade of the remaining containers. Update the service with a newer image with a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. To specify Health Check, use the Elastic Load Balancer menu to find the Health Check URL suffix.
+
+DuploCloud automates the management of AWS IAM roles, streamlining the access control for services within a tenant and facilitating AWS-integrated tasks without code modifications. This includes a `duplomaster` role for administrative tasks in the AWS console, enhancing security and operational efficiency.
 
 ## Diagnostic Tool FAQs
 
