@@ -239,7 +239,7 @@ This means DuploCloud is going to remove these containers. DuploCloud also suppo
 
 ### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
 
-No. DuploCloud calls the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a state machine of operations with built-in retries to ensure robustness. Interacting with the cloud provider continuously monitors configuration drift, system faults, security, and compliance controls.&#x20;
+No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
 
 ### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
 
@@ -265,7 +265,7 @@ From the DuploCloud portal, click on your name in the top right corner and selec
 
 ### How does CI/CD work with DuploCloud?
 
-CI/CD is the topmost layer of the DevOps stack. DuploCloud is a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its own CI/CD tool.
+CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its [own CI/CD tool](introduction-to-ci-cd/katkit/), as well.
 
 ## Upgrade FAQs
 
@@ -302,7 +302,7 @@ Two possible reasons for receiving this fault message are:
 
 ### I do not see logs displayed for a Tenant. I get the error: "`Docker native collection agent Filebeat is not running for Tenant"`.
 
-Ensure you set up [logging](overview/use-cases/central-logging/central-logging-setup.md) and select the Tenant you want to collect logging information for.
+Ensure that logging is set up and that you have selected the Tenant for which you want to collect logging information. If logs are still not appearing in the DuploCloud console and Filebeat indicates a `bulk send failure`, it may be due to Elasticsearch running out of disk space. In this case, check the disk space in the diagnostics history of the Default Tenant. If necessary, follow the steps to recognize and expand the volume on Linux as outlined in the AWS documentation to resolve this issue.
 
 ### I'm receiving the message: "It took too long to check if you are authorized to access DuploCloud. Try refreshing the page and logging in again".
 
