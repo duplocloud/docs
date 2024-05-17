@@ -1,42 +1,56 @@
-# SecretProviderClass custom resource
+---
+description: Creating K8s SecretProviderClass CRs in the DuploCloud Portal
+---
 
-DuploCloud Portal provides the ability to create Custom Resource `SecretProvider` Class.
+# Creating the SecretProviderClass Custom Resource to mount secrets
 
-This capability allows Kubernetes to mount secrets stored in external secrets stores into the pods as volumes. After the volumes are attached, the data is mounted into the container’s file system.
+DuploCloud Portal provides the ability to create Custom Resource (CR) `SecretProviderClass`.
 
-### Step 1: Enable Secret Provider Class
+This capability allows Kubernetes (K8s) to mount secrets stored in external secrets stores into the Pods as volumes. After the volumes are attached, the data is mounted into the container’s file system.
 
-As a pre-requisite, Administrator needs to set the Infrastructure setting for `Enable Secrets CSI Driver` as `True`**.** This setting is available by navigating to **Administrator** -> **Infrastructure**, selecting your Infrastructure, and clicking **Settings**).
+## Prerequisites
 
-### Step 2: Create K8s Secret Provider Class
+An Administrator must set the Infrastructure setting  `Enable Secrets CSI Driver` as `True`. This setting is available by navigating to **Administrator** -> **Infrastructure**, selecting your Infrastructure, and clicking **Settings**).
 
-Navigate to **Kubernetes** -> **Sec. Provider Class.**
+## Create the K8s SecretProviderClass CR
 
-You can map the `AWS Secrets` and `SSM Parameters` configured in DuploCloud Portal (**Cloud Services** -> **App Integration**) under the **Parameters** section of the configuration.
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Secret Provider.**
+2. Click **Add**. The **Add Kubernetes Sercet Provider Class** page displays.
+3. Map the `AWS Secrets` and `SSM Parameters` configured in DuploCloud Portal (**Cloud Services** -> **App Integration**) to the **Parameters** section of the configuration.
+4. Optionally, use the **Secret Objects** field to define the desired state of the synced Kubernetes secret objects.
 
-Use the optional **Secret Objects** field to define the desired state of the synced Kubernetes secret objects.
+The following is an example `SecretProviderClass` configuration where AWS secrets and Kubernetes Secret Objects are configured:
 
-The following is an example SecretProviderClass configuration where AWS secrets and Kubernetes Secret Objects are configured.
+![Kubernetes Secret Provider Class Page](<../../.gitbook/assets/image (52) (1).png>)
 
-![K8s Secret Provider Class Page](<../../.gitbook/assets/image (52) (1).png>)
+## **Create a Kubernetes Service and mount** volumes based on the configured secrets
 
-### **Step 3:** Mount Volumes based on the configured secrets
+To ensure your application is using the Secrets Store CSI driver, you need to configure your deployment to use the reference of the `SecretProviderClass` resource created in the previous step.
 
-To ensure your application is using the Secrets Store CSI driver, you need to configure your deployment to use the  reference of the `SecretProviderClass` resource created in the previous step.
+The following is an example of configuring a Pod to mount a volume based on the `SecretProviderClass` created in prior steps to retrieve secrets from Secrets Manager.
 
-The following is an example of how to configure a pod to mount a volume based on the SecretProviderClass created in prior steps to retrieve secrets from Secrets Manager.
-
-While creating **Service** (**Kubernetes** -> **Service**),&#x20;
-
-{% hint style="info" %}
-Select **Cloud Credentials** value as `From Kubernetes`
+{% hint style="warning" %}
+It's important to note that SPC timeouts can occur due to issues related to Secret Auto Rotation, which is enabled by default. This feature checks every two minutes if the secrets need to be updated from the values in AWS Secrets Manager. During a service deployment, if a secret is deleted due to a redeployment while a rotation check is attempted, it can lead to timeouts. This deletion happens because the secret is generated from the volume mount in the service Pod, and when the Pod is destroyed, the secret is also destroyed.
 {% endhint %}
 
-![Select Cloud Credentials](<../../.gitbook/assets/image (41) (3).png>)
+1. In the DuploCloud Portal, create a Kubernetes Service by navigating to **Kubernetes** -> **Services** and clicking **Add**.&#x20;
+2.  Complete the required fields and click **Next** to display the **Advanced Options** page.
 
-![Advance Options Service Page](<../../.gitbook/assets/image (65).png>)
+    ![Advanced Options Service Page](<../../.gitbook/assets/image (65).png>)
 
-* Add **Other Pod Config** field as the following example.
+
+3.  On the **Advanced Options** page, in the **Cloud Credentials** list box, select **From Kubernetes**.
+
+    <div align="left">
+
+    <img src="../../.gitbook/assets/image (37) (2).png" alt="K8s Secret Provider Class Page">
+
+    </div>
+
+
+4. Add code to the **Other Pod Config** field, as in the example below.
+5. Add code for `VolumeMounts` in the **Other Container Config** field, as in the example below.
+6. Click **Create** to create the Kubernetes service.
 
 {% code title="Other Pod Config field" %}
 ```yaml
@@ -51,8 +65,6 @@ Volumes:
 ```
 {% endcode %}
 
-* Add mount details in **Other Container Config** field
-
 {% code title="Other Container Config field" %}
 ```yaml
 VolumesMounts:
@@ -63,27 +75,21 @@ VolumesMounts:
 ```
 {% endcode %}
 
-### Using SecretObjects
+![Cloud Credentials list box with From Kubernetes selected ](<../../.gitbook/assets/image (41) (3).png>)
 
-#### Configuring Secret Objects
+## Configure and use Kubernetes Secret Objects
 
-You can use the optional secretObjects field to define the desired state of your synced Kubernetes secret objects. The volume mount is required for the sync.
+{% hint style="info" %}
+Before you can sync Kubernetes Secret Objects, you must [Create a Kubernetes Service and mount volumes based on the configured secrets](adding-secretproviderclass-custom-resource.md#create-a-kubernetes-service-and-mount-volumes-based-on-the-configured-secrets).&#x20;
+{% endhint %}
 
-Referring to the example which we are following from prior steps, we have defined `SecretObjects` in **Secret Object** field (K8s Secret Provider Class).
+Optionally, you can define `secretObjects` in the `SecretProviderClass` to define the desired state of your synced Kubernetes secret objects.&#x20;
 
-&#x20;The following is an example SecretProviderClass custom resource that will sync a secret from AWS Secrets Manager to a Kubernetes secret:
+The following is an example of how to create a `SecretProviderClass` CR that syncs a secret from AWS Secrets Manager to a Kubernetes secret:
 
-<div align="left">
+### Configuring Secret Objects in deployments
 
-<img src="../../.gitbook/assets/image (37) (2).png" alt="K8s Secret Provider Class Page">
-
-</div>
-
-#### Configuring Secret Objects in deployment
-
-Create Service with all the configurations specified in [Step 3](adding-secretproviderclass-custom-resource.md#step3-mount-volumes-based-on-the-configured-secrets)
-
-In **Other Container Config** field, you can specify mount details with the object name. Refer following example.
+In **Other Container Config** field, specify mount details with the `secretobject-name`. Refer to the following example:
 
 {% code title="Other Container Config field" %}
 ```yaml
@@ -97,11 +103,11 @@ EnvFrom:
 ```
 {% endcode %}
 
-#### Configuring Secret Objects in Environment Variables
+### Configuring Secret Objects using Environment Variables
 
-Set environment variables in your deployment to refer your new Kubernetes secrets.
+Set environment variables in your deployment to refer to your Kubernetes secrets.
 
-Refer following example. Specify below in **Environment Variables** field
+Refer to the following example using the **Environment Variables** field in the **Basic Options** page when [creating a service](adding-secretproviderclass-custom-resource.md#create-a-kubernetes-service-and-mount-volumes-based-on-the-configured-secrets).
 
 {% code title="Environment Variables field" %}
 ```yaml
@@ -113,3 +119,6 @@ Refer following example. Specify below in **Environment Variables** field
 ```
 {% endcode %}
 
+{% hint style="success" %}
+While powerful, this integration of secrets into Kubernetes deployments requires careful management to avoid issues such as SPC timeouts. Understanding the underlying mechanisms, such as Secret Auto Rotation and the lifecycle of secrets in pod deployments, is crucial for smooth operations.
+{% endhint %}
