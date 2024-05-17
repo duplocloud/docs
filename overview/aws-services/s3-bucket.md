@@ -12,6 +12,10 @@ To configure an S3 bucket for auditing, see the [Auditing ](../use-cases/auditin
 
 ## Creating an S3 bucket
 
+{% hint style="info" %}
+When creating an S3 bucket using the `duplocloud_s3_bucket` resource in Terraform, a unique identifier is appended to the bucket name to ensure global uniqueness, as AWS requires. This identifier is the AWS account ID and a prefix with the tenant name (`duploservices-<tenant_name>-`) is also added. This naming convention allows for creating buckets with the same name across multiple tenants while maintaining global uniqueness.
+{% endhint %}
+
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage**.
 2. Click the **S3** tab.
 3. Click **Add**. The **Create an S3** **Bucket** pane displays.
@@ -60,7 +64,7 @@ With this setting configured, all new S3 buckets in the Tenant will automaticall
 ## Setting S3 bucket permissions and policies
 
 {% hint style="warning" %}
-For SES-specific buckets not managed by DuploCloud, it is advisable to manage the bucket independently. Note that Duplo's default bucket policy enforces encryption, which complements SES's automatic encryption for incoming emails. \
+It is advisable to manage SES-specific buckets not managed by DuploCloud independently. Duplo's default bucket policy enforces encryption, which complements SES's automatic encryption for incoming emails. \
 \
 You should manage your bucket policies if DuploCloud overwrites the custom policy to update an S3 Bucket defined in DuploCloud for SES. \
 
@@ -92,10 +96,10 @@ From the **S3 Bucket** page, you can set bucket permissions directly in the AWS 
 
 ## Add a custom prefix for S3 Buckets
 
-DuploCloud allows you to specify a custom prefix for S3 buckets. Before adding custom prefixes, contact DuploCloud Support to enable AWS resource management using tags. This setting gives you more granular control over S3 bucket naming conventions, enhancing your ability to organize and manage resources effectively.
+DuploCloud provides the capability to specify a custom prefix for S3 buckets, enhancing naming conventions and organizational strategies. Before adding custom prefixes, ensure the `ENABLEAWSRESOURCEMGMTUSINGTAGS` property is set to `True` in DuploCloud by contacting the DuploCloud Support Team using your Slack channel. This setting allows for a more tailored bucket naming approach that can reflect your organization's naming conventions or project identifiers.
 
 {% hint style="warning" %}
-**IMPORTANT:** Before you add custom prefixes for S3 buckets, contact the DuploCloud Support Team and ask them to set the `ENABLEAWSRESOURCEMGMTUSINGTAGS` property to`True` in the DuploCloud System. After this property is set, use this procedure to add custom prefixes.
+Avoid specifying system-reserved prefixes such as`duploservices`.
 {% endhint %}
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
@@ -105,10 +109,6 @@ DuploCloud allows you to specify a custom prefix for S3 buckets. Before adding c
 5. From the **Key** list box, select **Prefix all S3 Bucket Names**.
 6. In the **Value** field, enter the custom prefix.
 7. Click **Submit**.
-
-{% hint style="warning" %}
-Avoid specifying system-reserved prefixes such as`duploservices`.
-{% endhint %}
 
 <div align="left">
 
