@@ -123,6 +123,7 @@
       * [Enable billing data](overview/use-cases/cost-management/enable-billing-data.md)
       * [Apply cost allocation tags](overview/use-cases/cost-management/cost-allocation-tags.md)
       * [DuploCloud License Usage](overview/use-cases/cost-management/duplocloud-license-usage.md)
+      * [Configure Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md)
       * [View billing data](overview/use-cases/cost-management/view-billing-data.md)
     * [Resource Quotas](overview/use-cases/resource-quotas.md)
     * [Big Data and ETL](overview/use-cases/big-data-and-etl.md)

@@ -17,14 +17,25 @@ DuploCloud calculates license usage by Node for the following categories:
 2.  Click the **DuploCloud License Usage** tab.\
 
 
-    <figure><img src="../../../.gitbook/assets/LIC1.png" alt=""><figcaption><p><strong>DuploCloud License Usage</strong> tab on the <strong>Billing</strong> page in the DuploCloud Portal</p></figcaption></figure>
-3.  Click **More Details** in any **License Usage** card for additional breakdown of Node Usage statistics per Tenant.\
+    <div align="left">
 
+    <figure><img src="../../../.gitbook/assets/license usage.png" alt=""><figcaption><p><strong>DuploCloud License Usage</strong> tab on the <strong>Billing</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
-    <figure><img src="../../../.gitbook/assets/LIC3.png" alt=""><figcaption></figcaption></figure>
+    </div>
+3. Click **More Details** in any **License Usage** card for additional breakdown of Node Usage statistics per Tenant.
+
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/license usage more details.png" alt=""><figcaption><p>The <strong>DuploCloud License Usage</strong> page showing <strong>More Details</strong>. </p></figcaption></figure>
+
+</div>
 
 {% hint style="info" %}
 Click the **DuploCloud license documentation** link to download a copy of the license document.
 {% endhint %}
 
+<div align="left">
+
 <figure><img src="../../../.gitbook/assets/LIC2.png" alt=""><figcaption><p>Month-view of Node Usage for billing with <strong>DuploCloud license documentation</strong> link highlighted</p></figcaption></figure>
+
+</div>
