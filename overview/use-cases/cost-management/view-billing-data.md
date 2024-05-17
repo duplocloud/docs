@@ -4,23 +4,38 @@ description: Displaying Service and Tenant billing data.
 
 # View billing data
 
-You can use the **Billing Summary** area in the respective tab on the billing page in the DuploCloud Portal to view 18 months of Service and Tenant spending data.
+From the DuploCloud portal, administrators can[ view account spending details](view-billing-data.md#view-account-billing-details) by month, week, and Tenant. Non-administrator users can [view billing data for a Tenant](view-billing-data.md#view-billing-details-for-a-tenant) they have user access to.
 
-## View billing data by month
+## View account billing details
 
-1. In the DuploCloud portal, navigate to **Cloud Services** -> **Billing**.&#x20;
-2. Select the **Spend by Month** tab to view the 5 top-spending Services per month.
+View the billing details for your company's AWS account.&#x20;
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-12_30_41.png" alt=""><figcaption><p>The <strong>Billing</strong> page - <strong>Spend by Month</strong></p></figcaption></figure>
+Log in as an administrator, and navigate to **Administrator** -> **Billing**. &#x20;
 
-3. Click **More Details** on any month card to view spending by Service for that month.&#x20;
+<figure><img src="../../../.gitbook/assets/billing 1.png" alt=""><figcaption><p>The <strong>Billing</strong> dashboard for AWS</p></figcaption></figure>
 
-## View billing data by Tenant&#x20;
+You can view usage by:
 
-1. In the DuploCloud portal, navigate to **Administrator** -> **Billing**.
-2. Select the **Spend by Tenant** tab to view the 5 top-spending Tenants per month.
+* Time
+  * Select the **Spend by Month** tab and click **More Details** to display monthly and weekly spending options. &#x20;
+* Tenant
+  * Select the **Spend by Tenant** tab.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-12_37_40.png" alt=""><figcaption><p>The <strong>Billing Tenant Summary</strong> area in the <strong>Spend by Tenant</strong> tab</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/billing 2.png" alt=""><figcaption><p><strong>Spend by Month</strong> tab with monthly and weekly options displayed</p></figcaption></figure>
 
-3. &#x20;Click **Show All Tenants** to view all spending by Tenant for that month.&#x20;
-4. Click **More Details** on any month card to view other details such as the 5 top-spending Services for that month.
+
+
+{% hint style="info" %}
+You must first enable the billing feature to view or manage usage costs in the DuploCloud Portal.
+{% endhint %}
+
+## View billing details for a Tenant
+
+View billing details for a selected Tenant. This option is accessible to non-administrator users with user access to the selected Tenant.&#x20;
+
+1. Select the **Tenant** name from the **Tenant** list box.&#x20;
+2. Navigate to **Cloud Services** -> **Billing**. The **Billing** page displays.
+
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-15_44_40.png" alt=""><figcaption><p>The <strong>Billing</strong> dashboard for the Invoice Tenant</p></figcaption></figure>
+
+The **Spend by Month** tab lists the five services with the highest spending for each month for the selected Tenant. Click **More Details** on any month's card to display more details about that month's spending. &#x20;
