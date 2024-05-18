@@ -175,6 +175,10 @@ No. DuploCloud segregates resources into environments called Tenants, which acce
 
 ## Connectivity and Availability FAQs
 
+### Troubleshooting VPN Connection Issues with DNS Resolution Failures
+
+If you encounter difficulties connecting to Duplo resources over OpenVPN, particularly when using networks like TMobile 5G Home Internet, and face errors such as "hostname not found" when accessing resources like a Postgres DB, the issue may stem from DNS resolution failures between AWS and TMobile, not OpenVPN itself. A practical workaround is to manually resolve the DNS name to its corresponding IP address using a DNS lookup tool like MXToolbox (https://mxtoolbox.com/DNSLookup.aspx). Subsequently, use the obtained IP address directly on your device to bypass the DNS issue, which has been effective for resolving such connectivity problems.
+
 ### I can't edit the Service Description to update my control plane configuration.
 
 You must make control plane modifications before [enabling central logging](overview/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
@@ -193,9 +197,7 @@ Under Host, click on Connection Details under the Actions dropdown. It will prov
 
 ### How do I get into the container where my code is running?
 
-Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps` to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID.
-
-### I cannot connect to my service URL. How do I debug it?
+Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps` to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID. cannot connect to my service URL. How do I debug it?
 
 Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host and connect to your Docker container using the Docker command `sudo docker exec -t`_`CONTAINER_ID`_`bash`. From inside the container, curl the application URL using the IP `127.0.0.1` and the port where the application is running. Confirm that this works. CURL is the same URL using the container's IP address instead of `127.0.0.1`. The IP address can be obtained by running the `ifconfig` command in the container.
 
