@@ -95,7 +95,7 @@ coverY: 0
   * Add [custom Lambda image configurations](overview/aws-services/lambda/create-lambda-using-container-image.md) and URLs.
   * Enable [Object Lock in S3 Buckets](overview/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
   * Configure a [custom S3 Bucket for auditing](overview/use-cases/disaster-recovery/ecs-setup/enable-ecs-logging.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
-  * Update [Lifecycle Policies for EFS storage](overview/aws-services/elastic-file-system-efs/#updating-efs-lifecycle-policies).
+  * Update [Lifecycle Policies for EFS storage](aws-user-guide/aws-services/elastic-file-system-efs/#updating-efs-lifecycle-policies).
   * [Customize a Node Selector for EKS Services](overview/aws-services/containers/#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
   * Access [ECS container task shells](overview/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
   * Ability to designate [Essential Containers](overview/aws-services/containers/#7-toc-title-2) in Task definitions for ECS Services.
@@ -154,7 +154,7 @@ coverY: 0
   * Support for [Redis database versions](overview/aws-services/database/elastic-cache.md) when creating Elastic Cache (Ecache).
   * Enable [shell access for ECS, Kubernetes, and Native docke](overview/prerequisites/kubectl-shell.md)r containers using a simplified workflow.
   * Reduce storage cost and increase performance by [setting GP3 as your default storage class](overview/aws-services/storage/gp3-storage-class.md).
-  * Enable [NAT Gateways for High Availability (HA)](overview/aws-services/nat-gateway-for-ha.md).
+  * Enable [NAT Gateways for High Availability (HA)](aws-user-guide/aws-services/nat-gateway-for-ha.md).
   * [Restart up to twenty DuploCloud Services](overview/aws-services/containers/#7-toc-title-1) at once.
 * GCP
   * Updated documentation for [supported databases](broken-reference).
@@ -212,7 +212,7 @@ coverY: 0
 
 ## August 2022
 
-* [Support for Elastic File System (EFS)](overview/aws-services/elastic-file-system-efs/):  Support for adding EFS has been added to DuploCloud. You can create and mount a shared filesystem for an Infrastructure in the DuploCloud Portal.
+* [Support for Elastic File System (EFS)](aws-user-guide/aws-services/elastic-file-system-efs/):  Support for adding EFS has been added to DuploCloud. You can create and mount a shared filesystem for an Infrastructure in the DuploCloud Portal.
 * [Support for adding Kubernetes Storage Class:](overview/aws-services/storage/adding-k8s-storage-class.md) Support for Kubernetes Storage Class and Persistent Volumes is now available.
 * [Support for Kubernetes Secret Provider Class](kubernetes-overview/configs-and-secrets/adding-secretproviderclass-custom-resource.md): This provides the ability to integrate AWS parameters and secrets to be available as Kubernetes secrets.
 * [Ability to add Lambda using Container Images](overview/aws-services/lambda/create-lambda-using-container-image.md): Users can now configure an AWS Lambda using Container images.
