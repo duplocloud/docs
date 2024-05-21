@@ -26,6 +26,10 @@ In this example, you create a security rule allowing traffic originating from th
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/Screen Shot 2023-01-26 at 5.47.52 PM.png" alt=""><figcaption><p>Using the <strong>Add Tenant Security</strong> pane to create a security rule</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2023-01-26 at 5.47.52 PM.png" alt=""><figcaption><p>Using the <strong>Add Tenant Security</strong> pane to create a security rule</p></figcaption></figure>
 
 </div>
+
+{% hint style="info" %}
+The example above gives Tenant access to all VPN users. If you want to grant some VPN users access while excluding others, add a separate security rule for each user you want to give access to (using their individual IP address).
+{% endhint %}
