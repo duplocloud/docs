@@ -8,7 +8,7 @@ coverY: 0
 ## Q1 2024
 
 * AWS
-  * [Enable automatic AWS ACM (SSL) Certificates](overview/prerequisites/acm-certificate.md#enabling-automatic-aws-acm-certificate-creation) for a Plan.
+  * [Enable automatic AWS ACM (SSL) Certificates](aws-user-guide/prerequisites/acm-certificate.md#enabling-automatic-aws-acm-certificate-creation) for a Plan.
   * [Configure K8s Ingress redirect ](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](overview/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
   * Enable UltraWarm Data nodes for [OpenSearch domains](overview/aws-services/elasticsearch.md).
@@ -64,7 +64,7 @@ coverY: 0
   * [Follow logs](overview/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
   * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](kubernetes-overview/pod-toleration.md).&#x20;
   * Create [Kubernetes Jobs (K8s Jobs)](kubernetes-overview/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
-  * Create [Kubernetes CronJobs (K8s CronJobs)](kubernetes-overview/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
+  * Create [Kubernetes CronJobs (K8s CronJobs)](kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 *   General updates
 
     * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
@@ -132,7 +132,7 @@ coverY: 0
   * Define [custom CIDRs](overview/aws-services/load-balancers/#adding-a-network-load-balancer-nlb-listener-with-a-custom-cidr) for NLB Load Balancers.
   * Manage multiple Load Balancer settings using the **Load Balancer** tab's [**Other Settings** card](overview/aws-services/load-balancers/#additional-load-balancer-settings). Settings include specifying a Web Application Firewall (WAF) Access Control List (ACL), enabling HTTP to HTTPS redirects, enabling Access Logs, setting an Idle Timeout, and an option to drop invalid headers.
   * Specify [custom public and private EKS endpoints](overview/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md) for your DuploCloud Infrastructure during or after creating an Infrastructure.&#x20;
-  * Gain [Cross-Tenant access to restricted policy-based resources](access-control/tenant-access/cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
+  * Gain [Cross-Tenant access to restricted policy-based resources](user-administration/access-control/tenant-access/cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
   * [JIT Access to the AWS Console is redesigned](overview/use-cases/jit-access.md#obtaining-aws-access-for-a-workstation) with several usability enhancements.
   * [Enable Control Plane logging for EKS clusters](overview/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-logs.md).
   * Enable [Read-only processing for ECS services](overview/aws-services/containers/#enabling-read-only-processing-for-ecs-services).

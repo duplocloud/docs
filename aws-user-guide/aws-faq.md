@@ -30,6 +30,52 @@ Use the AWS constructor that takes only the region as the argument (`us-west-2`)
 
 Duplo uses an IAM role, specifically an instance profile, to access AWS accounts. This methodology does not involve access keys.
 
+### If I have an S3 bucket in one Tenant, how would I give a DuploCloud Service in another Tenant access to it?
+
+See the DuploCloud documentation on [Cross-Tenant Access](../user-administration/access-control/tenant-access/cross-tenant-access.md).
+
+### How do I give DuploCloud Services access to an S3 bucket in a non-DuploCloud AWS accounts?
+
+To give DuploCloud Services (i.e., Cronjobs) access to an S3 bucket created in a non-DuploCloud AWS account, add the following permissions to your AWS accounts.&#x20;
+
+1.
+
+```
+{
+    "Sid": "AllowCrossAccount",
+    "Effect": "Allow",
+    "Principal": {
+        "AWS": "arn:aws:iam::123456789012:duploservices-dev01"
+    },
+    "Action": "s3:GetObject",
+    "Resource": [
+        "arn:aws:s3:::my-source-bucket/*",
+        "arn:aws:s3:::my-souce-bucket"
+    ]
+}
+```
+
+2.
+
+```
+{
+    "Sid": "CustomAllowS3",
+    "Effect": "Allow",
+    "Action": "s3:GetObject",
+    "Resource": [
+        "arn:aws:s3:::my-souce-bucket/*",
+        "arn:aws:s3:::my-souce-bucket"
+    ]
+}
+
+```
+
+e `s3GetObject` permission is configured in the source and destination accounts respectively, enabling cross-account data sharing for the objects in the S3 bucket.&#x20;
+
+{% hint style="warning" %}
+Depending on the use case, you may need to add additional permissions. For example, in addition to the `s3:GetObject` permission shown in the snippets above, you may need to add `s3:ListBuckets` or s3:PutObject. Be sure to add permissions to both policies, respectively, as shown in the example.
+{% endhint %}
+
 ## Security and Compliance FAQs
 
 ### Will using DuploCloud be more secure and compliant out-of-the-box, as opposed to using a default AWS configuration?
@@ -60,7 +106,7 @@ DuploCloud provisions a Load Balancer for your K8 service. If you want to look a
 
 You can find the Load Balancer name for your service by navigating to **Kubernetes** _->_ **Services**, selecting your Service from the list, and looking at the Load Balancer tab. If you're using K8s Ingress, you must go to the **K8s Ingress** tab and find the Load Balancer configuration there.
 
-Once you have the Load Balancer name, you can access the AWS Console via the DuploCloud UI ([here](use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your Load Balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes).
+Once you have the Load Balancer name, you can access the AWS Console via the DuploCloud UI ([here](../overview/use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your Load Balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes).
 
 ## Terraform FAQs
 

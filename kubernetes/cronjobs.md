@@ -1,14 +1,14 @@
 ---
 description: >-
-  Schedule a Kubernetes Job in AWS and GCP by creating a CronJob in the
-  DuploCloud Portal
+  Schedule a Kubernetes Job in AWS and GCP by creating a Kubernetes CronJob in
+  the DuploCloud Portal
 ---
 
 # CronJobs
 
-A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](jobs.md), with the exception that you can schedule a CronJob to run at periodic intervals.
+A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](../kubernetes-overview/jobs.md), with the exception that you can schedule a Kubernetes CronJob to run at periodic intervals.
 
-See the Kubernetes documentation on [CronJobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) for more information.
+See the Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) documentation for more information.
 
 ## Creating a Kubernetes CronJob in the DuploCloud portal
 
@@ -26,7 +26,7 @@ See the Kubernetes documentation on [CronJobs](https://kubernetes.io/docs/concep
 
 <figure><img src="../.gitbook/assets/crom3.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with the <strong>Command</strong> field for <strong>Container - 1</strong> filled<strong>.</strong></p></figcaption></figure>
 
-7. To run the CronJob to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line">button and select the **Add Init Container** option. The **Init Container - 1** area displays.
+7. To run the Kubernetes CronJob to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line"> button and select the **Add Init Container** option. The **Init Container - 1** area displays.
 
 <figure><img src="../.gitbook/assets/cron4 (1).png" alt=""><figcaption><p><strong>Add Init Container</strong> area.</p></figcaption></figure>
 
@@ -38,14 +38,14 @@ See the Kubernetes documentation on [CronJobs](https://kubernetes.io/docs/concep
 
 <figure><img src="../.gitbook/assets/cron7.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with the <strong>Other Spec Configuration</strong> field completed<strong>.</strong></p></figcaption></figure>
 
-11. Click **Create**. The K8s CronJob is created and displayed on the **CronJob** page and will be run according to the schedule you specified.&#x20;
+11. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page and will be run according to the schedule you specified.&#x20;
 
 <figure><img src="../.gitbook/assets/cron final.png" alt=""><figcaption><p><strong>K8s CronJob</strong> tab displaying Kubernetes Job <strong>CALCULATEPI.</strong></p></figcaption></figure>
 
 ## Viewing a Kubernetes CronJob&#x20;
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob**.
-2. Select the CronJob you want to view and click the **Overview, Schedule**, and **Details** tabs for more information about the job schedule and job history.&#x20;
+2. Select the Kubernetes CronJob you want to view and click the **Overview, Schedule**, and **Details** tabs for more information about the job schedule and job history.&#x20;
 
 You can also view details of a Kubernetes CronJob by clicking on the **menu icon** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the job name and selecting **View**.
 
@@ -57,7 +57,7 @@ You can also view details of a Kubernetes CronJob by clicking on the **menu icon
 
 ### Using the Container page to view linked Kubernetes CronJobs
 
-You can also view CronJobs linked to containers by clicking the container **Name** on the **Containers** page (**Kubernetes** -> **Containers**). \
+You can also view Kubernetes CronJobs linked to containers by clicking the container **Name** on the **Containers** page (**Kubernetes** -> **Containers**). \
 
 
 <div align="left">
@@ -75,8 +75,8 @@ You can filter container names by using the search field at the top of the page,
 ## Editing a Kubernetes CronJob
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob**.
-2. Select the K8s CronJob you want to edit.&#x20;
-3. Click the **options menu** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the CronJob name and select **Edit**.
+2. Select the Kubernetes CronJob you want to edit.&#x20;
+3. Click the **options menu** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the Kubernetes CronJob name and select **Edit**.
 
 You can edit a Kubernetes Job in the DuploCloud Portal and modify the following fields:
 
@@ -90,8 +90,8 @@ You can edit a Kubernetes Job in the DuploCloud Portal and modify the following 
 ## Deleting a Kubernetes CronJob
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob.**
-2. Select the K8s CronJob you want to delete.&#x20;
-3. Click the Job Options Menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
+2. Select the Kubernetes CronJob you want to delete.&#x20;
+3. Click the Job Options Menu (<img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line">) icon to the left of the Job name and select **Delete**.
 
 <figure><img src="../.gitbook/assets/cron delete.png" alt=""><figcaption><p>Job options menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
 

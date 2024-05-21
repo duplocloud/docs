@@ -5,7 +5,7 @@ description: Using Tenants in DuploCloud
 # Tenant (Environment)
 
 {% hint style="info" %}
-For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../access-control/tenant-access/cross-tenant-access.md).&#x20;
+For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../user-administration/access-control/tenant-access/cross-tenant-access.md).&#x20;
 {% endhint %}
 
 In AWS, cloud features such as AWS resource groups, AWS IAM, AWS security groups, KMS keys, as well as Kubernetes Namespaces, are exposed in Tenants which reference their configurations.
