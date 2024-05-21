@@ -6,7 +6,7 @@ description: Set up Storage Classes and PVCs in Kubernetes
 
 ### **Step 1:** Create an Amazon EFS &#x20;
 
-&#x20;Refer to steps [here](../elastic-file-system-efs/)
+&#x20;Refer to steps [here](../../../aws-user-guide/aws-services/elastic-file-system-efs/)
 
 ### Step 2:  Create Storage Class with EFS Parameter
 

@@ -5,7 +5,7 @@ description: Managing Containers and Service with ECS
 # ECS Containers and Task Definitions
 
 {% hint style="success" %}
-For an end-to-end example of creating an ECS Task Definition, Service, and Load Balancer, [see this tutorial](../../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
+For an end-to-end example of creating an ECS Task Definition, Service, and Load Balancer, [see this tutorial](../../../overview/quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
 {% endhint %}
 
 ## Services
@@ -22,13 +22,13 @@ You can display and manage the Containers you have defined in the DuploCloud por
 
 Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
 
-| Option              | Functionality                                                                                                                                                  |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Logs**            | Displays container logs.                                                                                                                                       |
-| **State**           | Displays container state configuration, in YAML code, in a separate window.                                                                                    |
-| **Container Shell** | Accesses the Container Shell. To access the **Container Shell** option, you must first set up [Shell access for Docker](../../prerequisites/kubectl-shell.md). |
-| **Host Shell**      | Accesses the Host Shell.                                                                                                                                       |
-| **Delete**          | Deletes the container.                                                                                                                                         |
+| Option              | Functionality                                                                                                                                                              |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Logs**            | Displays container logs.                                                                                                                                                   |
+| **State**           | Displays container state configuration, in YAML code, in a separate window.                                                                                                |
+| **Container Shell** | Accesses the Container Shell. To access the **Container Shell** option, you must first set up [Shell access for Docker](../../../overview/prerequisites/kubectl-shell.md). |
+| **Host Shell**      | Accesses the Host Shell.                                                                                                                                                   |
+| **Delete**          | Deletes the container.                                                                                                                                                     |
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_50_21.png" alt=""><figcaption><p><strong>Containers</strong> tab displaying defined containers with highlighted Options Menu</p></figcaption></figure>
 
@@ -89,4 +89,4 @@ For information about Fargate, [contact the DuploCloud support team](https://dup
 
 ## Create an ECS Service and Load Balancer&#x20;
 
-Follow [this procedure](../load-balancers/ecs-services-and-load-balancers.md) to create the ECS Service from your Task Definition and define an associated Load Balancer to expose your application on the network.
+Follow [this procedure](../../../overview/aws-services/load-balancers/ecs-services-and-load-balancers.md) to create the ECS Service from your Task Definition and define an associated Load Balancer to expose your application on the network.
