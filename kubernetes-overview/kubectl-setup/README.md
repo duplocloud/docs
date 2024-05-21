@@ -7,7 +7,7 @@ description: Accessing kubectl on your local computer
 You can access `kubectl`on a local computer to a Kubernetes cluster with `cluster-admin` privileges to download and run `kubeconfig`.
 
 {% hint style="success" %}
-You can obtain Just-In-Time (JIT) access to Kubernetes by using `duplo-jit`. See the [JIT Access](../../overview/use-cases/jit-access.md) documentation for detailed information about:
+You can obtain Just-In-Time (JIT) access to Kubernetes by using `duplo-jit`. See the [JIT Access](../../aws-user-guide/use-cases/jit-access.md) documentation for detailed information about:
 
 • Obtaining JIT access, using the UI and CLI.
 
@@ -28,7 +28,7 @@ You can obtain Just-In-Time (JIT) access to Kubernetes by using `duplo-jit`. See
 <figure><img src="../../.gitbook/assets/Screenshot (346).png" alt=""><figcaption><p>The <strong>EKS</strong> tab for the TEST01 Infrastructure. </p></figcaption></figure>
 
 {% hint style="info" %}
-If you don't have Administrator access, you can use `duplo-jit` to access Kubernetes. When you click **Download Kube Config**, the **Access to Kubernetes from your Workstation** window displays, which provides you the alternative of installing [`duplo-jit`](../../overview/use-cases/jit-access.md) to access your Kubernetes cluster without obtaining permanent access keys.
+If you don't have Administrator access, you can use `duplo-jit` to access Kubernetes. When you click **Download Kube Config**, the **Access to Kubernetes from your Workstation** window displays, which provides you the alternative of installing [`duplo-jit`](../../aws-user-guide/use-cases/jit-access.md) to access your Kubernetes cluster without obtaining permanent access keys.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/kubeconfig_dialog.png" alt=""><figcaption><p><strong>Access to Kubernetes from your Workstation</strong> window with instructions and links for temporary access with duplo-jit</p></figcaption></figure>

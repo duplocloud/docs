@@ -24,7 +24,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Diagnostics and Metrics](monitoring/)
 * [Faults and alerts](faults-and-alarms/)
 * [AWS Console](using-aws-console.md) link
-* [JIT Access](jit-access.md)
+* [JIT Access](../../aws-user-guide/use-cases/jit-access.md)
 * [Cost management for billing](cost-management/)
 * [Resource Quotas](resource-quotas.md)
 * [Big Data and ETL](big-data-and-etl.md)
