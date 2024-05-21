@@ -45,6 +45,6 @@ Once the database is created, select it and use the **Instances** tab to view th
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_18_36.png" alt=""><figcaption><p><strong>RDS Instances</strong> tab</p></figcaption></figure>
 
 {% hint style="info" %}
-Pass the endpoint, name, and credentials to your application [using environment variables](../../containers/passing-config-and-secrets.md) for maximum security.&#x20;
+Pass the endpoint, name, and credentials to your application [using environment variables](../../../../overview/aws-services/containers/passing-config-and-secrets.md) for maximum security.&#x20;
 {% endhint %}
 
