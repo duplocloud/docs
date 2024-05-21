@@ -10,7 +10,7 @@ Using DuploCloud you can pretty much create any service within the Tenant using 
 
 ## Exposing Services to multiple Tenants (Cross-tenant Access)
 
-Every service within the Tenant will automatically be reachable to any application running within that tenant. If you need to expose some service from one Tenant to another, see [Allow Cross-tenant Access](../../access-control/tenant-access/cross-tenant-access.md).
+Every service within the Tenant will automatically be reachable to any application running within that tenant. If you need to expose some service from one Tenant to another, see [Allow Cross-tenant Access](../../user-administration/access-control/tenant-access/cross-tenant-access.md).
 
 {% hint style="info" %}
 DuploCloud adds new AWS services to the platform on almost a weekly basis, if a certain service is not documented here please contact the DuploCloud Team. Even if the feature is currently available, the DuploCloud team will enable the feature in a matter of days.

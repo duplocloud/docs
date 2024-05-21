@@ -4,7 +4,7 @@ description: Create an Certificate for AWS Certificate Manager
 
 # ACM Certificate
 
-The DuploCloud platform needs a wild character AWS Certificate Manager (ACM) certificate that corresponds to the domain you created for the [Route 53 Hosted Zone](route-53-hosted-zone.md).&#x20;
+The DuploCloud platform needs a wild character AWS Certificate Manager (ACM) certificate that corresponds to the domain you created for the [Route 53 Hosted Zone](../../overview/prerequisites/route-53-hosted-zone.md).&#x20;
 
 For example, if the Route 53 Hosted Zone created is `apps.acme.com`, then the ACM certificate specifies `*.apps.acme.com`. You can add additional domains to this certificate (for example,  `*.acme.com`.
 

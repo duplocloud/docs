@@ -10,7 +10,7 @@ DuploCloud typically runs Kubernetes services in GCP on GKE in Autopilot mode. A
 
 ### One or more of my containers are showing in a pending state, how can I debug? <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-[Click here for the details](../overview/aws-faq.md#7-toc-title)
+[Click here for the details](../aws-user-guide/aws-faq.md#7-toc-title)
 
 ### How do I add a certificate to an internal load balancer?
 

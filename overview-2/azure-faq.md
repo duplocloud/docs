@@ -2,7 +2,7 @@
 
 ## One or more of my containers are showing in a pending state, how can I debug? <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-[Click here for the details](../overview/aws-faq.md#7-toc-title)
+[Click here for the details](../aws-user-guide/aws-faq.md#7-toc-title)
 
 ## How to create a VM host with public IP? <a href="#id-9-toc-title" id="id-9-toc-title"></a>
 
