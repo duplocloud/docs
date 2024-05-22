@@ -1,5 +1,5 @@
 ---
-description: Configure a CloudFront distribution in DuploCloud
+description: Configuring a CloudFront distribution in DuploCloud
 ---
 
 # CloudFront
