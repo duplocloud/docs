@@ -1,63 +1,76 @@
 ---
-description: Configuring a CloudFront distribution in DuploCloud
+description: Configure a CloudFront distribution in DuploCloud
 ---
 
 # CloudFront
 
-## Create a CloudFront distribution
+[CloudFront ](https://aws.amazon.com/cloudfront/)is an AWS content delivery network (CDN) service. It accelerates the delivery of your websites, APIs, video content, and other web assets to users by caching content at edge locations closer to the user.
 
-#### Prerequisite
+## Prerequisites
 
-The S3 bucket needs to be created and static asserts need to be uploaded to the S3 bucket. Please follow the steps in the link below to create the S3 bucket.
+Before creating a CloudFront distribution:
 
-{% content-ref url="../../overview/aws-services/s3-bucket.md" %}
-[s3-bucket.md](../../overview/aws-services/s3-bucket.md)
-{% endcontent-ref %}
+* [Create an S3 bucket](../../overview/aws-services/s3-bucket.md#creating-an-s3-bucket)
+* Upload your static asserts to the S3 bucket.&#x20;
 
-Create Cloudfront distribution by navigating to **Cloud Services** -> **Networking** and selecting the **CloudFront** tab. Then click **+Add**.&#x20;
+## Creating a CloudFront distribution
 
-* Name - Friendly name for the distribution.
-* Root Object - Default root object that will be returned while accessing the root of the domain. Example: index.html. Should not start with "/".
-* Certificate - ACM certificate for distribution. Only certs in us-east-1 can be used. If not already present should be created in AWS and added to the plan (Administrator > Plans > Select Tenant Plan > Certificate tab).
-* Aliases - Domain name using which distribution will be accessed. Multiple domain names can be configured if needed. If the Domain name is managed by Duplo CNAME mapping will be automatically done else CNAME mapping should be added manually in the appropriate DNS management console.
-* Origins - Location information where the actual content is stored. It can be an S3 bucket or any HTTP server endpoint.
-  * Domain Name - S3 bucket can be selected or chosen other and enter custom endpoint.
-  * ID - unique identifier for the origin. UI pre-populates it from the domain name. If needed can be changed.
-  * Path - Optional. The Path will be suffixed to the origin's domain name (URL) while fetching content. For S3: If the content that needs to be served is under prefix static. You should enter "static" in the path. For custom URL: If all the APIs have a prefix like v1. You should enter "v1" in the path.
-* Default Cache Behaviors - The default Cache policy and the default origin to fetch content are entered here.
-  * Cache Policy ID - AWS predefined cache policies are listed. You can select one or choose another and enter a custom cache policy.&#x20;
-  * Target Origin - Choose the default origin that should be used for the distribution
-* Custom Cache Behaviors - Additional Cache policies and path patterns to use the custom cache behaviors are entered here.
-  * Cache Policy ID - AWS predefined cache policies are listed. You can select one or choose another and enter a custom cache policy.&#x20;
-  * Path Pattern - For requests matching the pattern enter this specific origin and cache policy will be used. For example "**api/\***" all requests that start with API prefix will be routed to this origin.
-  * Target Origin - Choose the origin that should be used for this custom path.
+1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Networking**.
+2. Select the **CloudFront** tab, and click **Add**. The **Add Distribution** page displays.&#x20;
 
-![](../../.gitbook/assets/cloudfrontdistribution-form.jpg)
+![The CloudFront Add Distribution page. ](../../.gitbook/assets/cloudfrontdistribution-form.jpg)
 
-{% hint style="info" %}
-Note: If the S3 bucket used is part of the same tenant where CloudFront distribution is created. Duplo creates an Origin Access Identity and updates the bucket policy to allow GetObject for Cloudfront Origin Access Identity. No extra step is needed on the user end to deal with S3 bucket permissions.
-{% endhint %}
-
-## Lambda Association
-
-Create the lambda function in the tenant by selecting the `Edge lambda` checkbox. This will create a lambda function in `us-east-1` along with necessary permissions.
-
-Create a CloudFront distribution by giving the necessary values, in addition for the lambda@edge select the function associations and select the lambda function.
+1. In the **Name** field, enter a name for the distribution.
+2. In the **Root Object** field, specify the root object that will be returned when accessing the domain's root (in this example, "index.html"). The root object should not start with "/."
+3. From the **Certificate** list box, select the ACM certificate for distribution. Only certificates in US-East-1 can be used. If a certificate is not already present, request one in AWS and [add it to the DuploCloud Plan](../prerequisites/acm-certificate.md).
+4. In the **Certificate Protocol Version** item list, select the correct certificate protocol.&#x20;
+5. Optionally, enter any alternate domain name(s) you want to connect to your CloudFront distribution in the **Aliases** section. For aliases managed by DuploCloud, CNAME mapping is done automatically. For other aliases, manually set up CNAME in your DNS management console.
+6. In the **Origins** area, enter the location(s) where the content is stored (e.g., an S3 bucket or HTTP server endpoint).&#x20;
+   * In the **Domain Name** field, select the correct S3 bucket, or select **Other** and enter a custom endpoint.
+   * A unique **ID** will be pre-populated from the domain name. If needed, the ID can be changed.
+   * Optionally, enter a **Path** (a path will be suffixed to the origin's domain name \[URL] while fetching content). Enter **static** if the content is in an S3 bucket under the prefix static. For a custom URL where all APIs have a prefix like v1, enter **v1**.
+7. In the **Default Cache Behaviors** area, select the **Cache Policy ID** and **Target Origin** to fetch the content.
+8. In the **Custom Cache Behaviors** area, enter additional policies and path patterns if needed.
+   * **Cache Policy ID** - Select one of the AWS-defined cache policies, or choose **Other** and enter a custom cache policy.&#x20;
+   * **Path Pattern** - For requests matching the pattern, enter the specific origin and cache policy to be used. For example, if **api/\*** is entered, all requests that start with the prefix API will be routed to this origin.
+   * **Target Origin** - Choose the origin that should be used for your custom path.
 
 {% hint style="info" %}
-**Note:** We will show the versions of the lambda function, so the same function will be there multiple times with V1 and V2.
+Note: If the S3 bucket and CloudFront distribution are in the same Tenant, DuploCloud creates an Origin Access Identity and updates the bucket policy to allow GetObject for Cloudfront Origin Access Identity. You do not need to configure any additional S3 bucket permissions.
 {% endhint %}
 
-Once the deployment status becomes `Deployed`. Then visit the domain name and you should see the invocation of the lambda function
+## Creating a Lambda@Edge function association
 
-## Maintenance Page setup for website
+### Create a lambda function in the Tenant
 
-* The default origin should point to your app URL `ui.mysite.com.`
-* Create a new S3 Bucket to store maintenance pages. In the bucket create a prefix/folder called `maintpage.`
-* Upload maintenance page asserts (`.html, .css, .js`, etc.) into an S3 bucket inside `maintpage` folder.
-* Add new **S3 Origin** pointing to the S3 bucket we have maintenance static asserts.
-* Add new **Custom Cache Behaviors** use `/maintpage/*`as path pattern, Target origin should be S3  maintenance asserts origin.
+1. Select the Tenant from the **Tenant** list box.
+2. Navigate to **Cloud Services** -> **Serverless**, select the **Lambda** tab, and click **Add**.&#x20;
+3. Select the **Edge lambda** checkbox. This will create a lambda function in us-east-1 along with the necessary permissions.
+4. Complete the necessary fields and click **Submit**.
+
+### Create a CloudFront distribution&#x20;
+
+1. Select the **Tenant** from the **Tenant** list box.
+2. Navigate to **Cloud Services** -> **Networking**, select the **CloudFront** tab, and click **Add**.&#x20;
+3. Complete the necessary fields. Make sure to select the lambda function created above in Function **Associations**.
+4. Click **Submit**.
+
+{% hint style="info" %}
+Note: DuploCloud displays all versions of the lambda function, so the same function will appear multiple times with V1, V2, and so forth.
+{% endhint %}
+
+Once the deployment status becomes Deployed, visit the domain name to see the lambda function invocation.
+
+## Setting up a website maintenance page
+
+Create a maintenance page to inform users that your website or application is temporarily unavailable. By clearly communicating the service's status, you can help manage user expectations and provide a better user experience.
+
+* The default origin should point to your app UR `ui.mysite.com.`
+* Create a new S3 bucket to store your maintenance pages. In the S3 bucket, create a prefix/folder called `maintpage.`
+* Upload your maintenance page asserts (`.html, .css, .js`, etc.) into an S3 bucket inside the `maintpage` folder.
+* Add a new **S3 Origin** pointing to the S3 bucket that contains the maintenance static asserts.
+* Add new **Custom Cache Behaviors** using `/maintpage/*`  as the path pattern. The **Target Origin** should be the S3 maintenance asserts origin.
 * Adding **Custom Error Response** mapping**.**
-  * &#x20;In the **error code** dropdown select the HTTP code for which the maintenance page should be served. **502** gateway timeout is commonly used.
-  * In the **Response page path** enter `/maintpage/5xx.html`. 5xx.html should be changed to a page that exists in s3.
-  * HTTP Response code can be either 200 or 502 (same as the actual source origin response code).
+  * &#x20;In the **error code** dropdown, select the HTTP code for which the maintenance page should be served. **502** gateway timeout is commonly used.
+  * In the **Response page path,** enter `/maintpage/5xx.html`, replacing `5xx.html`with a page that exists in S3.
+  * The **HTTP Response Code** can be 200 or 502 (the same as the source origin response code).
