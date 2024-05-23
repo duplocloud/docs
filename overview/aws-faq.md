@@ -88,7 +88,7 @@ To estimate Amazon GuardDuty pricing, you can use the [AWS pricing calculator](h
 
 ### If we enable Amazon GuardDuty, will we lose vulnerability and security standards insights from DuploCloud?
 
-No, turning Amazon GuardDuty on or off has no effect on the vulnerabilities and security standards insights DuploCloud provides.
+No, enabling or disabling Amazon GuardDuty does not affect the vulnerabilities and security standards insights DuploCloud provides.
 
 ## CI/CD FAQs
 
@@ -106,7 +106,7 @@ DuploCloud provisions a Load Balancer for your K8 service. If you want to look a
 
 You can find the Load Balancer name for your service by navigating to **Kubernetes** _->_ **Services**, selecting your Service from the list, and looking at the Load Balancer tab. If you're using K8s Ingress, you must go to the **K8s Ingress** tab and find the Load Balancer configuration there.
 
-Once you have the Load Balancer name, you can access the AWS Console via the DuploCloud UI ([here](use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your Load Balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes).
+Once you have the Load Balancer name, you can access the AWS Console via the DuploCloud UI ([here](../aws-user-guide/use-cases/jit-access.md)). Once you are in the AWS Console, navigate to the EC2 service view and navigate to Load Balancers from the left navigation menu. Find your Load Balancer by name from that list and look at the detailed attributes in that view (scroll down to attributes).
 
 ## Terraform FAQs
 
