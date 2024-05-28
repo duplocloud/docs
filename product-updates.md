@@ -63,7 +63,7 @@ coverY: 0
 * Kubernetes
   * [Follow logs](overview/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
   * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](kubernetes-overview/pod-toleration.md).&#x20;
-  * Create [Kubernetes Jobs (K8s Jobs)](kubernetes-overview/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
+  * Create [Kubernetes Jobs (K8s Jobs)](kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
   * Create [Kubernetes CronJobs (K8s CronJobs)](kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 *   General updates
 
