@@ -71,7 +71,7 @@
       * [Step 5: Create a Service](overview/quick-start/quick-start-duplocloud-docker-services/step-5-create-app-via-docker-native.md)
       * [Step 6: Create a Load Balancer](overview/quick-start/quick-start-duplocloud-docker-services/step-6-create-loadbalancer.md)
       * [Step 7: Test the Application](overview/quick-start/quick-start-duplocloud-docker-services/step-7-test-the-application.md)
-  * [AWS use cases](overview/use-cases/README.md)
+  * [AWS Use Cases](overview/use-cases/README.md)
     * [Infrastructure and Plan](overview/use-cases/disaster-recovery/README.md)
       * [EKS Setup](overview/use-cases/disaster-recovery/kubernetes-cluster/README.md)
         * [Enable EKS endpoints](overview/use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md)
