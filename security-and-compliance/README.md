@@ -4,7 +4,7 @@ description: An Overview of Security and Compliance features in the DuploCloud P
 
 # Security and Compliance
 
-Automation, security, and compliance are the three core value propositions of the DuploCloud platform. The majority of our clients buy DuploCloud for security and compliance first. The following are the fundamental tenants of DuploCloud's approach to security:
+Automation, security, and compliance are the three core value propositions of the DuploCloud platform. The majority of our clients buy DuploCloud for security and compliance first. The following are the fundamental tenets of DuploCloud's approach to security:
 
 * **Self-Hosted**: The platform lives completely within your cloud infrastructure. There is no call home or control plane outside. Our personnel support the client by having access to the environment with their permission.  This permission can be revoked at any time. Upgrades and patches can be downloaded and applied by clients themselves. In almost all cases, our customers use us as a valuable support resource and allow us to provide a managed service. DuploCloud is a SOC2-certified organization.
 * **NIST 800-53-based Implementation:** Even though well-established frameworks like NIST exist, most organizations have an ad-hoc approach to security controls. At DuploCloud we have codified the NIST 800-53 control set in the platform. Any other standard is a subset. This further allows us to adapt easily to any industry-specific compliance frameworks (PCI, HIPAA, SOC2, etc) because those controls (in the infrastructure context) are a subset of the NIST framework.
