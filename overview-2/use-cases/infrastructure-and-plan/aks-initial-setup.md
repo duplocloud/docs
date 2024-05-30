@@ -12,7 +12,17 @@ Once your Infrastructure and Plan have been created, the final step before creat
 2. Select the Infrastructure that you created, in the **NAME** column of the Infrastructure page.
 3. Click the **Kubernetes** tab. The following message displays: **Kubernetes cluster is not yet enabled. Click Here to enable the Kubernetes Cluster**.
 4. Click on the **Click Here** hyperlink. The **Configure AKS Cluster** pane displays.
-5. Accept the default values and click **Create** to enable the AKS service for your Infrastructure.&#x20;
+5. In the **Cluster name** field, specify a name for your cluster.
+6. From the **AKS Version** item list, select your AKS version.
+7. Select the correct plugin from the **Network Plugin** item list.
+8.  Accept the default values for the remaining fields, and click **Create** to enable the AKS service for your Infrastructure. \
+
+
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/new reduced pic (1).png" alt=""><figcaption><p>The <strong>Configure AKS Cluster</strong> pane</p></figcaption></figure>
+
+    </div>
 
 DuploCloud begins creating and configuring an AKS cluster using Kubernetes. You receive an alert message when the Infrastructure has been updated.&#x20;
 
