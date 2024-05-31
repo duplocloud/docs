@@ -5,6 +5,11 @@ coverY: 0
 
 # Product updates
 
+## Q2 2024
+
+* Azure
+  * [Specify AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
+
 ## Q1 2024
 
 * AWS
