@@ -6,7 +6,7 @@ Some concepts relating to security (DevSecOps) are hidden from the end user, for
 
 The following picture shows the high level abstractions within which applications are deployed and users operate.
 
-<figure><img src="../../.gitbook/assets/duplocloud-customer-walkthroughs-diagram (1).png" alt=""><figcaption><p>DuploCloud Application-centric Deployment Model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/duplocloud-customer-walkthroughs-diagram (1).png" alt="" width="563"><figcaption><p>DuploCloud Application-centric Deployment Model</p></figcaption></figure>
 
 While there are many concepts in the policy model, the following are the main ones to be aware of:
 
