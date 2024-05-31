@@ -8,7 +8,7 @@ The following picture shows the high-level abstractions within which application
 
 
 
-<figure><img src="../../.gitbook/assets/gad.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-05-31 17321600000.png" alt=""><figcaption></figcaption></figure>
 
 While there are many concepts in the policy model, the following are the main ones to be aware of:
 
