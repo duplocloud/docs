@@ -33,7 +33,7 @@
     * [Mounting ConfigMaps and Secrets as files](kubernetes-overview/configs-and-secrets/mounting-config-as-files.md)
     * [Using Kubernetes Secrets with Azure Storage connection data](kubernetes-overview/configs-and-secrets/using-kubernetes-secrets-with-azure-storage-connection-data.md)
     * [Creating the SecretProviderClass Custom Resource to mount secrets](kubernetes-overview/configs-and-secrets/adding-secretproviderclass-custom-resource.md)
-  * [Jobs](kubernetes/jobs.md)
+  * [Jobs](kubernetes-overview/jobs.md)
   * [CronJobs](kubernetes/cronjobs.md)
   * [Ingress Loadbalancer](kubernetes-overview/ingress-loadbalancer/README.md)
     * [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md)
