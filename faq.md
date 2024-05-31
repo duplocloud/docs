@@ -92,9 +92,9 @@ If DuploCloud is down, it's similar to having an unavailable DevOps engineer. If
 
 ### Our company has no DevOps experience. Can DuploCloud provide services to build our environment and support us?
 
-Absolutely! More than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates.
+Absolutely! More than half of our customers have no DevOps team.With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates. Our team is dedicated to not only managing your cloud infrastructure but also ensuring that it's optimized and modernized according to the latest best practices in the industry.
 
-The DuploCloud team is your extended DevOps team. We assist with white-glove environment setup and daily operations with 24x7 Slack and email support. We cover what the DuploCloud platform supports and assist with your cloud provider's requirements.
+The DuploCloud team is your extended DevOps team. We assist with white-glove environment setup and daily operations with 24x7 Slack and email support. We cover what the DuploCloud platform supports and assist with your cloud provider's requirements. This includes a range of services from infrastructure as code improvements for better reusability and code reduction to architecture refactoring or infrastructure modernization. For instance, if your strategic goal is to transition from deploying applications on VMs to utilizing Kubernetes, our DevOps engineers are equipped to guide and implement this refactoring for you. However, it's important to note that DuploCloud's scope does not extend to refactoring customer application code itself.
 
 After the initial onboarding of the platform, we recommend that you engage the DuploCloud team as your second line of defense by setting up an internal triage process of your own. We can assist you in setting up this process.
 
@@ -124,23 +124,13 @@ DuploCloud provides flexibility when a feature that is not supported by DuploClo
 
 ### I don't know IaC (Infrastructure-as-Code). Can I still use DuploCloud?
 
-Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you should read the product documentation to understand the basic constructs in DuploCloud.
+Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you should read the product documentation to understand the basic constructs in DuploCloud. This approach significantly reduces the risk of errors associated with manual configurations or "Click Ops," ensuring that your infrastructure is set up following best practices with just a few clicks.
 
 ### Isn't No Code Click Ops?
 
-"Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. You can skip past default settings that aren't secure, copy configuration incorrectly between environments, etc. You need hundreds or thousands of clicks and a lot of DevSecOps knowledge.
+"Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. DuploCloud manages infrastructure resources for you, ensuring the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
-DuploCloud manages infrastructure resources for you. You pick application-level functionality like "services" and "load balancers," and then DuploCloud creates the complex cloud resources needed to deliver that functionality. It ensures the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
-
-Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure you don't.
-
-### **Should I use low-code or no-code?**
-
-The answer depends on the following key factors:
-
-#### How much Developer self-service do you require?
-
-Especially in a rapidly growing company environment, where architecture is constantly evolving, and services are constantly updated, there may be a desire to let developers self-service and move fast. This would be a case for no-code. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
+Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure you don't.be a case for no-code. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
 
 Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with completely independent constructs.
 
