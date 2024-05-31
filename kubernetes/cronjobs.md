@@ -1,12 +1,12 @@
 ---
 description: >-
-  Schedule a Kubernetes Job in AWS and GCP by creating a Kubernetes CronJob in
+  Schedule a Kubernetes Job in AWS or GCP by creating a Kubernetes CronJob in
   the DuploCloud Portal
 ---
 
 # CronJobs
 
-A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](jobs.md), with the exception that you can schedule a Kubernetes CronJob to run at periodic intervals.
+A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](../kubernetes-overview/jobs.md) you can schedule to run at periodic intervals.
 
 See the Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) documentation for more information.
 
@@ -14,13 +14,13 @@ See the Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/contr
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob**.
 2. Click **Add**. The **Add Kubernetes CronJob** page displays.
-3. In the **Basic Options** step, specify the Kubernetes CronJob **Name**.
+3. In the **Basic Options** step, specify the Kubernetes CronJob name.
 4. In the **Schedule** field, specify the Cron Schedule in Cron Format. Click the Info Tip icon for examples. When specifying a **Schedule** in Cron Format, ensure you separate each value with a space. For example, `0 0 * * 0` is a valid Cron Format input; `00**0` is not. See the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#writing-a-cronjob-spec) for detailed information about Cron Format.
 5. In the **Container - 1** area, specify the **Container Name** and associated **Docker Image**.
 
 <figure><img src="../.gitbook/assets/cron 1.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with <strong>Container Nam</strong>e and <strong>Docker image</strong> fields filled.</p></figcaption></figure>
 
-6. In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.
+6. In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and copy commands as needed.
 
 <figure><img src="../.gitbook/assets/cron retake.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with the <strong>Command</strong> options window open.</p></figcaption></figure>
 
@@ -32,32 +32,20 @@ See the Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/contr
 
 8. In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.
 9. Click **Next** to open the **Advanced Configuration** step.
-10. In the **Other Spec Configuration** field, specify the job spec (in YAML) for **Init Container - 1**. Click the Info Tip icon ( <img src="../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for examples. Select and **Copy** commands as needed
+10. In the **Other Spec Configuration** field, specify the Kubernetes CronJob spec (in YAML) for **Init Container - 1**. Click the Info Tip icon ( <img src="../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for examples. Select and copy commands as needed
 
 <figure><img src="../.gitbook/assets/cron6 (1).png" alt=""><figcaption><p>The <strong>Other Spec Configuration</strong> window on the <strong>Add Kubernetes CronJob, Advanced Configuration</strong> page<strong>.</strong></p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/cron7.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with the <strong>Other Spec Configuration</strong> field completed<strong>.</strong></p></figcaption></figure>
 
-11. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page and will run according to your specified schedule.&#x20;
+11. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page. It will run according to the schedule you specified.&#x20;
 
 <figure><img src="../.gitbook/assets/cron final.png" alt=""><figcaption><p><strong>K8s CronJob</strong> tab displaying Kubernetes Job <strong>CALCULATEPI.</strong></p></figcaption></figure>
 
-## **Running a Kubernetes CronJob immediately**
-
-You can enable a Kubernetes CronJob to run immediately (as a Job) instead of following the specified schedule.
-
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob**.
-2.  Click on the **menu icon** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the CronJob name and select **Run Now**.\
-
-
-    <figure><img src="../.gitbook/assets/cronjob run now (1).png" alt=""><figcaption><p>The Kubernetes <strong>CronJob</strong> page showing the action menu with the <strong>Run now</strong> option highlighted.</p></figcaption></figure>
-
-
-
 ## Viewing a Kubernetes CronJob&#x20;
 
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob**.
-2. Select the Kubernetes CronJob you want to view and click the **Overview, Schedule**, and **Details** tabs for more information about the job schedule and job history.&#x20;
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJobs**.
+2. Select the Kubernetes CronJob you want to view and click the **Overview, Schedule**, and **Details** tabs for more information about the CronJob schedule and history.&#x20;
 
 You can also view details of a Kubernetes CronJob by clicking on the **menu icon** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the job name and selecting **View**.
 
@@ -65,13 +53,11 @@ You can also view details of a Kubernetes CronJob by clicking on the **menu icon
 
 <figure><img src="../.gitbook/assets/cron9.png" alt=""><figcaption><p><strong>Overview</strong> tab for Kubernetes Job <strong>MYCRONJOB.</strong></p></figcaption></figure>
 
-
-
-<figure><img src="../.gitbook/assets/cronjob updated.png" alt=""><figcaption><p>CronJob options menu with <strong>View</strong> option highlighted.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cronview.png" alt=""><figcaption><p>CronJob options menu with <strong>View</strong> option highlighted.</p></figcaption></figure>
 
 ### Using the Container page to view linked Kubernetes CronJobs
 
-You can also view Kubernetes CronJobs linked to containers by clicking the container **Name** on the **Containers** page (**Kubernetes** -> **Containers**). \
+You can view Kubernetes CronJobs linked to containers by clicking the container name on the **Containers** page (**Kubernetes** -> **Containers**). \
 
 
 <div align="left">
@@ -92,7 +78,7 @@ You can filter container names by using the search field at the top of the page,
 2. Select the Kubernetes CronJob you want to edit.&#x20;
 3. Click the **options menu** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the Kubernetes CronJob name and select **Edit**.
 
-You can edit a Kubernetes Job in the DuploCloud Portal and modify the following fields:
+You can edit and modify the following fields in the DuploCloud Portal:
 
 * **Cleanup After Finished in Seconds**
 * **Other Spec Configuration**
@@ -105,7 +91,7 @@ You can edit a Kubernetes Job in the DuploCloud Portal and modify the following 
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob.**
 2. Select the Kubernetes CronJob you want to delete.&#x20;
-3. Click the Job Options Menu (<img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line">) icon to the left of the Job name and select **Delete**.
+3. Click the Options Menu (<img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line">) icon to the left of the Kubernetes CronJob name and select **Delete**.
 
-<figure><img src="../.gitbook/assets/cron delete.png" alt=""><figcaption><p>Job options menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cron delete.png" alt=""><figcaption><p>CronJob options menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
 

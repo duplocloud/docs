@@ -1,5 +1,5 @@
 ---
-description: Support for specifying K8s YAML for Pod Toleration
+description: Support for specifying Kubernetes YAML for Pod Toleration
 ---
 
 # Pod Toleration
@@ -8,7 +8,7 @@ DuploCloud supports the customization of many Kubernetes (K8s) YAML operators, s
 
 ## Specifying Pod Toleration
 
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services** or **Docker** -> **Services**. The **Services** page displays.
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 2. Select the **Service** from the **NAME** column.
 3.  From the **Actions** menu, select **Edit**. The **Edit Service** page displays.\
 
@@ -20,17 +20,21 @@ DuploCloud supports the customization of many Kubernetes (K8s) YAML operators, s
 5.  In the **Other Container Config** field, add the `tolerations` operator YAML you have customized for your container. \
 
 
+    <div align="left">
+
     <figure><img src="../.gitbook/assets/tol2.png" alt=""><figcaption><p><strong>Other Container Config</strong> field in <strong>Advanced Options</strong> page</p></figcaption></figure>
 
+    </div>
 
-6. Click **Update**. Your container has been updated with your custom specification for the **tolerations** operator.&#x20;
+
+6. Click **Update**. Your container has been updated with your custom specifications for the `tolerations` operator.&#x20;
 
 ### Example Code: `tolerations` operator YAML
 
 In this example:
 
 * If a Pod is running and a taint matching `key1` exists on the node, then the Pod will not schedule the node (`NoSchedule`).
-* If a Pod is running and a taint matching `example-key` exists on the node, then the Pod stays bound to the node for `6000` seconds, and then is evicted (`NoExecute`). If the taint is removed before that time, the Pod will not be evicted.
+* If a Pod is running and a taint matching `example-key` exists on the node, then the Pod stays bound to the node for `6000` seconds and then is evicted (`NoExecute`). If the taint is removed before that time, the Pod will not be evicted.
 
 {% code title="tolerations YAML" %}
 ```yaml

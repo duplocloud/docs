@@ -1,37 +1,41 @@
 ---
-description: Accessing kubectl on your local computer
+description: Access kubectl on your local computer
 ---
 
 # Kubectl setup
 
-You can access `kubectl`on a local computer to a Kubernetes cluster with `cluster-admin` privileges to download and run `kubeconfig`.
+On a local computer, you can access `kubectl`to a Kubernetes cluster with `cluster-admin` privileges to download and run `kubeconfig`.
 
 {% hint style="success" %}
 You can obtain Just-In-Time (JIT) access to Kubernetes by using `duplo-jit`. See the [JIT Access](../../aws-user-guide/use-cases/jit-access.md) documentation for detailed information about:
 
-• Obtaining JIT access, using the UI and CLI.
+• Obtaining JIT access using the UI and CLI.
 
-• Installing `duplo-jit`, using various tools.&#x20;
+• Installing `duplo-jit` using various tools.&#x20;
 
-• Getting credentials for AWS access interactively, or with an API token.&#x20;
+• Getting credentials for AWS access interactively or with an API token.&#x20;
 
 • Accessing the AWS Console.&#x20;
 {% endhint %}
 
-## Downloading `kubeconfig`&#x20;
+## Downloading kubeconfig&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrators** -> **Infrastructure.**
-2. In the Name column, select the Infrastructure in which you want to set up `kubectl`.&#x20;
-3. Click the **EKS** (for AWS) tab, **GKE** (for GCP) tab, or the **AKS** (for Azure) tab.
+2. In the **Name** column, select the Infrastructure in which you want to set up `kubectl`.&#x20;
+3. Click the **EKS** (for AWS), **GKE** (for GCP) tab, or the **AKS** (for Azure) tab.
 4. Click **Download Kube Config** to download the `kubeconfig` file.
 
 <figure><img src="../../.gitbook/assets/Screenshot (346).png" alt=""><figcaption><p>The <strong>EKS</strong> tab for the TEST01 Infrastructure. </p></figcaption></figure>
 
 {% hint style="info" %}
-If you don't have Administrator access, you can use `duplo-jit` to access Kubernetes. When you click **Download Kube Config**, the **Access to Kubernetes from your Workstation** window displays, which provides you the alternative of installing [`duplo-jit`](../../aws-user-guide/use-cases/jit-access.md) to access your Kubernetes cluster without obtaining permanent access keys.
+If you don't have Administrator access, you can use `duplo-jit` to access Kubernetes. When you click **Download Kube Config**, the **Access to Kubernetes from your Workstation** window displays, giving you the option to install [`duplo-jit`](../../aws-user-guide/use-cases/jit-access.md) to access your Kubernetes cluster without obtaining permanent access keys.
 {% endhint %}
 
+<div align="left">
+
 <figure><img src="../../.gitbook/assets/kubeconfig_dialog.png" alt=""><figcaption><p><strong>Access to Kubernetes from your Workstation</strong> window with instructions and links for temporary access with duplo-jit</p></figcaption></figure>
+
+</div>
 
 ## Installing kubectl on your local computer
 

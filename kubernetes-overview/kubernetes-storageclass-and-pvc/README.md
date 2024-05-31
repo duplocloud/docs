@@ -4,7 +4,7 @@ description: Creating K8s PVCs and StorageClass constructs in the DuploCloud Por
 
 # Kubernetes StorageClass and PVC
 
-## Configure Kubernetes Storage
+## Configuring Kubernetes Storage
 
 You can configure the Storage Class and Persistent Volume Claims (PVCs) from the DuploCloud Portal.&#x20;
 

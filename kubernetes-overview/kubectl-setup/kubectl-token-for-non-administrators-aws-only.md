@@ -1,5 +1,5 @@
 ---
-description: Accessing kubectl without administrator privileges
+description: Access kubectl without administrator privileges
 ---
 
 # Kubectl Token for non-administrators
@@ -10,7 +10,7 @@ If you don't have administrator privileges, use this procedure to access `kubeco
 Before beginning, refer to this article for more information about[`kubeconfig`](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/).
 {% endhint %}
 
-## (AWS Only) Updating the AWS Profile
+## Updating the AWS Profile (AWS Only)&#x20;
 
 Add the following code to your AWS profile:
 
@@ -27,7 +27,7 @@ The token that you download is for the selected Tenant only. It is intended for 
 {% endhint %}
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
-2. Select the Service from the **Name** column.
+2. Select the Service name from the **Name** column.
 3.  From the **KubeCtl** item list, select **KubeCtl Token**. The **KubeCtl Token** window displays.\
 
 
