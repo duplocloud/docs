@@ -7,6 +7,8 @@ coverY: 0
 
 ## Q2 2024
 
+* AWS
+  * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md)
 * Azure
   * [Specify AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
 
@@ -17,7 +19,6 @@ coverY: 0
   * [Configure K8s Ingress redirect ](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](overview/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
   * Enable UltraWarm Data nodes for [OpenSearch domains](overview/aws-services/elasticsearch.md).
-  * Support for [upgrading EKS components](overview/use-cases/disaster-recovery/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).&#x20;
   * [Add a Web App Firewall URL](overview/aws-services/web-application-firewall-waf.md#creating-a-web-application-firewall-waf) when creating or updating a Plan.
   * [Update or skip a final RDS snapshot](aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
   * [Upgrade the EKS Cluster](overview/use-cases/disaster-recovery/upgrading-eks-version.md).
