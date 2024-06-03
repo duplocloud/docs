@@ -8,9 +8,12 @@ coverY: 0
 ## Q2 2024
 
 * AWS
-  * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md)
+  * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
+  * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
 * Azure
-  * [Specify AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
+  * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
+* Kubernetes
+  * Create and manually run a [K8s Job](kubernetes-overview/jobs.md) from a CronJob.
 
 ## Q1 2024
 
