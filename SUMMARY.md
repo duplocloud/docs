@@ -162,7 +162,7 @@
     * [Elastic File System (EFS)](aws-user-guide/aws-services/elastic-file-system-efs/README.md)
       * [Mount an EFS in an EC2 instance](aws-user-guide/aws-services/elastic-file-system-efs/mount-an-efs-in-an-ec2-instance.md)
     * [EMR Serverless](overview/aws-services/emr-serverless.md)
-    * [Eventbridge](aws-user-guide/aws-services/cloud-watch.md)
+    * [EventBridge](aws-user-guide/aws-services/cloud-watch.md)
     * [IoT (Internet of Things)](overview/aws-services/iot-internet-of-things.md)
     * [Kafka Cluster](aws-user-guide/aws-services/kafka-cluster.md)
     * [Kinesis Stream](overview/aws-services/kinesis-stream.md)
