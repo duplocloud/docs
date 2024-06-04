@@ -157,6 +157,7 @@
           * [Add Aurora RDS replicas](overview/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md)
         * [Add monitoring interval](overview/aws-services/database/rds-database/add-monitoring-interval.md)
         * [Enable or disable RDS logging](overview/aws-services/database/rds-database/enable-or-disable-rds-logging.md)
+        * [Restrict RDS instance size](overview/aws-services/database/rds-database/restrict-rds-instance-size.md)
         * [Add parameters in Parameter Groups](overview/aws-services/database/rds-database/add-parameters-in-parameter-groups.md)
     * [Data Pipeline](overview/aws-services/data-pipeline.md)
     * [Elastic File System (EFS)](aws-user-guide/aws-services/elastic-file-system-efs/README.md)
