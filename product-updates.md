@@ -8,12 +8,13 @@ coverY: 0
 ## Q2 2024
 
 * AWS
-  * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
+  * [Set a maximum RDS instance size ](overview/aws-services/database/rds-database/restrict-rds-instance-size.md)in Systems Settings.
   * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
+  * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
 * Azure
-  * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
+  * [Specify AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
 * Kubernetes
-  * Create and manually run a [K8s Job](kubernetes-overview/jobs.md) from a CronJob.
+  * Create and manually run a [K8s Job](kubernetes-overview/jobs.md) from a Kubernetes CronJob.
 
 ## Q1 2024
 
@@ -22,6 +23,7 @@ coverY: 0
   * [Configure K8s Ingress redirect ](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](overview/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
   * Enable UltraWarm Data nodes for [OpenSearch domains](overview/aws-services/elasticsearch.md).
+  * Support for [upgrading EKS components](overview/use-cases/disaster-recovery/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).&#x20;
   * [Add a Web App Firewall URL](overview/aws-services/web-application-firewall-waf.md#creating-a-web-application-firewall-waf) when creating or updating a Plan.
   * [Update or skip a final RDS snapshot](aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
   * [Upgrade the EKS Cluster](overview/use-cases/disaster-recovery/upgrading-eks-version.md).
@@ -236,3 +238,10 @@ coverY: 0
 * [Support for Kubernetes Ingress Controller](https://docs.duplocloud.com/docs/aws/aws-services/containers): Support for the K8s Ingress controller has been added, this is a key piece of functionality for traffic routing to a K8s cluster.
 * [RDS Snapshot Management](https://docs.duplocloud.com/docs/aws/aws-services/rds-database/manage-rds-snapshots):  Support to manage RDS database snapshot was added to the Portal, accessible through the RDS page.
 * [Terraform Provider updates](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs): Expanded support for more resources in the DuploCloud terraform provider, specifically for Microsoft Azure.&#x20;
+* AWS
+  * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
+  * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
+* Azure
+  * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
+* Kubernetes
+  * Create and manually run a [K8s Job](kubernetes-overview/jobs.md) from a CronJob.
