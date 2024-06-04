@@ -14,13 +14,14 @@ Once your Infrastructure and Plan have been created, the final step before creat
 4. Click on the **Click Here** hyperlink. The **Configure AKS Cluster** pane displays.
 5. In the **Cluster name** field, specify a name for your cluster.
 6. From the **AKS Version** item list, select your AKS version.
-7. Select the correct plugin from the **Network Plugin** item list.
-8.  Accept the default values for the remaining fields, and click **Create** to enable the AKS service for your Infrastructure. \
+7. Optionally, from the **Network Plugin** item list, select your network plugin (**azure** or **kubenet**).
+8. Optionally, enter your Azure Node Resource Group name in the **K8s Resource** group field.
+9.  Accept the default values for the remaining fields, and click **Create** to enable the AKS service for your Infrastructure. \
 
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/new reduced pic (1).png" alt=""><figcaption><p>The <strong>Configure AKS Cluster</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Webp.net-resizeimage.png" alt=""><figcaption><p>The <strong>Configure AKS Cluster</strong> pane</p></figcaption></figure>
 
     </div>
 

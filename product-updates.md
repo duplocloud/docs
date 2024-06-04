@@ -13,6 +13,7 @@ coverY: 0
   * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
 * Azure
   * [Specify AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
+  * Specify the [node resource group](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md) when configuring an AKS cluster.
 * Kubernetes
   * Create and manually run a [K8s Job](kubernetes-overview/jobs.md) from a Kubernetes CronJob.
 
@@ -238,10 +239,3 @@ coverY: 0
 * [Support for Kubernetes Ingress Controller](https://docs.duplocloud.com/docs/aws/aws-services/containers): Support for the K8s Ingress controller has been added, this is a key piece of functionality for traffic routing to a K8s cluster.
 * [RDS Snapshot Management](https://docs.duplocloud.com/docs/aws/aws-services/rds-database/manage-rds-snapshots):  Support to manage RDS database snapshot was added to the Portal, accessible through the RDS page.
 * [Terraform Provider updates](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs): Expanded support for more resources in the DuploCloud terraform provider, specifically for Microsoft Azure.&#x20;
-* AWS
-  * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
-  * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
-* Azure
-  * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
-* Kubernetes
-  * Create and manually run a [K8s Job](kubernetes-overview/jobs.md) from a CronJob.
