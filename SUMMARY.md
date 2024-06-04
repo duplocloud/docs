@@ -408,4 +408,4 @@
     * [DuploCloud GCP Product Demo](extras-overview/video-transcripts/duplocloud-gcp-product-demo.md)
     * [DevOps Deep Dive - Abstracting Cloud Complexity](extras-overview/video-transcripts/devops-deep-dive-abstracting-cloud-complexity.md)
     * [DuploCloud Uses Infrastructure-as-Code to Stitch Together DevOps Lifecycle](extras-overview/video-transcripts/duplocloud-uses-infrastructure-as-code-to-stitch-together-devops-lifecycle.md)
-  * [Login Banner Customization](extras-overview/login-banner-customization.md)
+  * [Login Banner/Button Customization](extras-overview/login-banner-customization.md)
