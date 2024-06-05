@@ -1,12 +1,12 @@
 ---
 description: >-
-  Schedule a Kubernetes Job in AWS or GCP by creating a Kubernetes CronJob in
+  Schedule a Kubernetes Job in AWS and GCP by creating a Kubernetes CronJob in
   the DuploCloud Portal
 ---
 
 # CronJobs
 
-A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](../kubernetes-overview/jobs.md) you can schedule to run at periodic intervals.
+A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](jobs.md) you can schedule to run at periodic intervals.
 
 See the Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) documentation for more information.
 
@@ -41,6 +41,43 @@ See the Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/contr
 11. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page. It will run according to the schedule you specified.&#x20;
 
 <figure><img src="../.gitbook/assets/cron final.png" alt=""><figcaption><p><strong>K8s CronJob</strong> tab displaying Kubernetes Job <strong>CALCULATEPI.</strong></p></figcaption></figure>
+
+## Viewing a Kubernetes CronJob&#x20;
+
+## Managing Kubernetes CronJobs faults
+
+You can manage/override Kubernetes Jobs faults on a Tenant or CronJob level. If a CronJob fails, and no Tenant- or Job-level fault setting is configured, DuploCloud will generate a fault by default.&#x20;
+
+### **Tenant-level Kubernetes CronJobs faults**
+
+Enable or disable faults for failed Kubernetes CronJobs in a specific Tenant.
+
+1. From the DuploCloud Portal, navigate to **Administrator** -> **Tenant.**
+2. Click the Tenant name in the **NAME** column.&#x20;
+3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
+4. From the **Select Feature** list box, select **Enable K8s job fault logging by default**, and use the toggle switch to enable or disable the setting.&#x20;
+5.  Click **Add**. The CronJobs fault setting is added. \
+
+
+    <div align="left">
+
+    <figure><img src="../.gitbook/assets/tenant faults feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane with <strong>Enable K8s Job fault logging by default</strong> enabled</p></figcaption></figure>
+
+    </div>
+
+You can view the CronJobs fault setting on the **Tenants** page (Navigate to **Administrator** -> **Tenant**, select the Tenant name) under the **Settings** tab. If the value is **true**, DuploCloud will generate a fault. If the value is **false**, DuploCloud will not generate a fault.&#x20;
+
+<figure><img src="../.gitbook/assets/tenant setting set.png" alt=""><figcaption><p>The <strong>Tenant</strong> details page, <strong>Setting</strong>s tab, showing the configured Jobs fault setting</p></figcaption></figure>
+
+### **Jobs-level Kubernetes CronJobs faults**
+
+You can configure the faults for a specific CronJob when creating the CronJob in DuploCloud. Fault settings added this way override Tenant-level settings. On the **Add Kubernetes Job** page, in the **Metadata Annotations** field, enter:&#x20;
+
+`duplocloud.net/fault/when-failed: true.` or&#x20;
+
+`duplocloud.net/fault/when-failed: false.`
+
+When the value is true and the CronJob fails, DuploCloud will generate a fault. When the value is false and the CronJob fails, a fault will not be generated.&#x20;
 
 ## Viewing a Kubernetes CronJob&#x20;
 
