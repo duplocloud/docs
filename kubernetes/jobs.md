@@ -16,7 +16,7 @@ In the DuploCloud Portal, you can create K8s Jobs to create one or more Pods. Th
 
 You typically create one Kubernetes Job object to run one Pod to completion reliably. The Job object starts a new Pod if the first Pod fails or is deleted (for example, in case of a node hardware failure or a node reboot).
 
-You can also use a Kubernetes Job to run multiple Pods in [parallel](https://kubernetes.io/docs/tasks/job/parallel-processing-expansion/). If you want to run a Kubernetes Job (a single task or several in parallel) on a schedule, see Kubernetes [CronJobs](../kubernetes/cronjobs.md).
+You can also use a Kubernetes Job to run multiple Pods in [parallel](https://kubernetes.io/docs/tasks/job/parallel-processing-expansion/). If you want to run a Kubernetes Job (a single task or several in parallel) on a schedule, see Kubernetes [CronJobs](cronjobs.md).
 
 ## Creating a Kubernetes Job in the DuploCloud portal
 
@@ -92,6 +92,41 @@ spec:
 ```
 
 To learn more about allocation tags for Kubernetes Jobs, see the Kubernetes documentation on [labels and selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) and [node selectors and node affinity](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector).
+
+## Managing Kubernetes Jobs faults
+
+You can manage/override Kubernetes Jobs faults on a Tenant or Job level. If a Job fails, and no Tenant- or Job-level fault setting is configured, DuploCloud will generate a fault by default.&#x20;
+
+### **Tenant-level Kubernetes Jobs faults**
+
+Enable or disable faults for failed Kubernetes Jobs in a specific Tenant.
+
+1. From the DuploCloud Portal, navigate to **Administrator** -> **Tenant.**
+2. Click the Tenant name in the **NAME** column.&#x20;
+3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
+4. From the **Select Feature** list box, select **Enable K8s job fault logging by default**, and use the toggle switch to enable or disable the setting.&#x20;
+5.  Click **Add**. The Jobs fault setting is added. \
+
+
+    <div align="left">
+
+    <figure><img src="../.gitbook/assets/tenant faults feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane with <strong>Enable K8s Job fault logging by default</strong> enabled</p></figcaption></figure>
+
+    </div>
+
+You can view the Jobs fault setting on the **Tenants** page (Navigate to **Administrator** -> **Tenant**, select the Tenant name) under the **Settings** tab. If the value is **true**, DuploCloud will generate a fault. If the value is **false**, DuploCloud will not generate a fault.&#x20;
+
+<figure><img src="../.gitbook/assets/tenant setting set.png" alt=""><figcaption><p>The <strong>Tenant</strong> details page, <strong>Setting</strong>s tab, showing the configured Jobs fault setting</p></figcaption></figure>
+
+### **Jobs-level Kubernetes Jobs faults**
+
+You can configure the faults for a specific Job when creating the Job in DuploCloud. Fault settings added this way override Tenant-level settings. On the **Add Kubernetes Job** page, in the **Metadata Annotations** field, enter:&#x20;
+
+`duplocloud.net/fault/when-failed: true.` or&#x20;
+
+`duplocloud.net/fault/when-failed: false.`
+
+When the value is true and the Job fails, DuploCloud will generate a fault. When the value is false and the Job fails, a fault will not be generated.&#x20;
 
 ## Viewing a Kubernetes Job&#x20;
 

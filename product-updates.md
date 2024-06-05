@@ -15,7 +15,8 @@ coverY: 0
   * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
   * Specify the [node resource group](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md) when configuring an AKS cluster.
 * Kubernetes
-  * Create and manually run a [K8s Job](kubernetes-overview/jobs.md) from a Kubernetes CronJob.
+  * Create and manually run a [K8s Job](kubernetes/jobs.md) from a Kubernetes CronJob.
+  * Configure faults for failed [Jobs](kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [Cron Jobs](kubernetes/cronjobs.md#jobs-level-kubernetes-cronjobs-faults) at the Tenant level.
 * General
   * [Customize the text on the log-in button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
@@ -77,7 +78,7 @@ coverY: 0
 * Kubernetes
   * [Follow logs](overview/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
   * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](kubernetes-overview/pod-toleration.md).&#x20;
-  * Create [Kubernetes Jobs (K8s Jobs)](kubernetes-overview/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
+  * Create [Kubernetes Jobs (K8s Jobs)](kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
   * Create [Kubernetes CronJobs (K8s CronJobs)](kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 *   General updates
 
