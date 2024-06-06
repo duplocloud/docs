@@ -397,7 +397,7 @@
   * [Auditing](diagnostics-overview/auditing.md)
   * [Web App Firewall (WAF)](diagnostics-overview/web-application-firewall-waf.md)
 * [Extras](extras-overview/README.md)
-  * [Terraform (In progress)](extras-overview/terraform-in-progress.md)
+  * [Terraform](extras-overview/terraform.md)
   * [Helm Charts](extras-overview/helm-charts.md)
   * [Allocation Tagging for Hosts](extras-overview/creating-advanced-functions.md)
   * [Managed Service Accounts (RBAC)](extras-overview/managed-service-accounts-rbac.md)

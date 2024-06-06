@@ -1,8 +1,8 @@
 ---
-description: Configuring Terraform in DuploCloud
+description: Working with DuploCloud's integrated Terraform Provider
 ---
 
-# Terraform (In progress)
+# Terraform
 
 DuploCloud has its own fully integrated Terraform Provider that interacts directly with our API; it is not simply wrapping existing Terraform modules. Learn more about our Terraform offerings [in the Terraform Registry](https://registry.terraform.io/namespaces/duplocloud).  Since we have a provider, we don't change how Terraform works. You simply provide credentials to the DuploCloud Terraform Provider. Many common patterns and use cases are available to help you create your desired stack.
 
