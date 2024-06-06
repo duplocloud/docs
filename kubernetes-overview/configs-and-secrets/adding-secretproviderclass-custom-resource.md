@@ -1,5 +1,5 @@
 ---
-description: Creating the K8s SecretProviderClass Custom Resource in the DuploCloud Portal
+description: Creating K8s SecretProviderClass CRs in the DuploCloud Portal
 ---
 
 # Creating the SecretProviderClass Custom Resource to mount secrets
