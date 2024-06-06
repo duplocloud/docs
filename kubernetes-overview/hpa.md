@@ -1,5 +1,5 @@
 ---
-description: Manage and troubleshoot Services with HPA configured.
+description: Manage and troubleshooting services with HPA configured.
 ---
 
 # HPA
