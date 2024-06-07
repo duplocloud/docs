@@ -22,20 +22,12 @@ Create an Azure agent pool for an existing Host in the DuploCloud Portal:
 4.  Provide inputs for the **Instance Type**, **Min Capacity**, and **Max Capacity** fields.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/Azure_Agent_Pool_Fields.png" alt=""><figcaption><p>Input fields on the <strong>Add Azure Agent Pool</strong> page with <strong>Enable Autoscaling</strong> selected.</p></figcaption></figure>
-
-    </div>
+    <figure><img src="../../.gitbook/assets/Add agent pool.png" alt=""><figcaption><p>Input fields on the <strong>Add Azure Ag</strong></p></figcaption></figure>
 5. Optionally, select **Enable Autoscaling** to autoscale the pool.
 6.  Click **Add**. When the agent pool is created, **Succeeded** is displayed in the **Status** column. It may take some time to create the agent pool.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/Agent_Pool_Azure_Agent_Pool_Created_SUCCESS.png" alt=""><figcaption><p>Agent pool with <strong>Succeeded</strong> status</p></figcaption></figure>
-
-    </div>
+    <figure><img src="../../.gitbook/assets/agent pool success.png" alt=""><figcaption><p>Agent pool with <strong>Succeeded</strong> status</p></figcaption></figure>
 
 ## Editing an agent pool
 
@@ -47,6 +39,6 @@ Edit an agent pool:
 4.  Select the **Actions** menu and choose **Edit**.\
 
 
-    <figure><img src="../../.gitbook/assets/Agent_Pool_Azure_Agent_Pool_Created_SUCCESS_2.png" alt=""><figcaption><p>Agent pool with the <strong>Actions</strong> menu</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/edit agent pool.png" alt=""><figcaption><p>The <strong>Azure Agent Pool</strong> page with the <strong>Edit</strong> menu option highlighted</p></figcaption></figure>
 5. In the **Update agent pool capacity** pane, edit the pool configuration.
 6. Click **Update**.

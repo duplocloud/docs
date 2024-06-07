@@ -2,10 +2,6 @@
 
 Metrics of the resources created/managed in DuploCloud can be tracked under **Observability** -> **Metrics**.
 
-Separate Tabs are available to view the metrics resource type wise.
+Separate tabs are available to view the metrics resource type wise.
 
-<div align="left">
-
-<img src="../../.gitbook/assets/image (37) (3) (1).png" alt="Metrics dashboard">
-
-</div>
+<figure><img src="../../.gitbook/assets/metrics fixed.png" alt=""><figcaption><p>Metrics dashboard</p></figcaption></figure>
