@@ -101,7 +101,7 @@ provider "kubernetes" {
 ```
 
 {% hint style="info" %}
-Use [`duplocloud_gke_credentials`](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/gke\_credentials)`when you are on GKE. For Azure AKS, simply use`[`duplocloud_eks_credentials`](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/eks\_credentials)`.`
+Use [duplocloud\_gke\_credentials](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/gke\_credentials) when you are on GKE. For Azure AKS, simply use [duplocloud\_eks\_credentials](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/eks\_credentials).
 {% endhint %}
 
 When using your local Kubernetes configuration, there is a chance you are scoped into the wrong cluster, for example you want to run for dev but forgot you set `current-context: prod` in your kubeconfig. If you really would like to use the local configuration instead, you can use the [duploctl jit k8s](https://cli.duplocloud.com/Jit/#duplo\_resource.jit.DuploJit.k8s) to safely achieve this.&#x20;
@@ -320,10 +320,10 @@ Here is a simple `BASH` script that discovers the `config` file and applies the 
 ```sh
 export WORKSPACE=dev01 
 export MODULE=app
-terraform workspace select -or-create $WORKSPACE
-terraform apply \
-  -chdir="modules/${MODULE}" \
-  -var-file="config/${WORKSPACE}/${MODULE}.tfvars.json"
+export MODULE_PATH="modules/${MODULE}"
+export MODULE_CONFIG="$(pwd)/config/${WORKSPACE}/${MODULE}.tfvars.json"
+terraform -chdir=$MODULE_PATH workspace select -or-create $WORKSPACE
+terraform -chdir=$MODULE_PATH apply -var-file=$MODULE_CONFIG
 ```
 
 Use a secret manager such as AWS Secret Manager and a data block to retrieve it, instead of passing secrets through variables.  If you must use Terraform variables, inject the variable as a `TF_VAR_myvar` style environment variable from the CI/CD tool, which manages the execution.&#x20;
