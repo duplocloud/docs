@@ -23,12 +23,20 @@ Add a Virtual Machine Host. DuploCloud AWS supports **Host** (Azure Host) and **
 3. Click the tab that corresponds to the type of Host you want to create (**HOST** or **BYOH**).
 4. In the **Friendly Name** field, specify a unique name for the Host.&#x20;
 5. Define the **Subnet**, select the **Instance Type**, enter your **Username** and **Password**, and specify whether to enable a **Public IP**.&#x20;
-6. Optionally, select the **Disk Controller Type** in the **Advanced Options**. The disk controller type is set to `SCSI` by default. If you select `NVME`, specify the supported instance size.&#x20;
-7. Click **Add**.
+6. Optionally, enter a computer name in **Computer Name** field in the **Advanced Options**.
+7. Optionally, select the **Disk Controller Type** in the **Advanced Options**. The disk controller type is set to `SCSI` by default. If you select `NVME`, specify the supported instance size.&#x20;
+8. Click **Add**.\
+
+
+<figure><img src="../../../.gitbook/assets/Add a VM.png" alt=""><figcaption><p>The Azure <strong>Add a Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 {% hint style="info" %}
 It is not necessary to explicitly define Hosts. Instead, you can use [**Azure Agent Pool**s](../../azure-services/agent-pool.md) and [**VM Scale Set**s](../../azure-services/vm-scale-sets.md).
 {% endhint %}
+
+## Viewing Hosts (VMs)
+
+To view your Hosts (VMs), navigate to **Cloud Services** -> **Hosts** and select the **Host** tab.&#x20;
 
 <figure><img src="../../../.gitbook/assets/newvm.png" alt=""><figcaption><p><strong>Azure VM</strong> <strong>Hosts</strong> page with <strong>Host</strong>, <strong>VM Scale Set</strong>, <strong>Azure Agent Pool</strong>, and <strong>BYOH</strong> options, as tabs</p></figcaption></figure>
 
