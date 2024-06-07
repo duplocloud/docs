@@ -23,6 +23,11 @@ coverY: 0
 ## Q1 2024
 
 * AWS
+  * ClusterIP and Worker Node target types are supported when creating AWS Ingress.
+
+## Q1 2024
+
+* AWS
   * [Enable automatic AWS ACM (SSL) Certificates](aws-user-guide/prerequisites/acm-certificate.md#enabling-automatic-aws-acm-certificate-creation) for a Plan.
   * [Configure K8s Ingress redirect ](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](overview/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
