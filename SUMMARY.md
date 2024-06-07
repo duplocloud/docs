@@ -35,6 +35,7 @@
     * [Creating the SecretProviderClass Custom Resource to mount secrets](kubernetes-overview/configs-and-secrets/adding-secretproviderclass-custom-resource.md)
   * [Jobs](kubernetes/jobs.md)
   * [CronJobs](kubernetes/cronjobs.md)
+  * [DaemonSet](kubernetes-overview/daemonset.md)
   * [Ingress Loadbalancer](kubernetes-overview/ingress-loadbalancer/README.md)
     * [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md)
     * [GKE Ingress](kubernetes-overview/ingress-loadbalancer/gke-ingress.md)

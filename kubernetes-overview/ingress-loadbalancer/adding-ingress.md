@@ -94,7 +94,7 @@ To add a Kubernetes Ingress, you must define rules. [Continue to the next sectio
 
         <div align="left">
 
-        <figure><img src="../../.gitbook/assets/Ingress target type (1).png" alt=""><figcaption></figcaption></figure>
+        <figure><img src="../../.gitbook/assets/Ingress target type (2).png" alt=""><figcaption></figcaption></figure>
 
         </div>
 
