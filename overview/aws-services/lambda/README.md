@@ -33,29 +33,30 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 3.  Click **Add**. The **Create a Lambda Function** page displays.\
 
 
-    <figure><img src="../../../.gitbook/assets/Lambda function.png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page using <strong>Package Type Zip</strong><br></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/lambda fixed.png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page using <strong>Package Type Zip</strong><br></p></figcaption></figure>
 4. In the **Name** field, enter the name of your Lambda Function.
 5. In the **Description** field, enter a useful description of the function.
 6. From the **Package Type** list box, select **Zip**. For type **Image**, see the [Configure Lambda with Container Images](create-lambda-using-container-image.md) topic.
 7. In the **Runtime** field, enter the runtime for your programming language.
-8. To allocate a temporary file share, enter the value in megabytes (MB) in the **Ephemeral Storage** field. The minimum value is **512**; the maximum value is **10240**.
-9. In the **Function Handler** field, enter the method name that Lambda calls to execute your function.
-10. In the **S3 Bucket** list box, select an existing [S3 bucket](../s3-bucket.md).
-11. In the **Function Package** field, enter the name of the **Zip** package containing your Lambda Function.&#x20;
-12. In the **Dead Letter Queue** list box, select an Amazon Simple Queue Service (SQS) queue or Amazon Simple Notification Service (SNS) topic.
-13. Click **Submit**. The Lambda Function is created.
-14. On the **Lambda Function** page, from the **Name** column, select the function you created.
-15. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
+8. From the the **Architecture** list box, select the correct Lambda Architecture.&#x20;
+9. To allocate a temporary file share, enter the value in megabytes (MB) in the **Ephemeral Storage** field. The minimum value is **512**; the maximum value is **10240**.
+10. In the **Function Handler** field, enter the method name that Lambda calls to execute your function.
+11. In the **S3 Bucket** list box, select an existing [S3 bucket](../s3-bucket.md).
+12. In the **Function Package** field, enter the name of the **Zip** package containing your Lambda Function.&#x20;
+13. In the **Dead Letter Queue** list box, select an Amazon Simple Queue Service (SQS) queue or Amazon Simple Notification Service (SNS) topic.
+14. Click **Submit**. The Lambda Function is created.
+15. On the **Lambda Function** page, from the **Name** column, select the function you created.
+16. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
 
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/L11.png" alt=""><figcaption><p><strong>Actions</strong> menu on the selected <strong>Lambda Function</strong> page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/L11.png" alt=""><figcaption><p>The <strong>Lambda Function</strong> page <strong>Actions</strong> menu  </p></figcaption></figure>
 
     </div>
 
 
-16. Test the function using the AWS Console.
+17. Test the function using the AWS Console.
 
 ### Integrating with other resources <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 

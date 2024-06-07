@@ -35,6 +35,21 @@ coverY: 0
 * General
   * [Customize the text on the log-in button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
+## Q2 2024
+
+* AWS
+  * [Set a maximum RDS instance size ](overview/aws-services/database/rds-database/restrict-rds-instance-size.md)in Systems Settings.
+  * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
+  * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
+* Azure
+  * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
+  * Specify the [node resource group](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md) when configuring an AKS cluster.
+* Kubernetes
+  * Create and manually run a [K8s Job](kubernetes/jobs.md) from a Kubernetes CronJob.
+  * Configure faults for failed [Jobs](kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [Cron Jobs](kubernetes/cronjobs.md#jobs-level-kubernetes-cronjobs-faults) at the Tenant level.
+* General
+  * [Customize the text on the log-in button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
+
 ## Q1 2024
 
 * AWS
