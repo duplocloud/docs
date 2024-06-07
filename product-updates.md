@@ -5,6 +5,8 @@ coverY: 0
 
 # Product updates
 
+## Q2 2024
+
 * AWS
   * [Set a maximum RDS instance size ](overview/aws-services/database/rds-database/restrict-rds-instance-size.md)in Systems Settings.
   * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
