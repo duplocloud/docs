@@ -5,20 +5,22 @@ coverY: 0
 
 # Product updates
 
-## Q2 2024
-
 * AWS
   * [Set a maximum RDS instance size ](overview/aws-services/database/rds-database/restrict-rds-instance-size.md)in Systems Settings.
   * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
   * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
+  * [Specify a Lambda architecture](overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
+  * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.&#x20;
 * Azure
   * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
   * Specify the [node resource group](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md) when configuring an AKS cluster.
+  * [Specify a computer name](overview-2/use-cases/hosts-vms/#adding-a-host-vm) when creating a Host.&#x20;
 * Kubernetes
   * Create and manually run a [K8s Job](kubernetes/jobs.md) from a Kubernetes CronJob.
   * Configure faults for failed [Jobs](kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [Cron Jobs](kubernetes/cronjobs.md#jobs-level-kubernetes-cronjobs-faults) at the Tenant level.
+  * Support for [DaemonSet](https://docs.duplocloud.com/docs/kubernetes-overview/daemonset#creating-a-daemonset-in-duplocloud-aws-or-gcp) with GCP or AWS.&#x20;
 * General
-  * [Customize the text on the log-in button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banner.
+  * [Customize the text on the log-in button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
 ## Q1 2024
 
