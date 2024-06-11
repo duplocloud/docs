@@ -1,5 +1,5 @@
 ---
-description: Enable autoscaler for the K8 cluster
+description: Enable Cluster Autoscaler for a Kubernetes cluster
 ---
 
 # Enable Cluster Autoscaler
@@ -9,7 +9,7 @@ description: Enable autoscaler for the K8 cluster
 The Cluster AutoScaler automatically adjusts the number of nodes in your cluster when Pods fail or are rescheduled onto other nodes.&#x20;
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
-2. Select the Infrastructure with which you want to use Cluster AutoScaler.
+2. From the **NAME** column, select the Infrastructure with which you want to use Cluster AutoScaler.
 3. Click the **Settings** tab.
 4.  Click **Add**. The **Add Infra - Set Custom Data** pane displays.\
 
@@ -23,7 +23,7 @@ The Cluster AutoScaler automatically adjusts the number of nodes in your cluster
 
 5. From the **Setting Name** list box, select **Cluster Autoscaler**.
 6. Select **Enable** to enable EKS.
-7.  Click **Set**. Your configuration is displayed in the Settings tab.\
+7.  Click **Set**. Your configuration is displayed in the **Settings** tab.\
 
 
     <figure><img src="../../../../.gitbook/assets/ASG.png" alt=""><figcaption><p><strong>Cluster Autoscaler</strong> configuraton enabled with <strong>Value true</strong></p></figcaption></figure>

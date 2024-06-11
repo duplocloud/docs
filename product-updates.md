@@ -58,7 +58,7 @@ coverY: 0
 * General&#x20;
   * [Customize the DuploCloud login screen banner.](extras-overview/login-banner-customization.md)
   * [Set Tenants to expire](overview/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
-  * Configure settings for all new Tenants under a Plan using [Tenant Config tab](welcome-to-duplocloud/application-focussed-interface/tenant/tenant-config-settings.md).
+  * Configure settings for all new Tenants under a Plan using [Tenant Config tab](welcome-to-duplocloud/duplocloud-common-components/tenant/tenant-config-settings.md).
   * SIEM - [Configure agents to install on specific Tenants](broken-reference).
 
 ## Q4 2023

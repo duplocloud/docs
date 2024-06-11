@@ -8,7 +8,7 @@ AWS SDKs and the AWS Command Line Interface (AWS CLI) automatically use the defa
 
 For more information about AWS Endpoints, see the [AWS documentation](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html#private-access).&#x20;
 
-## Specifying public and private subnets
+## Specifying public and private endpoints
 
 1. Follow the steps in the section [Creating an Infrastructure](../). Before clicking **Create**, specify **EKS Endpoint Visibility**.
 2. From the **EKS Endpoint Visibility** list box, select **Public**, **Private**, or **Both public and private**. If you select **private** or **Both public and private**, the **Allow VPN Access to the EKS Cluster** option is enabled.
@@ -28,12 +28,12 @@ For more information about AWS Endpoints, see the [AWS documentation](https://do
 
 </div>
 
-## Enabling VPN for private visibility (optional)
+## Changing VPN visibility from public to private (optional)
 
-If you want to enable private visibility after you have previously [created an Infrastructure](../) with only public visibility, follow these steps to enable private visibility and VPN access.
+To change VPN visibility from public to private after you have [created an Infrastructure](../), follow these steps.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
-2. From the **Name** column, select the Infrastructure.
+2. From the **NAME** column, select the Infrastructure.
 3. Click the **Settings** tab.
 4.  In the **EKS Endpoint Visibility** row, in the **Actions** column, click the ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) icon and select **Update Setting**. The **Infra - Set Custom Data** pane displays.\
 
@@ -47,21 +47,12 @@ If you want to enable private visibility after you have previously [created an I
 
 5. From the **Setting Name** list box, select **Enable VPN Access to EKS Cluster**.
 6. Select **Enable** to enable VPN.
-7. Click **Set**. When you [create an Infrastructure](../), the **Allow VPN Access to the EKS Cluster** option will be enabled.
+7.  Click **Set**. When you [create an Infrastructure](../), the **Allow VPN Access to the EKS Cluster** option will be enabled.\
 
-## Viewing Infrastructure settings
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
-2. From the **Name** column, select the Infrastructure containing settings that you want to view.
-3. Click the **Settings** tab. The Infrastructure settings display.
+    <figure><img src="../../../../.gitbook/assets/settings marked.png" alt=""><figcaption></figcaption></figure>
 
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/eksv.png" alt=""><figcaption><p><strong>Settings</strong> tab on the <strong>Infrastructure</strong> page</p></figcaption></figure>
-
-</div>
-
-## Changing EKS endpoint visibility
+## Changing EKS endpoint visibility (optional)
 
 {% hint style="warning" %}
 Modifying endpoints can incur an outage of up to thirty (30) minutes in your EKS cluster. Plan your update accordingly to minimize disruption for your users.

@@ -6,7 +6,7 @@ coverY: 0
 # AWS User Guide
 
 {% hint style="info" %}
-Before you begin, read through the [DuploCloud Platform Overview](../) and are familiar with DuploCloud terms such as [Infrastructure](../welcome-to-duplocloud/application-focussed-interface/infrastructure.md), [Plan](../welcome-to-duplocloud/application-focussed-interface/plan.md), and [Tenant](../welcome-to-duplocloud/application-focussed-interface/tenant/).
+Before you begin, read through the [DuploCloud Platform Overview](../) and are familiar with DuploCloud terms such as [Infrastructure](../welcome-to-duplocloud/duplocloud-common-components/infrastructure.md), [Plan](../welcome-to-duplocloud/duplocloud-common-components/plan.md), and [Tenant](../welcome-to-duplocloud/duplocloud-common-components/tenant/).
 {% endhint %}
 
 The DuploCloud platform installs in an EC2 instance within your AWS account. It can be accessed using a web interface, API, and a Terraform provider.&#x20;

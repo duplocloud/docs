@@ -2,7 +2,11 @@
 
 For organizations operating in regulated industries, the infrastructure needs to follow strict compliance guidelines. Compliance standards such as NIST, PCI, HITRUST, and SOC 2 set the bar, with the complexity and duration of compliance efforts varying significantly. For instance, achieving compliance in a 50-node infrastructure could span from 6 months to a year, depending on the specific requirements of these standards.
 
-![Number of controls and and provisioning time](<../../.gitbook/assets/image (15) (1) (1) (1) (1).png>)
+<div align="left">
+
+<img src="../../.gitbook/assets/image (15) (1) (1) (1) (1).png" alt="Number of controls and and provisioning time">
+
+</div>
 
 In addition to these standards, organizations releasing new applications must also consider data protection regulations such as the General Data Protection Regulation (GDPR) in the European Union. Duplo offers guidance on GDPR compliance, emphasizing the importance of data classification and security. It is crucial to identify Personal Identifiable Information (PII) and ensure it is stored and managed in compliance with GDPR. For example, storing PII in databases located within the EU and applying appropriate access controls meets GDPR requirements. Leveraging standard AWS services in the correct region further supports compliance efforts. Duplo and AWS provide extensive resources and discussions on navigating GDPR compliance, including detailed information available through the AWS GDPR Center.
 

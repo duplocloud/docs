@@ -1,15 +1,6 @@
-# Creating GKE Autopilot Cluster
+# Creating a GKE Autopilot Cluster
 
-Navigate from **Administrator** -> **Infrastructure** -> **Add** to create Infrastructure with GKE Standard Cluster.
-
-* Name: nonprod
-* Account: Google Cloud account
-* VPC CIDR: 10.11.0.0/16
-* Cloud: Google
-* Region: us-east1
-* Subnet CIDR: 22
-* Enable GKE: enabled
-* Cluster Mode: GKE Autopilot
+When [creating an Infrastructure](./), use the **Enable GKE** toggle switch to enable GKE. In the Cluster Mode list box, select **GKE Autopilot**. Complete the remaining fields (**GKE Version**, **GKE Endpoint Visibility**, and **Cluster IP CIDR**). Click **Create**.
 
 <div align="left">
 
@@ -17,4 +8,4 @@ Navigate from **Administrator** -> **Infrastructure** -> **Add** to create Infra
 
 </div>
 
-This takes about 20 minutes.  Infrastructure status should move to Completed. Once the Infrastructure status shows Complete, navigate to **Administrators** -> **Plans** to verify that a plan has been created with the same name (nonprod).
+This takes about 20 minutes.  Infrastructure status should move to Completed. Once the Infrastructure status shows Complete, navigate to **Administrators** -> **Plans** to verify that a Plan has been created with the same name (nonprod).
