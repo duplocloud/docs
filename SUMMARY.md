@@ -123,7 +123,7 @@
     * [CloudFront](aws-user-guide/aws-services/cloudfront.md)
     * [Databases](aws-user-guide/aws-services/database/README.md)
       * [Amazon ElastiCache](overview/aws-services/database/elastic-cache.md)
-      * [AWS DynamoDB database tables](aws-user-guide/aws-services/database/dynamodb.md)
+      * [AWS DynamoDB database](aws-user-guide/aws-services/database/dynamodb.md)
       * [AWS Timestream database](aws-user-guide/aws-services/database/timestream-database.md)
       * [RDS database](aws-user-guide/aws-services/database/rds-database/README.md)
         * [IAM authentication](aws-user-guide/aws-services/database/rds-database/iam-authentication.md)
