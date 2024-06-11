@@ -6,13 +6,13 @@ description: Enable ECS Elasticsearch logging for containers at the Tenant level
 
 To generate logs for AWS ECS clusters, you must first create an Elasticsearch logging container. Once auditing is enabled, your container logging data can be captured for analysis.
 
-## Before you begin
+## Prerequisites
 
 * [Create a Task Definition](../../../aws-services/containers/#7-toc-title)
-* Define at least one [service and container](../../../aws-services/containers/).
-* Enable the Audit feature.
+* Define at least one [Service and container](../../../aws-services/containers/).
+* Enable the[ Audit](../../auditing.md#enabling-audit) feature.
 
-## Enable ECS Elastic Search Logging for a Tenant
+## Enabling ECS ElasticSearch logging
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**. The **Tenant** page displays.
 2. From the **Name** column, select the Tenant that is running the container for which you want to enable logging.
@@ -37,7 +37,11 @@ You can verify that ECS logging is enabled for a specific container.
 2.  In the **Task Definitions** tab, select the **Task Definition Family Name** in which your container is defined. \
 
 
+    <div align="left">
+
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_37_06.png" alt=""><figcaption><p>The Task Definition Family Name detail page with <strong>Task Definitions</strong> tab selected</p></figcaption></figure>
+
+    </div>
 3. Click the **Task Definitions** tab.
 4. Menu icon ( <img src="../../../../.gitbook/assets/image (53).png" alt="" data-size="line">) in the row of the task definition and select **Edit Task Definition**. The **Edit Task Definition** page displays your defined **Container**s.
 
