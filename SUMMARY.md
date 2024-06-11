@@ -287,6 +287,7 @@
     * [Mounting ConfigMaps and Secrets as files](kubernetes-overview/configs-and-secrets/mounting-config-as-files.md)
     * [Using Kubernetes Secrets with Azure Storage connection data](kubernetes-overview/configs-and-secrets/using-kubernetes-secrets-with-azure-storage-connection-data.md)
     * [Creating the SecretProviderClass Custom Resource to mount secrets](kubernetes-overview/configs-and-secrets/adding-secretproviderclass-custom-resource.md)
+    * [Managing Secret access for read-only users (AWS and GCP)](kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md)
   * [Jobs](kubernetes/jobs.md)
   * [CronJobs](kubernetes/cronjobs.md)
   * [DaemonSet](kubernetes-overview/daemonset.md)
