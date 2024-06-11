@@ -1,22 +1,6 @@
----
-description: Using DuploCloud exclusive Terraform provider
----
+# Terraform FAQ
 
-# DuploCloud Terraform Provider
-
-The DuploCloud provider offers a seamless way to interact with the DuploCloud API, facilitating the integration of AWS Security Hub and infrastructure management using Terraform (TF) and AWS Cloud Development Kit (CDK). This integration not only enhances security through a built-in Security Information and Event Management (SIEM) system but also directly supports the attachment of new AWS accounts to the AWS Security Hub, typically recommended for production environments to optimize costs.
-
-Detailed documentation can be obtained from:
-
-{% embed url="https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs" %}
-Link to DuploCloud Terraform provider documentation on the Terraform site
-{% endembed %}
-
-## AWS Security Hub Integration
-
-DuploCloud supports AWS Security Hub integration out of the box, enabling users to attach new accounts to their AWS Security Hub easily. This feature is particularly useful in production accounts, allowing for cost savings by avoiding activating this service in non-production environments.
-
-## Terraform vs. CDK
+## 1 . Terraform vs. CDK
 
 For implementing Infrastructure as Code (IaC), DuploCloud integrates well with Terraform and CDK scripts. However, Terraform offers distinct advantages, including its broader vendor support and the ease of maintaining infrastructure with a single language across different tools and services. Terraform's extensive community support and compatibility with various open-source tools make it a preferred choice for many developers.
 
