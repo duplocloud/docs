@@ -22,7 +22,7 @@ See the Services documentation for steps to [create Hosts and configure Kubernet
 
 </div>
 
-## GCE VM
+### GCE VM
 
 You can create a GCE VM by going to **Cloud Services** -> **Hosts** ->  **GCE VM**.
 
@@ -32,7 +32,7 @@ You can create a GCE VM by going to **Cloud Services** -> **Hosts** ->  **GCE VM
 
 </div>
 
-## BYOH Hosts
+### BYOH Host
 
 While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the Tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
 
@@ -52,3 +52,19 @@ There is an additional parameter labeled **Fleet Type**. This is applicable if t
 {% hint style="info" %}
 If a VM is used for container orchestration, ensure that the **Image ID** corresponds to the Image in the container. Any name that begins with **Duplo** is an image that DuploCloud generates for Built-in container orchestration &#x20;
 {% endhint %}
+
+## Increasing minimum ports per VM instance (GKE Standard)
+
+You can increase the number of available ephemeral ports per GKE Standard VM instance in the DuploCloud Portal using Infrastructure systems settings. More ports help handle high volumes of network traffic, especially for applications that require many simultaneous connections.
+
+To increase the minimum ports per VM for your Infrastructure:&#x20;
+
+* Navigate to **Administrator** -> **Infrastructure**.
+* In the **NAME** column, select your Infrastructure name.&#x20;
+* Select the **Settings** tab, and click **Add**. The **Infra - Set Custom Data** pane displays.
+* From the **Setting Name** list box, select **GKE Minimum Ports Per VM**.&#x20;
+* In the **Setting Value** field, enter the minimum number of ports you want or each VM.&#x20;
+*   Click **Set**. VMs in this Infrastructure will have at least the minimum number of ports configured. \
+
+
+    <figure><img src="../../.gitbook/assets/minimum ports per VM.png" alt=""><figcaption></figcaption></figure>
