@@ -16,14 +16,15 @@ In GCP, Cloud Storage Buckets are containers that hold your data. Everything in 
 
 </div>
 
-2. In the **Buckets** tab, click **Add**. The **Create a Bucket** pane displays.
+2.  In the **Buckets** tab, click **Add**. The **Create a Bucket** pane displays.\
 
-<div align="left">
 
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_42_11 (1).png" alt=""><figcaption><p>The <strong>Create a Bucket</strong> pane </p></figcaption></figure>
+    <div align="left">
 
-</div>
+    <figure><img src="../../.gitbook/assets/create a bucket.png" alt=""><figcaption><p>The <strong>Create a Bucket</strong> pane </p></figcaption></figure>
 
+    </div>
 3. In the **Name** field, enter a bucket name.
 4. Optionally, select **Enable Versioning** or **Allow Public Access;** enter a label string for your bucket in the **Labels** field.&#x20;
-5. Click **Create**.&#x20;
+5. Optionally, select the **Multi Region** or **Region** (single region) location type for your data storage. In the **Multi Region Options** or **Region Options** list box, select your region(s).&#x20;
+6. Click **Create**.&#x20;
