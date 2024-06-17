@@ -11,6 +11,6 @@ This is often very useful in order to:
 
 * [Install Terraform Exporter](install-terraform-exporter.md)
 * [Generate Terraform Code](generate-terraform.md)
-* [Using Genarated Code to create New Tenant and Resources](using-generated-code.md)
+* [Using Generated Code to create New Tenant and Resources](using-generated-code.md)
 * [Troubleshooting Guide](troubleshooting-guide.md)
 
