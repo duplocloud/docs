@@ -130,7 +130,7 @@ Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to k
 
 "Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. DuploCloud manages infrastructure resources for you, ensuring the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
-Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure you don't.be a case for no-code. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
+Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure correctness since the platform enforces it. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
 
 Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with completely independent constructs.
 
