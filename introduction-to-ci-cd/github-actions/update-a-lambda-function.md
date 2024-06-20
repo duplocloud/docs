@@ -51,7 +51,7 @@ jobs:
 
     # uses duploctl from above
     - name: Update Lambda
-      uses: <a data-footnote-ref href="#user-content-fn-2">duplocloud/actions/update-image@v0.0.</a>5
+      uses: duplocloud/actions/update-image@v0.0.5
       with:
         type: lambda
         name: mylambda
@@ -128,5 +128,3 @@ jobs:
   * [Ruby](https://hub.docker.com/r/amazon/aws-lambda-ruby)
 
 [^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
-
-[^2]: [https://github.com/duplocloud/actions/tree/main/update-image](https://github.com/duplocloud/actions/tree/main/update-image)

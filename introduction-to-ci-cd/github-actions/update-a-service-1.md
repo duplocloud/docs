@@ -2,11 +2,11 @@
 description: Use Duplo to update a Service container from Github Actions
 ---
 
-# Update a Kubernetes Service
+# Update an ECS Service
 
 ## Update the docker image for a service
 
-The goal of this section is to show how you can update the docker image for a Kubernetes service, after you have built that image. This task can be achieved using the [duplocloud/actions/update-service](https://github.com/duplocloud/actions/tree/main/update-service) action.&#x20;
+The goal of this section is to show how you can update the docker image for an ECS service, after you have built that image. This task can be achieved using the [duplocloud/actions/update-service](https://github.com/duplocloud/actions/tree/main/update-service) action.&#x20;
 
 ### Example Workflow
 
@@ -64,7 +64,7 @@ jobs:
       with:
         name: my-service
         image: ${{ inputs.image }}
-        type: service
+        type: ecs
 </code></pre>
 
 [^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
