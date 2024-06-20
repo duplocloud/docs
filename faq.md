@@ -39,7 +39,7 @@ We estimate that DuploCloud will increase your company's monthly cloud costs by 
 
 ### Can companies with private clouds use DuploCloud?
 
-Yes, DuploCloud's On-prem services support companies with private clouds.
+Yes, DuploCloud's On-premises services support companies with private clouds.
 
 ### Is DuploCloud a SaaS product?
 
@@ -67,13 +67,13 @@ Installing a DuploCloud appliance in each account is necessary to manage workloa
 
 ### Can we install DuploCloud in our existing cloud account?
 
-While you can install DuploCloud in your existing environment, we prefer that we do the setup in a separate account. You do not have to migrate all your existing data sources, especially if you have terabytes of files in the S3 bucket. The workload in DuploCloud environments can connect to existing data sources and endpoints over peering and cross-account access. Here are the top reasons why people prefer Duplocloud in a separate account:
+While you can install DuploCloud in your existing environment, we prefer that we do the setup in a separate account. You do not have to migrate all your existing data sources, especially if you have terabytes of files in the S3 bucket. The workload in DuploCloud environments can connect to existing data sources and endpoints over peering and cross-account access. Here are the top reasons why people prefer DuploCloud in a separate account:
 
 * It is considered a safe and non-intrusive way to validate the new setup and, at times, new architecture, like Kubernetes, without touching the existing account.
 * From a compliance perspective, a new account is a clean slate and is very easy to pass audits as DuploCloud will guarantee all aspects of it. If we were to fit in an existing account, there may be many things that are pretty hard and, in some cases, impossible to fix. For example, in a non-compliant scenario, that history is stored in a cloud trail, indicating irregularities to an auditor and creating questions around scope, leading to exceptions in the report.
 * Some DuploCloud security features can impact existing non-compliant resources and workloads. While this is rare, it is something to consider.
 
-In summary, while one can deploy the platform in an existing account and even import a VPC and Kubernetes clusters, avoiding it can cause more overhead than benefit compared to a new account with either data migrated or connected to existing data sources over cross-account access.
+In summary, while one can deploy the platform in an existing account and even import VPC and Kubernetes clusters, avoiding it can cause more overhead than benefit compared to a new account with either data migrated or connected to existing data sources over cross-account access.
 
 ### Am I locked into DuploCloud? If so, what work must I do to move away from it?
 
@@ -82,7 +82,7 @@ DuploCloud is running in your cloud account, along with your workloads. DuploClo
 The following is a list of automation constructs managed by DuploCloud and a summary of what you need to do to maintain them directly instead of through DuploCloud.
 
 1. Cloud Provider Configuration (Terraform): This involves various cloud services, IAM roles, Security groups, VPC, etc. DuploCloud can export your latest cloud configuration into native Terraform code and state files. Once exported, you maintain the configuration.
-2. Kubernetes: All applications and configurations that have been deployed in K8s are available in the form of deployments, StatefulSets, DaemonSet, K8s Secrets, ConfigMaps, etc. One can run `kubectl`commands to export configurations as YAML files and continue to maintain them in the future.
+2. Kubernetes: All applications and configurations deployed in K8s are available as deployments, StatefulSets, DaemonSet, K8s Secrets, ConfigMaps, etc. One can run `kubectl` commands to export configurations as YAML files and continue to maintain them in the future.
 3. Compliance monitoring: DuploCloud uses a third-party SIEM solution called [Wazuh](https://www.wazuh.com). Wazuh is an open-source software platform running in an independent VM in your cloud account, and you have full permission to retain it "as-is." However, in the future, you need to integrate any new systems that need compliance monitoring into the SIEM.
 4. Diagnostics tools: These include Prometheus, Grafana, and Elasticsearch. They are all open source and run in your cloud account, so you can continue to manage them directly.
 
@@ -92,9 +92,9 @@ If DuploCloud is down, it's similar to having an unavailable DevOps engineer. If
 
 ### Our company has no DevOps experience. Can DuploCloud provide services to build our environment and support us?
 
-Absolutely! More than half of our customers have no DevOps team.With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates. Our team is dedicated to not only managing your cloud infrastructure but also ensuring that it's optimized and modernized according to the latest best practices in the industry.
+Absolutely! More than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates. Our team is dedicated to managing your cloud infrastructure and ensuring that it's optimized and modernized according to the latest industry best practices.
 
-The DuploCloud team is your extended DevOps team. We assist with white-glove environment setup and daily operations with 24x7 Slack and email support. We cover what the DuploCloud platform supports and assist with your cloud provider's requirements. This includes a range of services from infrastructure as code improvements for better reusability and code reduction to architecture refactoring or infrastructure modernization. For instance, if your strategic goal is to transition from deploying applications on VMs to utilizing Kubernetes, our DevOps engineers are equipped to guide and implement this refactoring for you. However, it's important to note that DuploCloud's scope does not extend to refactoring customer application code itself.
+The DuploCloud team is your extended DevOps team. We assist with white-glove environment setup and daily operations with 24x7 Slack and email support. We cover what the DuploCloud platform supports and help with your cloud provider's requirements. This includes a range of services from infrastructure as code improvements for better reusability and code reduction to architecture refactoring or infrastructure modernization. For instance, if your strategic goal is to transition from deploying applications on VMs to utilizing Kubernetes, our DevOps engineers are equipped to guide and implement this refactoring for you. However, it's important to note that DuploCloud's scope does not extend to refactoring customer application code itself.
 
 After the initial onboarding of the platform, we recommend that you engage the DuploCloud team as your second line of defense by setting up an internal triage process of your own. We can assist you in setting up this process.
 
@@ -116,23 +116,23 @@ For resources that DuploCloud does not manage directly, you change directly in y
 
 #### Conflicting Changes to DuploCloud-managed resources
 
-For resources that DuploCloud manages, DuploCloud automatically detects conflicts and either revert changes or raises an alert about inconsistencies.
+For resources that DuploCloud manages, DuploCloud automatically detects conflicts and either reverts changes or raises an alert about inconsistencies.
 
 {% hint style="info" %}
-DuploCloud provides flexibility when a feature that is not supported by DuploCloud can be programmed directly in your cloud provider. If you are using Terraform, then the DuploCloud provider and the native cloud provider can be used in tandem. For an example of this use case, see [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS).
+DuploCloud provides flexibility when a feature not supported by DuploCloud can be programmed directly in your cloud provider. If you are using Terraform, then the DuploCloud provider and the native cloud provider can be used in tandem. For an example of this use case, see [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS).
 {% endhint %}
 
 ### I don't know IaC (Infrastructure-as-Code). Can I still use DuploCloud?
 
-Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you should read the product documentation to understand the basic constructs in DuploCloud. This approach significantly reduces the risk of errors associated with manual configurations or "Click Ops," ensuring that your infrastructure is set up following best practices with just a few clicks.
+Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you should read the product documentation to understand the basic constructs in DuploCloud. This approach significantly reduces the risk of errors associated with manual configurations or "Click Ops," ensuring that your infrastructure follows best practices with just a few clicks.
 
 ### Isn't No Code Click Ops?
 
 "Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. DuploCloud manages infrastructure resources for you, ensuring the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
-Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure correctness since the platform enforces it. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
+Using Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure correctness since the platform enforces it. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
 
-Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with completely independent constructs.
+Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with entirely independent constructs.
 
 #### Dealing with a broad scope of changes vs. small, Just-In-Time changes
 
@@ -167,7 +167,7 @@ No. DuploCloud segregates resources into environments called Tenants, which acce
 
 ### Troubleshooting VPN Connection Issues with DNS Resolution Failures
 
-If you encounter difficulties connecting to Duplo resources over OpenVPN, particularly when using networks like TMobile 5G Home Internet, and face errors such as "hostname not found" when accessing resources like a Postgres DB, the issue may stem from DNS resolution failures between AWS and TMobile, not OpenVPN itself. A practical workaround is to manually resolve the DNS name to its corresponding IP address using a DNS lookup tool like MXToolbox (https://mxtoolbox.com/DNSLookup.aspx). Subsequently, use the obtained IP address directly on your device to bypass the DNS issue, which has been effective for resolving such connectivity problems.
+If you encounter difficulties connecting to DuploCloud resources over OpenVPN, mainly when using networks like T-Mobile 5G Home Internet, and face errors such as `hostname not found` when accessing resources like a PostgreSQL DB, the issue may stem from DNS resolution failures between AWS and T-Mobile, not OpenVPN itself. A practical workaround is manually resolving the DNS name to its corresponding IP address using a DNS lookup tool like [MxToolbox](https://mxtoolbox.com/DNSLookup.aspx). Subsequently, use your device's obtained IP address to bypass the DNS issue, effectively resolving such connectivity problems.
 
 ### I can't edit the Service Description to update my control plane configuration.
 
@@ -179,19 +179,21 @@ While creating a Host, click on Show Advanced to display advanced options and se
 
 ### How do I SSH into the host?
 
-Under each Host, you can click on Connection Details under the Actions dropdown, which will provide the key file and instructions to SSH.
+Under each Host, you can click on Connection Details under the Actions list box, which will provide the key file and instructions to SSH.
 
 ### My host is Windows. How do I use RDP (Remote Desktop Protocol)?
 
-Under Host, click on Connection Details under the Actions dropdown. It will provide the password and instructions on how to connect to RDP.
+Under Host, click on Connection Details under the Actions list box. It will provide the password and instructions on how to connect to RDP.
 
 ### How do I get into the container where my code is running?
 
-Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps` to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID. cannot connect to my service URL. How do I debug it?
+Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps` to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID.&#x20;
 
-Make sure the DNS name is resolved by running `ping` on your local machine. Ensure that the application is running running `ping` from within the container. SSH into the host and connect to your Docker container using the Docker command `sudo docker exec -t`_`CONTAINER_ID`_`bash`. From inside the container, curl the application URL using the IP `127.0.0.1` and the port where the application is running. Confirm that this works. CURL is the same URL using the container's IP address instead of `127.0.0.1`. The IP address can be obtained by running the `ifconfig` command in the container.
+### I cannot connect to my service URL. How do I debug it?
 
-If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range of 10xxx or the same as the container port. Now try connecting to the “HostIP,” and DuploMappedHostPort just obtained. If this also works but the service URL fails, contact your enterprise admin or duplolive-support@duplocloud.net.
+Run `ping` on your local machine to resolve the DNS name and ensure that the application is running `ping` from within the container. SSH into the host and connect to your Docker container using the Docker command `sudo docker exec -t`_`CONTAINER_ID`_`bash`. From inside the container, curl the application URL using the IP `127.0.0.1` and the port where the application is running. Confirm that this works. CURL is the same URL using the container's IP address instead of `127.0.0.1`. The IP address can be obtained by running the `ifconfig` command in the container.
+
+If the connection from within the container works, exit the container and navigate to the host. Curl the same endpoint from the host (i.e., using container IP and port). If this works, then under the ELB UI in DuploCloud, note down the host port that DuploCloud created for the given container endpoint. This will be in the range of 10xxx or the same as the container port. Now try connecting to the `HostIP` and `DuploMappedHostPort` that was obtained. If this also works but the service URL fails, contact your enterprise admin or `duplolive-support@duplocloud.net`.
 
 ## Kubernetes FAQs
 
@@ -207,7 +209,7 @@ Choose the container management software that best meets the complexity level of
 
 Enable Health Check for your service and ensure the API does not return `HTTP 200` status until migration is done. Since DuploCloud waits for a complete Health Check on one service before upgrading to the next service, only one instance will run migration at a time.
 
-DuploCloud's approach to container deployment emphasizes applications being self-contained and fungible, which facilitates independent updates of each service. Kubernetes automatically manages failing containers, and DuploCloud supports the use of Health Checks, including Liveness and Readiness Probes, to ensure containers are functioning correctly and ready to receive work.
+DuploCloud's approach to container deployment emphasizes applications being self-contained and fungible, which facilitates independent updates of each service. Kubernetes automatically manages failing containers, and DuploCloud supports using Kubernetes Health Checks, including Liveness and Readiness Probes, to ensure containers function correctly and are ready to receive work.
 
 ## Storage FAQs
 
@@ -225,13 +227,13 @@ If the current state is Pending when the desired state is Delete, the container 
 
 ### Some of my container statuses say “pending delete.” What does this mean?
 
-This means DuploCloud is going to remove these containers. DuploCloud also supports the creation of on-demand testing environments, facilitating quick setup and teardown of environments with different configurations through the console or Terraform. This capability is crucial for testing and development workflows, ensuring flexibility and efficiency in managing containerized applications. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check fails and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
+This means DuploCloud is going to remove these containers. DuploCloud also supports the creation of on-demand testing environments, facilitating quick setup and tear-down of environments with different configurations through the console or Terraform. This capability is crucial for testing and development workflows, ensuring flexibility and efficiency in managing containerized applications. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check fails and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, environment, etc.) to an error-free state.
 
 ## Terraform FAQs
 
 ### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
 
-No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
+No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
 
 ### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
 
@@ -245,11 +247,11 @@ DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provi
 
 It is best to create separation between your developers and your DevOps team. Allowing developers to use the Web UI in non-production development environments to iterate product changes quickly can create inconsistency.
 
-You use Terraform for setting up Cloud services and first-time application deployment in both production and critical non-production environments. In addition, build CI/CD workflows to update only the application (Docker and Lambda) deployments. The DevOps team should make any cloud service level changes via Terraform, and developers should ask the
+You use Terraform to set up Cloud services and first-time application deployment in production and critical non-production environments. In addition, build CI/CD workflows to update only the application (Docker and Lambda) deployments. The DevOps team should make any cloud service level changes via Terraform, and developers should ask the
 
 ## Uninstalling Chocolatey
 
-For those looking to remove Chocolatey from their system, it involves a straightforward process using PowerShell. Begin by executing the command `Remove-Item -Recurse -Force C:\ProgramData\chocolatey` to delete the Chocolatey directory and all its contents. Following this, it's essential to clean up your system's PATH environment variable to eliminate any references to Chocolatey's bin and lib\bin directories. This cleanup process ensures that Chocolatey and its components are thoroughly removed from your system, preventing any potential conflicts or issues with other software installations or system operations.he DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
+For those looking to remove Chocolatey from their system, it involves a straightforward process using PowerShell. Begin by executing the command `Remove-Item -Recurse -Force C:\ProgramData\chocolatey` to delete the Chocolatey directory and all its contents. Following this, it's essential to clean up your system's PATH environment variable to eliminate any references to Chocolatey's `bin` and `lib\bin` directories. This cleanup process ensures that Chocolatey and its components are thoroughly removed from your system, preventing potential conflicts or issues with other software installations or system operations. The DevOps team should do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
 
 ## Security and Compliance FAQs
 
@@ -261,11 +263,11 @@ From the DuploCloud portal, click on your name in the top right corner and selec
 
 ### How does CI/CD work with DuploCloud?
 
-CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its [own CI/CD tool](introduction-to-ci-cd/katkit/), as well.
+CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its [own CI/CD tool](introduction-to-ci-cd/katkit/).
 
 ## Upgrade FAQs
 
-DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. Additionally, DuploCloud's built-in monitoring feature displays resource utilization by tenant or container, simplifying usage tracking and offering a cost-effective alternative to solutions like Datadog.
+DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. DuploCloud's built-in monitoring feature also displays resource utilization by Tenant or container functions, simplifying usage tracking and offering a cost-effective alternative to solutions like Datadog.
 
 ### What is a rolling upgrade, and how do I enable it?
 
@@ -277,11 +279,11 @@ DuploCloud automates the management of AWS IAM roles, streamlining the access co
 
 ### How do I use Datadog and other diagnostics tools?
 
-DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party toolset like Datadog, you follow the toolset's guidelines and deploy collector agents. You can do this as if running an application within the respective DuploCloud tenants.
+DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party tool set like Datadog, you follow the tool set guidelines and deploy collector agents. You can do this as if running an application within the respective DuploCloud tenants.
 
 ## Error Messages
 
-### I'm receiving the error message: "`Could not load credentials from any providers"`.
+### I'm receiving the error message: "`Could not load credentials from any providers."`
 
 Your `duplo-jit` local cache must be cleared. To do this, run the following command:
 
@@ -289,16 +291,16 @@ Your `duplo-jit` local cache must be cleared. To do this, run the following comm
 rm -rf ~/Library/Caches/duplo-jit/
 ```
 
-### When creating a Service, I'm receiving the "DuploCloud Fault `Conditions Unschedulable" message because 0/N nodes are available: 1 node(s) didn't match pod anti-affinity rules, 1 node(s) were unschedulable....`
+### When creating a Service, I'm receiving the "DuploCloud Fault `Conditions Unschedulable" message because 0/N nodes are available: 1 node(s) didn't match pod anti-affinity rules, one node(s) were unschedulable...`
 
 Two possible reasons for receiving this fault message are:
 
 * You are not allocating enough hosts to process your workload.
 * The [allocation tags](overview-1/container-deployments/concepts.md#allocation-tags) you assigned to your existing Hosts limit additional Service workloads.
 
-### I do not see logs displayed for a Tenant. I get the error: "`Docker native collection agent Filebeat is not running for Tenant"`.
+### I do not see logs displayed for a Tenant. I get the error: "`Docker native collection agent Filebeat is not running for Tenant."`
 
-Ensure that logging is set up and that you have selected the Tenant for which you want to collect logging information. If logs are still not appearing in the DuploCloud console and Filebeat indicates a bulk send failure`, it may be due to Elasticsearch running out of disk space. In this case, check the disk space in the diagnostics history of the Default Tenant. If necessary, follow the steps to recognize and expand the volume on Linux as outlined in the AWS documentation to resolve this issue.
+Ensure that logging is set up and that you have selected the Tenant for which you want to collect logging information. If logs are still not appearing in the DuploCloud console and Filebeat indicates a bulk send failure\`, it may be due to Elasticsearch running out of disk space. In this case, check the disk space in the diagnostics history of the Default Tenant. If necessary, follow the steps to recognize and expand the volume on Linux as outlined in the AWS documentation to resolve this issue.
 
 ### I'm receiving the message: "It took too long to check if you are authorized to access DuploCloud. Try refreshing the page and logging in again".
 
