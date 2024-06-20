@@ -225,13 +225,13 @@ If the current state is Pending when the desired state is Delete, the container 
 
 ### Some of my container statuses say “pending delete.” What does this mean?
 
-This means DuploCloud is going to remove these containers. DuploCloud also supports the creation of on-demand testing environments, facilitating quick setup and teardown of environments with different configurations through the console or Terraform. This capability is crucial for testing and development workflows, ensuring flexibility and efficiency in managing containerized applications.s. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check fails and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
+This means DuploCloud is going to remove these containers. DuploCloud also supports the creation of on-demand testing environments, facilitating quick setup and teardown of environments with different configurations through the console or Terraform. This capability is crucial for testing and development workflows, ensuring flexibility and efficiency in managing containerized applications. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check fails and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, env, etc.) to an error-free state.
 
 ## Terraform FAQs
 
 ### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
 
-No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
+No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
 
 ### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
 
@@ -245,7 +245,11 @@ DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provi
 
 It is best to create separation between your developers and your DevOps team. Allowing developers to use the Web UI in non-production development environments to iterate product changes quickly can create inconsistency.
 
-You use Terraform for setting up Cloud services and first-time application deployment in both production and critical non-production environments. In addition, build CI/CD workflows to update only the application (Docker and Lambda) deployments. The DevOps team should make any cloud service level changes via Terraform, and developers should ask the DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
+You use Terraform for setting up Cloud services and first-time application deployment in both production and critical non-production environments. In addition, build CI/CD workflows to update only the application (Docker and Lambda) deployments. The DevOps team should make any cloud service level changes via Terraform, and developers should ask the
+
+## Uninstalling Chocolatey
+
+For those looking to remove Chocolatey from their system, it involves a straightforward process using PowerShell. Begin by executing the command `Remove-Item -Recurse -Force C:\ProgramData\chocolatey` to delete the Chocolatey directory and all its contents. Following this, it's essential to clean up your system's PATH environment variable to eliminate any references to Chocolatey's bin and lib\bin directories. This cleanup process ensures that Chocolatey and its components are thoroughly removed from your system, preventing any potential conflicts or issues with other software installations or system operations.he DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
 
 ## Security and Compliance FAQs
 
@@ -294,7 +298,7 @@ Two possible reasons for receiving this fault message are:
 
 ### I do not see logs displayed for a Tenant. I get the error: "`Docker native collection agent Filebeat is not running for Tenant"`.
 
-Ensure that logging is set up and that you have selected the Tenant for which you want to collect logging information. If logs are still not appearing in the DuploCloud console and Filebeat indicates a `bulk send failure`, it may be due to Elasticsearch running out of disk space. In this case, check the disk space in the diagnostics history of the Default Tenant. If necessary, follow the steps to recognize and expand the volume on Linux as outlined in the AWS documentation to resolve this issue.
+Ensure that logging is set up and that you have selected the Tenant for which you want to collect logging information. If logs are still not appearing in the DuploCloud console and Filebeat indicates a bulk send failure`, it may be due to Elasticsearch running out of disk space. In this case, check the disk space in the diagnostics history of the Default Tenant. If necessary, follow the steps to recognize and expand the volume on Linux as outlined in the AWS documentation to resolve this issue.
 
 ### I'm receiving the message: "It took too long to check if you are authorized to access DuploCloud. Try refreshing the page and logging in again".
 
