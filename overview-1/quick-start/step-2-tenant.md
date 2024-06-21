@@ -6,7 +6,7 @@ description: Creating a DuploCloud Tenant that segregates your workloads
 
 Now that the [Infrastructure and Plan](step-1-infrastructure.md) exist and a Kubernetes GKE Cluster has been enabled, create one or more Tenants that use the configuration DuploCloud created.
 
-[Tenants ](../../welcome-to-duplocloud/duplocloud-common-components/tenant/)in DuploCloud are similar to projects or workspaces and have a subordinate relationship to the Infrastructure. Think of the Infrastructure as a virtual "house" (cloud), with Tenants conceptually "residing" in the Infrastructure performing specific workloads that you define. As Infrastructure is an abstraction of a Virtual Private Cloud, Tenants abstract the segregation created by a [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), although Kubernetes Namespaces are only one component that Tenants can contain.
+[Tenants ](../../welcome-to-duplocloud/duplocloud-common-components/tenant.md)in DuploCloud are similar to projects or workspaces and have a subordinate relationship to the Infrastructure. Think of the Infrastructure as a virtual "house" (cloud), with Tenants conceptually "residing" in the Infrastructure performing specific workloads that you define. As Infrastructure is an abstraction of a Virtual Private Cloud, Tenants abstract the segregation created by a [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), although Kubernetes Namespaces are only one component that Tenants can contain.
 
 _Estimated time to complete Step 2: 10 minutes._
 

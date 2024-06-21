@@ -8,4 +8,4 @@ Several DuploCloud components are used with AWS, GCP, and Azure Services. These 
 
 * [Infrastructure](infrastructure.md)
 * [Plan](plan.md)
-* [Tenant](tenant/)
+* [Tenant](tenant.md)
