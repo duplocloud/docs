@@ -1,7 +1,3 @@
----
-description: Adding DynamoDB Tables in DuploCloud
----
-
 # AWS DynamoDB database
 
 When using DynamoDB in DuploCloud AWS, the required permissions to access the DynamoDB from a virtual machine (VM), Lambda functions, and containers are provisioned automatically using Instance profiles. Therefore, no Access Key is required in the Application code.
