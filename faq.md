@@ -130,52 +130,40 @@ Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to k
 
 "Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. DuploCloud manages infrastructure resources for you, ensuring the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
-Using Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure correctness since the platform enforces it. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
-
-Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with entirely independent constructs.
-
-#### Dealing with a broad scope of changes vs. small, Just-In-Time changes
-
-Terraform projects typically have a broad scope with multiple components. Sometimes, you must make small targeted changes (for example, a health check URL change). But when the change is being executed, there may be other drifts, and the user may be forced to resolve them. This can be inconvenient, and often, the user will change the UI, resulting in further configuration drifts.
+Using Click OpDuploCloud's No Code platform is designed to ensure correctness and enforce best practices, making it an ideal choice for software developer-centric companies that value agility and focus on application code. In contrast, the low-code Terraform solution is favored by DevOps-centric organizations due to its ability to handle a broad scope of changes, despite its limitations such as being a single-user system and the potential for configuration drifts when making small, Just-In-Time changes.
 
 {% hint style="info" %}
-About half of our customer base uses no-code, while the other half uses Terraform. Ironically, software developer-centric companies prefer no-code because it enables engineers to be agile and focus on their application code. By contrast, the low-code Terraform provider is often used in DevOps-centric organizations.
+About half of our customer base uses no-code, while the other half uses Terraform. This reflects the diverse needs and preferences of our customers, ranging from those who prioritize ease of use and correctness to those who require the flexibility to manage complex, multi-component projects.
 {% endhint %}
 
-### How is the DuploCloud subscription cost calculated?
+### DuploCloud Subscription Cost Calculation
 
-DuploCloud license usage is calculated based on the services managed by DuploCloud. The service usage is counted in terms of units, with a unit defined as below:
+The cost of a DuploCloud subscription is based on the services managed by the platform, with usage counted in units. Here's how units are defined:
 
-* A host is counted as 1 unit. (example: EC2 instance, Azure, or GCP VM)
-* A serverless function or service is counted as 1/4 unit (example: Lambda function)
-* A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
-* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count.
+* Each host (e.g., EC2 instance, Azure, or GCP VM) counts as 1 unit.
+* Serverless functions or services are counted as 1/4 unit (e.g., Lambda function).
+* Serverless applications are considered 1/2 unit (e.g., AWS ECS Service, Azure Web App, Google GKE Service).
+* AWS Managed Airflow (MWAA) worker counts as 1/2 unit, with the number of workers calculated as the average of the minimum and maximum worker count.
 
-### Can you delete an application and all its resources with a single click and confirmation?
+### Simplified Application and Resource Management
 
-Yes.
+With DuploCloud, you can delete an application and all its associated resources with a single click and confirmation, streamlining the management process. Furthermore, every element in the DuploCloud UI can be automated over an API, ensuring that all resource provisioning, including compute instances, storage options, and databases, is tracked and auditable.
 
-### Can anything in the UI be automated over an API as well?
-
-Yes. Every element in the DuploCloud UI is populated by calling an API. Additionally, DuploCloud maintains a comprehensive log file that records the creation of all resources, including compute instances, storage options, and databases, facilitating tracking and auditing of resource provisioning.
-
-### Does DuploCloud make any assumptions we should be aware of that may impact initial implementation time?
-
-No. DuploCloud segregates resources into environments called Tenants, which accelerates ramp-up time. For more information about implementation,[ contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).
+DuploCloud does not make assumptions that could delay initial implementation. By segregating resources into environments called Tenants, DuploCloud accelerates ramp-up time. For more details on implementation, [contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).
 
 ## Connectivity and Availability FAQs
 
 ### Troubleshooting VPN Connection Issues with DNS Resolution Failures
 
-If you encounter difficulties connecting to DuploCloud resources over OpenVPN, mainly when using networks like T-Mobile 5G Home Internet, and face errors such as `hostname not found` when accessing resources like a PostgreSQL DB, the issue may stem from DNS resolution failures between AWS and T-Mobile, not OpenVPN itself. A practical workaround is manually resolving the DNS name to its corresponding IP address using a DNS lookup tool like [MxToolbox](https://mxtoolbox.com/DNSLookup.aspx). Subsequently, use your device's obtained IP address to bypass the DNS issue, effectively resolving such connectivity problems.
+When facing connectivity issues over OpenVPN, such as `hostname not found` errors when accessing resources like a PostgreSQL DB, especially on networks like T-Mobile 5G Home Internet, the problem may be due to DNS resolution failures. A workaround is to manually resolve the DNS name using a tool like [MxToolbox](https://mxtoolbox.com/DNSLookup.aspx) and then use the obtained IP address directly, bypassing the DNS issue.
 
-### I can't edit the Service Description to update my control plane configuration.
+### Application Logs Retention Policy
 
-You must make control plane modifications before [enabling central logging](overview/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
+DuploCloud retains application logs in two stages for comprehensive tracking and auditing. Initially, logs are available in OpenSearch for 60 days, ensuring immediate access for recent activity analysis. For long-term storage, logs are then archived in S3 for 365 days, catering to compliance and historical data review needs. These retention periods can be customized to meet specific requirements, offering flexibility in log management.
 
-### How do you create a Host with a public IP?
+### Additional Configuration Guidelines
 
-While creating a Host, click on Show Advanced to display advanced options and select the public subnet from the list of availability zones.
+Before enabling central logging, ensure any necessary control plane modifications are completed, as the Service Description cannot be edited once logging is enabled. This precaution helps maintain the integrity and consistency of your logging setup.display advanced options and select the public subnet from the list of availability zones.
 
 ### How do I SSH into the host?
 
