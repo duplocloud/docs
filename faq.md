@@ -130,7 +130,7 @@ Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to k
 
 "Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. DuploCloud manages infrastructure resources for you, ensuring the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
-Using Click Ops is an easy way to make mistakes. DuploCloud's No Code is an easy way to ensure correctness since the platform enforces it. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
+Using Click OpDuploCloud's No Code is an easy way to ensure correctness since the platform enforces it. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
 
 Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with entirely independent constructs.
 
@@ -161,7 +161,7 @@ Yes. Every element in the DuploCloud UI is populated by calling an API. Addition
 
 ### Does DuploCloud make any assumptions we should be aware of that may impact initial implementation time?
 
-No. DuploCloud segregates resources into environments called Tenants, which accelerates ramp-up time. For more information about implementation,[ contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).
+No. DuploCloud segregates resources into environments called Tenants, which accelerates ramp-up time. For more information about implementation, [contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).
 
 ## Connectivity and Availability FAQs
 
@@ -169,13 +169,17 @@ No. DuploCloud segregates resources into environments called Tenants, which acce
 
 If you encounter difficulties connecting to DuploCloud resources over OpenVPN, mainly when using networks like T-Mobile 5G Home Internet, and face errors such as `hostname not found` when accessing resources like a PostgreSQL DB, the issue may stem from DNS resolution failures between AWS and T-Mobile, not OpenVPN itself. A practical workaround is manually resolving the DNS name to its corresponding IP address using a DNS lookup tool like [MxToolbox](https://mxtoolbox.com/DNSLookup.aspx). Subsequently, use your device's obtained IP address to bypass the DNS issue, effectively resolving such connectivity problems.
 
+### Troubleshooting Redis Connection Issues in AWS Environment
+
+When facing connection issues with a Redis instance in an AWS environment, ensure the Security Group (SG) configuration allows for VPN traffic to port 6379. Verify the Redis instance's accessibility using the `nc` command. If encountering local DNS resolution problems, consider changing your DNS provider or connecting directly using the Redis instance's IP address, obtainable via the `dig` command. For persistent DNS issues, resetting your router or using external DNS query tools may help. Exploring AWS network interfaces can offer additional insights if other troubleshooting steps fail.
+
 ### I can't edit the Service Description to update my control plane configuration.
 
 You must make control plane modifications before [enabling central logging](overview/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
 
 ### How do you create a Host with a public IP?
 
-While creating a Host, click on Show Advanced to display advanced options and select the public subnet from the list of availability zones.
+While creating a Host, click on Show Advanced todisplay advanced options and select the public subnet from the list of availability zones.
 
 ### How do I SSH into the host?
 
