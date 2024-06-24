@@ -37,6 +37,15 @@ See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for 
 
 We estimate that DuploCloud will increase your company's monthly cloud costs by approximately $100 to $200.
 
+### How is the DuploCloud subscription cost calculated?
+
+The cost of a DuploCloud subscription is based on the services managed by the platform, with usage counted in units. Here is how units are defined:
+
+* Each host (e.g., EC2 instance, Azure, or GCP VM) counts as 1 unit.
+* Serverless functions or services are counted as 1/4 unit (e.g., Lambda function).
+* Serverless applications are considered 1/2 unit (e.g., AWS ECS Service, Azure Web App, Google GKE Service).
+* AWS Managed Airflow (MWAA) worker counts as 1/2 unit, with the number of workers calculated as the average of the minimum and maximum worker count.
+
 ### Can companies with private clouds use DuploCloud?
 
 Yes, DuploCloud's On-premises services support companies with private clouds.
@@ -92,7 +101,7 @@ If DuploCloud is down, it's similar to having an unavailable DevOps engineer. If
 
 ### Our company has no DevOps experience. Can DuploCloud provide services to build our environment and support us?
 
-Absolutely! More than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates. Our team is dedicated to managing your cloud infrastructure and ensuring that it's optimized and modernized according to the latest industry best practices.
+Absolutely! More than half of our customers have no DevOps team. With our managed service offering, we handle your deployments, act as the first line of defense for any issues, and are constantly involved in daily tasks like CI/CD updates. Our team manages your cloud infrastructure and ensures it's optimized and modernized according to the latest industry best practices.
 
 The DuploCloud team is your extended DevOps team. We assist with white-glove environment setup and daily operations with 24x7 Slack and email support. We cover what the DuploCloud platform supports and help with your cloud provider's requirements. This includes a range of services from infrastructure as code improvements for better reusability and code reduction to architecture refactoring or infrastructure modernization. For instance, if your strategic goal is to transition from deploying applications on VMs to utilizing Kubernetes, our DevOps engineers are equipped to guide and implement this refactoring for you. However, it's important to note that DuploCloud's scope does not extend to refactoring customer application code itself.
 
@@ -130,11 +139,9 @@ Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to k
 
 "Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. DuploCloud manages infrastructure resources for you, ensuring the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
-DuploCloud's No Code is an easy way to ensure correctness since the platform enforces it. On the other hand, in cases where an established operations organization has centralized requirements, a low-code Terraform solution may be a better option.
+DuploCloud's No Code platform is designed to ensure correctness and enforce best practices. It is an ideal choice for software developer-centric companies that value agility and focus on application code. In contrast, the low-code Terraform solution is favored by DevOps-centric organizations due to its ability to handle a broad scope of changes despite its limitations, such as being a single-user system and the potential for configuration drifts when making small, Just-In-Time changes.
 
-Note that Terraform is a client-side scripting tool and a single-user system, so the scope of a project is limited to one person operating at one time. This can incur constraints if a project has many components and two people cannot operate simultaneously, even if they deal with entirely independent constructs.
-
-#### Dealing with a broad scope of changes vs. small, Just-In-Time changes
+**Dealing with a broad scope of changes vs. small, Just-In-Time changes**
 
 Terraform projects typically have a broad scope with multiple components. Sometimes, you must make small targeted changes (for example, a health check URL change). But when the change is being executed, there may be other drifts, and the user may be forced to resolve them. This can be inconvenient, and often, the user will change the UI, resulting in further configuration drifts.
 
@@ -149,33 +156,33 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 * A host is counted as 1 unit. (example: EC2 instance, Azure, or GCP VM)
 * A serverless function or service is counted as 1/4 unit (example: Lambda function)
 * A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
-* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average of the minimum and maximum worker count.
+* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average minimum and maximum worker count.
 
 ### Can you delete an application and all its resources with a single click and confirmation?
 
 Yes.
 
-### Can anything in the UI be automated over an API as well?
+### What can be automated using the DuploCloud API? How can API automation simplify application and resource management?&#x20;
 
-Yes. Every element in the DuploCloud UI is populated by calling an API. Additionally, DuploCloud maintains a comprehensive log file that records the creation of all resources, including compute instances, storage options, and databases, facilitating tracking and auditing of resource provisioning.
+With DuploCloud, you can delete an application and all its associated resources with a single click and confirmation, streamlining the management process. Furthermore, every element in the DuploCloud UI can be automated over an API, ensuring that all resource provisioning, including compute instances, storage options, and databases, is tracked and auditable.
 
 ### Does DuploCloud make any assumptions we should be aware of that may impact initial implementation time?
 
-No. DuploCloud segregates resources into environments called Tenants, which accelerates ramp-up time. For more information about implementation,[ contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).
+DuploCloud does not make assumptions that could delay initial implementation. By segregating resources into environments called Tenants, DuploCloud accelerates ramp-up time. For more details on implementation, [contact the DuploCloud support team](https://duplocloud.com/company/contact-us/).
 
 ## Connectivity and Availability FAQs
 
-### Troubleshooting VPN Connection Issues with DNS Resolution Failures
+### How do I troubleshoot OpenVPN Connection Issues, such as DNS Resolution Failures?
 
-If you encounter difficulties connecting to DuploCloud resources over OpenVPN, mainly when using networks like T-Mobile 5G Home Internet, and face errors such as `hostname not found` when accessing resources like a PostgreSQL DB, the issue may stem from DNS resolution failures between AWS and T-Mobile, not OpenVPN itself. A practical workaround is manually resolving the DNS name to its corresponding IP address using a DNS lookup tool like [MxToolbox](https://mxtoolbox.com/DNSLookup.aspx). Subsequently, use your device's obtained IP address to bypass the DNS issue, effectively resolving such connectivity problems.
+When facing connectivity issues over OpenVPN, such as `hostname not found` errors when accessing resources like a PostgreSQL DB, especially on networks like T-Mobile 5G Home Internet, the problem may be due to DNS resolution failures. A workaround is to manually resolve the DNS name using a tool like [MxToolbox](https://mxtoolbox.com/DNSLookup.aspx) and then use the obtained IP address directly, bypassing the DNS issue.
 
-### I can't edit the Service Description to update my control plane configuration.
+### How do I edit the Service Description to update my control plane configuration?
 
-You must make control plane modifications before [enabling central logging](overview/use-cases/central-logging/central-logging-setup.md). If logging is enabled, the Service Description cannot be edited.
+Before enabling central logging, ensure any necessary control plane modifications are completed, as the Service Description cannot be edited once logging is enabled. This precaution helps maintain the integrity and consistency of your logging setup. Click Advanced Options and select the public subnet from the list of availability zones.
 
 ### How do you create a Host with a public IP?
 
-While creating a Host, click on Show Advanced to display advanced options and select the public subnet from the list of availability zones.
+Display advanced options and select the public subnet from the list of availability zones.
 
 ### How do I SSH into the host?
 
@@ -249,10 +256,6 @@ It is best to create separation between your developers and your DevOps team. Al
 
 You use Terraform to set up Cloud services and first-time application deployment in production and critical non-production environments. In addition, build CI/CD workflows to update only the application (Docker and Lambda) deployments. The DevOps team should make any cloud service level changes via Terraform, and developers should ask the
 
-## Uninstalling Chocolatey
-
-For those looking to remove Chocolatey from their system, it involves a straightforward process using PowerShell. Begin by executing the command `Remove-Item -Recurse -Force C:\ProgramData\chocolatey` to delete the Chocolatey directory and all its contents. Following this, it's essential to clean up your system's PATH environment variable to eliminate any references to Chocolatey's `bin` and `lib\bin` directories. This cleanup process ensures that Chocolatey and its components are thoroughly removed from your system, preventing potential conflicts or issues with other software installations or system operations. The DevOps team should do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
-
 ## Security and Compliance FAQs
 
 ### How can I set up Multi-Factor Authentication (MFA) for OpenVPN authentication?
@@ -265,6 +268,10 @@ From the DuploCloud portal, click on your name in the top right corner and selec
 
 CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the CI/CD section. DuploCloud offers its [own CI/CD tool](introduction-to-ci-cd/katkit/).
 
+### Uninstalling Chocolatey
+
+For those looking to remove Chocolatey from their system, it involves a straightforward process using PowerShell. Begin by executing the command `Remove-Item -Recurse -Force C:\ProgramData\chocolatey` to delete the Chocolatey directory and all its contents. Following this, it's essential to clean up your system's PATH environment variable to eliminate any references to Chocolatey's `bin` and `lib\bin` directories. This cleanup process ensures that Chocolatey and its components are thoroughly removed from your system, preventing potential conflicts or issues with other software installations or system operations. The DevOps team should do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
+
 ## Upgrade FAQs
 
 DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. DuploCloud's built-in monitoring feature also displays resource utilization by Tenant or container functions, simplifying usage tracking and offering a cost-effective alternative to solutions like Datadog.
@@ -273,7 +280,7 @@ DuploCloud provides comprehensive monitoring capabilities, including Kubernetes 
 
 When you update (for example, when you change an image or environment variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start or the health check URL does not return `HTTP 200` status, DuploCloud will pause the upgrade of the remaining containers. Update the service with a newer image with a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. To specify Health Check, use the Elastic Load Balancer menu to find the Health Check URL suffix.
 
-DuploCloud automates the management of AWS IAM roles, streamlining the access control for services within a tenant and facilitating AWS-integrated tasks without code modifications. This includes a `duplomaster` role for administrative tasks in the AWS console, enhancing security and operational efficiency.
+DuploCloud automates the management of AWS IAM roles, streamlining the access control for services within a tenant and facilitating AWS-integrated tasks without code modifications. This includes a `duplomaster` role for administrative functions in the AWS console, enhancing security and operational efficiency.
 
 ## Diagnostic Tool FAQs
 
