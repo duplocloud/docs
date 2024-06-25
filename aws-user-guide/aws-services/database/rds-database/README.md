@@ -32,13 +32,26 @@ When upgrading RDS versions, use the AWS Console and see your Cloud Provider for
 3. Fill out the form based on your requirements, and **Enable Logging** if needed.
 4. Optionally, in the **Backup Retention Period in Days** field, enter a number of days to retain automated backups between one (**1**) and thirty-five (**35**). If a value is not entered, the Backup Retention Period value configured in Systems Settings will be applied.
 
-To create a publicly available RDS database, ensure the selected DB Subnet Group consists only of public subnets from your VPC. This configuration is crucial for making the database accessible publicly.
+To create a publicly available RDS database, follow these steps.
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_16_19.png" alt=""><figcaption><p><strong>Create a RDS</strong> window</p></figcaption></figure>
 
 #### Create Aurora Serverless V2 Cluster database
 
 You can create Aurora Serverless V2 Databases by selecting **Aurora-MySql-Serverless-V2** or **Aurora-PostgreSql-Serverless-V2** from the **RDS Database Engine** list box. Select the RDS Engine Version compatible with Aurora Serverless v2. The **RDS Instance Size** of `db.serverless` applies to both engines.
+
+## Creating a publicly available RDS database
+
+1. [Create a DB subnet group in AWS](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/SubnetGroups.Creating.html) consisting _only_ of public subnets from your VPC.
+2. &#x20;In the DuploCloud Portal, navigate to **Cloud Services** -> **Databases**
+3. Select the **RDS** tab, and click **Add**. The **Create a RDS** page displays.&#x20;
+4. In the **DB Subnet Group** list box select the public DB subnet group you created in AWS.&#x20;
+5. Complete the remaining fields according to your requirements.&#x20;
+6. Click **Create**. The publicly available RDS database is created.&#x20;
+
+{% hint style="warning" %}
+The DB subnet group created in AWS must contain only public subnets from your VPC. This configuration is crucial for making the database accessible publicly.
+{% endhint %}
 
 ## Connecting to the database <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
