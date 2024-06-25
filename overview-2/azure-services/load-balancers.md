@@ -8,7 +8,7 @@ Load Balancers are essential when running a service. They expose the containers 
 
 ## Creating an AKS Ingress
 
-If you need to create an Ingress Load Balancer, refer to the[ AKS Ingress](../../kubernetes-overview/ingress-loadbalancer/aks-ingress.md) page in the DuploCloud Kubernetes User Guide.&#x20;
+If you need to create an Ingress Load Balancer, refer to the[ AKS Ingress](../../kubernetes-overview/ingress-loadbalancer/aks-ingress/) page in the DuploCloud Kubernetes User Guide.&#x20;
 
 {% hint style="info" %}
 DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service.
@@ -48,4 +48,4 @@ You must create [Services ](containers-and-services/#adding-a-duplocloud-service
 
 Rules specify specific configurations for various types of Load Balancers.
 
-See the [Ingress ](../../kubernetes-overview/ingress-loadbalancer/aks-ingress.md)use case for an example of how to configure Load Balancers using rules.&#x20;
+See the [Ingress ](../../kubernetes-overview/ingress-loadbalancer/aks-ingress/)use case for an example of how to configure Load Balancers using rules.&#x20;
