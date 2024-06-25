@@ -8,20 +8,27 @@ coverY: 0
 ## Q2 2024
 
 * AWS
+  * Support for[ secondary indexes](aws-user-guide/aws-services/database/dynamodb.md#adding-dynamodb-database-tables) when using DynamoDB databases.
   * [Set a maximum RDS instance size ](overview/aws-services/database/rds-database/restrict-rds-instance-size.md)in Systems Settings.
   * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
   * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
   * [Specify a Lambda architecture](overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
   * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.&#x20;
 * Azure
+  * Support for [Azure Application Gateway SSL policies with AKS Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/using-an-azure-application-gateway-ssl-policy-with-ingress.md) for ALB Load Balancers.
+  * Support for [private endpoints ](overview-2/azure-services/storage-account.md#create-a-private-endpoint)with Azure Storage Account.
   * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
   * Specify the [node resource group](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md) when configuring an AKS cluster.
   * [Specify a computer name](overview-2/use-cases/hosts-vms/#adding-a-host-vm) when creating a Host.&#x20;
+* GCP
+  * Select [single, or multi-region data location types](overview-1/gcp-services/s3-bucket-2.md#creating-a-gcp-cloud-storage-bucket) for Google Cloud Storage buckets.&#x20;
+  * Configure the [minimum number of ports per VM instance](overview-1/use-cases/hosts-vms.md#increasing-minimum-ports-per-vm-instance-gke-standard).
 * Kubernetes
   * Create and manually run a [K8s Job](kubernetes/jobs.md) from a Kubernetes CronJob.
-  * Configure faults for failed [Jobs](kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [Cron Jobs](kubernetes/cronjobs.md#jobs-level-kubernetes-cronjobs-faults) at the Tenant level.
+  * Configure faults for failed [Jobs](kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [CronJobs ](kubernetes/cronjobs.md)at the Tenant level.
   * Support for [DaemonSet](https://docs.duplocloud.com/docs/kubernetes-overview/daemonset#creating-a-daemonset-in-duplocloud-aws-or-gcp) with GCP or AWS.&#x20;
 * General
+  * [Configure Okta](extras-overview/okta-user-management.md) as a user source for the DuploCloud Portal.
   * [Customize the text on the log-in button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
 ## Q1 2024
@@ -30,7 +37,7 @@ coverY: 0
   * [Enable automatic AWS ACM (SSL) Certificates](aws-user-guide/prerequisites/acm-certificate.md#enabling-automatic-aws-acm-certificate-creation) for a Plan.
   * [Configure K8s Ingress redirect ](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](overview/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
-  * Enable UltraWarm Data nodes for [OpenSearch domains](overview/aws-services/elasticsearch.md).
+  * [Enable UltraWarm Data nodes ](overview/aws-services/elasticsearch.md)for OpenSearch domains.
   * Support for [upgrading EKS components](overview/use-cases/disaster-recovery/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).&#x20;
   * [Add a Web App Firewall URL](overview/aws-services/web-application-firewall-waf.md#creating-a-web-application-firewall-waf) when creating or updating a Plan.
   * [Update or skip a final RDS snapshot](aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#updating-or-skipping-final-snapshot).
