@@ -411,6 +411,7 @@
   * [Login Banner/Button Customization](extras-overview/login-banner-customization.md)
   * [Setting up SCPs (Service Control Policies) for DuploCloud](extras-overview/setting-up-scps-service-control-policies-for-duplocloud.md)
   * [Managed Service Accounts (RBAC)](extras-overview/managed-service-accounts-rbac.md)
+  * [Okta user management](extras-overview/okta-user-management.md)
   * [Supported Third-party Tools](extras-overview/supported-third-party-tools.md)
   * [Video Transcripts](extras-overview/video-transcripts/README.md)
     * [DuploCloud AWS Product Demo](extras-overview/video-transcripts/duplocloud-aws-product-demo.md)
