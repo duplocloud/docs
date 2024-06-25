@@ -32,4 +32,4 @@ Supported Services are listed in alphabetical order, following the core services
 * [Service Bus](service-bus.md)
 * [Storage Account](storage-account.md)
 * [Subscription](subscription.md)
-* [VM Scale Set](vm-scale-sets.md)s
+* [VM Scale Sets](vm-scale-sets.md)
