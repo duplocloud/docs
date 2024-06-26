@@ -265,6 +265,7 @@
     * [Databases](overview-2/azure-services/databases/README.md)
       * [MSSQL Server database](overview-2/azure-services/databases/sql-database.md)
       * [PostgreSQL database](overview-2/azure-services/databases/postgresql.md)
+      * [PostgreSQL Flexible Server](overview-2/azure-services/databases/postgresql-flexible-server.md)
       * [MySQL Server database](overview-2/azure-services/databases/mysql-server-database.md)
       * [MySQL Flexible Server](overview-2/azure-services/databases/mysql-flexible-server.md)
       * [Redis database](overview-2/azure-services/databases/redis-database.md)
