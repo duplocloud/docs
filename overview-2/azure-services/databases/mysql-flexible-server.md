@@ -23,7 +23,7 @@ You cannot change the value of the High Availability field, once the MySQL Flexi
 
 Setup Database Backup and choose the number of days (1-35) to backup databases in the DuploCloud Portal **System Settings**. First, enable Redundant Backup, and then set the Backup Retention Period.
 
-### Enabling Redundant Backup
+### Enable Redundant Backup
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Select the **System Config** tab.
