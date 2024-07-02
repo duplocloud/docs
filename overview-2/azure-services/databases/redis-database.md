@@ -4,6 +4,18 @@ description: Create a Redis database in DuploCloud
 
 # Redis database
 
+## Prerequisites&#x20;
+
+To create a Redis with public network access, follow the steps below to configure public network access for databases before creating a Redis database instance. If your database does not need to be publicly accessible, skip this step, and proceed to [creating a Redis database instance](redis-database.md#creating-a-redis-database-instance).&#x20;
+
+### Configure public network access for databases (optional) &#x20;
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.&#x20;
+2. Select the Tenant where the Redis will be created from the **NAME** column .&#x20;
+3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
+4. From the **Select Feature** list box, select **Allow Public Network Access for Databases and Cache Servers**.
+5. **Enable** the setting, and click **Add**. The Allow Public Network Access for Databases and Cache Servers Tenant setting value is **True**.&#x20;
+
 ## Creating a Redis database instance
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** -> **Redis**. The **Create Redis Instance** pane displays.
