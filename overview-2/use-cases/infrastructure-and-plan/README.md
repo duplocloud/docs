@@ -2,11 +2,7 @@
 
 ## Creating an Infrastructure
 
-{% hint style="warning" %}
-Up to one instance (0 or 1) of an AKS is supported for each DuploCloud Infrastructure.
-{% endhint %}
-
-In DuploCloud, an [Infrastructure](../../../welcome-to-duplocloud/duplocloud-common-components/infrastructure.md) maps one-to-one to a VPC in a specified region. It also maps to an [Azure Managed Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service) cluster for container orchestration.&#x20;
+In DuploCloud, an [Infrastructure](../../../welcome-to-duplocloud/duplocloud-common-components/infrastructure.md) maps one-to-one to a VPC in a specified region. It also maps to an [Azure Managed Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service) cluster for container orchestration. Up to one instance (0 or 1) of an AKS is supported for each DuploCloud Infrastructure.
 
 1. Select **Administrator** -> **Infrastructure** from the navigation menu.&#x20;
 2. Click **Add**.
