@@ -8,26 +8,29 @@ description: >-
 
 When you create agent pools to run Azure Kubernetes (AKS) workloads, you create groups of agents available to a pipeline. When you run the pipeline, the pipeline selects the agent that best meets the performance demands of that pipeline.
 
-Agent pools can be[ autoscaled](../use-cases/hosts-vms/autoscaling/autoscaling-azure-agent-pools.md) when the **Enable Autoscaling** option is selected in the DuploCloud Portal. Each agent pool contains nodes backed by virtual host machines.
+Autoscaling can be enabled when creating agent pools in the DuploCloud Portal. Each agent pool contains nodes backed by virtual host machines.
 
-Use the DuploCloud Portal **Hosts** page to create and edit Azure agent pools.
+## Prerequisites
 
-## Creating an agent pool
+To create an agent pool using availability zones, you must first create a [PostgreSQL Flexible Server subnet](databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure. For agent pools not using availability zones, skip this step.&#x20;
 
-Create an Azure agent pool for an existing Host in the DuploCloud Portal:
+## Adding an agent pool
 
-1. Select **Cloud Services** -> **Hosts** from the navigation menu.
-2. Select the **Azure Agent Pool** tab. The **Azure Agent Pool** page is displayed.
-3. Click **Add**. The **Add Azure Agent Pool** page is displayed.
-4.  Provide inputs for the **Instance Type**, **Min Capacity**, and **Max Capacity** fields.\
+Create an Azure agent pool for an existing Host in the DuploCloud Portal.
 
-
-    <figure><img src="../../.gitbook/assets/Add agent pool.png" alt=""><figcaption><p>Input fields on the <strong>Add Azure Ag</strong></p></figcaption></figure>
-5. Optionally, select **Enable Autoscaling** to autoscale the pool.
-6.  Click **Add**. When the agent pool is created, **Succeeded** is displayed in the **Status** column. It may take some time to create the agent pool.\
+1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
+2.  Select the **Azure Agent Pool** tab, and Click **Add**. The **Add Azure Agent Pool** page displays.\
 
 
-    <figure><img src="../../.gitbook/assets/agent pool success.png" alt=""><figcaption><p>Agent pool with <strong>Succeeded</strong> status</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/add agent pool AZ better.png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> page in the DuploCloud Portal</p></figcaption></figure>
+3. Provide inputs for the **Instance Type**, **Min Capacity**, **Max Capacity**, and **Desired Capacity** fields.
+4. Enter allocation tags in the **Allocation Tags** field, if required.
+5. Optionally, select **Enable Autoscaling**.
+6. Optionally, select one or more availability zones from the **Availability Zones** list box. If you select availability zones, you must create a [PostgreSQL Flexible Server subnet](databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure before adding your agent pool. &#x20;
+7.  Click **Add**. It may take some time to create the agent pool. When the agent pool is ready, **Succeeded** displays in the **Status** column. \
+
+
+    <figure><img src="../../.gitbook/assets/agent pool success.png" alt=""><figcaption><p>The <strong>Azure Agent Pool</strong> tab on the <strong>Hosts</strong> page shows the <strong>DLJEGA1</strong> agent pool with <strong>Succeeded</strong> status</p></figcaption></figure>
 
 ## Editing an agent pool
 
