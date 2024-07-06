@@ -37,7 +37,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 ## Adding a Service
 
-1. In the DuploCloud Portal, navigate to **DevOps** -> **Containers** -> **EKS/Native**. The **Services** page displays.&#x20;
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.&#x20;
 2.  Click **Add**. The **Add Service** page displays.\
 
 
@@ -47,10 +47,6 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 5. At the bottom of the **Advanced Options** page, click **Create**. Your Service is created and initialized. In about five (5) minutes, in the **Containers** tab, your DuploCloud Service displays a **Current** status of **Running**.&#x20;
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-15_24_19.png" alt=""><figcaption><p><strong>Add Service</strong> page</p></figcaption></figure>
-
-3. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept all other default values for fields not specified.&#x20;
-4. Click **Next**. The **Advanced Options** page is displayed.
-5. At the bottom of the **Advanced Options** page, click **Create**. Your Service is created and initialized. In about five (5) minutes, in the **Containers** tab, your DuploCloud Service displays a **Current** status of **Running**.&#x20;
 
 | Add a Service page field | Value                            |
 | ------------------------ | -------------------------------- |
