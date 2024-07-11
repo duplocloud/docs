@@ -17,6 +17,7 @@
     * [DevOps responsibility](welcome-to-duplocloud/existing-devops-approach/devops-responsibility.md)
   * [DuploCloud Approach](welcome-to-duplocloud/duplocloud-approach.md)
   * [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md)
+  * [DuploCloud Tenancy Models](welcome-to-duplocloud/duplocloud-tenancy-models.md)
   * [Application Focused Interface](welcome-to-duplocloud/application-focussed-interface.md)
   * [No-Code / Low-Code](welcome-to-duplocloud/no-code-low-code.md)
   * [Security and Compliance](welcome-to-duplocloud/security-and-compliance.md)
