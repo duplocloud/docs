@@ -28,7 +28,7 @@ You can create a GCE VM by going to **Cloud Services** -> **Hosts** ->  **GCE VM
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 5.24.09 PM.png" alt=""><figcaption><p><strong>Add GCE Virtual Machine</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/virtual machine add.png" alt=""><figcaption><p><strong>Add GCE Virtual Machine</strong> page</p></figcaption></figure>
 
 </div>
 
