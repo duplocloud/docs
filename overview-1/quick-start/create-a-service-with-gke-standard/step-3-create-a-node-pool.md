@@ -25,7 +25,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 1. From the DuploCloud portal, navigate to **Kubernetes** -> **Node Pools**.&#x20;
 2. Click on the **Node Pool** tab and then click **Add**. The **Add Node Pool** page displays.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.23-19_10_23.png" alt=""><figcaption><p>The <strong>Add Node Pool</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/node pool add.png" alt=""><figcaption><p>The <strong>Add Node Pool</strong> page</p></figcaption></figure>
 
 3. In the **Name** field, enter a unique name for your GCE Virtual Machine. Choose the same **Availability Zone** as your Infrastructure, and update the **Instance Type**, if needed.&#x20;
 4. Optionally, **Enable Autoscaling**.
