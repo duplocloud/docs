@@ -16,7 +16,7 @@ Otherwise, to skip this step, proceed to the [next page in this tutorial](step-8
 
 In this tutorial step, for the Application Load Balancer (ALB) you created in [Step 6](../quick-start-duplocloud-docker-services/step-6-create-loadbalancer.md), you will:&#x20;
 
-* Enable access logging to monitor [HTTP message](https://en.wikipedia.org/wiki/HTTP\_message\_body) details.
+* Enable access logging to monitor [HTTP message](https://en.wikipedia.org/wiki/HTTP\_message\_body) details and record incoming traffic data. Access logs are crucial for analyzing traffic patterns and identifying potential threats, but they are not enabled by default. You must manually activate them in the load balancer's configuration settings.
 * Protect against requests that contain [invalid headers](https://en.wikipedia.org/wiki/List\_of\_HTTP\_header\_fields).
 
 _Estimated time to complete Step 7: 5 minutes._
@@ -70,3 +70,4 @@ Verify that the **Other Settings** card contains the selections you made above f
 
 <figure><img src="../../../.gitbook/assets/ihatethis.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>Other Settings</strong> card, including set options </p></figcaption></figure>
 
+By enabling access logs, you've taken a significant step towards enhancing the security and monitoring capabilities of your load balancer. This feature is instrumental in providing insights into the traffic accessing your application, allowing for a more robust security posture.
