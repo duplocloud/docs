@@ -81,6 +81,9 @@ Once a Service and Load Balancer are deployed, add an Ingress:
 "kubernetes.io/ingress.allow-http" = "false"
 ```
 
+9. Enter labels in the **Labels** field, if required.&#x20;
+10. Click **Add** to add the Ingress.&#x20;
+
 {% hint style="warning" %}
 To add a Kubernetes Ingress, you must define [rules ](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-rules). Continue to the next section to add rules to Kubernetes Ingress and complete the Ingress setup.&#x20;
 {% endhint %}
