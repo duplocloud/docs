@@ -1,6 +1,21 @@
 ---
 description: AWS-specific cloud provider deployments
+cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (4).png
 coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # AWS User Guide

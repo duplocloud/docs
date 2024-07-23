@@ -1,5 +1,21 @@
 ---
 description: Popular and frequently asked questions about DuploCloud
+cover: .gitbook/assets/GitHub - Great Place to Work Badge.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # FAQs
@@ -93,8 +109,7 @@ The following is a list of automation constructs managed by DuploCloud and a sum
 1. Cloud Provider Configuration (Terraform): This involves various cloud services, IAM roles, Security groups, VPC, etc. DuploCloud can export your latest cloud configuration into native Terraform code and state files. Once exported, you maintain the configuration.
 2. Kubernetes: All applications and configurations deployed in K8s are available as deployments, StatefulSets, DaemonSet, K8s Secrets, ConfigMaps, etc. One can run `kubectl` commands to export configurations as YAML files and continue to maintain them in the future.
 3. Compliance monitoring: DuploCloud uses a third-party SIEM solution called [Wazuh](https://www.wazuh.com). Wazuh is an open-source software platform running in an independent VM in your cloud account, and you have full permission to retain it "as-is." However, in the future, you need to integrate any new systems that need compliance monitoring into the SIEM.
-4. Diagnostics tools: These include Prometheus, Grafana, and Elasticsearch. They are
- all open source and run in your cloud account, so you can continue to manage them directly.
+4. Diagnostics tools: These include Prometheus, Grafana, and Elasticsearch. They are all open source and run in your cloud account, so you can continue to manage them directly.
 
 {% hint style="info" %}
 If DuploCloud is down, it's similar to having an unavailable DevOps engineer. If you need to opt out of DuploCloud, you are replacing your DevOps management. DuploCloud is neither a PaaS nor a hosted solution that hosts your workloads.
@@ -138,8 +153,7 @@ Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to k
 
 ### Configuring DuploCloud CLI on Windows Subsystem for Linux (WSL)
 
-For users leveraging WSL, configuring DuploCloud CLI requires specific steps to ensure smooth operation, especially for tasks involving interactive browser sessions or AWS CLI usage. Users may need to install utilities like `xclip`, `xdg-utils`, and `jq` to facilitate these operations. Additionally, setting up aliases in the `.bashrc` file for `start` and `open` commands to point to `xdg-open`, and defining the `BROWSER` environment variable to the path of a browser in `/usr/local/bin` are crucial steps. Creating a symlink in `/usr/local/bin` to the browser executable located in the Windows file system allows DuploCloud CLI to utilize the Windows browser for authentication and other browser-required operations. While optional, adding aliases for `pbcopy` and `pbpaste` can enhance script compatibility, particularly for users accustomed to macOS environments. These configurations enable effective use of DuploCloud CLI within WSL, bridging the gap between Windows and Linux environments for cloud management tasks.
- Isn't No Code Click Ops?
+For users leveraging WSL, configuring DuploCloud CLI requires specific steps to ensure smooth operation, especially for tasks involving interactive browser sessions or AWS CLI usage. Users may need to install utilities like `xclip`, `xdg-utils`, and `jq` to facilitate these operations. Additionally, setting up aliases in the `.bashrc` file for `start` and `open` commands to point to `xdg-open`, and defining the `BROWSER` environment variable to the path of a browser in `/usr/local/bin` are crucial steps. Creating a symlink in `/usr/local/bin` to the browser executable located in the Windows file system allows DuploCloud CLI to utilize the Windows browser for authentication and other browser-required operations. While optional, adding aliases for `pbcopy` and `pbpaste` can enhance script compatibility, particularly for users accustomed to macOS environments. These configurations enable effective use of DuploCloud CLI within WSL, bridging the gap between Windows and Linux environments for cloud management tasks. Isn't No Code Click Ops?
 
 "Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. DuploCloud manages infrastructure resources for you, ensuring the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
@@ -166,7 +180,7 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 
 Yes.
 
-### What can be automated using the DuploCloud API? How can API automation simplify application and resource management?&#x20;
+### What can be automated using the DuploCloud API? How can API automation simplify application and resource management?
 
 With DuploCloud, you can delete an application and all its associated resources with a single click and confirmation, streamlining the management process. Furthermore, every element in the DuploCloud UI can be automated over an API, ensuring that all resource provisioning, including compute instances, storage options, and databases, is tracked and auditable.
 
@@ -198,7 +212,7 @@ Under Host, click on Connection Details under the Actions list box. It will prov
 
 ### How do I get into the container where my code is running?
 
-Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps` to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID.&#x20;
+Under the Services Status tab, find the host where the container is running. SSH into the host (see instructions above), and run `sudo docker ps` to get the container ID. Next, run `sudo docker exec -it`_**`CONTAINER_ID`**_`bash`. Find your container using the image ID.
 
 ### I cannot connect to my service URL. How do I debug it?
 

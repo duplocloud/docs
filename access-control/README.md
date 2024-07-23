@@ -1,6 +1,21 @@
 ---
 description: Tools for Administrators in the DuploCloud Portal
+cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (12).png
 coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # User Administration
