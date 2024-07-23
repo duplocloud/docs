@@ -34,8 +34,8 @@ A Default Value of **Enabled** in the table below displays a property value of *
 
 A Default Value of **Disabled** in the table below displays a property value of **False** in the UI.
 
-| Infrastructure Settings     | Description                                                                                                                                                                                                            | Default Value |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| **EKS Endpoint Visibility** | <p><br>Set as <strong>Private</strong> to access an EKS Cluster using a private endpoint with <a href="../use-cases/disaster-recovery/kubernetes-cluster/enable-eks-endpoints.md">DuploCloud VPN enabled</a>. <br></p> | **Public**    |
-|                             |                                                                                                                                                                                                                        |               |
+| Infrastructure Settings     | Description                                                                                                                                                                                                                                      | Default Value |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| **EKS Endpoint Visibility** | <p><br>Set as <strong>Private</strong> to access an EKS Cluster using a private endpoint with <a href="../use-cases/creating-an-infrastructure-and-plan-for-aws/kubernetes-cluster/enable-eks-endpoints.md">DuploCloud VPN enabled</a>. <br></p> | **Public**    |
+|                             |                                                                                                                                                                                                                                                  |               |
 

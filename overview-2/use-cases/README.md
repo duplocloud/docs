@@ -10,7 +10,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 
 ## Supported use cases for DuploCloud Azure
 
-* [Infrastructure and Plan](../../overview/use-cases/disaster-recovery/)
+* [Infrastructure and Plan](infrastructure-and-plan/)
 * [Tenant](tenant-environment/)
 * [Hosts](../../overview/use-cases/hosts-vms/)
 * [Autoscaling for Hosts](hosts-vms/autoscaling/)
