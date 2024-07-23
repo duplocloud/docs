@@ -5,7 +5,7 @@ description: Key terms and concepts in DuploCloud Container Orchestration
 # Terminologies in Container Orchestration
 
 {% hint style="info" %}
-The following concepts do not apply to ECS. ECS uses a proprietary policy model, which is explained in a [later section](../overview/use-cases/disaster-recovery/ecs-setup/).
+The following concepts do not apply to ECS. ECS uses a proprietary policy model, which is explained in a [later section](../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/ecs-setup/).
 {% endhint %}
 
 Familiarize yourself with these DuploCloud concepts and terms before deploying containerized applications in DuploCloud. See [use cases](../overview/use-cases/) for a description of DuploCloud Infrastructures and Tenants.
