@@ -1,6 +1,21 @@
 ---
 description: Using DuploCloud with Microsoft Azure
+cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (6).png
 coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Azure User Guide

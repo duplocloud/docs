@@ -3,7 +3,7 @@ description: >-
   DuploCloud DevOps-as-a-Service platform is cloud infrastructure automation
   software that enables developer self-service with continuous security and
   compliance.
-cover: .gitbook/assets/g2-branded-banner-image-v3.png
+cover: .gitbook/assets/Twitter - G2 Awards.png
 coverY: 0
 ---
 

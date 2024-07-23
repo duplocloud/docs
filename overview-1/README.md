@@ -1,6 +1,21 @@
 ---
 description: Using DuploCloud with Google Cloud Platform
+cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (5).png
 coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # GCP User Guide

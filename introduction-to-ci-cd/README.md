@@ -2,7 +2,22 @@
 description: >-
   Ensuring continuous integration, delivery, and deployment of your Cloud
   applications
+cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (11).png
 coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # CI/CD Overview
