@@ -60,7 +60,7 @@ coverY: 0
   * [Security Configurations Settings](overview/security-configuration-settings/) documentation section added.
   * ClusterIP and Worker Node target types are supported when creating [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
 * GCP
-  * [GKE Standard mode](overview-1/use-cases/disaster-recovery/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
+  * [GKE Standard mode](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
   * Support for [Firestore ](overview-1/gcp-services/firestore-database.md)databases.
   * Support for [GCP Hosts](overview-1/use-cases/hosts-vms.md#id-3-toc-title) and [GCE VMs](overview-1/use-cases/hosts-vms.md#gce-vm).
   * Create [Node Pools](overview-1/gcp-services/node-pools.md) with support for accelerators and taints.
