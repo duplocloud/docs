@@ -1,4 +1,10 @@
-# DuploCloud Architecture: an Application Focused Interface
+---
+description: >-
+  A high-level overview of the building blocks of DuploCloud's infrastructure
+  based architecture
+---
+
+# Application Focused Interface: DuploCloud Architecture
 
 The DuploCloud platform is an application infrastructure-centric abstraction created on top of the user's cloud provider account. Users can deploy and operate their applications using DuploCloud's simple, user-friendly UI, or use the low-code Terraform provider to consume cloud services like S3, DynamoDB, Lambda functions, GCP Redis, Azure SQL, etc., from their cloud provider.
 
