@@ -15,7 +15,7 @@ Corresponding to each Infrastructure is the concept of a Plan. A Plan is a place
 
 The figure below shows a screenshot of the plan constructs:
 
-![](<../../.gitbook/assets/Screen Shot 2022-03-12 at 8.12.26 PM.png>)
+![](<../../../.gitbook/assets/Screen Shot 2022-03-12 at 8.12.26 PM.png>)
 
 
 

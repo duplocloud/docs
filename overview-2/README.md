@@ -23,7 +23,7 @@ layout:
 The DuploCloud platform installs a Virtual Machine resource within your Azure Subscription. It can be accessed using a web interface, API, or a Terraform provider. Login to the DuploCloud Portal via SSO  through your GSuite or O365 login.&#x20;
 
 {% hint style="info" %}
-Read through the [DuploCloud Platform Overview](../) and learn about DuploCloud terms such as [Infrastructure](../welcome-to-duplocloud/duplocloud-common-components/infrastructure.md), [Plan](../welcome-to-duplocloud/duplocloud-common-components/plan.md), and [Tenant](../welcome-to-duplocloud/duplocloud-common-components/tenant.md).
+Read through the [DuploCloud Platform Overview](../) and learn about DuploCloud terms such as [Infrastructure](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/infrastructure.md), [Plan](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/plan.md), and [Tenant](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md).
 {% endhint %}
 
 ## Prerequisites

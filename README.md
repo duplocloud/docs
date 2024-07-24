@@ -11,9 +11,9 @@ coverY: 0
 
 DuploCloud is a platform that enables security and compliance for engineers and operators in organizations that host infrastructure on the public cloud.&#x20;
 
-You provide high-level application specifications including cloud services, application containers, packages and configurations, interconnectivity, requirements for multiple environments, and scoped compliance standards. DuploCloud uses these specifications to auto-generate required lower-level configurations, provisioning them in a secure and compliant manner, while maintaining their ongoing operations.&#x20;
+You provide high-level application specifications, including cloud services, application containers, packages and configurations, interconnectivity, requirements for multiple environments, and scoped compliance standards. DuploCloud uses these specifications to auto-generate required lower-level configurations, provisioning them securely and compliantly while maintaining their ongoing operations.&#x20;
 
-In addition, logging, monitoring, alerting, and reporting of the provisioned system are enabled. The following figure shows the various functions provided by the platform.
+In addition, the provisioned system's logging, monitoring, alerting, and reporting are enabled. The following figure shows the platform's various functions.
 
 ![The DuploCloud Platform Features Diagram](.gitbook/assets/one-unified-platform-infographic-1280x720.png)
 
