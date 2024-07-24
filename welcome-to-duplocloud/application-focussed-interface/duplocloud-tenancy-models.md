@@ -19,7 +19,7 @@ DuploCloud-supported tenancy models, outlined below, include:
 
 ### Application-managed multi-tenancy
 
-<figure><img src="../.gitbook/assets/1 - Application Provides Tenancy.png" alt=""><figcaption><p>DuploCloud pooled tenancy model</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/1 - Application Provides Tenancy.png" alt=""><figcaption><p>DuploCloud pooled tenancy model</p></figcaption></figure>
 
 * **Description**: The application manages tenant isolation with DuploCloud structured pooled tenancy.&#x20;
 * **Use Case**: The most common scenario is where the application logic isolates customer data. DuploCloud Tenants are then used to isolate development environments (i.e., nonprod and prod).&#x20;
@@ -29,7 +29,7 @@ DuploCloud-supported tenancy models, outlined below, include:
 
 ### DuploCloud Tenant per customer
 
-<figure><img src="../.gitbook/assets/2 - DuploCloud Tenant.png" alt=""><figcaption><p>DuploCloud shared cluster with separate namespace per tenant</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2 - DuploCloud Tenant.png" alt=""><figcaption><p>DuploCloud shared cluster with separate namespace per tenant</p></figcaption></figure>
 
 * **Description**: Each customer gets a separate DuploCloud Tenant.
 * **Use Case**: Suitable for older applications not designed for multi-tenancy, or security and compliance needs.
@@ -40,7 +40,7 @@ DuploCloud-supported tenancy models, outlined below, include:
 
 ### DuploCloud Infrastructure per customer
 
-<figure><img src="../.gitbook/assets/3 - DuploCloud Infrastructure.png" alt=""><figcaption><p>DuploCloud siloed cluster per Tenant with separate network infrastructure</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 - DuploCloud Infrastructure.png" alt=""><figcaption><p>DuploCloud siloed cluster per Tenant with separate network infrastructure</p></figcaption></figure>
 
 * **Description**: Each customer gets a separate DuploCloud Infrastructure.
 * **Use Case**: Provides a higher security boundary at the network layer where customer access and data are separated.
@@ -51,7 +51,7 @@ DuploCloud-supported tenancy models, outlined below, include:
 
 ### Cloud account per customer
 
-<figure><img src="../.gitbook/assets/4 - Cloud Account.png" alt=""><figcaption><p>DuploCloud siloed account isolation and tenant per customer</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/4 - Cloud Account.png" alt=""><figcaption><p>DuploCloud siloed account isolation and tenant per customer</p></figcaption></figure>
 
 * **Description**: Each customer gets a separate cloud account.
 * **Use Case**: The least common model, used for customers requiring complete isolation.
@@ -61,7 +61,7 @@ DuploCloud-supported tenancy models, outlined below, include:
 
 ### Hybrid model
 
-<figure><img src="../.gitbook/assets/5 - Hybrid Tenancy Model (1).png" alt=""><figcaption><p>A hybrid of DuploCloud pooled tenancy model and shared cluster with separate namespace per tenant</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5 - Hybrid Tenancy Model (1).png" alt=""><figcaption><p>A hybrid of DuploCloud pooled tenancy model and shared cluster with separate namespace per tenant</p></figcaption></figure>
 
 * **Description**: Combination of the above models as needed to meet specific requirements.
 * **Use Case**: Diverse customer needs.
@@ -71,7 +71,7 @@ DuploCloud-supported tenancy models, outlined below, include:
 
 ### Special hybrid case: single-tenant deployment in external Kubernetes cluster
 
-<figure><img src="../.gitbook/assets/5.1 - Hybrid Tenancy Model - External Cluster.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/5.1 - Hybrid Tenancy Model - External Cluster.png" alt=""><figcaption></figcaption></figure>
 
 * **Description**: DuploCloud imports existing Kubernetes clusters from external environments.
 * **Use Case**: A cluster and resources already exist, or customers require the application or services solution running inside their client's cloud account. Customers are comfortable creating their own Kubernetes environments.

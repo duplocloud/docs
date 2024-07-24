@@ -10,7 +10,7 @@ Ingress controllers abstract the complexity of routed Kubernetes application tra
 
 ### Creating Tenants, Hosts, and Services with EKS
 
-See the [Containers ](../../overview/aws-services/containers/)topic for steps on how to create [Tenants](../../welcome-to-duplocloud/duplocloud-common-components/tenant.md), Hosts, and [Services](../../welcome-to-duplocloud/duplocloud-common-components/app-service-and-cloud-services.md).
+See the [Containers ](../../overview/aws-services/containers/)topic for steps on how to create [Tenants](../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md), Hosts, and [Services](../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/app-service-and-cloud-services.md).
 
 Once your service is deployed, you can add and configure Kubernetes Ingress by [enabling the AWS Application Load Balancer](adding-ingress.md#enabling-the-aws-application-load-balancer).
 

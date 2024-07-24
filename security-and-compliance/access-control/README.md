@@ -8,7 +8,7 @@ description: >-
 
 Isolation of the environment is the most basic principle in any infrastructure security implementation. Cloud providers allow many constructs to implement this isolation to varying degrees. For example, you can isolate two workloads in completely different cloud accounts, different VPCs within the same account, or different "security groups" within the same VPC. Then there are other constructs like IAM (AWS roles, Azure managed Identity, GCP service accounts) or Kubernetes namespaces, and so forth. But how do we bring together dozens of these security constructs and map them to an application-centric isolation model?&#x20;
 
-DuploCloud gathers these constructs together in a single application-centric model, in the figure below, which is described in more detail [here](../../welcome-to-duplocloud/application-focussed-interface.md). To summarize, there have three layers of isolation:
+DuploCloud gathers these constructs together in a single application-centric model, in the figure below, which is described in more detail [here](../../welcome-to-duplocloud/application-focussed-interface/). To summarize, there have three layers of isolation:
 
 * **Account Level**: This offers the deepest grade of separation. As it is heavyweight, it also incurs maximum overhead in terms of maintenance and cost as almost no construct can be reused across two environments.&#x20;
 * **VPC Level (a.k.a **_**DuploCloud Infrastructure**_**)**: Within the same account, environments are segregated by virtual networks (VPC/ VNET).

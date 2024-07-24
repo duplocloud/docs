@@ -2,7 +2,7 @@
 
 ## Creating an Infrastructure
 
-In DuploCloud, an [Infrastructure](../../../welcome-to-duplocloud/duplocloud-common-components/infrastructure.md) maps one-to-one to a VPC in a specified region. It also maps to an [Azure Managed Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service) cluster for container orchestration. Up to one instance (0 or 1) of an AKS is supported for each DuploCloud Infrastructure.
+In DuploCloud, an [Infrastructure](../../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/infrastructure.md) maps one-to-one to a VPC in a specified region. It also maps to an [Azure Managed Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service) cluster for container orchestration. Up to one instance (0 or 1) of an AKS is supported for each DuploCloud Infrastructure.
 
 1. Select **Administrator** -> **Infrastructure** from the navigation menu.&#x20;
 2. Click **Add**.
@@ -11,7 +11,7 @@ In DuploCloud, an [Infrastructure](../../../welcome-to-duplocloud/duplocloud-com
 5. In the **VNET CIDR** field, enter the **VNET CIDR**.&#x20;
 6. From the **Cloud** list box, select **Azure**.&#x20;
 7. Complete the remaining fields on the **Add Infrastructure** form.&#x20;
-8. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page. DuploCloud automatically creates a [Plan ](../../../welcome-to-duplocloud/duplocloud-common-components/plan.md)(with the same Infrastructure name) with the Infrastructure configuration.&#x20;
+8. Click **Create**. The Infrastructure is created and is listed on the **Infrastructure** page. DuploCloud automatically creates a [Plan ](../../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/plan.md)(with the same Infrastructure name) with the Infrastructure configuration.&#x20;
 
 {% hint style="warning" %}
 Cloud providers limit the number of Infrastructures that can run in each region. If you have completed the steps to create an Infrastructure and it doesn't show a Status of Complete, try selecting a different region.&#x20;

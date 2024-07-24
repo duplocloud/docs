@@ -4,7 +4,7 @@ Ingress controllers abstract the complexity of routed Kubernetes application tra
 
 ### Creating Tenants, Hosts, and Services
 
-See the DuploCloud documentation on creating [Tenants](../../welcome-to-duplocloud/duplocloud-common-components/tenant.md), [Hosts](../../overview/use-cases/hosts-vms/), and [Services](../../welcome-to-duplocloud/duplocloud-common-components/app-service-and-cloud-services.md) for your cloud provider. These foundational steps are essential for deploying and managing your applications and services within a Kubernetes environment.
+See the DuploCloud documentation on creating [Tenants](../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md), [Hosts](../../overview/use-cases/hosts-vms/), and [Services](../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/app-service-and-cloud-services.md) for your cloud provider. These foundational steps are essential for deploying and managing your applications and services within a Kubernetes environment.
 
 Once your Service is deployed, you can add and configure Kubernetes Ingress. The steps to create Ingress for each cloud provider are slightly different. Ingress setup is a critical step in defining how external traffic is routed to your services, providing a scalable and secure entry point for your applications.
 

@@ -4,7 +4,7 @@ Infrastructures are abstractions that allow you to create a Virtual Private Clou
 
 Each Infrastructure represents a network connection to a unique VPC/VNET, in a region with a Kubernetes cluster. In the case of AWS, it can also include an ECS. An Infrastructure can be created with four basic inputs: Name, VPC CIDR, Number of AZs, Region, and the option to enable or disable a K8S/ECS cluster. &#x20;
 
-![Infrastructure Creation Screen](<../../.gitbook/assets/image (12) (4).png>)
+![Infrastructure Creation Screen](<../../../.gitbook/assets/image (12) (4).png>)
 
 When you create the Infrastructure, DuploCloud automatically creates the following components:
 
@@ -13,7 +13,7 @@ When you create the Infrastructure, DuploCloud automatically creates the followi
 * NAT Gateway
 * Internet Gateway
 * Route tables
-* [VPC peering](../../overview/aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
+* [VPC peering](../../../overview/aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
 
 Additional requirements like custom Private/Public Subnet CIDRs can be configured in the Advanced Options area.&#x20;
 
@@ -23,6 +23,6 @@ A common use for Infrastructure is having two Infrastructures, one for prod and 
 
 ## Plans and Infrastructures
 
-Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](../../overview/use-cases/tenant-environment/).
+Once the Infrastructure is created, DuploCloud automatically creates a [Plan ](plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](../../../overview/use-cases/tenant-environment/).
 
-<figure><img src="../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
