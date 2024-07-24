@@ -5,7 +5,7 @@
 * [Product updates](product-updates.md)
 * [Getting Started with DuploCloud](getting-started/welcome-to-duplocloud.md)
   * [DuploCloud Onboarding](welcome-to-duplocloud/duplocloud-onboarding.md)
-  * [DuploCloud Architecture: an Application Focused Interface](welcome-to-duplocloud/application-focussed-interface/README.md)
+  * [Application Focused Interface: DuploCloud Architecture](welcome-to-duplocloud/application-focussed-interface/README.md)
     * [DuploCloud Tenancy Models](welcome-to-duplocloud/application-focussed-interface/duplocloud-tenancy-models.md)
     * [DuploCloud Common Components](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/README.md)
       * [Infrastructure](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/infrastructure.md)

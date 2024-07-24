@@ -4,7 +4,7 @@ description: >-
   the power of generating application infrastructures.
 ---
 
-# Quick Start
+# AWS Quick Start
 
 This Quick Start tutorial shows you how to set up an end-to-end cloud deployment. You will create AWS infrastructure and tenants and, by the end of this tutorial, you can view a deployed sample web application.
 
@@ -19,7 +19,7 @@ When you complete the AWS Quick Start Tutorial, you have three options or paths,
 * Using Native Docker Services - You create a service in Docker and expose it using a load balancer within DuploCloud.
 
 {% hint style="info" %}
-There are optional steps in each tutorial path, in the table below, marked with an asterisk ( **\*** ). While these steps are not needed to complete each tutorial, you may want to perform or read through them, as they are tasks that are normally completed when you create production-ready services.
+There are optional steps in each tutorial path, in the table below, marked with an asterisk. While these steps are unnecessary to complete each tutorial, you may want to perform or read through them, as they are tasks normally completed when you create production-ready services.
 {% endhint %}
 
 For information about the differences between these methods, to help you choose which method best suits your needs, skills, and environments, see this [AWS blog](https://aws.amazon.com/blogs/containers/amazon-ecs-vs-amazon-eks-making-sense-of-aws-container-services/) and the [Docker ](https://docs.docker.com/)documentation.
