@@ -420,3 +420,4 @@
     * [DuploCloud Uses Infrastructure-as-Code to Stitch Together DevOps Lifecycle](extras-overview/video-transcripts/duplocloud-uses-infrastructure-as-code-to-stitch-together-devops-lifecycle.md)
   * [BYOH](extras-overview/byoh.md)
   * [Allocation Tagging for Hosts](extras-overview/creating-advanced-functions.md)
+  * [Import an External Kubernetes Cluster](extras-overview/import-an-external-kubernetes-cluster.md)
