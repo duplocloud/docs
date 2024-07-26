@@ -65,11 +65,11 @@ Before performing this step, Contact DuploCloud Support to enable the configurat
 
 <figure><img src="../.gitbook/assets/image (163).png" alt=""><figcaption></figcaption></figure>
 
-### View Imported Kubernetes Cluster from DuploCloud
+### 3. View Imported Kubernetes Cluster from DuploCloud
 
 <figure><img src="../.gitbook/assets/image (164).png" alt=""><figcaption></figcaption></figure>
 
-### Adding Existing Nodes for the imported cluster in DuploCloud Portal
+### 4. Adding Existing Nodes for the imported cluster in DuploCloud Portal
 
 1. Create a Tenant for the Infrastructure created in above steps.
 2. Click on On-Premises Tab and click on Add
@@ -84,7 +84,7 @@ Before performing this step, Contact DuploCloud Support to enable the configurat
 
 <figure><img src="../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
 
-### Creating a WebServer Service with Cloud as On-Prem
+### 5. Creating a WebServer Service with Cloud as On-Prem
 
 You can create a Service by selecting **Cloud** as **OnPrem.**
 
@@ -98,7 +98,7 @@ Once service is created, you should be able to access KubeCtl shell, retrieve Ku
 
 Administrator can import external Kubernetes cluster in DuploCloud Portal with Read Only access.
 
-### Creating a service account in K8s cluster with **readonly** user
+### 1. Creating a service account in K8s cluster with **readonly** user
 
 1. Save the below content as a file name **service-account-readonly-setup.yaml**
 
@@ -137,7 +137,7 @@ type: kubernetes.io/service-account-token
 2. Run `kubectl apply -f service-account-readonly-setup.yaml`. This will create a new service account with readonly permission.
 3. Run `kubectl -n kube-system describe secret duplo-readonly-token` to fetch the token to use in DuploCloud to import the cluster.
 
-### Import the Kubernetes cluster in DuploCloud.&#x20;
+### 2. Import the Kubernetes cluster in DuploCloud.&#x20;
 
 Follow this step to [import](import-an-external-kubernetes-cluster.md#id-2.-import-the-kubernetes-cluster-in-duplocloud) and [view](import-an-external-kubernetes-cluster.md#view-imported-kubernetes-cluster-from-duplocloud) the cluster.
 
