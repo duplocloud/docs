@@ -30,3 +30,4 @@ These additional features provide flexibility and accessibility across all suppo
 * [Video Transcripts](video-transcripts/)
 * [BYOH (Bring Your Own Host)](byoh.md)
 * [Allocation Tagging for Hosts (Virtual Machines)](creating-advanced-functions.md)
+* [Import an External Kubernetes Cluster](import-an-external-kubernetes-cluster.md)

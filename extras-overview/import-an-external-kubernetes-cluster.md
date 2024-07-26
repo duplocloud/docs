@@ -1,17 +1,20 @@
+---
+description: Import an external or On-Prem cluster to be managed by DuploCloud
+---
+
 # Import an External Kubernetes Cluster
 
-DuploCloud allows an external or an On-Premises Kubernetes Cluster to be imported as an Infrastructure that is managed by the Platform.
+DuploCloud allows an external or an On-Premises Kubernetes (K8s) Cluster to be imported as an Infrastructure that the DuploCloud Platform manages.
 
-### Prerequisite
+## Prerequisite
 
-The Kubernetes Cluster that needs to be importaed should be ready to use and accessible using kubectl shell.
+The Kubernetes Cluster that needs to be imported should be ready to use and accessible using the `kubectl`shell.
 
-## Import External K8s Cluster with Admin permission
+## Creating a service account in the K8s cluster with admin permissions
 
-### 1. Creating a service account in K8s cluster with admin setup
+1. Save this YAML code as a file name **service-account-admin-setup.yaml**.
 
-1. Save the below content as a file name **service-account-admin-setup.yaml**
-
+{% code title="service-account-admin-setup.yaml" %}
 ```yaml
 example with admin access
 ---
@@ -44,64 +47,73 @@ metadata:
 type: kubernetes.io/service-account-token
 ---
 ```
+{% endcode %}
 
-2. Run `kubectl apply -f service-account-admin-setup.yaml`. This will create a new service account with admin permission.
-3. Run `kubectl -n kube-system describe secret duplo-admin-token` to fetch the token to use in DuploCloud to import the cluster.
+2. Run `kubectl apply -f service-account-admin-setup.yaml`, creating a new service account with Administrator permissions.
+3. Run `kubectl -n kube-system describe secret duplo-admin-token` to fetch the token for DuploCloud to use when importing the cluster.
 
-### 2. Import the Kubernetes cluster in DuploCloud
+## Importing your Kubernetes Cluster to DuploCloud
 
 {% hint style="warning" %}
-Before performing this step, Contact DuploCloud Support to enable the configuration that allows import of an external Kubernetes cluster.
+Before performing this step, Contact DuploCloud Support to enable the configuration that allows the import of an external Kubernetes cluster.
 {% endhint %}
 
-1. Go to DuploCloud portal **Administrator --> Infrastructure** page and click Add.
-2. From **Cloud** dropdown, select **On-Premises.**
-3. Enter all the details of the Kubernetes Cluster&#x20;
-   * Kubernetes Cluster Name
-   * Kubernetes Cluster Endpoint
-   * Kubernetes Token got from Step 1.3.
-   * Kubernetes Cluster Certificate Authority Data (For EKS cluster this can be fetched from EKS Cluster overview page from AWS Console).&#x20;
-   * Kubernetes Vendor as EKS (as shown in the example below)
+1. In the DuploCloud Portal, navigate to **Administrator -> Infrastructure**.
+2. Click **Add**. The **Add Infrastructure** page displays.
+3. From the **Cloud** list box, select **On-Premises**.
+4. Enter the details of the Kubernetes Cluster:&#x20;
+   * Kubernetes Cluster **Name**
+   * **Kubernetes Cluster Endpoint**
+   * **Kubernetes** Token, which you retrieved when you [created a service account in the previous step](import-an-external-kubernetes-cluster.md#creating-a-service-account-in-the-k8s-cluster-with-admin-permissions).
+   * **Kubernetes Cluster Certificate Authority Data** (For an EKS cluster, this can be copied from the **EKS Cluster Overview** page from the AWS Console).&#x20;
+   * **Kubernetes Vendor** (Enter **EKS**, as in the example below).
 
-<figure><img src="../.gitbook/assets/image (163).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (163).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
 
-### 3. View Imported Kubernetes Cluster from DuploCloud
+## Viewing Imported Kubernetes Cluster from DuploCloud
 
-<figure><img src="../.gitbook/assets/image (164).png" alt=""><figcaption></figcaption></figure>
+Select the **Kubernetes** tab to display information about the imported Kubernetes Cluster.
 
-### 4. Adding Existing Nodes for the imported cluster in DuploCloud Portal
+<figure><img src="../.gitbook/assets/image (164).png" alt=""><figcaption><p>The <strong>Kubernetes</strong> tab</p></figcaption></figure>
 
-1. Create a Tenant for the Infrastructure created in above steps.
-2. Click on On-Premises Tab and click on Add
+## Adding Existing Nodes for the imported cluster in DuploCloud&#x20;
 
-<figure><img src="../.gitbook/assets/image (169).png" alt=""><figcaption></figcaption></figure>
+1. In the DuploCloud Portal, navigate to **Administrator -> Tenants**.
+2. Click **Add**. The **Create a Tenant** pane displays.
+3. Enter the Tenant **Name**.
+4. Select the Infrastructure name from the **Plan** list box.
+5. Click **Create**.
+6. Navigate to **Kubernetes** -> **Nodes**. The **Nodes** page displays.
+7. Click the **On-Premises** Tab.
+8. Click **Add**. The **Add On-Premesis** Instance pane displays.
+9. Select the node from the **Kubernetes Node** list box.&#x20;
+10. Supply an **Allocation Tag**.
+11. Click **Add**.
+12. Navigate to **Kubernetes** -> **Nodes** to view the imported cluster and host.
 
-3. You can import existing nodes
+<figure><img src="../.gitbook/assets/image (169).png" alt=""><figcaption><p>The <strong>On-Premesis</strong> tab on the <strong>Nodes</strong> page</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (166).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (166).png" alt=""><figcaption><p>The <strong>Add On-Premises Instance</strong> pane</p></figcaption></figure>
 
-4. View imported Nodes.
+## Creating a WebServer Service with Cloud as On-Premises
 
-<figure><img src="../.gitbook/assets/image (167).png" alt=""><figcaption></figcaption></figure>
+Create a WebServer Service in the DuploCloud portal by selecting **OnPrem** from the **Cloud** list box while creating a [Kubernetes Service](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/app-service-and-cloud-services.md).
 
-### 5. Creating a WebServer Service with Cloud as On-Prem
+<figure><img src="../.gitbook/assets/image (168).png" alt=""><figcaption><p>The <strong>Basic Options</strong> page to add a Kubernetes Service with the <strong>Cloud</strong> list box set to <strong>OnPrem</strong></p></figcaption></figure>
 
-You can create a Service by selecting **Cloud** as **OnPrem.**
+Once the service is created, you should be able to access the [`kubectl` shell](../kubernetes-overview/kubectl-setup/kubectl-shell.md), retrieve the [KubeCtl Token](../kubernetes-overview/kubectl-setup/kubectl-token.md), [Host/Container shell, and Container logs](../overview/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for the service you created.
 
-<figure><img src="../.gitbook/assets/image (168).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (170).png" alt=""><figcaption><p><strong>Containers</strong> tab for a Kubernetes Service</p></figcaption></figure>
 
-Once service is created, you should be able to access KubeCtl shell, retrieve KubeToken, Host/ Container shell, Container logs for the service created.
+## Importing External Kubernetes Cluster as Read-Only
 
-<figure><img src="../.gitbook/assets/image (170).png" alt=""><figcaption></figcaption></figure>
+An administrator can import an external Kubernetes cluster in the DuploCloud Portal with `readonly` access.
 
-## Import External Kubernetes Cluster as Read-Only
+### Creating a Service Account in the K8s cluster with R**ead-Only** Access
 
-Administrator can import external Kubernetes cluster in DuploCloud Portal with Read Only access.
+1. Save the following YAML code as **service-account-readonly-setup.yaml**.
 
-### 1. Creating a service account in K8s cluster with **readonly** user
-
-1. Save the below content as a file name **service-account-readonly-setup.yaml**
-
+{% code title="service-account-readonly-setup.yaml" %}
 ```yaml
 ---
 apiVersion: v1
@@ -133,14 +145,16 @@ metadata:
 type: kubernetes.io/service-account-token
 ---
 ```
+{% endcode %}
 
-2. Run `kubectl apply -f service-account-readonly-setup.yaml`. This will create a new service account with readonly permission.
-3. Run `kubectl -n kube-system describe secret duplo-readonly-token` to fetch the token to use in DuploCloud to import the cluster.
+2. Run `kubectl apply -f service-account-readonly-setup.yaml`, creating a new service account with `readonly` permission.
+3. Run `kubectl -n kube-system describe secret duplo-readonly-token` to fetch the token for DuploCloud to use when importing the cluster.
 
-### 2. Import the Kubernetes cluster in DuploCloud.&#x20;
+### Importing the Kubernetes cluster to DuploCloud&#x20;
 
-Follow this step to [import](import-an-external-kubernetes-cluster.md#id-2.-import-the-kubernetes-cluster-in-duplocloud) and [view](import-an-external-kubernetes-cluster.md#view-imported-kubernetes-cluster-from-duplocloud) the cluster.
+Follow this step to [import](import-an-external-kubernetes-cluster.md#importing-your-kubernetes-cluster-to-duplocloud) and [view](import-an-external-kubernetes-cluster.md#viewing-imported-kubernetes-cluster-from-duplocloud) the cluster.
 
-User will only be able to view the Kubernetes resources. You will not be able to add Nodes, create or update any services in Read Only mode.
+{% hint style="warning" %}
+DuploCloud users with non-administrator access (**User** role) can only view Kubernetes resources. They cannot add Nodes or create or update any Services in `readonly` mode.\
 
-\
+{% endhint %}
