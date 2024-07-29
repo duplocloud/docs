@@ -258,7 +258,8 @@ This means DuploCloud is going to remove these containers. DuploCloud also suppo
 
 ### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
 
-No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
+No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a 
+[state machine](https://en.wikipedia.org/wiki/Finite-state_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
 
 ### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
 
@@ -280,6 +281,10 @@ You use Terraform to set up Cloud services and first-time application deployment
 
 From the DuploCloud portal, click on your name in the top right corner and select Profile. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the profile and add it to the OpenVPN Connect. The next time you log in with OpenVPN, enter the authentication code when prompted.
 
+### Overview of SOC 2 Type 2 Compliance Costs
+
+Achieving SOC 2 Type 2 compliance is crucial for organizations looking to demonstrate a high level of security and data protection. The process involves various costs, including the use of a Compliance Automation Platform, which may range from $10,000 to $15,000, potentially increasing for larger companies. Additionally, the audit process itself is estimated to cost between $7,500 and $15,000. Companies offering both services may provide discounts for bundling them together, presenting an opportunity for cost savings. For organizations embarking on this compliance journey, it's advisable to consult detailed resources for a comprehensive understanding of the associated expenses.
+
 ## CI/CD FAQs
 
 ### How does CI/CD work with DuploCloud?
@@ -292,7 +297,8 @@ For those looking to remove Chocolatey from their system, it involves a straight
 
 ## Upgrade FAQs
 
-DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. DuploCloud's built-in monitoring feature also displays resource utilization by Tenant or container functions, simplifying usage tracking and offering a cost-effective alternative to solutions like Datadog.
+DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. DuploCloud's built-in monitoring feature also displays resource utilization by Tenant or container functions, simplifying usage tracking and offering a cost-effective
+ve alternative to solutions like Datadog.
 
 ### What is a rolling upgrade, and how do I enable it?
 
