@@ -89,7 +89,7 @@ Select the **Kubernetes** tab to display information about the imported Kubernet
 9. Select the node from the **Kubernetes Node** list box.&#x20;
 10. Supply an **Allocation Tag**.
 11. Click **Add**.
-12. Navigate to **Kubernetes** -> **Nodes** to view the imported cluster and host.
+12. Navigate to **Kubernetes** -> **Nodes** to view the imported cluster.
 
 <figure><img src="../.gitbook/assets/image (169).png" alt=""><figcaption><p>The <strong>On-Premesis</strong> tab on the <strong>Nodes</strong> page</p></figcaption></figure>
 
