@@ -4,6 +4,12 @@
 
 A Tenant is the most fundamental construct in DuploCloud which is essentially like a project or a workspace and is a child of the Infrastructure. While Infrastructure is a VPC level isolation, Tenant is the next level of isolation implemented by segregating Tenants using Security Groups, IAM role, Instance Profile, K8S Namespace, KMS Key, etc., in the case of AWS. Similar concepts are leveraged from other cloud providers like resource groups, managed identity, ASG, etc., in Azure.
 
+For instructions to create a Tenant in the DuploCloud Portal, see:
+
+* [AWS Tenant](../../../overview/use-cases/tenant-environment/)
+* [Azure Tenant](../../../overview-2/use-cases/tenant-environment/)
+* [GCP Tenant](../../../overview-1/use-cases/tenant-environment/)
+
 \
 A Tenant is fundamentally four things, at the logical level:
 
