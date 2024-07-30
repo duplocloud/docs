@@ -11,6 +11,7 @@
       * [Infrastructure](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/infrastructure.md)
       * [Plan](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/plan.md)
       * [Tenant](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md)
+      * [Hosts](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/hosts.md)
       * [Services](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/app-service-and-cloud-services.md)
       * [Diagnostics](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/diagnostics.md)
   * [User Logins](welcome-to-duplocloud/user-logins.md)
