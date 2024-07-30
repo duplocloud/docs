@@ -2,7 +2,7 @@
 
 ## DuploCloud Plans
 
-Corresponding to each Infrastructure is the concept of a Plan. A Plan is a placeholder or a template for configurations. These configurations are consistently applied to all Tenants within the Plan (or Infrastructure). Examples of such configurations are:
+Corresponding to each Infrastructure is the concept of a Plan. When you create an[ Infrastructure](infrastructure.md) in DuploCloud, a Plan is automatically generated. A Plan is a placeholder or a template for configurations. These configurations are consistently applied to all Tenants within the Plan (or Infrastructure). Examples of such configurations are:
 
 * Certificates available to be attached to Load Balancers in Tenants of this Plan
 * Machine images

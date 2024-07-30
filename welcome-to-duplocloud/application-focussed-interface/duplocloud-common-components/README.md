@@ -4,7 +4,7 @@ description: DuploCloud components common to AWS, GCP, and Azure deployments
 
 # DuploCloud Common Components
 
-Several DuploCloud components are used with AWS, GCP, Azure, and hybrid/On-Premises Services. These include Infrastructures, Plans, Tenants, Hosts, and Load Balancers. To learn more, see the topics below.&#x20;
+Several DuploCloud components are used with AWS, GCP, Azure, and hybrid/On-Premises Services. These include Infrastructures, Plans, Tenants, Hosts, and Load Balancers. This section provides a conceptual explanation of the following common DuploCloud components:
 
 * [Infrastructure](infrastructure.md)
 * [Plan](plan.md)
@@ -12,4 +12,8 @@ Several DuploCloud components are used with AWS, GCP, Azure, and hybrid/On-Premi
 * [Services](app-service-and-cloud-services.md)
 * [Diagnostics](diagnostics.md)
 
-For the cloud-specific implementation of these components, see the [AWS Use Cases](../../../overview/use-cases/), [Azure Use Cases](../../../overview-2/use-cases/), and [GCP Use Cases](../../../overview-1/use-cases/).
+For instructions to implement these common components in your DuploCloud account, see the  documentation for your cloud provider:
+
+* &#x20;[AWS Use Cases](../../../overview/use-cases/)
+* [Azure Use Cases](../../../overview-2/use-cases/)
+* [GCP Use Cases](../../../overview-1/use-cases/)
