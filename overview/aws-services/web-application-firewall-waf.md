@@ -16,18 +16,18 @@ When you create a WAF in DuploCloud, an entry is added to the [Web ACL](https://
 
 
     <figure><img src="../../.gitbook/assets/WAF details new.png" alt=""><figcaption><p>The <strong>Plans</strong> page <strong>WAF</strong> tab</p></figcaption></figure>
-4.  Click **Add**. The **Add WAF** pane displays.\
+4. Click **Add**. The **Add WAF** pane displays.
 
+<div align="left">
 
-    <div align="left">
+<figure><img src="../../.gitbook/assets/Screenshot (456).png" alt=""><figcaption><p>The <strong>Add WAF</strong> pane</p></figcaption></figure>
 
-    <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.01-12_50_20.png" alt=""><figcaption><p><strong>Add WAF</strong> pane</p></figcaption></figure>
+</div>
 
-    </div>
-5. In the **Name** field, type the name of your WAF.
-6. In the **WAF ARN** field, enter the Amazon Resource Name (ARN).
-7. Optionally, enter your **WAF Dashboard URL**.
-8. Click **Create**.
+1. In the **Name** field, type the name of your WAF.
+2. In the **WAF ARN** field, enter the Amazon Resource Name (ARN).
+3. Optionally, enter your **WAF Dashboard URL**.
+4. Click **Create**.
 
 ## Attaching the WAF to a Load Balancer
 
