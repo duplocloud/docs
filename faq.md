@@ -60,7 +60,7 @@ The cost of a DuploCloud subscription is based on the services managed by the pl
 * Each host (e.g., EC2 instance, Azure, or GCP VM) counts as 1 unit.
 * Serverless functions or services are counted as 1/4 unit (e.g., Lambda function).
 * Serverless applications are considered 1/2 unit (e.g., AWS ECS Service, Azure Web App, Google GKE Service).
-* AWS Managed Airflow (MWAA) worker counts as 1/2 unit, with the number of workers calculated as the average of the minimum and maximum worker count.
+* AWS Managed Airflow (MWAA) worker counts as 1/2 unit, with the number of workers calculated as the average minimum and maximum worker count.
 
 ### Can companies with private clouds use DuploCloud?
 
@@ -153,13 +153,13 @@ Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to k
 
 ### Configuring DuploCloud CLI on Windows Subsystem for Linux (WSL)
 
-For users leveraging WSL, configuring DuploCloud CLI requires specific steps to ensure smooth operation, especially for tasks involving interactive browser sessions or AWS CLI usage. Users may need to install utilities like `xclip`, `xdg-utils`, and `jq` to facilitate these operations. Additionally, setting up aliases in the `.bashrc` file for `start` and `open` commands to point to `xdg-open`, and defining the `BROWSER` environment variable to the path of a browser in `/usr/local/bin` are crucial steps. Creating a symlink in `/usr/local/bin` to the browser executable located in the Windows file system allows DuploCloud CLI to utilize the Windows browser for authentication and other browser-required operations. While optional, adding aliases for `pbcopy` and `pbpaste` can enhance script compatibility, particularly for users accustomed to macOS environments. These configurations enable effective use of DuploCloud CLI within WSL, bridging the gap between Windows and Linux environments for cloud management tasks. 
+For users leveraging WSL, configuring DuploCloud CLI requires specific steps to ensure smooth operation, especially for tasks involving interactive browser sessions or AWS CLI usage. Users may need to install utilities like `xclip`, `xdg-utils`, and `jq` to facilitate these operations. Additionally, setting up aliases in the `.bashrc` file for `start` and `open` commands to point to `xdg-open`, and defining the `BROWSER` environment variable to the path of a browser in `/usr/local/bin` are crucial steps. Creating a symlink in `/usr/local/bin` to the browser executable in the Windows file system allows DuploCloud CLI to utilize the Windows browser for authentication and other browser-required operations. While optional, adding aliases for `pbcopy` and `pbpaste` can enhance script compatibility, particularly for users accustomed to macOS environments. These configurations enable effective use of DuploCloud CLI within WSL, bridging the gap between Windows and Linux environments for cloud management tasks.
 
 ### Isn't No Code Click Ops?
 
 "Click Ops" is when engineers manually create infrastructure resources in the cloud and other UIs. It's often considered bad practice because there are so many components and configurations that it's easy to make mistakes. DuploCloud manages infrastructure resources for you, ensuring the underlying compute instances, firewall rules, IAM policies, and other components are configured following good practices. You only need a few clicks and don't need to know DevSecOps because DuploCloud knows it for you.
 
-DuploCloud's No Code platform is designed to ensure correctness and enforce best practices. It is an ideal choice for software developer-centric companies that value agility and focus on application code. In contrast, the low-code Terraform solution is favored by DevOps-centric organizations due to its ability to handle a broad scope of changes despite its limitations, such as being a single-user system and the potential for configuration drifts when making small, Just-In-Time changes.
+DuploCloud's No Code platform is designed to ensure correctness and enforce best practices. It is ideal for software developer-centric companies that value agility and focus on application code. In contrast, the low-code Terraform solution is favored by DevOps-centric organizations due to its ability to handle a broad scope of changes despite its limitations, such as being a single-user system and the potential for configuration drifts when making small, Just-In-Time changes.
 
 **Dealing with a broad scope of changes vs. small, Just-In-Time changes**
 
@@ -176,7 +176,7 @@ DuploCloud license usage is calculated based on the services managed by DuploClo
 * A host is counted as 1 unit. (example: EC2 instance, Azure, or GCP VM)
 * A serverless function or service is counted as 1/4 unit (example: Lambda function)
 * A serverless application is counted as 1/2 unit (example: AWS ECS Service, Azure Web App, Google GKE Service)
-* AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. For an MWAA environment, the number of workers is calculated as the average minimum and maximum worker count.
+* An AWS Managed Airflow (MWAA) worker is counted as 1/2 unit. The number of workers in an MWAA environment is calculated as the average minimum and maximum worker count.
 
 ### Can you delete an application and all its resources with a single click and confirmation?
 
@@ -210,7 +210,7 @@ Under each Host, you can click on Connection Details under the Actions list box,
 
 ### My host is Windows. How do I use RDP (Remote Desktop Protocol)?
 
-Under Host, click on Connection Details under the Actions list box. It will provide the password and instructions on how to connect to RDP.
+When viewing a Host, click the **Actions** list box and select **Connection Details**. It will provide the password and instructions on how to connect to RDP.
 
 ### How do I get into the container where my code is running?
 
@@ -254,14 +254,13 @@ If the current state is Pending when the desired state is Delete, the container 
 
 ### Some of my container statuses say “pending delete.” What does this mean?
 
-This means DuploCloud is going to remove these containers. DuploCloud also supports the creation of on-demand testing environments, facilitating quick setup and tear-down of environments with different configurations through the console or Terraform. This capability is crucial for testing and development workflows, ensuring flexibility and efficiency in managing containerized applications. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Some replicas may show a Running state even though the health check fails and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, environment, etc.) to an error-free state.
+This means DuploCloud is going to remove these containers. DuploCloud also supports the creation of on-demand testing environments, facilitating quick setup and tear-down of environments with different configurations through the console or Terraform. This capability is crucial for testing and development workflows, ensuring flexibility and efficiency in managing containerized applications. The most common cause is that DuploCloud blocked the upgrade because a replica of the service was upgraded but is no longer operational. Sounderstand may show a Running state even though the health check fails and the rolling upgrade is blocked. To unblock the upgrade, restore the service configuration (image, environment, etc.) to an error-free state.
 
 ## Terraform FAQs
 
 ### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
 
-No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a 
-[state machine](https://en.wikipedia.org/wiki/Finite-state_machine) of operations with built-in retries to ensure robustness. Any configuration drift, system faults, security, and compliance controls are monitored continuously by interacting with the cloud provider.
+No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Interacting with the cloud provider continuously monitors configuration drift, system faults, security, and compliance controls.
 
 ### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-code?
 
@@ -275,17 +274,17 @@ DuploCloud provides an SDK into Terraform called the [DuploCloud Terraform Provi
 
 It is best to create separation between your developers and your DevOps team. Allowing developers to use the Web UI in non-production development environments to iterate product changes quickly can create inconsistency.
 
-You use Terraform to set up Cloud services and first-time application deployment in production and critical non-production environments. In addition, build CI/CD workflows to update only the application (Docker and Lambda) deployments. The DevOps team should make any cloud service level changes via Terraform, and developers should ask the
+You use Terraform to set up Cloud services and first-time application deployment in production and critical non-production environments. In addition, build CI/CD workflow to update only the application (Docker and Lambda) deployment calls. The DevOps team should make any cloud service level changes via Terraform, and developers should also comprehensively understand changes the DevOps team to do the same. Developers should still be able to trigger CI/CD for their application rollouts without DevOps involvement.
 
 ## Security and Compliance FAQs
 
 ### How can I set up Multi-Factor Authentication (MFA) for OpenVPN authentication?
 
-From the DuploCloud portal, click on your name in the top right corner and select Profile. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the profile and add it to the OpenVPN Connect. The next time you log in with OpenVPN, enter the authentication code when prompted.
+From the DuploCloud portal, click on your name in the top right corner and select Profile. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the Profile and add it to the OpenVPN Connect. The next time you log in with OpenVPN, enter the authentication code when prompted.
 
 ### Overview of SOC 2 Type 2 Compliance Costs
 
-Achieving SOC 2 Type 2 compliance is crucial for organizations looking to demonstrate a high level of security and data protection. The process involves various costs, including the use of a Compliance Automation Platform, which may range from $10,000 to $15,000, potentially increasing for larger companies. Additionally, the audit process itself is estimated to cost between $7,500 and $15,000. Companies offering both services may provide discounts for bundling them together, presenting an opportunity for cost savings. For organizations embarking on this compliance journey, it's advisable to consult detailed resources for a comprehensive understanding of the associated expenses.
+Achieving SOC 2 Type 2 compliance is crucial for organizations looking to demonstrate high security and data protection. The process involves various costs, including using a Compliance Automation Platform, which may range from $10,000 to $15,000, potentially increasing for larger companies. The tool changes the audit process and the estimated understanding to cost between $7,500 and $15,000. Companies offering both services may provide discounts for bundlinProfile, presenting an opportunity for cost savings. For organizations embarking on this compliance journey, it's advisable to consult detailed resources to understand the associated expenses comprehensively.
 
 ## CI/CD FAQs
 
@@ -299,12 +298,11 @@ For those looking to remove Chocolatey from their system, it involves a straight
 
 ## Upgrade FAQs
 
-DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. DuploCloud's built-in monitoring feature also displays resource utilization by Tenant or container functions, simplifying usage tracking and offering a cost-effective
-ve alternative to solutions like Datadog.
+DuploCloud provides comprehensive monitoring capabilities, including Kubernetes pods, node hosts, RDS databases, and load balancers. This enables the creation of dashboards and setting up alerts for efficient service management. DuploCloud's built-in monitoring feature also displays resource utilization by Tenant or container functions, simplifying usage tracking and offering a cost-effective alternative to solutions like Datadog.
 
 ### What is a rolling upgrade, and how do I enable it?
 
-When you update (for example, when you change an image or environment variable) a service with multiple replicas, DuploCloud makes the change to one container at a time. If an updated container fails to start or the health check URL does not return `HTTP 200` status, DuploCloud will pause the upgrade of the remaining containers. Update the service with a newer image with a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. To specify Health Check, use the Elastic Load Balancer menu to find the Health Check URL suffix.
+When you update (for example, when you change an image or environment variable) a service with multiple replicas, DuploCloud changes to one container at a time if an updated container fails to start or the health check URL does not return `HTTP 200` status, DuploCloud will pause the upgrade of the remaining containers. Update the service with a newer image with a fix. If no health check URL is specified, DuploCloud only checks to see if an updated container is running before moving on to the next. To specify Health Check, use the Elastic Load Balancer menu to find the Health Check URL suffix.
 
 DuploCloud automates the management of AWS IAM roles, streamlining the access control for services within a tenant and facilitating AWS-integrated tasks without code modifications. This includes a `duplomaster` role for administrative functions in the AWS console, enhancing security and operational efficiency.
 
@@ -312,7 +310,7 @@ DuploCloud automates the management of AWS IAM roles, streamlining the access co
 
 ### How do I use Datadog and other diagnostics tools?
 
-DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with a third-party tool set like Datadog, you follow the tool set guidelines and deploy collector agents. You can do this as if running an application within the respective DuploCloud tenants.
+DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with third-party toolset changes like Datadog, you follow the toolset guidelines and deploy collector agents. You can do this as if running an application within the respective DuploCloud tenants.
 
 ## Error Messages
 
@@ -324,7 +322,7 @@ Your `duplo-jit` local cache must be cleared. To do this, run the following comm
 rm -rf ~/Library/Caches/duplo-jit/
 ```
 
-### When creating a Service, I'm receiving the "DuploCloud Fault `Conditions Unschedulable" message because 0/N nodes are available: 1 node(s) didn't match pod anti-affinity rules, one node(s) were unschedulable...`
+### When creating a Service, I'm receiving the "DuploCloud Fault `Conditions Unschedulable" message because 0/N nodes are available: 1 node(s) didn't match pod anti-affinity rules, and one node(s) were unschedulable...`
 
 Two possible reasons for receiving this fault message are:
 
