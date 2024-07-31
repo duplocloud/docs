@@ -13,7 +13,7 @@ In GCP, Cloud Functions are for serverless execution of code.
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>The <strong>Buckets</strong> page</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>The <strong>Buckets</strong> page</p></figcaption></figure>
 
     </div>
 
@@ -23,6 +23,6 @@ In GCP, Cloud Functions are for serverless execution of code.
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>The <strong>Add Function</strong> page</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (5).png" alt=""><figcaption><p>The <strong>Add Function</strong> page</p></figcaption></figure>
 
     </div>

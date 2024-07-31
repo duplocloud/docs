@@ -19,4 +19,4 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Metrics](metrics.md)
 * [Faults and alerts](faults-and-alerting/)
 * [Azure Portal link](azure-portal-link.md)
-* [Cost management for billing](cost-management.md)
+* [Cost management for billing](billing-and-cost-management/cost-management.md)

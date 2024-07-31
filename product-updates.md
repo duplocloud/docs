@@ -230,7 +230,7 @@ layout:
   * [Force creation of StatefulSets](overview/aws-services/containers/#5-toc-title).
 * Azure
   * Support for [Kubernetes Ingress](broken-reference).
-  * Monitor Tenant usage in the [Cost Management for billing ](overview-2/use-cases/cost-management.md)feature with weekly or monthly views.
+  * Monitor Tenant usage in the [Cost Management for billing ](overview-2/use-cases/billing-and-cost-management/cost-management.md)feature with weekly or monthly views.
   * Edit [Azure agent pools](overview-2/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 * GCP
   * Monitor Tenant usage in the [Cost Management for billing](overview-1/use-cases/cost-management/) feature with weekly or monthly views.&#x20;
