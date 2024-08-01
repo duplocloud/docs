@@ -10,6 +10,30 @@ You can look at Tenant-specific faults under **Observability** -> **Faults** or 
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-14_04_51.png" alt=""><figcaption><p>The <strong>Faults</strong> page showing faults for the DEV01 Tenant</p></figcaption></figure>
 
+## Configuring Tenant-level fault settings <a href="#id-2-toc-title" id="id-2-toc-title"></a>
+
+To configure faults for a Tenant, navigate to **Administrator** -> **Tenants** and select the Tenant from the **NAME** column. In the **Settings** tab, click **Add**. Select or enter the appropriate feature on the **Add Tenant Feature** pane.
+
+### Muting faults for stopped Tenants
+
+1. From the DuploCloud portal, navigate to **Administrator** -> **Tenants**.
+2. Select the Tenant from the **NAME** column.
+3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.07.29-18_51_07 (1).png" alt=""><figcaption><p>The <strong>Add Tenant</strong> pane</p></figcaption></figure>
+
+</div>
+
+4. From the **Select Feature** list box, select **Other**.
+5. In the **Configuration** field, enter **tenant\_instances\_stopped**.
+6. In the **Value** field, enter **True**.
+7.  Click **Add**. Faults for stopped Tenants will be muted.\
+
+
+    <figure><img src="../../.gitbook/assets/image (5) (6).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the SA-12 <strong>Tenant</strong> details page in the DuploCloud Platform</p></figcaption></figure>
+
 ## Creating Alerts <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
 You can set the AWS Alerts for the individual metrics, click on the bell icon on any of the metrics. A form to create an alert shows up. You can provide the necessary information and create the alert.
