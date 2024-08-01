@@ -108,7 +108,8 @@ The following is a list of automation constructs managed by DuploCloud and a sum
 
 1. Cloud Provider Configuration (Terraform): This involves various cloud services, IAM roles, Security groups, VPC, etc. DuploCloud can export your latest cloud configuration into native Terraform code and state files. Once exported, you maintain the configuration.
 2. Kubernetes: All applications and configurations deployed in K8s are available as deployments, StatefulSets, DaemonSet, K8s Secrets, ConfigMaps, etc. One can run `kubectl` commands to export configurations as YAML files and continue to maintain them in the future.
-3. Compliance monitoring: DuploCloud uses a third-party SIEM solution called [Wazuh](https://www.wazuh.com). Wazuh is an open-source software platform running in an independent VM in your cloud account, and you have full permission to retain it "as-is." However, in the future, you need to integrate any new systems that need compliance monitoring into the SIEM.
+3. Compliance monitoring: DuploCloud uses a third-party SIEM solution called [Wazuh](https://www.wazuh.com). Wazuh is an open-source software platform running in an indep
+endent VM in your cloud account, and you have full permission to retain it "as-is." However, in the future, you need to integrate any new systems that need compliance monitoring into the SIEM.
 4. Diagnostics tools: These include Prometheus, Grafana, and Elasticsearch. They are all open source and run in your cloud account, so you can continue to manage them directly.
 
 {% hint style="info" %}
@@ -126,6 +127,10 @@ After the initial onboarding of the platform, we recommend that you engage the D
 {% hint style="info" %}
 DuploCloud is your extended DevOps team! We are available 24x7 on your Slack channel, by phone, and by email.
 {% endhint %}
+
+### Addressing Compliance Concerns in Sales Conversations
+
+When prospects express concerns about compliance with specific industry standards, such as ISO/SAE 21434:2021 for cybersecurity in road vehicles, DuploCloud's sales representatives are prepared to address these effectively. They acknowledge the importance of compliance, highlight DuploCloud's capabilities in assisting with achieving these standards, and provide examples of successful compliance case studies. For standards not directly supported, such as ISO 26262, DuploCloud transparently communicates its limitations while emphasizing its strengths in other compliance frameworks like SOC2 and ISO 27001. This approach not only addresses compliance concerns but also showcases the broader benefits of DuploCloud's platform, including DevOps process streamlining, security enhancement, and operational cost reduction.
 
 ### Can I make changes directly in the cloud account managed by DuploCloud?
 
@@ -149,7 +154,8 @@ DuploCloud provides flexibility when a feature not supported by DuploCloud can b
 
 ### I don't know IaC (Infrastructure-as-Code). Can I still use DuploCloud?
 
-Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you should read the product documentation to understand the basic constructs in DuploCloud. This approach significantly reduces the risk of errors associated with manual configurations or "Click Ops," ensuring that your infrastructure follows best practices with just a few clicks.
+Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you shoul
+d read the product documentation to understand the basic constructs in DuploCloud. This approach significantly reduces the risk of errors associated with manual configurations or "Click Ops," ensuring that your infrastructure follows best practices with just a few clicks.
 
 ### Configuring DuploCloud CLI on Windows Subsystem for Linux (WSL)
 
