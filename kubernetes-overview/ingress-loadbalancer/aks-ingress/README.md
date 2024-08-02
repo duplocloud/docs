@@ -106,21 +106,4 @@ Port **80** is configured by default when adding Ingress. If you want to use a c
 
 When Ingress is configured, you can access Services based on the rules for each **DNS**, displayed on the **Kubernetes** -> **Ingress** page.&#x20;
 
-The image below shows the output for three Services with **Path Type** rules and different DNS names. See the detailed steps to [create Ingress rules](./#configuring-kubernetes-ingress-rules).
-
-<figure><img src="../../../.gitbook/assets/ingress patched.png" alt=""><figcaption><p>The <strong>Kubernetes Ingress</strong> page showing three Ingresses</p></figcaption></figure>
-
-By executing `curl` commands, you can see the difference in the output for each Service. Services are accessed based on the DNS name specified in the DuploCloud Portal and the paths that you configured when you added Ingress rules:
-
-> `>curl http://ig-nev-ingress-ing-t2-1.duplopoc.net/`
->
-> `this is IG-NEV`\
-> \
-> `>curl http://ing-doc-ingress-ing-t2-1.duplopoc.net/`
->
-> `this is ING-DOC`
->
-> \
-> `>curl http://ing-public-ingress-ing-t2.1.duplopoc.net/`
->
-> `this is ING2-PUBLIC`
+<figure><img src="../../../.gitbook/assets/ingress patched.png" alt=""><figcaption><p>The <strong>Kubernetes Ingress</strong> page</p></figcaption></figure>
