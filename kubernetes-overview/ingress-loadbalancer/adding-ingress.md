@@ -24,7 +24,7 @@ Your administrator needs to enable the AWS Application Load Balancer controller 
 4. Select **Enable**.
 5. Click **Set**. In the Settings tab, the **Enable ALB Ingress Controller** setting displays a value of **true**.&#x20;
 
-<figure><img src="../../.gitbook/assets/k8aws10.png" alt=""><figcaption><p><strong>Settings</strong> tab on the <strong>Infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/k8aws10.png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the <strong>Infrastructure</strong> page</p></figcaption></figure>
 
 ### Adding a Load Balancer with Kubernetes NodePort
 
@@ -46,7 +46,7 @@ Add a Load Balancer listener that uses Kubernetes (K8s) NodePort. Kubernetes Hea
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
 6. Complete the other required fields in the **Add Load Balancer Listener** pane and click **Add**. The Load Balancer displays in the **Load Balancers** tab.
 
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_44_43.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab for <strong>filebeat-k8s-duploinfrasvc</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_44_43.png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab for the <strong>filebeat-k8s-duploinfrasvc</strong> Service</p></figcaption></figure>
 
 ### Add Kubernetes Ingress
 
@@ -123,24 +123,9 @@ DuploCloud Platform supports defining multiple paths in Ingress. For example, yo
 
 ## Viewing Ingress
 
-When Ingress is configured, you can access Services based on the rules for each **DNS**, displayed on the **Kubernetes** -> **Ingress** page.&#x20;
+When Ingress is configured, you can view details on the **Kubernetes** -> **Ingress** page.&#x20;
 
-In this example, we display the output for three services with **Path Type** rules and different DNS names. See the [previous example](adding-ingress.md#add-rules-to-kubernetes-ingress-and-complete-ingress-setup) for detailed steps to create Ingress rules.
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-15_06_22.png" alt=""><figcaption><p> <strong>Ingress</strong> page with multiple Ingresses</p></figcaption></figure>
 
 
-
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-15_06_22.png" alt=""><figcaption><p> <strong>Ingress</strong> page with multiple Ingresses for specific DNS names.</p></figcaption></figure>
-
-By executing `curl` commands, you can see the difference in the output for each service in this example. Configured services are accessed based on the DNS name specified in the DuploCloud Portal and the paths you specified when adding Ingress rules.
-
-> `>curl http://ig-nev-ingress-ing-t2-1-duplopoc.net/`_`path-x`_`/`\
-> `this is service1`\
-> \
-> `>curl http://ing-doc-ingress-ing-t2-1-duplopoc.net/`_`path-y`_`/`\
-> `this is service2`
->
-> \
-> `>curl http://ing-public-ingress-ing-t2.1.duplopoc.net/`_`path-z`_`/`
->
-> `this is ING2-PUBLIC`
 
