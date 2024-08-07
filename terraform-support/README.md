@@ -1,6 +1,6 @@
 ---
 description: Information about working with DuploCloud's Terraform provider
-cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (9).png
+cover: ../.gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
   cover:
