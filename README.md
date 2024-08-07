@@ -1,5 +1,5 @@
 ---
-description: A brief overview of the services DuploCloud provides
+description: An overview and demo of DuploCloud services
 cover: .gitbook/assets/Twitter - G2 Awards.png
 coverY: 0
 layout:
@@ -21,6 +21,8 @@ layout:
 # Overview
 
 DuploCloud is a cloud infrastructure automation platform that enables developer self-service with built-in security and compliance for organizations hosting public cloud infrastructure.&#x20;
+
+DuploCloud is a cloud infrastructure automation platform that enables developers to self-service with built-in security and compliance for organizations that host infrastructure on the public cloud.&#x20;
 
 You provide high-level application specifications, including cloud services, application containers, packages and configurations, interconnectivity, requirements for multiple environments, and scoped compliance standards. DuploCloud uses these specifications to auto-generate required lower-level configurations, provisioning them securely and compliantly while maintaining ongoing operations.&#x20;
 

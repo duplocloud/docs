@@ -4,6 +4,9 @@ description: Tasks to perform before you use AWS with DuploCloud
 
 # Prerequisites
 
-Before using DuploCloud, ensure the following prerequisites are met.&#x20;
+* [Route 53 Hosted Zone](../../overview/prerequisites/route-53-hosted-zone.md)
+* [ACM Certificate](acm-certificate.md)
+* [Shell access for Docker or ECS](../../overview/prerequisites/kubectl-shell.md)
+* [VPN setup](../../overview/prerequisites/vpn-setup.md)
+* [Connect to the VPN](connect-to-the-vpn.md)
 
-Read the [Access Control](../../access-control/) section to ensure at least one person has administrator access.

@@ -23,7 +23,7 @@
   * [Prerequisites](aws-user-guide/prerequisites/README.md)
     * [Route 53 Hosted Zone](overview/prerequisites/route-53-hosted-zone.md)
     * [ACM Certificate](aws-user-guide/prerequisites/acm-certificate.md)
-    * [Shell access for Docker or ECS](overview/prerequisites/kubectl-shell.md)
+    * [Shell Access for Docker or ECS](overview/prerequisites/kubectl-shell.md)
     * [VPN Setup](overview/prerequisites/vpn-setup.md)
     * [Connect to the VPN](aws-user-guide/prerequisites/connect-to-the-vpn.md)
   * [AWS Quick Start](overview/quick-start/README.md)
