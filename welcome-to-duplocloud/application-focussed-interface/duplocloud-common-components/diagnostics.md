@@ -1,16 +1,31 @@
+---
+description: An overview of DuploCloud diagnostics
+---
+
 # Diagnostics
 
-The DuploCloud platform automatically orchestrates three main diagnostic functions:
+## DuploCloud Diagnostics Functions
 
-* **Central Logging:** A shared Elasticsearch cluster is deployed and file beat is installed in all worker nodes to fetch the logs from various applications across tenants. The logs are injected with metadata corresponding to Tenant name, service name, container ID, Host name, etc. Further, each tenant has the central logging dashboard which includes the Kibana view of the logs from applications within the service. See the screenshot below:
+The DuploCloud platform automatically orchestrates the following main diagnostic functions:
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_52_27.png" alt=""><figcaption></figcaption></figure>
+### **Central Logging**
 
-* **Metrics**: Metrics are fetched from hosts, containers, and cloud services like ELB, RDS, Redis, etc., and displayed in Grafana. Behind the scenes, for cloud services, these are collected by calling cloud provider APIs like CloudWatch and Azure Mon, while for nodes and containers, this is done using Prometheus, Node Exporter, and cAdvisor. Again, the dashboards are Tenant-centric and segregated per application and cloud service as shown in the picture below:
+A shared Elasticsearch cluster is deployed and Filebeat is installed in all worker nodes to fetch logs from various applications across Tenants. The logs are injected with metadata corresponding to the Tenant, Service, container ID, Host, etc. Further, each Tenant has a central logging dashboard which includes the Kibana view of logs from applications within the Service. See the screenshot below:
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_54_52.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_52_27.png" alt=""><figcaption><p>The <strong>Logging</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>
 
-* **Alarms and Faults**: The platform creates faults for many failures automatically, such as Health check, container crashes, node crashes, deployment failures, etc. Further, users can easily set alarms on cloud services like CPU and Memory on EC2 instances, Free Disk space in RDS database, etc. All failures are displayed as faults per tenant. Sentry and Pager Duty projects can be linked to each tenant and DuploCloud will send these faults there so the user can set notification configurations.
-* **Audit Trail:** An audit trail of all changes made to the system are logged in Elasticsearch where these can be audited using high level constructs like changes by tenant, by service, by change type, by user and dozens of other such filters.
+### **Metrics**
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_56_17.png" alt=""><figcaption></figcaption></figure>
+Metrics are fetched from Hosts, containers, and Services and displayed in Grafana. Services metrics are collected behind the scenes by calling cloud provider APIs like CloudWatch and Azure Monitor. For nodes and containers, metrics are collected using Prometheus, Node Exporter, and cAdvisor. The Metrics dashboards are Tenant-centric and segregated per application and Service as shown in the image below:
+
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_54_52.png" alt=""><figcaption><p>The <strong>Nodes</strong> tab on the <strong>Metrics</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>
+
+### **Alarms and Faults**
+
+The platform creates faults for many failures automatically. For example, health check failures, container crashes, node crashes, deployment failures, etc. Further, users can easily set alarms like CPU and memory for EC2 instances or free disk space for RDS databases. Failures are displayed as faults under their respective Tenant. Sentry and Pager Duty projects can be linked to Tenants, and DuploCloud will send faults there so the user can set notification configurations.
+
+### **Audit Trail**
+
+All system changes are logged in an audit trail in Elasticsearch where they can be sorted and viewed by Tenant, Service, change type, user, and dozens of other filters.
+
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_56_17.png" alt=""><figcaption><p>The <strong>Audit</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>

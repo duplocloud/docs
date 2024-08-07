@@ -1,10 +1,16 @@
+---
+description: A conceptual overview of DuploCloud Services
+---
+
 # Services
 
-A Service could be a Kubernetes Deployment, StatefulSet, or DaemonSet. It can also be a Lambda function or an ECS task or service, capturing a microservice. Each service (except Lambda) is given a load balancer to expose itself and assigned a DNS name.
+A Service could be a Kubernetes Deployment, StatefulSet, or DaemonSet. It can also be a Lambda function or an ECS task or service, capturing a microservice. Each service (except Lambda) is given a Load Balancer to expose itself and is assigned a DNS name.
 
 {% hint style="info" %}
-DuploCloud Service should not be confused with a Kubernetes or ECS service. By service, we mean application components that can be either Docker-based or serverless.
+DuploCloud Services should not be confused with Kubernetes or ECS services. By Service, we mean application components that can be either Docker-based or serverless.
 {% endhint %}
+
+## DuploCloud Supported Services
 
 For information on cloud-specific Services supported by DuploCloud, see:
 
@@ -12,18 +18,20 @@ For information on cloud-specific Services supported by DuploCloud, see:
 * [Azure Services](../../../overview-2/azure-services/)
 * [GCP Services](../../../overview-1/gcp-services/)
 
+DuploCloud supports a simple, application-specific interface to configure dozens of cloud services, such as S3, SNS, SQS, Kafka, Elasticsearch, Data Pipeline, EMR, SageMaker, Azure Redis, Azure SQL, Google Redis, etc. Almost all commonly used services are supported, and new ones are constantly added. DuploCloud Engineers fulfill most requests for new services within days, depending on their complexity.
+
+All services and cloud features are created within a [Tenant](tenant.md). While users specify application-level constructs for provisioning cloud resources, DuploCloud implicitly adds all the underlying DevOps and compliance controls.
+
 Below is an image of some properties of a service:
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_45_12.png" alt=""><figcaption></figcaption></figure>
-
-**Cloud Services:** DuploCloud supports a simple application-specific interface to configure dozens of cloud services, such as S3, SNS, SQS, Kafka, Elasticsearch, Data Pipeline, EMR, Sagemaker, Azure Redis, Azure SQL, Google Redis, etc. Almost all commonly used services are supported, and new ones are constantly added. A typical request to support a new service takes the DuploCloud team a matter of days, depending on the complexity of the service.
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_45_12.png" alt=""><figcaption><p>The <strong>Add Service</strong> page in the DuploCloud Platform</p></figcaption></figure>
 
 {% hint style="info" %}
-While users specify application-level constructs for provisioning cloud resources, DuploCloud implicitly adds all the underlying DevOps and compliance controls.
+
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_49_52.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_49_52.png" alt=""><figcaption><p>The <strong>SNS Topic</strong>, <strong>App Integration</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 {% hint style="info" %}
-**IMPORTANT:** All services and cloud features are created within a [Tenant](tenant.md).
+
 {% endhint %}

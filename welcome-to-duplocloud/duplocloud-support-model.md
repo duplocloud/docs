@@ -1,41 +1,41 @@
 ---
 description: >-
-  Support feature included with the product and how to contact DuploCloud
+  Support features included with the product and how to contact DuploCloud
   Support
 ---
 
 # DuploCloud Support
 
-DuploCloud offers hands-on 24/7 Support for all customers via Slack or email as part of your subscription. Automation and Developer Self-Service are at the heart of the DuploCloud platform.  We are dedicated to helping you achieve hands-off automation in the fastest time possible, via rapid deployment of managed service or customized Terraform scripts using our exclusive Terraform provider.
+DuploCloud offers hands-on 24/7 support for all customers via Slack or email as part of your subscription. Automation and developer self-service are at the heart of the DuploCloud Platform.  We are dedicated to helping you achieve hands-off automation as fast as possible via rapid deployment of managed services or customized Terraform scripts using our exclusive Terraform provider.
 
-## How to contact DuploCloud for support
+## How to Contact DuploCloud for Support
 
-* Use the customer Slack or Microsoft Teams channel created during the Onboarding process.
-* Send us an email at support@duplocloud.net.
+* Use the customer Slack or Microsoft Teams channel created during onboarding.
+* Email us at support@duplocloud.net.
 
-## Included Support features
+## Included DuploCloud Support Features
 
-Some of the ways we support our customers in real-time include, but are not limited to:
+Some of the things we support our customers with in real time include:
 
-* Any configuration changes in your public cloud infrastructures and associated Kubernetes (K8s) constructs that are managed by DuploCloud
-* Hands-on support for setting up CI/CD pipelines
+* Configuring changes in your public cloud infrastructures and associated Kubernetes (K8s) constructs managed by DuploCloud
+* Setting up CI/CD pipelines
 * Cloud Migration from any existing platform
 * Proactive, tailored EKS cluster upgrades designed for minimum downtime impact
 * Accelerated onboarding of existing Services
-* Troubleshooting and debugging&#x20;
-  * Apps and services crashing&#x20;
+* Troubleshooting and debugging for:
+  * Apps and Services crashing&#x20;
   * OpenSearch or database instances slow or crashing
-  * Proof-of-Concepts (PoCs) for third-party integrations, including roll-out to development environment
-  * Downtime during Rolling Upgrades
-  * Increases in billing by your public cloud provider that need investigation and clarification. Many times DuploCloud can suggest a more cost-effective alternative.
+  * Proof-of-Concepts (PoCs) for third-party integrations, including roll-out to the development environment
+  * Downtime during rolling Upgrades
+  * Investigation and clarification of public cloud provider billing increases. Many times DuploCloud can suggest a more cost-effective alternative
   * Consolidation of third-party tools for which you currently subscribe that are included with your DuploCloud subscription
   * Adding a CI/CD pipeline for a new service
 
-### What DuploCloud does not support or supports conditionally
+### What DuploCloud Does not Support or Supports Conditionally
 
-We cover most of your DevOps needs, but there are some we do not cover or only partially support. Some examples of these include, but are not limited to:
+We cover most of your DevOps needs, but there are some. Examples of needs we do not or only partially support include, but are not limited to:
 
 * Patching an application inside a Docker image
 * Monitoring alerts in a Network Operations Center (NOC)&#x20;
-* Troubleshooting of application code
+* Troubleshooting application code
 * Database configuration
