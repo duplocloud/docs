@@ -1,25 +1,27 @@
+---
+description: A conceptual overview of DuploCloud Plans
+---
+
 # Plan
 
 ## DuploCloud Plans
 
-Corresponding to each Infrastructure is the concept of a Plan. When you create an[ Infrastructure](infrastructure.md) in DuploCloud, a Plan is automatically generated. A Plan is a placeholder or a template for configurations. These configurations are consistently applied to all Tenants within the Plan (or Infrastructure). Examples of such configurations are:
+When you create an[ Infrastructure](infrastructure.md) in DuploCloud, a Plan is automatically generated. A Plan is a placeholder or a template for configurations. These configurations are consistently applied to all Tenants within the Plan (or Infrastructure). Examples of such configurations are:
 
-* Certificates available to be attached to Load Balancers in Tenants of this Plan
+* Certificates available to be attached to Load Balancers in the Plan's Tenants
 * Machine images
 * WAF web ACLs
-* Common IAM policies and SG rules to be applied to all resources in Tenants within the Plan
-* Unique or shared DNS domain name where applications provisioned in Tenants within the Plan can have a unique DNS name in this domain
-* Resource Quota: The plan also has a resource quota that is enforced in each of the Tenants within that Plan
+* Common IAM policies and SG rules to be applied to all resources in the Plan's Tenants
+* Unique or shared DNS domain names where applications provisioned in the Plan's Tenants can have a unique DNS name in the domain
+* Resource Quota that is enforced in each of the Plan's Tenants
 * DB Parameter Groups
-* Several policies and feature flags are to be applied at the infrastructure level on Tenants within the Plan
+* Policies and feature flags applied at the Infrastructure level on the Plan's Tenants
 
 The figure below shows a screenshot of the plan constructs:
 
-![](<../../../.gitbook/assets/Screen Shot 2022-03-12 at 8.12.26 PM.png>)
+![The Capabilities tab for the DEMO Plan in the DuploCloud Portal](<../../../.gitbook/assets/Screen Shot 2022-03-12 at 8.12.26 PM.png>)
 
-
-
-## DuploCloud Plans and DNS considerations
+## DuploCloud Plans and DNS Considerations
 
 When creating DuploCloud Plans and DNS names, consider the following to prevent DNS issues:
 
