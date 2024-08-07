@@ -1,5 +1,5 @@
 ---
-description: New DuploCloud features and enhancements
+description: New features and enhancements in DuploCloud
 cover: .gitbook/assets/GitHub - Great Place to Work Badge (1) (1).png
 coverY: 0
 layout:

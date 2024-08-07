@@ -1,5 +1,5 @@
 ---
-description: An overview of the DuploCloud approach
+description: An outline of the DuploCloud approach in comparison to existing DevOps
 cover: ../.gitbook/assets/GitHub - Great Place to Work Badge.png
 coverY: 0
 layout:
@@ -20,8 +20,6 @@ layout:
 
 # Getting Started with DuploCloud
 
-This module describes DuploCloud and its unique constructs and terminology. It also outlines the onboarding process and details the business value of automating your DevOps and Security Compliance cloud environments in the DuploCloud Portal.
-
 ## **Existing Approach**
 
 Technology organizations today typically have people with two distinct skill sets: Software Engineers and DevOps Engineers. Compliance functions may be managed by these engineers or by a separate team. In startups and smaller companies, engineers may wear all three hats.
@@ -38,7 +36,7 @@ DevOps essentially requires one to be a programmer, an operator, and a complianc
 
 ## **DuploCloud Approach**
 
-&#x20;DuploCloud simplifies and automates cloud infrastructure management by enabling users to deploy and operate applications without knowledge of lower-level DevOps nuances. The platform requires only three high-level inputs:
+DuploCloud simplifies and automates cloud infrastructure management by enabling users to deploy and operate applications without knowledge of lower-level DevOps nuances. The platform requires only three high-level inputs:
 
 1\.     Application architecture
 

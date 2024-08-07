@@ -1,5 +1,5 @@
 ---
-description: An overview of the container orchestration technologies DuploCloud supports
+description: Multiple container orchestration technologies for ease of consumption
 cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (3).png
 coverY: 0
 layout:
@@ -24,9 +24,9 @@ Most application workloads deployed on DuploCloud are in Docker containers. The 
 
 Among the technologies DuploCloud supports are:
 
-* **Kubernetes**: On AWS, DuploCloud supports orchestration using Elastic Kubernetes Service (EKS). On GCP we support GKE autopilot and node-pool based. On Azure, we support AKS and Azure web apps.&#x20;
-* **Built-in (DuploCloud)**: The DuploCloud Platform's Built-in container management has the same interface as the `docker run` command, but it can be scaled to manage hundreds of containers across many Hosts, providing capabilities such as associated Load Balancers, DNS, and more.
-* **AWS ECS Fargate**: Fargate is a technology you can use with Elastic Container Service (ECS) to run containers without managing servers or clusters of EC2 instances.&#x20;
+* **Kubernetes**: On AWS, DuploCloud supports orchestration using Elastic Kubernetes Service (EKS). On GCP we support GKE auto pilot and node-pool based. On Azure we support AKS and Azure web apps.&#x20;
+* **Built-in (DuploCloud)**: DuploCloud platform's Built-in container management has the same interface as the `docker run` command, but it can be scaled to manage hundreds of containers across many hosts, providing capabilities such as associated load balancers, DNS, and more.
+* **AWS ECS Fargate**: Fargate is a technology you can use with Elastic Container Service (ECS) to run containers without having to manage servers or clusters of EC2 instances.&#x20;
 
 ## Container Orchestration Feature Matrix
 
