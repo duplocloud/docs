@@ -1,6 +1,6 @@
 ---
 description: Multiple container orchestration technologies for ease of consumption
-cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (3).png
+cover: ../.gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
   cover:
