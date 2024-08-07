@@ -1,6 +1,6 @@
 ---
 description: An overview and demo of DuploCloud services
-cover: .gitbook/assets/Twitter - G2 Awards.png
+cover: .gitbook/assets/duplocloud-blog-cover.png
 coverY: 0
 layout:
   cover:

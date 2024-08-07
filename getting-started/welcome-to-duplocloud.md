@@ -1,6 +1,6 @@
 ---
 description: An outline of the DuploCloud approach in comparison to existing DevOps
-cover: ../.gitbook/assets/GitHub - Great Place to Work Badge.png
+cover: ../.gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
   cover:
