@@ -2,7 +2,7 @@
 
 * [Overview](README.md)
 * [FAQs](faq.md)
-* [Product updates](product-updates.md)
+* [Product Updates](product-updates.md)
 * [Getting Started with DuploCloud](getting-started/welcome-to-duplocloud.md)
   * [DuploCloud Onboarding](welcome-to-duplocloud/duplocloud-onboarding.md)
   * [Application Focused Interface: DuploCloud Architecture](welcome-to-duplocloud/application-focussed-interface/README.md)
