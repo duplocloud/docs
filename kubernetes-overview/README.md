@@ -1,6 +1,6 @@
 ---
 description: Kubernetes features in the DuploCloud Portal
-cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (8).png
+cover: ../.gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
   cover:

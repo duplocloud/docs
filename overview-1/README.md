@@ -1,6 +1,6 @@
 ---
 description: Using DuploCloud with Google Cloud Platform
-cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (5).png
+cover: ../.gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
   cover:

@@ -1,6 +1,6 @@
 ---
 description: Continuous monitoring of your cloud infrastructure in the DuploCloud Portal
-cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (13).png
+cover: ../.gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
   cover:

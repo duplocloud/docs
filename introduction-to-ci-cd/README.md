@@ -2,7 +2,7 @@
 description: >-
   Ensuring continuous integration, delivery, and deployment of your Cloud
   applications
-cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (11).png
+cover: ../.gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
   cover:
