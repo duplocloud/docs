@@ -148,12 +148,12 @@ For resources that DuploCloud does not manage directly, you change directly in y
 For resources that DuploCloud manages, DuploCloud automatically detects conflicts and either reverts changes or raises an alert about inconsistencies.
 
 {% hint style="info" %}
-DuploCloud provides flexibility when a feature not supported by DuploCloud can be programmed directly in your cloud provider. If you are using Terraform, then the DuploCloud provider and the native cloud provider can be used in tandem. For an example of this use case, see [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS).
+DuploCloud provides flexibility when a feature not supported by DuploCloud can be programmed directly in your cloud provider. If you are using Terraform, then the DuploCloud provider and the native cloud provider can be used in tandem. For an example of this use case, see [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS). Additionally, for specific needs such as creating short-lived one-shot ECS tasks, which are not directly supported through the Duplo UI or Terraform provider, DuploCloud offers the capability via its API. This approach has been utilized by customers for tasks like database migrations on ECS, showcasing the platform's adaptability to unique operational requirements.
 {% endhint %}
 
 ### I don't know IaC (Infrastructure-as-Code). Can I still use DuploCloud?
 
-Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you shoul d read the product documentation to understand the basic constructs in DuploCloud. This approach significantly reduces the risk of errors associated with manual configurations or "Click Ops," ensuring that your infrastructure follows best practices with just a few clicks.
+Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you should read the product documentation to understand the basic constructs in DuploCloud. This approach significantly reduces the risk of errors associated with manual configurations or "Click Ops," ensuring that your infrastructure follows best practices with just a few clicks.
 
 ### Configuring DuploCloud CLI on Windows Subsystem for Linux (WSL)
 
@@ -170,7 +170,8 @@ DuploCloud's No Code platform is designed to ensure correctness and enforce best
 Terraform projects typically have a broad scope with multiple components. Sometimes, you must make small targeted changes (for example, a health check URL change). But when the change is being executed, there may be other drifts, and the user may be forced to resolve them. This can be inconvenient, and often, the user will change the UI, resulting in further configuration drifts.
 
 {% hint style="info" %}
-About half of our customer base uses no-code, while the other half uses Terraform. Ironically, software developer-centric companies prefer no-code because it enables engineers to be agile and focus on their application code. By contrast, the low-code Terraform provider is often used in DevOps-centric organizations.
+About half of our customer base uses no-code, while the other half uses Terraform. Ironically, software developer-centric companies prefer no-code because it enables engineers to be agile and focus on their application code. By contrast, the low-code Terraform provider offers a different kind of flexibility, allowing for the integration of unique solutions like the creation of short-lived one-shot ECS tasks through the API, demonstrating the platform's versatility in accommodating diverse operational needs.
+{% endhint %}der is often used in DevOps-centric organizations.
 {% endhint %}
 
 ### How is the DuploCloud subscription cost calculated?
