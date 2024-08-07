@@ -45,9 +45,9 @@ DuploCloud supports the following:
 * Google Cloud
 * On-Premises
 
-### What support features come with my DuploCloud subscription
+### What support features come with my DuploCloud subscription?
 
-See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.
+See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us. For more detailed inquiries or assistance, including DuploCloud's DevOps automation platform capabilities, compliance, AWS services like Kinesis stream, and product updates, refer to the official documentation and whitepapers available on DuploCloud's website.
 
 ### How much will DuploCloud add to my company's cloud budget?
 
@@ -80,7 +80,7 @@ No. DuploCloud is a self-hosted solution deployed within the customer's cloud ac
 
 Even though the onboarding process can take thirty to seventy (30-70) hours, the DuploCloud staff performs about 90% of the work for you. Feel free to contact our Support staff anytime with questions or concerns.
 
-In addition, during setup, we perform penetration testing and vulnerability assessments for your applications. Using our SIEM solution, we assess the vulnerabilities of DuploCloud Hosts in the Infrastructure.
+In addition, duringg setup, we perform penetration testing and vulnerability assessments for your applications. Using our SIEM solution, we assess the vulnerabilities of DuploCloud Hosts in the Infrastructure.
 
 ### How is DuploCloud Portal accessing my cloud infrastructure, and how is it secured?
 
