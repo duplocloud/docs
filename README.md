@@ -2,8 +2,22 @@
 description: >-
   DuploCloud is a cloud infrastructure automation platform that enables
   developers to self-service with built-in security and compliance.
-cover: .gitbook/assets/Twitter - G2 Awards.png
+cover: .gitbook/assets/duplocloud-blog-cover.png
 coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Overview
