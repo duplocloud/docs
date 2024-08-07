@@ -1,6 +1,6 @@
 ---
-description: New features and enhancements in DuploCloud
-cover: .gitbook/assets/Linkedin-bannerV2 (1).png
+description: New DuploCloud features and enhancements
+cover: .gitbook/assets/GitHub - Great Place to Work Badge (1) (1).png
 coverY: 0
 layout:
   cover:
@@ -18,7 +18,7 @@ layout:
     visible: true
 ---
 
-# Product updates
+# Product Updates
 
 ## Q2 2024
 
@@ -26,7 +26,7 @@ layout:
   * Configure [admin-only access to the SSH key](overview/use-cases/hosts-vms/ssh-ec2-instance.md#configuring-admin-only-access-to-the-ssh-key).
   * Support for[ secondary indexes](aws-user-guide/aws-services/database/dynamodb.md#adding-dynamodb-database-tables) when using DynamoDB databases.
   * [Set a maximum RDS instance size ](overview/aws-services/database/rds-database/restrict-rds-instance-size.md)in Systems Settings.
-  * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md) has been added.
+  * [Support for editing in Apache Airflow](overview/aws-services/managed-airflow.md).
   * Set up [Billing Alerts](overview/use-cases/cost-management/configure-billing-alerts.md).
   * [Specify a Lambda architecture](overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
   * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.&#x20;
@@ -43,7 +43,7 @@ layout:
   * Specify the [node resource group](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md) when configuring an AKS cluster.
   * [Specify a computer name](overview-2/use-cases/hosts-vms/#adding-a-host-vm) when creating a Host.&#x20;
 * GCP
-  * Select [single, or multi-region data location types](overview-1/gcp-services/s3-bucket-2.md#creating-a-gcp-cloud-storage-bucket) for Google Cloud Storage buckets.&#x20;
+  * Select [single, or multi-region data location types](overview-1/gcp-services/s3-bucket-2.md#creating-a-gcp-cloud-storage-bucket) for GCP Storage buckets.&#x20;
   * Configure the [minimum number of ports per VM instance](overview-1/use-cases/hosts-vms.md#increasing-minimum-ports-per-vm-instance-gke-standard).
 * Kubernetes
   * Create and manually run a [K8s Job](kubernetes/jobs.md) from a Kubernetes CronJob.
@@ -51,7 +51,7 @@ layout:
   * Support for [DaemonSet](https://docs.duplocloud.com/docs/kubernetes-overview/daemonset#creating-a-daemonset-in-duplocloud-aws-or-gcp) with GCP or AWS.&#x20;
 * General
   * [Configure Okta](extras-overview/okta-user-management.md) as a user source for the DuploCloud Portal.
-  * [Customize the text on the log-in button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
+  * [Customize the text on the login button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
 ## Q1 2024
 
@@ -88,7 +88,7 @@ layout:
   * [Customize the DuploCloud login screen banner.](extras-overview/login-banner-customization.md)
   * [Set Tenants to expire](overview/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
   * Configure settings for all new Tenants under a Plan using [Tenant Config tab](overview/use-cases/tenant-environment/tenant-config-settings.md).
-  * SIEM - [Configure agents to install on specific Tenants](broken-reference).
+  * SIEM - [Configure agents to install on specific Tenants.](security-and-compliance/access-control-3/agent-management.md#agent-setup)
 
 ## Q4 2023
 
@@ -96,11 +96,11 @@ layout:
   * Enable [Spot Instances](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md) for EKS Autoscaling Groups (ASG).
   * Implement [Kubernetes Lifecycle Hooks](kubernetes-overview/kubernetes-lifecycle-hooks.md) while Adding a DuploCloud EKS/Native Service.&#x20;
   * Enable [shared hosts](overview/use-cases/hosts-vms/adding-shared-hosts.md) to allow K8s Pods in a Tenant to run on Hosts in another Tenant.&#x20;
-  * Set a [default automated backup retention period](aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#id-0-toc-title-1) for databases.
+  * Set a [default automated backup retention period](aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#id-0-toc-title-1) for RDS databases.
   * Enable bucket versioning when [creating an S3 bucket](overview/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
   * Create an [Amazon Machine Image (AMI)](overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md).
   * Use [dedicated hosts](overview/use-cases/hosts-vms/adding-dedicated-hosts.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server.
-  * [Automatically reboot a host](overview/use-cases/hosts-vms/configure-auto-reboot.md) upon StatusCheck faults or Host disconnection.
+  * [Automatically reboot a host](overview/use-cases/hosts-vms/configure-auto-reboot.md) upon Status Check faults or Host disconnection.
   * Support for [SNS Topic Alerts](overview/use-cases/faults-and-alarms/sns-topic-alerts.md), enabling notifications and alerts across different AWS services and external endpoints.
   * [Establish VPN connections for private endpoints](overview/use-cases/creating-an-infrastructure-and-plan-for-aws/kubernetes-cluster/enable-eks-endpoints.md#enabling-vpn-for-private-visibility-optional) when creating an Infrastructure.
   * Restore an [RDS to a particular point in time](aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#restoring-snapshots-to-a-point-in-time).
@@ -113,11 +113,11 @@ layout:
   * [Follow logs](overview/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for K8s containers in real-time.&#x20;
   * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](kubernetes-overview/pod-toleration.md).&#x20;
   * Create [Kubernetes Jobs (K8s Jobs)](kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
-  * Create [Kubernetes CronJobs (K8s CronJobs)](kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
+  * Create [Kubernetes CronJobs](kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 *   General updates
 
-    * The DuploCloud UI contains numerous design, navigational, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
-    * Quickly search the DuploCloud Portal for any navigation menus or tab labels, such as **Kubernetes Secrets** and **Spend by Month**, by using the **Search** box at the top center of the DuploCloud Portal.\
+    * The DuploCloud UI contains numerous design, navigation, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
+    * Quickly search the DuploCloud Portal for any navigation menus or tab labels, such as **Kubernetes Secrets** and **Spend by Month**, using the **Search** box at the top center of the DuploCloud Portal.\
 
 
     <div align="left">
@@ -126,7 +126,7 @@ layout:
 
     </div>
 
-    * Use the [Supported Third-Party Tools](extras-overview/supported-third-party-tools.md) page for a list of functionality supported by DuploCloud, out-of-the-box.
+    * Refer to the [Supported Third-Party Tools](extras-overview/supported-third-party-tools.md) page for a list of out-of-the-box functionalities DuploCloud supports.
     * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
 
 ## August 2023 and September 2023
@@ -188,7 +188,7 @@ layout:
   * Support for [Aurora RDS Serverless and MySQL read replicas](overview/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md) and ability to modify Serverless replica instance size.
   * Improved documentation for [upgrading an EKS cluster version](overview/use-cases/creating-an-infrastructure-and-plan-for-aws/upgrading-eks-version.md).
 * Azure
-  * [Add a direct link to the Azure Console ](overview-2/use-cases/azure-portal-link.md)from a DuploCloud **Host** page **Actions** Menu.
+  * [Add a direct link to the Azure Console ](overview-2/use-cases/azure-portal-link.md)from the DuploCloud **Host** page.
 * General Updates
   * [Set read-only access to specific Tenants](access-control/tenant-access/read-only-access-to-a-tenant.md) for DuploCloud users.
 
@@ -200,13 +200,13 @@ layout:
   * DuploCloud users can obtain [Just-In-Time (JIT) access](aws-user-guide/use-cases/jit-access.md) to the AWS Console.
   * [AWS SQS Standard and FIFO queues](overview/aws-services/sqs-queue.md) are now supported.
   * Use the DuploCloud Portal to work with AWS [Internet of Things (IoT)](overview/aws-services/iot-internet-of-things.md).
-  * Support for [Redis database versions](overview/aws-services/database/elastic-cache.md) when creating Elastic Cache (Ecache).
+  * Support for Redis database versions when [creating Elastic Cache (Ecache)](overview/aws-services/database/elastic-cache.md).
   * Enable [shell access for ECS, Kubernetes, and Native docke](overview/prerequisites/kubectl-shell.md)r containers using a simplified workflow.
   * Reduce storage cost and increase performance by [setting GP3 as your default storage class](overview/aws-services/storage/gp3-storage-class.md).
   * Enable [NAT Gateways for High Availability (HA)](aws-user-guide/aws-services/nat-gateway-for-ha.md).
   * [Restart up to twenty DuploCloud Services](overview/aws-services/containers/#7-toc-title-1) at once.
 * GCP
-  * Updated documentation for [supported databases](broken-reference).
+  * Updated documentation for supported databases.
 * CI/CD
   * Documentation for [Bitbucket Pipelines](introduction-to-ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
 * Terraform&#x20;
@@ -223,19 +223,19 @@ layout:
 ## December 2022 and January 2023
 
 * AWS
-  * AWS ElastiCache, a managed caching service for Redis and Memcached, is now supported.&#x20;
-  * Monitor Tenant usage in [Cost Management for billing](overview/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, you can also select the **shared** card to display tax and support costs.
+  * [AWS ElastiCache](overview/aws-services/database/elastic-cache.md), a managed caching service for Redis and Memcached, is now supported.&#x20;
+  * Monitor Tenant usage in [Cost Management for billing](overview/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, select the **shared** card to display tax and support costs.
   * Maintain cluster stability with [Ingress Health Checks annotations](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).&#x20;
   * Use the [K8s Admin dashboard to monitor StatefulSets](overview/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * [Force creation of StatefulSets](overview/aws-services/containers/#5-toc-title).
 * Azure
-  * Support for [Kubernetes Ingress](broken-reference).
+  * Support for [Kubernetes Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/).
   * Monitor Tenant usage in the [Cost Management for billing ](overview-2/use-cases/billing-and-cost-management/cost-management.md)feature with weekly or monthly views.
   * Edit [Azure agent pools](overview-2/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 * GCP
   * Monitor Tenant usage in the [Cost Management for billing](overview-1/use-cases/cost-management/) feature with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
-  * Support for Kubernetes Ingress in [Azure](broken-reference).
+  * Support for [Kubernetes Ingress in Azure](kubernetes-overview/ingress-loadbalancer/aks-ingress/).
   * Maintain cluster stability with [Ingress Health Checks annotations](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
   * [Force creation of StatefulSets in AWS](overview/aws-services/containers/#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](overview/use-cases/monitoring/kubernetes-administrator-dashboard.md).
@@ -271,8 +271,8 @@ layout:
 
 ## July 2022
 
-* [Ability to Automatically generate Alert](https://docs.duplocloud.com/docs/aws/use-cases/alerting-and-notifications/automatic-alert-creation):  Users can now configure automated alarm creation in AWS, to make sure any new resource added to their environment is not missed from monitoring.
-* [Ability to set resource allocation quotas by an Admin](https://docs.duplocloud.com/docs/aws/use-cases/resource-quotas): Administrators would often like to restrict the type of resources that should or should not be provisioned in their environments. This feature allows them a way to configure those rules via a DuploCloud Plan.
+* [Ability to Automatically generate Alert](https://docs.duplocloud.com/docs/aws/use-cases/alerting-and-notifications/automatic-alert-creation):  Users can now configure automated alarm creation in AWS, to ensure new resources are included in monitoring.
+* [Ability to set resource allocation quotas by an Admin](https://docs.duplocloud.com/docs/aws/use-cases/resource-quotas): Administrators would often like to restrict the type of resources that should or should not be provisioned in their environments. This feature allows them to configure those rules via a DuploCloud Plan.
 * [Support for Kubernetes Ingress Controller](https://docs.duplocloud.com/docs/aws/aws-services/containers): Support for the K8s Ingress controller has been added, this is a key piece of functionality for traffic routing to a K8s cluster.
-* [RDS Snapshot Management](https://docs.duplocloud.com/docs/aws/aws-services/rds-database/manage-rds-snapshots):  Support to manage RDS database snapshot was added to the Portal, accessible through the RDS page.
+* [RDS Snapshot Management](https://docs.duplocloud.com/docs/aws/aws-services/rds-database/manage-rds-snapshots):  Support for RDS database snapshots was added to the DuploCloud Portal, accessible through the RDS page.
 * [Terraform Provider updates](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs): Expanded support for more resources in the DuploCloud terraform provider, specifically for Microsoft Azure.&#x20;
