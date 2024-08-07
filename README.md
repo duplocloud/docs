@@ -22,17 +22,17 @@ layout:
 
 # Overview
 
-DuploCloud is a platform that enables security and compliance for engineers and operators in organizations that host infrastructure on the public cloud.&#x20;
+You provide high-level application specifications, including cloud services, application containers, packages and configurations, interconnectivity, requirements for multiple environments, and scoped compliance standards. DuploCloud uses these specifications to auto-generate required lower-level configurations, provisioning them securely and compliantly while maintaining ongoing operations.&#x20;
 
-You provide high-level application specifications, including cloud services, application containers, packages and configurations, interconnectivity, requirements for multiple environments, and scoped compliance standards. DuploCloud uses these specifications to auto-generate required lower-level configurations, provisioning them securely and compliantly while maintaining their ongoing operations.&#x20;
+Further protection is supplied by the DuploCloud [Tenant](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md), an isolated workspace that acts as an additional isolation layer, ideal for segregating production workloads or creating extensible developer sandboxes. A Tenant’s architecture is abstracted from its underlying [Infrastructure](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/infrastructure.md), and you can create as many Tenants as you need with no degradation in performance. &#x20;
 
 In addition, the provisioned system's logging, monitoring, alerting, and reporting are enabled. The following figure shows the platform's various functions.
 
 ![The DuploCloud Platform Features Diagram](.gitbook/assets/one-unified-platform-infographic-1280x720.png)
 
-DuploCloud is a single-Tenant software platform installed in the customer's cloud account. The customer interfaces with DuploCloud via the browser UI, the DuploCloud Terraform provider, and/or API calls while the data and configuration stay within the customer's cloud account. All configurations created and applied by DuploCloud can be reviewed and edited in the customer's cloud account.
+The customer interfaces with DuploCloud via the browser UI, the DuploCloud Terraform provider, and API calls while the data and configuration stay within the customer's cloud account. All configurations created and applied by DuploCloud can be reviewed and edited in the customer's cloud account.
 
-## Quick demo
+## Demo
 
 **Got 5 minutes?** Check out a video overview of a DuploCloud deployment:
 
