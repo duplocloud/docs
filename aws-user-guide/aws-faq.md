@@ -38,8 +38,6 @@ See the DuploCloud documentation on [Cross-Tenant Access](../user-administration
 
 To give DuploCloud Services (i.e., Cronjobs) access to an S3 bucket created in a non-DuploCloud AWS account, add the following permissions to your AWS accounts.&#x20;
 
-1.
-
 ```
 {
     "Sid": "AllowCrossAccount",
@@ -55,8 +53,6 @@ To give DuploCloud Services (i.e., Cronjobs) access to an S3 bucket created in a
 }
 ```
 
-2.
-
 ```
 {
     "Sid": "CustomAllowS3",
@@ -70,7 +66,7 @@ To give DuploCloud Services (i.e., Cronjobs) access to an S3 bucket created in a
 
 ```
 
-Now `s3GetObject` permission is configured in the source and destination accounts respectively, enabling cross-account data sharing for the objects in the S3 bucket.&#x20;
+After you add these permissions, `s3GetObject` permission is configured in the source and destination accounts respectively, enabling cross-account data sharing for the objects in the S3 bucket.&#x20;
 
 {% hint style="warning" %}
 Depending on the use case, you may need to add additional permissions. For example, in addition to the `s3:GetObject` permission shown in the snippets above, you may need to add `s3:ListBuckets` or s3:PutObject. Be sure to add permissions to both policies, respectively, as shown in the example.
