@@ -408,6 +408,8 @@
   * [Logs](diagnostics-overview/logs.md)
   * [Auditing](diagnostics-overview/auditing.md)
   * [Web App Firewall (WAF)](diagnostics-overview/web-application-firewall-waf.md)
+* [Runbooks](runbooks/README.md)
+  * [Configuring Egress and Ingress for AKS Ingress Controllers in Private Networks](runbooks/configuring-egress-and-ingress-for-aks-ingress-controllers-in-private-networks.md)
 * [Extras](extras-overview/README.md)
   * [Helm Charts](extras-overview/helm-charts.md)
   * [Login Banner/Button Customization](extras-overview/login-banner-customization.md)
