@@ -1,6 +1,6 @@
 ---
 description: An Overview of Security and Compliance features in the DuploCloud Portal
-cover: ../.gitbook/assets/Linkedin-bannerV2 (1).png
+cover: ../.gitbook/assets/Linkedin-bannerV3 (1).png
 coverY: 0
 layout:
   cover:
