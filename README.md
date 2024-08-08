@@ -30,7 +30,7 @@ Further protection is supplied by the DuploCloud [Tenant](welcome-to-duplocloud/
 
 In addition, DuploCloud facilitates logging, monitoring, alerting, and reporting. The following figure shows the platform's various functions.
 
-![The DuploCloud Platform Features Diagram](.gitbook/assets/one-unified-platform-infographic-1280x720.png)
+![The DuploCloud Platform Features Diagram](.gitbook/assets/duplocloud-update-illustration-graphics.png)
 
 The customer interfaces with DuploCloud via the browser UI, the DuploCloud Terraform provider, and API calls while the data and configuration stay within the customer's cloud account. All configurations created and applied by DuploCloud can be reviewed and edited in the customer's cloud account.
 
