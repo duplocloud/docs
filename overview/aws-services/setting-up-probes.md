@@ -73,5 +73,5 @@ Complete details of this feature are available in the Kubernetes documentation [
 
 ## Health Check
 
-Enable Kubernetes Health by adding a [Load Balancer Listener with Health Check enabled](broken-reference).
+Enable Kubernetes Health by adding a [Load Balancer Listener with Health Check enabled](load-balancers/#adding-a-load-balancer-listener).
 
