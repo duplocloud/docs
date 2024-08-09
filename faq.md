@@ -45,7 +45,9 @@ Use these FAQ documents to quickly find answers to popular questions about using
 
 ### What support features come with my DuploCloud subscription?
 
-See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.
+See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.&#x20;
+
+For more detailed inquiries or assistance, including DuploCloud's DevOps automation platform capabilities, compliance, AWS services like Kinesis stream, and product updates, refer to the [official documentation](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/) and [whitepapers ](https://duplocloud.com/white-papers/)available on DuploCloud's website.
 
 ### How much will DuploCloud add to my company's cloud budget?
 
