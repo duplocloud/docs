@@ -1,6 +1,6 @@
 ---
 description: An overview and demo of DuploCloud services
-cover: .gitbook/assets/duplocloud-blog-cover.png
+cover: .gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
   cover:
