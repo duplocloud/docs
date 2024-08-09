@@ -65,7 +65,7 @@ The Security Policy displays in the Load Balancer's Other Settings card.
 
 ## Modifying a Cloud Armour Configuration Security Policy
 
-To change your Cloud Armour configuration to use a different security policy, edit the **Security Policy** in the DuploCloud [Plan](broken-reference).
+To change your Cloud Armour configuration to use a different security policy, edit the **Security Policy** in the DuploCloud [Plan](../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/plan.md#duplocloud-plans).
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**. The **Plans** page displays.
 2. From the **Name** column, select the Plan that corresponds to your Infrastructure.

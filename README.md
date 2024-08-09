@@ -1,5 +1,5 @@
 ---
-description: An overview and demo of DuploCloud services
+description: An overview and demo of DuploCloud's comprehensive DevSecOps platform
 cover: .gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
