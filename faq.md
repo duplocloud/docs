@@ -115,7 +115,7 @@ DuploCloud uses a third-party SIEM solution called [Wazuh](https://www.wazuh.com
 
 These include Prometheus, Grafana, and Elasticsearch. They are all open source and run in your cloud account, so you can continue to manage them directly.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 If DuploCloud is down, it's like having an unavailable DevOps engineer. Opting out of DuploCloud is like replacing your DevOps management. DuploCloud is neither a Platform as a Service (PaaS) nor a hosted solution.
 {% endhint %}
 
@@ -145,23 +145,13 @@ DuploCloud does not interfere with non-conflicting changes to the resources it m
 
 DuploCloud automatically detects conflicting changes to DuploCloud-managed resources and reverts changes or raises an alert about inconsistencies.
 
-{% hint style="info" %}
-DuploCloud provides flexibility when a feature not supported by DuploCloud can be programmed directly in your cloud provider. If you are using Terraform, then the DuploCloud provider and the native cloud provider can be used in tandem. For an example of this use case, see [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS).
-{% endhint %}
-
-{% hint style="info" %}
 DuploCloud allows you to program unsupported features directly in your cloud provider. If you're using Terraform, you can use the DuploCloud provider and the native cloud provider together. For an example, visit [DuploCloud DevOps White Papers](https://duplocloud.com/white-papers/devops/#PAAS).
-{% endhint %}
 
 {% hint style="info" %}
-DuploCloud provides flexibility when a feature not supported by DuploCloud can be programmed directly in your cloud provider. If you are using Terraform, then the DuploCloud provider and the native cloud provider can be used in tandem. For an example of this use case, see [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS). Additionally, for specific needs such as creating short-lived one-shot ECS tasks, which are not directly supported through the Duplo UI or Terraform provider, DuploCloud offers the capability via its API. This approach has been utilized by customers for tasks like database migrations on ECS, showcasing the platform's adaptability to unique operational requirements.
+DuploCloud provides flexibility when a feature not supported by DuploCloud can be programmed directly in your cloud provider. If you are using Terraform, then the DuploCloud provider and the native cloud provider can be used in tandem. For an example of this use case, see [https://duplocloud.com/white-papers/devops/#PAAS](https://duplocloud.com/white-papers/devops/#PAAS). Additionally, for specific needs such as creating short-lived one-shot ECS tasks, which are not directly supported through the Duplo UI or Terraform provider, DuploCloud offers the capability via its API. Customers have utilized this approach for tasks like database migrations on ECS, showcasing the platform's adaptability to unique operational requirements.
 {% endhint %}
-
-### I don't know Infrastructure-as-Code (IaC), can I still use DuploCloud?
 
 ### I don't know IaC (Infrastructure-as-Code). Can I still use DuploCloud?
-
-Yes. DuploCloud's Web UI is a no-code interface for DevOps. You do not need to know IaC or have cloud expertise to operate it. However, you should read the product documentation to understand the basic constructs in DuploCloud. This approach significantly reduces the risk of errors associated with manual configurations or "Click Ops," ensuring that your infrastructure follows best practices with just a few clicks.
 
 Yes. DuploCloud's UI is a No-Code DevOps interface. You do not need to know IaC or have cloud expertise to operate it. However, you should read the product documentation to understand the basic constructs. DuploCloud's approach significantly reduces the risk of errors associated with manual configurations or "Click Ops" and ensures that your infrastructure follows best practices with just a few clicks.
 
@@ -176,15 +166,7 @@ No, these concepts are not the same. "Click Ops" is when engineers manually crea
 Terraform projects typically have a broad scope with multiple components. Sometimes, you must make small targeted changes (for example, a health check URL change). But when the change is being executed, there may be other drifts, and the user may be forced to resolve them. This can be inconvenient, and often, the user will change the UI, resulting in further configuration drifts.
 
 {% hint style="info" %}
-About half of our customer base uses no-code, while the other half uses Terraform. Ironically, software developer-centric companies prefer no-code because it enables engineers to be agile and focus on their application code. By contrast, the low-code Terraform provider offers a different kind of flexibility, allowing for the integration of unique solutions like the creation of short-lived one-shot ECS tasks through the API, demonstrating the platform's versatility in accommodating diverse operational needs.
-{% endhint %}
-
-Terraform projects typically have a broad scope with multiple components. Sometimes, you must make small targeted changes (for example, a health check URL change). But when the change is being executed, there may be other drifts, and the user may be forced to resolve them. This can be inconvenient, and often, the user will change the UI, resulting in further configuration drifts.
-
-der is often used in DevOps-centric organizations.
-
-{% hint style="info" %}
-About half of our customer base uses No Code, while the other half uses Low-Code Terraform. Ironically, software developer-centric companies prefer No Code because it enables engineers to be agile and focus on their application code. By contrast, the Low-Code Terraform provider is often used in DevOps-centric organizations.
+About half of our customer base uses no-code, while the other half uses Terraform. Ironically, software developer-centric companies prefer no codeensure the application runs because it enables engineers to be agile and focus on their application code. By contrast, the low-code Terraform provider offers a different kind of flexibility, allowing for the integration of unique solutions like creating short-lived one-shot ECS tasks through the API, demonstrating the platform's versatility in accommodating diverse operational needs.
 {% endhint %}
 
 ### Can you delete an application and all its resources with a single click and confirmation?
@@ -207,7 +189,7 @@ OpenVPN connectivity issues (e.g., "hostname not found" errors when accessing re
 
 ### How do I edit the Service Description to update my Control Plane configuration?
 
-The Service Description cannot be edited once logging is enabled. To maintain the integrity and consistency of your logging setup, complete any Control Plane modifications before enabling central logging.&#x20;
+Once logging is enabled, the Service Description cannot be edited. To maintain the integrity and consistency of your logging setup, complete any Control Plane modifications before enabling central logging.&#x20;
 
 ### How do you create a Host with a public IP?
 
@@ -237,11 +219,11 @@ If the connection from within the container works, exit the container and naviga
 
 No, Kubernetes is not required to use DuploCloud. DuploCloud supports AWS (ECS and EKS), Kubernetes, Azure, and GCP. Many customers use software from multiple vendors to create robust business solutions backed by DuploCloud's compliance assurance and automated low-code/no-code DevOps approach.
 
-The main advantage of Kubernetes is its broad-based, highly customizable, third-party, open-source community that supports it as a delivery platform. For example, Astronomer (managed Airflow), time series database, Istio service mesh, and Kong API Gateway all require you to have a Kubernetes deployment. However, if your business needs and use cases are met with an AWS solution, you may not need Kubernetes. Choose the software that aligns best with your use cases and requirements.&#x20;
+The main advantage of Kubernetes is its broad-based, highly customizable, third-party, open-source community that supports it as a delivery platform. For example, Astronomer (managed Airflow), time series database, Istio service mesh, and Kong API Gateway all require a Kubernetes deployment. However, if your business needs and use cases are met with an AWS solution, you may not need Kubernetes. Choose the software that best aligns with your use cases and requirements.&#x20;
 
 ### I want to have multiple replicas of my Model-View-Controller (MVC) service. How do I make sure that only one of them runs migration?
 
-Enable health check for your service, and ensure the API does not return `HTTP 200` status until migration is done. Since DuploCloud waits for a complete health check on one service before moving on to the next service, only one instance will run migration at a time.
+Enable health check for your service, and ensure the API does not return `HTTP 200` status until migration. Since DuploCloud waits for a complete health check on one service before moving on to the next service, only one instance will run migration at a time.
 
 DuploCloud's approach to container deployment emphasizes applications being self-contained and fungible, which facilitates independent updates of each service. Kubernetes automatically manages failing containers, and DuploCloud supports using Kubernetes health checks, including Liveness and Readiness Probes, to ensure containers function correctly and are ready to receive work.
 
@@ -253,11 +235,11 @@ DuploCloud supports the creation of S3 buckets with custom prefixes, enabling un
 
 ## Container/Docker FAQs
 
-### One or more of my containers are pending, how can I debug?
+### One or more of my containers are pending. How can I debug them?
 
 If the current status is Pending and the desired status is Running, wait a few minutes for the image to finish downloading. If it’s been more than five (5) minutes, check the faults from the button below the table. Ensure that your image name is correct and does not have spaces. Image names are case-sensitive, so they should be all lowercase, including image names in Docker Hub.
 
-If the current state is Pending and the desired state is Delete, the container is the old service version. It is still running because the system is being upgraded, and the previous replica has not been upgraded yet. Check for faults with a current state of Pending and a desired state of Running for other containers in the same service.
+If the current state is Pending and the desired state is Delete, the container is the old service version. It is still running because the system is being upgraded, and the previous replica has not been upgraded yet. Check for faults for other containers in the same service with a current state of Pending and a desired state of Running.
 
 ### Some of my container statuses say `pending delete`. What does this mean?
 
@@ -275,7 +257,7 @@ The Terraform and DuploCloud Web UIs layer on top of the DuploCloud platform.
 
 ![User Interaction with the DuploCloud Platform](<.gitbook/assets/image (11) (1) (1).png>)
 
-DuploCloud provides a Software Development Kit (SDK) to Terraform called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows users to configure their cloud infrastructure using DuploCloud constructs rather than lower-level cloud provider constructs. It enables users to benefit from Infrastructure-as-Code while significantly reducing the needed code. The DuploCloud Terraform Provider calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
+DuploCloud provides Terraform with a Software Development Kit (SDK) called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows users to configure their cloud infrastructure using DuploCloud constructs rather than lower-level cloud provider constructs. It enables users to benefit from Infrastructure-as-Code while significantly reducing the needed code. The DuploCloud Terraform Provider calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
 
 ### **If my developers make changes via the DuploCloud UI, what happens to the Terraform code my DevOps engineers have written?**
 
@@ -313,7 +295,7 @@ When you update (e.g., change an image or environment variable) a service with m
 
 ### How do I use Datadog and other diagnostics tools?
 
-DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with third-party toolset changes like Datadog, follow the toolset guidelines and deploy collector agents as if running an application within the respective DuploCloud Tenant(s).
+DuploCloud's out-of-the-box diagnostics stack is optional. To integrate with third-party toolset changes like Datadog, follow the guidelines and deploy collector agents as if running an application within the respective DuploCloud Tenant(s).
 
 ## Error Messages
 
