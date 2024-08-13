@@ -4,7 +4,7 @@ description: Monitoring Kubernetes status with the K8s Admin dashboard
 
 # Kubernetes Administrator dashboard
 
-#### Monitoring Kubernetes StatefulSets&#x20;
+## Monitoring Kubernetes StatefulSets&#x20;
 
 Use the **k8s Admin** dashboard to monitor various statistics and statuses for Kubernetes, including the number and availability of StatefulSets defined for a service.
 
