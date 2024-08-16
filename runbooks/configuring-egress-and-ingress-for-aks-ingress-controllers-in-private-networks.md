@@ -110,7 +110,7 @@ For cases that utilize VPN gateways, the CIDR that is needed to allow traffic th
 * Associate this route table with the application gateway subnet.
 * Configure the firewall to allow traffic from the application gateway subnet to the AKS services.
 
-This Runbook ensures that egress and ingress traffic is securely managed, requirements for handling sensitive data.
+This Runbook ensures that egress and ingress traffic is securely managed, facilitating secure, compliant communication for users handling sensitive data.
 
 ## Resources
 
