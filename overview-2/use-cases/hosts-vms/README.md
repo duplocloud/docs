@@ -20,18 +20,20 @@ Add a Virtual Machine Host. DuploCloud AWS supports **Host** (Azure Host) and **
 
 1. Ensure you have selected the appropriate Tenant from the **Tenant** list box at the top of the DuploCloud Portal.
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.&#x20;
-3. Click the tab that corresponds to the type of Host you want to create (**HOST** or **BYOH**).
+3. Select the tab that corresponds to the type of Host you want to create (**HOST** or **BYOH**), and click **Add**.
+
+<figure><img src="../../../.gitbook/assets/image (6) (4).png" alt=""><figcaption><p>The <strong>Add Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
+
 4. In the **Friendly Name** field, specify a unique name for the Host.&#x20;
 5. Define the **Subnet**, select the **Instance Type**, enter your **Username** and **Password**, and specify whether to enable a **Public IP**.&#x20;
 6. Optionally, enter a computer name in **Computer Name** field in the **Advanced Options**.
-7. Optionally, select the **Disk Controller Type** in the **Advanced Options**. The disk controller type is set to `SCSI` by default. If you select `NVME`, specify the supported instance size.&#x20;
-8. Click **Add**.\
-
-
-<figure><img src="../../../.gitbook/assets/Add a VM.png" alt=""><figcaption><p>The Azure <strong>Add a Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
+7. In the Encryption list box, select **Off** or **On**.
+8. Optionally, select the **Disk Controller Type** in the **Advanced Options**. The disk controller type is set to `SCSI` by default. If you select `NVME`, specify the supported instance size.&#x20;
+9. Optionally, select **Standard** or **Trusted Launch** in the Security Type field. If you select **Trusted Launch**, enable or disable **Enable Secure Boot** and **vTPM**.
+10. Click **Add**.
 
 {% hint style="info" %}
-It is not necessary to explicitly define Hosts. Instead, you can use [**Azure Agent Pool**s](../../azure-services/agent-pool.md) and [**VM Scale Set**s](../../azure-services/vm-scale-sets.md).
+It is not necessary to explicitly define Hosts. Instead, you can use [Azure Agent Pools](../../azure-services/agent-pool.md) and [VM Scale Sets](../../azure-services/vm-scale-sets.md)**.**
 {% endhint %}
 
 ## Viewing Hosts (VMs)

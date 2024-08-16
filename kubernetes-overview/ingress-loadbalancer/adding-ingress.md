@@ -33,18 +33,19 @@ Add a Load Balancer listener that uses Kubernetes (K8s) NodePort. Kubernetes Hea
 1. In the DuploCloud Portal, navigate **Kubernetes** -> **Services**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
-4.  Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.\
+4. Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.
 
+<div align="left">
 
-    <div align="left">
+<figure><img src="../../.gitbook/assets/LB image.png" alt="" width="375"><figcaption><p>The <strong>Add Load Balancer</strong> Listener pane in the DuploCloud Portal</p></figcaption></figure>
 
-    <figure><img src="../../.gitbook/assets/k8aws.png" alt=""><figcaption><p><strong>Add Load Balancer LIstener</strong> pane</p></figcaption></figure>
-
-    </div>
-
+</div>
 
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
-6. Complete the other required fields in the **Add Load Balancer Listener** pane and click **Add**. The Load Balancer displays in the **Load Balancers** tab.
+6. Complete the Container port and External port fields.
+7. In the Health Check field, enter `/`.&#x20;
+8. Complete the other required fields in the **Add Load Balancer Listener** pane as needed.&#x20;
+9. Click **Add**. The Load Balancer displays in the **Load Balancers** tab.
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_44_43.png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab for the <strong>filebeat-k8s-duploinfrasvc</strong> Service</p></figcaption></figure>
 
