@@ -4,11 +4,29 @@ description: Scale to or from zero when creating Autoscaling Groups in DuploClou
 
 # Scale to or from Zero
 
-DuploCloud allows you to scale to or from zero in EKS clusters by enabling the **Scale from zero** option in the Advanced Options when creating an [Autoscaling Group](./).
+DuploCloud allows you to scale to or from zero in Amazon EKS clusters by enabling the **Scale from Zero** option within the Advanced Options when creating an [Autoscaling Group](./). This feature intelligently adjusts the number of instances in your cluster, dynamically scaling up when demand increases and down to zero when resources are not in use. Reducing resource allocation during idle periods leads to significant cost savings.
 
-Scaling to or from zero with AWS Autoscaling Groups (ASG) offers several advantages depending on the context and requirements of your application:
+## When to Use Scale to Zero
+
+Autoscaling to zero is ideal for Kubernetes workloads that don’t always require 100% availability such as:
+
+**Non-Critical Workloads:** Batch processing jobs, data analysis tasks, and other non-customer-facing services that can be scaled down to zero during off-peak hours (e.g., nights or weekends).
+
+**Dev/Test Environments:** Development and testing environments that can be scaled up when developers need them and scaled down when not in use.
+
+**Background Jobs:** Workloads with background jobs running in Kubernetes that are only needed intermittently, such as those triggered by specific events or scheduled at certain times.
+
+## When Autoscaling to Zero Should Not Be Used
+
+Autoscaling to zero is not suitable for all workloads. Avoid using this feature for:&#x20;
+
+**Customer-Facing Applications:** Frontend web applications that must always be available should not use autoscaling to zero, as it can cause downtime and negatively impact user experience.
+
+**Workloads Outside Kubernetes:** If background jobs or other processes are not running in Kubernetes, autoscaling to zero will not apply. Different scaling strategies are required for these environments.
 
 ## Advantages of Scaling to Zero
+
+Scaling to or from zero with AWS Autoscaling Groups (ASG) offers several advantages depending on the context and requirements of your application:
 
 * **Cost Savings**: By scaling down to zero instances during periods of low demand, you minimize costs associated with running and maintaining instances. This pay-as-you-go model ensures you only pay for resources when they are actively being used.
 * **Resource Efficiency**: Scaling to zero ensures that resources are not wasted during periods of low demand. By terminating instances when they are not needed, you optimize resource utilization and prevent over-provisioning, leading to improved efficiency and reduced infrastructure costs.
