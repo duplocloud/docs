@@ -30,7 +30,9 @@ By the conclusion of this phase, we will provide you with a DuploCloud Portal yo
 
 ### Your Team Provides:&#x20;
 
-* N/A
+* Verification of your project's containerization needs, service configurations, interdependencies, and data migration requirements
+* Project plan questions or feedback
+* Input for the creation of a working session plan&#x20;
 
 ### DuploCloud Provides:
 
@@ -61,7 +63,8 @@ The CI/CD & Release Management phase involves identifying Services and Tenants t
 
 ### Your Team Provides:&#x20;
 
-* N/A
+* Input for CI/CD pipeline development
+* Participation in information/knowledge sharing, training, and demo&#x20;
 
 ### DuploCloud Provides:
 
