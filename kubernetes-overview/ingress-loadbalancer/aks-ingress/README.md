@@ -12,9 +12,9 @@ To add an SSL certificate to a service using Kubernetes Ingress, see the DuploCl
 
 ## Prerequisites
 
-### Creating Services
+### Creating Services with AKS
 
-To run the load balancers, you must create one or more Services. To add a service, follow the steps in the [Services](https://docs.duplocloud.com/docs/overview-2/azure-services/containers-and-services) topic. In this example, we created two Services named **s1-alb** and **s4-nlb**.&#x20;
+To run the Load Balancers, you must create one or more Services. To add a service, follow the steps in the [Services](../../../overview-2/azure-services/containers-and-services/#adding-a-duplocloud-service) topic. In this example, we created two Services named **s1-alb** and **s4-nlb**.&#x20;
 
 <figure><img src="../../../.gitbook/assets/services patched (1).png" alt=""><figcaption><p>The <strong>Kubernetes Services</strong> page showing two Services running </p></figcaption></figure>
 
@@ -24,34 +24,29 @@ Before you add an Ingress rule, you need to enable the Ingress Controller for th
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select the Infrastructure from the **NAME** column.
-3. Click the **Settings** tab.
-4. Click **Add**. The **Infra-Set Custom Data** pane displays.
-5. In the **Setting Name** field, select **Enable App Gateway Ingress Controller**. Click **Enable** and **Set**. In the **Settings** tab, the **Enable App Gateway Ingress Controller** setting contains the **true** value.
+3. Select the **Settings** tab, and click **Add**. The **Infra-Set Custom Data** pane displays.
+4. In the **Setting Name** list box, select **Enable App Gateway Ingress Controller**. **Enable** the setting and click **Set**. The **Enable App Gateway Ingress Controller** setting value is **true**.
 
 <figure><img src="../../../.gitbook/assets/image (3) (5).png" alt=""><figcaption><p><strong>Enable App Gateway Ingress Controller</strong> configured with <strong>true</strong> value</p></figcaption></figure>
 
-### Adding a Load Balancer Listener using the K8S NodePort
-
-Add a load balancer listener that uses the Kubernetes NodePort (K8S NodePort).
+## Adding a Load Balancer Listener using K8S NodePort
 
 1. In the DuploCloud Portal, navigate **Kubernetes** -> **Services**.
-2. On the **Services** page, click on the name of the Service you created.
+2. Select the Service from the **NAME** column.
 3. Click the **Load Balancers** tab.
 4.  Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.\
 
 
-    <figure><img src="../../../.gitbook/assets/configure LB.png" alt=""><figcaption><p>The <strong>Load Balancer</strong> tab on the s1-alb Service details page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/configure LB.png" alt=""><figcaption><p>The <strong>Load Balancer</strong> tab on the Service details page</p></figcaption></figure>
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
 6. In the **Health Check** field, add the Kubernetes Health Check URL for this container.&#x20;
 7. Complete the other fields in the **Add Load Balancer Listener** and click **Add**.
 
 {% hint style="info" %}
-Using Kubernetes Health Check allows AKS's Application Load Balancer to determine whether your service is running properly.&#x20;
+Using Kubernetes Health Check allows AKS's Application Load Balancer to determine whether your Service is running properly.&#x20;
 {% endhint %}
 
 ## Adding Kubernetes Ingress
-
-Add an Ingress rule to listen on port 80 (in this example) using both Load Balancers.
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Ingress**.
 2. Click **Add**. The **Add Kubernetes Ingress** page displays.
@@ -59,14 +54,13 @@ Add an Ingress rule to listen on port 80 (in this example) using both Load Balan
 
 
     <figure><img src="../../../.gitbook/assets/myingress.png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
-4. In the **DNS Prefix** field, provide the DNS prefix to expose services using the Route53 domain.
+4. In the **DNS Prefix** field, provide the DNS prefix to expose services.
 5. From the **Certificate ARN** list box, select the certificate ARN to expose services over HTTPS.
-6. In the **Port Override** field, select the port to override. This field allows configuring frontend listeners to use different ports other than 80/443 for HTTP/HTTPS. If you use a port other than 80, you must define an additional Security Group rule for that port. See [this section](./#adding-a-security-group-rule-for-a-port-value-other-than-80) for more information.
+6. Optionally, in the **Port Override** field, select a port to override. This field allows configuring frontend listeners to use ports other than 80/443 for HTTP/HTTPS. If you use a port other than 80, you must define an additional Security Group rule for that port. See [this section](./#adding-a-security-group-rule-for-a-port-value-other-than-80) for more information.
 
-### Configuring Kubernetes Ingress rules
+### Configuring Ingress rules
 
-1. On the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule** pane displays. Specify a unique **Path** identifier.
-2.  In the **Service Name** field, select the Service (**s1-alb:80** in this example). Click **Add Rule** to add the Ingress rule.\
+1.  On the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule** pane displays.\
 
 
     <div align="left">
@@ -74,22 +68,26 @@ Add an Ingress rule to listen on port 80 (in this example) using both Load Balan
     <figure><img src="../../../.gitbook/assets/AKS_Ingress_add_ALB.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
 
     </div>
-3. Repeat the previous steps to add additional rules. In this example, we added a second rule for Service **s4-nlb:80**.
-4. On the **Add Kubernetes Ingress** page, click **Add** to create the Ingress.
+2. Enter a **Path**.
+3. In the **Path Type** list box, select **Exact**, **Prefix,** or **Implementation Specific**.
+4. In the **Service Name** field, select the Service (**s1-alb:80** in this example).&#x20;
+5. Click **Add Rule** to add the Ingress rule.
+6. Repeat steps 1-5 to add additional rules. In this example, we added a second rule for Service **s4-nlb:80**.
+7. On the **Add Kubernetes Ingress** page, click **Add** to create the Ingress.
 
 {% hint style="info" %}
-The DuploCloud Platform supports defining multiple paths in Ingress.
+The DuploCloud Platform supports defining multiple rules/paths in Ingress.
 {% endhint %}
 
 ### Adding a Security Group Rule
 
 {% hint style="warning" %}
-Port **80** is configured by default when adding Ingress. If you want to use a custom port number other than **80**, add an additional security group rule for the custom port using this procedure.&#x20;
+Port **80** is configured by default when adding Ingress. If you want to use a custom port number, add a security group rule for the custom port.&#x20;
 {% endhint %}
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
-2. Select the Infrastructure from the **Name** column.
-3. Click the **Security Group Rules** tab.&#x20;
+2. Select the Infrastructure from the **NAME** column.
+3. Select the **Security Group Rules** tab.&#x20;
 4.  Click **Add**. The **Add Infrastructure Security** pane displays.\
 
 
@@ -100,10 +98,28 @@ Port **80** is configured by default when adding Ingress. If you want to use a c
     </div>
 5. Define the rule and click **Add**. The rule is added to the **Security Group Rules** list.
 
-<figure><img src="../../../.gitbook/assets/addazuresc2.png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab showing a rule for ports <strong>1-81</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/addazuresc2.png" alt=""><figcaption><p>The <strong>Security Group Rules</strong> tab</p></figcaption></figure>
 
 ## Viewing Ingress
 
-When Ingress is configured, you can access Services based on the rules for each **DNS**, displayed on the **Kubernetes** -> **Ingress** page.&#x20;
+### Viewing Ingress details in the DuploCloud Portal
+
+When Ingress is configured, view details by navigating to **Kubernetes** -> **Ingress**, and selecting your Ingress from the **NAME** column.
 
 <figure><img src="../../../.gitbook/assets/ingress patched.png" alt=""><figcaption><p>The <strong>Kubernetes Ingress</strong> page</p></figcaption></figure>
+
+### Viewing Ingress details using `curl` Commands
+
+You can also view Ingress details using `curl` commands. Curl commands are configured with the DNS names and paths (as defined in your Ingress rules) in the format: `curl http://<dns1>/<path1>`. The responses from these requests will show how traffic is being routed according to the Ingress configuration. For example, see the following three commands and responses:
+
+Command: `curl http://ig-nev-ingress-ing-t2-1.duplopoc.net/path1/`
+
+Response**:** `this is IG-NEV`
+
+Command: `curl http://ing-doc-ingress-ing-t2-1.duplopoc.net/path2/`
+
+Response: `this is ING-DOC`
+
+Command: `curl http://ing-public-ingress-ing-t2.1.duplopoc.net/path3/`
+
+Response: `this is ING2-PUBLIC`
