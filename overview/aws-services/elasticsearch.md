@@ -4,6 +4,8 @@ description: Create an OpenSearch domain from the DuploCloud portal
 
 # OpenSearch
 
+## Creating an OpenSearch domain
+
 1. Navigate to **Cloud Services** -> **Analytics**, select the **OpenSearch** tab, and click the **Add** button. The **Add OpenSearch Domain** page displays.&#x20;
 2. In the **Domain Name** field, create a name for the OpenSearch domain.
 3. In the **OpenSearch Version** field, select the OpenSearch version you are using.
@@ -21,6 +23,16 @@ description: Create an OpenSearch domain from the DuploCloud portal
 
     <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-14_39_49.png" alt=""><figcaption><p><strong>Enable UltraWarm data nodes</strong> selected, displaying additional options <strong>(Warm Instance type</strong>, <strong>Number of warm data nodes</strong>, and <strong>Enable Cold Storage</strong>)</p></figcaption></figure>
 11. Click **Submit**. The OpenSearch domain is created.&#x20;
+
+## Creating an OpenSearch domain without EBS storage
+
+To create an OpenSearch without EBS storage, follow the steps to [create an OpenSearch domain](elasticsearch.md#creating-an-opensearch-domain). In the **Data Instance Size** list box, select **Other**, and enter a storage type instance, For example, `i3.2xlarge.search`. Complete the remaining steps and click **Submit**. &#x20;
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/image (3) (11).png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## Managing OpenSearch Logging
 
