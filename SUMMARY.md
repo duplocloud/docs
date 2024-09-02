@@ -288,6 +288,7 @@
     * [KubeCtl Token](kubernetes-overview/kubectl-setup/kubectl-token.md)
     * [Kubectl Shell](kubernetes-overview/kubectl-setup/kubectl-shell.md)
     * [Kubectl Token for non-administrators](kubernetes-overview/kubectl-setup/kubectl-token-for-non-administrators-aws-only.md)
+    * [Kubectl Readonly Access](kubernetes-overview/kubectl-setup/kubectl-readonly-access.md)
   * [Configs and Secrets](kubernetes-overview/configs-and-secrets/README.md)
     * [Setting Kubernetes Secrets](kubernetes-overview/configs-and-secrets/setting-kubernetes-secrets.md)
     * [Setting Environment Variables (EVs) from a ConfigMap or Secret](kubernetes-overview/configs-and-secrets/setting-environment-variables-from-config.md)
