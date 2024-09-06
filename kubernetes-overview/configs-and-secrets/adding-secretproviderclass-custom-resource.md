@@ -12,7 +12,7 @@ This capability allows Kubernetes (K8s) to mount secrets stored in external secr
 
 An Administrator must set the Infrastructure setting  `Enable Secrets CSI Driver` as `True`. This setting is available by navigating to **Administrator** -> **Infrastructure**, selecting your Infrastructure, and clicking **Settings**).
 
-## Creating the K8s SecretProviderClass CR
+## Creating the K8s SecretProviderClass&#x20;
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Secret Provider.**
 2. Click **Add**. The **Add Kubernetes Sercet Provider Class** page displays.
