@@ -1,6 +1,6 @@
 ---
 description: Additional features of the DuploCloud Portal
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1).png
+cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (14).png
 coverY: 0
 layout:
   cover:
@@ -31,3 +31,4 @@ These additional features provide flexibility and accessibility across all suppo
 * [BYOH (Bring Your Own Host)](byoh.md)
 * [Allocation Tagging for Hosts (Virtual Machines)](creating-advanced-functions.md)
 * [Import an External Kubernetes Cluster](import-an-external-kubernetes-cluster.md)
+* [DuploCtl](duploctl.md)

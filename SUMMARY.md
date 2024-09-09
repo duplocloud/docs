@@ -94,7 +94,7 @@
       * [SNS Topic Alerts](overview/use-cases/faults-and-alarms/sns-topic-alerts.md)
       * [System Settings Flags](overview/use-cases/faults-and-alarms/system-settings-flags.md)
     * [AWS Console link](overview/use-cases/using-aws-console.md)
-    * [JIT Access](aws-user-guide/use-cases/jit-access.md)
+    * [Just-in-Time (JIT) Access](aws-user-guide/use-cases/jit-access.md)
     * [Billing and Cost management](overview/use-cases/cost-management/README.md)
       * [Enable billing data](overview/use-cases/cost-management/enable-billing-data.md)
       * [View billing data](overview/use-cases/cost-management/view-billing-data.md)
@@ -428,3 +428,4 @@
   * [BYOH](extras-overview/byoh.md)
   * [Allocation Tagging for Hosts](extras-overview/creating-advanced-functions.md)
   * [Import an External Kubernetes Cluster](extras-overview/import-an-external-kubernetes-cluster.md)
+  * [Duploctl](extras-overview/duploctl.md)
