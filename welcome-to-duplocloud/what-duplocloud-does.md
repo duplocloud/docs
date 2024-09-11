@@ -44,15 +44,15 @@ Our website also features a comprehensive Chatbot ([Ask DuploCloud](https://dupl
 
 Do you know that one of the biggest headaches faced by DevOps is complex navigation and workflows in public cloud portals? Using DuploCloud, customers can minimize the time they typically spend logging in and out of AWS, Azure, and GCP consoles. Every DevOps and SecOps task can be completed from within the DuploCloud portal, often with significantly reduced clicks.
 
-If a customer is skeptical, offer them a demo and gather some of their most common use cases (creating an S3 bucket or a Lambda, for example). Compare the keystrokes and navigation between DuploCloud and using a native cloud portal. Often, customers "get used to the pain" inherent in many daily DevOps tasks, unaware they can gain back minutes, hours, and days by using DuploCloud.
+Compare the keystrokes and navigation between DuploCloud and using a native cloud portal. Often, DevOps engineers "get used to the pain" inherent in many daily DevOps tasks, unaware they can gain back minutes, hours, and days by using DuploCloud.
 
-Some commonly used tools that can be accessed directly within DuploCloud include kubectl, container logs, and Just-In-Time access to cloud consoles from within DuploCloud.
+Some commonly used tools that can be accessed directly within DuploCloud include `kubectl`, container logs, and Just-In-Time access to cloud consoles from within DuploCloud.
 
 ## 5. Turn-key compliance and security
 
 When you let DuploCloud manage your DevOps environment, a scalable and robust SecOps framework and implementation strategy are included.  Aligned with industry best practices, our staff of SecOps experts analyzes how your data is stored and transmitted, helps identify the standards you must meet, and then constructs a detailed implementation strategy to meet and exceed those requirements, in addition to creating a scalable model that adapts as your customer base and workloads grow.&#x20;
 
-DuploCloud walks the customer through each process step during onboarding, then ensures each implementation phase results in smooth and secure operations, laying the foundation for a reliable and compliant system. &#x20;
+DuploCloud walks you through each process step during onboarding, then ensures each implementation phase results in smooth and secure operations, laying the foundation for a reliable and compliant system. &#x20;
 
 DuploCloud provides easy-to-access "Single Pane of Glass" dashboards that provide a granular view of all security issues and compliance controls. Completing questionnaires and passing audits is simple, especially with our 24/7 support.&#x20;
 
