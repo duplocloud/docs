@@ -4,6 +4,7 @@
 * [FAQs](faq.md)
 * [Product Updates](product-updates.md)
 * [Getting Started with DuploCloud](getting-started/welcome-to-duplocloud.md)
+  * [What DuploCloud Does](welcome-to-duplocloud/what-duplocloud-does.md)
   * [DuploCloud Onboarding](welcome-to-duplocloud/duplocloud-onboarding.md)
   * [Application Focused Interface: DuploCloud Architecture](welcome-to-duplocloud/application-focussed-interface/README.md)
     * [DuploCloud Tenancy Models](welcome-to-duplocloud/application-focussed-interface/duplocloud-tenancy-models.md)
