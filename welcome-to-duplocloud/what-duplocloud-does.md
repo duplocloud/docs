@@ -18,11 +18,11 @@ If there is a way to do something in the cloud, it can be done faster and more e
 
 Did you know that DuploCloud can create a complete cloud infrastructure in ten to fifteen minutes, comprising virtually hundreds of components and sub-components that would take hours to develop in a native cloud portal and even longer when using native Kubernetes? Individual workspaces or Tenants can be created in less than a minute.
 
-This acceleration is critical to many of the business value propositions DuploCloud offers. It is why we can perform cloud migrations at such an advanced pace, minimizing customer downtime and simultaneously ensuring security and compliance (and peace of mind).
+This acceleration is critical to many of the business value propositions DuploCloud offers. It is why we can perform cloud migrations at such an advanced pace, minimizing downtime and simultaneously ensuring security and compliance (and peace of mind).
 
 ### 2. Built-in scaling and managed services <a href="#id-2.-built-in-scaling-and-managed-services" id="id-2.-built-in-scaling-and-managed-services"></a>
 
-Virtually all of the services DuploCloud supports are designed to auto-scale as a customer's cloud environment grows exponentially (which they all do, eventually). These Managed Services further promote automated "set and forget" configurations that dovetail neatly into developer self-service.
+Virtually all of the services DuploCloud supports are designed to auto-scale as a your cloud environment grows exponentially (which they all do, eventually). These Managed Services further promote automated "set and forget" configurations that dovetail neatly into developer self-service.
 
 As with creating Infrastructures and Tenants, DuploCloud Services are designed for the most common use cases. They enable users to supply a minimum number of inputs to get their service up and running quickly. At the same time, DuploCloud retains the ability to customize, using native Kubernetes YAML coding and custom scripts if needed.
 
@@ -36,13 +36,13 @@ Remember that DuploCloud is not a replacement for DevOps engineers but rather an
 
 DuploCloud's simplified UI guides developers and less savvy DevOps users in creating and managing DevOps components and constructs. Even advanced features such as AWS Batch, CloudFront, or setting up a Lambda function are simplified through a combination of procedural documentation, step-by-step UI panels, and even sample code blocks that can be accessed through info-tips in the UI.
 
-Using a templatized approach, potentially complex Kubernetes constructs such as Ingress and Terraform scripting can be easily managed by developers with minimal exposure to such functionality. And for customers who are experts and have invested time and money in creating custom solutions using such tools, there is no need to discard that work. DuploCloud can help integrate existing solutions and workflows, expediting and often automating them during onboarding, often at no additional cost.
+Using a templatized approach, potentially complex Kubernetes constructs such as Ingress and Terraform scripting can be easily managed by developers with minimal exposure to such functionality. Experts who have invested time and money in creating custom solutions using such tools do not need to discard that work. DuploCloud can help integrate existing solutions and workflows, expediting and often automating them during onboarding, often at no additional cost.
 
-Our website also features a comprehensive Chatbot ([Ask DuploCloud](https://duplocloud.com/ask-duplocloud/)) that can provide thorough answers and troubleshooting. It's also worth mentioning that every customer receives their own Slack channel for personalized support from our responsive team of DevOps specialists.
+Our website also features a comprehensive Chatbot ([Ask DuploCloud](https://duplocloud.com/ask-duplocloud/)) that can provide thorough answers and troubleshooting. Every DuploCloud customer receives their own Slack channel for personalized support from our responsive team of DevOps specialists.
 
 ### 4. Saving time through ease of use and expedited navigation <a href="#id-4.-saving-time-through-ease-of-use-and-expedited-navigation" id="id-4.-saving-time-through-ease-of-use-and-expedited-navigation"></a>
 
-Do you know that one of the biggest headaches faced by DevOps is complex navigation and workflows in public cloud portals? Using DuploCloud, customers can minimize the time they typically spend logging in and out of AWS, Azure, and GCP consoles. Every DevOps and SecOps task can be completed from within the DuploCloud portal, often with significantly reduced clicks.
+Do you know that one of the biggest headaches faced by DevOps is complex navigation and workflows in public cloud portals? Using DuploCloud, you can minimize the time they typically spend logging in and out of AWS, Azure, and GCP consoles. Every DevOps and SecOps task can be completed from within the DuploCloud portal, often with significantly reduced clicks.
 
 Compare the keystrokes and navigation between DuploCloud and using a native cloud portal. Often, DevOps engineers "get used to the pain" inherent in many daily DevOps tasks, unaware they can gain back minutes, hours, and days by using DuploCloud.
 
