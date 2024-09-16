@@ -1,10 +1,10 @@
 ---
-description: Adding SQL Databases in DuploCloud
+description: Adding Cloud SQL Databases in DuploCloud
 ---
 
 # Cloud SQL
 
-## Creating a SQL database
+## Creating a Cloud SQL database
 
 Use this procedure to create:
 
@@ -13,46 +13,20 @@ Use this procedure to create:
 * SQL databases with SQLServer engines
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud SQL**.
-2. Click **Add**. The **Add SQL DB** page displays.&#x20;
-3. For MySQL databases and SQL databases with PostGres engines, provide the **Name**, **SQL Version**, and **Tier** (Machine Type/CPU). For SQL databases with SQLServer engines, provide the same inputs, in addition to **Root Password** and **Disk Size** in gigabytes (GB).
+2.  Click **Add**. The **Add SQL DB** page displays. \
+
+
+    <figure><img src="../../.gitbook/assets/CloudSQLDB create.png" alt=""><figcaption><p>The <strong>Add SQL DB</strong> page in the DuploCloud Portal</p></figcaption></figure>
+3. Complete the fields (**Name**, **Disk Size**, **SQL Version**, **Tier**, **Root Password**) as required.
 4. Click **Create**.&#x20;
-5. Select your database from the Name column in the **SQL** tab. The **Details** tab displays information about the database you created.
 
-Refer to the graphics below for examples of creating and displaying the supported SQL databases.
+## Viewing a Cloud SQL database
 
-<div align="left">
+You can view database details and configure other options by navigating to **Cloud Services** ->  **Cloud SQL** and selecting the Cloud SQL database from the **NAME** column.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_28_52.png" alt=""><figcaption><p><strong>Add SQL DB</strong> page for adding a <strong>MYSQL</strong> database</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CloudSQL details.png" alt=""><figcaption><p>The Cloud SQL database details page in the DuploCloud Portal</p></figcaption></figure>
 
-</div>
+## Additional Supported Actions
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_30_24.png" alt=""><figcaption><p><strong>Details</strong> tab for a created <strong>MySQL</strong> database</p></figcaption></figure>
-
-</div>
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_32_25.png" alt=""><figcaption><p><strong>Add SQL DB</strong> page for adding a SQL database with a <strong>POSTGRES</strong> engine</p></figcaption></figure>
-
-</div>
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_33_43.png" alt=""><figcaption><p><strong>Details</strong> tab for created SQL database with a <strong>POSTGRES</strong> engine</p></figcaption></figure>
-
-</div>
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_36_44.png" alt=""><figcaption><p><strong>Add SQL DB</strong> page for adding a SQL database with a <strong>SQLSERVER</strong> engine</p></figcaption></figure>
-
-</div>
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_38_00.png" alt=""><figcaption><p>Details tab for created SQL database with a SQLSERVER engine</p></figcaption></figure>
-
-</div>
-
+1. Navigate to **Cloud Services** ->  **Cloud SQL.**
+2. Click the menu icon ( <img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252F1bULWx4HFiK9TRFeLpk4%252FKabab_three_Vertical_dots.png%3Falt%3Dmedia%26token%3De0fb9551-05e2-4e66-ac2b-c50a23f66acc&#x26;width=20&#x26;dpr=4&#x26;quality=100&#x26;sign=d18bec42&#x26;sv=1" alt="" data-size="line"> ) on the left of the row listing your SQL database, and select **GCP Console**, **Edit**, **Delete**, **Stop**, **Restart**, or **Reset Password**.
