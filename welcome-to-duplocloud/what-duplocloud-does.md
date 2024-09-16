@@ -22,7 +22,7 @@ This acceleration is critical to many of the business value propositions DuploCl
 
 ## 2. Built-in scaling and managed services <a href="#id-2.-built-in-scaling-and-managed-services" id="id-2.-built-in-scaling-and-managed-services"></a>
 
-Virtually all of the services DuploCloud supports are designed to auto-scale as a your cloud environment grows exponentially (which they all do, eventually). These Managed Services further promote automated "set and forget" configurations that dovetail neatly into developer self-service.
+Virtually all of the services DuploCloud supports are designed to auto-scale as your cloud environment grows exponentially (which they all do, eventually). These Managed Services further promote automated "set and forget" configurations that dovetail neatly into developer self-service.
 
 As with creating Infrastructures and Tenants, DuploCloud Services are designed for the most common use cases. They enable users to supply a minimum number of inputs to get their service up and running quickly. At the same time, DuploCloud retains the ability to customize, using native Kubernetes YAML coding and custom scripts if needed.
 
