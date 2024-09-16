@@ -22,17 +22,18 @@ See the Services documentation for steps to [create Hosts and configure Kubernet
 
 </div>
 
-### GCE VM
+### Adding a GCE VM
 
-You can create a GCE VM by going to **Cloud Services** -> **Hosts** ->  **GCE VM**.
+1. Navigate to **Cloud Services** -> **Hosts.**&#x20;
+2. Select the **GCE VM** tab, and click **Add**. The **Add GCE Virtual Machine** page displays.
 
-<div align="left">
+<figure><img src="../../.gitbook/assets/disk size.png" alt=""><figcaption><p>The <strong>Add GCE Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/virtual machine add.png" alt=""><figcaption><p><strong>Add GCE Virtual Machine</strong> page</p></figcaption></figure>
+3. Complete the required fields, including **Name**, **Availability Zone**, and **Instance Type**.&#x20;
+4. If needed, enable **Advanced Options** to select your **Agent Platform, Image**, **Network Type**, **Disk Size**, **Accelerator Type**, **Accelerator Count,** and enter **Labels**, **Metadata**, and **Startup Script**.
+5. Click **Create**.&#x20;
 
-</div>
-
-### BYOH Host
+### Adding a BYOH Host
 
 While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the Tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
 
