@@ -388,7 +388,7 @@
     * [Advanced functions](introduction-to-ci-cd/katkit/advanced-functions.md)
 * [User Administration](access-control/README.md)
   * [User access to DuploCloud](access-control/add-edit-or-delete-a-user.md)
-  * [Tenant access for users](access-control/tenant-access/README.md)
+  * [Tenant Access for Users](access-control/tenant-access/README.md)
     * [Add Tenant access over a VPN](access-control/tenant-access/add-tenant-access-over-a-vpn.md)
     * [Read-only access to a Tenant](access-control/tenant-access/read-only-access-to-a-tenant.md)
     * [Cross-tenant Access](user-administration/access-control/tenant-access/cross-tenant-access.md)
