@@ -12,7 +12,7 @@ DuploCloud Services should not be confused with Kubernetes or ECS services. By S
 
 ## DuploCloud Supported Services
 
-For information on cloud-specific Services supported by DuploCloud, see:
+**For information on cloud-specific Services supported by DuploCloud, see:**
 
 * [AWS Services](../../../overview/aws-services/)
 * [Azure Services](../../../overview-2/azure-services/)

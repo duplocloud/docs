@@ -4,9 +4,9 @@ description: Create an ECS Service from Task Definition and expose it with a Loa
 
 # Step 5: Create the ECS Service and Load Balancer
 
-Now that you've created a Task Definition, you create a Service, which creates a Task (from the definition) to run your application. A Task is the instantiation of a Task Definition within a cluster. After you create a task definition for your application within Amazon ECS, you can specify multiple tasks to run on your cluster, based on your performance and availability requirements.&#x20;
+Now that you've created a Task Definition, create a Service, which creates a Task (from the definition) to run your application. A Task is the instantiation of a Task Definition within a cluster. After you create a task definition for your application within Amazon ECS, you can specify multiple tasks to run on your cluster, based on your performance and availability requirements.&#x20;
 
-Once a Service is created, you must create a Load Balancer to expose the Service on the network. An Amazon ECS _service_ runs and maintains the desired number of tasks simultaneously in an Amazon ECS cluster.  If any of your tasks fail or stop for any reason, the Amazon ECS service scheduler launches another instance based on parameters specified in your Task Definition. It does so in order to maintain the desired number of tasks created.
+Once a Service is created, you must create a Load Balancer to expose the Service on the network. An Amazon ECS service runs and maintains the desired number of tasks simultaneously in an Amazon ECS cluster.  If any of your tasks fail or stop, the Amazon ECS service scheduler launches another instance based on parameters specified in your Task Definition. It does so in order to maintain the desired number of tasks created.
 
 _Estimated time to complete Step 5: 10 minutes._
 
@@ -14,32 +14,30 @@ _Estimated time to complete Step 5: 10 minutes._
 
 Before creating the ECS Service and Load Balancer, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
 * The **NONPROD** infrastructure has [ECS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
-* A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
+* A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A [Task Definition named **sample-task-def**](step-4-create-app-via-ecs.md) has been created.
 
-## Creating an ECS Service and a Load Balancer&#x20;
+## Creating an ECS Service and Load Balancer&#x20;
 
-Tasks run until an error occurs or a user terminates the Task in the ECS Cluster.
-
-1.  In the DuploCloud Portal's **Tenant** list box. select Tenant **dev01**.\
+1.  In the DuploCloud Portal's **Tenant** list box, select **dev01**.\
 
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/tenant_dev01 (5).png" alt=""><figcaption><p>DuploCloud <strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/tenant_dev01 (5).png" alt=""><figcaption><p>DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure>
 
     </div>
 
 
 2. Navigate to **Cloud Services** -> **ECS**.
-3. In the **Task Definitions** tab, select the Task Definition Family Name, **DUPLOSERVICES-DEV01-SAMPLE-TASK-DEF**. This is the [Task Definition **Name** that you created ](step-4-create-app-via-ecs.md#creating-a-task-definition)prepended by a unique identified, which includes your Tenant name (**DEV01**) and part of your Infrastructure name (**ECS-TEST**).&#x20;
+3. In the **Task Definitions** tab, select the Task Definition Family Name, **DUPLOSERVICES-DEV01-SAMPLE-TASK-DEF**. This is the [Task Definition **Name** you created ](step-4-create-app-via-ecs.md#creating-a-task-definition)prepended by a unique identifier, which includes your Tenant name (**DEV01**) and part of your Infrastructure name (**ECS-TEST**).&#x20;
 4. In the **Service Details** tab, click the **Configure ECS Service** link. The **Add ECS Service** page displays.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_53_00.png" alt=""><figcaption><p><strong>Service Details</strong> tab </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_53_00.png" alt=""><figcaption><p>The <strong>Service Details</strong> tab </p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_57_05.png" alt=""><figcaption><p><strong>Add ECS Service</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_57_05.png" alt=""><figcaption><p>The <strong>Add ECS Service</strong> page</p></figcaption></figure>
 
 5. In the **Name** field, enter **sample-httpd-app** as the Service name.
 6.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.\

@@ -8,7 +8,7 @@ description: A conceptual overview of DuploCloud Tenants
 
 A Tenant, like a project or a workspace and a child of the Infrastructure, is the most fundamental construct in DuploCloud. While Infrastructure is a VPC level isolation, Tenant is the next level of isolation implemented by segregating Tenants using concepts like Security Groups, IAM roles, Instance Profiles, K8S Namespaces, KMS Keys, etc.
 
-For instructions to create a Tenant in the DuploCloud Portal, see:
+**For instructions to create a Tenant in the DuploCloud Portal, see:**
 
 * [AWS Tenant](../../../overview/use-cases/tenant-environment/)
 * [Azure Tenant](../../../overview-2/use-cases/tenant-environment/)

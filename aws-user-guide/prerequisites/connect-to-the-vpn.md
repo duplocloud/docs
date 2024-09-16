@@ -1,5 +1,5 @@
 ---
-description: Connect to the VPN with the OpenVPN client
+description: Obtain VPN credentials and connect to the VPN
 ---
 
 # Connect to the VPN
