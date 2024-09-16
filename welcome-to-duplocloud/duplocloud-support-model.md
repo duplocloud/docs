@@ -31,7 +31,7 @@ Some of the things we support our customers with in real time include:
   * Consolidation of third-party tools for which you currently subscribe that are included with your DuploCloud subscription
   * Adding a CI/CD pipeline for a new service
 
-### What DuploCloud Does not Support or Supports Conditionally
+### What DuploCloud Does Not Support or Supports Conditionally
 
 We cover most of your DevOps needs, but there are some. Examples of needs we do not or only partially support include, but are not limited to:
 

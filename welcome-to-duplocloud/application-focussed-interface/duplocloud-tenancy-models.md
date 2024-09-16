@@ -8,16 +8,16 @@ DuploCloud supports a variety of deployment models, from basic multi-tenant appl
 
 DuploCloud-supported tenancy models, outlined below, include:
 
-* [Application-managed multi-tenancy](duplocloud-tenancy-models.md#application-managed-multi-tenancy)
-* [DuploCloud Tenant-per-customer](duplocloud-tenancy-models.md#duplocloud-tenant-per-customer)
-* [DuploCloud Infrastructure-per-customer](duplocloud-tenancy-models.md#duplocloud-infrastructure-per-customer)
-* [Cloud account-per-customer](duplocloud-tenancy-models.md#cloud-account-per-customer)
-* [Hybrid model](duplocloud-tenancy-models.md#hybrid-model)
-* [On-premises ](duplocloud-tenancy-models.md#special-hybrid-case-single-tenant-deployment-in-external-kubernetes-cluster)
+* [Application-Managed Multi-Tenancy](duplocloud-tenancy-models.md#application-managed-multi-tenancy)
+* [DuploCloud Tenant-per-Customer](duplocloud-tenancy-models.md#duplocloud-tenant-per-customer)
+* [DuploCloud Infrastructure-per-Customer](duplocloud-tenancy-models.md#duplocloud-infrastructure-per-customer)
+* [Cloud Account-per-Customer](duplocloud-tenancy-models.md#cloud-account-per-customer)
+* [Hybrid Model](duplocloud-tenancy-models.md#hybrid-model)
+* [On-Premises ](duplocloud-tenancy-models.md#special-hybrid-case-single-tenant-deployment-in-external-kubernetes-cluster)
 
 ## Tenancy Deployment Models
 
-### Application-Managed Multi Tenancy
+### Application-Managed Multi-Tenancy
 
 <figure><img src="../../.gitbook/assets/1 - Application Provides Tenancy.png" alt=""><figcaption><p>DuploCloud pooled tenancy model</p></figcaption></figure>
 

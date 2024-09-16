@@ -28,6 +28,6 @@ DuploCloud allows shell access into the deployed containers. Shell access is ena
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **ECS**. The **ECS** **Task Definition** page displays.
 2. Select the name from the **TASK DEFINITION FAMILY NAME** column.
 3. Select the **Tasks** tab.
-4. To display the ECS task shell for any task, click on the **(>\_**) icon in the **Actions** column of the appropriate row. Click on the container task shell option. A browser launches to give you access to the shell.
+4. To display the ECS task shell for any task, click on the **(>\_**) icon in the **Actions** column of the appropriate row. Click on the container task shell option. A browser launches, giving access to the shell.
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-14_36_14.png" alt=""><figcaption><p>The <strong>ECS task shell</strong> option in the menu of the <strong>Tasks</strong> tab</p></figcaption></figure>

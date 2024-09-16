@@ -10,50 +10,44 @@ _Estimated time to complete Step 5: 10 minutes._
 
 ## Prerequisites
 
-Before creating a Service, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
+Before creating a Service, verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* A Tenant with the name [**dev01** has been created](../step-2-tenant.md).
-* An EC2 Host with the name [host01 has been created](step-4-create-ec2-host.md).
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
+* A Tenant named [**dev01** has been created](../step-2-tenant.md).
+* An EC2 Host named [host01 has been created](step-4-create-ec2-host.md).
 
-### Select the Tenant you created
+## Creating a Service with Native Docker&#x20;
 
-In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, select the **dev01** Tenant that you created.
-
-
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption><p><strong>Tenant</strong> list box in the DuploCloud Portal</p></figcaption></figure>
-
-</div>
-
-## Creating a Service using Native Docker&#x20;
-
-1. In the DuploCloud Portal, navigate to **Docker** -> **Services.**
-2. Click **Add**. The **Add Service** **Basic Options** page displays.
-3. In the **Service Name** field, enter **demo-service-d01**.
-4. From the **Platform** list box, select **Linux/Docker Native**.
-5. In the Docker Image field, enter **duplocloud/nodejs-hello:latest**.
-6.  From the **Docker Networks** list box, select **Docker Default**.\
+1. In the **Tenant** list box, select **dev01**.
+2. Navigate to **Docker** -> **Services.**
+3. Click **Add**. The **Add Service** **Basic Options** page displays.
+4. In the **Service Name** field, enter **demo-service-d01**.
+5. From the **Platform** list box, select **Linux/Docker Native**.
+6. In the **Docker Image** field, enter **duplocloud/nodejs-hello:latest**.
+7.  From the **Docker Networks** list box, select **Docker Default**.\
 
 
-    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-18_07_25.png" alt=""><figcaption><p><strong>Add Service Basic Options</strong> page for <strong>Linux/Docker Native</strong> Service</p></figcaption></figure>
-7. Click **Next**. The **Advanced Options** page displays.
-8. Click **Create**.
+    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-18_07_25.png" alt=""><figcaption><p>The <strong>Add Service Basic Options</strong> page</p></figcaption></figure>
+8. Click **Next**. The **Advanced Options** page displays.
+9. Click **Create**.
 
 {% hint style="info" %}
-On the Add Service Basic Options page, you can also specify optional **Environment Variables** (EVs) such as database Host, port, and so on. You can also pass [Docker credentials](../../aws-services/containers/docker-registry-credentials.md) using EVs for testing purposes.&#x20;
+On the Add Service page, you can also specify optional **Environment Variables** (EVs) such as databases, Hosts, ports, etc. You can also pass [Docker credentials](../../aws-services/containers/docker-registry-credentials.md) using EVs for testing purposes.&#x20;
 {% endhint %}
 
-## Checking your work
+## Checking Your Work
 
-Verify that **demo-service-d01** has a **Current** Status of **Running**.
+
+
+1. In the **Tenant** list box, select **dev01**.
+2. Navigate to **Docker** -> **Services.**
+3. In the **NAME** column, select **demo-service-d01.**
+4. Check the **Current** column to verify that **demo-service-d01** has a status of **Running**.
 
 <figure><img src="../../../.gitbook/assets/ishwtaitis.png" alt=""><figcaption><p><strong>demo-service-d01</strong> Service page displaying a <strong>Running</strong> status</p></figcaption></figure>
 
 {% hint style="info" %}
-Once the Service is **Running**, you can check logs for informational messages by clicking the menu icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (4).png" alt="" data-size="line"> ) to the left of the running Service **Name** on the Service page and selecting the **Logs** option.&#x20;
+Once the Service is **Running**, you can check the logs for additional information. On the **Services** page, select the **Containers** tab, click the menu icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (4).png" alt="" data-size="line"> ) to the left of the container name, and select the **Logs** option.&#x20;
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/grouped.png" alt=""><figcaption><p>Menu for <strong>demo-service-d01-1</strong> Service with <strong>Logs</strong> highlighted </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/grouped.png" alt=""><figcaption><p>The Service details page for  <strong>demo-service-d01-1</strong> </p></figcaption></figure>

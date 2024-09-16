@@ -32,5 +32,5 @@ _Estimated time to complete remaining tutorial steps: 30-40 minutes_
 
 Behind the scenes, the topology that DuploCloud creates resembles this low-level configuration in AWS.
 
-<figure><img src="../../../.gitbook/assets/network-diagram.png" alt=""><figcaption><p>AWS architecture and configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/network-diagram.png" alt=""><figcaption><p>A diagram of AWS architecture and configuration</p></figcaption></figure>
 

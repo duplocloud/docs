@@ -10,11 +10,11 @@ The following concepts do not apply to ECS. ECS uses a proprietary policy model,
 
 Familiarize yourself with these DuploCloud concepts and terms before deploying containerized applications in DuploCloud. See the [DuploCloud Common Concepts](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/) section for a description of DuploCloud Infrastructures, Tenants, Hosts, and Services.
 
-## Host
+## Hosts
 
 These are virtual machines (EC2 Instances, GCP Node pools, or Azure Agent Pools). By default, apps within a Tenant are pinned to VMs in the same Tenant. One can also deploy Hosts in one Tenant that can be leveraged by apps in other Tenants. This is called the shared-host model. The shared-host model does not apply to ECS Fargate.
 
-## Service
+## Services
 
 Service is a DuploCloud term and is not the same as a Kubernetes Service. In DuploCloud, a Service is a micro-service defined by a name, Docker Image, number of replicas, and other optional parameters. Behind the scenes, a DuploCloud Service maps 1:1 to a Deployment or StatefulSet, based on whether it has stateful volumes. There are many optional Service configurations for Docker containers. Among these are:
 
@@ -25,7 +25,7 @@ Service is a DuploCloud term and is not the same as a Kubernetes Service. In Dup
 * Resource caps
 * Kubernetes health checks
 
-## Allocation tags
+## Allocation Tags
 
 A Service can be configured to run only a specific set of Hosts by setting allocation tags on the Hosts and Service. Allocation tags are case-insensitive substrings. On a Service, allocation tags should be a substring of the Host tag. For example, if a Host is tagged `HighCpu;HighMem`, a Service tagged `highcpu` can be placed on it. Services without allocation tags can be placed on any Host.
 
@@ -35,7 +35,7 @@ If a Host has a specific tag and there are Services with the same tag, the Host 
 
 For Kubernetes Deployments, allocation tags are implemented using labels on nodes and then applying node selectors in your Deployment or StatefulSet configurations.
 
-## Host networking
+## Host Networking
 
 By default, Docker containers have network addresses. Sometimes, containers share the VM network interface. This reuse is called host networking mode.
 
@@ -47,7 +47,7 @@ A DuploCloud Service that communicates with other Services, must be exposed by a
 
 A DuploCloud Service exposed by an ELB is reachable from anywhere unless marked **Internal**, then, is only reachable from within the VPC (or DuploCloud Infrastructure). Application ELBs allow you to use a certificate to terminate SSL on the LB and avoid providing application SSLs and certificates (e.g., [AWS Amazon Certificate Manager (ACM)](https://aws.amazon.com/certificate-manager/) certificates).
 
-In Kubernetes, the platform creates a [NodePort ](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types)pointing to the Deployment and adds the Worker Nnodes' Host IPs to the ELB. Traffic flows from the client to the external port defined in the ELB (for example, 443), to the ELB's NodePort (for example, 30004 on the Worker Node), and the Kubernetes Proxy running on each Worker Node. The Worker Node forwards the NodePort to the container.&#x20;
+In Kubernetes, the platform creates a [NodePort ](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types)pointing to the Deployment and adds the Worker Nodes' Host IPs to the ELB. Traffic flows from the client to the external port defined in the ELB (for example, 443), to the ELB's NodePort (for example, 30004 on the Worker Node), and the Kubernetes Proxy running on each Worker Node. The Worker Node forwards the NodePort to the container.&#x20;
 
 #### **Classic ELB (Only applicable to Built-in container orchestration)**
 
