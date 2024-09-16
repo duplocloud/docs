@@ -28,7 +28,7 @@ As with creating Infrastructures and Tenants, DuploCloud Services are designed f
 
 Turnkey access to scalable Kubernetes constructs and managed services ensures minimal implementation detail, making DuploCloud the DevSecOps platform for the rapidly growing AI/ML cloud space. In this arena, the power of an automated platform becomes readily apparent, not only in setting up your cloud infrastructure but also in maintaining it.
 
-DuploCloud’s ready-made templatized approach to K8s made adjustments to Kubernetes parameters, such as increasing the number of replicas or using Horizontal Pod Autoscalars (HPA) based on CPU and RAM requirements, which are simple to access and adjust. Contextual AI created a secure and compliant environment in under an hour, whereasjust-in-time access to cloud consoles before, it would take them days.
+DuploCloud’s ready-made templatized approach to K8s made adjustments to Kubernetes parameters, such as increasing the number of replicas or using Horizontal Pod Autoscalars (HPA) based on CPU and RAM requirements, which are simple to access and adjust.&#x20;
 
 Remember that DuploCloud is not a replacement for DevOps engineers but rather an efficient, user-friendly means of helping them automate their environment, reducing the need for constant monitoring or "babysitting." More information on fewer screens and improved ease of navigation enhance monitoring performance.
 
@@ -40,13 +40,13 @@ Using a templatized approach, potentially complex Kubernetes constructs such as 
 
 Our website also features a comprehensive Chatbot ([Ask DuploCloud](https://duplocloud.com/ask-duplocloud/)) that can provide thorough answers and troubleshooting. Every DuploCloud customer receives their own Slack channel for personalized support from our responsive team of DevOps specialists.
 
-## 4. Saving time through ease of use and expedited navigation <a href="#id-4.-saving-time-through-ease-of-use-and-expedited-navigation" id="id-4.-saving-time-through-ease-of-use-and-expedited-navigation"></a>
+## 4. Ease of use and expedited navigation with JIT access <a href="#id-4.-saving-time-through-ease-of-use-and-expedited-navigation" id="id-4.-saving-time-through-ease-of-use-and-expedited-navigation"></a>
 
-Do you know that one of the biggest headaches faced by DevOps is complex navigation and workflows in public cloud portals? Using DuploCloud, you can minimize the time they typically spend logging in and out of AWS, Azure, and GCP consoles. Every DevOps and SecOps task can be completed from within the DuploCloud portal, often with significantly reduced clicks.
+Do you know that one of DevOps and cloud engineers' biggest headaches is complex navigation and workflows? Using DuploCloud, you can minimize the time they typically spend logging in and out of AWS, Azure, and GCP consoles. Every DevOps and SecOps task can be completed from within the DuploCloud portal, often with significantly reduced clicks.
 
 Compare the keystrokes and navigation between DuploCloud and using a native cloud portal. Often, DevOps engineers "get used to the pain" inherent in many daily DevOps tasks, unaware they can gain back minutes, hours, and days by using DuploCloud.
 
-Some commonly used tools that can be accessed directly within DuploCloud include `kubectl`, container logs, and Just-In-Time access to cloud consoles from within DuploCloud.
+Some commonly used tools that can be accessed directly within DuploCloud include `kubectl`, container logs, and JIT access to cloud consoles from within DuploCloud.
 
 ## 5. Turn-key compliance and security
 
@@ -72,9 +72,9 @@ DuploCloud provides several billing dashboards that break down your spending by 
 
 ## 8. Scalable, simplified, faster Terraform scripting
 
-As with most platforms, the work required to set up and configure a Terraform environment can adversely impact accuracy, productivity gains, and effectiveness. Terraform requires more development skills than advanced languages like Java, Go or Ruby. As with any code base, it requires constant updating, refactoring, and other maintenance tasks.
+As with most platforms, the work required to set up and configure a Terraform environment can adversely impact accuracy, productivity gains, and effectiveness. Crafting scalable Terraform requires more skills than simply programming. In addition, as with any code base, it requires constant updating, refactoring, and other maintenance tasks.
 
-Again, the power of ready-made templates in DuploCloud works to your advantage. DuploCloud contains its own Terraform provider, which can access DuploCloud Cloud constructs such as [Infrastructure](https://docs.duplocloud.com/docs/getting-started/application-focussed-interface/infrastructure) and [Tenant](https://docs.duplocloud.com/docs/getting-started/application-focussed-interface/tenant). When you run DuploCloud, you’re already speeding up the creation of DevOps components, so adding another accelerator based on Terraform is a win-win proposition: less code, less maintenance, faster deployments, and faster time-to-market.
+But the power of ready-made templates in DuploCloud works to your advantage. DuploCloud contains its own Terraform provider, which can access DuploCloud Cloud constructs such as [Infrastructure](https://docs.duplocloud.com/docs/getting-started/application-focussed-interface/infrastructure) and [Tenant](https://docs.duplocloud.com/docs/getting-started/application-focussed-interface/tenant). This simplifies the creation of many cloud resources by assuming defaults for compliance and security. When you run DuploCloud, you’re already speeding up the creation of DevOps components, so adding another accelerator based on Terraform is a win-win proposition: less code, less maintenance, faster deployments, and faster time-to-market.
 
 Using DuploCloud’s proprietary Terraform provider removes the need to write specifically for one public cloud. You can effectively use the same DuploCloud Terraform code — as it maps to DuploCloud’s constructs, not one specific cloud — with several public clouds. You don’t need to worry about differentiating platform-specific specifications. DuploCloud handles all of this for you in a transparent, replicable manner. You use utilities such as DuploCloud’s Terraform Exporter to quickly clone Tenants and modify configuration details when needed for specific Infrastructures and Tenants.
 
