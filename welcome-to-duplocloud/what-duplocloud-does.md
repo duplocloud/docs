@@ -14,13 +14,13 @@ Personalized onboarding, cloud migration, SecOps questionnaire completion, and a
 
 If there is a way to do something in the cloud, it can be done faster and more efficiently in DuploCloud.
 
-### 1. Turbo-charging Infrastructure and workspace creation <a href="#id-1.-turbo-charging-infrastructure-and-workspace-creation" id="id-1.-turbo-charging-infrastructure-and-workspace-creation"></a>
+## 1. Turbo-charging Infrastructure and workspace creation <a href="#id-1.-turbo-charging-infrastructure-and-workspace-creation" id="id-1.-turbo-charging-infrastructure-and-workspace-creation"></a>
 
 Did you know that DuploCloud can create a complete cloud infrastructure in ten to fifteen minutes, comprising virtually hundreds of components and sub-components that would take hours to develop in a native cloud portal and even longer when using native Kubernetes? Individual workspaces or Tenants can be created in less than a minute.
 
 This acceleration is critical to many of the business value propositions DuploCloud offers. It is why we can perform cloud migrations at such an advanced pace, minimizing downtime and simultaneously ensuring security and compliance (and peace of mind).
 
-### 2. Built-in scaling and managed services <a href="#id-2.-built-in-scaling-and-managed-services" id="id-2.-built-in-scaling-and-managed-services"></a>
+## 2. Built-in scaling and managed services <a href="#id-2.-built-in-scaling-and-managed-services" id="id-2.-built-in-scaling-and-managed-services"></a>
 
 Virtually all of the services DuploCloud supports are designed to auto-scale as a your cloud environment grows exponentially (which they all do, eventually). These Managed Services further promote automated "set and forget" configurations that dovetail neatly into developer self-service.
 
@@ -32,7 +32,7 @@ DuploCloud’s ready-made templatized approach to K8s made adjustments to Kubern
 
 Remember that DuploCloud is not a replacement for DevOps engineers but rather an efficient, user-friendly means of helping them automate their environment, reducing the need for constant monitoring or "babysitting." More information on fewer screens and improved ease of navigation enhance monitoring performance.
 
-### 3. Intuitive self-service DevOps for developers <a href="#id-3.-intuitive-self-service-devops-for-developers" id="id-3.-intuitive-self-service-devops-for-developers"></a>
+## 3. Intuitive self-service DevOps for developers <a href="#id-3.-intuitive-self-service-devops-for-developers" id="id-3.-intuitive-self-service-devops-for-developers"></a>
 
 DuploCloud's simplified UI guides developers and less savvy DevOps users in creating and managing DevOps components and constructs. Even advanced features such as AWS Batch, CloudFront, or setting up a Lambda function are simplified through a combination of procedural documentation, step-by-step UI panels, and even sample code blocks that can be accessed through info-tips in the UI.
 
@@ -40,7 +40,7 @@ Using a templatized approach, potentially complex Kubernetes constructs such as 
 
 Our website also features a comprehensive Chatbot ([Ask DuploCloud](https://duplocloud.com/ask-duplocloud/)) that can provide thorough answers and troubleshooting. Every DuploCloud customer receives their own Slack channel for personalized support from our responsive team of DevOps specialists.
 
-### 4. Saving time through ease of use and expedited navigation <a href="#id-4.-saving-time-through-ease-of-use-and-expedited-navigation" id="id-4.-saving-time-through-ease-of-use-and-expedited-navigation"></a>
+## 4. Saving time through ease of use and expedited navigation <a href="#id-4.-saving-time-through-ease-of-use-and-expedited-navigation" id="id-4.-saving-time-through-ease-of-use-and-expedited-navigation"></a>
 
 Do you know that one of the biggest headaches faced by DevOps is complex navigation and workflows in public cloud portals? Using DuploCloud, you can minimize the time they typically spend logging in and out of AWS, Azure, and GCP consoles. Every DevOps and SecOps task can be completed from within the DuploCloud portal, often with significantly reduced clicks.
 
