@@ -4,9 +4,9 @@ description: >-
   they provide
 ---
 
-# Supported Third-party Tools
+# Supported 3rd Party Tools
 
-The DuploCloud Portal integrates with numerous third-party tools to provide diverse functionality at a lower cost and time investment. Use this table to determine which tool supports the functionality you need. &#x20;
+Use this table to determine which tool supports the functionality you need. &#x20;
 
 | Functionality       | Third-party tool supported by DuploCloud |
 | ------------------- | ---------------------------------------- |
