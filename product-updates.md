@@ -20,6 +20,8 @@ layout:
 
 # Product Updates
 
+
+
 ## Q2 2024
 
 * AWS
@@ -126,7 +128,7 @@ layout:
 
     </div>
 
-    * Refer to the [Supported Third-Party Tools](extras-overview/supported-third-party-tools.md) page for a list of out-of-the-box functionalities DuploCloud supports.
+    * Refer to the [Supported Third-Party Tools](automation-and-tools/supported-third-party-tools.md) page for a list of out-of-the-box functionalities DuploCloud supports.
     * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
 
 ## August 2023 and September 2023
