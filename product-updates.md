@@ -20,10 +20,6 @@ layout:
 
 # Product Updates
 
-
-
-## Q2 2024
-
 ## Q3 2024
 
 * Azure
