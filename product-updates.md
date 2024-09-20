@@ -24,6 +24,15 @@ layout:
 
 ## Q2 2024
 
+## Q3 2024
+
+* Azure
+  * Support for [Table, Queue, and Container storage types](overview-2/azure-services/storage-account.md#create-storage-account) within Azure Storage Accounts.
+* GCP
+  * Specify OS disk size when [creating a GCE VM](overview-1/use-cases/hosts-vms.md#gce-vm).
+
+## Q2 2024
+
 * AWS
   * Configure [admin-only access to the SSH key](overview/use-cases/hosts-vms/ssh-ec2-instance.md#configuring-admin-only-access-to-the-ssh-key).
   * Support for[ secondary indexes](aws-user-guide/aws-services/database/dynamodb.md#adding-dynamodb-database-tables) when using DynamoDB databases.
@@ -52,6 +61,7 @@ layout:
   * Configure faults for failed [Jobs](kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [CronJobs ](kubernetes/cronjobs.md)at the Tenant level.
   * Support for [DaemonSet](https://docs.duplocloud.com/docs/kubernetes-overview/daemonset#creating-a-daemonset-in-duplocloud-aws-or-gcp) with GCP or AWS.&#x20;
 * General
+  * [Configure user access to multiple Tenants](access-control/tenant-access/) with one step.
   * [Configure Okta](extras-overview/okta-user-management.md) as a user source for the DuploCloud Portal.
   * [Customize the text on the login button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
@@ -77,6 +87,7 @@ layout:
   * [Security Configurations Settings](overview/security-configuration-settings/) documentation section added.
   * ClusterIP and Worker Node target types are supported when creating [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
 * GCP
+  * Additional supported actions for [Cloud SQL databases](overview-1/gcp-services/s3-bucket-1.md#create-a-cloud-scheduler-job) (GCP Console, Edit, Delete, Stop, Restart, or Reset Password)
   * [GKE Standard mode](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
   * Support for [Firestore ](overview-1/gcp-services/firestore-database.md)databases.
   * Support for [GCP Hosts](overview-1/use-cases/hosts-vms.md#id-3-toc-title) and [GCE VMs](overview-1/use-cases/hosts-vms.md#gce-vm).
