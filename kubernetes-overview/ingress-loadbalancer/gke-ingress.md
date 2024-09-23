@@ -14,7 +14,7 @@ Container-native load balancing on Google Cloud Platform (GCP) allows Load Balan
 
 It leverages the network endpoint groups (NEGs) feature to ensure that traffic is directed to the appropriate container instances, enabling more granular and efficient load distribution for applications running on GKE.
 
-<figure><img src="../../.gitbook/assets/image (121).png" alt="" width="563"><figcaption><p><strong>GKE Container Native Load Balancing</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (315).png" alt="" width="563"><figcaption><p><strong>GKE Container Native Load Balancing</strong></p></figcaption></figure>
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ Add a Load Balancer listener that uses Kubernetes (K8s) ClusterIP. Kubernetes He
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (122).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (316).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
 
 </div>
 
@@ -43,7 +43,7 @@ Add a Load Balancer listener that uses Kubernetes (K8s) ClusterIP. Kubernetes He
 6. Enable **Advanced Kubernetes Settings** and **Set HealthCheck annotations for Ingress**, if needed. (This will add required annotations in Kubernetes Service to be recognized by the GKE Ingress Controller)
 7. Click **Add**. The Load Balancer listener details display in the **Load Balancers** tab on the Service details page.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (123).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab for <strong>nginx-test</strong> service</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (317).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab for <strong>nginx-test</strong> service</p></figcaption></figure>
 
 ### Creating a GCP Managed Certificate (optional)
 
@@ -94,7 +94,7 @@ To add a Kubernetes Ingress, you must define [rules ](https://kubernetes.io/docs
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (125).png" alt="" width="375"><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (319).png" alt="" width="375"><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
 
 </div>
 
@@ -104,7 +104,7 @@ To add a Kubernetes Ingress, you must define [rules ](https://kubernetes.io/docs
 5. Click **Add Rule**. The rule displays on the Add Kubernetes Ingress page. Repeat the preceding steps to add additional rules.
 6. Click **Add** to add the Kubernetes Ingress. The Ingress displays on the **Ingress** page.
 
-<figure><img src="../../.gitbook/assets/image (127).png" alt=""><figcaption><p><strong>Ingress</strong> page displaying the added Ingress</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (321).png" alt=""><figcaption><p><strong>Ingress</strong> page displaying the added Ingress</p></figcaption></figure>
 
 The Ingress creation will take a few minutes. Once the IP is attached to the Ingress, you are ready to use your path- or host-based routing defined via Ingress.
 
@@ -112,5 +112,5 @@ The Ingress creation will take a few minutes. Once the IP is attached to the Ing
 
 You can view the Ingresses you have created by navigating to **Kubernetes** -> **Ingres**s.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (128).png" alt=""><figcaption><p>The Kubernetes <strong>Ingress</strong> page showing the added Ingress</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (322).png" alt=""><figcaption><p>The Kubernetes <strong>Ingress</strong> page showing the added Ingress</p></figcaption></figure>
 

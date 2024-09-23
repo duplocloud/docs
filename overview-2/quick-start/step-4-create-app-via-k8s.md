@@ -26,7 +26,7 @@ Before creating your DuploCloud Service, ensure that:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (2) (1) (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01 (6).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
 
 </div>
 
@@ -38,7 +38,7 @@ Before creating your DuploCloud Service, ensure that:
 
     <div align="left">
 
-    <img src="../../.gitbook/assets/image (2) (3) (1).png" alt="Add Service page to add nginx-service">
+    <img src="../../.gitbook/assets/image (301).png" alt="Add Service page to add nginx-service">
 
     </div>
 3. In the **Service Name** field, enter **nginx-service**.

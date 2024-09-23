@@ -59,4 +59,4 @@ It may take 1-2 minutes for the Tenant to be set up. While the Tenant is setting
 
 From the DuploCloud portal, navigate to **Administrator** -> **Tenants**, and verify that a Tenant exists with the name and Plan you created.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption><p>The <strong>Tenants</strong> page showing the Dev01 Tenant</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (145).png" alt=""><figcaption><p>The <strong>Tenants</strong> page showing the Dev01 Tenant</p></figcaption></figure>

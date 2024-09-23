@@ -10,7 +10,7 @@ Refer below for the sample App Service Plan.
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (5) (2) (1).png" alt="">
+<img src="../../.gitbook/assets/image (129).png" alt="">
 
 </div>
 

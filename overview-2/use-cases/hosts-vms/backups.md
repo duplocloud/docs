@@ -14,7 +14,7 @@ Create Virtual Machine (VM) snapshots in the DuploCloud Portal.
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/image (61).png" alt="Actions -> Snapshot option on Hosts page">
+<img src="../../../.gitbook/assets/image (127).png" alt="Actions -> Snapshot option on Hosts page">
 
 </div>
 

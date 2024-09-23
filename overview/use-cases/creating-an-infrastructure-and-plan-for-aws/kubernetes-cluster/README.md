@@ -14,7 +14,7 @@ Optionally, [enable logging](enable-eks-logs.md) and [custom EKS endpoints](enab
 
 The worker nodes and remaining workload setup are described in the [Tenant](../../tenant-environment/) topic.
 
-<figure><img src="../../../../.gitbook/assets/AWS_Infra_logs1 (1).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> form with <strong>Enable EKS</strong> selected </p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/AWS_Infra_logs1.png" alt=""><figcaption><p><strong>Add Infrastructure</strong> form with <strong>Enable EKS</strong> selected </p></figcaption></figure>
 
 {% hint style="warning" %}
 Up to one instance (0 or 1) of an EKS is supported for each DuploCloud Infrastructure. &#x20;

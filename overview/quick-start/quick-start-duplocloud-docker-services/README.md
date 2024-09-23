@@ -30,4 +30,4 @@ _Estimated time to complete remaining tutorial steps: 30-40 minutes_
 
 Behind the scenes, the topology that DuploCloud creates resembles this low-level configuration in AWS.
 
-<figure><img src="../../../.gitbook/assets/image (3) (2) (2).png" alt=""><figcaption><p>A diagram of the DuploCloud Docker Service topology</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (131).png" alt=""><figcaption><p>A diagram of the DuploCloud Docker Service topology</p></figcaption></figure>

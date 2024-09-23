@@ -21,7 +21,7 @@ After you select the Host, on the Host's page click the **Actions** menu and sel
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/image (1) (1) (2) (1).png" alt="Connection Info for Host window with Download Key button">
+<img src="../../../.gitbook/assets/image (219).png" alt="Connection Info for Host window with Download Key button">
 
 </div>
 
@@ -39,7 +39,7 @@ If you don't want to display the **Download Key** button, disable the button's v
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (2) (6).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Disable SSH Key Download Key</strong> selected</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (265).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Disable SSH Key Download Key</strong> selected</p></figcaption></figure>
 
 </div>
 

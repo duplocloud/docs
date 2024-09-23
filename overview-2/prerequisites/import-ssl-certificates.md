@@ -32,7 +32,7 @@ openssl pkcs12 -export -out certificate.pfx -inkey <CERTIFICATE_PRIVATE_KEY>.key
 When running this command, you will be asked for a password to protect the PFX file.  Note this password and store it in a secure place as you will need to provide it when importing the certificate to Azure KeyVault.
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/SSL_PFX (1).png" alt=""><figcaption><p>Password prompt when converting CRT file to PFX format</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SSL_PFX.png" alt=""><figcaption><p>Password prompt when converting CRT file to PFX format</p></figcaption></figure>
 
 ## Importing SSL certificates to Azure
 
@@ -62,7 +62,7 @@ After you generate the PFX file, sign in to the Azure Portal and access Azure Ke
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/SSL_Create_Cert_with_create_button (1).png" alt=""><figcaption><p><strong>Create a Certificate</strong> form in Azure Key Vault</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/SSL_Create_Cert_with_create_button.png" alt=""><figcaption><p><strong>Create a Certificate</strong> form in Azure Key Vault</p></figcaption></figure>
 
     </div>
 7.  Click **Create**. Even though the certificate is created, notice that the certificate is _not yet_ successfully imported into the vault, as indicated by the **No certificates available** message, as shown below. To import the certificate, you must obtain the Secret Identifier ARN of this certificate and then [configure it in DuploCloud](import-ssl-certificates.md#configuring-the-certificate-in-duplocloud).\
@@ -78,10 +78,10 @@ After you generate the PFX file, sign in to the Azure Portal and access Azure Ke
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/SSL_Import5.png" alt=""><figcaption><p>CURRENT VERSION of certificate </p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/SSL_Import5 (1).png" alt=""><figcaption><p>CURRENT VERSION of certificate </p></figcaption></figure>
 
     </div>
-9. In the **Certificate Version** form, copy the **Secret Identifier** using the Copy Icon (![](<../../.gitbook/assets/copy\_icon (1) (1).png>)).&#x20;
+9. In the **Certificate Version** form, copy the **Secret Identifier** using the Copy Icon (![](<../../.gitbook/assets/copy\_icon (1).png>)).&#x20;
 
 {% hint style="info" %}
 You will paste the ARN when you [configure the certificate in DuploCloud](import-ssl-certificates.md#configuring-the-certificate-in-duplocloud).

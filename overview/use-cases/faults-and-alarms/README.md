@@ -20,9 +20,13 @@ You can set the AWS Alerts for individual metrics.&#x20;
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/image (21) (2).png" alt="">
+<img src="../../../.gitbook/assets/image (263).png" alt="">
 
 </div>
+
+{% hint style="info" %}
+
+{% endhint %}
 
 ## Viewing Alerts
 

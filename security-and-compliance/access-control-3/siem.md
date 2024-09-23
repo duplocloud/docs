@@ -20,5 +20,5 @@ For customers who require SIEM, the setup is a seamless, fully orchestrated expe
 Typically, one centralized SIEM is used for multiple accounts, i.e., one DuploCloud implementation implements the SIEM, and more DuploCloud environments can ingest data there.\
 
 
-<figure><img src="../../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (400).png" alt=""><figcaption></figcaption></figure>
 

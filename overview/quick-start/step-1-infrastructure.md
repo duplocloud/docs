@@ -38,7 +38,7 @@ DuploCloud begins creating and configuring your Infrastructure and EKS/ECS clust
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/AWS_QS_1.png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page<br></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_QS_1 (1).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page<br></p></figcaption></figure>
 
 </div>
 

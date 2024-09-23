@@ -41,4 +41,4 @@ description: >-
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select the Infrastructure from the **Name** column.
 3. Click the **Security Group Rules** tab. Security Rules are displayed in rows.
-4. In the first column of the Security Group row, click the Options Menu Icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) and select **Delete**.
+4. In the first column of the Security Group row, click the Options Menu Icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (16).png" alt="" data-size="line"> ) and select **Delete**.

@@ -66,7 +66,7 @@ You previously verified that your Infrastructure and Plan were created. Now veri
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (286).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -78,6 +78,6 @@ From the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**.
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (23) (3).png" alt=""><figcaption><p>The <strong>Nonprod Infrastructure</strong> details page with the <strong>GKE</strong> tab selected.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (151).png" alt=""><figcaption><p>The <strong>Nonprod Infrastructure</strong> details page with the <strong>GKE</strong> tab selected.</p></figcaption></figure>
 
 </div>

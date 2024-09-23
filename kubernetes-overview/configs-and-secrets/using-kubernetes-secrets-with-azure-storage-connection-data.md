@@ -16,7 +16,7 @@ Navigate to **Kubernetes** -> **Secrets**. Create a Kubernetes Secret Object usi
 
 For more information, see [Kubernetes Configs and Secrets](./).
 
-<figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption><p>Kubernetes Storage Account Secret</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (381).png" alt=""><figcaption><p>Kubernetes Storage Account Secret</p></figcaption></figure>
 
 {% code title="SecretDetails example" %}
 ```
@@ -51,4 +51,4 @@ VolumesMounts:
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption><p>Service Deployment Screen with K8s Secret example</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (382).png" alt=""><figcaption><p>Service Deployment Screen with K8s Secret example</p></figcaption></figure>

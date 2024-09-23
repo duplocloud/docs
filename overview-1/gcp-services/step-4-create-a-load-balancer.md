@@ -29,7 +29,7 @@ DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (12) (5).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure>
 
 </div>
 

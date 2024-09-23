@@ -32,7 +32,7 @@ You must add a Key/Value pair in the DuploCloud Portal's **System Config** setti
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/L4 (1).png" alt=""><figcaption><p><strong>System Settings</strong> with <strong>ListAllLambdaLayers AppConfig Type</strong> set to <strong>Value</strong> of <strong>True</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/L4.png" alt=""><figcaption><p><strong>System Settings</strong> with <strong>ListAllLambdaLayers AppConfig Type</strong> set to <strong>Value</strong> of <strong>True</strong></p></figcaption></figure>
 
 </div>
 

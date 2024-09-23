@@ -10,14 +10,14 @@ Provide unique name to create Storage Account.
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (54).png" alt="Add Storage Account screen">
+<img src="../../.gitbook/assets/image (35).png" alt="Add Storage Account screen">
 
 </div>
 
 ## View Storage Account
 
 You can view Storage Account Details once created. You can view Endpoint details in the Storage Account table view.\
-Click on the  <img src="../../.gitbook/assets/image (1) (1) (2).png" alt="" data-size="line">icons under the Actions Column to view and copy the keys of the Storage Account.
+Click on the  <img src="../../.gitbook/assets/image (189).png" alt="" data-size="line">icons under the Actions Column to view and copy the keys of the Storage Account.
 
 <figure><img src="../../.gitbook/assets/storage1fixed.png" alt=""><figcaption></figcaption></figure>
 
@@ -33,7 +33,7 @@ Click on **Actions** -> **Shared Access Signature**. Provide access details in t
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (28).png" alt="">
+<img src="../../.gitbook/assets/image (236).png" alt="">
 
 </div>
 

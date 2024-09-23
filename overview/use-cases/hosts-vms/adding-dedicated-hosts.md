@@ -22,7 +22,7 @@ Configure the DuploCloud Portal to allow for the creation of Dedicated Hosts.
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (106) (2).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (291).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure>
 
 </div>
 

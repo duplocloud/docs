@@ -11,7 +11,7 @@ Set the **MinCapacity** (minimum value 2) and **MaxCapacity** to complete the co
 
 <div align="left">
 
-<img src="../../../../.gitbook/assets/image (24) (1).png" alt="">
+<img src="../../../../.gitbook/assets/image (53).png" alt="">
 
 </div>
 
@@ -32,7 +32,7 @@ This step creates the target tracking scaling policy and attaches it to the Auto
 
 <div align="left">
 
-<img src="../../../../.gitbook/assets/image (5) (3) (1).png" alt="">
+<img src="../../../../.gitbook/assets/image (196).png" alt="">
 
 </div>
 
@@ -40,4 +40,4 @@ This step creates the target tracking scaling policy and attaches it to the Auto
 
 View the Scaling Target and Policy Details from the DuploCloud Portal. Update and Delete Operations are also supported from this view
 
-![](<../../../../.gitbook/assets/image (23) (1).png>)
+![](<../../../../.gitbook/assets/image (182).png>)

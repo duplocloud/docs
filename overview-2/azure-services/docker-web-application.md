@@ -36,7 +36,7 @@ Select the Test-service and click the plus icon on the load balancer configurati
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (67).png" alt="">
+<img src="../../.gitbook/assets/image (55).png" alt="">
 
 </div>
 

@@ -39,11 +39,11 @@ Refer to the [AWS Documentation](https://docs.aws.amazon.com/AmazonECR/latest/us
 
 
     ![Create a Lambda Function page using Type Image
-    ](../../../.gitbook/assets/L9.png)
+    ](<../../../.gitbook/assets/L9 (1).png>)
 4. In the **Name** field, enter the name of your Lambda Function.
 5. In the **Description** field, enter a useful description of the function.
 6. From the **Package Type** list box, select **Image**. For type **Zip**, see the [Lambda Functions](./) topic.
-7. Optionally, enter an **Image Configuration**. Refer to the informational ToolTip ( <img src="../../../.gitbook/assets/info_tip_black (3).png" alt="" data-size="line"> ) for examples.
+7. Optionally, enter an **Image Configuration**. Refer to the informational ToolTip ( <img src="../../../.gitbook/assets/info_tip_black (4).png" alt="" data-size="line"> ) for examples.
 8. In the **Image URL** field, enter the URL of the image.
 9. Click **Submit**. The Lambda function is created.
 10. On the **Lambda Function** page, from the **Name** column, select the function you created.

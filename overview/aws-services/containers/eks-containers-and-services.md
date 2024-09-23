@@ -111,7 +111,7 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/image (114).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (383).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure>
 
     </div>
 
@@ -120,7 +120,7 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 7.  Click **Submit**. The setting is displayed as **BlockMasterVpcCidrAllowInEksSg** in the **System Config** tab.\
 
 
-    <figure><img src="../../../.gitbook/assets/image (115).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>Flag BlockMasterVpcCidrAllowInEksSg</strong> set to <strong>true</strong></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (384).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>Flag BlockMasterVpcCidrAllowInEksSg</strong> set to <strong>true</strong></p></figcaption></figure>
 
 ## Kubernetes Containers
 

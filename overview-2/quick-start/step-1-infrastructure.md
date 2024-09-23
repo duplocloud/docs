@@ -38,7 +38,7 @@ Before starting this tutorial:
 | **Cloud**                      | `Azure`                          |
 | **Region**                     | _`YOUR_GEOGRAPHIC_REGION`_       |
 
-![Infrastructure creation with a status of Complete](<../../.gitbook/assets/image (30).png>)
+![Infrastructure creation with a status of Complete](<../../.gitbook/assets/image (34).png>)
 
 ## Enable Kubernetes for Azure
 
@@ -67,6 +67,6 @@ You previously verified that your Infrastructure and Plan were created. Now, ver
 
 From the Infrastructure page, select the Infrastructure (**NONPROD**) that you created. When AKS has been **Enabled**, details are listed in the **Kubernetes** tab on the **Infrastructure** page. This page also displays the **Enabled** status on the **Kubernetes** card.
 
-![Kubernetes tab in the Infrastructure page with details about your configured AKS cluster ](<../../.gitbook/assets/image (38).png>)
+![Kubernetes tab in the Infrastructure page with details about your configured AKS cluster ](<../../.gitbook/assets/image (120).png>)
 
 <figure><img src="../../.gitbook/assets/Azure_GS_Infra_3_Verify.png" alt=""><figcaption><p><strong>NONPROD Infrastructure</strong> page with <strong>Kubernetes Enabled</strong> card</p></figcaption></figure>

@@ -23,7 +23,7 @@ If you attempt to start a KubeCtl Shell instance and receive a 503 in your web b
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (1) (3).png" alt="Token window with kubectl commands for creating token">
+<img src="../../.gitbook/assets/image (194).png" alt="Token window with kubectl commands for creating token">
 
 </div>
 

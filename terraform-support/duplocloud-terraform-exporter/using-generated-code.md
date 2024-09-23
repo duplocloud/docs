@@ -37,19 +37,19 @@ Execute Script in this sequence:
 
 > scripts/apply.sh \<new tenant name> **admin-tenant**
 
-![scripts/apply,sh execution in progress](<../../../.gitbook/assets/image (31) (1).png>)
+![scripts/apply,sh execution in progress](<../../.gitbook/assets/image (168).png>)
 
 ### Project: aws-services
 
 This project manages data services like Redis, RDS, Kafka, S3 buckets, Cloudfront, EMR and Elastic Search inside DuploCloud.
 
-![aws-services project apply execution ](<../../../.gitbook/assets/image (28) (1).png>)
+![aws-services project apply execution ](<../../.gitbook/assets/image (215).png>)
 
 ### Project: app
 
 This project manages containerized applications inside DuploCloud like EKS Services, ECS, docker native service.
 
-![app project apply execution ](<../../../.gitbook/assets/image (50) (1).png>)
+![app project apply execution ](<../../.gitbook/assets/image (107).png>)
 
 ### Delete the resources created using Utility
 

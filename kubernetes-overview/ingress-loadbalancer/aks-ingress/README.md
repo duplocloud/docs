@@ -27,7 +27,7 @@ Before you add an Ingress rule, you need to enable the Ingress Controller for th
 3. Select the **Settings** tab, and click **Add**. The **Infra-Set Custom Data** pane displays.
 4. In the **Setting Name** list box, select **Enable App Gateway Ingress Controller**. **Enable** the setting and click **Set**. The **Enable App Gateway Ingress Controller** setting value is **true**.
 
-<figure><img src="../../../.gitbook/assets/image (3) (5).png" alt=""><figcaption><p><strong>Enable App Gateway Ingress Controller</strong> configured with <strong>true</strong> value</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Azure_Ingress_1.png" alt=""><figcaption><p><strong>Enable App Gateway Ingress Controller</strong> configured with <strong>true</strong> value</p></figcaption></figure>
 
 ## Adding a Load Balancer Listener using K8S NodePort
 

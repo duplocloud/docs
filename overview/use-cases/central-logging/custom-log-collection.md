@@ -19,7 +19,7 @@ You must make Service Description changes before you [enable central logging](ce
 3. Edit the YAML in the **Service Description** window as needed.
 4. Click **Update** when the configuration is complete to close the window and save your changes.
 
-![Editable Service Description window](<../../../.gitbook/assets/image (21) (1) (1).png>)
+![Editable Service Description window](<../../../.gitbook/assets/image (206).png>)
 
 ### Updating the Control Plane by editing the Service Description
 

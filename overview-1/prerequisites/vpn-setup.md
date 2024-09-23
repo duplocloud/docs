@@ -23,7 +23,7 @@ After the OpenVPN is provisioned, it is ready to use. Behind the scenes, DuploCl
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (2) (2) (1).png" alt="VPN tab in the System Settings page.">
+<img src="../../.gitbook/assets/image (244).png" alt="VPN tab in the System Settings page.">
 
 </div>
 

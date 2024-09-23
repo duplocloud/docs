@@ -25,7 +25,7 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (378).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -43,7 +43,7 @@ You can verify that ECS logging is enabled for a specific container.
 
     </div>
 3. Click the **Task Definitions** tab.
-4. Menu icon ( <img src="../../../../.gitbook/assets/image (53).png" alt="" data-size="line">) in the row of the task definition and select **Edit Task Definition**. The **Edit Task Definition** page displays your defined **Container**s.
+4. Menu icon ( <img src="../../../../.gitbook/assets/image (362).png" alt="" data-size="line">) in the row of the task definition and select **Edit Task Definition**. The **Edit Task Definition** page displays your defined **Container**s.
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_40_32.png" alt=""><figcaption><p><strong>Task Definitions</strong> tab menu with <strong>Edit Task Definitio</strong>n highlighted</p></figcaption></figure>
 
@@ -57,4 +57,4 @@ In the **Container - 1** area, in the **Container Other Config** field, your `Lo
 
 In the **Container-2** area, another container is created by DuploCloud with the name `log_router`.
 
-<figure><img src="../../../../.gitbook/assets/image (109).png" alt=""><figcaption><p><strong>Container - 2</strong> area of the Task Definition editor displaying configuration for <strong>log_router</strong> container, created by DuploCloud</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (379).png" alt=""><figcaption><p><strong>Container - 2</strong> area of the Task Definition editor displaying configuration for <strong>log_router</strong> container, created by DuploCloud</p></figcaption></figure>

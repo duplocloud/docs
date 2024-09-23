@@ -23,7 +23,7 @@ Before creating Azure Agent Pools, verify that you accomplished the tasks in [St
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (3) (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
 
 </div>
 
@@ -40,7 +40,7 @@ Before creating Azure Agent Pools, verify that you accomplished the tasks in [St
 | **Id**                                   | `1`             |
 | **Instance Type**                        | `(4 CPU 16GB)`  |
 
-![Add Azure Agent Pool page ](<../../.gitbook/assets/image (42).png>)
+![Add Azure Agent Pool page ](<../../.gitbook/assets/image (125).png>)
 
 ## Check your work
 

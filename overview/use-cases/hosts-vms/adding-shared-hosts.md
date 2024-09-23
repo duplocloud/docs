@@ -59,7 +59,7 @@ You can enable shared Hosts in the DuploCloud Portal. First, configure one Tenan
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/image (96).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure>
 
     </div>
 6. Click **Create**. A Service running the shared Host is created.&#x20;

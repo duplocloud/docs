@@ -38,7 +38,7 @@ Before completing this task, you must [add a Load Balancer Listener of **Type Ne
 1. In the DuploCloud Portal, navigate **Docker** -> **Services** or **Kubernetes** -> **Service**.
 2. Select the Service name from the **NAME** column.
 3. Click the **Load Balancers** tab.
-4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
+4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../.gitbook/assets/image (199).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
 5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pane**.**
 6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. After the CIDRs are added, you [add Security Groups for Custom CIDR(s)](./#adding-security-groups-for-custom-cidrs).
 
@@ -106,7 +106,7 @@ To accomplish this, you:
 4. If no Load Balancers exist, click the **Configure Load Balancer** link. If other Load Balancers exist, click **Add** in the **LB listeners** card. The **Add Load Balancer Listener** pane displays.
 5. From the **Select Type** list box, select **Target Group Only**.
 6. You can create a Load Balancer Listener with a type of **Target Group** **Only** for Docker or EKS and ECS Services based on your application requirement.  Complete the other required fields and click **Add**.&#x20;
-7.  Note the name of the created Target Group by clicking the Info Icon ( <img src="../../../.gitbook/assets/info_tip_black (2).png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`. You will select the Target Group when you [create a Shared Load Balancer for the Target Group](./#creating-a-shared-load-balancer-for-the-target-group).\
+7.  Note the name of the created Target Group by clicking the Info Icon ( <img src="../../../.gitbook/assets/info_tip_black (3).png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`. You will select the Target Group when you [create a Shared Load Balancer for the Target Group](./#creating-a-shared-load-balancer-for-the-target-group).\
 
 
     <div align="left">
@@ -151,7 +151,7 @@ The **Target Group Only** Service Load Balancer is displayed in the **LB Listene
 Rules are not supported for Network Load Balancers (NLBs).
 {% endhint %}
 
-1. In the **Listeners** tab, in the **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) and select **Manage Rules**. You can also select **Update attributes** from the **Actions** menu, as well, to dynamically update Target Group attributes. The **Listener Rules** page displays.
+1. In the **Listeners** tab, in the **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) and select **Manage Rules**. You can also select **Update attributes** from the **Actions** menu, as well, to dynamically update Target Group attributes. The **Listener Rules** page displays.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-19_12_19.png" alt=""><figcaption><p><strong>Actions</strong> menu for <strong>Target Group</strong> with <strong>Manage Rules</strong> and <strong>Update attributes</strong> options</p></figcaption></figure>
 
@@ -172,7 +172,7 @@ View the rules you defined for any Shared Load Balancer.
 1. In the DuploCloud portal, navigate to **Cloud Services** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose rules you want to view.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../../.gitbook/assets/image (12) (1).png" alt="" data-size="line"> ) and select **Manage Rules**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../../.gitbook/assets/image (132).png" alt="" data-size="line"> ) and select **Manage Rules**.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-19_20_44.png" alt=""><figcaption><p><strong>Listener Rules</strong> page displaying Shared Load Balancer rules</p></figcaption></figure>
 
@@ -183,7 +183,7 @@ Update attributes for your defined Target Group.
 1. In the DuploCloud portal, navigate to **Cloud Services** -> **Networking**.&#x20;
 2. Select the **Load Balancer** tab.&#x20;
 3. From the **Name** column, select the Load Balancer whose defined Target Group attributes you want to modify.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/image (6) (1).png" alt="" data-size="line"> ) and select **Update attributes**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../.gitbook/assets/image (96).png" alt="" data-size="line"> ) and select **Update attributes**.
 
 ## Additional Load Balancer Settings
 

@@ -2,7 +2,7 @@
 description: Set up logging for the DuploCloud Portal
 ---
 
-# Set up logging
+# Set up central logging
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ description: Set up logging for the DuploCloud Portal
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/image (2) (2).png" alt=""><figcaption><p><strong>Create Logging</strong> link</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption><p><strong>Create Logging</strong> link</p></figcaption></figure>
 
     </div>
 
@@ -28,7 +28,7 @@ description: Set up logging for the DuploCloud Portal
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption><p><strong>Enable Logging</strong> page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (155).png" alt=""><figcaption><p><strong>Enable Logging</strong> page</p></figcaption></figure>
 
     </div>
 
@@ -38,7 +38,7 @@ description: Set up logging for the DuploCloud Portal
 7.  In the **Logging** tab, on the **Logging Infrastructure Tenants** page, click **Add.**\
 
 
-    <figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption><p><strong>Add</strong> button on the <strong>Logging Infrastructure Tenants</strong> page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (257).png" alt=""><figcaption><p><strong>Add</strong> button on the <strong>Logging Infrastructure Tenants</strong> page</p></figcaption></figure>
 8. Select the Tenants for which you want to configure logging, using the **Select Tenants to enable logging** area, as in the example below. The [Control Plane configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description) is deployed for each Tenant that you select in the Infrastructure, specified in **Infrastructure Details**.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.21-14_43_41.png" alt=""><figcaption><p><strong>Logging</strong> tab with logging setup complete</p></figcaption></figure>

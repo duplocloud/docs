@@ -16,7 +16,7 @@ Package and upload your DAG (Directed Acyclic Graph) code to Amazon S3. Amazon M
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption><p>S3 Objects for Airflow configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (372).png" alt=""><figcaption><p>S3 Objects for Airflow configuration</p></figcaption></figure>
 
 </div>
 
@@ -43,4 +43,4 @@ If you specify `plugins.zip`, `requirements.txt`, and `startup` script while set
 
 After setup, view the Managed Airflow Environment from the DuploCloud Portal, using the **Airflow** tab. You can view the Airflow Environment in the AWS Console by clicking the **WebserverURL**.
 
-<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption><p><strong>Airflow</strong> tab containing details of the Managed Airflow Environment</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (371).png" alt=""><figcaption><p><strong>Airflow</strong> tab containing details of the Managed Airflow Environment</p></figcaption></figure>

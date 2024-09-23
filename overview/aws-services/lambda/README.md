@@ -6,7 +6,7 @@ description: Use Lambda to deploy serverless functions in DuploCloud
 
 [Lambda ](https://aws.amazon.com/pm/lambda/?trk=73f686c8-9606-40ad-852f-7b2bcafa68fe\&sc\_channel=ps\&ef\_id=CjwKCAjwm4ukBhAuEiwA0zQxk0SFVZUD3BCwJFOwlrHAFxzGF6anGJulF49mrridyhHjXRxfSHnmGxoCQw0QAvD\_BwE:G:s\&s\_kwcid=AL!4422!3!651212652666!e!!g!!amazon%20lambda!909122559!45462427876)is a serverless computing platform provided by AWS that allows you to run code without provisioning or managing servers. It enables you to build and run applications in response to events or triggers from Lambda Functions.
 
-Lambda Functions are event-driven and designed to perform small, specific tasks or functions. They can be written in supported programming languages such as Python, JavaScript (`Node.js`), Java, C#, PowerShell, or Ruby. Once you create a Lambda function, you can configure it to respond to various types of events, such as changes in data stored in an Amazon [S3 bucket](../s3-bucket.md), updates in an Amazon [DynamoDB](../../../aws-user-guide/aws-services/database/dynamodb.md) table, incoming HTTP requests via Amazon API Gateway, or custom events triggered by other [AWS services](../).
+Lambda Functions are event-driven and designed to perform small, specific tasks or functions. They can be written in supported programming languages such as Python, JavaScript (`Node.js`), Java, C#, PowerShell, or Ruby. Once you create a Lambda function, you can configure it to respond to various types of events, such as changes in data stored in an Amazon [S3 bucket](../s3-bucket.md), updates in an Amazon [DynamoDB](../database/dynamodb.md) table, incoming HTTP requests via Amazon API Gateway, or custom events triggered by other [AWS services](../).
 
 Using Lambda, you write your code and upload it to AWS. Lambda executes and scales the code as needed, abstracting away the underlying infrastructure, and allowing you to focus on writing the actual business logic of your application. Lambda Functions are the principal resource of the Lambda serverless platform.&#x20;
 
@@ -23,7 +23,7 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 ## Creating an S3 Bucket <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
 1. [Create an S3 Bucket](../s3-bucket.md).
-2. Use [JIT ](../../../aws-user-guide/use-cases/jit-access.md)to access the AWS Console.
+2. Use [JIT ](../../use-cases/jit-access.md)to access the AWS Console.
 3. Upload the Zip package in the AWS Console.
 
 ## Creating a Lambda function <a href="#id-3-toc-title" id="id-3-toc-title"></a>

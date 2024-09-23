@@ -18,7 +18,7 @@ Accept OpenVPN in the [Azure marketplace](https://azuremarketplace.microsoft.com
 
 After the OpenVPN is provisioned, it is ready to use. Behind the scenes, DuploCloud launches a cloud formation script to provision the OpenVPN.   &#x20;
 
-![VPN tab in the System Settings page.](<../../.gitbook/assets/image (2) (2) (1).png>)
+![VPN tab in the System Settings page.](<../../.gitbook/assets/image (244).png>)
 
 {% hint style="info" %}
 You can find the OpenVPN admin password in the cloud formation stack in your Azure console.

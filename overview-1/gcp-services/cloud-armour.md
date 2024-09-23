@@ -79,7 +79,7 @@ To change your Cloud Armour configuration to use a different security policy, ed
     </div>
 
 
-4.  In the row listing your security policy, click the Edit Icon ( <img src="../../.gitbook/assets/square_edit_icon (3) (1).png" alt="" data-size="line"> ) to change the Security Policy ID. The **Update Security Policy** pane displays.\
+4.  In the row listing your security policy, click the Edit Icon ( <img src="../../.gitbook/assets/square_edit_icon (5).png" alt="" data-size="line"> ) to change the Security Policy ID. The **Update Security Policy** pane displays.\
 
 
     <div align="left">

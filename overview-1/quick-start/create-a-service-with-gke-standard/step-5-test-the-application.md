@@ -28,11 +28,11 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 1. In the DuploCloud Portal, navigate to Kubernetes -> Services. The **Services** page displays.
 2. From the **Name** column, select **demo-service**.
 3. Click the **Load Balancers** tab. The Application Load Balancer configuration is displayed.
-4. In the **LB Configuration** card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the **IP Address** displayed to your clipboard.
+4. In the **LB Configuration** card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the **IP Address** displayed to your clipboard.
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (7) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (176).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -41,6 +41,6 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 Congratulations! You have just launched your first web service on DuploCloud!
 
-<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
 
 \

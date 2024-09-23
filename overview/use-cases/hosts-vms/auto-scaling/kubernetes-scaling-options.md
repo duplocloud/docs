@@ -60,7 +60,7 @@ When your services are running, **Replicas: Auto** is displayed on the Service p
 
 <div align="left">
 
-<img src="../../../../.gitbook/assets/image (8) (3).png" alt="Service page with Replicas: Auto and Status: Running displayed">
+<img src="../../../../.gitbook/assets/image (140).png" alt="Service page with Replicas: Auto and Status: Running displayed">
 
 </div>
 

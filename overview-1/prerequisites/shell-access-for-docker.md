@@ -9,7 +9,7 @@ DuploCloud allows shell access into the deployed containers.&#x20;
 ### Access to the Docker Native container shell
 
 1. In the DuploCloud Portal, navigate to **Docker -> Services**, displaying the **Services** page.
-2. Click the Options Menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) on the top row of the Services page, as in the example below. Select  **Enable Docker Shell**. The **Start Shell Service** pane displays.
+2. Click the Options Menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2).png" alt="" data-size="line"> ) on the top row of the Services page, as in the example below. Select  **Enable Docker Shell**. The **Start Shell Service** pane displays.
 
 <div align="left">
 

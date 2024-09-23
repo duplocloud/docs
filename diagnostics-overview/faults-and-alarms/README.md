@@ -36,7 +36,7 @@ To configure faults for a Tenant, navigate to **Administrator** -> **Tenants** a
 7.  Click **Add**. Faults for stopped Tenants will be muted.\
 
 
-    <figure><img src="../../.gitbook/assets/image (5) (6).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the SA-12 <strong>Tenant</strong> details page in the DuploCloud Platform</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the SA-12 <strong>Tenant</strong> details page in the DuploCloud Platform</p></figcaption></figure>
 
 ## Creating Alerts <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
@@ -44,7 +44,7 @@ You can set the AWS Alerts for the individual metrics, click on the bell icon on
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (21) (2).png" alt="">
+<img src="../../.gitbook/assets/image (263).png" alt="">
 
 </div>
 

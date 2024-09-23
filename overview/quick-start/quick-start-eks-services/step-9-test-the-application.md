@@ -33,7 +33,7 @@ Note that if you skipped [Step 7](step-7-secure-the-load-balancer.md) and/or [St
 2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 3. From the **Name** column, select **demo-service**.
 4. Click the **Load Balancers** tab.&#x20;
-5. In the **DNS** status card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.
+5. In the **DNS** status card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.
 
 <figure><img src="../../../.gitbook/assets/dns name.png" alt=""><figcaption></figcaption></figure>
 
@@ -72,7 +72,7 @@ In the previous steps, you:
 In this tutorial, you created many artifacts for testing purposes. Now that you are finished, clean them up so others can run this tutorial using the same names for Infrastructure and Tenant.
 
 1. To delete the **dev01** tenant [follow these instructions](../../../access-control/tenant-access/deleting-a-tenant.md), then return to this page. As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant you created cleans up most of your artifacts.
-2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../.gitbook/assets/image (4) (3).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
+2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../.gitbook/assets/image (156).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
 
 The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
 
