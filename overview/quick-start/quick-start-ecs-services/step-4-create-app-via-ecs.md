@@ -25,7 +25,7 @@ Before creating an RDS, verify that you completed the tasks in the previous tuto
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/tenant_dev01 (5).png" alt=""><figcaption><p>The DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/tenant_dev01 (12).png" alt=""><figcaption><p>The DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure>
 
     </div>
 

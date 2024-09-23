@@ -20,7 +20,7 @@ Before creating your DuploCloud load balancer, ensure that:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (1) (1) (1).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/tenant_dev01 (7).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
 
 </div>
 

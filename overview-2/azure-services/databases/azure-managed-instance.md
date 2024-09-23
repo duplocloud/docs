@@ -13,7 +13,7 @@ description: Create an Azure Managed Instances in DuploCloud
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/Azure_managed_instance_db.png" alt=""><figcaption><p><strong>Create Managed SQL Instance</strong> pane</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Azure_managed_instance_db (1).png" alt=""><figcaption><p><strong>Create Managed SQL Instance</strong> pane</p></figcaption></figure>
 
 </div>
 

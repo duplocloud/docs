@@ -68,13 +68,13 @@ Before performing this step, Contact DuploCloud Support to enable the configurat
    * **Kubernetes Cluster Certificate Authority Data** (For an EKS cluster, this can be copied from the **EKS Cluster Overview** page from the AWS Console).&#x20;
    * **Kubernetes Vendor** (Enter **EKS**, as in the example below).
 
-<figure><img src="../.gitbook/assets/image (163).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (421).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
 
 ## Viewing Imported Kubernetes Cluster from DuploCloud
 
 Select the **Kubernetes** tab to display information about the imported Kubernetes Cluster.
 
-<figure><img src="../.gitbook/assets/image (164).png" alt=""><figcaption><p>The <strong>Kubernetes</strong> tab</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (422).png" alt=""><figcaption><p>The <strong>Kubernetes</strong> tab</p></figcaption></figure>
 
 ## Adding Existing Nodes for the imported cluster in DuploCloud&#x20;
 
@@ -91,19 +91,19 @@ Select the **Kubernetes** tab to display information about the imported Kubernet
 11. Click **Add**.
 12. Navigate to **Kubernetes** -> **Nodes** to view the imported cluster.
 
-<figure><img src="../.gitbook/assets/image (169).png" alt=""><figcaption><p>The <strong>On-Premesis</strong> tab on the <strong>Nodes</strong> page</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (427).png" alt=""><figcaption><p>The <strong>On-Premesis</strong> tab on the <strong>Nodes</strong> page</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (166).png" alt=""><figcaption><p>The <strong>Add On-Premises Instance</strong> pane</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (424).png" alt=""><figcaption><p>The <strong>Add On-Premises Instance</strong> pane</p></figcaption></figure>
 
 ## Creating a WebServer Service with Cloud as On-Premises
 
 Create a WebServer Service in the DuploCloud portal by selecting **OnPrem** from the **Cloud** list box while creating a [Kubernetes Service](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/app-service-and-cloud-services.md).
 
-<figure><img src="../.gitbook/assets/image (168).png" alt=""><figcaption><p>The <strong>Basic Options</strong> page to add a Kubernetes Service with the <strong>Cloud</strong> list box set to <strong>OnPrem</strong></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (426).png" alt=""><figcaption><p>The <strong>Basic Options</strong> page to add a Kubernetes Service with the <strong>Cloud</strong> list box set to <strong>OnPrem</strong></p></figcaption></figure>
 
 Once the service is created, you should be able to access the [`kubectl` shell](../kubernetes-overview/kubectl-setup/kubectl-shell.md), retrieve the [KubeCtl Token](../kubernetes-overview/kubectl-setup/kubectl-token.md), [Host/Container shell, and Container logs](../overview/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for the service you created.
 
-<figure><img src="../.gitbook/assets/image (170).png" alt=""><figcaption><p><strong>Containers</strong> tab for a Kubernetes Service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (428).png" alt=""><figcaption><p><strong>Containers</strong> tab for a Kubernetes Service</p></figcaption></figure>
 
 ## Importing External Kubernetes Cluster as Read-Only
 

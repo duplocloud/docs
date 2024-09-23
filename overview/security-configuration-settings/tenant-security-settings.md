@@ -8,7 +8,7 @@ description: Configure Tenant Security settings for specific DuploCloud Tenants
 
 Configure these settings (properties) by navigating to **Administrator** -> **Tenants** in the DuploCloud Portal. Select the Tenant for which you want to configure the settings listed below and click the **Settings** tab. The Tenant Feature Properties are listed in the **Name** column in the **Settings** tab.
 
-To edit or remove an existing property, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (7).png" alt="" data-size="line">icon to the left of the property **Name** and select **Edit Setting** or **Remove Setting**. To add any of these settings, click **Add.** Select and **Enable** the feature using the **Add Tenant Feature** pane.
+To edit or remove an existing property, click the <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (13).png" alt="" data-size="line">icon to the left of the property **Name** and select **Edit Setting** or **Remove Setting**. To add any of these settings, click **Add.** Select and **Enable** the feature using the **Add Tenant Feature** pane.
 
 <figure><img src="../../.gitbook/assets/systemconfig4.png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane for configuring Tenant settings</p></figcaption></figure>
 

@@ -12,7 +12,7 @@ View the billing details for your company's AWS account.&#x20;
 
 Log in as an administrator, and navigate to **Administrator** -> **Billing**. &#x20;
 
-<figure><img src="../../../.gitbook/assets/billing 1.png" alt=""><figcaption><p>The <strong>Billing</strong> dashboard for AWS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/billing 1 (1).png" alt=""><figcaption><p>The <strong>Billing</strong> dashboard for AWS</p></figcaption></figure>
 
 You can view usage by:
 
@@ -21,7 +21,7 @@ You can view usage by:
 * Tenant
   * Select the **Spend by Tenant** tab.
 
-<figure><img src="../../../.gitbook/assets/billing 2.png" alt=""><figcaption><p><strong>Spend by Month</strong> tab with monthly and weekly options displayed</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/billing 2 (1).png" alt=""><figcaption><p><strong>Spend by Month</strong> tab with monthly and weekly options displayed</p></figcaption></figure>
 
 
 

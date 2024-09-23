@@ -26,7 +26,7 @@ To create an MSSQL Server database with public access, configure the following T
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/image (38) (1) (1).png" alt="Create My SQL Server">
+<img src="../../../.gitbook/assets/image (340).png" alt="Create My SQL Server">
 
 </div>
 
@@ -80,7 +80,7 @@ Configure Azure Elastic Pools for an MSSQL Server in the DuploCloud Portal:
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/image (1) (11).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
     </div>
 

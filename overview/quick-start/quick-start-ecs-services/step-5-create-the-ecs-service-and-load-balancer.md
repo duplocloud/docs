@@ -26,7 +26,7 @@ Before creating the ECS Service and Load Balancer, verify that you accomplished 
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/tenant_dev01 (5).png" alt=""><figcaption><p>DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/tenant_dev01 (12).png" alt=""><figcaption><p>DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure>
 
     </div>
 

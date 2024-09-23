@@ -47,7 +47,7 @@ On the Add Service page, you can also specify optional **Environment Variables**
 <figure><img src="../../../.gitbook/assets/ishwtaitis.png" alt=""><figcaption><p><strong>demo-service-d01</strong> Service page displaying a <strong>Running</strong> status</p></figcaption></figure>
 
 {% hint style="info" %}
-Once the Service is **Running**, you can check the logs for additional information. On the **Services** page, select the **Containers** tab, click the menu icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (4).png" alt="" data-size="line"> ) to the left of the container name, and select the **Logs** option.&#x20;
+Once the Service is **Running**, you can check the logs for additional information. On the **Services** page, select the **Containers** tab, click the menu icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (12).png" alt="" data-size="line"> ) to the left of the container name, and select the **Logs** option.&#x20;
 {% endhint %}
 
 <figure><img src="../../../.gitbook/assets/grouped.png" alt=""><figcaption><p>The Service details page for  <strong>demo-service-d01-1</strong> </p></figcaption></figure>

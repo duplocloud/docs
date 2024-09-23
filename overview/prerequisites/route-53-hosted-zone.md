@@ -24,7 +24,7 @@ Once this is complete, provision the Route53 domain in every DuploCloud Plan, st
 Do not forget the dot (**.**) at the beginning of the DNS suffix, in the form as shown below.
 {% endhint %}
 
-![The DNS tab for the DEFAULT Tenant shows External and Internal Suffix values beginning with a dot (.)](<../../.gitbook/assets/image (18) (2).png>)
+![The DNS tab for the DEFAULT Tenant shows External and Internal Suffix values beginning with a dot (.)](<../../.gitbook/assets/image (337).png>)
 
 {% hint style="info" %}
 Note that this domain must be set in each new Plan you create in your DuploCloud Infrastructure.

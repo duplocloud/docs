@@ -21,7 +21,7 @@ Configure SSO for DuploCloud using the Azure Application Deployment (AD) Portal 
 4.  Enter a **Name** for the application, for example, _**duplo-app1**_.\
 
 
-    <figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption><p><strong>Register an Application</strong> page</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption><p><strong>Register an Application</strong> page</p></figcaption></figure>
 5. In the **Supported account types** area, select **Accounts in any organizational directory (Any Azure AD directory - Multitenant).**
 6. In the **Redirect UTI** field, select Web and type the DuploCloud URL **https://**_**company**_**.duplocloud.net/app/signin-microsoft** replacing company with your company's DuploCloud deployment.
 7. Click **Register**.
@@ -36,7 +36,7 @@ Note the **Application** (Client) **ID** for future reference; for example, _**8
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>Certificates &#x26; secrets</strong> option</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (214).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>Certificates &#x26; secrets</strong> option</p></figcaption></figure>
 
     </div>
 2. In the **Client Secret** tab, click **New Client Secret**.
@@ -48,7 +48,7 @@ Note the **Application** (Client) **ID** for future reference; for example, _**8
 
 Note the Value displayed in the client secrets tab; for example,  _**hFFC8Q\~z.bHooBGcwftnh2LRgp53M62XJdLIrXxyz**_.
 
-<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption><p><strong>Client secrets</strong> tab with secret <strong>Value</strong> displayed</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (195).png" alt=""><figcaption><p><strong>Client secrets</strong> tab with secret <strong>Value</strong> displayed</p></figcaption></figure>
 
 ## Step3: Assign API Permissions
 
@@ -57,18 +57,18 @@ Note the Value displayed in the client secrets tab; for example,  _**hFFC8Q\~z.b
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>API Permissions</strong> option</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (159).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>API Permissions</strong> option</p></figcaption></figure>
 
     </div>
 2. Click **Microsoft Graph & Delegated Permissions**. The **Request API Permissions** page displays.
 3.  On the **Select permissions** area of the **Request API Permissions** page, select **openid**, **email,** and **profile**. Add the **User.Read** permission if it is not present by entering **User.Read** in the search box and selecting it from the search results. \
 
 
-    <figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption><p><strong>Request API Permissions</strong> page with <strong>Select permissions</strong> area</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (287).png" alt=""><figcaption><p><strong>Request API Permissions</strong> page with <strong>Select permissions</strong> area</p></figcaption></figure>
 4. Click **Add permissions**.
 5.  In the **Configured Permissions** area of the **Request API Permissions** page, click **Grant admin consent for Default Directory** and confirm by clicking **Yes**.
 
-    <figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption><p><strong>Configured permissions</strong> area of <strong>Request API Permissions</strong> page</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (262).png" alt=""><figcaption><p><strong>Configured permissions</strong> area of <strong>Request API Permissions</strong> page</p></figcaption></figure>
 
 ## Next Steps
 

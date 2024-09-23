@@ -39,7 +39,7 @@ While lower-level details such as IAM roles and security groups are abstracted, 
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/GCP_HOSTS_Add_BYOH (1).png" alt=""><figcaption><p><strong>Add BYOH Hosts</strong> page </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/GCP_HOSTS_Add_BYOH.png" alt=""><figcaption><p><strong>Add BYOH Hosts</strong> page </p></figcaption></figure>
 
 </div>
 

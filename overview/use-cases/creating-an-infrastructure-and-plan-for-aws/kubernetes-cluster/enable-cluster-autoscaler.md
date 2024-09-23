@@ -16,7 +16,7 @@ The Cluster AutoScaler automatically adjusts the number of nodes in your cluster
 
     <div align="left">
 
-    <img src="../../../../.gitbook/assets/image (15) (2).png" alt="Infra - Set Custom Data pane for Cluster Autoscaler">
+    <img src="../../../../.gitbook/assets/image (326).png" alt="Infra - Set Custom Data pane for Cluster Autoscaler">
 
     </div>
 

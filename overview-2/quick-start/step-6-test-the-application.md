@@ -32,7 +32,7 @@ Display the web page that the application creates:
 5. Open a web browser and paste the copied IP address in your browser's URL field.&#x20;
 6. Press **Enter**. Your application runs and your web page renders as shown below. Congratulations! You just launched your first web service with Azure on DuploCloud!&#x20;
 
-<figure><img src="../../.gitbook/assets/Azure_GS_viewebsite_3.png" alt=""><figcaption><p><strong>Welcome to nginx!</strong> web page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Azure_GS_viewebsite_3 (1).png" alt=""><figcaption><p><strong>Welcome to nginx!</strong> web page</p></figcaption></figure>
 
 ## Reviewing what you learned
 
@@ -54,7 +54,7 @@ In the previous steps, you:
 In this tutorial, you created many artifacts for testing purposes. When you are ready, clean them up so that another person can run this tutorial from the start, using the same names for Infrastructure and Tenant.
 
 1. To delete the **dev01** tenant [follow these instructions](../../access-control/tenant-access/deleting-a-tenant.md) and then return to this page. As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant that you created cleans up most of your artifacts.
-2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../.gitbook/assets/image (4) (3).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
+2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../.gitbook/assets/image (156).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
 
 The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
 

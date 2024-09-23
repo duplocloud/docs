@@ -22,7 +22,7 @@ To export to BigQuery you must have:
 3.  Click **Create Dataset**.\
 
 
-    <figure><img src="../../../.gitbook/assets/image (135).png" alt="" width="563"><figcaption><p><strong>Create Dataset</strong> button<br></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (388).png" alt="" width="563"><figcaption><p><strong>Create Dataset</strong> button<br></p></figcaption></figure>
 4.  In the **Create dataset** window, configure your dataset with the following parameters:
 
     * **Dataset ID**: Enter a unique name for your dataset.
@@ -32,7 +32,7 @@ To export to BigQuery you must have:
     * Once the dataset is created, it appears in the BigQuery Console under your project. Select the dataset to view details.\
 
 
-    <figure><img src="../../../.gitbook/assets/image (2) (13).png" alt="" width="375"><figcaption><p><strong>Create dataset window</strong> in GCP</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (390).png" alt="" width="375"><figcaption><p><strong>Create dataset window</strong> in GCP</p></figcaption></figure>
 
 
 
@@ -45,13 +45,13 @@ To export to BigQuery you must have:
 5.  In the **Billing Export** page, in the **Detailed usage cost** area, click **Edit Settings**. \
 
 
-    <figure><img src="../../../.gitbook/assets/image (135) (1).png" alt="" width="563"><figcaption><p><strong>Detailed usage cost</strong> area in the <strong>Billing Export</strong> page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (393).png" alt="" width="563"><figcaption><p><strong>Detailed usage cost</strong> area in the <strong>Billing Export</strong> page</p></figcaption></figure>
 6.  In the **BigQuery Export** tab, configure **Detailed usage cost**.
 
     * **Select the Project**: Choose the project where you created the BigQuery dataset.
     * **Select the Dataset**: Choose the dataset you created for billing data.
 
-    <figure><img src="../../../.gitbook/assets/image (136).png" alt="" width="563"><figcaption><p><strong>BigQuery Export</strong> tab in the <strong>Billing Export</strong> page</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (394).png" alt="" width="563"><figcaption><p><strong>BigQuery Export</strong> tab in the <strong>Billing Export</strong> page</p></figcaption></figure>
 7. Click **Save**.
 8. Contact DuploCloud Support to complete additional steps to enable the billing dashboard.
 

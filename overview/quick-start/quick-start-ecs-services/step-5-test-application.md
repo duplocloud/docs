@@ -23,7 +23,7 @@ Before testing your application, verify that you accomplished the tasks in the p
 1. In the **Tenant** list box, select the **dev01** Tenant that you created.
 2. Navigate to **Cloud Services** -> **ECS**.&#x20;
 3. Click the **Service Details** tab.&#x20;
-4. In the **DNS Name** card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (1).png" alt="" data-size="line"> ) to copy the DNS address to your clipboard.
+4. In the **DNS Name** card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the DNS address to your clipboard.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-17_14_14.png" alt=""><figcaption><p><strong>Service Details</strong> tab with <strong>DNS Name</strong> card highlighted</p></figcaption></figure>
 
@@ -32,7 +32,7 @@ Before testing your application, verify that you accomplished the tasks in the p
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption><p>Web page with <strong>Hello World!</strong> displayed</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (118).png" alt=""><figcaption><p>Web page with <strong>Hello World!</strong> displayed</p></figcaption></figure>
 
 </div>
 
@@ -61,7 +61,7 @@ In the previous steps, you:
 In this tutorial, you created many artifacts. When you are ready, clean them up so others can run this tutorial using the same names for Infrastructure and Tenant.
 
 1. To delete the **dev01** tenant [follow these instructions](../../../access-control/tenant-access/deleting-a-tenant.md), and then return to this page. As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant cleans up most of your artifacts.
-2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../.gitbook/assets/image (4) (3).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
+2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../.gitbook/assets/image (156).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
 
 The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
 

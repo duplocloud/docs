@@ -13,7 +13,7 @@ description: Create a PostgreSQL database instance in DuploCloud
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/image (1) (2) (1).png" alt="Create PostgreSQL Instance pane">
+<img src="../../../.gitbook/assets/image (161).png" alt="Create PostgreSQL Instance pane">
 
 </div>
 

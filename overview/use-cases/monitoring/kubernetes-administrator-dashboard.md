@@ -11,4 +11,4 @@ Use the **K8s Admin** dashboard to monitor various statistics and statuses for K
 1. In the DuploCloud Portal, select **Administrator** -> **Observability** -> **Metrics**.
 2. Click the **k8s** tab. The **K8s Admin** dashboard displays.
 
-<figure><img src="../../../.gitbook/assets/k8_statefulSet_dash (1).png" alt=""><figcaption><p><strong>K8s Admin</strong> Dashboard displaying StatefulSet status</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/k8_statefulSet_dash.png" alt=""><figcaption><p><strong>K8s Admin</strong> Dashboard displaying StatefulSet status</p></figcaption></figure>

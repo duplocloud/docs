@@ -26,7 +26,7 @@ Do not forget the dot (**.**) at the beginning of the DNS suffix, in the form as
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (120).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (314).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

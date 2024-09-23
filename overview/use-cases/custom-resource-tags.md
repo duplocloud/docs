@@ -15,7 +15,7 @@ An Administrator can provide a list of custom tag names that can be applied to A
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/image (111).png" alt=""><figcaption><p>Custom Tag- AppConfig with Key and Value</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>Custom Tag- AppConfig with Key and Value</p></figcaption></figure>
 
     </div>
 

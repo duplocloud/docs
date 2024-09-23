@@ -21,7 +21,7 @@ An Administrator must set the Infrastructure setting  `Enable Secrets CSI Driver
 
 The following is an example `SecretProviderClass` configuration where AWS secrets and Kubernetes Secret Objects are configured:
 
-![Kubernetes Secret Provider Class Page](<../../.gitbook/assets/image (52) (1).png>)
+![Kubernetes Secret Provider Class Page](<../../.gitbook/assets/image (50).png>)
 
 ## **Creating a Kubernetes Service and mounting** volumes based on the configured secrets
 
@@ -36,14 +36,14 @@ It's important to note that SPC timeouts can occur due to issues related to Secr
 1. In the DuploCloud Portal, create a Kubernetes Service by navigating to **Kubernetes** -> **Services** and clicking **Add**.&#x20;
 2.  Complete the required fields and click **Next** to display the **Advanced Options** page.
 
-    ![Advanced Options Service Page](<../../.gitbook/assets/image (65).png>)
+    ![Advanced Options Service Page](<../../.gitbook/assets/image (204).png>)
 
 
 3.  On the **Advanced Options** page, in the **Cloud Credentials** list box, select **From Kubernetes**.
 
     <div align="left">
 
-    <img src="../../.gitbook/assets/image (37) (2).png" alt="K8s Secret Provider Class Page">
+    <img src="../../.gitbook/assets/image (335).png" alt="K8s Secret Provider Class Page">
 
     </div>
 
@@ -75,7 +75,7 @@ VolumesMounts:
 ```
 {% endcode %}
 
-![Cloud Credentials list box with From Kubernetes selected ](<../../.gitbook/assets/image (41) (3).png>)
+![Cloud Credentials list box with From Kubernetes selected ](<../../.gitbook/assets/image (226).png>)
 
 ## Configure and use Kubernetes Secret Objects
 

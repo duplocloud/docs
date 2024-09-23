@@ -17,6 +17,6 @@ For more information about DuploCloud Tenants, see the [Tenants](../../../welcom
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/image (16) (3).png" alt="The Create a Tenant pane in the DuploCloud Portal">
+<img src="../../../.gitbook/assets/image (332).png" alt="The Create a Tenant pane in the DuploCloud Portal">
 
 </div>

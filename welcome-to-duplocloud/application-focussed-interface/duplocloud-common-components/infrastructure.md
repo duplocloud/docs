@@ -15,7 +15,7 @@ For instructions to create an Infrastructure in the DuploCloud Portal, see:
 
 Each Infrastructure represents a network connection to a unique VPC/VNET, in a region with a Kubernetes cluster. For AWS, it can also include an ECS. An Infrastructure can be created with four basic inputs: Name, VPC CIDR, Number of AZs, Region, and a choice to enable or disable a K8S/ECS cluster. &#x20;
 
-![The Add Infrastructure page in the DuploCloud Portal](<../../../.gitbook/assets/image (12) (4).png>)
+![The Add Infrastructure page in the DuploCloud Portal](<../../../.gitbook/assets/image (69).png>)
 
 When you create an Infrastructure, DuploCloud automatically creates the following components:
 
@@ -36,4 +36,4 @@ A common use case is two Infrastructures: one for Prod and one for Nonprod. Anot
 
 Once an Infrastructure is created, DuploCloud automatically creates a [Plan ](plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](../../../overview/use-cases/tenant-environment/).
 
-<figure><img src="../../../.gitbook/assets/image (157).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>

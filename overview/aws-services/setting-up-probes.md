@@ -45,7 +45,7 @@ readinessProbe:
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure>
 
 </div>
 

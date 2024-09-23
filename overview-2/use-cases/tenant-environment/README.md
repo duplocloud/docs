@@ -15,4 +15,4 @@ For more information about DuploCloud Tenants, see the [Tenants](../../../welcom
 3. In the **Plan** list box, select the Plan to associate the Tenant with.&#x20;
 4. Click **Create**. The Tenant is created.&#x20;
 
-![Create a Tenant pane](<../../../.gitbook/assets/image (16) (3).png>)
+![Create a Tenant pane](<../../../.gitbook/assets/image (332).png>)

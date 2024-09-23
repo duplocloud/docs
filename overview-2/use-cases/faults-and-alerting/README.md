@@ -22,7 +22,7 @@ Alerts can also be configured from the **Observability** -> **Alerts** option.
 
 <div align="left">
 
-<img src="../../../.gitbook/assets/image (7) (4) (1).png" alt="">
+<img src="../../../.gitbook/assets/image (179).png" alt="">
 
 </div>
 

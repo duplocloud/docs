@@ -10,7 +10,7 @@ AKS provides a few out-of-the-box StorageClass objects. To mount the built-in st
 
 <div align="left">
 
-<img src="../../.gitbook/assets/image (2) (4).png" alt="Service Deployment Page">
+<img src="../../.gitbook/assets/image (136).png" alt="Service Deployment Page">
 
 </div>
 

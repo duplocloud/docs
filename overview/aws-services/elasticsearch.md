@@ -30,7 +30,7 @@ To create an OpenSearch without EBS storage, follow the steps to [create an Open
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (3) (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

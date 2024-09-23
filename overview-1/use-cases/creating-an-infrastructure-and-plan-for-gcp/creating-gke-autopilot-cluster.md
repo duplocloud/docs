@@ -4,7 +4,7 @@ When [creating an Infrastructure](./), use the **Enable GKE** toggle switch to e
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (6) (1).png" alt=""><figcaption><p><strong>Add infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (312).png" alt=""><figcaption><p><strong>Add infrastructure</strong> page</p></figcaption></figure>
 
 </div>
 

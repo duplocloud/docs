@@ -13,7 +13,7 @@ description: Use the DuploCloud Portal to create an AWS Infrastructure and assoc
 5. Optionally, select **Advanced Options** to specify additional configurations (such as [**Public** and **Private CIDR** Endpoints](kubernetes-cluster/enable-eks-endpoints.md)).
 6. Click **Create**. The Infrastructure is created and listed on the **Infrastructure** page. DuploCloud automatically creates a [Plan ](../../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/plan.md)(with the same Infrastructure name) with the Infrastructure configuration.&#x20;
 
-<figure><img src="../../../.gitbook/assets/AWS_Infra_new_enable_switches.png" alt=""><figcaption><p>AWS <strong>Add Infrastructure</strong> page with highlighted <strong>Enable EKS</strong> and <strong>Enable ECS Cluster</strong> options</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/AWS_Infra_new_enable_switches (1).png" alt=""><figcaption><p>AWS <strong>Add Infrastructure</strong> page with highlighted <strong>Enable EKS</strong> and <strong>Enable ECS Cluster</strong> options</p></figcaption></figure>
 
 
 
@@ -27,7 +27,7 @@ Cloud providers limit the number of Infrastructures that can run in each region.
 2. From the **Name** column, select the Infrastructure containing settings that you want to view.&#x20;
 3. Click the **Settings** tab. The Infrastructure settings display.
 
-<figure><img src="../../../.gitbook/assets/eksv.png" alt=""><figcaption><p><strong>Settings</strong> tab on the <strong>Infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/eksv (2).png" alt=""><figcaption><p><strong>Settings</strong> tab on the <strong>Infrastructure</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
 Up to one instance (0 or 1) of an EKS or ECS is supported for each DuploCloud Infrastructure.

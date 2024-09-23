@@ -48,6 +48,6 @@ Refer to AWS [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/usergui
 
 The DuploCloud Portal provides the ability to configure Services based on the platforms **EKS Linux** and **Linux Docker/Native**.  Select the ASG based on the platform used when creating services and Autoscaling groups. Optionally, if you previously [enabled Spot Instances in the ASG](spot-instances.md#enabling-spot-instances-when-creating-autoscaling-groups), you can configure the Service to use Spot Instances by selecting **Tolerate spot instances**.&#x20;
 
-![ASG name with EKS Linux](<../../../../../.gitbook/assets/image (17) (1).png>)
+![ASG name with EKS Linux](<../../../../../.gitbook/assets/image (231).png>)
 
-![ASG name using Linux Docker/Native](<../../../../../.gitbook/assets/image (13) (1).png>)
+![ASG name using Linux Docker/Native](<../../../../../.gitbook/assets/image (141).png>)

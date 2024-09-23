@@ -19,7 +19,7 @@ For an end-to-end example of deploying an application using a Native Docker Serv
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/image (105) (1).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (294).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
 
 </div>
 

@@ -28,7 +28,7 @@ Before you create and mount the Kubernetes [ConfigMap](https://kubernetes.io/doc
 2. Select the Service you want to modify from the **Name** column.
 3. Click the **Actions** menu and select **Edit**.
 
-<figure><img src="../../.gitbook/assets/Azure_Serv1.png" alt=""><figcaption><p><strong>Actions</strong> menu on the <strong>Services</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Azure_Serv1 (1).png" alt=""><figcaption><p><strong>Actions</strong> menu on the <strong>Services</strong> page</p></figcaption></figure>
 
 ### Mounting the Kubernetes ConfigMap as a volume
 

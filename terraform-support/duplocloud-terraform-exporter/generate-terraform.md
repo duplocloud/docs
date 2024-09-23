@@ -8,13 +8,13 @@ Once Terraform Exporter Utility is configured, [export Environment Variables](in
 >
 > `make run`
 
-![Utility  Execution in-progress](<../../../.gitbook/assets/image (24) (2).png>)
+![Utility  Execution in-progress](<../../.gitbook/assets/image (52).png>)
 
 ### View the Output
 
 New Folders would be available under `tenant-terraform-generator/target/<customer-name>/<tenant>`
 
-![Target Folder View](<../../../.gitbook/assets/image (6) (1) (1).png>)
+![Target Folder View](<../../.gitbook/assets/image (95).png>)
 
 Under `terraform` folder, **admin-tenant**, **aws-services** and **app** projects would be available. These projects would be referenced later to create new tenants and resources.
 

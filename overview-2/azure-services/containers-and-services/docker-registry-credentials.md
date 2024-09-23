@@ -22,7 +22,7 @@ You can pull images from multiple Docker registries by adding multiple Docker Re
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/aws_add_config (2).png" alt=""><figcaption><p><strong>Add Config</strong> pane</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/aws_add_config.png" alt=""><figcaption><p><strong>Add Config</strong> pane</p></figcaption></figure>
 
 </div>
 
