@@ -2,7 +2,7 @@
 
 DuploCloud Azure Portal provides the ability to create Storage Accounts, File Shares, and generate Shared Access Signatures (SAS). Storage Accounts with a SKU Type `Standard_LRS` are created. Users can view additional details of File Share endpoints from the Portal.
 
-## Create Storage Account
+## Creating a Storage Account
 
 Navigate to **Cloud Services** -> **Storage Account** to create Storage Account.
 
@@ -14,18 +14,21 @@ Provide unique name to create Storage Account.
 
 </div>
 
-## View Storage Account
+## Adding a Data Storage Source (**Container, File Share, Queue, Table, Private Endpoint, Alerts**)
+
+1. Navigate to **Cloud Services** -> **Storage Account**&#x20;
+2. **From the NAME column, select the Storage Account where you want to add a data source.**
+3. Select the tab for the type of data storage you want to add (**Container, File Share, Queue, Table, Private Endpoint, Alerts**). Click Add.
+4. Enter a name for your data source, and additional information, if needed. Click **Add**/**Submit**/**Create**. The data storage source is added to the Storage Account. &#x20;
+
+<figure><img src="../../.gitbook/assets/data source example (1).png" alt=""><figcaption><p>The <strong>Container</strong> tab on the <strong>Storage Accoun</strong>t page</p></figcaption></figure>
+
+## Viewing a Storage Account
 
 You can view Storage Account Details once created. You can view Endpoint details in the Storage Account table view.\
 Click on the  <img src="../../.gitbook/assets/image (189).png" alt="" data-size="line">icons under the Actions Column to view and copy the keys of the Storage Account.
 
 <figure><img src="../../.gitbook/assets/storage1fixed.png" alt=""><figcaption></figcaption></figure>
-
-## Create and View File Shares
-
-Create File Shares by clicking on **Add**.&#x20;
-
-<figure><img src="../../.gitbook/assets/storage 2 fixed.png" alt=""><figcaption><p>View File Share</p></figcaption></figure>
 
 ## Generate Shared Access Signature (SAS)
 
