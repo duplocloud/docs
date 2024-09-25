@@ -156,7 +156,7 @@
     * [SQS Queue](overview/aws-services/sqs-queue.md)
     * [Virtual Private Cloud (VPC) Peering](overview/aws-services/virtual-private-cloud-vpc-peering.md)
     * [Web App Firewall (WAF)](overview/aws-services/web-application-firewall-waf.md)
-  * [AWS FAQ](aws-user-guide/aws-faq.md)
+  * [AWS FAQ](overview/aws-faq.md)
   * [Security Configuration Settings](overview/security-configuration-settings/README.md)
     * [Tenant Security settings](overview/security-configuration-settings/tenant-security-settings.md)
     * [Infrastructure Security settings](overview/security-configuration-settings/infrastructure-security-settings.md)
