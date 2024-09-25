@@ -16,7 +16,7 @@ You can find your VPN credentials on your user profile page in the DuploCloud Po
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (5) (5).png" alt=""><figcaption><p>The user menu accessible from the user icon in the upper right</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (187).png" alt=""><figcaption><p>The user menu accessible from the user icon in the upper right</p></figcaption></figure>
 
 </div>
 
@@ -24,7 +24,7 @@ You can find your VPN credentials on your user profile page in the DuploCloud Po
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (4) (4).png" alt=""><figcaption><p>The <strong>VPN Details</strong> section of the user profile</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption><p>The <strong>VPN Details</strong> section of the user profile</p></figcaption></figure>
 
 </div>
 

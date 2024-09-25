@@ -4,44 +4,33 @@ description: Using Hosts in DuploCloud
 
 # Hosts (VMs)
 
-Once we have the Infrastructure (Networking, Kubernetes cluster, and other common configurations) and an environment (Tenant) set up, the next step is to create VMs. These could be meant for:
+Once we have the Infrastructure (Networking, Kubernetes cluster, and other common configurations) and an environment (Tenant) set up, the next step is to create VMs. These could be for:
 
 * Compute Engine virtual machines in GCP
 * Worker Nodes (Docker Hosts) if built-in container orchestration is used.
 * Regular nodes that are not part of any container orchestration, where a user manually connects and installs applications.&#x20;
 
-## Adding a GCP Host <a href="#id-3-toc-title" id="id-3-toc-title"></a>
+In the DuploCloud Portal, you can create GCE VMs, Node Pools, or BYOH (bring your own Hosts) virtual machine setups.
 
-In GCP, you can use GCE VMs or BYOH (bring your own hosts) to get a Virtual Machine setup. Both of these are available through the **Cloud Services -> Hosts** menu
+## Creating a GCE VM
 
-See the Services documentation for steps to [create Hosts and configure Kubernetes storage options](../gcp-services/containers/).&#x20;
+To create a GCE VM (Virtual Machine), navigate to **Cloud Services** -> **Hosts** ->  **GCE VM**, and click **Add**.
 
-<div align="left">
+<figure><img src="../../.gitbook/assets/New GCP VM.png" alt=""><figcaption><p>The <strong>Add GCE Virtual Machine</strong> pane in the DuploCloud Portal</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 5.21.26 PM.png" alt=""><figcaption><p>Hosts in GCP</p></figcaption></figure>
+## Creating a Node Pool
 
-</div>
+A GCP node pool is a group of VMs that share the same configuration, including machine type, disk size, and operating system. Node pools allow you to manage scaling and updates for groups of nodes collectively.
 
-### Adding a GCE VM
+To create a GCP node pool, navigate to **Cloud Services** -> **Hosts** ->  **Node Pool**, and click **Add**.
 
-1. Navigate to **Cloud Services** -> **Hosts.**&#x20;
-2. Select the **GCE VM** tab, and click **Add**. The **Add GCE Virtual Machine** page displays.
+<figure><img src="../../.gitbook/assets/node pool.png" alt=""><figcaption><p>The <strong>Add Node Pool</strong> pane in the DuploCloud Portal</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/disk size.png" alt=""><figcaption><p>The <strong>Add GCE Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
-
-3. Complete the required fields, including **Name**, **Availability Zone**, and **Instance Type**.&#x20;
-4. If needed, enable **Advanced Options** to select your **Agent Platform, Image**, **Network Type**, **Disk Size**, **Accelerator Type**, **Accelerator Count,** and enter **Labels**, **Metadata**, and **Startup Script**.
-5. Click **Create**.&#x20;
-
-### Adding a BYOH Host
+## Creating a BYOH Host
 
 While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the Tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/GCP_HOSTS_Add_BYOH.png" alt=""><figcaption><p><strong>Add BYOH Hosts</strong> page </p></figcaption></figure>
-
-</div>
+<figure><img src="../../.gitbook/assets/screenshot-qa-gcp_duplocloud_net-2024_09_22-18_30_09.png" alt=""><figcaption><p>The <strong>Add BYOH</strong> pane in the DuploCloud Portal</p></figcaption></figure>
 
 Most of these inputs are optional and some are available as list box selections, set by the administrator in the Plan (for example, **Image ID**, in Host **Advanced Options**).&#x20;
 
@@ -69,3 +58,19 @@ To increase the minimum ports per VM for your Infrastructure:&#x20;
 
 
     <figure><img src="../../.gitbook/assets/minimum ports per VM.png" alt=""><figcaption></figcaption></figure>
+
+## Configuring a friendly image name
+
+Set a friendly name for an image in your DuploCloud Plan. This name will display in the **Image** list box when creating a GCE VM in the DuploCloud Portal.
+
+1. From the DuploCloud Portal, navigate to **Administrator** -> **Plans**.&#x20;
+2. Select the Plan from the **NAME** column.&#x20;
+3. Select the **Images** tab, and click **Add**. The **Add Image** pane displays.
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/add image.png" alt=""><figcaption><p>The <strong>Add Image</strong> pane</p></figcaption></figure>
+
+</div>
+
+4. Enter a friendly name and complete the remaining fields, as required. Click **Submit**. The image name will display in the **Image** list box when [creating a GCE VM](hosts-vms.md#gce-vm) under the Plan.&#x20;

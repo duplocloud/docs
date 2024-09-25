@@ -31,7 +31,7 @@ Use the System Config tab to enable IAM authentication before enabling it for a 
 
 <div align="left">
 
-<figure><img src="../../../../.gitbook/assets/image (1) (8).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>EnableRdsIamAuth</strong> <strong>Key</strong> with <strong>Value</strong> of <strong>true</strong></p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>EnableRdsIamAuth</strong> <strong>Key</strong> with <strong>Value</strong> of <strong>true</strong></p></figcaption></figure>
 
 </div>
 
@@ -86,6 +86,6 @@ To download a token which you can use for IAM authentication:
     </div>
 
 
-4. In the **RDS Credentials** window, click the Copy Icon ( <img src="../../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the **Endpoint**, **Username**, and **Password** to your clipboard.
+4. In the **RDS Credentials** window, click the Copy Icon ( <img src="../../../../.gitbook/assets/copy_icon (3).png" alt="" data-size="line"> ) to copy the **Endpoint**, **Username**, and **Password** to your clipboard.
 5. Click **Close** to dismiss the window.
 

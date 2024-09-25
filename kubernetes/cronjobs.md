@@ -84,7 +84,7 @@ When the value is true and the CronJob fails, DuploCloud will generate a fault. 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJobs**.
 2. Select the Kubernetes CronJob you want to view and click the **Overview, Schedule**, and **Details** tabs for more information about the CronJob schedule and history.&#x20;
 
-You can also view details of a Kubernetes CronJob by clicking on the **menu icon** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the job name and selecting **View**.
+You can also view details of a Kubernetes CronJob by clicking on the **menu icon** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the job name and selecting **View**.
 
 
 
@@ -113,7 +113,7 @@ You can filter container names by using the search field at the top of the page,
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob**.
 2. Select the Kubernetes CronJob you want to edit.&#x20;
-3. Click the **options menu** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon to the left of the Kubernetes CronJob name and select **Edit**.
+3. Click the **options menu** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Kubernetes CronJob name and select **Edit**.
 
 You can edit and modify the following fields in the DuploCloud Portal:
 
@@ -128,7 +128,7 @@ You can edit and modify the following fields in the DuploCloud Portal:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob.**
 2. Select the Kubernetes CronJob you want to delete.&#x20;
-3. Click the Options Menu (<img src="../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line">) icon to the left of the Kubernetes CronJob name and select **Delete**.
+3. Click the Options Menu (<img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line">) icon to the left of the Kubernetes CronJob name and select **Delete**.
 
 <figure><img src="../.gitbook/assets/cron delete.png" alt=""><figcaption><p>CronJob options menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
 

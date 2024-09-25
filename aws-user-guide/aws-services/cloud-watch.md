@@ -2,7 +2,7 @@
 description: Collect and display real-time event data in AWS with DuploCloud
 ---
 
-# Eventbridge
+# EventBridge
 
 Amazon [EventBridge](https://docs.aws.amazon.com/eventbridge) collects and visualizes real-time logs, metrics, and event data in automated dashboards to streamline your cloud infrastructure and application maintenance.
 
@@ -14,7 +14,7 @@ DuploCloud provides a way to automatically install these agents on all the hosts
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Click the **EventBridge** tab.
-3.  Click **Add**. The **Add EventBridge Rule** page displays; or to update an existing rule, select the menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (2) (1).png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.\
+3.  Click **Add**. The **Add EventBridge Rule** page displays; or to update an existing rule, select the menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.\
 
 
     <figure><img src="../../.gitbook/assets/ebr1.png" alt=""><figcaption><p><strong>Add EventBridge Rule</strong> page</p></figcaption></figure>

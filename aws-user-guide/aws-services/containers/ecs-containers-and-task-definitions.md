@@ -55,7 +55,7 @@ To designate a container as Essential, see [Defining an Essential Container](ecs
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/ECS_Mult_con_2 (2).png" alt=""><figcaption><p><strong>Primary</strong> label with Add and Expand/Collapse Icons in <strong>Container -1</strong>; Delete Icon in <strong>Container - 2</strong>. <strong>Container - 3</strong> is editable.</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/ECS_Mult_con_2 (1).png" alt=""><figcaption><p><strong>Primary</strong> label with Add and Expand/Collapse Icons in <strong>Container -1</strong>; Delete Icon in <strong>Container - 2</strong>. <strong>Container - 3</strong> is editable.</p></figcaption></figure>
 
     </div>
 
