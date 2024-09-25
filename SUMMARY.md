@@ -429,5 +429,5 @@
     * [DevOps Deep Dive - Abstracting Cloud Complexity](extras-overview/video-transcripts/devops-deep-dive-abstracting-cloud-complexity.md)
     * [DuploCloud Uses Infrastructure-as-Code to Stitch Together DevOps Lifecycle](extras-overview/video-transcripts/duplocloud-uses-infrastructure-as-code-to-stitch-together-devops-lifecycle.md)
   * [BYOH](extras-overview/byoh.md)
-  * [Allocation Tagging for Hosts](extras-overview/creating-advanced-functions.md)
+  * [Allocation Tagging](extras-overview/creating-advanced-functions.md)
   * [Import an External Kubernetes Cluster](extras-overview/import-an-external-kubernetes-cluster.md)
