@@ -9,7 +9,7 @@ description: Manage backup and restore for Relational Database Services (RDS)
 Create a [snapshot ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_WorkingWithAutomatedBackups.html)of an RDS.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
-2. In the **RDS** tab, in the row containing your RDS instance, click the **Actions** menu icon ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (5) (1).png" alt="" data-size="line"> ) and select **Backup & Restore** -> **Create Snapshot**.&#x20;
+2. In the **RDS** tab, in the row containing your RDS instance, click the **Actions** menu icon ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (15).png" alt="" data-size="line"> ) and select **Backup & Restore** -> **Create Snapshot**.&#x20;
 3. **Confirm** the snapshot request. Once taken, the snapshot displays in the **Snapshot** tab.
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_22_14.png" alt=""><figcaption><p><strong>RDS</strong> Tab with <strong>Actions</strong> menu for <strong>DUPLODEV01-DOCS</strong> instance with <strong>Create Snapshot</strong> option highlighted</p></figcaption></figure>

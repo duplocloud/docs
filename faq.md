@@ -22,16 +22,16 @@ layout:
 
 Use these FAQ documents to quickly find answers to popular questions about using AWS, Azure, and GCP with DuploCloud.
 
-{% content-ref url="overview/aws-faq.md" %}
-[aws-faq.md](overview/aws-faq.md)
+{% content-ref url="aws-user-guide/aws-faq.md" %}
+[aws-faq.md](aws-user-guide/aws-faq.md)
 {% endcontent-ref %}
 
 {% content-ref url="overview-2/azure-faq.md" %}
 [azure-faq.md](overview-2/azure-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="overview-1/gcp-faq.md" %}
-[gcp-faq.md](overview-1/gcp-faq.md)
+{% content-ref url="gcp-user-guide/gcp-faq.md" %}
+[gcp-faq.md](gcp-user-guide/gcp-faq.md)
 {% endcontent-ref %}
 
 ## General FAQs

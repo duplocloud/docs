@@ -8,7 +8,7 @@ Aurora database replica setup is slightly different from [adding an RDS read rep
 
 ## Adding an Aurora read replica&#x20;
 
-1. [Create an Aurora RDS database](../).
+1. [Create an Aurora RDS database](../../../../../aws-user-guide/aws-services/database/rds-database/).
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 3. In the row of the RDS for which you want to add an Aurora read replica, click the ( <img src="../../../../../.gitbook/assets/image (132).png" alt="" data-size="line"> ) icon, select **RDS Settings**, and then **Add Replica**. The **Add Replica** pane displays.
 

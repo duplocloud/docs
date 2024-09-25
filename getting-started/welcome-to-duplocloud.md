@@ -54,7 +54,7 @@ Users interact with their applications through the No-Code DuploCloud UI or our 
 A common misconception is that DuploCloud generates Terraform behind the scenes to provision the cloud infrastructure. The DuploCloud UI and Terraform (with the DuploCloud Provider) are layered on top of DuploCloud. Behind the scenes, DuploCloud uses the cloud provider Application Programming Interfaces (APIs) as shown in the picture below.
 {% endhint %}
 
-![](<../.gitbook/assets/image (4) (1) (1).png>)
+![](<../.gitbook/assets/image (116).png>)
 
 Unlike a PAAS such as Heroku, the DuploCloud platform does not prevent users from consuming cloud services directly from the cloud provider. DuploCloud is a self-hosted platform running in the customer's cloud account and can therefore work in tandem with direct cloud account changes. Complex security details (IAM roles, KMS keys, Azure Managed Identities, GCP service accounts, etc.) are hidden, but remain configurable if needed. See this [DuploCloud white paper](https://duplocloud.com/white-papers/devops/) for more information and examples.
 

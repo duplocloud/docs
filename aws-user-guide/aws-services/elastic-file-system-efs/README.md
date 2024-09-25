@@ -39,7 +39,7 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 8.  Change other defaults as needed as click **Create**. The EFS is created and displayed in the **EFS** tab. Select the EFS from the **Name** column and view the configuration in the **Details** tab.\
 
 
-    ![EFS Details](<../../../.gitbook/assets/image (9) (4).png>)
+    ![EFS Details](<../../../.gitbook/assets/image (122).png>)
 
 {% hint style="info" %}
 **Max I/O** mode is not supported on file systems using [One Zone storage classes](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html).
@@ -47,7 +47,7 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 
 Information about EFS **Mount Targets** and **Access Points** is available in their respective tabs.
 
-![Mount Target tab details](<../../../.gitbook/assets/image (8) (1).png>)
+![Mount Target tab details](<../../../.gitbook/assets/image (63).png>)
 
 ```bash
 btoa(`#!/bin/bash
