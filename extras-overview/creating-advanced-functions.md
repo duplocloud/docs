@@ -1,5 +1,5 @@
 ---
-description: Configure DuploCloud Hosts and Services using allocation tags
+description: Pin a container to a set of hosts using allocation tagging
 coverY: 0
 ---
 
