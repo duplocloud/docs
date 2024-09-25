@@ -154,29 +154,45 @@ function jitnow() {
 usage is `jitnow <ENV_NAME>`
 {% endhint %}
 
-## Configuring JIT session timeout
+## Configuring JIT timeout for Tenants
 
-By default, JIT sessions expire after one hour. This can be modified in the DuploCloud Portal for a specific Tenant.&#x20;
+By default, JIT sessions expire after one (1) hour. This can be modified for a specific Tenant in the DuploCloud Portal.&#x20;
+
+{% hint style="warning" %}
+If you increase the JIT session timeout beyond the AWS default of one (1) hour, you must also update the maximum session duration value for the IAM role assigned to your DuploCloud Tenant using the instructions below.
+{% endhint %}
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
-2. Select the **Tenant** for which you want to change the expiration period from the **NAME** column.
-3. Click the **Settings** tab.
-4. Click **Add** to add a custom timeout setting. The **Add Tenant Feature** pane displays.
-5. Select **AWS Access Token Validity** from the **Select Feature** list box.
-6. In the field below (the value), specify the desired timeout period in seconds. in the example below, we specify **7200** seconds or two (2) hours, overriding the default of **3600** seconds, or one (1) hour.
-7. Click **Update**. The new setting is displayed in the **Tenants, Settings** tab.
+2. Select the **Tenant** from the **NAME** column.
+3.  Click the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.\
+
+
+    <div align="left">
+
+    <figure><img src="../../.gitbook/assets/update_tenant_JIT_TO.png" alt=""><figcaption><p>The <strong>Update Tenant Feature</strong> pane</p></figcaption></figure>
+
+    </div>
+4. Select **AWS Access Token Validity** from the **Select Feature** list box.
+5. In the **Value** field, enter the length of time JIT access should remain active in seconds.&#x20;
+6. Click **Update**. The new setting is displayed on the **Tenant** details page under the **Settings** tab.
+
+<figure><img src="../../.gitbook/assets/update_tenant_JIT_TO_output.png" alt=""><figcaption><p>The Setting page with an <strong>AWS Access Token Validity</strong> setting value of <strong>7200</strong> (seconds)</p></figcaption></figure>
+
+## Configuring Admin-JIT timeout via AWS IAM role
+
+By default, AWS IAM roles have a maximum session duration of one (1) hour. This can be adjusted by modifying the maximum session duration for the AWS Master IAM role in the DuploCloud Portal.
+
+1. From the DuploCloud Portal, navigate to **Administrator** -> **Systems Settings**.
+2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.&#x20;
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/update_tenant_JIT_TO.png" alt=""><figcaption><p><strong>Update Tenant Feature</strong> pane to specify new default timeout in seconds</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/app config.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
-<figure><img src="../../.gitbook/assets/update_tenant_JIT_TO_output.png" alt=""><figcaption><p><strong>AWS Access Token Validity</strong> settings updated with a value of <strong>7200</strong> (seconds)</p></figcaption></figure>
-
-{% hint style="warning" %}
-If you are increasing the session timeout beyond the AWS default of 1 hour, you also need to update the maximum session duration value for the IAM role assigned to your DuploCloud tenant.&#x20;
-
-Access the AWS Console as an Administrator using [the instructions above](jit-access.md#accessing-the-aws-console). In the AWS Console, navigate IAM -> Roles and modify the value for your tenant accordingly. For example, if your Tenant is named DEV01, and you need to set a timeout of two hours (7200 seconds), locate the IAM role **duploservices-dev01** and modify the **Maximum Session Duration** to two hours.
-{% endhint %}
+3. From the **Config Type** list box, select **AppConfig**.
+4. From the **Key** list box, select **AdminJitSessionDuration**.
+5. In the **Value** field, enter the length of time JIT access should remain active in seconds.&#x20;
+6. Click **Submit**. The Admin-JIT session duration is configured.&#x20;
 
