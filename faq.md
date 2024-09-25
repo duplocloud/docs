@@ -22,8 +22,8 @@ layout:
 
 Use these FAQ documents to quickly find answers to popular questions about using AWS, Azure, and GCP with DuploCloud.
 
-{% content-ref url="aws-user-guide/aws-faq.md" %}
-[aws-faq.md](aws-user-guide/aws-faq.md)
+{% content-ref url="overview/aws-faq.md" %}
+[aws-faq.md](overview/aws-faq.md)
 {% endcontent-ref %}
 
 {% content-ref url="overview-2/azure-faq.md" %}
@@ -173,6 +173,10 @@ About half of our customer base uses no-code, while the other half uses Terrafor
 
 Yes, deleting a DuploCloud Tenant, which requires only a single click and confirmation, deletes the associated application and all its resources.&#x20;
 
+### Can DuploCloud manage multiple cloud accounts in a single DuploCloud Portal instance?
+
+No. You must have a separate DuploCloud account (instance) for every native cloud infrastructure you want DuploCloud to manage.
+
 ### What can be automated using the DuploCloud API? How can API automation simplify application and resource management?
 
 With DuploCloud, you can delete an application and all its associated resources with a single click (plus confirmation), streamlining the management process. Furthermore, every element in the DuploCloud UI can be automated over an API, ensuring that all resource provisioning is tracked and auditable.
@@ -180,6 +184,18 @@ With DuploCloud, you can delete an application and all its associated resources 
 ### Does DuploCloud make any assumptions that may impact initial implementation time?
 
 DuploCloud does not make any assumptions that could delay initial implementation. By segregating resources into environments called Tenants, DuploCloud accelerates ramp-up time.
+
+### How do I create a dedicated VPC in DuploCloud?
+
+In DuploCloud, you can create a dedicated VPC by following these steps:
+
+1. In the DuploCloud Portal, navigate to the "Administrator" section and then to the "Infrastructure" page.
+2. Click on the "Add" button to create a new Infrastructure.
+3. In the "Add Infrastructure" page, you can specify the details for your dedicated VPC, such as the VPC CIDR, number of Availability Zones, and the region.
+4. DuploCloud will automatically create the VPC with the specified configurations, including the private and public subnets, NAT Gateway, Internet Gateway, and route tables.
+5. Once the Infrastructure is created, you can further customize it by adding Tenants, Hosts, and Services within this dedicated VPC.
+
+The key benefit of creating a dedicated VPC in DuploCloud is that it provides a secure, isolated network environment for your applications and resources. This helps you maintain better control over your network configuration and security, while still leveraging the automation and management capabilities of the DuploCloud platform.
 
 ## Connectivity and Availability FAQs
 
@@ -267,6 +283,16 @@ Use Terraform to set up cloud services and handle the initial deployment of appl
 
 ## Security and Compliance FAQs
 
+### How does DuploCloud manage my data securely and compliantly?
+
+DuploCloud automatically generates a wildcard SSL certificate in ACM for each DNS domain it manages and applies it to the relevant resources.
+
+To configure in-transit encryption, navigate to  “Administrator -> Plan -> Certificates” and add the SSL/TLS certificates you want DuploCloud to use.
+
+DuploCloud’s encryption capabilities help ensure your data is protected at rest and in transit, simplifying the management of encryption for your cloud infrastructure.
+
+[https://docs.duplocloud.com/docs/welcome-to-duplocloud/security-and-compliance](https://docs.duplocloud.com/docs/welcome-to-duplocloud/security-and-compliance)
+
 ### How can I set up Multi-Factor Authentication (MFA) for OpenVPN authentication?
 
 From the DuploCloud Portal, click on your name in the top right corner and select **Profile**. Click on the VPN URL and enter the required credentials. On the first login, scan the barcode displayed on the screen. Download the Profile and add it to the OpenVPN Connect. Next time you log in with OpenVPN, you will be prompted to enter the authentication code.
@@ -284,6 +310,18 @@ CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a
 ### How do I uninstall Chocolatey?
 
 Removing Chocolatey from your system is a straightforward process using PowerShell. Begin by executing `Remove-Item -Recurse -Force C:\ProgramData\chocolatey` to delete the Chocolatey directory and all its contents. Next, it's essential to clean up your system's PATH environment variable to eliminate any references to Chocolatey `bin` and `lib\bin` directories. This cleanup process ensures that Chocolatey and its components are thoroughly removed from your system, preventing potential conflicts or issues with other software installations or system operations. The DevOps team should do the same.
+
+### Does DuploCloud have an integration for Jenkins CI/CD?
+
+Yes, CI/CD is a layer on top of DuploCloud, and CI/CD systems like Jenkins seamlessly integrate with DuploCloud by either calling our REST APIs or via Terraform."
+
+This means that you can build your Jenkins pipelines and workflows to invoke DuploCloud functionality through its APIs or by using the DuploCloud Terraform provider. DuploCloud's integration with Jenkins allows you to automate your entire CI/CD workflow, from building and testing to deploying your applications in a secure and compliant manner.
+
+Some key integration points between Jenkins and DuploCloud include:
+
+1. Accessing cloud resources: DuploCloud can provide just-in-time (JIT) access to cloud resources for your Jenkins build agents, allowing them to securely connect to your cloud infrastructure.
+2. Deploying self-hosted runners: You can deploy build containers within the same DuploCloud tenant as your application, enabling your Jenkins builds to seamlessly access tenant resources like registries, APIs, and databases.
+3. Integrating with cloud security services: DuploCloud integrates with cloud-native security solutions like AWS SecurityHub and Azure Defender, which can be leveraged in your Jenkins pipelines.
 
 ## Upgrade FAQs
 

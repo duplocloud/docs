@@ -72,6 +72,14 @@ After you add these permissions, `s3GetObject` permission is configured in the s
 Depending on the use case, you may need to add additional permissions. For example, in addition to the `s3:GetObject` permission shown in the snippets above, you may need to add `s3:ListBuckets` or s3:PutObject. Be sure to add permissions to both policies, respectively, as shown in the example.
 {% endhint %}
 
+### How is AWS Control Tower managed in DuploCloud?
+
+In DuploCloud, AWS Control Tower is not directly managed. DuploCloud installs in an EC2 instance within your AWS account and provides a web interface, API, and Terraform provider to manage your AWS infrastructure. It handles the lower-level nuances of AWS configuration, such as access control, security, and compliance, through its automation and best practices.
+
+DuploCloud's concept of "Tenants" is a logical construct above AWS that represents an application's entire lifecycle, including dev, stage, and production environments. It automatically configures the necessary AWS services, IAM policies, and other resources within each Tenant, without the need for complex AWS Control Tower setup and management.
+
+Additionally, DuploCloud provides Just-In-Time (JIT) access to the AWS console and CLI, with least-privileged IAM permissions and short-lived access, making it more secure and easier to manage than traditional AWS access methods.
+
 ## Security and Compliance FAQs
 
 ### Will using DuploCloud be more secure and compliant out-of-the-box, as opposed to using a default AWS configuration?
@@ -102,7 +110,7 @@ DuploCloud provisions a Load Balancer for your K8s service. If you want to look 
 
 Find the Load Balancer name for your service by navigating to **Kubernetes** _->_ **Services**, selecting your Service from the list, and clicking the **Load Balancer** tab. If you're using K8s Ingress, go to the **K8s Ingress** tab to find the Load Balancer configuration.
 
-Once you have the Load Balancer name, you can access the AWS Console via the [DuploCloud U](use-cases/jit-access.md)[I](use-cases/jit-access.md). In the AWS Console, navigate to the EC2 service view and select Load Balancers from the left navigation menu. Find your Load Balancer name and scroll down to view detailed attributes.
+Once you have the Load Balancer name, you can access the AWS Console via the [DuploCloud U](../aws-user-guide/use-cases/jit-access.md)[I](../aws-user-guide/use-cases/jit-access.md). In the AWS Console, navigate to the EC2 service view and select Load Balancers from the left navigation menu. Find your Load Balancer name and scroll down to view detailed attributes.
 
 ## Terraform FAQs
 

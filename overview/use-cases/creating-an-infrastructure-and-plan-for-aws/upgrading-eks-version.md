@@ -97,4 +97,4 @@ If any of your Hosts use allocation tags, you must assign allocation tags to the
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_29_01.png" alt=""><figcaption><p>Allocation tags in the <strong>Add Host</strong> screen</p></figcaption></figure>
 
-For additional information about the EKS version upgrade process with DuploCloud, see the [AWS FAQs section on EKS version upgrades](../../../aws-user-guide/aws-faq.md#eks-version-upgrade-faqs).                    &#x20;
+For additional information about the EKS version upgrade process with DuploCloud, see the [AWS FAQs section on EKS version upgrades](../../aws-faq.md#eks-version-upgrade-faqs).                    &#x20;
