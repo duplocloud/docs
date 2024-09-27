@@ -27,7 +27,10 @@ The DuploCloud Portal contains the following access roles:&#x20;
 * An **Administrator** has access to all Tenants plus access to administrative functions like Plan configuration, system dashboards, system defaults, etc.
 * A **User** is a regular user that can be given access to a specific Tenant. A Tenant can be accessed by multiple users and a user can be given access to multiple Tenants.
 * The **Security** role is for security and compliance auditors, in order to verify security and compliance dashboards and reports.
-* The **Signup** role is for users who create and manage DuploCloud resources via API.
+
+## Read Only Permissions
+
+For each of the access roles above, DuploCloud supports Read Only permissions, which restrict a user to "view" the resources that are in scope of that particular role but prevents them from making any updates to those resources. Read Only permissions also prevent Just-In-Time access to the underlying Cloud platform.
 
 ## Single Sign On (SSO)
 
