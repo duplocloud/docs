@@ -13,7 +13,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Infrastructure and Plan](creating-an-infrastructure-and-plan-for-gcp/)
 * [Tenant](tenant-environment/)
 * [Hosts](hosts-vms.md)
-* [Kubernetes Jobs](../../kubernetes-overview/jobs.md) and [CronJobs](../../kubernetes-overview/cronjobs.md)
+* [Kubernetes Jobs](../../kubernetes/jobs.md) and [CronJobs](../../kubernetes/cronjobs.md)
 * [Logs](../../diagnostics-overview/logs.md)
 * [Metrics](../../diagnostics-overview/monitoring/)
 * [Faults and alerts](../../diagnostics-overview/faults-and-alarms/)

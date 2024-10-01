@@ -23,5 +23,5 @@ For more information about DuploCloud Tenants, see the [Tenants](../../../welcom
     </div>
 
 {% hint style="info" %}
-For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../access-control/tenant-access/cross-tenant-access.md).&#x20;
+For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../user-administration/access-control/tenant-access/cross-tenant-access.md).&#x20;
 {% endhint %}

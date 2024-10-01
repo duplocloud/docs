@@ -10,6 +10,7 @@ The core benefit of the DuploCloud Platform is accelerated and out-of-box compli
 * [PCI](https://duplocloud.com/white-papers/pci-and-hipaa-compliance-with-duplocloud/#Control-by-Control\_PCI\_Implementation\_Detail)
 * [HIPAA](https://duplocloud.com/white-papers/pci-and-hipaa-compliance-with-duplocloud/#Control-by-Control\_HIPAA\_Implementation\_Detail)
 * [HiTrust](https://duplocloud.com/white-papers/pci-and-hipaa-compliance-with-duplocloud/#Control-by-Control\_HITRUST\_Implementation\_Detail)
+* [NIST-800-171](https://www.nist.gov/blogs/manufacturing-innovation-blog/what-nist-sp-800-171-and-who-needs-follow-it-0)
 
 If you are using GRC tools like Vanta, Drata, Secureframe, Thoropass, or any others, leveraging DuploCloud will make all infrastructure checks go green in a matter of a few days. You can assign the failing tests in your GRC tool to DuploCloud support personnel, who can ensure their completion. If you are in an AWS environment and using Vanta, we have an integration with AWS that will setup the configuration and tags on AWS resources that Vanta is looking for, as described [here](../overview/security-configuration-settings/vanta-compliance-controls.md).
 
