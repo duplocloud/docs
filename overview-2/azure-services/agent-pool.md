@@ -4,7 +4,7 @@ description: >-
   pools
 ---
 
-# Agent pool
+# Agent Pools
 
 When you create agent pools to run Azure Kubernetes (AKS) workloads, you create groups of agents available to a pipeline. When you run the pipeline, the pipeline selects the agent that best meets the performance demands of that pipeline.
 
@@ -19,14 +19,16 @@ To create an agent pool using availability zones, you must first create a [Postg
 Create an Azure agent pool for an existing Host in the DuploCloud Portal.
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
-2.  Select the **Azure Agent Pool** tab, and Click **Add**. The **Add Azure Agent Pool** page displays.\
+2. Select the **Azure Agent Pool** tab, and Click **Add**. The **Add Azure Agent Pool** page displays.
 
+<figure><img src="../../.gitbook/assets/new agent pool.png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
-    <figure><img src="../../.gitbook/assets/add agent pool AZ better.png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> page in the DuploCloud Portal</p></figcaption></figure>
-3. Provide inputs for the **Instance Type**, **Min Capacity**, **Max Capacity**, and **Desired Capacity** fields.
-4. Enter allocation tags in the **Allocation Tags** field, if required.
-5. Optionally, select **Enable Autoscaling**.
-6. Optionally, select one or more availability zones from the **Availability Zones** list box. If you select availability zones, you must create a [PostgreSQL Flexible Server subnet](databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure before adding your agent pool. &#x20;
+1. Provide inputs for the **Id**, **Instance Type**, **Min Capacity**, **Max Capacity**, and **Desired Capacity** fields.
+2. Enter allocation tags in the **Allocation Tags** field, if required.
+3. Optionally, select one or more availability zones from the **Availability Zones** list box. If you select availability zones, you must create a [PostgreSQL Flexible Server subnet](databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure before adding your agent pool. &#x20;
+4. Optionally, select **Enable Autoscaling**.
+5. Select the **Scale Set** priority: **Regular** creates a regular agent pool node with standard priority and **Spot** creates Spot AKS agent pool nodes.
+6. If needed, adjust the number of **Max Pods Per Node** from the default of 30.
 7.  Click **Add**. It may take some time to create the agent pool. When the agent pool is ready, **Succeeded** displays in the **Status** column. \
 
 
