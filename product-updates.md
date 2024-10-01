@@ -23,6 +23,7 @@ layout:
 ## Q3 2024
 
 * Azure
+  * [Set max number of Pods](overview-2/azure-services/agent-pool.md) for Azure Agent Pools.
   * Support for [Table, Queue, and Container storage types](overview-2/azure-services/storage-account.md#create-storage-account) within Azure Storage Accounts.
 * GCP
   * Specify OS disk size when [creating a GCE VM](overview-1/use-cases/hosts-vms.md#gce-vm).
@@ -56,6 +57,8 @@ layout:
   * Select [single, or multi-region data location types](overview-1/gcp-services/s3-bucket-2.md#creating-a-gcp-cloud-storage-bucket) for GCP Storage buckets.&#x20;
   * Configure the [minimum number of ports per VM instance](overview-1/use-cases/hosts-vms.md#increasing-minimum-ports-per-vm-instance-gke-standard).
 * Kubernetes
+  * Integrate DuploCloud-managed K8s clusters with [FluxCD](extras-overview/fluxcd.md).
+  * Support for migration from Flux v1 to Flux v2 for FluxCD users.&#x20;
   * Configure [read-only access to K8s Secrets](kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md).
   * Create and manually run a [K8s Job](kubernetes/jobs.md) from a Kubernetes CronJob.
   * Configure faults for failed [Jobs](kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [CronJobs ](kubernetes/cronjobs.md)at the Tenant level.
@@ -100,6 +103,7 @@ layout:
 * Kubernetes
   * [Enable real-time alerts for autoscaling Kubernetes nodes.](overview/use-cases/hosts-vms/auto-scaling/kubernetes-scaling-options.md#allowing-real-time-alerts-for-autoscaling-kubernetes-nodes)
 * General&#x20;
+  * Support for [NIST-800-171 compliance](security-and-compliance/access-control-4.md).
   * [Customize the DuploCloud login screen banner.](extras-overview/login-banner-customization.md)
   * [Set Tenants to expire](overview/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
   * Configure settings for all new Tenants under a Plan using [Tenant Config tab](overview/use-cases/tenant-environment/tenant-config-settings.md).
