@@ -32,7 +32,7 @@ Duplo uses an IAM role, specifically an instance profile, to access AWS accounts
 
 ### If I have an S3 bucket in one Tenant, how would I give a DuploCloud Service in another Tenant access to it?
 
-See the DuploCloud documentation on [Cross-Tenant Access](../access-control/tenant-access/cross-tenant-access.md).
+See the DuploCloud documentation on [Cross-Tenant Access](../user-administration/access-control/tenant-access/cross-tenant-access.md).
 
 ### How do I allow DuploCloud Services to access an S3 bucket in a non-DuploCloud AWS account?
 
@@ -110,7 +110,7 @@ DuploCloud provisions a Load Balancer for your K8s service. If you want to look 
 
 Find the Load Balancer name for your service by navigating to **Kubernetes** _->_ **Services**, selecting your Service from the list, and clicking the **Load Balancer** tab. If you're using K8s Ingress, go to the **K8s Ingress** tab to find the Load Balancer configuration.
 
-Once you have the Load Balancer name, you can access the AWS Console via the [DuploCloud U](use-cases/jit-access.md)[I](use-cases/jit-access.md). In the AWS Console, navigate to the EC2 service view and select Load Balancers from the left navigation menu. Find your Load Balancer name and scroll down to view detailed attributes.
+Once you have the Load Balancer name, you can access the AWS Console via the [DuploCloud U](../aws-user-guide/use-cases/jit-access.md)[I](../aws-user-guide/use-cases/jit-access.md). In the AWS Console, navigate to the EC2 service view and select Load Balancers from the left navigation menu. Find your Load Balancer name and scroll down to view detailed attributes.
 
 ## Terraform FAQs
 

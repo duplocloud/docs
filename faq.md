@@ -30,8 +30,8 @@ Use these FAQ documents to quickly find answers to popular questions about using
 [azure-faq.md](overview-2/azure-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="overview-1/gcp-faq.md" %}
-[gcp-faq.md](overview-1/gcp-faq.md)
+{% content-ref url="gcp-user-guide/gcp-faq.md" %}
+[gcp-faq.md](gcp-user-guide/gcp-faq.md)
 {% endcontent-ref %}
 
 ## General FAQs

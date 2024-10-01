@@ -7,7 +7,7 @@ description: Enabling IoT for a Tenant, creating Things and supporting certifica
 Connect and manage billions of devices with AWS IoT, per Tenant. Collect, store, and analyze IoT data for industrial, consumer, commercial, and automotive workloads within DuploCloud.
 
 {% hint style="info" %}
-Use [Just-In-Time access](../use-cases/jit-access.md) to provision devices in your IoT.
+Use [Just-In-Time access](../../aws-user-guide/use-cases/jit-access.md) to provision devices in your IoT.
 {% endhint %}
 
 ## Enabling IoT for a Tenant&#x20;
