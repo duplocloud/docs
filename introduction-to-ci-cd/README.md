@@ -2,7 +2,7 @@
 description: >-
   Ensuring continuous integration, delivery, and deployment of your Cloud
   applications
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1).png
+cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
 layout:
   cover:

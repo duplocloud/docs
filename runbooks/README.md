@@ -1,6 +1,6 @@
 ---
 description: Quick Start guides for complex but uncommon use cases
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1).png
+cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
 layout:
   cover:
