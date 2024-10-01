@@ -34,7 +34,7 @@ No matter the brand of tool you use, they all need secure access to your Duplocl
 
 ## DuploCloud CI/CD integrations
 
-DuploCloud’s CI/CD integrations play a crucial role in orchestrating cloud code deployments by seamlessly connecting your existing CI/CD platforms with the DuploCloud Platform. Here’s how it works:
+DuploCloud’s CI/CD integrations are crucial in orchestrating cloud code deployments by seamlessly connecting your existing CI/CD platforms with the DuploCloud Platform. Here’s how it works:
 
 CI/CD systems like GitHub Actions, GitLab, and Azure DevOps can leverage DuploCloud’s prepackaged libraries and modules to invoke DuploCloud functionality directly from their pipelines. This allows you to automate the deployment of your cloud infrastructure and applications, ensuring continuous integration, delivery, and deployment.
 
@@ -44,6 +44,6 @@ Some key integration points between CI/CD systems and DuploCloud include:
 2. Deploying Self-Hosted Runners within the Tenant: DuploCloud allows you to deploy a set of build containers within the same Tenant as the application, enabling the build to seamlessly access the Tenant's resources like Docker registries, internal APIs, object stores, SQL, etc.
 3. AWS SecurityHub and Azure Defender Integration: DuploCloud integrates natively with cloud provider-native security solutions like AWS Security Hub and Azure Defender, handling the setup, management, and operations.
 
-Once you have a service account properly setup for your cloud, you can configure those credentials with the tool itself. Some of the CI/CD integrations that are directly supported by DuploCloud include:
+Once you have a service account properly set up for your cloud, you can configure those credentials with the tool. Some of the CI/CD integrations that are directly supported by DuploCloud include:
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><a href="github-actions/"><strong>GitHub Actions</strong></a></td><td>Documentation guides for getting started using CI/CD with GitHub Actions</td><td><a href="github-actions/">github-actions</a></td></tr><tr><td><a href="circleci/"><strong>CircleCI</strong></a></td><td>Documentation guides for getting started using CI/CD with CircleCI</td><td><a href="circleci/">circleci</a></td></tr><tr><td><a href="gitlab-ci-cd/"><strong>GitLab CI/CD</strong></a></td><td>Documentation guides for getting started using CI/CD with GitLab CI/CD</td><td><a href="gitlab-ci-cd/">gitlab-ci-cd</a></td></tr><tr><td><a href="bitbucket-pipelines/"><strong>BitBucket Pipelines</strong></a></td><td>Documentation guides for getting started with BitBucket Pipelines</td><td></td></tr><tr><td><a href="azure-pipelines/"><strong>Azure DevOps</strong></a></td><td>Documentation guides for getting started with Azure DevOps</td><td></td></tr><tr><td><a href="katkit/"><strong>Katkit</strong></a></td><td>Documentation guides for getting started using CI/CD with Katkit</td><td><a href="katkit/">katkit</a></td></tr></tbody></table>
