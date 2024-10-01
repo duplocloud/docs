@@ -6,7 +6,7 @@ description: >-
 
 # FluxCD
 
-DuploCloud integrates with[ FluxCD](https://fluxcd.io/): a continuous delivery (CD) solution for Kubernetes that automates deploying and managing applications in a GitOps-based workflow. In simple terms, FluxCD synchronizes your Kubernetes cluster state with configuration and application files stored in Git repositories.&#x20;
+DuploCloud integrates with[ FluxCD](https://fluxcd.io/), a continuous delivery (CD) solution for Kubernetes that automates deploying and managing applications in a GitOps-based workflow. In simple terms, FluxCD synchronizes your Kubernetes cluster state with configuration and application files stored in Git repositories.&#x20;
 
 FluxCD is built around the GitOps approach, where Git is the single source of truth for application and infrastructure configurations. Any changes to the configuration files in Git automatically trigger updates to the Kubernetes environment, ensuring the system is always in sync with the desired state. FluxCD is ideal for automated deployments, declarative management, Helm chart handling, and multi-environment workflows.
 
