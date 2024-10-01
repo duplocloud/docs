@@ -1,6 +1,6 @@
 ---
 description: Tools for Administrators in the DuploCloud Portal
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1).png
+cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
 layout:
   cover:

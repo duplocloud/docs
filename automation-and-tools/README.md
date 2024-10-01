@@ -2,7 +2,7 @@
 description: >-
   Access the CLI for DuploCloud and leverage third-party integrations to boost
   DevOps automation
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
+cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1) (1).png
 coverY: 0
 layout:
   cover:

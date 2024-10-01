@@ -1,6 +1,6 @@
 ---
 description: Using DuploCloud with Google Cloud Platform
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1).png
+cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
 layout:
   cover:
