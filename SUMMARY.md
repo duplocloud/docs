@@ -130,7 +130,7 @@
         * [Backup and restore](aws-user-guide/aws-services/database/rds-database/backup-and-restore.md)
         * [Sharing encrypted database](aws-user-guide/aws-services/database/rds-database/sharing-encrypted-database.md)
         * [Manage RDS Snapshots](aws-user-guide/aws-services/database/rds-database/manage-rds-snapshots.md)
-        * [Add an RDS read replica](overview/aws-services/database/rds-database/add-an-rds-read-replica/README.md)
+        * [Add and manage RDS read replicas](overview/aws-services/database/rds-database/add-an-rds-read-replica/README.md)
           * [Add Aurora RDS replicas](overview/aws-services/database/rds-database/add-an-rds-read-replica/add-aurora-rds-replicas.md)
         * [Add monitoring interval](overview/aws-services/database/rds-database/add-monitoring-interval.md)
         * [Enable or disable RDS logging](overview/aws-services/database/rds-database/enable-or-disable-rds-logging.md)
