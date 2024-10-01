@@ -22,6 +22,7 @@ layout:
 
 These additional features provide flexibility and accessibility across all supported clouds:
 
+* [FluxCD](fluxcd.md)
 * [Helm Charts](helm-charts.md)
 * [Login banner and button customization](login-banner-customization.md)
 * [Setting up Service Control Policies for DuploCloud](setting-up-scps-service-control-policies-for-duplocloud.md)

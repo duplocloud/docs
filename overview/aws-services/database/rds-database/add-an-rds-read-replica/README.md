@@ -1,7 +1,5 @@
 ---
-description: >-
-  Create and manage read replicas for you RDS databases from the DuploCloud
-  Portal
+description: Create a read replica of your RDS database
 ---
 
 # Add and manage RDS read replicas
