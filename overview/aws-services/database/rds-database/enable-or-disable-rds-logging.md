@@ -8,7 +8,7 @@ You can enable or disable logging for an RDS database at any time, using the Dup
 
 ## Prerequisites
 
-To update logging for an RDS, you must select the **Enable Logging** option when you [create the RDS](../../../../aws-user-guide/aws-services/database/rds-database/).
+To update logging for an RDS, you must select the **Enable Logging** option when you [create the RDS](./).
 
 ## Update RDS logging&#x20;
 

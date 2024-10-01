@@ -5,7 +5,7 @@ description: Access specific resources in the AWS Console using the DuploCloud P
 # AWS Console link
 
 {% hint style="info" %}
-Use [Just-In-Time (JIT)](../../aws-user-guide/use-cases/jit-access.md) to launch the AWS console and work with a specific Tenant configuration, or to obtain Administrator privileges.
+Use [Just-In-Time (JIT)](jit-access.md) to launch the AWS console and work with a specific Tenant configuration, or to obtain Administrator privileges.
 {% endhint %}
 
 DuploCloud users have AWS Console access for advanced configurations of S3 Buckets, Dynamo databases, SQS, SNS Topic, Kinesis stream, and API Gateway resources that are created in DuploCloud. ELB and EC2 areas of the console are not supported.&#x20;
@@ -18,4 +18,4 @@ Clicking the **Console** link launches the AWS console and gives you access to t
 
 Using the **Console** link, you don't need to set up permissions to create new resources in the AWS Console. You can perform any operations on resources that are created with DuploCloud.&#x20;
 
-For example, you can create an S3 bucket from the DuploCloud UI, and then launch the AWS Console with the **Console** link, removing files, setting up static web hosting, and so on. Similarly, you can create a [DynamoDB](../../aws-user-guide/aws-services/database/dynamodb.md) in DuploCloud and use the AWS console to add and remove entries in a database table.
+For example, you can create an S3 bucket from the DuploCloud UI, and then launch the AWS Console with the **Console** link, removing files, setting up static web hosting, and so on. Similarly, you can create a [DynamoDB](../aws-services/database/dynamodb.md) in DuploCloud and use the AWS console to add and remove entries in a database table.
