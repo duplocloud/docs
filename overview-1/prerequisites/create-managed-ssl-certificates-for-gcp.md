@@ -4,7 +4,11 @@ description: >-
   certificates for GCP
 ---
 
-# Create Managed SSL Certificates for GCP
+# \[Optional] Create Managed SSL Certificates for GCP
+
+{% hint style="info" %}
+If you have your own certificate and you followed the step [Certificate for Load Balancer](certificate-for-load-balancer.md) then you can skip this.
+{% endhint %}
 
 SSL certificates secure connections between clients and servers or Load Balancers by encrypting information sent over the network using Transport Layer Security (TLS). GCP users have two options to configure SSL certificates: **Compute Engine SSL certificates resource (compute engine certificates)** and **Certificate Manager (certificate maps)**. For more information, see the Google Cloud documentation about the different [ways to configure SSL certificates in GCP](https://cloud.google.com/load-balancing/docs/ssl-certificates#config-tech) and [when to use Certificate Manager](https://cloud.google.com/certificate-manager/docs/overview#when-to-use).&#x20;
 

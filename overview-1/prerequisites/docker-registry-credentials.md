@@ -1,8 +1,10 @@
----
-description: Set Docker registry credentials
----
+# \[Optional] Docker Registry Credentials
 
-# Docker Registry Credentials
+
+
+{% hint style="info" %}
+This step is needed only if you are using an external non GCR registry
+{% endhint %}
 
 ## Set Docker Registry Credentials&#x20;
 

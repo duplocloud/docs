@@ -1,8 +1,8 @@
----
-description: Enabling shell access using Docker Native
----
+# \[Optional] Shell Access for Docker
 
-# Shell Access for Docker
+{% hint style="info" %}
+This is required only if you are using [Docker Native Container Orchestration](../../container-orchestrators/) as against Kubernetes. If you are using Kubernetes then this can be skipped.
+{% endhint %}
 
 DuploCloud allows shell access into the deployed containers.&#x20;
 
