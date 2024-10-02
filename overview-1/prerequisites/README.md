@@ -2,8 +2,9 @@
 description: Tasks to perform before you use GCP with DuploCloud
 ---
 
-# Prerequisites
+# Initial Setup
 
-Before using DuploCloud, ensure the following prerequisites are met.&#x20;
+Following initial steps need to be performed and described in details in the subsequent subsections:&#x20;
 
-Read the [Access Control](../../access-control/) section to ensure at least one person has administrator access.
+1. Service Account Key Creation: A single DuploCloud portal supports multiple GCP projects. Each project is added to DuploCloud and DuploCloud platform given access to the project via Service account keys.
+2.
