@@ -1,5 +1,8 @@
 ---
-description: Tasks to perform before you use GCP with DuploCloud
+description: >-
+  Tasks to perform before you use GCP with DuploCloud. Typically the DuploCloud
+  onboarding team will perform these steps in your GCP project with your
+  permission.
 ---
 
 # Initial Setup
