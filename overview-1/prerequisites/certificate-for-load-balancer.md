@@ -19,4 +19,4 @@ The applications that will be deployed in the GCP environment will need to be ex
 
 Note down the names of the certificates created as we will reference these names in the DuploCloud platform. Login to DuploCloud portal. Navigate to administrator --> Plans --> Certificate and add the 2 certificates. You can name them same as the names in GCP portal. Choose the type as LB SSL Certificate
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
