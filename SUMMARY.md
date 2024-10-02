@@ -170,6 +170,7 @@
     * [Key DuploCloud concepts](overview-1/container-deployments/concepts.md)
   * [Prerequisites](overview-1/prerequisites/README.md)
     * [Cloud DNS Zone](overview-1/prerequisites/route-53-hosted-zone.md)
+    * [Certificate for Load Balancer](overview-1/prerequisites/certificate-for-load-balancer.md)
     * [Docker Registry Credentials](overview-1/prerequisites/docker-registry-credentials.md)
     * [Enable kubectl Shell](overview-1/prerequisites/enable-kubectl-shell.md)
     * [Shell Access for Docker](overview-1/prerequisites/shell-access-for-docker.md)
