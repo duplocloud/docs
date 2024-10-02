@@ -43,38 +43,30 @@ Under the GCP VM Tab you will soon see VM running\
 4. Click **Next**. The **Advanced Options** page displays.&#x20;
 5. Click **Create**. The Service is created.&#x20;
 
-## Step 2: Create a LoadBalancer of type Cluster IP
+## Step 2: Create a LoadBalancer of type Cluster IP and Ingress
 
 Click on the service name under Kubernetes --> Services page and you will see under the containers tab that the container is in running state.\
 \
-Then click on the load balancer tab and add a new one of type Cluster IP; external and container port should be 80. Backend protocol as TCP and health check as /duplo\_auth. Click on the Advanced Kuberentes settings and check box "Set HealthCheck annotations for Ingress" Follow the steps on the GKE Ingress page to [add Kubernetes Ingress](../../../kubernetes-overview/ingress-loadbalancer/gke-ingress.md#add-kubernetes-ingress), substituting the following values in the **Name** and **Annotations** fields:
+Then click on the load balancer tab and add a new one of type Cluster IP; external and container port should be 80. Backend protocol as TCP and health check as /duplo\_auth. Click on the Advanced Kuberentes settings and check box "Set HealthCheck annotations for Ingress"&#x20;
 
-* **Name**: **duplo-shell**
-* **Annotations**: enter the following, replacing _**CERTIFICATE\_NAME**_ with your certificate name.&#x20;
+<figure><img src="../../../.gitbook/assets/image (438).png" alt=""><figcaption></figcaption></figure>
 
-```yaml
-//ingress.gcp.kubernetes.io/pre-shared-cert: <CERTIFICATE_NAME> kubernetes.io/ingress.allow-http:'false'
-```
+## Step 4: Add Ingress
 
-## Step 3: Add the DNS name to System Settings
+On the left Navbar under Kubernetes click on Ingress. Add a new ingress, call it kubect-shell with the following values. Choose the global certificate that was added to the plan in the step "Certificate for Load Balancer", choose a desired dns name prefix. Add a Path that defaults all traffic to kubectl service we created in the previous step:\
+![](<../../../.gitbook/assets/image (439).png>)![](<../../../.gitbook/assets/image (440).png>)\
+Now copy the full DNS name for the ingress for the next step.
 
-1. From the DuploCloud portal, navigate to **Kubernetes** -> **Ingress**.
-2. Click on **duplo-shell** in the **NAME** column. The **duplo-shell Ingress** details page displays.&#x20;
-3. Select the **Configuration** tab.
-4.  From the **DNS** box, copy the **DNS**.\
+<figure><img src="../../../.gitbook/assets/image (442).png" alt=""><figcaption></figcaption></figure>
 
+## Step 4: Add the DNS name to System Settings
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.10-13_27_00.png" alt=""><figcaption><p>The <strong>Ingress</strong> details page with the <strong>DNS</strong> box highlighted</p></figcaption></figure>
-
-    </div>
-5. Navigate to **Administrator** -> **Systems Settings**.&#x20;
-6. Select the **System Config** tab, and click **Add**.&#x20;
-7. From the **Config Type** list box, select **AppConfig**.
-8. From the **Key** list box, select **Other**.&#x20;
-9. In the second **Key** field, enter **DuploShellfqdn**
-10. In the **Value** field, paste the **DNS** you copied from the Ingress details page.&#x20;
+1. Navigate to **Administrator** -> **Systems Settings**.&#x20;
+2. Select the **System Config** tab, and click **Add**.&#x20;
+3. From the **Config Type** list box, select **AppConfig**.
+4. From the **Key** list box, select **Other**.&#x20;
+5. In the second **Key** field, enter **DuploShellfqdn**
+6. In the **Value** field, paste the **DNS** you copied from the Ingress details page.&#x20;
 
 <div align="left">
 
