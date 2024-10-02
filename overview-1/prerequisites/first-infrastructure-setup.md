@@ -4,8 +4,8 @@ Once the GCP project has been added to the DuploCloud portal, we setup the first
 
 
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 This will take about 15-20 mins for the setup to complete. Keep an eye on faults to see if something is amiss. There maybe an occasional NTP clock sync fault that can be ignore. You will see in the Infrastructure status that it progresses from one state to another. When complete, then navigate to Administrators and Plans and you will see a plan with the same name as infrastructure.

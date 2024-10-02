@@ -8,15 +8,25 @@ Enabling DuploCloud shell access in GCP is part of a one-time DuploCloud portal 
 
 ## Step 1: Create a DuploCloud Service
 
-Create a DuploCloud Service in any Tenant.
+Go under the tools tenant, create a node pool and create a new DuploCloud Service called kubectl.
 
-1. From the DuploCloud portal, navigate to **Kubernetes** -> **Services**.
+1.  To create a node pool, select the Tools tenant at the top drop down and then navigate to Kubernetes --> Nodes --> Node Pool\
+
+
+    <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Under the GCP VM Tab you will soon see VM running\
+
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+1. Next navigate to **Kubernetes** -> **Services** on the left nav bar.
 2. Click **Add**. The **Add Service** page displays.&#x20;
 3. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept all other default values for fields not specified.&#x20;
 
 | Add Service page field  | Value                                    |
 | ----------------------- | ---------------------------------------- |
-| **Name**                | _**YOUR\_SERVICE\_NAME**_                |
+| **Name**                | _**kubectl**_                            |
 | **Cloud**               | `Google`                                 |
 | **Platform**            | `GKE Linux`                              |
 | **Docker Image**        | `duplocloud/shell:terraform_kubectl_v15` |
@@ -33,9 +43,11 @@ Create a DuploCloud Service in any Tenant.
 4. Click **Next**. The **Advanced Options** page displays.&#x20;
 5. Click **Create**. The Service is created.&#x20;
 
-## Step 2: Create a Kubernetes Ingress
+## Step 2: Create a LoadBalancer of type Cluster IP
 
-Follow the steps on the GKE Ingress page to [add Kubernetes Ingress](../../kubernetes-overview/ingress-loadbalancer/gke-ingress.md#add-kubernetes-ingress), substituting the following values in the **Name** and **Annotations** fields:
+Click on the service name under Kubernetes --> Services page and you will see under the containers tab that the container is in running state.\
+\
+Then click on the load balancer tab and add a new one of type Cluster IP; external and container port should be 80. Backend protocol as TCP and health check as /duplo\_auth. Click on the Advanced Kuberentes settings and check box "Set HealthCheck annotations for Ingress" Follow the steps on the GKE Ingress page to [add Kubernetes Ingress](../../../kubernetes-overview/ingress-loadbalancer/gke-ingress.md#add-kubernetes-ingress), substituting the following values in the **Name** and **Annotations** fields:
 
 * **Name**: **duplo-shell**
 * **Annotations**: enter the following, replacing _**CERTIFICATE\_NAME**_ with your certificate name.&#x20;
@@ -54,7 +66,7 @@ Follow the steps on the GKE Ingress page to [add Kubernetes Ingress](../../kuber
 
     <div align="left">
 
-    <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.10-13_27_00.png" alt=""><figcaption><p>The <strong>Ingress</strong> details page with the <strong>DNS</strong> box highlighted</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.10-13_27_00.png" alt=""><figcaption><p>The <strong>Ingress</strong> details page with the <strong>DNS</strong> box highlighted</p></figcaption></figure>
 
     </div>
 5. Navigate to **Administrator** -> **Systems Settings**.&#x20;
@@ -66,7 +78,7 @@ Follow the steps on the GKE Ingress page to [add Kubernetes Ingress](../../kuber
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/shrunk.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/shrunk.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure>
 
 </div>
 

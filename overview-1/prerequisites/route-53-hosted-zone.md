@@ -15,7 +15,7 @@ To create the hosted zone using the GCP Console:
 1. Log in to the GCP[ console](https://aws.amazon.com/console/).
 2. Navigate to **Cloud DNS** under **Network Services**.&#x20;
 3. Click on "Create Zone" as shown in the picture below and note down the **Zone name** that you have created as this will be required to be added into DuploCloud later: \
-   ![](<../../.gitbook/assets/image (3).png>)![](<../../.gitbook/assets/image (1) (1).png>)
+   ![](<../../.gitbook/assets/image (3).png>)![](<../../.gitbook/assets/image (1) (1) (1).png>)
 4. Access the zone and note the [name server](https://docs.aws.amazon.com/Route53/latest/APIReference/API\_domains\_Nameserver.html) names.
 5. Go to your root Domain Provider's site (for `acme.com`, for example), and create a `NS` record that references the domain name of the hosted zone you created (`apps.acme.com`) and add the zone name to the name servers that you noted above.
 
