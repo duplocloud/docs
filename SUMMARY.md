@@ -170,6 +170,7 @@
     * [Key DuploCloud concepts](overview-1/container-deployments/concepts.md)
   * [Initial Setup](overview-1/prerequisites/README.md)
     * [Service Account Setup](overview-1/prerequisites/service-account-setup.md)
+    * [First Infrastructure Setup](overview-1/prerequisites/first-infrastructure-setup.md)
     * [Cloud DNS Zone](overview-1/prerequisites/route-53-hosted-zone.md)
     * [Certificate for Load Balancer](overview-1/prerequisites/certificate-for-load-balancer.md)
     * [Docker Registry Credentials](overview-1/prerequisites/docker-registry-credentials.md)
