@@ -1,21 +1,51 @@
+---
+description: Creating a Service Account for DuploCloud GCP and adding a private key
+---
+
 # Service Account Setup
 
-For each GCP project that is to be onboarded, we need to create a service account and a key.&#x20;
+A service account and a key are created for each GCP project to be onboarded.&#x20;
 
-1. Disable restriction on Service Account Key Setup. Login to GCP console and make sure that the desired project is selected in the GCP project drop down at the top. Search for IAM and admin and on the left hand side select "IAM and Admin" and under that select "Organization Policies". Then on the right hand side select the filter and search for "iam.disableServiceAccountKeyCreation". Then click the 3 dots and select edit policy. Then add a Rule at the bottom turn off enablement
+## Disable Restriction on the Service Account Key
 
-<img src="../../.gitbook/assets/image (434).png" alt="" data-size="original">" ![](<../../.gitbook/assets/image (435).png>)
+1. Login to the GCP console and select the desired project from the GCP project list box.&#x20;
+2. In the left navigation pane, in **IAM and admin**, select **Organization Policies**.&#x20;
+3. **Filter** and search for **iam.disableServiceAccountKeyCreation**.&#x20;
+4. Click the options menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) and select **Edit policy**.&#x20;
+5. Add a **Rule (Rule 1** in the graphic below**)** to turn off enablement.
 
-2. Next we create a service account by clicking on Service Accounts menu on the left Nav bar under IAM and Admin. Give the account "owner" permission to the project
+<figure><img src="../../.gitbook/assets/GCP_pol1.png" alt=""><figcaption><p>Filtering for <strong>iam.disableServiceAccountKeyCreation</strong></p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/GCP_pol2.png" alt=""><figcaption><p><strong>Configured Policy</strong> area with <strong>Rule 1</strong> defined to turn off enablement</p></figcaption></figure>
+
+## Creating a Service Account
+
+1. In the left navigation pane, click **IAM and Admin** -> **Service Accounts**.
+2. In the **Grant this service account access to project** step, assign the **Owner** role as shown below, giving the account owner permission to the project.
 
 <div align="center">
 
-<figure><img src="../../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (436).png" alt=""><figcaption><p>Assign <strong>Owner</strong> role to grant account owner permission to the project</p></figcaption></figure>
 
 </div>
 
-3. Click in the service account and create a new key of type json and download the json file and name it say "my-gcp-project-sa-key.json". Open a terminal window in your computer and navigate to the folder where you downloaded the file and run this command "jq -r .private\_key < my-gcp-project-sa-key.json| pbcopy" This will copy the key contents in your clip board. You can check by pasting it in a text editor.&#x20;
-4. Now we need to add these keys to DuploCloud portal. Login to your duploCloud portal and navigate to Administrator --> CloudCredentials. Paste the key from clip board to private key box; give a friendly display name typically you can keep it same as the project; Get the project ID and Service Account Email from the json key file downloaded above and submit the form.\
-   &#x20;&#x20;
+3. Select the Service Account and create a new Key of type **JSON.**
+4. Download the JSON file and give it a meaningful name, such as `my-gcp-project-sa-key.json`.&#x20;
+5. Open a Terminal window and navigate to the location of the downloaded file.&#x20;
+6. Run the following command.  This copies the Key contents to your clipboard. You can verify the contents by pasting it into a text editor.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (437).png" alt=""><figcaption></figcaption></figure>
+```shell-session
+jq -r .private_key < my-gcp-project-sa-key.json| pbcopy
+```
+
+## Adding the Service Account Private Key to the DuploCloud Portal
+
+To add the private key to DuploCloud:&#x20;
+
+1. Login to the DuploCloud and navigate to **Administrator** -> **Cloud Credentials**. The **Cloud Credentials** page displays.
+2. Paste the key in the **Service Account Private Key** field.
+3. Enter a **Display name** for easy reference, preferably including the project name.
+4. Enter the **Project ID** and **Service Account Email** from the JSON key file you downloaded.
+5. Click **Submit**. &#x20;
+
+<figure><img src="../../.gitbook/assets/image (437).png" alt=""><figcaption><p><strong>Cloud Credentials</strong> page</p></figcaption></figure>
