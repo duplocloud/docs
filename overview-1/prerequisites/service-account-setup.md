@@ -8,7 +8,7 @@ A service account and a key are created for each GCP project to be onboarded.&#x
 
 ## Disable Restriction on the Service Account Key
 
-1. Login to the GCP Console and select the desired project from the GCP **Project** list box.&#x20;
+1. Login to the [GCP Console](http://console.cloud.google.com/) and select the desired project from the GCP **Project** list box.&#x20;
 2. In the left navigation pane, in **IAM and admin**, select **Organization Policies**.&#x20;
 3. **Filter** and search for **iam.disableServiceAccountKeyCreation**.&#x20;
 4. Click the options menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) and select **Edit policy**.&#x20;

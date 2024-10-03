@@ -12,7 +12,7 @@ The DuploCloud platform needs a unique GCP Cloud DNS zone to create DNS entries 
 
 To create the hosted zone using the GCP Console:
 
-1. Log in to the GCP[ console](https://aws.amazon.com/console/).
+1. Log in to the [GCP console](http://console.cloud.google.com/).
 2. Navigate to **Cloud DNS** under **Network Services**.&#x20;
 3. Click on "Create Zone" as shown in the picture below and note down the **Zone name** that you have created as this will be required to be added into DuploCloud later: \
    ![](<../../.gitbook/assets/image (3).png>)![](<../../.gitbook/assets/image (1) (1) (1).png>)
