@@ -169,6 +169,7 @@
     * [Container orchestration features](overview-1/container-deployments/container-orchestrators.md)
     * [Key DuploCloud concepts](overview-1/container-deployments/concepts.md)
   * [Initial Setup](overview-1/prerequisites/README.md)
+    * [Docker Registry](overview-1/prerequisites/docker-registry.md)
     * [Service Account Setup](overview-1/prerequisites/service-account-setup.md)
     * [Cloud DNS Zone](overview-1/prerequisites/route-53-hosted-zone.md)
     * [Certificate for Load Balancer and Ingress](overview-1/prerequisites/certificate-for-load-balancer-and-ingress.md)
