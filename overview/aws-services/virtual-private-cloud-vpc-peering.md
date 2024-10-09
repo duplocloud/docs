@@ -8,7 +8,7 @@ VPC [peering ](https://en.wikipedia.org/wiki/Peering)is a networking connection 
 
 VPC peering facilitates the transfer of data. For example, if you have more than one AWS account, you can peer the VPCs across those accounts and create a file-sharing network.&#x20;
 
-This procedure describes how to peer two VPCs, using subnet routes, and how to manage the peering connections and routes.
+This procedure describes how to peer two VPCs, using subnet routes, and how to manage the peering connections and routes. For detailed steps on setting up VPC peering in Duplo, refer to the [Duplo documentation](https://docs.duplocloud.com/docs/overview/aws-services/virtual-private-cloud-vpc-peering).
 
 ## Enable and peer VPCs
 
