@@ -1,7 +1,13 @@
+---
+description: Create a DuploCloud Tenant for tools
+---
+
 # Tools Tenant
 
-Lets add a tools tenant where we will have tools like Kubectl shell, Open Telemetry stack and so forth One can name the tenant with any desired name and can also choose to split the desired tools to separate tenant.
+Once the initial infrastructure setup is complete, the next step is to add a DuploCloud Tenant for tools like `kubectl` shell, OpenTelemetry, etc.
 
-Here we create a new tenant called "tools" and place it in the infrastructure we just created in the "First Infrastructure Setup" step. Navigate to administrator --> Tenants and click on add and create this tenant. Typically it takes a few minutes so wait for 2-3 minutes.
+Follow the instructions in the DuploCloud documentation to [create a Tenant](../../use-cases/tenant-environment/). Name the Tenant **Tools**, and select the Plan with the same name as the initial Infrastructure you created in the previous step.&#x20;
 
-Next we will deploy the Kubectl Shell in this tenant.
+{% hint style="info" %}
+A **Tools** Tenant is not required. You can assign your Tenant(s) any name(s) you wish and/or create separate Tenants for different tools and purposes.
+{% endhint %}
