@@ -1,32 +1,34 @@
 ---
-description: Enable access to the DuploCloud shell for your GCP account
+description: Enable access to the kubectl shell
 ---
 
-# Enable kubectl Shell
+# Enable Kubectl Shell
 
-Enabling DuploCloud shell access in GCP is part of a one-time DuploCloud portal setup process.&#x20;
+Enabling kubectl shell access in GCP is part of a one-time DuploCloud Portal setup process.&#x20;
 
-## Step 1: Create a DuploCloud Service
+## Step 1: Create a Node Pool
 
-Go under the tools tenant, create a node pool and create a new DuploCloud Service called kubectl.
+1. In the **Tenant** list box, select the **Tools** Tenant.
+2. Navigate to **Kubernetes** -> **Nodes**.
+3. Select the **Node Pool** tab, and click **Add.**&#x20;
 
-1.  To create a node pool, select the Tools tenant at the top drop down and then navigate to Kubernetes --> Nodes --> Node Pool\
+<figure><img src="../../../.gitbook/assets/node pool new.png" alt=""><figcaption><p>The <strong>Add Node Pool</strong> pane</p></figcaption></figure>
 
+4. Complete the required fields, and click **Create**.
+5. Once the node pool is complete, it will display on the **GCP VM** tab with a status of **Running**.&#x20;
 
-    <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>The <strong>GCE VM</strong> tab in the DuploCloud Portal</p></figcaption></figure>
 
-Under the GCP VM Tab you will soon see VM running\
+## Step 2. Create a DuploCloud Service
 
-
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
-
-1. Next navigate to **Kubernetes** -> **Services** on the left nav bar.
-2. Click **Add**. The **Add Service** page displays.&#x20;
-3. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept all other default values for fields not specified.&#x20;
+1. In the **Tenant** list box, select the **Tools** Tenant.
+2. Navigate to **Kubernetes** -> **Services**.
+3. Click **Add**. The **Add Service** page displays.&#x20;
+4. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept default values for fields not specified.&#x20;
 
 | Add Service page field  | Value                                    |
 | ----------------------- | ---------------------------------------- |
-| **Name**                | _**kubectl**_                            |
+| **Name**                | `kubectl`                                |
 | **Cloud**               | `Google`                                 |
 | **Platform**            | `GKE Linux`                              |
 | **Docker Image**        | `duplocloud/shell:terraform_kubectl_v15` |
@@ -43,35 +45,67 @@ Under the GCP VM Tab you will soon see VM running\
 4. Click **Next**. The **Advanced Options** page displays.&#x20;
 5. Click **Create**. The Service is created.&#x20;
 
-## Step 2: Create a LoadBalancer of type Cluster IP and Ingress
+## Step 3: Create a Load Balancer
 
-Click on the service name under Kubernetes --> Services page and you will see under the containers tab that the container is in running state.\
-\
-Then click on the load balancer tab and add a new one of type Cluster IP; external and container port should be 80. Backend protocol as TCP and health check as /duplo\_auth. Click on the Advanced Kuberentes settings and check box "Set HealthCheck annotations for Ingress"&#x20;
-
-<figure><img src="../../../.gitbook/assets/image (438).png" alt=""><figcaption></figcaption></figure>
-
-## Step 4: Add Ingress
-
-On the left Navbar under Kubernetes click on Ingress. Add a new ingress, call it kubect-shell with the following values. Choose the global certificate that was added to the plan in the step "Certificate for Load Balancer", choose a desired dns name prefix. Add a Path that defaults all traffic to kubectl service we created in the previous step:\
-![](<../../../.gitbook/assets/image (439).png>)![](<../../../.gitbook/assets/image (440).png>)\
-Now copy the full DNS name for the ingress for the next step.
-
-<figure><img src="../../../.gitbook/assets/image (442).png" alt=""><figcaption></figcaption></figure>
-
-## Step 4: Add the DNS name to System Settings
-
-1. Navigate to **Administrator** -> **Systems Settings**.&#x20;
-2. Select the **System Config** tab, and click **Add**.&#x20;
-3. From the **Config Type** list box, select **AppConfig**.
-4. From the **Key** list box, select **Other**.&#x20;
-5. In the second **Key** field, enter **DuploShellFqdn**
-6. In the **Value** field, paste the **DNS** you copied from the Ingress details page.&#x20;
+1. Navigate to **Kubernetes** -> **Services**.
+2. Select the **kubectl** Service from the **NAME** column.&#x20;
+3. Select the **Load Balancers** tab, and click **Configure Load Balancer**. The **Add Load Balancer Listener** pane displays.&#x20;
+4. In the **Select Type** list box, select **K8s Cluster IP**.
+5. In the **Container port** and **External port** fields, enter **80**.
+6. In the **Health Check** field, enter **/duplo\_auth**.&#x20;
+7. In the **Backend Protocol** list box, select **TCP**
+8. Select **Advanced Kubernetes settings** and **Set HealthCheck annotations for Ingress.**
+9. Click **Add**. The Load Balancer listener is added.&#x20;
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/shrunk.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/new LB pic.png" alt="" width="332"><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
 
 </div>
 
-11. Click **Submit**. DuploCloud shell access is enabled in GCP.&#x20;
+## Step 4: Add an Ingress
+
+1. In the **Tenant** list box, select the **Tools** Tenant.
+2. Navigate to **Kubernetes** -> **Ingress**.
+3. Click **Add**. The **Add Kubernetes Ingress** page displays.&#x20;
+4. In the **Ingress Name** field, enter `kubect-shell`.
+5. From the **Ingress Controller** list box, select **gce**.
+6. In the **Visibility** list box, select **Public**.
+7. In the **DNS Prefix** field**,** enter the DNS name prefix.&#x20;
+8. In the **Certificate ARN** list box, select the ARN added to the Plan in the **Certificate for Load Balancer and Ingress** step.
+
+<figure><img src="../../../.gitbook/assets/add ingress new.png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
+
+9. Click **Add Rule**. The **Add Ingress Rule** pane displays.&#x20;
+10. In the **Path** field, enter (**/**)
+11. In the **Service Name** list box, select the Service previously created (**kubectl:80**)
+12. Click **Add Rule**. A rule directing all traffic to the **kubectl** Service is created.&#x20;
+
+<div align="left">
+
+<figure><img src="../../../.gitbook/assets/ingress newest.png" alt="" width="344"><figcaption></figcaption></figure>
+
+</div>
+
+\
+13\. On the **Add Kubernetes Ingress** page, click **Add**. The Ingress is created.
+
+## Step 5: Add the DNS Name to System Settings
+
+1. Navigate to **Administrator** -> **Systems Settings**.&#x20;
+2.  Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.\
+
+
+    <div align="left">
+
+    <figure><img src="../../../.gitbook/assets/shrunk.png" alt="" width="371"><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure>
+
+    </div>
+3. From the **Config Type** list box, select **AppConfig**.
+4. From the **Key** list box, select **Other**.&#x20;
+5. In the second **Key** field, enter **DuploShellfqdn**
+6.  In the **Value** field, paste the Ingress DNS. To find the Ingress DNS, navigate to **Kubernetes** -> **Ingress**, and copy the DNS from the **DNS** column.\
+
+
+    <figure><img src="../../../.gitbook/assets/image (442).png" alt=""><figcaption></figcaption></figure>
+7. Click **Submit**. `kubectl` shell access is enabled.&#x20;
