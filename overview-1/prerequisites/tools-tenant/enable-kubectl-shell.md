@@ -65,7 +65,7 @@ Now copy the full DNS name for the ingress for the next step.
 2. Select the **System Config** tab, and click **Add**.&#x20;
 3. From the **Config Type** list box, select **AppConfig**.
 4. From the **Key** list box, select **Other**.&#x20;
-5. In the second **Key** field, enter **DuploShellfqdn**
+5. In the second **Key** field, enter **DuploShellFqdn**
 6. In the **Value** field, paste the **DNS** you copied from the Ingress details page.&#x20;
 
 <div align="left">
