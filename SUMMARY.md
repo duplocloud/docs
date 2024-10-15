@@ -172,7 +172,7 @@
     * [Docker Registry](overview-1/prerequisites/docker-registry.md)
     * [Service Account Setup](overview-1/prerequisites/service-account-setup.md)
     * [Cloud DNS Zone](overview-1/prerequisites/route-53-hosted-zone.md)
-    * [Certificate for Load Balancer and Ingress](overview-1/prerequisites/certificate-for-load-balancer-and-ingress.md)
+    * [Certificates for Load Balancer and Ingress](overview-1/prerequisites/certificates-for-load-balancer-and-ingress.md)
     * [Initial Infrastructure Setup](overview-1/prerequisites/initial-infrastructure-setup.md)
     * [Tools Tenant](overview-1/prerequisites/tools-tenant/README.md)
       * [Enable kubectl Shell](overview-1/prerequisites/tools-tenant/enable-kubectl-shell.md)
