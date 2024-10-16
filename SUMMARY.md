@@ -360,7 +360,7 @@
     * [Troubleshooting Guide](terraform-support/duplocloud-terraform-exporter/troubleshooting-guide.md)
   * [Terraform FAQ](terraform-support/terraform-faq.md)
 * [Automation and Tools](automation-and-tools/README.md)
-  * [Duploctl](automation-and-tools/duploctl.md)
+  * [DuploCtl CLI](automation-and-tools/duploctl.md)
   * [Supported 3rd Party Tools](automation-and-tools/supported-third-party-tools.md)
 * [CI/CD Overview](introduction-to-ci-cd/README.md)
   * [Service Accounts](introduction-to-ci-cd/service-accounts.md)
