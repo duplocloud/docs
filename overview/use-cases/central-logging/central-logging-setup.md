@@ -34,7 +34,7 @@ description: Set up logging for the DuploCloud Portal
 
 
 5. Click **Submit**. Data gathering takes about fifteen (15) minutes. When data gathering is complete, graphical logging data is displayed in the **Logging** tab.&#x20;
-6. After logging has been enabled for the Control Plane, finish the logging setup by enabling the Log Collector to collect logs per Tenant. This feature is especially useful for Tenants that are spread across multiple regions. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Settings -> Logging**. &#x20;
+6. After logging has been enabled for the Control Plane, finish the logging setup by enabling the Log Collector to collect logs per Tenant. This feature is especially useful for Tenants that are spread across multiple regions. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Settings** -> **Logging**. &#x20;
 7.  In the **Logging** tab, on the **Logging Infrastructure Tenants** page, click **Add.**\
 
 
