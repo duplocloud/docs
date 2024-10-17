@@ -1,5 +1,5 @@
 ---
-description: Create global and regional SSL certificates for CGP deployments
+description: Create global and regional SSL certificates for GCP deployments
 ---
 
 # Certificates for Load Balancer and Ingress
