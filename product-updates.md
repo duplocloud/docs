@@ -66,7 +66,7 @@ layout:
 * General
   * [Skip faults for stopped Tenant instances.](diagnostics-overview/faults-and-alarms/#muting-faults-for-stopped-tenants)
   * [Configure user access to multiple Tenants](access-control/tenant-access/) with one step.
-  * [Configure Okta](extras-overview/okta-user-management.md) as a user source for the DuploCloud Portal.
+  * [Configure Okta](welcome-to-duplocloud/okta-identity-management.md) as a user source for the DuploCloud Portal.
   * [Customize the text on the login button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
 ## Q1 2024
