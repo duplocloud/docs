@@ -72,6 +72,8 @@ layout:
 ## Q1 2024
 
 * AWS
+  * Conifgure [Automatic Failover for Redis](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance).
+  * [Synch AWS Redis with Amazon CloudWatch Logs](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance) for automatic log delivery.
   * Configure [AWS JIT session timeout](aws-user-guide/use-cases/jit-access.md#configuring-admin-jit-timeout-via-aws-iam-role) using an IAM role.
   * [Enable automatic AWS ACM (SSL) Certificates](aws-user-guide/prerequisites/acm-certificate.md#enabling-automatic-aws-acm-certificate-creation) for a Plan.
   * [Configure K8s Ingress redirect ](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
