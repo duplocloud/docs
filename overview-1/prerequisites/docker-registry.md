@@ -1,8 +1,10 @@
+---
+description: Set up a Docker Registry image repository
+---
+
 # Docker Registry
 
 Create a docker image repository in GCP's Artifact Registry service and push an image to it.
-
-These steps are written as an example for the `qa-gcp3` project using the `us-east1` location.
 
 ## Prerequisites
 
@@ -10,9 +12,13 @@ These steps are written as an example for the `qa-gcp3` project using the `us-ea
 2. [Install and configure](https://cloud.google.com/sdk/docs/how-to) the `gcloud` CLI.
 3. Run `gcloud info` and confirm it shows your email address and GCP project.
 
-## Create the Repository
+## Creating the Repository
 
-Navigate to Repositories in the Artifact Registry service in the GCP UI and [create a repository](https://cloud.google.com/artifact-registry/docs/repositories/create-repos):
+{% hint style="info" %}
+These steps are written as an example for the `qa-gcp3` project using the `us-east1` location.
+{% endhint %}
+
+1. Navigate [Google Cloud Console](https://console.cloud.google.com/) and [create a repository](https://cloud.google.com/artifact-registry/docs/repositories/create-repos) with the following inputs:
 
 * **Type**: Docker
 * **Mode**: Standard
@@ -23,15 +29,11 @@ Navigate to Repositories in the Artifact Registry service in the GCP UI and [cre
 
 <figure><img src="../../.gitbook/assets/new_repo.png" alt=""><figcaption><p>Creating a repository</p></figcaption></figure>
 
-Copy the repo path from its page in the UI. You'll need this to tag the image you build later. The path will look similar to this:
-
-```
-us-east1-docker.pkg.dev/qa-gcp3/testrepo
-```
+2. Copy the repo path from the Google UI. This will be used to tag the image later. The path will look similar to this: `us-east1-docker.pkg.dev/qa-gcp3/testrepo`.
 
 <figure><img src="../../.gitbook/assets/repo_path.png" alt=""><figcaption><p>Finding the repository path</p></figcaption></figure>
 
-## Build and Push an Image
+## Building and Pushing an Image
 
 Now you can [tag and push](https://cloud.google.com/artifact-registry/docs/docker/pushing-and-pulling) any image you build. On some platforms (like Apple M1 laptops), you may need to specify a build architecture.
 
@@ -44,16 +46,13 @@ Now you can [tag and push](https://cloud.google.com/artifact-registry/docs/docke
    (Alternatively, you can add this tag with `-t` flags in the build step.)
 4. Push the image:\
    `docker push us-east1-docker.pkg.dev/qa-gcp3/testrepo/testimage:amd64`
-
-The image tag should now show up in the GCP UI:
+5. The image tag displays in the GCP UI:
 
 <figure><img src="../../.gitbook/assets/new_image.png" alt=""><figcaption><p>Viewing the image in the repository</p></figcaption></figure>
 
-## Use the Image in DuploCloud
+## Using the Image in DuploCloud
 
-Reference the image tag you just pushed in the `Docker Image` field of any DuploCloud service running in the same GCP account.
-
-Use the full path and tag (the arguments to the `push` command), like this:
+Enter the image tag in the **Docker Image** field of any DuploCloud Service running in the same GCP account. Use the full path and tag (the arguments to the `push` command) as shown below.
 
 ```
 us-east1-docker.pkg.dev/qa-gcp3/testrepo/testimage:amd64
