@@ -40,6 +40,7 @@ layout:
   * [Specify a Lambda architecture](overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
   * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.&#x20;
 * Azure
+  * Support for [spot instances with AKS Agent pool](overview-2/azure-services/agent-pool/spot-instances-for-aks-agent-pools.md).&#x20;
   * Support for [Azure VM Disk Controller](overview-2/use-cases/hosts-vms/).
   * Specify the cluster type, node VM size, and outbound connectivity source when [creating an AKS cluster](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md#enabling-the-aks-kubernetes-cluster).
   * Support for [private DNS zones](overview-2/prerequisites/program-dns-entries.md).
