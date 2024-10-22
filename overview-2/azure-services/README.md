@@ -21,7 +21,7 @@ Supported Services are listed in alphabetical order, following the core services
 
 ### Additional Services
 
-* [Agent Pool](agent-pool.md)
+* [Agent Pool](agent-pool/)
 * [Databases](databases/)
 * [Docker Web Application](docker-web-application.md)
 * [Functions](functions.md)

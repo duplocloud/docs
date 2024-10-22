@@ -23,7 +23,7 @@ layout:
 ## Q3 2024
 
 * Azure
-  * [Set max number of Pods](overview-2/azure-services/agent-pool.md) for Azure Agent Pools.
+  * [Set max number of Pods](overview-2/azure-services/agent-pool/) for Azure Agent Pools.
   * Support for [Table, Queue, and Container storage types](overview-2/azure-services/storage-account.md#create-storage-account) within Azure Storage Accounts.
 * GCP
   * Specify OS disk size when [creating a GCE VM](overview-1/use-cases/hosts-vms.md#gce-vm).
@@ -44,7 +44,7 @@ layout:
   * Specify the cluster type, node VM size, and outbound connectivity source when [creating an AKS cluster](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md#enabling-the-aks-kubernetes-cluster).
   * Support for [private DNS zones](overview-2/prerequisites/program-dns-entries.md).
   * Configure private endpoints for [MSSQL Server databases](overview-2/azure-services/databases/sql-database.md#creating-the-mssql-server).
-  * Support for [Azure agent pools](overview-2/azure-services/agent-pool.md#adding-an-agent-pool) with availability zones.&#x20;
+  * Support for [Azure agent pools](overview-2/azure-services/agent-pool/#adding-an-agent-pool) with availability zones.&#x20;
   * Configure [Redis databases](overview-2/azure-services/databases/redis-database.md#configure-public-network-access-for-databases-optional) with public network access.&#x20;
   * Support for [PostgreSQL Flexible Server](overview-2/azure-services/databases/postgresql-flexible-server.md) databases.
   * Support for [Azure Application Gateway SSL policies with AKS Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/using-an-azure-application-gateway-ssl-policy-with-ingress.md) for ALB Load Balancers.
@@ -252,7 +252,7 @@ layout:
 * Azure
   * Support for [Kubernetes Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/).
   * Monitor Tenant usage in the [Cost Management for billing ](overview-2/use-cases/billing-and-cost-management/cost-management.md)feature with weekly or monthly views.
-  * Edit [Azure agent pools](overview-2/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
+  * Edit [Azure agent pools](overview-2/azure-services/agent-pool/#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 * GCP
   * Monitor Tenant usage in the [Cost Management for billing](overview-1/use-cases/cost-management/) feature with weekly or monthly views.&#x20;
 * Kubernetes (K8s)
@@ -260,7 +260,7 @@ layout:
   * Maintain cluster stability with [Ingress Health Checks annotations](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.&#x20;
   * [Force creation of StatefulSets in AWS](overview/aws-services/containers/#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](overview/use-cases/monitoring/kubernetes-administrator-dashboard.md).
-  * Edit [Azure agent pools](overview-2/azure-services/agent-pool.md#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
+  * Edit [Azure agent pools](overview-2/azure-services/agent-pool/#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
 
 ## November 2022
 
