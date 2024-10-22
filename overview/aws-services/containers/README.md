@@ -24,14 +24,6 @@ DuploCloud supports three container orchestration technologies to deploy contain
 
 [Docker](https://docs.docker.com/get-started/overview/) is the foundational containerization technology. It is not managed, so the user manually controls the containers and orchestration. Although Docker requires considerably more user input than ECS or EKS, it offers greater control over the VM infrastructure, strong isolation between applications, and supreme portability.
 
-{% hint style="info" %}
-When you create a service, refer to the registry configuration in **Docker** -> **Services | Kubernetes** -> **Services** **| Cloud Services** -> **ECS** -> **Services**. Select the Service from the **NAME** column and select the **Configuration** tab. Note the values in the **Environment Variables** and **Other Docker Config** fields.&#x20;
-
-For example:&#x20;
-
-`{"DOCKER_REGISTRY_CREDENTIALS_NAME":"registry1"}`
-{% endhint %}
-
 ### **Kubernetes**
 
 Adding a Service in the DuploCloud Platform is not the same as adding a Kubernetes service. When you deploy DuploCloud Services, the platform implicitly converts your DuploCloud Service into either a deployment set or a StatefulSet. The service is mapped to a deployment set if there are no volume mappings. Otherwise, it is mapped to a StatefulSet, which you can force creation of if needed. Most configuration values are self-explanatory, such as **Images**, **Replicas,** and **Environmental Variables**.
@@ -39,3 +31,11 @@ Adding a Service in the DuploCloud Platform is not the same as adding a Kubernet
 Kubernetes clusters are created during Infrastructure setup using the **Administrator -> Infrastructure** option in the DuploCloud Portal. The cluster is created in the same Virtual Private Cloud (VPC) as the Infrastructure. Building an Infrastructure with an EKS/ECS cluster may take some time.&#x20;
 
 Next, you deploy an application within a Tenant in Kubernetes. The application contains a set of VMs, a Deployment set (Pods), and an application load balancer. Pods can be deployed either through the DuploCloud Portal or through `kubectl,`using HelmCharts.
+
+{% hint style="info" %}
+When you create a service, refer to the registry configuration in **Docker** -> **Services | Kubernetes** -> **Services** **| Cloud Services** -> **ECS** -> **Services**. Select the Service from the **NAME** column and select the **Configuration** tab. Note the values in the **Environment Variables** and **Other Docker Config** fields.&#x20;
+
+For example:&#x20;
+
+`{"DOCKER_REGISTRY_CREDENTIALS_NAME":"registry1"}`
+{% endhint %}
