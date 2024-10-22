@@ -10,7 +10,7 @@ Spot Instances in AKS are discounted VMs that use Azure's spare capacity. This m
 
 ## Creating Agent Pools with Spot Instances
 
-1. Follow the steps to [add an agent pool](./#adding-an-agent-pool).
+1. Follow the steps to [add an agent pool](../agent-pool.md#adding-an-agent-pool).
 2. On the **Add Azure Agent Pool** page, select **Spot** from the **Scale Set Priority** list box.&#x20;
 
 <figure><img src="../../../.gitbook/assets/agent pools.png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> page</p></figcaption></figure>
@@ -24,7 +24,7 @@ Spot Instances in AKS are discounted VMs that use Azure's spare capacity. This m
 
 ## Configuring a DuploCloud Service to use Spot Instances
 
-When [adding](./#adding-an-agent-pool) or [editing](./#editing-an-agent-pool) a Service, select **Tolerate spot instances**.
+When [adding](../agent-pool.md#adding-an-agent-pool) or [editing](../agent-pool.md#editing-an-agent-pool) a Service, select **Tolerate spot instances**.
 
 <figure><img src="../../../.gitbook/assets/service 1.png" alt=""><figcaption><p>The <strong>Edit Service</strong> page with <strong>Tolerate spot instances</strong> enabled</p></figcaption></figure>
 
