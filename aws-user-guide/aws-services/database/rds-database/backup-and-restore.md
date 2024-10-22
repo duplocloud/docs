@@ -50,10 +50,6 @@ You can restore available RDS snapshots to a specific point in time.
 
 </div>
 
-{% hint style="info" %}
-The backup retention period  new databases.&#x20;
-{% endhint %}
-
 ## Updating or skipping final snapshot
 
 To update or skip the final snapshot, navigate to **Cloud Services** -> **Database**, and click the **RDS** tab. Select the name of the RDS database for which you want to update or skip the final snapshot.&#x20;
