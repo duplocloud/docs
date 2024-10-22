@@ -40,7 +40,6 @@ layout:
   * [Specify a Lambda architecture](overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
   * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.&#x20;
 * Azure
-  * Support for [spot instances with AKS Agent pool](overview-2/azure-services/agent-pool/spot-instances-for-aks-agent-pools.md).&#x20;
   * Support for [Azure VM Disk Controller](overview-2/use-cases/hosts-vms/).
   * Specify the cluster type, node VM size, and outbound connectivity source when [creating an AKS cluster](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md#enabling-the-aks-kubernetes-cluster).
   * Support for [private DNS zones](overview-2/prerequisites/program-dns-entries.md).
@@ -59,12 +58,13 @@ layout:
   * Configure the [minimum number of ports per VM instance](overview-1/use-cases/hosts-vms.md#increasing-minimum-ports-per-vm-instance-gke-standard).
 * Kubernetes
   * Integrate DuploCloud-managed K8s clusters with [FluxCD](extras-overview/fluxcd.md).
-  * Support for migration from Flux v1 to Flux v2 for FluxCD users.&#x20;
+  * Support for [migration from Flux v1 to Flux v2](extras-overview/fluxcd.md#migrating-from-flux-v1-to-flux-v2) for FluxCD users.&#x20;
   * Configure [read-only access to K8s Secrets](kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md).
   * Create and manually run a [K8s Job](kubernetes/jobs.md) from a Kubernetes CronJob.
   * Configure faults for failed [Jobs](kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [CronJobs ](kubernetes/cronjobs.md)at the Tenant level.
   * Support for [DaemonSet](https://docs.duplocloud.com/docs/kubernetes-overview/daemonset#creating-a-daemonset-in-duplocloud-aws-or-gcp) with GCP or AWS.&#x20;
 * General
+  * Enhanced access to [DuploCloud help options](welcome-to-duplocloud/duplocloud-support-model.md#how-to-get-help-from-within-the-duplocloud-portal) from the DuploCloud Platform.&#x20;
   * [Skip faults for stopped Tenant instances.](diagnostics-overview/faults-and-alarms/#muting-faults-for-stopped-tenants)
   * [Configure user access to multiple Tenants](access-control/tenant-access/) with one step.
   * [Configure Okta](welcome-to-duplocloud/okta-identity-management.md) as a user source for the DuploCloud Portal.
