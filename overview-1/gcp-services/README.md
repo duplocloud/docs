@@ -28,7 +28,6 @@ In addition to GKE standard and auto-pilot, the following services are supported
 * [Cloud SQL](cloud-sql.md)
 * [Cloud Storage](s3-bucket-2.md)
 * [Firestore Database](firestore-database.md)
-* [Ingress (Kubernetes)](../../kubernetes-overview/ingress-loadbalancer/gke-ingress.md)
 * [Managed Redis](managed-redis.md)
 * [Node Pools](node-pools.md)
 * [Pub/Sub](s3-bucket-3.md)
