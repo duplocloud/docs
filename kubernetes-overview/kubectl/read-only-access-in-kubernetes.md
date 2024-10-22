@@ -1,8 +1,14 @@
-# Kubectl Readonly Access
+---
+description: Configure read-only access to your Kubernetes cluster in DuploCloud
+---
 
-Following are the steps to create a readonly access in a Kubernetes cluster.
+# Read-only Access in Kubernetes
 
-1. Save the below content as a file name **service-account-readonly-setup.yaml**
+## Configuring Read-only Access in Kubernetes
+
+Complete the following steps to configure read-only access to a Kubernetes cluster.
+
+1. Save the below content as a file name `service-account-readonly-setup.yaml.`
 
 ```
 ---
@@ -37,9 +43,10 @@ type: kubernetes.io/service-account-token
 
 ```
 
-2. Run `kubectl apply -f service-account-readonly-setup.yaml`. This will create a new service account with readonly permission.
-3. Run `kubectl -n kube-system describe secret duplo-readonly-token` to fetch the token. This can be used in DuploCloud to import the cluster as a readonly infrastructure.
-4.  With the above token, EKS server url and certificate-authority-data you can create a kubeconfig as follows. The server url and certificate-authority-data can be found in the cloud console under the cluster settings.
+2. Run `kubectl apply -f service-account-readonly-setup.yaml`. This will create a new service account with read-only permission.
+3. Run `kubectl -n kube-system describe secret duplo-readonly-token` to fetch the token. This can be used in DuploCloud to import the cluster as a read-only infrastructure.
+4.  With the above token, EKS server URL, and certificate-authority-data, create a `kubeconfig` as follows. The server URL and certificate-authority-data are in the cloud console under the cluster settings. The DuploCloud service account can interact with the Kubernetes cluster with read-only permissions.\
+
 
     ```
     apiVersion: v1
@@ -60,5 +67,3 @@ type: kubernetes.io/service-account-token
       user:
         token: <YOUR_BEARER_TOKEN>
     ```
-5. \
-   \

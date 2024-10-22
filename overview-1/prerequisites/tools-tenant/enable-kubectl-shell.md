@@ -1,5 +1,5 @@
 ---
-description: Enable access to the kubectl shell
+description: Enable access to the DuploCloud shell for your GCP account
 ---
 
 # Enable Kubectl Shell
@@ -90,7 +90,7 @@ Enabling kubectl shell access in GCP is part of a one-time DuploCloud Portal set
 \
 13\. On the **Add Kubernetes Ingress** page, click **Add**. The Ingress is created.
 
-## Step 5: Add the DNS Name to System Settings
+## Step 5: Add the DNS name to System Settings
 
 1. Navigate to **Administrator** -> **Systems Settings**.&#x20;
 2.  Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.\
