@@ -44,9 +44,9 @@ The number of Replicas that you define must be less than or equal to the number 
 
 <figure><img src="../../../.gitbook/assets/add service.png" alt=""><figcaption><p>DuploCloud Azure <strong>Add Service</strong> page</p></figcaption></figure>
 
-### Displaying Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
+## Viewing Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-Once the deployment commands run successfully, click the **Services** tile on the **Tenants** page. Your deployments are displayed and you can now attach [load balancers](../load-balancers.md) for the services.
+Once the deployment commands run successfully, click the **Services** tile from the Tenant details page. Your deployments are displayed and you can attach [load balancers](../load-balancers.md) for the Services.
 
 <figure><img src="../../../.gitbook/assets/Azure_tenant_service.png" alt=""><figcaption><p><strong>Tenants</strong> page with <strong>Services</strong> tile</p></figcaption></figure>
 

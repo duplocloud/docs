@@ -1,5 +1,5 @@
 ---
-description: Adding Cloud SQL Databases in DuploCloud
+description: Adding SQL Databases in DuploCloud
 ---
 
 # Cloud SQL
