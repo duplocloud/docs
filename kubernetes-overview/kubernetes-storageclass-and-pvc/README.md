@@ -26,6 +26,17 @@ You can configure the Storage Class and Persistent Volume Claims (PVCs) from the
 7. Define the Storage Class **Name**, **Provisioner**, **Reclaim Policy**, and **Volume Binding Mode.** Select other options, such as whether to **Allow Volume Expansion**.
 8. Click **Add**.
 
+{% hint style="warning" %}
+If you are using K8s and PVCs to autoscale your storage groups and you encounter out-of-space conditions, simply adding new storage volumes may not resolve the issue. Instead, you must increase the size of the existing PVCs to accommodate your storage needs.
+
+For guidance on how to perform volume expansion in Kubernetes, refer to the following resources:
+
+* [Managing Volume Expansions in StatefulSets on GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/persistent-volumes/volume-expansion#managing\_volume\_expansions\_in\_statefulsets)
+* [Increasing Disk Size in a StatefulSet](https://serverfault.com/questions/955293/how-to-increase-disk-size-in-a-stateful-set)
+* [Expanding Persistent Volume Claims in Kubernetes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#expanding-persistent-volumes-claims)
+* [Expanding Kubernetes Persistent Volumes on EKS](https://www.jeffgeerling.com/blog/2019/expanding-k8s-pvs-eks-on-aws)
+{% endhint %}
+
 ## Creating a Storage Class
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Storage**.
