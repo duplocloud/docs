@@ -18,7 +18,7 @@
   * [User Logins](welcome-to-duplocloud/user-logins.md)
   * [Okta Identity Management](welcome-to-duplocloud/okta-identity-management.md)
   * [Public Cloud Tutorials](welcome-to-duplocloud/public-cloud-tutorials.md)
-  * [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md)
+  * [Getting Help with DuploCloud](welcome-to-duplocloud/duplocloud-support-model.md)
 * [Container Orchestrators](container-orchestrators/README.md)
   * [Terminologies in Container Orchestration](container-orchestrators/concepts.md)
 * [AWS User Guide](overview/README.md)

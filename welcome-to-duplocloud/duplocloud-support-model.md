@@ -4,9 +4,9 @@ description: >-
   Support
 ---
 
-# DuploCloud Support
+# Getting Help with DuploCloud
 
-DuploCloud offers hands-on 24/7 support for all customers via Slack or email as part of your subscription. Automation and developer self-service are at the heart of the DuploCloud Platform.  We are dedicated to helping you achieve hands-off automation as fast as possible via rapid deployment of managed services or customized Terraform scripts using our exclusive Terraform provider.
+DuploCloud offers hands-on 24/7 support for all customers via Slack or email as part of your subscription. Automation and developer self-service are at the heart of the DuploCloud Platform. We are dedicated to helping you achieve hands-off automation as fast as possible via rapid deployment of managed services or customized Terraform scripts using our exclusive Terraform provider. Additionally, you can access various help options, including product documentation and customer support, directly from the DuploCloud Portal. For real-time answers tailored specifically to your organization's needs, ask customer support about Ask DuploCloud, our AI-powered assistant.
 
 ## How to Contact DuploCloud for Support
 
@@ -39,3 +39,20 @@ We cover most of your DevOps needs, but there are some. Examples of needs we do 
 * Monitoring alerts in a Network Operations Center (NOC)&#x20;
 * Troubleshooting application code
 * Database configuration
+
+## How to get help from within the DuploCloud Portal
+
+From any page in the DuploCloud Portal, click the **Help** menu icon (![](<../.gitbook/assets/help menu icon (1).png>)) in the upper right (next to your name and profile picture) to access a variety of tools and links for your self-service DevOps needs.&#x20;
+
+
+
+<div align="left">
+
+<figure><img src="../.gitbook/assets/help menu.png" alt=""><figcaption><p>The <strong>Help</strong> menu in the DuploCloud Portal</p></figcaption></figure>
+
+</div>
+
+* **What's New**: Stay informed about the latest features and updates in the DuploCloud platform.
+* **FAQs**: Access frequently asked questions to quickly find answers to common inquiries.
+* **Documentation**: Browse through our comprehensive product documentation to help you navigate the platform and optimize your usage.
+* **Contact Us**: Reach out to us via an email form for further assistance through this option.
