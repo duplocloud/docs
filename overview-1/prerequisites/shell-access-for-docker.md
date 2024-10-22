@@ -1,13 +1,9 @@
----
-description: Access the container shell for DuploCloud Docker Native users
----
-
 # Shell Access for Docker (Optional)
 
 For Docker Native users, setting up shell access for Docker enables you to run Docker commands, build, push, and pull images, and manage containers deployed in GCP. Configuring shell access helps ensure that your GCP environment, integrated with DuploCloud, is fully equipped to handle container operations.
 
 {% hint style="info" %}
-This is only for [Docker Native Container Orchestration](../../../container-orchestrators/) users. If you are using Kubernetes, skip this step.
+This is only for [Docker Native Container Orchestration](../../container-orchestrators/) users. If you are using Kubernetes, skip this step.
 {% endhint %}
 
 ## Enabling the Docker Native Container Shell
@@ -18,7 +14,7 @@ This is only for [Docker Native Container Orchestration](../../../container-orch
 
     <div align="left">
 
-    <figure><img src="../../../.gitbook/assets/docker shell enable.png" alt=""><figcaption><p>The <strong>Docker Services</strong> page in the DuploCloud Portal</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/docker shell enable.png" alt=""><figcaption><p>The <strong>Docker Services</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
     </div>
 3. From the **Platform** list box, select **Docker Native**.
@@ -28,6 +24,6 @@ This is only for [Docker Native Container Orchestration](../../../container-orch
 
 <div align="left">
 
-<figure><img src="../../../.gitbook/assets/AWS_Shell_Service.png" alt=""><figcaption><p>The <strong>Start Shell Service</strong> pane</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_Shell_Service.png" alt=""><figcaption><p>The <strong>Start Shell Service</strong> pane</p></figcaption></figure>
 
 </div>
