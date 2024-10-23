@@ -13,6 +13,7 @@ NOTE: This documentation is an extension of [Export Billing to BigQuery](export-
 * Two GCP projects: a source project where the original billing dataset resides, and a destination project where the dataset will be replicated.
 * Appropriate permissions to create datasets and data transfer jobs in BigQuery.
 * Google Cloud SDK installed and initialized.
+* Enable BigQuery Data Transfer API from API and Services in Destination GCP Project.
 
 ## Assumptions:
 
