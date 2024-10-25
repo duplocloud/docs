@@ -4,7 +4,7 @@ description: Set up kubectl within the DuploCloud Portal by downloading the kube
 
 # Kubectl Tokens and Access Management
 
-## Downloading the `kubectl` Token
+## Downloading a `kubectl` Token
 
 Connect directly to your Kubernetes cluster namespace using a `kubectl` token. This facilitates direct interaction with your Kubernetes cluster through a command-line interface.
 
@@ -25,21 +25,7 @@ If you attempt to start a `kubectl` shell instance and receive a 503 in your web
 
 ## Downloading a `kubectl` Token for Non-Administrators
 
-If you don't have administrator privileges, configure AWS credentials for interacting with cloud resources and download a `kubectl` token tied to a service account.&#x20;
-
-### Updating the AWS Profile (AWS Only)&#x20;
-
-Add the following code to your AWS profile:
-
-```yaml
-[profile NAME] # Supply your AWS profile name
-region=us-east-1
-credential_process=duplo-aws-credential-process --tenant YOUR_TENANT --host --interactive
-```
-
-### Downloading the `kubectl` Token
-
-Download a token specifically for the selected Tenant. It is designed for use with a DuploCloud service account, not for human users.
+If you don't have administrator privileges, configure AWS credentials for interacting with cloud resources and download a `kubectl` token tied to a service account. This token is specifically for the selected Tenant. It is designed for use with a DuploCloud service account, not for human users.
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 2. Select the Service name from the **Name** column.
