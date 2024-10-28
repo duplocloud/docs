@@ -9,7 +9,7 @@ When managing a domain, such as `example.com`, you may want to delegate control 
 Lets assume you have `example.com` registed in a DNS Provider such as GoDaddy or CloudFlare, and we want to be able to delegate:
 
 * `aws.example.com`. to your AWS account
-* `gcp.example.com`. to your AWS account
+* `gcp.example.com`. to your GCP account
 
 ### Delegate subdomains to AWS
 
