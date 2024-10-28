@@ -26,7 +26,7 @@ This configuration delegates the management of `aws.example.com` to AWS.
 
 1. Create a managed zone for `gcp.example.com` in Google Cloud DNS.
 2. Note down the nameserver (NS) records assigned to the managed zone.
-3. Update the DNS settings for your primary domain `example.com` in your DNS Procider to delegate GCP:
+3. Update the DNS settings for your primary domain `example.com` in your DNS Provider to delegate GCP:
 4. Go to where `example.com` is hosted. and add NS records for `gcp.example.com`, pointing to the nameservers noted from Google Cloud DNS.
 
 This configures the delegation of `gcp.example.com` to GCP.
