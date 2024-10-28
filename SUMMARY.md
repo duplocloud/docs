@@ -445,3 +445,4 @@
   * [BYOH](extras-overview/byoh.md)
   * [Allocation Tagging](extras-overview/creating-advanced-functions.md)
   * [Import an External Kubernetes Cluster](extras-overview/import-an-external-kubernetes-cluster.md)
+  * [Delegate Subdomains](extras-overview/delegate-subdomains.md)
