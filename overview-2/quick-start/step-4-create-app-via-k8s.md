@@ -4,7 +4,7 @@ description: Create a DuploCloud Service for application deployment
 
 # Step 4: Create a Service
 
-With all of the core components of your Duplocloud platform configured, enabled, and running, you're ready to deploy applications with Azure, using AKG and Kubernetes.
+With all of the core components of your Duplocloud platform configured, enabled, and running, you're ready to deploy applications with Azure, using AKS and Kubernetes.
 
 In order to deploy applications, you must first create a DuploCloud Service to connect to the Docker containers and images where your application code exists. Once you create a service from the DuploCloud Portal, you can also perform tasks that you might perform when working with a [Kubernetes service](https://kubernetes.io/docs/concepts/services-networking/service/). For example, you can view container logs, container state, and container shell, as well as get access to `kubectl`, which allows you to work directly with Kubernetes constructs such as Pods.
 

@@ -71,7 +71,7 @@ brew install duplocloud/tap/duplo-jit
 
 ## Step 2. Obtain Credentials
 
-Obtain credentials using an API token, or interactivel:
+Obtain credentials using an API token, or interactively:
 
 ### Obtaining Credentials Using an API Token
 
