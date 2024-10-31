@@ -13,7 +13,6 @@ Use this table to determine which tool supports the functionality you need. &#x2
 | SIEM Solution       | WAZUH                                    |
 | Antivirus           | ClamAV                                   |
 | Alerting            | Sentry, PagerDuty, NewRelic, OpsGenie    |
-| Incident Management | Jira                                     |
 | Collection          | Filebeat                                 |
 | Metrics             | Prometheus/Grafana                       |
 | Auditing            | CloudWatch                               |

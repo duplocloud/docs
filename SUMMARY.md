@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Overview](README.md)
-* [FAQs](faq.md)
 * [Product Updates](product-updates.md)
 * [Getting Started with DuploCloud](getting-started/welcome-to-duplocloud.md)
   * [What DuploCloud Does](welcome-to-duplocloud/what-duplocloud-does.md)
@@ -430,6 +429,7 @@
 * [Runbooks](runbooks/README.md)
   * [Configuring Egress and Ingress for AKS Ingress Controllers in Private Networks](runbooks/configuring-egress-and-ingress-for-aks-ingress-controllers-in-private-networks.md)
   * [Configuring Retool to SSH into a DuploCloud Host with a Static IP Address for Secure Remote Database](runbooks/configuring-retool-to-ssh-into-a-duplocloud-host-with-a-static-ip-address-for-secure-remote-database.md)
+* [FAQs](faq.md)
 * [Extras](extras-overview/README.md)
   * [FluxCD](extras-overview/fluxcd.md)
   * [Helm Charts](extras-overview/helm-charts.md)
