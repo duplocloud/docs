@@ -13,7 +13,7 @@ To configure an S3 bucket for auditing, see the [Auditing](../use-cases/auditing
 ## Creating an S3 bucket
 
 {% hint style="info" %}
-When creating an S3 bucket using the `duplocloud_s3_bucket` resource in Terraform, a unique identifier is appended to the bucket name to ensure global uniqueness, as AWS requires. This identifier is the AWS account ID, and a prefix with the tenant name (`duploservices-<tenant_name>-`) is also added. This naming convention allows for creating buckets with the same name across multiple tenants while maintaining global uniqueness. DuploCloud automatically adds a prefix and a suffix to bucket names to minimize naming conflicts in the global S3 namespace.
+When creating an S3 bucket using the `duplocloud_s3_bucket` resource in Terraform, a unique identifier is appended to the bucket name to ensure global uniqueness, as AWS requires. This identifier is the AWS account ID, and a prefix with the tenant name (`duploservices-<tenant_name>-`) is also added. Additionally, for configuring access logs, the default S3 bucket naming convention follows `duplo-<INFRA-NAME>-awslogs-<ACCOUNTNUMBER>`, facilitating streamlined log management across services and ingress configurations. DuploCloud automatically adds a prefix and a suffix to bucket names to minimize naming conflicts in the global S3 namespace.
 {% endhint %}
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage**.
@@ -81,7 +81,7 @@ Set S3 Bucket permissions in the DuploCloud Portal:
 3. From the **Name** column, select the bucket for which you want to set permissions. The **S3 Bucket** page for your bucket displays.
 4. In the **Settings** tab, click **Edit**. The **Edit a S3 Bucket** pane displays.
 5. From the **KMS** list box, select the key management system scope (**AWS Default KMS Key**, **Tenant KMS Key**, etc.).
-6. Select permissions: **Allow Public Access**, **Enable Access Logs**, or **Enable Versioning**.
+6. Select permissions: **Allow Public Access**, **Enable Access Logs**, or **Enable Versioning**. To enable access logs, additional configuration may be required, especially when integrating with Kubernetes ingress annotations.
 7. Select an available **Bucket Policy: Require SSL/HTTPS** or **Allow Public Read**. To select the **Allow Public Read** policy, you must select the **Allow Public Access** permission. To ignore all bucket policies for the bucket, choose Ignore Bucket **Policies**.
 8. Click **Save**. In the **Details** tab, your changed permissions are displayed.
 
