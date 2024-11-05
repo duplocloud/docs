@@ -1,5 +1,5 @@
 ---
-description: Set and manage Kubernetes Secrets in the DuploCloud Portal.
+description: Set and manage Kubernetes Secrets in the DuploCloud Portal, including troubleshooting format issues.
 ---
 
 # Setting Kubernetes Secrets
@@ -14,6 +14,10 @@ To securely manage sensitive information in your deployment, set and reference K
 4. Click **Add**. The Kubernetes Secret is set.
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-14_46_22.png" alt=""><figcaption><p><strong>Kubernetes Secrets</strong> page.</p></figcaption></figure>
+
+### Troubleshooting Secret Format Issues
+
+When entering a Kubernetes secret with a private key in Duplo, ensure the data is formatted as key/value pairs with all keys and values as strings. If you encounter format errors, it's likely due to non-string values or incorrect multiline string formatting. Use the `|` character to indicate multiline strings and manually split a single-line private key into multiple lines for compatibility. Matching the format of an existing, working secret can also aid in resolving these issues.
 
 ### Managing Kubernetes Secrets Effectively
 
