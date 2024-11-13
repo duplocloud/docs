@@ -14,6 +14,7 @@
       * [Hosts](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/hosts.md)
       * [Services](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/app-service-and-cloud-services.md)
       * [Diagnostics](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/diagnostics.md)
+    * [Management Portal Scope](welcome-to-duplocloud/application-focussed-interface/management-portal-scope.md)
   * [User Logins](welcome-to-duplocloud/user-logins.md)
   * [Okta Identity Management](welcome-to-duplocloud/okta-identity-management.md)
   * [Public Cloud Tutorials](welcome-to-duplocloud/public-cloud-tutorials.md)
