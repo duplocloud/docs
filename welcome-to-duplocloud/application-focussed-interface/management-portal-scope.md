@@ -2,8 +2,8 @@
 
 Following is the scope of cloud provider resources (accounts) that a single DuploCloud portal can manage:
 
-1. **Azure**: A single DuploCloud portal can manage multiple Azure subscriptions. Azure natively has the construct of Active Directory or Entrada which provides the managed identity which has the ability to have access to multiple subscription. DuploCloud inherits the permissions of the managed Identity
-2. **GCP:** Similar to Azure in GCP as well a single instance of DuploCloud can manage multiple projects.
+1. **Azure**: A single DuploCloud portal can manage multiple Azure subscriptions. Azure natively has the construct of Active Directory or Entra ID which provides the managed identity which has the ability to have access to multiple subscription. DuploCloud inherits the permissions of the managed Identity
+2. **GCP:** Similar to Azure, in GCP a single instance of DuploCloud can manage multiple GCP projects.
 3. **AWS**: In AWS a single DuploCloud portal manages one and only one AWS account. This is inline with the AWS IAM implementation i.e. even in native AWS IAM model the building blocks like IAM role, Instance profiles do not span multiple accounts. The cross account SCP policies are quite light weight. In fact AWS organizations was an after thought and added almost 10 years later since the launch of AWS. \
    A good place to experience the concept is when a user logs in using AWS Identity center, they have to choose an account and the session is scoped to that. See the picture below of IAM login console\
    \
