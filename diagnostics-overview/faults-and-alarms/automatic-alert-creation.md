@@ -4,7 +4,9 @@ description: Create automatic alerts
 
 # Automatic alert creation
 
-DuploCloud allows the automatic generation of alerts for resources within a Tenant. This ensures that the defined monitoring baseline is applied to all current and new resources based on a set of rules.
+DuploCloud allows automatic alert generation for resources within a Tenant. This ensures that the defined monitoring baseline is applied to all current and new resources based on a set of rules.
+
+## Creating an Alert
 
 As an Administrator:
 

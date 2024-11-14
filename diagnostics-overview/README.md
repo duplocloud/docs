@@ -20,8 +20,23 @@ layout:
 
 # Observability
 
-DuploCloud contains a complete suite of monitoring, logging, and auditing tools to ensure the stability and integrity of your cloud environment and maximize performance and uptime. In addition, graphical charts and reports provide snapshots of critical data metrics, that can be tailored to your needs, while logging assists in troubleshooting and fine-tuning your infrastructures.
+DuploCloud contains a complete suite of observability tools built-in to the platform. The suite is split into two packages:
+
+* **Standard**: This includes
+  * Logging using Open Search and Kibana
+  * Metrics using Prometheus and cloud provider solutions like CloudWatch for AWS, Azure Monitoring for Azure and Cloud Monitoring for GCP. &#x20;
+  * Alerting is limited to cloud service's using CloudWatch. Users can wire various third party alerting solutions like Sentry, Pager Duty etc as described [here](../overview-2/use-cases/faults-and-alerting/).
+  * No APM included.\
+
+* **Advanced:** This is a comprehensive suite based off Open Telemetry and includes:&#x20;
+  * Logging using [Loki](https://grafana.com/oss/loki/)
+  * Metrics using [Mimir](https://grafana.com/products/cloud/metrics/)
+  * Traces using [Tempo](https://grafana.com/products/cloud/traces/)
+  * Profiles using [Pyroscope](https://grafana.com/products/cloud/profiles-for-continuous-profiling/)
+  * Alerting using Grafana [Alert manager](https://grafana.com/products/cloud/alerting/).&#x20;
+  * Visualization and Dashboards is through Grafana.
+  * A comprehensive APM capability is built by linking all the components together.
 
 {% hint style="info" %}
-The DuploCloud [SIEM](../security-and-compliance/access-control-3/siem.md) helps you detect and proactively respond to security threats across your cloud environment.
+Open Telemetry requires a Kubernetes cluster for deployment. It comprises of approximately 20 Kubernetes components.
 {% endhint %}
