@@ -1,4 +1,11 @@
+---
+description: Setting up the Standard Observability Suite in DuploCloud
+---
+
 # Setup
 
-Observability components are **NOT** turned on by default. They need to be enabled under Administrator --> Observability --> Standard --> Settings.&#x20;
+{% hint style="warning" %}
+Observability components are not turned on by default.&#x20;
+{% endhint %}
 
+You need to enable the standard observability components before using them. To do this, navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings** and follow the instructions in the rest of this section.

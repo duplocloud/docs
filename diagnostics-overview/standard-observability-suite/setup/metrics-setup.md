@@ -1,8 +1,12 @@
+---
+description: Enabling Metrics collection for centralized monitoring and select Tenants
+---
+
 # Metrics Setup
 
-The control plane for metrics is Grafana, Promethues and Yace. They are only deployable in Default tenant.&#x20;
+The Metrics control plane uses Grafana, Prometheus, and Yace. They are only deployable in Default Tenant.&#x20;
 
-Navigate to **Administrator** -> **Observability** -> **Basic** -> **Settings**, and select the **Monitoring** tab to enable Metrics. Click on **Enable Monitoring**.&#x20;
+Navigate to **Administrator** -> **Observability** -> **Basic** -> **Settings**. Select the **Monitoring** tab to enable Metrics, and click the **Enable Monitoring** link.&#x20;
 
 <div align="center">
 
@@ -10,8 +14,10 @@ Navigate to **Administrator** -> **Observability** -> **Basic** -> **Settings**,
 
 </div>
 
+In the **Monitoring** tab, select **Enable Centralized Monitoring**.
+
 <figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-Following is how it looks after metrics control plane is operational. Cadvisor and Node Exporter are the collectors for metrics. Toggling one of the tenants shown in the picture below will deploy these containers on all the hosts in that tenant.
+Below, the **Monitoring** tab is shown after the metrics control plane is operational. cAdvisor and Node Exporter collect metrics. Selecting a Tenant deploys the containers on all the Hosts in that Tenant.
 
-<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption><p><strong>Monitoring</strong> tab after the metrics control plane is operational</p></figcaption></figure>

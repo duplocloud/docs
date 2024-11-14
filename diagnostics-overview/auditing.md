@@ -1,5 +1,5 @@
 ---
-description: Set up features for auditing and view auditing reports and logs
+description: View Auditing reports and logs
 ---
 
 # Auditing
