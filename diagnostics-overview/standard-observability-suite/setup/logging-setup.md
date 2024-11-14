@@ -7,11 +7,11 @@ Navigate to **Administrator** -> **Observability** -> **Basic** -> **Settings**,
 
 The control plane for logging is opensearch and Kibana which are deployed by default in the default tenant and is configurable as shown below.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After enabling the control plane, the user can choose which tenants to collect logs from and based on what tenants are enabled, the platform will deploy the collectors in that tenant. File beat is the collector for Logs
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
