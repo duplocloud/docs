@@ -22,7 +22,7 @@ Add a Virtual Machine Host. DuploCloud AWS supports **Host** (Azure Host) and **
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.&#x20;
 3. Select the tab that corresponds to the type of Host you want to create (**HOST** or **BYOH**), and click **Add**.
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption><p>The <strong>Add Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 4. In the **Friendly Name** field, specify a unique name for the Host.&#x20;
 5. Define the **Subnet**, select the **Instance Type**, enter your **Username** and **Password**, and specify whether to enable a **Public IP**.&#x20;

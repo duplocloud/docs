@@ -10,8 +10,8 @@ Navigate to **Administrator** -> **Observability** -> **Basic** -> **Settings**,
 
 </div>
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Following is how it looks after metrics control plane is operational. Cadvisor and Node Exporter are the collectors for metrics. Toggling one of the tenants shown in the picture below will deploy these containers on all the hosts in that tenant.
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
