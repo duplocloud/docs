@@ -63,6 +63,6 @@ Add multiple domains to the SSL certificate. This is especially useful for domai
 
 <div align="left">
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add a Certificate</strong> pane</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add a Certificate</strong> pane</p></figcaption></figure>
 
 </div>

@@ -10,7 +10,7 @@ The Open telemetry part of the AOS dashboard has 5 cards that point to Grafana d
 
 
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Each entry maps to a card on the dashboard. An entry that starts with \<infraname>/ applies to the cards for that Infrastructure. Note that in admin dashboard all cards are in the context of the Infrastructure and there is a infrastructure drop down.
 
@@ -59,4 +59,4 @@ Link external data sources to AOS dashboards by adding custom links to data card
 
 You can get the admin credentials for the grafana deployment from the tenant where the otel stack is deployed. It is the service called grafana-ui. Click edit on the service to get the credentials from the env.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
