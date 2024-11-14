@@ -1,13 +1,15 @@
 ---
-description: Comprehensive metrics at a glance
+description: >-
+  Comprehensive metrics at a glance using the DuploCloud Standard Observability
+  Suite
 ---
 
-# Metrics Dashboard
+# Metrics
 
 In the DuploCloud Portal, navigate to **Observability** -> **Basic** -> **Metrics** to view various metrics per Tenant.&#x20;
 
 {% hint style="info" %}
-While there are 8-10 out-of-box dashboards for various services, one can add their own dashboards and make them appear in Duplo Dashboard through a configuration&#x20;
+Several out-of-the-box dashboards are available for various services. You can customize these, configure them, and add them to your standard view.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-16_01_31.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/basic_metrics.png" alt=""><figcaption><p>Standard <strong>Metrics</strong> with <strong>Nodes</strong> tab selected</p></figcaption></figure>
