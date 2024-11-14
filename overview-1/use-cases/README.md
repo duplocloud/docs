@@ -15,6 +15,6 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Hosts](hosts-vms.md)
 * [Kubernetes Jobs](../../kubernetes/jobs.md) and [CronJobs](../../kubernetes/cronjobs.md)
 * [Logs](../../diagnostics-overview/standard-observability-suite/logs.md)
-* [Metrics](../../diagnostics-overview/standard-observability-suite/monitoring/)
+* [Metrics](broken-reference)
 * [Faults and alerts](../../diagnostics-overview/faults-and-alarms/)
 * [Cost management for billing](cost-management/)
