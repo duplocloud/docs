@@ -1,4 +1,4 @@
-# Tenant AOS Dashboard
+# Tenant Dashboard
 
 The **Tenant AOS Dashboard** provides cost and observability data by Tenant for granular infrastructure management. This dashboard is acccessible to non-administrators.&#x20;
 
@@ -38,7 +38,7 @@ Under the **Observability** header are data cards displaying various metrics.
 * **Traces**: View traces specific to the Tenant for performance and latency monitoring of the Tenant’s applications.
 * **Profiles**: Access profiling data for in-depth application insights and performance tuning.
 
-For Grafana-generated metrics (e.g., **K8s/Docker**, **Logs**, **Metrics**, **Traces**, **Profiles**), you can click on the card (header or visual data) to open the corresponding detailed view in the Grafana console. Additionally, you can [add custom links to the data cards](tenant-aos-dashboard.md#adding-custom-links-to-aos-dashboards).&#x20;
+For Grafana-generated metrics (e.g., **K8s/Docker**, **Logs**, **Metrics**, **Traces**, **Profiles**), you can click on the card (header or visual data) to open the corresponding detailed view in the Grafana console. Additionally, you can [add custom links to the data cards](tenant-dashboard.md#adding-custom-links-to-aos-dashboards).&#x20;
 
 <div align="left">
 
