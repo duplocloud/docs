@@ -10,7 +10,7 @@ DuploCloud Standard Observability Suite uses built-in OpenSearch. Filebeat is th
 
 In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Logs**.&#x20;
 
-Use the **Select Tenant** list box to select a Tenant. In the Tenant context, ready-made filters are available for easy access to logs per Service in that Tenant.&#x20;
+Use the **Select Tenant** list box to select a **Tenant**. In the Tenant context, ready-made filters are available for easy access to logs per Service in that Tenant.&#x20;
 
 Create additional filters using the Kibana interface. DuploCloud's Filebeat collector automatically labels the logs according to Tenant, Service, containers, and other related metadata. &#x20;
 

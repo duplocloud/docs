@@ -1,12 +1,14 @@
-# Customizing Dashboard
+---
+description: Dashboards can be customized.
+---
 
-
+# Customizing Dashboards
 
 {% hint style="info" %}
-Note that each Kubernetes cluster has its own open telemetry stack by default. If you need to share an Otel stack across clusters, contact your DuploCloud support team and they can setup things for you.
+Note that each Kubernetes cluster has its own OpenTelemetry stack by default. If you need to share an OTEL stack across clusters, contact your DuploCloud support team and they can set it up for you.
 {% endhint %}
 
-The Open telemetry part of the AOS dashboard has 5 cards that point to Grafana dashboards. These cards pick up the links from under administrator --> SystemSettings. Search for "otel" and you will find a list of settings of type otel with links as shown in the picture below:
+The OpenTelemetry part of the AOS dashboard has 5 cards that point to Grafana dashboards. These cards depend on the the links from under **Administrator --> SystemSettings -> System Config**. Search for "otel" and you will find a list of settings of type otel with links as shown in the picture below:
 
 
 
@@ -22,9 +24,7 @@ Each entry maps to a card on the dashboard. An entry that starts with \<infranam
 | \<infraname>/traces   | Traces Button                   | Admin          |
 | \<infraname>/k8s      | K8S Button                      | Admin          |
 
-Also note that the settings can have place holders like \[\[TENANT\_NAME]] that get dynamically replaced by the platform when the user clicks on the respective button
-
-
+Also note that the settings can have place holders like \[\[TENANT\_NAME]] that get dynamically replaced by the platform when the user clicks on the respective button.
 
 ### Adding Custom Links to AOS Dashboards
 
@@ -52,8 +52,6 @@ Link external data sources to AOS dashboards by adding custom links to data card
 3. Click Add. The **Add profiles Custom Link** pane displays.
 4. Enter a **Name**, **URL**, and **Description** for the custom link.&#x20;
 5. Click **Submit**. The custom link is added to the data card on the Tenant AOS Dashboard.&#x20;
-
-
 
 ### Adding New Dashboards In Grafana
 

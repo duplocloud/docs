@@ -6,7 +6,7 @@ description: >-
 
 # Metrics
 
-In the DuploCloud Portal, navigate to **Observability** -> **Basic** -> **Metrics** to view various metrics per Tenant.&#x20;
+In the DuploCloud Portal, navigate to **Observability** -> **Standard** -> **Metrics** to view various metrics per Tenant.&#x20;
 
 {% hint style="info" %}
 Several out-of-the-box dashboards are available for various services. You can customize these, configure them, and add them to your standard view.
