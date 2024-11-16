@@ -18,7 +18,7 @@ Depending on your [role ](../../../access-control/)(Administrator or User), you 
 
 <figure><img src="../../../.gitbook/assets/dashadmin.png" alt=""><figcaption><p>Navigating to the Adminstrator AOS Dashboard</p></figcaption></figure>
 
-<figure><img src="broken-reference" alt=""><figcaption><p>Navigating to the Tenant AOS Dashboard</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/dashtenant.png" alt=""><figcaption><p>Navigating to the Tenant AOS Dashboard</p></figcaption></figure>
 
 ## Adding and Modifying Custom Dashboard LInks
 
