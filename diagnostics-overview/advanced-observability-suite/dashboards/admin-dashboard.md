@@ -1,3 +1,7 @@
+---
+description: Working with the AOS Administrator Dashboard
+---
+
 # Admin Dashboard
 
 Navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard**.
