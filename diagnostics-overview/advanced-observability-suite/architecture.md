@@ -1,19 +1,57 @@
+---
+description: >-
+  How the Advanced Observability Suite and OpenTelemetry integrate with
+  DuploCloud
+---
+
 # Architecture
 
 Advanced Observability Suite (AOS) is based on OpenTelemetry. The following graphic shows the various components.
 
 {% hint style="info" %}
-The OTEL stack is made up of 50 or more components and hundreds of configurations. If you need to change your OpenTelemetry configuration, work with your DuploCloud support team.
+The OTel stack consists of 50 or more components and hundreds of configurations. If you need to change your OpenTelemetry configuration, contact your DuploCloud support team.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/OAS_Arch.png" alt=""><figcaption><p>DuploCloud Advanced Observability Suite Architecture</p></figcaption></figure>
 
-To view the complete deployment of the OpenTelemetry stack, see the setup under the tenant where OTEL is deployed under the Kubernetes menu. Data is stored in S3 buckets that you can find under Cloud services --> Storage --> S3. The setup is deployed and managed via Flux Helm release infrastructure.
+## The Open Telemetry Tenant
 
-The folllowing graphic shows a list of Kubernetes deployments, containers, and S3 buckets that are invovled in this OpenTelemetry deployment.
 
-<figure><img src="../../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (448).png" alt=""><figcaption></figcaption></figure>
+## Viewing the DuploCloud Deployment of the OpenTelemetry Stack
 
-<figure><img src="../../.gitbook/assets/image (449).png" alt=""><figcaption></figcaption></figure>
+To view the complete deployment of the OpenTelemetry stack:
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard**.
+2. In the **Observability** area, click the **K8s/Docker** card button. The Grafana K8s Resource Monitoring dashboard launches, giving you a detailed view of resources and monitoring for Kubernetes nodes, Docker containers, and Pods.
+
+<figure><img src="../../.gitbook/assets/otel1.png" alt=""><figcaption><p>The AOS <strong>Dashboard</strong> containing the <strong>K8s/Docker</strong> card</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/garf1.png" alt=""><figcaption><p>The Grafana <strong>K8s Resource Monitoring</strong> dashboard</p></figcaption></figure>
+
+## Viewing OpenTelemetry Data in DuploCloud
+
+{% hint style="info" %}
+Your OpenTelemetry data is stored in S3 Buckets in a Tenant that DuploCloud preconfigures for you during Onboarding. The name of this Tenant may vary depending on your preferences.
+
+In the DuploCloud documentation, the OpenTelemetry Tenant is referred to as _**OpenTelemetry\_Tenant**_ (in bold italics) to indicate that this Tenant name is a variable (the name you chose during the Onboarding setup).
+{% endhint %}
+
+The OpenTelemetry data is stored in S3 Buckets, which you can view.
+
+1. In the DuploCloud Portal, select the _**OpenTelemetry\_Tenant**_ from the **Tenant** list box at the top of the Portal.
+2. Navigate to **Cloud Services** -> **Storage** and view the data in the **S3** tab, which is stored in S3 buckets. This setup is deployed and managed via [Flux Helm](https://fluxcd.io/flux/guides/helmreleases/) release infrastructure.
+
+<div align="left">
+
+<figure><img src="../../.gitbook/assets/image (449).png" alt=""><figcaption><p>The <strong>S3 Bucket</strong> containing OpenTelemetry data in the OpenTelemetry Tenant <strong>OCT19OTEL</strong></p></figcaption></figure>
+
+</div>
+
+To view a complete list of Kubernetes deployments, containers, and S3 buckets in an OpenTelemetry deployment, select the _**OpenTelemetry\_Tenant**_ from the **Tenant** list box at the top of the Portal and navigate to **Kubernetes** -> **Services**.
+
+<figure><img src="../../.gitbook/assets/image (447).png" alt=""><figcaption><p> Kubernetes deployments, containers, and S3 buckets in an OpenTelemetry deployment in Tenant <strong>OCT19OTEL</strong></p></figcaption></figure>
+
+To view a complete list of Docker Containers in an OpenTelemetry deployment, select the _**OpenTelemetry\_Tenant**_ from the **Tenant** list box at the top of the Portal and navigate to **Kubernetes** -> **Containers**.
+
+<figure><img src="../../.gitbook/assets/image (448).png" alt=""><figcaption><p>Docker Containers in an OpenTelemetry deployment in Tenant <strong>OCT19OTEL</strong></p></figcaption></figure>
