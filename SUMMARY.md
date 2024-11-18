@@ -427,7 +427,7 @@
   * [Advanced Observability Suite](diagnostics-overview/advanced-observability-suite.md)
     * [Architecture](diagnostics-overview/advanced-observability-suite/architecture.md)
     * [Dashboards](diagnostics-overview/advanced-observability-suite/dashboards/README.md)
-      * [Admin Dashboard](diagnostics-overview/advanced-observability-suite/dashboards/admin-dashboard.md)
+      * [Administrator Dashboard](diagnostics-overview/advanced-observability-suite/dashboards/administrator-dashboard.md)
       * [Tenant Dashboard](diagnostics-overview/advanced-observability-suite/dashboards/tenant-dashboard.md)
       * [Customizing Dashboards](diagnostics-overview/advanced-observability-suite/dashboards/customizing-dashboards.md)
     * [Logging with loki](diagnostics-overview/advanced-observability-suite/logging-with-loki.md)

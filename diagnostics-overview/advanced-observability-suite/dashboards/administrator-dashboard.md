@@ -2,13 +2,15 @@
 description: Working with the AOS Administrator Dashboard
 ---
 
-# Admin Dashboard
+# Administrator Dashboard
 
-Navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard**.
+The **Administrator AOS Dashboard** displays cloud data across all resources and infrastructures. It is only accessible to administrators.&#x20;
+
+To access it, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard**.
 
 <figure><img src="../../../.gitbook/assets/Admin AOS Dash.png" alt=""><figcaption><p>The <strong>Admin AOS Dashboard</strong> in the DuploCloud Portal</p></figcaption></figure>
 
-### Viewing Admin Cloud Spend Data
+## Viewing Admin Cloud Spend Data
 
 The **Cloud Spend** area, on the left side of the **Advanced AOS Dashboard**, offers a comprehensive, real-time view of expenses across all resources.&#x20;
 
@@ -24,7 +26,7 @@ The **Cloud Spend** area, on the left side of the **Advanced AOS Dashboard**, of
 
 </div>
 
-### Viewing Admin Observability Data
+## Viewing Admin Observability Data
 
 The **Observability** section, on the right side of the **Advanced AOS Dashboard**, gives real-time health and usage data across resources.&#x20;
 
@@ -40,7 +42,7 @@ Under the **Observability** header are data cards displaying the following metri
 * **Traces**: View traces to monitor request flows and latency, supporting application performance analysis.
 * **Profiles**: Access profiling data for in-depth application insights, allowing performance tuning.
 
-For Grafana-generated metrics (e.g., **K8s/Docker**, **Logs**, **Metrics**, **Traces**, **Profiles**), you can click on the card (visual data or header) to open the corresponding detailed view in the Grafana console. Additionally, you can [add custom links to the data cards](admin-dashboard.md#adding-custom-links-to-aos-dashboards).&#x20;
+For Grafana-generated metrics (e.g., **K8s/Docker**, **Logs**, **Metrics**, **Traces**, **Profiles**), you can click on the card (visual data or header) to open the corresponding detailed view in the Grafana console. Additionally, you can [add custom links to the data cards](administrator-dashboard.md#adding-custom-links-to-aos-dashboards).&#x20;
 
 <figure><img src="../../../.gitbook/assets/Admin Observability.png" alt=""><figcaption><p>The <strong>Admin AOS Dashboard</strong>, <strong>Observability</strong> area</p></figcaption></figure>
 
