@@ -8,7 +8,7 @@ Grafana [loki](https://grafana.com/docs/loki/latest/) is the backend component t
 
 DuploCloud orchestrates the configuration to automatically insert metadata such as Tenant name, Namespace, container, Host, etc. Links can be set from logs to maps to traces and then metrics.
 
-## Displaying Logs in DuploCloud Advanced Observability Suite
+## Displaying Logs in the DuploCloud Advanced Observability Suite
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard**. The AOS Dashboard displays.
 2.  Click the **Logs** card button. The Grafana **Logging** dashboard displays.\
