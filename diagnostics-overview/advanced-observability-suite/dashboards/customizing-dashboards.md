@@ -1,16 +1,14 @@
 ---
-description: Dashboards can be customized.
+description: Create your own Advanced Observability Suite (AOS) Dashboards
 ---
 
 # Customizing Dashboards
 
 {% hint style="info" %}
-Note that each Kubernetes cluster has its own OpenTelemetry stack by default. If you need to share an OTEL stack across clusters, contact your DuploCloud support team and they can set it up for you.
+Note that each Kubernetes cluster has its own OpenTelemetry stack by default. If you need to share an OTEL stack across clusters, contact your DuploCloud support team, and they will set it up for you.
 {% endhint %}
 
-The OpenTelemetry part of the AOS dashboard has 5 cards that point to Grafana dashboards. These cards depend on the the links from under **Administrator --> SystemSettings -> System Config**. Search for "otel" and you will find a list of settings of type otel with links as shown in the picture below:
-
-
+The OpenTelemetry part of the AOS dashboard has five cards that point to Grafana dashboards. These cards depend on the the links from under **Administrator --> SystemSettings -> System Config**. Search for "otel" and you will find a list of settings of type otel with links as shown in the picture below:
 
 <figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 

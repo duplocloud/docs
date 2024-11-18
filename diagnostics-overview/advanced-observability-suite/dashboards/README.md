@@ -13,6 +13,6 @@ The DuploCloud AOS dashboards are a gateway to the detailed Grafana dashboards, 
 
 Depending on your [role ](../../../access-control/)(Administrator or User), you can access the Advanced Observability Suite dashboard from two locations in the DuploCloud Portal.
 
-1. The [Administrator AOS Dashboard](admin-dashboard.md) displays cloud data across all resources and allows you to select DuploCloud Infrastructures. To use it, navigate to  **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** in the DuploCloud Portal.&#x20;
+1. The [Administrator AOS Dashboard](administrator-dashboard.md) displays cloud data across all resources and allows you to select DuploCloud Infrastructures. To use it, navigate to  **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** in the DuploCloud Portal.&#x20;
 2. The [Tenant AOS Dashboard](tenant-dashboard.md) displays data for specific Tenants. To use it, navigate to **Observability** -> **Advanced** -> **Dashboard** in the DuploCloud Portal. &#x20;
 
