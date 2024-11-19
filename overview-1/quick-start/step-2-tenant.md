@@ -47,7 +47,7 @@ Create a Tenant for your Infrastructure and Plan:
 
 </div>
 
-3. Enter a unique name for your Tenant in the **Name** field.&#x20;
+3. Enter a unique name for your Tenant in the **Name** field. Choose unique names that are not substrings of one another, for example, if you have a Tenant named `dev`, you cannot create another named `dev2`. We recommend using distinct numerical suffixes like `dev01` and `dev02`.
 4. Select the **Plan** that you created in the previous step.
 5. Click **Create**.
 

@@ -56,3 +56,9 @@ Tenants can also isolate a single customer workload allowing more granular perfo
 
 With large sets of applications accessed by different teams, it is helpful to map Tenants to team workloads (Dev-analytics, Stage-analytics, etc.).
 
+## Tenant Naming Conventions
+
+Ensure Tenant names in DuploCloud are unique and not substrings of one another. For example, if you have a Tenant named `dev`, you cannot create another named `dev2`. This limitation arises because IAM policies and other security controls rely on pattern matching to enforce Tenant security boundaries. If Tenant names overlap, the patterns may not work correctly.
+
+To avoid issues, we recommend using distinct numerical suffixes like `dev01` and `dev02`.
+
