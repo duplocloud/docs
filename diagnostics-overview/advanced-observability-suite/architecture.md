@@ -14,10 +14,6 @@ The OTel stack consists of 50 or more components and hundreds of configurations.
 
 <figure><img src="../../.gitbook/assets/OAS_Arch.png" alt=""><figcaption><p>DuploCloud Advanced Observability Suite Architecture</p></figcaption></figure>
 
-## The Open Telemetry Tenant
-
-
-
 ## Viewing the DuploCloud Deployment of the OpenTelemetry Stack
 
 To view the complete deployment of the OpenTelemetry stack:
