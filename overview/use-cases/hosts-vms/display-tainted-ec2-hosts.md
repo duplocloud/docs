@@ -14,5 +14,5 @@ In the DuploCloud Portal, Taints are displayed in the **Status** column on the *
 2. In the **EC2** tab, check for hosts with a **Status** of `stopped` and `tainted`. If these statuses are present, the connection to the underlying Node is lost and you should take appropriate action to restore the connection. See the [Kubernetes `kubectl` reference documentation](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#taint) for available commands, flags, and examples to resolve the Taint.&#x20;
 
 {% hint style="info" %}
-To find Tainted Nodes, use the `kubectl get nodes` command, followed by the `kubectl describe node`` `_`<NODE_NAME>`_command. See [this topic](../../prerequisites/kubectl-shell.md) to get Shell Access to Kubernetes within the DuploCloud Portal and issue `kubectl` console commands from the Portal.
+To find Tainted Nodes, use the `kubectl get nodes` command, followed by the `kubectl describe node`` `_`<NODE_NAME>`_&#x63;ommand. See [this topic](../../prerequisites/kubectl-shell.md) to get Shell Access to Kubernetes within the DuploCloud Portal and issue `kubectl` console commands from the Portal.
 {% endhint %}

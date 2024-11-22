@@ -34,11 +34,7 @@ Add a Load Balancer listener that uses Kubernetes (K8s) NodePort.&#x20;
 4.  Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/k8aws.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/k8aws.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
 
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
@@ -47,11 +43,7 @@ Add a Load Balancer listener that uses Kubernetes (K8s) NodePort.&#x20;
 8. Kubernetes Health Check and Probes are enabled by default. To manually configure Health Check settings, select **Additional health check configs**.
 9. Click **Add**. The Load Balancer listener is displayed under **LB Listeners** on the **Load Balancers** tab.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/LB image.png" alt="" width="375"><figcaption><p>The <strong>Add Load Balancer</strong> Listener pane in the DuploCloud Portal</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/LB image.png" alt="" width="375"><figcaption><p>The <strong>Add Load Balancer</strong> Listener pane in the DuploCloud Portal</p></figcaption></figure></div>
 
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
 6. Complete the Container port and External port fields.
@@ -89,11 +81,7 @@ To add a Kubernetes Ingress, you must define rules. [Continue to the next sectio
 
 
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/ingress rule.png" alt=""><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/ingress rule.png" alt=""><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 
 2. Specify the **Path** (**/** in the example above) and **Path Type** (**Exact**, **Prefix**, or **Implementation Specific**).
 3. Optionally, enter a Host in the **Host** field.
@@ -105,11 +93,7 @@ To add a Kubernetes Ingress, you must define rules. [Continue to the next sectio
 1.  On the **Add Kubernetes Ingress** page, click **Add Redirect Config**. The **Add Redirect Config** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/redirect config.png" alt=""><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/redirect config.png" alt=""><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure></div>
 2. In the **Name** field, enter a descriptive name for the Ingress redirect configuration.&#x20;
 3. &#x20;In the **Host** field, specify the domain name for which this redirect rule will apply.
 4. In the **Path** field, Define the path that should trigger the redirect.
@@ -143,12 +127,12 @@ You can also view Ingress details using `curl` commands. Curl commands are confi
 
 Command: `curl http://ig-nev-ingress-ing-t2-1-duplopoc.net/path-x/`
 
-Response**:** `this is service1`
+Respons&#x65;**:** `this is service1`
 
 Command: `curl http://ing-doc-ingress-ing-t2-1-duplopoc.net/path-y/`
 
-Response**:**  `this is service2`
+Respons&#x65;**:**  `this is service2`
 
 Command: `curl http://ing-public-ingress-ing-t2.1.duplopoc.net/path-z/`
 
-Response**:** `this is ING2-PUBLIC`
+Respons&#x65;**:** `this is ING2-PUBLIC`

@@ -17,7 +17,7 @@ Enabling kubectl shell access in GCP is part of a one-time DuploCloud Portal set
 4. Complete the required fields, and click **Create**.
 5. Once the node pool is complete, it will display on the **GCP VM** tab with a status of **Running**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>GCE VM</strong> tab in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>GCE VM</strong> tab in the DuploCloud Portal</p></figcaption></figure>
 
 ## Step 2. Create a DuploCloud Service
 
@@ -57,11 +57,7 @@ Enabling kubectl shell access in GCP is part of a one-time DuploCloud Portal set
 8. Select **Advanced Kubernetes settings** and **Set HealthCheck annotations for Ingress.**
 9. Click **Add**. The Load Balancer listener is added.&#x20;
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/new LB pic.png" alt="" width="332"><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/new LB pic.png" alt="" width="332"><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
 ## Step 4: Add an Ingress
 
@@ -71,7 +67,7 @@ Enabling kubectl shell access in GCP is part of a one-time DuploCloud Portal set
 4. In the **Ingress Name** field, enter `kubect-shell`.
 5. From the **Ingress Controller** list box, select **gce**.
 6. In the **Visibility** list box, select **Public**.
-7. In the **DNS Prefix** field**,** enter the DNS name prefix.&#x20;
+7. In the **DNS Prefix** fiel&#x64;**,** enter the DNS name prefix.&#x20;
 8. In the **Certificate ARN** list box, select the ARN added to the Plan in the **Certificate for Load Balancer and Ingress** step.
 
 <figure><img src="../../../.gitbook/assets/add ingress new.png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
@@ -81,11 +77,7 @@ Enabling kubectl shell access in GCP is part of a one-time DuploCloud Portal set
 11. In the **Service Name** list box, select the Service previously created (**kubectl:80**)
 12. Click **Add Rule**. A rule directing all traffic to the **kubectl** Service is created.&#x20;
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/ingress newest.png" alt="" width="344"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/ingress newest.png" alt="" width="344"><figcaption></figcaption></figure></div>
 
 \
 13\. On the **Add Kubernetes Ingress** page, click **Add**. The Ingress is created.
@@ -96,11 +88,7 @@ Enabling kubectl shell access in GCP is part of a one-time DuploCloud Portal set
 2.  Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/shrunk.png" alt="" width="371"><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/shrunk.png" alt="" width="371"><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 3. From the **Config Type** list box, select **AppConfig**.
 4. From the **Key** list box, select **Other**.&#x20;
 5. In the second **Key** field, enter **DuploShellfqdn**

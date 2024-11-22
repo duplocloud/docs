@@ -41,11 +41,7 @@ To grant Cross-tenant access only to specific services restricted by IAM policie
 9. Add a user-friendly **Description** of this sharing rule.
 10. Click **Add**.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Screen Shot 2023-03-07 at 6.09.09 PM.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Screen Shot 2023-03-07 at 6.09.09 PM.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure></div>
 
 ## Granting Cross-tenant access to specific IAM-restricted services
 
@@ -65,24 +61,16 @@ Ensure that the two Tenants sharing resources reside within the same region in t
 
 1. In the DuploCloud portal, navigate to **Administrator** -> **Tenants**. The **Tenants** page displays.
 2. From the **Name** column, select the Tenant with access to the restricted resource that you want to share. In this example, we choose to share resources to which Tenant **uat-01** has access.
-3.  Click the **Grants** tab. Select **Allow Other Tenants to access **_**TENANT\_NAME**_, where _**TENANT\_NAME**_ is the Tenant you selected.\
+3.  Click the **Grants** tab. Select **Allow Other Tenants to access&#x20;**_**TENANT\_NAME**_, where _**TENANT\_NAME**_ is the Tenant you selected.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/AWS_GCT_selector.png" alt=""><figcaption><p><strong>Grants</strong> tab with <strong>Allow Other Tenants to access </strong><em><strong>TENANT_NAME</strong></em> option </p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/AWS_GCT_selector.png" alt=""><figcaption><p><strong>Grants</strong> tab with <strong>Allow Other Tenants to access </strong><em><strong>TENANT_NAME</strong></em> option </p></figcaption></figure></div>
 
 
 4.  Click **Add**. The **Grant Cross-Tenant Access** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/kms2.png" alt=""><figcaption><p><strong>Grant Cross-Tenant Access</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/kms2.png" alt=""><figcaption><p><strong>Grant Cross-Tenant Access</strong> pane</p></figcaption></figure></div>
 
 
 5. From the **Requesting Tenant** list box, select the Tenant with whom you want to share access from the Requesting Tenant list box. In this example, the **Requesting Tenant** is **demo01**.
@@ -93,11 +81,7 @@ Ensure that the two Tenants sharing resources reside within the same region in t
 
 1. In the DuploCloud portal, navigate to **Admini**> **Tenants**. The **Tenants** page displays.
 2. From the **Name** column, select the Tenant whose Cross-tenant grants you want to view. In this example, we select Tenant **uat-01**.
-3. Click the **Grants** tab. Select **Allow Other Tenants to access **_**TENANT\_NAME**_, where _**TENANT\_NAME**_ is the Tenant you selected.
+3. Click the **Grants** tab. Select **Allow Other Tenants to access&#x20;**_**TENANT\_NAME**_, where _**TENANT\_NAME**_ is the Tenant you selected.
 4. The resources that _**TENANT\_NAME**_ (**uat-01**, in this example) can access are displayed.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/kms1 (1).png" alt=""><figcaption><p><strong>Grant</strong> tab on the <strong>Tenant</strong> page</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/kms1 (1).png" alt=""><figcaption><p><strong>Grant</strong> tab on the <strong>Tenant</strong> page</p></figcaption></figure></div>

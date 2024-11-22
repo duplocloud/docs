@@ -23,17 +23,9 @@ Use the System Config tab to enable IAM authentication before enabling it for a 
 5. From the **Value** list box, select **True**.
 6. Click **Submit**. The configuration is displayed in the **System Config** tab.
 
-<div align="left">
+<div align="left"><figure><img src="../../../../.gitbook/assets/iam1.png" alt=""><figcaption><p><strong>Add Config</strong> pane with the <strong>Enable RDS IAM auth</strong> <strong>Key</strong></p></figcaption></figure></div>
 
-<figure><img src="../../../../.gitbook/assets/iam1.png" alt=""><figcaption><p><strong>Add Config</strong> pane with the <strong>Enable RDS IAM auth</strong> <strong>Key</strong></p></figcaption></figure>
-
-</div>
-
-<div align="left">
-
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>EnableRdsIamAuth</strong> <strong>Key</strong> with <strong>Value</strong> of <strong>true</strong></p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>EnableRdsIamAuth</strong> <strong>Key</strong> with <strong>Value</strong> of <strong>true</strong></p></figcaption></figure></div>
 
 ## Enabling IAM for an RDS instance
 
@@ -52,19 +44,11 @@ Select the **Enable IAM auth** option when you [create an RDS database](./#id-0-
 3.  Click the **Actions** menu and select **RDS Settings** -> **Update IAM Auth**. The **Update IAM Auth** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../../.gitbook/assets/IAM5.png" alt=""><figcaption><p><strong>Actions</strong> menu in <strong>RDS</strong> tab with <strong>RDS Settings</strong></p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/IAM5.png" alt=""><figcaption><p><strong>Actions</strong> menu in <strong>RDS</strong> tab with <strong>RDS Settings</strong></p></figcaption></figure></div>
 
 
 
-    <div align="left">
-
-    <figure><img src="../../../../.gitbook/assets/IAM4.png" alt=""><figcaption><p><strong>Update IAM Auth</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/IAM4.png" alt=""><figcaption><p><strong>Update IAM Auth</strong> pane</p></figcaption></figure></div>
 
 
 4. Select **Enable IAM Auth**.
@@ -79,11 +63,7 @@ To download a token which you can use for IAM authentication:
 3.  Click the **Actions** menu and select **View** -> **Get DB Auth Token**. The **RDS Credentials window** displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../../.gitbook/assets/IAM6.png" alt=""><figcaption><p><strong>Actions</strong> menu in <strong>RDS</strong> tab with <strong>View</strong> -> <strong>Get DB Auto Token</strong> option</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/IAM6.png" alt=""><figcaption><p><strong>Actions</strong> menu in <strong>RDS</strong> tab with <strong>View</strong> -> <strong>Get DB Auto Token</strong> option</p></figcaption></figure></div>
 
 
 4. In the **RDS Credentials** window, click the Copy Icon ( <img src="../../../../.gitbook/assets/copy_icon (3).png" alt="" data-size="line"> ) to copy the **Endpoint**, **Username**, and **Password** to your clipboard.
