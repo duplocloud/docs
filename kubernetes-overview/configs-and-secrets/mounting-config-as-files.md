@@ -32,7 +32,7 @@ Before you create and mount the Kubernetes [ConfigMap](https://kubernetes.io/doc
 
 ### Mounting the Kubernetes ConfigMap as a volume
 
-1. On the **Edit Service: **_**service\_name**_** Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
+1. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
 2. &#x20;In the **Volumes** field on the **Advanced Options** page, enter the configuration YAML to mount the ConfigMap as a volume.&#x20;
 
 #### Example: mounting a ConfigMap as a volume
@@ -87,7 +87,7 @@ Before you create and mount a [Kubernetes Secret](https://kubernetes.io/docs/con
 ### Mounting a Kubernetes Secret as a volume
 
 1. In the DuploCloud Portal, [edit the DuploCloud Service](mounting-config-as-files.md#editing-the-duplocloud-service).
-2. On the **Edit Service: **_**service\_name**_** Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
+2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
 3. In the **Volumes** field on the **Advanced Options** page, enter the configuration YAML to mount the Secret as a volume.&#x20;
 
 #### Example: mounting a Kubernetes Secret as a volume

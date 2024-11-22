@@ -37,11 +37,7 @@ Link external data sources to AOS dashboards by adding custom links to data card
 5. Enter a **Name**, **URL**, and **Description** for the custom link.&#x20;
 6. Click **Submit**. The custom link is added to the data card on the AOS Dashboard(s).&#x20;
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/new logs.png" alt="" width="354"><figcaption><p>The <strong>Logs</strong> data card with the clink icon highlighted</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/new logs.png" alt="" width="354"><figcaption><p>The <strong>Logs</strong> data card with the clink icon highlighted</p></figcaption></figure></div>
 
 #### Adding Custom Links for Non-Administrators
 
@@ -55,4 +51,4 @@ Link external data sources to AOS dashboards by adding custom links to data card
 
 You can get the admin credentials for the grafana deployment from the tenant where the otel stack is deployed. It is the service called grafana-ui. Click edit on the service to get the credentials from the env.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

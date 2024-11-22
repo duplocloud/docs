@@ -28,11 +28,7 @@ Alternatively, you can use the Certificate Manager to create a Certificate Map f
    * As a best practice, name the certificate `global-<DNS Domain name>`, where the dots (`.`) are replaced with hyphens (`-`). For example, if your domain is `example.com`, name the certificate `global-example-com`.
 5. Note the name of the global certificate for use in future steps.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (433).png" alt="" width="563"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (433).png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 ## Creating a Regional Certificate for Private/Internal Load Balancers
 
@@ -61,8 +57,4 @@ Add multiple domains to the SSL certificate. This is especially useful for domai
 4. Add the global and regional certificates, one at a time You can name them the same names you used in the GCP portal. For each certificate, choose the type **LB SSL Certificate.**
 5. Click **Create**. The GCP certificates are added to your DuploCloud Portal.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add a Certificate</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add a Certificate</strong> pane</p></figcaption></figure></div>

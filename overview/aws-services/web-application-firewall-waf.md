@@ -18,11 +18,7 @@ When you create a WAF in DuploCloud, an entry is added to the [Web ACL](https://
     <figure><img src="../../.gitbook/assets/WAF details new.png" alt=""><figcaption><p>The <strong>Plans</strong> page <strong>WAF</strong> tab</p></figcaption></figure>
 4. Click **Add**. The **Add WAF** pane displays.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/Screenshot (456).png" alt=""><figcaption><p>The <strong>Add WAF</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (456).png" alt=""><figcaption><p>The <strong>Add WAF</strong> pane</p></figcaption></figure></div>
 
 1. In the **Name** field, type the name of your WAF.
 2. In the **WAF ARN** field, enter the Amazon Resource Name (ARN).
@@ -39,11 +35,7 @@ Only ALB Load Balancers can be attached to a WAF.
 2.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/AWS_LB_WAF_Attach.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> for attaching a WAF (via the <strong>Web ACL</strong> field) to an ALB Load Balancer<br></p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/AWS_LB_WAF_Attach.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> for attaching a WAF (via the <strong>Web ACL</strong> field) to an ALB Load Balancer<br></p></figcaption></figure></div>
 3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).&#x20;
 4. Complete the other required fields in the **Other Load Balancer Settings** pane.
 5. Click **Update**.
@@ -53,14 +45,10 @@ Only ALB Load Balancers can be attached to a WAF.
 1. From the DuploCloud portal, navigate to **Administrator** -> **Plans**.
 2. From the **Name** column, select the Plan associated with the WAF you want to update.
 3. Click the **WAF** tab.&#x20;
-4.  Click on the menu icon (<img src="../../.gitbook/assets/menu icon.png" alt="" data-size="line">) in the row of the existing WAF that you want to update, and select **Edit**. The **Update WAF **_**YOUR\_WAF\_NAME**_ pane displays. \
+4.  Click on the menu icon (<img src="../../.gitbook/assets/menu icon.png" alt="" data-size="line">) in the row of the existing WAF that you want to update, and select **Edit**. The **Update WAF&#x20;**_**YOUR\_WAF\_NAME**_ pane displays. \
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/updating WAF.png" alt=""><figcaption></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/updating WAF.png" alt=""><figcaption></figcaption></figure></div>
 5. Update the **Name** and/or **WAF ARN**.
 6. Update or add a **WAF Dashboard URL**.&#x20;
 7. Click **Update**. The WAF is updated.&#x20;

@@ -237,6 +237,7 @@
     * [Import SSL certificates](overview-2/prerequisites/import-ssl-certificates.md)
     * [Provision the VPN](overview-2/prerequisites/vpn-setup.md)
     * [Connect to the VPN](overview-2/prerequisites/connect-to-the-vpn.md)
+    * [Managed Identity Setup](overview-2/prerequisites/managed-identity-setup.md)
   * [Azure Quick Start](overview-2/quick-start/README.md)
     * [Step 1: Create Infrastructure and Plan](overview-2/quick-start/step-1-infrastructure.md)
     * [Step 2: Create a Tenant](overview-2/quick-start/step-2-tenant.md)

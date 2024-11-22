@@ -63,11 +63,7 @@ Using Kubernetes Health Check allows AKS's Application Load Balancer to determin
 1.  On the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/AKS_Ingress_add_ALB.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/AKS_Ingress_add_ALB.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 2. Enter a **Path**.
 3. In the **Path Type** list box, select **Exact**, **Prefix,** or **Implementation Specific**.
 4. In the **Service Name** field, select the Service (**s1-alb:80** in this example).&#x20;
@@ -91,11 +87,7 @@ Port **80** is configured by default when adding Ingress. If you want to use a c
 4.  Click **Add**. The **Add Infrastructure Security** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/addazuresc.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/addazuresc.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure></div>
 5. Define the rule and click **Add**. The rule is added to the **Security Group Rules** list.
 
 <figure><img src="../../../.gitbook/assets/addazuresc2.png" alt=""><figcaption><p>The <strong>Security Group Rules</strong> tab</p></figcaption></figure>
@@ -114,7 +106,7 @@ You can also view Ingress details using `curl` commands. Curl commands are confi
 
 Command: `curl http://ig-nev-ingress-ing-t2-1.duplopoc.net/path1/`
 
-Response**:** `this is IG-NEV`
+Respons&#x65;**:** `this is IG-NEV`
 
 Command: `curl http://ing-doc-ingress-ing-t2-1.duplopoc.net/path2/`
 

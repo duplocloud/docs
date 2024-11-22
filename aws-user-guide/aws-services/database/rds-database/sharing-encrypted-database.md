@@ -35,7 +35,7 @@ Once the copied snapshot is ready, share the snapshot with another account by cl
 
 ## Step 4: Copy the shared snapshot <a href="#id-3-toc-title" id="id-3-toc-title"></a>
 
-In the destination account, Navigate to **Cloud Services** -> **Database** and select the **RDS** tab**.** Select **Shared with me**. Select the shared snapshot and click copy-snapshot. Use the encryption key of the destination account, not the shared key.
+In the destination account, Navigate to **Cloud Services** -> **Database** and select the **RDS** ta&#x62;**.** Select **Shared with me**. Select the shared snapshot and click copy-snapshot. Use the encryption key of the destination account, not the shared key.
 
 ![](https://duplocloud.com/wp-content/uploads/2021/11/RDS-copysnapshot.png)
 

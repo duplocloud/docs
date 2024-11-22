@@ -2,7 +2,7 @@
 description: Configure the kubectl shell for for DuploCloud-managed GKE deployments
 ---
 
-# Kubectl Shell for GKE
+# Enable Kubectl Shell for GKE
 
 Enabling `kubectl` shell access in GCP is part of a one-time DuploCloud Portal setup process.
 
@@ -56,11 +56,7 @@ Enabling `kubectl` shell access in GCP is part of a one-time DuploCloud Portal s
 8. Select **Advanced Kubernetes settings** and **Set HealthCheck annotations for Ingress.**
 9. Click **Add**. The Load Balancer listener is added.
 
-<div align="left">
-
-<figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FYubrSqkGFBjD8pOeXs5f%252Fnew%2520LB%2520pic.png%3Falt%3Dmedia%26token%3D89092ff1-99a2-4772-bf32-83254b0d219a&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=9b57daeb&#x26;sv=1" alt="" width="375"><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FYubrSqkGFBjD8pOeXs5f%252Fnew%2520LB%2520pic.png%3Falt%3Dmedia%26token%3D89092ff1-99a2-4772-bf32-83254b0d219a&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=9b57daeb&#x26;sv=1" alt="" width="375"><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
 ## Step 4: Add an Ingress <a href="#step-4-add-an-ingress" id="step-4-add-an-ingress"></a>
 
@@ -70,25 +66,17 @@ Enabling `kubectl` shell access in GCP is part of a one-time DuploCloud Portal s
 4. In the **Ingress Name** field, enter `kubect-shell`.
 5. From the **Ingress Controller** list box, select **gce**.
 6. In the **Visibility** list box, select **Public**.
-7. In the **DNS Prefix** field**,** enter the DNS name prefix.
+7. In the **DNS Prefix** fiel&#x64;**,** enter the DNS name prefix.
 8. In the **Certificate ARN** list box, select the ARN added to the Plan in the **Certificate for Load Balancer and Ingress** step.
 
-<div align="left">
-
-<figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FJj2Od9HA2DlQfxc24HHR%252Fadd%2520ingress%2520new.png%3Falt%3Dmedia%26token%3D28b41a61-797b-4837-92d2-fa5ad8d4caa1&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=294a09de&#x26;sv=1" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FJj2Od9HA2DlQfxc24HHR%252Fadd%2520ingress%2520new.png%3Falt%3Dmedia%26token%3D28b41a61-797b-4837-92d2-fa5ad8d4caa1&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=294a09de&#x26;sv=1" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure></div>
 
 9. Click **Add Rule**. The **Add Ingress Rule** pane displays.
 10. In the **Path** field, enter (**/**)
 11. In the **Service Name** list box, select the Service previously created (**kubectl:80**)
 12. Click **Add Rule**. A rule directing all traffic to the **kubectl** Service is created.
 
-<div align="left">
-
-<figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FwzAO4oY0dSyy2QLYqGzd%252Fingress%2520newest.png%3Falt%3Dmedia%26token%3Deb45895e-25df-47fa-a2c2-03247c10ebd0&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=ed174b16&#x26;sv=1" alt="" width="375"><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FwzAO4oY0dSyy2QLYqGzd%252Fingress%2520newest.png%3Falt%3Dmedia%26token%3Deb45895e-25df-47fa-a2c2-03247c10ebd0&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=ed174b16&#x26;sv=1" alt="" width="375"><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 
 13\. On the **Add Kubernetes Ingress** page, click **Add**. The Ingress is created.
 
@@ -98,11 +86,7 @@ Enabling `kubectl` shell access in GCP is part of a one-time DuploCloud Portal s
 2.  Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FzZCW2GzLSR4Eu5ONp4xV%252Fshrunk.png%3Falt%3Dmedia%26token%3De9588db4-41fd-4de2-9e0d-c702d7484dde&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=efefb027&#x26;sv=1" alt="" width="375"><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FzZCW2GzLSR4Eu5ONp4xV%252Fshrunk.png%3Falt%3Dmedia%26token%3De9588db4-41fd-4de2-9e0d-c702d7484dde&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=efefb027&#x26;sv=1" alt="" width="375"><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 3. From the **Config Type** list box, select **AppConfig**.
 4. From the **Key** list box, select **Other**.
 5. In the second **Key** field, enter **DuploShellfqdn**

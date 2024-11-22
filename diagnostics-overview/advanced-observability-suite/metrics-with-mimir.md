@@ -21,7 +21,7 @@ Focusing on these metrics in Grafana can enhance system reliability, improve use
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard**. The AOS Dashboard displays.
 2. Click the **Metrics** card button. The Grafana **APM** -> **RED Metrics** Dashboard displays. The graphic below shows the **RED** (Request, Error, Duration) Dashboard.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p><strong>Beyla RED Metrics</strong> Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p><strong>Beyla RED Metrics</strong> Dashboard</p></figcaption></figure>
 
 ## Exploring Detailed Metrics
 

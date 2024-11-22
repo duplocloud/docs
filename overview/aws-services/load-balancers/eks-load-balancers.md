@@ -22,11 +22,7 @@ For an end-to-end example of deploying an application using an EKS Service, see 
 6.  Complete other fields as required and click **Add** to add the Load Balancer Listener.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/LBL1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/LBL1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
 ### Adding a Network Load Balancer (NLB) Listener with a custom CIDR
 
@@ -38,14 +34,10 @@ Before completing this task, you must [add a Load Balancer Listener of **Type Ne
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
 4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../.gitbook/assets/image (199).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
-5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pane**.**
+5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pan&#x65;**.**
 6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. After the CIDRs are added, you [add Security Groups for Custom CIDR(s)](eks-load-balancers.md#adding-security-groups-for-custom-cidrs).
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/LBL7.png" alt=""><figcaption><p><strong>Edit Load Balancer Listener</strong> pane with <strong>Custom CIDRs</strong></p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/LBL7.png" alt=""><figcaption><p><strong>Edit Load Balancer Listener</strong> pane with <strong>Custom CIDRs</strong></p></figcaption></figure></div>
 
 ### Adding Security Groups for NLBs with custom CIDRs
 
@@ -64,11 +56,7 @@ Repeat this procedure for each custom CIDR that you want to add.
 
 Repeat this procedure to add additional CIDRs.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/LBL8.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane for adding <strong>Custom CIDRs</strong> to Securty Groups</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/LBL8.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane for adding <strong>Custom CIDRs</strong> to Securty Groups</p></figcaption></figure></div>
 
 ## Adding a Shared Load Balancer
 
@@ -77,11 +65,7 @@ Repeat this procedure to add additional CIDRs.
 3.  Click **Add**. The **Create a Load Balancer** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/AWS_alb_lb_create.png" alt=""><figcaption><p><strong>Create a Load Balancer</strong> pane for a shared <strong>Application</strong> load balancer</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/AWS_alb_lb_create.png" alt=""><figcaption><p><strong>Create a Load Balancer</strong> pane for a shared <strong>Application</strong> load balancer</p></figcaption></figure></div>
 4. In the **Name** field, enter a name for the Load Balancer.
 5. From the **Type** list box, select a Load Balancer type.
 6. From the **Visibility** list box, select **Public** or **Internal**.
@@ -108,11 +92,7 @@ To accomplish this, you:
 7.  Note the name of the created Target Group by clicking the Info Icon ( <img src="../../../.gitbook/assets/info_tip_black (3).png" alt="" data-size="line"> ) for the Load Balancer in the **LB Listener** card and searching for the string `TgName`. You will select the Target Group when you [create a Shared Load Balancer for the Target Group](eks-load-balancers.md#creating-a-shared-load-balancer-for-the-target-group).\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/AWS_Target3.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for <strong>Target Group Only Type</strong></p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/AWS_Target3.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for <strong>Target Group Only Type</strong></p></figcaption></figure></div>
 
 The **Target Group Only** Service Load Balancer is displayed in the **LB Listeners** area in the **Load Balancers** tab on the **Services** page.
 
@@ -131,11 +111,7 @@ The **Target Group Only** Service Load Balancer is displayed in the **LB Listene
 2. In the **Listeners** tab, click **Add**. The **Load Balancer Listener** pane displays.\
 
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/LBL12.png" alt=""><figcaption><p><strong>Load Balancer Listener</strong> pane with <strong>Target Group</strong> specified</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/LBL12.png" alt=""><figcaption><p><strong>Load Balancer Listener</strong> pane with <strong>Target Group</strong> specified</p></figcaption></figure></div>
 
 3. Complete all fields, specifying the **Target Group** that was created when you [added a Load Balancer with the **Type Target Group Only** in the previous step](eks-load-balancers.md#creating-a-service-load-balancer-with-the-type-target-group-only).
 4. Click **Save**. The Shared Load Balancer for the Target Group displays in the **Listeners** tab.
@@ -185,11 +161,7 @@ Update attributes for your defined Target Group.
 
 5. The **Update Target Group Attributes** pane displays.&#x20;
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/not sticky new.png" alt=""><figcaption><p>The <strong>Update Target Group Attributes</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/not sticky new.png" alt=""><figcaption><p>The <strong>Update Target Group Attributes</strong> pane</p></figcaption></figure></div>
 
 5. &#x20;Find the attribute you want to update in the **Attribute** column and update the associated value in the **Value** column.&#x20;
 6. Click **Update** to save the changes.&#x20;
@@ -198,11 +170,7 @@ Update attributes for your defined Target Group.
 
 To enable stickiness, complete steps 1-5 for [Updating Target Group Attributes](eks-load-balancers.md#updating-target-group-attributes) above. On the **Update Target Group Attributes** pane, in the **Value** field for **stickiness.enabled**, enter **true**. Update additional stickiness attributes, if needed. Click **Update** to save the changes.&#x20;
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/smallest.png" alt=""><figcaption><p>The <strong>Update Target Group Attributes</strong> pane configured to enable stickiness. </p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/smallest.png" alt=""><figcaption><p>The <strong>Update Target Group Attributes</strong> pane configured to enable stickiness. </p></figcaption></figure></div>
 
 ## Additional Load Balancer Settings
 
@@ -224,11 +192,7 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 5. In the **Other Load Balancer Settings** pane, select any or all options.\
 
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/AWS_LB_Other2.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/AWS_LB_Other2.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
 
 6. Click **Save**.
 

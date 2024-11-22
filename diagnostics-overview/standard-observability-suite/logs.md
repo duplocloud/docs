@@ -14,7 +14,7 @@ Use the **Select Tenant** list box to select a **Tenant**. In the Tenant context
 
 Create additional filters using the Kibana interface. DuploCloud's Filebeat collector automatically labels the logs according to Tenant, Service, containers, and other related metadata. &#x20;
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Application log retention policy
 

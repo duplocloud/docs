@@ -15,8 +15,8 @@ You will need to generate an keys from each of these vendor systems, and then pr
 
 ## Generating an Integration Key from Sentry <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
-1. In the [Sentry ](https://sentry.io/welcome/?utm\_source=google\&utm\_medium=cpc\&utm\_campaign=19655969969\&utm\_content=g\&utm\_term=sentry\&device=c\&gclid=CjwKCAjw5pShBhB\_EiwAvmnNV2cqd7lWEuiy\_n0HSuCc17JGB9vVYqdwm5\_QiDgJEXIWuz34u9h18hoCpbEQAvD\_BwE\&gclid=CjwKCAjw5pShBhB\_EiwAvmnNV2cqd7lWEuiy\_n0HSuCc17JGB9vVYqdwm5\_QiDgJEXIWuz34u9h18hoCpbEQAvD\_BwE)website, navigate to **Projects** -> **Create a New Project**.
-2. Click **Settings -> Projects -> **_**project-name**_** -> Client keys**. The **Client Keys** page displays.
+1. In the [Sentry ](https://sentry.io/welcome/?utm_source=google\&utm_medium=cpc\&utm_campaign=19655969969\&utm_content=g\&utm_term=sentry\&device=c\&gclid=CjwKCAjw5pShBhB_EiwAvmnNV2cqd7lWEuiy_n0HSuCc17JGB9vVYqdwm5_QiDgJEXIWuz34u9h18hoCpbEQAvD_BwE\&gclid=CjwKCAjw5pShBhB_EiwAvmnNV2cqd7lWEuiy_n0HSuCc17JGB9vVYqdwm5_QiDgJEXIWuz34u9h18hoCpbEQAvD_BwE)website, navigate to **Projects** -> **Create a New Project**.
+2. Click **Settings -> Projects ->&#x20;**_**project-name**_**&#x20;-> Client keys**. The **Client Keys** page displays.
 3. Complete the **DSN** fields on the screen.
 4.  Click **Generate New Key**. \
 
@@ -54,17 +54,13 @@ You will need to generate an keys from each of these vendor systems, and then pr
 
 ## OpsGenie
 
-1. In the [OpsGenie](https://www.atlassian.com/software/opsgenie/what-is-opsgenie?\&aceid=\&adposition=\&adgroup=141766912743\&campaign=18808090465\&creative=632740825597\&device=c\&keyword=opsgenie\&matchtype=e\&network=g\&placement=\&ds\_kids=p74114620049\&ds\_e=GOOGLE\&ds\_eid=700000001786355\&ds\_e1=GOOGLE\&gclid=CjwKCAjw5pShBhB\_EiwAvmnNV-jSU1vYU3psSiv9g\_lb8lRx5waZPMsYfcqoIv3ONXKt-fR5KsHCcxoCRvEQAvD\_BwE\&gclsrc=aw.ds) website, [generate an API Key to integrate DuploCloud faults with OpsGenie](https://support.atlassian.com/opsgenie/docs/what-is-a-default-api-integration/).
+1. In the [OpsGenie](https://www.atlassian.com/software/opsgenie/what-is-opsgenie?\&aceid=\&adposition=\&adgroup=141766912743\&campaign=18808090465\&creative=632740825597\&device=c\&keyword=opsgenie\&matchtype=e\&network=g\&placement=\&ds_kids=p74114620049\&ds_e=GOOGLE\&ds_eid=700000001786355\&ds_e1=GOOGLE\&gclid=CjwKCAjw5pShBhB_EiwAvmnNV-jSU1vYU3psSiv9g_lb8lRx5waZPMsYfcqoIv3ONXKt-fR5KsHCcxoCRvEQAvD_BwE\&gclsrc=aw.ds) website, [generate an API Key to integrate DuploCloud faults with OpsGenie](https://support.atlassian.com/opsgenie/docs/what-is-a-default-api-integration/).
 2. In the DuploCloud Portal, navigate to **Observability** -> **Faults**.
 3. Click **Update Notifications Config**. The **Set Alert Notifications Config** pane displays.
 4. In the **OpsGenie - API Key** field, enter the key you generated from OpsGenie.
 5. In the **Alerts Frequency (Seconds)** field, enter a time interval in seconds when you want alerts to be displayed.
 6. Click **Update**.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/AWS_Set_notify_config.png" alt=""><figcaption><p><strong>Set Alert Notifications Config</strong> pane in DuploCloud Portal</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/AWS_Set_notify_config.png" alt=""><figcaption><p><strong>Set Alert Notifications Config</strong> pane in DuploCloud Portal</p></figcaption></figure></div>
 
 &#x20;                               &#x20;

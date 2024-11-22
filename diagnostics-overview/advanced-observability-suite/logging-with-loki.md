@@ -15,7 +15,7 @@ DuploCloud orchestrates the configuration to automatically insert metadata such 
 3.  Click the **Logs** card button. The Grafana **Logging** dashboard displays various widgets and views, including **Live logs**.\
 
 
-    <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Grafana <strong>Logging D</strong>ashboard</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Grafana <strong>Logging D</strong>ashboard</p></figcaption></figure>
 
 
 
@@ -46,7 +46,7 @@ If you have administrator privileges, you can click any log entry for more detai
 
 1.  Click on any log entry for more details about the event that triggered it. Detailed data will be displayed, as in the graphic below.
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Close-up of <strong>Live logs</strong> on the Grafana Logging Dashboard</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Close-up of <strong>Live logs</strong> on the Grafana Logging Dashboard</p></figcaption></figure>
 2. Click the context icon ( ![](../../.gitbook/assets/c1.png) ) to open the **Log context** window for complete contextual detail.
 
 <figure><img src="../../.gitbook/assets/c2.png" alt=""><figcaption></figcaption></figure>

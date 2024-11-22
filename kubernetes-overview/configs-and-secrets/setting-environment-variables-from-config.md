@@ -36,7 +36,7 @@ You can import the entire ConfigMap as environment variables or choose specific 
 
 The most straightforward approach is to import the entire ConfigMap as environment variables.  Using this approach, your service will recognize each key in the ConfigMap defined as an environment variable.
 
-1. On the **Edit Service: **_**service\_name**_** Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
+1. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
 2. On the **Advanced Options** page, in the **Other Container Config** field, enter the configuration YAML to import environment variables from a ConfigMap.  For example, to import all environment variables from a ConfigMap named `my-env-vars`, use the following YAML:&#x20;
 
 ```yaml
@@ -56,7 +56,7 @@ To import from additional ConfigMaps, duplicate the YAML from lines 2 and 3 in t
 Another approach is to select which keys to import from the ConfigMap as environment variables. This method gives you complete control over each environment variable and its name, but it requires more manual configuration.
 
 1. [Edit the DuploCloud Service](setting-environment-variables-from-config.md#editing-the-duplocloud-service).
-2. On the **Edit Service: **_**service\_name**_** Basic Options** page, in the **Environment Variables** field, enter the configuration for environment variables to import from a ConfigMap.  For example, to set a single environment variable (`ENV_VAR_ONE)` to the value of the `MY_ENV_VAR` key in the `my-env-vars` config map, use the following YAML:
+2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, in the **Environment Variables** field, enter the configuration for environment variables to import from a ConfigMap.  For example, to set a single environment variable (`ENV_VAR_ONE)` to the value of the `MY_ENV_VAR` key in the `my-env-vars` config map, use the following YAML:
 
 ```yaml
 - Name: ENV_VAR_ONE
@@ -96,7 +96,7 @@ Before you configure environment variables, you must create a DuploCloud Service
 The most straightforward approach is to import the entire Secret as environment variables. Using this approach, your service will recognize each key in the Secret defined as an EV.
 
 1. [Edit the DuploCloud Service](setting-environment-variables-from-config.md#editing-the-duplocloud-service).
-2. On the **Edit Service: **_**service\_name**_** Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
+2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
 3. On the **Advanced Options** page, in the **Other Container Config** field, enter the configuration YAML to import environment variables from a Secret.  For example, to import all environment variables from a secret named `my-env-vars`, use the following YAML:&#x20;
 
 ```yaml
@@ -116,7 +116,7 @@ To import from additional secrets, duplicate the YAML from lines 2 and 3 in the 
 Another approach is to select which keys to import from the Secret as environment variables. This method gives you complete control over each environment variable and its name, but it requires more manual configuration.
 
 1. [Edit the DuploCloud Service](setting-environment-variables-from-config.md#editing-the-duplocloud-service).
-2. On the **Edit Service: **_**service\_name**_** Basic Options** page, in the **Environment Variables** field, enter the configuration for specific environment variables to import from a Secret.  For example, to set a single environment variable (`ENV_VAR_ONE)` to the value of the `SECRET_ENV_VAR` key in the `my-env-vars` secret, use the following YAML:
+2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, in the **Environment Variables** field, enter the configuration for specific environment variables to import from a Secret.  For example, to set a single environment variable (`ENV_VAR_ONE)` to the value of the `SECRET_ENV_VAR` key in the `my-env-vars` secret, use the following YAML:
 
 ```yaml
 - Name: ENV_VAR_ONE
