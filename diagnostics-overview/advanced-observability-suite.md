@@ -1,5 +1,5 @@
 ---
-description: DuploCloud's Advanced Observability Suite or available as a Product add-on
+description: DuploCloud's Advanced Observability Suite Add-on
 ---
 
 # Advanced Observability Suite
