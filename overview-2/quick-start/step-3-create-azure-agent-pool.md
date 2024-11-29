@@ -21,11 +21,7 @@ Before creating Azure Agent Pools, verify that you accomplished the tasks in [St
 * A [Tenant ](step-2-tenant.md)named **DEV01**
 * Selected Tenant **DEV01** in the **Tenant** list box, at the top of the DuploCloud Portal.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>DEV01</strong> selected</p></figcaption></figure></div>
 
 ## Create an Azure Agent Pool
 
@@ -33,7 +29,8 @@ Before creating Azure Agent Pools, verify that you accomplished the tasks in [St
 2. Click the **Azure Agent Pool** tab. &#x20;
 3. Click **Add**. The **Azure Agent Pool** page displays.
 4. From the table below, enter the values corresponding to the fields and options on the **Azure Agent Pool** page. Accept the defaults for fields that are not listed.&#x20;
-5. Click **Add**. After a few minutes, the Azure Agent Pool is created.&#x20;
+5. To run Windows container, K8WorkerOS should be set to Windows.
+6. Click **Add**. After a few minutes, the Azure Agent Pool is created.&#x20;
 
 | Azure Agent Pool page fields and options | Value or action |
 | ---------------------------------------- | --------------- |

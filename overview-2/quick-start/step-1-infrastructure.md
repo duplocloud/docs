@@ -48,7 +48,8 @@ Before starting this tutorial:
 4. Select the **Click Here** link. The **Configure AKS Cluster** pane displays.
 5. Enter a name in the **Cluster name** field.
 6. Select the node VM size from **Node VM Size** list box.
-7. Click **Create**. It may take some time to configure the cluster. The **Kubernetes** card on the Infrastructure page  shows **Enabled** when the cluster is complete. You can also monitor progress using the **Kubernetes** tab.&#x20;
+7. To use Windows containers, Network plugin should be set to Azure. This config will make Kubernetes pods to get IP assigned from Subnets address space, Make sure Infrastructure default subnet use /18 for network prefix. At least /20 should be used or IP Address space might run out.
+8. Click **Create**. It may take some time to configure the cluster. The **Kubernetes** card on the Infrastructure page  shows **Enabled** when the cluster is complete. You can also monitor progress using the **Kubernetes** tab.&#x20;
 
 ## Verifying that a Plan exists for your Infrastructure
 
