@@ -51,4 +51,4 @@ Link external data sources to AOS dashboards by adding custom links to data card
 
 You can get the admin credentials for the grafana deployment from the tenant where the otel stack is deployed. It is the service called grafana-ui. Click edit on the service to get the credentials from the env.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

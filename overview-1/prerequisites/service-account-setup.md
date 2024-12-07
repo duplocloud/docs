@@ -11,7 +11,7 @@ A service account and a key are created for each GCP project to be onboarded.&#x
 1. Login to the [GCP Console](http://console.cloud.google.com/) and select the desired project.&#x20;
 2. Open the navigation pane at the top left of the home page ( <img src="../../.gitbook/assets/GCP-nav.png" alt="" data-size="line"> ), and select **IAM & Admin** -> **Organization Policies**.&#x20;
 3. **Filter** and search for **iam.disableServiceAccountKeyCreation**.&#x20;
-4. Click the options menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) and select **Edit policy**.&#x20;
+4. Click the options menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) and select **Edit policy**.&#x20;
 5. Add a **Rule (Rule 1** in the graphic belo&#x77;**)** to turn off enablement.
 
 <figure><img src="../../.gitbook/assets/GCP_pol1.png" alt=""><figcaption><p>Filtering for <strong>iam.disableServiceAccountKeyCreation</strong></p></figcaption></figure>
