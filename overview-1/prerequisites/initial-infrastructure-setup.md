@@ -18,7 +18,7 @@ Once your GCP project has been added to the DuploCloud Portal, the next step is 
 
 <figure><img src="../../.gitbook/assets/final.png" alt=""><figcaption><p>The Add Infrastructure page in the DuploCloud Portal</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Infrastructure</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Infrastructure</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 8. Click **Create**. It will take approximately 15 to 20 minutes for the setup to complete. Monitor faults to see if any issues arise (NTP clock sync faults can be ignored).&#x20;
 

@@ -11,7 +11,7 @@ Navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings
 
 Logging is based on OpenSearch and Kibana, deployed in the Tenant of your choice, and configurable, as shown below.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 After enabling logging, choose which Tenants to collect logs from. The platform deploys collectors for each Tenant that you enable. Filebeat is the collector for Logs.
 

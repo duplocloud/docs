@@ -20,7 +20,7 @@ For ECS Services, select the Service **Name** and click the **Actions** menu to 
 
 You can display and manage the Containers you have defined in the DuploCloud portal. Navigate to **Kubernetes** -> **Containers**.
 
-Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
+Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1) (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
 
 | Option              | Functionality                                                                                                                                                              |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,11 +53,7 @@ To designate a container as Essential, see [Defining an Essential Container](ecs
 8.  Use the  <img src="../../../.gitbook/assets/up_chevron_icon.png" alt="" data-size="line"> and  <img src="../../../.gitbook/assets/down_chevron_icon (2).png" alt="" data-size="line"> icons to collapse and expand the **Container** areas as needed. Specify **Container Name** and **Image** name for each container that you add. Add more containers by clicking the Add Icon ( <img src="../../../.gitbook/assets/plus-sign-icon.png" alt="" data-size="line"> ) to create up to five (5) containers, in each container area. Delete containers by clicking the Delete ( **X** ) **I**con in each container area.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/ECS_Mult_con_2 (1).png" alt=""><figcaption><p><strong>Primary</strong> label with Add and Expand/Collapse Icons in <strong>Container -1</strong>; Delete Icon in <strong>Container - 2</strong>. <strong>Container - 3</strong> is editable.</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/ECS_Mult_con_2 (1).png" alt=""><figcaption><p><strong>Primary</strong> label with Add and Expand/Collapse Icons in <strong>Container -1</strong>; Delete Icon in <strong>Container - 2</strong>. <strong>Container - 3</strong> is editable.</p></figcaption></figure></div>
 
 
 9. Specify **Port Mappings**, and **Add New** mappings or **Delete** them, if needed.
@@ -75,11 +71,7 @@ By designating containers as essential or non-essential, you define the dependen
 
 To designate a container as Essential, follow the [Creating multiple containers for ECS Services using a Task Definition](ecs-containers-and-task-definitions.md#7-toc-title) procedure to create your containers, but before creating the container you want to designate as Essential, in the **Container** definition, select the **Essential Container** option, as in the example below.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/ecs.png" alt=""><figcaption><p>Editing a <strong>Container</strong> definition with the <strong>Essential Container</strong> option selected.</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/ecs.png" alt=""><figcaption><p>Editing a <strong>Container</strong> definition with the <strong>Essential Container</strong> option selected.</p></figcaption></figure></div>
 
 ## Elastic Container Service (ECS) Fargate <a href="#id-9-toc-title" id="id-9-toc-title"></a>
 

@@ -108,11 +108,7 @@ Enable or disable faults for failed Kubernetes Jobs in a specific Tenant.
 5.  Click **Add**. The Jobs fault setting is added. \
 
 
-    <div align="left">
-
-    <figure><img src="../.gitbook/assets/tenant faults feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane with <strong>Enable K8s Job fault logging by default</strong> enabled</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../.gitbook/assets/tenant faults feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane with <strong>Enable K8s Job fault logging by default</strong> enabled</p></figcaption></figure></div>
 
 You can view the Jobs fault setting on the **Tenants** page (Navigate to **Administrator** -> **Tenant**, select the Tenant name) under the **Settings** tab. If the value is **true**, DuploCloud will generate a fault. If the value is **false**, DuploCloud will not generate a fault.&#x20;
 
@@ -133,7 +129,7 @@ When the value is true and the Job fails, DuploCloud will generate a fault. When
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Job**.
 2. Select the Kubernetes Job you want to view and click the **Overview**, **Containers**, and **Details** tabs for more information about the Job status and history.&#x20;
 
-You can also view a Kubernetes Job's details by clicking the menu icon ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) icon to the left of the Job name and selecting **View**.
+You can also view a Kubernetes Job's details by clicking the menu icon ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) icon to the left of the Job name and selecting **View**.
 
 <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-13_04_25.png" alt=""><figcaption><p><strong>Overview and Details</strong> tabs for a KubernetesJob<strong>.</strong></p></figcaption></figure>
 
@@ -153,7 +149,7 @@ You can filter container names by using the search field at the top of the page,
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Job**.
 2. Select the K8s Job you want to edit.&#x20;
-3. Click the options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) icon to the left of the K8s Job you want to edit and select **Edit**.
+3. Click the options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) icon to the left of the K8s Job you want to edit and select **Edit**.
 
 You can edit and modify the following fields in the DuploCloud portal:
 
@@ -168,6 +164,6 @@ You can edit and modify the following fields in the DuploCloud portal:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Job**.
 2. Select the K8s Job you want to delete.&#x20;
-3. Click the Job options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1).png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
+3. Click the Job options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
 
 <figure><img src="../.gitbook/assets/delete.png" alt=""><figcaption><p>Job options menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
