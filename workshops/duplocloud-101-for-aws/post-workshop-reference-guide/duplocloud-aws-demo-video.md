@@ -1,5 +1,7 @@
 ---
-description: Watch a quick demo of DuploCloud AWS
+description: >-
+  To recap what you've learned in the workshop, watch a quick demo of DuploCloud
+  AWS
 ---
 
 # DuploCloud AWS Demo Video

@@ -6,4 +6,4 @@ description: >-
 
 # Daily Operations using DuploCloud
 
-The steps in this section provide an overview of DuploCloud features and tools to ensure the stability and scalability of your DevOps platform.
+The steps in this section provide an overview of DuploCloud features and tools to ensure the stability, performance, and scalability of your cloud infrastructure.
