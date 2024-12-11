@@ -10,4 +10,8 @@ Typically the DuploCloud onboarding team performs these steps in your GCP projec
 2. [Set up Cloud DNS Zone](route-53-hosted-zone.md).
 3. [Create Certificates](certificate-for-load-balancer-and-ingress.md) for Load Balancers and Kubernetes Ingress.
 4. [Perform initial Infrastructure and Tenant setup](initial-infrastructure-setup.md).
-5. Set up tools for the Tenant, such as [enabling `kubectl` shell.](tools-tenant/enable-kubectl-shell.md)
+5. Set up tools for the Tenant, such as [enabling `kubectl` shell.](tools-tenant/enable-kubectl-shell.md)&#x20;
+
+{% hint style="info" %}
+For Kubernetes prerequisites, see the [DuploCloud Kubernetes User Guide](../../kubernetes-overview/).&#x20;
+{% endhint %}
