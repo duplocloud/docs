@@ -4,21 +4,21 @@ description: DuploCloud's Advanced Observability Suite Add-on
 
 # Advanced Observability Suite
 
-DuploCloud's Advanced Observability Suite (AOS) is an add-on service to boost your monitoring and troubleshooting abilities. Built on OpenTelemetry, our AOS leverages [Prometheus ](https://prometheus.io/)and [Grafana ](https://grafana.com/)to deliver robust, real-time observability for your cloud infrastructure. It includes real-time anomaly detection and customizable alerts and unifies metrics, traces, logs, and profiles to track all aspects of your environment easily.&#x20;
+DuploCloud's Advanced Observability Suite (AOS) is an add-on service to boost your monitoring and troubleshooting abilities. Built on OpenTelemetry, our AOS leverages CloudWatch, LGTM (Loki, Grafana, Tempo and Mimir), and Pyroscope to deliver robust observability for your cloud infrastructure. It includes real-time anomaly detection and customizable alerts and unifies metrics, traces, logs, and profiles to track all aspects of your environment easily.&#x20;
 
-The Grafana-powered dashboards can be customized to spotlight key metrics and visualize trends in real time, empowering swift, data-driven decisions. DuploCloud’s AOS simplifies troubleshooting and enhances system health by providing a holistic view of your application and infrastructure performance.
+The Grafana-powered dashboards spotlight key metrics and visualize trends in real-time, empowering swift, data-driven decisions. Additionally,  AOS leverages object storage solutions like S3, GCS, and Storage Accounts, making it extremely cost-effective. Overall DuploCloud’s AOS simplifies troubleshooting and enhances system health by providing a holistic view of your application and infrastructure performance.
 
 ### About OpenTelemetry
 
-[OpenTelemetry ](https://opentelemetry.io/)is an open-source project from the Cloud Native Computing Foundation (CNCF) that supports multiple programming languages and environments. It provides a flexible, vendor-neutral framework for monitoring and analyzing application performance. Designed for high scalability, OpenTelemetry is ideal for distributed applications and helps reduce costs by using open-source components instead of expensive proprietary systems. See the [OpenTelemetry documentation](https://opentelemetry.io/docs/what-is-opentelemetry/) for more. &#x20;
+[OpenTelemetry, ](https://opentelemetry.io/)a project under the Cloud Native Computing Foundation (CNCF), supports multiple programming languages and environments and provides a flexible, vendor-neutral framework for monitoring and analyzing application performance. Designed for high scalability and ideal for distributed applications, OpenTelemetry is the industry standard for observability. See the [OpenTelemetry documentation](https://opentelemetry.io/docs/what-is-opentelemetry/) for more. &#x20;
 
 ## Advanced Observability Suite Use Cases
 
 ### Real-Time Monitoring and Observability
 
 * **System Health Check**: Track real-time metrics like CPU usage, memory consumption, network traffic, and error rates across services to ensure that applications are healthy.
-* **Latency Tracking**: Monitor request latencies to identify performance bottlenecks, particularly in services where latency spikes might indicate an issue.
-* **Error Rate Analysis**: Track error counts and types to ensure services operate as expected and identify critical failure points.
+* **Latency Tracking**: Monitor request latencies to identify performance bottlenecks, particularly in services where latency spikes might indicate an issue. Easily drill down to the traces and determine which specific module is the cause for latency, or switch to profile view for deeper utilization visibility.
+* **Error Rate Analysis**: Track error counts and types to ensure services operate as expected and identify critical failure points. Drill down to the traces with just a click to determine where the error occurs.
 
 ### End-to-End Tracing and Dependency Mapping
 
@@ -36,17 +36,11 @@ The Grafana-powered dashboards can be customized to spotlight key metrics and vi
 
 * **Set Alerts for Key Metrics**: Define thresholds and set alerts for anomalies in critical metrics, such as high error rates or slow response times, so that teams can act quickly.
 * **Incident Response and Remediation**: Enable responders to access context-specific insights that accelerate incident response, diagnostics, and resolution times.
-* **Service-Level Agreement (SLA) Monitoring**: Track SLA compliance metrics, such as uptime and latency, to ensure the system meets contractual obligations.
 
 ### User Experience Insights
 
 * **Track User Journey Metrics**: Analyze performance metrics specific to different user journeys (e.g., checkout flows) to understand the impact of backend performance on user experience.
 * **End-to-End Latency Perceptions**: Collect latency and success metrics for critical user actions to help understand where improvements could enhance user satisfaction.
-
-### Security and Compliance Monitoring
-
-* **Detect Anomalous Behavior**: Set up alerts on unusual patterns or outliers in metrics that could indicate potential security incidents.
-* **Audit Logging**: Track API call/sensitive event logs (e.g., login attempts) to assist in compliance reporting and security auditing.
 
 ### Custom Business and Operational Metrics
 

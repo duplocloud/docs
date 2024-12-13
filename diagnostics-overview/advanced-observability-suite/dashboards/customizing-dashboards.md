@@ -1,18 +1,20 @@
 ---
-description: Create your own Advanced Observability Suite (AOS) Dashboards
+description: Customize DuploCloud Advanced Observability Suite (AOS) Dashboards
 ---
 
 # Customizing Dashboards
 
-{% hint style="info" %}
-Note that each Kubernetes cluster has its own OpenTelemetry stack by default. If you need to share an OTEL stack across clusters, contact your DuploCloud support team, and they will set it up for you.
-{% endhint %}
+DuploCloud AOS users can tailor observability for their Kubernetes clusters by managing OpenTelemetry stacks and configuring Grafana dashboards to meet specific needs. Additionally, custom links can be added to AOS dashboard cards, enabling seamless integration with external tools or data sources.
 
-The OpenTelemetry part of the AOS dashboard has five cards that point to Grafana dashboards. These cards depend on the the links from under **Administrator --> SystemSettings -> System Config**. Search for "otel" and you will find a list of settings of type otel with links as shown in the picture below:
+By default, each Kubernetes cluster in DuploCloud has its own dedicated OpenTelemetry (OTEL) stack. If you need to share an OTEL stack across multiple clusters, contact DuploCloud Support.
+
+## Configuring OpenTelemetry Cards
+
+In the AOS dashboard, the OpenTelemetry section features five cards that link to Grafana dashboards. To configure these cards and their links, go to **Administrator** -> **System Settings -> System Config** in the DuploCloud Portal and search for `otel` as shown in the image below.
 
 <figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-Each entry maps to a card on the dashboard. An entry that starts with \<infraname>/ applies to the cards for that Infrastructure. Note that in admin dashboard all cards are in the context of the Infrastructure and there is a infrastructure drop down.
+Each configuration entry corresponds to a card on the dashboard. Entries that start with `<infraname>/` apply to the cards for that specific Infrastructure, (in the Administrator AOS Dashboard, all cards reference the Infrastructure selected from the **Infrastructure** list box), as shown in the table below.&#x20;
 
 | Setting Name          | Card                            | Dashboard Type |
 | --------------------- | ------------------------------- | -------------- |
@@ -22,33 +24,38 @@ Each entry maps to a card on the dashboard. An entry that starts with \<infranam
 | \<infraname>/traces   | Traces Button                   | Admin          |
 | \<infraname>/k8s      | K8S Button                      | Admin          |
 
-Also note that the settings can have place holders like \[\[TENANT\_NAME]] that get dynamically replaced by the platform when the user clicks on the respective button.
+{% hint style="info" %}
+Configuration settings include placeholders like **TENANT\_NAME**, **INFRA\_NAME**, and **NAMESPACE** that are dynamically updated when interacting with the dashboard. You can edit these values to refer to specific Tenants, Infrastructures, or Namespaces.
+{% endhint %}
 
-### Adding Custom Links to AOS Dashboards
+## Creating New Dashboards&#x20;
 
-Link external data sources to AOS dashboards by adding custom links to data cards.&#x20;
+For detailed instructions on customizing Grafana dashboards, refer to the official [Grafana Documentation on Dashboards](https://grafana.com/docs/grafana/latest/dashboards/).
 
-#### Adding Custom Links for Administrators
+## Adding Custom Dashboard Links
+
+For custom dashboards or manually instrumented applications, you may need to add custom links to your AOS dashboards to lead to the specific data or external tools associated with your custom configurations. Follow these steps to add custom links to data cards as an administrator or non-administrator:
+
+### Adding Administrator Custom Links
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard**.
-2. Click the link icon (<img src="../../../.gitbook/assets/new link icon.png" alt="" data-size="line">) in the header of the card to which you wish to add a custom link. The **All Admin Custom Links** pane displays.
-3. Select the **Admin** tab to add a custom link only to the Administrator AOS Dashboard, or the **Common** tab to include the custom link on the Tenant AOS Dashboard.
-4. Click Add. The **Add profiles Custom Link** pane displays.
-5. Enter a **Name**, **URL**, and **Description** for the custom link.&#x20;
-6. Click **Submit**. The custom link is added to the data card on the AOS Dashboard(s).&#x20;
+2. Click the link icon (<img src="../../../.gitbook/assets/new link icon.png" alt="" data-size="line">) on the card where you want to add a custom link. The **All Admin Custom Links** pane displays.
+3. Select the **Admin** tab to add a custom link to the Administrator AOS Dashboard or the **Common** tab to add a custom link to the Tenant AOS Dashboard dashboard.
+4. Click **Add**. The **Add&#x20;**_**DATA\_CARD\_NAME**_**&#x20;Custom Link** pane displays.
+5. Enter details for the custom link:&#x20;
+   * **Name:** The label for the link.
+   * **URL:** The target location (e.g., `<infraname>/logs/tenant` for Tenant-specific logs or `<infraname>/metrics/tenant` for tenant-specific metrics).
+   * **Description:** Optional details about the link.
+6. Click **Submit**. The custom link is added to the data card.&#x20;
 
-<div align="left"><figure><img src="../../../.gitbook/assets/new logs.png" alt="" width="354"><figcaption><p>The <strong>Logs</strong> data card with the clink icon highlighted</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/new logs.png" alt="" width="354"><figcaption><p>The <strong>Logs</strong> data card with the link icon highlighted</p></figcaption></figure></div>
 
-#### Adding Custom Links for Non-Administrators
+### Adding Tenant Custom Links
+
+Add custom links to Tenant dashboards.
 
 1. From the DuploCloud Portal, navigate to **Observability** -> **Advanced** -> **Dashboard.**
-2. Click the link icon (<img src="../../../.gitbook/assets/new link icon.png" alt="" data-size="line">) in the header of the card to which you wish to add a custom link. The **All Admin Custom Links** pane displays.
-3. Click Add. The **Add profiles Custom Link** pane displays.
+2. Click the link icon (<img src="../../../.gitbook/assets/new link icon.png" alt="" data-size="line">) on the card where you want to add a custom link. The **All Tenant Custom Links** pane displays.
+3. Click Add. The **Add&#x20;**_**DATA\_CARD\_NAME**_**&#x20;Custom Link** pane displays.
 4. Enter a **Name**, **URL**, and **Description** for the custom link.&#x20;
-5. Click **Submit**. The custom link is added to the data card on the Tenant AOS Dashboard.&#x20;
-
-### Adding New Dashboards In Grafana
-
-You can get the admin credentials for the grafana deployment from the tenant where the otel stack is deployed. It is the service called grafana-ui. Click edit on the service to get the credentials from the env.
-
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+5. Click **Submit**. The custom link is added to the Tenant Dashboard.&#x20;

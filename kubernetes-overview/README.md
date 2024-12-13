@@ -39,3 +39,7 @@ Moreover, you can add allocation tags to existing nodes with running services wh
 ## Kubernetes Integration with CloudWatch
 
 Additionally, DuploCloud can integrate with CloudWatch alarms via the DuploCloud UI to set up custom alerts for CPU/memory usage, ensuring proactive resource monitoring and management. This integration supports forwarding alerts to various notification systems like Sentry, PagerDuty, NewRelic, or OpsGenie for immediate action.
+
+## Kubernetes DuploCloud's Advanced Observability Suite
+
+DuploCloud's Advanced Observability Suite (AOS) works with all of your Kubernetes-based applications. See the [DuploCloud AOS documentation](../diagnostics-overview/advanced-observability-suite.md) for details. &#x20;

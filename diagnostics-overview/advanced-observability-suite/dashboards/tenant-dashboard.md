@@ -4,7 +4,7 @@ description: Working with the AOS Tenant Dashboard
 
 # Tenant Dashboard
 
-The **Tenant AOS Dashboard** provides cost and observability data by the Tenant for granular infrastructure management. It is accessible to non-administrators.&#x20;
+The **Tenant AOS Dashboard** provides cost and observability data by Tenant for granular infrastructure management. It is accessible to non-administrators who have access to the selected Tenant.&#x20;
 
 To access the **Tenant AOS Dashboard**, navigate to **Observability** -> **Advanced** -> **Dashboard**.
 
@@ -12,7 +12,7 @@ To access the **Tenant AOS Dashboard**, navigate to **Observability** -> **Advan
 
 ## Selecting a Tenant
 
-Use the **Tenant** list box at the top of the **Tenant AOS Dashboard** to select the Tenant for which you wish to view metrics.
+You can use the **Tenant** list box at the top of the Tenant AOS Dashboard to select the Tenant for which you want to view metrics.
 
 ## Viewing Tenant Cloud Spend Data
 
@@ -21,11 +21,7 @@ The **Cloud Spend** area, on the left side of the **Tenant AOS Dashboard**, offe
 * **Current Month**: Displays the current month’s spend for the selected Tenant.
 * **Spend By Service**: Displays a breakdown of cloud spending by Service.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/tenant cloud spend.png" alt="" width="560"><figcaption><p>The <strong>Tenant AOS Dashboard</strong>, <strong>Cloud Spend</strong> area</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/tenant cloud spend.png" alt="" width="560"><figcaption><p>The <strong>Tenant AOS Dashboard</strong>, <strong>Cloud Spend</strong> area</p></figcaption></figure></div>
 
 ## Viewing Tenant Observability Data
 
@@ -42,10 +38,6 @@ Under the **Observability** header are data cards displaying various metrics.
 * **Traces**: View traces specific to the Tenant for performance and latency monitoring of the Tenant’s applications.
 * **Profiles**: Access profiling data for in-depth application insights and performance tuning.
 
-For Grafana-generated metrics (e.g., **K8s/Docker**, **Logs**, **Metrics**, **Traces**, **Profiles**), you can click on the card (header or visual data) to open the corresponding detailed view in the Grafana console. Additionally, you can [add custom links to the data cards](tenant-dashboard.md#adding-custom-links-to-aos-dashboards).&#x20;
+For Grafana-generated metrics (e.g., **K8s/Docker**, **Logs**, **Metrics**, **Traces**, **Profiles**), you can click on the card (header or visual data) to open the corresponding detailed view in the Grafana console. Additionally, you [customize your data sources and dashboards](customizing-dashboards.md).
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Tenant Observability.png" alt="" width="563"><figcaption><p>The <strong>Tenant AOS Dashboard</strong>, <strong>Observability</strong> area</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Tenant Observability.png" alt="" width="563"><figcaption><p>The <strong>Tenant AOS Dashboard</strong>, <strong>Observability</strong> area</p></figcaption></figure></div>
