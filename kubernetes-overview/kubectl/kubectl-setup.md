@@ -40,10 +40,10 @@ To download `kubeconfig` using `duploctl`, follow [these instructions](https://c
 3. Click the **EKS** (for AWS), **GKE** (for GCP), or the **AKS** (for Azure) tab. The **Download Kubeconfig For Plan** pane displays.
 4. Click **Download Kubeconfig** to download the `kubeconfig` file.
 
-<figure><img src="../../../.gitbook/assets/pic 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/pic 1.png" alt=""><figcaption></figcaption></figure>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/pic 2.png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/pic 2.png" alt=""><figcaption></figcaption></figure></div>
 
 {% hint style="info" %}
-If you don't have Administrator access, you can use `duplo-jit` to access Kubernetes. When you click **Download kubeconfig**, the **Access to Kubernetes from your Workstation** window gives you the option to install [`duplo-jit`](../../../aws-user-guide/use-cases/jit-access.md) to access your Kubernetes cluster without obtaining permanent access keys.
+If you don't have Administrator access, you can use `duplo-jit` to access Kubernetes. When you click **Download kubeconfig**, the **Access to Kubernetes from your Workstation** window gives you the option to install [`duplo-jit`](../../aws-user-guide/use-cases/jit-access.md) to access your Kubernetes cluster without obtaining permanent access keys.
 {% endhint %}

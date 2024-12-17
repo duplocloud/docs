@@ -14,9 +14,9 @@ If you need to create an Ingress Load Balancer, refer to the[ AKS Ingress](../..
 DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service.
 {% endhint %}
 
-## Add a Load Balancer Listener&#x20;
+## Adding a Load Balancer
 
-Add a load balancer listener that uses the Kubernetes NodePort (K8S NodePort).
+Add a Load Balancer listener that uses the Kubernetes NodePort (K8S NodePort).
 
 Several Load Balancers are available for Azure. See the [Azure Documentation](https://learn.microsoft.com/en-us/azure/load-balancer/skus) for a comparison of each option.
 
@@ -25,7 +25,7 @@ Several Load Balancers are available for Azure. See the [Azure Documentation](ht
 * **Classic** (Basic load balancer)
 * **Health Check** - Selecting this load balancer allows the **Application LB** (Standard load balancer) to use Kubernetes Health Check to determine whether your service is running properly.
 
-### Before you begin
+### Prerequisites
 
 You must create [Services ](containers-and-services/#adding-a-duplocloud-service)before adding load balancers and listeners. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
 
@@ -49,3 +49,17 @@ You must create [Services ](containers-and-services/#adding-a-duplocloud-service
 Rules specify specific configurations for various types of Load Balancers.
 
 See the [Ingress ](../../kubernetes-overview/ingress-loadbalancer/aks-ingress/)use case for an example of how to configure Load Balancers using rules.&#x20;
+
+## Restricting Open Access to Public Load Balancers
+
+Restrict open access to your public Load Balancers by enforcing controlled access policies.
+
+1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.
+
+<div align="left"><figure><img src="../../.gitbook/assets/LB flag.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
+
+3. From the **Config Type** list box, select **Flags**.
+4. From the **Key** list box, select **Deny Open Access To Public LB**.&#x20;
+5. In the **Value** list box, select **True**.&#x20;
+6. Click **Submit**. Open access to public Load Balancers is restricted.&#x20;

@@ -27,11 +27,7 @@ See the [GCP Quick Start](../quick-start/) for an end-to-end example of deployin
 DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service.
 {% endhint %}
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure></div>
 
 ## Adding a certificate for an internal Load Balancer in GCP
 
@@ -71,3 +67,16 @@ resource "duplo_load_balancer" "internal_lb" {
 }
 ```
 
+## Restricting Open Access to Public Load Balancers
+
+Restrict open access to your public Load Balancers by enforcing controlled access policies.
+
+1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.
+
+<div align="left"><figure><img src="../../.gitbook/assets/LB flag.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
+
+3. From the **Config Type** list box, select **Flags**.
+4. From the **Key** list box, select **Deny Open Access To Public LB**.&#x20;
+5. In the **Value** list box, select **True**.&#x20;
+6. Click **Submit**. Open access to public Load Balancers is restricted.&#x20;

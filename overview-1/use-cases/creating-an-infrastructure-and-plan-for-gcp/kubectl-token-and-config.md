@@ -6,4 +6,4 @@ description: Connect to the Cluster namespace using the kubectl token.
 
 DuploCloud provides a way to connect directly to the Cluster namespace using the `kubectl` token.&#x20;
 
-See [kubectl Setup](../../../kubernetes-overview/kubectl/kubectl-setup/) for available options.
+See [kubectl Setup](../../../kubernetes-overview/kubectl/kubectl-setup.md) for available options.
