@@ -27,6 +27,8 @@ layout:
   * Support for [Table, Queue, and Container storage types](overview-2/azure-services/storage-account.md#create-storage-account) within Azure Storage Accounts.
 * GCP
   * Specify OS disk size when [creating a GCE VM](overview-1/use-cases/hosts-vms.md#gce-vm).
+* Kubernetes
+  * [Add Helm repositories and install Helm releases](kubernetes-overview/helm-charts.md) from the DuploCloud UI.
 
 ## Q2 2024
 
