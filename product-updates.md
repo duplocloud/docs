@@ -67,7 +67,7 @@ layout:
   * Enhanced access to [DuploCloud help options](welcome-to-duplocloud/duplocloud-support-model.md#how-to-get-help-from-within-the-duplocloud-portal) from the DuploCloud Platform.&#x20;
   * [Skip faults for stopped Tenant instances.](diagnostics-overview/faults-and-alarms/#muting-faults-for-stopped-tenants)
   * [Configure user access to multiple Tenants](access-control/tenant-access/) with one step.
-  * [Configure Okta](welcome-to-duplocloud/okta-identity-management.md) as a user source for the DuploCloud Portal.
+  * [Configure Okta](extras-overview/okta-identity-management.md) as a user source for the DuploCloud Portal.
   * [Customize the text on the login button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
 ## Q1 2024
@@ -142,11 +142,7 @@ layout:
     * Quickly search the DuploCloud Portal for any navigation menus or tab labels, such as **Kubernetes Secrets** and **Spend by Month**, using the **Search** box at the top center of the DuploCloud Portal.\
 
 
-    <div align="left">
-
-    <figure><img src=".gitbook/assets/search_menu.png" alt=""><figcaption><p>The <strong>Search</strong> box in the DuploCloud Portal<br></p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src=".gitbook/assets/search_menu.png" alt=""><figcaption><p>The <strong>Search</strong> box in the DuploCloud Portal<br></p></figcaption></figure></div>
 
     * Refer to the [Supported Third-Party Tools](automation-and-tools/supported-third-party-tools.md) page for a list of out-of-the-box functionalities DuploCloud supports.
     * DuploCloud no longer supports launch configurations. Instead, launch templates are created. If you use launch configurations, DuploCloud automatically converts them to launch templates with no interruption in uptime.&#x20;
@@ -232,7 +228,7 @@ layout:
 * CI/CD
   * Documentation for [Bitbucket Pipelines](introduction-to-ci-cd/bitbucket-pipelines/) is available, which allows developers to automatically build, test, and deploy their code every time they push changes to an Atlassian Bitbucket repository.&#x20;
 * Terraform&#x20;
-  * Added `IdleTimeout` to [`duplocloud_aws_load_balancer` resource](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/resources/aws\_load\_balancer).&#x20;
+  * Added `IdleTimeout` to [`duplocloud_aws_load_balancer` resource](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/resources/aws_load_balancer).&#x20;
 
 ## February 2023
 

@@ -44,7 +44,6 @@
       * [Diagnostics](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/diagnostics.md)
     * [Management Portal Scope](welcome-to-duplocloud/application-focussed-interface/management-portal-scope.md)
   * [User Logins](welcome-to-duplocloud/user-logins.md)
-  * [Okta Identity Management](welcome-to-duplocloud/okta-identity-management.md)
   * [Public Cloud Tutorials](welcome-to-duplocloud/public-cloud-tutorials.md)
   * [Getting Help with DuploCloud](welcome-to-duplocloud/duplocloud-support-model.md)
 * [Container Orchestrators](container-orchestrators/README.md)
@@ -491,3 +490,4 @@
   * [Allocation Tagging](extras-overview/creating-advanced-functions.md)
   * [Import an External Kubernetes Cluster](extras-overview/import-an-external-kubernetes-cluster.md)
   * [Delegate Subdomains](extras-overview/delegate-subdomains.md)
+  * [Okta Identity Management (Internal procedure)](extras-overview/okta-identity-management.md)
