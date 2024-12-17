@@ -11,11 +11,7 @@ description: Create an Azure Managed Instances in DuploCloud
 3. Provide the database **Name**, **Username**, **Password**, and **vCore**. Modify other values as needed.&#x20;
 4. Click **Submit**.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Azure_managed_instance_db (1).png" alt=""><figcaption><p><strong>Create Managed SQL Instance</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/Azure_managed_instance_db (1).png" alt=""><figcaption><p><strong>Create Managed SQL Instance</strong> pane</p></figcaption></figure></div>
 
 ## Viewing instance details
 

@@ -99,7 +99,7 @@ layout:
 * GCP
   * Additional supported actions for [Cloud SQL databases](overview-1/gcp-services/s3-bucket-1.md#create-a-cloud-scheduler-job) (GCP Console, Edit, Delete, Stop, Restart, or Reset Password)
   * [GKE Standard mode](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
-  * Support for [Firestore ](overview-1/gcp-services/firestore-database.md)databases.
+  * Support for [Firestore ](overview-1/gcp-services/gcp-databases/firestore-database.md)databases.
   * Support for [GCP Hosts](overview-1/use-cases/hosts-vms.md#id-3-toc-title) and [GCE VMs](overview-1/use-cases/hosts-vms.md#gce-vm).
   * Create [Node Pools](overview-1/gcp-services/node-pools.md) with support for accelerators and taints.
   * Support for [GKE Ingress.](kubernetes-overview/ingress-loadbalancer/gke-ingress.md)
@@ -172,8 +172,8 @@ layout:
   * [Automate fault healing](overview/use-cases/faults-and-alarms/automatic-fault-healing.md) on EC2 Hosts that fail a status check.
   * Enhanced support for [Startup Probes](overview/aws-services/setting-up-probes.md).
 * GCP
-  * Support for [Redis database instances](overview-1/gcp-services/managed-redis.md).
-  * Support for [SQL databases](overview-1/gcp-services/cloud-sql.md).
+  * Support for [Redis database instances](overview-1/gcp-services/gcp-databases/managed-redis.md).
+  * Support for [SQL databases](overview-1/gcp-services/gcp-databases/cloud-sql.md).
   * Change [Cloud Armour Security Policies](overview-1/gcp-services/cloud-armour.md#modifying-a-cloud-armour-configuration-security-policy).
 * General updates
   * **Last Login** card available for determining the last user sign-in when [viewing user access](access-control/add-edit-or-delete-a-user.md#view-users).
