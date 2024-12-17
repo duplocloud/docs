@@ -107,6 +107,7 @@ layout:
   * [Update a service with a stream-lined, read-to-use GitHub Actions script](introduction-to-ci-cd/github-actions/update-a-service.md).
 * Kubernetes
   * [Enable real-time alerts for autoscaling Kubernetes nodes.](overview/use-cases/hosts-vms/auto-scaling/kubernetes-scaling-options.md#allowing-real-time-alerts-for-autoscaling-kubernetes-nodes)
+  * Restrict open access to public Load Balancers for [AWS](overview/aws-services/load-balancers/#restricting-open-access-to-public-load-balancers),[ Azure](overview-2/azure-services/load-balancers.md#restricting-open-access-to-public-load-balancers), and [GCP](overview-1/gcp-services/step-4-create-a-load-balancer.md#restricting-open-access-to-public-load-balancers).&#x20;
 * General&#x20;
   * Support for [NIST-800-171 compliance](security-and-compliance/access-control-4.md).
   * [Customize the DuploCloud login screen banner.](extras-overview/login-banner-customization.md)

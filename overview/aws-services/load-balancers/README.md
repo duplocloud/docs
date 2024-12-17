@@ -35,7 +35,7 @@ To specify a custom classless inter-domain routing (CIDR) value for an NLB Load 
 
 Before completing this task, you must [add a Load Balancer Listener of **Type Network LB**](./#adding-a-load-balancer-listener).
 
-1. In the DuploCloud Portal, navigate **Docker** -> **Services** or **Kubernetes** -> **Service**.
+1. In the DuploCloud Portal, navigate **Docker** -> **Services** or **Kubernetes** -> **Services**.
 2. Select the Service name from the **NAME** column.
 3. Click the **Load Balancers** tab.
 4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../.gitbook/assets/image (199).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
@@ -187,3 +187,17 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 <div align="left"><figure><img src="../../../.gitbook/assets/AWS_LB_Other2.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
 
 6. Click **Save**.
+
+## Restricting Open Access to Public Load Balancers
+
+Restrict open access to your public Load Balancers by enforcing controlled access policies.
+
+1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.
+
+<div align="left"><figure><img src="../../../.gitbook/assets/LB flag.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
+
+3. From the **Config Type** list box, select **Flags**.
+4. From the **Key** list box, select **Deny Open Access To Public LB**.&#x20;
+5. In the **Value** list box, select **True**.&#x20;
+6. Click **Submit**. Open access to public Load Balancers is restricted.&#x20;
