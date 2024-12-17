@@ -22,8 +22,8 @@ layout:
 
 Use these FAQ documents to quickly find answers to popular questions about using AWS, Azure, and GCP with DuploCloud.
 
-{% content-ref url="overview/aws-faq.md" %}
-[aws-faq.md](overview/aws-faq.md)
+{% content-ref url="aws-user-guide/aws-faq.md" %}
+[aws-faq.md](aws-user-guide/aws-faq.md)
 {% endcontent-ref %}
 
 {% content-ref url="overview-2/azure-faq.md" %}
@@ -265,7 +265,7 @@ This means DuploCloud is going to remove these containers. DuploCloud supports t
 
 ### Is DuploCloud generating Terraform code behind the scenes to configure the cloud?
 
-No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state\_machine) of operations with built-in retries to ensure robustness. Interacting with the cloud provider continuously monitors configuration drift, system faults, security, and compliance controls.
+No. DuploCloud is calling the cloud provider's API directly. Based on user requirements, the software interacts with the cloud provider API asynchronously, maintaining a [state machine](https://en.wikipedia.org/wiki/Finite-state_machine) of operations with built-in retries to ensure robustness. Interacting with the cloud provider continuously monitors configuration drift, system faults, security, and compliance controls.
 
 ### If DuploCloud is not generating Terraform code behind the scenes, how can I use Infrastructure-as-Code?
 

@@ -101,7 +101,7 @@ Create a WebServer Service in the DuploCloud portal by selecting **OnPrem** from
 
 <figure><img src="../.gitbook/assets/image (426).png" alt=""><figcaption><p>The <strong>Basic Options</strong> page to add a Kubernetes Service with the <strong>Cloud</strong> list box set to <strong>OnPrem</strong></p></figcaption></figure>
 
-Once the service is created, you should be able to access the [`kubectl` shell](../kubernetes-overview/kubectl/kubectl-shell/#accessing-the-kubectl-shell-in-the-duplocloud-portal), retrieve the [KubeCtl Token](../kubernetes-overview/kubectl/kubectl-token.md), [Host/Container shell, and Container logs](../overview/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for the service you created.
+Once the service is created, you should be able to access the [`kubectl` shell](../kubernetes-overview/kubectl/kubectl-shell/#accessing-the-kubectl-shell-in-the-duplocloud-portal), retrieve the [KubeCtl Token](../kubernetes-overview/kubectl-setup/kubectl-token.md), [Host/Container shell, and Container logs](../overview/aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for the service you created.
 
 <figure><img src="../.gitbook/assets/image (428).png" alt=""><figcaption><p><strong>Containers</strong> tab for a Kubernetes Service</p></figcaption></figure>
 

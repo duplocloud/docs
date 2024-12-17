@@ -1,5 +1,5 @@
 ---
-description: Integrate DuploCloud with OpenVPN by provisioning VPNs for  users
+description: Integrate with OpenVPN by provisioning VPN users
 ---
 
 # VPN Setup
@@ -21,11 +21,7 @@ Accept the OpenVPN Free Tier (Bring Your Own License) agreement in the GCP marke
 2. Select the **VPN** tab.
 3. Click **Provision VPN.** Behind the scenes, DuploCloud launches a cloud formation script to provision the OpenVPN. OpenVPN is ready to use.  &#x20;
 
-<div align="left">
-
-<img src="../../../.gitbook/assets/image (244).png" alt="The VPN tab on the System Settings page in the DuploCloud Portal">
-
-</div>
+<div align="left"><img src="../../.gitbook/assets/image (244).png" alt="The VPN tab on the System Settings page in the DuploCloud Portal"></div>
 
 {% hint style="info" %}
 You can find the OpenVPN admin password in the cloud formation stack in your GCP console.
@@ -42,15 +38,11 @@ You can find the OpenVPN admin password in the cloud formation stack in your GCP
 5. Select **Provision VPN**.
 6. Click **Submit**.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/create user.png" alt=""><figcaption><p>The <strong>Create User</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/create user.png" alt=""><figcaption><p>The <strong>Create User</strong> pane</p></figcaption></figure></div>
 
 ### Deleting VPN Access for a User
 
-See [Deleting a VPN user](../../../access-control/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user). To delete VPN access, you must have administrator privileges.&#x20;
+See [Deleting a VPN user](../../access-control/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user). To delete VPN access, you must have administrator privileges.&#x20;
 
 ### Opening a VPN Port
 
@@ -62,11 +54,7 @@ By default, users connected to a VPN can SSH or RDP into virtual machines (VMs).
 4.  Click **Add**. The **Add Tenant Security** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/Add_Tenant_Security.png" alt=""><figcaption><p>The <strong>Add Tenant Security</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/Add_Tenant_Security.png" alt=""><figcaption><p>The <strong>Add Tenant Security</strong> pane</p></figcaption></figure></div>
 5. In the **Source Type** field, select **Ip Address**.&#x20;
 6. In the **IP CIDR** field, enter the VPN IP address range in CIDR notation, for example, `10.0.0.0/24` or `192.168.1.0/24`.
 7. In the **Protocol** list box, select the protocol you wish to allow through the VPN port.

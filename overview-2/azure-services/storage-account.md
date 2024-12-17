@@ -1,7 +1,3 @@
----
-description: Add a Storage Account in DuploCloud for Azure
----
-
 # Storage Account
 
 DuploCloud enables users to create Azure Storage Accounts, File Shares, and generate Shared Access Signatures (SAS). Azure Storage Accounts are essential for storing various types of data in the cloud, including blobs (unstructured data), files (managed file shares), queues (messaging), and tables (structured NoSQL data).
@@ -16,11 +12,7 @@ For more information about Azure Storage Accounts, refer to the [official Azure 
 2. In the **Name** field, give the Storage Account a name.
 3. Click **Create**.
 
-<div align="left">
-
-<img src="../../.gitbook/assets/image (35).png" alt="The Add Storage Account pane">
-
-</div>
+<div align="left"><img src="../../.gitbook/assets/image (35).png" alt="The Add Storage Account pane"></div>
 
 ## Adding Data Storage Sources (**Container, File Share, Queue, Table, Private Endpoint, Alerts**)
 
@@ -49,11 +41,7 @@ To view Storage Account and Endpoint details in the DuploCloud Portal
 2. Select the Storage Account from the **NAME** column.
 3. Click on **Actions** -> **Shared Access Signature**. Provide the necessary details as shown below.
 
-<div align="left">
-
-<img src="../../.gitbook/assets/image (236).png" alt="">
-
-</div>
+<div align="left"><img src="../../.gitbook/assets/image (236).png" alt=""></div>
 
 4. Click **Generate SAS** to generate Shared Access Signature (SAS) tokens.
 
@@ -69,11 +57,7 @@ Configure Tenant settings to block public network access to Storage Accounts.
 2. Select your Tenant name from the **NAME** column.&#x20;
 3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/add tenant feature (1).png" alt="" width="374"><figcaption><p>The <strong>Add Tenant Feature</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/add tenant feature (1).png" alt="" width="374"><figcaption><p>The <strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 
 4. From the **Select Feature** item list, select **Other**.&#x20;
 5. In the **Configuration** field, enter **block\_public\_network\_to\_azure\_storage**.&#x20;
@@ -81,11 +65,7 @@ Configure Tenant settings to block public network access to Storage Accounts.
 7.  Click **Add**. Public access to Storage Accounts is blocked. \
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/Screenshot (234).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the Tenants page in the DuploCloud Portal</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (234).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the Tenants page in the DuploCloud Portal</p></figcaption></figure></div>
 
 ## Creating Private Endpoints
 
@@ -96,11 +76,7 @@ Private endpoints let you access your Azure services over a private IP address w
 3.  Select the **Private Endpoint** tab, and click **Add**. The **Add Private Endpoint** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/add private endpoint.png" alt="" width="411"><figcaption><p>The <strong>Add Private Endpoint</strong> pane in the DuploCloud Portal</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/add private endpoint.png" alt="" width="411"><figcaption><p>The <strong>Add Private Endpoint</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 4. Enter a name for the endpoint in the **Name** field.&#x20;
 5. From the **Subnet** item list, select your subnet.&#x20;
 6. Select your storage type from the **Storage Type** item list (**Blob**, **File**, etc.).

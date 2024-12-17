@@ -10,11 +10,7 @@ description: Popular and frequently asked questions about DuploCloud and AWS
 
 AWS Copilot is used only for ECS cluster management, which is a small subset of overall cloud operations. The chart below shows that DuploCloud includes container management and multiple other functions. You can still use Copilot with DuploCloud for ECS management. Other clients have used tools like Harness or Helm with DuploCloud for Kubernetes management.
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/DC_Capabilities.png" alt=""><figcaption><p>DuploCloud features</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/DC_Capabilities.png" alt=""><figcaption><p>DuploCloud features</p></figcaption></figure></div>
 
 ### What keys should I use in my application to connect to the AWS resources I have created in DuploCloud (S3, Dynamo, SQS)? <a href="#id-4-toc-title" id="id-4-toc-title"></a>
 
@@ -110,7 +106,7 @@ DuploCloud provisions a Load Balancer for your K8s service. If you want to look 
 
 Find the Load Balancer name for your service by navigating to **Kubernetes** _->_ **Services**, selecting your Service from the list, and clicking the **Load Balancer** tab. If you're using K8s Ingress, go to the **K8s Ingress** tab to find the Load Balancer configuration.
 
-Once you have the Load Balancer name, you can access the AWS Console via the [DuploCloud U](../aws-user-guide/use-cases/jit-access.md)[I](../aws-user-guide/use-cases/jit-access.md). In the AWS Console, navigate to the EC2 service view and select Load Balancers from the left navigation menu. Find your Load Balancer name and scroll down to view detailed attributes.
+Once you have the Load Balancer name, you can access the AWS Console via the [DuploCloud U](use-cases/jit-access.md)[I](use-cases/jit-access.md). In the AWS Console, navigate to the EC2 service view and select Load Balancers from the left navigation menu. Find your Load Balancer name and scroll down to view detailed attributes.
 
 ## Terraform FAQs
 
@@ -172,7 +168,7 @@ Yes.
 
 ### Can I upgrade the RDS versions?
 
-Yes. See [AWS Console](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER\_UpgradeDBInstance.Upgrading.html) and your cloud provider for compatibility requirements. While versions 5.7.40, 5.7.41, and 5.7.42 cannot be upgraded to version 8.0.28, you can upgrade these versions to version 8.0.32 and higher.&#x20;
+Yes. See [AWS Console](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Upgrading.html) and your cloud provider for compatibility requirements. While versions 5.7.40, 5.7.41, and 5.7.42 cannot be upgraded to version 8.0.28, you can upgrade these versions to version 8.0.32 and higher.&#x20;
 
 ### Our current RDS logs are sent to CloudWatch. Does DuploCloud support this?&#x20;
 

@@ -8,5 +8,5 @@ description: Using Kubectl with DuploCloud for AWS, GCP, and Azure users
 
 DuploCloud users have two primary options for using `kubectl` to interact with Kubernetes clusters:&#x20;
 
-* [Download the `kubeconfig` and install `kubectl` locally](kubectl-setup.md). This setup allows full command-line access on your own machine and is ideal if you require persistent, scriptable access to Kubernetes resources.
+* [Download the `kubeconfig` and install `kubectl` locally](kubectl-setup/). This setup allows full command-line access on your own machine and is ideal if you require persistent, scriptable access to Kubernetes resources.
 * [DuploCloud’s in-browser solution](kubectl-shell/), where a preconfigured shell provides immediate access to `kubectl` without any local setup. This allows you to manage Kubernetes clusters from a browser tab, making it a quick and secure alternative to local configuration.

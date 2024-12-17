@@ -1,5 +1,7 @@
 ---
-description: Set up kubectl within the DuploCloud Portal by downloading the kubectl token
+description: >-
+  Set up KubeCtl within the DuploCloud Portal by downloading the token and
+  configuring Mirantis Lens for DuploCloud authentication.
 ---
 
 # Kubectl Tokens and Access Management
@@ -17,11 +19,7 @@ If you attempt to start a `kubectl` shell instance and receive a 503 in your web
 
 <figure><img src="../../.gitbook/assets/Screenshot (349).png" alt=""><figcaption><p>The <strong>Kubernetes Services</strong> page with the <strong>KubeCtl Token</strong> option highlighted</p></figcaption></figure>
 
-<div align="left">
-
-<img src="../../.gitbook/assets/image (194).png" alt="The kubectl Token window in the DuploCloud Portal">
-
-</div>
+<div align="left"><img src="../../.gitbook/assets/image (194).png" alt="The kubectl Token window in the DuploCloud Portal"></div>
 
 ## Downloading a `kubectl` Token for Non-Administrators
 
