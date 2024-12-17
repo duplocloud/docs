@@ -20,6 +20,11 @@ layout:
 
 # Product Updates
 
+## Q4 2024
+
+* General
+  * DuploCloud's [Advanced Observability Suite (AOS)](diagnostics-overview/advanced-observability-suite.md) is available as an add-on service.
+
 ## Q3 2024
 
 * Azure
