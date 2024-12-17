@@ -25,6 +25,16 @@ Pyroscope is the backend for profiles that show the CPU and Memory profile for t
 * **Debugging Latency Issues**: Detecting areas with high latency that may affect user experience.
 * **Root Cause Analysis**: Correlating profiling data with logs and traces to identify the cause of performance issues.
 
-For more information about profile data, see the [Grafana Pyroscope documentation](https://grafana.com/docs/pyroscope/latest/view-and-analyze-profile-data/flamegraphs/).&#x20;
+## Exploring Profiles in the DuploCloud Advanced Observability Suite
+
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** (Administrator AOS Dashboard) **or Observability** -> **Advanced** -> **Dashboard** (Tenant AOS Dashboard). The AOS Dashboard displays.
+2. Select your Infrastructure from the **Infrastructure** list box (Administrator AOS Dashboard) or **Tenant** from the Tenant list box (Tenant AOS Dashboard).&#x20;
+3. Click the **Profiles** card. The Grafana **Profiles** dashboard displays.
+
+For more information about profile data, see the [Grafana Pyroscope documentation](https://grafana.com/docs/grafana/latest/datasources/pyroscope/query-profile-data/).&#x20;
 
 <figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>The Grafana <strong>Profiling</strong> Dashboard</p></figcaption></figure>
+
+### Viewing Profiles and Traces in Grafana
+
+You can use the **Explore** feature in Grafana to [view profiles and traces together](https://grafana.com/docs/grafana/latest/datasources/pyroscope/profiling-and-tracing/). This allows you to correlate profiling and trace data for deeper insights into your application's performance. To learn more, check out the [Pyroscope in Grafana documentation](https://grafana.com/docs/pyroscope/latest/introduction/pyroscope-in-grafana/).
