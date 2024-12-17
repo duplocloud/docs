@@ -1,5 +1,5 @@
 ---
-description: Accept OpenVPN, provision the VPN, add VPN users, and manage connection limits
+description: Accept OpenVPN, provision the VPN, and add VPN users
 ---
 
 # VPN Setup
@@ -47,10 +47,6 @@ To enable users connected to the VPN to access various services, including datab
 6. From the **IP CIDR** list box, select your IP CIDR.
 7. Click **Add**.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/Add_Tenant_Security.png" alt=""><figcaption><p>The <strong>Add Tenant Security</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/Add_Tenant_Security.png" alt=""><figcaption><p>The <strong>Add Tenant Security</strong> pane</p></figcaption></figure></div>
 
 This comprehensive guide ensures your VPN setup is not only up and running but also scalable to meet the needs of your growing team.

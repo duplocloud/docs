@@ -1,5 +1,5 @@
 ---
-description: Set up Docker Registry credentials for external registry users
+description: Set Docker registry credentials
 ---
 
 # Docker Registry Credentials (Optional)
@@ -28,8 +28,4 @@ Pull images from multiple Docker registries by adding multiple Docker Registry C
 6. In the **Value** field, enter your registry credentials.
 7. Click **Submit**.&#x20;
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/aws_add_config.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/aws_add_config.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>

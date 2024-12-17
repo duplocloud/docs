@@ -1,5 +1,8 @@
 ---
-description: Use DuploCloud-JIT access to interact with the AWS Console and resources
+description: >-
+  DuploCloud makes access to AWS extraordinarily simple with just-in-time (JIT)
+  access to both the AWS console and the AWS CLI, both with least-priviledged
+  IAM permissions and short-lived access.
 ---
 
 # Just-in-Time (JIT) Access
@@ -163,11 +166,7 @@ If you increase the JIT session timeout beyond the AWS default of one (1) hour, 
 3.  Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/update_tenant_JIT_TO.png" alt="" width="281"><figcaption><p>The <strong>Update Tenant Feature</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/update_tenant_JIT_TO.png" alt="" width="281"><figcaption><p>The <strong>Update Tenant Feature</strong> pane</p></figcaption></figure></div>
 4. Select **AWS Access Token Validity** from the **Select Feature** list box.
 5. In the **Value** field, enter the length of time JIT access should remain active in seconds.&#x20;
 6. Click **Update**. The new setting is displayed on the Tenant details page under the **Settings** tab.
@@ -181,11 +180,7 @@ By default, AWS IAM roles have a maximum session duration of one (1) hour. You c
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Systems Settings**.
 2. Select the **System Config** tab, and click **Add**. The **Update Config AppConfig** pane displays.&#x20;
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/update config.png" alt="" width="324"><figcaption><p>The <strong>Update Config AppConfig</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/update config.png" alt="" width="324"><figcaption><p>The <strong>Update Config AppConfig</strong> pane</p></figcaption></figure></div>
 
 3. From the **Config Type** list box, select **AppConfig**.
 4. From the **Key** list box, select **AdminJitSessionDuration**.

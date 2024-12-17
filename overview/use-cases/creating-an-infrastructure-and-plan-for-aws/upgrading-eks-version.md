@@ -37,11 +37,7 @@ After the upgrade process completes successfully, you can assign allocation tags
 3. Select the **EKS** tab. If an upgrade is available for the Infrastructure, an **Upgrade** link appears in the **Value** column.
 4. Click the **Upgrade** link. The **Upgrade EKS Cluster** pane displays.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.04-15_02_49.png" alt=""><figcaption><p>The <strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.04-15_02_49.png" alt=""><figcaption><p>The <strong>Upgrade EKS Cluster</strong> pane</p></figcaption></figure></div>
 
 5. From the **Target Version** list box, select the version to which you want to upgrade.&#x20;
 6. From the **Host Upgrade Action**, select the method by which you want to upgrade hosts.
@@ -57,11 +53,7 @@ After the upgrade process completes successfully, you can assign allocation tags
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-13_23_09.png" alt=""><figcaption><p>EKS tab with component <strong>Upgrade</strong> available</p></figcaption></figure>
 4. Click the **Upgrade** link. The **Upgrade EKS Cluster** **Components** pane displays.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p><strong>Upgrade EKS Cluster Components</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption><p><strong>Upgrade EKS Cluster Components</strong> pane</p></figcaption></figure></div>
 
 5. From the **Host Upgrade Action**, select the method by which you want to upgrade hosts.
 6. Click **Start**. The upgrade process begins.
@@ -97,4 +89,4 @@ If any of your Hosts use allocation tags, you must assign allocation tags to the
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_29_01.png" alt=""><figcaption><p>Allocation tags in the <strong>Add Host</strong> screen</p></figcaption></figure>
 
-For additional information about the EKS version upgrade process with DuploCloud, see the [AWS FAQs section on EKS version upgrades](../../aws-faq.md#eks-version-upgrade-faqs).                    &#x20;
+For additional information about the EKS version upgrade process with DuploCloud, see the [AWS FAQs section on EKS version upgrades](../../../aws-user-guide/aws-faq.md#eks-version-upgrade-faqs).                    &#x20;

@@ -1,5 +1,5 @@
 ---
-description: Creating a Route 53 hosted zone to program DNS entries in GCP
+description: Creating a Route 53 hosted zone to program DNS entries
 ---
 
 # Cloud DNS Zone
@@ -24,17 +24,9 @@ Create a DNS Zone in the GCP Console:
 1. Navigate to your root Domain Provider's site (for `acme.com`, for example).
 2. Create an NS record that references the domain name of the hosted zone you created (`apps.acme.com`), and add the zone name to the Nameservers you noted above.
 
-<div align="left">
+<div align="left"><figure><img src="../../.gitbook/assets/GCP-DNS1.png" alt=""><figcaption></figcaption></figure></div>
 
-<figure><img src="../../.gitbook/assets/GCP-DNS1.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/GCP-DNS2.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/GCP-DNS2.png" alt=""><figcaption></figcaption></figure></div>
 
 ## Provisioning the Zone in DuploCloud
 
@@ -51,11 +43,7 @@ Provision the zone in every DuploCloud Plan, starting with the Plan created in t
 Do not forget the dot (**.**) at the beginning of the DNS suffix, in the form as shown below.
 {% endhint %}
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (314).png" alt=""><figcaption><p>The <strong>Set Plan DNS</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (314).png" alt=""><figcaption><p>The <strong>Set Plan DNS</strong> pane</p></figcaption></figure></div>
 
 {% hint style="info" %}
 Note that this domain must be set in each new Plan you create in your DuploCloud Infrastructure.
