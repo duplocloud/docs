@@ -4,4 +4,10 @@ description: Databases supported by DuploCloud AWS
 
 # Databases
 
-A number of databases are supported for DuploCloud and AWS. Use the procedures in this section to set them up.
+DuploCloud supports the following databases for AWS. Use the procedures in this section to set them up.
+
+* [RDS](rds-database/) (MariaDB, MySQL, PostgreSQL, SQL-Express, SQL-Web, SQL-Standard, Aurora MySQL, Aurora MySQL Serverless, Aurora PostgreSQL, Aurora PostgreSQL Serverless)
+* [DynamoDB](dynamodb.md)
+* [Timestream](timestream-database.md)
+* [ElastiCache](../../../overview/aws-services/database/elastic-cache.md) (Redis, Memcached)
+

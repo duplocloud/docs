@@ -18,7 +18,7 @@ There are two Firestore Database modes to choose from:&#x20;
 3.  Click **Add**. The **Add Firestore DB** page displays. \
 
 
-    <figure><img src="../../.gitbook/assets/firestore 1.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/firestore 1.png" alt=""><figcaption></figcaption></figure>
 4. In the **Name** field, enter a name for your database.
 5. From the **Type** list box, select **FIRESTORE\_NATIVE** or **DATASTORE\_MODE**.&#x20;
 6. Select your location from the **Location** list box.&#x20;
@@ -26,7 +26,7 @@ There are two Firestore Database modes to choose from:&#x20;
 8. From the **Delete Protection State list box,** enable or disable delete protection.&#x20;
 9. Click **Create**. Your Firestore Database is created.&#x20;
 
-<figure><img src="../../.gitbook/assets/firestore 2.png" alt=""><figcaption><p>The details for the created Firestore Database.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/firestore 2.png" alt=""><figcaption><p>The details for the created Firestore Database.</p></figcaption></figure>
 
 
 

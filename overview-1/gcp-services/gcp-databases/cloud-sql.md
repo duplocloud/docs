@@ -16,7 +16,7 @@ Use this procedure to create:
 2.  Click **Add**. The **Add SQL DB** page displays. \
 
 
-    <figure><img src="../../.gitbook/assets/CloudSQLDB create.png" alt=""><figcaption><p>The <strong>Add SQL DB</strong> page in the DuploCloud Portal</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/CloudSQLDB create.png" alt=""><figcaption><p>The <strong>Add SQL DB</strong> page in the DuploCloud Portal</p></figcaption></figure>
 3. Complete the fields (**Name**, **Disk Size**, **SQL Version**, **Tier**, **Root Password**) as required.
 4. Click **Create**.&#x20;
 
@@ -24,7 +24,7 @@ Use this procedure to create:
 
 You can view database details and configure other options by navigating to **Cloud Services** ->  **Cloud SQL** and selecting the Cloud SQL database from the **NAME** column.
 
-<figure><img src="../../.gitbook/assets/CloudSQL details.png" alt=""><figcaption><p>The Cloud SQL database details page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/CloudSQL details.png" alt=""><figcaption><p>The Cloud SQL database details page in the DuploCloud Portal</p></figcaption></figure>
 
 ## Additional Supported Actions
 
