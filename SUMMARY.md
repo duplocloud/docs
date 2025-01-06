@@ -459,6 +459,7 @@
     * [Metrics](diagnostics-overview/standard-observability-suite/metrics-dashboard.md)
   * [Advanced Observability Suite](diagnostics-overview/advanced-observability-suite.md)
     * [Architecture](diagnostics-overview/advanced-observability-suite/architecture.md)
+    * [OTEL Stack Resource Requirements](diagnostics-overview/advanced-observability-suite/otel-stack-resource-requirements.md)
     * [Dashboards](diagnostics-overview/advanced-observability-suite/dashboards/README.md)
       * [Administrator Dashboard](diagnostics-overview/advanced-observability-suite/dashboards/administrator-dashboard.md)
       * [Tenant Dashboard](diagnostics-overview/advanced-observability-suite/dashboards/tenant-dashboard.md)

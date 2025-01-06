@@ -51,6 +51,6 @@ The Grafana-powered dashboards spotlight key metrics and visualize trends in rea
 
 * Request new capabilities via DuploCloud/Using the OpenTelemetry open-source API.
 
-## Additional Functions
+### Additional Functions
 
 From the Grafana console, you can perform various tasks to customize your observability experience and proactively manage system health. For additional information, see the [Grafana documentation](https://grafana.com/docs/grafana/latest/).&#x20;
