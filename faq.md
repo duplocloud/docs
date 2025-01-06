@@ -301,6 +301,10 @@ From the DuploCloud Portal, click on your name in the top right corner and selec
 
 Achieving SOC 2 Type 2 compliance is crucial for organizations looking to demonstrate high security and data protection. The process involves various costs, including using a Compliance Automation Platform, which may range from $10,000 to $15,000 or more for larger companies. The use of such platforms changes how the audit process is conducted. Understanding and managing these changes can cost between $7,500 and $15,000. Some companies offer both compliance tools and services. They may provide discounts if you bundle these services, offering a cost-saving opportunity. Companies starting their compliance journey should consult detailed resources to understand the expenses fully.
 
+### Do I need a GRC tool like Vanta or Drata if I am using DuploCloud?
+
+The best strategy for your organization will ultimately depend on your specific compliance needs and priorities. To learn more about the differences between compliance support offered by traditional GRC tools like Vanta or Drata and DuploCloud, see the [DuploCloud documentation](welcome-to-duplocloud/grc-tools-and-duplocloud.md) on this topic.
+
 ## CI/CD FAQs
 
 ### How does CI/CD work with DuploCloud?
