@@ -22,13 +22,13 @@ Alternatively, you can use the Certificate Manager to create a Certificate Map f
 2.  Navigate to **Certificate Manager**, and click **Classic Certificates**.\
 
 
-    <figure><img src="../../.gitbook/assets/image (432).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (432) (1).png" alt=""><figcaption></figcaption></figure>
 3. Click on **Create SSL Certificate**.
 4. Provide the certificate with a name and upload the public and private key certificate files obtained in the prerequisite.&#x20;
    * As a best practice, name the certificate `global-<DNS Domain name>`, where the dots (`.`) are replaced with hyphens (`-`). For example, if your domain is `example.com`, name the certificate `global-example-com`.
 5. Note the name of the global certificate for use in future steps.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (433).png" alt="" width="563"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (433) (1).png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 ## Creating a Regional Certificate for Private/Internal Load Balancers
 

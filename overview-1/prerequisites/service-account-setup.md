@@ -25,7 +25,7 @@ A service account and a key are created for each GCP project to be onboarded.&#x
 3. Complete **Service Account Details**.
 4. In the **Grant this service account access to project** step, assign the **Owner** role as shown below, giving the account owner permission to the project. Complete the wizard, and click **Done**.
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (436).png" alt=""><figcaption><p>Assign <strong>Owner</strong> role to grant account owner permission to the project</p></figcaption></figure></div>
+<div align="center"><figure><img src="../../.gitbook/assets/image (436) (1).png" alt=""><figcaption><p>Assign <strong>Owner</strong> role to grant account owner permission to the project</p></figcaption></figure></div>
 
 3. Select the Service Account you created and add a new **JSON** Key.
 4. Download the JSON file and give it a meaningful name, such as `my-gcp-project-sa-key.json`.&#x20;
