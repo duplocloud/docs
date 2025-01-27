@@ -24,6 +24,8 @@ layout:
 
 * General
   * DuploCloud's [Advanced Observability Suite (AOS)](diagnostics-overview/advanced-observability-suite.md) is available as an add-on service.
+* AWS&#x20;
+  * DuploCloud's [Stacks ](automation-and-tools/automation-stacks/)feature is a no-code/low-code solution for importing, replicating, and managing resources across cloud environments. DuploCloud Stacks empowers users to replicate resources quickly and easily, minimizing onboarding time and reducing reliance on niche expertise.&#x20;
 
 ## Q3 2024
 
