@@ -503,4 +503,4 @@
   * [Allocation Tagging](extras-overview/creating-advanced-functions.md)
   * [Import an External Kubernetes Cluster](extras-overview/import-an-external-kubernetes-cluster.md)
   * [Delegate Subdomains](extras-overview/delegate-subdomains.md)
-  * [Okta Identity Management (Internal procedure)](extras-overview/okta-identity-management.md)
+  * [Okta Identity Management](extras-overview/okta-identity-management.md)
