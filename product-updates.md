@@ -76,8 +76,8 @@ layout:
   * Enhanced access to [DuploCloud help options](welcome-to-duplocloud/duplocloud-support-model.md#how-to-get-help-from-within-the-duplocloud-portal) from the DuploCloud Platform.&#x20;
   * [Skip faults for stopped Tenant instances.](diagnostics-overview/faults-and-alarms/#muting-faults-for-stopped-tenants)
   * [Configure user access to multiple Tenants](access-control/tenant-access/) with one step.
-  * [Configure Okta](extras-overview/okta-identity-management.md) as a user source for the DuploCloud Portal.
-  * [Customize the text on the login button](extras-overview/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
+  * [Configure Okta](access-control/sso-configuration/okta-identity-management.md) as a user source for the DuploCloud Portal.
+  * [Customize the text on the login button](access-control/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
 ## Q1 2024
 
@@ -117,7 +117,7 @@ layout:
   * Restrict open access to public Load Balancers for [AWS](overview/aws-services/load-balancers/#restricting-open-access-to-public-load-balancers),[ Azure](overview-2/azure-services/load-balancers.md#restricting-open-access-to-public-load-balancers), and [GCP](overview-1/gcp-services/step-4-create-a-load-balancer.md#restricting-open-access-to-public-load-balancers).&#x20;
 * General&#x20;
   * Support for [NIST-800-171 compliance](security-and-compliance/access-control-4.md).
-  * [Customize the DuploCloud login screen banner.](extras-overview/login-banner-customization.md)
+  * [Customize the DuploCloud login screen banner.](access-control/login-banner-customization.md)
   * [Set Tenants to expire](overview/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
   * Configure settings for all new Tenants under a Plan using [Tenant Config tab](overview/use-cases/tenant-environment/tenant-config-settings.md).
   * SIEM - [Configure agents to install on specific Tenants.](security-and-compliance/access-control-3/agent-management.md#agent-setup)
