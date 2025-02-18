@@ -169,6 +169,7 @@
         * [Enable or disable RDS logging](overview/aws-services/database/rds-database/enable-or-disable-rds-logging.md)
         * [Restrict RDS instance size](overview/aws-services/database/rds-database/restrict-rds-instance-size.md)
         * [Add parameters in Parameter Groups](overview/aws-services/database/rds-database/add-parameters-in-parameter-groups.md)
+        * [Manage Performance Insights](overview/aws-services/database/rds-database/manage-performance-insights.md)
     * [Data Pipeline](overview/aws-services/data-pipeline.md)
     * [Elastic File System (EFS)](aws-user-guide/aws-services/elastic-file-system-efs/README.md)
       * [Mount an EFS in an EC2 instance](aws-user-guide/aws-services/elastic-file-system-efs/mount-an-efs-in-an-ec2-instance.md)
