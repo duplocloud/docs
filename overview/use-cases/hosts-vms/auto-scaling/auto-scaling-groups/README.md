@@ -47,6 +47,20 @@ The Use for Cluster Autoscaling option will not be available until you enable th
     * Enter **Base64 Data**, **Volumes**, or **Tags**.
 11. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
 
+<figure><img src="../../../../../.gitbook/assets/Screenshot (33).png" alt=""><figcaption><p>The <strong>Add ASG</strong> page </p></figcaption></figure>
+
+3. In the **Friendly Name** field, enter the name of the ASG.
+4. Select **Availability Zone** and **Instance Type**.
+5. In the **Instance Count** field, enter the desired capacity for the Autoscaling group.
+6. In the **Minimum Instances** field, enter the minimum number of instances. The Autoscaling group ensures that the total number of instances is always greater than or equal to the minimum number of instances.
+7. In the **Maximum Instances** field, enter the maximum number of instances. The Autoscaling group ensures that the total number of instances is always less than or equal to the maximum number of instances.
+8. Optionally, select **Use for Cluster Autoscaling**.
+9.  Optionally select **Advanced Options,** and complete additional fields as needed. \
+
+
+    <figure><img src="../../../../../.gitbook/assets/asg3.png" alt=""><figcaption><p>ASG <strong>Advanced Options</strong> </p></figcaption></figure>
+10. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
+
 ## Viewing Hosts in Autoscaling Groups
 
 To view the hosts in an Autoscaling group, follow these steps:
@@ -61,11 +75,3 @@ To view the hosts in an Autoscaling group, follow these steps:
 ## **Creating an Amazon EC2 Autoscaling Policy**
 
 Refer to AWS [Documentation](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html#as-how-scaling-policies-work) for detailed steps on creating Scaling policies for the Autoscaling Group.
-
-## **Creating Services using Autoscaling Groups**
-
-The DuploCloud Portal provides the ability to configure Services based on the platforms **EKS Linux** and **Linux Docker/Native**.  Select the ASG based on the platform used when creating services and Autoscaling groups. Optionally, if you previously [enabled Spot Instances in the ASG](spot-instances.md#enabling-spot-instances-when-creating-autoscaling-groups), you can configure the Service to use Spot Instances by selecting **Tolerate spot instances**.&#x20;
-
-![ASG name with EKS Linux](<../../../../../.gitbook/assets/image (231).png>)
-
-![ASG name using Linux Docker/Native](<../../../../../.gitbook/assets/image (141).png>)

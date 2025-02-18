@@ -98,6 +98,8 @@
       * [Adding Dedicated Hosts](overview/use-cases/hosts-vms/adding-dedicated-hosts.md)
       * [Autoscaling Hosts](overview/use-cases/hosts-vms/auto-scaling/README.md)
         * [Autoscaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/README.md)
+          * [Launch Templates](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md)
+          * [Instance Refresh for ASG](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md)
           * [Scale to or from Zero](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/scale-to-or-from-zero.md)
           * [Spot Instances for AWS](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/spot-instances.md)
         * [ECS Autoscaling](overview/use-cases/hosts-vms/auto-scaling/ecs-auto-scaling.md)
