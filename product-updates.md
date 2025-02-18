@@ -91,7 +91,7 @@ layout:
   * Enhanced access to [DuploCloud help options](welcome-to-duplocloud/duplocloud-support-model.md#how-to-get-help-from-within-the-duplocloud-portal) from the DuploCloud Platform.&#x20;
   * [Skip faults for stopped Tenant instances.](diagnostics-overview/faults-and-alarms/#muting-faults-for-stopped-tenants)
   * [Configure user access to multiple Tenants](access-control/tenant-access/) with one step.
-  * [Configure Okta](access-control/sso-configuration/okta-identity-management.md) as a user source for the DuploCloud Portal.
+  * [Configure Okta](extras-overview/okta-identity-management.md) as a user source for the DuploCloud Portal.
   * [Customize the text on the login button](access-control/login-banner-customization.md#adding-custom-login-banner-button-text) for custom banners.
 
 ## Q1 2024

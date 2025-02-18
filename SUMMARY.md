@@ -465,7 +465,7 @@
   * [API tokens](access-control/api-tokens.md)
   * [SSO Configuration](access-control/sso-configuration/README.md)
     * [Azure SSO Configuration](access-control/sso-configuration/azure-ad-as-idp.md)
-    * [Okta Identity Management](access-control/sso-configuration/okta-identity-management.md)
+    * [Okta Identity Management](extras-overview/okta-identity-management.md)
   * [Login Banner/Button Customization](access-control/login-banner-customization.md)
 * [Observability](diagnostics-overview/README.md)
   * [Standard Observability Suite](diagnostics-overview/standard-observability-suite/README.md)
