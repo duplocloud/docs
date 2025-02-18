@@ -43,7 +43,7 @@ You can create multiple deployments for multiple tenants. In the case of Kuberne
 *   **Deployment Type** is either a K8s DaemonSet or Docker Native for built-in container orchestration.\
 
 
-    <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Update Security Agent Deployment</strong> page</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Update Security Agent Deployment</strong> page</p></figcaption></figure>
 
 
 

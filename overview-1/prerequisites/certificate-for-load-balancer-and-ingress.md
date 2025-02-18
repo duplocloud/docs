@@ -57,4 +57,4 @@ Add multiple domains to the SSL certificate. This is especially useful for domai
 4. Add the global and regional certificates, one at a time You can name them the same names you used in the GCP portal. For each certificate, choose the type **LB SSL Certificate.**
 5. Click **Create**. The GCP certificates are added to your DuploCloud Portal.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add a Certificate</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add a Certificate</strong> pane</p></figcaption></figure></div>

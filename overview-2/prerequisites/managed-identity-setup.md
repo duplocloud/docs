@@ -41,7 +41,7 @@ Follow these steps post the installation of DuploCloud portal in Azure VM:
 6. Search for and select the managed identity created in Step 1.
 7. Click **Save** to complete the role assignment.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Role assignment for Managed Identity</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Role assignment for Managed Identity</p></figcaption></figure>
 
 ## Step 4: Assign "owner" role to DuploCloud VM
 

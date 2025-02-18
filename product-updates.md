@@ -26,8 +26,11 @@ layout:
   * DuploCloud's [Advanced Observability Suite (AOS)](diagnostics-overview/advanced-observability-suite.md) is available as an add-on service.
 * AWS&#x20;
   * DuploCloud's [Stacks ](automation-and-tools/automation-stacks/)feature is a no-code/low-code solution for importing, replicating, and managing resources across cloud environments. DuploCloud Stacks empowers users to replicate resources quickly and easily, minimizing onboarding time and reducing reliance on niche expertise.&#x20;
-
-- AWS
+* AWS
+  * Support for configuring [S3 bucket replication rules](overview/aws-services/s3-bucket.md#s3-bucket-replication-rules).
+* General
+  * DuploCloud's [Advanced Observability Suite (AOS)](diagnostics-overview/advanced-observability-suite.md) is available as an add-on service.
+* AWS
   * Configure [automated snapshot settings for AWS Redis](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance), including snapshot name, ARNs, retention limit, start time, and duration.
 
 ## Q3 2024
