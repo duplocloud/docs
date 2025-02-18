@@ -2,7 +2,7 @@
 description: Create ElastiCache for Redis database and Memcache memory caching
 ---
 
-# Amazon ElastiCache
+# AWS ElastiCache
 
 [Amazon ElastiCache](https://aws.amazon.com/elasticache/features/) is a serverless, Redis- and Memcached-compatible caching service delivering real-time, cost-optimized performance for modern applications.
 
@@ -17,11 +17,7 @@ description: Create ElastiCache for Redis database and Memcache memory caching
 7. Select the node size in the **Size** list box.
 8. Click **Create**. The Memcached ElastiCache instance is created.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/memcache.png" alt=""><figcaption><p>The <strong>Create an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/memcache.png" alt=""><figcaption><p>The <strong>Create an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
 
 {% hint style="info" %}
 Pass the cache endpoint to your application through the [Environment Variables](../containers/passing-config-and-secrets.md) via the AWS Service.
@@ -32,7 +28,7 @@ Pass the cache endpoint to your application through the [Environment Variables](
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. Select the **ElastiCache** tab, and click **Add**. The **Create an ElastiCache** page displays.
 
-<figure><img src="../../../.gitbook/assets/elasticache new.png" alt=""><figcaption><p>The <strong>Create an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/create a redis (1).png" alt=""><figcaption><p>The <strong>Create</strong> <strong>an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 3. Provide the database **Name**.
 4. Select the number of **Replicas**.
@@ -40,16 +36,22 @@ Pass the cache endpoint to your application through the [Environment Variables](
 6. Optionally, enable **Cluster Mode**.
 7. In the **Type** field, select **Redis**.
 8. In the **Size** list box, select the node size.
-9. Optionally, complete the **Redis Version**, **Parameter Group Name**, **KMS (Optional)**, **Encryption At Transit**, **Snapshot Name**, **Snapshot ARNs**, and **Snapshot Retention Limit** fields.
-10. Optionally, click the **CloudWatch** link above the **Log Delivery Configuration** field to configure the Redis instance to deliver its engine logs to Amazon CloudWatch Logs. The **Add CloudWatch Logs: Log Delivery Configuration** pane displays. Complete the **Log Format**, **Log Type**, and **Log Group** fields. Click **Add Config**. The configuration is added to the **Log Delivery Configuration** field.
+9. Optionally, complete the **Redis Version**, **Parameter Group Name**, **KMS (Optional)**, and **Encryption At Transit** fields.&#x20;
+10. Optionally, complete the snapshot settings to configure backup:&#x20;
 
-<div align="left">
+* **Snapshot Name:** A label you give to the snapshot for easy identification.
+* **Snapshot ARNs**: The link to a specific backup file stored in Amazon S3 that you want to reference or use.
+* **Snapshot Retention Limit:** The maximum number of snapshots you want to keep; older ones will be automatically deleted when this limit is reached.
+* **Snapshot Window Start Time**: The time when your automated snapshot process will begin.
+* **Snapshot Window Duration in hours**: The length of time allowed for taking the snapshots automatically.
 
-<figure><img src="../../../.gitbook/assets/cloudwatch logs pane.png" alt="" width="350"><figcaption><p>The <strong>Add CloudWatch Logs: Log Delivery Configuration</strong> pane</p></figcaption></figure>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (15) (1).png" alt="" width="563"><figcaption></figcaption></figure></div>
 
-</div>
+11. Optionally, click the **CloudWatch** link above the **Log Delivery Configuration** field to configure the Redis instance to deliver its engine logs to Amazon CloudWatch Logs. The **Add CloudWatch Logs: Log Delivery Configuration** pane displays. Complete the **Log Format**, **Log Type**, and **Log Group** fields. Click **Add Config**. The configuration is added to the **Log Delivery Configuration** field.
 
-11. Click **Create**. The Redis database instance is created
+<div align="left"><figure><img src="../../../.gitbook/assets/cloudwatch logs pane.png" alt="" width="350"><figcaption><p>The <strong>Add CloudWatch Logs: Log Delivery Configuration</strong> pane</p></figcaption></figure></div>
+
+12. Click **Create**. The Redis database instance is created
 
 ## Troubleshooting Redis Connection Issues in AWS
 

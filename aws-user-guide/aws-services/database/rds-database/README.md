@@ -42,7 +42,7 @@ You can create Aurora Serverless V2 Databases by selecting **Aurora-MySql-Server
 
 ## Creating a publicly available RDS database
 
-1. [Create a DB subnet group in AWS](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/SubnetGroups.Creating.html) consisting _only_ of public subnets from your VPC.
+1. [Create a DB subnet group in AWS](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/SubnetGroups.Creating.html) consisting **only** of public subnets from your VPC.
 2. &#x20;In the DuploCloud Portal, navigate to **Cloud Services** -> **Databases**
 3. Select the **RDS** tab, and click **Add**. The **Create a RDS** page displays.&#x20;
 4. In the **DB Subnet Group** list box select the public DB subnet group you created in AWS.&#x20;

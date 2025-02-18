@@ -478,6 +478,7 @@
     * [Logging with Loki](diagnostics-overview/advanced-observability-suite/logging-with-loki.md)
     * [Metrics with Mimir](diagnostics-overview/advanced-observability-suite/metrics-with-mimir.md)
     * [Tracing with Tempo](diagnostics-overview/advanced-observability-suite/tracing-with-tempo.md)
+    * [Service Level Objectives (SLOs)](diagnostics-overview/advanced-observability-suite/service-level-objectives-slos.md)
     * [Profiles with Pyroscope](diagnostics-overview/advanced-observability-suite/profiles-with-pyroscope.md)
     * [Alerts with Alert Manager](diagnostics-overview/advanced-observability-suite/alerts-with-alert-manager.md)
     * [OTEL Stack Resource Requirements](diagnostics-overview/advanced-observability-suite/otel-stack-resource-requirements.md)
