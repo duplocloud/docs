@@ -28,3 +28,8 @@ Once the initial integration is setup and fully configured, you can use the [Okt
   * [Create an Okta API token](https://help.okta.com/en-us/content/topics/security/api.htm#create-okta-api-token)
   * [Manage Okta API tokens](https://help.okta.com/en-us/content/topics/security/api.htm)
 
+{% hint style="info" %}
+#### Syncing Okta Updates
+
+It can take several minutes for changes made in Okta to reflect in the DuploCloud UI. After making changes in Okta, navigate to **Administrator** -> **Users** in the DuploCloud Portal, and click the **Sync** button to immediately synchronize updates.
+{% endhint %}
