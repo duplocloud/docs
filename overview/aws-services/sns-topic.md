@@ -9,19 +9,17 @@ A SNS Topic is a logical access point that acts as a communication channel. It l
 ## Creating a SNS Topic
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
-2.  Click **Add**. The **Create a SNS Topic** pane displays.\
+2. Click **Add**. The **Create a SNS Topic** pane displays.
 
-
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/snst1.png" alt=""><figcaption><p><strong>Create a SNS Topic</strong> pane</p></figcaption></figure>
-
-    </div>
-
+<div align="left"><figure><img src="../../.gitbook/assets/sns new.png" alt="" width="411"><figcaption><p>The <strong>Create a SNS Topic</strong> pane</p></figcaption></figure></div>
 
 3. In the **Name** field, enter the SNS Topic name.
+   * If you plan to select **FIFO Mode**, your SNS topic must end with the `.fifo` suffix, for example `my-topic.fifo`, to indicate that it is a **FIFO (First-In, First-Out) Topic**. Without this suffix, the topic will be treated as a standard topic.
 4. From the **Encryption Key** list box, select a key.
-5. Click **Create**.
+5. Optionally, select **FIFO Mode** and **Enable FIFO content based deduplication**.
+   * **FIFO Mode**: Ensures that messages are processed in the exact order they are sent.
+   * **Enable FIFO content-based deduplication**: Prevents duplicate messages from being delivered to the subscribers if the same message content is sent within a 5-minute window.
+6. Click **Create**.
 
 ## Setting SNS Topic Alerts
 
