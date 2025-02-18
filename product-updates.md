@@ -20,27 +20,43 @@ layout:
 
 # Product Updates
 
-## Q4 2024
-
-* General
-  * DuploCloud's [Advanced Observability Suite (AOS)](diagnostics-overview/advanced-observability-suite.md) is available as an add-on service.
-* AWS&#x20;
-  * DuploCloud's [Stacks ](automation-and-tools/automation-stacks/)feature is a no-code/low-code solution for importing, replicating, and managing resources across cloud environments. DuploCloud Stacks empowers users to replicate resources quickly and easily, minimizing onboarding time and reducing reliance on niche expertise.&#x20;
-* AWS
-  * Support for configuring [S3 bucket replication rules](overview/aws-services/s3-bucket.md#s3-bucket-replication-rules).
-* General
-  * DuploCloud's [Advanced Observability Suite (AOS)](diagnostics-overview/advanced-observability-suite.md) is available as an add-on service.
-* AWS
-  * Configure [automated snapshot settings for AWS Redis](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance), including snapshot name, ARNs, retention limit, start time, and duration.
-
-## Q3 2024
-
-## Q4 2024
+## Q1 2025
 
 * AWS
+  * Configure [SQS dead letter queues and redrive policies in AWS](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
+  * Support for Modifying [ASG Launch Templates](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).
+  * I[nstance Refresh action for AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
+  * Customize CloudWatch metrics for [AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-autoscaling-groups-asg).
+  * Support for [SNS with FIFO (First-In-First-Out) topics.](overview/aws-services/sns-topic.md#creating-a-sns-topic)
+  * Create scheduled snapshot windows for automated backups in [AWS Redis](overview-2/azure-services/databases/redis-database.md).
   * Support for [taints with EKS Hosts or Agent Pools](overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
+  * [Download inventory reports of all AWS resources](security-and-compliance/access-control-3/inventory/inventory-reports.md) (for StateRAMP compliance).
+  * Support for [Lambda JAR with S3](overview/aws-services/lambda/#id-3-toc-title).
+  * Support for aurora-iopt1 storage type in [Aurora RDS](aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
+  * Force delete and update settings options added for [ECR repositories](overview/aws-services/elastic-container-registry-ecr.md#updating-ecr-repository-settings).&#x20;
+  * Select and update Certificate Authorities for RDS instances.
+  * Specify an initial database during [RDS instance creation](aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
+  * Support for [serverless Kafka clusters](aws-user-guide/aws-services/kafka-cluster.md#creating-a-kafka-cluster) for AWS users.
+  * Disable AWS JIT access for non-admin users.
+* Azure
+  * Support for Azure Container Registry.
+  * Support for Azure Availability Sets.
+  * Support for Azure Data Factory.&#x20;
+* GCP
+  * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/gcp-databases/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
+  * Support for GCP Virtual Private Cloud (VPC) Peering.
+  * Support for [SNS Pub/Sub topic subscriptions](overview-1/gcp-services/s3-bucket-3.md#create-a-pub-sub-topic-subscription).
+* Kubernetes
+  * [Manage read-only access to Kubernetes Secrets and ConfigMaps.](kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md)
+  * Add custom Kubernetes labels to nodes in AWS at the host or Auto Scaling Group (ASG) level.
+* General
+  * Support for rolling back container images for DuploCloud Services.
+  * DuploCloud UI redesign: updates to navigation, breadcrumbs, menus, and general appearance.
 
-## Q3 2024
+## Q4 2024
+
+* General
+  * DuploCloud's [Advanced Observability Suite (AOS)](diagnostics-overview/advanced-observability-suite.md) is available as an add-on service.
 
 ## Q3 2024
 
@@ -97,7 +113,7 @@ layout:
 ## Q1 2024
 
 * AWS
-  * Conifgure [Automatic Failover for Redis](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance).
+  * Configure [Automatic Failover for Redis](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance).
   * [Synch AWS Redis with Amazon CloudWatch Logs](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance) for automatic log delivery.
   * Configure [AWS JIT session timeout](aws-user-guide/use-cases/jit-access.md#configuring-admin-jit-timeout-via-aws-iam-role) using an IAM role.
   * [Enable automatic AWS ACM (SSL) Certificates](aws-user-guide/prerequisites/acm-certificate.md#enabling-automatic-aws-acm-certificate-creation) for a Plan.
@@ -129,8 +145,8 @@ layout:
   * [Update a service with a stream-lined, read-to-use GitHub Actions script](introduction-to-ci-cd/github-actions/update-a-service.md).
 * Kubernetes
   * [Enable real-time alerts for autoscaling Kubernetes nodes.](overview/use-cases/hosts-vms/auto-scaling/kubernetes-scaling-options.md#allowing-real-time-alerts-for-autoscaling-kubernetes-nodes)
-  * Restrict open access to public Load Balancers for [AWS](overview/aws-services/load-balancers/#restricting-open-access-to-public-load-balancers),[ Azure](overview-2/azure-services/load-balancers.md#restricting-open-access-to-public-load-balancers), and [GCP](overview-1/gcp-services/step-4-create-a-load-balancer.md#restricting-open-access-to-public-load-balancers).&#x20;
 * General&#x20;
+  * Restrict open access to public Load Balancers for [AWS](overview/aws-services/load-balancers/#restricting-open-access-to-public-load-balancers),[ Azure](overview-2/azure-services/load-balancers.md#restricting-open-access-to-public-load-balancers), and [GCP](overview-1/gcp-services/step-4-create-a-load-balancer.md#restricting-open-access-to-public-load-balancers).&#x20;
   * Support for [NIST-800-171 compliance](security-and-compliance/access-control-4.md).
   * [Customize the DuploCloud login screen banner.](access-control/login-banner-customization.md)
   * [Set Tenants to expire](overview/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
