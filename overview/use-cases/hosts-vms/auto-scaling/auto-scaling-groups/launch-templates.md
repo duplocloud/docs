@@ -15,7 +15,7 @@ This feature is applicable to both Kubernetes Node ASGs and Docker Native ASGs.&
 3. Select the **ASG** tab.&#x20;
 4. In the **NAME** column, click on the ASG you wish to edit launch templates for.
 5. Select the **Launch Templates** tab.&#x20;
-6. In the row of the version you wish to update, click the menu icon (<img src="../../../../../.gitbook/assets/image (1).png" alt="" data-size="line">), and select **Edit (Create a new version)**. The **Edit Launch Template** **(Create a new version)** pane displays.
+6. In the row of the version you wish to update, click the menu icon (<img src="../../../../../.gitbook/assets/image (459).png" alt="" data-size="line">), and select **Edit (Create a new version)**. The **Edit Launch Template** **(Create a new version)** pane displays.
 
 <div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (35).png" alt="" width="398"><figcaption><p>The <strong>Edit Launch Template</strong> <strong>(Create a new version)</strong> pane</p></figcaption></figure></div>
 
@@ -38,7 +38,7 @@ To change the default launch template version:
 2. For Kubernetes-managed ASGs (Nodes), navigate to **Kubernetes** -> **Nodes**. For Docker Native ASGs (EC2 Instances Running Docker Directly), Navigate to **Cloud Services** -> **Hosts**.
 3. Select the **ASG** tab and click the name of the appropriate ASG.
 4. Click on the **Launch Templates** tab.
-5. Click the menu icon (<img src="../../../../../.gitbook/assets/image.png" alt="" data-size="line">) on the version you want to set as the default.
+5. Click the menu icon (<img src="../../../../../.gitbook/assets/image (2).png" alt="" data-size="line">) on the version you want to set as the default.
 6. Select **Set as Default**.
 
 The selected version will now be the default for any **new** instances launched in the ASG. Existing instances will remain unchanged. To update existing instances, use the[ Instance Refresh](instance-refresh-for-asg.md) feature.&#x20;

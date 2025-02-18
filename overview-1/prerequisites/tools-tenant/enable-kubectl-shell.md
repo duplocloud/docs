@@ -17,7 +17,7 @@ Enabling kubectl shell access in GCP is part of a one-time DuploCloud Portal set
 4. Complete the required fields, and click **Create**.
 5. Once the node pool is complete, it will display on the **GCP VM** tab with a status of **Running**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>GCE VM</strong> tab in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>GCE VM</strong> tab in the DuploCloud Portal</p></figcaption></figure>
 
 ## Step 2. Create a DuploCloud Service
 

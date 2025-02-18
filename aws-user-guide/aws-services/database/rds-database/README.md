@@ -1,25 +1,17 @@
 ---
-description: Create and connect to an RDS database instance
+description: Create and connect an RDS database instance in the DuploCloud Portal
 ---
 
 # RDS database
 
-{% hint style="warning" %}
-Support for the Aurora Serverless V1 database engines has been deprecated. Do not create V1 engines when using Terraform.
-{% endhint %}
+Create, configure, and manage RDS instances directly from the DuploCloud Portal.
 
 DuploCloud supports the following RDS databases in AWS:
 
-* MySQL
-* PostgreSQL
-* MariaDB
-* Microsoft SQL-Express
-* Microsoft SQL-Web
-* Microsoft SQL-Standard
-* Aurora MySQL
-* Aurora MySQL Serverless
-* Aurora PostgreSQL
-* Aurora PostgreSQL Serverless
+| <p></p><ul><li>MySQL</li><li>PostgreSQL</li><li>MariaDB</li><li>Microsoft SQL-Express</li><li>Microsoft SQL-Web</li></ul> | <p></p><ul><li>Microsoft SQL-Standard</li><li>Aurora MySQL</li><li>Aurora MySQL Serverless</li><li>Aurora PostgreSQL</li><li>Aurora PostgreSQL Serverless</li></ul> |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+\*Support for Aurora Serverless V1 database engines has been deprecated. Do not create V1 engines when using Terraform.
 
 {% hint style="info" %}
 When upgrading RDS versions, use the AWS Console and see your Cloud Provider for compatibility requirements. Note that while versions 5.7.40, 5.7.41, and 5.7.42 cannot be upgraded to version 8.0.28, you can upgrade them to version 8.0.32 and higher.
@@ -28,19 +20,39 @@ When upgrading RDS versions, use the AWS Console and see your Cloud Provider for
 ## Creating an RDS database <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
-2. Click **Add**. The **Create a RDS** page displays.
-3. Fill out the form based on your requirements, and **Enable Logging** if needed.
-4. Optionally, in the **Backup Retention Period in Days** field, enter a number of days to retain automated backups between one (**1**) and thirty-five (**35**). If a value is not entered, the Backup Retention Period value configured in Systems Settings will be applied.
+2.  Click **Add**. The **Create a RDS** page displays.\
 
-To create a publicly available RDS database, follow these steps.
 
-<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_16_19.png" alt=""><figcaption><p><strong>Create a RDS</strong> window</p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/RDS create.png" alt=""><figcaption><p>The <strong>Create a RDS</strong> page in the DuploCloud Portal</p></figcaption></figure>
+3. Complete the following fields:
+   * **RDS Name**: Enter a unique name for the RDS instance. DuploCloud suggests using the Tenant name as a prefix, e.g., `tenantname-db`_._
+   * **Create from Snapshot (Optional)**: Select an existing snapshot to restore from if applicable.
+   * **RDS Engine**: Choose the database engine (e.g., MySQL, PostgreSQL, MariaDB).
+   * **RDS Engine Version**: Select the engine version.
+   * **Encryption Key (Optional)**: Select an encryption key if needed for encryption at rest.
+   * **Storage Type (Optional)**: Choose the storage type (e.g., General Purpose SSD, Provisioned IOPS).
+   * **Storage Size in GB** **(Optional)**: Specify the storage size in GiB. _(Minimum: 20 GiB, Maximum: 65,536 GiB.)_
+   * **RDS Instance Size**: Choose an instance type based on performance needs.
+   * **DB Parameter Group (Optional)**: Select a custom database parameter group if needed.
+   * **DB Subnet Group (Optional)**: Choose a subnet group for the database network configuration.
+   * **Backup Retention Period in Days**: Enter a retention period between **1 and 35** days.
+   * **User Name**: Enter the database username. (Required)
+   * **User Password**: Enter a secure password for the database. (Required)
+   * Optionally, select **Enable Performance Insights.**
+   * **Performance Insights Retention in Days (Optional)**: Enter the retention period for Performance Insights data. (Default: 7 days, Maximum: 731 days.)
+   * **Performance Insights Encryption (Optional)**: Select an encryption key for encrypting Performance Insights data. (If not specified, AWS will use the default key.)
+   * **Enable Additional Features (Optional):**
+     * **Enable IAM Auth**
+     * **Store Credentials in Secrets Manager**
+     * **Enable Multi-AZ**
+     * **Enable Logging**
+4. Click **Create** to provision the RDS database.
 
-#### Create Aurora Serverless V2 Cluster database
+### Creating an Aurora Serverless V2 Cluster database
 
-You can create Aurora Serverless V2 Databases by selecting **Aurora-MySql-Serverless-V2** or **Aurora-PostgreSql-Serverless-V2** from the **RDS Database Engine** list box. Select the RDS Engine Version compatible with Aurora Serverless v2. The **RDS Instance Size** of `db.serverless` applies to both engines.
+You can create Aurora Serverless V2 Databases by selecting **Aurora-MySql-Serverless-V2** or **Aurora-PostgreSql-Serverless-V2** from the **RDS Database Engine** list box. Select the **RDS Engine Version** compatible with Aurora Serverless v2. The **RDS Instance Size** of `db.serverless` applies to both engines.
 
-## Creating a publicly available RDS database
+### Creating a publicly available RDS database
 
 1. [Create a DB subnet group in AWS](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/SubnetGroups.Creating.html) consisting **only** of public subnets from your VPC.
 2. &#x20;In the DuploCloud Portal, navigate to **Cloud Services** -> **Databases**
@@ -49,8 +61,10 @@ You can create Aurora Serverless V2 Databases by selecting **Aurora-MySql-Server
 5. Complete the remaining fields according to your requirements.&#x20;
 6. Click **Create**. The publicly available RDS database is created.&#x20;
 
+To create a public RDS database, you much first [create a DB subnet group in AWS](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SubnetGroups.Creating.html) consisting only of public subnets from your VPC. Then follow the steps above to create an RDS database, selecting the DB subnet group you created from the DB Subnet Group list box.&#x20;
+
 {% hint style="warning" %}
-The DB subnet group created in AWS must contain only public subnets from your VPC. This configuration is crucial for making the database accessible publicly.
+The DB subnet group created in AWS must **only** contain public subnets from your VPC. This configuration is crucial for making the database public.
 {% endhint %}
 
 ## Connecting to the database <a href="#id-1-toc-title" id="id-1-toc-title"></a>
@@ -59,8 +73,18 @@ Once you create the database, select it and use the **Instances** tab to view th
 
 For databases you intend to make publicly available, ensure proper security measures, including broad accessibility, are in place to protect your data.
 
-<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_18_36.png" alt=""><figcaption><p><strong>RDS Instances</strong> tab</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_18_36.png" alt=""><figcaption><p>The <strong>Instances</strong> tab on the <strong>RDS</strong> details page</p></figcaption></figure>
 
 {% hint style="info" %}
 Pass the endpoint, name, and credentials to your application [using environment variables](../../../../overview/aws-services/containers/passing-config-and-secrets.md) for maximum security.
 {% endhint %}
+
+## Updating performance insights for an existing RDS
+
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** and select the **RDS** tab.&#x20;
+2. Click on the RDS name in the **NAME** column.
+3. From the **Actions** menu, select **RDS Settings** and then **Update Performance Insights**. The **Update Performance Insights** pane displays.&#x20;
+4. Select **Enable Performance Insights**.
+5. In the **Performance Insights Retention in Days field**, enter a retention period (1–731 days).
+6. From the **Performance Insights Encryption** list box, select an encryption key or select **No Encryption**.
+7. **Click Update** to apply the changes.&#x20;

@@ -20,7 +20,7 @@ DuploCloud platform provides seamless installation and management of these agent
 1.  **Create an Agent Type.** Each vendor or agent software is considered a type. For example, OSSEC, ClamAV, Laceworks, and Crowdstrike are different agent types. To add a new agent type, navigate to **Security** -> **Agents** and click **Add.** The **Add Security Agent** pane displays. Enter the **Agent Name** and click **Create**.\
 
 
-    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Add Security Agent</strong> pane.</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Add Security Agent</strong> pane.</p></figcaption></figure>
 
 
 2. **Create an agent deployment.** Under the desired **Agent** tab, **Add** a deployment to deploy the agent to the Hosts. You must deploy at least one agent per Kubernetes cluster. You can deploy on all hosts in a Kubernetes cluster or on all Hosts for a specific Tenant. Deploying on all hosts for one Tenant is useful for certain Kubernetes clusters or DuploCloud Infrastructures where you have Tenants on which you don't want specific agents to be run.&#x20;
