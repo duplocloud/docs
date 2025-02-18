@@ -34,6 +34,13 @@ layout:
 
 ## Q3 2024
 
+## Q4 2024
+
+* AWS
+  * Support for [taints with EKS Hosts or Agent Pools](overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
+
+## Q3 2024
+
 * Azure
   * [Set max number of Pods](overview-2/azure-services/agent-pool.md) for Azure Agent Pools.
   * Support for [Table, Queue, and Container storage types](overview-2/azure-services/storage-account.md#create-storage-account) within Azure Storage Accounts.

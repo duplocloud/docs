@@ -11,7 +11,8 @@ DuploCloud AWS supports **EC2**, **ASG**, and **BYOH** (Bring Your Own Host) typ
 1. Ensure you have selected the appropriate Tenant from the **Tenant** list box at the top of the DuploCloud Portal.
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.&#x20;
 3. Click the tab that corresponds to the type of Host you want to create (**EC2**, **ASG**, or **BYOH**).
-4. Click **Add**. The Host that you added is displayed in the appropriate tab (**EC2**, **ASG**, or **BYOH**).
+4. Complete the required fields.
+5. Click **Add**.&#x20;
 
 To connect to the Host using SSH, [follow this procedure](ssh-ec2-instance.md).
 
@@ -37,31 +38,19 @@ See [Kubernetes StorageClass and PVC](../../../kubernetes-overview/kubernetes-st
 
 <table data-header-hidden><thead><tr><th width="180"></th><th></th></tr></thead><tbody><tr><td><strong>SSH</strong></td><td>Establish an <a href="ssh-ec2-instance.md#connecting-to-an-ec2-linux-instance-using-ssh">SSH connection</a> to work directly in the AWS Console.</td></tr><tr><td><strong>Connection Details</strong></td><td>View connection details (connection type, address, user name, visibility) and <a href="ssh-ec2-instance.md#connect-by-downloading-a-key">download the key</a>.</td></tr><tr><td><strong>Host Details</strong></td><td>View Host details in the <strong>Host Details</strong> YAML screen.</td></tr></tbody></table>
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Shot 1 connection.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Connect</strong> selected.</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Shot 1 connection.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Connect</strong> selected.</p></figcaption></figure></div>
 
 ### **Host Settings:**
 
 <table data-header-hidden><thead><tr><th width="208"></th><th></th></tr></thead><tbody><tr><td><strong>Create AMI</strong></td><td>Set the <a href="create-amazon-machine-image-ami.md">AMI</a>.</td></tr><tr><td><strong>Create Snapshot</strong></td><td>Create a <a href="backups.md">snapshot </a>of the Host at a specific point. </td></tr><tr><td><strong>Update User Data</strong></td><td>Update the Host user data.</td></tr><tr><td><strong>Change Instance Size</strong></td><td>Resize a Host instance to accommodate the workload. </td></tr><tr><td><strong>Update Auto Reboot Status Check</strong></td><td>Enable or disable <a href="configure-auto-reboot.md">Auto Reboot</a>. Set the number of minutes after the AWS Instance Status Check fails before automatically rebooting. </td></tr></tbody></table>
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Shot 2 Host Connections.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Host Settings</strong> selected.</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Shot 2 Host Connections.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Host Settings</strong> selected.</p></figcaption></figure></div>
 
 ### **Host State:**
 
 <table data-header-hidden><thead><tr><th width="163"></th><th></th></tr></thead><tbody><tr><td><strong>Start</strong></td><td>Start the Host.</td></tr><tr><td><strong>Reboot</strong></td><td>Reboot the Host.</td></tr><tr><td><strong>Stop</strong> </td><td>Stop the Host. </td></tr><tr><td><strong>Hibernate</strong></td><td><a href="hibernate-an-ec2-host.md">Hibernate </a>(temporarily freeze) the Host.</td></tr><tr><td><strong>Terminate Host</strong></td><td>Terminate the Host. </td></tr></tbody></table>
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Shot 3 Host State.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Host State</strong> selected.</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Shot 3 Host State.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Host State</strong> selected.</p></figcaption></figure></div>
 
 ## Adding custom code for EC2 or ASG Hosts&#x20;
 
