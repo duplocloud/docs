@@ -20,7 +20,7 @@ RED metrics (Rate, Errors, Duration) are critical for monitoring and understandi
 2. Select your Infrastructure from the **Infrastructure** list box (Administrator AOS Dashboard) or **Tenant** from the Tenant list box (Tenant AOS Dashboard).&#x20;
 3. Click the **Metrics** card button. The Grafana **APM** -> **RED Metrics** Dashboard displays. The graphic below shows the **RED** (Request, Error, Duration) Dashboard.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>The <strong>Beyla RED Metrics</strong> Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>The <strong>Beyla RED Metrics</strong> Dashboard</p></figcaption></figure>
 
 ## Exploring Detailed Metrics
 
