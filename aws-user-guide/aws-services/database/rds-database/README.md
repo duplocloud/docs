@@ -1,5 +1,5 @@
 ---
-description: Create and connect an RDS database instance in the DuploCloud Portal
+description: Create and connect to an RDS database instance
 ---
 
 # RDS database
