@@ -29,6 +29,11 @@ layout:
 
 ## Q3 2024
 
+* AWS
+  * Configure [automated snapshot settings for AWS Redis](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance), including snapshot name, ARNs, retention limit, start time, and duration.
+
+## Q3 2024
+
 * Azure
   * [Set max number of Pods](overview-2/azure-services/agent-pool.md) for Azure Agent Pools.
   * Support for [Table, Queue, and Container storage types](overview-2/azure-services/storage-account.md#create-storage-account) within Azure Storage Accounts.
