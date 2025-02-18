@@ -304,6 +304,7 @@
       * [Passing Configs and Secrets](overview-2/azure-services/containers-and-services/passing-config-and-secrets.md)
     * [Agent Pools](overview-2/azure-services/agent-pool.md)
       * [Spot Instances for AKS Agent Pools](overview-2/azure-services/agent-pool/spot-instances-for-aks-agent-pools.md)
+    * [Azure Container Registry (ACR)](overview-2/azure-services/azure-container-registry-acr.md)
     * [Databases](overview-2/azure-services/databases/README.md)
       * [MSSQL Server database](overview-2/azure-services/databases/sql-database.md)
       * [PostgreSQL database](overview-2/azure-services/databases/postgresql.md)
