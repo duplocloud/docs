@@ -38,6 +38,8 @@ layout:
   * Specify an initial database during [RDS instance creation](aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
   * Support for [serverless Kafka clusters](aws-user-guide/aws-services/kafka-cluster.md#creating-a-kafka-cluster) for AWS users.
   * Disable AWS JIT access for non-admin users.
+  * Support for configuring [S3 bucket replication rules](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/~/changes/1184/overview/aws-services/s3-bucket/~/overview#s3-bucket-replication-rules).
+  * Update [RDS Performance Insights](aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).
 * Azure
   * Support for Azure Container Registry.
   * Support for Azure Availability Sets.
@@ -51,6 +53,7 @@ layout:
   * Add custom Kubernetes labels to nodes in AWS at the host or Auto Scaling Group (ASG) level.
 * General
   * Support for rolling back container images for DuploCloud Services.
+  * Force sync [Okta](extras-overview/okta-identity-management.md) changes to immediately apply updates.
   * DuploCloud UI redesign: updates to navigation, breadcrumbs, menus, and general appearance.
 
 ## Q4 2024
