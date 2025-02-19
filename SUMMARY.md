@@ -487,6 +487,7 @@
     * [Tracing with Tempo](diagnostics-overview/advanced-observability-suite/tracing-with-tempo.md)
     * [Profiles with Pyroscope](diagnostics-overview/advanced-observability-suite/profiles-with-pyroscope.md)
     * [Alerts with Alert Manager](diagnostics-overview/advanced-observability-suite/alerts-with-alert-manager.md)
+    * [Service Level Objectives (SLOs)](diagnostics-overview/advanced-observability-suite/service-level-objectives-slos.md)
     * [OTEL Stack Resource Requirements](diagnostics-overview/advanced-observability-suite/otel-stack-resource-requirements.md)
     * [Application Instrumentation](diagnostics-overview/advanced-observability-suite/application-instrumentation.md)
     * [Custom Metrics](diagnostics-overview/advanced-observability-suite/custom-metrics.md)
