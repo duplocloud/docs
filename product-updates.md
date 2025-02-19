@@ -44,6 +44,7 @@ layout:
   * Support for Azure Container Registry.
   * Support for Azure Availability Sets.
   * Support for Azure Data Factory.&#x20;
+  * Enable autoscaling in the AKS default node pool.
 * GCP
   * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/gcp-databases/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
   * Support for GCP Virtual Private Cloud (VPC) Peering.
@@ -55,6 +56,7 @@ layout:
   * Support for rolling back container images for DuploCloud Services.
   * Force sync [Okta](extras-overview/okta-identity-management.md) changes to immediately apply updates.
   * DuploCloud UI redesign: updates to navigation, breadcrumbs, menus, and general appearance.
+  * Access to SLO [dashboards and management](diagnostics-overview/advanced-observability-suite/service-level-objectives-slos.md) for DuploCloud AOS users.&#x20;
 
 ## Q4 2024
 
@@ -136,7 +138,7 @@ layout:
   * Configure [Vanta compliance controls](overview/security-configuration-settings/vanta-compliance-controls.md) for DuploCloud Tenants.
   * Support for [OpenSearch storage options](overview/aws-services/elasticsearch.md).
   * [Security Configurations Settings](overview/security-configuration-settings/) documentation section added.
-  * ClusterIP and Worker Node target types are supported when creating [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
+  * Cluster IP and Worker Node target types are supported when creating [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
 * GCP
   * Additional supported actions for [Cloud SQL databases](overview-1/gcp-services/s3-bucket-1.md#create-a-cloud-scheduler-job) (GCP Console, Edit, Delete, Stop, Restart, or Reset Password)
   * [GKE Standard mode](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
@@ -328,8 +330,7 @@ layout:
 * [Support for Kubernetes Secret Provider Class](kubernetes-overview/configs-and-secrets/adding-secretproviderclass-custom-resource.md): This provides the ability to integrate AWS parameters and secrets to be available as Kubernetes secrets.
 * [Ability to add Lambda using Container Images](overview/aws-services/lambda/create-lambda-using-container-image.md): Users can now configure an AWS Lambda using Container images.
 * [Support to configure RDS Automatic Backup Retention](aws-user-guide/aws-services/database/rds-database/backup-and-restore.md#0-toc-title-1):  Administrators can configure RDS Automatic Backup Retention in days at the system level
-* [Export Terraform from an existing Tenant](https://github.com/duplocloud/tenant-terraform-generator): Ability to export DuploCloud terraform provider code for an existing DuploCloud Tenant\
-
+* [Export Terraform from an existing Tenant](https://github.com/duplocloud/tenant-terraform-generator): Ability to export DuploCloud terraform provider code for an existing DuploCloud Tenant
 
 ## July 2022
 
