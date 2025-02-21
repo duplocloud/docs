@@ -25,7 +25,7 @@ In addition to GKE standard and auto-pilot, the following services are supported
 * [Cloud Credentials](cloud-credentials.md)
 * [Cloud Functions](cloud-functions.md)
 * [Cloud Scheduler](s3-bucket-1.md)
-* [Cloud SQL](gcp-databases/cloud-sql.md)
+* [Cloud SQL](cloud-sql.md)
 * [Cloud Storage](s3-bucket-2.md)
 * [Firestore Database](gcp-databases/firestore-database.md)
 * [Managed Redis](gcp-databases/managed-redis.md)

@@ -249,7 +249,7 @@
       * [Docker Registry credentials](overview-1/gcp-services/containers/docker-registry-credentials.md)
       * [Passing Config and Secrets](overview-1/gcp-services/containers/passing-config-and-secrets.md)
     * [GCP Databases](overview-1/gcp-services/gcp-databases/README.md)
-      * [Cloud SQL](overview-1/gcp-services/gcp-databases/cloud-sql.md)
+      * [Cloud SQL](overview-1/gcp-services/cloud-sql.md)
       * [Firestore Database](overview-1/gcp-services/gcp-databases/firestore-database.md)
       * [Managed Redis](overview-1/gcp-services/gcp-databases/managed-redis.md)
     * [Load Balancers](overview-1/gcp-services/step-4-create-a-load-balancer.md)
