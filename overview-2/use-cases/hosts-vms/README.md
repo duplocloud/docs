@@ -26,11 +26,21 @@ Add a Virtual Machine Host. DuploCloud supports **Host** (Azure Host) and **BYOH
 
 4. In the **Friendly Name** field, specify a unique name for the Host.&#x20;
 5. Define the **Subnet**, select the **Instance Type**, enter your **Username** and **Password**, and specify whether to enable a **Public IP**.&#x20;
-6. Optionally, enter a computer name in **Computer Name** field in the **Advanced Options**.
-7. In the Encryption list box, select **Off** or **On**.
-8. Optionally, select the **Disk Controller Type** in the **Advanced Options**. The disk controller type is set to `SCSI` by default. If you select `NVME`, specify the supported instance size.&#x20;
-9. Optionally, select **Standard** or **Trusted Launch** in the Security Type field. If you select **Trusted Launch**, enable or disable **Enable Secure Boot** and **vTPM**.
-10. Click **Add**.
+6. Optionally, complete the fields in the Advanced options:
+   * &#x20;**Image ID**: Specify the image to use for the host.
+   * **Fleet**: Select the fleet to which this host belongs.
+   * **Annotation Tag**: Add metadata or labels for organizational purposes.
+   * **Computer Name**: Set a custom computer name for the host.
+   * **Encryption**: Enable or disable disk encryption.
+   * **Disk Size**: Specify the size of the disk in GB.
+   * **Disk Controller Type**: Choose the disk controller type.
+   * **Join Domain**: Indicate whether the host should join an Active Directory domain.
+   * **Join Log Analytics**: Enable integration with Azure Log Analytics for monitoring.
+   * **Timezone**: Set the timezone for the host.
+   * **Availability Set**: Align with an [Availability Set](availability-sets.md), if needed.
+   * **Security Type**: Select **Standard** or **Trusted Launch**. If you select **Trusted Launch**, enable or disable **Enable Secure Boot** and **vTPM**.
+   * **Enable Encryption at Host**: Enable encryption for data at rest at the host level.
+7. Click **Add**.
 
 {% hint style="info" %}
 It is not necessary to explicitly define Hosts. Instead, you can use [Azure Agent Pools](../../azure-services/agent-pool.md) and [VM Scale Sets](../../azure-services/vm-scale-sets.md)**.**
