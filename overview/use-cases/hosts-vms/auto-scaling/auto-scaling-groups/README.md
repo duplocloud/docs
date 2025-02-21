@@ -6,45 +6,28 @@ description: Create Autoscaling groups to scale EC2 instances to your workload
 
 Configure Autoscaling Groups (ASG) to ensure the application load is scaled based on the number of EC2 instances configured. Autoscaling detects unhealthy instances and launches new EC2 instances. ASG is also cost-effective as EC2 Instances are dynamically created per the application requirement within minimum and maximum count limits.&#x20;
 
-## Creating Autoscaling Groups (ASG)
-
 {% hint style="info" %}
-The Use for Cluster Autoscaling option will not be available until you enable the [Cluster Autoscaler option in your Infrastructure](./#configuring-cluster-autoscaler-for-your-infrastructure).
+For cluster autoscaling, [enable the Cluster Autoscaler option](../../../creating-an-infrastructure-and-plan-for-aws/kubernetes-cluster/enable-cluster-autoscaler.md) in your Infrastructure before creating an ASG.
 {% endhint %}
 
+## Creating Autoscaling Groups (ASG)
+
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
-2.  Select the **ASG** tab, and click **Add**. The **Add ASG**  displays.\
+2.  In the **ASG** tab, click **Add**. The **Add ASG** page is displayed.\
 
 
-    <div align="left"><figure><img src="../../../../../.gitbook/assets/ASG basic.png" alt=""><figcaption><p>The <strong>Add ASG</strong> <strong>Basic Options</strong> in the DuploCloud Portal</p></figcaption></figure></div>
+    <figure><img src="../../../../../.gitbook/assets/Screenshot (30).png" alt=""><figcaption><p><strong>Add ASG page</strong> with <strong>Use for Cluster Autoscaling</strong> enabled</p></figcaption></figure>
 3. In the **Friendly Name** field, enter the name of the ASG.
 4. Select **Availability Zone** and **Instance Type**.
 5. In the **Instance Count** field, enter the desired capacity for the Autoscaling group.
 6. In the **Minimum Instances** field, enter the minimum number of instances. The Autoscaling group ensures that the total number of instances is always greater than or equal to the minimum number of instances.
 7. In the **Maximum Instances** field, enter the maximum number of instances. The Autoscaling group ensures that the total number of instances is always less than or equal to the maximum number of instances.
-8. Select **Use for Cluster Autoscaling**.
-9.  Select **Advanced Options**. The advanced options display. \
+8. Optionally, select **Use for Cluster Autoscaling**.
+9.  Select **Advanced Options**. The **Advanced Options** section displays.\
 
 
-    <figure><img src="../../../../../.gitbook/assets/ASG advanced.png" alt=""><figcaption><p>The <strong>Add ASG Advanced Options</strong> page in the DuploCloud Portal</p></figcaption></figure>
-10. Optionally, complete the following fields.
-    * Specify an **Image ID**.&#x20;
-    * **Agent Platform**: Select **Linux Docker/Native** to run a Docker service or select **EKS Linux** to run services using EKS. Fill in additional fields as needed for your ASG.&#x20;
-    * **Disk Size**: Defines the storage capacity (in GiB) of the instance's root or attached EBS volumes.
-    * **Key Pair Type**: Specifies the SSH key pair used for instance access, supporting none, existing, or new key pairs.
-    * **Enable Block EBS Optimization**: Boosts the I/O performance of attached EBS volumes for high-throughput workloads.
-    * **Enable Hibernation**: Preserves the instance's in-memory state to allow faster recovery from a hibernated state.
-    * **Metadata Service**: Configures the AWS Instance Metadata Service, with IMDSv2 recommended for enhanced security.
-    * Enable [**Spot Instances**](spot-instances.md), and enter a **Maximum Spot Price.**
-    * Enable [**Scale from zero**](scale-to-or-from-zero.md) (EKS only).&#x20;
-    * Select **Enabled Metrics**. This allows you to select which CloudWatch metrics will be collected and monitored for the ASG, providing greater control over performance and scaling insights. Available options include:&#x20;
-      * **GroupMinSize**: Tracks the minimum size of the Auto Scaling Group.
-      * **GroupMaxSize**: Tracks the maximum size of the Auto Scaling Group.
-      * **GroupDesiredCapacity**: Monitors the desired number of instances in the Auto Scaling Group.
-      * **GroupInServiceInstances**: Tracks the number of instances currently running and in service.
-      * **GroupInServiceCapacity**: Monitors the total capacity of instances currently in service.
-      * **GroupPendingInstances**: Tracks the number of instances that are in the process of launching.
-    * Enter **Base64 Data**, **Volumes**, or **Tags**.
+    <figure><img src="../../../../../.gitbook/assets/Screenshot (32).png" alt=""><figcaption><p>The <strong>Add ASG Advanced Options</strong> </p></figcaption></figure>
+10. &#x20;Fill in additional fields as needed for your ASG.&#x20;
 11. Click **Add**. Your ASG is added and displayed in the **ASG** tab.
 
 <figure><img src="../../../../../.gitbook/assets/Screenshot (33).png" alt=""><figcaption><p>The <strong>Add ASG</strong> page </p></figcaption></figure>
