@@ -48,7 +48,6 @@
   * [Getting Help with DuploCloud](welcome-to-duplocloud/duplocloud-support-model.md)
 * [Container Orchestrators](container-orchestrators/README.md)
   * [Terminologies in Container Orchestration](container-orchestrators/concepts.md)
-* [Container image rollback](container-image-rollback.md)
 * [AWS User Guide](overview/README.md)
   * [Prerequisites](aws-user-guide/prerequisites/README.md)
     * [Route 53 Hosted Zone](overview/prerequisites/route-53-hosted-zone.md)
