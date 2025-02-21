@@ -48,9 +48,22 @@ When upgrading RDS versions, use the AWS Console and see your Cloud Provider for
      * **Enable Logging**
 4. Click **Create** to provision the RDS database.
 
-### Creating an Aurora Serverless V2 Cluster database
+## Creating an Aurora Serverless V2 Cluster database
 
 You can create Aurora Serverless V2 Databases by selecting **Aurora-MySql-Serverless-V2** or **Aurora-PostgreSql-Serverless-V2** from the **RDS Database Engine** list box. Select the **RDS Engine Version** compatible with Aurora Serverless v2. The **RDS Instance Size** of `db.serverless` applies to both engines.
+
+## Creating Aurora databases
+
+### **Create Aurora Serverless V2 Cluster Database**
+
+You can create Aurora Serverless V2 Databases by selecting **Aurora-MySQL-Serverless-V2** or **Aurora-PostgreSQL-Serverless-V2** from the **RDS Engine** list box. Select the RDS Engine Version compatible with Aurora Serverless v2. The **db.serverless** RDS Instance Size applies to both engines.
+
+### **Storage Type Selection for Aurora**
+
+When creating an **Aurora MySQL** or **Aurora PostgreSQL** database, you can select between two storage types:
+
+* **Aurora** (standard storage type for Aurora databases).
+* **aurora-iopt1** (optimized for high IOPS performance and low-latency disk operations, ideal for performance-intensive applications).
 
 ### Creating a publicly available RDS database
 
