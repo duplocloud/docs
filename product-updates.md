@@ -25,7 +25,7 @@ layout:
 * AWS
   * Configure [SQS dead letter queues and redrive policies in AWS](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Support for Modifying [ASG Launch Templates](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).
-  * I[nstance Refresh action for AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
+  * [Instance Refresh action for AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Customize CloudWatch metrics for [AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-autoscaling-groups-asg).
   * Support for [SNS with FIFO (First-In-First-Out) topics.](overview/aws-services/sns-topic.md#creating-a-sns-topic)
   * Create scheduled snapshot windows for automated backups in [AWS Redis](overview-2/azure-services/databases/redis-database.md).
