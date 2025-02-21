@@ -5,9 +5,9 @@ description: Managing Containers and Service with EKS and Native Docker Services
 # EKS Containers and Services
 
 {% hint style="info" %}
-For an end-to-end example of creating an EKS Service, see [this tutorial](../../quick-start/quick-start-eks-services/).&#x20;
+For an end-to-end example of creating an EKS Service, see [this tutorial](../../../quick-start/quick-start-eks-services/).&#x20;
 
-For a Native Docker Services example, see [this tutorial](../../quick-start/quick-start-duplocloud-docker-services/). &#x20;
+For a Native Docker Services example, see [this tutorial](../../../quick-start/quick-start-duplocloud-docker-services/). &#x20;
 {% endhint %}
 
 ## Creating a DuploCloud EKS Service
@@ -26,17 +26,17 @@ For a Native Docker Services example, see [this tutorial](../../quick-start/quic
 12. In the **Force StatefulSets** list box, select **Yes** or **No** (for Static or Horizontal Pod Autoscaler replication strategies).
 13. Optionally, select **Tolerate spot instances** (for Static or Horizontal Pod Autoscaler replication strategies)
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_30_56.png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_30_56.png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
 
 5. Click **Next.** The **Add Service, Advanced Options** page displays.
-6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
+6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
 7. Click **Create**. The Service is created.&#x20;
 
 ## Viewing Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. Select the Service from the **NAME** column. The Service details page displays.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_33_17.png" alt=""><figcaption><p><strong>Actions</strong> menu for EKS Service</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_33_17.png" alt=""><figcaption><p><strong>Actions</strong> menu for EKS Service</p></figcaption></figure>
 
 ## Starting, Stopping, and Restarting Multiple DuploCloud Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
@@ -48,7 +48,7 @@ Using the Services page, you can start, stop, and restart multiple services simu
 
 Your selected services are started, stopped, or restarted as you specified.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_40_57.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_40_57.png" alt=""><figcaption></figcaption></figure>
 
 ## Importing a Native Kubernetes Service <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
@@ -62,7 +62,7 @@ Using the **Import Kubernetes Deployment** pane, you can add a Service to an exi
 6. In the **Add Service** page, click **Next.**
 7. Click **Create**. Your Native Kubernetes Service is created.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_42_33.png" alt=""><figcaption><p>YAML code for importing a Native Kubernetes Service</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_42_33.png" alt=""><figcaption><p>YAML code for importing a Native Kubernetes Service</p></figcaption></figure>
 
 {% code title="Sample YAML code" %}
 ```yaml
@@ -104,28 +104,28 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 5.  From the **Key** list box, select **Block Master VPC CIDR Allow in EKS SG**.\
 
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (383).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (383).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure></div>
 
 
 6. From the **Value** list box, select **True**.
 7.  Click **Submit**. The setting is displayed as **BlockMasterVpcCidrAllowInEksSg** in the **System Config** tab.\
 
 
-    <figure><img src="../../../.gitbook/assets/image (384).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>Flag BlockMasterVpcCidrAllowInEksSg</strong> set to <strong>true</strong></p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/image (384).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>Flag BlockMasterVpcCidrAllowInEksSg</strong> set to <strong>true</strong></p></figcaption></figure>
 
 ## Managing Kubernetes Containers
 
 You can display and manage the Containers you have defined in the DuploCloud portal. Navigate to **Kubernetes** -> **Containers**.
 
-Use the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1) (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
+Use the Options Menu ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1) (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
 
-<table><thead><tr><th width="243">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs. When you select this option, the Container Logs window displays. Use the <strong>Follow Logs</strong> option (enabled by default) to monitor logging in real-time for a running container. See the graphic below for an example of the Container Logs window.</td></tr><tr><td><strong>State</strong></td><td>Displays container state configuration, in YAML code, in a separate window.</td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
+<table><thead><tr><th width="243">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs. When you select this option, the Container Logs window displays. Use the <strong>Follow Logs</strong> option (enabled by default) to monitor logging in real-time for a running container. See the graphic below for an example of the Container Logs window.</td></tr><tr><td><strong>State</strong></td><td>Displays container state configuration, in YAML code, in a separate window.</td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../../prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_44_56.png" alt=""><figcaption><p><strong>Containers</strong> page displaying defined containers with highlighted Options Menu</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_44_56.png" alt=""><figcaption><p><strong>Containers</strong> page displaying defined containers with highlighted Options Menu</p></figcaption></figure>
 
 ### Downloading the Kubectl Token and KubeConfig <a href="#id-6-toc-title" id="id-6-toc-title"></a>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/customlogs2.png" alt=""><figcaption><p><strong>Container Logs</strong> window with <strong>Follow Logs</strong> option enabled</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/customlogs2.png" alt=""><figcaption><p><strong>Container Logs</strong> window with <strong>Follow Logs</strong> option enabled</p></figcaption></figure></div>
 
 ### Downloading the Kubectl Token and KubeConfig <a href="#id-6-toc-title" id="id-6-toc-title"></a>
 
@@ -137,7 +137,7 @@ DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen mi
 4.  Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Values** from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.\
 
 
-    <figure><img src="../../../.gitbook/assets/k8s3.png" alt=""><figcaption><p><strong>EKS</strong> tab with <strong>Download KubeConfig</strong> button</p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/k8s3.png" alt=""><figcaption><p><strong>EKS</strong> tab with <strong>Download KubeConfig</strong> button</p></figcaption></figure>
 
 
 5. Run the following commands, in a local Bash shell instance:
@@ -200,16 +200,16 @@ If you need security tokens of a longer duration, create them on your own. Secur
 
 ### Passing Kubernetes Configs and Secrets
 
-[See this section](../../../kubernetes-overview/configs-and-secrets/) in the Duplocloud Kubernetes documentation.
+[See this section](../../../../kubernetes-overview/configs-and-secrets/) in the Duplocloud Kubernetes documentation.
 
-### Downloading and configuring KubeCtl Token
+### Downloading and configuring a KubeCtl Token
 
-[See this section](../../../kubernetes-overview/kubectl-setup/kubectl-token.md) in the DuploCloud Kubernetes documentation.
+[See this section](../../../../kubernetes-overview/kubectl-setup/kubectl-token.md) in the DuploCloud Kubernetes documentation.
 
 ### Setting Up Docker Registry Credentials
 
-[See this section](docker-registry-credentials.md) in the DuploCloud documentation.
+[See this section](../docker-registry-credentials.md) in the DuploCloud documentation.
 
 #### Add Pod Toleration spec to a Container configuration
 
-See [Kubernetes Pod Toleration](../../../kubernetes-overview/pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.
+See [Kubernetes Pod Toleration](../../../../kubernetes-overview/pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.

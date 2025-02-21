@@ -29,5 +29,5 @@ These additional features provide flexibility and accessibility across all suppo
 * [Managed Service Accounts (RBAC)](../kubernetes-overview/managed-service-accounts-rbac.md)
 * [Video Transcripts](video-transcripts/)
 * [BYOH (Bring Your Own Host)](byoh.md)
-* [Allocation Tagging for Hosts (Virtual Machines)](../container-orchestrators/creating-advanced-functions.md)
+* [Allocation Tagging for Hosts (Virtual Machines)](../overview/aws-services/containers/eks-containers-and-services/creating-advanced-functions.md)
 * [Import an External Kubernetes Cluster](../kubernetes-overview/import-an-external-kubernetes-cluster.md)

@@ -7,7 +7,7 @@ description: Setting up Logging in the DuploCloud Portal
 Navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings**, and select the **Logging** tab to enable Logging. Click on **Enable Logging**. \
 
 
-<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Enabling Standard Logging Stack with the <strong>Enable Logging</strong> link</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption><p>Enabling Standard Logging Stack with the <strong>Enable Logging</strong> link</p></figcaption></figure>
 
 Logging is based on OpenSearch and Kibana, deployed in the Tenant of your choice, and configurable, as shown below.
 

@@ -53,7 +53,7 @@ When you perform the steps above to configure logging, DuploCloud does the follo
 ### Control Plane deployment
 
 1. **An EC2 Host is added** in the default Tenant, for example, **duploservices-default-oc-diagnostics**.
-2. **Services are added** in the default Tenant, one for OpenSearch and one for Kibana. Both services are pinned to the EC2 host using [allocation tags](../../../container-orchestrators/creating-advanced-functions.md). Kibana is set up to point to ElasticSearch and exposed using an internal load balancer.
+2. **Services are added** in the default Tenant, one for OpenSearch and one for Kibana. Both services are pinned to the EC2 host using [allocation tags](../../aws-services/containers/eks-containers-and-services/creating-advanced-functions.md). Kibana is set up to point to ElasticSearch and exposed using an internal load balancer.
 3. **Security rules from within the internal network to port 443 are added** in the default Tenant to allow log collectors that run on Tenant hosts to send logs to ElasticSearch. &#x20;
 
 ### Log Collector deployment

@@ -25,4 +25,4 @@ Confirm that your Hosts and Services are running or runnable to view relevant lo
 
 ## Displaying Container Logs
 
-See [Kubernetes Containers](../../aws-services/containers/eks-containers-and-services.md#kubernetes-containers) for information on displaying logs per container.
+See [Kubernetes Containers](../../aws-services/containers/eks-containers-and-services/#kubernetes-containers) for information on displaying logs per container.
