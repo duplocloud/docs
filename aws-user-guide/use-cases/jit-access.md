@@ -153,6 +153,17 @@ usage is `jitnow <ENV_NAME>`
 If you are receiving errors when attempting to retrieve credentials, try running the command with the `--no-cache` argument.
 {% endhint %}
 
+## Disabling JIT access for non-admin users
+
+1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.
+
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (24).png" alt="" width="359"><figcaption></figcaption></figure></div>
+
+3. From the **Config Type** list box, select **Flags**.&#x20;
+4. From the **Key** list box, select **Disable Non-Admin AWS JIT Access On UI**.
+5. In the **Value** list box, select **True**. JIT AWS access for non-admin users is disabled.&#x20;
+
 ## Configuring JIT timeout for Tenants
 
 By default, JIT sessions expire after one (1) hour. You can modify the session timeout setting for a specific Tenant in the DuploCloud Portal.&#x20;
