@@ -10,7 +10,7 @@ _Estimated time to complete Step 4: 5 minutes._
 
 ## Prerequisites
 
-Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual\_machine)), verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
+Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine)), verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
@@ -21,7 +21,7 @@ Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 3. In the **EC2** tab, click **Add**. The **Add Host** page displays.
 4. In the **Friendly Name** field, enter **host01**.
-5. From the **Instance Type** list box, select **2 CPU 4 GB - t3.medium**.
+5. From the **Instance Type** list box, select **2 CPU 4 GB - t3a.medium**.
 6. Select the **Advanced Options** checkbox to display advanced configuration fields.
 7. From the **Agent Platform** list box, select **Linux/Docker Native**.
 8. From the **Image ID** list box, select any **Docker-Duplo** or **Ubuntu** image. &#x20;

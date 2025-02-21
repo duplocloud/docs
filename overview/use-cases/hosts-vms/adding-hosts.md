@@ -10,13 +10,14 @@ DuploCloud AWS supports **EC2**, **ASG**, and **BYOH** (Bring Your Own Host) typ
 
 1. Ensure you have selected the appropriate Tenant from the **Tenant** list box at the top of the DuploCloud Portal.
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.&#x20;
-3. Click the tab that corresponds to the type of Host you want to create (**EC2**, **ASG**, or **BYOH**).
-4. Complete the required fields.
-5. Click **Add**.&#x20;
+3. Select the tab corresponding to the type of Host you want to create (**EC2**, **ASG**, or **BYOH**).
+4. Click **Add**. The **Add Host** page displays.
+5. Complete the fields as required for your architecture.&#x20;
+6. Click **Add**. The Host that you added is displayed in the appropriate tab (**EC2**, **ASG**, or **BYOH**).
 
 To connect to the Host using SSH, [follow this procedure](ssh-ec2-instance.md).
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_57_26.png" alt=""><figcaption><p><strong>Add Host</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (27).png" alt=""><figcaption><p><strong>Add Host</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
 The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time.
