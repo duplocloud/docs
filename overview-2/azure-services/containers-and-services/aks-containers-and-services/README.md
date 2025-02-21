@@ -5,7 +5,7 @@ description: Creating and managing AKS Services and containers
 # AKS Containers and Services
 
 {% hint style="info" %}
-For an end-to-end example of creating an AKS Service, see this [tutorial](../../quick-start/).
+For an end-to-end example of creating an AKS Service, see this [tutorial](../../../quick-start/).
 {% endhint %}
 
 ## Creating a DuploCloud AKS Service
@@ -24,17 +24,17 @@ For an end-to-end example of creating an AKS Service, see this [tutorial](../../
 12. In the **Force StatefulSets** list box, select **Yes** or **No** (for Static or Horizontal Pod Autoscaler replication strategies).
 13. Optionally, select **Tolerate spot instances** (for Static or Horizontal Pod Autoscaler replication strategies)
 
-<figure><img src="../../../.gitbook/assets/AKS service.png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/AKS service.png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
 
 14. Click **Next.** The **Add Service, Advanced Options** page displays.
-15. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
+15. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
 16. Click **Create**. The Service is created.&#x20;
 
 ## Viewing Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. Select the Service from the **NAME** column. The Service details page displays.
 
-<figure><img src="../../../.gitbook/assets/azure service detail.png" alt=""><figcaption><p>The <strong>Services</strong> details page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/azure service detail.png" alt=""><figcaption><p>The <strong>Services</strong> details page</p></figcaption></figure>
 
 ## Starting, Stopping, and Restarting Multiple DuploCloud Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
@@ -44,7 +44,7 @@ Using the Services page, you can start, stop, and restart multiple services simu
 2. Use the checkbox column to select multiple services you want to start or stop at once.
 3. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service**. The selected Services are started, stopped, or restarted as you specified.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_40_57.png" alt=""><figcaption><p>The Kubernetes <strong>Services</strong> page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_40_57.png" alt=""><figcaption><p>The Kubernetes <strong>Services</strong> page</p></figcaption></figure>
 
 ## **Managing Kubernetes Containers**
 
@@ -52,9 +52,9 @@ In the DuploCloud Portal, you can display and manage the containers you have def
 
 1. Select the Tenant from the **Tenan**t list box in the upper left.
 2. Navigate to **Kubernetes** -> **Containers.**
-3. Select the Options Menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1) (1).png" alt="" data-size="line"> ) in each container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
+3. Select the Options Menu ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1) (1).png" alt="" data-size="line"> ) in each container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
 
-<table><thead><tr><th width="243">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs. When you select this option, the Container Logs window displays. Use the <strong>Follow Logs</strong> option (enabled by default) to monitor logging in real-time for a running container. See the graphic below for an example of the Container Logs window.</td></tr><tr><td><strong>State</strong></td><td>Displays container state configuration, in YAML code, in a separate window.</td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../../overview/prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
+<table><thead><tr><th width="243">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs. When you select this option, the Container Logs window displays. Use the <strong>Follow Logs</strong> option (enabled by default) to monitor logging in real-time for a running container. See the graphic below for an example of the Container Logs window.</td></tr><tr><td><strong>State</strong></td><td>Displays container state configuration, in YAML code, in a separate window.</td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../../../overview/prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_44_56.png" alt=""><figcaption><p>The <strong>Containers</strong> page with menu highlighted</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_44_56.png" alt=""><figcaption><p>The <strong>Containers</strong> page with menu highlighted</p></figcaption></figure>
 

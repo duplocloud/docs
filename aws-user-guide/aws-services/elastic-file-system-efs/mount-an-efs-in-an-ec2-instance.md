@@ -23,6 +23,6 @@ defaults,_netdev 0 0" >> /etc/fstab`);
 ```
 
 1. Create a `bash` script, as in the example above, and replace `nfs4` with your EFS endpoint. You can run the script below on an existing EC2 instance or run an EC2 user data script to configure the instance at first launch (bootstrapping).&#x20;
-2. In the DuploCloud Portal, [edit the DuploCloud Service](../../../overview/aws-services/containers/eks-containers-and-services.md#services).
+2. In the DuploCloud Portal, [edit the DuploCloud Service](../../../overview/aws-services/containers/eks-containers-and-services/#services).
 3. On the **Edit Service** page, click **Next**. The **Advanced Options** page displays.
 4. On the **Advanced Options** page, in the **Volumes** field, enter the configuration YAML to mount the EFS endpoint as a volume.&#x20;

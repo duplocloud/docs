@@ -17,15 +17,15 @@ Assign a tag describing the Host's characteristics or capabilities, such as reso
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. Select the Host from the **NAME** column. If the Host is part of an Auto-Scaling Group (ASG), select the **ASG** tab and select the correct ASG.
-3. Click the **Allocation Tag** Edit Icon ( <img src="../.gitbook/assets/square_edit_icon (6).png" alt="" data-size="line">). The **Set Allocation Tag** pane displays.
+3. Click the **Allocation Tag** Edit Icon ( <img src="../../../../.gitbook/assets/square_edit_icon (6).png" alt="" data-size="line">). The **Set Allocation Tag** pane displays.
 
-<figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_29_49.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_29_49.png" alt=""><figcaption></figcaption></figure>
 
 4. In the **Allocation Tag** field, enter a tag name. Use only alphanumeric characters. Hyphens ( **-** ) are supported as special characters if needed. For example, **highmemory-highcpu** is a valid tag name.
 5.  Click **Set**. The allocation tag you set displays in the heading banner for the Host or ASG.\
 
 
-    <figure><img src="../.gitbook/assets/AT2.png" alt=""><figcaption><p>The heading banner for an Auto-Scaling Group (ASG) with an allocation tag</p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/AT2.png" alt=""><figcaption><p>The heading banner for an Auto-Scaling Group (ASG) with an allocation tag</p></figcaption></figure>
 
 ## Assigning an Allocation Tag to a Service
 
