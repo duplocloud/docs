@@ -101,3 +101,25 @@ Pass the endpoint, name, and credentials to your application [using environment 
 5. In the **Performance Insights Retention in Days field**, enter a retention period (1–731 days).
 6. From the **Performance Insights Encryption** list box, select an encryption key or select **No Encryption**.
 7. **Click Update** to apply the changes.&#x20;
+
+## Managing RDS Certificate Authorities
+
+You can manage the Certificate Authority (CA) for an RDS instance when creating a new RDS database or by updating the CA for an existing database.
+
+### **Choosing a Certificate Authority When Creating an RDS Database**
+
+During the RDS creation process, select a **Certificate Authority** from a dropdown menu.
+
+This option ensures that the RDS instance is set up with the correct certificate authority to encrypt communications using SSL/TLS. The selected CA will validate certificates to ensure secure and trusted connections.
+
+### **Updating the Certificate Authority for an Existing RDS Database**
+
+If you need to update the Certificate Authority used by an existing RDS database, you can do so through the **Actions** menu in the RDS instance settings:
+
+1. Navigate to **Cloud Services** → **Databases**.
+2. Select the **RDS** tab.
+3. Select the RDS you want to modify from the **NAME** column.
+4. From the **Actions** menu, choose **RDS Settings**.
+5. Click **Update Certificate Authority**.
+6. In the **Certificate Authority** list box, select the new CA to use for the instance.
+7. Click **Save** to apply the new CA.
