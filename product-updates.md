@@ -46,7 +46,7 @@ layout:
   * Support for Azure Data Factory.&#x20;
   * Enable autoscaling in the AKS default node pool.
 * GCP
-  * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/gcp-databases/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
+  * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
   * Support for GCP Virtual Private Cloud (VPC) Peering.
   * Support for [SNS Pub/Sub topic subscriptions](overview-1/gcp-services/s3-bucket-3.md#create-a-pub-sub-topic-subscription).
 * Kubernetes
@@ -216,7 +216,7 @@ layout:
   * Enhanced support for [Startup Probes](overview/aws-services/setting-up-probes.md).
 * GCP
   * Support for [Redis database instances](overview-1/gcp-services/gcp-databases/managed-redis.md).
-  * Support for [SQL databases](overview-1/gcp-services/gcp-databases/cloud-sql.md).
+  * Support for [SQL databases](overview-1/gcp-services/cloud-sql.md).
   * Change [Cloud Armour Security Policies](overview-1/gcp-services/cloud-armour.md#modifying-a-cloud-armour-configuration-security-policy).
 * General updates
   * **Last Login** card available for determining the last user sign-in when [viewing user access](access-control/add-edit-or-delete-a-user.md#view-users).

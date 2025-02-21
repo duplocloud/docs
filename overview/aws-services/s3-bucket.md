@@ -116,7 +116,7 @@ To create an S3 bucket replication rule in DuploCloud, follow these steps:
 3. In the **NAME** column, click the name of the bucket you want to create the replication rule for.
 4. Select the **Replication Rule** tab, and click **Add**. The **Add S3 Bucket Replication** pane displays.
 
-<figure><img src="../../.gitbook/assets/image (2) (5).png" alt=""><figcaption><p>The <strong>Add S3 Bucket Replication</strong> pane in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (5) (1).png" alt=""><figcaption><p>The <strong>Add S3 Bucket Replication</strong> pane in the DuploCloud Portal</p></figcaption></figure>
 
 
 
