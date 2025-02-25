@@ -177,24 +177,43 @@ If you increase the JIT session timeout beyond the AWS default of one (1) hour, 
 3.  Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.\
 
 
-    <div align="left"><figure><img src="../../.gitbook/assets/update_tenant_JIT_TO.png" alt="" width="281"><figcaption><p>The <strong>Update Tenant Feature</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../.gitbook/assets/update_tenant_JIT_TO.png" alt=""><figcaption><p>The <strong>Update Tenant Feature</strong> pane</p></figcaption></figure></div>
 4. Select **AWS Access Token Validity** from the **Select Feature** list box.
 5. In the **Value** field, enter the length of time JIT access should remain active in seconds.&#x20;
 6. Click **Update**. The new setting is displayed on the Tenant details page under the **Settings** tab.
 
 <figure><img src="../../.gitbook/assets/update_tenant_JIT_TO_output.png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the Tenant details page with the <strong>AWS Access Token Validity</strong> setting highlighted</p></figcaption></figure>
 
-## Configuring Admin-JIT timeout for the AWS IAM role
+## Configuring JIT Timeout for AWS IAM Roles
 
-By default, AWS IAM roles have a maximum session duration of one (1) hour. You can modify the maximum session duration for the AWS Master IAM role in the DuploCloud Portal.
+By default, AWS IAM roles have a maximum session duration of one (1) hour. You can modify the maximum session duration for both the AWS Master IAM role (admin-level) and all Tenant-specific IAM roles in the DuploCloud Portal.
+
+### **Configuring JIT Timeout for the AWS Master IAM Role**
+
+This configuration applies to the AWS Master IAM role and specifies the session duration for administrators who manage AWS resources in the platform. The JIT access duration determines how long an administrator’s session remains active before expiration.
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Systems Settings**.
-2. Select the **System Config** tab, and click **Add**. The **Update Config AppConfig** pane displays.&#x20;
+2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.&#x20;
 
-<div align="left"><figure><img src="../../.gitbook/assets/update config.png" alt="" width="324"><figcaption><p>The <strong>Update Config AppConfig</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (61).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 
+3. From the **Config Type** list box, select **Other**.
+4. In the **Other Config Type** field, enter **AppConfig**.
+5. In the **Key** field, enter `AdminJitSessionDuration`.
+6. In the **Value** field, enter the length of time JIT access should remain active in seconds.&#x20;
+7. Click **Submit**. The Admin-JIT session duration is configured.&#x20;
+
+### **Configuring Global JIT Timeout for All Tenants**
+
+This configuration applies to all Tenant-specific IAM roles within the platform. It sets the session duration for all Tenant users or roles, ensuring a consistent JIT session timeout across all Tenants.
+
+1. Navigate to **Administrator -> Systems Settings**.
+2.  Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.\
+    \
+
+
+    <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (61) (1).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 3. From the **Config Type** list box, select **AppConfig**.
-4. From the **Key** list box, select **AdminJitSessionDuration**.
-5. In the **Value** field, enter the length of time JIT access should remain active in seconds.&#x20;
-6. Click **Submit**. The Admin-JIT session duration is configured.&#x20;
-
+4. In the **Key** list box, select **AWS Role Max Session Duration**.
+5. In the **Value** field, select the desired duration for how long JIT access should remain active, or choose **Custom** and specify a **Custom Duration**.
+6. Click **Submit**. The Tenant JIT session duration is configured.
