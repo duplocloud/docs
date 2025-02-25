@@ -14,7 +14,7 @@ To create a Redis with public network access, follow the steps below to configur
 2. Select the Tenant where the Redis will be created from the **NAME** column .&#x20;
 3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
 4. From the **Select Feature** list box, select **Allow Public Network Access for Databases and Cache Servers**.
-5. **Enable** the setting, and click **Add**. The Allow Public Network Access for Databases and Cache Servers Tenant setting value is **True**.&#x20;
+5. **Enable** the setting, and click **Add**. The **Allow Public Network Access for Databases and Cache Servers Tenant** setting value is **True**.&#x20;
 
 ## Creating a Redis database instance
 
@@ -25,11 +25,7 @@ To create a Redis with public network access, follow the steps below to configur
 5. Modify values for **Service Tier**, **Shards**, and **Non TLS Port**, as needed.
 6. Click **Submit**.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/Azure_Redis.png" alt=""><figcaption><p><strong>Create Redis Instance</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Azure_Redis.png" alt=""><figcaption><p><strong>Create Redis Instance</strong> pane</p></figcaption></figure></div>
 
 ### Viewing Database details
 
