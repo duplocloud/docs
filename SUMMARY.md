@@ -365,6 +365,7 @@
     * [GKE Ingress](kubernetes-overview/ingress-loadbalancer/gke-ingress.md)
     * [AKS Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/README.md)
       * [Using an Azure Application Gateway SSL policy with Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/using-an-azure-application-gateway-ssl-policy-with-ingress.md)
+  * [InitContainers and Sidecar Containers](kubernetes-overview/initcontainers-and-sidecar-containers.md)
   * [HPA](kubernetes-overview/hpa.md)
   * [Pod Toleration](kubernetes-overview/pod-toleration.md)
   * [Kubernetes Lifecycle Hooks](kubernetes-overview/kubernetes-lifecycle-hooks.md)
