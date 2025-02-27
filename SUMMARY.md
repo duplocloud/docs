@@ -324,6 +324,7 @@
       * [MySQL Flexible Server](overview-2/azure-services/databases/mysql-flexible-server.md)
       * [Redis database](overview-2/azure-services/databases/redis-database.md)
     * [Docker Web Application](overview-2/azure-services/docker-web-application.md)
+    * [Databricks](overview-2/azure-services/databricks.md)
     * [Data Factory](overview-2/azure-services/data-factory.md)
     * [Functions](overview-2/azure-services/functions.md)
     * [Key vault](overview-2/azure-services/key-vault.md)
