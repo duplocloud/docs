@@ -33,27 +33,37 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 3.  Click **Add**. The **Create a Lambda Function** page displays.\
 
 
-    <figure><img src="../../../.gitbook/assets/lambda fixed.png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page using <strong>Package Type Zip</strong><br></p></figcaption></figure>
+    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (58).png" alt=""><figcaption><p>The <strong>Create a Lambda Function</strong> page<br></p></figcaption></figure></div>
 4. In the **Name** field, enter the name of your Lambda Function.
 5. In the **Description** field, enter a useful description of the function.
 6. From the **Package Type** list box, select **Zip**. For type **Image**, see the [Configure Lambda with Container Images](create-lambda-using-container-image.md) topic.
 7. In the **Runtime** field, enter the runtime for your programming language.
 8. From the the **Architecture** list box, select the correct Lambda Architecture.&#x20;
 9. To allocate a temporary file share, enter the value in megabytes (MB) in the **Ephemeral Storage** field. The minimum value is **512**; the maximum value is **10240**.
-10. In the **Function Handler** field, enter the method name that Lambda calls to execute your function.
+10. In the **Function Handler** field, enter the handler: the handler setting is the file name and the name of the exported handler method, separated by a dot. For example, `index.handler`. This indicates the `handler` method that's exported from the `index.js` file.
 11. In the **S3 Bucket** list box, select an existing [S3 bucket](../s3-bucket.md).
 12. In the **Function Package** field, enter the name of the **Zip** package containing your Lambda Function.&#x20;
     * DuploCloud Lambda supports Java-based function packages, such as **HelloWorld.jar**, stored in **S3**. Ensure that the JAR file is uploaded to the S3 bucket before configuring the Lambda function.
 13. In the **Dead Letter Queue** list box, select an Amazon Simple Queue Service (SQS) queue or Amazon Simple Notification Service (SNS) topic.
-14. Click **Submit**. The Lambda Function is created.
-15. On the **Lambda Function** page, from the **Name** column, select the function you created.
-16. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
+14. Optionally, configure **Maximum Retry Attempts** and **Maximum Event Age**.&#x20;
+    * **Maximum Retry Attempts**: **d**efines how many times Lambda will retry a failed function invocation. You can set it to 0, 1, or 2 retries.
+    * **Maximum Event Age**: specifies the maximum time (in seconds) an event can stay in the queue before being discarded. The range is 60 seconds to 21,600 seconds (6 hours).
+15. Click **Submit**. The Lambda Function is created.
+
+## Testing a Lambda Function
+
+You can test the Lambda function created in DuploCloud by navigating to the AWS Console.&#x20;
+
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Serverless**.
+2. Click the **Lambda** tab. The **Lambda Function** page displays.
+3. On the **Lambda Function** page, from the **NAME** column, select the function you created.
+4.  From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
 
 
     <div align="left"><figure><img src="../../../.gitbook/assets/L11.png" alt=""><figcaption><p>The <strong>Lambda Function</strong> page <strong>Actions</strong> menu  </p></figcaption></figure></div>
 
 
-17. Test the function using the AWS Console.
+5. Test the function using the AWS Console.
 
 ### Integrating with other resources <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 

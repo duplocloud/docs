@@ -23,20 +23,12 @@ For detailed instructions on how to configure and use ECR with Lambda, refer to 
 3.  Click **Add**. The **Create a Lambda Function** page displays.\
 
 
-    ![Create a Lambda Function page using Type Image
-    ](<../../../.gitbook/assets/L9 (1).png>)
+    <figure><img src="../../../.gitbook/assets/Screenshot (62).png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page <br></p></figcaption></figure>
 4. In the **Name** field, enter the name of your Lambda Function.
 5. In the **Description** field, enter a useful description of the function.
 6. From the **Package Type** list box, select **Image**. For type **Zip**, see the [Lambda Functions](./) topic.
-7. Optionally, enter an **Image Configuration**. Refer to the informational ToolTip ( <img src="../../../.gitbook/assets/info_tip_black (4).png" alt="" data-size="line"> ) for examples.
-8. In the **Image URL** field, enter the URL of the image.
-9. Click **Submit**. The Lambda function is created.
-10. On the **Lambda Function** page, from the **Name** column, select the function you created.
-11. From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
-
-
-    <div align="left"><figure><img src="../../../.gitbook/assets/L11 (1).png" alt=""><figcaption><p><strong>Actions</strong> menu on the selected <strong>Lambda Function</strong> page</p></figcaption></figure></div>
-12. Test the function using the AWS Console.
+7. Configure the remaining fields as needed for your specific function.
+8. If needed, [test the Lambda function](./#testing-a-lambda-function) to ensure it works properly.
 
 ## References
 
