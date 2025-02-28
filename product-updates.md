@@ -23,24 +23,29 @@ layout:
 ## Q1 2025
 
 * AWS
+  * Set Retry and Expiration Limits for Asynchronous [Lambda](overview/aws-services/lambda/) Invocations
   * Configure [SQS dead letter queues and redrive policies in AWS](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Support for Modifying [ASG Launch Templates](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).
   * I[nstance Refresh action for AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Customize CloudWatch metrics for [AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-autoscaling-groups-asg).
   * Support for [SNS with FIFO (First-In-First-Out) topics.](overview/aws-services/sns-topic.md#creating-a-sns-topic)
-  * Create scheduled snapshot windows for automated backups in [AWS Redis](overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance).
+  * Create scheduled snapshot windows for automated backups in [AWS Redis](overview-2/azure-services/databases/redis-database.md).
   * Support for [taints with EKS Hosts or Agent Pools](overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
   * [Download inventory reports of all AWS resources](security-and-compliance/access-control-3/inventory/inventory-reports.md) (for StateRAMP compliance).
   * Support for [Lambda JAR with S3](overview/aws-services/lambda/#id-3-toc-title).
   * Support for aurora-iopt1 storage type in [Aurora RDS](aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
-  * Force delete, update settings, and other settings added for [ECR repositories](overview/aws-services/elastic-container-registry-ecr.md#updating-ecr-repository-settings).&#x20;
+  * Force delete and update settings options added for [ECR repositories](overview/aws-services/elastic-container-registry-ecr.md#updating-ecr-repository-settings).&#x20;
   * Select and update [Certificate Authorities for RDS instances](aws-user-guide/aws-services/database/rds-database/#managing-rds-certificate-authorities).
   * Specify an initial database during [RDS instance creation](aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
   * Support for [serverless Kafka clusters](aws-user-guide/aws-services/kafka-cluster.md#creating-a-kafka-cluster) for AWS users.
   * [Disable AWS JIT access for non-admin users](aws-user-guide/use-cases/jit-access.md#disabling-jit-access-for-non-admin-users).
-  * Support for configuring [S3 bucket replication rules](overview/aws-services/s3-bucket.md#s3-bucket-replication-rules).
+  * Support for configuring [S3 bucket replication rules](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/~/changes/1184/overview/aws-services/s3-bucket/~/overview#s3-bucket-replication-rules).
   * Update [RDS Performance Insights](aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).
+  * Update [ECR repository settings](overview/aws-services/elastic-container-registry-ecr.md).&#x20;
+  * Enable delete protection for AWS Load Balancers.
+  * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
 * Azure
+  * Support for [Azure Databricks](overview-2/azure-services/databricks.md).
   * Support for [Azure Container Registry](overview-2/azure-services/azure-container-registry-acr.md).
   * Support for [Azure Availability Sets](overview-2/use-cases/hosts-vms/availability-sets.md).
   * Support for [Azure Data Factory](overview-2/azure-services/data-factory.md).&#x20;
@@ -48,15 +53,17 @@ layout:
 * GCP
   * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
   * Support for GCP Virtual Private Cloud (VPC) Peering.
-  * Support for Pub/Sub Topic subscriptions.
+  * Support for [SNS Pub/Sub topic subscriptions](overview-1/gcp-services/s3-bucket-3.md#create-a-pub-sub-topic-subscription).
 * Kubernetes
   * [Manage read-only access to Kubernetes Secrets and ConfigMaps.](kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md)
   * Add custom Kubernetes labels to nodes in AWS at the [host](overview/use-cases/hosts-vms/) or [Auto Scaling Group](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/) (ASG) level.
-  * Support for initContainers and additionalContainers (Sidecar Containers) with K8s Services.
+  * Support for Kubernetes Ingress with TLS specification
+  * Support for [initContainers and additionalContainers (Sidecar Containers)](kubernetes-overview/initcontainers-and-sidecar-containers.md) with K8s Services.
 * General
   * Support for [rolling back container images](overview/aws-services/containers/container-rollback.md) for DuploCloud Services.
   * Force sync [Okta](extras-overview/okta-identity-management.md) changes to immediately apply updates.
   * DuploCloud UI redesign: updates to navigation, breadcrumbs, menus, and general appearance.
+  * Configure session timeout duration for user logins.
 
 ## Q4 2024
 
