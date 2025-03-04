@@ -463,6 +463,7 @@
 * [User Administration](access-control/README.md)
   * [User Logins](access-control/user-logins.md)
   * [User access to DuploCloud](access-control/add-edit-or-delete-a-user.md)
+  * [Session Timeout](access-control/session-timeout.md)
   * [Tenant Access for Users](access-control/tenant-access/README.md)
     * [Add Tenant access over a VPN](access-control/tenant-access/add-tenant-access-over-a-vpn.md)
     * [Read-only access to a Tenant](access-control/tenant-access/read-only-access-to-a-tenant.md)
