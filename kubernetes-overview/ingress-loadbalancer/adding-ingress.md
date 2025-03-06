@@ -26,8 +26,6 @@ An administrator needs to enable the AWS Application Load Balancer controller fo
 
 ## Adding a Load Balancer with Kubernetes NodePort
 
-Add a Load Balancer listener that uses Kubernetes (K8s) NodePort.&#x20;
-
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
 2. Select your Service name from the **NAME** column.
 3. Select the **Load Balancers** tab.
@@ -39,17 +37,16 @@ Add a Load Balancer listener that uses Kubernetes (K8s) NodePort.&#x20;
 
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
 6. Enter the **Container port** and **External port**.
-7. Optionally, enable **Advanced Kubernetes settings**. &#x20;
-8. Kubernetes Health Check and Probes are enabled by default. To manually configure Health Check settings, select **Additional health check configs**.
-9. Click **Add**. The Load Balancer listener is displayed under **LB Listeners** on the **Load Balancers** tab.
+7. In the **Health Check** field, enter the path should be used to check the health of backend services.
+   * Common value: `/` (checks the root path).
+   * If your service has a dedicated health check endpoint, enter it (e.g., `/health` or `/status`).&#x20;
+8. From the **Backend Protocol** list box, select **TCP** or **UDP**.
+9.  Kubernetes Health Check and Probes are enabled by default. To manually configure Health Check settings, select **Additional health check configs**.\
 
-<div align="left"><figure><img src="../../.gitbook/assets/LB image.png" alt="" width="375"><figcaption><p>The <strong>Add Load Balancer</strong> Listener pane in the DuploCloud Portal</p></figcaption></figure></div>
 
-5. In the **Select Type** field, select **K8S Node Port**.&#x20;
-6. Complete the Container port and External port fields.
-7. In the Health Check field, enter `/`.&#x20;
-8. Complete the other required fields in the **Add Load Balancer Listener** pane as needed.&#x20;
-9. Click **Add**. The Load Balancer displays in the **Load Balancers** tab.
+    <div align="left"><figure><img src="../../.gitbook/assets/to edit.png" alt="" width="375"><figcaption></figcaption></figure></div>
+10. If needed, enable and configure **Advanced Kubernetes settings**.&#x20;
+11. Click **Add**. The Load Balancer listener is displayed under **LB Listeners** on the **Load Balancers** tab.
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_44_43.png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab for the <strong>filebeat-k8s-duploinfrasvc</strong> Service</p></figcaption></figure>
 
@@ -58,16 +55,19 @@ Add a Load Balancer listener that uses Kubernetes (K8s) NodePort.&#x20;
 1. Select **Kubernetes** -> **Ingress** from the navigation pane.
 2. Click **Add**. The **Add Kubernetes Ingress** page displays.
 
-<figure><img src="../../.gitbook/assets/add ingress.png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (66).png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 3. Enter a name in the **Ingress Name field.**
-4. From the **Ingress Controller** list box, select the [Ingress Controller that you defined previously](adding-ingress.md#enabling-the-aws-application-load-balancer).
-5. From the **Visibility** list box, select either **Internal Only** or **Public**.&#x20;
+4. From the **Ingress Controller** list box, select the appropriate controller (for example, **alb**).&#x20;
+5. From the **Visibility** list box, select **Internal Only** or **Public**.&#x20;
 6. From the **Certificate ARN** list box, select the appropriate ARN.
 7. To expose your services over HTTP or HTTPS, enter the listener ports in the **HTTP Listener Port** and **HTTPS Listener Port** fields.&#x20;
 8. In the **Target Type** field, specify how you want to route traffic to Pods. You can choose between **Instance (Worker Nodes)** or **IP (Pod IPs)**.&#x20;
    * **Instance (Worker Nodes)** routes traffic to all EC2 instances within the cluster on the NodePort opened for your Service. To use the Instance target type, the Service must be **NodePort** or **LoadBalancer** type.
    * **IP (Pod IPs)** routes traffic directly to the Pod IP. The network plugin must use secondary IP addresses on ENI (e.g., amazon-vpc-cni-k8s) for the Pod IP to use IP mode. The Service can be of any type (e.g., ClusterIP, NodePort, or LoadBalancer). IP mode is required for sticky sessions to work with Application Load Balancers.
+9. Optionally, enable **HTTP to HTTPS Redirect** to automatically redirect all traffic to HTTPS.
+10. Optionally, in the **TLS Hosts** field, enter one or more hostnames that should be secured with TLS. If adding multiple hosts, separate them with commas. For example: `example.com, api.example.com, dashboard.example.com`.
+11. Optionally, in the **TLS Secrets** field, enter the name of the Kubernetes Secret containing the TLS certificate and private key.&#x20;
 
 {% hint style="warning" %}
 To add a Kubernetes Ingress, you must define rules. [Continue to the next section to add rules](adding-ingress.md#add-rules-to-kubernetes-ingress-and-complete-ingress-setup) to Kubernetes Ingress and complete the setup.&#x20;
@@ -81,12 +81,12 @@ To add a Kubernetes Ingress, you must define rules. [Continue to the next sectio
 
 
 
-<div align="left"><figure><img src="../../.gitbook/assets/ingress rule.png" alt=""><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/ingress rule.png" alt="" width="369"><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 
 2. Specify the **Path** (**/** in the example above) and **Path Type** (**Exact**, **Prefix**, or **Implementation Specific**).
 3. Optionally, enter a Host in the **Host** field.
 4. Select the **Service Name** (the **Container Port** field is automatically completed), or, use the toggle switch to enable **Use Container Port Name**, and manually complete the **Service Name** and **Container Port Name** fields. &#x20;
-5. Click **Add Rule**. The rule will be displayed on the **Add Kubernetes Ingress** page. Repeat steps 1-7 to add additional rules.
+5. Click **Add Rule**. The rule will be displayed on the **Add Kubernetes Ingress** page. Repeat steps 1-5 to add additional rules.
 
 ### Configuring Ingress redirect configurations and annotations
 
@@ -102,7 +102,7 @@ To add a Kubernetes Ingress, you must define rules. [Continue to the next sectio
 7. If Applicable, in the **Query** field, specify query parameters for the redirect.
 8. In the **Status Codes** field, enter the HTTP status code for the redirect.
 9. Optionally, in the **Annotations** field, enter additional configuration options specific to the Ingress controller.
-10. Click **Add** to add the Kubernetes Ingress with defined rules and configurations. The Ingress you added displays in the **K8S Ingress** tab.\
+10. Click **Add** to add the Kubernetes Ingress with defined rules and configurations. The Ingress  displays in the **Kubenernetes** -> **Ingress** tab.\
 
 
     <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_57_51.png" alt=""><figcaption><p> <strong>The Ingress</strong> page displaying the added Ingress</p></figcaption></figure>

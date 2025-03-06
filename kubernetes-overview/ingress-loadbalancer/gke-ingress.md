@@ -8,7 +8,7 @@ GCP's Ingress Controller for GKE automatically manages traffic routing to Kubern
 
 GCP offers its own Ingress Controller, specifically created for Google Kubernetes Engine (GKE), to seamlessly integrate Kubernetes services with Google Cloud's advanced load balancing features.
 
-### Container-native load balancing with GKE Ingress
+## Container-native load balancing with GKE Ingress
 
 Container-native load balancing on Google Cloud Platform (GCP) allows Load Balancers to directly target Kubernetes Pods instead of using a node-based proxy. This approach improves performance by enabling more efficient routing, reducing latency by eliminating extra hops, and providing better health-checking capabilities.&#x20;
 
@@ -18,34 +18,33 @@ It leverages the network endpoint groups (NEGs) feature to ensure that traffic i
 
 ## Prerequisites
 
-### Creating Tenants and Services
+Before you can create an Ingress, you must create the following DuploCloud resources:
 
-Before you can create an Ingress, you must create a DuploCloud Tenant and Service. See the DuploCloud GCP User Guide for steps on how to create [Tenants](https://docs.duplocloud.com/docs/overview-1/use-cases/tenant-environment) and [Services](https://docs.duplocloud.com/docs/overview-1/gcp-services/containers).
+* **GKE Standard** users: create a DuploCloud **Tenant**, **Node Pool**, and **Service**.
+* **GKE Autopilot** users: create a DuploCloud **Tenant**, and **Service**.&#x20;
 
-Once your Tenant and Service are deployed, you are ready to add and configure a Load Balancer listener.
+See the DuploCloud GCP User Guide for steps on how to create [Tenants](https://docs.duplocloud.com/docs/overview-1/use-cases/tenant-environment), [Node Pools](../../overview-1/gcp-services/node-pools.md) and [Services](https://docs.duplocloud.com/docs/overview-1/gcp-services/containers). Once your Tenant and Service are deployed, you can add and configure a Load Balancer listener.
 
-### Adding a Load Balancer listener with Kubernetes ClusterIP
+## Adding a Load Balancer listener with Kubernetes ClusterIP
 
-Add a Load Balancer listener that uses Kubernetes (K8s) ClusterIP. Kubernetes Health Check and probes are enabled by default. To specifically configure the settings for Health Check, select **Additional health check configs** when you add the Load Balancer.
+Add a Load Balancer listener that uses Kubernetes (K8s) ClusterIP.&#x20;
 
 1. In the DuploCloud Portal, navigate **Kubernetes** -> **Services.**
 2. On the **Services** page, select the Service name from the **NAME** column.
 3. Click the **Load Balancers** tab.
 4. Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.
 
-<div align="left">
+<div align="left"><figure><img src="../../.gitbook/assets/image (316).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
-<figure><img src="../../.gitbook/assets/image (316).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
-
-</div>
-
-5. From the **Select Type** list box, select **K8s Cluster IP**.&#x20;
-6. Enable **Advanced Kubernetes Settings** and **Set HealthCheck annotations for Ingress**, if needed. (This will add required annotations in Kubernetes Service to be recognized by the GKE Ingress Controller)
-7. Click **Add**. The Load Balancer listener details display in the **Load Balancers** tab on the Service details page.&#x20;
+5. From the **Select Type** list box, select **K8s ClusterIP**.&#x20;
+6. Optionally, enable **Advanced Kubernetes Settings** and configure the **External Traffic Policy** and **Extra Selector Labels** fields.
+7. Optionally, select **Set HealthCheck annotations** (this ensures the Kubernetes Service is recognized by the GKE Ingress Controller).
+8. Optionally, enable **Additional health check configs**.
+9. Click **Add**. The Load Balancer listener details will appear in the **Load Balancers** tab on the Service details page.
 
 <figure><img src="../../.gitbook/assets/image (317).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab for <strong>nginx-test</strong> service</p></figcaption></figure>
 
-### Creating a GCP Managed Certificate (optional)
+## Creating a GCP Managed Certificate (optional)
 
 To enable SSL, create a GCP-managed certificate resource in the application namespace.
 
@@ -73,7 +72,7 @@ Once a Service and Load Balancer are deployed, add an Ingress:
 7.  Select your ARN from the **Certificate ARN** list box. \
 
 
-    <figure><img src="../../.gitbook/assets/NEW INGRESS.png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page </p></figcaption></figure>
+    <div align="left"><figure><img src="../../.gitbook/assets/NEW INGRESS.png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page </p></figcaption></figure></div>
 8. If you have [created a GCP managed cert](gke-ingress.md#create-gcp-managed-certificate-optional)[ificate](gke-ingress.md#create-a-gcp-managed-certificate-optional), add the following annotations in the **Annotations** field to link the Ingress with your GCP-managed certificate
 
 ```
@@ -92,11 +91,7 @@ To add a Kubernetes Ingress, you must define [rules ](https://kubernetes.io/docs
 
 1. In the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule** pane displays.&#x20;
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (319).png" alt="" width="375"><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (319).png" alt="" width="375"><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 
 2. Specify the **Path** (**/samplePath/** in the example).
 3. Optionally, specify the **Path Type** and **Host**. In this example, we specify a **Path Type** of **Exact**. Clicking the Info Tip icon ( <img src="../../.gitbook/assets/info_tip_black (1).png" alt="" data-size="line"> ) provides more information for these optional fields.

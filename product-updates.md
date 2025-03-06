@@ -44,6 +44,7 @@ layout:
   * Update [ECR repository settings](overview/aws-services/elastic-container-registry-ecr.md).&#x20;
   * Enable delete protection for AWS Load Balancers.
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
+  * Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;
 * Azure
   * Support for [Azure Databricks](overview-2/azure-services/databricks.md).
   * Support for [Azure Container Registry](overview-2/azure-services/azure-container-registry-acr.md).
@@ -57,7 +58,6 @@ layout:
 * Kubernetes
   * [Manage read-only access to Kubernetes Secrets and ConfigMaps.](kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md)
   * Add custom Kubernetes labels to nodes in AWS at the [host](overview/use-cases/hosts-vms/) or [Auto Scaling Group](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/) (ASG) level.
-  * Support for Kubernetes Ingress with TLS specification
   * Support for [initContainers and additionalContainers (Sidecar Containers)](kubernetes-overview/initcontainers-and-sidecar-containers.md) with K8s Services.
 * General
   * Support for [rolling back container images](overview/aws-services/containers/container-rollback.md) for DuploCloud Services.
