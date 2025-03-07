@@ -50,13 +50,18 @@ Using Kubernetes Health Check allows AKS's Application Load Balancer to determin
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Ingress**.
 2. Click **Add**. The **Add Kubernetes Ingress** page displays.
-3.  Supply the **Ingress Name**, select the Ingress Controller (in this example, **azure-application-gateway**), and set **Visibility** to **Public**.\
+3. Supply the **Ingress Name.**
+4. Select the **Ingress Controller**.
+5.  Set **Visibility** to **Public** or **Internal Only**.\
 
 
-    <figure><img src="../../../.gitbook/assets/myingress.png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
-4. In the **DNS Prefix** field, provide the DNS prefix to expose services.
-5. From the **Certificate ARN** list box, select the certificate ARN to expose services over HTTPS.
-6. Optionally, in the **Port Override** field, select a port to override. This field allows configuring frontend listeners to use ports other than 80/443 for HTTP/HTTPS. If you use a port other than 80, you must define an additional Security Group rule for that port. See [this section](./#adding-a-security-group-rule-for-a-port-value-other-than-80) for more information.
+    <figure><img src="../../../.gitbook/assets/new azure ingress.png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
+6. Optionally, in the **DNS Prefix** field, provide the DNS prefix to expose services.
+7. Optionally, in the **Certificate Name** list box, select or enter the name of the TLS/SSL certificate to secure the Ingress traffic.
+8. Optionally, in the **Port Override** field, select a port to override. This field allows configuring frontend listeners to use ports other than 80/443 for HTTP/HTTPS. If you use a port other than 80, you must define an additional Security Group rule for that port. See [this section](./#adding-a-security-group-rule-for-a-port-value-other-than-80) for more information.
+9. Optionally, enable **HTTP to HTTPS Redirect** to automatically redirect all HTTP requests to HTTPS, ensuring secure communication with your services.
+10. Follow the steps below to configure Ingress rules.
+11. Click **Add** to create the Ingress.
 
 ### Configuring Ingress rules
 
@@ -68,8 +73,7 @@ Using Kubernetes Health Check allows AKS's Application Load Balancer to determin
 3. In the **Path Type** list box, select **Exact**, **Prefix,** or **Implementation Specific**.
 4. In the **Service Name** field, select the Service (**s1-alb:80** in this example).&#x20;
 5. Click **Add Rule** to add the Ingress rule.
-6. Repeat steps 1-5 to add additional rules. In this example, we added a second rule for Service **s4-nlb:80**.
-7. On the **Add Kubernetes Ingress** page, click **Add** to create the Ingress.
+6. Repeat steps 1-5 to add additional rules.&#x20;
 
 {% hint style="info" %}
 The DuploCloud Platform supports defining multiple rules/paths in Ingress.

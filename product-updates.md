@@ -51,6 +51,7 @@ layout:
   * Support for [Azure Availability Sets](overview-2/use-cases/hosts-vms/availability-sets.md).
   * Support for [Azure Data Factory](overview-2/azure-services/data-factory.md).&#x20;
   * Enable autoscaling in the [AKS default node pool](overview-2/prerequisites/set-the-aks-cluster-version.md).
+  * Automatically redirect incoming HTTP requests to HTTPS for [AKS Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/).&#x20;
 * GCP
   * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
   * Support for GCP Virtual Private Cloud (VPC) Peering.
