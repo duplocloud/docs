@@ -64,7 +64,7 @@ layout:
   * Support for [rolling back container images](overview/aws-services/containers/container-rollback.md) for DuploCloud Services.
   * Force sync [Okta](extras-overview/okta-identity-management.md) changes to immediately apply updates.
   * DuploCloud UI redesign: updates to navigation, breadcrumbs, menus, and general appearance.
-  * Configure session timeout duration for user logins.
+  * [Configure session timeout duration for user logins.](access-control/session-timeout.md#configuring-session-timeout-for-duplocloud-users)
 
 ## Q4 2024
 
