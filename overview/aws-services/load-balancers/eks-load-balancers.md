@@ -181,18 +181,18 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 * Enable Access Logging
 * Set Idle Timeout
 * Drop invalid headers
+* Delete Protection
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
-2. Select the Service to which your Load Balancer is attached from the **Name** column.
+2. Select the Service to which your Load Balancer is attached from the **NAME** column.
 3. Click the **Load Balancers** tab.
-4. In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.
+4. In the **Other Settings** card, click **Edit**.&#x20;
 
 <figure><img src="../../../.gitbook/assets/other settings (1).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab with <strong>Other Settings</strong> card</p></figcaption></figure>
 
-5. In the **Other Load Balancer Settings** pane, select any or all options.\
+5.  The **Other Load Balancer Settings** pane displays.\
 
 
-<div align="left"><figure><img src="../../../.gitbook/assets/AWS_LB_Other2.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
-
-6. Click **Save**.
-
+    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (68) (1).png" alt=""><figcaption><p>The <strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
+6. Configure the settings, as needed.
+7. Click **Save**. The Load Balancer settings are updated.
