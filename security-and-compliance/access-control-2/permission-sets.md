@@ -39,9 +39,9 @@ Each policy within a Permission Set defines access rules based on the following 
 When a user attempts to access resources, DuploCloud evaluates permissions based on their assigned Permission Sets. The system then follows these steps to determine access:
 
 * **Tenant Filtering:** Checks if the Permission Set applies to the current Tenant. If not, it is ignored.
-* **Explicit Deny Check:** If a _deny_ rule exists for the request, access is immediately blocked with a **403 Unauthorized** error.
+* **Explicit Deny Check:** If a _deny_ rule exists for the request, access is immediately blocked with a **400** error.
 * **Allow Check:** If no _deny_ rule is found and an _allow_ rule exists, access is granted.
-* **Default Deny:** If there is no explicit _allow_ rule, access is denied by default (**403 Unauthorized**).
+* **Default Deny:** If there is no explicit _allow_ rule, access is denied by default (**400**).
 
 #### **System-Wide Permission Set**
 
