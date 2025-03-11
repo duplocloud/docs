@@ -33,7 +33,7 @@ Pyroscope is the backend for profiles that show the CPU and Memory profile for t
 
 For more information about profile data, see the [Grafana Pyroscope documentation](https://grafana.com/docs/grafana/latest/datasources/pyroscope/query-profile-data/).&#x20;
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption><p>The Grafana <strong>Profiling</strong> Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>The Grafana <strong>Profiling</strong> Dashboard</p></figcaption></figure>
 
 ### Viewing Profiles and Traces in Grafana
 

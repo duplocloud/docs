@@ -42,7 +42,7 @@ layout:
   * Support for configuring [S3 bucket replication rules](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/~/changes/1184/overview/aws-services/s3-bucket/~/overview#s3-bucket-replication-rules).
   * Update [RDS Performance Insights](aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).
   * Update [ECR repository settings](overview/aws-services/elastic-container-registry-ecr.md).&#x20;
-  * [Enable delete protection for AWS Load Balancers.](overview/aws-services/load-balancers/#additional-load-balancer-settings)
+  * Enable delete protection for AWS Load Balancers.
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
   * Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;
 * Azure
@@ -51,7 +51,7 @@ layout:
   * Support for [Azure Availability Sets](overview-2/use-cases/hosts-vms/availability-sets.md).
   * Support for [Azure Data Factory](overview-2/azure-services/data-factory.md).&#x20;
   * Enable autoscaling in the [AKS default node pool](overview-2/prerequisites/set-the-aks-cluster-version.md).
-  * Automatically redirect incoming HTTP requests to HTTPS for [AKS Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/).&#x20;
+  * Automatically redirect incoming HTTP requests to HTTPS for [AKS Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/).
 * GCP
   * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
   * Support for GCP Virtual Private Cloud (VPC) Peering.
@@ -62,6 +62,7 @@ layout:
   * Support for [initContainers and additionalContainers (Sidecar Containers)](kubernetes-overview/initcontainers-and-sidecar-containers.md) with K8s Services.
 * General
   * Support for [rolling back container images](overview/aws-services/containers/container-rollback.md) for DuploCloud Services.
+  * [Manage automatic VPN access for new Okta users. ](access-control/add-and-delete-vpn-access-for-users.md#managing-vpn-access-for-okta-users)
   * Force sync [Okta](extras-overview/okta-identity-management.md) changes to immediately apply updates.
   * DuploCloud UI redesign: updates to navigation, breadcrumbs, menus, and general appearance.
   * [Configure session timeout duration for user logins.](access-control/session-timeout.md#configuring-session-timeout-for-duplocloud-users)
