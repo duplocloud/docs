@@ -61,6 +61,7 @@ layout:
   * Add custom Kubernetes labels to nodes in AWS at the [host](overview/use-cases/hosts-vms/) or [Auto Scaling Group](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/) (ASG) level.
   * Support for [initContainers and additionalContainers (Sidecar Containers)](kubernetes-overview/initcontainers-and-sidecar-containers.md) with K8s Services.
 * General
+  * [Support for granular access control with new Permission Sets.](security-and-compliance/access-control-2/permission-sets.md)
   * Support for [rolling back container images](overview/aws-services/containers/container-rollback.md) for DuploCloud Services.
   * [Manage automatic VPN access for new Okta users. ](access-control/add-and-delete-vpn-access-for-users.md#managing-vpn-access-for-okta-users)
   * Force sync [Okta](extras-overview/okta-identity-management.md) changes to immediately apply updates.
