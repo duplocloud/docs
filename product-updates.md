@@ -26,7 +26,7 @@ layout:
   * Set Retry and Expiration Limits for Asynchronous [Lambda](overview/aws-services/lambda/) Invocations
   * Configure [SQS dead letter queues and redrive policies in AWS](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Support for Modifying [ASG Launch Templates](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).
-  * I[nstance Refresh action for AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
+  * [Instance Refresh action for AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Customize CloudWatch metrics for [AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-autoscaling-groups-asg).
   * Support for [SNS with FIFO (First-In-First-Out) topics.](overview/aws-services/sns-topic.md#creating-a-sns-topic)
   * Create scheduled snapshot windows for automated backups in [AWS Redis](overview-2/azure-services/databases/redis-database.md).
@@ -46,6 +46,7 @@ layout:
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
   * Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;
 * Azure
+  * Add new secret versions in [Azure Key Vault](overview-2/azure-services/key-vault.md).
   * Support for [Azure Databricks](overview-2/azure-services/databricks.md).
   * Support for [Azure Container Registry](overview-2/azure-services/azure-container-registry-acr.md).
   * Support for [Azure Availability Sets](overview-2/use-cases/hosts-vms/availability-sets.md).
