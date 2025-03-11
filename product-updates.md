@@ -42,7 +42,7 @@ layout:
   * Support for configuring [S3 bucket replication rules](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/~/changes/1184/overview/aws-services/s3-bucket/~/overview#s3-bucket-replication-rules).
   * Update [RDS Performance Insights](aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).
   * Update [ECR repository settings](overview/aws-services/elastic-container-registry-ecr.md).&#x20;
-  * Enable delete protection for AWS Load Balancers.
+  * [Enable delete protection for AWS Load Balancers.](overview/aws-services/load-balancers/#additional-load-balancer-settings)
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
   * Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;
 * Azure
