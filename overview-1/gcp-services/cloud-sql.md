@@ -37,4 +37,4 @@ This setting ensures that a backup is automatically taken and stored in a design
 
 1. When deleting a Cloud SQL instance, enable the **Retain backups** option to retain backups.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>The <strong>Delete SQL Database</strong> pane with <strong>Retain backups</strong> enabled</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption><p>The <strong>Delete SQL Database</strong> pane with <strong>Retain backups</strong> enabled</p></figcaption></figure></div>
