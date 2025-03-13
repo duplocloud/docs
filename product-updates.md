@@ -23,6 +23,7 @@ layout:
 ## Q1 2025
 
 * AWS
+  * Support for [ElastiCache Valkey](overview/aws-services/database/elastic-cache.md#creating-a-redis-or-valkey-elasticache-instance).
   * Set Retry and Expiration Limits for Asynchronous [Lambda](overview/aws-services/lambda/) Invocations
   * Configure [SQS dead letter queues and redrive policies in AWS](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Support for Modifying [ASG Launch Templates](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).
