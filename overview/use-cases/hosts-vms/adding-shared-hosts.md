@@ -6,61 +6,69 @@ description: >-
 
 # Adding Shared Hosts
 
-You can enable shared Hosts in the DuploCloud Portal. First, configure one Tenant to allow K8s Pods from other Tenants to run on its Host(s). Then, configure another Tenant to run its K8s Pods on Hosts in other Tenants. This allows you to break Tenant boundaries for greater flexibility.&#x20;
+Shared Hosts allow workloads to run on the same set of virtual machines (VMs), making better use of resources across multiple Tenants. DuploCloud now supports Services, Jobs, and CronJobs on shared Hosts, providing more flexibility for running long-running services, batch jobs, and scheduled tasks.
+
+DuploCloud supports shared Hosts for:
+
+* **Services**
+* **Jobs**
+* **CronJobs**
 
 ## Configuring Tenants to allow Host sharing
 
-### Enabling a Tenant to allow Host sharing
+To enable Host sharing, configure one Tenant to share its Hosts, and another Tenant to run K8s Pods on any Host.&#x20;
+
+### Enabling a Tenant to share its Hosts
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
-2. From the **Tenant** list, select the name of the Tenant to which the Host is defined.&#x20;
+2. From the **Tenant** list box, select the Tenant that will share its Host.&#x20;
 3. Click the **Settings** tab.
-4. Click **Add**. The **Add Tenant Feature** pane displays.
+4.  Click **Add**. The **Add Tenant Feature** pane displays.\
+
+
+    <div align="left"><figure><img src="../../../.gitbook/assets/Tenantfeature.jpg" alt="" width="455"><figcaption><p>The <strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** item list, select **Allow hosts to run K8S pods from other tenants**.
-6.  Select **Enable.**\
+6. Select **Enable.**
+7. Click **Add**. This Tenant's Hosts can now run Pods from other Tenants.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/Screenshot (270).png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane filled to enable Hosts to run K8s Pods from other Tenants.</p></figcaption></figure>
-
-    </div>
-7. Click **Add**. This Tenant's hosts can now run Pods from other Tenants.\
-
-
-### Enabling a Tenant to run Kubernetes Pods on another Tenant's Host
+### **Enabling a Tenant to run Pods on shared Hosts**
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
-2. From the **Tenant** list, select the name of the Tenant that will access the other Tenant's Host (the Tenant not associated with a Host).&#x20;
-3. Click the **Settings** tab.
-4. Click **Add**. The **Add Tenant Feature** pane displays.
+2. From the **Tenant** list, select the Tenant that will run Pods on the shared Host.
+3. Select the **Settings** tab.
+4.  Click **Add**. The **Add Tenant Feature** pane displays.\
+
+
+    <div align="left"><figure><img src="../../../.gitbook/assets/SHARED.jpg" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** item list, select **Enable option to run K8S pods on any host**.
 6. Select **Enable.**
-7.  Click **Add**. This Tenant can now run Pods on other Tenant's Hosts.\
+7. Click **Add**. This Tenant can now run Pods on other Tenant's Hosts.
 
+## Creating Services, Jobs, and CronJobs on Shared Hosts
 
-    <div align="left">
+After configuring Tenant settings to allow Host sharing, create the resources you want to run on the shared Hosts.&#x20;
 
-    <figure><img src="../../../.gitbook/assets/shot 3333.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane filled to enable running Pods on any Host. </p></figcaption></figure>
+### **Creating a Service to run on a shared Host**
 
-    </div>
-
-## Creating a Service that uses a shared Host
-
-1. From the **Tenant** list box at the top of the DuploCloud Portal, select the name of the Tenant that will run K8s Pods on the shared Host.
+1. From the **Tenant** list box, select the Tenant that will run Pods on the shared Host.
 2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
-3. In the **Services** tab, click **Add**. The **Add Service** window displays.
+3.  In the **Services** tab, click **Add**. The **Add Service** page displays.\
+
+
+    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_00_08.png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Basic Options.</p></figcaption></figure>
 4. Fill in the **Service Name**, **Cloud**, **Platform**, and **Docker Image** fields. Click **Next**.
-
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_00_08.png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Basic Options.</p></figcaption></figure>
-
-5.  In the **Advanced Options** window, from the **Run on Any Hos**t item list, select **Yes**. \
+5.  Enable **Run on Any Host**. \
 
 
-    <div align="left">
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure></div>
+6. Click **Create**. A Service running on the shared Host is created.&#x20;
 
-    <figure><img src="../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure>
+### **Creating a Job or CronJob to run on a Shared Host**
 
-    </div>
-6. Click **Create**. A Service running the shared Host is created.&#x20;
+DuploCloud supports running Jobs and CronJobs on shared Hosts for AWS.
 
+1. Follow the steps in the DuploCloud documentation to create a [Kubernetes Job](../../../kubernetes/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [Kubernetes CronJob](../../../kubernetes/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).&#x20;
+2. On the **Add Kubernetes Job** or **Add Kubernetes CronJob** page, enable **Run on Any Host**.
+3. Click **Create** to deploy the Job or CronJob on the shared Host.
+
+<figure><img src="../../../.gitbook/assets/Screenshot (119).png" alt=""><figcaption><p>The <strong>Add Kubernetes Job</strong> page with the <strong>Run on Any Host</strong> option enabled</p></figcaption></figure>

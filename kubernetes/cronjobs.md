@@ -42,7 +42,7 @@ See the Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/contr
 
 <figure><img src="../.gitbook/assets/cron final.png" alt=""><figcaption><p><strong>K8s CronJob</strong> tab displaying Kubernetes Job <strong>CALCULATEPI.</strong></p></figcaption></figure>
 
-## Viewing a Kubernetes CronJob&#x20;
+&#x20;
 
 ## Managing Kubernetes CronJobs faults
 
@@ -81,8 +81,6 @@ When the value is true and the CronJob fails, DuploCloud will generate a fault. 
 2. Select the Kubernetes CronJob you want to view and click the **Overview, Schedule**, and **Details** tabs for more information about the CronJob schedule and history.&#x20;
 
 You can also view details of a Kubernetes CronJob by clicking on the **menu icon** ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) icon to the left of the job name and selecting **View**.
-
-
 
 <figure><img src="../.gitbook/assets/cron9.png" alt=""><figcaption><p><strong>Overview</strong> tab for Kubernetes Job <strong>MYCRONJOB.</strong></p></figcaption></figure>
 
@@ -124,3 +122,8 @@ You can edit and modify the following fields in the DuploCloud Portal:
 
 <figure><img src="../.gitbook/assets/cron delete.png" alt=""><figcaption><p>CronJob options menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
 
+## Running CronJobs on Shared Hosts
+
+DuploCloud supports running Kubernetes CronJobs on Shared Hosts in both AWS and Azure.&#x20;
+
+For detailed steps, see the [Shared Hosts documentation for AWS](../overview/use-cases/hosts-vms/adding-shared-hosts.md) and [Shared Hosts documentation for Azure](../overview-2/use-cases/hosts-vms/shared-hosts.md).

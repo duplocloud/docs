@@ -295,6 +295,7 @@
     * [Hosts (VMs)](overview-2/use-cases/hosts-vms/README.md)
       * [Autoscaling for Hosts](overview-2/use-cases/hosts-vms/autoscaling/README.md)
         * [Autoscaling Azure Agent Pools](overview-2/use-cases/hosts-vms/autoscaling/autoscaling-azure-agent-pools.md)
+      * [Shared Hosts](overview-2/use-cases/hosts-vms/shared-hosts.md)
       * [Availability Sets](overview-2/use-cases/hosts-vms/availability-sets.md)
       * [Snapshots](overview-2/use-cases/hosts-vms/backups.md)
     * [Logs](overview-2/use-cases/logs.md)

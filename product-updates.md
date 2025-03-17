@@ -59,6 +59,7 @@ layout:
   * Support for GCP Virtual Private Cloud (VPC) Peering.
   * Support for [SNS Pub/Sub topic subscriptions](overview-1/gcp-services/s3-bucket-3.md#create-a-pub-sub-topic-subscription).
 * Kubernetes
+  * Support for Running Jobs and CronJobs on [Shared Hosts in AWS](overview/use-cases/hosts-vms/adding-shared-hosts.md#creating-a-job-or-cronjob-to-run-on-a-shared-host) and [Shared VMs in Azure](overview/use-cases/hosts-vms/adding-shared-hosts.md#creating-a-job-or-cronjob-to-run-on-a-shared-host).
   * [Manage read-only access to Kubernetes Secrets and ConfigMaps.](kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md)
   * Add custom Kubernetes labels to nodes in AWS at the [host](overview/use-cases/hosts-vms/) or [Auto Scaling Group](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/) (ASG) level.
   * Support for [initContainers and additionalContainers (Sidecar Containers)](kubernetes-overview/initcontainers-and-sidecar-containers.md) with K8s Services.
