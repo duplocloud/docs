@@ -18,12 +18,12 @@ When creating an S3 bucket using the `duplocloud_s3_bucket` resource in Terrafor
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage**.
 2. Click the **S3** tab.
-3. Click **Add**. The **Create an S3 Bucket** pane displays.
+3.  Click **Add**. The **Create an S3 Bucket** pane displays.\
+
+
+    <div align="left"><figure><img src="../../.gitbook/assets/S3BUCKET.png" alt="" width="362"><figcaption><p>The <strong>Create an S3 Bucket</strong> pane</p></figcaption></figure></div>
 4. In the **Name** field, enter a name for the S3 bucket.
 5. In the **Region** list box, select the region. You can choose Region Tenant, **Default Region**, or **Global Region** and specify **Other Region** to enter a custom region you have defined.
-
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-14_38_40.png" alt=""><figcaption><p>The <strong>Create an S3 Bucket</strong> pane</p></figcaption></figure>
-
 6. Optionally, select **Enable Bucket Versioning** or **Object Lock.** These settings are disabled by default unless you Enable Bucket Versioning Tenant-wide in **Tenant Settings**. For more information about S3 bucket versioning, see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html). It's important to note that while DuploCloud supports enabling versioning, managing versions and the deletion of versioned objects may require manual steps through the AWS console or CLI, especially since DuploCloud's current Terraform operations perform only basic delete operations.
 7. Click **Create**. An S3 bucket is created.
 
@@ -40,10 +40,12 @@ You can configure the [Tenant](../use-cases/tenant-environment/#2-toc-title) to 
 3. In the **Settings** tab, click **Add**. The **Add Tenant Feature** pane displays.
 4. Click **Add**. The **Create an S3 Bucket** pane displays.
 5. From the **Select Tenant Feature** list box, select **Default: Enable bucket versioning for new S3 buckets**.
-6.  Select **Enable**.
+6.  Select **Enable**.\
+
 
     <div align="left"><figure><img src="../../.gitbook/assets/add tenant feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane filled to enable bucket versioning for this Tenant.<br></p></figcaption></figure></div>
-7.  Click **Add**. Bucket versioning will be enabled by default on the **Create an S3 Bucket** pane when [creating a new S3 bucket](s3-bucket.md#creating-an-s3-bucket).
+7.  Click **Add**. Bucket versioning will be enabled by default on the **Create an S3 Bucket** pane when [creating a new S3 bucket](s3-bucket.md#creating-an-s3-bucket).\
+
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (257).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the <strong>Tenant</strong> page shows bucket versioning is enabled for new S3 buckets.</p></figcaption></figure></div>
 
