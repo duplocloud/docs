@@ -167,3 +167,9 @@ You can edit and modify the following fields in the DuploCloud portal:
 3. Click the Job options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
 
 <figure><img src="../.gitbook/assets/delete.png" alt=""><figcaption><p>Job options menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
+
+## Running Jobs on Shared Hosts
+
+DuploCloud supports running Kubernetes Jobs on Shared Hosts in both AWS and Azure.&#x20;
+
+For detailed steps, see the [Shared Hosts documentation for AWS](../overview/use-cases/hosts-vms/adding-shared-hosts.md) and [Shared Hosts documentation for Azure](../overview-2/use-cases/hosts-vms/shared-hosts.md).
