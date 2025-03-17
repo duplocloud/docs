@@ -31,9 +31,9 @@ Note that Control Plane Components are deployed in the DuploCloud **Default** Te
 
 &#x20;You can update the log retention period using the OpenSearch native dashboard by completing the following steps.
 
-1. From the DuploCloud portal, navigate to **Administrator** -> **Observability** -> **Logging**.
+1. From the DuploCloud portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Logging**.
 2. Click **Open New Tab** to access the OpenSearch dashboard.
-3. Navigate to **Pancake** -> **Index management** -> **State management policies**.
+3. Click the menu icon **(**<img src="../../../.gitbook/assets/Screenshot (88).png" alt="" data-size="line">) -> **Index management** -> **State management policies**.
 4. Edit the **FileBeat** YAML file and update the retention period.
 
 For more information see the [OpenSearch documentation](https://opensearch.org/docs/latest/).&#x20;
