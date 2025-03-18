@@ -13,7 +13,7 @@ For a Native Docker Services example, see [this tutorial](../../../quick-start/q
 ## Creating a DuploCloud EKS Service
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
-2. Click **Add**. The **Basic Options** section of the **Add Service** page displays.
+2. Click **Add**.
 3. In the **Service Name** field, give the Service a name (without spaces).&#x20;
 4. From the **Cloud** list box, select **AWS**.&#x20;
 5. From the **Platform** list box, select **EKS Linux**.&#x20;
@@ -28,7 +28,7 @@ For a Native Docker Services example, see [this tutorial](../../../quick-start/q
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_30_56.png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
 
-5. Click **Next.** The **Add Service, Advanced Options** page displays.
+5. Click **Next.** The **Advanced Options** page displays.
 6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
 7. Click **Create**. The Service is created.&#x20;
 

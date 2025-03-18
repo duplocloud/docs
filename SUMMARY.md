@@ -141,7 +141,7 @@
     * [Containers and Services](overview/aws-services/containers/README.md)
       * [EKS Containers and Services](overview/aws-services/containers/eks-containers-and-services/README.md)
         * [Allocation Tagging](overview/aws-services/containers/eks-containers-and-services/creating-advanced-functions.md)
-      * [ECS Containers and Task Definitions](aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md)
+      * [ECS Containers, Task Definitions and Services](aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md)
       * [Passing Configs and Secrets](overview/aws-services/containers/passing-config-and-secrets.md)
       * [Container Rollback](overview/aws-services/containers/container-rollback.md)
       * [Docker Registry credentials](overview/aws-services/containers/docker-registry-credentials.md)
