@@ -46,6 +46,7 @@ layout:
   * Enable delete protection for AWS Load Balancers.
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
   * Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;
+  * Support for [ECS with EC2 Capacity Provider](aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#configuring-ecs-with-ec2-capacity-provider).
 * Azure
   * Add new secret versions in [Azure Key Vault](overview-2/azure-services/key-vault.md).
   * Support for [Azure Databricks](overview-2/azure-services/databricks.md).

@@ -24,11 +24,7 @@ Before creating the ECS Service and Load Balancer, verify that you accomplished 
 1.  In the DuploCloud Portal's **Tenant** list box, select **dev01**.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/tenant_dev01 (12).png" alt=""><figcaption><p>DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/tenant_dev01 (12).png" alt=""><figcaption><p>DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure></div>
 
 
 2. Navigate to **Cloud Services** -> **ECS**.
@@ -43,11 +39,7 @@ Before creating the ECS Service and Load Balancer, verify that you accomplished 
 6.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/dockerq.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for an ECS Service</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/dockerq.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for an ECS Service</p></figcaption></figure></div>
 
 
 7. From the **Select Type** list box, select **Application LB**.
@@ -57,8 +49,7 @@ Before creating the ECS Service and Load Balancer, verify that you accomplished 
 11. In the **Heath Check** field, enter **/**, specifying `root`, the location of Kubernetes Health Check logs.
 12. From the **Backend Protocol** list box, select **HTTP**.
 13. From the **Protocol Policy** list box, select **HTTP1**.
-14. Select other options as needed and click **Add**.
-15. On the **Add ECS Service** page, click **Submit**.&#x20;
+14. On the **Add ECS Service** page, click **Submit**.&#x20;
 
 ## Checking Your Work
 

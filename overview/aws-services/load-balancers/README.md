@@ -61,7 +61,7 @@ Repeat this procedure for each custom CIDR that you want to add.
 
 Repeat this procedure to add additional CIDRs.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/LBL8.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane for adding <strong>Custom CIDRs</strong> to Securty Groups</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/LBL8.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane for adding <strong>Custom CIDRs</strong> to Security Groups</p></figcaption></figure></div>
 
 ## Adding a Shared Load Balancer
 
@@ -70,7 +70,7 @@ Repeat this procedure to add additional CIDRs.
 3.  Click **Add**. The **Create a Load Balancer** pane displays.\
 
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/AWS_alb_lb_create.png" alt=""><figcaption><p><strong>Create a Load Balancer</strong> pane for a shared <strong>Application</strong> load balancer</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/AWS_alb_lb_create.png" alt=""><figcaption><p><strong>Create a Load Balancer</strong> pane for a shared <strong>ALB</strong></p></figcaption></figure></div>
 4. In the **Name** field, enter a name for the Load Balancer.
 5. From the **Type** list box, select a Load Balancer type.
 6. From the **Visibility** list box, select **Public** or **Internal**.
@@ -178,7 +178,7 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Networking**.
 2. Select the **Load Balancers** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the Load Balancer for which you want to configure Other Settings, and select **Other Settings**. The **Other Load Balancer Settings** pane displays.\
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (5).avif" alt="" data-size="line">) in the row of the Load Balancer for which you want to configure Other Settings, and select **Other Settings**. The **Other Load Balancer Settings** pane displays.\
 
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (68).png" alt=""><figcaption><p>The <strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
