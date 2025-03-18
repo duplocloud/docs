@@ -146,6 +146,7 @@
       * [Container Rollback](overview/aws-services/containers/container-rollback.md)
       * [Docker Registry credentials](overview/aws-services/containers/docker-registry-credentials.md)
     * [Load Balancers](overview/aws-services/load-balancers/README.md)
+      * [Target Groups](overview/aws-services/load-balancers/target-groups.md)
       * [EKS Load Balancers](overview/aws-services/load-balancers/eks-load-balancers.md)
       * [ECS Services and Load Balancers](overview/aws-services/load-balancers/ecs-services-and-load-balancers.md)
       * [Native Docker Load Balancers](overview/aws-services/load-balancers/native-docker-load-balancers.md)
