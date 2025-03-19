@@ -44,31 +44,13 @@ Create a Tenant for your Infrastructure and Plan:
 2. Click **Add**. The **Create a Tenant** pane displays.
 3. Enter **dev01** in the **Name** field.&#x20;
 4. Select the **Plan** that you created in the previous step (**NONPROD**).
-5. Click **Create**.\
+5. Click **Create**.
 
-
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/Azure_GS_Tenant_1_Create_a_Tenant.png" alt=""><figcaption><p>The <strong>Create a Tenant</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/Azure_GS_Tenant_1_Create_a_Tenant.png" alt=""><figcaption><p>The <strong>Create a Tenant</strong> pane</p></figcaption></figure></div>
 
 ## Checking Your Work
 
 1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/AWS_QS_3.png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong><br></p></figcaption></figure>
-
-    </div>
-2.  Navigate to **Administrator** -> **Infrastructure** and select **dev01** from the **Tenant** list box. Ensure that the **NONPROD** Infrastructure appears in the list of Infrastructures with a status of **Complete**.\
-
-
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/AWS_QS_4.png" alt=""><figcaption><p>The <strong>Infrastructure</strong> page with the <strong>NONPROD</strong> Infrastructure highlighted</p></figcaption></figure>
-
-    </div>
-
+    <div align="left"><figure><img src="../../.gitbook/assets/AWS_QS_3.png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong><br></p></figcaption></figure></div>

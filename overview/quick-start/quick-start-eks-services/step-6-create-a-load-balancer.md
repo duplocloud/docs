@@ -26,16 +26,9 @@ Before creating a Load Balancer, verify that you completed the tasks in the prev
 2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. &#x20;
 3. From the **NAME** column, select **demo-service**.
 4. Click the **Load Balancers** tab.
-5.  Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.\
-    \
+5. Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.
 
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/Screenshot 2023-07-11 132858.png" alt=""><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
-
-    </div>
-
+<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (128).png" alt="" width="344"><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
 6. From the **Type** list box, select **Application LB**.
 7. In the **Container Port** field, enter **3000**. This is the configured port on which the application inside the Docker Container Image `duplocloud/nodejs-hello:latest` is running.&#x20;
@@ -55,6 +48,5 @@ Before creating a Load Balancer, verify that you completed the tasks in the prev
 5. Note the **DNS** Name of the Load Balancer that you created.&#x20;
 6. In the **LB Listeners** area of the **Services** page, note the configuration details of the Load Balancer's **HTTP** protocol, which you specified, when you added it above.
 
-<figure><img src="../../../.gitbook/assets/done fake.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab containing <strong>LB Configuration</strong> card displaying <strong>Type ALB</strong> Load Balancer</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (134) (1).png" alt=""><figcaption><p>The <strong>Services</strong> details page with <strong>Ready LB Status</strong> highlighted</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/final faker.png" alt=""><figcaption><p><strong>DNS</strong> name for demo-service</p></figcaption></figure>

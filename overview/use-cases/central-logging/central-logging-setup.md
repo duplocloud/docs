@@ -18,7 +18,7 @@ Central logging is typically set up during DuploCloud onboarding. Contact DuploC
 ## Enabling Default-Tenant Logging
 
 1. From the **Tenant** list box at the top of the DuploCloud Portal, select the **Default** Tenant.
-2. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Basic** -> **Settings**, and select the **Logging** tab.
+2. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings**, and select the **Logging** tab.
 3.  Click the **Enable Logging** link. The **Enable Logging** page displays.\
 
 
@@ -33,10 +33,9 @@ Find the ARN certificate by selecting the **Default** Tenant from the **Tenant**
 {% endhint %}
 
 6. Enter the number of days to retain logs in the **Log Retention in Index (Days)** field.&#x20;
-7.  Click **Submit**. Data gathering takes about fifteen (15) minutes. When data gathering is complete, graphical logging data is displayed on the **Logging** tab. \
+7. Click **Submit**. Data gathering takes about fifteen (15) minutes. When data gathering is complete, graphical logging data is displayed on the **Logging** tab.&#x20;
 
-
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (155).png" alt=""><figcaption><p>The <strong>Enable Logging</strong> page</p></figcaption></figure></div>
+<figure><img src="../../../.gitbook/assets/new logging.png" alt=""><figcaption><p>The <strong>Enable Logging</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
 When you enable logging for a Tenant, an Elastic Filebeat Service starts and begins log collection. The [Elastic Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html) Service must be running for log collection to occur.&#x20;
