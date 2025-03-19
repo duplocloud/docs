@@ -11,15 +11,14 @@ Enable and access shells for your DuploCloud Docker, EKS, and ECS containers dir
 ### Enabling the Shell for Docker&#x20;
 
 1. In the DuploCloud Portal, navigate to **Docker** -> **Services**.&#x20;
-2. From the **Docker** list box, select **Enable Docker Shell**. The **Start Shell Service** pane displays.
+2.  From the **Docker** list box, select **Enable Docker Shell**. The **Start Shell Service** pane displays.\
 
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-14_19_17.png" alt=""><figcaption><p>The <strong>Services</strong> page with the <strong>Enable Docker Shell</strong> option highlighted</p></figcaption></figure>
 
-<div align="left">
+    <figure><img src="../../.gitbook/assets/Screenshot (169) (1).png" alt=""><figcaption><p>The <strong>Services</strong> page with the <strong>Enable Docker Shell</strong> option highlighted</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/docker shell (1).png" alt="" width="365"><figcaption><p>The <strong>Start Shell Service</strong> pane</p></figcaption></figure>
 
-</div>
+
+<div align="left"><figure><img src="../../.gitbook/assets/docker shell (1).png" alt="" width="365"><figcaption><p>The <strong>Start Shell Service</strong> pane</p></figcaption></figure></div>
 
 3. In the **Platform** list box, select **Docker Native**.
 4. From the **Certificate** list box, select your certificate.
@@ -40,11 +39,7 @@ Enable and access shells for your DuploCloud Docker, EKS, and ECS containers dir
 2. In the DuploCloud Portal, navigate to **Docker** -> **Services**.
 3. Click the **Docker** button, and select **Enable Docker Shell**. The **Start Shell Service** pane displays.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/brand new3.png" alt="" width="386"><figcaption><p>The <strong>Start Shell Service</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/brand new3.png" alt="" width="386"><figcaption><p>The <strong>Start Shell Service</strong> pane</p></figcaption></figure></div>
 
 4. In the **Platform** list box, select **Kubernetes**.
 5. In the **Certificate** list box, select your certificate.

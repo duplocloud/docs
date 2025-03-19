@@ -31,12 +31,9 @@ Before securing a Load Balancer, verify that you completed the tasks in the prev
 2. Navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 3. From the **Name** column, select **demo-service**.
 4. Click the **Load Balancers** tab. The ALB Load Balancer configuration is displayed.
-
-<figure><img src="../../../.gitbook/assets/ihatethis.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page</p></figcaption></figure>
-
-4. In the **DNS Name** card, click **Edit**. The prefix in the DNS Name is editable.
-5. Edit the **DNS Name** and select a meaningful DNS Name prefix.
-6. Click **Save**. A success message briefly displays at the top center of the DuploCloud Portal.
+5. In the **DNS Name** card, click **Edit**. The prefix in the DNS Name is editable.
+6. Edit the **DNS Name** and select a meaningful DNS Name prefix.
+7. Click **Save**. A success message briefly displays at the top center of the DuploCloud Portal.
 
 An entry for your new DNS name is now registered with **demo-service**.
 
@@ -44,8 +41,9 @@ An entry for your new DNS name is now registered with **demo-service**.
 
 1. Navigate to **Kubernetes** -> **Services**.
 2. From the **Name** column, select **demo-service**.
-3. Select the **Load Balancers** tab and verify that the **DNS Name** card displays your modified DNS Name.   &#x20;
+3.  Select the **Load Balancers** tab and verify that the **DNS Name** card displays your modified DNS Name.    \
 
-<figure><img src="../../../.gitbook/assets/cropped shot.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab on the <strong>Services</strong> page with <strong>DNS Name</strong> card displaying new <strong>DNS Name</strong></p></figcaption></figure>
 
-&#x20;                                        &#x20;
+    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (141).png" alt="" width="451"><figcaption><p>The <strong>DNS Name</strong> card on the <strong>Load Balancers</strong> tab</p></figcaption></figure></div>
+
+&#x20;                         &#x20;

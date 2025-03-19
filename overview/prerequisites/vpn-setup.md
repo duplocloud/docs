@@ -21,7 +21,7 @@ Accept OpenVPN Free Tier (Bring Your Own License) in the AWS Marketplace:
 
 After the OpenVPN is provisioned, it is ready to use. DuploCloud automates the setup by launching a CloudFormation script to provision the OpenVPN.
 
-![The VPN tab on the System Settings page in the DuploCloud Portal](<../../.gitbook/assets/image (244).png>)
+<figure><img src="../../.gitbook/assets/Provision VPN (1).png" alt=""><figcaption><p>The <strong>VPN</strong> tab on the <strong>System Settings</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 {% hint style="info" %}
 The OpenVPN admin password can be found in the CloudFormation stack in your AWS console.

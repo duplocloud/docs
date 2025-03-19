@@ -36,11 +36,7 @@ DuploCloud begins creating and configuring your Infrastructure and EKS/ECS clust
 | **VPC CIDR**             | `10.221.0.0/16`            |
 | **Subnet CIDR Bits**     | `24`                       |
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/AWS_QS_1 (1).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page<br></p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/AWS_QS_1 (1).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page<br></p></figcaption></figure></div>
 
 {% hint style="info" %}
 It may take up to forty-five (45) minutes for your Infrastructure to be created and Kubernetes (EKS/ECS) enablement to be complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display **Enabled** when complete. You can also monitor progress using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
@@ -61,19 +57,14 @@ You previously verified that your Infrastructure and Plan were created. Now veri
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
 2. From the Name column, select the **NONPROD** Infrastructure.
-3. Select the **EKS** or **ECS** tab. When Kubernetes has been **Enabled** for EKS or ECS, details are listed in the respective tab. For EKS, **Enabled** is displayed on the **Kubernetes** card. For ECS, the cluster name is listed in the **ECS** tab.
+3.  Select the **EKS** or **ECS** tab. When Kubernetes has been **Enabled** for EKS or ECS, details are listed in the respective tab. For EKS, **Enabled** is displayed on the **Kubernetes** card. For ECS, the cluster name is listed in the **ECS** tab.\
 
-<div align="left">
 
-<figure><img src="../../.gitbook/assets/AWS_QS_2.png" alt=""><figcaption><p>DuploCloud Infrastructure <strong>NONPROD</strong> with the <strong>EKS</strong> card displaying <strong>Enabled</strong> </p></figcaption></figure>
-
-</div>
+    <figure><img src="../../.gitbook/assets/Screenshot (171).png" alt=""><figcaption><p>DuploCloud Infrastructure <strong>NONPROD</strong> with the <strong>EKS</strong> card displaying <strong>Enabled</strong> </p></figcaption></figure>
 
 
 
-<div align="left">
+    <figure><img src="../../.gitbook/assets/Screenshot (172).png" alt=""><figcaption><p>The NONPROD Infrastructure details page with <strong>Cluster Name</strong> displayed on the <strong>ECS</strong> tab</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/ecs_3.png" alt=""><figcaption><p>DuploCloud Infrastructure <strong>NONPROD-ECS-TEST</strong> details page with <strong>Cluster Nam</strong>e displaying in the <strong>ECS</strong> tab</p></figcaption></figure>
 
-</div>
 

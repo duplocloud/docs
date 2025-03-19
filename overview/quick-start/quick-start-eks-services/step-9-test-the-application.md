@@ -19,10 +19,6 @@ Before testing your application, verify that you accomplished the tasks in the p
 * A Service named [**demo-service** has been created](step-5-create-app-via-k8s.md).
 * An [HTTPS Application Load Balancer](step-6-create-a-load-balancer.md) has been created.&#x20;
 
-### Select the Tenant you created
-
-
-
 ## Testing the Application
 
 {% hint style="info" %}
@@ -33,18 +29,14 @@ Note that if you skipped [Step 7](step-7-secure-the-load-balancer.md) and/or [St
 2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 3. From the **Name** column, select **demo-service**.
 4. Click the **Load Balancers** tab.&#x20;
-5. In the **DNS** status card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.
+5.  In the **DNS** status card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.\
 
-<figure><img src="../../../.gitbook/assets/dns name.png" alt=""><figcaption></figcaption></figure>
 
-5. Open a browser instance and **Paste** the DNS in the URL field of your browser.
-6. Press **ENTER**. A web page with the text **Hello World!** is displayed, from the JavaScript program residing in your Docker Container running in **demo-service**, which is exposed to the web by your Load Balancer.
+    <figure><img src="../../../.gitbook/assets/configured new (1).png" alt=""><figcaption></figcaption></figure>
+6. Open a browser instance and **Paste** the DNS in the URL field of your browser.
+7. Press **ENTER**. A web page with the text **Hello World!** is displayed, from the JavaScript program residing in your Docker Container running in **demo-service**, which is exposed to the web by your Load Balancer.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/AWS_QS_29.png" alt=""><figcaption><p>Web page with <strong>Hello World!</strong> displayed</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/AWS_QS_29.png" alt=""><figcaption><p>Web page with <strong>Hello World!</strong> displayed</p></figcaption></figure></div>
 
 {% hint style="info" %}
 It can take from five to fifteen (5-15) minutes for the DNS Name to become active once you launch your browser instance to test your application.

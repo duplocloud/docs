@@ -26,7 +26,7 @@ In the **Tenant** list box, select the **dev01** Tenant that you created.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. In the **EC2** tab, click **Add**. The **Add Host** page displays.
-3. In the **Friendly Name** field, enter **host01**.
+3. In the **Friendly Name** field, enter `host01`.
 4. In the **Instance Type** list box, select **2 CPU 4 GB - t3a.medium**.
 5. Select the **Advanced Options** checkbox to display advanced configuration fields.
 6. From the **Agent Platform** list box, select **EKS Linux**.

@@ -24,7 +24,7 @@ Up to one instance (0 or 1) of an EKS is supported for each DuploCloud Infrastru
 Creating an Infrastructure with EKS can take some time. See the [Infrastructure ](../)section for details about other elements on the Add Infrastructure form.
 {% endhint %}
 
-When the Infrastructure is in the ready state, as indicated by a **Complete** status, navigate to Kubernetes -> Services and select the Infrastructure from the NAME column to view the Kubernetes configuration details, including the token and configuration for `kubectl`.&#x20;
+When the Infrastructure is in the ready state, as indicated by a **Complete** status, navigate to **Kubernetes** -> **Services** and select the Infrastructure from the **NAME** column to view the Kubernetes configuration details, including the token and configuration for `kubectl`.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/Infrastructure_Complete_AWS.png" alt=""><figcaption><p><strong>Infrastructure</strong> page with <strong>Status Complete</strong> displayed</p></figcaption></figure>
 

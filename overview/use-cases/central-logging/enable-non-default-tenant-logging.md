@@ -14,10 +14,10 @@ Enable logging to deploy AWS Log Collector to collect logs for selected Tenant(s
 
 Configure AWS Log Collector to collect logs for non-Default Tenants.
 
-1. From the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Basic** -> **Settings**. &#x20;
+1. From the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings**. &#x20;
 2. Select the **Logging** tab, and click **Add**. The **Enable Logging** pane displays.
 
-<figure><img src="../../../.gitbook/assets/nondefault.png" alt=""><figcaption><p>The <strong>Enable Logging</strong> pane in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/newnew.png" alt=""><figcaption><p>The <strong>Enable Logging</strong> pane in the DuploCloud Portal</p></figcaption></figure>
 
 3. In the **Select Tenant** list box, select the Tenant for which you want to enable log collection.&#x20;
 4. In the **Cert ARN** list box, select the correct ARN.&#x20;

@@ -35,15 +35,11 @@ Before creating a Load Balancer, verify that you completed the tasks in the prev
 12. From the **Backend Protocol** list box, select **HTTP**.
 13. Click **Add**.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/dockerp.png" alt=""><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/dockerp.png" alt=""><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
 When the **LB Status** card displays **Ready**, your Load Balancer is running and ready for use.
 
-<figure><img src="../../../.gitbook/assets/help.png" alt=""><figcaption><p>The <strong>Services</strong> page with LB Status <strong>Ready</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (142).png" alt=""><figcaption><p>The <strong>Services</strong> page with LB Status <strong>Ready</strong></p></figcaption></figure>
 
 ### Securing the Load Balancer
 
@@ -53,4 +49,4 @@ If you want to secure the load balancer created, you can follow the steps specif
 
 You can modify the DNS name by clicking Edit in the DNS Name card in the Load Balancers tab. For additional information see [this page](../quick-start-eks-services/step-8-create-dns-name.md).
 
-<figure><img src="../../../.gitbook/assets/shitpic.png" alt=""><figcaption><p>The <strong>DNS Name</strong> card in the <strong>Load Balancers</strong> tab</p></figcaption></figure>
+<div align="left"><figure><img src="../../../.gitbook/assets/shitpic.png" alt="" width="563"><figcaption><p>The <strong>DNS Name</strong> card in the <strong>Load Balancers</strong> tab</p></figcaption></figure></div>

@@ -37,7 +37,7 @@ Before creating an RDS, verify that you completed the tasks in the previous tuto
 7.  Click Next. The **Advanced Options** area displays. \
 
 
-    <figure><img src="../../../.gitbook/assets/Screenshot (106).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Screenshot (106).png" alt=""><figcaption><p>The <strong>Add Task Definition-Advanced Options</strong> page</p></figcaption></figure>
 8. In the **Container - 1** section, enter **Container Name** `sample-task-def-c1`.&#x20;
 9. In the **Image** field, enter `duplocloud/nodejs-hello:latest`.
 10. In the **Port Mappings** section, in the **Port** field, enter `3000`. Port mappings allow containers to access ports for the host container instance to send or receive traffic.&#x20;

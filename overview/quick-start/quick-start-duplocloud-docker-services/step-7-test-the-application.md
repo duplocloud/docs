@@ -20,10 +20,10 @@ Before testing your application, verify that you completed the tasks in the prev
 2. Navigate to **Docker** -> **Services**. The **Services** page displays.
 3. From the **Name** column, select **demo-service-d01**.
 4. Click the **Load Balancers** tab. The Application Load Balancer configuration is displayed.
-5.  In the **DNS** status card on the right side of the Portal, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.\
+5. In the **DNS** status card on the right side of the Portal, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.
 
+<figure><img src="../../../.gitbook/assets/Screenshot (143).png" alt=""><figcaption><p>The <strong>Services Details</strong> page with the DNS status card highlighted. </p></figcaption></figure>
 
-    <figure><img src="../../../.gitbook/assets/services new.png" alt=""><figcaption><p>Service page with <strong>Load Balancers</strong> tab selected<br></p></figcaption></figure>
 6. Open a browser instance and paste the DNS in the URL field of your browser.
 7. Press **ENTER**. A web page with the text **Hello World!** is displayed, from the JavaScript program residing in your Docker Container running in **demo-service-d01**, which is exposed to the web by your Load Balancer.
 
