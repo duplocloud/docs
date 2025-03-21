@@ -23,8 +23,9 @@ layout:
 ## Q1 2025
 
 * AWS
+  * Create and manage [Target Groups for EC2 Instances, IPs, and ALB Load Balancers (AWS)](overview/aws-services/load-balancers/target-groups.md).
   * Support for [ElastiCache Valkey](overview/aws-services/database/elastic-cache.md#creating-a-redis-or-valkey-elasticache-instance).
-  * Set Retry and Expiration Limits for Asynchronous [Lambda](overview/aws-services/lambda/) Invocations
+  * Set Retry and Expiration Limits for Asynchronous [Lambda](overview/aws-services/lambda/) Invocations.
   * Configure [SQS dead letter queues and redrive policies in AWS](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Support for Modifying [ASG Launch Templates](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).
   * [Instance Refresh action for AWS Auto Scaling Groups (ASG)](overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
@@ -43,7 +44,7 @@ layout:
   * Support for configuring [S3 bucket replication rules](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/~/changes/1184/overview/aws-services/s3-bucket/~/overview#s3-bucket-replication-rules).
   * Update [RDS Performance Insights](aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).
   * Update [ECR repository settings](overview/aws-services/elastic-container-registry-ecr.md).&#x20;
-  * Enable delete protection for AWS Load Balancers.
+  * [Enable delete protection for AWS Load Balancers.](overview/aws-services/load-balancers/#additional-load-balancer-settings)
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
   * Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;
   * Support for [ECS with EC2 Capacity Provider](aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#configuring-ecs-with-ec2-capacity-provider).
