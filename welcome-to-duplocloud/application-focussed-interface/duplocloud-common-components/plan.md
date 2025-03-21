@@ -19,7 +19,7 @@ When you create an[ Infrastructure](infrastructure.md) in DuploCloud, a Plan is 
 
 The figure below shows a screenshot of the plan constructs:
 
-![The Capabilities tab for the DEMO Plan in the DuploCloud Portal](<../../../.gitbook/assets/Screen Shot 2022-03-12 at 8.12.26 PM.png>)
+<figure><img src="../../../.gitbook/assets/Screenshot (245).png" alt=""><figcaption><p>The <strong>Capabilities</strong> tab for the <strong>NONPROD</strong> Plan in the DuploCloud Portal</p></figcaption></figure>
 
 ## DuploCloud Plans and DNS Considerations
 

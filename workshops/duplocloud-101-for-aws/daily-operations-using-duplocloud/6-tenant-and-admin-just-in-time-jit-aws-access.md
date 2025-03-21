@@ -12,7 +12,7 @@ Navigate to **User -> Profile** to view options for obtaining JIT credentials wi
 This method uses Tenant-level AWS permissions.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/profile.png" alt=""><figcaption><p><strong>JIT AWS Console</strong> button on the <strong>Profile</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/PROFILE.png" alt=""><figcaption><p><strong>JIT AWS Console</strong> button on the <strong>Profile</strong> page</p></figcaption></figure>
 
 ## CLI
 
