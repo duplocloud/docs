@@ -24,14 +24,4 @@ All services and cloud features are created within a [Tenant](tenant.md). While 
 
 Below is an image of some properties of a service:
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_45_12.png" alt=""><figcaption><p>The <strong>Add Service</strong> page in the DuploCloud Platform</p></figcaption></figure>
-
-{% hint style="info" %}
-
-{% endhint %}
-
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_49_52.png" alt=""><figcaption><p>The <strong>SNS Topic</strong>, <strong>App Integration</strong> page in the DuploCloud Portal</p></figcaption></figure>
-
-{% hint style="info" %}
-
-{% endhint %}
+<figure><img src="../../../.gitbook/assets/Screenshot (246).png" alt=""><figcaption><p>The <strong>Add Service</strong> page in the DuploCloud Platform</p></figcaption></figure>
