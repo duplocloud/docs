@@ -21,11 +21,7 @@ Failure to follow these steps when creating a link to the Azure Portal from the 
 5.  In the **Key** field, enter **AzurePortalLink**.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/azure_portal.png" alt=""><figcaption><p><strong>Add infrastructure Tag</strong> pane with <strong>Key AzurePortalLink</strong></p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/azure_portal.png" alt=""><figcaption><p><strong>Add infrastructure Tag</strong> pane with <strong>Key AzurePortalLink</strong></p></figcaption></figure></div>
 6. In the **Value** field, enter the URL for your Azure Portal.&#x20;
 7. Click **Create**.
 
@@ -39,7 +35,6 @@ After you [configure Azure Portal link ](azure-portal-link.md#creating-a-link-to
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. From the **Name** column, select the Host you are working with.
-3.  From the **Actions** menu, select **Connect** -> **Azure Portal**.\
+3. From the **Actions** menu, select **Connect** -> **Azure Portal**.
 
-
-    <figure><img src="../../.gitbook/assets/azureVM.png" alt=""><figcaption><p><strong>HOST1</strong> host page with <strong>Action Menu</strong> displaying <strong>Azure Portal</strong> link</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (229).png" alt=""><figcaption><p>Host details page with with the <strong>Action Menu</strong> and <strong>Azure Portal</strong> link highlighted</p></figcaption></figure>

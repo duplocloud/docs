@@ -11,13 +11,13 @@ You can configure settings to apply to all new Tenants under a Plan using the Co
 1. From the DuploCloud portal, navigate to **Administrator** -> **Plan**.&#x20;
 2. Click on the Plan you want to configure settings under in the **NAME** column.
 3. Select the **Config** tab.&#x20;
-4. Click **Add**. The **Add Config** pane displays.
+4.  Click **Add**. The **Add Config** pane displays.\
+
+
+    <div align="left"><figure><img src="../../../.gitbook/assets/config (1).png" alt="" width="378"><figcaption></figcaption></figure></div>
 5. From the **Config Type** field, select **TenantConfig**.
 6. In the **Name** field, enter the **setting** that you would like to apply to new Tenants under this Plan. (In the example, the **enable\_alerting** setting is entered.)&#x20;
-7.  In the **Value** field, enter **True**.\
-
-
-    <figure><img src="../../../.gitbook/assets/config.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane for the <strong>Infra-126-4</strong> Plan</p></figcaption></figure>
+7. In the **Value** field, enter **True**.
 8. Click **Submit**. The setting entered in the Name field (**enable alerting** in the example) will apply to all new Tenants added under the Plan.&#x20;
 
 ## Viewing Tenant Config settings

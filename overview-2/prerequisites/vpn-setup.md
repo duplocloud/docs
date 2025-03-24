@@ -18,7 +18,7 @@ Accept OpenVPN in the [Azure marketplace](https://azuremarketplace.microsoft.com
 
 After the OpenVPN is provisioned, it is ready to use. Behind the scenes, DuploCloud launches a cloud formation script to provision the OpenVPN.   &#x20;
 
-![VPN tab in the System Settings page.](<../../.gitbook/assets/image (244).png>)
+<figure><img src="../../.gitbook/assets/VPN.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 You can find the OpenVPN admin password in the cloud formation stack in your Azure console.
@@ -35,11 +35,7 @@ Provision a VPN while creating a user:
 5. Select **Provision VPN**.
 6. Click **Submit**.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/VPN_Create_User.png" alt=""><figcaption><p><strong>Create User</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/VPN_Create_User.png" alt=""><figcaption><p><strong>Create User</strong> pane</p></figcaption></figure></div>
 
 ### Deleting VPN access for a user
 
@@ -57,8 +53,4 @@ By default, users connected to a VPN can SSH or RDP into virtual machines (VMs).
 6. In the **IP CIDR** field, enter the name of your VPN.
 7. Click **Add**.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/Add_Tenant_Security.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/Add_Tenant_Security.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure></div>

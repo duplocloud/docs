@@ -18,4 +18,4 @@ Secure your Azure cloud data by enabling [Azure storage encryption](https://lear
 
 The Key/Value pair configuration is displayed in the **System Configs** area.&#x20;
 
-<figure><img src="../../../.gitbook/assets/azure_encryption.png" alt=""><figcaption><p><strong>System Config</strong> tab displaying <strong>Enable Storage Account Infra Encryption Key Value</strong> as <strong>true</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (227).png" alt=""><figcaption><p><strong>System Config</strong> tab displaying <strong>Enable Storage Account Infra Encryption Key Value</strong> as <strong>true</strong></p></figcaption></figure>

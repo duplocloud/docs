@@ -23,7 +23,7 @@ For more information about Azure Storage Accounts, refer to the [official Azure 
 5. Enter a name for your data source and additional information as needed.
 6. Click **Add**, **Submit**, or **Create**. The data storage source is added to the Storage Account. &#x20;
 
-<figure><img src="../../.gitbook/assets/data source example (1).png" alt=""><figcaption><p>The <strong>Container</strong> tab on the <strong>Storage Accoun</strong>t page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (224).png" alt=""><figcaption><p>The <strong>Container</strong> tab on the <strong>Storage Accoun</strong>t page</p></figcaption></figure>
 
 ## Viewing a Storage Account
 
