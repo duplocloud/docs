@@ -27,9 +27,7 @@ Several Load Balancers are available for Azure. See the [Azure Documentation](ht
 
 ### Prerequisites
 
-You must create [Services ](containers-and-services/#adding-a-duplocloud-service)before adding load balancers and listeners. In this example, we name these services **s1-alb** and **s4-nlb**, respectively.&#x20;
-
-<figure><img src="../../.gitbook/assets/replacement services.png" alt=""><figcaption><p><strong>Services</strong> running ALB and NLB</p></figcaption></figure>
+* You must create [Services ](containers-and-services/#adding-a-duplocloud-service)before adding load balancers and listeners.&#x20;
 
 ### Adding a Load Balancer Listener
 

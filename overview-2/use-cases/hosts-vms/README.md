@@ -18,7 +18,7 @@ For ease of use, [create a link to the Azure Console](../azure-portal-link.md) f
 
 Add a Virtual Machine Host. DuploCloud supports **Host** (Azure Host) and **BYOH** (Bring Your Own Host) types. Use **BYOH** for any VM that is not an Azure Host.&#x20;
 
-1. Ensure you have selected the appropriate Tenant from the **Tenant** list box at the top of the DuploCloud Portal.
+1. Select the appropriate Tenant from the **Tenant** list box
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.&#x20;
 3. Select the tab that corresponds to the type of Host you want to create (**HOST** or **BYOH**), and click **Add**.
 
