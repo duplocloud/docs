@@ -20,6 +20,26 @@ layout:
 
 # Product Updates
 
+## 2025 New User Interface
+
+We’re excited to inform you that we’re rolling out a new user interface (UI) for the DuploCloud Portal! Since this update is being deployed gradually, you may notice differences between the UI in the documentation and what you see in your portal. Some key changes include:
+
+* **User Profile Access**:
+  * **Old UI**: The **User** tab was listed in the left-hand navigation bar.
+  * **New UI**: User options are now accessible through your user profile. Click on the person icon at the top-right corner of the portal, and select **Profile** to access user options.
+* **Left Navigation Bar**:
+  * **Old UI**: You could click on navigation tabs to reveal sub-options.
+  * **New UI**: The left navigation bar has been updated to a dark blue color, and now you can hover over a tab to display its sub-options, offering a more streamlined and intuitive navigation experience.
+* **Search Bar**:
+  * **Old UI**: The search bar was a visible input field.
+  * **New UI**: The search is now represented by a magnifying glass icon at top of the portal next to the Tenant list box. Hover over it to type your query.
+* **New Help and Faults Icons**:
+  * **New UI**: Two new icons are located at the top-right, next to your user profile icon (person icon).
+    * **Help Icon**: Click on this icon to access help options.
+    * **Faults Icon**: Click on this icon to view and manage faults related to your services.
+
+For assistance with the new UI, contact your [DuploCloud Support team](welcome-to-duplocloud/duplocloud-support-model.md).
+
 ## Q1 2025
 
 * AWS
