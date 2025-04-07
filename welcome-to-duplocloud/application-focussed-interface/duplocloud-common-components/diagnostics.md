@@ -16,13 +16,13 @@ A shared Elasticsearch cluster is deployed and Filebeat is installed in all work
 
 ### **Metrics**
 
-Metrics are fetched from Hosts, containers, and Services and displayed in Grafana. Services metrics are collected behind the scenes by calling cloud provider APIs like CloudWatch and Azure Monitor. For nodes and containers, metrics are collected using Prometheus, Node Exporter, and cAdvisor. The Metrics dashboards are Tenant-centric and segregated per application and Service as shown in the image below:
+Metrics are fetched from Hosts, containers, and Services and displayed in Grafana. Service metrics are collected behind the scenes by calling cloud provider APIs like CloudWatch and Azure Monitor. For nodes and containers, metrics are collected using Prometheus, Node Exporter, and cAdvisor. The Metrics dashboards are Tenant-centric and segregated per application and Service as shown in the image below:
 
 <figure><img src="../../../.gitbook/assets/METRICS (1).png" alt=""><figcaption><p>The <strong>Metrics</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>
 
 ### **Alarms and Faults**
 
-The platform creates faults for many failures automatically. For example, health check failures, container crashes, node crashes, deployment failures, etc. Further, users can easily set alarms like CPU and memory for EC2 instances or free disk space for RDS databases. Failures are displayed as faults under their respective Tenant. Sentry and Pager Duty projects can be linked to Tenants, and DuploCloud will send faults there so the user can set notification configurations.
+The platform creates faults for many failures automatically. For example, health check failures, container crashes, node crashes, deployment failures, etc. Further, users can easily set alarms like CPU and memory for EC2 instances or free disk space for RDS databases. Failures are displayed as faults under their respective Tenants. Sentry and Pager Duty projects can be linked to Tenants, and DuploCloud will send faults there so the user can set notification configurations.
 
 ### **Audit Trail**
 

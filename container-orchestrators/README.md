@@ -1,5 +1,5 @@
 ---
-description: Multiple container orchestration technologies for ease of consumption
+description: An overview of the container orchestration technologies DuploCloud supports
 cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
 layout:
@@ -31,8 +31,6 @@ Among the technologies DuploCloud supports are:
 ## Container Orchestration Feature Matrix
 
 You can use the feature matrix below to compare the features of the orchestration technologies that DuploCloud supports. DuploCloud can help you implement whatever option you choose through the DuploCloud Portal or the Terraform API.
-
-
 
 <table><thead><tr><th width="276.71428571428567" align="center">Feature</th><th width="150" data-type="rating" data-max="3">Kubernetes</th><th width="150" data-type="rating" data-max="3">Built-In</th><th data-type="rating" data-max="3">ECS Fargate</th></tr></thead><tbody><tr><td align="center">Ease of use</td><td>2</td><td>2</td><td>1</td></tr><tr><td align="center">Features and ecosystem tools</td><td>3</td><td>null</td><td>1</td></tr><tr><td align="center">Suitability for stateful apps</td><td>3</td><td>2</td><td>1</td></tr><tr><td align="center">Stability and maintenance</td><td>2</td><td>2</td><td>2</td></tr><tr><td align="center">AWS cost</td><td>2</td><td>3</td><td>3</td></tr><tr><td align="center">Multi-cloud (w/o DuploCloud)</td><td>3</td><td>null</td><td>null</td></tr></tbody></table>
 
