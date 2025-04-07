@@ -4,13 +4,13 @@ description: An explanation of how DuploCloud and GRC tools work together
 
 # GRC Tools and DuploCloud
 
-When pursuing specific compliance certifications such as SOC2, HIPAA, or PCI, specific controls must be implemented across an organization, from data management to infrastructure. Governance, Risk, and Compliance (GRC) tools such as Drata, Vanta, Thoropass, Secureframe, A-LIGN (A-SCEND), Sprinto, Scytale, ControlMap, and TrustCloud.ai help define and maintain these controls, ensuring they are kept up to date. Understanding how these tools complement DuploCloud is essential for meeting compliance requirements efficiently.
+When pursuing specific compliance certifications such as SOC2, HIPAA, or PCI, specific controls must be implemented across an organization, from data management to infrastructure. Governance, Risk, and Compliance (GRC) tools such as Drata, Vanta, Thoropass, Secureframe, A-LIGN (A-SCEND), Sprinto, Scytale, ControlMap, and TrustCloud.ai help define and maintain these controls, ensuring they are kept up to date. Understanding how these tools complement DuploCloud is essential for meeting compliance requirements.
 
 ## Implementing Compliance Controls vs Assessing Compliance
 
-DuploCloud automates the provisioning, configuration, and monitoring of cloud infrastructure to meet compliance standards like SOC 2, HIPAA, and PCI DSS. By using Infrastructure as Code (IaC), prebuilt templates, and compliance checks, DuploCloud creates cloud environments that meet the technical control requirements of these frameworks. While DuploCloud has built in dashboards which provide compliance scores against well known Compliance standards, auditors prefer using dedicated compliance monitoring systems that are independent from the process of infrastructure provisioning.
+DuploCloud automates cloud infrastructure provisioning, configuration, and monitoring to meet compliance standards like SOC 2, HIPAA, and PCI DSS. By using Infrastructure as Code (IaC), prebuilt templates, and compliance checks, DuploCloud creates cloud environments that meet the these frameworks' requirements. While DuploCloud has built-in dashboards which provide compliance scores against well known Compliance standards, auditors prefer using dedicated compliance monitoring systems that are independent from the process of infrastructure provisioning.
 
-GRC tools, on the other hand, are designed to automate compliance monitoring, reporting, and evidence collection organization-wide. Acting as independent observers, they assess compliance without implementing controls themselves, ensuring impartiality. Beyond cloud infrastructure, GRC tools cover areas like HR policies, IT systems, and company processes. They streamline audits by automating evidence collection and providing a centralized platform for auditors to verify compliance.&#x20;
+This is where GRC tools come in. GRC tools automate compliance monitoring, reporting, and evidence collection organization-wide. Acting as independent observers, they assess compliance without implementing controls themselves, ensuring impartiality. Beyond cloud infrastructure, GRC tools cover areas like HR policies, IT systems, and company processes. They streamline audits by automating evidence collection and providing a centralized platform for auditors to verify compliance.&#x20;
 
 Overall, DuploCloud and GRC tools serve different functions, but complement each other to support overall compliance efforts. For organizations seeking the most streamlined compliance strategy, combining DuploCloud with a GRC tool offers the best of both worlds.
 
@@ -20,11 +20,11 @@ GRC tools monitor compliance but do not implement the controls needed to maintai
 
 **DuploCloud adds value through:**
 
-Infrastructure Orchestration: DuploCloud provisions and manages cloud resources in line with compliance frameworks such as SOC 2, ISO 27001, and HIPAA, automating the technical implementation of controls.
+**Infrastructure Orchestration**: DuploCloud provisions and manages cloud resources in line with compliance frameworks such as SOC 2, ISO 27001, and HIPAA, automating the technical implementation of controls.
 
-Continuous Compliance: By enforcing policies and automatically remediating misconfigurations, DuploCloud ensures that cloud infrastructure remains compliant over time, delivering a consistent "green" status for infrastructure controls.
+**Continuous Compliance**: By enforcing policies and automatically remediating misconfigurations, DuploCloud ensures that cloud infrastructure remains compliant over time, delivering a consistent "green" status for infrastructure controls.
 
-Evidence for Auditors: DuploCloud generates detailed, audit-ready evidence for cloud infrastructure compliance. This evidence can be used directly by auditors or integrated with GRC tools to simplify compliance reporting.
+**Evidence for Auditors**: DuploCloud generates detailed, audit-ready evidence for cloud infrastructure compliance. This evidence can be used directly by auditors or integrated with GRC tools to simplify compliance reporting.
 
 For more information about how DuploCloud supports compliance, see the [Security and Compliance Workflow](../security-and-compliance/security-and-compliance-workflow.md).&#x20;
 

@@ -4,7 +4,7 @@ description: An outline of the tenancy deployment models supported by DuploCloud
 
 # DuploCloud Tenancy Models
 
-DuploCloud supports a variety of deployment models, from basic multi-tenant applications to complex single-Tenant deployments within customer environments. These models cater to different security needs, allowing customers to achieve their desired isolation level while maintaining operational efficiency.&#x20;
+DuploCloud supports a variety of deployment models, from basic multi-Tenant applications to complex single-Tenant deployments within customer environments. These models cater to different security needs, allowing customers to achieve their desired isolation level while maintaining operational efficiency.&#x20;
 
 DuploCloud-supported tenancy models, outlined below, include:
 
@@ -21,7 +21,7 @@ DuploCloud-supported tenancy models, outlined below, include:
 
 <figure><img src="../../.gitbook/assets/1 - Application Provides Tenancy.png" alt=""><figcaption><p>DuploCloud pooled tenancy model</p></figcaption></figure>
 
-* **Description**: The application manages tenant isolation with DuploCloud structured pooled tenancy.&#x20;
+* **Description**: The application manages Tenant isolation with DuploCloud structured pooled tenancy.&#x20;
 * **Use Case**: The most common scenario is where the application logic isolates customer data. DuploCloud Tenants are then used to isolate development environments (i.e., Nonprod and Prod).&#x20;
 * **Infrastructure**:
   * Shared DuploCloud Infrastructure (VPC, Tenant, VM/instances, S3 bucket, RDS). Cluster/namespace can also be shared.&#x20;

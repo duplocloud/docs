@@ -6,7 +6,7 @@ description: A conceptual overview of DuploCloud Tenants
 
 ## Tenant as a Logical Concept
 
-A Tenant, like a project or a workspace and a child of the Infrastructure, is the most fundamental construct in DuploCloud. While Infrastructure is a VPC level isolation, Tenant is the next level of isolation implemented by segregating Tenants using concepts like Security Groups, IAM roles, Instance Profiles, K8S Namespaces, KMS Keys, etc.
+A Tenant is a project or a workspace and is a child of the Infrastructure. It is the most fundamental construct in DuploCloud. While Infrastructure is a VPC level isolation, Tenant is the next level of isolation implemented by segregating Tenants using concepts like Security Groups, IAM roles, Instance Profiles, K8S Namespaces, KMS Keys, etc.
 
 **For instructions to create a Tenant in the DuploCloud Portal, see:**
 
@@ -43,14 +43,14 @@ You can map Tenants in each (or all) of your production environments.&#x20;
 
 For example:
 
-* Production Infrastructure &#x20;
-  * Pre-production Tenant - for preparing or reviewing production code
-  * Production Tenant - for deploying tested code&#x20;
-* Nonproduction Infrastructure
-  * Development Tenant: For writing and reviewing code
-  * Quality Assurance Tenant: For automated testing
+* **Production Infrastructure** &#x20;
+  * **Pre-production Tenant**: for preparing or reviewing production code
+  * **Production Tenant**: for deploying tested code&#x20;
+* **Nonproduction Infrastructure**
+  * **Development Tenant**: For writing and reviewing code
+  * **Quality Assurance Tenant**: For automated testing
 
-Some customers in larger organizations create Tenants based on application environments: one tenant for data science applications, another for web applications, etc.&#x20;
+Some customers in larger organizations create Tenants based on application environments: one Tenant for data science applications, another for web applications, etc.&#x20;
 
 Tenants can also isolate a single customer workload allowing more granular performance monitoring, flexibility scaling, or tighter security. This is referred to as a single-Tenant setup. In this case, a DuploCloud Tenant maps to an environment used exclusively by the end client. &#x20;
 

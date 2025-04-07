@@ -58,7 +58,7 @@ A common misconception is that DuploCloud generates Terraform behind the scenes 
 
 Unlike a PAAS such as Heroku, the DuploCloud platform does not prevent users from consuming cloud services directly from the cloud provider. DuploCloud is a self-hosted platform running in the customer's cloud account and can therefore work in tandem with direct cloud account changes. Complex security details (IAM roles, KMS keys, Azure Managed Identities, GCP service accounts, etc.) are hidden, but remain configurable if needed. See this [DuploCloud white paper](https://duplocloud.com/white-papers/devops/) for more information and examples.
 
-DuploCloud uses APIs to handle tasks in the background (e.g., processing user requests, generating configurations synchronously, and calling the cloud provider). Other operations require asynchronous processing, requiring a state machine with retries that continuously identifies and corrects configuration drift and continuously monitors faults and compliance controls.
+DuploCloud uses APIs to handle tasks in the background (e.g., processing user requests, generating configurations synchronously, and calling the cloud provider). Other operations with asynchronous processing require a state machine with retries that continuously identifies and corrects configuration drift and continuously monitors faults and compliance controls.
 
 DuploCloud eliminates the need for extensive manual coding and drastically reduces the need for specialized DevOps expertise. At the same time, the platform ensures efficient, scalable, and compliant cloud infrastructure deployment and management, making it a superior alternative to traditional methods.
 

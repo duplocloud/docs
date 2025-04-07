@@ -4,7 +4,7 @@ description: A conceptual overview of DuploCloud Infrastructures
 
 # Infrastructure
 
-Infrastructures are abstractions that allow you to create a Virtual Private Cloud (VPC) instance in the DuploCloud Portal. When you create an Infrastructure, a [Plan](plan.md) (with the same Infrastructure name) to supply the network configuration that runs your Infrastructure is automatically created and populated with the Infrastructure configuration.&#x20;
+Infrastructures are abstractions that allow you to create a Virtual Private Cloud (VPC) instance in the DuploCloud Portal. When you create an Infrastructure, a [Plan](plan.md) (with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration.&#x20;
 
 For instructions to create an Infrastructure in the DuploCloud Portal, see:
 
@@ -36,4 +36,4 @@ A common use case is two Infrastructures: one for Prod and one for Nonprod. Anot
 
 Once an Infrastructure is created, DuploCloud automatically creates a [Plan ](plan.md)(with the same Infrastructure name) with the Infrastructure configuration. The Plan is used to create [Tenants](../../../overview/use-cases/tenant-environment/).
 
-<figure><img src="../../../.gitbook/assets/image (12) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (2).png" alt=""><figcaption><p>The <strong>Plan Details</strong> pane in the DuploCloud Portal</p></figcaption></figure>
