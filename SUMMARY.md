@@ -25,7 +25,7 @@
       * [8. Security Hub and Dashboard](workshops/duplocloud-101-for-aws/daily-operations-using-duplocloud/8.-security-hub-and-dashboard.md)
       * [9. Terraform Mode of Operations](workshops/duplocloud-101-for-aws/daily-operations-using-duplocloud/9.-terraform-mode-of-operations.md)
     * [Post-workshop Reference Guide](workshops/duplocloud-101-for-aws/post-workshop-reference-guide/README.md)
-      * [Post-Workshop Testing and Documentation Links](workshops/duplocloud-101-for-aws/post-workshop-reference-guide/post-workshop-testing-and-documentation-links.md)
+      * [Post-Workshop Testing and Documentation Links](workshops/duplocloud-101-for-aws/post-workshop-reference-guide/post-workshop-testing-and-documenation-links.md)
       * [Connect With Us](workshops/duplocloud-101-for-aws/post-workshop-reference-guide/connect-with-us.md)
       * [DuploCloud Whitepapers](workshops/duplocloud-101-for-aws/post-workshop-reference-guide/duplocloud-whitepapers.md)
       * [DuploCloud Terraform Provider](workshops/duplocloud-101-for-aws/post-workshop-reference-guide/duplocloud-terraform-provider.md)
