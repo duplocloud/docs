@@ -56,14 +56,14 @@ For assistance with the new UI, contact your [DuploCloud Support team](welcome-t
   * [Download inventory reports of all AWS resources](security-and-compliance/access-control-3/inventory/inventory-reports.md) (for StateRAMP compliance).
   * Support for [Lambda JAR with S3](overview/aws-services/lambda/#id-3-toc-title).
   * Support for aurora-iopt1 storage type in [Aurora RDS](aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
-  * Force delete and update settings options added for [ECR repositories](overview/aws-services/elastic-container-registry-ecr.md#updating-ecr-repository-settings).&#x20;
+  * Force delete and update settings options added for [ECR repositories](overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).&#x20;
   * Select and update [Certificate Authorities for RDS instances](aws-user-guide/aws-services/database/rds-database/#managing-rds-certificate-authorities).
   * Specify an initial database during [RDS instance creation](aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
   * Support for [serverless Kafka clusters](aws-user-guide/aws-services/kafka-cluster.md#creating-a-kafka-cluster) for AWS users.
   * [Disable AWS JIT access for non-admin users](aws-user-guide/use-cases/jit-access.md#disabling-jit-access-for-non-admin-users).
   * Support for configuring [S3 bucket replication rules](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/~/changes/1184/overview/aws-services/s3-bucket/~/overview#s3-bucket-replication-rules).
   * Update [RDS Performance Insights](aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).
-  * Update [ECR repository settings](overview/aws-services/elastic-container-registry-ecr.md).&#x20;
+  * Update [ECR repository settings](overview/aws-services/elastic-container-registry-ecr/).&#x20;
   * [Enable delete protection for AWS Load Balancers.](overview/aws-services/load-balancers/#additional-load-balancer-settings)
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
   * Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;

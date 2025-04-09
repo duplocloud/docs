@@ -14,7 +14,7 @@ Create and Build your Lambda code using `DockerFile`.  Refer to the [AWS documen
 
 To use container images with Lambda, your images must be stored in Amazon Elastic Container Registry (ECR). ECR provides a fully managed service to store your container images, which Lambda pulls to run your functions.
 
-For detailed instructions on how to configure and use ECR with Lambda, refer to the [DuploCloud ECR documentation](../elastic-container-registry-ecr.md).
+For detailed instructions on how to configure and use ECR with Lambda, refer to the [DuploCloud ECR documentation](../elastic-container-registry-ecr/).
 
 ## Configuring Lambda with Container Images
 
