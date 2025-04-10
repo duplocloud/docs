@@ -44,9 +44,8 @@ We cover most of your DevOps needs, but there are some limitations. Examples of 
 
 From any page in the DuploCloud Portal, click the **Help** menu icon (![](<../.gitbook/assets/help menu icon (1).png>)) in the upper right (next to your name and the person icon) to access a variety of tools and links for your self-service DevOps needs.&#x20;
 
-<div align="left"><figure><img src="../.gitbook/assets/help menu.png" alt=""><figcaption><p>The <strong>Help</strong> menu in the DuploCloud Portal</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/Screenshot (304).png" alt=""><figcaption><p>The <strong>Help</strong> menu in the DuploCloud Portal</p></figcaption></figure></div>
 
 * **What's New**: Stay informed about the latest features and updates in the DuploCloud platform.
 * **FAQs**: Access frequently asked questions to quickly find answers to common inquiries.
 * **Documentation**: Browse through our comprehensive product documentation to help you navigate the platform and optimize your usage.
-* **Contact Us**: Reach out to us via an email form for further assistance through this option.
