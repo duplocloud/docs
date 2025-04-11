@@ -8,26 +8,41 @@ All containers run inside a private network and cannot be accessed from an exter
 
 ## Creating a GKE Ingress
 
-If you need to create an Ingress Load Balancer, refer to the [GKE Ingress](../../kubernetes-overview/ingress-loadbalancer/gke-ingress.md) page in the DuploCloud Kubernetes User Guide.&#x20;
-
-## Adding a Load Balancer Listener
+To create an Ingress Load Balancer, refer to the [GKE Ingress](../../kubernetes-overview/ingress-loadbalancer/gke-ingress.md) page in the DuploCloud Kubernetes User Guide.&#x20;
 
 {% hint style="info" %}
 See the [GCP Quick Start](../quick-start/) for an end-to-end example of deploying an application using a GCP Service.
 {% endhint %}
+
+## Adding a Load Balancer Listener
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
 4. If no Load Balancers exist, click the **Configure Load Balancer** link. If other Load Balancers exist, click **Add** in the **LB listeners** card. The **Add Load Balancer Listener** pane displays.
 5. From the **Select Type** list box, select a Load Balancer Listener type based on your Load Balancer.
-6. Complete other fields as required and click **Add** to add the Load Balancer Listener.
+6. Complete other Load Balancer fields as required:
+   * **Container Port**: Enter the port your container is listening on inside the application. Use **80** for HTTP or **443** for HTTPS. If you are using HTTPS, make sure you plan to configure SSL certificates later.
+   * **External Port**: Enter the port that will be exposed to the internet. For HTTP traffic, use **80**, and for secure HTTPS traffic, use **443**. If you're using HTTPS, ensure that you configure SSL certificates accordingly.
+   * **Visibility**: Select **Public** or **Private**
+   * **Application Mode**:&#x20;
+     * **Docker Mode**: Choose this if your application is running inside containers (such as Docker or Kubernetes pods). This mode is optimized for containerized services.
+     * **Native App Mode**: Choose this if your application is running on virtual machines (VMs) or on bare-metal infrastructure, rather than inside containers.
+   * **Health Check**: This tells Kubernetes where to check the health of your application. Use `/` to check the root level of your service. If you have a custom health check endpoint, specify it here (e.g., `/health`).
+   * **Backend Protocol**: **HTTP** or **HTTPS**\
+     Choose **HTTP** for unencrypted traffic or **HTTPS** for encrypted traffic between the Load Balancer and your containerized service. HTTPS is highly recommended. If using HTTPS, SSL certificates are required.
+   * **Certificate**: Select the SSL Certificate to use. If you're using HTTPS, it's important to configure SSL certificates to ensure secure communication. Follow the instructions to [add SSL certificates for your domain](../prerequisites/certificate-for-load-balancer-and-ingress.md).
+7. Optionally, enable and configure additional Load Balancer settings:
+   * **Advanced Kubernetes Settings:** Customize advanced Kubernetes configurations.&#x20;
+   * **Set Health Check annotations for Ingress**: Add annotations for Ingress.&#x20;
+   * **Additional Health Check configs**: specify the URL path that the Load Balancer will use to check if your service is healthy. You can use the root (`/`) path for a simple health check, or for more detailed monitoring, configure paths like `/health` or `/status`
+   * **Additional GCP Settings**: Enable GCP-specific optimizations and settings.&#x20;
+
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (293).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure></div>
 
 {% hint style="info" %}
 DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service.
 {% endhint %}
-
-<div align="left"><figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure></div>
 
 ## Adding a certificate for an internal Load Balancer in GCP
 

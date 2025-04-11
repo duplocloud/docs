@@ -37,11 +37,7 @@ Before starting this tutorial:
 | **Region**                    | _`YOUR_GEOGRAPHIC_REGION`_ |
 | **Subnet**                    | `CIDR 22`                  |
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 5.08.04 PM.png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
-
-</div>
+<figure><img src="../../.gitbook/assets/Screenshot (295).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
 It may take up to twenty (20) minutes for your Infrastructure to be created and Kubernetes (GKE) enablement to be complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
@@ -64,11 +60,7 @@ You previously verified that your Infrastructure and Plan were created. Now veri
 2. From the **NAME** column, click on the name of the Infrastructure you created.
 3. Click the **GKE** tab. When Kubernetes has been **Enabled** for GKE, details are listed in the tab. The Infrastructure page displays the **Enabled** status on the **Kubernetes** card for GKE Clusters.&#x20;
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (286).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (286).png" alt=""><figcaption></figcaption></figure></div>
 
 ### Viewing GKE Cluster details
 
@@ -76,8 +68,4 @@ When an Infrastructure is created, a GKE Cluster is created by default. You can 
 
 From the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**. Click on the name of the Infrastructure, and select the **GKE** tab. To download the kubeconfig file, click **Download Kube Config**.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (151).png" alt=""><figcaption><p>The <strong>Nonprod Infrastructure</strong> details page with the <strong>GKE</strong> tab selected.</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (151).png" alt=""><figcaption><p>The <strong>Nonprod Infrastructure</strong> details page with the <strong>GKE</strong> tab selected.</p></figcaption></figure></div>
