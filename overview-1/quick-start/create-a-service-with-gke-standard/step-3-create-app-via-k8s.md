@@ -28,7 +28,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.&#x20;
 2. Click **Add**. The **Add Service** page displays.
 3. In the **Service** **Name** field, enter a name for the service (in the example below, the name is "myservice").
-4. In the **Docker image** field, enter the docker image (for example "nginx:latest").
+4. In the **Docker image** field, enter `nginx:latest`.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.23-14_16_57.png" alt=""><figcaption><p>The Kubernetes, <strong>Add Service</strong> page.</p></figcaption></figure>
 

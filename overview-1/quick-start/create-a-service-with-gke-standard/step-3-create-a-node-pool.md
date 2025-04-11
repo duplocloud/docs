@@ -27,10 +27,12 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 <figure><img src="../../../.gitbook/assets/node pool add.png" alt=""><figcaption><p>The <strong>Add Node Pool</strong> page</p></figcaption></figure>
 
-3. In the **Name** field, enter a unique name for your GCE Virtual Machine. Choose the same **Availability Zone** as your Infrastructure, and update the **Instance Type**, if needed.&#x20;
-4. Optionally, **Enable Autoscaling**.
-5. If autoscaling is enabled, set the **Initial Node Count**, **Min Node Count**, **Max Node Count**, and **Location Policy**.
-6. Click **Create**. The **Node Pool** is created.&#x20;
+3. In the **Name** field, enter a unique name for your GCE Virtual Machine.&#x20;
+4. Complete the following fields:
+   * **Initial Node Count (per AZ)**: **1**
+   * **Min Node Count (per AZ)**: **1**.
+   * **Max Node Count (per AZ)**: 2
+5. Accept the default values for all remaining fields, and click **Create**.&#x20;
 
 ## Checking your work
 
