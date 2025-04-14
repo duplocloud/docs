@@ -323,7 +323,7 @@
       * [PostgreSQL database](overview-2/azure-services/databases/postgresql.md)
       * [PostgreSQL Flexible Server](overview-2/azure-services/databases/postgresql-flexible-server.md)
       * [MySQL Server database](overview-2/azure-services/databases/mysql-server-database/README.md)
-        * [Azure Managed Instance](overview-2/azure-services/databases/mysql-server-database/azure-managed-instance.md)
+        * [Azure Managed SQL Instances](overview-2/azure-services/databases/mysql-server-database/azure-managed-instance.md)
       * [MySQL Flexible Server](overview-2/azure-services/databases/mysql-flexible-server.md)
       * [Redis database](overview-2/azure-services/databases/redis-database.md)
     * [Docker Web Application](overview-2/azure-services/docker-web-application.md)
