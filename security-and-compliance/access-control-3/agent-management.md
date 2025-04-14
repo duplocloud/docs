@@ -6,18 +6,29 @@ description: >-
 
 # Agent Management
 
-Agents are typically required to be installed on virtual machines to collect data and send it to their respective controlling software running in a central location. For example, OSSEC is the agent for the SIEM Wazuh. CrowdStrike and Laceworks all have their respective agents. ClamAV anti-virus can also be considered an agent whose results we collect and send to Wazuh.
+Security agents monitor virtual machines for threats, vulnerabilities, and compliance. They collect security-related data and send it to centralized controlling software. Security agents include tools like OSSEC (used with SIEM Wazuh), ClamAV (anti-virus), CrowdStrike, and Lacework.&#x20;
 
-DuploCloud platform provides seamless installation and management of these agents. There are 3 types of agents that we install:
+DuploCloud provides seamless installation and management of these security agents, offering three types:
 
-* Docker-based agents
-  * The Kubernetes DaemonSet runs in all or a subset of hosts in a cluster. Typically, these containers are launched with privileged access over the host operating system
-  * Containers that run on all or a subset of hosts are orchestrated through DuploCloud's built-in container orchestration. Typically, these containers are launched with predefined access to the host operating system.
-* Non-Docker VM agents are Linux packages or Windows services installed and baked in virtual machine images before launch. They can also be installed via user data.&#x20;
+**1. Docker-based Agents**
 
-## Agent Setup&#x20;
+These agents run as containers orchestrated by DuploCloud, with privileged access over the Host operating system. They can be deployed on all or a subset of hosts within a cluster.
 
-1.  **Create an Agent Type.** Each vendor or agent software is considered a type. For example, OSSEC, ClamAV, Laceworks, and Crowdstrike are different agent types. To add a new agent type, navigate to **Security** -> **Agents** and click **Add.** The **Add Security Agent** pane displays. Enter the **Agent Name** and click **Create**.\
+**2. Kubernetes DaemonSet Agents**
+
+Kubernetes DaemonSets ensure that security agents are deployed across all or a subset of Hosts in the cluster, typically with privileged access over the Host operating system.
+
+**3. Non-Docker VM Agents**
+
+These agents are Linux packages or Windows services installed on virtual machines, either baked into the VM image before launch or installed via user data scripts.
+
+{% hint style="info" %}
+**Security agents** focus on system protection and compliance, while **observability agents** monitor application performance, health, and infrastructure metrics. For more information on **observability agents**, please refer to the [observability documentation](../../diagnostics-overview/).
+{% endhint %}
+
+## Agent Registration
+
+1.  **Create an Agent Type.** Each vendor or agent software is considered a type. For example, OSSEC, ClamAV, Laceworks, and CrowdStrike are different agent types. To add a new agent type, navigate to **Security** -> **Agents** and click **Add.** The **Add Security Agent** pane displays. Enter the **Agent Name** and click **Create**.\
 
 
     <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Add Security Agent</strong> pane.</p></figcaption></figure>
@@ -28,10 +39,6 @@ DuploCloud platform provides seamless installation and management of these agent
 {% hint style="info" %}
 Behind the scenes, this deployment is just a regular Kubernetes DaemonSet deployment or a built-in container orchestration deployment within a tenant, as documented here.&#x20;
 {% endhint %}
-
-### Understanding Virus Scan Scope
-
-When deploying or managing containers and cloud services, it is essential to ensure the security and integrity of your systems. Virus scans play a crucial role in this process by checking for malicious software, vulnerabilities, and any security threats within the defined scope. This includes all areas and items the virus scanning process covers during its operation, ensuring the safety of your network and systems.
 
 ## Creating multiple deployments for multiple Tenants&#x20;
 
