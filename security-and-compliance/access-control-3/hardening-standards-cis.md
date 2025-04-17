@@ -8,8 +8,6 @@ The DuploCloud platform orchestrates CIS benchmark monitoring for virtual machin
 
 <figure><img src="../../.gitbook/assets/image (409).png" alt=""><figcaption><p><strong>SIEM</strong> dashboard <strong>Security Events</strong> tab in the DuploCloud Portal</p></figcaption></figure>
 
-DuploCloud integrates with AWS Security Hub for cloud provider CIS posture and enables several other conformation packs, such as PCI and AWS Foundational Security Best Practices v1.0.0.&#x20;
-
-Currently, Azure and GCP need to be set up and managed manually out of band from their portals using Azure Security Center and GCP Security Command Center, respectively. DuploCloud will release the GCP command center integration sometime in Q2 2024 and Azure in Q4 2024.
+DuploCloud integrates with AWS Security Hub for cloud provider CIS posture and enables several other conformation packs, such as PCI and AWS Foundational Security Best Practices v1.0.0. DuploCloud also integrates with corresponding security services in GCP and Azure.
 
 <figure><img src="../../.gitbook/assets/image (403).png" alt=""><figcaption><p>The <strong>Secuity</strong> -> <strong>Standards</strong> page in the DuploCloud Portal</p></figcaption></figure>
