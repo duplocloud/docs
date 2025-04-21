@@ -4,7 +4,7 @@ description: Configure infrastructure Security Settings for Infrastructure and P
 
 # Infrastructure Security settings
 
-### Configuring Plan Settings
+## Configuring Plan Settings
 
 To configure Plan settings, navigate to **Administrator** -> **Plans** in the DuploCloud Portal. Select the name of the Plan that matches the DuploCloud Infrastructure for which you want to configure settings. Click the **Capabilities** tab to view Plan Settings.
 
@@ -16,13 +16,15 @@ A Default Value of **Enabled** in the table below displays a property **Value** 
 
 A Default Value of **Disabled** in the table below displays a property **Value** of **False** in the UI.
 
+### Plan Security Settings
+
 | Plan Settings                           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Default Value |
 | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | **Unrestricted External Load Balancer** | <p><br>Creation of an internet-facing load balancer with non-default listener ports (other than <strong>80</strong> and <strong>443</strong>) will be automatically allowed to everyone (<strong>0.0.0.0/0</strong>) if this setting is enabled. If this setting is disabled, you must  manually add a Security Group <a href="../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#add-rules-to-kubernetes-ingress-and-complete-ingress-setup">Ingress rule</a> to access the service<br></p> | Enabled       |
 
 ***
 
-### Configuring Infrastructure Settings
+## Configuring Infrastructure Settings
 
 To configure Infrastructure settings, navigate to **Administrator** -> **Infrastructure** in the DuploCloud Portal. Select the name of the Infrastructure for which you want to configure the settings. Click the **Settings** tab to view Infrastructure settings.
 
@@ -33,6 +35,8 @@ To update or remove an existing setting, click the (<img src="../../.gitbook/ass
 A Default Value of **Enabled** in the table below displays a property value of **True** in the UI.
 
 A Default Value of **Disabled** in the table below displays a property value of **False** in the UI.
+
+### Infrastructure Security Settings
 
 | Infrastructure Settings     | Description                                                                                                                                                                                                                                      | Default Value |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
