@@ -4,13 +4,15 @@ description: Configure AWS Account Security settings for the DuploCloud Portal
 
 # AWS Account Security settings
 
-### Configuring Account Security Settings
+## Configuring Account Security Settings
 
 To configure AWS Account Security settings, navigate to **Administrator** -> **System Settings** in the DuploCloud Portal and click the **AWS Account Security** tab.
 
 Enable the settings listed in the table below by clicking the setting switch.
 
-<figure><img src="../../.gitbook/assets/sw1.png" alt=""><figcaption><p><strong>AWS Security Settings</strong> page with <strong>Enable Security Hub</strong> setting switch enabled.</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/sw1.png" alt=""><figcaption><p><strong>AWS Security Settings</strong> page with <strong>Enable Security Hub</strong> setting switch enabled</p></figcaption></figure>
+
+### AWS Account Security Settings
 
 | Settings Name                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
