@@ -386,6 +386,7 @@
     * [Native Azure Storage Classes](kubernetes-overview/kubernetes-storageclass-and-pvc/storage-options.md)
   * [Import an External Kubernetes Cluster](kubernetes-overview/import-an-external-kubernetes-cluster.md)
   * [Managed Service Accounts (RBAC)](kubernetes-overview/managed-service-accounts-rbac.md)
+  * [Create a Diagnostics Application Service](kubernetes-overview/create-a-diagnostics-application-service.md)
 * [Security and Compliance](security-and-compliance/README.md)
   * [Control Groups](security-and-compliance/control-groups.md)
   * [Isolation and Firewall](security-and-compliance/access-control/README.md)
