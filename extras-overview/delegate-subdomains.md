@@ -15,7 +15,7 @@ Lets assume you have `example.com` registed in a DNS Provider such as GoDaddy or
 
 For DNS management, AWS offers Amazon Route 53. Here are the steps you need to take:
 
-1. Create a hosted zone for `aws.example.com` in Route 53.
+1. Create a public hosted zone for `aws.example.com` in Route 53.
 2. Note down the nameserver (NS) records that Route 53 assigns to your new hosted zone
 3. To delegate the DNS control, you need to update the DNS settings of your primary domain `example.com` in the DNS Provider.
 4. Go to where `example.com` is hosted, and add NS records for `aws.example.com`, pointing to the nameservers you noted from AWS Route 53.
