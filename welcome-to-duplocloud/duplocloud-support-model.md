@@ -12,6 +12,7 @@ DuploCloud offers hands-on 24/7 support for all customers via Slack or email. Au
 
 * Use the customer Slack or Microsoft Teams channel created during onboarding.
 * Email us at support@duplocloud.net.
+* Click the chat icon (<img src="../.gitbook/assets/Screenshot (314) (1).png" alt="" data-size="line">) in the DuploCloud Portal to post your question. If we are unable to respond immediately, we will automatically create a ticket for you and someone from the Duplocloud engineering team will reach out to you ASAP
 
 ## DuploCloud Support Features
 
