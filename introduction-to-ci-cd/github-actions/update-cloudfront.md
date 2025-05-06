@@ -16,11 +16,11 @@ This process is done in four basic steps:
 * Inform AWS CloudFront that the website content has changed
 
 {% hint style="info" %}
-**NOTE:** The example workflow assumes that all the website content is uploaded from a single subfolder named `build`.  It also makes extremely conservative assumptions about cache lifetimes.  Your actual website content may allow a more optimal cache lifetime.
+**NOTE:** The example workflow assumes that all the website content is uploaded from a single subfolder named `build`. It also makes extremely conservative assumptions about cache lifetimes. Your actual website content may allow a more optimal cache lifetime.
 {% endhint %}
 
 {% hint style="warning" %}
-**IMPORTANT:** Steps to build website content are application specific and outside of the scope of this document.  Please replace the example step in the workflow with the steps needed by your application's website.
+**IMPORTANT:** Steps to build website content are application specific and outside of the scope of this document. Please replace the example step in the workflow with the steps needed by your application's website.
 {% endhint %}
 
 {% content-ref url="upload-to-s3.md" %}
@@ -61,7 +61,7 @@ jobs:
       - build
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       
       # Build the website.  CHANGE ME!
       - name: CHANGE ME - Replace with your actual build logic

@@ -47,7 +47,7 @@ jobs:
     
     # configures duplocloud and aws
     - name: Cloud CI Setup
-      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@v0.0.</a>5
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions@v0.0.12</a>
 
     # uses duploctl from above
     - name: Update Lambda
@@ -127,4 +127,4 @@ jobs:
   * [GoLang](https://hub.docker.com/r/amazon/aws-lambda-go)
   * [Ruby](https://hub.docker.com/r/amazon/aws-lambda-ruby)
 
-[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
+[^1]: [https://github.com/duplocloud/actions](https://github.com/duplocloud/actions)
