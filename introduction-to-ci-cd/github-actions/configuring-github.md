@@ -30,7 +30,7 @@ First you need a service account in your portal with the permissions.&#x20;
 
 ## Setup Duplocloud in a Workflow
 
-To get fully set up with Duplocloud and the underlying cloud provider you use, you get everything you need set up with [duplocloud/actions/setup](https://github.com/duplocloud/actions/tree/main/setup). This action will install the CLI for duplocloud and the CLI for the underlying cloud. Finally, it will perform a safe login so subsequent steps can freely interact with DuploCloud or the cloud it manages.&#x20;
+To get fully set up with Duplocloud and the underlying cloud provider you use, you get everything you need set up with [duplocloud/actions](https://github.com/duplocloud/actions). This action will install the CLI for duplocloud and the CLI for the underlying cloud. Finally, it will perform a safe login so subsequent steps can freely interact with DuploCloud or the cloud it manages.&#x20;
 
 Here is the most basic setup for any pipeline to get started.&#x20;
 
@@ -43,7 +43,7 @@ Here is the most basic setup for any pipeline to get started.&#x20;
       DUPLO_TENANT: ${{ vars.DUPLO_TENANT }}
     steps:
     - name: Duplo Setup
-      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@v0.0.</a>5
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions@v0.0.</a>12
       with: # These are only needed for GCP and Azure
         account-id: ${{ vars.CLOUD_ACCOUNT }}
         credentials: ${{ secrets.CLOUD_CREDENTIALS }}
@@ -78,7 +78,7 @@ jobs:
       DUPLO_TENANT: ${{ inputs.environment }}
     steps:
     - name: Duplo Setup
-      uses: <a data-footnote-ref href="#user-content-fn-2">duplocloud/actions/setup@v0.0.</a>5
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions@v0.0.</a>12
       with: # These are only needed for GCP and Azure
         account-id: ${{ vars.CLOUD_ACCOUNT }}
         credentials: ${{ secrets.CLOUD_CREDENTIALS }}
@@ -87,11 +87,7 @@ jobs:
 The input type is `environment` which only works on `workflow_dispatch` because it provides a UI with a drop-down selector for choosing from the list of configured Github Environments.  On any other event type, the environment input would be a type `string`, and you pass in a name. \
 
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/Screenshot 2024-04-01 at 3.36.56 PM (1).png" alt=""><figcaption><p>Environment Selector in workflow dispatch UI</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot 2024-04-01 at 3.36.56 PM (1).png" alt=""><figcaption><p>Environment Selector in workflow dispatch UI</p></figcaption></figure></div>
 
 ## Retrieving a DuploCloud ID from a GitHub Actions script
 
@@ -108,6 +104,4 @@ From inside a GitHub Actions workflow, use the DuploCloud Python client (`duploc
 The rest of this documentation will assume that you named the GitHub repository secret. `DUPLO_TOKEN`.
 {% endhint %}
 
-[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
-
-[^2]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
+[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions)

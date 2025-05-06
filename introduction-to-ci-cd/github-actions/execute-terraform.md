@@ -101,7 +101,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Duplo and AWS Setup
-      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@main</a>
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions@main</a>
       with:
         admin: true
     
@@ -165,7 +165,7 @@ jobs:
       module: app
 ```
 
-[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
+[^1]: [https://github.com/duplocloud/actions](https://github.com/duplocloud/actions)
 
 [^2]: [https://github.com/duplocloud/actions/tree/main/setup-terraform](https://github.com/duplocloud/actions/tree/main/setup-terraform)
 

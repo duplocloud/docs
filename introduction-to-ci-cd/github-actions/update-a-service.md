@@ -52,7 +52,7 @@ jobs:
     
     # install and login to the cloud
     - name: Duplo Setup
-      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@</a>v0.0.5
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions@v0.0.12</a>
       # only required on gcp and azure
       with:
         account-id: ${{ vars.CLOUD_ACCOUNT }}
@@ -67,4 +67,4 @@ jobs:
         type: service
 </code></pre>
 
-[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
+[^1]: [https://github.com/duplocloud/actions](https://github.com/duplocloud/actions)

@@ -65,7 +65,7 @@ jobs:
 
     # Configures DuploCloud and the host cloud, for example, AWS
     - name: Cloud CI Setup
-      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions/setup@</a>v0.0.5
+      uses: <a data-footnote-ref href="#user-content-fn-1">duplocloud/actions@v0.0.12</a>
     
     # logs into the registry, configures Docker, builds the image, and lastly pushes
     - name: Build and Push Docker Image
@@ -87,6 +87,6 @@ jobs:
 * [GitHub on publishing Docker images](https://docs.github.com/en/actions/publishing-packages/publishing-docker-images)
 * [Docker introduction to GitHub Actions](https://docs.docker.com/build/ci/github-actions/)
 
-[^1]: [https://github.com/duplocloud/actions/tree/main/setup](https://github.com/duplocloud/actions/tree/main/setup)
+[^1]: [https://github.com/duplocloud/actions](https://github.com/duplocloud/actions)
 
 [^2]: [https://github.com/duplocloud/actions/tree/main/build-image](https://github.com/duplocloud/actions/tree/main/build-image)
