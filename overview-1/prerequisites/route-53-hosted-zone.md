@@ -6,6 +6,8 @@ description: Creating a Route 53 hosted zone to program DNS entries
 
 The DuploCloud Platform requires a unique GCP Cloud DNS zone to create DNS entries for the services you deploy. The domain must be registered with a domain provider and set in DuploCloud before configuration. We recommend creating a subdomain such as `apps.[MY-COMPANY].com` or `internal.[my-company].com`.
 
+For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../duplocloud-prerequisites/resolving-dns-failures.md).&#x20;
+
 {% hint style="danger" %}
 Never use this subdomain for any other purpose, as DuploCloud owns all CNAME entries in this domain and will remove any entries it does not manage.
 {% endhint %}

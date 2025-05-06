@@ -6,6 +6,8 @@ description: Create a Route 53 Hosted Zone to program DNS entries
 
 The DuploCloud Platform needs a unique Route 53 hosted zone to create DNS entries for Services that you deploy. The domain must be created out-of-band and set in DuploCloud. The zone is a subdomain such as `apps.[`_`MY-COMPANY`_`].com`.&#x20;
 
+For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../duplocloud-prerequisites/resolving-dns-failures.md).&#x20;
+
 {% hint style="danger" %}
 Never use this subdomain for anything else, as DuploCloud owns all `CNAME entries` in this domain and removes all entries it has no record of.
 {% endhint %}

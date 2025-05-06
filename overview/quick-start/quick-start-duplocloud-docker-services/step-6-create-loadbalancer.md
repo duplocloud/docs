@@ -47,6 +47,6 @@ If you want to secure the load balancer created, you can follow the steps specif
 
 ### Creating a Custom DNS Name
 
-You can modify the DNS name by clicking Edit in the DNS Name card in the Load Balancers tab. For additional information see [this page](../quick-start-eks-services/step-8-create-dns-name.md).
+You can modify the DNS name by clicking Edit in the DNS Name card in the Load Balancers tab. For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../../duplocloud-prerequisites/resolving-dns-failures.md).&#x20;
 
 <div align="left"><figure><img src="../../../.gitbook/assets/shitpic.png" alt="" width="563"><figcaption><p>The <strong>DNS Name</strong> card in the <strong>Load Balancers</strong> tab</p></figcaption></figure></div>
