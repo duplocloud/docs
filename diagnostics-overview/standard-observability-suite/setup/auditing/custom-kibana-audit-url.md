@@ -4,24 +4,39 @@ description: Configure a custom Kibana URL for viewing audit logs from DuploClou
 
 # Custom Kibana Audit URL
 
-DuploCloud provides a default Kibana URL for viewing audit logs, but in some cases, this default URL may not work due to specific configurations or network settings. If necessary, you can override it by configuring a custom Kibana URL that points to a different Kibana instance within DuploCloud's.
+DuploCloud provides a default Kibana URL for viewing audit logs, but if you want to update filters or customize further, you can override the default with these settings.
 
 ## **Configuring a Custom Kibana Audit URL**
 
 1. Log in to the **DuploCloud Portal**.
-2. Navigate to **Administrator -**> **System Settings** -> **System Config**.
+2. Navigate to **Administrator** -> **System Settings** -> **System Config**.
 3.  Click **Add**. The **Add Config** pane displays.\
 
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (358).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
-4. Configure the settings as shown in the following table:
+4. In the **Config Type** list box, select `AppConfig`.
+5. In the **Key** list box, choose one of the following keys:
+   * **Kibana Base URL**: This URL points to the proxy or direct-access Kibana instance.
+   * **Kibana Audit URL Template**: This URL template links to Kibana’s Audit logs.
+6. In the **Value** field, enter the custom URL for the selected key. For example:
+   * For **Kibana Base URL**:\
+     `/proxy/kibana`
+   * For **Kibana Audit URL Template**:\
+     `https://kibana.example.com/app/discover#/?_a=(query:(language:kuery,query:'log_type:"audit"'))&_g=(time:(from:now-1h,to:now))`
 
-<table data-header-hidden><thead><tr><th width="127.11114501953125">Field</th><th>Value</th></tr></thead><tbody><tr><td><strong>Config Type</strong></td><td>Select: <strong>AppConfig</strong></td></tr><tr><td><strong>Key</strong></td><td>Select one of the following keys, depending on the desired configuration:<br>    <br><strong>Kibana Base URL</strong>: This URL points to the proxy or direct access Kibana URL. <br><strong>Kibana Audit URL Template</strong>: This URL template links to Kibana’s Audit logs.</td></tr><tr><td><strong>Value</strong></td><td>Enter the custom URL for the selected key (for example, <code>/proxy/kibana</code> or a specific Kibana dashboard URL with filters already applied).</td></tr></tbody></table>
+{% hint style="info" %}
+You can customize the example URLs, replacing placeholders with your own values and modifying the query string to adjust the filters:
 
-5.  Click **Submit** to save the configuration.\
+* **log\_type**: Filter by log type (e.g., **`"audit"`**, **`"application"`**).
+* **time range**: Adjust the time range (e.g., **`from:now-1h`**, **`from:now-7d`**).
 
+**Example:**\
+&#xNAN;**`https://kibana.example.com/app/discover#/?_a=(query:(language:kuery,query:'log_type:"audit"'))&_g=(time:(from:now-1h,to:now))`**
+{% endhint %}
 
-    <figure><img src="../../../../.gitbook/assets/Screenshot (359).png" alt=""><figcaption><p>The <strong>System Config</strong> page in the DuploCloud Platform</p></figcaption></figure>
+7. Click **Submit** to save the configuration.
+
+<figure><img src="../../../../.gitbook/assets/Screenshot (359).png" alt=""><figcaption><p>The <strong>System Config</strong> page in the DuploCloud Platform</p></figcaption></figure>
 
 After configuring the Kibana URL in DuploCloud, you can access Kibana Audit data directly from the DuploCloud Portal:
 
