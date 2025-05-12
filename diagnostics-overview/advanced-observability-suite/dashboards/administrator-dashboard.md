@@ -4,7 +4,7 @@ description: Working with the AOS Administrator Dashboard
 
 # Administrator Dashboard
 
-The **Administrator AOS Dashboard** displays cloud data across all resources and infrastructures. It is only accessible to administrators.&#x20;
+The **Administrator AOS Dashboard** displays cloud data across all resources and infrastructures. It is only accessible to Administrators.&#x20;
 
 To access it, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard**.
 

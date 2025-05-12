@@ -21,7 +21,7 @@ The **Cloud Spend** area, on the left side of the **Tenant AOS Dashboard**, offe
 * **Current Month**: Displays the current month’s spend for the selected Tenant.
 * **Spend By Service**: Displays a breakdown of cloud spending by Service.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/tenant cloud spend.png" alt="" width="560"><figcaption><p>The <strong>Tenant AOS Dashboard</strong>, <strong>Cloud Spend</strong> area</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (309).png" alt="" width="518"><figcaption><p>The <strong>Tenant AOS Dashboard</strong>, <strong>Cloud Spend</strong> area</p></figcaption></figure></div>
 
 ## Viewing Tenant Observability Data
 

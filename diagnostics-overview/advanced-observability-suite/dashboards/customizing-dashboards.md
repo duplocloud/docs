@@ -10,7 +10,7 @@ By default, each Kubernetes cluster in DuploCloud has its own dedicated OpenTele
 
 ## Configuring OpenTelemetry Cards
 
-In the AOS dashboard, the OpenTelemetry section features five cards that link to Grafana dashboards. To configure these cards and their links, go to **Administrator** -> **System Settings -> System Config** in the DuploCloud Portal and search for `otel` as shown in the image below.
+In the AOS dashboard, the OpenTelemetry section features five cards that link to Grafana dashboards. To configure these cards and their links, go to **Administrator** -> **System Settings** -> **System Config** in the DuploCloud Portal and search for `otel` as shown in the image below.
 
 <figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
