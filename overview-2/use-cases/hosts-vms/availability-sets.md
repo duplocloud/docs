@@ -21,7 +21,7 @@ In DuploCloud, Availability Sets can be configured when creating or managing hos
 
 4. Fill in the following details:
    * **Name**: Enter a descriptive name for the Availability Set.
-   * **Use managed disks**: Select whether to use Managed Disks (recommended) or Classic Disks.
+   * **Use managed disks**: Select whether to use **Managed** (recommended) or **Classic** disks.
    * **Platform Fault Domain Count**: Specify the number of fault domains (up to 3 in most Azure regions).
    * **Platform Update Domain Count**: Specify the number of update domains (default is 5, max is 20).
 5. Click **Add** to create the Availability Set.
