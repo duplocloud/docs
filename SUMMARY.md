@@ -339,6 +339,7 @@
     * [Databricks](overview-2/azure-services/databricks.md)
     * [Data Factory](overview-2/azure-services/data-factory.md)
     * [Functions](overview-2/azure-services/functions.md)
+    * [Infra Secrets](overview-2/azure-services/infra-secrets.md)
     * [Key Vault](overview-2/azure-services/key-vault.md)
     * [Load Balancers](overview-2/azure-services/load-balancers.md)
     * [Public IP Address Prefix](overview-2/azure-services/public-ip-address-prefix.md)
