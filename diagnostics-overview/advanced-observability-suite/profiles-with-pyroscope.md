@@ -29,11 +29,15 @@ Pyroscope is the backend for profiles that show the CPU and Memory profile for t
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** (Administrator AOS Dashboard) **or Observability** -> **Advanced** -> **Dashboard** (Tenant AOS Dashboard). The AOS Dashboard displays.
 2. Select your Infrastructure from the **Infrastructure** list box (Administrator AOS Dashboard) or **Tenant** from the Tenant list box (Tenant AOS Dashboard).&#x20;
-3. Click the **Profiles** card. The Grafana **Profiles** dashboard displays.
+3. Click the **Profiles** card. The Grafana **Profiling** dashboard displays.
 
 For more information about profile data, see the [Grafana Pyroscope documentation](https://grafana.com/docs/grafana/latest/datasources/pyroscope/query-profile-data/).&#x20;
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption><p>The Grafana <strong>Profiling</strong> Dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (312).png" alt=""><figcaption><p>The Grafana <strong>Profiling</strong> Dashboard</p></figcaption></figure>
+
+The **Profiling Dashboard** provides detailed insights into how your application utilizes resources such as CPU and memory.
+
+You can also view **Flame Graphs**, which show the call stack and resource consumption, making it easier to identify the specific functions causing performance issues. The **Explain Flame Graph** feature further analyzes the data, offering insights into bottlenecks and suggesting optimizations for improved performance.
 
 ### Viewing Profiles and Traces in Grafana
 
