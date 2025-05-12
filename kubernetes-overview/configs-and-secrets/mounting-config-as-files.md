@@ -1,28 +1,25 @@
 ---
-description: Mounting application configuration maps and secrets as files
+description: Mounting Kubernetes ConfigMaps and Secrets as files
 ---
 
 # Mounting ConfigMaps and Secrets as files
 
-In Kubernetes, you can mount application configurations or secrets as files.&#x20;
+In Kubernetes, you can mount ConfigMap or Secret data as files into a container, allowing your workloads to read configuration values at runtime without hardcoding them into images or code.
 
-## Creating and mounting a Kubernetes ConfigMap
+## Prerequisites
 
-{% hint style="warning" %}
-Before you create and mount the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud Service.&#x20;
-{% endhint %}
+Before you can mount a ConfigMap or Secret as a file in a container, complete the following setup:
 
-### Creating a Kubernetes ConfigMap
+* **Create a DuploCloud Service.**\
+  The Service defines the container into which the ConfigMap or Secret will be mounted.\
+  You can create a Service by navigating to **Kubernetes** → **Services** in the DuploCloud Portal.
+* **Create the ConfigMap or Secret.**
+  * To create a ConfigMap, see [Creating a Kubernetes ConfigMap](mounting-config-as-files.md#creating-a-kubernetes-configmap).
+  * To create a Secret, see [Creating a Kubernetes Secret](mounting-config-as-files.md#creating-a-kubernetes-secret).
 
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Config Maps**.
-2. Click **Add**. The **Add Kubernetes Config Map** pane displays.&#x20;
-3. Give the ConfigMap a name, such as **my-config-map**.
-4. In the **Data** field, add a key/value pair for each file in your config map, separated by a colon (**`:`**). The key is the file name, and the value is the file's contents.
-5. Click **Create**.
+Each ConfigMap or Secret should include the file data you want to mount, using key/value pairs where the key is the filename and the value is the file’s contents.
 
-![Add Kubernetes Config Map pane](<../../.gitbook/assets/Screen Shot 2022-03-21 at 11.39.39 AM.png>)
-
-### Editing the DuploCloud Service
+## Mounting a Kubernetes ConfigMap as a Volume
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2. Select the Service you want to modify from the **Name** column.
@@ -30,14 +27,12 @@ Before you create and mount the Kubernetes [ConfigMap](https://kubernetes.io/doc
 
 <figure><img src="../../.gitbook/assets/Azure_Serv1 (1).png" alt=""><figcaption><p><strong>Actions</strong> menu on the <strong>Services</strong> page</p></figcaption></figure>
 
-### Mounting the Kubernetes ConfigMap as a volume
+4. Click **Next**. The **Advanced Options** page displays.
+5. In the **Volumes** field on the **Advanced Options** page, enter the appropriate YAML configuration to define the volume mount. See examples below.
 
-1. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
-2. &#x20;In the **Volumes** field on the **Advanced Options** page, enter the configuration YAML to mount the ConfigMap as a volume.&#x20;
+**Example: Mounting a ConfigMap as a Volume**
 
-#### Example: mounting a ConfigMap as a volume
-
-For example, to mount a config map named `my-config-map` to a directory named `/app/my-config` enter the following YAML code block in the **Volumes** field:
+To mount a ConfigMap named `my-config-map` to a directory named `/app/my-config`, use the following configuration:
 
 ```yaml
 - Name: my-config
@@ -47,11 +42,11 @@ For example, to mount a config map named `my-config-map` to a directory named `/
       Name: my-config-map
 ```
 
-<figure><img src="../../.gitbook/assets/Azure_edit_serv_2.png" alt=""><figcaption><p>Mouting ConfigMap as a volume in the <strong>Advanced Options</strong> page </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Azure_edit_serv_2.png" alt=""><figcaption><p>The <strong>nginx Service</strong> <strong>Advanced Options</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
-#### Example: adding a Key value to select individual ConfigMap items
+**Example: Mounting an Individual File from a ConfigMap**
 
-If you want to select individual ConfigMap items and specify the subpath for mounting, you can use a different configuration.  For example, if you want the key named `my-file-name` to be mounted to `/app/my-config/config-file` use the following YAML:
+To mount an individual file (e.g., `my-file-name`) from the ConfigMap to a specific location (e.g., `/app/my-config/config-file`), use the following configuration:
 
 ```yaml
   Path: /app/my-config
@@ -63,36 +58,22 @@ If you want to select individual ConfigMap items and specify the subpath for mou
         Path: config-file
 ```
 
-## Creating and Mounting a Kubernetes Secret
+6. Select **Update** to save the configuration. The ConfigMap will now be mounted into the container at runtime.
 
-Before you create and mount a [Kubernetes Secret](https://kubernetes.io/docs/concepts/configuration/secret/), you must create a DuploCloud Service.
+## Mounting a Kubernetes Secret as a Volume
 
-### Creating a Kubernetes Secret&#x20;
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
+2. Select the Service you want to modify from the **Name** column.
+3. Click the **Actions** menu and select **Edit**.
+4.  Click **Next**. The **Advanced Options** page displays.\
 
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Secrets**.
-2. Click **Add**. The **Add Kubernetes Secret** pane displays.
-3. Give the secret a name, such as **my-secret-files**.
-4. Add **Secret Details** such as a key/value pair for each file in your secret separated by a colon (**`:`**). The key is the file name, and the value is the file's contents.&#x20;
-5. Click **Add** to create the secret.
 
-![Add Kubernetes Secret pane](<../../.gitbook/assets/Screen Shot 2022-03-21 at 12.50.14 PM.png>)
+    ![The nginx Service Advanced Options page in the DuploCloud Portal](<../../.gitbook/assets/Screen Shot 2022-03-21 at 12.52.19 PM.png>)
+5. In the **Volumes** field on the **Advanced Options** page, enter the appropriate YAML configuration to define the volume mount. See examples below.
 
-### Creating a multi-line Kubernetes Secret
+**Example: Mounting a Secret as a Volume**
 
-1. Follow the steps in [creating a Kubernetes Secret](mounting-config-as-files.md#creating-a-kubernetes-secret), defining a Key value using the `PRIVATE_KEY_FILENAME`  in the **Secret Details** field, as shown below.&#x20;
-2. Click **Add** to create the multi-line secret.
-
-![](<../../.gitbook/assets/Screen Shot 2022-08-10 at 4.25.05 PM.png>)
-
-### Mounting a Kubernetes Secret as a volume
-
-1. In the DuploCloud Portal, [edit the DuploCloud Service](mounting-config-as-files.md#editing-the-duplocloud-service).
-2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
-3. In the **Volumes** field on the **Advanced Options** page, enter the configuration YAML to mount the Secret as a volume.&#x20;
-
-#### Example: mounting a Kubernetes Secret as a volume
-
-For example, to mount a Secret named `my-secret-files` to a directory named `/app/my-config` Enter the following YAML code block in the **Volumes** field:
+To mount a Secret named `my-secret-files` to a directory named `/app/my-config`, use the following configuration:
 
 ```yaml
 - Name: my-config
@@ -102,11 +83,9 @@ For example, to mount a Secret named `my-secret-files` to a directory named `/ap
       SecretName: my-secret-files
 ```
 
-![Mouting a Secret as a volume in the Advanced Options page ](<../../.gitbook/assets/Screen Shot 2022-03-21 at 12.52.19 PM.png>)
+**Example: Mounting an Individual Secret Item**
 
-#### Example: adding a Key value to select individual Secret items&#x20;
-
-If you want to select individual Secret items and specify the subpath for mounting, you can use a different configuration.  For example, if you want the key named `secret-file` to be mounted to `/app/my-config/config-file` use the following YAML:
+If you want to select individual Secret items (e.g., `secret-file`) and specify the subpath for mounting (e.g., `/app/my-config/config-file`) use the following configuration:
 
 ```yaml
 - Name: my-config
@@ -118,3 +97,5 @@ If you want to select individual Secret items and specify the subpath for mounti
       - Key: secret-file
         Path: config-file
 ```
+
+6. Select **Update** to save the configuration. The Secret will now be mounted into the container at runtime.
