@@ -4,11 +4,11 @@ description: >-
   environment; harness the power of generating application infrastructures.
 ---
 
-# Quick Start
+# Azure Quick Start
 
 {% embed url="https://vimeo.com/738721577" %}
 
-This Quick Start tutorial shows you how to set up an end-to-end cloud deployment. You will create Azure infrastructure and tenants and, by the end of this tutorial, you can view a deployed sample web application.
+This Quick Start tutorial shows you how to set up an end-to-end cloud deployment. You will create an Azure Infrastructure and Tenant, and by the end of this tutorial, you can view a deployed sample web application.
 
 _Estimated time to complete tutorial: 90-100 minutes._
 
