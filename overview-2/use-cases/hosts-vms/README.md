@@ -4,47 +4,100 @@ description: Using Hosts in DuploCloud
 
 # Hosts (VMs)
 
-Once we have the Infrastructure (Networking, Kubernetes cluster, and other common configurations) and an environment (Tenant) set up, the next step is to create VMs. These could be meant for:
+Once we have the Infrastructure (Networking, Kubernetes cluster, and other common configurations) and an environment (Tenant) set up, the next step is to create VMs. In DuploCloud, you can create the following types of hosts for your workloads:
 
-* AKS Worker Nodes
-* Worker Nodes (Docker Hosts) if built-in container orchestration is used.
-* Regular nodes that are not part of any container orchestration, where a user manually connects and installs applications. For example, when using a Microsoft SQL Server in a VM, when running an IIS application and in other custom use cases.
+* **Host (VM)**: Standard virtual machines for general-purpose workloads, including application hosting and databases.
+* **VM Scale Set**: A group of identical VMs that can automatically scale based on demand, ideal for horizontally scalable applications.
+* **Azure Agent Pool**: A set of VMs used in container orchestration environments like Azure Kubernetes Service (AKS).
+* **Availability Set**: A collection of VMs spread across fault and update domains to ensure high availability and minimize downtime.
+* **BYOH (Bring Your Own Host)**: For users with pre-configured VMs or non-Azure infrastructure that they want to bring into DuploCloud. Use **BYOH** for any VM that is not an Azure Host.&#x20;
 
 {% hint style="info" %}
-For ease of use, [create a link to the Azure Console](../azure-portal-link.md) from a **Host** page **Action Menu**.
+For convenience, you can [create a link to the Azure Console](../azure-portal-link.md) from the Action Menu on the Host page to quickly access Azure-specific settings or configurations while managing your Hosts in DuploCloud.
 {% endhint %}
 
-## Adding a Host (VM)
+## Adding Hosts in DuploCloud
 
-Add a Virtual Machine Host. DuploCloud supports **Host** (Azure Host) and **BYOH** (Bring Your Own Host) types. Use **BYOH** for any VM that is not an Azure Host.&#x20;
+### Adding a Host (VM)
 
-1. Select the appropriate Tenant from the **Tenant** list box
-2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.&#x20;
-3. Select the tab that corresponds to the type of Host you want to create (**HOST** or **BYOH**), and click **Add**.
+1. Select the appropriate Tenant from the **Tenant** list box.
+2. Navigate to **Cloud Services** -> **Hosts**.&#x20;
+3. Select the **Host** tab.
+4. Click **Add**. The **Add Virtual Machine** pane displays.&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
-4. In the **Friendly Name** field, specify a unique name for the Host.&#x20;
-5. Define the **Subnet**, select the **Instance Type**, enter your **Username** and **Password**, and specify whether to enable a **Public IP**.&#x20;
-6. Optionally, complete the fields in the Advanced options:
-   * &#x20;**Image ID**: Specify the image to use for the host.
-   * **Fleet**: Select the fleet to which this host belongs.
-   * **Annotation Tag**: Add metadata or labels for organizational purposes.
-   * **Computer Name**: Set a custom computer name for the host.
-   * **Encryption**: Enable or disable disk encryption.
-   * **Disk Size**: Specify the size of the disk in GB.
-   * **Disk Controller Type**: Choose the disk controller type.
-   * **Join Domain**: Indicate whether the host should join an Active Directory domain.
-   * **Join Log Analytics**: Enable integration with Azure Log Analytics for monitoring.
-   * **Timezone**: Set the timezone for the host.
-   * **Availability Set**: Align with an [Availability Set](availability-sets.md), if needed.
-   * **Security Type**: Select **Standard** or **Trusted Launch**. If you select **Trusted Launch**, enable or disable **Enable Secure Boot** and **vTPM**.
-   * **Enable Encryption at Host**: Enable encryption for data at rest at the host level.
-7. Click **Add**.
+4. In the **Friendly Name** field, specify a unique name for the Host.
+5. Define the **Subnet** for the Host.
+6. Select the **Instance Type** that fits your requirements.
+7. Enter the **Username** and **Password** for the Host.
+8. Specify whether to enable a **Public IP** for the Host.
+9. Optionally, check the Advanced Options box and configure advanced settings.&#x20;
+10. Click **Add**.
 
 {% hint style="info" %}
 It is not necessary to explicitly define Hosts. Instead, you can use [Azure Agent Pools](../../azure-services/agent-pool.md) and [VM Scale Sets](../../azure-services/vm-scale-sets.md)**.**
 {% endhint %}
+
+### Adding a VM Scale Set
+
+1. Select the appropriate Tenant from the **Tenant** list box.
+2. Navigate to **Cloud Services** → **Hosts**. &#x20;
+3. Select the **VM Scale Set** tab.
+4. Click **Add**. The **Add VM Scale Set** pane displays.
+5. In the **Name** field, provide a unique name for the VM Scale Set.
+6. Select the **Subnet** from the available options.
+7. Choose the **Instance Type** for the VMs in the scale set (e.g., **2GB, 4GB**, etc.).
+8. Define the **Capacity**, specifying the desired number of VMs for the scale set.
+9. Select the **Image Id** for the base image of the VMs (e.g., `Ubuntu20_04`).
+10. Choose the **Fleet** to which the VM Scale Set will belong.
+11. Optionally, enter an **Allocation Tag** for organizational purposes.
+12. Provide the **Username** and **Password** for accessing the VMs in the scale set.
+13. Click **Add** to create the VM Scale Set.
+
+### Adding an Azure Agent Pool
+
+1. Select the appropriate Tenant from the **Tenant** list box.
+2. Navigate to **Cloud Services** → **Hosts**.
+3. Select the **Azure Agent Pool** tab.
+4.  Click **Add**. The **Add Azure Agent Pool** pane displays.\
+
+
+    <figure><img src="../../../.gitbook/assets/Screenshot (372).png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> pane</p></figcaption></figure>
+5. In the **Name** field, enter a unique name for the agent pool.
+6. Choose the **Instance Type** (e.g., **2GB, 4GB**, etc.).
+7. Set the **Min Capacity**, specifying the minimum number of nodes in the agent pool.
+8. Set the **Max Capacity**, specifying the maximum number of nodes in the agent pool.
+9. Set the **Desired Capacity**, specifying the desired number of nodes.
+10. Select the **OS** for the agent pool (e.g., **Linux**, **Windows**).
+11. Choose the **OS SKU**, (e.g., **Ubuntu**).
+12. Optionally, enter an **Allocation Tag** for organizational purposes.
+13. Specify the **Availability Zones** in which the agent pool nodes should be located.
+14. Choose the **Scale Set Priority** (e.g., **Regular**, **Spot**).
+15. Set the **Max Pods Per Node**, specifying the maximum number of pods for each node.
+16. Optionally, select **Enable Autoscaling** to automatically scale the agent pool based on usage.
+17. Click **Add** to create the Azure Agent Pool.
+
+### Adding an Azure Availability Set
+
+For detailed instructions, see the [DuploCloud Azure Availability Set documentation](./#adding-an-azure-availability-set).
+
+### Adding a BYOH (Bring Your Own Host)
+
+1. Select the appropriate Tenant from the **Tenant** list box.
+2. Navigate to **Cloud Services** → **Hosts**.
+3. Select the **BYOH** tab.
+4.  Click **Add**. The **Add BYOH** pane displays.\
+
+
+    <figure><img src="../../../.gitbook/assets/Screenshot (374).png" alt=""><figcaption><p>The <strong>Add BYOH</strong> pane </p></figcaption></figure>
+5. In the **Friendly Name** field, enter a unique name for the Host.
+6. In the **Direct Address** field, enter the direct IP address of the Host.
+7. In the **Fleet Type** field, select the appropriate fleet type (e.g., **Linux Docker/Native**).
+8. In the **Username** field, enter the username for accessing the Host (optional).
+9. In the **Password** field, enter the password for the Host (optional).
+10. Optionally, provide a **Private Key** for SSH access if necessary.
+11. Click **Add** to create the BYOH Host.
 
 ## Viewing Hosts (VMs)
 
