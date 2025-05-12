@@ -29,13 +29,13 @@ Service is a DuploCloud term and is not the same as a Kubernetes Service. In Dup
 
 ### Allocation Tags
 
-A Service can be configured to run only a specific set of Hosts by setting allocation tags on the Hosts and Service. Allocation tags are case-insensitive substrings. On a Service, allocation tags should be a substring of the Host tag. For example, if a Host is tagged `HighCpu;HighMem`, a Service tagged `highcpu` can be placed on it. Services without allocation tags can be placed on any Host.
+Allocation tags allow you to control which Hosts a Service can run on by specifying tags on both the Host and the Service. Services without allocation tags can be scheduled on any Host.
 
-{% hint style="info" %}
-If a Host has a specific tag and there are Services with the same tag, the Host can also be used by any Service that doesn’t have a tag. To ensure a Host is only used by a specific set of Services, ensure all Services in the Tenant are tagged.&#x20;
-{% endhint %}
+* **Docker Services** use **case-insensitive, substring-based matching**.\
+  For example, if a Host has the tag `HighCpu;HighMem`, a Service tagged `highcpu` or `cpu` would match and be eligible to run on that Host.
+* **Kubernetes Deployments** use **exact, case-sensitive matching** based on Kubernetes node labels and node selectors. For example, a Host tagged `frontend-prod` will only match a Service with the exact same tag. For example `Frontend-Prod` or `frontend-prod-1` will **not** match. Kubernetes allocation tags must start and end with an alphanumeric character and may only contain letters, numbers, hyphens (`-`), or periods (`.`)
 
-For Kubernetes Deployments, allocation tags are implemented using labels on nodes and then applying node selectors in your Deployment or StatefulSet configurations.
+If a Host is tagged and a matching Service exists, the Host may still be used by untagged Services unless **all Services in the tenant are tagged**. To fully isolate Hosts for a specific purpose, ensure **all** Services use allocation tags.
 
 ### Host Networking
 
