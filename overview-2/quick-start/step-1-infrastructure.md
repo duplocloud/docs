@@ -6,7 +6,7 @@ description: Creating the DuploCloud Infrastructure and a Plan
 
 Each DuploCloud Infrastructure is a connection to a unique Virtual Private Cloud (VPC) network that resides in a region that can host Kubernetes clusters. An Infrastructure can reside On-Premises (On-Prem) or in a Public Cloud.
 
-After you supply a few basic inputs DuploCloud creates an Infrastructure for you, within Azure and within DuploCloud, with a few clicks. Behind the scenes, DuploCloud does a lot with what little you supply—generating subnets, NAT gateway, routes, and a cluster in the region.
+After you supply a few basic inputs, DuploCloud creates an Infrastructure for you within Azure. Behind the scenes, DuploCloud does a lot with what little you supply—generating subnets, NAT gateway, routes, and a cluster in the region.
 
 With the Infrastructure as your foundation, you can customize an extensible, versatile Platform Engineering development environment by adding Tenants, Hosts, Services, and more.
 
@@ -40,10 +40,10 @@ Before starting this tutorial:
 
 ![Infrastructure creation with a status of Complete](<../../.gitbook/assets/image (34).png>)
 
-## Enable Kubernetes for Azure
+## Enabling Kubernetes for Azure
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
-2. Select the Infrastructure you created.
+2. Select the `nonprod` Infrastructure you created.
 3. Click the **Kubernetes** tab.
 4. Select the **Click Here** link. The **Configure AKS Cluster** pane displays.
 5. Enter a name in the **Cluster name** field.
@@ -51,7 +51,9 @@ Before starting this tutorial:
 7. To use Windows containers, Network plugin should be set to Azure. This config will make Kubernetes pods to get IP assigned from Subnets address space, Make sure Infrastructure default subnet use /18 for network prefix. At least /20 should be used or IP Address space might run out.
 8. Click **Create**. It may take some time to configure the cluster. The **Kubernetes** card on the Infrastructure page  shows **Enabled** when the cluster is complete. You can also monitor progress using the **Kubernetes** tab.&#x20;
 
-## Verifying that a Plan exists for your Infrastructure
+## Checking Your Work
+
+### Verifying a Plan Exists
 
 Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the [Tenants ](../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md)or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
 
@@ -62,7 +64,7 @@ Before proceeding, confirm that a Plan exists that corresponds to your newly cre
 
 DuploCloud begins creating and configuring an AKS cluster using Kubernetes. You receive an alert message when the Infrastructure has been updated.&#x20;
 
-## Check your work
+### Verifying AKS is Enabled
 
 You previously verified that your Infrastructure and Plan were created. Now, verify that AKS is Enabled before proceeding to [Create a Tenant](step-2-tenant.md).
 

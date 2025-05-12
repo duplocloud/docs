@@ -1,59 +1,48 @@
 ---
-description: Create a load balancer to access your application
+description: Create a Load Balancer to access your application
 ---
 
 # Step 5: Create a Load Balancer
 
-Now that your DuploCloud Service is running, you have a mechanism to expose the containers and images in which your application resides. But because your containers are running inside a private network, you also need a load balancer to listen on the correct ports in order to access the application.
+Now that your DuploCloud Service is running, you have a mechanism to expose the containers and images where your application resides. But because your containers are running inside a private network, you also need a Load Balancer to listen on the correct ports in order to access the application.
 
-In this step, we add a Load Balancer Listener to complete this network configuration.
+In this step, we add a Load Balancer Listener to complete the network configuration.
 
 _Estimated time to complete Step 5: 20 minutes._
 
 ## Prerequisites
 
-Before creating your DuploCloud load balancer, ensure that:
+Before creating your DuploCloud Load Balancer, ensure that:
 
 * All previous steps in this tutorial to create an [Infrastructure and Plan](step-1-infrastructure.md), [Tenant](step-2-tenant.md), [Azure Agent Pool](step-3-create-azure-agent-pool.md), and [Service](step-4-create-app-via-k8s.md) are complete.
 * [AKS Kubernetes cluster](step-1-infrastructure.md#enabling-the-aks-kubernetes-cluster) is enabled.
 * **dev01**  is selected in the **Tenant** list box, at the top of the DuploCloud Portal.
 
-<div align="left">
+<div align="left"><figure><img src="../../.gitbook/assets/tenant_dev01 (7).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure></div>
 
-<figure><img src="../../.gitbook/assets/tenant_dev01 (7).png" alt=""><figcaption><p><strong>Tenant</strong> list box with Tenant <strong>dev01</strong> selected</p></figcaption></figure>
-
-</div>
-
-## Adding and configuring a load balancer
-
-Add a load balancer for your running service that listens on port **80**:
+## Adding a Load Balancer
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
-2. On the **Services** page, select the **nginx-service** you started when [creating a service in the previous step](step-4-create-app-via-k8s.md).
-3. Click the **Load Balancers** tab.
-4. Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.
-5. Select **K8S Node Port** from the **Select Type** list box.
-6. Enter **80** in the **Container port** field.
-7. Enter **30008** in the **External port** field.
-8. Type **/** (forward-slash) in the **Health Check** field to indicate that the cluster we want Kubernetes to perform Health Checks on is located at the `root` level.
-9.  Select **TCP** from the **Backend Protocol** list box.\
+2. On the **Services** page, select the **nginx-service** you created.
+3. Select the **Load Balancers** tab.
+4.  Click **Add**. The **Add Load Balancer Listener** pane displays.\
 
 
-    <div align="left">
+    <div align="left"><figure><img src="../../.gitbook/assets/Azure_GS_LBL_1.png" alt=""><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane<br></p></figcaption></figure></div>
+5. Fill the fields as shown in the following tables. Leave any default values for fields not specified.&#x20;
 
-    <figure><img src="../../.gitbook/assets/Azure_GS_LBL_1.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane using <strong>K8S Node Port</strong><br></p></figcaption></figure>
+| **Select Type**      | `K8S Node Port`   |
+| -------------------- | ----------------- |
+| **Container Port**   | `80`              |
+| **External Port**    | `30008`           |
+| **Health Check**     | / (forward-slash) |
+| **Backend Protocol** | `TCP`             |
 
-    </div>
-10. Click **Add**. The Load Balancer is created and started. After a few minutes, the **LB Status** card displays a status of **Ready**, indicating that the Load Balancer is ready for use.\
+6. Click **Add**. After a few minutes, the **LB Status** card displays a status of **Ready**, indicating that the Load Balancer is ready for use.
 
+<div align="left"><figure><img src="../../.gitbook/assets/LB running.png" alt=""><figcaption></figcaption></figure></div>
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/LB running.png" alt=""><figcaption></figcaption></figure>
-
-    </div>
-
-## Enable the Ingress Controller
+## Enabling the Ingress Controller
 
 When we created the Load Balancer Listener, we used the [**K8S Node Port**](https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport) type, which leverages the capabilities of the [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) object.&#x20;
 
@@ -62,7 +51,7 @@ Ingress is an entry point that front-ends multiple services in a cluster. It can
 To use Ingress, you first enable the [Kubernetes Ingress Controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/) to open the application gateway for Ingress.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
-2. Select your Infrastructure from the **Name** column.
+2. Select your Infrastructure from the **NAME** column.
 3. Click the **Settings** tab.
 4. Click **Add**. The **Infra-Set Custom Data** pane displays.
 5. In the **Setting Name** field, select **Enable App Gateway Ingress Controller**.&#x20;
@@ -71,7 +60,7 @@ To use Ingress, you first enable the [Kubernetes Ingress Controller](https://kub
 
 <figure><img src="../../.gitbook/assets/Azure_GS_Infra_app_gateway.png" alt=""><figcaption><p><strong>NONPROD Infrastructure</strong> page with <strong>Enable App Gateway Ingress Controller</strong> set to <strong>true</strong></p></figcaption></figure>
 
-## Add Kubernetes Ingress
+## Adding Kubernetes Ingress
 
 Now that your gateway is established and opened, you add [Kubernetes Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) to expose the backend HTTP routes outside the cluster to your service.&#x20;
 
@@ -79,7 +68,7 @@ The Ingress object communicates with the Kubernetes NodePort that your Load Bala
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Ingress**.
 2. Click **Add**. The **Add Kubernetes Ingress** page displays.
-3. In the **Ingress Name** field, type **viewwebsite**.
+3. In the **Ingress Name** field, type `viewwebsite`.
 4. In the **Ingress Controller** list box, select **azure-application-gateway**.
 5. In the **Visibility** list box, select **Public**.
 6.  Click **Add Rule**. The **Add Ingress Rule** pane displays.\
@@ -91,17 +80,13 @@ The Ingress object communicates with the Kubernetes NodePort that your Load Bala
 9.  Click **Add Rule** to add the rule and to close the **Add Ingress Rule** pane. You should be back to viewing the **Add Kubernetes Ingress** page.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/Azure_GS_Ingressaddrule.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/Azure_GS_Ingressaddrule.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 10. On the **Add Kubernetes Ingress** page, click **Add** to add Ingress. On the **Ingress** page, the **VIEWWEBSITE** Ingress that you defined, with an **Ingress Class** of **azure-application-gateway**, displays.\
 
 
     <figure><img src="../../.gitbook/assets/goodingress.png" alt=""><figcaption><p> <strong>Ingress</strong> page displaying <strong>VIEWWEBSITE</strong> Ingress</p></figcaption></figure>
 
-## Check your work
+## Checking Your Work
 
 Before you proceed to the final step and run your application, ensure that you:
 
