@@ -60,8 +60,7 @@ To download a token which you can use for IAM authentication:
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. In the **RDS** tab, select the database for which you want to enable IAM.
-3.  Click the **Actions** menu and select **View** -> **Get DB Auth Token**. The **RDS Credentials window** displays.\
-
+3.  Click the **Actions** menu and select **View** -> **Get DB Auth Token**. The **RDS Credentials window** displays.
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/IAM6.png" alt=""><figcaption><p><strong>Actions</strong> menu in <strong>RDS</strong> tab with <strong>View</strong> -> <strong>Get DB Auto Token</strong> option</p></figcaption></figure></div>
 

@@ -29,12 +29,8 @@ Access AWS Console using the Console link from your user profile page, or a spec
 
 To access the AWS Console from your user profile page, follow these steps:
 
-1.  In the DuploCloud Portal, navigate to **Administrator** -> **Users**.\
-
-
-    <figure><img src="../../.gitbook/assets/AWS_jit_profile (1).png" alt=""><figcaption><p>User profile area of the DuploCloud Portal with the <strong>Profile</strong> option</p></figcaption></figure>
-2. Click the username in the upper right corner, and select **Profile**.&#x20;
-3. Click the **JIT AWS Console** button. A browser opens, giving you access to AWS Console.
+1. Click the person icon in the in the upper right corner of the DuploCloud Platform, and select **Profile**.&#x20;
+2. Click the **JIT AWS Console** button. A browser opens, giving you access to AWS Console.
 
 From the **JIT AWS Console** list box, you can also select **Copy AWS Console URL**, **Temporary AWS Credentials**, or **AWS access from my Workstation**.&#x20;
 
@@ -182,7 +178,7 @@ If you increase the JIT session timeout beyond the AWS default of one (1) hour, 
 5. In the **Value** field, enter the length of time JIT access should remain active in seconds.&#x20;
 6. Click **Update**. The new setting is displayed on the Tenant details page under the **Settings** tab.
 
-<figure><img src="../../.gitbook/assets/update_tenant_JIT_TO_output.png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the Tenant details page with the <strong>AWS Access Token Validity</strong> setting highlighted</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (180).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the Tenant details page with the <strong>AWS Access Token Validity</strong> setting highlighted</p></figcaption></figure>
 
 ## Configuring JIT Timeout for AWS IAM Roles
 

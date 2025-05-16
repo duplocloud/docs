@@ -10,7 +10,7 @@ To configure Plan settings, navigate to **Administrator** -> **Plans** in the Du
 
 Click the Edit icon ( <img src="../../.gitbook/assets/square_edit_icon (4).png" alt="" data-size="line"> ) to open the **Update Capabilities** pane. Enable the settings listed in the table below by clicking the setting switch and clicking **Submit**.
 
-<figure><img src="../../.gitbook/assets/systemconfig3 (1).png" alt=""><figcaption><p>Plan Capabilities tab with Edit Icon highlighted</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (207).png" alt=""><figcaption></figcaption></figure>
 
 A Default Value of **Enabled** in the table below displays a property **Value** of **True** in the UI.
 
@@ -30,7 +30,7 @@ To configure Infrastructure settings, navigate to **Administrator** -> **Infrast
 
 To update or remove an existing setting, click the (<img src="../../.gitbook/assets/Kabab_three_Vertical_dots (13).png" alt="" data-size="line">) icon to the left of the setting **Name** and select **Update Setting** or **Remove Setting**. To add any of these settings, click **Add.** Select and **Enable** the settings using the **Infra- Set Custom Data** pane.
 
-<figure><img src="../../.gitbook/assets/systemconfig2.png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane for Infrastructure settings</p></figcaption></figure>
+<div align="left"><figure><img src="../../.gitbook/assets/systemconfig2 (1) (1).png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane for Infrastructure settings</p></figcaption></figure></div>
 
 A Default Value of **Enabled** in the table below displays a property value of **True** in the UI.
 

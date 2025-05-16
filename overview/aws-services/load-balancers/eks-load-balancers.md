@@ -197,10 +197,10 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 2. Select the Service to which your Load Balancer is attached from the **NAME** column.
 3. Click the **Load Balancers** tab.
-4. In the **Other Settings** card, click **Edit**.&#x20;
+4.  In the **Other Settings** card, click **Edit**. \
 
-<figure><img src="../../../.gitbook/assets/other settings (1).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab with <strong>Other Settings</strong> card</p></figcaption></figure>
 
+    <figure><img src="../../../.gitbook/assets/Screenshot (202).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab with <strong>Other Settings</strong> card</p></figcaption></figure>
 5.  The **Other Load Balancer Settings** pane displays.\
 
 

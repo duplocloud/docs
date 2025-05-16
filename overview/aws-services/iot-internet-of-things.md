@@ -18,11 +18,7 @@ Use [Just-In-Time access](../../aws-user-guide/use-cases/jit-access.md) to provi
 4.  Click **Add**. The **Add Tenant Feature** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/AWS_IOT_Create.png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane with <strong>Enable AWS IoT</strong> feature selected</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/AWS_IOT_Create.png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane with <strong>Enable AWS IoT</strong> feature selected</p></figcaption></figure></div>
 5. From the **Select Feature** list box, select **Enable AWS IoT** and **Enable**.
 6. Click **Add**. It takes approximately five minutes to enable IoT.&#x20;
 7. Navigate to **Cloud Services** -> **IoT**.  The IoT **Things** page displays.
@@ -36,7 +32,7 @@ Use [Just-In-Time access](../../aws-user-guide/use-cases/jit-access.md) to provi
 3.  Click **Add**. The **Create an IoT Thing** pane displays.\
 
 
-    <figure><img src="../../.gitbook/assets/IOT_Create_Thing_Attr.png" alt=""><figcaption><p><strong>Create an IoT Thing</strong> pane with <strong>AttributesACtions</strong> </p></figcaption></figure>
+    <div align="left"><figure><img src="../../.gitbook/assets/IOT_Create_Thing_Attr.png" alt="" width="563"><figcaption><p><strong>Create an IoT Thing</strong> pane with <strong>AttributesACtions</strong> </p></figcaption></figure></div>
 4. In the editable portion of the **Name** field, enter a Thing name.&#x20;
 5. From the **IoT Certificate** list box, select an IoT Certificate.
 6. From the **IoT Thing Type** list box, select the Thing type that you want to create.
@@ -69,11 +65,7 @@ Select the Thing to view **Details** and **IoT Principals** (certificate informa
 4.  Click the **Actions** menu and select **Download Device Package**. The **Download IoT Device Package** window displays. \
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/IOT_Download.png" alt=""><figcaption></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/IOT_Download.png" alt=""><figcaption></figcaption></figure></div>
 5. From the **IoT Certificate** list box, select the IoT certificate associated with the Thing's Device Package.&#x20;
 6. Click **Download**.
 
@@ -88,11 +80,7 @@ Add, update, or manage an IoT certificate with the following procedures.
 3.  Click **Add**. The **Create an IoT Certificate** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/IOT_create_cert.png" alt=""><figcaption><p><strong>Create an IoT Certificate</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/IOT_create_cert.png" alt=""><figcaption><p><strong>Create an IoT Certificate</strong> pane</p></figcaption></figure></div>
 4. Select **Activate the Certificate** and click **Create**. The certificate displays.&#x20;
 
 ### Updating a certificate
@@ -102,11 +90,7 @@ Add, update, or manage an IoT certificate with the following procedures.
 3.  In the row for the certificate you want to update, click the **Actions** menu ( <img src="../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) and select **Edit**. The **Update an IoT Certificate** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/IOT_update_cert.png" alt=""><figcaption></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/IOT_update_cert.png" alt=""><figcaption></figcaption></figure></div>
 4. From the **Status** list box, select the new status of the certificate.
 5. Click **Update**.
 
@@ -135,11 +119,7 @@ To learn more about IoT Topic Rules and how you define and manage them, see the 
 3.  Click **Add**. The **Add** Topic Rules page displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/IOT_R_1.png" alt=""><figcaption><p><strong>Add</strong> Topic Rules page</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/IOT_R_1.png" alt=""><figcaption><p><strong>Add</strong> Topic Rules page</p></figcaption></figure></div>
 4. In the **Name** field, enter a Topic Rule name.
 5. Add a meaningful description of what the rule does in the **Description** field.
 6. Define the rule by completing the fields in the **AWS IoT SQL** and **AWS IoT SQL Version** areas. Select **Define an Error Action** if the rule pertains to error management.

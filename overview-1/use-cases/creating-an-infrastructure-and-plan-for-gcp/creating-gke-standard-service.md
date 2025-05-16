@@ -2,7 +2,7 @@
 
 When [creating an Infrastructure](./), use the **Enable GKE** toggle switch to enable GKE. In the Cluster Mode list box, select **GKE Standard**. Complete the remaining fields (**GKE Version**, **GKE Endpoint Visibility**, and **Cluster IP CIDR**). Click **Create**.
 
-<figure><img src="../../../.gitbook/assets/image (310).png" alt=""><figcaption><p>Create Infrastructure with GKE Standard</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (215).png" alt=""><figcaption><p>The <strong>Add Infrastructure</strong> with GKE Standard</p></figcaption></figure>
 
 This takes about 20 minutes.  Infrastructure status should move to Completed. Once the Infrastructure status shows Complete, navigate to **Administrators** -> **Plans** to verify that a Plan has been created with the same name.
 

@@ -49,15 +49,15 @@ You can increase the number of available ephemeral ports per GKE Standard VM ins
 
 To increase the minimum ports per VM for your Infrastructure:&#x20;
 
-* Navigate to **Administrator** -> **Infrastructure**.
-* In the **NAME** column, select your Infrastructure name.&#x20;
-* Select the **Settings** tab, and click **Add**. The **Infra - Set Custom Data** pane displays.
-* From the **Setting Name** list box, select **GKE Minimum Ports Per VM**.&#x20;
-* In the **Setting Value** field, enter the minimum number of ports you want or each VM.&#x20;
-*   Click **Set**. VMs in this Infrastructure will have at least the minimum number of ports configured. \
+1. Navigate to **Administrator** -> **Infrastructure**.
+2. In the **NAME** column, select your Infrastructure name.&#x20;
+3.  Select the **Settings** tab, and click **Add**. The **Infra - Set Custom Data** pane displays.\
 
 
-    <figure><img src="../../.gitbook/assets/minimum ports per VM.png" alt=""><figcaption></figcaption></figure>
+    <div align="left"><figure><img src="../../.gitbook/assets/minimum ports per VM (1).png" alt="" width="375"><figcaption><p>The <strong>Infra - Set Custom Data</strong> pane</p></figcaption></figure></div>
+4. From the **Setting Name** list box, select **GKE Minimum Ports Per VM**.&#x20;
+5. In the **Setting Value** field, enter the minimum number of ports you want or each VM.&#x20;
+6. Click **Set**. VMs in this Infrastructure will have at least the minimum number of ports configured.&#x20;
 
 ## Configuring a friendly image name
 
@@ -67,10 +67,6 @@ Set a friendly name for an image in your DuploCloud Plan. This name will display
 2. Select the Plan from the **NAME** column.&#x20;
 3. Select the **Images** tab, and click **Add**. The **Add Image** pane displays.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/add image.png" alt=""><figcaption><p>The <strong>Add Image</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/add image.png" alt="" width="369"><figcaption><p>The <strong>Add Image</strong> pane</p></figcaption></figure></div>
 
 4. Enter a friendly name and complete the remaining fields, as required. Click **Submit**. The image name will display in the **Image** list box when [creating a GCE VM](hosts-vms.md#gce-vm) under the Plan.&#x20;

@@ -43,10 +43,10 @@ In the destination account, Navigate to **Cloud Services** -> **Database** and s
 
 In the copied snapshot add a tag with Key as “`Name`” and Value as “`duploservices-{tenantname}`” where `tenantname` is the tenant where you want to launch an RDS with this snapshot.
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/RDS-customtag.png)
+<div align="left"><img src="https://duplocloud.com/wp-content/uploads/2021/11/RDS-customtag.png" alt=""></div>
 
 ## Step 6: Create a new database <a href="#id-5-toc-title" id="id-5-toc-title"></a>
 
-Go to the DuploCloud portal and select the tenant. Navigate to **Cloud Services** -> **Database** and select the **RDS** tab. Click **Add**. Then give a name for the new database. In the snapshot select the new snapshot. Enter the instance type and click **Submit**. In a few minutes, the database will be created with the data from the snapshot. You must use the existing username and password to access the database.
+Go to the DuploCloud portal and select the tenant. Navigate to **Cloud Services** -> **Database** and select the **RDS** tab. Click **Add**. Then give a name for the new database. In the **Create from Snapshot** list box, select the new snapshot. Enter the instance type and click **Submit**. In a few minutes, the database will be created with the data from the snapshot. You must use the existing username and password to access the database.
 
-<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_26_33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot (204).png" alt=""><figcaption></figcaption></figure>

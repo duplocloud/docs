@@ -50,4 +50,4 @@ All containers are running inside a private network and cannot be accessed from 
 2. Click on the name of your **Service**.
 3. Verify that the Load Balancer has a status of **Ready** on the **LB Status** card.&#x20;
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.04-20_28_33 (1).png" alt=""><figcaption><p><strong>Services</strong> details page showing <strong>LB Status</strong> of <strong>Ready</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (210).png" alt=""><figcaption><p>The Service details page with the LB Ready Status highlighted</p></figcaption></figure>

@@ -21,7 +21,7 @@ Accept the OpenVPN Free Tier (Bring Your Own License) agreement in the GCP marke
 2. Select the **VPN** tab.
 3. Click **Provision VPN.** Behind the scenes, DuploCloud launches a cloud formation script to provision the OpenVPN. OpenVPN is ready to use.  &#x20;
 
-<div align="left"><img src="../../.gitbook/assets/image (244).png" alt="The VPN tab on the System Settings page in the DuploCloud Portal"></div>
+<figure><img src="../../.gitbook/assets/VPN (1).png" alt=""><figcaption><p>The <strong>VPN</strong> tab on the <strong>System Settings</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 {% hint style="info" %}
 You can find the OpenVPN admin password in the cloud formation stack in your GCP console.

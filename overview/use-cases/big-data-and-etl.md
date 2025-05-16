@@ -38,7 +38,7 @@ The high-level steps are:
 
 From the DuploCloud portal, navigate to **Cloud Services -> Hosts -> EC2.** Click **+Add** and check the **Advanced Options** box. Change the value of instance type to ‘`m4.xlarge`‘ and add an allocation tag ‘`sparkmaster`‘.
 
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_06_50.png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (183) (1).png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
 
 ### **Create a host for Spark worker**
 
@@ -90,7 +90,7 @@ Add or update shell access by clicking on `>_` icon. This gives you easy access 
 
 ### **Open Jupyter Docker shell**
 
-Select Jupyter service and expand the container. Copy the hostip and then click on `>_` icon.
+Select Jupyter service and expand the container. Copy the Host IP and then click on `>_` icon.
 
 ![Figure 8](https://duplocloud.com/wp-content/uploads/2021/11/jupyter-ip.png)
 
