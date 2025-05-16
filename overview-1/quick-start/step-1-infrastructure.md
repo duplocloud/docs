@@ -68,4 +68,4 @@ When an Infrastructure is created, a GKE Cluster is created by default. You can 
 
 From the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**. Click on the name of the Infrastructure, and select the **GKE** tab. To download the kubeconfig file, click **Download Kube Config**.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (151).png" alt=""><figcaption><p>The <strong>Nonprod Infrastructure</strong> details page with the <strong>GKE</strong> tab selected.</p></figcaption></figure></div>
+<figure><img src="../../.gitbook/assets/Screenshot (209).png" alt=""><figcaption><p>The <strong>Infrastructure</strong> details page with the <strong>GKE</strong> tab selected.</p></figcaption></figure>

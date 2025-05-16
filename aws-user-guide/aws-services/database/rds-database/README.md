@@ -8,8 +8,8 @@ Create, configure, and manage RDS instances directly from the DuploCloud Portal.
 
 DuploCloud supports the following RDS databases in AWS:
 
-| <p></p><ul><li>MySQL</li><li>PostgreSQL</li><li>MariaDB</li><li>Microsoft SQL-Express</li><li>Microsoft SQL-Web</li></ul> | <p></p><ul><li>Microsoft SQL-Standard</li><li>Aurora MySQL</li><li>Aurora MySQL Serverless</li><li>Aurora PostgreSQL</li><li>Aurora PostgreSQL Serverless</li></ul> |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p></p><ul><li>MySQL</li><li>PostgreSQL</li><li>MariaDB</li><li>Microsoft SQL-Express</li><li>Microsoft SQL-We</li></ul> | <p></p><ul><li>Microsoft SQL-Standard</li><li>Aurora MySQL</li><li>Aurora MySQL Serverless</li><li>Aurora PostgreSQL</li><li>Aurora PostgreSQL Serverless</li></ul> |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 \*Support for Aurora Serverless V1 database engines has been deprecated. Do not create V1 engines when using Terraform.
 

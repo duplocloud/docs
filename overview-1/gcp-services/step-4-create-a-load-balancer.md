@@ -38,11 +38,13 @@ See the [GCP Quick Start](../quick-start/) for an end-to-end example of deployin
    * **Additional Health Check configs**: specify the URL path that the Load Balancer will use to check if your service is healthy. You can use the root (`/`) path for a simple health check, or for more detailed monitoring, configure paths like `/health` or `/status`
    * **Additional GCP Settings**: Enable GCP-specific optimizations and settings.&#x20;
 
-<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (293).png" alt=""><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure></div>
-
 {% hint style="info" %}
 DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service.
 {% endhint %}
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (82).png" alt="" width="363"><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure></div>
+
+8. Click **Add** to create the Load Balancer.&#x20;
 
 ## Adding a certificate for an internal Load Balancer in GCP
 
@@ -89,7 +91,7 @@ Restrict open access to your public Load Balancers by enforcing controlled acces
 1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.
 
-<div align="left"><figure><img src="../../.gitbook/assets/LB flag.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/LB flag.png" alt="" width="364"><figcaption><p>The <strong>Add Config</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 
 3. From the **Config Type** list box, select **Flags**.
 4. From the **Key** list box, select **Deny Open Access To Public LB**.&#x20;

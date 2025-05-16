@@ -28,11 +28,7 @@ description: Create an OpenSearch domain from the DuploCloud portal
 
 To create an OpenSearch without EBS storage, follow the steps to [create an OpenSearch domain](elasticsearch.md#creating-an-opensearch-domain). In the **Data Instance Size** list box, select **Other**, and enter a storage type instance, For example, `i3.2xlarge.search`. Complete the remaining steps and click **Submit**. &#x20;
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../../.gitbook/assets/Screenshot (206).png" alt=""><figcaption></figcaption></figure>
 
 ## Managing OpenSearch Logging
 

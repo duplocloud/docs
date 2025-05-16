@@ -14,7 +14,7 @@ In GCP, Cloud Storage Buckets are containers that hold your data. Everything in 
 
 2. In the **Buckets** tab, click **Add**. The **Create a Bucket** pane displays.
 
-<div align="left"><figure><img src="../../.gitbook/assets/my bucket image.png" alt="" width="563"><figcaption><p>The <strong>Create a Bucket</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/my bucket image.png" alt="" width="563"><figcaption></figcaption></figure></div>
 
 3. Configure the bucket settings:
 

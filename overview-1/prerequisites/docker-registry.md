@@ -58,4 +58,4 @@ Enter the image tag in the **Docker Image** field of any DuploCloud Service runn
 us-east1-docker.pkg.dev/qa-gcp3/testrepo/testimage:amd64
 ```
 
-<figure><img src="../../.gitbook/assets/duplo_service_image.png" alt=""><figcaption><p>Using the image in a DuploCloud service</p></figcaption></figure>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (208).png" alt="" width="563"><figcaption><p>Using the image in a DuploCloud service</p></figcaption></figure></div>

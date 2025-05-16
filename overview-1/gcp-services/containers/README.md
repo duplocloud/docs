@@ -34,7 +34,7 @@ For an end-to-end example of creating an GKE Service, see this [tutorial](../../
 
 1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. Select the Service from the **NAME** column. The Service details page displays.
 
-<figure><img src="../../../.gitbook/assets/GCP Service.png" alt=""><figcaption><p>The <strong>Service</strong> details page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (216).png" alt=""><figcaption><p>The <strong>Service</strong> details page</p></figcaption></figure>
 
 ## Starting, Stopping, and Restarting Multiple DuploCloud Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
@@ -56,4 +56,6 @@ In the DuploCloud Portal, you can display and manage the containers you have def
 
 <table><thead><tr><th width="374">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs.</td></tr><tr><td><strong>State</strong></td><td>Displays container state configuration, in YAML code, in a separate window.</td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../prerequisites/shell-access-for-docker.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_10_00.png" alt=""><figcaption><p>The <strong>Kubernetes Containers</strong> page with the menu options highlighted.</p></figcaption></figure></div>
+
+
+<figure><img src="../../../.gitbook/assets/CONTAINERS.png" alt=""><figcaption><p>The <strong>Kubernetes Containers</strong> page</p></figcaption></figure>

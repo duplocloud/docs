@@ -6,7 +6,7 @@ description: Add GCP subscription details
 
 The DuploCloud rules-based expert system requires GCP Subscription details to manage cloud resources effectively. By adding Cloud Credentials in the DuploCloud Portal, you provide the necessary subscription details for this management.
 
-## Adding Cloud Credentials for GCP Subscriptions
+## Adding Cloud Credentials for GCP
 
 To integrate GCP project cloud credentials into DuploCloud, follow these steps:
 
@@ -23,5 +23,4 @@ To integrate GCP project cloud credentials into DuploCloud, follow these steps:
 6. Paste the private key associated with your service account in the Service Account Private Key field. To extract and copy the private key from a JSON file, you can use the command:  `jq -r .private_key < filename.json | pbcopy`.
 7. Click **Submit** to save your credentials, which will be displayed on the **Cloud Credentials** page.
 
-<figure><img src="../../.gitbook/assets/gcp_cc.png" alt=""><figcaption><p>GCP <strong>Cloud Credentials</strong> page in the DuploCloud Portal</p></figcaption></figure>
-
+<figure><img src="../../.gitbook/assets/CLOUDCREDS.png" alt=""><figcaption><p>GCP <strong>Cloud Credentials</strong> page in the DuploCloud Portal</p></figcaption></figure>

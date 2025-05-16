@@ -30,11 +30,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 3. Click the **Load Balancers** tab. The Application Load Balancer configuration is displayed.
 4. In the **LB Configuration** card, click the Copy Icon ( <img src="../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the **IP Address** displayed to your clipboard.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (176).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../../../.gitbook/assets/Screenshot (211) (1).png" alt=""><figcaption></figcaption></figure>
 
 5. Open a browser instance and **Paste** the IP Address in the URL field of your browser.
 6. Press **ENTER**. A web page with the text **Welcome to nginx!** is displayed.

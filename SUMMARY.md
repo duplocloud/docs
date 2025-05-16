@@ -200,7 +200,7 @@
   * [AWS Systems Settings](overview/aws-systems-settings/README.md)
     * [AWS Infrastructure Settings](overview/aws-systems-settings/aws-infrastructure-settings.md)
     * [AWS Tenant Settings](overview/aws-systems-settings/aws-tenant-settings.md)
-  * [AWS Security Settings](overview/security-configuration-settings/README.md)
+  * [AWS Security Configuration Settings](overview/security-configuration-settings/README.md)
     * [Tenant Security settings](overview/security-configuration-settings/tenant-security-settings.md)
     * [Infrastructure Security settings](overview/security-configuration-settings/infrastructure-security-settings.md)
     * [System Security settings](overview/security-configuration-settings/system-security-settings.md)

@@ -1,8 +1,4 @@
----
-description: Configure Security settings in the DuploCloud UI for AWS users
----
-
-# AWS Security Settings
+# AWS Security Configuration Settings
 
 Use the sections below to get detailed settings and values for various AWS security configurations
 

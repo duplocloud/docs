@@ -22,7 +22,7 @@ To export to BigQuery you must have:
 3.  Click **Create Dataset**.\
 
 
-    <figure><img src="../../../.gitbook/assets/image (388).png" alt="" width="563"><figcaption><p><strong>Create Dataset</strong> button<br></p></figcaption></figure>
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (388).png" alt="" width="563"><figcaption><p><strong>Create Dataset</strong> button<br></p></figcaption></figure></div>
 4.  In the **Create dataset** window, configure your dataset with the following parameters:
 
     * **Dataset ID**: Enter a unique name for your dataset.
@@ -32,7 +32,7 @@ To export to BigQuery you must have:
     * Once the dataset is created, it appears in the BigQuery Console under your project. Select the dataset to view details.\
 
 
-    <figure><img src="../../../.gitbook/assets/image (390).png" alt="" width="375"><figcaption><p><strong>Create dataset window</strong> in GCP</p></figcaption></figure>
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (390).png" alt="" width="375"><figcaption><p><strong>Create dataset window</strong> in GCP</p></figcaption></figure></div>
 
 
 

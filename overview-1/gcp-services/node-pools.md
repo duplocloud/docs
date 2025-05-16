@@ -43,7 +43,7 @@ Accelerator Types are not available in all regions.
 3. Enter `command`, `args`, and `resources` in the **Other Container Config** field.
 4. Click **Create**.
 
-For additional details, refer to the documentation from Google Cloud [here](https://cloud.google.com/kubernetes-engine/docs/how-to/gpus#pods\_gpus) .
+For additional details, refer to the documentation from Google Cloud [here](https://cloud.google.com/kubernetes-engine/docs/how-to/gpus#pods_gpus) .
 
 <figure><img src="../../.gitbook/assets/image (355).png" alt=""><figcaption><p><strong>Add Service</strong> page, <strong>Basic Options</strong></p></figcaption></figure>
 
@@ -59,11 +59,7 @@ For additional details, refer to the documentation from Google Cloud [here](http
 
 For example, the following screen applies  a taint to a Node Pool  that has a **Key**/**Value** of `dedicated=experimental`with a `NoSchedule` effect.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (347).png" alt=""><figcaption><p><strong>Add Taint</strong> pane</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (347).png" alt=""><figcaption><p><strong>Add Taint</strong> pane</p></figcaption></figure></div>
 
 ### Configure a Service to use Taints
 
@@ -79,11 +75,7 @@ tolerations:
     effect: NoSchedule
 ```
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (353).png" alt=""><figcaption><p>Configure <code>tolerations</code> using the <strong>Other Container Config</strong> in <strong>Add Service Advanced Options</strong> form</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (353).png" alt=""><figcaption><p>Configure <code>tolerations</code> using the <strong>Other Container Config</strong> in <strong>Add Service Advanced Options</strong> form</p></figcaption></figure></div>
 
 You can Edit or Delete a Taint by selecting the Node Pool **Name**, clicking the **Actions** menu, and selecting **Edit** or **Delete**. You edit the Node Pool using the **Edit Node Pool** page.
 
@@ -95,11 +87,10 @@ View Node Pools by clicking the **Node Pool** tab and selecting the Node Pool **
 
 <figure><img src="../../.gitbook/assets/image (345).png" alt=""><figcaption><p>The <strong>Node Pool</strong> page</p></figcaption></figure>
 
-Nodes created as part of a Node Pool, are displayed in the **GCE VM** tab.\
+Nodes created as part of a Node Pool, are displayed in the **GCE VM** tab.
 
-
-<figure><img src="../../.gitbook/assets/image (357).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NODES 1.png" alt=""><figcaption></figcaption></figure>
 
 Taints configured to a Node Pool are displayed with a **Tainted** Status. Click the **Tainted** icon to display a window with a Taint List.
 
-<figure><img src="../../.gitbook/assets/image (354).png" alt=""><figcaption><p><strong>Taint List</strong> window</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/NODES 2.png" alt=""><figcaption><p><strong>Taint List</strong> window</p></figcaption></figure>
