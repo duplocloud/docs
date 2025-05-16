@@ -31,3 +31,4 @@ In addition to GKE standard and auto-pilot, the following services are supported
 * [Managed Redis](gcp-databases/managed-redis.md)
 * [Node Pools](node-pools.md)
 * [Pub/Sub](s3-bucket-3.md)
+* [Virtual Private Cloud (VPC) Peering](virtual-private-cloud-vpc-peering.md)
