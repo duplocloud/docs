@@ -12,7 +12,8 @@ As an Administrator:
 
 1. From the DuploCloud portal, navigate to **Administrator** -> **Tenants**, and click the **Alerting** tab
 2. Enable alerting, this will open an alerts template which has rules for each AWS namespace and Metric to be monitored.
-3. Review the alerts template and adjust the thresholds
-4. Click on **Update**
+3. Review the alerts template and adjust the thresholds.
+4.  Click **Update.**\
 
-![](<../../.gitbook/assets/Screen Shot 2022-06-15 at 6.32.32 PM.png>)
+
+    <figure><img src="../../.gitbook/assets/Screenshot (241).png" alt=""><figcaption></figcaption></figure>

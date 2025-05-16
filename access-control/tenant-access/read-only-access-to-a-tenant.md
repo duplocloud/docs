@@ -14,11 +14,10 @@ Set read-only access for a specific user to temporarily or permanently block the
 4.  Click **Add**. The **Add User Access** pane displays.\
 
 
-    <figure><img src="../../../.gitbook/assets/Tenant_RO1.png" alt=""><figcaption><p><strong>Add User Access</strong> pane with <strong>Read only Access</strong> option</p></figcaption></figure>
+    <div align="left"><figure><img src="../../.gitbook/assets/Tenant_RO1 (1).png" alt=""><figcaption><p><strong>Add User Access</strong> pane with <strong>Read only Access</strong> option</p></figcaption></figure></div>
 5. From the **User** list box, select the user for whom you want to limit access.
 6. Select **Read only Access**.
-7. Click **Add**. The **User Access** tab displays **Yes** in the **READ ONLY** column.
+7.  Click **Add**. The **User Access** tab displays **Yes** in the **READ ONLY** column. The user has readonly access to the Tenant.\
 
-The user you specified now has only read access to the Tenant.
 
-<figure><img src="../../../.gitbook/assets/Tenant_RO2.png" alt=""><figcaption><p><strong>User Access</strong> tab with <strong>Yes</strong> in <strong>READ ONLY</strong> column </p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Screenshot (238).png" alt=""><figcaption><p>The <strong>User Access</strong> tab shows a user with readonly access to the Tenant</p></figcaption></figure>

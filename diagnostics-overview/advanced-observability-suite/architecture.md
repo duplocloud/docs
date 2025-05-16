@@ -38,10 +38,16 @@ OpenTelemetry data is stored in S3 Buckets in a Tenant that DuploCloud preconfig
 
 <figure><img src="../../.gitbook/assets/Screenshot (305).png" alt=""><figcaption><p><strong>S3 Bucket</strong> containing OpenTelemetry data in the OpenTelemetry Tenant</p></figcaption></figure>
 
-To view a complete list of Kubernetes deployments, containers, and S3 buckets in an OpenTelemetry deployment, select the _**OpenTelemetry\_Tenant**_ from the **Tenant** list box at the top of the Portal and navigate to **Kubernetes** -> **Services**.
+<figure><img src="../../.gitbook/assets/S3 to edit (3).png" alt=""><figcaption><p>S3 Buckets in the <strong>OpenTelemetry_Tenant</strong> Tenant</p></figcaption></figure>
+
+To view a complete list of Kubernetes Services in an OpenTelemetry deployment, select the _**OpenTelemetry\_Tenant**_ from the **Tenant** list box at the top of the Portal and navigate to **Kubernetes** -> **Services**.
 
 <figure><img src="../../.gitbook/assets/Screenshot (306).png" alt=""><figcaption><p> Kubernetes deployments, containers, and S3 buckets in an OpenTelemetry Tenant</p></figcaption></figure>
 
-To view a complete list of Docker Containers in an OpenTelemetry deployment, select the _**OpenTelemetry\_Tenant**_ from the **Tenant** list box at the top of the Portal and navigate to **Kubernetes** -> **Containers**.
+<figure><img src="../../.gitbook/assets/image (10) (2).png" alt=""><figcaption><p>Services in the <strong>OpenTelemetry_Tenant</strong> Tenant</p></figcaption></figure>
+
+To view a complete list of Docker Containers in an OpenTelemetry deployment, select the **OpenTelemetry\_Tenant** from the **Tenant** list box at the top of the Portal and navigate to **Kubernetes** -> **Containers**.
 
 <figure><img src="../../.gitbook/assets/Screenshot (307).png" alt=""><figcaption><p>Docker Containers in the OpenTelemetry Tenant</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (11) (2).png" alt=""><figcaption><p>Containers in the <strong>OpenTelemetry_Tenant</strong> Tenant</p></figcaption></figure>

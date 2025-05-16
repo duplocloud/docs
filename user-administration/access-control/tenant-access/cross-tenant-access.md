@@ -70,9 +70,7 @@ Ensure that the two Tenants sharing resources reside within the same region in t
 4.  Click **Add**. The **Grant Cross-Tenant Access** pane displays.\
 
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/kms2.png" alt=""><figcaption><p><strong>Grant Cross-Tenant Access</strong> pane</p></figcaption></figure></div>
-
-
+    <div align="left"><figure><img src="../../../.gitbook/assets/kms2 (1).png" alt=""><figcaption><p><strong>Grant Cross-Tenant Access</strong> pane</p></figcaption></figure></div>
 5. From the **Requesting Tenant** list box, select the Tenant with whom you want to share access from the Requesting Tenant list box. In this example, the **Requesting Tenant** is **demo01**.
 6. From the **Access to Area** list box, select the restricted policy-based resource you want to share.
 7. Click **Create**. Your Cross-tenant Access share is created.
