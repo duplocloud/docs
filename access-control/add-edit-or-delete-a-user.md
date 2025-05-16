@@ -35,16 +35,11 @@ Edit an existing user's permissions and role:
 
 View users and their permissions:
 
-1.  In the DuploCloud Portal, navigate to **Administrator** -> **Users**. The **Users** page displays.\
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**. The **Users** page displays.
+2.  From the **Username** column, select the user that you want to view. The user page displays information about [**Tenant Access**](tenant-access/), [**VPN** access](add-and-delete-vpn-access-for-users.md), and API [**Tokens**](api-tokens.md).\
 
 
-    <figure><img src="../.gitbook/assets/ll2.png" alt=""><figcaption><p>DuploCloud <strong>Users</strong> page</p></figcaption></figure>
-2.  From the **Username** column, select the user that you want to view. The user's page displays tabs with more information about [**Tenant Access**](tenant-access/), [**VPN** access](add-and-delete-vpn-access-for-users.md), and API [**Tokens**](api-tokens.md).\
-
-
-    <figure><img src="../.gitbook/assets/ll1.png" alt=""><figcaption><p>User page with <strong>Tenant Access</strong>, <strong>VPN</strong>, <strong>DevSpace</strong>, and <strong>Token</strong> tabs; <strong>Last Login</strong> card</p></figcaption></figure>
-
-
+    <figure><img src="../.gitbook/assets/Screenshot (237).png" alt=""><figcaption><p>User page with <strong>Tenant Access</strong>, <strong>VPN</strong>, <strong>DevSpace</strong>, and <strong>Token</strong> tabs</p></figcaption></figure>
 
 {% hint style="info" %}
 Use the **Last Login** card for the date and time of the user's last log-in.

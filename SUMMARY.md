@@ -500,7 +500,7 @@
 * [Observability](diagnostics-overview/README.md)
   * [Standard Observability Suite](diagnostics-overview/standard-observability-suite/README.md)
     * [Setup](diagnostics-overview/standard-observability-suite/setup/README.md)
-      * [Logging Setup](diagnostics-overview/standard-observability-suite/setup/logging-setup/README.md)
+      * [Logging Setup](diagnostics-overview/standard-observability-suite/setup/logging-setup.md)
         * [Custom Kibana Logging URL](diagnostics-overview/standard-observability-suite/setup/logging-setup/custom-kibana-logging-url.md)
       * [Metrics Setup](diagnostics-overview/standard-observability-suite/setup/metrics-setup.md)
       * [Auditing](diagnostics-overview/standard-observability-suite/setup/auditing/README.md)

@@ -18,7 +18,7 @@ Every time a user logs in to DuploCloud, a temporary API token is created for th
 
 ### Getting a Temporary API token
 
-Any user can retrieve their temporary API token from DuploCloud. Navigate to the **User** -> **Profile** page. Click the copy icon ![](<../.gitbook/assets/Screen Shot 2022-02-24 at 2.19.23 PM.png>) in the **Temporary API Token** area.
+Any user can retrieve their temporary API token from DuploCloud. Click on the person icon in the upper right, and select **Profile**. Click the copy icon ![](<../.gitbook/assets/Screen Shot 2022-02-24 at 2.19.23 PM.png>) in the **Temporary API Token** area.
 
 <figure><img src="../.gitbook/assets/tempapi.png" alt=""><figcaption><p><strong>Profile</strong> page with <strong>Temporary API Token</strong> area</p></figcaption></figure>
 
