@@ -479,6 +479,7 @@
     * [Phases](introduction-to-ci-cd/katkit/phases.md)
     * [Katkit config](introduction-to-ci-cd/katkit/katkit-config.md)
     * [Advanced functions](introduction-to-ci-cd/katkit/advanced-functions.md)
+  * [ArgoCD](introduction-to-ci-cd/argocd.md)
 * [User Administration](access-control/README.md)
   * [User Logins](access-control/user-logins.md)
   * [User access to DuploCloud](access-control/add-edit-or-delete-a-user.md)
