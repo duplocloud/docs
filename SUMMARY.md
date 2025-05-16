@@ -269,6 +269,7 @@
     * [Cloud Storage](overview-1/gcp-services/s3-bucket-2.md)
     * [Node Pools](overview-1/gcp-services/node-pools.md)
     * [Pub/Sub](overview-1/gcp-services/s3-bucket-3.md)
+    * [Virtual Private Cloud (VPC) Peering](overview-1/gcp-services/virtual-private-cloud-vpc-peering.md)
   * [GCP FAQs](gcp-user-guide/gcp-faq.md)
   * [GCP Systems Settings](overview-1/gcp-systems-settings/README.md)
     * [GCP Infrastructure Settings](overview-1/gcp-systems-settings/gcp-infrastructure-settings.md)
