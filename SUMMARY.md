@@ -484,6 +484,7 @@
 * [User Administration](access-control/README.md)
   * [User Logins](access-control/user-logins.md)
   * [User access to DuploCloud](access-control/add-edit-or-delete-a-user.md)
+  * [User Email Notifications](access-control/user-email-notifications.md)
   * [API tokens](access-control/api-tokens.md)
   * [Session Timeout](access-control/session-timeout.md)
   * [Tenant Access for Users](access-control/tenant-access/README.md)
