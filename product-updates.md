@@ -74,7 +74,7 @@ For assistance with the new UI, contact your [DuploCloud Support team](welcome-t
   * Support for [Azure Container Registry](overview-2/azure-services/azure-container-registry-acr.md).
   * Support for [Azure Availability Sets](overview-2/use-cases/hosts-vms/availability-sets.md).
   * Support for [Azure Data Factory](overview-2/azure-services/data-factory.md).&#x20;
-  * Enable autoscaling in the [AKS default node pool](overview-2/prerequisites/set-the-aks-cluster-version.md).
+  * [Enable autoscaling in the AKS default node pool](overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md).
   * Automatically redirect incoming HTTP requests to HTTPS for [AKS Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/).
 * GCP
   * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
