@@ -265,6 +265,7 @@
     * [Cloud Armour](overview-1/gcp-services/cloud-armour.md)
     * [Cloud Credentials](overview-1/gcp-services/cloud-credentials.md)
     * [Cloud Functions](overview-1/gcp-services/cloud-functions.md)
+    * [Cloud Run Service](overview-1/gcp-services/cloud-run-service.md)
     * [Cloud Scheduler](overview-1/gcp-services/s3-bucket-1.md)
     * [Cloud Storage](overview-1/gcp-services/s3-bucket-2.md)
     * [Node Pools](overview-1/gcp-services/node-pools.md)
