@@ -1,6 +1,6 @@
 ---
 description: Popular and frequently asked questions about DuploCloud
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
+cover: .gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
 layout:
   cover:
@@ -22,16 +22,16 @@ layout:
 
 Use these FAQ documents to quickly find answers to popular questions about using AWS, Azure, and GCP with DuploCloud.
 
-{% content-ref url="../aws-user-guide/aws-faq.md" %}
-[aws-faq.md](../aws-user-guide/aws-faq.md)
+{% content-ref url="aws-user-guide/aws-faq.md" %}
+[aws-faq.md](aws-user-guide/aws-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="../overview-2/azure-faq.md" %}
-[azure-faq.md](../overview-2/azure-faq.md)
+{% content-ref url="overview-2/azure-faq.md" %}
+[azure-faq.md](overview-2/azure-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="../gcp-user-guide/gcp-faq.md" %}
-[gcp-faq.md](../gcp-user-guide/gcp-faq.md)
+{% content-ref url="gcp-user-guide/gcp-faq.md" %}
+[gcp-faq.md](gcp-user-guide/gcp-faq.md)
 {% endcontent-ref %}
 
 ## General FAQs
@@ -45,7 +45,7 @@ Use these FAQ documents to quickly find answers to popular questions about using
 
 ### What support features come with my DuploCloud subscription?
 
-See [DuploCloud Support](../welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.&#x20;
+See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.&#x20;
 
 For more detailed inquiries or assistance, including DuploCloud's DevOps automation platform capabilities, compliance, AWS services like Kinesis stream, and product updates, refer to the [official documentation](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/) and [whitepapers ](https://duplocloud.com/white-papers/)available on DuploCloud's website.
 
@@ -77,7 +77,7 @@ No. DuploCloud is a self-hosted solution deployed within the customer's cloud ac
 * Our engineers install the DuploCloud Portal and schedule a call to orient you and complete any additional configurations. You can complete the setup at this time or create some services and let DuploCloud engineers handle the rest. We also perform penetration testing and vulnerability assessments on your applications and Infrastructures using our SIEM solution.
 * Once your DuploCloud Portal is installed and configured, DuploCloud Infrastructures (VPCs) are operational; Kubernetes is enabled and configured; and logging, monitoring, alerting, CI/CD, and SOC 2 controls are implemented.
 
-Although the onboarding process can take thirty to seventy (30-70) hours, DuploCloud staff performs about 90% of the work. Contact [DuploCloud Support](../welcome-to-duplocloud/duplocloud-support-model.md) with any additional questions.
+Although the onboarding process can take thirty to seventy (30-70) hours, DuploCloud staff performs about 90% of the work. Contact [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) with any additional questions.
 
 ### How does the DuploCloud Portal access my cloud infrastructure, and how is it secured?
 
@@ -93,7 +93,7 @@ While you can install DuploCloud in your existing environment, we prefer to do t
 
 In summary, while you can deploy DuploCloud in an existing account or import existing VPC and Kubernetes clusters, migrating or connecting your data to new accounts often requires less overhead and provides more benefits.
 
-### Am I locked into DuploCloud? If so, what work must I do to move away from it?
+### Am I locked into DuploCloud? What work must I do to move away from it?
 
 DuploCloud is a provisioning system that runs along with your workloads in your cloud account. Stopping it does not impact your applications or cloud services.
 
@@ -271,7 +271,7 @@ No. DuploCloud is calling the cloud provider's API directly. Based on user requi
 
 The Terraform and DuploCloud Web UIs layer on top of the DuploCloud platform.
 
-![User Interaction with the DuploCloud Platform](<../.gitbook/assets/image (124).png>)
+![User Interaction with the DuploCloud Platform](<.gitbook/assets/image (124).png>)
 
 DuploCloud provides Terraform with a Software Development Kit (SDK) called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows users to configure their cloud infrastructure using DuploCloud constructs rather than lower-level cloud provider constructs. It enables users to benefit from Infrastructure-as-Code while significantly reducing the needed code. The DuploCloud Terraform Provider calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
 
@@ -303,13 +303,13 @@ Achieving SOC 2 Type 2 compliance is crucial for organizations looking to demons
 
 ### Do I need a GRC tool like Vanta or Drata if I am using DuploCloud?
 
-The best strategy for your organization will ultimately depend on your specific compliance needs and priorities. To learn more about the differences between compliance support offered by traditional GRC tools like Vanta or Drata and DuploCloud, see the [DuploCloud documentation](../welcome-to-duplocloud/grc-tools-and-duplocloud.md) on this topic.
+The best strategy for your organization will ultimately depend on your specific compliance needs and priorities. To learn more about the differences between compliance support offered by traditional GRC tools like Vanta or Drata and DuploCloud, see the [DuploCloud documentation](welcome-to-duplocloud/grc-tools-and-duplocloud.md) on this topic.
 
 ## CI/CD FAQs
 
 ### How does CI/CD work with DuploCloud?
 
-CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the [CI/CD documentation](../introduction-to-ci-cd/). DuploCloud offers its [own CI/CD tool](../introduction-to-ci-cd/katkit/) called KitKat.
+CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the [CI/CD documentation](introduction-to-ci-cd/). DuploCloud offers its [own CI/CD tool](introduction-to-ci-cd/katkit/) called KitKat.
 
 ### How do I uninstall Chocolatey?
 
@@ -350,7 +350,7 @@ Your `duplo-jit` local cache must be cleared. To do this, run the following comm
 Two possible reasons for receiving this message are:
 
 * You are not allocating enough Hosts to process your workload.
-* The [allocation tags](../overview-1/container-deployments/concepts.md#allocation-tags) you assigned to your existing Hosts limit additional Service workloads.
+* The [allocation tags](overview-1/container-deployments/concepts.md#allocation-tags) you assigned to your existing Hosts limit additional Service workloads.
 
 ### I do not see logs displayed for a Tenant. I get the error: `Docker native collection agent Filebeat is not running for Tenant`.
 
