@@ -40,6 +40,20 @@ We’re excited to inform you that we’re rolling out a new user interface (UI)
 
 For assistance with the new UI, contact your [DuploCloud Support team](welcome-to-duplocloud/duplocloud-support-model.md).
 
+## Q2 2025
+
+* GCP
+  * Support for [GCP Cloud Run Service](overview-1/gcp-services/cloud-run-service.md).
+* Kubernetes
+  * Support for [ArgoCD integration](introduction-to-ci-cd/argocd.md), enabling GitOps deployment and management workflows within DuploCloud.
+* General
+  * Usability improvements and a new Explain Flame Graph feature were added to [DuploCloud Advanced Observability Suite](diagnostics-overview/advanced-observability-suite.md).
+  * Configure DuploCloud to [ignore DNS record prefixes](duplocloud-prerequisites/resolving-dns-failures.md#configuring-duplocloud-to-ignore-dns-entries), allowing you to safely add custom entries without risk of deletion.
+  * [Customization for welcome emails](access-control/user-email-notifications.md#customizing-welcome-emails-for-new-users) sent to new users upon account creation.
+  * [Automatic email alerts when new Admin users are added.](access-control/user-email-notifications.md#configuring-new-admin-user-email-notifications)
+  * [Customizable Kibana URL for Audit Logs.](diagnostics-overview/standard-observability-suite/setup/auditing/custom-kibana-audit-url.md)
+  * [Customizable Kibana URL for Logging Views.](diagnostics-overview/standard-observability-suite/setup/logging-setup/custom-kibana-logging-url.md)
+
 ## Q1 2025
 
 * AWS
@@ -78,7 +92,7 @@ For assistance with the new UI, contact your [DuploCloud Support team](welcome-t
   * Automatically redirect incoming HTTP requests to HTTPS for [AKS Ingress](kubernetes-overview/ingress-loadbalancer/aks-ingress/).
 * GCP
   * Enable automation to [retain backups when a Cloud SQL instance is deleted](overview-1/gcp-services/cloud-sql.md#retaining-backups-before-cloud-sql-deletion).
-  * Support for GCP Virtual Private Cloud (VPC) Peering.
+  * Support for [GCP Virtual Private Cloud (VPC) Peering](overview-1/gcp-services/virtual-private-cloud-vpc-peering.md).
   * Support for [SNS Pub/Sub topic subscriptions](overview-1/gcp-services/s3-bucket-3.md#create-a-pub-sub-topic-subscription).
 * Kubernetes
   * Support for Running Jobs and CronJobs on [Shared Hosts in AWS](overview/use-cases/hosts-vms/adding-shared-hosts.md#creating-a-job-or-cronjob-to-run-on-a-shared-host) and [Shared VMs in Azure](overview/use-cases/hosts-vms/adding-shared-hosts.md#creating-a-job-or-cronjob-to-run-on-a-shared-host).
