@@ -23,7 +23,9 @@ Configure SSO for DuploCloud using the Azure Application Deployment (AD) Portal 
 
     <figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption><p><strong>Register an Application</strong> page</p></figcaption></figure>
 5. In the **Supported account types** area, select **Accounts in any organizational directory (Any Azure AD directory - Multitenant).**
-6. In the **Redirect UTI** field, select Web and type the DuploCloud URL **https://**_**company**_**.duplocloud.net/app/signin-microsoft** replacing company with your company's DuploCloud deployment.
+6. In the **Redirect UTI** field, select Web and type the DuploCloud URL `https://PORTAL_DNS_NAME/app/signin-microsoft` updating `PORTAL_DNS_NAME` to match your DuploCloud portal.\
+   \
+   For example: `https://duplo.cloud.mycompany.com/app/signin-microsoft`
 7. Click **Register**.
 
 Note the **Application** (Client) **ID** for future reference; for example, _**8a6acf76-555e-4782-a8a4-abcd283d889d**_.
@@ -34,11 +36,7 @@ Note the **Application** (Client) **ID** for future reference; for example, _**8
     \
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/image (214).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>Certificates &#x26; secrets</strong> option</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/image (214).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>Certificates &#x26; secrets</strong> option</p></figcaption></figure></div>
 2. In the **Client Secret** tab, click **New Client Secret**.
 3. In the **Add a client secret** window, enter a **Description** for the secret.
 4.  In the **Expires** list box, select **12 months** for the expiration duration.\
@@ -55,11 +53,7 @@ Note the Value displayed in the client secrets tab; for example,  _**hFFC8Q\~z.b
 1.  In the Azure AD Portal, navigate to **Manage** -> **API Permissions**.\
 
 
-    <div align="left">
-
-    <figure><img src="../../.gitbook/assets/image (159).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>API Permissions</strong> option</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../.gitbook/assets/image (159).png" alt=""><figcaption><p><strong>Manage</strong> section in navigation pane of Azure AD Portal with <strong>API Permissions</strong> option</p></figcaption></figure></div>
 2. Click **Microsoft Graph & Delegated Permissions**. The **Request API Permissions** page displays.
 3.  On the **Select permissions** area of the **Request API Permissions** page, select **openid**, **email,** and **profile**. Add the **User.Read** permission if it is not present by entering **User.Read** in the search box and selecting it from the search results. \
 
