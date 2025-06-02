@@ -30,7 +30,7 @@ After creating a Databricks instance, you can access additional management optio
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **AI-ML**.
 2. Select the **Databricks** tab.
-3. In the row corresponding to your Databricks instance, click the menu icon (<img src="../../.gitbook/assets/menu icon (1).avif" alt="" data-size="line">).
+3. In the row corresponding to your Databricks instance, click the menu icon (<img src="../../.gitbook/assets/menu icon (1) (1).avif" alt="" data-size="line">).
 4. Select from the following options:
 
 <table data-header-hidden><thead><tr><th width="184.66668701171875"></th><th></th></tr></thead><tbody><tr><td><strong>Copy</strong></td><td>Copy relevant details of the Databricks instance</td></tr><tr><td><strong>Azure Portal</strong></td><td>Open the Databricks instance in the Azure Portal</td></tr><tr><td><strong>Launch Workspace</strong></td><td>Access the Databricks workspace directly</td></tr><tr><td><strong>Delete</strong></td><td>Delete the Databricks instance from DuploCloud</td></tr></tbody></table>

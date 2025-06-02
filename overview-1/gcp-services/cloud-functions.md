@@ -15,7 +15,7 @@ Google Cloud Functions allow you to run serverless code that automatically scale
 * [Create a Storage Bucket](s3-bucket-2.md#creating-a-gcp-cloud-storage-bucket) to hold your code package.
 * In GCP Console, upload your code package (ZIP file) to the bucket:
   * Navigate to **Cloud Services** -> **Storage**.
-  * In the row of the bucket you created, click on the menu icon (<img src="../../.gitbook/assets/menu icon (6).avif" alt="" data-size="line">) and select **GCP Console**.&#x20;
+  * In the row of the bucket you created, click on the menu icon (<img src="../../.gitbook/assets/menu icon (6) (1).avif" alt="" data-size="line">) and select **GCP Console**.&#x20;
   * In GCP Console, upload your code package to the bucket.
   * After uploading, note the file path (location) of your code package in the bucket, as you will need this when configuring your Cloud Function. For example, `gs://my-cloud-function-bucket/my-function-code.zip` .
 
