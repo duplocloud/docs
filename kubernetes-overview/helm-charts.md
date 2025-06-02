@@ -63,7 +63,7 @@ Deploy a Kubernetes cluster using a Helm Chart from the DuploCloud Platform.&#x2
 1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Helm**.
 2. Select the **Release** tab, and click **Add**. The **Add Helm Release** page displays
 
-<figure><img src="../.gitbook/assets/Screenshot (476).png" alt=""><figcaption><p>The <strong>Add Helm Release</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot (476) (1).png" alt=""><figcaption><p>The <strong>Add Helm Release</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 3. In the **Name** field, enter a unique name for this Helm release (e.g., `nginx-release`).
 4. In the Release **Name** field, enter the name to identify the application deployment in Kubernetes (e.g., `nginx-release`).

@@ -42,7 +42,7 @@ After creating a Key Vault and adding secrets, you can update an existing secret
 1. In the DuploCloud Portal, go to **Cloud Services** -> **Key Vault**.
 2. Select the Key Vault you wish to manage from the **NAME** column.
 3. Select the **Secrets** tab.
-4. Click the menu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the secret you want to update.
+4. Click the menu icon (<img src="../../.gitbook/assets/menu icon (6).avif" alt="" data-size="line">) next to the secret you want to update.
 5. From the menu options, select **Edit**. The **Update a Secret** pane displays.
 6. Update the **Value** field with the new data you want to store.
 7. Click **Update** to apply the changes. The updated secret will now be stored as a new version, and the old version will be moved to the secret's version history.
@@ -51,6 +51,6 @@ After creating a Key Vault and adding secrets, you can update an existing secret
 
 To view secret versions, click the caret (<img src="../../.gitbook/assets/Screenshot (111).png" alt="" data-size="line">) next to a secret's name. A list of available versions will appear.
 
-To view a specific version, click the menu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the version and select **View**. The **JSON representation** of that version displays.
+To view a specific version, click the menu icon (<img src="../../.gitbook/assets/menu icon (6).avif" alt="" data-size="line">) next to the version and select **View**. The **JSON representation** of that version displays.
 
 <figure><img src="../../.gitbook/assets/Screenshot (110) (1).png" alt=""><figcaption></figcaption></figure>

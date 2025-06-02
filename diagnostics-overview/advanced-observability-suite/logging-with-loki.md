@@ -53,7 +53,7 @@ From the Grafana **Logging** Dashboard, there are several ways to explore logs a
 
 **Traces**: From the log details pane, click the **View Trace** button to view traces associated with the log entry.&#x20;
 
-<figure><img src="../../.gitbook/assets/Screenshot (485).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (485) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Log Context**: Click the context icon ( ![](https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FX58Pxdm6agJUZP30GiWm%252Fc1.png%3Falt%3Dmedia%26token%3D77f48d2a-fe61-4130-aeef-78371a715dc2\&width=300\&dpr=4\&quality=100\&sign=64ddabcf\&sv=2) ) to open the **Log context** window for contextual details about the log entry.
 
