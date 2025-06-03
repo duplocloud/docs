@@ -1,6 +1,6 @@
 # Ticket
 
-The DuploCloud Service Desk provides a conversational interface for managing infrastructure tasks through AI-powered tickets. Each ticket connects you to an intelligent AI agent who can reason through problems, suggest commands, and collaborate with you in real time via the Canvas workspace.
+The AI HelpDesk provides a conversational interface for managing infrastructure tasks through AI-powered tickets. Each ticket connects you to an intelligent AI Agent who can reason through problems, suggest commands, and collaborate with you in real time via the Canvas workspace.
 
 ## Creating a Ticket
 
@@ -8,7 +8,7 @@ To begin a new interaction, users create a ticket within the context of a specif
 
 **To create a ticket**:
 
-1. Navigate to **AI Suite -> ServiceDesk** pane.&#x20;
+1. Navigate to **AI Suite -> HelpDesk** pane.&#x20;
 2. Selects the appropriate **Agent** and **Instance**.
 3. Begin the interaction by submitting a **Message to Agent** to describe the task or problem.
 

@@ -1,7 +1,3 @@
----
-description: this page will be the technical of how to create an agent
----
-
 # Agent
 
 Agents are the core AI components in DuploCloud AI Suite. Each Agent is responsible for interpreting user inputs, deciding which Tools to invoke, and orchestrating intelligent responses using integrated data and logic. They serve as the execution layer for AI-powered workflows and can be tailored to a wide range of use cases, from conversational interfaces to backend automation.
@@ -28,7 +24,7 @@ Prebuilt Agents use a pre-existing container image that defines your Agent’s f
 
     <figure><img src="../../.gitbook/assets/Screenshot (509).png" alt=""><figcaption><p>The <strong>Agents</strong> tab with the <code>kubernetes-agent</code> Agent displayed</p></figcaption></figure>
 
-Once the Agent has been successfully completed, complete steps 2 and 3 below to deploy and register the Agent so it can be used with [DuploCloud's AI ServiceDesk](../ai-servicedesk/).
+Once the Agent has been successfully completed, complete steps 2 and 3 below to deploy and register the Agent so it can be used with [DuploCloud's AI ServiceDesk](../ai-helpdesk/).
 
 ### Creating a Dynamic Agent
 
@@ -74,7 +70,7 @@ Once an Agent image is created, it must be deployed. Deploying the Agent makes i
 
     <figure><img src="../../.gitbook/assets/Screenshot (506).png" alt=""><figcaption><p>The <strong>Agent</strong> page with the <strong>Deploy Image</strong> pane </p></figcaption></figure>
 3. Choose a deployment method:
-   * **Quick Deploy**: Automatically sets up everything needed to run your Agent: it creates a DC Service, deploys a pod that runs the Agent container, and exposes it through a load balancer listener using the port specified during Agent creation.
+   * **Quick Deploy**: Automatically sets up everything needed to run your Agent: it creates a DuploCloud Service, deploys a pod that runs the Agent container, and exposes it through a load balancer listener using the port specified during Agent creation.
    * **Advanced**: Allows full control over deployment settings, including network, scaling, and service options.
 4.  Proceed through the remaining steps to complete the deployment, following the prompts based on whether you selected **Quick Deploy** or **Advanced**. Monitor the deployment status on the **Deployments** tab. \
 
@@ -83,7 +79,7 @@ Once an Agent image is created, it must be deployed. Deploying the Agent makes i
 
 ## Step 3. Register the Agent
 
-Once your Agent has been successfully deployed, it must be registered so that the DuploCloud AI Suite can route queries to it.
+Once your Agent has been successfully deployed, it must be registered so that the DuploCloud AI HelpDesk can route queries to it.
 
 1. Select the **Register** tab on the Agent page (**AI Suite** → **Studio** → **Agents** → select the Agent name).
 2.  Click **Register**. The **Register Agent** pane displays.\
@@ -94,5 +90,5 @@ Once your Agent has been successfully deployed, it must be registered so that th
 
 <table data-header-hidden><thead><tr><th width="182.88885498046875"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Provide a name for this Agent registration.</td></tr><tr><td><strong>Instanceid</strong></td><td>Enter the ID of the deployed instance (created during deployment).</td></tr><tr><td><strong>Allowed Tenants</strong></td><td>Select the tenants where this Agent is allowed to operate.</td></tr><tr><td><strong>Endpoint</strong></td><td>The service endpoint for the deployed Agent (prepopulated).</td></tr><tr><td><strong>Path</strong></td><td>The endpoint path that handles requests. You can retrieve this from the Agent's registration info, if needed: On the Register tab, click the menu icon (<img src="../../.gitbook/assets/menu icon (1).avif" alt="" data-size="line">) next to the Instance and select Edit. Copy the path from the Path field.</td></tr><tr><td><strong>Headers</strong></td><td>Optional key/value pairs to pass custom headers during API calls.</td></tr></tbody></table>
 
-3. Click **Submit** to register the Agent. This Agent can now be utilized by the DuploCloud Service Desk. To learn how to configure and use Service Desk, see the [Service Desk documentation](../ai-servicedesk/).&#x20;
+3. Click **Submit** to register the Agent. This Agent can now be utilized by the DuploCloud Service Desk. To learn how to configure and use Service Desk, see the [Service Desk documentation](../ai-helpdesk/).&#x20;
 
