@@ -10,7 +10,7 @@ Agent definitions form the blueprint for creating AI agents within DuploCloud AI
 
 ### PreBuilt
 
-PreBuilt agents are ready-to-use solutions developed outside of AI Studio that conform to DuploCloud's agent standards and interfaces. These agents are packaged as Docker images with pre-configured APIs that seamlessly integrate with the ServiceDesk. PreBuilt agents offer immediate value for common DevOps scenarios without requiring custom development. They're ideal for organizations seeking to rapidly implement AI assistance for standardized workflows or those with existing agent implementations they wish to incorporate into the DuploCloud ecosystem.&#x20;
+PreBuilt agents are ready-to-use solutions developed outside of AI Studio that conform to DuploCloud's agent standards and interfaces. These agents are packaged as Docker images with pre-configured APIs that seamlessly integrate with the AI HelpDesk. PreBuilt agents offer immediate value for common DevOps scenarios without requiring custom development. They're ideal for organizations seeking to rapidly implement AI assistance for standardized workflows or those with existing agent implementations they wish to incorporate into the DuploCloud ecosystem.&#x20;
 
 ### Dynamic
 
@@ -26,7 +26,7 @@ The build process transforms agent definitions and associated Tools into deploya
 
 ## Images
 
-Agent images are Docker Images that encapsulate the AI agent's code, dependencies
+Agent images are Docker Images that encapsulate the AI agent's code, dependencies, etc. &#x20;
 
 ## Deployments
 
@@ -34,4 +34,4 @@ Deploying an agent makes it available for use within your infrastructure. AI Stu
 
 ## Register
 
-Registering an agent connects a deployed agent instance into AI ServiceDesk, making it available for user interaction through tickets. During registration, you provide essential information including the agent's friendly name, endpoint URL, API path for message handling, and applicable tenant scopes.&#x20;
+Registering an agent connects a deployed agent instance into AI HelpDesk, making it available for user interaction through tickets. During registration, you provide essential information including the agent's friendly name, endpoint URL, API path for message handling, and applicable tenant scopes.&#x20;
