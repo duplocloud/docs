@@ -247,6 +247,7 @@
       * [Tenant expiry](overview-1/use-cases/tenant-environment/tenant-expiry.md)
       * [Tenant Config settings](overview-1/use-cases/tenant-environment/tenant-config-settings.md)
     * [Hosts (VMs)](overview-1/use-cases/hosts-vms.md)
+    * [GKE Maintenance Windows](overview-1/use-cases/gke-maintenance-windows.md)
     * [Cost management for billing](overview-1/use-cases/cost-management/README.md)
       * [Export Billing to BigQuery](overview-1/use-cases/cost-management/export-billing-to-bigquery.md)
       * [Manage cross project billing in GCP](overview-1/use-cases/cost-management/manage-cross-project-billing-in-gcp.md)
