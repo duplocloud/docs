@@ -21,11 +21,11 @@ While Beyla captures foundational metrics and spans out of the box, it does not 
 * This operator enables auto-instrumentation for services written in .NET, Java, Node.js, Python, and Go based on **Pod Annotations**.
 * DuploCloud ships an **Instrumentation object** in the OTEL namespace by default, forwarding telemetry data to an OpenTelemetry Collector (Alloy).
 * The following annotations are used for different programming languages to enable automatic instrumentation:
-  * .NET: `instrumentation.opentelemetry.io/inject-dotnet: "`duploservices-<\<Opentelemetry\_tenant>>/otel-instrumentation`"`
-  * Go: `instrumentation.opentelemetry.io/inject-go: "`duploservices-<\<Opentelemetry\_tenant>>/otel-instrumentation`"`
-  * Java: `instrumentation.opentelemetry.io/inject-java: "`duploservices-<\<Opentelemetry\_tenant>>/otel-instrumentation`"`
-  * Node.js: `instrumentation.opentelemetry.io/inject-nodejs: "`duploservices-<\<Opentelemetry\_tenant>>/otel-instrumentation`"`
-  * Python: `instrumentation.opentelemetry.io/inject-python: "`duploservices-<\<Opentelemetry\_tenant>>/otel-instrumentation`"`
+  * .NET: `instrumentation.opentelemetry.io/inject-dotnet: "duploservices-AOS_TENANT_NAME/otel-instrumentation"`
+  * Go: `instrumentation.opentelemetry.io/inject-go: "duploservices-AOS_TENANT_NAME/otel-instrumentation"`
+  * Java: `instrumentation.opentelemetry.io/inject-java: "duploservices-AOS_TENANT_NAME/otel-instrumentation"`
+  * Node.js: `instrumentation.opentelemetry.io/inject-nodejs: "duploservices-AOS_TENANT_NAME/otel-instrumentation"`
+  * Python: `instrumentation.opentelemetry.io/inject-python: "duploservices-AOS_TENANT_NAME/otel-instrumentation"`
 * Users can also customize or add OpenTelemetry environmental variables for their Pods, as needed. See the [OpenTelemetry documentation](https://opentelemetry.io/docs/kubernetes/operator/automatic/) for details.&#x20;
 
 ## Manual instrumentation
