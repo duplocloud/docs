@@ -30,6 +30,6 @@ If you don't have administrator privileges, configure AWS credentials for intera
 3.  From the **KubeCtl** item list, select **KubeCtl Token**. The **KubeCtl Token** window displays.\
 
 
-    <figure><img src="../../.gitbook/assets/Screenshot (350).png" alt=""><figcaption><p><strong>Token</strong> window with <code>kubectl</code> commands for creating token</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/KUBECTL.png" alt=""><figcaption><p>The <strong>Token</strong> window</p></figcaption></figure>
 4. Click **Copy** to copy the `kubectl` commands in the **Token** window to your clipboard.
 5. From the **KubeCtl** item list, select **KubeCtl Shell** to launch the shell instance.

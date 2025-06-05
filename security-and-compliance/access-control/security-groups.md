@@ -1,8 +1,10 @@
 ---
-description: Managing Security Groups in DuploCloud
+description: DuploCloud Tenants and Security Groups
 ---
 
 # Security Groups
+
+<div align="left"><figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure></div>
 
 In DuploCloud, each Tenant is associated with its own Security Group, which allows unrestricted communication between all resources within that Tenant. This setup ensures that any computing resource in that Tenant can easily reach the services within that same Tenant.
 
@@ -42,4 +44,5 @@ In Azure, security is implemented at the **Virtual Network (VNet)** level. All t
 
 5. Click **Add**. The Security Group Rule is configured.&#x20;
 
-&#x20;
+<div align="left"><figure><img src="../../.gitbook/assets/image (7) (3).png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure></div>
+

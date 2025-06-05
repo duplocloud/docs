@@ -34,7 +34,7 @@ DuploCloud Portal, navigate to **Kubernetes** -> **Storage**.&#x20;
 
 The **Persistent Volume Claims** option is selected by default.
 
-<div align="left"><figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-15_10_55.png" alt=""><figcaption><p>The <strong>Persistent Volume Claims</strong> option on the <strong>Kubernetes Storage</strong> page</p></figcaption></figure></div>
+<figure><img src="../../.gitbook/assets/Screenshot (235) (2).png" alt=""><figcaption><p>The <strong>Persistent Volume Claims</strong> option on the <strong>Kubernetes Storage</strong> page</p></figcaption></figure>
 
 Click **Add**. The **Add Kubernetes Persistent Volume Claim** page displays.
 

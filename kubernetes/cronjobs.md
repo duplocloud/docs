@@ -22,8 +22,6 @@ See the Kubernetes [CronJob](https://kubernetes.io/docs/concepts/workloads/contr
 
 6. In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and copy commands as needed.
 
-<figure><img src="../.gitbook/assets/cron retake.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with the <strong>Command</strong> options window open.</p></figcaption></figure>
-
 <figure><img src="../.gitbook/assets/crom3.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with the <strong>Command</strong> field for <strong>Container - 1</strong> filled<strong>.</strong></p></figcaption></figure>
 
 7. To run the Kubernetes CronJob to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line"> button and select the **Add Init Container** option. The **Init Container - 1** area displays.

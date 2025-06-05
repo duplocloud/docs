@@ -5,11 +5,11 @@ An Azure Application Gateway SSL policy allows you to configure the security set
 To use an Application Gateway SSL policy with Ingress for your ALB Load Balancer, follow these steps:&#x20;
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Systems Settings**.
-2. Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.&#x20;
+2. Select the **System Config** tab, and click **Add**. If the setting is already configured, click the menu icon next to the setting, and click **Update**. The **Add Config** or **Update Config AppConfig** pane displays.&#x20;
 3. In the **Config Type** list box, select **AppConfig**.
 4. In the **Key** field, enter `AZURE_APP_GATEWAY_SSL_POLICY`.
 5. In the **Value** field, enter your Azure Application Gateway SSL Policy (for example **AppGwSslPolicy20220101**).
 6.  Click **Submit**. \
 
 
-    <figure><img src="../../../.gitbook/assets/Application gateway policy (2).png" alt=""><figcaption><p>The <strong>Update Config</strong> pane in the DuploCloud Portal</p></figcaption></figure>
+    <div align="left"><figure><img src="../../../.gitbook/assets/Application gateway policy (3).png" alt="" width="375"><figcaption><p>The Update Config App Config pane</p></figcaption></figure></div>

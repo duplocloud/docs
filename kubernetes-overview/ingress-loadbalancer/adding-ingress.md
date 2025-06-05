@@ -48,7 +48,7 @@ An administrator needs to enable the AWS Application Load Balancer controller fo
 10. If needed, enable and configure **Advanced Kubernetes settings**.&#x20;
 11. Click **Add**. The Load Balancer listener is displayed under **LB Listeners** on the **Load Balancers** tab.
 
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_44_43.png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab for the <strong>filebeat-k8s-duploinfrasvc</strong> Service</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (234) (1).png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab for the Service</p></figcaption></figure>
 
 ## Adding a Kubernetes Ingress
 

@@ -1,5 +1,5 @@
 ---
-description: Mounting Kubernetes ConfigMaps and Secrets as files
+description: Mounting application configuration maps and secrets as files
 ---
 
 # Mounting ConfigMaps and Secrets as files
@@ -25,10 +25,8 @@ Each ConfigMap or Secret should include the file data you want to mount, using k
 2. Select the Service you want to modify from the **Name** column.
 3. Click the **Actions** menu and select **Edit**.
 
-<figure><img src="../../.gitbook/assets/Azure_Serv1 (1).png" alt=""><figcaption><p><strong>Actions</strong> menu on the <strong>Services</strong> page</p></figcaption></figure>
-
-4. Click **Next**. The **Advanced Options** page displays.
-5. In the **Volumes** field on the **Advanced Options** page, enter the appropriate YAML configuration to define the volume mount. See examples below.
+4) Click **Next**. The **Advanced Options** page displays.
+5) In the **Volumes** field on the **Advanced Options** page, enter the appropriate YAML configuration to define the volume mount. See examples below.
 
 **Example: Mounting a ConfigMap as a Volume**
 

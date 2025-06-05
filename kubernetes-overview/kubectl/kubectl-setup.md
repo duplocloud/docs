@@ -40,7 +40,7 @@ To download `kubeconfig` using `duploctl`, follow [these instructions](https://c
 3. Click the **EKS** (for AWS), **GKE** (for GCP), or the **AKS** (for Azure) tab. The **Download Kubeconfig For Plan** pane displays.
 4. Click **Download Kubeconfig** to download the `kubeconfig` file.
 
-<figure><img src="../../.gitbook/assets/pic 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (232).png" alt=""><figcaption></figcaption></figure>
 
 <div align="left"><figure><img src="../../.gitbook/assets/pic 2.png" alt=""><figcaption></figcaption></figure></div>
 

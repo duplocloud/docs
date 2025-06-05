@@ -31,8 +31,6 @@ You can also use a Kubernetes Job to run multiple Pods in [parallel](https://kub
 6. In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and copy commands as needed.
 7. In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.
 
-<figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.13-21_36_00.png" alt=""><figcaption><p>The <strong>Add Kubernetes Jobs</strong> page with the <strong>Command</strong> info window open.<br></p></figcaption></figure>
-
 <figure><img src="../.gitbook/assets/pi1 final if theres a god (1).png" alt=""><figcaption><p>The <strong>Add Kubernetes Jobs</strong> page with <strong>Container - 1</strong> details added.<br></p></figcaption></figure>
 
 7. To run the Kubernetes Job to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line">button and select the **Add Init Container** option. The **Init Container - 1** area displays.
