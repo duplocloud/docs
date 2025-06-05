@@ -19,8 +19,6 @@ The cloud provider account is the greatest barrier, providing security and isola
     <figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption><p><strong>Welcome</strong> screen, displaying a list of available DuploCloud portals</p></figcaption></figure>
 
 
-*   **Google Project**: Multiple GCP projects can be added and managed by the same DuploCloud installation. To add a project, click **Administrator** -> **CloudCredentials**, as shown in the figure below.\
-    \
+* **Google Project**: Multiple GCP projects can be added and managed by the same DuploCloud installation. To add a project, click **Administrator** -> **Cloud Credentials**, as shown in the figure below.
 
-
-    <figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption><p><strong>Cloud Credentials</strong> page in the DuploCloud Portal for GCP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/CLOUDCREDS (2).png" alt=""><figcaption></figcaption></figure>

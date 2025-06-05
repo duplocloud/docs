@@ -42,7 +42,7 @@ Add a Load Balancer listener that uses Kubernetes (K8s) ClusterIP.&#x20;
 8. Optionally, enable **Additional health check configs**.
 9. Click **Add**. The Load Balancer listener details will appear in the **Load Balancers** tab on the Service details page.
 
-<figure><img src="../../.gitbook/assets/image (317).png" alt=""><figcaption><p><strong>Load Balancers</strong> tab for <strong>nginx-test</strong> service</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/SERVICES.png" alt=""><figcaption><p><strong>Load Balancers</strong> tab</p></figcaption></figure>
 
 ## Creating a GCP Managed Certificate (optional)
 
@@ -106,6 +106,4 @@ The Ingress creation will take a few minutes. Once the IP is attached to the Ing
 ## Viewing Ingress
 
 You can view the Ingresses you have created by navigating to **Kubernetes** -> **Ingres**s.&#x20;
-
-<figure><img src="../../.gitbook/assets/image (322).png" alt=""><figcaption><p>The Kubernetes <strong>Ingress</strong> page showing the added Ingress</p></figcaption></figure>
 

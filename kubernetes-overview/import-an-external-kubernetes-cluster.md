@@ -78,22 +78,16 @@ Select the **Kubernetes** tab to display information about the imported Kubernet
 
 ## Adding Existing Nodes for the imported cluster in DuploCloud&#x20;
 
-1. In the DuploCloud Portal, navigate to **Administrator -> Tenants**.
-2. Click **Add**. The **Create a Tenant** pane displays.
-3. Enter the Tenant **Name**.
-4. Select the Infrastructure name from the **Plan** list box.
-5. Click **Create**.
-6. Navigate to **Kubernetes** -> **Nodes**. The **Nodes** page displays.
-7. Click the **On-Premises** Tab.
-8. Click **Add**. The **Add On-Premesis** Instance pane displays.
-9. Select the node from the **Kubernetes Node** list box.&#x20;
-10. Supply an **Allocation Tag**.
-11. Click **Add**.
-12. Navigate to **Kubernetes** -> **Nodes** to view the imported cluster.
+1. Select the Tenant from the **Tenant** list box.&#x20;
+2. Navigate to **Kubernetes** -> **Nodes**. The **Nodes** page displays.
+3. Click the **On-Premises** Tab.
+4. Click **Add**. The **Add On-Premesis** Instance pane displays.
+5. Select the node from the **Kubernetes Node** list box.&#x20;
+6. Supply an **Allocation Tag**.
+7.  Click **Add**.\
 
-<figure><img src="../.gitbook/assets/image (427).png" alt=""><figcaption><p>The <strong>On-Premesis</strong> tab on the <strong>Nodes</strong> page</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (424).png" alt=""><figcaption><p>The <strong>Add On-Premises Instance</strong> pane</p></figcaption></figure>
+    <div align="left"><figure><img src="../.gitbook/assets/image (6) (3).png" alt="" width="381"><figcaption><p>The <strong>Add On-Premises Instance</strong> pane</p></figcaption></figure></div>
 
 ## Creating a WebServer Service with Cloud as On-Premises
 
