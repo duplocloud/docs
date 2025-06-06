@@ -46,6 +46,7 @@
   * [GRC Tools and DuploCloud](welcome-to-duplocloud/grc-tools-and-duplocloud.md)
   * [Public Cloud Tutorials](welcome-to-duplocloud/public-cloud-tutorials.md)
   * [Getting Help with DuploCloud](welcome-to-duplocloud/duplocloud-support-model.md)
+  * [DuploCloud Support Options: Standard vs. Managed Operations](welcome-to-duplocloud/duplocloud-support-options-standard-vs.-managed-operations.md)
 * [Container Orchestrators](container-orchestrators/README.md)
   * [Terminologies in Container Orchestration](container-orchestrators/concepts.md)
 * [DuploCloud Prerequisites](duplocloud-prerequisites/README.md)
