@@ -17,7 +17,7 @@ Standard Support is designed to enable your internal teams to effectively operat
 **What’s Included:**
 
 * **24×7 Access**&#x20;
-  * Available via **Slack or Microsoft Teams** for real-time communication.
+  * Available via Slack or Microsoft Teams for real-time communication.
   * Ideal for initiating support requests, troubleshooting issues collaboratively, or asking quick questions.
   * Responses are handled by DuploCloud’s experienced support engineers, ensuring fast and informed assistance.
   * Issues are logged and tracked in a dedicated ticketing system.
@@ -35,13 +35,11 @@ Standard Support is designed to enable your internal teams to effectively operat
 * **Service Level Agreements (SLA)**
   * DuploCloud provides responsive support for all critical issues and best-effort assistance for general queries, typically within a few business hours depending on severity and complexity. Customers with urgent or escalated issues can flag them via chat using Slack or Microsoft Teams, or a provided escalation email address.
 
-Standard Support is designed for teams who want **direct access to knowledgeable engineers** without the need for fully managed operations. It is especially well-suited for engineering-led teams that prefer to maintain operational control while getting help when and where they need it.
+**Standard Support** is designed for teams who want direct access to knowledgeable engineers without the need for fully managed operations. It is especially well-suited for engineering-led teams that prefer to maintain operational control while getting help when and where they need it.
 
 ### **Managed Operations**
 
 **Managed Operations** is DuploCloud’s premium support offering, designed for organizations seeking full-service operational management of their cloud infrastructure. This service builds on what’s included in Standard Support and is available as an add-on. It provides more deeper and proactive management by DevOps engineers assigned to your team and serves as an extension of your internal engineering and DevOps functions.
-
-If you need to offload day-to-day cloud operations or ensure best-practice implementation at scale, Managed Operations delivers that through hands-on support, compliance reinforcement, and platform optimization.
 
 **What’s Included:**
 
@@ -53,21 +51,23 @@ If you need to offload day-to-day cloud operations or ensure best-practice imple
   * The SOW can include **any of the areas listed below** — such as infrastructure provisioning, CI/CD automation, observability, security enforcement, and compliance support.
     * **Cloud Infrastructure**
       * Provision and manage cloud resources across environments.
-        * Monitor system health, availability, and security posture.
-          * Enforce policies and align with industry best practices.
+      * Monitor system health, availability, and security posture.
+      * Enforce policies and align with industry best practices.
     * **Application & Workload Support**
       * Deploy and manage workloads through the DuploCloud platform.
-        * Support for service migrations and CI/CD pipeline integration.
-          * Configure infrastructure-as-code (e.g., Terraform) as needed.
+      * Support for service migrations and CI/CD pipeline integration.
+      * Configure infrastructure-as-code (e.g., Terraform) as needed.
     * **Observability & Reliability**
       * Implement and manage logging, monitoring, and alerting.
-        * Automate backups and support periodic Disaster Recovery (DR) and Business Continuity Planning (BCP) exercises.
+      * Automate backups and support periodic Disaster Recovery (DR) and Business Continuity Planning (BCP) exercises.
     * **Cloud Cost Optimization**
       * Analyze cloud resource usage and spending trends.
-        * Recommend and implement cost-saving strategies.
+      * Recommend and implement cost-saving strategies.
     * **Security & Compliance Support**
       * Conduct annual penetration tests and provide findings with remediation plans.
-        * Assist with audits and assessments.
+      * Assist with audits and assessments.
+
+If you need to offload day-to-day cloud operations or ensure best-practice implementation at scale, **Managed Operations** delivers that through hands-on support, compliance reinforcement, and platform optimization.
 
 ## **Comparing Support Options**
 
