@@ -39,7 +39,7 @@ Standard Support is designed to enable your internal teams to effectively operat
 
 ### **Managed Operations**
 
-**Managed Operations** is DuploCloud’s premium support offering, designed for organizations seeking full-service operational management of their cloud infrastructure. This service builds on what’s included in Standard Support and is available as an add-on. It provides more deeper and proactive management by DevOps engineers assigned to your team and serves as an extension of your internal engineering and DevOps functions.
+**Managed Operations** is DuploCloud’s premium support offering, designed for organizations seeking full-service operational management of their cloud infrastructure. This service builds on what’s included in Standard Support and is available as an add-on. You’ll work with dedicated DevOps engineers who provide proactive, hands-on management and operate as an extension of your internal engineering and DevOps teams.
 
 **What’s Included:**
 
