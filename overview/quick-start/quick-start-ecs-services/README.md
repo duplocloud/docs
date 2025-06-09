@@ -32,4 +32,4 @@ _Estimated time to complete remaining tutorial steps: 30-40 minutes_
 
 Behind the scenes, the topology that DuploCloud creates resembles this low-level configuration in AWS.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>AWS Architecture For ECS Deployment</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (470).png" alt=""><figcaption><p>AWS ECS Deployment</p></figcaption></figure>
