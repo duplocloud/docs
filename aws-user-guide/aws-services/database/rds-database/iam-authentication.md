@@ -25,7 +25,7 @@ Use the System Config tab to enable IAM authentication before enabling it for a 
 
 <div align="left"><figure><img src="../../../../.gitbook/assets/iam1.png" alt=""><figcaption><p><strong>Add Config</strong> pane with the <strong>Enable RDS IAM auth</strong> <strong>Key</strong></p></figcaption></figure></div>
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>EnableRdsIamAuth</strong> <strong>Key</strong> with <strong>Value</strong> of <strong>true</strong></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>EnableRdsIamAuth</strong> <strong>Key</strong> with <strong>Value</strong> of <strong>true</strong></p></figcaption></figure></div>
 
 ## Enabling IAM for an RDS instance
 

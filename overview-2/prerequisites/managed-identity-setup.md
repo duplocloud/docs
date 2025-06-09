@@ -20,7 +20,7 @@ Follow these steps post the installation of DuploCloud portal in Azure VM:
    * **Region**: Select the appropriate region for the managed identity.
 5. Click **Create** and wait for the deployment to complete.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Create a managed identity</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Create a managed identity</p></figcaption></figure>
 
 ## Step 2: Assign this Managed Identity to Duplo-Master VM
 
@@ -29,7 +29,7 @@ Follow these steps post the installation of DuploCloud portal in Azure VM:
 3. Switch to the **User assigned** tab and click **+ Add**.
 4. Select the managed identity created in Step 1 and click **Add**.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Assigning managed identity to the Duplo-Master VM</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Assigning managed identity to the Duplo-Master VM</p></figcaption></figure>
 
 ## Step 3: Assign "owner" role to the Managed Identity
 
