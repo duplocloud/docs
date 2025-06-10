@@ -1,14 +1,16 @@
 ---
 description: >-
-  A comparison of DuploCloud's Standard Support and Managed Operations service
-  options
+  DuploCloud offers two levels of ongoing support designed to meet different
+  customer needs: Standard Support, and Managed Operations.
 ---
 
 # DuploCloud Support Options: Standard vs. Managed Operations
 
 ## **DuploCloud Support Services**
 
-DuploCloud offers two levels of support designed to meet different customer needs: Standard Support, and Managed Operations. All customers receive Standard Support. Teams needing deeper operational assistance can upgrade to Managed Operations. For more details, see [the DuploCloud Pricing page](https://duplocloud.com/pricing/).
+Every new DuploCloud customer begins with a [white-glove onboarding experience](duplocloud-onboarding.md) led by our DevOps implementation engineers and project team. Onboarding includes infrastructure assessment, deployment of services and environments, CI/CD integration, observability setup, and a guided production cutover.
+
+After onboarding, customers transition to Standard Support. For teams that require deeper, hands-on operational assistance, our Managed Operations offering is available as an upgrade. For details on pricing, see [the DuploCloud Pricing page](https://duplocloud.com/pricing/).
 
 ### **Standard Support**&#x20;
 
