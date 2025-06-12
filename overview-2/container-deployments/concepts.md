@@ -2,19 +2,19 @@
 description: Key concepts for using DuploCloud with Docker and Azure
 ---
 
-# Key DuploCloud concepts
+# Key DuploCloud Concepts
 
-While deploying Dockerized applications, familiarize yourself with some key concepts and terminologies.
+Familiarize yourself with some key concepts and terminologies.
 
-See [Use Cases](../use-cases/) for a description of DuploCloud Infrastructures and Tenants.
+For descriptions of other common DuploCloud concepts, like Infrastructures and Tenants, see the [Common Components documentation](../../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/).
 
 ## Hosts
 
 These are virtual machines. In AKS deployments, they are also called Worker nodes. By default, apps within a Tenant are pinned to VMs in the same Tenant.&#x20;
 
-## Service
+## Services
 
-Service is a DuploCloud term. DuploCloud Services are not Kubernetes Services. Services are microservices that are defined by a Name, DockerImage, and number of replicas in addition to many other optional parameters. Behind the scenes, a DuploCloud Service maps 1:1 either to a Kubernetes deployment set or to a StatefulSet depending on whether the microservice has stateful volumes or not. There are many optional configurations associated with a DuploCloud Service that represent various ways Docker containers can be run. A few of these are:
+Service is a DuploCloud term. DuploCloud Services are not Kubernetes Services. Services are microservices defined by a Name, Docker image, number of replicas, and other optional parameters. Behind the scenes, a DuploCloud Service maps 1:1 either to a Kubernetes deployment set or to a StatefulSet, depending on whether it has stateful volumes. Optional configurations represent various ways Docker containers can be run, such as:
 
 * Environment variables&#x20;
 * Host Network Mode&#x20;
@@ -22,6 +22,8 @@ Service is a DuploCloud term. DuploCloud Services are not Kubernetes Services. S
 * Entrypoint or command overrides&#x20;
 * Resource caps&#x20;
 * Health Checks
+
+If a service needs to be pinned to run only on a specific set of Hosts, set an Allocation Tag on the Hosts as well as on the Service. The Allocation Tag is a case-insensitive substring match in case of Docker native deployments and exact match in case of Kubernetes deployments. For example, an Allocation Tag specified on a Docker native Service is usually a substring of the tag specified on the Host. If a Host is tagged **HighCpu;HighMem,** a Service tagged **highcpu** can be allocated on it. However, if the Service is tagged **highcpu;gpu** then it won't be allocated; it would need a Host tagged **highcpu;gpu**_._ If a Service does not have any tag set, it can be placed on any Host.
 
 ## Allocation Tags
 

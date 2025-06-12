@@ -2,18 +2,10 @@
 description: Orchestration across multiple Cloud providers
 ---
 
-# Container deployments
+# Container Deployments
 
-The majority of workloads deployed on DuploCloud are in Docker containers.
+Approximately 90% of workloads deployed on DuploCloud run in Docker containers. The platform orchestrates these containerized applications using **Azure Kubernetes Service (AKS)** or **DuploCloud's built-in orchestration engine**, which offers a simpler alternative to Kubernetes.
 
-DuploCloud supports virtually all orchestration techniques across multiple cloud providers, using a simplified and cloud-neutral interface. On Microsoft Azure, orchestration includes support for Managed Kubernetes Service (AKS), and WebApps in Azure, and native Docker Containers.
+On Microsoft Azure, DuploCloud supports many application hosting options, including AKS, Azure WebApps, and native Docker containers. This flexibility allows users to leverage the most appropriate orchestration model for their workloads while working within a cloud-neutral interface.
 
-In addition, the DuploCloud platform has a built-in container management platform that provides an alternative to Kubernetes, which can be complex to implement.
-
-DuploCloud supports many types of applications in Azure, including but not limited to:
-
-* Dockerized apps constitute about 90% of our user workloads. The platform orchestrates containerized application deployments using AKS or built-in container orchestrations as defined in the [Container orchestration features](../../overview-1/container-deployments/container-orchestrators.md) section.
-
-{% hint style="info" %}
-If you need other services, please get in touch with your DuploCloud support team. The typical turnaround time for creating a custom service is a business week.
-{% endhint %}
+DuploCloud also supports a wide range of application types beyond containers. If you need support for a custom Service, please contact the DuploCloud support team. The typical turnaround time is one business week.
