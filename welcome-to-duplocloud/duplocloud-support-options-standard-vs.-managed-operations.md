@@ -75,14 +75,14 @@ If you need to offload day-to-day cloud operations or ensure best-practice imple
 
 The following table outlines key differences between Standard Support and Managed Operations:
 
-| **Feature**                            | **Standard Support**                                     | **Managed Operations**                                                          |
-| -------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| **Support Access**                     | 24x7 via Slack or Teams                                  | 24x7 via dedicated channel with assigned DevOps engineers                       |
-| **Level of Engagement**                | On-demand expert guidance                                | Proactive, ongoing management tailored to your environment                      |
-| **Scope of Coverage**                  | Limited to services deployed via the DuploCloud platform | Full cloud infrastructure, including components outside the DuploCloud platform |
-| **Troubleshooting & Issue Resolution** | Support for issues within the DuploCloud platform        | Comprehensive troubleshooting across full cloud infrastructure                  |
-| **Observability**                      | Guidance on setting up logging and monitoring            | Assistance configuring observability tools, aligned with your needs             |
-| **Security & Compliance**              | General best-practice advice                             | Hands-on support, audit collaboration, and policy enforcement                   |
+| **Feature**                            | **Standard Support**                              | **Managed Operations**                                                          |
+| -------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Support Access**                     | 24x7 via Slack or Teams                           | 24x7 via dedicated channel with assigned DevOps engineers                       |
+| **Level of Engagement**                | On-demand expert guidance                         | Proactive, ongoing management tailored to your environment                      |
+| **Scope of Coverage**                  | Services deployed via the DuploCloud platform     | Full cloud infrastructure, including components outside the DuploCloud platform |
+| **Troubleshooting & Issue Resolution** | Support for issues within the DuploCloud platform | Comprehensive troubleshooting across full cloud infrastructure                  |
+| **Observability**                      | Guidance on setting up logging and monitoring     | Assistance configuring observability tools, aligned with your needs             |
+| **Security & Compliance**              | General best-practice advice                      | Hands-on support, audit collaboration, and policy enforcement                   |
 
 ## **Which Support Option is Right for You?**
 
