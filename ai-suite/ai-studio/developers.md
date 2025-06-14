@@ -69,6 +69,8 @@ The Service Desk sends a flat array of messages where the last message is the cu
 {
   "k8s_namespace": "duploservices-andy",
   "tenant_name": "andy",
+  "tenant_id": "7859b3f9-6d74-44fd-b20f-2b9c1e056761",
+  "duplo_base_url": "duplo.cloud.exmple.com",
   "aws_credentials": { /* ... */ },
   "kubeconfig": "base64...",
   "grafana_base_url": "https://grafana.example.com",
