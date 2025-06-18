@@ -4,9 +4,11 @@ description: Create an OpenSearch domain from the DuploCloud portal
 
 # OpenSearch
 
+OpenSearch provides scalable search and analytics capabilities for your applications. With DuploCloud, you can easily create, configure, and manage OpenSearch instances to support your data indexing and search needs.
+
 ## Creating an OpenSearch domain
 
-1. Navigate to **Cloud Services** -> **Analytics**, select the **OpenSearch** tab, and click the **Add** button. The **Add OpenSearch Domain** page displays.&#x20;
+1. Navigate to **Cloud Services** → **Analytics**, select the **OpenSearch** tab, and click the **Add** button. The **Add OpenSearch Domain** page displays.&#x20;
 2. In the **Domain Name** field, create a name for the OpenSearch domain.
 3. In the **OpenSearch Version** field, select the OpenSearch version you are using.
 4. Select your needed instance size from the **Data Instance Size** list box.
@@ -30,7 +32,20 @@ To create an OpenSearch without EBS storage, follow the steps to [create an Open
 
 <figure><img src="../../.gitbook/assets/Screenshot (206).png" alt=""><figcaption></figcaption></figure>
 
+## Managing an OpenSearch Instance
+
+From the DuploCloud Portal, you can view OpenSearch instance details, open the AWS Console for the instance, edit configuration settings, upgrade the OpenSearch version, or delete the instance.
+
+1. In the DuploCloud Portal, go to **Cloud Services** → **Analytics**.
+2. Select the **OpenSearch** tab.
+3.  Click the menu icon (<img src="../../.gitbook/assets/menu icon (11).avif" alt="" data-size="line">) at the end of the row for the OpenSearch instance you want to manage.\
+
+
+    <figure><img src="../../.gitbook/assets/Screenshot (550).png" alt=""><figcaption><p><strong>OpenSearch</strong> tab with menu options highlighted</p></figcaption></figure>
+4. Choose one of the following actions:
+
+<table data-header-hidden><thead><tr><th width="195.33331298828125">Option</th><th>Description</th></tr></thead><tbody><tr><td><strong>View JSON</strong></td><td>View the JSON representation of the OpenSearch instance configuration.</td></tr><tr><td><strong>Console</strong></td><td>Open the AWS Console to view and manage the OpenSearch domain.</td></tr><tr><td><strong>Edit</strong></td><td>Open the <strong>Edit OpenSearch Domain</strong> pane to update instance configurations, such as node count or size.</td></tr><tr><td><strong>Upgrade</strong></td><td>Upgrade the OpenSearch version for the selected instance.</td></tr><tr><td><strong>Delete</strong></td><td>Permanently remove the OpenSearch instance.</td></tr></tbody></table>
+
 ## Managing OpenSearch Logging
 
 See the[ Logging documentation](../use-cases/central-logging/custom-log-collection.md).
-
