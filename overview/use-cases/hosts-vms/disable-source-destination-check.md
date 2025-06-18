@@ -4,13 +4,17 @@ description: Disable CloudFormation's SourceDestCheck in EC2 Host metadata
 
 # Disable Source Destination Check
 
-The AWS Cloudformation template contains a [Source Destination Check (`SourceDestCheck` parameter)](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html) that ensures that an EC2 Host instance is either the source or the destination of any traffic the instance receives. In the DuploCloud Portal, this parameter is specified as `true`, by default, enabling source and destination checks.
+{% hint style="danger" %}
+Source/destination checking is a security feature. Disabling it is only needed in specific use cases. In most cases, disabling it creates a security gap. We recommend consulting with the DuploCloud team before using this.
+{% endhint %}
 
-There are times when you may want to override this default behavior, such as when an EC2 instance runs services such as network address translation, routing, or firewalls. To override the default behavior and set the `SourceDestCheck` parameter to `false`, use this procedure.
+AWS EC2 ensures that each instance is either the source or the destination of any network traffic that it receives. This is called "[source/destination checking](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#eni-basics)". In the DuploCloud Portal, this parameter is specified as `true`, by default, enabling source and destination checks.
+
+There are times when you may want to override this default behavior, such as when an EC2 instance runs services [Network Address Translation (NAT)](https://docs.aws.amazon.com/vpc/latest/userguide/work-with-nat-instances.html#EIP_Disable_SrcDestCheck), routing, or firewalls. To override the default behavior and set the `SourceDestCheck` parameter to `false`, use this procedure.
 
 ## Disable `SourceDestCheck` in the DuploCloud Portal
 
-Set AWS CloudFormation `SourceDestCheck` to `false` for an EC2 Host:
+Set `SourceDestCheck` to `false` for an EC2 Host:
 
 1. In the DuploCloud Portal, navigate to **Cloud Services -> Hosts**.
 2. In the **EC2** tab, select the Host for which you want to disable `SourceDestCheck`.
@@ -18,11 +22,7 @@ Set AWS CloudFormation `SourceDestCheck` to `false` for an EC2 Host:
 4.  Click **Add**. The **Add Metadata** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/SDC1.png" alt=""><figcaption><p><strong>Add Metadata</strong> pane for <strong>Key SourceDestCheck</strong></p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/SDC1.png" alt=""><figcaption><p><strong>Add Metadata</strong> pane for <strong>Key SourceDestCheck</strong></p></figcaption></figure></div>
 
 
 5. In the **Key** field, enter **SourceDestCheck**.
