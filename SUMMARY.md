@@ -272,6 +272,7 @@
     * [Cloud Storage](overview-1/gcp-services/s3-bucket-2.md)
     * [Node Pools](overview-1/gcp-services/node-pools.md)
     * [Pub/Sub](overview-1/gcp-services/s3-bucket-3.md)
+    * [GCP Secrets Manager](overview-1/gcp-services/gcp-secrets-manager.md)
     * [Virtual Private Cloud (VPC) Peering](overview-1/gcp-services/virtual-private-cloud-vpc-peering.md)
     * [GCP Security Command Center](overview-1/gcp-services/gcp-security-command-center.md)
   * [GCP FAQs](gcp-user-guide/gcp-faq.md)
