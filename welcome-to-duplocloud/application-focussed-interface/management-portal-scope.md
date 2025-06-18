@@ -16,7 +16,7 @@ Following is the scope of cloud provider resources (accounts) that a single Dupl
 \
 ![](<../../.gitbook/assets/image (1) (3).png>)
 
-We implement the same experience, providing an account switcher on the login page and inside the Portal, as shown below.\
+We implement the same experience, providing an account switcher on the login page and inside the Portal, as shown below. For instructions on adding additional login portals to the DuploCloud login screen, see the [Multiple Portal Login Options pag](../../access-control/multiple-portal-login-options.md)e.\
 &#x20;&#x20;
 
 <figure><img src="../../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure>

@@ -501,6 +501,7 @@
     * [Azure SSO Configuration](access-control/sso-configuration/azure-ad-as-idp.md)
     * [Okta Identity Management](extras-overview/okta-identity-management.md)
   * [Login Banner/Button Customization](access-control/login-banner-customization.md)
+  * [Multiple Portal Login Options](access-control/multiple-portal-login-options.md)
 * [AI Suite](ai-suite/README.md)
   * [AI HelpDesk](ai-suite/ai-helpdesk/README.md)
     * [Ticket](ai-suite/ai-helpdesk/ticket.md)
