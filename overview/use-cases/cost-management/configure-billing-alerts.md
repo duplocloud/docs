@@ -4,6 +4,10 @@ Set billing alerts based on the previous month's spending or define a custom thr
 
 ## Create or edit a billing alert
 
+{% hint style="info" %}
+New billing alerts may take up to 24 hours to send their first message.
+{% endhint %}
+
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Billing**, and select the **Billing Alerts** tab.&#x20;
 2. Click **Add** or **Edit**.
 3. Enable **Billing Alerts**.
