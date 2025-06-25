@@ -73,6 +73,7 @@ The Service Desk sends a flat array of messages where the last message is the cu
   "duplo_base_url": "duplo.cloud.exmple.com",
   "aws_credentials": { /* ... */ },
   "kubeconfig": "base64...",
+  "duplo_token": "DuploCloud Token for the user sending the message to the Agent",
   "grafana_base_url": "https://grafana.example.com",
   "aws_security_group_name": "duploservices-andy",
   "aws_iam_role_name": "duploservices-andy"
