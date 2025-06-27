@@ -4,9 +4,17 @@ description: Instrument applications in DuploCloud using Grafana Beyla and OpenT
 
 # Application Instrumentation
 
-DuploCloud leverages automated instrumentation with [Grafana Beyla](https://grafana.com/docs/beyla/latest/) and the [OpenTelemetry Operator](https://opentelemetry.io/docs/kubernetes/operator/) to provide robust monitoring and tracing without extensive manual configuration. With Grafana Beyla, users get automatic instrumentation out of the box for a wide range of languages, capturing key metrics and trace spans with minimal setup. For languages and use cases not covered by Beyla, users can manually instrument their applications using OpenTelemetry, offering full flexibility to capture detailed telemetry data where automated options are unavailable.
+DuploCloud leverages automated instrumentation with [Grafana Beyla](https://grafana.com/docs/beyla/latest/) and the [OpenTelemetry Operator](https://opentelemetry.io/docs/kubernetes/operator/) to provide robust monitoring and tracing without extensive manual configuration. With Grafana Beyla, users can get automatic instrumentation for a wide range of languages, capturing key metrics and trace spans with minimal setup. For languages and use cases not covered by Beyla, users can manually instrument their applications using OpenTelemetry, offering full flexibility to capture detailed telemetry data where automated options are unavailable.
 
-## Automated instrumentation using Beyla
+## Automated Instrumentation
+
+{% hint style="info" %}
+We recommend enabling automated instrumentation features in a non-production environment and validating for performance and other impact before using them in production.
+{% endhint %}
+
+### Beyla
+
+To enable Beyla in your environment, contact your DuploCloud team.
 
 * **Grafana Beyla** is an open-source, eBPF-based auto-instrumentation tool designed to simplify the collection of key observability data for applications written in Go, C/C++, Rust, Python, Ruby, Java, NodeJS, .NET, and more.
 * It uses eBPF technology to capture RED metrics (Rate, Error, Duration) and basic trace spans for HTTP/S and gRPC services running on Linux, without requiring code changes or configuration updates.
@@ -14,7 +22,7 @@ DuploCloud leverages automated instrumentation with [Grafana Beyla](https://graf
 
 For more information, see the [Beyla documentation](https://grafana.com/oss/beyla-ebpf/).&#x20;
 
-## **OpenTelemetry Operator for Advanced Tracing**
+### **OpenTelemetry Operator for Advanced Tracing**
 
 While Beyla captures foundational metrics and spans out of the box, it does not provide distributed tracing or detailed trace spans. To address this, DuploCloud integrates the Kubernetes OpenTelemetry Operator.
 
