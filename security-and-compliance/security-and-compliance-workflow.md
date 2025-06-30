@@ -4,7 +4,7 @@ description: An outline of a Compliance Project workflow
 
 # Security and Compliance Workflow
 
-When a DevSecOps or DevSecOps PLUS subscriber needs to achieve specific compliance certifications, a Compliance Project is initiated. This ensures that their cloud infrastructure meets the required security and compliance standards.&#x20;
+When a subscriber needs to achieve specific compliance certifications, a Compliance Project is initiated. This ensures that their cloud infrastructure meets the required security and compliance standards.&#x20;
 
 ## Compliance Project Steps
 
