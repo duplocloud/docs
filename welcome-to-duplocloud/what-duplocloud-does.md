@@ -1,6 +1,6 @@
 ---
 description: >-
-  How DuploCloud is able to provide comprehensive DevSecOps support in a single
+  How DuploCloud is able to provide comprehensive DevOps support in a single
   intuitive tool
 ---
 
@@ -26,7 +26,7 @@ Virtually all of the services DuploCloud supports are designed to auto-scale as 
 
 As with creating Infrastructures and Tenants, DuploCloud Services are designed for the most common use cases. They enable users to supply a minimum number of inputs to get their service up and running quickly. At the same time, DuploCloud retains the ability to customize, using native Kubernetes YAML coding and custom scripting if needed.
 
-Turnkey access to scalable Kubernetes constructs and managed services ensures minimal implementation detail, making DuploCloud the DevSecOps platform for the rapidly expanding AI/ML cloud space. In this arena, the power of an automated platform becomes readily apparent, not only in setting up your cloud infrastructure but also in maintaining it.
+Turnkey access to scalable Kubernetes constructs and managed services ensures minimal implementation detail, making DuploCloud the DevOps platform for the rapidly expanding AI/ML cloud space. In this arena, the power of an automated platform becomes readily apparent, not only in setting up your cloud infrastructure but also in maintaining it.
 
 DuploCloud’s ready-made templatized approach to K8s makes adjustments to Kubernetes parameters, such as Horizontal Pod Autoscalers (HPA) for CPU and RAM requirements, easy to access and adjust.&#x20;
 
@@ -66,7 +66,7 @@ Whatever your tool of choice, our DevOps experts can help you find the best work
 
 ## 7. Optimizing DevOps Spending
 
-One of the biggest reasons to consider an automated DevSecOps solution comes down to dollars and cents. It's too easy to spend a lot on a public cloud solution without knowing precisely where your money goes. Sometimes, the components and services you've created (and even ones you've forgotten about) cost you more than they're earning you.
+One of the biggest reasons to consider an automated DevOps solution comes down to dollars and cents. It's too easy to spend a lot on a public cloud solution without knowing precisely where your money goes. Sometimes, the components and services you've created (and even ones you've forgotten about) cost you more than they're earning you.
 
 DuploCloud provides several billing dashboards that break down your spending by workspace and component. These dashboards are navigable with just a few clicks. Our support team can help you identify redundancies in services and tools and possibly cut costs by suggesting solutions leveraging the many third-party tools built into DuploCloud.
 

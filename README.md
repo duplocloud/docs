@@ -1,5 +1,5 @@
 ---
-description: An overview and demo of DuploCloud's comprehensive DevSecOps platform
+description: An overview and demo of DuploCloud's comprehensive DevOps platform
 cover: .gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
 layout:
@@ -26,7 +26,7 @@ You provide high-level application specifications, including cloud services, app
 
 Further protection is supplied by the DuploCloud [Tenant](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md), an isolated workspace that acts as an additional isolation layer, ideal for segregating production workloads or creating extensible developer sandboxes. A Tenant’s architecture is abstracted from its underlying [Infrastructure](welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/infrastructure.md), and you can create as many Tenants as you need with no degradation in performance.
 
-In addition, DuploCloud facilitates logging, monitoring, alerting, and reporting. The following figure shows the platform's various functions.
+In addition, DuploCloud facilitates logging, monitoring, alerting, and reporting. The following figure  shows the platform's various functions.
 
 ![The DuploCloud Platform Features Diagram](.gitbook/assets/duplocloud-update-illustration-graphics.png)
 
