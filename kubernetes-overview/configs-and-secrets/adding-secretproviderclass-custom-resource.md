@@ -16,7 +16,8 @@ An Administrator must set the Infrastructure setting  `Enable Secrets CSI Driver
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Secret Provider.**
 2. Click **Add**. The **Add Kubernetes Sercet Provider Class** page displays.
-3. Map the `AWS Secrets` and `SSM Parameters` configured in DuploCloud Portal (**Cloud Services** -> **App Integration**) to the **Parameters** section of the configuration.
+3. Map the AWS Secrets and SSM Parameters (configured in the DuploCloud Portal under Cloud **Services** → **App Integration**) to the Parameters section of the configuration.
+   * If you haven’t already created the AWS Secret, see [AWS Secrets](../../overview/aws-services/aws-secrets-support.md) for instructions.
 4. Optionally, use the **Secret Objects** field to define the desired state of the synced Kubernetes secret objects.
 
 The following is an example `SecretProviderClass` configuration where AWS secrets and Kubernetes Secret Objects are configured:
@@ -41,11 +42,7 @@ It's important to note that SPC timeouts can occur due to issues related to Secr
 
 3.  On the **Advanced Options** page, in the **Cloud Credentials** list box, select **From Kubernetes**.
 
-    <div align="left">
-
-    <img src="../../.gitbook/assets/image (335).png" alt="K8s Secret Provider Class Page">
-
-    </div>
+    <div align="left"><img src="../../.gitbook/assets/image (335).png" alt="K8s Secret Provider Class Page"></div>
 
 
 4. Add code to the **Other Pod Config** field, as in the example below.

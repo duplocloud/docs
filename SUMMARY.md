@@ -193,6 +193,7 @@
     * [OpenSearch](overview/aws-services/elasticsearch.md)
     * [Probes and Health Check](overview/aws-services/setting-up-probes.md)
     * [S3 Bucket](overview/aws-services/s3-bucket.md)
+    * [AWS Secrets Support](overview/aws-services/aws-secrets-support.md)
     * [SNS Topic](overview/aws-services/sns-topic.md)
     * [SQS Queue](overview/aws-services/sqs-queue.md)
     * [Virtual Private Cloud (VPC) Peering](overview/aws-services/virtual-private-cloud-vpc-peering.md)
