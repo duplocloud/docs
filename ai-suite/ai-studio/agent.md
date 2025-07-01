@@ -65,7 +65,7 @@ Now that the Agent is created, trigger a build packages your dynamic Agent’s c
 Once an Agent image is created, it must be deployed. Deploying the Agent makes it available for use on your infrastructure.
 
 1. Select the **Images** tab on the Agent page (**AI Suite** → **Studio** → **Agents** → select Agent name).
-2.  Click the menu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the Agent image and select **Deploy**. The **Deploy Image** pane displays with name and image fields prepopulated.\
+2.  Click the menu icon (<img src="../../.gitbook/assets/menu icon (1).avif" alt="" data-size="line">) next to the Agent image and select **Deploy**. The **Deploy Image** pane displays with name and image fields prepopulated.\
 
 
     <figure><img src="../../.gitbook/assets/Screenshot (506).png" alt=""><figcaption><p>The <strong>Agent</strong> page with the <strong>Deploy Image</strong> pane </p></figcaption></figure>
@@ -88,7 +88,7 @@ Once your Agent has been successfully deployed, it must be registered so that th
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (512).png" alt="" width="496"><figcaption><p>The <strong>Register Agent</strong> pane </p></figcaption></figure></div>
 3. Complete the following fields:
 
-<table data-header-hidden><thead><tr><th width="182.88885498046875"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Provide a name for this Agent registration.</td></tr><tr><td><strong>Instanceid</strong></td><td>Enter the ID of the deployed instance (created during deployment).</td></tr><tr><td><strong>Allowed Tenants</strong></td><td>Select the tenants where this Agent is allowed to operate.</td></tr><tr><td><strong>Endpoint</strong></td><td>The service endpoint for the deployed Agent (prepopulated).</td></tr><tr><td><strong>Path</strong></td><td>The endpoint path that handles requests. You can retrieve this from the Agent's registration info, if needed: On the Register tab, click the menu icon (<img src="../../.gitbook/assets/menu icon (1).avif" alt="" data-size="line">) next to the Instance and select Edit. Copy the path from the Path field.</td></tr><tr><td><strong>Headers</strong></td><td>Optional key/value pairs to pass custom headers during API calls.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="182.88885498046875"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Provide a name for this Agent registration.</td></tr><tr><td><strong>Instanceid</strong></td><td>Enter the ID of the deployed instance (created during deployment).</td></tr><tr><td><strong>Allowed Tenants</strong></td><td>Select the tenants where this Agent is allowed to operate.</td></tr><tr><td><strong>Endpoint</strong></td><td>The service endpoint for the deployed Agent (prepopulated).</td></tr><tr><td><strong>Path</strong></td><td>The endpoint path that handles requests. You can retrieve this from the Agent's registration info, if needed: On the Register tab, click the menu icon (<img src="../../.gitbook/assets/menu icon (1) (2).avif" alt="" data-size="line">) next to the Instance and select Edit. Copy the path from the Path field.</td></tr><tr><td><strong>Headers</strong></td><td>Optional key/value pairs to pass custom headers during API calls.</td></tr></tbody></table>
 
 3. Click **Submit** to register the Agent. This Agent can now be utilized by the DuploCloud Service Desk. To learn how to configure and use Service Desk, see the [Service Desk documentation](../ai-helpdesk/).&#x20;
 
