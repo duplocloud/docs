@@ -73,7 +73,7 @@ The CI/CD & Release Management phase involves identifying Services and Tenants t
 
 ## Phase 5. Production Deployment
 
-The fifth phase, Production Development, focuses on the Production environment. During this phase, the DuploCloud team works with your team to confirm your high-availability requirements and apply any needed adjustments. We also review and update infrastructure component scale parameters (e.g., CPU and memory utilization) and monitoring and alerting configurations. Lastly, we review data migration requirements and formulate a production cutover plan.&#x20;
+The fifth phase, Production Deployment, focuses on the Production environment. During this phase, the DuploCloud team works with your team to confirm your high-availability requirements and apply any needed adjustments. We also review and update infrastructure component scale parameters (e.g., CPU and memory utilization) and monitoring and alerting configurations. Lastly, we review data migration requirements and formulate a production cutover plan.&#x20;
 
 ### Shared Responsibilities
 
