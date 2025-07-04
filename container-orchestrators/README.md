@@ -2,20 +2,6 @@
 description: An overview of the container orchestration technologies DuploCloud supports
 cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Container Orchestrators

@@ -2,20 +2,6 @@
 description: An overview and demo of DuploCloud's comprehensive DevOps platform
 cover: .gitbook/assets/Linkedin-bannerV2 (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Overview

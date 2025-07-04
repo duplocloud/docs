@@ -2,20 +2,6 @@
 description: Continuous monitoring of your cloud infrastructure in the DuploCloud Portal
 cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Observability
