@@ -2,20 +2,6 @@
 description: Tools for Administrators in the DuploCloud Portal
 cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # User Administration

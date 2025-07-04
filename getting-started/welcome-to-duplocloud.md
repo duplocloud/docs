@@ -2,20 +2,6 @@
 description: An outline of the DuploCloud approach compared to existing DevOps
 cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Getting Started with DuploCloud

@@ -2,20 +2,6 @@
 description: Additional features of the DuploCloud Portal
 cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (15).png
 coverY: 0
-layout:
-  cover:
-    visible: true
-    size: full
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Extras
