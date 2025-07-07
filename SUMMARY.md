@@ -509,7 +509,7 @@
   * [VPN access for users](access-control/add-and-delete-vpn-access-for-users.md)
   * [Database access for users](access-control/database-access-for-users.md)
   * [SSO Configuration](access-control/sso-configuration/README.md)
-    * [Azure SSO Configuration](access-control/sso-configuration/azure-ad-as-idp.md)
+    * [Microsoft Entra ID SSO Configuration](access-control/sso-configuration/azure-ad-as-idp.md)
     * [Okta Identity Management](extras-overview/okta-identity-management.md)
   * [Login Banner/Button Customization](access-control/login-banner-customization.md)
   * [Multiple Portal Login Options](access-control/multiple-portal-login-options.md)

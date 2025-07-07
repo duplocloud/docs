@@ -1,5 +1,5 @@
 ---
-description: Activate cost allocation tags in DuploCloud AWS
+description: Activating cost allocation tags in DuploCloud AWS
 ---
 
 # Applying Cost Allocation Tags
