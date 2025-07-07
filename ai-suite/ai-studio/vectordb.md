@@ -133,7 +133,7 @@ After uploading and ingesting documents into a Vector DB, you can monitor the st
 
 * In the DuploCloud portal, go to **AI Suite** → **Studio** → **Vector DBs**.
 * Select the **Ingestion Jobs** tab.
-*   Click the **menu icon** (<img src="../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) next to the job you want to inspect.\
+*   Click the **menu icon** (<img src="../../.gitbook/assets/menu icon (2) (1).avif" alt="" data-size="line">) next to the job you want to inspect.\
 
 
     <figure><img src="../../.gitbook/assets/ingestion jobs1.png" alt=""><figcaption><p>The <strong>Ingestion Jobs</strong> tab with the <strong>Logs</strong> and <strong>Details</strong> menu options highlighted</p></figcaption></figure>
