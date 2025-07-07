@@ -1,15 +1,8 @@
 ---
-description: Manage costs for resources
+description: Manage billing and costs for AWS resources
 ---
 
-# Billing and Cost management
+# AWS Billing and Cost Management
 
-The DuploCloud Portal allows you to view and manage resource usage costs. As an administrator, you can view your company's billing data by month, week, or Tenant. You can configure billing alerts, explore historical resource costs, and view DuploCloud license usage information. Non-administrator users can view billing data for Tenants they can access by viewing billing data for a selected Tenant.&#x20;
-
-## Prerequisites
-
-To enable the billing feature, you must:
-
-1. Enable access to billing data in AWS by following the steps in this [AWS document](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/control-access-billing.html).
-2. [Apply cost allocation tags](cost-allocation-tags.md) so that DuploCloud can retrieve billing data.
+The DuploCloud Portal allows you to view and manage cloud-resource usage costs. As an administrator, you can view your organization’s billing data by month, week, or Tenant. Non-administrator users can access billing data for Tenants they have permission to view. You can also configure billing alerts, analyze historical usage trends, and view DuploCloud license usage.
 

@@ -1,61 +1,41 @@
 ---
-description: Export GCP billing data to BigQuery using DuploCloud
+description: Set up GCP billing data access for DuploCloud
 ---
 
-# Export Billing to BigQuery
+# Enabling GCP Billing Data
 
-By exporting your Google Cloud Platform (GCP) billing data to BigQuery, you can leverage DuploCloud's dashboard to monitor and analyze your GCP billing effectively.&#x20;
+To enable billing data visibility in DuploCloud for Google Cloud Platform (GCP), you must export detailed billing data to BigQuery and give DuploCloud access to that dataset. Once the export is complete, you will enable the billing feature in the DuploCloud Portal to begin viewing usage and cost data.
 
-## Prerequisites
+## Step 1. Create a BigQuery Dataset
 
-To export to BigQuery you must have:
+[Create a BigQuery dataset](https://cloud.google.com/bigquery/docs/datasets#create-dataset) in the project you plan to use with DuploCloud.
 
-* A Google Cloud Platform account with billing enabled.
-* Permission to access the Google Cloud Billing API and BigQuery.
-  * Billing Account Administrator permissions
-  * BigQuery Admin permissions
+## Step 2. Enable Billing Export to BigQuery
 
-## Creating a  BigQuery Dataset
+[Enable detailed billing data export](https://cloud.google.com/billing/docs/how-to/export-data-bigquery) using the following specifications:
 
-1. Navigate to the [BigQuery](https://cloud.google.com/bigquery/docs) Console in your Google Cloud Platform account.
-2. In GCP, select the **Project** where you want to create the dataset.
-3.  Click **Create Dataset**.\
+* Select the same project and dataset you used in Step 1.
+* Make sure to enable **Detailed usage** **cost** export.
 
+## Step 3. Share the Dataset with DuploCloud
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (388).png" alt="" width="563"><figcaption><p><strong>Create Dataset</strong> button<br></p></figcaption></figure></div>
-4.  In the **Create dataset** window, configure your dataset with the following parameters:
+1. Open the BigQuery dataset in the GCP console.
+2. Click **Share dataset**.
+3. Add the DuploCloud service account email.
+4. Assign the role: **BigQuery Data Viewer**.
 
-    * **Dataset ID**: Enter a unique name for your dataset.
-    * **Location Type**: Select **Multi-Region**.
-    * **Default table expiration**: Select **Enable table expiration** and set a default expiration time for tables in this dataset, such as **60** days. Tables will be automatically deleted after this period.
-    * Click **Create Dataset**.
-    * Once the dataset is created, it appears in the BigQuery Console under your project. Select the dataset to view details.\
+## Step 4. Enable Billing in DuploCloud
 
+After setting up the export and access:
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (390).png" alt="" width="375"><figcaption><p><strong>Create dataset window</strong> in GCP</p></figcaption></figure></div>
+1. In the DuploCloud Portal, navigate to **Administrator**-> **Billing**.
+2.  On the right side of the page, click **Enable Billing Feature**.\
 
 
+    <figure><img src="../../../.gitbook/assets/Screenshot (600) (2).png" alt=""><figcaption><p><strong>Billing</strong> page in the DuploCloud Portal with the <strong>Enable Billing Feature</strong> option highlighted</p></figcaption></figure>
 
-## Enabling billing export to BigQuery
+DuploCloud will display GCP billing data as it becomes available from the BigQuery export.
 
-1. In GCP, open the [Google Cloud Console](https://cloud.google.com/compute/docs/console).
-2. Select **Billing** from the main menu or visit Google Cloud Billing.
-3. Select the billing account for which you want to enable the billing export.
-4. In the **Billing Account Details** page, select **Billing Export** from the left navigational pane. &#x20;
-5.  In the **Billing Export** page, in the **Detailed usage cost** area, click **Edit Settings**. \
+## Step 5. Notify DuploCloud Support
 
-
-    <figure><img src="../../../.gitbook/assets/image (393).png" alt="" width="563"><figcaption><p><strong>Detailed usage cost</strong> area in the <strong>Billing Export</strong> page</p></figcaption></figure>
-6.  In the **BigQuery Export** tab, configure **Detailed usage cost**.
-
-    * **Select the Project**: Choose the project where you created the BigQuery dataset.
-    * **Select the Dataset**: Choose the dataset you created for billing data.
-
-    <figure><img src="../../../.gitbook/assets/image (394).png" alt="" width="563"><figcaption><p><strong>BigQuery Export</strong> tab in the <strong>Billing Export</strong> page</p></figcaption></figure>
-7. Click **Save**.
-8. Contact DuploCloud Support to complete additional steps to enable the billing dashboard.
-
-{% hint style="info" %}
-The exported billing data includes detailed information about your GCP usage and charges. Regularly monitor and analyze this data to keep track of your cloud spending.\
-
-{% endhint %}
+Contact DuploCloud Support to confirm access and complete setup. This step is required to activate the billing dashboard.

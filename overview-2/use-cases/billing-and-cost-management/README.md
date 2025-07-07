@@ -1,7 +1,7 @@
 ---
-description: Manage costs for resources
+description: Manage billing and costs for Azure resources
 ---
 
-# Billing and Cost management
+# Azure Billing and Cost Management
 
-The DuploCloud Portal allows you to view and manage resource usage costs. As an administrator, you can view your company's billing data by month, week, or Tenant. Configure billing alerts, explore historical resource costs and view DuploCloud license usage information. Non-administrator users can view billing data for Tenants they can access by viewing billing data for a selected Tenant.&#x20;
+The DuploCloud Portal allows you to view and manage cloud resource usage costs. As an administrator, you can view your organization’s billing data by month, week, or Tenant. Non-administrator users can access billing data for Tenants they have permission to view. You can also configure billing alerts, analyze historical usage trends, and view DuploCloud license usage.
