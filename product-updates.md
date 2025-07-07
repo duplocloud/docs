@@ -109,7 +109,7 @@ For assistance with the new UI, contact your [DuploCloud Support team](welcome-t
 * GCP
   * Specify OS disk size when [creating a GCE VM](overview-1/use-cases/hosts-vms.md#gce-vm).
 * Kubernetes
-  * [Add Helm repositories and install Helm releases](kubernetes-overview/helm-charts.md) from the DuploCloud UI.
+  * [Add Helm repositories and install Helm releases](kubernetes-overview/helm/helm-charts.md) from the DuploCloud UI.
 
 ## Q2 2024
 
