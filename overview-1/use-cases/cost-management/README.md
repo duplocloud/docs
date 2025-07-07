@@ -1,29 +1,7 @@
 ---
-description: Manage costs for resources
+description: Manage billing and costs for GCP resources
 ---
 
-# Cost management for billing
+# GCP Billing and Cost Management
 
-Usage costs for resources can be viewed and managed in the DuploCloud Portal, by month or week, and by Tenant. You can also explore historical resource costs.&#x20;
-
-To view the Billing page for GCP in the DuploCloud Portal, click **Administrator** -> **Billing**. &#x20;
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/GCP_Billing.png" alt=""><figcaption><p><strong>Billing</strong> dashboard for GCP</p></figcaption></figure>
-
-</div>
-
-You can view usage by:
-
-* Time
-  * Select the **Spend by Month** tab and click **More Details** to display monthly and weekly spending options. &#x20;
-* Tenant
-  * Select the **Spend by Tenant** tab.
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/GCP_Week_Month_billing.png" alt=""><figcaption><p><strong>Spend by Month</strong> tab with monthly and weekly options displayed</p></figcaption></figure>
-
-</div>
-
+The DuploCloud Portal allows you to view and manage cloud resource usage costs. As an administrator, you can view your organization’s billing data by month, week, or Tenant. Non-administrator users can access billing data for Tenants they have permission to view. You can also configure billing alerts, analyze historical usage trends, and view DuploCloud license usage.

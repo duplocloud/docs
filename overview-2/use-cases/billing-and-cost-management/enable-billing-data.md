@@ -2,21 +2,38 @@
 description: Grant AIM permissions to view billing data in Azure
 ---
 
-# Enable billing data
+# Enabling Azure Billing Data
 
-## Enabling the billing feature
+To enable the billing feature in DuploCloud for Microsoft Azure, you must assign the **Billing Reader** role to the DuploCloud master VM (`DuploMaster`), restart the VM to apply the change, verify that the billing service is running, and then enable billing in the DuploCloud Portal.
 
-To enable the billing feature in the Azure Console:
+## Step 1. Assign the Billing Reader Role
 
-1.  In the Azure Console, select the host (VM) beginning with **DuploMaster**.\
+Follow the Azure documentation to [assign a role using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal).
+
+When assigning the role:
+
+* **Scope**: Assign the role to the VM named **`DuploMaster`**.
+* **Role**: Select **Billing Reader**.
+* **Identity**: Choose the system-assigned or user-assigned managed identity associated with the VM.
+
+{% hint style="info" %}
+To locate the DuploMaster VM, go to Azure Virtual Machines and search for a name beginning with `DuploMaster`.
+{% endhint %}
+
+## Step 2. Restart the VM
+
+After assigning the role, restart the `DuploMaster` VM so the role assignment takes effect.
+
+Refer to [Restart a virtual machine in Azure](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/restart) for detailed instructions.
+
+## Step 3. Enable Billing in DuploCloud
+
+To complete the setup:
+
+1. From the DuploCloud Portal, navigate to **Administrator > Billing**.
+2.  On the right side of the page, click **Enable Billing Feature**.\
 
 
-    <figure><img src="../../../.gitbook/assets/bill1.png" alt=""><figcaption><p><strong>DuploMaster</strong> VM in the Azure Console<br></p></figcaption></figure>
-2. In the Azure Console, navigate to **Security** -> **Identity**.&#x20;
-3. Click **Azure role assignments**. The **Azure role assignments** page displays.
-4.  Click **Add role assignment (Preview)** to add the **Billing Reader** role.\
+    <figure><img src="../../../.gitbook/assets/Screenshot (600) (6).png" alt=""><figcaption></figcaption></figure>
 
-
-    <figure><img src="../../../.gitbook/assets/bill2.png" alt=""><figcaption><p><strong>Azure role assignments</strong> page in the Azure Console<br></p></figcaption></figure>
-5. Restart the **DuploMaster** VM to make the **Billing Reader** role available.
-6. Verify that **Duplo.BillingService** is running. If it is, the billing feature is enabled.
+Billing data will be displayed as it becomes available from Azure.
