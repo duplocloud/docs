@@ -6,6 +6,10 @@ description: Support for Kubernetes Probes
 
 ## Liveness, Readiness, and Startup Probes
 
+{% hint style="danger" %}
+Kubernetes probes can terminate pods and prevent pods from receiving traffic. They're powerful tools for managing availability, but they can be dangerous if they're tuned too tightly. Review the warnings in [this Kubernetes document](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) before setting them.
+{% endhint %}
+
 Liveness, Readiness, and Startup probes are well-known methods to detect Pod health in Kubernetes. They are used in regular uptime monitoring and enable initial startup health that allows rolling deploys of new service updates.
 
 The example below will define **Liveness, Readiness,** and **Startup probes** to one service deployment.
@@ -43,11 +47,7 @@ readinessProbe:
       - /etc/nginx/nginx.conf
 </code></pre>
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/image (67).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure></div>
 
 In addition to the `httpGet` example, TCP Probes can be configured from the **Other Container Config** field:
 
@@ -73,5 +73,5 @@ Complete details of this feature are available in the Kubernetes documentation [
 
 ## Health Check
 
-Enable Kubernetes Health by adding a [Load Balancer Listener with Health Check enabled](load-balancers/#adding-a-load-balancer-listener).
+Enable Kubernetes Health by adding a [Load Balancer Listener with Health Check enabled](../overview/aws-services/load-balancers/#adding-a-load-balancer-listener).
 

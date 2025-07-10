@@ -251,7 +251,7 @@ For assistance with the new UI, contact your [DuploCloud Support team](welcome-t
   * Access [ECS container task shells](overview/prerequisites/kubectl-shell.md#view-the-ecs-task-shell) directly from the DuploCloud Portal.
   * Ability to designate [Essential Containers](overview/aws-services/containers/#7-toc-title-2) in Task definitions for ECS Services.
   * [Automate fault healing](overview/use-cases/faults-and-alarms/automatic-fault-healing.md) on EC2 Hosts that fail a status check.
-  * Enhanced support for [Startup Probes](overview/aws-services/setting-up-probes.md).
+  * Enhanced support for [Startup Probes](kubernetes-overview/setting-up-probes.md).
 * GCP
   * Support for [Redis database instances](overview-1/gcp-services/gcp-databases/managed-redis.md).
   * Support for [SQL databases](overview-1/gcp-services/cloud-sql.md).

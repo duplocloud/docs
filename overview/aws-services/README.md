@@ -44,7 +44,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [Managed Airflow](managed-airflow.md)
 * [NAT Gateway for High Availability (HA)](../../aws-user-guide/aws-services/nat-gateway-for-ha.md)
 * [OpenSearch](elasticsearch.md)
-* [Probes and Health Check](setting-up-probes.md)
+* [Probes and Health Check](../../kubernetes-overview/setting-up-probes.md)
 * [S3 Bucket](s3-bucket.md)
 * [SNS Topic](sns-topic.md)
 * [SQS Queue](sqs-queue.md)
