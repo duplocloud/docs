@@ -4,17 +4,19 @@ description: Create regional or global SSL certificates for GCP using Certificat
 
 # Managed SSL Certificates with Certificate Manager (Optional)
 
+DuploCloud supports both **Compute Engine SSL certificates** and **GCP Certificate Manager certificates** (via certificate maps). While both are valid, we recommend **Certificate Manager** for most use cases. Certificate Manager certificates can be **created and validated independently of load balancers**, which improves automation support, allows reuse across services, and helps reduce the risk of downtime during load balancer creation. In contrast, Compute Engine certificates must be validated during load balancer setup, which can lead to delays or interruptions.
+
 {% hint style="info" %}
 If you followed the step [Certificate for Load Balancer](certificate-for-load-balancer-and-ingress.md), skip this step.
 {% endhint %}
 
-SSL certificates secure connections between clients, servers, and Load Balancers by encrypting data transmitted over the network using Transport Layer Security (TLS). GCP provides two primary methods for configuring SSL certificates: Compute Engine SSL Certificates and Certificate Manager (using certificate maps). While DuploCloud supports both methods, we recommend Certificate Manager whenever possible. This approach is preferable because Compute Engine certificates cannot be validated until associated with a Load Balancer, potentially leading to downtime. In contrast, certificate maps can be validated in advance, helping to ensure consistent uptime and a smoother management experience.
-
 ## Prerequisites&#x20;
 
-* Obtain public and private certificate files from your chosen SSL certificate provider, such as GoDaddy or Namecheap.
+* Obtain public and private certificate files from your chosen SSL certificate provider, such as GoDaddy or Namecheap.  Alternatively, you can create Google-managed certificates directly in Certificate Manager without uploading your own files.
 
 ## Creating a Certificate Map With Certificate Manager
+
+To create a standalone SSL certificate with Certificate Manager, complete the following steps in Google Cloud CLI:
 
 1. Create a DNS authorization resource using the following command where **YOUR\_DOMAIN** is your domain URL and **MAP\_NAME** is your certificate name (a unique name you choose for your certificate map).&#x20;
 
@@ -47,14 +49,12 @@ gcloud certificate-manager maps entries create MAP_NAME-wildcard \
   --hostname="*.YOUR_DOMAIN"
 ```
 
-5. Add the certificate map to the DuploCloud Plan. Navigate to **Administrator** -> **Plans**. Select the **Certificates** tab and click **Add**. The **Add a Certificate** pane displays.&#x20;
-6. In the **Name** field, create a name for the certificate (the name is arbitrary as it is only a display name to be used within DuploCloud).&#x20;
-7. In the **GCP Certificate Type** list box, select the certificate type. The certificate type must match the certificate entered in the `gcloud certificate-manager maps entries create` command.&#x20;
-8. In the **GCP Certificate Map** field, enter the name of your map (in this example, **MAP\_NAME**).&#x20;
-9. Click **Create**. The certificate can now be used with your DuploCloud Services.
+5.  After your certificate map is created, register it in DuploCloud so it can be attached to services and load balancers: Navigate to **Administrator** -> **Plans**. Select the **Certificates** tab and click **Add**. The **Add a Certificate** pane displays. \
 
-<div align="left">
 
-<figure><img src="../../.gitbook/assets/add cert image.png" alt="" width="365"><figcaption><p>The <strong>Add a Certificate</strong> pane</p></figcaption></figure>
+    <div align="left"><figure><img src="../../.gitbook/assets/add cert image.png" alt="" width="365"><figcaption><p><strong>Add a Certificate</strong> pane</p></figcaption></figure></div>
+6. Complete the following fields.
 
-</div>
+<table data-header-hidden><thead><tr><th width="198.22222900390625">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a friendly display name used within DuploCloud only.</td></tr><tr><td><strong>GCP Certificate Type</strong></td><td>Select the certificate type used during creation. This must match what you created in GCP.</td></tr><tr><td><strong>GCP Certificate Map</strong></td><td>Enter the name of the certificate map created using Certificate Manager.</td></tr></tbody></table>
+
+&#x20;5\. Click **Create**. The certificate will be available for selection when configuring HTTPS Load Balancers.
