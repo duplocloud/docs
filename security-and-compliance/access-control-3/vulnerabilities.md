@@ -1,5 +1,5 @@
 ---
-description: Detect security vulnerabilities in Hosts in he DuploCloud Portal
+description: Detect security vulnerabilities in Hosts in the DuploCloud Portal
 ---
 
 # Vulnerabilities
