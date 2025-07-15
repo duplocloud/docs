@@ -179,7 +179,7 @@ For assistance with the new UI, contact your [DuploCloud Support team](welcome-t
   * Cluster IP and Worker Node target types are supported when creating [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
 * GCP
   * Additional supported actions for [Cloud SQL databases](overview-1/gcp-services/s3-bucket-1.md#create-a-cloud-scheduler-job) (GCP Console, Edit, Delete, Stop, Restart, or Reset Password)
-  * [GKE Standard mode](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-standard-service.md) is supported when creating DuploCloud Infrastructures.
+  * [GKE Standard mode](broken-reference) is supported when creating DuploCloud Infrastructures.
   * Support for [Firestore ](overview-1/gcp-services/gcp-databases/firestore-database.md)databases.
   * Support for [GCP Hosts](overview-1/use-cases/hosts-vms.md#id-3-toc-title) and [GCE VMs](overview-1/use-cases/hosts-vms.md#gce-vm).
   * Create [Node Pools](overview-1/gcp-services/node-pools.md) with support for accelerators and taints.

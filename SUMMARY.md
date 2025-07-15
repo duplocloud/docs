@@ -239,8 +239,6 @@
       * [Step 6: Test the Application](overview-1/quick-start/create-a-service-with-gke-standard/step-5-test-the-application.md)
   * [GCP Use Cases](overview-1/use-cases/README.md)
     * [Creating an Infrastructure and Plan for GCP](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/README.md)
-      * [Creating a GKE Autopilot Cluster](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-autopilot-cluster.md)
-      * [Creating GKE Standard Cluster](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-standard-service.md)
       * [Kubectl token and config](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/kubectl-token-and-config.md)
       * [Upgrading the GKE version](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/upgrading-eks-version.md)
     * [Creating a Tenant (Environment)](overview-1/use-cases/tenant-environment/README.md)

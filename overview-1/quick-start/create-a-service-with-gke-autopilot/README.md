@@ -10,7 +10,7 @@ Now you need to create a DuploCloud Service on top of your Infrastructure and co
 
 Alternatively, you can finish this tutorial by:
 
-* [Creating a DuploCloud Service using GCE's GKE S](../../use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-standard-service.md)[tandard. ](../../use-cases/creating-an-infrastructure-and-plan-for-gcp/creating-gke-standard-service.md)
+* [Creating a DuploCloud Service using GCE's GKE S](broken-reference)[tandard. ](broken-reference)
 
 For a comparison of the benefits of GKE Autopilot vs. GKE Standard, consult this [Google Cloud article](https://cloud.google.com/kubernetes-engine/docs/resources/autopilot-standard-feature-comparison).
 
