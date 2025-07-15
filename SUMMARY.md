@@ -268,6 +268,7 @@
     * [Cloud Run Service](overview-1/gcp-services/cloud-run-service.md)
     * [Cloud Scheduler](overview-1/gcp-services/s3-bucket-1.md)
     * [Cloud Storage](overview-1/gcp-services/s3-bucket-2.md)
+    * [Dynamic NAT Port Allocation](overview-1/gcp-services/dynamic-nat-port-allocation.md)
     * [Node Pools](overview-1/gcp-services/node-pools.md)
     * [Pub/Sub](overview-1/gcp-services/s3-bucket-3.md)
     * [GCP Secrets Manager](overview-1/gcp-services/gcp-secrets-manager.md)
