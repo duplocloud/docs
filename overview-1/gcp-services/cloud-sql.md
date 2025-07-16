@@ -4,20 +4,18 @@ description: Adding SQL Databases in DuploCloud
 
 # Cloud SQL
 
+DuploCloud supports creating and managing Cloud SQL databases in Google Cloud Platform (GCP) through the DuploCloud Portal. You can provision **MySQL**, **PostgreSQL**, or **SQL Server** instances using preconfigured tiers or custom node types. This allows you to tailor your database setup for performance, cost, or compliance requirements including the ability to deploy dedicated PostgreSQL nodes using custom vCPU and memory settings.
+
 ## Creating a Cloud SQL database
-
-Use this procedure to create:
-
-* MySQL databases
-* SQL databases with PostGres engines
-* SQL databases with SQLServer engines
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud SQL**.
 2.  Click **Add**. The **Add SQL DB** page displays. \
 
 
     <figure><img src="../../.gitbook/assets/CloudSQLDB create.png" alt=""><figcaption><p>The <strong>Add SQL DB</strong> page in the DuploCloud Portal</p></figcaption></figure>
-3. Complete the fields (**Name**, **Disk Size**, **SQL Version**, **Tier**, **Root Password**) as required.
+3.  Complete the fields as required.
+
+    <table data-header-hidden><thead><tr><th width="192"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a name for the Cloud SQL database. This will be used as the resource identifier.</td></tr><tr><td><strong>SQL Version</strong></td><td>Select the database engine and version to use (e.g., <strong>PostgreSQL 15</strong>, <strong>MySQL 8</strong>).</td></tr><tr><td><strong>Tier</strong></td><td>Select a predefined machine type (e.g., <strong>1 vCPU 3.75 GB</strong>) or choose <strong>Custom Node</strong> and specify a custom machine tier by entering it manually in the <strong>Other Tier</strong> field. Refer to <a href="https://cloud.google.com/sql/docs/postgres/instance-settings">GCP Instance Settings</a> to find valid tier names.</td></tr><tr><td><strong>Root Password</strong></td><td>Enter a password for the root/admin database user.</td></tr><tr><td><strong>Disk Size (in GB)</strong></td><td>Enter the disk size for the Cloud SQL instance.</td></tr><tr><td><strong>Labels</strong></td><td>(Optional) Add key-value pairs to organize or tag your database resources.</td></tr></tbody></table>
 4. Click **Create**.&#x20;
 
 ## Viewing a Cloud SQL database
