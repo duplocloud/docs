@@ -8,12 +8,6 @@ description: Create and manage Google Cloud Task queues from the DuploCloud Port
 
 DuploCloud simplifies Google Cloud Tasks by allowing you to create and manage task queues and individual tasks directly from the Portal. This lets you easily incorporate background processing into your GCP workloads without writing scripts or configuring the service manually in Google Cloud.
 
-## Prerequisites
-
-Before creating a queue:
-
-* [Enable the Cloud Tasks API in your GCP project.](https://cloud.google.com/service-usage/docs/enable-disable)
-
 ## Creating a Cloud Task Queue
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud Tasks**.
