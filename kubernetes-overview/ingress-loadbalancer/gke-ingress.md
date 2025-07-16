@@ -23,11 +23,9 @@ Before you can create an Ingress, you must create the following DuploCloud resou
 * **GKE Standard** users: create a DuploCloud **Tenant**, **Node Pool**, and **Service**.
 * **GKE Autopilot** users: create a DuploCloud **Tenant**, and **Service**.&#x20;
 
-See the DuploCloud GCP User Guide for steps on how to create [Tenants](https://docs.duplocloud.com/docs/overview-1/use-cases/tenant-environment), [Node Pools](../../overview-1/gcp-services/node-pools.md) and [Services](https://docs.duplocloud.com/docs/overview-1/gcp-services/containers). Once your Tenant and Service are deployed, you can add and configure a Load Balancer listener.
+See the [DuploCloud GCP User Guide](../../overview-1/) for steps on how to create Tenants, Node Pools and Services. Once your Tenant and Service are deployed, you can add and configure a Load Balancer listener.
 
 ## Adding a Load Balancer listener with Kubernetes ClusterIP
-
-Add a Load Balancer listener that uses Kubernetes (K8s) ClusterIP.&#x20;
 
 1. In the DuploCloud Portal, navigate **Kubernetes** -> **Services.**
 2. On the **Services** page, select the Service name from the **NAME** column.
@@ -46,7 +44,7 @@ Add a Load Balancer listener that uses Kubernetes (K8s) ClusterIP.&#x20;
 
 ## Creating a GCP Managed Certificate (optional)
 
-To enable SSL, create a GCP-managed certificate resource in the application namespace.
+To enable SSL, create a GCP-managed certificate resource in the application namespace, as shown in the example below.
 
 ```
 apiVersion: networking.gke.io/v1
@@ -61,49 +59,49 @@ spec:
 
 ## Adding a Kubernetes Ingress
 
-Once a Service and Load Balancer are deployed, add an Ingress:
+Once a Service and Load Balancer are deployed, complete the following steps to add an Ingress:
+
+### Configuring the Ingress
 
 1. Select **Kubernetes** -> **Ingress** from the navigation pane.
 2. Click **Add**. The **Add Kubernetes Ingress** page displays.
-3. Enter an **Ingress Name**.
-4. From the **Ingress Controller** list box, select **GCE.**
-5. From the **Visibility** list box, select **Internal Only** or **Public**.&#x20;
-6. Enter your DNS prefix in the **DNS Prefix** field.
-7.  Select your ARN from the **Certificate ARN** list box. \
 
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (670).png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page </p></figcaption></figure></div>
 
-    <div align="left"><figure><img src="../../.gitbook/assets/NEW INGRESS.png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page </p></figcaption></figure></div>
-8. If you have [created a GCP managed cert](gke-ingress.md#create-gcp-managed-certificate-optional)[ificate](gke-ingress.md#create-a-gcp-managed-certificate-optional), add the following annotations in the **Annotations** field to link the Ingress with your GCP-managed certificate
+1. Complete the fields to configure the Ingress:
 
-```
-"networking.gke.io/managed-certificates" = "my-managed-cert",
-"kubernetes.io/ingress.allow-http" = "false"
-```
+<table data-header-hidden><thead><tr><th width="232.888916015625">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Ingress Name</strong></td><td>Enter a unique name for your Ingress.</td></tr><tr><td><strong>Ingress Controller</strong></td><td>Select <strong>GCE</strong> to use the Google Cloud Ingress Controller for GKE.</td></tr><tr><td><strong>Visibility</strong></td><td>Choose <strong>Internal Only</strong> or <strong>Public</strong> to define load balancer visibility.</td></tr><tr><td><strong>DNS Prefix</strong></td><td>Specify the DNS prefix for the Ingress (e.g., <code>myapp</code>).</td></tr><tr><td><strong>TLS Hosts</strong></td><td>Enter the domain names to secure with TLS (e.g., <code>example.com,www.example.com</code>), separated by commas.</td></tr><tr><td><strong>TLS Secret Name</strong></td><td>Enter the Kubernetes TLS secret containing the certificate and key. Must exist in the Ingress namespace.</td></tr><tr><td><strong>Annotations</strong></td><td>Optional: Add Kubernetes annotations in <code>key=value</code> format. Use this to configure Ingress behavior or link to a GCP Managed Certificate.</td></tr><tr><td><strong>Labels</strong></td><td>Optionally, enter labels to organize the Ingress resource.</td></tr></tbody></table>
 
-9. Enter labels in the **Labels** field, if required.&#x20;
-10. Click **Add** to add the Ingress.&#x20;
+{% hint style="info" %}
+**Note:**\
+The **Certificate ARN** field from previous versions has been removed. TLS is now configured using:
 
-{% hint style="warning" %}
-To add a Kubernetes Ingress, you must define [rules ](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-rules). Continue to the next section to add rules to Kubernetes Ingress and complete the Ingress setup.&#x20;
+* The **TLS Hosts** and **TLS Secret Name** fields
+*   Or annotations such as:
+
+    ```
+    bashCopyEditnetworking.gke.io/managed-certificates=my-managed-cert
+    kubernetes.io/ingress.allow-http=false
+    ```
+
+This update reflects GCP’s native Ingress TLS behavior.
 {% endhint %}
 
-### Configuring Kubernetes Ingress rules
-
-1. In the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule** pane displays.&#x20;
+4. Before you can save the Ingress, you must add at least one rule. In the **Ingress Rules** section, click **Add Rule**. The **Add Ingress Rule** pane displays.
 
 <div align="left"><figure><img src="../../.gitbook/assets/image (319).png" alt="" width="375"><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 
-2. Specify the **Path** (**/samplePath/** in the example).
-3. Optionally, specify the **Path Type** and **Host**. In this example, we specify a **Path Type** of **Exact**. Clicking the Info Tip icon ( <img src="../../.gitbook/assets/info_tip_black (1).png" alt="" data-size="line"> ) provides more information for these optional fields.
-4. From the **Service Name** list box, select the Service exposed through the K8S ClusterIP (**nginx-test** in the example). The **Container port** field is completed automatically.&#x20;
-5. Click **Add Rule**. The rule displays on the Add Kubernetes Ingress page. Repeat the preceding steps to add additional rules.
-6. Click **Add** to add the Kubernetes Ingress. The Ingress displays on the **Ingress** page.
+2. Complete the fields to configure the rule:
+
+<table data-header-hidden><thead><tr><th width="189.11102294921875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Path</strong></td><td>Enter the URL path to match (e.g., <code>/samplePath</code>).</td></tr><tr><td><strong>Path Type</strong></td><td>Select the path matching behavior, such as <code>Exact</code>, <code>Prefix</code>, or <code>ImplementationSpecific</code>.</td></tr><tr><td><strong>Host</strong></td><td>Optionally, enter the hostname to match (e.g., <code>api.example.com</code>).</td></tr><tr><td><strong>Service</strong></td><td>Select the Kubernetes Service to expose through the Ingress. Only Services using K8s ClusterIP are valid.</td></tr><tr><td><strong>Container Port</strong></td><td>Select the port from the Kubernetes service that ingress will use as backend port to serve the requests.</td></tr></tbody></table>
+
+3. Click **Add Rule** to add the rule to the Ingress. Repeat the steps to define additional rules as needed.
+4. After at least one rule is added, click **Add** to create the Ingress. Ingress creation will take a few minutes. Once the IP is attached to the Ingress, the Ingress displays on the **Ingress** page and you are ready to use your path- or host-based routing defined via Ingress.
+
+## Viewing an Ingress
+
+You can view the Ingresses you have created by navigating to **Kubernetes** -> **Ingress**.&#x20;
+
+Click on an Ingress name in the **NAME** column to view Ingress details.
 
 <figure><img src="../../.gitbook/assets/image (321).png" alt=""><figcaption><p><strong>Ingress</strong> page displaying the added Ingress</p></figcaption></figure>
-
-The Ingress creation will take a few minutes. Once the IP is attached to the Ingress, you are ready to use your path- or host-based routing defined via Ingress.
-
-## Viewing Ingress
-
-You can view the Ingresses you have created by navigating to **Kubernetes** -> **Ingres**s.&#x20;
-
