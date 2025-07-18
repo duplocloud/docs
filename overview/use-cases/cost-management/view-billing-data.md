@@ -6,6 +6,8 @@ description: View billing data and create billing alerts for AWS billing data
 
 From the DuploCloud portal, administrators can view account spending details by month, week, and Tenant. Non-administrator users can view billing data for a Tenant they have user access to.
 
+Discounts like [Compute Savings Plans](https://aws.amazon.com/savingsplans/compute-pricing/) are incorporated into the costs displayed on the dashboard. It shows what you will pay with the current discounts in place.
+
 In addition, DuploCloud allows you to set up billing alerts to monitor your cloud spending.&#x20;
 
 ## Prerequisites
