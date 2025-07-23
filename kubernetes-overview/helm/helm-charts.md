@@ -74,19 +74,13 @@ Deploy a Kubernetes cluster using a Helm Chart from the DuploCloud Platform.&#x2
 1. From the DuploCloud Portal, navigate to **Kubernetes** → **Helm**.
 2. Select the **Release** tab, and click **Add**. The **Add Helm Release** page displays
 
-<figure><img src="../../.gitbook/assets/Screenshot (476) (1).png" alt=""><figcaption><p>The <strong>Add Helm Release</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (676).png" alt=""><figcaption><p>The <strong>Add Helm Release</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
-3. In the **Name** field, enter a unique name for this Helm release (e.g., `nginx-release`).
-4. In the Release **Name** field, enter the name to identify the application deployment in Kubernetes (e.g., `nginx-release`).
-5. In the **Interval (MM: SS)** box, set the time interval for periodic reconciliation of the release (e.g., `02:00`).
-6. In the **Chart Name** field, specify the name of the Helm chart to use (e.g., `nginx`).
-7. In the **Version** field, specify the specific version of the Helm chart to deploy (e.g., `15.1.0`).
-8. From the **Reconcile Strategy** list box, select how Helm ensures the deployment stays consistent (e.g., `Chart Version`).
-9. From the **Source Type** list box, choose where the Helm chart is stored (e.g., `HelmRepository`).
-10. From the **Source Name** list box, select the name of the Helm repository or source.
-11. In the **Interval (MM: SS)** box, select the frequency with which the tool should check for changes in the repository and reconcile those changes in the Kubernetes cluster.
-12. In the **Values** field, add any custom configuration values in YAML format to override the defaults (e.g., replica count or enabling a service account).
-13. Click **Add**. The Helm release is deployed. To check the release status, navigate to **Kubernetes** -> **Helm**, and select the **Release** tab.&#x20;
+3. Complete the following fields.
+
+<table data-header-hidden><thead><tr><th width="195.33331298828125"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for this Helm release (e.g., <code>nginx-release</code>).</td></tr><tr><td><strong>Release Name</strong></td><td>Enter the name to identify the application deployment in Kubernetes (e.g., <code>nginx-release</code>).</td></tr><tr><td><strong>Interval (MM:SS)</strong></td><td>Set the time interval for periodic reconciliation of the release (e.g., <code>02:00</code>).</td></tr><tr><td><strong>Chart Name</strong></td><td>Specify the name of the Helm chart to use (e.g., <strong>nginx</strong>).</td></tr><tr><td><strong>Version</strong></td><td>Specify the specific version of the Helm chart to deploy (e.g., <strong>15.1.0</strong>).</td></tr><tr><td><strong>Reconcile Strategy</strong></td><td>Select how Helm ensures the deployment stays consistent (e.g., <strong>Chart Version</strong>).</td></tr><tr><td><strong>Source Type</strong></td><td>Choose where the Helm chart is stored (e.g., <strong>HelmRepository</strong>).</td></tr><tr><td><strong>Source Name</strong></td><td>Select the name of the Helm repository or source.</td></tr><tr><td><strong>Interval (MM:SS)</strong></td><td>Set how often the tool checks for updates in the repository and reconciles changes in the cluster (e.g., <strong>02:00</strong>).</td></tr><tr><td><strong>Values</strong></td><td>Add any custom configuration values in YAML format to override chart defaults (e.g., <strong>replicaCount: 2</strong>).</td></tr><tr><td><strong>ValuesFrom</strong></td><td>Optionally, specify an external source (e.g., a ConfigMap or Secret) to provide values, instead of entering them directly in the <strong>Values</strong> field.</td></tr></tbody></table>
+
+3. Click **Add**. The Helm release is deployed. To check the release status, navigate to **Kubernetes** -> **Helm**, and select the **Release** tab.&#x20;
 
 <figure><img src="../../.gitbook/assets/Screenshot (477) (1).png" alt=""><figcaption><p>The <strong>Release</strong> tab on the Kubernetes <strong>Helm</strong> page</p></figcaption></figure>
 
