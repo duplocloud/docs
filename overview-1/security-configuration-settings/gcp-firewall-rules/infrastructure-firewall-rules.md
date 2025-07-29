@@ -44,7 +44,7 @@ Edit or delete firewall rules directly from the DuploCloud Portal.&#x20;
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Click the infrastructure name in the **NAME** column.
 3. Select the **Firewall Rules** tab.
-4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the firewall rule you want to manage.
+4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2) (2).avif" alt="" data-size="line">) in the row of the firewall rule you want to manage.
 5.  Choose one of the following options:
 
     * **Edit**: Opens the **Update Firewall Rule** pane to modify the firewall rule configuration.
