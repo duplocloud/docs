@@ -16,7 +16,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [EKS Initial setup](creating-an-infrastructure-and-plan-for-aws/kubernetes-cluster/) and [upgrade](creating-an-infrastructure-and-plan-for-aws/upgrading-eks-version.md)
 * [ECS Initial setup](creating-an-infrastructure-and-plan-for-aws/ecs-setup/)
 * [Tenant](tenant-environment/)
-* [Hosts](hosts-vms/) and [Snapshots](hosts-vms/backups.md)
+* [Hosts](hosts-vms/) and [Snapshots](broken-reference)
 * [Auto Scaling host groups](hosts-vms/auto-scaling/auto-scaling-groups/)
 * [Kubernetes Jobs](../../kubernetes/jobs.md) and [CronJobs](../../kubernetes/cronjobs.md)
 * [Auditing](auditing.md)

@@ -36,7 +36,7 @@ You can view, edit, or deletes directly from the DuploCloud Portal.
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Select the **AWS Secrets** tab
-3.  Click the menu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the secret you want to manage.\
+3.  Click the menu icon (<img src="../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the secret you want to manage.\
 
 
     <figure><img src="../../.gitbook/assets/Screenshot (607).png" alt=""><figcaption><p><strong>AWS Secrets</strong> tab with the secret menu options highlighted</p></figcaption></figure>

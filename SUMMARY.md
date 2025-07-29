@@ -109,7 +109,7 @@
       * [Configure Auto-reboot](overview/use-cases/hosts-vms/configure-auto-reboot.md)
       * [Create Amazon Machine Image (AMI)](overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md)
       * [Hibernate an EC2 Host](overview/use-cases/hosts-vms/hibernate-an-ec2-host.md)
-      * [Snapshots](overview/use-cases/hosts-vms/backups.md)
+      * [EC2 Snapshots](overview/use-cases/hosts-vms/ec2-snapshots.md)
       * [Taints for EKS Nodes](overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md)
       * [Disable Source Destination Check](overview/use-cases/hosts-vms/disable-source-destination-check.md)
     * [Auditing](overview/use-cases/auditing.md)
