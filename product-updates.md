@@ -29,19 +29,23 @@ For assistance with the new UI, contact your [DuploCloud Support team](welcome-t
 ## Q2 2025
 
 * AWS
+  * [External DNS Infra Setting](overview/aws-systems-settings/aws-infrastructure-settings.md#infrastructure-settings) for managing DNS record behavior.
   * Support for managing [Amazon CloudFront](aws-user-guide/aws-services/cloudfront.md) distributions through DuploCloud.
 * GCP
   * Support for [GCP Cloud Run Service](overview-1/gcp-services/cloud-run-service.md).
+  * Support for [dynamic NAT port allocation](overview-1/gcp-services/dynamic-nat-port-allocation.md) during GCP infrastructure creation.
+  * Support for [Cloud Tasks](overview-1/gcp-services/gcp-cloud-task-support.md) integration.
 * Kubernetes
   * Support for [ArgoCD integration](introduction-to-ci-cd/argocd.md), enabling GitOps deployment and management workflows within DuploCloud.
+  * Support for [ResourceQuota](kubernetes-overview/resourcequotas.md) to manage namespace resource limits.
 * General
   * [Pulumi integration support ](pulumi-user-guide/)for managing DuploCloud infrastructure as code.
   * Usability improvements and a new Explain Flame Graph feature were added to [DuploCloud Advanced Observability Suite](diagnostics-overview/advanced-observability-suite.md).
-    * Configure DuploCloud to [ignore DNS record prefixes](duplocloud-prerequisites/resolving-dns-failures.md#configuring-duplocloud-to-ignore-dns-entries), allowing you to safely add custom entries without risk of deletion.
-    * [Customization for welcome emails](access-control/user-email-notifications.md#customizing-welcome-emails-for-new-users) sent to new users upon account creation.
-    * [Automatic email alerts when new Admin users are added.](access-control/user-email-notifications.md#configuring-new-admin-user-email-notifications)
-    * [Customizable Kibana URL for Audit Logs.](diagnostics-overview/standard-observability-suite/setup/auditing/custom-kibana-audit-url.md)
-    * [Customizable Kibana URL for Logging Views.](diagnostics-overview/standard-observability-suite/setup/logging-setup/custom-kibana-logging-url.md)
+  * Configure DuploCloud to [ignore DNS record prefixes](duplocloud-prerequisites/resolving-dns-failures.md#configuring-duplocloud-to-ignore-dns-entries), allowing you to safely add custom entries without risk of deletion.
+  * [Customization for welcome emails](access-control/user-email-notifications.md#customizing-welcome-emails-for-new-users) sent to new users upon account creation.
+  * [Automatic email alerts when new Admin users are added.](access-control/user-email-notifications.md#configuring-new-admin-user-email-notifications)
+  * [Customizable Kibana URL for Audit Logs.](diagnostics-overview/standard-observability-suite/setup/auditing/custom-kibana-audit-url.md)
+  * [Customizable Kibana URL for Logging Views.](diagnostics-overview/standard-observability-suite/setup/logging-setup/custom-kibana-logging-url.md)
 
 ## Q1 2025
 
