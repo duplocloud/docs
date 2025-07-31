@@ -343,6 +343,7 @@
         * [Azure Managed SQL Instances](overview-2/azure-services/databases/mysql-server-database/azure-managed-instance.md)
       * [MySQL Flexible Server](overview-2/azure-services/databases/mysql-flexible-server.md)
       * [Redis database](overview-2/azure-services/databases/redis-database.md)
+      * [CosmosDB](overview-2/azure-services/databases/cosmosdb.md)
     * [Docker Web Application](overview-2/azure-services/docker-web-application.md)
     * [Databricks](overview-2/azure-services/databricks.md)
     * [Data Factory](overview-2/azure-services/data-factory.md)
