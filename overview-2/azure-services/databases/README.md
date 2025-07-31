@@ -12,6 +12,7 @@ DuploCloud supports the following databases for Microsoft Azure. Use the procedu
 * [MySQL Server](mysql-server-database/)
 * [MySQL Flexible Server](mysql-flexible-server.md)
 * [Redis](redis-database.md)
+* [CosmosDB](cosmosdb.md)
 
 {% hint style="info" %}
 When using Azure Databases, select a Tenant other than the **Default** Tenant.
