@@ -274,7 +274,7 @@ For assistance with the new UI, contact your [DuploCloud Support team](welcome-t
   * [Enable logging for ECS containers](overview/use-cases/creating-an-infrastructure-and-plan-for-aws/ecs-setup/enable-ecs-logging.md).
   * Define [S3 bucket policies](overview/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
   * Support for [Lambda Layers](overview/aws-services/lambda/lambda-layers.md) has been added.
-  * [CloudWatch EventBridge](aws-user-guide/aws-services/cloud-watch.md) rules and targets are supported.
+  * [CloudWatch EventBridge](broken-reference) rules and targets are supported.
   * The CloudFront feature and associated UI tab have been relocated in the DuploCloud Portal from the **Cloud Services -> App Integration** menu item to the **Cloud Services -> Networking** menu item.
 * Azure
   * Support for [Redis databases](overview-2/azure-services/databases/redis-database.md) is available.

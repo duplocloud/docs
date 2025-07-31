@@ -35,7 +35,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [Data Pipeline](data-pipeline.md)
 * [Elastic File System (EFS)](../../aws-user-guide/aws-services/elastic-file-system-efs/)
 * [EMR Serverless](emr-serverless.md)
-* [EventBridge](../../aws-user-guide/aws-services/cloud-watch.md)
+* [EventBridge](broken-reference)
 * [Ingress (Kubernetes)](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md)
 * [IoT (Internet of Things)](iot-internet-of-things.md)
 * [Kafka Cluster](../../aws-user-guide/aws-services/kafka-cluster.md)
