@@ -17,33 +17,29 @@ You must add a Key/Value pair in the DuploCloud Portal's **System Config** setti
 3.  Click **Add**. The **Add Config** pane displays.\
 
 
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/L5.png" alt=""><figcaption><p><strong>Add Config</strong> pane</p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/L5.png" alt=""><figcaption><p><strong>Add Config</strong> pane</p></figcaption></figure></div>
 
 
 4. From the **Config Type** list box, select **Other**. The **Other Config Type** field displays.
-5. In the **Other Config Type** field, enter **AppConfig**.
-6. In the **Key** field, enter **ListAllLambdaLayers**.
-7. In the **Value** field, enter **True**.
+5. In the **Other Config Type** field, select **AppConfig**.
+6. In the **Key** field, enter `ListAllLambdaLayers`.
+7. In the **Value** field, enter `true`.
 8. Click **Submit**. The **Key**/**Value** pair is displayed in the **System Config** tab.
 
-<div align="left">
+<div align="left"><figure><img src="../../../.gitbook/assets/L4.png" alt=""><figcaption><p><strong>System Settings</strong> with <strong>ListAllLambdaLayers AppConfig Type</strong> set to <strong>Value</strong> of <strong>True</strong></p></figcaption></figure></div>
 
-<figure><img src="../../../.gitbook/assets/L4.png" alt=""><figcaption><p><strong>System Settings</strong> with <strong>ListAllLambdaLayers AppConfig Type</strong> set to <strong>Value</strong> of <strong>True</strong></p></figcaption></figure>
+After you set `ListAllLambdaLayers` to `true`:
 
-</div>
+* Layer names prefixed with `duplo-` display for all Tenants in the DuploCloud Portal.
+* Layer names prefixed with `duploservices-TENANT_NAME` display in the `TENANT_NAME` Tenant.
 
-After you set **ListAllLambdaLayers** to **True**:
+## Creating Lambda Layers
 
-* Layer names prefixed with `DUPLO-` display for all Tenants in the DuploCloud Portal.
-* Layer names prefixed with `DUPLOSERVICES-` display in the appropriate Tenant.
+Follow the [AWS instructions to create layers](https://docs.aws.amazon.com/lambda/latest/dg/creating-deleting-layers.html#layers-create).
 
 ## Adding Lambda Layers to a Lambda Function
 
-Before you add a Lambda Layer, you must have defined at least one [Lambda Function](./).
+You can add layers to a new or existing [Lambda Function](./). For example, to add a layer to an existing function:
 
 1. In the DuploCloud Portal, navigate to C**loud Services** -> **Serverless**.
 2. In the **Lambda** tab, select the Lambda Function to which you want to add Lambda Layers.&#x20;
@@ -52,17 +48,9 @@ Before you add a Lambda Layer, you must have defined at least one [Lambda Functi
     \
 
 
-    <div align="left">
+    <div align="left"><figure><img src="../../../.gitbook/assets/lam_eph5 (1).png" alt=""><figcaption><p>Lambda Layers area with add (<strong>+</strong>) and <strong>Delete</strong> options<br><br></p></figcaption></figure></div>
 
-    <figure><img src="../../../.gitbook/assets/lam_eph5 (1).png" alt=""><figcaption><p>Lambda Layers area with add (<strong>+</strong>) and <strong>Delete</strong> options<br><br></p></figcaption></figure>
-
-    </div>
-
-    <div align="left">
-
-    <figure><img src="../../../.gitbook/assets/lam_eph6.png" alt=""><figcaption><p><strong>Add a Lambda Layer</strong> pane<br></p></figcaption></figure>
-
-    </div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/lam_eph6.png" alt=""><figcaption><p><strong>Add a Lambda Layer</strong> pane<br></p></figcaption></figure></div>
 5. From the **Layer** list box, select the Lambda Layer to add.
 6. From the **Version** list box, select the layer version.
 7. Click **Add Layer**. The layer you added is displayed in the **Layers** area of the **Edit Lambda Function** page.
