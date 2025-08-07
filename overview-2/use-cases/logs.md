@@ -1,7 +1,24 @@
 # Logs
 
-All the activity in the DuploCloud is logged which can be used for auditing. All the logs are saved into Elasticsearch and can be visualized in Kibana. The URL for the Kibana is available under Diagnostics.
+DuploCloud provides centralized logging and observability features that help you monitor AWS services, tenants, and individual applications.
 
-The Elasticsearch & Kibana will be sitting inside the VPC and cannot be accessed from outside. Connect to the VPN and access these URL.
+**Standard Observability Logs**\
+View tenant-scoped or system-wide logs using OpenSearch or Kibana dashboards:
 
-![](https://duplocloud.com/wp-content/uploads/2021/11/audit-logs.png)
+* **Observability -> Standard -> Logging**
+* **Administrator -> Observability -> Standard -> Logging**
+
+&#x20;See [Standard Observability Logs](../../diagnostics-overview/standard-observability-suite/logs.md) documentation.
+
+**Advanced Observability Suite (AOS) Logs**\
+Access enhanced Grafana dashboards with live logs, traces, and detailed queries:
+
+* **Observability -> Advanced -> Dashboard -> Logs**
+* **Administrator -> Observability -> Advanced -> Dashboard -> Logs**
+
+See [Advanced Observability Suite Logs](../../diagnostics-overview/advanced-observability-suite/logging-with-loki.md) documentation.
+
+**Container Logs**\
+For Kubernetes workloads, view logs per container:
+
+See the Azure [Managing Kubernetes Containers ](../azure-services/containers-and-services/aks-containers-and-services/#managing-kubernetes-containers)documentation.

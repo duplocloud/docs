@@ -21,7 +21,7 @@ Logs are crucial for observability, offering detailed, time-stamped insights int
 
 Using the Grafana Logging dashboard, you can quickly drill down into logs to investigate issues, explore associated traces for context, and analyze metrics to optimize performance.
 
-## Displaying Logs in the DuploCloud Advanced Observability Suite (AOS)
+## Viewing Logs in the DuploCloud Advanced Observability Suite (AOS)
 
 1.  In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** (Administrator AOS Dashboard) or **Observability** -> **Advanced** -> **Dashboard** (Tenant AOS Dashboard). The AOS Dashboard displays.\
 
@@ -38,6 +38,18 @@ Using the Grafana Logging dashboard, you can quickly drill down into logs to inv
 
 4. Adjust the time interval list box in the top right corner of the Grafana dashboard (**Last 30 minutes** in the above graphic) to display data for the period of your choice.
 5. Refine your view by selecting a specific namespace, Pod, or stream from the **Namespace**, **Pod**, and **Stream** list boxes near the top of the page, or using the default values of **All**.
+
+## Viewing Service-Specific Logs
+
+You can quickly access logs filtered for a specific Service. This helps you troubleshoot issues without manually setting filters.
+
+To view logs for a Service:
+
+1. Navigate to **Kubernetes** → **Services** (or the relevant service list) in the DuploCloud Portal.
+2. Click the **menu icon** (⋮) next to the service you want to inspect.
+3. Click **Logs**.
+
+DuploCloud displays a logs dashboard pre-filtered to show logs for the Service. You can adjust the filters or expand the time window to explore further
 
 ## Exploring Logs in Detail
 

@@ -6,15 +6,46 @@ description: >-
 
 # Logs
 
-DuploCloud Standard Observability Suite uses built-in OpenSearch. Filebeat is the collector deployed in each host.&#x20;
+DuploCloud Standard Observability Suite uses built-in OpenSearch for log storage and search. Filebeat is the collector deployed on each host to gather logs from containers and other system services.&#x20;
 
-In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Logs**.&#x20;
+Logs can be accessed at the platform level (by Administrators), at the Tenant level, or directly from a specific Service using the Logs link.
 
-Use the **Select Tenant** list box to select a **Tenant**. In the Tenant context, ready-made filters are available for easy access to logs per Service in that Tenant.&#x20;
+## Viewing Platform Logs
 
-Create additional filters using the Kibana interface. DuploCloud's Filebeat collector automatically labels the logs according to Tenant, Service, containers, and other related metadata. &#x20;
+Use this option to view logs across all tenants or to troubleshoot issues at the platform level.
 
-<figure><img src="../../.gitbook/assets/LOGGING (2).png" alt=""><figcaption></figcaption></figure>
+1. Navigate to **Administrator** → **Observability** → **Standard** → **Logging** in the DuploCloud Portal.
+
+This page includes two tabs:
+
+* **Main**: Shows logs using an embedded OpenSearch dashboard provided by DuploCloud. You can select a Tenant and use filters to find the logs you need.
+* **Kibana**: Available if your organization has set up a custom Kibana (OpenSearch) URL. This lets you view logs with more advanced tools and features.
+
+<figure><img src="../../.gitbook/assets/Screenshot (721).png" alt=""><figcaption></figcaption></figure>
+
+## Viewing Tenant Logs
+
+Use this view to access logs scoped to a single tenant.
+
+1. Navigate to **Observability** → **Standard** → **Logging**.
+
+In this view:
+
+* Logs are automatically filtered to show only data for the current tenant.
+* At the top, use the **Service** dropdown to filter logs for a specific service.
+* Alternatively, click **Search by Filters** to create custom filters for more precise log searching.
+
+<figure><img src="../../.gitbook/assets/Screenshot (724).png" alt=""><figcaption></figcaption></figure>
+
+## Viewing Service-Specific Logs
+
+You can quickly access logs filtered for a Specific service directly from the Service details page. This shortcut helps you troubleshoot service issues faster without manually applying filters.
+
+To view logs for a Service:
+
+1. Navigate to **Kubernetes** → **Services** (or the relevant service list) in the DuploCloud Portal.
+2. Click the menu icon (<img src="../../.gitbook/assets/menu icon (20).avif" alt="" data-size="line">) next to the Service you want to view logs for.
+3. Select **Logs**. This will open a logs dashboard pre-filtered to show logs for that specific service.
 
 ## Application log retention policy
 
