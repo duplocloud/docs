@@ -4,25 +4,26 @@ description: Display logs for the DuploCloud Portal, components, services, and c
 
 # Display logs
 
-## Displaying logs for Service and Tenant with the Central Logging Dashboard
+DuploCloud provides centralized logging and observability features that help you monitor AWS services, tenants, and individual applications.
 
-The central logging dashboard displays detailed logs for Service and Tenant.  The dashboard uses Kibana and preset filters that you can modify.
+**Standard Observability Logs**\
+View tenant-scoped or system-wide logs using OpenSearch or Kibana dashboards:
 
-1. In the DuploCloud Portal, navigate to **Observability** -> **Standard** -> **Logging**.
-2. Select the Tenant from the **Tenant** list box at the top of the DuploCloud Portal.
-3. Select the Service from the **Select Service** list box.
-4. Modify the **DQL** to customize Tenant selection, if needed.
-5. Adjust the date range by clicking **Show dates**.
-6. **Add filter**s, if needed.
+* **Observability -> Standard -> Logging**
+* **Administrator -> Observability -> Standard -> Logging**
 
-DuploCloud pre-filters logs per Tenant. All DuploCloud logs are stored in a single index. You can see any Tenant or combination of Tenants (using the DQL option) but the central logging control plane is shared, with no per-Tenant access.&#x20;
+&#x20;See [Standard Observability Logs](../../../diagnostics-overview/standard-observability-suite/logs.md) documentation.
 
-{% hint style="success" %}
-Confirm that your Hosts and Services are running or runnable to view relevant log data.
-{% endhint %}
+**Advanced Observability Suite (AOS) Logs**\
+Access enhanced Grafana dashboards with live logs, traces, and detailed queries:
 
-<figure><img src="../../../.gitbook/assets/container LOGS.png" alt=""><figcaption><p>The Central <strong>Logging</strong> Dashboard in the DuploCloud Portal for a selected Service and Tenant</p></figcaption></figure>
+* **Observability -> Advanced -> Dashboard -> Logs**
+* **Administrator -> Observability -> Advanced -> Dashboard -> Logs**
 
-## Displaying Container Logs
+See [Advanced Observability Suite Logs](../../../diagnostics-overview/advanced-observability-suite/logging-with-loki.md) documentation.
 
-See [Kubernetes Containers](../../aws-services/containers/eks-containers-and-services/#kubernetes-containers) for information on displaying logs per container.
+**Container Logs**\
+For Kubernetes workloads, logs can be viewed per container:
+
+See [Managing Kubernetes Containers ](../../aws-services/containers/eks-containers-and-services/#managing-kubernetes-containers)documentation.
+
