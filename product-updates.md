@@ -26,15 +26,53 @@ We’re excited to inform you that we’re rolling out a new user interface (UI)
 
 For assistance with the new UI, contact your [DuploCloud Support team](welcome-to-duplocloud/duplocloud-support-model.md).
 
+## Q3 2025
+
+AWS
+
+* [OpenSearch upgrade support](overview/aws-services/elasticsearch.md#managing-an-opensearch-instance) — Upgrade OpenSearch versions within DuploCloud.
+* [AWS Secrets Manager support](overview/aws-services/aws-secrets-support.md) — Manage secrets using AWS Secrets Manager.
+* [EC2 Snapshots](overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.
+* [Ingress: Multi-certificate support](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB–managed Ingress.
+
+Azure
+
+* [Deleted Key Vaults listing](overview-2/azure-services/key-vault.md#managing-deleted-azure-key-vaults) — View and recover or purge deleted Azure Key Vaults.
+* [Azure CosmosDB support](overview-2/azure-services/databases/cosmosdb.md) — Provision and manage CosmosDB resources in Azure.
+
+GCP
+
+* [Ingress TLS annotation support](kubernetes-overview/ingress-loadbalancer/gke-ingress.md#configuring-the-ingress) — Use annotations to configure TLS host and secret.
+* [PostgreSQL dedicated node types](overview-1/gcp-services/cloud-sql.md) — Use dedicated nodes for PostgreSQL deployments.
+* [Disable NAT during infra creation](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/) — Option to skip NAT setup when creating infra.
+* [GCP Secret Manager support](overview-1/gcp-services/gcp-secrets-manager.md) — Manage secrets using GCP Secret Manager service.
+* [Firewall rule support](overview-1/security-configuration-settings/gcp-firewall-rules/) — Define and manage network rules at the infrastructure and tenant levels.
+* [Security Command Center](overview-1/gcp-services/gcp-security-command-center.md) — Integration with GCP Security Command Center.
+* [Standalone SSL certificates](overview-1/prerequisites/create-managed-ssl-certificates-for-gcp.md) — Support for GCP Certificate Manager SSL certs.
+
+Kubernetes
+
+* [Helm Repo with OCI support](kubernetes-overview/helm/oci-helm-repositories.md) — Support for adding Helm repositories from OCI-compliant registries.
+* [HelmRelease with `ValuesFrom`](kubernetes-overview/helm/helm-charts.md) — Pull Helm chart values from external sources.
+
+General
+
+* [PermissionSet with Priority](security-and-compliance/access-control-2/permission-sets.md) — Control policy precedence using numeric priority.
+* [Multiple portal logins](access-control/multiple-portal-login-options.md)— Add and switch between portals on the login screen.
+* [Simpler logging navigation](diagnostics-overview/standard-observability-suite/logs.md#viewing-service-specific-logs) — Navigate directly from service pages to logs.
+
 ## Q2 2025
 
 * AWS
   * [External DNS Infra Setting](overview/aws-systems-settings/aws-infrastructure-settings.md#infrastructure-settings) for managing DNS record behavior.
   * Support for managing [Amazon CloudFront](aws-user-guide/aws-services/cloudfront.md) distributions through DuploCloud.
 * GCP
+  * Support for defining [GCP Maintenance Windows](overview-1/use-cases/gke-maintenance-windows.md).
   * Support for [GCP Cloud Run Service](overview-1/gcp-services/cloud-run-service.md).
   * Support for [dynamic NAT port allocation](overview-1/gcp-services/dynamic-nat-port-allocation.md) during GCP infrastructure creation.
   * Support for [Cloud Tasks](overview-1/gcp-services/gcp-cloud-task-support.md) integration.
+* Azure
+  * Support for managing [infra secrets in Azure](overview-2/azure-services/infra-secrets.md).
 * Kubernetes
   * Support for [ArgoCD integration](introduction-to-ci-cd/argocd.md), enabling GitOps deployment and management workflows within DuploCloud.
   * Support for [ResourceQuota](kubernetes-overview/resourcequotas.md) to manage namespace resource limits.
