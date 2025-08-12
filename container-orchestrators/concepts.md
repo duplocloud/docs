@@ -8,7 +8,7 @@ description: Key terms and concepts in DuploCloud container orchestration
 The following concepts do not apply to ECS. ECS uses a proprietary policy model, which is explained in a [later section](../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/ecs-setup/).
 {% endhint %}
 
-Familiarize yourself with these DuploCloud concepts and terms before deploying containerized applications in DuploCloud. See the [DuploCloud Common Concepts](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/) section for a description of DuploCloud Infrastructures, Tenants, Hosts, and Services.
+Familiarize yourself with these DuploCloud concepts and terms before deploying containerized applications in DuploCloud. See the [DuploCloud Common Concepts](../welcome-to-duplocloud/application-focused-interface-duplocloud-architecture/duplocloud-common-components/) section for a description of DuploCloud Infrastructures, Tenants, Hosts, and Services.
 
 ## Container Orchestration Terms
 

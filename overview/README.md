@@ -14,7 +14,7 @@ You can log in to the DuploCloud portal, using single sign-on (SSO), with your G
 
 Before getting started, complete the following steps:
 
-* Read the [DuploCloud Platform Overview](../) and learn about DuploCloud terms like [Infrastructure](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/infrastructure.md), [Plan](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/plan.md), and [Tenant](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md)
+* Read the [DuploCloud Platform Overview](../) and learn about DuploCloud terms like [Infrastructure](../welcome-to-duplocloud/application-focused-interface-duplocloud-architecture/duplocloud-common-components/infrastructure.md), [Plan](../welcome-to-duplocloud/application-focused-interface-duplocloud-architecture/duplocloud-common-components/plan.md), and [Tenant](../welcome-to-duplocloud/application-focused-interface-duplocloud-architecture/duplocloud-common-components/tenant.md)
 * Set up the DuploCloud Portal
 * Read the [Access Control](../access-control/) section and ensure at least one person has administrator access
 * Connect to the DuploCloud Slack channel for support from the DuploCloud team

@@ -91,7 +91,7 @@ Select the **Kubernetes** tab to display information about the imported Kubernet
 
 ## Creating a WebServer Service with Cloud as On-Premises
 
-Create a WebServer Service in the DuploCloud portal by selecting **OnPrem** from the **Cloud** list box while creating a [Kubernetes Service](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/app-service-and-cloud-services.md).
+Create a WebServer Service in the DuploCloud portal by selecting **OnPrem** from the **Cloud** list box while creating a [Kubernetes Service](../welcome-to-duplocloud/application-focused-interface-duplocloud-architecture/duplocloud-common-components/app-service-and-cloud-services.md).
 
 <figure><img src="../.gitbook/assets/image (426).png" alt=""><figcaption><p>The <strong>Basic Options</strong> page to add a Kubernetes Service with the <strong>Cloud</strong> list box set to <strong>OnPrem</strong></p></figcaption></figure>
 
