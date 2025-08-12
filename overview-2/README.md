@@ -14,7 +14,7 @@ Before you begin, ensure that:
 
 * DuploCloud Portal has been set up, and you have access to it.
 * You can access your individual Slack channel for 24/7 support from the DuploCloud team.
-* Read the [DuploCloud Platform Overview](../) and learn about DuploCloud terms: [Infrastructure](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/infrastructure.md), [Plan](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/plan.md), and [Tenant](../welcome-to-duplocloud/application-focussed-interface/duplocloud-common-components/tenant.md).
+* Read the [DuploCloud Platform Overview](../) and learn about DuploCloud terms: [Infrastructure](../welcome-to-duplocloud/application-focused-interface-duplocloud-architecture/duplocloud-common-components/infrastructure.md), [Plan](../welcome-to-duplocloud/application-focused-interface-duplocloud-architecture/duplocloud-common-components/plan.md), and [Tenant](../welcome-to-duplocloud/application-focused-interface-duplocloud-architecture/duplocloud-common-components/tenant.md).
 
 Behind the scenes, a topology is created similar to the following low-level configuration in Azure.
 
