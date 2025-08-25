@@ -377,6 +377,7 @@
     * [Mirantis Lens](kubernetes-overview/kubectl/mirantis-lens.md)
   * [Configs and Secrets](kubernetes-overview/configs-and-secrets/README.md)
     * [Setting Kubernetes Secrets](kubernetes-overview/configs-and-secrets/setting-kubernetes-secrets.md)
+    * [Backing Up and Restoring Kubernetes Secrets and ConfigMaps](kubernetes-overview/configs-and-secrets/backing-up-and-restoring-kubernetes-secrets-and-configmaps.md)
     * [Creating a Kubernetes ConfigMap](kubernetes-overview/configs-and-secrets/creating-a-kubernetes-configmap.md)
     * [Setting Environment Variables (EVs) from a ConfigMap or Secret](kubernetes-overview/configs-and-secrets/setting-environment-variables-from-config.md)
     * [Mounting ConfigMaps and Secrets as files](kubernetes-overview/configs-and-secrets/mounting-config-as-files.md)
