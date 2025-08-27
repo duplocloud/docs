@@ -41,21 +41,32 @@ provider "duplocloud" {}
 
 ### AWS Provider
 
-The DuploCloud provider has a [data resource for JIT admin access to AWS](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/admin\_aws\_credentials). This is used to inject credentials into the [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs).  This ensures the AWS credentials you are using are never stored locally and is always in scope of the correct AWS account with a dedicated admin role.&#x20;
+The DuploCloud provider has a [data resource for JIT admin access to AWS](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/admin_aws_credentials). This is used to inject credentials into the [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs).  This ensures the AWS credentials you are using are never stored locally and is always in scope of the correct AWS account with a dedicated admin role.&#x20;
 
 ```hcl
 data "duplocloud_admin_aws_credentials" "current" {}
 
 # using JIT to inject creds
 provider "aws" {
-  region     = local.region
+  # Region where resources will be created, which may be different from the region
+  # where your DuploCloud portal is deployed. One portal can manage many regions.
+  region = "<region name>"
+
   access_key = data.duplocloud_admin_aws_credentials.current.access_key_id
   secret_key = data.duplocloud_admin_aws_credentials.current.secret_access_key
   token      = data.duplocloud_admin_aws_credentials.current.session_token
+
+  default_tags {
+    tags = {
+      duplo-project = "<tenant name>"
+    }
+  }
 }
 ```
 
-When using your local AWS configuration, there is a chance you are scoped into the wrong account, for example you want to run for dev but forgot you set `AWS_PROFILE=prod`. If you really would like to use the local configuration instead, you can use the [duploctl jit aws](https://cli.duplocloud.com/Jit/#duplo\_resource.jit.DuploJit.aws) to safely achieve this.&#x20;
+The `duplo-project`  tag can be [enabled as a cost allocation tag](../overview/use-cases/cost-management/cost-allocation-tags.md) and used to filter costs by tenant. Resources created by the DuploCloud Terraform provider will automatically have this tag. Resources created outside of DuploCloud using the AWS Terraform provider need it to be added explicitly. The AWS provider's [`default_tags` parameter will add this tag to all resources it manages](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#default_tags-1) (so you don't have to remember to set it on each one).
+
+When using your local AWS configuration, there is a chance you are scoped into the wrong account, for example you want to run for dev but forgot you set `AWS_PROFILE=prod`. If you really would like to use the local configuration instead, you can use the [duploctl jit aws](https://cli.duplocloud.com/Jit/#duplo_resource.jit.DuploJit.aws) to safely achieve this.&#x20;
 
 ```hcl
 # uses local aws config
@@ -65,7 +76,7 @@ provider "aws" {
 ```
 
 {% hint style="info" %}
-Generate the local AWS config with [duploctl](https://cli.duplocloud.com/Jit/#duplo\_resource.jit.DuploJit.update\_kubeconfig)
+Generate the local AWS config with [duploctl](https://cli.duplocloud.com/Jit/#duplo_resource.jit.DuploJit.update_kubeconfig)
 
 ```sh
 duploctl jit update_aws_config myportal --interactive --admin
@@ -80,7 +91,7 @@ AWS_PROFILE=myportal
 
 ### Kubernetes Provider
 
-The DuploCloud provider has a [data resource for JIT admin access to Kubernetes](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/eks\_credentials). This is used to inject credentials into the [Terraform Kubernetes Provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs), the [Terraform Helm Provider](https://registry.terraform.io/providers/hashicorp/helm/latest/docs), or any other Kubernetes based provider. This ensures the Kubernetes credentials you are using are never stored locally and always in scope of the correct Kubernetes cluster with a dedicated admin role.
+The DuploCloud provider has a [data resource for JIT admin access to Kubernetes](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/eks_credentials). This is used to inject credentials into the [Terraform Kubernetes Provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs), the [Terraform Helm Provider](https://registry.terraform.io/providers/hashicorp/helm/latest/docs), or any other Kubernetes based provider. This ensures the Kubernetes credentials you are using are never stored locally and always in scope of the correct Kubernetes cluster with a dedicated admin role.
 
 ```hcl
 data "duplocloud_eks_credentials" "current" {
@@ -95,10 +106,10 @@ provider "kubernetes" {
 ```
 
 {% hint style="info" %}
-Use [duplocloud\_gke\_credentials](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/gke\_credentials) when you are on GKE. For Azure AKS, simply use [duplocloud\_eks\_credentials](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/eks\_credentials).
+Use [duplocloud\_gke\_credentials](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/gke_credentials) when you are on GKE. For Azure AKS, simply use [duplocloud\_eks\_credentials](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs/data-sources/eks_credentials).
 {% endhint %}
 
-When using your local Kubernetes configuration, there is a chance you are scoped into the wrong cluster, for example you want to run for dev but forgot you set `current-context: prod` in your kubeconfig. If you really would like to use the local configuration instead, you can use the [duploctl jit k8s](https://cli.duplocloud.com/Jit/#duplo\_resource.jit.DuploJit.k8s) to safely achieve this.&#x20;
+When using your local Kubernetes configuration, there is a chance you are scoped into the wrong cluster, for example you want to run for dev but forgot you set `current-context: prod` in your kubeconfig. If you really would like to use the local configuration instead, you can use the [duploctl jit k8s](https://cli.duplocloud.com/Jit/#duplo_resource.jit.DuploJit.k8s) to safely achieve this.&#x20;
 
 ```hcl
 # Discovers config from KUBECONFIG environment variable
@@ -106,7 +117,7 @@ provider "kubernetes" {}
 ```
 
 {% hint style="info" %}
-Generate the local KUBECONFIG with [duploctl](https://cli.duplocloud.com/Jit/#duplo\_resource.jit.DuploJit.update\_kubeconfig) and use this context
+Generate the local KUBECONFIG with [duploctl](https://cli.duplocloud.com/Jit/#duplo_resource.jit.DuploJit.update_kubeconfig) and use this context
 
 ```sh
 duploctl jit update_kubeconfig --plan myinfra --interactive --admin
