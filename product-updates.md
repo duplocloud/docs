@@ -78,7 +78,7 @@ General
   * Support for [SNS with FIFO (First-In-First-Out) topics.](overview/aws-services/sns-topic.md#creating-a-sns-topic)
   * Create scheduled snapshot windows for automated backups in [AWS Redis](overview-2/azure-services/databases/redis-database.md).
   * Support for [taints with EKS Hosts or Agent Pools](overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
-  * [Download inventory reports of all AWS resources](security-and-compliance/access-control-3/inventory/inventory-reports.md) (for StateRAMP compliance).
+  * [Download inventory reports of all AWS resources](broken-reference) (for StateRAMP compliance).
   * Support for [Lambda JAR with S3](overview/aws-services/lambda/#id-3-toc-title).
   * Support for aurora-iopt1 storage type in [Aurora RDS](aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
   * Force delete and update settings options added for [ECR repositories](overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).&#x20;
