@@ -336,7 +336,7 @@
       * [Spot Instances for AKS Agent Pools](overview-2/azure-services/agent-pool/spot-instances-for-aks-agent-pools.md)
     * [Azure Container Registry (ACR)](overview-2/azure-services/azure-container-registry-acr.md)
     * [Databases](overview-2/azure-services/databases/README.md)
-      * [MSSQL Server database](overview-2/azure-services/databases/sql-database.md)
+      * [Microsoft SQL Server (MSSQL)](overview-2/azure-services/databases/sql-database.md)
       * [PostgreSQL database](overview-2/azure-services/databases/postgresql.md)
       * [PostgreSQL Flexible Server](overview-2/azure-services/databases/postgresql-flexible-server.md)
       * [MySQL Server database](overview-2/azure-services/databases/mysql-server-database/README.md)
