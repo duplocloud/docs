@@ -12,24 +12,29 @@ A Task Definition defines how your containers should run, including images, port
 
 1. Select the Tenant from the **Tenant** list box.&#x20;
 2. Navigate to **Cloud Services** -> **ECS**.
-3. Select the **Task Definition** tab, click **Add**. The **Add Task Definition**-**Basic Options** display.
+3. Select the **Task Definition** tab, click **Add**. The **Add Task Definition**-**Basic Options** pane displays.
 
-<figure><img src="../../../.gitbook/assets/Screenshot (101).png" alt=""><figcaption><p>The <strong>Add Task Definition-Basic Options</strong> page</p></figcaption></figure>
+<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (781).png" alt=""><figcaption><p> <strong>Add Task Definition</strong>-<strong>Basic Options</strong> page</p></figcaption></figure></div>
 
-4. In the **Name** field, give the task definition a name.&#x20;
-5. Specify the **Operating System/Architecture.**
-6. Specify the **vCPU** and **Memory**:
-   * **vCPUs**: Specifies the number of CPU units used by the task. It can be expressed as an integer using CPU units, for example 1024, or as a string using vCPUs, for example `1 vCPU` or `1 vcpu`.
-   * **Memory**: Specifies the amount of memory (in MiB) used by the task. It can be expressed as an integer using MiB, for example `1024`, or as a string using GB, for example `1GB` or `1 gb`.
-7. Optionally, specify **Volumes** for the Task Definition.&#x20;
-8.  Click **Next**. The **Add Task Definition**-**Advanced Options** display. \
+4. Complete the following fields:
 
+<table data-header-hidden><thead><tr><th width="290.4444580078125"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for your task definition.</td></tr><tr><td><strong>Operating System/Architecture</strong></td><td>Select the operating system and CPU architecture for the task (e.g., <strong>Linux</strong> | <strong>x86_64</strong>).</td></tr><tr><td><strong>Launch Type</strong></td><td>Select one or more launch types (<strong>Fargate</strong>, <strong>EC2</strong>). </td></tr><tr><td><strong>Network Mode</strong></td><td>Select the network mode for the task, e.g., <strong>awsvpc</strong>.</td></tr><tr><td><strong>vCPUs</strong></td><td>Specify the CPU units allocated to the task, e.g., <strong>1 vCPU</strong>.</td></tr><tr><td><strong>Memory</strong></td><td>Specify the memory allocated to the task, e.g., <strong>1 GB</strong>.</td></tr><tr><td><strong>Volumes</strong></td><td>Optionally, define one or more storage volumes to be used by containers in the task.</td></tr></tbody></table>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (103).png" alt=""><figcaption><p>The <strong>Add Task Definition-Advanced Options</strong></p></figcaption></figure></div>
-9. &#x20;In the **Container-1** field, specify your primary **Container** details.
-   * Add additional containers by clicking the add icon ( <img src="../../../.gitbook/assets/plus-sign-icon.png" alt="" data-size="line"> ) to create up to five (5) containers.
-   * Be sure to select the **Essential Container** option when defining your containers, as the task will fail if the essential container stops or fails to run.&#x20;
-10. Click **Submit**.
+5. Click **Next**. The **Add Task Definition**-**Advanced Options** pane displays.&#x20;
+
+<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (103).png" alt=""><figcaption><p><strong>Add Task Definition</strong>-<strong>Advanced Options</strong> pane</p></figcaption></figure></div>
+
+6. Configure settings for **Container - 1** (primary):&#x20;
+7. and runtime options for the ECS task:
+
+<table data-header-hidden><thead><tr><th width="168.666748046875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Container Name</strong></td><td>Enter the name for the primary container.</td></tr><tr><td><strong>Image</strong></td><td>Specify the Docker image to use for this container.</td></tr></tbody></table>
+
+6. To add more containers, click the plus (+) icon, enter the **Container Name** and **Image**, and optionally mark it as **Essential**. Repeat as needed for all additional containers.
+7. Configure the ECS task’s runtime options
+
+<table data-header-hidden><thead><tr><th width="223.7777099609375"></th><th></th></tr></thead><tbody><tr><td><strong>Port</strong></td><td>Enter the port number your container listens on, e.g., <code>80</code>.</td></tr><tr><td><strong>Protocol</strong></td><td>Select the network protocol for the port (default is <strong>tcp</strong>).</td></tr><tr><td><strong>Environments</strong></td><td>Optionally, add environment variables for the container.</td></tr><tr><td><strong>Command</strong></td><td>Optionally, specify commands to run inside the container.</td></tr><tr><td><strong>Health Check</strong></td><td>Optionally, configure health checks to monitor container health.</td></tr><tr><td><strong>Secret</strong></td><td>Optionally, add secrets or credentials securely injected into the container.</td></tr><tr><td><strong>Container Other Config</strong></td><td>Optionally, specify any other container configurations as needed.</td></tr></tbody></table>
+
+8. Click **Create**.
 
 ## **Running a Task (Optional)**
 
