@@ -526,6 +526,7 @@
     * [Developers](ai-suite/ai-studio/developers.md)
   * [Quick Start](ai-suite/quick-start.md)
   * [FAQ](ai-suite/faq.md)
+  * [Product Updates](ai-suite/product-updates.md)
 * [Observability](diagnostics-overview/README.md)
   * [Standard Observability Suite](diagnostics-overview/standard-observability-suite/README.md)
     * [Setup](diagnostics-overview/standard-observability-suite/setup/README.md)
