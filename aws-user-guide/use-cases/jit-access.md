@@ -1,15 +1,12 @@
 ---
-description: >-
-  DuploCloud makes access to AWS extraordinarily simple with just-in-time (JIT)
-  access to both the AWS console and the AWS CLI, both with least-priviledged
-  IAM permissions and short-lived access.
+description: Short-lived AWS console sessions and keys.
 ---
 
 # Just-in-Time (JIT) Access
 
-DuploCloud-JIT (Just-In-Time) offers temporary access to the AWS Console to quickly and easily interact with your AWS resources. With DuploCloud-JIT, you can perform necessary tasks without relying on long-lived credentials, simplifying access while maintaining strict security controls.
+Most infrastructure work should be done through the DuploCloud portal. It's your interface into the resources it manages.
 
-## **When to Use DuploCloud-JIT AWS Access**
+You can also access AWS outside of DuploCloud to look behind the scenes or develop custom patterns. DuploCloud's JIT generates short-lived AWS console sessions and keys that can only access resources in the tenants the user has access to.
 
 Use DuploCloud-JIT for tasks that require short-term access to AWS resources, such as:
 
@@ -19,135 +16,83 @@ Use DuploCloud-JIT for tasks that require short-term access to AWS resources, su
 * **Dynamic Access for Temporary Services**: Securely authenticating and interacting with services that are needed for a limited time.
 * **Interactive Sessions**: Providing users access to AWS Console for specific tasks without the complexity of permanent credentials.
 
-## **How to use DuploCloud-JIT AWS Access**&#x20;
+## Get an AWS Console Session
 
-You can obtain DuploCloud JIT access to AWS Console through the DuploCloud UI, or using command-line tools and `duplo-jit` or `duplo-ctl`.
-
-## Configuring JIT AWS Console Access from the UI
+You can also do this [using `duploctl`](https://cli.duplocloud.com/Jit/#duplo_resource.jit.DuploJit.web).
 
 Access AWS Console using the Console link from your user profile page, or a specific resource page. To access the AWS Console from a specific resource page, see the [AWS Console link](../../overview/use-cases/using-aws-console.md).&#x20;
 
 To access the AWS Console from your user profile page, follow these steps:
 
 1. Click the person icon in the in the upper right corner of the DuploCloud Platform, and select **Profile**.&#x20;
-2. Click the **JIT AWS Console** button. A browser opens, giving you access to AWS Console.
+2. Click the **JIT AWS Console** button to get a browser session with access restricted to the currently selected tenant or the **JIT Admin AWS Console** to get an admin session with full access (only available to Administrator users).
 
 From the **JIT AWS Console** list box, you can also select **Copy AWS Console URL**, **Temporary AWS Credentials**, or **AWS access from my Workstation**.&#x20;
 
-<figure><img src="../../.gitbook/assets/JIT PIC.png" alt=""><figcaption><p>The user <strong>Profile</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/profile_jit_screenshot.png" alt=""><figcaption></figcaption></figure>
 
-## Configuring JIT AWS Console Access with CLI and `duplo-jit` or `duplo-ctl`
+If you're an Administrator user but you don't see the Administrator options in the JIT menu, see [Enabling Administrator JIT Access in the UI](jit-access.md#enabling-administrator-jit-access-in-the-ui).
 
-To gain JIT AWS Console access through a CLI, install `duplo-jit` and [`duplo-ctl`](../../automation-and-tools/duploctl.md), obtain credentials, and access the AWS Console.&#x20;
+## Configure the AWS CLI
 
-{% hint style="info" %}
-DuploCloud-JIT CLI access is based on user permissions configured in the DuploCloud Portal. For instance, if you have Administrator permissions in DuploCloud, you can gain admin-level JIT access.  If you are a User, your JIT access will be restricted to the resources and functionalities your DuploCloud permissions permit.
-{% endhint %}
+This requires `duploctl`. See its [documentation](https://cli.duplocloud.com/) for installation instructions and more details.
 
-## Step 1. Install `duplo-jit`
+The AWS CLI is most commonly used by Administrator users, so the examples below assume you have Administrator access. See the `duploctl` documentation for instructions for non-Administrator users.
 
-Install `duplo-jit` with Homebrew, or from GitHub releases:
+### Using Interactive Credentials (Recommended)
 
-### Installing `duplo-jit` with Homebrew
-
-Run the following command:&#x20;
+Add a profile like this one to the `~/.aws/config` file. Replace `duplo.cloud.mydomain.com` with the domain name of your DuploCloud portal and `us-west-2` with the region you want to use as the default.
 
 ```
-brew install duplocloud/tap/duplo-jit
-```
-
-### Installing `duplo-jit` from GitHub Releases
-
-1. Download the latest **.zip** archive from [https://github.com/duplocloud/duplo-jit/releases](https://github.com/duplocloud/duplo-jit/releases) for your operating system.
-2. Extract the archive listed in the table below based on the operating system and processor you are running.&#x20;
-3. Add the path to `duplo-jit` to your `$PATH` environment variable.&#x20;
-
-| Processor/Operating System  | Archive                |
-| --------------------------- | ---------------------- |
-| Intel macOS                 | **darwin\_amd64.zip**  |
-| M1 macOS                    | **darwin\_arm64.zip**  |
-| Windows                     | **windows\_amd64.zip** |
-
-## Step 2. Obtain Credentials
-
-Obtain credentials using an API token, or interactively:
-
-### Obtaining Credentials Using an API Token
-
-1. Obtain an[ API token](../../access-control/api-tokens.md#creating-a-permanent-api-token). While you can create a temporary or permanent API token, a permanent token is recommended.&#x20;
-2. Edit the `~/.aws/config` file, and add the following profile, as shown in the code snippet below:
-
-```
-[profile <ENV_NAME>]
+[profile duplo.cloud.mydomain.com]
 region=us-west-2
-credential_process=duplo-jit aws --admin --host https://<ENV_NAME>.duplocloud.net --token <DUPLO_TOKEN>
+output=json
+credential_process=duploctl jit aws --host https://duplo.cloud.mydomain.com --admin --interactive
 ```
 
-### Obtaining Credentials Interactively
+Select the `duplo.cloud.mydomain.com` [AWS profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html#cli-configure-files-using-profiles):
 
-To obtain credentials interactively, rather than with a token, replace `--token <DUPLO_TOKEN>` in the argument above with `--interactive`.
+```
+export AWS_PROFILE=duplo.cloud.mydomain.com
+```
 
-When you make the first AWS call, you are prompted to grant authorization through the DuploCloud portal, as shown below.&#x20;
+When you make the first AWS call, a browser window will open with a prompt to authorize access.
 
 <figure><img src="../../.gitbook/assets/image (89).png" alt="A prompt reads &#x22;The duplo-aws-credential-process application on your computer wants to access your Duplo credentials.&#x22; The options are a green button on the right for Authorize and a Red button on the left for Cancel."><figcaption><p><strong>Local Access Requested</strong> prompt</p></figcaption></figure>
 
-Upon successful authorization, A JIT token is provided. This token is valid for one (1) hour. When the token expires, you are prompted to re-authorize the request.
+### Using an API Token
 
-## Step 3. Accessing the AWS Console
+Use this pattern in CICD pipelines and other places where a human won't be present to click approve in the interactive prompt. You'll need an [API token](../../access-control/api-tokens.md).
 
-### Accessing the AWS Console Using the CLI
+In automation, it's also often helpful to use the `duploctl jit update_aws_config` [subcommand](https://cli.duplocloud.com/Jit/#duplo_resource.jit.DuploJit.update_aws_config) to update the config file dynamically.
 
-Ensure that the AWS CLI is configured with the profile name that matches the one you used when obtaining credentials. This can be done in the `~/.aws/config` file.
-
-Use the following command, replacing `<ENV_NAME>` with your actual environment name:
-
-```bash
-AWS_PROFILE=<ENV_NAME> aws ec2 describe-instances
-```
-
-This command will list your EC2 instances in the specified environment.
-
-### **Accessing the AWS Console with a URL link**
-
-Run one of the following commands to copy an AWS Console URL link to your clipboard. You can use the link in any browser.
-
-All of these examples assume Administrator access. If you are obtaining JIT access for a User role, replace the `--admin` flag in the commands with `--tenant <YOUR_TENANT>`. For example, if your tenant's name is  `dev01`, you would use `--tenant dev01`.  Tenants are lower-case at the CLI.
-
-#### Using an API Token
+Add a profile like this one to the `~/.aws/config` file. Replace `duplo.cloud.mydomain.com` with the domain name of your DuploCloud portal and `us-west-2` with the region you want to use as the default.
 
 ```
-duplo-jit aws --admin --host "https://<ENV_NAME>.duplocloud.net" --token <DUPLO_TOKEN> | jq -r .ConsoleUrl | pbcopy
+[profile duplo.cloud.mydomain.com]
+region=us-west-2
+output=json
+credential_process=duploctl jit aws --host https://duplo.cloud.mydomain.com --admin --token MYTOKEN
 ```
 
-#### Obtaining a link interactively
+Select the `duplo.cloud.mydomain.com` [AWS profile](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html#cli-configure-files-using-profiles):
 
 ```
-duplo-jit aws --admin --host "https://<ENV_NAME>.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
+export AWS_PROFILE=duplo.cloud.mydomain.com
 ```
 
-#### Obtaining a link interactively in PowerShell
+You won't be prompted to approve access because you passed a token to the `credential_process` parameter.
 
-```
-duplo-jit aws --admin --host "https://<ENV_NAME>.duplocloud.net" --interactive | ConvertFrom-Json | Select-Object -ExpandProperty ConsoleUrl | Set-Clipboard
-```
+## Enabling Administrator JIT Access in the UI
 
-#### Obtaining a link by configuring your `zsh` shell
+1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
+2. Select the **System Config** tab, and click **Add**.
+3. From the **Config Type** list box, select **Flags**.&#x20;
+4. From the **Key** list box, select **Enable Admin AWS JIT Access On UI**.
+5. In the **Value** list box, select **true**.
+6. Click **Submit**.
 
-Add the following to your `.zshrc` file:
-
-```
-function jitnow() {
-  duplo-jit aws --admin --no-cache --host "https://$1.duplocloud.net" --interactive | jq -r .ConsoleUrl | pbcopy
-}
-```
-
-{% hint style="info" %}
-usage is `jitnow <ENV_NAME>`
-{% endhint %}
-
-{% hint style="warning" %}
-If you are receiving errors when attempting to retrieve credentials, try running the command with the `--no-cache` argument.
-{% endhint %}
+<div align="left"><figure><img src="../../.gitbook/assets/admin_jit_screenshot (1).png" alt="" width="405"><figcaption></figcaption></figure></div>
 
 ## Disabling JIT access for non-admin users
 
