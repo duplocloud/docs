@@ -524,6 +524,7 @@
     * [Tools](ai-suite/ai-studio/tools.md)
     * [VectorDB](ai-suite/ai-studio/vectordb.md)
     * [Developers](ai-suite/ai-studio/developers.md)
+    * [Supporting Components](ai-suite/ai-studio/supporting-components.md)
   * [Quick Start](ai-suite/quick-start.md)
   * [FAQ](ai-suite/faq.md)
   * [Product Updates](ai-suite/product-updates.md)
