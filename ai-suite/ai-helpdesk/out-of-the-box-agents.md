@@ -1,18 +1,22 @@
+---
+description: An overview of DuploCloud's pre-built AI Agents
+---
+
 # Out of the Box Agents
 
-DuploCloud AI Suite comes with several pre-built, production-ready agents designed to handle common DevOps and infrastructure management tasks. These agents integrate seamlessly with your existing DuploCloud infrastructure and can be deployed immediately to start automating routine operations and troubleshooting workflows.
+DuploCloud AI Suite includes several pre-built, production-ready agents that handle common DevOps and infrastructure management tasks. These agents integrate seamlessly with your existing DuploCloud infrastructure and can be deployed immediately to automate routine operations and troubleshooting workflows.
 
-### Overview
+Agents work within DuploCloud's secure tenant architecture, inheriting user permissions and maintaining compliance with your organization's security policies. Agents can be accessed through the HelpDesk interface, where you can create tickets and collaborate with AI agents to resolve issues or perform tasks.
 
-Each agent is built to work within DuploCloud's secure tenant architecture, inheriting user permissions and maintaining compliance with your organization's security policies. Agents can be accessed through the HelpDesk interface, where users can create tickets and collaborate with AI agents to resolve issues or perform tasks.
-
-***
+## Out-of-the-Box Agents
 
 ### Kubernetes Agent
 
-#### Description
-
 The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes cluster management, maintenance, and troubleshooting. This agent serves as your dedicated Kubernetes specialist, capable of handling everything from routine cluster health checks to complex resource deployments.
+
+<details>
+
+<summary>View Kubernetes Agent details</summary>
 
 #### Core Capabilities
 
@@ -26,7 +30,7 @@ The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes clus
 
 * **Permission Inheritance**: Operates with the requesting user's Kubernetes permissions - no additional access required
 * **kubectl Integration**: Executes kubectl commands securely within your cluster environment
-* **Multi-Level Support**: Handles both specific detailed requests ("get logs for pod xyz") and high-level queries ("assess cluster health")
+* **Multi-Level Support**: Handles both specific detailed requests (like "get logs for pod xyz") and high-level queries (like "assess cluster health")
 * **Real-time Troubleshooting**: Interactive problem-solving with immediate command execution
 
 #### Use Cases
@@ -43,13 +47,15 @@ The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes clus
 * All actions are performed within DuploCloud's tenant isolation
 * Command execution is logged and auditable
 
-***
+</details>
 
 ### Observability Agent
 
-#### Description
+The Observability Agent provides intelligent monitoring and troubleshooting capabilities through integration with your observability stack. It is currently optimized for OpenTelemetry-based environments using Grafana and helps teams quickly identify and resolve application performance issues.
 
-The Observability Agent provides intelligent monitoring and troubleshooting capabilities through integration with your observability stack. Currently optimized for OpenTelemetry-based environments using Grafana, this agent helps teams quickly identify and resolve application performance issues.
+<details>
+
+<summary>View Observability Agent details</summary>
 
 #### Core Capabilities
 
@@ -87,15 +93,17 @@ Future versions will include support for:
 * Distributed tracing analysis
 * Span-level troubleshooting
 * Performance profiling insights
-* Integration with additional observability platforms (Datadog, New Relic, Kibana)
+* Integration with additional observability platforms (e.g., Datadog, New Relic, Kibana)
 
-***
+</details>
 
 ### CI/CD Agent
 
-#### Description
-
 The CI/CD Agent automates pipeline troubleshooting and failure resolution across your continuous integration and deployment workflows. Available for both Jenkins and GitHub Actions, this agent proactively engages when pipeline failures occur and provides intelligent assistance for resolution.
+
+<details>
+
+<summary>View CI/CD Agent details</summary>
 
 #### Supported Platforms
 
@@ -130,13 +138,15 @@ The CI/CD Agent automates pipeline troubleshooting and failure resolution across
 * Resolving deployment issues and rollback scenarios
 * Optimizing pipeline performance and reliability
 
-***
+</details>
 
 ### Architecture Diagram Agent
 
-#### Description
-
 The Architecture Diagram Agent leverages DuploCloud's cartography system to generate intelligent infrastructure and application architecture diagrams. Built on Neo4j graph database technology, this agent provides visual representations of complex system relationships and dependencies.
+
+<details>
+
+<summary>View Architecture Diagram Agent details</summary>
 
 #### Core Technology
 
@@ -168,15 +178,15 @@ Organizations can optionally define custom application dependencies:
 * **Granular Control**: Define dependencies per microservice
 * **Multi-type Support**: AWS resources, Kubernetes services, and external APIs
 
-
-
-***
+</details>
 
 ### PrivateGPT Agent
 
-#### Description
-
 The PrivateGPT Agent provides a secure, enterprise-grade ChatGPT-like experience for organizations concerned about data privacy and security. This agent ensures that sensitive organizational data never leaves your AWS environment while providing powerful AI assistance.
+
+<details>
+
+<summary>View PrivateGPT Agent details</summary>
 
 #### Security Architecture
 
@@ -209,13 +219,15 @@ The PrivateGPT Agent provides a secure, enterprise-grade ChatGPT-like experience
 * **Compliance Alignment**: Meets enterprise security and regulatory requirements
 * **Audit Trail**: Full logging and monitoring of AI interactions
 
-***
+</details>
 
 ### Database Explorer Agent
 
-#### Description
+The Database Explorer Agent provides secure, controlled access to database operations through pre-defined query templates. This agent enables non-technical teams to access database information safely without SQL knowledge or direct database access.
 
-The Database Explorer Agent provides secure, controlled access to database operations through pre-defined query templates. This agent enables non-technical teams to access database information safely without requiring SQL knowledge or direct database access.
+<details>
+
+<summary>View Database Explorer Agent details</summary>
 
 #### Core Architecture
 
@@ -258,11 +270,8 @@ The Database Explorer Agent provides secure, controlled access to database opera
 * **User Empowerment**: Non-technical teams gain self-service capabilities
 * **Reduced Development Overhead**: No need to build custom data access interfaces
 
-***
+</details>
 
-***
-
-### Support and Customization
+## Support and Customization
 
 While these out-of-the-box agents cover many common use cases, DuploCloud's AI Studio platform enables you to build custom agents tailored to your specific workflows and tools. For assistance with agent customization or integration with additional tools, contact the DuploCloud team.
-
