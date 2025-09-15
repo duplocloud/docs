@@ -15,12 +15,14 @@ description: Configure Tenant settings in the DuploCloud UI for GCP users
 
 ### Tenant settings
 
-| **Delete Protection**                              | Enables delete protection for the Tenant.                                           |
-| -------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| **Enable K8S network policy**                      | Enables Kubernetes network policies for the Tenant.                                 |
-| **Enable option to run K8S pods on any host**      | Enables the option to run the Tenant's Kubernetes (K8S) pods on any available Host. |
-| **Allow hosts to run K8S pods from other tenants** | Allows the Tenant's Hosts to run Kubernetes (K8S) pods from other Tenants.          |
-| **Enable k8s job fault logging by default**        | Enables Kubernetes job fault logging by default for the Tenant.                     |
-| **Enable Cluster Autoscaler OverProvisioning**     | Enables Cluster Autoscaler overprovisioning for the Tenant.                         |
-| **Other**                                          | Allows entering a custom or unlisted setting.                                       |
+| **Delete Protection**                              | Enables delete protection for the Tenant.                                                                                                                                                         |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Enable K8S network policy**                      | Enables Kubernetes network policies for the Tenant.                                                                                                                                               |
+| **Enable option to run K8S pods on any host**      | Enables the option to run the Tenant's Kubernetes (K8S) pods on any available Host.                                                                                                               |
+| **Allow hosts to run K8S pods from other tenants** | Allows the Tenant's Hosts to run Kubernetes (K8S) pods from other Tenants.                                                                                                                        |
+| **Enable k8s job fault logging by default**        | Enables Kubernetes job fault logging by default for the Tenant.                                                                                                                                   |
+| **Enable Cluster Autoscaler OverProvisioning**     | Enables Cluster Autoscaler overprovisioning for the Tenant.                                                                                                                                       |
+| **Other**                                          | Allows entering a custom or unlisted setting.                                                                                                                                                     |
+| `raise_fault_on_last_state_pod_failure_reasons`    | Generates a fault when a Kubernetes pod is terminated with a specified failure reason. Enter the failure reasons you want to monitor, e.g., `OOMKilled`. Multiple reasons can be comma-separated. |
+| `tenant_instances_stopped`                         | Mutes faults for tenants whose instances are stopped when set to `True`.                                                                                                                          |
 
