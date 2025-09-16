@@ -1,27 +1,24 @@
-# Supporting Components
+# View Cartography Details
 
-### Cartography
-
-Duplo Cartography is a Dockerized build of Cartography extended with custom Duplo intelligence and Neo4j models that unifies DuploCloud, Kubernetes, AWS, GitHub, and external systems into a single, queryable graph. It injects a Duplo ingestion stage at runtime (via sitecustomize) to ingest tenants, plans, infra, hosts, pods, agents, and container versions, standardizing on IN\_TENANT relationships for clean scoping and authorization. The project supports an optional dependencies manifest (local file or Kubernetes ConfigMap) to link workloads to Kubernetes objects, AWS resources (e.g., S3, RDS), and external services, while helper scripts and JIT credential support make it straightforward to run against Neo4j for local development or production.
+## Dependencies manifest (YAML) – How to write and use it
 
 This guide explains how to describe a service/workload's dependencies in YAML, how the file is discovered at runtime, and how each dependency type is matched in Neo4j. It is written for junior engineers; examples are included throughout.
 
 ***
 
-#### Where the file comes from
+### Where the file comes from
 
 You can supply the manifest as a plain file inside the container, or by mounting a Kubernetes ConfigMap to a file path.
 
-* Set `DEPENDENCIES_SOURCE=local` to force reading `/dependencies.yaml`.
-* Otherwise set `DEPENDENCIES_CONFIG_MAP=/path/to/file.yaml` to use a specific file path (e.g., a ConfigMap mounted at `/config/config`).
-* If `DEPENDENCIES_CONFIG_MAP` is not set, the dependencies step is skipped (we do not crash; we log an error and continue).
+* Set `DEPENDENCIES_MAPPING_FILE=/path/to/file.yaml` to use a specific file path (e.g., a ConfigMap mounted at `/config/config`).
+* If `DEPENDENCIES_MAPPING_FILE` is not set, we log a warning and skip the dependencies step (no crash).
 * If the file cannot be opened, is empty, or has malformed YAML, we log a warning and skip the step (no crash).
 
 Important: The mounted file must contain only the YAML shown below – do NOT wrap it in a `config: |` key. The file content should start with `namespaces:`.
 
 ***
 
-#### YAML schema (high level)
+### YAML schema (high level)
 
 ```yaml
 namespaces:
@@ -31,6 +28,7 @@ namespaces:
           kubernetes: []  # list of K8s dependency items
           aws: []         # list of AWS dependency items
           external: []    # list of external dependency items
+          source_control: [] # list of source control dependency items
 ```
 
 * `namespaces` is a list. Each list item maps one namespace to one or more workloads under it.
@@ -43,7 +41,7 @@ Examples of derived workload names:
 
 ***
 
-#### Kubernetes dependencies
+### Kubernetes dependencies
 
 These link your pod(s) to existing typed Kubernetes nodes in Neo4j. Supported kinds in v1:
 
@@ -83,7 +81,7 @@ Matching behavior:
 
 ***
 
-#### AWS dependencies
+### AWS dependencies
 
 AWS dependencies link your pod(s) to existing typed AWS nodes in Neo4j. In v1 we support at least:
 
@@ -92,19 +90,19 @@ AWS dependencies link your pod(s) to existing typed AWS nodes in Neo4j. In v1 we
 
 We intentionally do not model non-resource AWS offerings here (e.g., Bedrock, SES). Treat those under `external` instead.
 
-Item shapes:
+Item shapes (required unified `name`):
 
 ```yaml
 # S3 bucket
 - type: s3
-  bucket_name: <bucket>       # REQUIRED; maps to S3Bucket.name
+  name: <bucket>              # REQUIRED; maps to S3Bucket.name
   region: <optional>
   critical: <optional bool>
   description: <optional string>
 
 # RDS instance
 - type: rds
-  db_instance_identifier: <id>  # REQUIRED; maps to RDSInstance.db_instance_identifier
+  name: <db_identifier>        # REQUIRED; maps to RDSInstance.db_instance_identifier
   region: <optional>
   critical: <optional bool>
   description: <optional string>
@@ -115,13 +113,13 @@ Example:
 ```yaml
 aws:
   - type: s3
-    bucket_name: my-diagrams
+    name: my-diagrams
     region: us-east-1
     critical: true
     description: Stores rendered diagrams
 
   - type: rds
-    db_instance_identifier: orders-db-prod
+    name: orders-db-prod
     region: us-east-1
     critical: true
     description: Primary orders database
@@ -129,13 +127,18 @@ aws:
 
 Matching behavior:
 
-* S3: `MATCH (s3:S3Bucket {name: bucket_name})`
-* RDS: `MATCH (rds:RDSInstance {db_instance_identifier: db_instance_identifier})`
+* S3: `MATCH (s3:S3Bucket {name: name})`
+* RDS: `MATCH (rds:RDSInstance {db_instance_identifier: name})`
 * If the target doesn’t exist, no edge is created (and we can log a debug line for troubleshooting).
+
+Neo4j property mappings:
+
+* S3: YAML `name` → Neo4j `S3Bucket.name`
+* RDS: YAML `name` → Neo4j `RDSInstance.db_instance_identifier`
 
 ***
 
-#### External dependencies
+### External dependencies
 
 External dependencies represent systems outside your cluster/AWS account (or AWS offerings that don’t create resources, like Bedrock/SES).
 
@@ -168,17 +171,21 @@ external:
     description: Anthropic Claude Sonnet 3.5 via Application Inference Profile
     region: us-east-1
     inference_profile_arn: arn:aws:bedrock:us-east-1:123456789012:application-inference-profile/abcd
+
+  - type: git
+    name: https://github.com/myorg/myrepo
+    description: Repository used by the service
 ```
 
 Graph behavior:
 
-* We `MERGE` `(:ExternalService {name})` and `MERGE` a `DEPENDS_ON` relationship from the pod.
-* If the pod has `IN_TENANT`, we also `MERGE (ExternalService)-[:IN_TENANT]->(DuploTenant)` so the external system inherits tenant scoping.
-* On the relationship, we store helpful fields like `critical`, `description`, `url`, `region`, `inference_profile_arn`, and `service_name`.
+* For `type: git`, we link directly to an existing `(:GitHubRepository {url: name})` and create `(:KubernetesPod)-[:DEPENDS_ON {kind:'external', type:'git', name}]->(:GitHubRepository)`. We do not create `ExternalService` in this case.
+* For other types, we `MERGE` `(:ExternalService {name})` and `MERGE` a `DEPENDS_ON` relationship from the pod. If the pod has `IN_TENANT`, we also `MERGE (ExternalService)-[:IN_TENANT]->(DuploTenant)` so the external system inherits tenant scoping.
+* On external relationships, we store helpful fields like `critical`, `description`, `url`, `region`, `inference_profile_arn`, and `service_name`.
 
 ***
 
-#### Full working example
+### Full working example
 
 ```yaml
 namespaces:
@@ -224,9 +231,15 @@ namespaces:
               url: https://example.communication.azure.com
               critical: false
               description: Customer notifications via Azure Communication Server
+
+          source_control:
+            - type: github
+              name: myorg/myrepo
+              url: https://github.com/myorg/myrepo
+              description: Main application repository
 ```
 
-#### Full Example in Duplo
+### Full Example in Duplo
 
 ```yaml
 config: |
@@ -284,7 +297,7 @@ config: |
 
 ***
 
-#### Troubleshooting checklist
+### Troubleshooting checklist
 
 * YAML wrapper: The file must start with `namespaces:` – do not wrap with `config: |`.
 * Indentation: Keys under list items must be indented two spaces more than the `-` line.
@@ -298,17 +311,10 @@ config: |
 
 ***
 
-#### Operational notes
+### Operational notes
 
 * The ingestion runs even when the manifest is missing or malformed; we log and continue.
-* You can switch modes at runtime by changing `DEPENDENCIES_SOURCE` or `DEPENDENCIES_CONFIG_MAP` and re-running.
+* You can change the file path at runtime by setting `DEPENDENCIES_MAPPING_FILE` and re-running.
 * We de-duplicate relationships by stable keys and set `lastupdated` on each run.
 
 If you have questions or see skipped targets, copy the relevant log lines and open an issue with the exact pod name, namespace, and the YAML snippet.
-
-
-
-### GenAI-ToolBox
-
-### Presidio
-
