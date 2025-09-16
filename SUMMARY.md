@@ -152,6 +152,7 @@
       * [EKS Load Balancers](overview/aws-services/load-balancers/eks-load-balancers.md)
       * [ECS Services and Load Balancers](overview/aws-services/load-balancers/ecs-services-and-load-balancers.md)
       * [Native Docker Load Balancers](overview/aws-services/load-balancers/native-docker-load-balancers.md)
+      * [Using Allocated IPs with AWS Load Balancers](overview/aws-services/load-balancers/using-allocated-ips-with-aws-load-balancers.md)
     * [Storage](aws-user-guide/aws-services/storage/README.md)
       * [Storage Class and PVCs](overview/aws-services/storage/adding-k8s-storage-class.md)
       * [GP3 Storage Class](overview/aws-services/storage/gp3-storage-class.md)
