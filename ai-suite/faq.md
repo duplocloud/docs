@@ -10,7 +10,7 @@ Infrastructure costs (EC2 instances, load balancers, S3 buckets, Bedrock LLM cos
 
 **What agents are available out-of-the-box?**
 
-We provide several pre-built agents including Kubernetes troubleshooting, Private GPT, Architecture Diagram generation, and Observability. Full documentation is available in the [out-of-the-box agents](ai-helpdesk/out-of-the-box-agents.md) section.
+We provide several pre-built agents including Kubernetes troubleshooting, Private GPT, Architecture Diagram generation, and Observability. Full documentation is available in the [out-of-the-box agents](ai-helpdesk/out-of-the-box-agents/) section.
 
 **Can we get custom agents built for our specific use cases?**
 
