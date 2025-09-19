@@ -16,3 +16,4 @@ Duplo Cartography is a Dockerized build of Cartography extended with custom Dupl
 
 ### Presidio
 
+Presidio Service is a wrapper built on top of Microsoft’s open-source Presidio framework, designed to detect and protect sensitive data such as PII, credentials, tokens, and secrets. While Presidio provides strong built-in capabilities, the Duplo wrapper extends it by supporting custom recognizers, enabling organizations to define their own detection rules for environment-specific secrets (e.g., API keys, database passwords, private keys). Running as a Kubernetes microservice within Duplo-managed clusters, it ensures sensitive data is anonymized or sanitized before leaving the environment—strengthening compliance, privacy, and security across applications and integrations with external services like LLMs.
