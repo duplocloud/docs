@@ -1,4 +1,4 @@
-# 🔎 Duplo Presidio Details
+# View Presidio Details
 
 The **Duplo Presidio Service** is a wrapper built on top of [Microsoft Presidio](https://microsoft.github.io/presidio/) that enhances its ability to detect and protect sensitive data by supporting **custom recognizers and anonymizers**.  
 
