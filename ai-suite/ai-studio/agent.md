@@ -24,7 +24,7 @@ Prebuilt Agents use a pre-existing container image that defines your Agent’s f
 
     <figure><img src="../../.gitbook/assets/Screenshot (509).png" alt=""><figcaption><p>The <strong>Agents</strong> tab with the <code>kubernetes-agent</code> Agent displayed</p></figcaption></figure>
 
-Once the Agent has been successfully completed, complete steps 2 and 3 below to deploy and register the Agent so it can be used with [DuploCloud's AI ServiceDesk](../ai-helpdesk/).
+Once the Agent has been successfully completed, complete steps 2 and 3 below to deploy and register the Agent so it can be used with [DuploCloud's AI Help Desk](../ai-helpdesk/).
 
 ### Creating a Dynamic Agent
 
@@ -90,5 +90,5 @@ Once your Agent has been successfully deployed, it must be registered so that th
 
 <table data-header-hidden><thead><tr><th width="182.88885498046875"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Provide a name for this Agent registration.</td></tr><tr><td><strong>Instanceid</strong></td><td>Enter the ID of the deployed instance (created during deployment).</td></tr><tr><td><strong>Allowed Tenants</strong></td><td>Select the tenants where this Agent is allowed to operate.</td></tr><tr><td><strong>Endpoint</strong></td><td>The service endpoint for the deployed Agent (prepopulated).</td></tr><tr><td><strong>Path</strong></td><td>The endpoint path that handles requests. You can retrieve this from the Agent's registration info, if needed: On the Register tab, click the menu icon (<img src="../../.gitbook/assets/menu icon (1) (2).avif" alt="" data-size="line">) next to the Instance and select Edit. Copy the path from the Path field.</td></tr><tr><td><strong>Headers</strong></td><td>Optional key/value pairs to pass custom headers during API calls.</td></tr></tbody></table>
 
-3. Click **Submit** to register the Agent. This Agent can now be utilized by the DuploCloud Service Desk. To learn how to configure and use Service Desk, see the [Service Desk documentation](../ai-helpdesk/).&#x20;
+3. Click **Submit** to register the Agent. This Agent can now be utilized by the DuploCloud Help Desk. To learn how to configure and use Help Desk, see the [Help Desk documentation](../ai-helpdesk/).&#x20;
 
