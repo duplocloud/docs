@@ -14,6 +14,7 @@ AWS
 * [AWS Secrets Manager support](overview/aws-services/aws-secrets-support.md) — Manage secrets using AWS Secrets Manager.
 * [EC2 Snapshots](overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.
 * [Ingress: Multi-certificate support](kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB–managed Ingress.
+* [Duplocloud AI Suite](ai-suite/) - Purpose built AI agents to automate your infrastructure
 
 Azure
 
