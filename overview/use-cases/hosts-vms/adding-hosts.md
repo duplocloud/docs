@@ -25,7 +25,7 @@ Use BYOH for any Host that is neither EC2 nor ASG.
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (782).png" alt=""><figcaption><p><strong>Add Host</strong> page</p></figcaption></figure></div>
 5. Complete the required fields:
 
-<table data-header-hidden><thead><tr><th width="232.66668701171875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Friendly Name</strong></td><td>Enter a descriptive name for the Host.</td></tr><tr><td><strong>Availability Zone</strong></td><td>Select an availability zone or choose <strong>Automatic</strong> to let AWS decide.</td></tr><tr><td><strong>Instance Type</strong></td><td>Select the EC2 instance type (e.g., <strong>2 CPU 2 GB - t3a.small</strong>).</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="232.66668701171875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Friendly Name</strong></td><td>Enter a descriptive name for the Host.</td></tr><tr><td><strong>Availability Zone</strong></td><td>Select an availability zone or choose <strong>Automatic</strong> to let AWS decide.</td></tr><tr><td><strong>Instance Type</strong></td><td>Select the EC2 instance type (e.g., <strong>2 CPU 2 GB - t3a.small</strong>)<br>Only instance types that do not exceed the quotas defined for this Plan are available. You cannot create EC2 hosts that exceed these quotas. For more information, see <a href="../resource-quotas.md">Resource Quotas</a>.</td></tr></tbody></table>
 
 6. Optionally, select **Advanced Options** and complete the additional configurations:
 
