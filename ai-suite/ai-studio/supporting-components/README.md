@@ -11,3 +11,10 @@ DuploCloud Cartography is a Dockerized build of Cartography extended with custom
 ### GenAI-ToolBox
 
 ### Presidio
+
+The **Duplo Presidio Service** is a wrapper built on top of Microsoft Presidio that enhances its ability to detect and protect sensitive data by allowing **custom recognizers and anonymizers**.\
+This ensures secrets, tokens, and credentials are automatically identified and protected before data leaves your Duplo-managed Kubernetes cluster.
+
+{% content-ref url="view-presidio-details.md" %}
+[view-presidio-details.md](view-presidio-details.md)
+{% endcontent-ref %}
