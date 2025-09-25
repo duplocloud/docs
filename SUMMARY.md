@@ -527,6 +527,7 @@
     * [Developers](ai-suite/ai-studio/developers.md)
     * [Supporting Components](ai-suite/ai-studio/supporting-components/README.md)
       * [View Cartography Details](ai-suite/ai-studio/supporting-components/view-cartography-details.md)
+      * [View Presidio Details](ai-suite/ai-studio/supporting-components/view-presidio-details.md)
   * [Quick Start](ai-suite/quick-start.md)
   * [FAQ](ai-suite/faq.md)
   * [Product Updates](ai-suite/product-updates.md)
