@@ -1,12 +1,12 @@
 # View Cartography Details
 
-## Dependencies manifest (YAML) – How to write and use it
+The Cartography feature visualizes the relationships and dependencies within your infrastructure. By providing a Dependencies Manifest (YAML), DuploCloud maps services, workloads, and external resources into a Neo4j graph. This allows you to explore, analyze, and manage dependencies across Kubernetes, cloud services, and external systems, giving you a clear picture of how your applications interact and rely on each other.
 
-This guide explains how to describe a service/workload's dependencies in YAML, how the file is discovered at runtime, and how each dependency type is matched in Neo4j. It is written for junior engineers; examples are included throughout.
+This guide explains how to describe a service/workload's dependencies in YAML, how the file is discovered at runtime, and how each dependency type is matched in Neo4j, examples are included throughout.
 
-***
+## Writing and Using a Dependencies Manifest (YAML)
 
-### Where the file comes from
+### Providing the File
 
 You can supply the manifest as a plain file inside the container, or by mounting a Kubernetes ConfigMap to a file path.
 
@@ -16,9 +16,7 @@ You can supply the manifest as a plain file inside the container, or by mounting
 
 Important: The mounted file must contain only the YAML shown below – do NOT wrap it in a `config: |` key. The file content should start with `namespaces:`.
 
-***
-
-### YAML schema (high level)
+### YAML Schema (high-level)
 
 ```yaml
 namespaces:
@@ -32,18 +30,16 @@ namespaces:
 ```
 
 * `namespaces` is a list. Each list item maps one namespace to one or more workloads under it.
-* `<workload-name>` is a logical workload key. We derive this from pod names by trimming hashes/ordinals, so all pod instances of the same workload share one definition.
+* `<workload-name>` is a logical workload key. We derive this from Pod names by trimming hashes/ordinals, so all Pod instances of the same workload share one definition.
 
 Examples of derived workload names:
 
-* Deployment pod: `api-7c9d88f9d9-abc12` → `api`
-* StatefulSet pod: `db-0` → `db`
+* Deployment Pod: `api-7c9d88f9d9-abc12` → `api`
+* StatefulSet Pod: `db-0` → `db`
 
-***
+### Kubernetes Dependencies
 
-### Kubernetes dependencies
-
-These link your pod(s) to existing typed Kubernetes nodes in Neo4j. Supported kinds in v1:
+These link your Pod(s) to existing typed Kubernetes nodes in Neo4j. Supported kinds in v1:
 
 * `Service`, `Secret`, `ConfigMap`
 
@@ -79,11 +75,9 @@ Matching behavior:
 * We link to existing typed nodes: `(:KubernetesService)`, `(:KubernetesSecret)`, or `(:KubernetesConfigMap)` by `name` + `namespace`.
 * If the target doesn’t exist in the graph, we skip and log a warning. We do not create generic K8s nodes in v1.
 
-***
+### AWS Dependencies
 
-### AWS dependencies
-
-AWS dependencies link your pod(s) to existing typed AWS nodes in Neo4j. In v1 we support at least:
+AWS dependencies link your Pod(s) to existing typed AWS nodes in Neo4j. In v1 we support at least:
 
 * `s3` → `(:S3Bucket)` by bucket name
 * `rds` → `(:RDSInstance)` by DB instance identifier
@@ -136,9 +130,7 @@ Neo4j property mappings:
 * S3: YAML `name` → Neo4j `S3Bucket.name`
 * RDS: YAML `name` → Neo4j `RDSInstance.db_instance_identifier`
 
-***
-
-### External dependencies
+### External Dependencies
 
 External dependencies represent systems outside your cluster/AWS account (or AWS offerings that don’t create resources, like Bedrock/SES).
 
@@ -183,9 +175,7 @@ Graph behavior:
 * For other types, we `MERGE` `(:ExternalService {name})` and `MERGE` a `DEPENDS_ON` relationship from the pod. If the pod has `IN_TENANT`, we also `MERGE (ExternalService)-[:IN_TENANT]->(DuploTenant)` so the external system inherits tenant scoping.
 * On external relationships, we store helpful fields like `critical`, `description`, `url`, `region`, `inference_profile_arn`, and `service_name`.
 
-***
-
-### Full working example
+### Full Working Example
 
 ```yaml
 namespaces:
@@ -239,7 +229,7 @@ namespaces:
               description: Main application repository
 ```
 
-### Full Example in Duplo
+### Full Example in DuploCloud
 
 ```yaml
 config: |
@@ -295,9 +285,7 @@ config: |
                 inference_profile_arn: arn:aws:bedrock:us-east-1:938690564755:application-inference-profile/5hli7gcftss9
 ```
 
-***
-
-### Troubleshooting checklist
+### Troubleshooting Checklist
 
 * YAML wrapper: The file must start with `namespaces:` – do not wrap with `config: |`.
 * Indentation: Keys under list items must be indented two spaces more than the `-` line.
@@ -306,15 +294,13 @@ config: |
 * AWS linking:
   * S3 uses `bucket_name` → `S3Bucket.name`
   * RDS uses `db_instance_identifier` → `RDSInstance.db_instance_identifier`
-* External scoping: ExternalService nodes inherit `IN_TENANT` from the pod when present.
+* External scoping: ExternalService nodes inherit `IN_TENANT` from the Pod when present.
 * Logging: Enable debug logs to see each mapping decision. Look for lines like `K8s map`, `AWS map`, and `External map` in the logs.
 
-***
-
-### Operational notes
+### Operational Notes
 
 * The ingestion runs even when the manifest is missing or malformed; we log and continue.
 * You can change the file path at runtime by setting `DEPENDENCIES_MAPPING_FILE` and re-running.
 * We de-duplicate relationships by stable keys and set `lastupdated` on each run.
 
-If you have questions or see skipped targets, copy the relevant log lines and open an issue with the exact pod name, namespace, and the YAML snippet.
+If you have questions or see skipped targets, copy the relevant log lines and open an issue with the exact Pod name, namespace, and the YAML snippet.

@@ -4,15 +4,15 @@ description: An overview of DuploCloud's pre-built AI Agents
 
 # Out of the Box Agents
 
-DuploCloud AI Suite includes several pre-built, production-ready agents that handle common DevOps and infrastructure management tasks. These agents integrate seamlessly with your existing DuploCloud infrastructure and can be deployed immediately to automate routine operations and troubleshooting workflows.
+DuploCloud AI Suite includes several Prebuilt, production-ready Agents that handle common DevOps and infrastructure management tasks. These Agents integrate seamlessly with your existing DuploCloud infrastructure and can be deployed immediately to automate routine operations and troubleshooting workflows.
 
-Agents work within DuploCloud's secure tenant architecture, inheriting user permissions and maintaining compliance with your organization's security policies. Agents can be accessed through the HelpDesk interface, where you can create tickets and collaborate with AI agents to resolve issues or perform tasks.
+Agents work within DuploCloud's secure Tenant architecture, inheriting user permissions and maintaining compliance with your organization's security policies. Agents can be accessed through the HelpDesk interface, where you can create Tickets and collaborate with AI Agents to resolve issues or perform tasks.
 
 ## Out-of-the-Box Agents
 
 ### Kubernetes Agent
 
-The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes cluster management, maintenance, and troubleshooting. This agent serves as your dedicated Kubernetes specialist, capable of handling everything from routine cluster health checks to complex resource deployments.
+The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes cluster management, maintenance, and troubleshooting. This Agent serves as your dedicated Kubernetes specialist, capable of handling everything from routine cluster health checks to complex resource deployments.
 
 <details>
 
@@ -44,7 +44,7 @@ The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes clus
 #### Security Model
 
 * No standalone permissions - inherits user's existing kubectl access
-* All actions are performed within DuploCloud's tenant isolation
+* All actions are performed within DuploCloud's Tenant isolation
 * Command execution is logged and auditable
 
 </details>
@@ -120,8 +120,8 @@ The CI/CD Agent automates pipeline troubleshooting and failure resolution across
 #### Integration Workflow
 
 1. **Failure Detection**: Try-catch blocks in your pipelines automatically detect failures
-2. **Ticket Creation**: DuploCloud CLI (duploctl) creates HelpDesk tickets with full context
-3. **Agent Assignment**: Tickets are automatically assigned to the CI/CD agent
+2. **Ticket Creation**: DuploCloud CLI (duploctl) creates HelpDesk Tickets with full context
+3. **Agent Assignment**: Tickets are automatically assigned to the CI/CD Agent
 4. **Resolution Process**: Agent analyzes logs and works with users to resolve issues
 
 #### Key Features
@@ -130,7 +130,7 @@ The CI/CD Agent automates pipeline troubleshooting and failure resolution across
 * **Rich Context**: Receives pipeline output, URLs, execution IDs, and failure details
 * **Cross-Platform Access**: Can access version control, retrieve files, and examine build artifacts
 * **Pipeline History**: Understands build trends and recurring failure patterns
-* **Seamless Integration**: Direct links from Jenkins/GitHub Actions to HelpDesk tickets
+* **Seamless Integration**: Direct links from Jenkins/GitHub Actions to HelpDesk Tickets
 
 #### Use Cases
 
@@ -144,11 +144,72 @@ The CI/CD Agent automates pipeline troubleshooting and failure resolution across
 
 The Architecture Diagram Agent leverages DuploCloud's cartography system to generate intelligent infrastructure and application architecture diagrams. Built on Neo4j graph database technology, this agent provides visual representations of complex system relationships and dependencies.
 
+<details>
 
+<summary>View Architecture Diagram Agent Details</summary>
 
-{% content-ref url="view-architecture-diagram-agent-details.md" %}
-[view-architecture-diagram-agent-details.md](view-architecture-diagram-agent-details.md)
-{% endcontent-ref %}
+#### Core Technology
+
+* **Backend**: Neo4j graph database populated by DuploCloud Cartography
+* **Real-time Updates**: Continuously synchronized with your cloud environment
+* **Multi-layer Mapping**: Covers AWS resources, Kubernetes objects, and application dependencies
+* **Visualization**: Mermaid.js diagram generation
+
+#### Key Features
+
+* **Developer-Centric Views**: Generate diagrams focused on specific microservices or applications
+* **Multi-Level Detail**: From high-level architecture overviews to detailed resource dependencies
+* **Interactive Exploration**: Ask questions like "show me everything connected to the payment service"
+* **Real-time Accuracy**: Diagrams reflect current state of your infrastructure
+* **Contextual Filtering**: Scope diagrams to specific Tenants, namespaces, or applications
+
+#### Use Cases
+
+* **New Developer Onboarding**: Help developers understand system architecture for unfamiliar services
+* **Impact Analysis**: Visualize dependencies before making changes
+* **Troubleshooting**: Understand data flow and potential failure points
+* **Documentation**: Generate up-to-date architecture documentation
+* **Compliance Auditing**: Visualize data flows for security and compliance reviews
+
+#### Custom Dependency Definition
+
+Organizations can optionally define custom application dependencies:
+
+* **Granular Control**: Define dependencies per microservice
+* **Multi-type Support**: AWS resources, Kubernetes services, and external APIs
+
+\
+**Architecture Diagram Agent — Role Boundaries and Scope**
+
+* **Tenancy boundary**:
+  * All resources, relationships, metrics, and events are organized under a Tenant using `tenantId`.
+  * All reads/writes require a `tenantId`; data from other Tenants is never returned or mutated.
+  * Cross-tenant access is denied; background jobs and graph updates run within the same `tenantId` scope.
+* **User role (least privilege)**:
+  * **Visibility**: Only resources and relationships within their own `tenantId`.
+  * **Actions**: Read and interact within Tenant scope; cannot access or reference other Tenants.
+  * **UI**: Graph, search, filters, impact/stats panels, and websockets show only Tenant-scoped data.
+* **Admin role (most privilege)**:
+  * **Visibility**: Intended for administration across Tenants.
+  * **Actions**: Manage resources, relationships, and system-wide operations.
+  * **UI**: Can view and operate beyond a single Tenant unless least-privilege applies (see below).
+* **Least-privilege override (effective role)**:
+  * When a principal has multiple roles, the least-privileged role determines access.
+  * Example: If a principal has both admin and user roles, the effective scope is the user role:
+    * Visibility and actions are restricted to the principal’s `tenantId`.
+    * Cross-tenant views and operations are not permitted.
+* **What each role sees**:
+  * **User**: Only their Tenant’s nodes, edges, metrics, and events; Tenant-filtered diagrams and panels.
+  * **Admin**: System-wide view and management; however, if also assigned the user role, the session is constrained to the user’s single-Tenant scope.
+* **Enforcement points (high level)**:
+  * API routes validate and require `tenantId`.
+  * Graph/database queries filter by `tenantId`.
+  * Websocket channels are partitianed by `tenantId`.
+  * Diagram generation and analysis features apply `tenantId` filtering end-to-end.
+
+In short: data is strictly segmented by `tenantId`; users operate only within their Tenant; admins can operate broadly, but any concurrent user assignment forces least-privilege behavior, restricting access to the user’s Tenant.
+
+</details>
 
 ### PrivateGPT Agent
 
