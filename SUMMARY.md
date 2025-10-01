@@ -190,6 +190,7 @@
       * [Configure Lambda with Container Images](overview/aws-services/lambda/create-lambda-using-container-image.md)
       * [Lambda Layers](overview/aws-services/lambda/lambda-layers.md)
     * [Managed Airflow](overview/aws-services/managed-airflow.md)
+    * [Amazon MQ](overview/aws-services/amazon-mq.md)
     * [NAT Gateway for HA](aws-user-guide/aws-services/nat-gateway-for-ha.md)
     * [OpenSearch](overview/aws-services/elasticsearch.md)
     * [S3 Bucket](overview/aws-services/s3-bucket.md)
