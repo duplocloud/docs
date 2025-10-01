@@ -27,13 +27,13 @@ In the **Tenant** list box, select the **dev01** Tenant that you created.
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. In the **EC2** tab, click **Add**. The **Add Host** page displays.
 3. In the **Friendly Name** field, enter `host01`.
-4. In the **Instance Type** list box, select **2 CPU 4 GB - t3a.medium**.
+4. In the **Instance Type** list box, select **t3a.medium**.
 5. Select the **Advanced Options** checkbox to display advanced configuration fields.
 6. From the **Agent Platform** list box, select **EKS Linux**.
 7. From the **Image ID** list box, select any Image ID with an **EKS** prefix (for example, **EKS-Oregon-1.23**).
 8. Click **Add**. The Host is created, initialized, and started. In a few minutes, when the **Status** displays **Running**, the Host is available for use.
 
-<figure><img src="../../../.gitbook/assets/Screenshot (27).png" alt=""><figcaption><p>The E<strong>C2 Add Host</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (829).png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
 The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time. For this tutorial, the region is **us-west-2**, where the **NONPROD** Infrastructure was created.&#x20;

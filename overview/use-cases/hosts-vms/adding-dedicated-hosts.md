@@ -20,11 +20,7 @@ Configure the DuploCloud Portal to allow for the creation of Dedicated Hosts.
 6. In the **Value** field, select **true**.
 7. Click **Submit**. The configuration is displayed in the **System Config** tab.
 
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/image (291).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (291).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure></div>
 
 ### Creating Dedicated Hosts to launch EC2 instances
 
@@ -34,7 +30,7 @@ Configure the DuploCloud Portal to allow for the creation of Dedicated Hosts.
 4. In the **Dedicated Host ID** field, enter the ID of the Dedicated Host. The ID is used to launch a specific instance on a Dedicated Host. See the screenshot below for an example.
 5. Click **Add**. The Dedicated Host is displayed in the **EC2** tab.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_07_38.png" alt=""><figcaption><p><strong>EC2</strong> page with <strong>Advanced Options</strong> displayed including <strong>Dedciated Host ID</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (828).png" alt=""><figcaption><p><strong>EC2</strong> page with <strong>Dedicated Host ID</strong></p></figcaption></figure>
 
 ### Viewing Dedicated Hosts to launch EC2 instances
 
@@ -44,4 +40,3 @@ After you create Dedicated Hosts, view them by doing the following:
 2. In the **EC2** tab, select the **Host** from the Name column. The **Dedicated Host ID** card on the Host page displays the ID of the Dedicated Host.
 
 <figure><img src="../../../.gitbook/assets/newshot.png" alt=""><figcaption><p><strong>Dedicated Host ID</strong> card on the Host page displaying ID of the Dedicated Host</p></figcaption></figure>
-
