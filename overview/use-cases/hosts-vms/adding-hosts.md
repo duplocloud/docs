@@ -1,5 +1,5 @@
 ---
-description: Add a Host (VM) in the DuploCloud Portal.
+description: Add a Host (virtual machine) in the DuploCloud Portal.
 ---
 
 # Adding Hosts
@@ -97,7 +97,7 @@ See [Kubernetes StorageClass and PVC](../../../kubernetes-overview/kubernetes-st
 
 ### **Host Settings:**
 
-<table data-header-hidden><thead><tr><th width="208"></th><th></th></tr></thead><tbody><tr><td><strong>Create AMI</strong></td><td>Create an <a href="create-amazon-machine-image-ami.md">AMI</a> from the Host. </td></tr><tr><td><strong>Create Snapshot</strong></td><td>Create a <a href="ec2-snapshots.md">snapshot </a>of the Host at a specific point. </td></tr><tr><td><strong>Update User Data</strong></td><td>Update the Host user data.</td></tr><tr><td><strong>Change Instance Size</strong></td><td>Resize a Host instance to accommodate the workload. </td></tr><tr><td><strong>Update Auto Reboot Status Check</strong></td><td>Enable or disable <a href="configure-auto-reboot.md">Auto Reboot</a>. Set the number of minutes after the AWS Instance Status Check fails before automatically rebooting. Also allows updating the Auto Reboot setting if the instance is disconnected.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="208"></th><th></th></tr></thead><tbody><tr><td><strong>Create AMI</strong></td><td>Create an <a href="create-amazon-machine-image-ami.md">Amazon Machine Image (AMI)</a> of the Host.</td></tr><tr><td><strong>Create Snapshot</strong></td><td>Create a <a href="ec2-snapshots.md">snapshot </a>of the Host at a specific point. </td></tr><tr><td><strong>Update User Data</strong></td><td>Update the Host user data.</td></tr><tr><td><strong>Change Instance Size</strong></td><td>Resize a Host instance to accommodate the workload. </td></tr><tr><td><strong>Update Auto Reboot Status Check</strong></td><td>Enable or disable <a href="configure-auto-reboot.md">Auto Reboot</a>. Set the number of minutes after the AWS Instance Status Check fails before automatically rebooting. </td></tr></tbody></table>
 
 <div align="left"><figure><img src="../../../.gitbook/assets/Shot 2 Host Connections.png" alt=""><figcaption><p>The Host <strong>Actions</strong> menu with <strong>Host Settings</strong> selected.</p></figcaption></figure></div>
 
