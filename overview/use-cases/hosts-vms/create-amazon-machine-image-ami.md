@@ -4,27 +4,36 @@ description: Add and view AMIs in AWS
 
 # Create Amazon Machine Image (AMI)
 
-You can create [Amazon Machine Images (AMIs)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) in the DuploCloud Portal. Unlike EC2 Hosts, which are fully dedicated physical servers for launching EC2 instances, AMIs are templates that contain the information required to launch an instance, such as an operating system, application software, and data. EC2 is used for creating a virtual server instance. AMI is the EC2 virtual machine image.
+[Amazon Machine Images (AMIs)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html) are virtual machine templates used to launch EC2 instances in AWS. An AMI includes the operating system, application software, and configuration data required to start an instance. While EC2 Hosts in DuploCloud represent dedicated physical servers, AMIs serve as reusable blueprints for creating virtual server instances. You can create and manage AMIs directly in the DuploCloud Portal to support consistent and scalable deployments.
 
 ## Adding an AMI
 
-1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
-2. Select the Host on which you want to base your AMI from the **Name** column.
-3.  Click the **Actions** menu and select **Host Settings** -> **Create AMI**. The **Set AMI** pane displays. \
+1. In the DuploCloud Portal, navigate to **Cloud Services** → **Hosts**. The **Hosts** page displays.
+2. In the **NAME** column, select the host you want to use as the basis for your AMI.
+3.  Click the **Actions** menu and select **Host Settings** → **Create AMI**. The **Create AMI** pane displays. \
 
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/ami1.png" alt=""><figcaption><p><strong>Set AMI</strong> pane</p></figcaption></figure></div>
-4. In the **AMI Name** field, enter the name of the AMI.
-5. Click **Create**.&#x20;
+    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (730).png" alt=""><figcaption><p><strong>Create AMI</strong> pane</p></figcaption></figure></div>
+4.  Complete the following fields:
 
-## Viewing an AMI
+    <table data-header-hidden><thead><tr><th width="214.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>AMI Name</strong></td><td>Enter a name for the new AMI.</td></tr><tr><td><strong>Share With All Tenants</strong></td><td>Enable this option to make the AMI available to all tenants in the environment.</td></tr><tr><td><strong>Shared With Tenants</strong></td><td>If not sharing with all tenants, select one or more specific tenants to share the AMI with.</td></tr></tbody></table>
+5. Click **Create** to generate the AMI. You can monitor its status on the **AMI** tab of the **Hosts** page.
 
-1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
-2. Select the **AMI** tab. Your AMIs are displayed on the **AMI** page. Selecting an AMI from this page displays the **Overview** and **Details** tabs for more information.
+## Viewing and Editing an AMI
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-14_34_01.png" alt=""><figcaption><p><strong>AMI</strong> page</p></figcaption></figure>
+1. In the DuploCloud Portal, navigate to **Cloud Services** → **Hosts**.&#x20;
+2. Select the **AMI** tab.
+3. Click the **Name** of an AMI to open its details page and view overview information such as creation date, source host, and sharing scope.
+4. To update the AMI’s sharing settings, click **Actions** → **Edit** from the AMI details page. Here you can:
+   * Enable or disable **Share With All Tenants**.
+   * Select specific tenants to share the AMI with.
+   * Keep the AMI tenant-scoped (private).
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-14_35_23.png" alt=""><figcaption><p><strong>Overview</strong> and <strong>Details</strong> tabs for an AMI</p></figcaption></figure>
+{% hint style="info" %}
+**Note:** The **Edit** option is available only for AMIs created after sharing functionality was implemented. Older AMIs may not support editing.
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/Screenshot (731).png" alt=""><figcaption><p><strong>Overview</strong> and <strong>Details</strong> tabs for an AMI</p></figcaption></figure>
 
 ## Launching a New Host from an AMI
 
