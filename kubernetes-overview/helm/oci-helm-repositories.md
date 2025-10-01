@@ -1,6 +1,12 @@
+---
+description: Manage and deploy Helm charts stored in OCI-compliant registries
+---
+
 # OCI Helm Repositories
 
-DuploCloud supports OCI-compliant Helm repositories, enabling you to manage and deploy Helm charts stored in container registries such as Docker Hub, GitHub Container Registry, Amazon ECR, and Azure Container Registry. This support is especially useful for managing private Helm charts or leveraging cloud-native registries that follow the OCI distribution specification.
+OCI Helm repositories let you store and manage Helm charts as OCI artifacts, similar to container images. This approach is useful for cloud-native registries and private charts where a traditional `index.yaml` catalog is not available.
+
+Using OCI repositories in DuploCloud, you can deploy charts just like a standard Helm repository, while taking advantage of OCI-native workflows.
 
 ## Prerequisites
 
@@ -13,30 +19,36 @@ DuploCloud supports OCI-compliant Helm repositories, enabling you to manage and 
 To register an OCI Helm repository in DuploCloud:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** → **Helm.**
-2. Select the **Repository** tab.
-3. Click **Add**, The **Add Helm Repository** pane displays.
+2. Select the **OCI Repository** tab.
+3. Click **Add**, The **Add OCI Repository** pane displays.
 4. Complete the fields as described below:
 
-<table data-header-hidden><thead><tr><th width="245.99993896484375"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a friendly name for the repository.</td></tr><tr><td><strong>Interval (MM:SS)</strong></td><td>Set how often DuploCloud should refresh and synchronize with the repository. The default is 05:00 (five minutes).</td></tr><tr><td><strong>Repository Type</strong></td><td>Select <strong>OCI Repository</strong></td></tr><tr><td><strong>Repository URL</strong></td><td>Enter the full OCI repository URL, for example, <code>oci://ghcr.io/my-org/charts</code>.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="199.5555419921875">Field</th><th>Description / Notes</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter the repository name. This field is required.</td></tr><tr><td><strong>Interval (MM:SS)</strong></td><td>Enter the synchronization interval in minutes and seconds. The default is <strong>05:00</strong>.</td></tr><tr><td><strong>Repository URL</strong></td><td>Enter the OCI repository URL. For example: <code>oci://registry-1.docker.io/bitnamicharts/nginx</code></td></tr><tr><td><strong>Tag</strong></td><td>Enter a tag for the repository, for example, <code>18.9.0</code>.</td></tr><tr><td><strong>Media Type</strong></td><td>Select the media type from the available options.</td></tr><tr><td><strong>Operation</strong></td><td>Select the operation to perform from the available options.</td></tr></tbody></table>
 
-4. Click **Create**. Once added, the OCI repository will appear under the **Repository** tab and be available when [deploying Helm charts](helm-charts.md#deploying-helm-releases).
+5. Click **Create**. Once added, the repository will appear under the **OCI Repository** tab and be available when [deploying Helm charts](helm-charts.md#deploying-helm-releases).
 
 ## Managing an OCI Repository
 
 Once you've added an OCI Helm repository, you can view its details, update its configuration, or delete from directly in the DuploCloud Portal.
 
 1. Navigate to **Kubernetes** → **Helm.**
-2. Select the **Repository** tab.
-3. Click the **menu icon (three dots)** in the row of the repository you want to manage.
+2. Select the **OCI Repository** tab.
+3. Click the **menu icon** (<img src="../../.gitbook/assets/menu icon (26).avif" alt="" data-size="line">) in the row of the repository you want to manage.
 4. Choose one of the following actions:
 
 <table data-header-hidden><thead><tr><th width="146.4444580078125">Option</th><th>Description</th></tr></thead><tbody><tr><td><strong>View</strong></td><td>View the repository’s current configuration, sync status, and metadata.</td></tr><tr><td><strong>Update</strong></td><td>Edit the repository name, URL, sync interval, or authentication settings.</td></tr><tr><td><strong>Delete</strong></td><td>Remove the repository from DuploCloud. Releases that depend on it will no longer reconcile.</td></tr></tbody></table>
 
 {% hint style="info" %}
-Deleting a Helm repository will not remove any releases that were deployed from it, but those releases will no longer reconcile unless the repository is re-added.
+Deleting an OCI Helm repository will not remove any releases that were deployed from it, but those releases will no longer reconcile unless the repository is re-added.
 {% endhint %}
 
-## Deploying Charts from an OCI Repository
+## Deploying a Helm Release from an OCI Repository
 
-Once your OCI repository is added and synced in DuploCloud, you can deploy charts from it the same way you would for any other Helm repository. Follow the steps in [Deploying a Helm Release](helm-charts.md#deploying-helm-releases), selecting your OCI repository from the **Source Name** list box.
+To deploy a Helm release from an OCI-compliant repository, see the documentation for [Deploying Helm Releases](helm-charts.md#deploying-a-helm-release).
 
+When completing the release fields:
+
+* For **Source Type**, select **OCIRepository**.
+* For **Source Name**, select the OCI repository you added.
+
+The release will deploy using the selected OCI repository and appear under the **Release** tab.
