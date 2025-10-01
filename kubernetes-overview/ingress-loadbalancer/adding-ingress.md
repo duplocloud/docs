@@ -17,7 +17,7 @@ See the DuploCloud documentation for instructions to add [Tenants](../../overvie
 An administrator needs to enable the AWS Application Load Balancer controller for your Infrastructure before you can use Ingress.
 
 1. In the DuploCloud Portal, navigate to **Administrator ->** **Infrastructure** and select the Infrastructure name from the **NAME** column.&#x20;
-2. Select the **Settings** tab, and click **Add**. The **Infra - Custom Data** pane displays.
+2. Select the **Settings** tab and click **Add**. The **Infra - Custom Data** pane displays.
 3. From the **Setting Name** list box, select **Enable ALB Ingress Controller**.
 4. Select **Enable**.
 5. Click **Set**. In the Settings tab, the **Enable ALB Ingress Controller** setting displays a value of **true**.&#x20;
@@ -71,7 +71,7 @@ Complete the following steps to add routing rules to the Ingress.
 
 1. On the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule pane** displays.&#x20;
 
-<div align="left"><figure><img src="../../.gitbook/assets/ingress rule.png" alt="" width="369"><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (711).png" alt="" width="380"><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 
 2. Complete the fields to configure the rule.
 
@@ -108,7 +108,20 @@ Now that the necessary certificates have been added, you can optionally configur
 
 ### Configuring Ingress redirect configurations and annotations
 
-1. On the **Add Kubernetes Ingress** page, click **Add Redirect Config**. The **Add Redirect Config** pane displays.
+1.  On the **Add Kubernetes Ingress** page, click **Add Redirect Config**. The **Add Redirect Config** pane displays.\
+
+
+    <div align="left"><figure><img src="../../.gitbook/assets/redirect config.png" alt=""><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure></div>
+2. In the **Name** field, enter a descriptive name for the Ingress redirect configuration.&#x20;
+3. &#x20;In the **Host** field, specify the domain name for which this redirect rule will apply.
+4. In the **Path** field, define the path that should trigger the redirect.
+5. Enter the **Port** for the backend service or redirect.
+6. Enter the **Protocol** to enforce (e.g., HTTPS).
+7. If Applicable, in the **Query** field, specify query parameters for the redirect.
+8. In the **Status Codes** field, enter the HTTP status code for the redirect.
+9. Optionally, in the **Annotations** field, enter additional configuration options specific to the Ingress controller.
+10. Click **Add** to add the Kubernetes Ingress with defined rules and configurations.&#x20;
+11. On the **Add Kubernetes Ingress** page, click **Add Redirect Config**. The **Add Redirect Config** pane displays.
 
 <div align="left"><figure><img src="../../.gitbook/assets/redirect config.png" alt="" width="330"><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure></div>
 
@@ -120,7 +133,7 @@ Now that the necessary certificates have been added, you can optionally configur
 
 After completing all required fields, adding rules and certificates, and optionally configuring annotations and labels, click **Add** at the bottom of the **Add Kubernetes Ingress** page to finalize and create your Ingress resource.
 
-You will then see your new Ingress listed on the **Kubernetes → Ingress** page.
+You will then see your new Ingress listed on the **Kubernetes** → **Ingress** page.
 
 <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_57_51.png" alt=""><figcaption><p> <strong>The Ingress</strong> page displaying the added Ingress</p></figcaption></figure>
 
@@ -128,9 +141,14 @@ You will then see your new Ingress listed on the **Kubernetes → Ingress** page
 
 ### Viewing Ingress details in the DuploCloud Portal
 
-When Ingress is configured, view details by navigating to **Kubernetes** -> **Ingress**, and selecting your Ingress from the **NAME** column.
+1. View Ingress details by navigating to **Kubernetes** -> **Ingress** and selecting your Ingress from the **NAME** column. The Ingress details page displays.
+2. Use the tabs to view Ingress details:
+   * In the **Configuration** tab, you can view the overall Ingress settings such as the Ingress controller, visibility, certificate details, listener ports, and target type. The DNS address displayed here is a clickable link that opens the ingress endpoint in a new browser tab, enabling you to quickly access the exposed service.
+   * In the **Ingress Rules** tab, you can review the list of rules that define how traffic is routed based on hostnames and paths. Each rule includes a clickable **Access Path** link (<img src="../../.gitbook/assets/Screenshot (737).png" alt="" data-size="line">) that opens the full URL for that specific path in a new browser tab, allowing you to quickly verify and test routing behavior for individual paths.
 
-<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-15_06_22.png" alt=""><figcaption><p> <strong>Ingress</strong> page with multiple Ingresses</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (740).png" alt=""><figcaption><p> <strong>Configuration</strong> tab on the <strong>Ingress</strong> details page</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/Screenshot (739).png" alt=""><figcaption><p> <strong>Ingress Rules</strong> tab on the <strong>Ingress</strong> details page</p></figcaption></figure>
 
 ### Viewing Ingress details using `curl` Commands
 
