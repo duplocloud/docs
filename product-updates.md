@@ -10,6 +10,10 @@ coverY: 0
 
 AWS
 
+* [AMI enhancements](overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md) — Select, restrict, or share AMIs across Tenants.
+* [Amazon MQ support](overview/aws-services/amazon-mq.md) — Provision and manage AWS MQ brokers in DuploCloud.
+* [App Runner support](overview/aws-services/app-runner.md) — Provision and manage AWS App Runner services.
+* [ECS launch and network mode](aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#creating-a-task-definition) — Select launch type and network mode for ECS tasks.
 * [OpenSearch upgrade support](overview/aws-services/elasticsearch.md#managing-an-opensearch-instance) — Upgrade OpenSearch versions within DuploCloud.
 * [AWS Secrets Manager support](overview/aws-services/aws-secrets-support.md) — Manage secrets using AWS Secrets Manager.
 * [EC2 Snapshots](overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.
@@ -17,13 +21,15 @@ AWS
 
 Azure
 
+* [MSSQL Backup retention](overview-2/azure-services/databases/sql-database.md#updating-the-backup-retention-period-for-a-database) — Enable and manage backup retention for Azure SQL Server.
 * [Deleted Key Vaults listing](overview-2/azure-services/key-vault.md#managing-deleted-azure-key-vaults) — View and recover or purge deleted Azure Key Vaults.
 * [Azure CosmosDB support](overview-2/azure-services/databases/cosmosdb.md) — Provision and manage CosmosDB resources in Azure.
 
 GCP
 
+* [Cloud SQL edition attribute](overview-1/gcp-services/cloud-sql.md#creating-a-cloud-sql-database) — Add and manage edition attributes for Cloud SQL instances.
 * [Ingress TLS annotation support](kubernetes-overview/ingress-loadbalancer/gke-ingress.md#configuring-the-ingress) — Use annotations to configure TLS host and secret.
-* [PostgreSQL dedicated node types](overview-1/gcp-services/cloud-sql.md) — Use dedicated nodes for PostgreSQL deployments.
+* [PostgreSQL dedicated node types](overview-1/gcp-services/cloud-sql.md#creating-a-cloud-sql-database) — Use dedicated nodes for PostgreSQL deployments.
 * [Disable NAT during infra creation](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/) — Option to skip NAT setup when creating infra.
 * [GCP Secret Manager support](overview-1/gcp-services/gcp-secrets-manager.md) — Manage secrets using GCP Secret Manager service.
 * [Firewall rule support](overview-1/security-configuration-settings/gcp-firewall-rules/) — Define and manage network rules at the infrastructure and tenant levels.
@@ -32,11 +38,15 @@ GCP
 
 Kubernetes
 
+* [K8s secrets & ConfigMaps backup](kubernetes-overview/configs-and-secrets/backing-up-and-restoring-kubernetes-secrets-and-configmaps.md) — Manage backups for K8s secrets and ConfigMaps.
 * [Helm Repo with OCI support](kubernetes-overview/helm/oci-helm-repositories.md) — Support for adding Helm repositories from OCI-compliant registries.
 * [HelmRelease with `ValuesFrom`](kubernetes-overview/helm/helm-charts.md) — Pull Helm chart values from external sources.
 
 General
 
+* [User groups in PermissionSets](security-and-compliance/access-control-2/permission-sets.md#creating-a-user-group) — Apply PermissionSets to user groups for simplified access control.
+* [Billing Alerts](diagnostics-overview/configure-billing-alerts.md) — Configure billing alerts across AWS, Azure, and GCP.
+* [Inventory page](extras-overview/inventory.md#accessing-the-inventory-page) — View and track deployed resources across cloud providers.
 * [PermissionSet with Priority](security-and-compliance/access-control-2/permission-sets.md) — Control policy precedence using numeric priority.
 * [Multiple portal logins](access-control/multiple-portal-login-options.md)— Add and switch between portals on the login screen.
 * [Simpler logging navigation](diagnostics-overview/standard-observability-suite/logs.md#viewing-service-specific-logs) — Navigate directly from service pages to logs.
