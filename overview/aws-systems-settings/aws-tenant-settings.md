@@ -4,7 +4,7 @@ description: Configure Tenant settings in the DuploCloud UI for AWS users
 
 # AWS Tenant Settings
 
-## Configuring Tenant settings:&#x20;
+## Configuring Tenant Settings&#x20;
 
 1. Navigate to **Administrator** -> **Tenants**.
 2. In the **NAME** column, select the name of the Tenant you want to configure settings for.&#x20;
@@ -12,6 +12,22 @@ description: Configure Tenant settings in the DuploCloud UI for AWS users
 4. From the **Select Feature** list box, select the setting (see list of settings below).&#x20;
 5. Click **Enable**, or enter an appropriate value.&#x20;
 6. Click **Add**. The setting is applied to the Infrastructure.&#x20;
+
+## Configuring Custom Settings
+
+To add a tenant setting that is not listed in the **Select Feature** list box, enter the setting name and value manually, using the following steps.&#x20;
+
+1. In the DuploCloud Portal, navigate to **Administrator** → **Tenants**.
+2. In the **NAME** column, select the tenant you want to configure.
+3. Select the **Settings** tab.
+4.  Click **Add**. The **Add Tenant Feature** pane displays.\
+
+
+    <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (879).png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
+5. In the **Tenant Feature** list box, choose **Other**.
+6. Enter the name of your custom tenant setting in the **Configuration** field.
+7. Enter the value for the setting (for example, `True`) in the adjacent field.
+8. Click **Add**. The custom tenant setting is applied.
 
 ## Tenant Settings
 
@@ -55,4 +71,5 @@ description: Configure Tenant settings in the DuploCloud UI for AWS users
 | **Other**                                                       | Allows entering a custom or unlisted setting.                                                                                                                                                     |
 | `raise_fault_on_last_state_pod_failure_reasons`                 | Generates a fault when a Kubernetes pod is terminated with a specified failure reason. Enter the failure reasons you want to monitor, e.g., `OOMKilled`. Multiple reasons can be comma-separated. |
 | `tenant_instances_stopped`                                      | Mutes faults for tenants whose instances are stopped when set to `True`.                                                                                                                          |
+| `enable_aws_lambda_log_forwarding_to_elastic_search`            | Enable AWS Lambda log forwarding to Elasticsearch.                                                                                                                                                |
 

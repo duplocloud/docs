@@ -87,6 +87,12 @@ To update the code for the Lambda function:
 4. Use the **Image Configuration** field to update an additional configuration parameter.
 5. Click **Submit**.
 
+{% hint style="info" %}
+#### Forwarding Lambda Logs to Elasticsearch
+
+Enabling the `enable_aws_lambda_log_forwarding_to_elastic_search` Tenant setting sends AWS Lambda logs to Elasticsearch, allowing you to view Lambda execution logs directly in the DuploCloud Logs dashboard. For detailed instructions, see [AWS Tenant Settings](../../aws-systems-settings/aws-tenant-settings.md).&#x20;
+{% endhint %}
+
 ## References
 
 * [Duplocloud Lambda](https://docs.duplocloud.com/docs/aws-user-guide/aws-services/lambda)
