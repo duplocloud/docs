@@ -171,12 +171,30 @@ The Architecture Diagram Agent leverages DuploCloud's cartography system to gene
 * **Documentation**: Generate up-to-date architecture documentation
 * **Compliance Auditing**: Visualize data flows for security and compliance reviews
 
+#### AWS Resources
+
+Architecture Diagram Agent has insights into your AWS Resources. We currently support `AWSAccount`, `AWSRegion`, `EC2Instance`, `S3Bucket`, and `RDSInstance` to name a few. To see your AWS Resources ask the agent: `Can you create a diagram of the aws resources?`
+
+<figure><img src="../../.gitbook/assets/aws-resources.png" alt=""><figcaption></figcaption></figure>
+
+#### Kubernetes Aware
+
+Architecture Diagram Agent has extensive knowledge of Kubernetes in your infrastructure.&#x20;
+
+For example, we can ask Architecture Diagram Agent `Can you create a diagram of the duploservices-ai namespace?` and it'll create a diagram.
+
+<figure><img src="../../.gitbook/assets/duploservices-ai-ns.png" alt=""><figcaption></figcaption></figure>
+
 #### Custom Dependency Definition
 
 Organizations can optionally define custom application dependencies:
 
 * **Granular Control**: Define dependencies per microservice
 * **Multi-type Support**: AWS resources, Kubernetes services, and external APIs
+
+For example, once we define a pods dependenices, we can ask our Architecture Diagram Agent: `Can you create a diagram of dependencies for my Architecture Diagram Agent?` and it will create a diagram of the dependencies:
+
+<figure><img src="../../.gitbook/assets/architecture-diagram-agent.png" alt=""><figcaption></figcaption></figure>
 
 \
 **Architecture Diagram Agent — Role Boundaries and Scope**
