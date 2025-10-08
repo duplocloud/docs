@@ -6,7 +6,7 @@ description: Encryption support in DuploCloud
 
 Encryption falls into two categories:&#x20;
 
-* [At Rest](at-rest-encryption.md)
+* [At Rest](at-rest-encryption/)
 * [In Transit](in-transit-encryption.md)
 
 &#x20; &#x20;
