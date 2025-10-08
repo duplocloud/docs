@@ -4,11 +4,7 @@ description: Create ElastiCache for Redis database and Memcache memory caching
 
 # AWS ElastiCache
 
-[Amazon ElastiCache](https://aws.amazon.com/elasticache/features/) is a serverless caching service delivering real-time, cost-optimized performance for modern applications. DuploCloud supports ElastiCache instances of the following types:
-
-* **Memcached**
-* **Redis**
-* **Valkey**
+[Amazon ElastiCache](https://aws.amazon.com/elasticache/features/) is a serverless caching service delivering real-time, cost-optimized performance for modern applications. DuploCloud supports Memcached, Redis, and Valkey ElastiCache instances.
 
 ## Creating a Memcached ElastiCache Instance
 
@@ -65,6 +61,81 @@ Pass the cache endpoint to your application through the [Environment Variables](
 <div align="left"><figure><img src="../../../.gitbook/assets/cloudwatch logs pane.png" alt="" width="350"><figcaption><p>The <strong>Add CloudWatch Logs: Log Delivery Configuration</strong> pane</p></figcaption></figure></div>
 
 12. Click **Create**. The Redis or Valkey database instance is created.
+
+## Creating an ElastiCache Global Datastore
+
+DuploCloud supports ElastiCache Global Datastores, which allow you to replicate a Redis cluster across AWS regions.&#x20;
+
+### Creating a Global Datastore
+
+When you create a Global Datastore in DuploCloud, a primary Redis cluster, in the current Tenant, and a secondary cluster in a different region are created automatically as part of the process. You can then add additional secondary clusters in other regions as necessary.
+
+1. Navigate to to **Cloud Services** → **Database** → **ElastiCache** → **Global Datastores**.
+2.  Click **Add**. The **Create a Global Datastore** pane displays.\
+
+
+    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (868).png" alt=""><figcaption><p><strong>Create a Global Datastore</strong> pane </p></figcaption></figure></div>
+3. Complete the fields, as required for your configuration:
+
+<table data-header-hidden><thead><tr><th width="218.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the datastore. We recommend using the Tenant name as a prefix.</td></tr><tr><td><strong>Redis Version</strong></td><td>Select the Redis version to deploy.</td></tr><tr><td><strong>Size</strong></td><td>Select a node size. Only Large or larger nodes are supported, and burstable types (t-class) are not allowed.</td></tr><tr><td><strong>Global Replication Group</strong></td><td>Enter a name for the replication group.</td></tr><tr><td><strong>Global Replication Group Description</strong></td><td>Optionally, enter a description for the replication group.</td></tr><tr><td><strong>Secondary Cluster Region</strong></td><td>Select the Tenant/region where you want the secondary cluster to reside.</td></tr><tr><td><strong>Log Delivery Configuration</strong>  </td><td>Configure a log destination to capture Redis logs for monitoring and troubleshooting.</td></tr><tr><td><strong>Parameter Group Name</strong></td><td>Select the parameter group name for log delivery.</td></tr><tr><td><strong>Replicas</strong></td><td>Enter the number of replicas.</td></tr><tr><td><strong>No of Shards</strong></td><td>Specify the number of shards for the cluster.</td></tr><tr><td><strong>KMS (Optional)</strong></td><td>Select a KMS key to enable server-side encryption for the Global Datastore.</td></tr><tr><td><strong>Encryption in Transit</strong></td><td><p>Enable or disable in-transit encryption.</p><ul><li>When enabled, enter the password clients will use to authenticate to the cluster in the <strong>Auth Token (Optional)</strong> field.</li></ul></td></tr><tr><td><strong>Secondary Cluster KMS</strong></td><td>Select a KMS key to enable server-side encryption for any secondary clusters you add.</td></tr><tr><td><strong>Snapshot Retention Limit</strong></td><td>Enter retention period in days.</td></tr><tr><td><strong>Snapshot Window Start Time</strong></td><td>Enter the start time for the snapshot window.</td></tr><tr><td><strong>Snapshot Window Duration in Hours</strong></td><td>Enter the duration of the snapshot window in hours.</td></tr></tbody></table>
+
+5. Click **Create** to provision the ElastiCache Global Datastore.
+
+### Adding Regional Clusters
+
+After creating a Global Datastore, you can add secondary clusters (regional clusters) to replicate the primary Redis cluster across other AWS regions.
+
+1. Navigate to **Cloud Services** → **Databases** → **ElastiCache** → **Global Datastores**.
+2. Select the **Regional Clusters** tab.
+3.  Click **Add**. The **Add Secondary Cluster** pane displays.\
+
+
+    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (871).png" alt=""><figcaption><p><strong>Add Secondary Cluster</strong> pane</p></figcaption></figure></div>
+4. Complete the following fields:
+
+<table data-header-hidden><thead><tr><th width="177.3333740234375"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the secondary cluster.</td></tr><tr><td><strong>Description</strong></td><td>Optionally, enter a description for the cluster.</td></tr><tr><td><strong>Tenant</strong></td><td>Select the Tenant that will own this secondary cluster.</td></tr><tr><td><strong>KMS</strong> (Optional)</td><td>If a KMS key was selected when creating the Global Datastore, select the same KMS key to enable server-side encryption for the secondary cluster.</td></tr><tr><td><strong>Auth Token</strong> (Optional)</td><td>If a KMS key was selected when creating the Global Datastore, enter the authentication token for client connections.</td></tr></tbody></table>
+
+5. Click **Create** to provision the secondary cluster.
+
+{% hint style="info" %}
+Each regional cluster added becomes a read replica of the primary Redis cluster. You can retrieve the primary or secondary cluster endpoint directly from the **Redis Cluster** tab to connect your application.
+{% endhint %}
+
+### Viewing Cluster Details
+
+To view cluster details, including connection endpoints for a Global Datastore:
+
+1. Navigate to **Cloud Services** → **Database** → **ElastiCache** → **Global Datastores**.
+2. Select the name of the Global Datastore.
+3. Select the **Regional Clusters** tab. A list of clusters in the Global Datastore displays.
+4. Click the name of the cluster you want to view details for.
+5. Use the tabs to explore cluster details:&#x20;
+
+<table data-header-hidden><thead><tr><th width="143.77777099609375">Tab</th><th>Description</th></tr></thead><tbody><tr><td><strong>Redis Cluster</strong></td><td>Displays cluster details, including the endpoint. </td></tr><tr><td><strong>Details</strong></td><td>Shows a JSON representation of the cluster configuration and status.</td></tr><tr><td><strong>Alerts</strong></td><td>Displays any alerts related to the cluster.</td></tr><tr><td><strong>Snapshots</strong></td><td>Lists available snapshots and backup information for the cluster.</td></tr></tbody></table>
+
+{% hint style="info" %}
+Each cluster provides a single endpoint. The primary endpoint handles **write operations**, and the secondary endpoint handles **read operations**.&#x20;
+{% endhint %}
+
+<figure><img src="../../../.gitbook/assets/Screenshot (870).png" alt=""><figcaption><p>Cluster detail page with <strong>Redis Cluster</strong>, <strong>Details</strong>, <strong>Alerts</strong>, and <strong>Snapshots</strong> tabs.</p></figcaption></figure>
+
+### Removing Clusters
+
+To remove a cluster from a Global Datastore:
+
+1. Navigate to **Cloud Services** → **Database** → **ElastiCache** → **Global Datastores**.
+2. Select the name of the Global Datastore.
+3. Select the **Regional Clusters** tab
+4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the cluster you want to remove.
+5. Select **Remove**.
+
+{% hint style="warning" %}
+**Important:**
+
+* Secondary clusters must be removed **before** the primary cluster.
+* Once all secondary clusters are removed, the primary cluster can be removed.
+* Any removed cluster becomes a **standalone cluster**.
+{% endhint %}
 
 ## Troubleshooting Redis Connection Issues in AWS
 
