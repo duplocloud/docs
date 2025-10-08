@@ -25,7 +25,7 @@ View and manage your EC2 snapshots in DuploCloud.
 2. Select the **EC2** tab.
 3. Click on name of the EC2 host you want to inspect in the **NAME** column.
 4. Select the **Snapshots** tab. A list of all snapshots for that host displays, showing details such as Snapshot ID, creation date, and description.
-5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to a snapshot, and select from the following options:
+5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (18).avif" alt="" data-size="line">) next to a snapshot, and select from the following options:
    * **View JSON**: to view details of the snapshot.
    * **Delete**: to delete the snapshot if no longer needed.
 

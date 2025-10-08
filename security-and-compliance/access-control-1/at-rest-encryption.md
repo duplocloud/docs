@@ -15,6 +15,6 @@ When creating resources, encryption is applied using one of the following option
 These options give users flexibility to apply encryption strategies that meet their specific requirements.
 
 {% hint style="info" %}
-For detailed instructions on adding Plan-level or Tenant-level keys and selecting them when creating resources, see the [KMS Keys documentation](kms-keys.md).
+For detailed instructions on adding Plan-level or Tenant-level keys and selecting them when creating resources, see the [KMS Keys documentation](at-rest-encryption/kms-keys.md).
 {% endhint %}
 
