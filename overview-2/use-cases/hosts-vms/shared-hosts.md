@@ -12,31 +12,29 @@ DuploCloud supports Shared Hosts for:
 
 To enable Host sharing, configure one Tenant to share its Hosts, and another Tenant to run K8s Pods on any Host.
 
-### **Enabling a Tenant to Share Its Hosts**
+### **Enabling a Tenant to Share its Hosts**
 
-1. In the DuploCloud Portal, go to **Administrator → Tenant**.
+1. In the DuploCloud Portal, go to **Administrator** → **Tenant**.
 2. From the Tenant list box, select the Tenant that will share its Host.
 3. Click the **Settings** tab.
 4.  Click **Add**. The **Add Tenant Feature** pane displays.\
 
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/Addfeature1.jpg" alt="" width="455"><figcaption><p>The <strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (482).png" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** list, select **Allow hosts to run K8S pods from other tenants**.
-6. Select **Enable**, then click **Add**.\
-   This Tenant's Hosts (Azure VMs) can now run Pods from other Tenants.
+6. Select **Enable**, then click **Add**. This Tenant's Hosts (Azure VMs) can now run Pods from other Tenants.
 
 ### **Enabling a Tenant to Run Pods on Shared Hosts**
 
-1. In the DuploCloud Portal, go to **Administrator → Tenant**.
+1. In the DuploCloud Portal, go to **Administrator** → **Tenant**.
 2. Select the Tenant that will run Pods on the shared Host.
 3. Click the **Settings** tab.
 4.  Click **Add**. The **Add Tenant Feature** pane displays.\
 
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/addfeature2.jpg" alt="" width="455"><figcaption><p>The <strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (483).png" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** list, select **Enable option to run K8S pods on any host**.
-6. Select **Enable**, then click **Add**.\
-   This Tenant can now run Pods on other Tenant's Hosts.
+6. Select **Enable**, then click **Add**. This Tenant can now run Pods on other Tenant's Hosts.
 
 ## Creating Services, Jobs, and CronJobs on Shared Hosts
 
