@@ -20,7 +20,10 @@ To register an OCI Helm repository in DuploCloud:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** → **Helm.**
 2. Select the **OCI Repository** tab.
-3. Click **Add**, The **Add OCI Repository** pane displays.
+3.  Click **Add**, The **Add OCI Repository** pane displays.\
+
+
+    <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (933).png" alt="" width="411"><figcaption><p><strong>Add OCI Repository</strong> pane</p></figcaption></figure></div>
 4. Complete the fields as described below:
 
 <table data-header-hidden><thead><tr><th width="199.5555419921875">Field</th><th>Description / Notes</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter the repository name. This field is required.</td></tr><tr><td><strong>Interval (MM:SS)</strong></td><td>Enter the synchronization interval in minutes and seconds. The default is <strong>05:00</strong>.</td></tr><tr><td><strong>Repository URL</strong></td><td>Enter the OCI repository URL. For example: <code>oci://registry-1.docker.io/bitnamicharts/nginx</code></td></tr><tr><td><strong>Tag</strong></td><td>Enter a tag for the repository, for example, <code>18.9.0</code>.</td></tr><tr><td><strong>Media Type</strong></td><td>Select the media type from the available options.</td></tr><tr><td><strong>Operation</strong></td><td>Select the operation to perform from the available options.</td></tr></tbody></table>
@@ -41,6 +44,8 @@ Once you've added an OCI Helm repository, you can view its details, update its c
 {% hint style="info" %}
 Deleting an OCI Helm repository will not remove any releases that were deployed from it, but those releases will no longer reconcile unless the repository is re-added.
 {% endhint %}
+
+<figure><img src="../../.gitbook/assets/Screenshot (935).png" alt=""><figcaption><p><strong>OCI Helm Repository-View</strong> pane</p></figcaption></figure>
 
 ## Deploying a Helm Release from an OCI Repository
 
