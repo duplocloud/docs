@@ -13,7 +13,7 @@ AWS
 * [AMI enhancements](overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md) — Select, restrict, or share AMIs across Tenants.
 * [Amazon MQ support](overview/aws-services/amazon-mq.md) — Provision and manage AWS MQ brokers in DuploCloud.
 * [App Runner support](overview/aws-services/app-runner.md) — Provision and manage AWS App Runner services.
-* [ECS launch and network mode](aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#creating-a-task-definition) — Select launch type and network mode for ECS tasks.
+* [ECS launch and network mode](overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition) — Select launch type and network mode for ECS tasks.
 * [OpenSearch upgrade support](overview/aws-services/elasticsearch.md#managing-an-opensearch-instance) — Upgrade OpenSearch versions within DuploCloud.
 * [AWS Secrets Manager support](overview/aws-services/aws-secrets-support.md) — Manage secrets using AWS Secrets Manager.
 * [EC2 Snapshots](overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.
@@ -102,7 +102,7 @@ General
   * [Enable delete protection for AWS Load Balancers.](overview/aws-services/load-balancers/#additional-load-balancer-settings)
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
   * Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;
-  * Support for [ECS with EC2 Capacity Provider](aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#configuring-ecs-with-ec2-capacity-provider).
+  * Support for [ECS with EC2 Capacity Provider](overview/aws-services/containers/ecs-containers-and-task-definitions/#configuring-ecs-with-ec2-capacity-provider).
 * Azure
   * Add new secret versions in [Azure Key Vault](overview-2/azure-services/key-vault.md).
   * Support for [Azure Databricks](overview-2/azure-services/databricks.md).
