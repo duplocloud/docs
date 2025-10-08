@@ -13,40 +13,36 @@ For a Native Docker Services example, see [this tutorial](../../../quick-start/q
 ## Creating a DuploCloud EKS Service
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
-2. Click **Add**.
-3. In the **Service Name** field, give the Service a name (without spaces).&#x20;
-4. From the **Cloud** list box, select **AWS**.&#x20;
-5. From the **Platform** list box, select **EKS Linux**.&#x20;
-6. In the **Docker Image** field, enter the Docker image.&#x20;
-7. Optionally, enter any allocation tags in the **Allocation Tag** field.&#x20;
-8. From the **Replica Strategy** list box, select a replication strategy. Refer to the informational ToolTip ( <img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FxM3pXz5cUSUlHq5qDBWY%252Finfo_tip_black.png%3Falt%3Dmedia%26token%3D1694a38c-92f8-4443-81f9-d465b3f968c8&#x26;width=41&#x26;dpr=4&#x26;quality=100&#x26;sign=cae4f194&#x26;sv=1" alt="" data-size="line"> ) for more information.
-9. Specify the number of replicas in the **Replicas** field (for Static replica strategy). The number of replicas you define must be less than or equal to the number of Hosts in the fleet.
-10. In the **Replica Placement** list box (for Static or Horizontal Pod Autoscaler replication strategies) select **First Available**, **Place on Different Hosts**, **Spread Across Zones**, or **Different Hosts and Spread Across Zones**. Refer to the informational ToolTip ( <img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FxM3pXz5cUSUlHq5qDBWY%252Finfo_tip_black.png%3Falt%3Dmedia%26token%3D1694a38c-92f8-4443-81f9-d465b3f968c8&#x26;width=41&#x26;dpr=4&#x26;quality=100&#x26;sign=cae4f194&#x26;sv=1" alt="" data-size="line"> ) for more information.
-11. Optionally, enter variables in the **Environmental Variables** field.&#x20;
-12. In the **Force StatefulSets** list box, select **Yes** or **No** (for Static or Horizontal Pod Autoscaler replication strategies).
-13. Optionally, select **Tolerate spot instances** (for Static or Horizontal Pod Autoscaler replication strategies)
+2. Click **Add**. **The Add Service** pane displays.
+3. Complete the following fields:
 
-<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_30_56.png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
+<table data-header-hidden><thead><tr><th width="211.111083984375">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Service Name</strong></td><td>Give the Service a name (without spaces).</td></tr><tr><td><strong>App Name</strong></td><td>Optionally, enter a label for the application. You can use this label later to filter Services.</td></tr><tr><td><strong>Cloud</strong></td><td>Select <strong>AWS</strong> from the list box.</td></tr><tr><td><strong>Platform</strong></td><td>Select <strong>EKS Linux</strong> from the list box.</td></tr><tr><td><strong>Docker Image</strong></td><td>Enter the Docker image.</td></tr><tr><td><strong>Allocation Tag</strong></td><td>Optionally, enter any allocation tags.</td></tr><tr><td><strong>Replica Strategy</strong></td><td>Select a replication strategy. Refer to the informational ToolTip  (<img src="../../../../.gitbook/assets/image (482).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Environmental Variables</strong></td><td>Optionally, enter variables.</td></tr><tr><td><strong>Replicas</strong></td><td>Specify the number of replicas (for <strong>Static</strong> replica strategy). The number must be less than or equal to the number of Hosts in the fleet.</td></tr><tr><td><strong>Replica Placement</strong></td><td>(For <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies) Select <strong>First Available</strong>, <strong>Place on Different Hosts</strong>, <strong>Spread Across Zones</strong>, or <strong>Different Hosts and Spread Across Zones</strong>. Refer to the informational ToolTip (<img src="../../../../.gitbook/assets/image (483).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Force StatefulSets</strong></td><td>Select <strong>Yes</strong> or <strong>No</strong> (for <strong>Static</strong> or <strong>Horizontal Pod Autoscale</strong>r strategies).</td></tr><tr><td><strong>Tolerate spot instances</strong></td><td>Optionally, select this option (for <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies).</td></tr><tr><td><strong>Use Fargate</strong></td><td>Select this option to run the Service on AWS Fargate instead of EC2-based worker nodes.</td></tr></tbody></table>
+
+<figure><img src="../../../../.gitbook/assets/Screenshot (936).png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
 
 5. Click **Next.** The **Advanced Options** page displays.
 6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
 7. Click **Create**. The Service is created.&#x20;
 
-## Viewing Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
+## Viewing and Managing Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. Select the Service from the **NAME** column. The Service details page displays.
+1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
+2.  Select **All** to view all Services, or **Select App** to view Services by **App Name**. This option is only available when one or more Services were created with an **App Name.**\
 
-<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_33_17.png" alt=""><figcaption><p><strong>Actions</strong> menu for EKS Service</p></figcaption></figure>
+
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (480).png" alt=""><figcaption><p><strong>Kubernetes - Services</strong> page with the <strong>Select App</strong> list box<br></p></figcaption></figure></div>
+3. Select the Service from the **NAME** column. The Service details page displays.
+4. Click **Actions** to choose from the following options:
+
+<table data-header-hidden><thead><tr><th width="174.8887939453125"></th><th></th></tr></thead><tbody><tr><td><strong>Edit</strong></td><td>Modify the container configuration.</td></tr><tr><td><strong>Restart</strong></td><td>Stop and then start the container immediately.</td></tr><tr><td><strong>Start</strong></td><td>Start a stopped container.</td></tr><tr><td><strong>Stop</strong></td><td>Stop a running container.</td></tr></tbody></table>
 
 ## Starting, Stopping, and Restarting Multiple DuploCloud Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 Using the Services page, you can start, stop, and restart multiple services simultaneously.
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
-2. Use the checkbox column to select multiple services you want to start or stop at once.
-3. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.**
-
-Your selected services are started, stopped, or restarted as you specified.
+2. Use the checkbox column to select the services you want to start or stop.
+3. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.** Your selected services are started, stopped, or restarted.
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_40_57.png" alt=""><figcaption></figcaption></figure>
 
