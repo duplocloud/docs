@@ -9,7 +9,7 @@ description: Create ElastiCache for Redis database and Memcache memory caching
 ## Creating a Memcached ElastiCache Instance
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database.**
-2.  Select the **ElastiCache** tab, and click **Add**. The **Create a ElastiCache** page displays.\
+2.  Select the **ElastiCache** tab and click **Add**. The **Create a ElastiCache** page displays.\
 
 
     <div align="left"><figure><img src="../../../.gitbook/assets/memcache.png" alt=""><figcaption><p>The <strong>Create an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
@@ -27,7 +27,7 @@ Pass the cache endpoint to your application through the [Environment Variables](
 ## Creating a Redis or Valkey ElastiCache Instance
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
-2. Select the **ElastiCache** tab, and click **Add**. The **Create an ElastiCache** page displays.
+2. Select the **ElastiCache** tab and click **Add**. The **Create an ElastiCache** page displays.
 
 <figure><img src="../../../.gitbook/assets/create a redis (1).png" alt=""><figcaption><p>The <strong>Create</strong> <strong>an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
@@ -38,16 +38,12 @@ Pass the cache endpoint to your application through the [Environment Variables](
 7. In the **Type** field, select **Redis** or **Valkey**.
 8. In the **Size** list box, select the node size.
 9. Optionally, complete the following fields:
-   * **Redis Version** or **Valkey Version**: Select the version number of the cache engine to be used. If not set, defaults to the latest version.
-   * **Parameter Group Name**: Specify the name of the parameter group to associate with this cache cluster.
-   * **KMS**: Select the KMS key.
-   * **Encryption At Transit**: Select if Encryption At Transit is needed.
-10. Optionally, complete the snapshot fields to configure backup:&#x20;
-    * **Snapshot Name:** Select the snapshot/backup you want to use for creating Redis/Valkey.
-    * **Snapshot ARNs**: Specify the ARN of a Redis RDB snapshot file stored in Amazon S3. Example- `arn:aws:s3:::s3-backup-foldername/backupobject.rdb`
-    * **Snapshot Retention Limit:** Specify retention limit in days. Accepted values - 1-35.
-    * **Snapshot Window Start Time**: The time when your automated snapshot process will begin.
-    * **Snapshot Window Duration in hours**: The length of time allowed for taking the snapshots automatically.
+
+<table data-header-hidden><thead><tr><th width="230.79998779296875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Redis Version or Valkey Version</strong></td><td>Select the version number of the cache engine to be used. If not set, defaults to the latest version.</td></tr><tr><td><strong>Parameter Group Name</strong></td><td>Specify the name of the parameter group to associate with this cache cluster.</td></tr><tr><td><strong>KMS</strong></td><td>Select the KMS key.</td></tr><tr><td><strong>Encryption At Transit</strong></td><td>Select if Encryption at Transit is needed.</td></tr></tbody></table>
+
+10. Optionally, configure snapshots for backup:&#x20;
+
+<table data-header-hidden><thead><tr><th width="206.79998779296875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Snapshot Name</strong></td><td>Select the snapshot/backup you want to use for creating Redis/Valkey.</td></tr><tr><td><strong>Snapshot ARNs</strong></td><td>Specify the ARN of a Redis RDB snapshot file stored in Amazon S3. Example: <code>arn:aws:s3:::s3-backup-foldername/backupobject.rdb</code></td></tr><tr><td><strong>Snapshot Retention Limit</strong></td><td>Specify retention limit in days (<strong>1</strong> to <strong>35</strong> days).</td></tr><tr><td><strong>Snapshot Window Start Time</strong></td><td>Select the time when your automated snapshot process will begin.</td></tr><tr><td><strong>Snapshot Window Duration in hours</strong></td><td>Specify the length of time allowed for taking the snapshots automatically.</td></tr></tbody></table>
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (15) (1).png" alt="" width="563"><figcaption><p>The Snapshot fields on the <strong>Create an ElastiCache</strong> pane</p></figcaption></figure></div>
 
@@ -61,6 +57,26 @@ Pass the cache endpoint to your application through the [Environment Variables](
 <div align="left"><figure><img src="../../../.gitbook/assets/cloudwatch logs pane.png" alt="" width="350"><figcaption><p>The <strong>Add CloudWatch Logs: Log Delivery Configuration</strong> pane</p></figcaption></figure></div>
 
 12. Click **Create**. The Redis or Valkey database instance is created.
+
+## Updating Snapshot Retention Limit
+
+After a Redis or Valkey ElastiCache instance is created, most settings cannot be changed without deleting and recreating the instance. However, you can update the Snapshot Retention Limit at any time.
+
+{% hint style="warning" %}
+This setting is not available for Memcached. It applies only to Redis and Valkey instances, which support snapshot backups.
+{% endhint %}
+
+To update the Snapshot Retention Limit:
+
+1. Navigate to **Cloud Services** -> **Database**.
+2. Select the **ElastiCache** tab.
+3. Click on the name of the ElastiCache instance in the **NAME** column.&#x20;
+4.  Click **Actions**, and select **Update Snapshot Retention Limit**. The **Update Snapshot Retention Limit** pane displays.\
+
+
+    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (767).png" alt=""><figcaption><p><strong>Update Snapshot Retention Limit</strong> pane</p></figcaption></figure></div>
+5. Select the desired **Snapshot Retention Limit (Days)** (between **1** and **35**).
+6. Click **Update** to save your changes.
 
 ## Creating an ElastiCache Global Datastore
 
@@ -79,7 +95,7 @@ When you create a Global Datastore in DuploCloud, a primary Redis cluster, in th
 
 <table data-header-hidden><thead><tr><th width="218.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the datastore. We recommend using the Tenant name as a prefix.</td></tr><tr><td><strong>Redis Version</strong></td><td>Select the Redis version to deploy.</td></tr><tr><td><strong>Size</strong></td><td>Select a node size. Only Large or larger nodes are supported, and burstable types (t-class) are not allowed.</td></tr><tr><td><strong>Global Replication Group</strong></td><td>Enter a name for the replication group.</td></tr><tr><td><strong>Global Replication Group Description</strong></td><td>Optionally, enter a description for the replication group.</td></tr><tr><td><strong>Secondary Cluster Region</strong></td><td>Select the Tenant/region where you want the secondary cluster to reside.</td></tr><tr><td><strong>Log Delivery Configuration</strong>  </td><td>Configure a log destination to capture Redis logs for monitoring and troubleshooting.</td></tr><tr><td><strong>Parameter Group Name</strong></td><td>Select the parameter group name for log delivery.</td></tr><tr><td><strong>Replicas</strong></td><td>Enter the number of replicas.</td></tr><tr><td><strong>No of Shards</strong></td><td>Specify the number of shards for the cluster.</td></tr><tr><td><strong>KMS (Optional)</strong></td><td>Select a KMS key to enable server-side encryption for the Global Datastore.</td></tr><tr><td><strong>Encryption in Transit</strong></td><td><p>Enable or disable in-transit encryption.</p><ul><li>When enabled, enter the password clients will use to authenticate to the cluster in the <strong>Auth Token (Optional)</strong> field.</li></ul></td></tr><tr><td><strong>Secondary Cluster KMS</strong></td><td>Select a KMS key to enable server-side encryption for any secondary clusters you add.</td></tr><tr><td><strong>Snapshot Retention Limit</strong></td><td>Enter retention period in days.</td></tr><tr><td><strong>Snapshot Window Start Time</strong></td><td>Enter the start time for the snapshot window.</td></tr><tr><td><strong>Snapshot Window Duration in Hours</strong></td><td>Enter the duration of the snapshot window in hours.</td></tr></tbody></table>
 
-5. Click **Create** to provision the ElastiCache Global Datastore.
+4. Click **Create** to provision the ElastiCache Global Datastore.
 
 ### Adding Regional Clusters
 
