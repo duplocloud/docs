@@ -16,18 +16,18 @@ For a Native Docker Services example, see [this tutorial](../../../quick-start/q
 2. Click **Add**. **The Add Service** pane displays.
 3. Complete the following fields:
 
-<table data-header-hidden><thead><tr><th width="211.111083984375">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Service Name</strong></td><td>Give the Service a name (without spaces).</td></tr><tr><td><strong>App Name</strong></td><td>Optionally, enter a label for the application. You can use this label later to filter Services.</td></tr><tr><td><strong>Cloud</strong></td><td>Select <strong>AWS</strong> from the list box.</td></tr><tr><td><strong>Platform</strong></td><td>Select <strong>EKS Linux</strong> from the list box.</td></tr><tr><td><strong>Docker Image</strong></td><td>Enter the Docker image.</td></tr><tr><td><strong>Allocation Tag</strong></td><td>Optionally, enter any allocation tags.</td></tr><tr><td><strong>Replica Strategy</strong></td><td>Select a replication strategy. Refer to the informational ToolTip  (<img src="../../../../.gitbook/assets/image (482) (1).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Environmental Variables</strong></td><td>Optionally, enter variables.</td></tr><tr><td><strong>Replicas</strong></td><td>Specify the number of replicas (for <strong>Static</strong> replica strategy). The number must be less than or equal to the number of Hosts in the fleet.</td></tr><tr><td><strong>Replica Placement</strong></td><td>(For <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies) Select <strong>First Available</strong>, <strong>Place on Different Hosts</strong>, <strong>Spread Across Zones</strong>, or <strong>Different Hosts and Spread Across Zones</strong>. Refer to the informational ToolTip (<img src="../../../../.gitbook/assets/image (483) (1).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Force StatefulSets</strong></td><td>Select <strong>Yes</strong> or <strong>No</strong> (for <strong>Static</strong> or <strong>Horizontal Pod Autoscale</strong>r strategies).</td></tr><tr><td><strong>Tolerate spot instances</strong></td><td>Optionally, select this option (for <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies).</td></tr><tr><td><strong>Use Fargate</strong></td><td>Select this option to run the Service on AWS Fargate instead of EC2-based worker nodes.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="211.111083984375">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Service Name</strong></td><td>Give the Service a name (without spaces).</td></tr><tr><td><strong>App Name</strong></td><td>Optionally, enter an <strong>App Name</strong> for the Service. You can use this label later to filter Services.</td></tr><tr><td><strong>Cloud</strong></td><td>Select <strong>AWS</strong> from the list box.</td></tr><tr><td><strong>Platform</strong></td><td>Select <strong>EKS Linux</strong> from the list box.</td></tr><tr><td><strong>Docker Image</strong></td><td>Enter the Docker image.</td></tr><tr><td><strong>Allocation Tag</strong></td><td>Optionally, enter any allocation tags.</td></tr><tr><td><strong>Replica Strategy</strong></td><td>Select a replication strategy. Refer to the informational ToolTip (<img src="../../../../.gitbook/assets/image (482) (1).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Environmental Variables</strong></td><td>Optionally, enter variables.</td></tr><tr><td><strong>Replicas</strong></td><td>Specify the number of replicas (for <strong>Static</strong> replica strategy). The number must be less than or equal to the number of Hosts in the fleet.</td></tr><tr><td><strong>Replica Placement</strong></td><td>For <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies. Select <strong>First Available</strong>, <strong>Place on Different Hosts</strong>, <strong>Spread Across Zones</strong>, or <strong>Different Hosts and Spread Across Zones</strong>. Refer to the informational ToolTip (<img src="../../../../.gitbook/assets/image (483) (1).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Force StatefulSets</strong></td><td>Select <strong>Yes</strong> or <strong>No</strong> (for <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies).</td></tr><tr><td><strong>Tolerate spot instances</strong></td><td>Optionally, select this option (for <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies).</td></tr><tr><td><strong>Use Fargate</strong></td><td>Select this option to run the Service on AWS Fargate instead of EC2-based worker nodes.</td></tr></tbody></table>
 
 <figure><img src="../../../../.gitbook/assets/Screenshot (936).png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
 
-5. Click **Next.** The **Advanced Options** page displays.
-6. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
-7. Click **Create**. The Service is created.&#x20;
+4. Click **Next.** The **Advanced Options** page displays.
+5. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
+6. Click **Create**. The Service is created.&#x20;
 
 ## Viewing and Managing Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
-2.  Select **All** to view all Services, or **Select App** to view Services by **App Name**. This option is only available when one or more Services were created with an **App Name.**\
+2.  Select **All** to view all Services or **Select App** to view Services by **App Name** (this option is only available when one or more Services were created with an App Name).\
 
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (480) (1).png" alt=""><figcaption><p><strong>Kubernetes - Services</strong> page with the <strong>Select App</strong> list box<br></p></figcaption></figure></div>
@@ -111,17 +111,14 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 
 ## Managing Kubernetes Containers
 
-You can display and manage the Containers you have defined in the DuploCloud portal. Navigate to **Kubernetes** -> **Containers**.
+1. You can view and manage Containers from the DuploCloud Portal  by navigating to one of two locations:
+   * **Tenant-wide view**: Go to **Kubernetes** → **Containers**.
+   * **Service-specific view**: Go to **Kubernetes** → **Services**, select the name of the Service, and select the **Containers** tab.
+2. Click the menu icon ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1) (1).png" alt="" data-size="line"> ) for a Container and select from the following options:&#x20;
 
-Use the Options Menu ( <img src="../../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1) (1).png" alt="" data-size="line"> ) in each Container row to display **Logs**, **State**, **Container Shell**, **Host Shell,** and **Delete** options.&#x20;
-
-<table><thead><tr><th width="243">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs. When you select this option, the Container Logs window displays. Use the <strong>Follow Logs</strong> option (enabled by default) to monitor logging in real-time for a running container. See the graphic below for an example of the Container Logs window.</td></tr><tr><td><strong>State</strong></td><td>Displays container state configuration, in YAML code, in a separate window.</td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../../prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="243">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs. When you select this option, the Container Logs window displays. Use the <strong>Follow Logs</strong> option (enabled by default) to monitor logging in real-time for a running container. See the graphic below for an example of the Container Logs window.</td></tr><tr><td><strong>State</strong></td><td><p>Displays container state information in a separate window, where you can select between two tabs:</p><ul><li><strong>Container State:</strong> Shows key runtime details such as start time, restart policy, termination grace period, container image, restart count, and current state.</li><li><strong>Details:</strong> Shows the full YAML definition of the container and Pod, including metadata, labels, annotations, volumes, and status conditions.</li></ul></td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../../prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_44_56.png" alt=""><figcaption><p><strong>Containers</strong> page displaying defined containers with highlighted Options Menu</p></figcaption></figure>
-
-### Downloading the Kubectl Token and KubeConfig <a href="#id-6-toc-title" id="id-6-toc-title"></a>
-
-<div align="left"><figure><img src="../../../../.gitbook/assets/customlogs2.png" alt=""><figcaption><p><strong>Container Logs</strong> window with <strong>Follow Logs</strong> option enabled</p></figcaption></figure></div>
 
 ### Downloading the Kubectl Token and KubeConfig <a href="#id-6-toc-title" id="id-6-toc-title"></a>
 
@@ -194,18 +191,11 @@ spec:
 
 If you need security tokens of a longer duration, create them on your own. Secure them outside of the DuploCloud environment.
 
-### Passing Kubernetes Configs and Secrets
+### Additional Resources
 
-[See this section](../../../../kubernetes-overview/configs-and-secrets/) in the Duplocloud Kubernetes documentation.
+For more detailed instructions and examples related to EKS and container deployments, see:
 
-### Downloading and configuring a KubeCtl Token
-
-[See this section](../../../../kubernetes-overview/kubectl-setup/kubectl-token.md) in the DuploCloud Kubernetes documentation.
-
-### Setting Up Docker Registry Credentials
-
-[See this section](../docker-registry-credentials.md) in the DuploCloud documentation.
-
-#### Add Pod Toleration spec to a Container configuration
-
-See [Kubernetes Pod Toleration](../../../../kubernetes-overview/pod-toleration.md) for examples of specifying K8s YAML for Pod Toleration.
+* [Passing Kubernetes Configs and Secrets](../../../../kubernetes-overview/configs-and-secrets/)
+* [Downloading and Configuring a Kubectl Token](../../../../kubernetes-overview/kubectl-setup/kubectl-token.md)
+* [Setting Up Docker Registry Credentials](../docker-registry-credentials.md)
+* [Adding Pod Toleration Specs to a Container Configuration](../../../../kubernetes-overview/pod-toleration.md)
