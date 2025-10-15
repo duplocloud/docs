@@ -4,7 +4,7 @@
 
 **What is the infrastructure cost of running the DuploCloud AI Suite?**
 
-Infrastructure costs (EC2 instances, load balancers, S3 buckets, Bedrock LLM cost) will be approximately $30-50 per month. LLM/Bedrock costs will only apply when you actively use the features and will be a few dollars per month.
+Infrastructure costs (EC2 instances, load balancers, S3 buckets, Bedrock LLM cost) will be approximately $80-150 per month. LLM/Bedrock costs will only apply when you actively use the features and will be a few dollars per month.
 
 ### Available Agents and Customization
 
