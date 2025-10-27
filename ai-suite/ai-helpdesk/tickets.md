@@ -15,6 +15,10 @@ To create a Ticket, complete the following steps:
 
 <figure><img src="../../.gitbook/assets/image (479).png" alt=""><figcaption><p>Initiating a new ticket in HelpDesk</p></figcaption></figure>
 
+{% hint style="info" %}
+Tickets can also be created and managed in Slack via the [HelpDesk Slack integration](slack-integration.md).
+{% endhint %}
+
 ## Collaborating in the Canvas
 
 Each Ticket provides a Canvas, a dynamic, interactive workspace. The Canvas preserves the state of the interaction, ensuring continuity across multiple exchanges and allowing users to collaborate with the AI Agent as a knowledgeable partner.

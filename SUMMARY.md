@@ -6,6 +6,7 @@
   * [AI HelpDesk](ai-suite/ai-helpdesk/README.md)
     * [Tickets](ai-suite/ai-helpdesk/tickets.md)
     * [Out of the Box Agents](ai-suite/ai-helpdesk/out-of-the-box-agents.md)
+    * [Slack Integration](ai-suite/ai-helpdesk/slack-integration.md)
     * [Webhooks](ai-suite/ai-helpdesk/webhooks.md)
   * [AI Studio](ai-suite/ai-studio/README.md)
     * [Agents](ai-suite/ai-studio/agents.md)
