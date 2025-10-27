@@ -1,6 +1,6 @@
 ---
 description: Additional features of the DuploCloud Portal
-cover: ../.gitbook/assets/GitHub - Great Place to Work Badge (15).png
+cover: ../.gitbook/assets/banner dark.png
 coverY: 0
 ---
 

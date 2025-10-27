@@ -1,6 +1,6 @@
 ---
 description: Continuous monitoring of your cloud infrastructure in the DuploCloud Portal
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
+cover: ../.gitbook/assets/banner dark.png
 coverY: 0
 ---
 

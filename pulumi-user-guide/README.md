@@ -1,5 +1,7 @@
 ---
 description: Information about working with DuploCloud's Pulumi provider
+cover: ../.gitbook/assets/banner dark.png
+coverY: 0
 ---
 
 # Pulumi User Guide
