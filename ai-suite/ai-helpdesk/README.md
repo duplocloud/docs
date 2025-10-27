@@ -1,6 +1,6 @@
 # AI HelpDesk
 
-AI HelpDesk serves as the central interface through which users engage with AI Agents in the DuploCloud ecosystem. It provides a structured, collaborative environment where DevOps tasks and infrastructure management operations can be executed with AI assistance while maintaining human oversight. The HelpDesk is designed to replicate the collaborative experience between engineers, offering visualization tools, command execution capabilities, and intuitive communication channels. This component of the AI Suite bridges the expertise gap in cloud operations by making specialized AI assistance readily available to all users regardless of their technical background.
+AI HelpDesk serves as the central interface through which users engage with AI Agents in the DuploCloud ecosystem. It provides a structured, collaborative environment where DevOps tasks and infrastructure management operations can be executed with AI assistance while maintaining human oversight. The HelpDesk is designed to replicate the collaborative experience between engineers, offering visualization tools, command execution capabilities, and intuitive communication channels. This component of the AI Suite bridges the expertise gap in cloud operations by making specialized AI assistance readily available to all users regardless of their technical background. You can also interact with the AI HelpDesk directly in Slack. [Learn more here](slack-integration.md).
 
 ## Key HelpDesk Features
 
