@@ -1,6 +1,6 @@
 ---
 description: Initial steps for AWS DuploCloud users
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
+cover: ../.gitbook/assets/banner dark.png
 coverY: 0
 ---
 

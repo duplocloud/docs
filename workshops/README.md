@@ -2,6 +2,8 @@
 description: >-
   Cloud-specific workshops designed for ramping up on related DuploCloud
   features and functionality
+cover: ../.gitbook/assets/banner dark.png
+coverY: 0
 ---
 
 # Workshops

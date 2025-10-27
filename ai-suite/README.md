@@ -1,3 +1,8 @@
+---
+cover: ../.gitbook/assets/banner dark.png
+coverY: 0
+---
+
 # AI Suite
 
 DuploCloud AI Suite is an advanced platform that transforms DevOps operations through purpose-built AI agents that augment your existing infrastructure management capabilities. Designed to address the complexity of cloud operations and the scarcity of specialized DevOps expertise, AI Suite intelligently automates routine and complex tasks while maintaining a human-in-the-loop approach for critical decisions. The solution seamlessly integrates with your existing infrastructure and tooling, creating a secure collaborative environment between AI Agents and human operators.

@@ -1,6 +1,6 @@
 ---
 description: An overview and demo of DuploCloud's comprehensive DevOps platform
-cover: .gitbook/assets/image (1) (4).png
+cover: .gitbook/assets/banner dark.png
 coverY: 0
 ---
 

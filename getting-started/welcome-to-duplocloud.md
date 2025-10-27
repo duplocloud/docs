@@ -1,6 +1,6 @@
 ---
 description: An outline of the DuploCloud approach compared to existing DevOps
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
+cover: ../.gitbook/assets/banner dark.png
 coverY: 0
 ---
 

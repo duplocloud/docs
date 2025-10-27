@@ -1,6 +1,6 @@
 ---
 description: Popular and frequently asked questions about DuploCloud
-cover: .gitbook/assets/Linkedin-bannerV3 (1) (1).png
+cover: .gitbook/assets/banner dark.png
 coverY: 0
 ---
 
