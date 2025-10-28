@@ -26,7 +26,7 @@ For instructions on adding or updating these settings, see the **Tenant Settings
 
 ### Tenant Fault Settings
 
-<table><thead><tr><th width="265.22222900390625">Tenant Setting</th><th>Description</th></tr></thead><tbody><tr><td><code>raise_fault_on_last_state_pod_failure_reasons</code></td><td>Generates a fault when a Kubernetes pod is terminated with a specified failure reason. Enter the failure reasons you want to monitor, e.g., <code>OOMKilled</code>. Multiple reasons can be comma-separated.</td></tr><tr><td><code>enable_k8s_job_fault_logging</code></td><td>Generates faults for Kubernetes Job failures by default when set to <code>True</code>.</td></tr><tr><td><code>tenant_instances_stopped</code></td><td>Mutes faults for Tenants that have been stopped when set to <code>True</code>.</td></tr></tbody></table>
+<table><thead><tr><th width="401.91363525390625">Tenant Setting</th><th>Description</th></tr></thead><tbody><tr><td><code>raise_fault_on_last_state_pod_failure_reasons</code></td><td>Generates a fault when a Kubernetes pod is terminated with a specified failure reason. Enter the failure reasons you want to monitor, e.g., <code>OOMKilled</code>. Multiple reasons can be semicolon-separated.</td></tr><tr><td><code>enable_k8s_job_fault_logging</code></td><td>Generates faults for Kubernetes Job failures by default when set to <code>True</code>.</td></tr><tr><td><code>tenant_instances_stopped</code></td><td>Mutes faults for Tenants that have been stopped when set to <code>True</code>.</td></tr></tbody></table>
 
 ## Creating Alerts <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
