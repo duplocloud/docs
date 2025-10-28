@@ -1,6 +1,6 @@
 ---
 description: New features and enhancements in DuploCloud
-cover: .gitbook/assets/banner dark.png
+cover: .gitbook/assets/Linkedin-bannerV3 (1) (1).png
 coverY: 0
 ---
 
@@ -10,6 +10,9 @@ coverY: 0
 
 AWS
 
+* [ECS ASG sharing](overview/aws-services/containers/ecs-containers-and-task-definitions/sharing-ec2-auto-scaling-groups-across-tenants-for-ecs.md) — Sharing EC2 Auto Scaling Groups across tenants for ECS.
+* [KMS key management](security-and-compliance/access-control-1/at-rest-encryption/kms-keys.md) — Manage AWS KMS keys at the tenant level in DuploCloud.
+* [ElastiCache global datastore](overview/aws-services/database/elastic-cache.md#creating-a-global-datastore) — Support for provisioning and managing global ElastiCache clusters.
 * [AMI enhancements](overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md) — Select, restrict, or share AMIs across Tenants.
 * [Amazon MQ support](overview/aws-services/amazon-mq.md) — Provision and manage AWS MQ brokers in DuploCloud.
 * [App Runner support](overview/aws-services/app-runner.md) — Provision and manage AWS App Runner services.
@@ -38,6 +41,7 @@ GCP
 
 Kubernetes
 
+* [Group and view services by App](overview/aws-services/containers/eks-containers-and-services/#id-7-toc-title) — Organize Kubernetes services by  App Name.
 * [K8s secrets & ConfigMaps backup](kubernetes-overview/configs-and-secrets/backing-up-and-restoring-kubernetes-secrets-and-configmaps.md) — Manage backups for K8s secrets and ConfigMaps.
 * [Helm Repo with OCI support](kubernetes-overview/helm/oci-helm-repositories.md) — Support for adding Helm repositories from OCI-compliant registries.
 * [HelmRelease with `ValuesFrom`](kubernetes-overview/helm/helm-charts.md) — Pull Helm chart values from external sources.
