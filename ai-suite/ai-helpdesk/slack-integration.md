@@ -8,6 +8,10 @@ description: >-
 
 The DuploCloud AI HelpDesk Slack integration lets you get AI-powered support directly in your Slack workspace. You can create and manage Tickets, interact with AI Agents, and approve commands without leaving Slack. The integration works across all your DuploCloud Portals and maintains your existing shared Slack channel workflows. When needed, you can also open the full HelpDesk interface to perform advanced actions.
 
+Here’s a quick look at how DuploCloud AI Agents work inside Slack.
+
+{% embed url="https://drive.google.com/file/d/10Yqo1_7wuZXLZkMGD0-QM4eUpVwiv99D/view?usp=sharing" %}
+
 ## Using the AI HelpDesk Slack Integration
 
 ### **Configuring Agent Permissions**
