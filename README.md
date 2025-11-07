@@ -18,8 +18,14 @@ The platform provides multiple customer interfaces — the DuploCloud AI HelpDes
 
 Having this level of support and control empowers your team to quickly tackle even the most complex DevOps tasks more confidently and efficiently than ever before.
 
-## Demo
+## Duplo AI Suite
 
-Check out a 6-minute video overview of a DuploCloud deployment.
+Check out a quick video of our AI suite
+
+{% embed url="https://player.vimeo.com/video/1085542812?h=de0470a8c2" %}
+
+## Automation Platform Demo
+
+Check out a 6-minute video overview of a DuploCloud Automation Platform.
 
 {% embed url="https://drive.google.com/file/d/1b0VYeix7vex7MxfCtRa4Yq5nHptb4nkA/view?usp=sharing" %}
