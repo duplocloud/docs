@@ -41,7 +41,7 @@ You can create a new host based on an existing AMI to deploy a server with your 
 
 When [creating a host in DuploCloud](adding-hosts.md#adding-a-host-vm), check the box to display **Advanced Options**, and select your desired AMI from the **Image ID** dropdown.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (472).png" alt=""><figcaption></figcaption></figure>
 
 ## Disabling Host creation for custom AMIs
 

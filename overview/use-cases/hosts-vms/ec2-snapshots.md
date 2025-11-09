@@ -29,4 +29,4 @@ View and manage your EC2 snapshots in DuploCloud.
    * **View JSON**: to view details of the snapshot.
    * **Delete**: to delete the snapshot if no longer needed.
 
-<figure><img src="../../../.gitbook/assets/image (472).png" alt=""><figcaption><p><strong>Snapshots</strong> tab on the EC2 instance details page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (472) (1).png" alt=""><figcaption><p><strong>Snapshots</strong> tab on the EC2 instance details page</p></figcaption></figure>
