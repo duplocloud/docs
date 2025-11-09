@@ -15,7 +15,7 @@ You can use the Inventory page to:
 * Export a full inventory of cloud resources for recordkeeping or compliance needs.
 
 {% hint style="info" %}
-For Host-level security inventory collected via OSSEC and visible in the SIEM dashboard, see the [**Inventory Monitoring** documentation](../security-and-compliance/access-control-3/inventory.md) in the **Security and Compliance** section.
+For Host-level security inventory collected via OSSEC and visible in the SIEM dashboard, see the [**Inventory Monitoring** documentation](../automation-platform/security-and-compliance/access-control-3/inventory.md) in the **Security and Compliance** section.
 {% endhint %}
 
 ## Accessing the Inventory Page
