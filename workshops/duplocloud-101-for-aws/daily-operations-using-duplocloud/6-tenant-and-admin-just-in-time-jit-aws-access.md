@@ -18,7 +18,7 @@ This method uses Tenant-level AWS permissions.
 
 DuploCloud uses `duplo-jit` to access the CLI. You can use `duplo-jit` to retrieve Tenant-scoped temporary credentials.&#x20;
 
-Documentation for installation and setup can be found [here](../../../aws-user-guide/use-cases/jit-access.md).
+Documentation for installation and setup can be found [here](../../../automation-platform/overview/use-cases/jit-access.md).
 
 ## Accessing the AWS CLI for Admin and Tenant Scopes
 

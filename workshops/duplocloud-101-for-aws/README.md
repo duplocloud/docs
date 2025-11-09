@@ -26,7 +26,7 @@ In preparation for the workshop, the DuploCloud team will do the following for y
 
 ## Optional pre-event reading list
 
-* [Quick Start Guide](../../overview/quick-start/)
+* [Quick Start Guide](../../automation-platform/overview/quick-start/)
 * [Platform Demo](https://duplocloud.com/videos/#gallery-2) (5 minutes)
-* [DuploCloud AWS Platform documentation](../../overview/)
-* [Just-In-Time (JIT) Access](../../aws-user-guide/use-cases/jit-access.md)
+* [DuploCloud AWS Platform documentation](../../automation-platform/overview/)
+* [Just-In-Time (JIT) Access](../../automation-platform/overview/use-cases/jit-access.md)
