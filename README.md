@@ -6,7 +6,7 @@ coverY: 0
 
 # Overview
 
-DuploCloud is an agentic Devsecops Automation platform that leverages AI for a wide range of Cloud Infrastructure automation needs. It encompasses Devops, security, compliance, Observability and CICD. The software can:
+DuploCloud is an agentic DevSecOps Automation platform that leverages AI for a wide range of Cloud Infrastructure automation needs. It encompasses DevOps, Security, Compliance, Observability and CICD. The software can:
 
 * Configure and update resources safely and securely
 * Write IAC (Cursor like experience in an IDE)
@@ -19,16 +19,23 @@ DuploCloud is an agentic Devsecops Automation platform that leverages AI for a w
 Duplocloud platform is entirely self hosted in customer's cloud account. With an open architecture you can choose your own model, build your own agents and bring your own automation tools.
 {% endhint %}
 
-The platform broadly comprises of two parts:
+The platform is composed of two main components:
 
-* **Agentic Orchestration or AI Suite**: This module orchestrates AI agents that are specialized in different devops, in such a way that the overall system functions like an AI devops engineer to which users can delegate higher level tasks.\
-  The primary user experience is that of an IT help Desk where users create a ticket, assign it to an AI agent that accomplishes the task in real time. The help desk interface can be accessed via a Web browser, slack/teams thread or an IDE Extension (Cursor like experience) &#x20;
-*   **Automation Platform**: The AI agents need automation tools to interface with cloud infrastructure. For example for an AI observability functionality we need an observability solution underneath like a Datadog or Open telemetry. DuploCloud's automation platform provides a comprehensive tool set that include:
+*   **Agentic Orchestration (AI Suite)**
 
-    * **Provisioning Tool kit** that has automation capability to create and manage hundreds of cloud services like EKS, AKS, GKE, S3, SQS, RDS, Azure SQL, Google Cloud SQL and so on. This tool lit is available to the agent in the form of MCP, Terraform provider, CLI and APIs.&#x20;
-    * **Observability** is delivered using Open telemetry stack with functions like tracing, Logging, alerting, profiles, infrastructure metrics, RUM, SLO/SLA monitoring and so forth.
-    * **Security** tooling includes SIEM, VA, AV, JIT, Access controls and so forth.
-    * **CI/CD** we have argoCD and workflows as well as integrate with any other CI/CD system
+    This module coordinates a collection of AI agents specialized in DevOps operations. Together, these agents function as an **AI DevOps engineer**, capable of handling complex, high-level tasks delegated by users.
+
+    The primary user experience mirrors an IT Help Desk. Users can create tickets and assign them to AI agents, which execute tasks in real time. The help desk interface is accessible through a web browser, Slack or Teams chat thread, or directly within an IDE extension (offering a “Cursor-like” experience).
+*   **Automation Platform**
+
+    To effectively manage cloud infrastructure, AI agents rely on a suite of automation tools. For example, enabling AI-driven observability requires an underlying observability framework such as Datadog or OpenTelemetry. DuploCloud’s automation platform delivers a comprehensive set of such capabilities, including:
+
+    * **Provisioning Toolkit:** Automates the creation and management of hundreds of cloud services such as EKS, AKS, GKE, S3, SQS, RDS, Azure SQL, and Google Cloud SQL. The toolkit is accessible to AI agents through MCP, Terraform provider, CLI, and APIs.
+    * **Observability:** Built on the OpenTelemetry stack, offering full-spectrum monitoring — including tracing, logging, alerting, profiling, infrastructure metrics, RUM, and SLO/SLA tracking.
+    * **Security Tooling:** Provides integrated SIEM, vulnerability assessment, antivirus, just-in-time access control, and other security mechanisms.
+    * **CI/CD:** Supports ArgoCD, workflows, and seamless integration with any other CI/CD systems.
+
+
 
     Teams can also bring their own automation tools whether built in-house or from a third party. &#x20;
 
