@@ -4,7 +4,7 @@ description: Configure Vanta compliance controls for your DuploCloud Tenants
 
 # Vanta Compliance Controls
 
-DuploCloud integrates with Vanta Monitor and AWS GuardDuty to monitor your applications and provide real-time alerts and notifications for compliance issues, security events, and vulnerabilities.
+DuploCloud applies tags on AWS resources following the Vanta [Bulk Tags](https://help.vanta.com/en/articles/11345627-bulk-tags) feature. This allows the Vanta and AWS GuardDuty to monitor your applications and provide real-time alerts and notifications for compliance issues, security events, and vulnerabilities.
 
 ## Enabling Vanta Compliance Controls&#x20;
 
