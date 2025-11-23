@@ -22,8 +22,7 @@ Before starting this tutorial:
 ## Creating a DuploCloud Infrastructure
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
-2.  Click **Add**. The **Add Infrastructure** page displays. \
-
+2.  Click **Add**. The **Add Infrastructure** page displays. <br>
 
     ![Add Infrastructure page for creating a DuploCloud Infrastructure](../../../.gitbook/assets/azureinfrare.png)
 3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.&#x20;

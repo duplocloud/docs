@@ -26,8 +26,7 @@ description: Create a PostgreSQL Flexible Server database instance in DuploCloud
 ## Creating a PostgreSQL Flexible Server database
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Database** -> **PostgreSQL Flexible**.
-2.  Click **Add**. The **Create PostgreSQL Flexible Instance** page displays. \
-
+2.  Click **Add**. The **Create PostgreSQL Flexible Instance** page displays. <br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (222).png" alt=""><figcaption><p>The <strong>Create PostgreSQL Flexible Instance</strong> page </p></figcaption></figure>
 3. Complete the required fields.&#x20;

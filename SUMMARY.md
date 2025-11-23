@@ -57,7 +57,7 @@
     * [VPN Setup](automation-platform/overview/prerequisites/vpn-setup.md)
     * [Connect to the VPN](automation-platform/overview/prerequisites/connect-to-the-vpn.md)
   * [AWS Quick Start](automation-platform/overview/quick-start/README.md)
-    * [Step 1: Create Infrastructure and Plan](automation-platform/overview/quick-start/step-1-infrastructure.md)
+    * [Step 1: Create Infrastructure and Plan](overview/quick-start/step-1-infrastructure.md)
     * [Step 2: Create a Tenant](automation-platform/overview/quick-start/step-2-tenant.md)
     * [Step 3: Create an RDS Database (Optional)](automation-platform/overview/quick-start/step-4-create-a-rds-database.md)
     * [Creating an EKS Service](automation-platform/overview/quick-start/quick-start-eks-services/README.md)

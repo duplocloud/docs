@@ -29,8 +29,7 @@ An administrator needs to enable the AWS Application Load Balancer controller fo
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
 2. Select your Service name from the **NAME** column.
 3. Select the **Load Balancers** tab.
-4.  Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.\
-
+4.  Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/k8aws.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
@@ -41,8 +40,7 @@ An administrator needs to enable the AWS Application Load Balancer controller fo
    * Common value: `/` (checks the root path).
    * If your service has a dedicated health check endpoint, enter it (e.g., `/health` or `/status`).&#x20;
 8. From the **Backend Protocol** list box, select **TCP** or **UDP**.
-9.  Kubernetes Health Check and Probes are enabled by default. To manually configure Health Check settings, select **Additional health check configs**.\
-
+9.  Kubernetes Health Check and Probes are enabled by default. To manually configure Health Check settings, select **Additional health check configs**.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/to edit.png" alt="" width="375"><figcaption></figcaption></figure></div>
 10. If needed, enable and configure **Advanced Kubernetes settings**.&#x20;
@@ -88,8 +86,7 @@ Before attaching certificates to an Ingress, you must add the ACM certificates t
 
 Once your certificates have been added to the plan, complete the following steps to attach them to the Ingress configuration:
 
-1.  On the **Add Kubernetes Ingress** page, click **Add Certificate**. The **Add Certificate** pane displays.\
-
+1.  On the **Add Kubernetes Ingress** page, click **Add Certificate**. The **Add Certificate** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (708).png" alt="" width="355"><figcaption><p> <strong>Add Certificate</strong> pane</p></figcaption></figure></div>
 2. In the **Certificate** list box, select the certificate to associate with this Ingress.
@@ -108,8 +105,7 @@ Now that the necessary certificates have been added, you can optionally configur
 
 ### Configuring Ingress redirect configurations and annotations
 
-1.  On the **Add Kubernetes Ingress** page, click **Add Redirect Config**. The **Add Redirect Config** pane displays.\
-
+1.  On the **Add Kubernetes Ingress** page, click **Add Redirect Config**. The **Add Redirect Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/redirect config.png" alt=""><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure></div>
 2. In the **Name** field, enter a descriptive name for the Ingress redirect configuration.&#x20;

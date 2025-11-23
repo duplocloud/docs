@@ -13,8 +13,7 @@ To integrate GCP project cloud credentials into DuploCloud, follow these steps:
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Cloud Credentials**. The **Cloud Credentials** page displays.
 2. Click **Add** to initiate the creation of new cloud credentials.
 3. Ensure **Google** is selected from the **Cloud** list box as your cloud provider.
-4.  Enter your Google Project ID in the **Project ID** field. This ID uniquely identifies your GCP project.\
-
+4.  Enter your Google Project ID in the **Project ID** field. This ID uniquely identifies your GCP project.<br>
 
     <figure><img src="../../../.gitbook/assets/gcp_cc2.png" alt=""><figcaption><p><strong>Cloud Credentials</strong> page in the DuploCloud Portal</p></figcaption></figure>
 

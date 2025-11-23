@@ -27,12 +27,10 @@ The OpenVPN Access Server only forwards traffic intended for resources within Du
 <div align="left"><figure><img src="../../../../.gitbook/assets/image (73).png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 5.  Click the link labeled **Yourself (user-locked profile)** to download your OpenVPN user profile.\
-    \
-
+    <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (202).png" alt="" width="375"><figcaption></figcaption></figure></div>
-6.  Open the **.ovpn** file and click **OK** in the **Import .ovpn profile** dialog. \
-
+6.  Open the **.ovpn** file and click **OK** in the **Import .ovpn profile** dialog. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (47).png" alt="" width="375"><figcaption></figcaption></figure></div>
 7. Click **Connect**. The OpenVPN user profile and client app are set up.

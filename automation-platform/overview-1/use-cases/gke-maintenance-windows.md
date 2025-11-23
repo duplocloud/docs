@@ -11,8 +11,7 @@ You can configure maintenance windows and maintenance exclusions for your GKE cl
 1. In the DuploCloud Portal, navigate to **Administrator** → **Infrastructure**.
 2. In the **NAME** column, click your Infrastructure name.
 3. Select the **GKE** tab.
-4.  Open the **Actions** menu, and select **Edit GKE Maintenance Policy**. The **Edit GKE Maintenance Policy** pane displays. \
-
+4.  Open the **Actions** menu, and select **Edit GKE Maintenance Policy**. The **Edit GKE Maintenance Policy** pane displays. <br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (440).png" alt=""><figcaption><p>The <strong>Edit GKE Maintenance Policy</strong> pane</p></figcaption></figure>
 5. Complete the following fields:
@@ -33,8 +32,7 @@ You can configure maintenance windows and maintenance exclusions for your GKE cl
 1. In the DuploCloud Portal, go to **Administrator** → **Infrastructure**.
 2. From the **NAME** column, select the Infrastructure where your GKE cluster is defined.
 3. Select the **GKE** tab.&#x20;
-4.  View the current GKE Maintenance Policy details in the **Maintenance Policy** area near the bottom of the screen. \
-
+4.  View the current GKE Maintenance Policy details in the **Maintenance Policy** area near the bottom of the screen. <br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (444).png" alt=""><figcaption><p>The GKE tab on the Infrastructure page with the Actions menu options highlighted</p></figcaption></figure>
 5. Click the **Actions** menu in the upper-right corner for additional options:

@@ -22,8 +22,7 @@ Google Cloud Functions allow you to run serverless code that automatically scale
 ## Creating a GCP Cloud Function
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Functions**.
-2.  Click **Add**. The **Create Function** pane displays.\
-
+2.  Click **Add**. The **Create Function** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (285).png" alt=""><figcaption><p>The <strong>Create Function</strong> pane</p></figcaption></figure>
 3. Configure the Function Settings:
@@ -42,4 +41,4 @@ Google Cloud Functions allow you to run serverless code that automatically scale
    * **Environment Variables**: Provide any environment variables needed by your function. This could include API keys, database URLs, etc.
    * **Build Environment Variables**: Define any environment variables needed during the build phase of the function.
    * **Labels**: Optionally, add labels to categorize or organize your cloud function. For example, `env: production` or `service: hello-world`.
-4. Click **Create**. The cloud function is created with the configurations you specified.\
+4. Click **Create**. The cloud function is created with the configurations you specified.<br>

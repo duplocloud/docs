@@ -11,8 +11,7 @@ DuploCloud provides a default Kibana URL for viewing Logging data, but if you wa
 1. Log in to the **DuploCloud Portal**.
 2. Navigate to **Administrator** -> **System Settings** -> **System Config**.
 3.  Click **Add**. The **Add Config** pane displays.\
-    \
-
+    <br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (343).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 4. In the **Config Type** list box, select **AppConfig**.

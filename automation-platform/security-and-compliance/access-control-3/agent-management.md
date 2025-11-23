@@ -28,8 +28,7 @@ These agents are Linux packages or Windows services installed on virtual machine
 
 ## Agent Registration
 
-1.  **Create an Agent Type.** Each vendor or agent software is considered a type. For example, OSSEC, ClamAV, Laceworks, and Crowdstrike are different agent types. To add a new agent type, navigate to **Security** -> **Agents** and click **Add.** The **Add Security Agent** pane displays. Enter the **Agent Name** and click **Create**.\
-
+1.  **Create an Agent Type.** Each vendor or agent software is considered a type. For example, OSSEC, ClamAV, Laceworks, and Crowdstrike are different agent types. To add a new agent type, navigate to **Security** -> **Agents** and click **Add.** The **Add Security Agent** pane displays. Enter the **Agent Name** and click **Create**.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/image (8) (2).png" alt=""><figcaption><p><strong>Add Security Agent</strong> pane.</p></figcaption></figure></div>
 2. **Create an agent deployment.** Under the desired **Agent** tab, **Add** a deployment to deploy the agent to the Hosts. You must deploy at least one agent per Kubernetes cluster. You can deploy on all hosts in a Kubernetes cluster or on all Hosts for a specific Tenant. Deploying on all hosts for one Tenant is useful for certain Kubernetes clusters or DuploCloud Infrastructures where you have Tenants on which you don't want specific agents to be run.&#x20;
@@ -45,8 +44,7 @@ You can create multiple deployments for multiple tenants. In the case of Kuberne
 * **Name** is a desired name to track the deployment.
 * **Cluster** is the infrastructure name and is the maximum scope of deployment.&#x20;
 * **Host Tenant** is the tenant namespace where the daemon set will be deployed.&#x20;
-*   **Deployment Type** is either a K8s DaemonSet or Docker Native for built-in container orchestration.\
-
+*   **Deployment Type** is either a K8s DaemonSet or Docker Native for built-in container orchestration.<br>
 
     <figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Update Security Agent Deployment</strong> page</p></figcaption></figure>
 

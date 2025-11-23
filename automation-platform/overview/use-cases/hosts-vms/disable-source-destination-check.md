@@ -19,8 +19,7 @@ Set `SourceDestCheck` to `false` for an EC2 Host:
 1. In the DuploCloud Portal, navigate to **Cloud Services -> Hosts**.
 2. In the **EC2** tab, select the Host for which you want to disable `SourceDestCheck`.
 3. Click the **Metadata** tab.
-4.  Click **Add**. The **Add Metadata** pane displays.\
-
+4.  Click **Add**. The **Add Metadata** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/SDC1.png" alt=""><figcaption><p><strong>Add Metadata</strong> pane for <strong>Key SourceDestCheck</strong></p></figcaption></figure></div>
 

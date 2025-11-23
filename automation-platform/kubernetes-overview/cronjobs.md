@@ -54,8 +54,7 @@ Enable or disable faults for failed Kubernetes CronJobs in a specific Tenant.
 2. Click the Tenant name in the **NAME** column.&#x20;
 3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
 4. From the **Select Feature** list box, select **Enable K8s job fault logging by default**, and use the toggle switch to enable or disable the setting.&#x20;
-5.  Click **Add**. The CronJobs fault setting is added. \
-
+5.  Click **Add**. The CronJobs fault setting is added. <br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/tenant faults feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane with <strong>Enable K8s Job fault logging by default</strong> enabled</p></figcaption></figure></div>
 
@@ -86,8 +85,7 @@ You can also view details of a Kubernetes CronJob by clicking on the **menu icon
 
 ### Using the Container page to view linked Kubernetes CronJobs
 
-You can view Kubernetes CronJobs linked to containers by clicking the container name on the **Containers** page (**Kubernetes** -> **Containers**). \
-
+You can view Kubernetes CronJobs linked to containers by clicking the container name on the **Containers** page (**Kubernetes** -> **Containers**). <br>
 
 <div align="left"><figure><img src="../../.gitbook/assets/j29.png" alt=""><figcaption><p>Clicking the Container <strong>Name</strong> on the <strong>Containers</strong> page to view a linked K8s CronJob</p></figcaption></figure></div>
 

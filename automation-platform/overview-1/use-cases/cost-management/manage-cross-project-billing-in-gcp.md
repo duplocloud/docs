@@ -71,4 +71,4 @@ Following roles are needed:
 
 By following these steps, you can set up automated replication of a BigQuery dataset from one GCP project to another, enabling billing monitoring on all DuploCloud dashboards across multiple projects. Ensure to monitor the transfer job periodically to make sure it is running as expected.
 
-\
+<br>

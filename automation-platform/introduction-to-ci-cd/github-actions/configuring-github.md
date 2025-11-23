@@ -84,8 +84,7 @@ jobs:
         credentials: ${{ secrets.CLOUD_CREDENTIALS }}
 </code></pre>
 
-The input type is `environment` which only works on `workflow_dispatch` because it provides a UI with a drop-down selector for choosing from the list of configured Github Environments.  On any other event type, the environment input would be a type `string`, and you pass in a name. \
-
+The input type is `environment` which only works on `workflow_dispatch` because it provides a UI with a drop-down selector for choosing from the list of configured Github Environments.  On any other event type, the environment input would be a type `string`, and you pass in a name. <br>
 
 <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot 2024-04-01 at 3.36.56 PM (1).png" alt=""><figcaption><p>Environment Selector in workflow dispatch UI</p></figcaption></figure></div>
 

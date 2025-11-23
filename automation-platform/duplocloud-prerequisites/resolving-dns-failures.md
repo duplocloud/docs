@@ -48,8 +48,7 @@ DuploCloud automatically deletes DNS records that it does not manage. If you cre
 If you create a DNS entry directly in your cloud provider’s platform (AWS, Google Cloud, or Azure), DuploCloud may delete it during updates, as it automatically deletes any DNS entries it did not create. To prevent this from happening, configure Systems Settings to ignore specific DNS entries.
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings** -> **System Config**.
-2.  Click **Add**. The **Add Config** pane displays. \
-
+2.  Click **Add**. The **Add Config** pane displays. <br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (362).png" alt="" width="360"><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 3. Fill the fields:

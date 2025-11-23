@@ -19,8 +19,7 @@ Alternatively, you can use the Certificate Manager to create a Certificate Map f
 {% endhint %}
 
 1. Log in to the GCP Console.
-2.  Navigate to **Certificate Manager**, and click **Classic Certificates**.\
-
+2.  Navigate to **Certificate Manager**, and click **Classic Certificates**.<br>
 
     <figure><img src="../../../.gitbook/assets/image (432) (1).png" alt=""><figcaption></figcaption></figure>
 3. Click on **Create SSL Certificate**.

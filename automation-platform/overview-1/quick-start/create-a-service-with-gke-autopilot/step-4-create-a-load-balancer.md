@@ -30,8 +30,7 @@ All containers are running inside a private network and cannot be accessed from 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.&#x20;
 2. From the **Name** column, click on the name of your **Service**
 3. Click the **Load Balancers** tab.
-4.  Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.\
-
+4.  Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (292).png" alt=""><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 5. From the **Type** list box, select **Application LB**.

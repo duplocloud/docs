@@ -15,8 +15,7 @@ There are two Firestore Database modes to choose from:&#x20;
 
 1. From the **Tenant** list box, select your Tenant name.
 2. From the DuploCloud portal, navigate to **Cloud Services** -> **Firestore Database**.
-3.  Click **Add**. The **Add Firestore DB** page displays. \
-
+3.  Click **Add**. The **Add Firestore DB** page displays. <br>
 
     <figure><img src="../../../../.gitbook/assets/firestore 1.png" alt=""><figcaption></figcaption></figure>
 4. In the **Name** field, enter a name for your database.

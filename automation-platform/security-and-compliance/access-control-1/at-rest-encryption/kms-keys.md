@@ -13,8 +13,7 @@ Plan-level KMS keys can be used for encrypting resources in any Tenant under the
 1. Navigate to **Administrator** -> **Plans**.
 2. Select the Plan from the **NAME** column.
 3. Select the **KMS** tab.
-4.  Click **Add**. The **Add a Kms Key** pane displays.\
-
+4.  Click **Add**. The **Add a Kms Key** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (938).png" alt="" width="410"><figcaption><p><strong>Add a Kms Key</strong> pane </p></figcaption></figure></div>
 5. Complete the following fields:
@@ -32,8 +31,7 @@ Tenant-level KMS keys can be used for encrypting resources only within the selec
 1. Navigate to **Administrator** -> **Tenants**.
 2. Select the Tenant from the **NAME** column.
 3. Select the **KMS** tab.
-4.  Click **Add**. The **Add a Kms Key** pane displays.\
-
+4.  Click **Add**. The **Add a Kms Key** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (937).png" alt="" width="410"><figcaption><p><strong>Add a Kms Key</strong> pane</p></figcaption></figure></div>
 5. Complete the following fields:
@@ -50,8 +48,7 @@ When creating a Host, RDS database, or other supported resource, select a KMS ke
 
 1. Navigate to the resource creation page (e.g., **Hosts**, **RDS**, or other supported resources).
 2. Locate the **Encryption Key** or **KMS Key** field.
-3.  Choose a key from the options listed under **Default Tenant Key**, **Plan-level Keys**, or **Tenant-level Keys**.\
-
+3.  Choose a key from the options listed under **Default Tenant Key**, **Plan-level Keys**, or **Tenant-level Keys**.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (939).png" alt=""><figcaption><p><strong>Encryption Key</strong> selection options </p></figcaption></figure>
 4. Complete the rest of the resource creation steps as usual.

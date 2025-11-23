@@ -14,8 +14,7 @@ A **Permission Group** is a bundle of users assigned one or more Permission Sets
 
 1. In the DuploCloud Portal, navigate to **Administrator** → **Permissions**.
 2. Select the **Sets** tab.&#x20;
-3.  Click **Add**. The **Add Permission Set** pane displays. \
-
+3.  Click **Add**. The **Add Permission Set** pane displays. <br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (765).png" alt=""><figcaption><p><strong>Add Permission Set</strong> pane</p></figcaption></figure>
 4. Complete the following fields:
@@ -30,8 +29,7 @@ After creating a Permission Set, assign specific users to it:
 
 1. In the **DuploCloud Portal**, navigate to **Administrator** → **Permissions**.
 2. Select the **Sets** tab.
-3.  Select the Permission Set from the **NAME** column. The Permission Set details page displays.\
-
+3.  Select the Permission Set from the **NAME** column. The Permission Set details page displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/image (462).png" alt=""><figcaption><p>Adding users to the permission set</p></figcaption></figure></div>
 4. Select the **Users** tab.
@@ -44,8 +42,7 @@ User Groups allow you to assign multiple users the same set of permissions at on
 
 1. Navigate to **Administrator** → **Permissions**.
 2. Select the **Groups** tab.
-3.  Click **Add**. The **Add Permission Group** pane displays.\
-
+3.  Click **Add**. The **Add Permission Group** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (847).png" alt=""><figcaption><p><strong>Add Permission Group</strong> pane</p></figcaption></figure></div>
 4. Complete the fields:

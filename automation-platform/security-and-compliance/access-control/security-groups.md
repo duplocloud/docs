@@ -17,8 +17,7 @@ Administrators can allow inter-Tenant traffic using the **Add Tenant Security** 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. Select the Tenant you want to open from the **NAME** column.
 3. Select the **Security** tab.&#x20;
-4.  Click **Add**. The **Add Tenant Security** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Security** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (325).png" alt="" width="359"><figcaption><p>The <strong>Add Tenant Security</strong> pane </p></figcaption></figure></div>
 5. Complete the fields:
@@ -34,8 +33,7 @@ In Azure, security is implemented at the **Virtual Network (VNet)** level. All t
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select the Infrastructure you want to manage access for from the **NAME** column.
 3. Select the **Security Group Rules** tab.&#x20;
-4.  Click **Add**. The **Add Infrastructure Security** pane displays.\
-
+4.  Click **Add**. The **Add Infrastructure Security** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (327).png" alt=""><figcaption><p>The <strong>Add Infrastructure Security</strong> pane</p></figcaption></figure></div>
 5. Complete the fields:

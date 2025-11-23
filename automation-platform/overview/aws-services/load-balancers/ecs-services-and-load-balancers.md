@@ -20,8 +20,7 @@ Tasks run until an error occurs or a user terminates the Task in the ECS Cluster
 2. In the **Task Definitions** tab, select the Task Definition Family Name. This is the [Task Definition **Name** that you created ](../containers/ecs-containers-and-task-definitions/)prepended by a unique DuploCloud identifier. &#x20;
 3. In the **Service Details** tab, click the **Configure ECS Service** link. The **Add ECS Service** page displays.
 4. In the **Name** field, enter the Service name.
-5.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.\
-
+5.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/dockerq (1).png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for an ECS Service</p></figcaption></figure></div>
 
@@ -53,12 +52,10 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **ECS**, and select the **Services** tab.
 2. Select the Service to which your Load Balancer is attached from the **NAME** column.
 3. Click the **Load Balancers** tab.
-4.  In the **Other Settings** card, click **Edit**. \
-
+4.  In the **Other Settings** card, click **Edit**. <br>
 
     <figure><img src="../../../../.gitbook/assets/othersettingsnew.png" alt=""><figcaption><p>The <strong>ECS</strong> details page with the <strong>Edit Other Settings</strong> option highlighted</p></figcaption></figure>
-5.  The **Other Load Balancer Settings** pane displays.\
-
+5.  The **Other Load Balancer Settings** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/other load balancer settings pane.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
 6. Configure the settings, as needed.

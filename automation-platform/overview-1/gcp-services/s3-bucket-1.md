@@ -19,8 +19,7 @@ You can set up recurring tasks that trigger **HTTP endpoints**, **Pub/Sub topics
 Before creating the Cloud Scheduler job, ensure that you have created a [Pub/Sub topic](s3-bucket-3.md), as the job will send messages to that topic.&#x20;
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud Scheduler**.
-2.  Click **Add**. The **Create Scheduler Job** pane displays.\
-
+2.  Click **Add**. The **Create Scheduler Job** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (275).png" alt=""><figcaption><p>The <strong>Create Scheduler Job</strong> pane</p></figcaption></figure>
 3. Configure the Job settings:
@@ -32,8 +31,7 @@ Before creating the Cloud Scheduler job, ensure that you have created a [Pub/Sub
      * **Topic Name**: Select the Pub/Sub topic to which messages will be published.
      * **Attributes**: Optionally, add custom attributes for the message.
      * **Data:** Optionally, enter the message body.&#x20;
-4.  Click **Create**. The job will trigger based on the schedule you set, sending messages to the selected Pub/Sub topic.\
-
+4.  Click **Create**. The job will trigger based on the schedule you set, sending messages to the selected Pub/Sub topic.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (277) (1).png" alt=""><figcaption><p>The <strong>Cloud Scheduler</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
@@ -44,8 +42,7 @@ After creating the Cloud Scheduler job, you can create a [Cloud Function](cloud-
 Before creating the Cloud Scheduler job, ensure that you have already deployed a [Google App Engine](https://cloud.google.com/appengine?hl=en) application with the relevant endpoint (e.g., `/process-data`) that you want to trigger. The Cloud Scheduler job will send an HTTP request to this endpoint at the scheduled time.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud Scheduler**.
-2.  Click **Add**. The **Create Scheduler Job** pane displays.\
-
+2.  Click **Add**. The **Create Scheduler Job** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (279).png" alt=""><figcaption><p>The <strong>Create Scheduler Job</strong> pane </p></figcaption></figure>
 3. Configure the Job settings:
@@ -69,8 +66,7 @@ Before creating the Cloud Scheduler job, ensure that you have already deployed a
 Before creating the Cloud Scheduler job, ensure that you have already deployed either an HTTP-based service or a [Cloud Function](cloud-functions.md#creating-a-gcp-cloud-functions) with the relevant endpoint (e.g., `/process-orders`) that you want to trigger. The Cloud Scheduler job will send an HTTP request to this endpoint or invoke the Cloud Function at the scheduled time.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud Scheduler**.
-2.  Click **Add**. The **Create Scheduler Job** pane displays.\
-
+2.  Click **Add**. The **Create Scheduler Job** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (282).png" alt=""><figcaption><p>The <strong>Create Scheduler Job</strong> pane</p></figcaption></figure>
 3. Configure the Job settings:
@@ -85,8 +81,7 @@ Before creating the Cloud Scheduler job, ensure that you have already deployed e
      * **Authentication Method**: Choose the authentication method required for the target service (e.g., **oauth token**, **oidc token**, etc.).
      * **HTTP Body**: Optionally, enter the body of the HTTP request (e.g., `{ "order_id": 12345 }` for a POST request).
      * **HTTP Headers:** Optionally, add any necessary HTTP headers for the request.
-4.  Click **Create**. The job will make an HTTP request to the specified endpoint according to the cron schedule.\
-
+4.  Click **Create**. The job will make an HTTP request to the specified endpoint according to the cron schedule.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (283).png" alt=""><figcaption><p>The <strong>Cloud Scheduler</strong> page in the DuploCloud Portal</p></figcaption></figure>
 

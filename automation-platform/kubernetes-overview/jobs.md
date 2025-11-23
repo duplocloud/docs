@@ -34,26 +34,22 @@ You can also use a Kubernetes Job to run multiple Pods in [parallel](https://kub
 <figure><img src="../../.gitbook/assets/pi1 final if theres a god (1).png" alt=""><figcaption><p>The <strong>Add Kubernetes Jobs</strong> page with <strong>Container - 1</strong> details added.<br></p></figcaption></figure>
 
 7. To run the Kubernetes Job to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line">button and select the **Add Init Container** option. The **Init Container - 1** area displays.
-8.  In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.\
-
+8.  In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.<br>
 
     <figure><img src="../../.gitbook/assets/newpi2.png" alt=""><figcaption><p>The <strong>Add Kubernetes Job</strong> page with <strong>Init Container</strong> added.</p></figcaption></figure>
 9. Click **Next** to open the **Advanced Configuration** step.
-10. In the **Other Spec Configuration** field, specify the Kubernetes Job spec (in YAML) for **Init Container - 1**. Click the Info Tip icon for examples. Select and copy commands as needed.\
-
+10. In the **Other Spec Configuration** field, specify the Kubernetes Job spec (in YAML) for **Init Container - 1**. Click the Info Tip icon for examples. Select and copy commands as needed.<br>
 
     <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-12_41_36.png" alt=""><figcaption><p>Info Tip examples for the <strong>Other Spec Configuration</strong> field<strong>.</strong><br></p></figcaption></figure>
 
     <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-12_55_12.png" alt=""><figcaption><p><strong>Add Kubernetes Job</strong> page with completed <strong>Other Spec Configuration</strong> field<strong>.</strong> </p></figcaption></figure>
 11. Click **Create**. The Kubernetes Job is created and displayed on the **Job** page with a status of **Active**.&#x20;
 12. To run the Kubernetes Job to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line">button and select the **Add Init Container** option. The **Init Container - 1** area displays.
-13. In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.\
-
+13. In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.<br>
 
     <figure><img src="../../.gitbook/assets/newpi2.png" alt=""><figcaption><p>The <strong>Add Kubernetes Job</strong> page with <strong>Init Container</strong> added.</p></figcaption></figure>
 14. Click **Next** to open the **Advanced Configuration** step.
-15. In the **Other Spec Configuration** field, specify the Kubernetes Job spec (in YAML) for **Init Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.\
-
+15. In the **Other Spec Configuration** field, specify the Kubernetes Job spec (in YAML) for **Init Container - 1**. Click the Info Tip icon for examples. Select and **Copy** commands as needed.<br>
 
     <figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-12_41_36.png" alt=""><figcaption><p>Info Tip examples for the <strong>Other Spec Configuration</strong> field<strong>.</strong><br></p></figcaption></figure>
 
@@ -103,8 +99,7 @@ Enable or disable faults for failed Kubernetes Jobs in a specific Tenant.
 2. Click the Tenant name in the **NAME** column.&#x20;
 3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
 4. From the **Select Feature** list box, select **Enable K8s job fault logging by default**, and use the toggle switch to enable or disable the setting.&#x20;
-5.  Click **Add**. The Jobs fault setting is added. \
-
+5.  Click **Add**. The Jobs fault setting is added. <br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/tenant faults feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane with <strong>Enable K8s Job fault logging by default</strong> enabled</p></figcaption></figure></div>
 

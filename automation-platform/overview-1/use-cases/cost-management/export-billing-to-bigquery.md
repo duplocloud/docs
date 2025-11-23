@@ -29,8 +29,7 @@ To enable billing data visibility in DuploCloud for Google Cloud Platform (GCP),
 After setting up the export and access:
 
 1. In the DuploCloud Portal, navigate to **Administrator**-> **Billing**.
-2.  On the right side of the page, click **Enable Billing Feature**.\
-
+2.  On the right side of the page, click **Enable Billing Feature**.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (600) (2).png" alt=""><figcaption><p><strong>Billing</strong> page in the DuploCloud Portal with the <strong>Enable Billing Feature</strong> option highlighted</p></figcaption></figure>
 

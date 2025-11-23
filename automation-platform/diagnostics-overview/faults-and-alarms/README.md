@@ -38,8 +38,7 @@ Alerts in DuploCloud are created for individual resources and their metrics. To 
    * For other resources, follow a similar pattern
 2. Select the resource from the **NAME** column to open its details page.
 3. Click the **Alerts** tab.
-4.  Click **Add**. The **Create Alert** pane displays.\
-
+4.  Click **Add**. The **Create Alert** pane displays.<br>
 
     <div align="left"><img src="../../../.gitbook/assets/Screenshot (891).png" alt="Create Alert pane" width="409"></div>
 5. Enter the desired threshold, conditions, and notification options.

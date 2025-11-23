@@ -12,8 +12,7 @@ Create scheduling policies to define when your batch job runs.&#x20;
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Batch** page, and click the **Scheduling Policies** tab.
 2. Click **Add**. The **Create Batch Scheduling Policy** page displays.
-3.  Create batch job scheduling policies using the [AWS documentation](https://docs.aws.amazon.com/batch/latest/userguide/scheduling-policies.html). The fields in the AWS documentation map to the fields on the DuploCloud **Create Batch Scheduling Policy** page.\
-
+3.  Create batch job scheduling policies using the [AWS documentation](https://docs.aws.amazon.com/batch/latest/userguide/scheduling-policies.html). The fields in the AWS documentation map to the fields on the DuploCloud **Create Batch Scheduling Policy** page.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_45_52.png" alt=""><figcaption><p>The <strong>Create Batch Scheduling Policy</strong> page in the DuploCloud Portal</p></figcaption></figure>
 4. Click **Create**.
@@ -27,8 +26,7 @@ Create scheduling policies to define when your batch job runs.&#x20;
 3. Click **Add**. The **Add Batch Environment** page displays.
 4. In the **Compute Environment Name** field, enter a unique name for your environment.
 5. From the **Type** list box, select the environment type (On-Demand, Spot, Fargate, etc.).
-6.  Modify additional defaults on the page or add configuration parameters in the **Other Configurations** field, as needed. \
-
+6.  Modify additional defaults on the page or add configuration parameters in the **Other Configurations** field, as needed. <br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_48_46.png" alt=""><figcaption><p>The <strong>Add Batch Environment</strong> page in the DuploCloud Portal</p></figcaption></figure>
 7. Click **Create**. The compute environment is created.&#x20;
@@ -40,8 +38,7 @@ Create scheduling policies to define when your batch job runs.&#x20;
 After you define job definitions, create queues for your batch jobs to run in. For more information, see the [AWS instructions for creating a job queue](https://docs.aws.amazon.com/batch/latest/userguide/create-job-queue-ec2.html).
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Batch** page, and click the **Queues** tab.
-2.  Click **Add**. The **Create Batch Queue** page displays.\
-
+2.  Click **Add**. The **Create Batch Queue** page displays.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_54_23.png" alt=""><figcaption><p>The AWS Batch <strong>Create Batch Queue</strong> page in the DuploCloud Portal.</p></figcaption></figure>
 3. Create batch job queues using the [AWS documentation](https://docs.aws.amazon.com/batch/latest/userguide/job_queues.html). The fields in the AWS documentation map to the fields on the DuploCloud **Create Batch Queue** page.
@@ -56,13 +53,11 @@ In the **Priority** field, enter a whole number. Job queues with a higher priori
 Before you can run AWS batch jobs, you need to create job definitions specifying how batch jobs are run.
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Batch**, and click the **Job Definitions** tab.
-2.  Click **Add**. The **Create** **Batch Job Definition** page displays.\
-
+2.  Click **Add**. The **Create** **Batch Job Definition** page displays.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_56_25.png" alt=""><figcaption><p>The <strong>Create Batch Job Definition</strong> page in the DuploCloud Portal.</p></figcaption></figure>
 3. Define your batch jobs using the [AWS documentation](https://docs.aws.amazon.com/batch/latest/userguide/job_definitions.html). The fields in the AWS documentation map to the fields on the DuploCloud **Create Batch Job Definition** page.
-4.  Click **Create**. The batch job definition is created. \
-
+4.  Click **Create**. The batch job definition is created. <br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_00_47 (1).png" alt=""><figcaption><p>The <strong>Batch Job Definition</strong> configuration is shown in the DuploCloud Portal.</p></figcaption></figure>
 
@@ -71,8 +66,7 @@ Before you can run AWS batch jobs, you need to create job definitions specifying
 Add a job for AWS batch processing. See the [AWS documentation](https://docs.aws.amazon.com/batch/latest/userguide/jobs.html) for more information about batch jobs.
 
 1. After you [configure your compute environment](batch.md#configuring-compute-environments), navigate to **Cloud Services** -> **Batch** and click the **Jobs** tab.&#x20;
-2.  Click **Add**. The **Add Batch Job** page displays.\
-
+2.  Click **Add**. The **Add Batch Job** page displays.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_04_10.png" alt=""><figcaption><p>The <strong>Add Batch Job</strong> page in the DuploCloud Portal.</p></figcaption></figure>
 3. On the **Add Batch Job** page, fill the **Job Name**, **Job Definition**, **Job Queue**, and **Job Properties** fields.

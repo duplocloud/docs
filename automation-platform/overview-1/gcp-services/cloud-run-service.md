@@ -15,16 +15,14 @@ description: Create Google Cloud Run services in DuploCloud
 ## **Creating a GCP Cloud Run Service**
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Cloud Run Service**.
-2.  Click **Add**. The **Add Cloud Run Service - Basic Options** pane displays.\
-
+2.  Click **Add**. The **Add Cloud Run Service - Basic Options** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (369).png" alt=""><figcaption><p>The <strong>Add Cloud Run Service - Basic Options</strong> pane</p></figcaption></figure>
 3. Complete the fields:
 
 <table data-header-hidden><thead><tr><th width="171.33331298828125"></th><th></th></tr></thead><tbody><tr><td><strong>Service Name</strong></td><td>Provide a unique name, such as <code>hello-world-service</code>.</td></tr><tr><td><strong>Image</strong></td><td>Specify the container image (e.g., <code>us-docker.pkg.dev/cloudrun/container/hello</code>).</td></tr><tr><td><strong>Minimum Replicas</strong></td><td>Set the minimum number of instances for the service to scale to.</td></tr><tr><td><strong>Maximum Replicas</strong></td><td>Set the maximum number of instances the service can scale to.</td></tr><tr><td><strong>Session Affinity</strong></td><td>Optionally, select <strong>Yes</strong> or <strong>No</strong> to enable or disable session affinity. Selecting <strong>Yes</strong> ensures requests from the same user are routed to the same instance.</td></tr><tr><td><strong>Environment Variables</strong></td><td>Optionally, add environment variables, such as API keys or database URLs.</td></tr><tr><td><strong>Labels</strong></td><td>Optionally, add labels to categorize or organize your service. For example: <code>env: production</code>.</td></tr><tr><td>A<strong>nnotations</strong><br></td><td>Optionally, add annotations for additional metadata.</td></tr></tbody></table>
 
-4.  Click **Next**. The **Add Cloud Run Service - Advanced Options** pane displays.\
-
+4.  Click **Next**. The **Add Cloud Run Service - Advanced Options** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (370).png" alt=""><figcaption><p>The <strong>Add Cloud Run Service - Advanced Options</strong> pane</p></figcaption></figure>
 5. Optionally, update the **Advanced Options** fields:

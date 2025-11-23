@@ -12,8 +12,7 @@ Complete the following steps to Add an Azure Databricks instance:
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **AI-ML**.
 2.  Select the **Databricks** tab, and click **Add**. The **Add Databricks** pane displays.\
-    \
-
+    <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (51).png" alt="" width="338"><figcaption><p>The <strong>Add Databricks</strong> pane</p></figcaption></figure></div>
 3. Fill in the fields:

@@ -40,4 +40,4 @@ Scaling to or from zero with AWS Autoscaling Groups (ASG) offers several advanta
 * **Enhanced Scalability**: Scaling from zero enables your infrastructure to scale out horizontally, adding additional instances as demand grows. This horizontal scalability allows you to seamlessly handle increases in workload and accommodate a growing user base without experiencing bottlenecks or performance issues.
 * **Elasticity**: Scaling from zero provides elasticity to your infrastructure, allowing it to expand and contract based on demand. This elasticity ensures that you can efficiently allocate resources to match changing workload patterns, resulting in optimal resource utilization and cost efficiency.
 
-\
+<br>

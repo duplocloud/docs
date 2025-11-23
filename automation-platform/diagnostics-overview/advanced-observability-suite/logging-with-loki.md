@@ -23,13 +23,11 @@ Using the Grafana Logging dashboard, you can quickly drill down into logs to inv
 
 ## Viewing Logs in the DuploCloud Advanced Observability Suite (AOS)
 
-1.  In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** (Administrator AOS Dashboard) or **Observability** -> **Advanced** -> **Dashboard** (Tenant AOS Dashboard). The AOS Dashboard displays.\
-
+1.  In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** (Administrator AOS Dashboard) or **Observability** -> **Advanced** -> **Dashboard** (Tenant AOS Dashboard). The AOS Dashboard displays.<br>
 
     <figure><img src="../../../.gitbook/assets/infraotel (1).png" alt=""><figcaption><p><strong>Infrastructure</strong> list box on the DuploCloud Administrator AOS Dashboard</p></figcaption></figure>
 2. Select your Infrastructure from the **Infrastructure** list box (Administrator AOS Dashboard) or **Tenant** from the Tenant list box (Tenant AOS Dashboard).&#x20;
-3.  Click the **Logs** card button. The Grafana **Logging** dashboard displays various widgets and views, including **Live logs**.\
-
+3.  Click the **Logs** card button. The Grafana **Logging** dashboard displays various widgets and views, including **Live logs**.<br>
 
     <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Grafana <strong>Logging D</strong>ashboard</p></figcaption></figure>
 

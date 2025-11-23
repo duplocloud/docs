@@ -14,8 +14,7 @@ For more information about IAM roles and session times in relation to a user, ap
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**. The **System Settings** page displays.
 2. Click the **System Config** tab.
-3.  Click **Add**. The **App Config** pane displays.\
-
+3.  Click **Add**. The **App Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-12_48_30.png" alt=""><figcaption><p><strong>Add Config</strong> pane to set Key <strong>AWS Role Max Session Duration</strong> for all <strong>Tenants</strong><br></p></figcaption></figure></div>
 4. From the **Config Type** list box, select **AppConfig**.
@@ -30,8 +29,7 @@ For more information about IAM roles and session times in relation to a user, ap
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**. The **Tenants** page displays.
 2. From the **Name** column, select the Tenant for which you want to configure session duration time.
 3. Click the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-12_45_39.png" alt=""><figcaption><p>Add Tenant Feature pane to set <strong>AWS Role Max Session Duration</strong> for a single Tenant<br></p></figcaption></figure></div>
 5. From the **Select Feature** list box, select **AWS Role Max Session Duration**.

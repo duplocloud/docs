@@ -20,8 +20,7 @@ OpenSearch provides scalable search and analytics capabilities for your applicat
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.04-14_45_54.png" alt=""><figcaption><p>The <strong>Add OpenSearch Domain</strong> page.</p></figcaption></figure>
 
-10. Optionally, use the toggle switch to **Enable UltraWarm data nodes** (nodes that are optimized for storing large volumes of data cost-effectively). When this option is enabled, additional fields display. Select a **Warm Instance type**, enter **Number of warm data nodes**, and **Enable Cold Storage** as your application requires.\
-
+10. Optionally, use the toggle switch to **Enable UltraWarm data nodes** (nodes that are optimized for storing large volumes of data cost-effectively). When this option is enabled, additional fields display. Select a **Warm Instance type**, enter **Number of warm data nodes**, and **Enable Cold Storage** as your application requires.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-14_39_49.png" alt=""><figcaption><p><strong>Enable UltraWarm data nodes</strong> selected, displaying additional options <strong>(Warm Instance type</strong>, <strong>Number of warm data nodes</strong>, and <strong>Enable Cold Storage</strong>)</p></figcaption></figure>
 11. Click **Submit**. The OpenSearch domain is created.&#x20;
@@ -38,8 +37,7 @@ From the DuploCloud Portal, you can view OpenSearch instance details, open the A
 
 1. In the DuploCloud Portal, go to **Cloud Services** → **Analytics**.
 2. Select the **OpenSearch** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (11).avif" alt="" data-size="line">) at the end of the row for the OpenSearch instance you want to manage.\
-
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (11).avif" alt="" data-size="line">) at the end of the row for the OpenSearch instance you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (550).png" alt=""><figcaption><p><strong>OpenSearch</strong> tab with menu options highlighted</p></figcaption></figure>
 4. Choose one of the following actions:

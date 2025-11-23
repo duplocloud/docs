@@ -11,8 +11,7 @@ EC2 snapshots provide point-in-time backups of virtual machine volumes for AWS-b
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Hosts**.
 2. Select the **EC2** tab.
 3. From the **NAME** column, select the Host you want to backup.
-4.  Click **Actions** → **Host Settings** → **Create Snapshot**.\
-
+4.  Click **Actions** → **Host Settings** → **Create Snapshot**.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-14_42_51.png" alt=""><figcaption><p><strong>Create Snapshot</strong> option on the <strong>EC2 Hosts</strong> page</p></figcaption></figure></div>
 5. Click **Confirm** to confirm that you want to create the snapshot.

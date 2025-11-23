@@ -20,8 +20,7 @@ To enable Dynamic NAT port allocation for a DuploCloud Infrastructure:
 1. In the DuploCloud Portal, navigate to **Administrator** → **Infrastructure**.
 2. Select the GCP infrastructure you want to configure from the **NAME** column.
 3. Select the **Settings** tab.
-4.  Click **Add**. The **Infra - Set Custom Data** pane displays.\
-
+4.  Click **Add**. The **Infra - Set Custom Data** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (659).png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane</p></figcaption></figure></div>
 5. In the **Setting Name** field, select **Enable Dynamic NAT Port Allocation** from the list box.

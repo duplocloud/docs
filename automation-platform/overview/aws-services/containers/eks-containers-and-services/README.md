@@ -27,8 +27,7 @@ For a Native Docker Services example, see [this tutorial](../../../quick-start/q
 ## Viewing and Managing Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
 1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
-2.  Select **All** to view all Services or **Select App** to view Services by **App Name** (this option is only available when one or more Services were created with an App Name).\
-
+2.  Select **All** to view all Services or **Select App** to view Services by **App Name** (this option is only available when one or more Services were created with an App Name).<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/image (480) (1).png" alt=""><figcaption><p><strong>Kubernetes - Services</strong> page with the <strong>Select App</strong> list box<br></p></figcaption></figure></div>
 3. Select the Service from the **NAME** column. The Service details page displays.
@@ -97,15 +96,13 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 2. Click the **System Config** tab.
 3. Click **Add**. The **Add Config** pane displays.
 4. From the **Config Type** list box, select, **Flags**.
-5.  From the **Key** list box, select **Block Master VPC CIDR Allow in EKS SG**.\
-
+5.  From the **Key** list box, select **Block Master VPC CIDR Allow in EKS SG**.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/image (383).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure></div>
 
 
 6. From the **Value** list box, select **True**.
-7.  Click **Submit**. The setting is displayed as **BlockMasterVpcCidrAllowInEksSg** in the **System Config** tab.\
-
+7.  Click **Submit**. The setting is displayed as **BlockMasterVpcCidrAllowInEksSg** in the **System Config** tab.<br>
 
     <figure><img src="../../../../../.gitbook/assets/image (384).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>Flag BlockMasterVpcCidrAllowInEksSg</strong> set to <strong>true</strong></p></figcaption></figure>
 
@@ -127,8 +124,7 @@ DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen mi
 1. In the DuploCloud Portal, select **Administrator** -> **Infrastructure** from the navigation pane.&#x20;
 2. Select the Infrastructure in the **Name** column.
 3. Click the **EKS** tab.&#x20;
-4.  Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Values** from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.\
-
+4.  Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Values** from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.<br>
 
     <figure><img src="../../../../../.gitbook/assets/k8s3.png" alt=""><figcaption><p><strong>EKS</strong> tab with <strong>Download KubeConfig</strong> button</p></figcaption></figure>
 

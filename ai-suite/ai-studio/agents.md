@@ -13,16 +13,14 @@ Prebuilt Agents use a pre-existing container image that defines its functionalit
 To create a Prebuilt Agent, follow these steps:
 
 1. Navigate to **AI Suite** → **Studio** → **Agents**.
-2.  Click **Add**. The **Add Agent Definition** pane displays.\
-
+2.  Click **Add**. The **Add Agent Definition** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (504).png" alt="" width="563"><figcaption><p><strong>Add Agent Definition</strong> pane</p></figcaption></figure></div>
 3. Complete the following fields:
 
 <table data-header-hidden><thead><tr><th width="220.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a name for the Agent.</td></tr><tr><td><strong>Agent Type</strong></td><td>Select <strong>Prebuilt</strong>.</td></tr><tr><td><strong>Docker Image</strong></td><td>Enter the full image path (e.g., <code>registry/myagent:latest</code>).</td></tr><tr><td><strong>Base64 Docker Registry Credential (Optional)</strong></td><td>Enter credentials if needed.</td></tr><tr><td><strong>Port</strong></td><td>Enter the port exposed by the container.</td></tr><tr><td><strong>Protocol</strong></td><td>Select the network protocol your Agent uses for communication (e.g., <strong>http</strong>, <strong>https</strong>, or <strong>grpc</strong>). This determines how external services connect to the containerized Agent.</td></tr><tr><td><strong>Token Limit</strong></td><td>Set the token output limit.</td></tr><tr><td><strong>Environment Variables</strong></td><td>Define key-value pairs (mark as mandatory if needed).</td></tr><tr><td><strong>Meta Data</strong></td><td>Optionally, enter additional key-value configurations.</td></tr></tbody></table>
 
-4.  Click **Submit** to create the Agent. You can view your Agents on the **Agents** tab. \
-
+4.  Click **Submit** to create the Agent. You can view your Agents on the **Agents** tab. <br>
 
     <figure><img src="../../.gitbook/assets/Screenshot (509).png" alt=""><figcaption><p><strong>Agents</strong> tab with the <code>kubernetes-agent</code> Agent displayed</p></figcaption></figure>
 
@@ -39,8 +37,7 @@ Dynamic Agents are configured using flexible, user-defined parameters, including
 #### Creating an Agent Definition
 
 1. Navigate to **AI Suite** → **Studio** → **Agents**.
-2.  Click **Add**. The **Add Agent Definition** pane displays.\
-
+2.  Click **Add**. The **Add Agent Definition** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (510).png" alt="" width="503"><figcaption><p>The <strong>Add Agent Definition</strong> pane<br></p></figcaption></figure></div>
 
@@ -75,15 +72,13 @@ Now that the Agent is created, trigger a build to package your dynamic Agent’s
 Once an Agent image is created, it must be deployed. Deploying the Agent makes it available for use on your infrastructure.
 
 1. Select the **Images** tab on the Agent page (**AI Suite** → **Studio** → **Agents** → select the Agent name).
-2.  Click the menu icon (<img src="../../.gitbook/assets/menu icon (1).avif" alt="" data-size="line">) next to the Agent image and select **Deploy**. The **Deploy Image** pane displays with name and image fields prepopulated.\
-
+2.  Click the menu icon (<img src="../../.gitbook/assets/menu icon (1).avif" alt="" data-size="line">) next to the Agent image and select **Deploy**. The **Deploy Image** pane displays with name and image fields prepopulated.<br>
 
     <figure><img src="../../.gitbook/assets/Screenshot (506).png" alt=""><figcaption><p><strong>Agents</strong> page with the <strong>Deploy Image</strong> pane </p></figcaption></figure>
 3. Choose a deployment method:
    * **Quick Deploy**: Automatically sets up everything needed to run your Agent: it creates a DuploCloud Service, deploys a pod that runs the Agent container, and exposes it through a load balancer listener using the port specified during Agent creation.
    * **Advanced**: Allows full control over deployment settings, including network, scaling, and service options.
-4. Proceed through the remaining steps to complete the deployment, following the prompts based on whether you selected **Quick Deploy** or **Advanced**. Monitor the deployment status on the **Deployments** tab. \
-
+4. Proceed through the remaining steps to complete the deployment, following the prompts based on whether you selected **Quick Deploy** or **Advanced**. Monitor the deployment status on the **Deployments** tab. <br>
 
 <figure><img src="../../.gitbook/assets/Screenshot (508).png" alt=""><figcaption><p>Agents <strong>Deployment</strong> tab showing the deployment with <strong>Running</strong> status</p></figcaption></figure>
 
@@ -96,8 +91,7 @@ Once an Agent image is created, it must be deployed. Deploying the Agent makes i
 Once an Agent has been successfully deployed, it must be registered so that the DuploCloud AI HelpDesk can route queries to it.
 
 1. Select the **Register** tab on the Agent page (**AI Suite** → **Studio** → **Agents** → select the Agent name).
-2.  Click **Register**. The **Register Agent** pane displays.\
-
+2.  Click **Register**. The **Register Agent** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (512).png" alt="" width="496"><figcaption><p>The <strong>Register Agent</strong> pane </p></figcaption></figure></div>
 3. Complete the following fields:

@@ -27,8 +27,7 @@ Follow these steps to create a Target Group:
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** → **Networking** → **Load Balancers**.
 2. Select the **Target Groups** tab.
-3.  Click **Add**. The **Create Target Group** pane displays.\
-
+3.  Click **Add**. The **Create Target Group** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (313) (1).png" alt="" width="362"><figcaption><p>The <strong>Create Target Group</strong> pane<br></p></figcaption></figure></div>
 4. Complete the following fields:
@@ -44,8 +43,7 @@ Register backend resources to your Target Group. Registered targets will receive
 1. From the DuploCloud Portal, navigate to **Cloud Services** → **Networking** → **Load Balancers**.
 2. Select the **Target Groups** tab.&#x20;
 3. Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (4).avif" alt="" data-size="line">) in the row of the Target Group.
-4.  Select **Register Targets**. The **Register Targets** pane displays. \
-
+4.  Select **Register Targets**. The **Register Targets** pane displays. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (117).png" alt="" width="344"><figcaption><p>The <strong>Register Targets</strong> pane with an Instance selected</p></figcaption></figure></div>
 5. In the **Register Targets** pane, specify the Targets you want to register:

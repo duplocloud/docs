@@ -13,8 +13,7 @@ This is only for [Docker Native Container Orchestration](../../../container-orch
 ## Enabling the Docker Native Container Shell
 
 1. In the DuploCloud Portal, navigate to **Docker** -> **Services**. The **Services** page displays.
-2.  Click the **Docker** button, and select **Enable Docker Shell**. The **Start Shell Service** pane displays.\
-
+2.  Click the **Docker** button, and select **Enable Docker Shell**. The **Start Shell Service** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/docker shell enable.png" alt=""><figcaption><p>The <strong>Docker Services</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
 3. From the **Platform** list box, select **Docker Native**.

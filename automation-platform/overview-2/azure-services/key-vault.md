@@ -9,8 +9,7 @@ DuploCloud integrates with Azure Key Vault to secure the storage of secrets, suc
 ## Configuring Azure Key Vault
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Key Vault**.
-2.  Click **Add**. The **Create a** **Key Vault** pane displays.\
-
+2.  Click **Add**. The **Create a** **Key Vault** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (72).png" alt=""><figcaption><p><strong>Create a</strong> <strong>Key Vault</strong> pane</p></figcaption></figure></div>
 3. Enter a **Name** for the Key Vault.
@@ -25,8 +24,7 @@ DuploCloud integrates with Azure Key Vault to secure the storage of secrets, suc
 2. Select the **Azure Key Vaults** tab. &#x20;
 3. Select the Key Vault from the **NAME** column.&#x20;
 4. Select the **Secrets** tab.
-5.  Click, **Add**. The **Create a Secret** pane displays. \
-
+5.  Click, **Add**. The **Create a Secret** pane displays. <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (108).png" alt="" width="453"><figcaption><p>The <strong>Create a Secret</strong> pane</p></figcaption></figure></div>
 6. Complete the following fields on the **Create a Secret** pane:
@@ -54,8 +52,7 @@ DuploCloud allows you to view, recover, and purge deleted Azure Key Vaults direc
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Key Vault**.
 2. Select the **Azure Key Vaults** tab.
 3. Click the **Actions** button.
-4.  Select **Manage Deleted Vaults**. A list of deleted key vaults displays.\
-
+4.  Select **Manage Deleted Vaults**. A list of deleted key vaults displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (681).png" alt=""><figcaption><p><strong>Manage Deleted Vaults</strong> page with <strong>Recover</strong> and <strong>Purge</strong> options highlighted</p></figcaption></figure>
 5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (19).avif" alt="" data-size="line">) in the row of the vault you want to manage.

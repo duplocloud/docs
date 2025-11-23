@@ -10,12 +10,10 @@ Creating AWS RDS read replicas of your database helps you elastically scale your
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database.**
 2. Click the **RDS** tab.
-3.  Click on the name of the database you want to replicate in the **NAME** column.\
-
+3.  Click on the name of the database you want to replicate in the **NAME** column.<br>
 
     <figure><img src="../../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_36_03.png" alt=""><figcaption><p>The <strong>RDS</strong> tab on the <strong>Database</strong> page with the RDS database highlighted</p></figcaption></figure>
-4.  From the **Actions** menu, select **RDS Settings**, and then **Add Replica**. The **Add read replica to: DATABASE** pane displays.\
-
+4.  From the **Actions** menu, select **RDS Settings**, and then **Add Replica**. The **Add read replica to: DATABASE** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../../../.gitbook/assets/prefix1.png" alt="" width="361"><figcaption><p>The <strong>Add read replica to: duplodefault-db</strong> pane</p></figcaption></figure></div>
 5. In the **Read Replica Name** field, provide a name for the replica (the Tenant name is prefixed automatically).

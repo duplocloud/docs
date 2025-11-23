@@ -10,15 +10,13 @@ DuploCloud supports the customization of many Kubernetes (K8s) YAML operators, s
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 2. Select the **Service** from the **NAME** column.
-3.  From the **Actions** menu, select **Edit**. The **Edit Service** page displays.\
-
+3.  From the **Actions** menu, select **Edit**. The **Edit Service** page displays.<br>
 
     <figure><img src="../../.gitbook/assets/tol1 (1).png" alt=""><figcaption><p><strong>Edit</strong> option in <strong>Actions</strong> menu on <strong>Edit Service</strong> page</p></figcaption></figure>
 
 
 4. Click **Next** to proceed to the **Advanced Options** page.
-5.  In the **Other Container Config** field, add the `tolerations` operator YAML you have customized for your container. \
-
+5.  In the **Other Container Config** field, add the `tolerations` operator YAML you have customized for your container. <br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/tol2.png" alt=""><figcaption><p><strong>Other Container Config</strong> field in <strong>Advanced Options</strong> page</p></figcaption></figure></div>
 

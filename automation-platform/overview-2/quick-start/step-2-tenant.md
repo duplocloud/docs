@@ -50,11 +50,9 @@ Create a Tenant for your Infrastructure and Plan:
 
 ## Checking Your Work
 
-1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.\
-
+1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.<br>
 
     <figure><img src="../../../.gitbook/assets/Azure_GS_Tenant_2_Verify.png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong></p></figcaption></figure>
-2.  Navigate to **Administrator** -> **Infrastructure** and select **dev01** from the **Tenant** list box at the top left in the DuploCloud Portal. The **NONPROD** Infrastructure appears in the list of Infrastructures, indicating that the **dev01** Tenant is associated with Infrastructure **NONPROD**.\
-
+2.  Navigate to **Administrator** -> **Infrastructure** and select **dev01** from the **Tenant** list box at the top left in the DuploCloud Portal. The **NONPROD** Infrastructure appears in the list of Infrastructures, indicating that the **dev01** Tenant is associated with Infrastructure **NONPROD**.<br>
 
     <figure><img src="../../../.gitbook/assets/Azure_GS_Tenant_3_Verify (1).png" alt=""><figcaption><p>Tenant list box with <strong>dev01</strong> selected; <strong>NONPROD</strong> Infrastructure with <strong>Status Complete</strong> </p></figcaption></figure>

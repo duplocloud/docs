@@ -12,8 +12,7 @@ A non-administrator user can view and use database engine types created by an ad
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click **System Config**.
-3.  Click **Add**. The **Add Config** pane displays.\
-
+3.  Click **Add**. The **Add Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/useraccess_db.png" alt=""><figcaption><p><strong>Add Config</strong> pane </p></figcaption></figure></div>
 4. From the **Config Type** list box, select **AppConfig**.

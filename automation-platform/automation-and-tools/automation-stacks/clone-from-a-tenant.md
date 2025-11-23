@@ -10,8 +10,7 @@ Clone resources (Nodes, Hosts, Services, Secrets, storage, etc.) from one Tenant
 
 1. Select the destination Tenant from the **Tenant** list box.&#x20;
 2. Navigate to **Automation** -> **Stacks**.
-3.  On the **Deployments** tab, click **Clone**. The **Create Tenant Clone Job** pane displays. \
-
+3.  On the **Deployments** tab, click **Clone**. The **Create Tenant Clone Job** pane displays. <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/image (9) (4).png" alt=""><figcaption><p>The <strong>Create Tenant Clone Job</strong> in the DuploCloud Portal</p></figcaption></figure></div>
 4. Provide a **Name** for the clone Tenant, select the source Tenant from the **Source Tenant** list box, and specify the resources to be cloned in the **Scope** field.&#x20;

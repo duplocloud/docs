@@ -259,8 +259,7 @@ General
 *   General updates
 
     * The DuploCloud UI contains numerous design, navigation, and usability improvements, including new menus for managing an RDS, Containers, and Hosts. These improvements are cross-platform and apply to AWS, Azure, and GCP.
-    * Quickly search the DuploCloud Portal for any navigation menus or tab labels, such as **Kubernetes Secrets** and **Spend by Month**, using the **Search** box at the top center of the DuploCloud Portal.\
-
+    * Quickly search the DuploCloud Portal for any navigation menus or tab labels, such as **Kubernetes Secrets** and **Spend by Month**, using the **Search** box at the top center of the DuploCloud Portal.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/search_menu.png" alt=""><figcaption><p>The <strong>Search</strong> box in the DuploCloud Portal<br></p></figcaption></figure></div>
 

@@ -4,7 +4,7 @@ description: Finish the Quick Start Tutorial by creating an EKS Service
 
 # Creating an EKS Service
 
-So far in this DuploCloud AWS tutorial, you created a VPC network with configuration templates ([Infrastructure and Plan](../step-1-infrastructure.md)), an isolated workspace ([Tenant](../step-2-tenant.md)), and an [RDS database instance](../step-4-create-a-rds-database.md) (optionally).
+So far in this DuploCloud AWS tutorial, you created a VPC network with configuration templates ([Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md)), an isolated workspace ([Tenant](../step-2-tenant.md)), and an [RDS database instance](../step-4-create-a-rds-database.md) (optionally).
 
 Now you need to create a DuploCloud Service on top of your Infrastructure and configure it to run and deploy your application. In this tutorial path, we'll deploy an application using Docker containers and leveraging [AWS Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/).&#x20;
 

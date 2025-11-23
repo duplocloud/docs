@@ -15,8 +15,7 @@ When the infrastructure is created, DuploCloud automatically creates a Plan with
 ## Creating an Infrastructure
 
 1. Navigate to **Administrator** -> **Infrastructure**.&#x20;
-2.  Click **Add**. The **Add Infrastructure** pane displays.\
-
+2.  Click **Add**. The **Add Infrastructure** pane displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (661).png" alt=""><figcaption></figcaption></figure>
 3. Complete the following fields to define the infrastructure.&#x20;

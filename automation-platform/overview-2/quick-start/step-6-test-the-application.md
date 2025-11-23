@@ -24,8 +24,7 @@ Display the web page that the application creates:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Ingress**.
 2. Select the **VIEWWEBSITE** Ingress from the **NAME** column.
-3.  Click the **Configuration** tab.\
-
+3.  Click the **Configuration** tab.<br>
 
     <figure><img src="../../../.gitbook/assets/reallyfixed.png" alt=""><figcaption></figcaption></figure>
 4. In the **Application Gateway IP** card, copy the displayed IP address to your clipboard. In this example, the IP address is **20.84.11.154**.&#x20;

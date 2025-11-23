@@ -39,28 +39,23 @@ When running this command, you will be prompted to create a password. Save it se
 After you generate the PFX file, import it to Azure Key Vault:
 
 1. Sign in to the Azure Portal and access Azure Key Vault.&#x20;
-2.  Select the respective Azure Key Vault for your environment (for example, production versus test) to import the PFX file as shown below.\
-
+2.  Select the respective Azure Key Vault for your environment (for example, production versus test) to import the PFX file as shown below.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import1.png" alt=""><figcaption><p>Azure Key Vaults in the Azure Portal</p></figcaption></figure></div>
-3.  In Azure Key Vault, navigate to **Objects** -> **Certificates**.\
-
+3.  In Azure Key Vault, navigate to **Objects** -> **Certificates**.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import2.png" alt=""><figcaption><p><strong>Generate/Import</strong> option in Azure Key Vault</p></figcaption></figure></div>
 4. Click **Generate/Import**. The **Create a Certificate** form displays.&#x20;
 5. In the **Method of Certificate Creation** field, select **Import**.
 6. Name the Certificate in the **Certificate Name** field.
 7. Upload the PFX file using the **Upload Certificate File** field.
-8.  In the **Password** field, enter the password you set when you [generated the PFX file](import-ssl-certificates.md#id-1.-generating-the-pfx-file).\
-
+8.  In the **Password** field, enter the password you set when you [generated the PFX file](import-ssl-certificates.md#id-1.-generating-the-pfx-file).<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Create_Cert_with_create_button.png" alt=""><figcaption><p><strong>Create a Certificate</strong> form in Azure Key Vault</p></figcaption></figure></div>
-9.  Click **Create**. The certificate is created, but not yet available for use, as indicated by the message: **There are no certificates available** message. In the remaining steps, we will complete the import by copying the certificate’s Secret Identifier ARN and configuring it in DuploCloud.\
-
+9.  Click **Create**. The certificate is created, but not yet available for use, as indicated by the message: **There are no certificates available** message. In the remaining steps, we will complete the import by copying the certificate’s Secret Identifier ARN and configuring it in DuploCloud.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import4.png" alt=""><figcaption><p><strong>There are no certificates available</strong> message in Azure Key Vault</p></figcaption></figure></div>
-10. On the **Certificates** page, select the certificate and open its **current version**.\
-
+10. On the **Certificates** page, select the certificate and open its **current version**.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import5 (1).png" alt=""><figcaption><p>CURRENT VERSION of certificate </p></figcaption></figure></div>
 11. Copy the **Secret Identifier** using the Copy Icon (![](<../../../.gitbook/assets/copy_icon (1).png>)). You will paste it when you [configure the certificate in DuploCloud](import-ssl-certificates.md#configuring-the-certificate-in-duplocloud) in the next step.
@@ -73,12 +68,10 @@ With the Secret Identifier copied to your clipboard, you are ready to configure 
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**.
 2. Select the Plan to which you want to add the certificate from the **NAME** column. The **Plan** details page displays.
-3.  Select the **Certificates** tab.\
-
+3.  Select the **Certificates** tab.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (226).png" alt=""><figcaption><p><strong>Certificates</strong> tab on the <strong>Plan</strong> page</p></figcaption></figure>
-4.  Click **Add**. The **Add a Certificate** pane displays.\
-
+4.  Click **Add**. The **Add a Certificate** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (339).png" alt=""><figcaption><p><strong>Add a Certificate</strong> pane</p></figcaption></figure></div>
 5. Enter a **Name** for the certificate.

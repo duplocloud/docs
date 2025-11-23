@@ -20,8 +20,7 @@ For detailed instructions on how to configure and use ECR with Lambda, refer to 
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Serverless**.
 2. Click the **Lambda** tab. The **Lambda Function** page displays.
-3.  Click **Add**. The **Create a Lambda Function** page displays.\
-
+3.  Click **Add**. The **Create a Lambda Function** page displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (62).png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page <br></p></figcaption></figure>
 4. In the **Name** field, enter the name of your Lambda Function.

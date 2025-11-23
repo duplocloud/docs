@@ -14,15 +14,14 @@ _Estimated time to complete Step 5: 10 minutes._
 
 Before creating the ECS Service and Load Balancer, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [ECS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has [ECS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A [Task Definition named **sample-task-def**](step-4-create-app-via-ecs.md) has been created.
 
 ## Creating an ECS Service and Load Balancer&#x20;
 
-1.  In the DuploCloud Portal's **Tenant** list box, select **dev01**.\
-
+1.  In the DuploCloud Portal's **Tenant** list box, select **dev01**.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/tenant_dev01 (12).png" alt=""><figcaption><p>DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure></div>
 
@@ -36,8 +35,7 @@ Before creating the ECS Service and Load Balancer, verify that you accomplished 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_57_05.png" alt=""><figcaption><p>The <strong>Add ECS Service</strong> page</p></figcaption></figure>
 
 5. In the **Name** field, enter **sample-httpd-app** as the Service name.
-6.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.\
-
+6.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/dockerq.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane for an ECS Service</p></figcaption></figure></div>
 

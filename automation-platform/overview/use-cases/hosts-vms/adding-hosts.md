@@ -19,8 +19,7 @@ Use BYOH for any Host that is neither EC2 nor ASG.
 1. Select the appropriate Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** -> **Hosts**.&#x20;
 3. Select the **EC2** tab.
-4.  Click **Add**. The **Add Host** page displays.\
-
+4.  Click **Add**. The **Add Host** page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (782).png" alt=""><figcaption><p><strong>Add Host</strong> page</p></figcaption></figure></div>
 5. Complete the required fields:
@@ -48,8 +47,7 @@ An Auto Scaling Group (ASG) Host represents a scalable cluster of EC2 instances 
 1. Select the appropriate Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** -> **Hosts**.&#x20;
 3. Select the **ASG** tab.
-4.  Click **Add**. The **Add ASG** page displays.\
-
+4.  Click **Add**. The **Add ASG** page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (783).png" alt=""><figcaption><p><strong>Add ASG</strong> page</p></figcaption></figure></div>
 5. Configure the basic ASG settings:
@@ -69,8 +67,7 @@ Bring Your Own Host (BYOH) allows you to register and manage existing servers or
 1. Select the appropriate Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** -> **Hosts**.&#x20;
 3. Select the **BYOH** tab.
-4.  Click **Add**. The **Add** page displays.\
-
+4.  Click **Add**. The **Add** page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (785) (1).png" alt=""><figcaption><p><strong>Add</strong> page</p></figcaption></figure></div>
 5. Complete the following fields:

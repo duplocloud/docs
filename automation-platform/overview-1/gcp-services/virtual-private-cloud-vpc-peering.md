@@ -17,8 +17,7 @@ To set up VPC peering in DuploCloud, first configure peering in the source Infra
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. In the **NAME** column, select the name of the source Infrastructure.&#x20;
 3. Select the **Peering** tab.
-4.  Click **Add**. The **Create VPC Peering** pane displays. \
-
+4.  Click **Add**. The **Create VPC Peering** pane displays. <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (8).png" alt="" width="388"><figcaption><p>The <strong>Create VPC Peering</strong> pane</p></figcaption></figure></div>
 5. Select the **Destination Infrastructure**.&#x20;

@@ -27,8 +27,7 @@ Before creating Azure Agent Pools, verify that you accomplished the tasks in [St
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
 2. Click the **Azure Agent Pool** tab. &#x20;
-3.  Click **Add**. The **Add** **Azure Agent Pool** page displays.\
-
+3.  Click **Add**. The **Add** **Azure Agent Pool** page displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (351).png" alt=""><figcaption><p>The <strong>Add</strong> <strong>Azure Agent Pool</strong> page</p></figcaption></figure>
 4. Enter the values from the table below. Accept the defaults for fields that are not listed.

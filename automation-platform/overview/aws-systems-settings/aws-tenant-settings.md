@@ -20,8 +20,7 @@ To add a tenant setting that is not listed in the **Select Feature** list box, e
 1. In the DuploCloud Portal, navigate to **Administrator** → **Tenants**.
 2. In the **NAME** column, select the tenant you want to configure.
 3. Select the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (879).png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. In the **Tenant Feature** list box, choose **Other**.

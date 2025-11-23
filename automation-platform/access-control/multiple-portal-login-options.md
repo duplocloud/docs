@@ -12,8 +12,7 @@ Follow these steps to add a new DuploCloud portal account that will appear as a 
 
 1. In the DuploCloud portal, navigate to **Administrator** -> **System Settings**.
 2. Select the **System Config** tab.
-3.  In the **DuploCloud Accounts** area at the bottom of the screen, click **Add**. The **Add DuploCloud Account** pane displays.\
-
+3.  In the **DuploCloud Accounts** area at the bottom of the screen, click **Add**. The **Add DuploCloud Account** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (528).png" alt=""><figcaption><p><strong>Add DuploCloud Account</strong> pane</p></figcaption></figure></div>
 4.  Complete the required fields:

@@ -12,8 +12,7 @@ Complete the steps to create an Azure Managed SQL Instance in the DuploCloud Por
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** -> **Managed Instances**.&#x20;
 2.  Click **Add**. The **Create Managed SQL Instance** pane displays.\
-    \
-
+    <br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (316).png" alt="" width="407"><figcaption><p>The <strong>Create Managed SQL Instance</strong> pane</p></figcaption></figure></div>
 3. Complete the fields:

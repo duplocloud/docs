@@ -22,8 +22,7 @@ Configure AWS Log Collector to collect logs for non-Default Tenants.
 3. In the **Select Tenant** list box, select the Tenant for which you want to enable log collection.&#x20;
 4. In the **Cert ARN** list box, select the correct ARN.&#x20;
 5. In the **Log retention in Index(Days)** field, enter the number of days logs should be retained.&#x20;
-6.  Click **Submit**. Log collection for the selected Tenant deploys based on the [Control Plane configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description).\
-
+6.  Click **Submit**. Log collection for the selected Tenant deploys based on the [Control Plane configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description).<br>
 
     <figure><img src="../../../../.gitbook/assets/image (257).png" alt=""><figcaption><p>The <strong>Logging</strong> tab on the <strong>Observability Settings</strong> page in the DuploCloud Portal</p></figcaption></figure>
 

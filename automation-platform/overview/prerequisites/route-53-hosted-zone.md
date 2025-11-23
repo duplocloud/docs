@@ -37,8 +37,7 @@ Start by updating the **DEFAULT** Plan, then repeat the configuration for any ad
 
 <table data-header-hidden><thead><tr><th width="213.99993896484375">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Route53 Zone ID</strong></td><td>Enter the Hosted Zone ID from AWS Route 53. This is required to enable DNS support.</td></tr><tr><td><strong>External DNS Suffix</strong></td><td>Enter the DNS suffix for public-facing records (e.g., <code>.apps.acme.com</code>). Must begin with a dot (<code>.</code>).</td></tr><tr><td><strong>Internal DNS Suffix</strong></td><td>Enter the DNS suffix for internal resources (e.g., <code>.internal.acme.com</code>). Must begin with a dot (<code>.</code>).</td></tr><tr><td><strong>Ignore Global DNS</strong></td><td>Optionally, select this option to disable global DNS record management for the Plan, allowing localized DNS control.</td></tr></tbody></table>
 
-6.  Click **Save** to apply your changes.\
-
+6.  Click **Save** to apply your changes.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (167).png" alt=""><figcaption><p><strong>DNS</strong> tab for the <strong>DEFAULT</strong> Plan</p></figcaption></figure>
 

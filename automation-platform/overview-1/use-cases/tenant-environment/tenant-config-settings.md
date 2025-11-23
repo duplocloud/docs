@@ -14,8 +14,7 @@ You can configure settings to apply to all new Tenants under a Plan using the Co
 4. Click **Add**. The **Add Config** pane displays.
 5. From the **Config Type** field, select **TenantConfig**.
 6. In the **Name** field, enter the **setting** that you would like to apply to new Tenants under this Plan. (In the example, the **enable\_alerting** setting is entered.)&#x20;
-7.  In the **Value** field, enter **True**.\
-
+7.  In the **Value** field, enter **True**.<br>
 
     <figure><img src="../../../../.gitbook/assets/config.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane for the <strong>Infra-126-4</strong> Plan</p></figcaption></figure>
 8. Click **Submit**. The setting entered in the Name field (**enable alerting** in the example) will apply to all new Tenants added under the Plan.&#x20;

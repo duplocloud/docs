@@ -63,8 +63,7 @@ Presidio ships with a rich set of **built-in recognizers** for detecting common 
 * **CreditCardRecognizer** → credit card numbers
 * **UsSsnRecognizer** → U.S. Social Security Numbers
 * **PersonRecognizer** → human names
-* **IbanRecognizer** → IBAN bank account numbers\
-
+* **IbanRecognizer** → IBAN bank account numbers<br>
 
 ### ✂️ Built-in Anonymizers
 

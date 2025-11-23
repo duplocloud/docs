@@ -17,8 +17,7 @@ OSSEC agents are deployed at various endpoints (VMs in the cloud) where they col
 For customers who require SIEM, the setup is a seamless, fully orchestrated experience. The platform takes care of everything, automatically installing and updating OSSEC agents in the DuploCloud Hosts, ensuring a hassle-free experience for the customer.&#x20;
 {% endhint %}
 
-Typically, one centralized SIEM is used for multiple accounts, i.e., one DuploCloud implementation implements the SIEM, and more DuploCloud environments can ingest data there.\
-
+Typically, one centralized SIEM is used for multiple accounts, i.e., one DuploCloud implementation implements the SIEM, and more DuploCloud environments can ingest data there.<br>
 
 <figure><img src="../../../.gitbook/assets/image (400).png" alt=""><figcaption></figcaption></figure>
 

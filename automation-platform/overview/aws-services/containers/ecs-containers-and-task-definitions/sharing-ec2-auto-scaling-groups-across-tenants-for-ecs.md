@@ -18,8 +18,7 @@ To allow ECS tasks to run on Hosts from another Tenant, both Tenants must have t
 4. Click **Add**. The **Add Tenant Feature** pane displays.
 5. In the **Select Feature** list box, select the appropriate setting for the Tenant:
    * Tenant running hosts: **Allow hosts to run K8S pods/ECS Task from other tenants**
-   * Tenant(s) running tasks: **Enable option to run K8S pods/ECS Task on any host**\
-
+   * Tenant(s) running tasks: **Enable option to run K8S pods/ECS Task on any host**<br>
 
 {% columns %}
 {% column width="50%" %}

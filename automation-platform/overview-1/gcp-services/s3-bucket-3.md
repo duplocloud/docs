@@ -7,8 +7,7 @@ description: Create Pub/Sub Topic in GCP
 ## Add a Pub/Sub topic
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Pub/Sub**.
-2.  Select the **Topics** tab, and click **Add**. The **Create a PubSub Topic** pane displays.\
-
+2.  Select the **Topics** tab, and click **Add**. The **Create a PubSub Topic** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/topic pane (1).png" alt=""><figcaption><p>The <strong>Create a PubSub Topic</strong> pane</p></figcaption></figure></div>
 3. Provide a **Name** for the Pub/Sub Topic.

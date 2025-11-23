@@ -9,16 +9,14 @@ DuploCloud integrates with **GCP Secrets Manager** to help you securely store an
 ## Adding a Secret
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Secrets**.
-2.  Click **Add**. The **Add Google Secret** pane displays.\
-
+2.  Click **Add**. The **Add Google Secret** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (518).png" alt=""><figcaption><p><strong>Add Google Secret</strong> pane in the DuploCloud Portal</p></figcaption></figure>
 3. Complete the following fields:
 
 <table data-header-hidden><thead><tr><th width="224.6666259765625">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Provide a name for the secret which will be the identifier in DuploCloud and GCP.</td></tr><tr><td><strong>Secret Value Type</strong></td><td>Select the secret format (<strong>String</strong> or <strong>JSON</strong>).</td></tr><tr><td><strong>Secret Value</strong></td><td>Enter the actual secret you want to store securely.</td></tr><tr><td><strong>Labels</strong></td><td>Enter optional key-value pairs to help categorize or manage the secret.</td></tr><tr><td><strong>Replication Type</strong></td><td>Choose how GCP replicates the secret: <strong>Automatic</strong> (managed by Google) or <strong>User Managed</strong> (you specify the regions).</td></tr></tbody></table>
 
-4.  Click **Submit** to create the secret. The secret is created in CGP Secrets Manager and displays on the **Secrets** page in the DuploCloud Portal.\
-
+4.  Click **Submit** to create the secret. The secret is created in CGP Secrets Manager and displays on the **Secrets** page in the DuploCloud Portal.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (519).png" alt=""><figcaption><p><strong>Secrets</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
@@ -41,8 +39,7 @@ Secret values may be masked depending on your access level.
 View, update, or delete existing secrets using the actions menu in the DuploCloud Portal.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Secrets**.
-2.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (12).avif" alt="" data-size="line">) in the row of the secret you want to manage.\
-
+2.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (12).avif" alt="" data-size="line">) in the row of the secret you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (520).png" alt=""><figcaption><p><strong>Secrets</strong> page with menu options highlighted</p></figcaption></figure>
 3. Choose from the available actions:

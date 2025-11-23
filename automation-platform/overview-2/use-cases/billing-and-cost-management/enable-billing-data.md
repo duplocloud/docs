@@ -31,8 +31,7 @@ Refer to [Restart a virtual machine in Azure](https://learn.microsoft.com/en-us/
 To complete the setup:
 
 1. From the DuploCloud Portal, navigate to **Administrator > Billing**.
-2.  On the right side of the page, click **Enable Billing Feature**.\
-
+2.  On the right side of the page, click **Enable Billing Feature**.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (600) (6).png" alt=""><figcaption></figcaption></figure>
 

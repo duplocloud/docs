@@ -20,8 +20,7 @@ By using these strategies alongside DuploCloud's interface for Kubernetes secret
 ## Creating a Kubernetes Secret&#x20;
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Secrets**.
-2.  Click **Add**. The **Add Kubernetes Secret** pane displays.\
-
+2.  Click **Add**. The **Add Kubernetes Secret** pane displays.<br>
 
     <div align="left"><img src="../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.50.14 PM.png" alt="Add Kubernetes Secret pane" width="563"></div>
 3. Complete the fields:
@@ -34,8 +33,7 @@ To use this Secret in your application, [mount it as a volume in a container](mo
 
 ## Creating a multi-line Kubernetes Secret
 
-1.  Follow the steps in [creating a Kubernetes Secret](setting-kubernetes-secrets.md#creating-a-kubernetes-secret), defining a Key value using the `PRIVATE_KEY_FILENAME`  in the **Secret Details** field, as shown below. \
-
+1.  Follow the steps in [creating a Kubernetes Secret](setting-kubernetes-secrets.md#creating-a-kubernetes-secret), defining a Key value using the `PRIVATE_KEY_FILENAME`  in the **Secret Details** field, as shown below. <br>
 
     <div align="left"><img src="../../../.gitbook/assets/Screen Shot 2022-08-10 at 4.25.05 PM.png" alt="" width="563"></div>
 2. Click **Add** to create the multi-line secret.

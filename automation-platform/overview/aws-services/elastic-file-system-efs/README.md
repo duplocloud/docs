@@ -28,16 +28,14 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 
 1. In the DuploClod Portal, navigate to **Cloud Services** -> **Storage.**
 2. Click the **EFS** tab.&#x20;
-3.  Click **Add**. The **Add Elastic File System** page displays.\
-
+3.  Click **Add**. The **Add Elastic File System** page displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_06_46.png" alt=""><figcaption><p><strong>Actions</strong> menu for a <strong>Timestream</strong> database, <strong>Table</strong> tab</p></figcaption></figure>
 4. In the **Name** field, enter a name for the EFS you want to create.
 5. In the **Creation Token** field, enter a string of up to 64 ASCII characters.
 6. From the **Performance Mode** list box, select **General** or **Max I/O**. Select General for most file systems. Selecting **Max I/O** allows scaling to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. You can not change this setting after the file system has been created.&#x20;
 7. From the **Throughput Mode** list box, select **Bursting** or **Provisioned**. If you select Provisioned, you must also set a value from **1** to **1024** for **Provisioned Throughput (in MiB)**. After you create the file system, you can decrease the file system's throughput in Provisioned mode or change between the throughput modes, as long as more than 24 hours have passed since the last decrease in throughput or throughput mode change.
-8.  Change other defaults as needed as click **Create**. The EFS is created and displayed in the **EFS** tab. Select the EFS from the **Name** column and view the configuration in the **Details** tab.\
-
+8.  Change other defaults as needed as click **Create**. The EFS is created and displayed in the **EFS** tab. Select the EFS from the **Name** column and view the configuration in the **Details** tab.<br>
 
     ![EFS Details](<../../../../.gitbook/assets/image (122).png>)
 
@@ -73,17 +71,14 @@ If you want to disable an EFS Lifecycle Management Policy that you previously cr
 
 1. In the DuploClod Portal, navigate to **Cloud Services** -> **Storage.**
 2. Click the **EFS** tab.&#x20;
-3.  Select the EFS from the **Name** column. The EFS page displays.\
-
+3.  Select the EFS from the **Name** column. The EFS page displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_08_45.png" alt=""><figcaption><p>EFS page with <strong>Actions</strong> menu and <strong>Update Lifecycle Policies</strong> highlighted</p></figcaption></figure>
-4.  From the **Actions** menu, select **Update Lifecycle Policies**. The **Update EFS Lifecycle Policies** pane displays.\
-
+4.  From the **Actions** menu, select **Update Lifecycle Policies**. The **Update EFS Lifecycle Policies** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/efs_lc2.png" alt=""><figcaption><p><strong>Update EFS Lifecycle Policies</strong> pane</p></figcaption></figure></div>
 5. From the **Transition to IA** list box, select the time duration (in **days**) to elapse before transitioning files to the IA storage class.
 6. Optionally, select **Transition to Primary Storage Class**, if appropriate.
-7.  Click **Submit**. The EFS Lifecycle Policies are updated and can be viewed in the **Lifecycle Policies** tab.\
-
+7.  Click **Submit**. The EFS Lifecycle Policies are updated and can be viewed in the **Lifecycle Policies** tab.<br>
 
     <figure><img src="../../../../.gitbook/assets/efs_lc3.png" alt=""><figcaption><p><strong>Lifecycle Policies</strong> tab</p></figcaption></figure>

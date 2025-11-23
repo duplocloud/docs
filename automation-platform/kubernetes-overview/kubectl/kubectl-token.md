@@ -27,8 +27,7 @@ If you don't have administrator privileges, configure AWS credentials for intera
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 2. Select the Service name from the **Name** column.
-3.  From the **KubeCtl** item list, select **KubeCtl Token**. The **KubeCtl Token** window displays.\
-
+3.  From the **KubeCtl** item list, select **KubeCtl Token**. The **KubeCtl Token** window displays.<br>
 
     <figure><img src="../../../.gitbook/assets/KUBECTL.png" alt=""><figcaption><p>The <strong>Token</strong> window</p></figcaption></figure>
 4. Click **Copy** to copy the `kubectl` commands in the **Token** window to your clipboard.

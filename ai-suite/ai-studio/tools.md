@@ -15,8 +15,7 @@ Tools are built as Python classes that inherit from the `BaseTool` class in [Lan
 Each Tool in the DuploCloud AI Suite relies on a Python package that contains the logic it will execute. Before creating a Tool, upload your package to DuploCloud.
 
 1. Navigate to **AI Suite** → **Studio** → **Tools**, and select the **Packages** tab.
-2.  Click **Add**. The **Upload Package** pane appears.\
-
+2.  Click **Add**. The **Upload Package** pane appears.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (500).png" alt="" width="421"><figcaption><p>The <strong>Upload Package</strong> pane</p></figcaption></figure></div>
 3. In the **Tool Name** field, provide a name for the package.
@@ -30,8 +29,7 @@ Once uploaded, the package will appear in the list under the **Packages** tab. Y
 Add a custom Tool to the DuploCloud AI Suite to enable the DuploCloud AI Agent to import and execute it during its reasoning process.
 
 1. From the DuploCloud Portal, navigate to **AI Suite** → **Studio** → **Tools**, and select the **Tools** tab.
-2.  Click the **Add** button. The **Add Tool Definition** pane displays.\
-
+2.  Click the **Add** button. The **Add Tool Definition** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (501).png" alt=""><figcaption><p>The <strong>Add Tool Definition</strong> pane</p></figcaption></figure></div>
 3. Complete the following fields:

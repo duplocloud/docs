@@ -10,8 +10,7 @@ Azure Function Apps allow you to run serverless, event-driven code that automati
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Serverless**.
 2. Select the **Function Apps** tab.
-3.  Click **Add**. The **Add Function App** pane displays.\
-
+3.  Click **Add**. The **Add Function App** pane displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/funtion complete.png" alt=""><figcaption></figcaption></figure>
 4. Complete the fields:

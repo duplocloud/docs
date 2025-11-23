@@ -4,7 +4,7 @@ description: Creating a DuploCloud Tenant that segregates your workloads
 
 # Step 2: Create a Tenant
 
-Now that the [Infrastructure and Plan](step-1-infrastructure.md) exist and a Kubernetes EKS or ECS cluster has been enabled, create one or more Tenants that use the configuration DuploCloud created.
+Now that the [Infrastructure and Plan](../../../overview/quick-start/step-1-infrastructure.md) exist and a Kubernetes EKS or ECS cluster has been enabled, create one or more Tenants that use the configuration DuploCloud created.
 
 [Tenants ](../../../introduction/application-focused-interface-duplocloud-architecture/tenant.md)in DuploCloud are similar to projects or workspaces and have a subordinate relationship to the Infrastructure. Think of the Infrastructure as a virtual "house" (cloud), with Tenants conceptually "residing" in the Infrastructure performing specific workloads that you define. As Infrastructure is an abstraction of a Virtual Private Cloud, Tenants abstract the segregation created by a [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/), although Kubernetes Namespaces are only one component that Tenants can contain.
 
@@ -33,8 +33,8 @@ Tenants are sometimes created to isolate a single customer workload, allowing mo
 
 Before creating a Tenant, verify that you accomplished the tasks in the previous tutorial steps.  Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../../../overview/quick-start/step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
 
 ## Creating a Tenant&#x20;
 
@@ -50,7 +50,6 @@ Create a Tenant for your Infrastructure and Plan:
 
 ## Checking Your Work
 
-1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.\
-
+1.  Navigate to **Administrator** -> **Tenants** and verify that the **dev01** Tenant displays in the list.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/AWS_QS_3.png" alt=""><figcaption><p><strong>Tenant</strong> page with Tenant <strong>dev01</strong> using Plan <strong>NONPROD</strong><br></p></figcaption></figure></div>

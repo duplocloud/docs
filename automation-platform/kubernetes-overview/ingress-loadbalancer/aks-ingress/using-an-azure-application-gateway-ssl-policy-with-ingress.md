@@ -9,7 +9,6 @@ To use an Application Gateway SSL policy with Ingress for your ALB Load Balancer
 3. In the **Config Type** list box, select **AppConfig**.
 4. In the **Key** field, enter `AZURE_APP_GATEWAY_SSL_POLICY`.
 5. In the **Value** field, enter your Azure Application Gateway SSL Policy (for example **AppGwSslPolicy20220101**).
-6.  Click **Submit**. \
-
+6.  Click **Submit**. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Application gateway policy (3).png" alt="" width="375"><figcaption><p>The Update Config App Config pane</p></figcaption></figure></div>

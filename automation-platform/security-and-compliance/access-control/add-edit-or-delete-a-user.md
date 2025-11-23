@@ -10,4 +10,4 @@ The DuploCloud Infrastructure construct maps to a VPC in AWS and GCP. In Azure, 
 
 Subnets within a network infrastructure are tied to availability zones. A single application's multiple replicas are typically spread across multiple subnets. Subnets thus are not an isolation construct by default. However, you can deploy workloads in specific subnets when they launch the virtual machines. In the case of Azure, subnets also have special considerations, for example, different types of Azure PaaS services require their special subnets.
 
-All resources in the cloud provider that allow resource provisioning to have a network interface associated are placed in private subnets. This is a straightforward configuration in AWS and GCP. In Azure, the platform deals with the more complicated workflows around creating private endpoints and hosted zones.\
+All resources in the cloud provider that allow resource provisioning to have a network interface associated are placed in private subnets. This is a straightforward configuration in AWS and GCP. In Azure, the platform deals with the more complicated workflows around creating private endpoints and hosted zones.<br>

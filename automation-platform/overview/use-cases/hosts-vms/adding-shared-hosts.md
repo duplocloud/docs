@@ -23,8 +23,7 @@ To enable Host sharing, configure one Tenant to share its Hosts, and another Ten
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
 2. From the **Tenant** list box, select the Tenant that will share its Host.&#x20;
 3. Click the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Tenantfeature.jpg" alt="" width="455"><figcaption><p>The <strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** item list, select **Allow hosts to run K8S pods from other tenants**.
@@ -36,8 +35,7 @@ To enable Host sharing, configure one Tenant to share its Hosts, and another Ten
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
 2. From the **Tenant** list, select the Tenant that will run Pods on the shared Host.
 3. Select the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/SHARED.jpg" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** item list, select **Enable option to run K8S pods on any host**.
@@ -52,13 +50,11 @@ After configuring Tenant settings to allow Host sharing, create the resources yo
 
 1. From the **Tenant** list box, select the Tenant that will run Pods on the shared Host.
 2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
-3.  In the **Services** tab, click **Add**. The **Add Service** page displays.\
-
+3.  In the **Services** tab, click **Add**. The **Add Service** page displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_00_08.png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Basic Options.</p></figcaption></figure>
 4. Fill in the **Service Name**, **Cloud**, **Platform**, and **Docker Image** fields. Click **Next**.
-5.  Enable **Run on Any Host**. \
-
+5.  Enable **Run on Any Host**. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure></div>
 6. Click **Create**. A Service running on the shared Host is created.&#x20;

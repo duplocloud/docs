@@ -11,14 +11,12 @@ Amazon Timestream automatically scales to adjust for capacity and performance, s
 ## Adding a Timestream database
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
-2.  From the **RDS** page, click the **Timestream** tab.\
-
+2.  From the **RDS** page, click the **Timestream** tab.<br>
 
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_59_07.png" alt=""><figcaption><p><strong>Timestream</strong> database page </p></figcaption></figure>
 
 
-3.  Click **Add**. The **Add Timestream Database** pane displays.\
-
+3.  Click **Add**. The **Add Timestream Database** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AWS_Add_Timestream_DB.png" alt=""><figcaption><p><strong>Add Timestream Database</strong> pane</p></figcaption></figure></div>
 4. Enter the **DatabaseName.**
@@ -30,8 +28,7 @@ Amazon Timestream automatically scales to adjust for capacity and performance, s
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. From the **RDS** page, click the **Timestream** tab.
 3. Select the database from the **Name** column.
-4.  On the **Tables** tab, click **Add**. The **Add Timestream Table** pane displays.\
-
+4.  On the **Tables** tab, click **Add**. The **Add Timestream Table** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AWS_Add_Timestream_Table.png" alt=""><figcaption><p><strong>Add Timestream Table</strong> pane</p></figcaption></figure></div>
 5. Enter the **Table Name** and other necessary information to size and create your table.

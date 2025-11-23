@@ -60,8 +60,7 @@ It is not necessary to explicitly define Hosts. Instead, you can use [Azure Agen
 1. Select the appropriate Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** → **Hosts**.
 3. Select the **Azure Agent Pool** tab.
-4.  Click **Add**. The **Add Azure Agent Pool** pane displays.\
-
+4.  Click **Add**. The **Add Azure Agent Pool** pane displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (372).png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> pane</p></figcaption></figure>
 5. In the **Name** field, enter a unique name for the agent pool.
@@ -87,8 +86,7 @@ For detailed instructions, see the [DuploCloud Azure Availability Set documentat
 1. Select the appropriate Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** → **Hosts**.
 3. Select the **BYOH** tab.
-4.  Click **Add**. The **Add BYOH** pane displays.\
-
+4.  Click **Add**. The **Add BYOH** pane displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (374).png" alt=""><figcaption><p>The <strong>Add BYOH</strong> pane </p></figcaption></figure>
 5. In the **Friendly Name** field, enter a unique name for the Host.

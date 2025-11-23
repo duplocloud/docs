@@ -62,8 +62,7 @@ To mount an individual file (e.g., `my-file-name`) from the ConfigMap to a speci
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2. Select the Service you want to modify from the **Name** column.
 3. Click the **Actions** menu and select **Edit**.
-4.  Click **Next**. The **Advanced Options** page displays.\
-
+4.  Click **Next**. The **Advanced Options** page displays.<br>
 
     ![The nginx Service Advanced Options page in the DuploCloud Portal](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.52.19 PM.png>)
 5. In the **Volumes** field on the **Advanced Options** page, enter the appropriate YAML configuration to define the volume mount. See examples below.

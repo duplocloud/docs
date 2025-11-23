@@ -41,8 +41,7 @@ Select the **Enable IAM auth** option when you [create an RDS database](./#id-0-
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. In the **RDS** tab, select the database for which you want to enable IAM.
-3.  Click the **Actions** menu and select **RDS Settings** -> **Update IAM Auth**. The **Update IAM Auth** pane displays.\
-
+3.  Click the **Actions** menu and select **RDS Settings** -> **Update IAM Auth**. The **Update IAM Auth** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/IAM5.png" alt=""><figcaption><p><strong>Actions</strong> menu in <strong>RDS</strong> tab with <strong>RDS Settings</strong></p></figcaption></figure></div>
 

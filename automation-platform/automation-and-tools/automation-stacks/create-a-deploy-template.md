@@ -31,4 +31,4 @@ Create a re-usable template to deploy resources (Nodes, Hosts, Services, Secrets
      * Adding or removing components on the left modifies the corresponding nodes and payloads in the JSON.
      * Advanced users can click **Edit** to [fine-tune the JSON manually](customize-deploy-templates.md#customizing-deploy-templates).
      * Click **Save** to save your changes.
-9. Click the **Download** button to save the template file to your local machine for further use or modifications.\
+9. Click the **Download** button to save the template file to your local machine for further use or modifications.<br>

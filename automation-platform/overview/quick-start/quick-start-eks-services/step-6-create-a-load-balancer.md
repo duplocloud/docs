@@ -14,8 +14,8 @@ _Estimated time to complete Step 6: 10 minutes._
 
 Before creating a Load Balancer, verify that you completed the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [EKS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has [EKS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A Host named [**host01** has been created](step-3-create-host.md).
 * A Service named [**demo-service** has been created](step-5-create-app-via-k8s.md).

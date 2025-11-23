@@ -21,21 +21,18 @@ You can configure HPA while creating a Deployment Service from the DuploCloud Po
 
 1. In the DuploCloud Portal, navigate **Kubernetes** -> **Services**, displaying the **Services** page.
 2. Create a new [Service](../../../aws-services/containers/) by clicking **Add**.
-3.  In **Add Service - Basic Options**, from the **Replication Strategy** list box, select **Horizontal Pod Scheduler**_._ \
-
+3.  In **Add Service - Basic Options**, from the **Replication Strategy** list box, select **Horizontal Pod Scheduler**_._ <br>
 
     <div align="left"><img src="../../../../../.gitbook/assets/hpa1.png" alt="Basic Options on the Add Service page, with Replication Strategy list box and Horizontal Pod Autoscaler Config fields"></div>
 
 
-4.  In the **Horizontal Pod Autoscaler Config** field, add a sample configuration, as shown below. Update the minimum/maximum Replica Count in the `resource` attributes, based on your requirements. \
-
+4.  In the **Horizontal Pod Autoscaler Config** field, add a sample configuration, as shown below. Update the minimum/maximum Replica Count in the `resource` attributes, based on your requirements. <br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/hpa_Code_block.png" alt=""><figcaption><p><strong>Horizontal Pod Autoscaler Config</strong> field in <strong>Basic Options</strong>, on the <strong>Add Service</strong> page</p></figcaption></figure></div>
 
 
 5. Click **Next** to navigate to **Advanced Options**.
-6.  In **Advanced Options**, in the **Other Container Config** field, ensure your resource attributes, such as `Limits` and `Requests`, are set to work with your HPA configuration, as in the example below.\
-
+6.  In **Advanced Options**, in the **Other Container Config** field, ensure your resource attributes, such as `Limits` and `Requests`, are set to work with your HPA configuration, as in the example below.<br>
 
     <div align="left"><img src="../../../../../.gitbook/assets/Screen Shot 2022-07-16 at 12.02.11 PM.png" alt="Other Container Config field in Advanced Options on the Add Service page"></div>
 7. At the bottom of the **Advanced Options** page, click **Create**.
@@ -68,8 +65,7 @@ When the **Cluster Autoscaler** flag is set and a Tenant has one or more ASGs, a
 1. From the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
 2. Click on the Infrastructure you want to configure settings for in the **Name** list.&#x20;
 3. Select the **Settings** tab.
-4.  Click the **Add** button. The **Infra - Set Custom Data** pane displays.\
-
+4.  Click the **Add** button. The **Infra - Set Custom Data** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.01-16_40_53.png" alt=""><figcaption><p>The <strong>Infra - Set Custom Data</strong> pane with <strong>Enables faults prior to autoscaling Kubernetes nodes</strong> enabled</p></figcaption></figure></div>
 5. In the **Setting Name** list box, select **Enables faults prior to autoscaling Kubernetes nodes**.&#x20;

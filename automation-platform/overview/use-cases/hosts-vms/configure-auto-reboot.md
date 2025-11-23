@@ -26,16 +26,14 @@ Configure the Auto Reboot feature at the Tenant for Docker Native and EKS Node-b
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**. The **Tenant** page displays.
 2. Select a Tenant with access to the Host for which you want to configure Auto Reboot.
 3. Click the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F68cb0s9ce5UIUKWPuYs8%2Fuploads%2F0bZGElNdvPsQrwSYNZ23%2FAR100.png?alt=media&#x26;token=eff8d69e-231b-458d-bf72-4690006952fd" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane with <strong>Enable Auto Reboot EC2 status check</strong> feature for a <strong>5-</strong>minute interval.</p></figcaption></figure></div>
 
 
 5. From the **Select Feature** list box, select **Enable Auto Reboot EC2 status check**.
 6. In the field below the **Select Feature** list box, enter the time interval in minutes after which the host automatically reboots after a `StatusCheck` fault is identified. Enter zero (**0**) to disable this configuration.
-7.  Click **Add**. The configuration is displayed in the **Settings** tab.\
-
+7.  Click **Add**. The configuration is displayed in the **Settings** tab.<br>
 
     <div align="left"><figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F68cb0s9ce5UIUKWPuYs8%2Fuploads%2F0C3MgJ6n4vir7b8D1lbe%2FAR101.png?alt=media&#x26;token=cf133b90-7713-4add-8257-8126e1adeb5c" alt=""><figcaption><p>Tenant <strong>Settings</strong> tab displaying <strong>Enable Auto Reboot EC2 status check</strong> configuration <strong>Value</strong> of <strong>5</strong> minutes</p></figcaption></figure></div>
 
@@ -50,8 +48,7 @@ Configure the Auto Reboot feature at the Tenant for EKS node-based Hosts, to reb
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**. The **Tenant** page displays.
 2. Select a Tenant with access to the Host for which you want to configure Auto Reboot.
 3. Click the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F68cb0s9ce5UIUKWPuYs8%2Fuploads%2FnVMHNBsQYthNQacZSycN%2FAR102.png?alt=media&#x26;token=1182e877-97f0-4772-8703-4f4b5ed3f113" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane with <strong>Enable Auto Reboot K8s Nodes if disconnected</strong> feature for a <strong>3-minute</strong> interval<br></p></figcaption></figure></div>
 5. From the **Select Feature** list box, select **Enable Auto Reboot K8s Nodes if disconnected**.
@@ -70,14 +67,12 @@ Configure the Auto Reboot feature on the Host level for Docker Native and EKS No
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. Click the appropriate tab for your Host type and select the Host for which you want to configure Auto Reboot.
-3.  Click the **Actions** menu and select **Host Settings** -> **Update Auto Reboot Status Check**. The **Set Auto Reboot Status Check Time** pane displays.​\
-
+3.  Click the **Actions** menu and select **Host Settings** -> **Update Auto Reboot Status Check**. The **Set Auto Reboot Status Check Time** pane displays.​<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AR108 (2).png" alt=""><figcaption><p>Host <strong>Actions</strong> menu options <strong>Host Settings</strong> -> <strong>Update Auto Reboot Status Check</strong></p></figcaption></figure></div>
 
 
-4.  In the **Auto Reboot Status Check** field, enter the time interval in minutes after which the host automatically reboots after a `StatusCheck` fault is identified. Enter zero (**0**) to disable this configuration.\
-
+4.  In the **Auto Reboot Status Check** field, enter the time interval in minutes after which the host automatically reboots after a `StatusCheck` fault is identified. Enter zero (**0**) to disable this configuration.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AR106.png" alt=""><figcaption><p><strong>Set Auto Reboot Status Check Time</strong> pane with <strong>Auto Reboot Status Check</strong> field</p></figcaption></figure></div>
 
@@ -90,14 +85,12 @@ Configure the Auto Reboot feature on the Host level for EKS node-based Hosts, to
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**. The **Hosts** page displays.
 2. Click the appropriate tab for your Host type and select the Host for which you want to configure Auto Reboot.
-3.  Click the **Actions** menu and select **Host Settings** -> **Update Auto Reboot Disconnected**. The **Set Auto Reboot Status Check Time** pane displays.​\
-
+3.  Click the **Actions** menu and select **Host Settings** -> **Update Auto Reboot Disconnected**. The **Set Auto Reboot Status Check Time** pane displays.​<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AR112.png" alt=""><figcaption><p>Host <strong>Actions</strong> menu options <strong>Host Settings</strong> -> <strong>Update Auto Reboot Disconnected</strong></p></figcaption></figure></div>
 
 
-4.  In the **Auto Reboot Time** field, enter the time interval in minutes after which the host automatically reboots when a `Host Disconnected` fault is identified. Enter zero (**0**) to disable this configuration.\
-
+4.  In the **Auto Reboot Time** field, enter the time interval in minutes after which the host automatically reboots when a `Host Disconnected` fault is identified. Enter zero (**0**) to disable this configuration.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AR107.png" alt=""><figcaption><p><strong>Set Auto Reboot Status Check Time</strong> pane with <strong>Auto Reboot Time</strong> field</p></figcaption></figure></div>
 

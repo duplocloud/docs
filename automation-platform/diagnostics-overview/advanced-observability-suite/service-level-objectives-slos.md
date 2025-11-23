@@ -33,8 +33,7 @@ To create an SLO in Grafana, follow the steps below. For more information, see t
 
 1. From the DuploCloud Portal, **Navigate to Observability** -> **Advanced** -> **Dashboard**
 2. Click the **SLO** link in the Metrics data card or navigate to the **SLO Overview** dashboard in Grafana. The Grafana **SLO Overview** dashboard displays.&#x20;
-3.  Click on the **Create SLO** button located at the top-right corner of the screen. The **Dashboard for Managing SLO** displays.\
-
+3.  Click on the **Create SLO** button located at the top-right corner of the screen. The **Dashboard for Managing SLO** displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (41).png" alt=""><figcaption><p>The form for managing SLOs in Grafana.</p></figcaption></figure></div>
 4. Enter the following information about the SLO:
@@ -60,8 +59,7 @@ DuploCloud automatically creates alert rules for each SLO, including **Critical*
 
 1. From your **Grafana** home page, navigate to **Alerting -> Alert rules**. The **Alert rules** page displays.
 2. Locate and click the specific **SLO** (e.g., `duplo_slo_slo-auto-14:rjgsrnj6hyf1jef10bf91`).
-3.  The associated recording and normal alert rules display.\
-
+3.  The associated recording and normal alert rules display.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (43).png" alt=""><figcaption><p>Alert rules for the selected SLO on the <strong>Alert rules</strong> page in Grafana.</p></figcaption></figure></div>
 4. Click on any alert rule to review the alert conditions, thresholds, and labels.

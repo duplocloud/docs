@@ -8,8 +8,7 @@ description: Customize or update the text on your DuploCloud login screen banner
 
 1. Navigate to **Administrator** -> **Systems Settings**.
 2. Click on the **System Config** tab.
-3.  Click **Add**. The **Add Config** pane displays.\
-
+3.  Click **Add**. The **Add Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/newbanneradd.png" alt=""><figcaption><p>The <strong>Add Config</strong> pane.</p></figcaption></figure></div>
 4. In the **Config Type** list box, select **AppConfig**.
@@ -18,8 +17,7 @@ description: Customize or update the text on your DuploCloud login screen banner
 7. In the **Value** field, enter the text that will display on the login banner or button.
 8. Click **Submit**. The entered text displays on the login banner or button.
 
-\
-
+<br>
 
 <div align="left"><figure><img src="../../.gitbook/assets/porvidede login sceren.png" alt=""><figcaption><p>The <strong>DuploCloud</strong> login screen with customized banner text.</p></figcaption></figure></div>
 

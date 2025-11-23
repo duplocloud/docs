@@ -14,8 +14,7 @@ Container Rollback in DuploCloud allows users to quickly revert a Kubernetes or 
 1. Select the appropriate Tenant from the **Tenant** list box.
 2. Navigate to **Kubernetes** -> **Services** or **Docker** -> **Services**.
 3. In the **NAME** column, select the service you want to roll back.
-4.  From the **Actions** menu, choose **Rollback**. The **Rollback Container Image** pane will appear.\
-
+4.  From the **Actions** menu, choose **Rollback**. The **Rollback Container Image** pane will appear.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (48).png" alt="" width="363"><figcaption></figcaption></figure></div>
 5. In the **Image** list box, select the version of the container image you want to roll back to.

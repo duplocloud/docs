@@ -22,16 +22,14 @@ Each alert compares current monthly usage against either the previous month’s 
 Billing alerts can be created at two levels: **Administrator** alerts monitor overall cloud spending across all tenants, while **Tenant** alerts focus on the usage within a specific Tenant. Choose the appropriate section in the DuploCloud Portal based on the scope you want to monitor.
 
 1. In the DuploCloud Portal, navigate to **Administrator** → **Billing** for Administrator-level alerts or **Cloud Services** → **Billing** for Tenant-level alerts.
-2.  Click **Add** to create a new billing alert. The **Add Billing Alert Config** pane displays.\
-
+2.  Click **Add** to create a new billing alert. The **Add Billing Alert Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (552).png" alt=""><figcaption><p><strong>Add Billing Alert Config</strong> pane</p></figcaption></figure></div>
 3. Complete the fields (shown in the table below) according to your alert preferences.
 
 <table data-header-hidden><thead><tr><th width="274.4444580078125"></th><th></th></tr></thead><tbody><tr><td><strong>Alert Name</strong></td><td>Enter a unique name for the billing alert.</td></tr><tr><td><strong>Choose Threshold</strong></td><td>Select the threshold type:<br>• <strong>Custom Threshold</strong>: Set your own spending threshold. <br>• <strong>Previous Month Spend</strong>: use the total spend from the prior month as the threshold.</td></tr><tr><td><strong>Threshold (Dollar Amount)</strong></td><td>Enter the dollar amount that triggers the alert (for Custom Thresholds only).</td></tr><tr><td><strong>Alert Trigger % (Percent of Threshold)</strong></td><td>Select the percentage of your defined threshold at which the alert should trigger. For example, 80% means you'll be notified when spending reaches 80% of the threshold.</td></tr><tr><td><strong>Azure Subscription</strong> <em>(Azure only)</em></td><td>Required for Azure billing alerts. Select the Azure Subscription to monitor.</td></tr><tr><td><strong>Google Project ID</strong> <em>(GCP only)</em></td><td>Required for GCP billing alerts. Select the GCP project to monitor.</td></tr><tr><td><strong>Tenant: Cost Tag (Optional)</strong><br><em>(Admin billing alerts only)</em></td><td>For Administrator-level billing alerts, select one or more Tenants to apply the alert to (e.g., <strong>All</strong>, <strong>Shared</strong>, or specific Tenants).</td></tr><tr><td><strong>Service (Optional)</strong></td><td>Optionally, select one or more DuploCloud Services to monitor as part of this alert.</td></tr><tr><td><strong>Email Notifications</strong></td><td>Select the email address that should receive the alert notifications.</td></tr><tr><td><strong>Pause Alerts</strong></td><td>Enable this setting to temporarily pause the alert.</td></tr></tbody></table>
 
-4.  Click **Submit** to save your alert. The alert appears in the **Billing Alerts** tab and will trigger email notifications when conditions are met.\
-
+4.  Click **Submit** to save your alert. The alert appears in the **Billing Alerts** tab and will trigger email notifications when conditions are met.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (556).png" alt=""><figcaption><p><strong>Billing Alerts</strong> tab displaying the <code>monthly_alert</code> billing alert</p></figcaption></figure></div>
 

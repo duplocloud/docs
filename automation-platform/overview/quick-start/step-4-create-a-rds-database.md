@@ -18,16 +18,15 @@ _Estimated time to complete Step 3: 5 minutes._
 
 Before creating an RDS, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../../../overview/quick-start/step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant with the name [**dev01** has been created](step-2-tenant.md).
 
 ## Creating an RDS Database <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 1. In the **Tenant** list box, select the **dev01** Tenant that you created.
 2. Navigate to **Cloud Services** -> **Database**.
-3.  Select the **RDS** tab, and click **Add**. The **Create a RDS** page displays.\
-
+3.  Select the **RDS** tab, and click **Add**. The **Create a RDS** page displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (173).png" alt=""><figcaption><p>The <strong>Create a RDS</strong> page</p></figcaption></figure>
 

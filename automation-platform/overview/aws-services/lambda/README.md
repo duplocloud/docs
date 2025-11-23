@@ -30,8 +30,7 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Serverless**.
 2. Click the **Lambda** tab. The **Lambda Function** page displays.
-3.  Click **Add**. The **Create a Lambda Function** page displays.\
-
+3.  Click **Add**. The **Create a Lambda Function** page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (58).png" alt=""><figcaption><p>The <strong>Create a Lambda Function</strong> page<br></p></figcaption></figure></div>
 4. In the **Name** field, enter the name of your Lambda Function.
@@ -57,8 +56,7 @@ You can test the Lambda function created in DuploCloud by navigating to the AWS 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Serverless**.
 2. Click the **Lambda** tab. The **Lambda Function** page displays.
 3. On the **Lambda Function** page, from the **NAME** column, select the function you created.
-4.  From the **Actions** menu, click **Console**. You are redirected to the AWS Console.\
-
+4.  From the **Actions** menu, click **Console**. You are redirected to the AWS Console.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/L11.png" alt=""><figcaption><p>The <strong>Lambda Function</strong> page <strong>Actions</strong> menu  </p></figcaption></figure></div>
 

@@ -9,8 +9,7 @@ description: Create ElastiCache for Redis database and Memcache memory caching
 ## Creating a Memcached ElastiCache Instance
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database.**
-2.  Select the **ElastiCache** tab and click **Add**. The **Create a ElastiCache** page displays.\
-
+2.  Select the **ElastiCache** tab and click **Add**. The **Create a ElastiCache** page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/memcache.png" alt=""><figcaption><p>The <strong>Create an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
 3. Enter a database **Name**.
@@ -71,8 +70,7 @@ To update the Snapshot Retention Limit:
 1. Navigate to **Cloud Services** -> **Database**.
 2. Select the **ElastiCache** tab.
 3. Click on the name of the ElastiCache instance in the **NAME** column.&#x20;
-4.  Click **Actions**, and select **Update Snapshot Retention Limit**. The **Update Snapshot Retention Limit** pane displays.\
-
+4.  Click **Actions**, and select **Update Snapshot Retention Limit**. The **Update Snapshot Retention Limit** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (767).png" alt=""><figcaption><p><strong>Update Snapshot Retention Limit</strong> pane</p></figcaption></figure></div>
 5. Select the desired **Snapshot Retention Limit (Days)** (between **1** and **35**).
@@ -87,8 +85,7 @@ DuploCloud supports ElastiCache Global Datastores, which allow you to replicate 
 When you create a Global Datastore in DuploCloud, a primary Redis cluster, in the current Tenant, and a secondary cluster in a different region are created automatically as part of the process. You can then add additional secondary clusters in other regions as necessary.
 
 1. Navigate to to **Cloud Services** → **Database** → **ElastiCache** → **Global Datastores**.
-2.  Click **Add**. The **Create a Global Datastore** pane displays.\
-
+2.  Click **Add**. The **Create a Global Datastore** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (868).png" alt=""><figcaption><p><strong>Create a Global Datastore</strong> pane </p></figcaption></figure></div>
 3. Complete the fields, as required for your configuration:
@@ -103,8 +100,7 @@ After creating a Global Datastore, you can add secondary clusters (regional clus
 
 1. Navigate to **Cloud Services** → **Databases** → **ElastiCache** → **Global Datastores**.
 2. Select the **Regional Clusters** tab.
-3.  Click **Add**. The **Add Secondary Cluster** pane displays.\
-
+3.  Click **Add**. The **Add Secondary Cluster** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (871).png" alt=""><figcaption><p><strong>Add Secondary Cluster</strong> pane</p></figcaption></figure></div>
 4. Complete the following fields:
