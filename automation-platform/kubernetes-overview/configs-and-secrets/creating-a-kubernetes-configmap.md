@@ -11,8 +11,7 @@ You can use Kubernetes ConfigMaps to store non-sensitive configuration data as k
 ## Creating a Kubernetes ConfigMap
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** → **Config Maps**.
-2.  Click **Add**. The **Add Config Map** pane displays.\
-
+2.  Click **Add**. The **Add Config Map** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (376).png" alt=""><figcaption><p>The <strong>Add Config Map</strong> pane</p></figcaption></figure>
 3. Complete the fields:

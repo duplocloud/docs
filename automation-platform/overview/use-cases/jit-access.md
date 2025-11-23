@@ -115,8 +115,7 @@ If you increase the JIT session timeout beyond the AWS default of one (1) hour, 
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
 2. Select the **Tenant** name from the **NAME** column.
-3.  Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.\
-
+3.  Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/update_tenant_JIT_TO.png" alt=""><figcaption><p>The <strong>Update Tenant Feature</strong> pane</p></figcaption></figure></div>
 4. Select **AWS Access Token Validity** from the **Select Feature** list box.
@@ -150,8 +149,7 @@ This configuration applies to all Tenant-specific IAM roles within the platform.
 
 1. Navigate to **Administrator -> Systems Settings**.
 2.  Select the **System Config** tab, and click **Add**. The **Add Config** pane displays.\
-    \
-
+    <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (61) (1).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 3. From the **Config Type** list box, select **AppConfig**.

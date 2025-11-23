@@ -24,8 +24,8 @@ _Estimated time to complete Step 5: 10 minutes._
 
 Before creating a Service, verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [EKS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has [EKS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A host named [**host01** has been created](step-3-create-host.md).
 
@@ -33,8 +33,7 @@ Before creating a Service, verify that you completed the tasks in the previous t
 
 1. In the **Tenant** list box, select the **dev01** Tenant.
 2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
-3.  Click **Add**. The **Add Service** page displays.\
-
+3.  Click **Add**. The **Add Service** page displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (126).png" alt=""><figcaption><p><strong>Add Service</strong> page</p></figcaption></figure>
 4. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept all other default values for fields not specified.&#x20;

@@ -12,7 +12,7 @@ _Estimated time to complete Step 5: 10 minutes._
 
 Before creating a Service, verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
+* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * An EC2 Host named [host01 has been created](step-4-create-ec2-host.md).
 
@@ -24,8 +24,7 @@ Before creating a Service, verify that you completed the tasks in the previous t
 4. In the **Service Name** field, enter `demo-service-d01`.
 5. From the **Platform** list box, select **Linux/Docker Native**.
 6. In the **Docker Image** field, enter `duplocloud/nodejs-hello:latest`.
-7.  From the **Docker Networks** list box, select **Docker Default**.\
-
+7.  From the **Docker Networks** list box, select **Docker Default**.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (122) (1).png" alt=""><figcaption><p>The <strong>Add Service</strong> page</p></figcaption></figure>
 8. Click **Next**. The **Advanced Options** page displays.
@@ -40,8 +39,7 @@ On the Add Service page, you can also specify optional **Environment Variables**
 1. In the **Tenant** list box, select **dev01**.
 2. Navigate to **Docker** -> **Services.**
 3. In the **NAME** column, select **demo-service-d01.**
-4.  Check the **Current** column to verify that **demo-service-d01** has a status of **Running**.\
-
+4.  Check the **Current** column to verify that **demo-service-d01** has a status of **Running**.<br>
 
     <figure><img src="../../../../.gitbook/assets/NEWSERVICES (2).png" alt=""><figcaption><p>The <strong>demo-service-d01</strong> Service details page displaying a <strong>Running</strong> status</p></figcaption></figure>
 

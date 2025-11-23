@@ -40,8 +40,7 @@ If you don't want to display the **Download Key** button, disable the button's v
 Configuring the following system setting disables SSH access for read-only users. Once this setting is configured, only administrator-level users can access SSH.
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Systems Settings**.&#x20;
-2.  Select the **Settings** tab, and click **Add**. The **Update Config Flags** pane displays.\
-
+2.  Select the **Settings** tab, and click **Add**. The **Update Config Flags** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/update configu flag (1).png" alt=""><figcaption><p>The <strong>Update Config Flags</strong> pane</p></figcaption></figure></div>
 3. From the **Config Type** list box, select **Flags**.&#x20;

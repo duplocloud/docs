@@ -6,8 +6,7 @@ ECS Autoscaling has the ability to scale the desired count of tasks for the ECS 
 
 Navigate to **Cloud Services** -> **ECS**. Select the **ECS Task Definition** where Autoscaling needs to be enabled > **Add Scaling Target**
 
-Set the **MinCapacity** (minimum value 2) and **MaxCapacity** to complete the configuration.\
-
+Set the **MinCapacity** (minimum value 2) and **MaxCapacity** to complete the configuration.<br>
 
 <div align="left"><img src="../../../../../.gitbook/assets/image (53).png" alt=""></div>
 

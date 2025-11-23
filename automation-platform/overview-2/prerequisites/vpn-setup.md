@@ -14,8 +14,7 @@ DuploCloud integrates with OpenVPN by provisioning VPN users that you add to the
 ## Provisioning the VPN
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
-2.  Click on the **VPN** tab.\
-
+2.  Click on the **VPN** tab.<br>
 
     <figure><img src="../../../.gitbook/assets/VPN.png" alt=""><figcaption></figcaption></figure>
 3. Click **Provision VPN.**
@@ -27,8 +26,7 @@ DuploCloud integrates with OpenVPN by provisioning VPN users that you add to the
 ## **Provisioning the VPN and Creating a User**
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**.
-2.  Click **Add**. The **Create User** pane displays.\
-
+2.  Click **Add**. The **Create User** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (346) (2).png" alt="" width="370"><figcaption><p>The <strong>Create User</strong> pane</p></figcaption></figure></div>
 3. Enter a valid email address in the **Username** field.

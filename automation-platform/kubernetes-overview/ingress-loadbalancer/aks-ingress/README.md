@@ -47,8 +47,7 @@ To configure Ingress through the Azure Shared Application Gateway:
 2. Click **Add**. The **Add Kubernetes Ingress** page displays.
 3. In the **Ingress Name** field, enter a name for the Ingress.
 4. In the **Ingress Controller** field, select the controller (Shared Application Gateway)
-5.  Set **Visibility** to **Public** or **Internal Only**.\
-
+5.  Set **Visibility** to **Public** or **Internal Only**.<br>
 
     <figure><img src="../../../../.gitbook/assets/new azure ingress.png" alt=""><figcaption><p><strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure>
 6. Optionally, configure the following fields:
@@ -63,8 +62,7 @@ To configure Ingress through the Azure Shared Application Gateway:
 
 To define routing rules for your Ingress:
 
-1.  On the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule** pane displays.\
-
+1.  On the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AKS_Ingress_add_ALB.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 2. Enter a **Path**.
@@ -84,8 +82,7 @@ Port 80 is allowed by default. If using a custom port, add a security rule:
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select your Infrastructure from the **NAME** column.
 3. Select the **Security Group Rules** tab.&#x20;
-4.  Click **Add**. The **Add Infrastructure Security** pane displays.\
-
+4.  Click **Add**. The **Add Infrastructure Security** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/addazuresc.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure></div>
 5. Define your rule (e.g., port 8080) and click **Add**. The rule is added to the **Security Group Rules** list.

@@ -11,8 +11,7 @@ description: Using Azure Container Registry for storage with DuploCloud
 1. Select the appropriate Tenant from the **Tenant** list box.&#x20;
 2. Navigate to **Cloud Services** -> **Storage**.
 3. Select the **Container Registry** tab.
-4.  Click **Add**. The **Create Container Registry** pane displays.\
-
+4.  Click **Add**. The **Create Container Registry** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/container registry.png" alt="" width="366"><figcaption><p>The <strong>Create Container Registry</strong> pane</p></figcaption></figure></div>
 5. In the **Name** field, enter a name for the registry.&#x20;

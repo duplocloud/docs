@@ -18,8 +18,7 @@ Failure to follow these steps when creating a link to the Azure Portal from the 
 2. From the **Name** column, select the Infrastructure for which you want to add a link to the Azure Console.
 3. Click the **Metadata** tab.
 4. Click **Add**. The **Add Infrastructure Tag** pane displays.
-5.  In the **Key** field, enter **AzurePortalLink**.\
-
+5.  In the **Key** field, enter **AzurePortalLink**.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/azure_portal.png" alt=""><figcaption><p><strong>Add infrastructure Tag</strong> pane with <strong>Key AzurePortalLink</strong></p></figcaption></figure></div>
 6. In the **Value** field, enter the URL for your Azure Portal.&#x20;

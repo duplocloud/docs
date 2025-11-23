@@ -23,8 +23,7 @@ VPN credentials are listed on your user profile page in the DuploCloud Portal. I
 
 <div align="left"><figure><img src="../../../.gitbook/assets/666.png" alt="" width="375"><figcaption><p>OpenVPN Access Server login screen</p></figcaption></figure></div>
 
-3. Click on the **OpenVPN Connect Recommended for your device** icon to install the OpenVPN Connect app for your local machine.\
-
+3. Click on the **OpenVPN Connect Recommended for your device** icon to install the OpenVPN Connect app for your local machine.<br>
 
 <div align="left"><figure><img src="../../../.gitbook/assets/picture 123.png" alt="" width="375"><figcaption><p>The OpenVPN Access Server pane</p></figcaption></figure></div>
 

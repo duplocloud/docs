@@ -12,8 +12,7 @@ DuploCloud ships with a standard suite of observability tools built into the pla
   * Logging using OpenSearch and Kibana
   * Metrics using Prometheus and cloud provider solutions like CloudWatch for AWS, Azure Monitoring for Azure, and Cloud Monitoring for GCP. &#x20;
   * Alerting is limited to cloud services using CloudWatch. Users can wire third-party alerting solutions, such as Sentry, Pager Duty, etc., as described [here](../overview-2/use-cases/faults-and-alerting/).
-  * No APM is included.\
-
+  * No APM is included.<br>
 * The **Advanced Edition** is a comprehensive add-on suite based on OpenTelemetry and includes:&#x20;
   * Logging using [Loki](https://grafana.com/oss/loki/)
   * Metrics using [Mimir](https://grafana.com/products/cloud/metrics/)

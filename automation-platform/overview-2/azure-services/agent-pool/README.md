@@ -19,8 +19,7 @@ To create an agent pool using availability zones, you must first create a [Postg
 Create an Azure agent pool for an existing Host in the DuploCloud Portal.
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
-2. Select the **Azure Agent Pool** tab, and Click **Add**. The **Add Azure Agent Pool** page displays.\
-
+2. Select the **Azure Agent Pool** tab, and Click **Add**. The **Add Azure Agent Pool** page displays.<br>
 
 <figure><img src="../../../../.gitbook/assets/new agent pool.png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
@@ -29,12 +28,10 @@ Create an Azure agent pool for an existing Host in the DuploCloud Portal.
 3. Optionally, select one or more availability zones from the **Availability Zones** list box. If you select availability zones, you must create a [PostgreSQL Flexible Server subnet](../databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure before adding your agent pool. &#x20;
 4. Optionally, select **Enable Autoscaling**.
 5. Select the **Scale Set** priority: **Regular** creates a regular agent pool node with standard priority and **Spot** creates Spot AKS agent pool nodes.
-6.  If needed, adjust the number of **Max Pods Per Node** from the default of 30.\
-
+6.  If needed, adjust the number of **Max Pods Per Node** from the default of 30.<br>
 
     <figure><img src="../../../../.gitbook/assets/add agent pool.png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> page in the DuploCloud Portal</p></figcaption></figure>
-7.  Click **Add**. It may take some time to create the agent pool. When the agent pool is ready, **Succeeded** displays in the **Status** column. \
-
+7.  Click **Add**. It may take some time to create the agent pool. When the agent pool is ready, **Succeeded** displays in the **Status** column. <br>
 
     <figure><img src="../../../../.gitbook/assets/agent pool success.png" alt=""><figcaption><p>The <strong>Azure Agent Pool</strong> tab on the <strong>Hosts</strong> page shows the <strong>DLJEGA1</strong> agent pool with <strong>Succeeded</strong> status</p></figcaption></figure>
 8. Optionally, select **Enable Autoscaling**.
@@ -47,8 +44,7 @@ Edit an agent pool:
 1. Select **Cloud Services** -> **Hosts** from the navigation menu.
 2. Select the **Azure Agent Pool** tab. The **Azure Agent Pool** page displays.
 3. In the **Name** column, select the agent pool that you want to edit.
-4.  Select the **Actions** menu and choose **Edit**.\
-
+4.  Select the **Actions** menu and choose **Edit**.<br>
 
     <figure><img src="../../../../.gitbook/assets/edit agent pool.png" alt=""><figcaption><p>The <strong>Azure Agent Pool</strong> page with the <strong>Edit</strong> menu option highlighted</p></figcaption></figure>
 5. In the **Update agent pool capacity** pane, edit the pool configuration.

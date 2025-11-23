@@ -10,8 +10,7 @@ Amazon EventBridge lets you easily ingest, filter, transform, and route events t
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Click the **EventBridge** tab.
-3.  Click **Add**. The **Add EventBridge Rule** page displays.\
-
+3.  Click **Add**. The **Add EventBridge Rule** page displays.<br>
 
     <figure><img src="../../../.gitbook/assets/ebr1.png" alt=""><figcaption><p><strong>Add EventBridge Rule</strong> page</p></figcaption></figure>
 4. In the **Rule Name** field, specify the rule name.

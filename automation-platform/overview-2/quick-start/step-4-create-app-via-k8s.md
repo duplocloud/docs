@@ -29,8 +29,7 @@ Before creating your DuploCloud Service, ensure that:
 ## Creating a Service
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
-2.  Click **Add**. The **Add Service** page displays.\
-
+2.  Click **Add**. The **Add Service** page displays.<br>
 
     <div align="left"><img src="../../../.gitbook/assets/image (301).png" alt="Add Service page to add nginx-service"></div>
 3. In the **Service Name** field, enter `nginx-service`.

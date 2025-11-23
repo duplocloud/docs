@@ -20,8 +20,7 @@ To register an OCI Helm repository in DuploCloud:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** → **Helm.**
 2. Select the **OCI Repository** tab.
-3.  Click **Add**, The **Add OCI Repository** pane displays.\
-
+3.  Click **Add**, The **Add OCI Repository** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (933).png" alt="" width="411"><figcaption><p><strong>Add OCI Repository</strong> pane</p></figcaption></figure></div>
 4. Complete the fields as described below:

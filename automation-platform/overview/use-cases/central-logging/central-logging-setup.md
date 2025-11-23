@@ -19,8 +19,7 @@ Central logging is typically set up during DuploCloud onboarding. Contact DuploC
 
 1. From the **Tenant** list box at the top of the DuploCloud Portal, select the **Default** Tenant.
 2. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings**, and select the **Logging** tab.
-3.  Click the **Enable Logging** link. The **Enable Logging** page displays.\
-
+3.  Click the **Enable Logging** link. The **Enable Logging** page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (44).png" alt=""><figcaption><p>The <strong>Logging</strong> tab with the <strong>Enable Logging</strong> link</p></figcaption></figure></div>
 

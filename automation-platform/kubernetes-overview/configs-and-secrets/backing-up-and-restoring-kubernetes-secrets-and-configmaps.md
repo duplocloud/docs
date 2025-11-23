@@ -17,8 +17,7 @@ Backups are configured via an infrastructure setting in the DuploCloud Portal:
 1. Navigate to **Administrator** -> **Infrastructure**.
 2. Select the Infrastructure you want to back up Secrets and ConfigMaps for in the **NAME** column.
 3. Select the **Settings** tab.&#x20;
-4.  Click **Add**. The **Infra - Set Custom Data** pane displays. \
-
+4.  Click **Add**. The **Infra - Set Custom Data** pane displays. <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (791).png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane</p></figcaption></figure></div>
 5. In the **Setting Name** list box, select **Other**.&#x20;

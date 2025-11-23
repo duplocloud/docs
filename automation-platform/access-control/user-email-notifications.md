@@ -48,8 +48,7 @@ When a new admin user is created in DuploCloud, you can configure the system to 
 ### **Enabling New Admin User Email Notifications**&#x20;
 
 1. Navigate to **Administrator** -> **System Settings** -> **System Config**.
-2.  Click **Add**. The **Add Config** pane displays.\
-
+2.  Click **Add**. The **Add Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (379).png" alt="" width="343"><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 3. Complete the following fields:
@@ -63,8 +62,7 @@ When a new admin user is created in DuploCloud, you can configure the system to 
 Configure which email addresses receive new admin user email notifications.
 
 1. Navigate to **Administrator** → **System Settings** → **System Config**.
-2.  Click **Add**. The **Add Config** pane displays.\
-
+2.  Click **Add**. The **Add Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (469).png" alt="" width="340"><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 3. Complete the following fields:

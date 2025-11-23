@@ -11,8 +11,7 @@ description: >-
 1. &#x20;In the DuploCloud Portal, navigate to **Administrator -> Infrastructure**. The **Infrastructure** page displays.
 2. Select the Infrastructure for which you want to add or view Security Group rules from the **Name** column.
 3. Click the **Security Group Rules** tab.
-4.  Click **Add**. The **Add Infrastructure Security** pane displays.\
-
+4.  Click **Add**. The **Add Infrastructure Security** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/xtenant1.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane defining port range for Cross-tenant access</p></figcaption></figure></div>
 

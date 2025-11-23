@@ -51,8 +51,7 @@ By default, users connected to a VPN can SSH or RDP into virtual machines (VMs).
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. Select the Tenant in the **NAME** column.
 3. Select the **Security** tab.
-4.  Click **Add**. The **Add Tenant Security** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Security** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Add_Tenant_Security.png" alt=""><figcaption><p>The <strong>Add Tenant Security</strong> pane</p></figcaption></figure></div>
 5. In the **Source Type** field, select **Ip Address**.&#x20;

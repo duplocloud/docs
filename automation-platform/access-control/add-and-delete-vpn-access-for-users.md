@@ -39,8 +39,7 @@ VPN access is removed for the user that you selected.
 Admins can choose to enable VPN access by default for new Okta users or require manual approval before granting access. Admin users can still update VPN settings for individual users as needed.
 
 1. Navigate to **Administrator** -> **System Settings**.
-2.  Select **System Config**, and click **Add**. The **Update Config AppConfig** pane displays. \
-
+2.  Select **System Config**, and click **Add**. The **Update Config AppConfig** pane displays. <br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/image (8).png" alt="" width="343"><figcaption><p>The <strong>Update Config AppConfig</strong> pane</p></figcaption></figure></div>
 3. In the **Config Type** list box, select **AppConfig**.&#x20;

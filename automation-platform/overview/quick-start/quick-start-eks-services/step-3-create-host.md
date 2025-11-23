@@ -14,8 +14,8 @@ _Estimated time to complete Step 4: 5 minutes._
 
 Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine)), verify that you completed the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [EKS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has [EKS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
 * A [Tenant](../step-2-tenant.md) named **dev01** has been created.
 
 ### Select the Tenant You Created

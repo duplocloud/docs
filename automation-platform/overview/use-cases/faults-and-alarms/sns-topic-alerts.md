@@ -19,14 +19,12 @@ Configuring this setting will attach the SNS Topic to the alerts in the **OK** a
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**. The **Tenants** page displays.
 2. Select the Tenant for which you want to set SNS Topic Alerts from the **NAME** column.
 3. Select the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (178) (1).png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane for <strong>Set SNS Topic Alerts</strong> feature​<br></p></figcaption></figure></div>
 5. From the **Select Feature** list box, select **Set SNS Topic Alerts**.
 6. In the field below the **Select Feature** list box, enter a **valid SNS Topic ARN**.
-7.  Click **Add**. The configuration is displayed in the **Settings** tab.\
-
+7.  Click **Add**. The configuration is displayed in the **Settings** tab.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (179).png" alt=""><figcaption><p><strong>Settings</strong> tab displaying <strong>Set SNS Topic Alerts</strong> ARN</p></figcaption></figure>
 

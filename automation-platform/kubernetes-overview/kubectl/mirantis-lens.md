@@ -15,8 +15,7 @@ Integrate Mirantis Lens with DuploCloud by following these steps:
 3. **Generate the Kubeconfig File:** Using the DuploCloud UI or `duploctl`:
 
 * Using the DuploCloud UI.&#x20;
-* Using `duploctl`, generate a `kubeconfig` file for Lens connection, as follows:\
-
+* Using `duploctl`, generate a `kubeconfig` file for Lens connection, as follows:<br>
 
 ```
 duploctl jit update_kubeconfig --plan nonprod01 --tenant $DUPLO_TENANT --host https://$DUPLO_HOST --token $DUPLO_TOKEN

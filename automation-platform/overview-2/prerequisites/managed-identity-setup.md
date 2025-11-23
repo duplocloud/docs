@@ -22,8 +22,7 @@ Managed Identity (MI) in Azure allows DuploCloud to authenticate securely to Azu
 ## Step 2: Assign the Managed Identity to Duplo-Master VM
 
 1. Go to **Virtual Machines** in the Azure portal and select the VM where DuploCloud is installed.
-2.  Under the **Security** section, select **Identity**.\
-
+2.  Under the **Security** section, select **Identity**.<br>
 
     <figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Assigning managed identity to the Duplo-Master VM</p></figcaption></figure>
 3. Select the **User assigned** tab and click **+** **Add**.
@@ -32,8 +31,7 @@ Managed Identity (MI) in Azure allows DuploCloud to authenticate securely to Azu
 ## Step 3: Assign Owner Role to the Managed Identity
 
 1. Go to **Subscriptions** in the Azure portal, and select the subscription where resources will be launched by DuploCloud.
-2.  Under **Access Control (IAM)**, click **+ Add** -> **Add role assignment**.\
-
+2.  Under **Access Control (IAM)**, click **+ Add** -> **Add role assignment**.<br>
 
     <figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Role assignment for Managed Identity</p></figcaption></figure>
 3. Select the **Privileged administrator roles** tab
@@ -46,8 +44,7 @@ Managed Identity (MI) in Azure allows DuploCloud to authenticate securely to Azu
 
 1. Go to **Subscriptions** in the Azure portal.
 2. Select the subscription where resources will be launched by DuploCloud.
-3.  Under **Access Control (IAM)**, click **+ Add** -> **Add role assignment**.\
-
+3.  Under **Access Control (IAM)**, click **+ Add** -> **Add role assignment**.<br>
 
     <figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Role assignment for VM</p></figcaption></figure>
 4. Select the **Privileged administrator roles** tab

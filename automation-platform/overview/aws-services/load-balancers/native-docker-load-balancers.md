@@ -37,12 +37,10 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 1. In the DuploCloud Portal, navigate to **Docker** -> **Services**. The **Services** page displays.
 2. Select the Service to which your Load Balancer is attached from the **NAME** column.
 3. Click the **Load Balancers** tab.&#x20;
-4.  In the **Other Settings** card, click **Edit**.\
-
+4.  In the **Other Settings** card, click **Edit**.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (70).png" alt=""><figcaption></figcaption></figure>
-5.  The **Other Load Balancer Settings** pane displays.\
-
+5.  The **Other Load Balancer Settings** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (68) (1).png" alt=""><figcaption><p>The <strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
 6. Configure the settings, as needed.

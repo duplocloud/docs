@@ -15,7 +15,6 @@ To create an AWS API Gateway using a REST API from the DuploCloud Portal, naviga
 Make private AWS API Gateway instances (associated with VPC endpoints) accessible from your machines by constructing a URL, as shown below. Replace _**REST\_API\_ID**_ with your API Gateway instance's unique identifier (API ID), _**VPCE\_ID**_ with your VPC Endpoint ID (VPCE ID), _**REGION**_ with the specified AWS region, and STAGE with the development stage (e.g., `prod`, `dev`, `test`).
 
 \
-`https://{`_**`REST_API_ID`**_`}-{`_**`VPCE_ID`**_`}.execute-api.{`_**`REGION`**_`}.amazonaws.com/{`_**`STAGE`**_`}`\
-
+`https://{`_**`REST_API_ID`**_`}-{`_**`VPCE_ID`**_`}.execute-api.{`_**`REGION`**_`}.amazonaws.com/{`_**`STAGE`**_`}`<br>
 
 The resulting URL will point to the specific API Gateway instance associated with the API ID and VPC Endpoint ID in the specified AWS region and stage. With this URL, you can make requests over the default open VPN to the private API Gateway.&#x20;

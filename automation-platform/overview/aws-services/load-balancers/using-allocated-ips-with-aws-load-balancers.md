@@ -17,8 +17,7 @@ Before you can assign allocated IPs to a load balancer, you must register the AW
 1. In the DuploCloud Portal, navigate to **Administrator** → **Plans**.
 2. From the **NAME** column, select the plan you want to configure.
 3. Select the **MetaData** tab.
-4.  Click **Add**. The **Add MetaData** pane displays.\
-
+4.  Click **Add**. The **Add MetaData** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (881).png" alt="" width="401"><figcaption><p><strong>Add MetaData</strong> pane</p></figcaption></figure></div>
 5. In the **MetaData Key** field, enter: `NLBEIPAllocationIds`.
@@ -36,8 +35,7 @@ After adding the Elastic IP Allocation IDs to your plan metadata, you can assign
 
 1. Navigate to your public NLB in DuploCloud.
 2. Click **Add Listener**. The **Add Load Balancer Listener** pane displays.
-3.  Select the **Use Elastic IPs from pool** option.\
-
+3.  Select the **Use Elastic IPs from pool** option.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (11) (3).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 4. Configure the remaining fields, as required, for the listener.

@@ -9,8 +9,7 @@ description: Configure AWS App Runner services in DuploCloud
 ## Creating an App Runner Service
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **App Runner**.
-2.  Click **Add**. The **Add App Runner Service** pane displays.\
-
+2.  Click **Add**. The **Add App Runner Service** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (873).png" alt=""><figcaption><p><strong>Create App Runner Service</strong> pane</p></figcaption></figure></div>
 3. Complete the fields on the **Basic Options** pane:
@@ -29,8 +28,7 @@ description: Configure AWS App Runner services in DuploCloud
 You can view details for any App Runner service in the DuploCloud Portal, including runtime information, deployment history, configuration, and endpoints.
 
 1. In the DuploCloud Portal, go to **Cloud Services** → **App Runner** → **Services**.
-2.  Click the name of the App Runner service you want to view details for.\
-
+2.  Click the name of the App Runner service you want to view details for.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (874).png" alt=""><figcaption><p><strong>Details</strong> tab for the App Runner service</p></figcaption></figure>
 3. Use the tabs to explore service details:

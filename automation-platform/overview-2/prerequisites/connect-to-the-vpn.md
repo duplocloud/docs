@@ -14,8 +14,7 @@ The **OpenVPN Access Server** forwards traffic only to network resources within 
 
 User VPN credentials are accessible through the user profile page.&#x20;
 
-1.  In the DuploCloud Portal, navigate to **Administrator** -> **Users** and select your user name, or click on the person icon (<img src="../../../.gitbook/assets/Screenshot (347) (1).png" alt="" data-size="line">) in the upper-right corner, and select **Profile**.\
-
+1.  In the DuploCloud Portal, navigate to **Administrator** -> **Users** and select your user name, or click on the person icon (<img src="../../../.gitbook/assets/Screenshot (347) (1).png" alt="" data-size="line">) in the upper-right corner, and select **Profile**.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/image (187).png" alt="" width="261"><figcaption><p>The User menu</p></figcaption></figure></div>
 2. You will find your VPN credentials in the **VPN Details** section of your profile.

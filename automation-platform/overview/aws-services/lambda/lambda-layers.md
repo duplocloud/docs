@@ -14,8 +14,7 @@ You must add a Key/Value pair in the DuploCloud Portal's **System Config** setti
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
-3.  Click **Add**. The **Add Config** pane displays.\
-
+3.  Click **Add**. The **Add Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/L5.png" alt=""><figcaption><p><strong>Add Config</strong> pane</p></figcaption></figure></div>
 
@@ -45,8 +44,7 @@ You can add layers to a new or existing [Lambda Function](./). For example, to a
 2. In the **Lambda** tab, select the Lambda Function to which you want to add Lambda Layers.&#x20;
 3. Click the **Actions** menu and select **Edit**. The **Edit Lambda Function** page displays.
 4.  In the **Layers** area, click the + button. The **Add Lambda Layer** pane displays.\
-    \
-
+    <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/lam_eph5 (1).png" alt=""><figcaption><p>Lambda Layers area with add (<strong>+</strong>) and <strong>Delete</strong> options<br><br></p></figcaption></figure></div>
 

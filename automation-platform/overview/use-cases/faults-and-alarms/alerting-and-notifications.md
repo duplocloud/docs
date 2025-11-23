@@ -18,8 +18,7 @@ You will need to generate an keys from each of these vendor systems, and then pr
 1. In the [Sentry ](https://sentry.io/welcome/?utm_source=google\&utm_medium=cpc\&utm_campaign=19655969969\&utm_content=g\&utm_term=sentry\&device=c\&gclid=CjwKCAjw5pShBhB_EiwAvmnNV2cqd7lWEuiy_n0HSuCc17JGB9vVYqdwm5_QiDgJEXIWuz34u9h18hoCpbEQAvD_BwE\&gclid=CjwKCAjw5pShBhB_EiwAvmnNV2cqd7lWEuiy_n0HSuCc17JGB9vVYqdwm5_QiDgJEXIWuz34u9h18hoCpbEQAvD_BwE)website, navigate to **Projects** -> **Create a New Project**.
 2. Click **Settings** -> **Projects** -> _**project-name**_ -> **Client keys**. The **Client Keys** page displays.
 3. Complete the **DSN** fields on the screen.
-4.  Click **Generate New Key**. \
-
+4.  Click **Generate New Key**. <br>
 
     ![Client Keys page on Sentry website with DSN fields](https://duplocloud.com/wp-content/uploads/2021/11/sentry.png)
 5. In the DuploCloud Portal, navigate to **Observability** -> **Faults**.

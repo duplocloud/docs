@@ -21,8 +21,7 @@ You can create, update, and manage these firewall rules directly from the DuploC
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Click the infrastructure name in the **NAME** column.
 3. Select the **Firewall Rules** tab.
-4.  Click **Add**. The **Add Firewall Rule** pane displays.\
-
+4.  Click **Add**. The **Add Firewall Rule** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (586).png" alt="" width="299"><figcaption><p><strong>Add Firewall Rule</strong> pane </p></figcaption></figure></div>
 5. Complete the fields:
@@ -48,8 +47,7 @@ Edit or delete firewall rules directly from the DuploCloud Portal.&#x20;
 5.  Choose one of the following options:
 
     * **Edit**: Opens the **Update Firewall Rule** pane to modify the firewall rule configuration.
-    * **Remove Rule**: Deletes the firewall rule after confirmation.\
-
+    * **Remove Rule**: Deletes the firewall rule after confirmation.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (587).png" alt=""><figcaption><p>Firewall rule menu options highlighted in the DuploCloud Portal</p></figcaption></figure></div>
 

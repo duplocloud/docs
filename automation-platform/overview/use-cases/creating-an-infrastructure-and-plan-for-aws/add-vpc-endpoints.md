@@ -15,14 +15,12 @@ DuploCloud allows you to specify predefined AWS endpoints for your Infrastructur
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
 2. Select the Infrastructure to which you want to add VPC endpoints.
 3. Click the **Endpoints** tab.&#x20;
-4.  Click **Add**. The **Infra - Create VPC Endpoints** pane displays.\
-
+4.  Click **Add**. The **Infra - Create VPC Endpoints** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AWS_VPC_End1.png" alt=""><figcaption><p><strong>Infra - Create VPC Endpoints</strong> pane displaying avaliable VPC Endpoints</p></figcaption></figure></div>
 
 
 5. From the **VPC Endpoint Service** list box, select the endpoint service you want to add.&#x20;
-6.  Click **Create**.  In the **Endpoints** tab, the **VPC Endpoint ID** of your selected service displays.\
-
+6.  Click **Create**.  In the **Endpoints** tab, the **VPC Endpoint ID** of your selected service displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AWS_VPC_End2.png" alt=""><figcaption><p><strong>Infrastructure</strong> page with <strong>Endpoints</strong> tab</p></figcaption></figure></div>

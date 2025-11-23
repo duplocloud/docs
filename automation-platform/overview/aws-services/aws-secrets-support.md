@@ -14,8 +14,7 @@ To create a new secret in AWS Secrets Manager from the DuploCloud Portal:
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Select the **AWS Secrets** tab.
-3.  Click **Add**. The **Create an AWS Secret** form displays.\
-
+3.  Click **Add**. The **Create an AWS Secret** form displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (605).png" alt=""><figcaption><p><strong>Create an AWS Secret</strong> form</p></figcaption></figure></div>
 4. Fill in the fields as described below:
@@ -36,8 +35,7 @@ You can view, edit, or deletes directly from the DuploCloud Portal.
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Select the **AWS Secrets** tab
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the secret you want to manage.\
-
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the secret you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (607).png" alt=""><figcaption><p><strong>AWS Secrets</strong> tab with the secret menu options highlighted</p></figcaption></figure>
 4. Select one of the following options:

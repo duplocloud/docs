@@ -26,8 +26,7 @@ To create a **Shared Application Gateway** Load Balancer, refer to the [Shared A
    * **Docker** → **Services** for Docker deployments.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
-4.  Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.\
-
+4.  Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (334).png" alt="" width="305"><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 5. Fill out the required fields based on your configuration needs.

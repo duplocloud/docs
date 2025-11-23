@@ -51,8 +51,7 @@ To increase the minimum ports per VM for your Infrastructure:&#x20;
 
 1. Navigate to **Administrator** -> **Infrastructure**.
 2. In the **NAME** column, select your Infrastructure name.&#x20;
-3.  Select the **Settings** tab, and click **Add**. The **Infra - Set Custom Data** pane displays.\
-
+3.  Select the **Settings** tab, and click **Add**. The **Infra - Set Custom Data** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/minimum ports per VM (1).png" alt="" width="375"><figcaption><p>The <strong>Infra - Set Custom Data</strong> pane</p></figcaption></figure></div>
 4. From the **Setting Name** list box, select **GKE Minimum Ports Per VM**.&#x20;

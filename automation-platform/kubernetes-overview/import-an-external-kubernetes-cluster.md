@@ -84,8 +84,7 @@ Select the **Kubernetes** tab to display information about the imported Kubernet
 4. Click **Add**. The **Add On-Premesis** Instance pane displays.
 5. Select the node from the **Kubernetes Node** list box.&#x20;
 6. Supply an **Allocation Tag**.
-7.  Click **Add**.\
-
+7.  Click **Add**.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/image (6) (3).png" alt="" width="381"><figcaption><p>The <strong>Add On-Premises Instance</strong> pane</p></figcaption></figure></div>
 
@@ -149,6 +148,5 @@ type: kubernetes.io/service-account-token
 Follow this step to [import](import-an-external-kubernetes-cluster.md#importing-your-kubernetes-cluster-to-duplocloud) and [view](import-an-external-kubernetes-cluster.md#viewing-imported-kubernetes-cluster-from-duplocloud) the cluster.
 
 {% hint style="warning" %}
-DuploCloud users with non-administrator access (**User** role) can only view Kubernetes resources. They cannot add Nodes or create or update any Services in `readonly` mode.\
-
+DuploCloud users with non-administrator access (**User** role) can only view Kubernetes resources. They cannot add Nodes or create or update any Services in `readonly` mode.<br>
 {% endhint %}

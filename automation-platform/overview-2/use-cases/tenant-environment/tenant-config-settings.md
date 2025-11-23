@@ -11,8 +11,7 @@ You can configure settings to apply to all new Tenants under a Plan using the Co
 1. From the DuploCloud portal, navigate to **Administrator** -> **Plan**.&#x20;
 2. Click on the Plan you want to configure settings under in the **NAME** column.
 3. Select the **Config** tab.&#x20;
-4.  Click **Add**. The **Add Config** pane displays.\
-
+4.  Click **Add**. The **Add Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/config (1).png" alt="" width="378"><figcaption></figcaption></figure></div>
 5. From the **Config Type** field, select **TenantConfig**.

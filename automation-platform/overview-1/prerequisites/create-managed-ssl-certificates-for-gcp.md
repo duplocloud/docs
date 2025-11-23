@@ -49,8 +49,7 @@ gcloud certificate-manager maps entries create MAP_NAME-wildcard \
   --hostname="*.YOUR_DOMAIN"
 ```
 
-5.  After your certificate map is created, register it in DuploCloud so it can be attached to services and load balancers: Navigate to **Administrator** -> **Plans**. Select the **Certificates** tab and click **Add**. The **Add a Certificate** pane displays. \
-
+5.  After your certificate map is created, register it in DuploCloud so it can be attached to services and load balancers: Navigate to **Administrator** -> **Plans**. Select the **Certificates** tab and click **Add**. The **Add a Certificate** pane displays. <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/add cert image.png" alt="" width="365"><figcaption><p><strong>Add a Certificate</strong> pane</p></figcaption></figure></div>
 6. Complete the following fields.

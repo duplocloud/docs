@@ -14,8 +14,7 @@ Upload templates in advance to make them available for deployment across all Ten
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Select the **Templates** tab.
-3.  Click **Upload**. The **Upload Template** pane displays.\
-
+3.  Click **Upload**. The **Upload Template** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/upload template pane (1).png" alt="" width="374"><figcaption><p>The <strong>Upload Template</strong> pane</p></figcaption></figure></div>
 4. Enter a name for the template in the **File Name** field.

@@ -24,8 +24,7 @@ Create a new Microsoft SQL Server instance in your tenant to host one or more SQ
 
 1. Select the Tenant from the **Tenant** list box.&#x20;
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** ->  **MSSQL Server**.
-3.  Click **Add**. The **Add SQL Server** pane displays.\
-
+3.  Click **Add**. The **Add SQL Server** pane displays.<br>
 
     <div align="left"><img src="../../../../.gitbook/assets/image (340).png" alt="Add SQL Server pane" width="375"></div>
 4. Provide a name for the MSSQL Server, your username and password, and database version information.&#x20;
@@ -39,8 +38,7 @@ After creating an MSSQL Server, you must add one or more SQL databases to store 
 1. Select the Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** → **Database** → **MSSQL Server**.
 3. Select the MSSQL Server from the **NAME** column.
-4.  In the **Databases** tab, click **Add**. The **Create SQL Database** pane displays.\
-
+4.  In the **Databases** tab, click **Add**. The **Create SQL Database** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (760).png" alt="" width="405"><figcaption><p><strong>Create SQL Database</strong> pane</p></figcaption></figure></div>
 5. Complete the following fields:
@@ -71,8 +69,7 @@ The backup retention period cannot be configured for the `master` database.
 
 1. Select the Tenant from the **Tenant** list box.
 2. In the DuploCloud Portal, navigate to **Cloud Services** → **Database** → **MSSQLServer**.
-3.  Select the MSSQL Server from the **NAME** column. The MSSQL Server details page displays.\
-
+3.  Select the MSSQL Server from the **NAME** column. The MSSQL Server details page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (778).png" alt=""><figcaption><p><strong>MSSQL Server</strong> page</p></figcaption></figure></div>
 4. Use one of the following options to manage the server and its databases:
@@ -100,8 +97,7 @@ A private endpoint is a network interface that connects you privately and secure
 1. Select the Tenant from the **Tenant** list box.&#x20;
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** ->  **MSSQLServer.**
 3. Select the MSSQL Server database from the **NAME** column.&#x20;
-4.  Select the **Private Endpoints** tab, and click **Add**. The **Add Private Endpoint** pane displays. \
-
+4.  Select the **Private Endpoints** tab, and click **Add**. The **Add Private Endpoint** pane displays. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/private endpoint.png" alt="" width="375"><figcaption><p>The <strong>Add Private Endpoint</strong> pane</p></figcaption></figure></div>
 5. Add a name and select a subnet for your private endpoint.&#x20;
@@ -116,13 +112,11 @@ Configure Azure Elastic Pools for an MSSQL Server in the DuploCloud Portal:
 1. Select the Tenant from the **Tenant** list box.&#x20;
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** ->  **MSSQLServer.**
 3. Select the MSSQL Server database from the **NAME** column.&#x20;
-4.  Select the **Elastic Pools** tab, and click **Add**. The **Add SQL Elastic Pool** pane displays. \
-
+4.  Select the **Elastic Pools** tab, and click **Add**. The **Add SQL Elastic Pool** pane displays. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Add elastci pool.png" alt="" width="364"><figcaption><p>The <strong>Add SQL Elastic Pool</strong> pane</p></figcaption></figure></div>
 5. Enter a name for the elastic pool, select your service tier, and select the correct SKU.&#x20;
-6.  Click **Submit**. The elastic pool is created. \
-
+6.  Click **Submit**. The elastic pool is created. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure></div>
 
@@ -145,12 +139,10 @@ Firewall rules for an MSSQL Server control access by allowing or denying traffic
 1. Select the Tenant from the **Tenant** list box.&#x20;
 2. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** ->  **MSSQL Server.**
 3. Select the MSSQL Server database from the **NAME** column.&#x20;
-4.  Select the **Firewall Rules** tab, and click **Add**. The **Add New SQL Server Firewall Rule** pane displays. \
-
+4.  Select the **Firewall Rules** tab, and click **Add**. The **Add New SQL Server Firewall Rule** pane displays. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/fw rules.png" alt="" width="367"><figcaption><p><strong>Add New SQL Server Firewall Rule</strong> pane</p></figcaption></figure></div>
 5. Add a name for the firewall rule, and specify the starting and ending IP addresses that should be allowed to access your MSSQL database.
-6.  Click **Create**. The firewall rule is added to the server.\
-
+6.  Click **Create**. The firewall rule is added to the server.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/firewall rule success.png" alt=""><figcaption><p><strong>Firewall Rule</strong> tab on the <strong>MSSQL Server</strong> page. </p></figcaption></figure></div>

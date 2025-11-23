@@ -11,13 +11,11 @@ DuploCloud supports integration with Azure Data Factory (ADF)--a fully managed c
 1. Select the appropriate Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** -> **AI - ML**.
 3. Select the **Data Factory** tab.
-4.  Click **Add**. The **Add Data Factory** pane displays. \
-
+4.  Click **Add**. The **Add Data Factory** pane displays. <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/add data factory (1).png" alt=""><figcaption><p>The <strong>Add Data Factory</strong> pane</p></figcaption></figure></div>
 5. In the **Data Factory Name** field, enter a name. Note: The name must be globally unique across all of Azure.
 6. Enable or disable **Allow Access Via Public Endpoint**.&#x20;
-7.  Click **Create**. The configuration is finalized, and DuploCloud provisions the Azure Data Factory instance according to the provided settings.\
-
+7.  Click **Create**. The configuration is finalized, and DuploCloud provisions the Azure Data Factory instance according to the provided settings.<br>
 
     <figure><img src="../../../.gitbook/assets/data factory success.png" alt=""><figcaption><p>The <strong>Data Factory</strong> tab in the DuploCloud Portal</p></figcaption></figure>

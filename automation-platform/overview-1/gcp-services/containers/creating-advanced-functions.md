@@ -39,8 +39,7 @@ Assign a tag describing the Host's characteristics or capabilities, such as reso
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.20-15_29_49.png" alt=""><figcaption></figcaption></figure>
 
 4. In the **Allocation Tag** field, enter a tag name following the [allocation tag rules](creating-advanced-functions.md#allocation-tag-rules).&#x20;
-5.  Click **Set**. The allocation tag you set displays in the heading banner for the Host or ASG.\
-
+5.  Click **Set**. The allocation tag you set displays in the heading banner for the Host or ASG.<br>
 
     <figure><img src="../../../../.gitbook/assets/AT2.png" alt=""><figcaption><p>The heading banner for an Auto-Scaling Group (ASG) with an allocation tag</p></figcaption></figure>
 

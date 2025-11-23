@@ -26,12 +26,10 @@ The Inventory page displays a full list of resources for recordkeeping, troubles
 
 <figure><img src="../.gitbook/assets/Screenshot (788).png" alt=""><figcaption><p><strong>Inventory</strong> page</p></figcaption></figure>
 
-2.  Select a tab at the top to filter resources by category. The tabs vary depending on the cloud provider and your environment.\
-
+2.  Select a tab at the top to filter resources by category. The tabs vary depending on the cloud provider and your environment.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/Screenshot (789).png" alt=""><figcaption><p><strong>Host</strong> tab on the <strong>Inventory</strong> page</p></figcaption></figure></div>
-3.  Click any resource name in the list to drill down to more detailed information about that resource.\
-
+3.  Click any resource name in the list to drill down to more detailed information about that resource.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/Screenshot (790).png" alt=""><figcaption><p><strong>EC2</strong> tab on the <strong>Inventory</strong> page</p></figcaption></figure></div>
 
@@ -44,7 +42,6 @@ DuploCloud allows users to export a full list of resources from the **Inventory*
 3.  Click the button in the upper right to export your inventory. The exact button and file format vary by cloud provider:
 
     * **AWS:** Click **DuploCloud Inventory Report** to download a compliance-ready Excel (`.xlsx`) report containing all AWS resource details. Useful for audits and StateRAMP/FedRAMP compliance.
-    * **GCP and Azure**: Click **Export to CSV** to download an operational snapshot in CSV format of DuploCloud-managed resources. Primarily used for troubleshooting or recordkeeping.\
-
+    * **GCP and Azure**: Click **Export to CSV** to download an operational snapshot in CSV format of DuploCloud-managed resources. Primarily used for troubleshooting or recordkeeping.<br>
 
     <figure><img src="../.gitbook/assets/Screenshot (792).png" alt=""><figcaption><p><strong>Inventory</strong> page with <strong>DuploCloud Inventory Report</strong> option highlighted</p></figcaption></figure>

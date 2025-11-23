@@ -27,16 +27,14 @@ To change VPN visibility from public to private after you have [created an Infra
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
 2. From the **NAME** column, select the Infrastructure.
 3. Click the **Settings** tab.
-4.  In the **EKS Endpoint Visibility** row, in the **Actions** column, click the ( <img src="../../../../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon and select **Update Setting**. The **Infra - Set Custom Data** pane displays.\
-
+4.  In the **EKS Endpoint Visibility** row, in the **Actions** column, click the ( <img src="../../../../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) icon and select **Update Setting**. The **Infra - Set Custom Data** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/infraend1.png" alt=""><figcaption><p><strong>Infra - Set Custom Data</strong> pane with <strong>Enable VPN Access to EKS Cluster</strong> option</p></figcaption></figure></div>
 
 
 5. From the **Setting Name** list box, select **Enable VPN Access to EKS Cluster**.
 6. Select **Enable** to enable VPN.
-7.  Click **Set**. When you [create an Infrastructure](../), the **Allow VPN Access to the EKS Cluster** option will be enabled.\
-
+7.  Click **Set**. When you [create an Infrastructure](../), the **Allow VPN Access to the EKS Cluster** option will be enabled.<br>
 
     <figure><img src="../../../../../.gitbook/assets/settings marked.png" alt=""><figcaption></figcaption></figure>
 

@@ -13,8 +13,7 @@ This page describes how to provision and manage Azure CosmosDB accounts and reso
 ## Adding an Azure CosmosDB Account
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Databases** → **CosmosDB**.
-2.  Click **Add**. The **Create CosmosDB Account** pane displays.\
-
+2.  Click **Add**. The **Create CosmosDB Account** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (573).png" alt=""><figcaption><p><strong>Create CosmosDB Account</strong> pane</p></figcaption></figure></div>
 3. Complete the following fields:
@@ -27,8 +26,7 @@ This page describes how to provision and manage Azure CosmosDB accounts and reso
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Databases** → **CosmosDB**.
 2. Click on the name of the CosmosDB account in the **NAME** column.
-3.  Select the **Databases**, **Private Endpoints**, or **Details** tab to view account details. \
-
+3.  Select the **Databases**, **Private Endpoints**, or **Details** tab to view account details. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (576).png" alt=""><figcaption><p><strong>Details</strong> tab for the <code>cosmodb-1243</code> CosmosDB account</p></figcaption></figure></div>
 
@@ -37,16 +35,14 @@ This page describes how to provision and manage Azure CosmosDB accounts and reso
 After creating a CosmosDB account in DuploCloud, you can view, edit, or delete the account:
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Databases** → **CosmosDB**.
-2.  Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (18) (1).avif" alt="" data-size="line">) in the row of the CosmosDB account you want to manage.\
-
+2.  Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (18) (1).avif" alt="" data-size="line">) in the row of the CosmosDB account you want to manage.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (577) (1).png" alt=""><figcaption><p><strong>CosmosDB</strong> page with the menu options highlighted</p></figcaption></figure></div>
 3.  Choose from the following options:
 
     * **JSON:** View the raw JSON configuration of the CosmosDB account.
     * **Edit:** Modify the account settings.
-    * **Delete:** Permanently remove the CosmosDB account.\
-
+    * **Delete:** Permanently remove the CosmosDB account.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (578).png" alt=""><figcaption><p><strong>Details</strong> tab for the <code>cosmodb-1243</code> Cosmosdb account</p></figcaption></figure></div>
 
@@ -55,8 +51,7 @@ After creating a CosmosDB account in DuploCloud, you can view, edit, or delete t
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Databases** → **CosmosDB**.
 2. Select the CosmosDB account from the **NAME** column.
 3. Select the **Data Explorer** tab.
-4.  Click **Add**. The **Add CosmosDB Database** pane displays. \
-
+4.  Click **Add**. The **Add CosmosDB Database** pane displays. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (579).png" alt=""><figcaption><p><strong>Add CosmosDB Database</strong> pane</p></figcaption></figure></div>
 5. Enter a **Name** for the database.
@@ -67,8 +62,7 @@ After creating a CosmosDB account in DuploCloud, you can view, edit, or delete t
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Databases** → **CosmosDB**.
 2. Select the CosmosDB account from the **NAME** column.
 3. Select the **Private Endpoints** tab.
-4.  Click **Add**. The **Add Private Endpoint** pane displays. \
-
+4.  Click **Add**. The **Add Private Endpoint** pane displays. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (580).png" alt=""><figcaption><p><strong>Add Private Endpoint</strong> pane</p></figcaption></figure></div>
 5. Provide a **Name** for the endpoint

@@ -44,8 +44,7 @@ Execute a single instance of a container based on your Task Definition. This opt
 2. Navigate to **Cloud Services** -> **ECS**.
 3. Select the **Task Definition** tab
 4. From the **TASK DEFINITION FAMILY NAME** list, locate the Task Definition to run. Note that this is the Task Definition Name prepended by a unique identifier, which includes your Tenant name and part of your Infrastructure name.&#x20;
-5.  Click on the **Actions** menu, and select **Execute**. The **Run ECS Tasks** pane displays.\
-
+5.  Click on the **Actions** menu, and select **Execute**. The **Run ECS Tasks** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (328).png" alt="" width="415"><figcaption><p>The <strong>Run ECS Tasks</strong> pane</p></figcaption></figure></div>
 6. Select the **Version** and Specify the **No of Tasks**.

@@ -29,8 +29,7 @@ For more information about Azure Storage Accounts, refer to the [official Azure 
 
 To view Storage Account and Endpoint details in the DuploCloud Portal
 
-1.  In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage Account**.\
-
+1.  In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage Account**.<br>
 
     <figure><img src="../../../.gitbook/assets/storage1fixed.png" alt=""><figcaption></figcaption></figure>
 2. Select the storage account from the **NAME** column. The Storage Account details page displays.
@@ -62,8 +61,7 @@ Configure Tenant settings to block public network access to Storage Accounts.
 4. From the **Select Feature** item list, select **Other**.&#x20;
 5. In the **Configuration** field, enter **block\_public\_network\_to\_azure\_storage**.&#x20;
 6. In the empty field, enter **True.**&#x20;
-7.  Click **Add**. Public access to Storage Accounts is blocked. \
-
+7.  Click **Add**. Public access to Storage Accounts is blocked. <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (234).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the Tenants page in the DuploCloud Portal</p></figcaption></figure></div>
 
@@ -73,8 +71,7 @@ Private endpoints let you access your Azure services over a private IP address w
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Storage Account**.
 2. From the **NAME** column, select your Storage Account.&#x20;
-3.  Select the **Private Endpoint** tab, and click **Add**. The **Add Private Endpoint** pane displays.\
-
+3.  Select the **Private Endpoint** tab, and click **Add**. The **Add Private Endpoint** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/add private endpoint.png" alt="" width="411"><figcaption><p>The <strong>Add Private Endpoint</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 4. Enter a name for the endpoint in the **Name** field.&#x20;

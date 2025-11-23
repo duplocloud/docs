@@ -17,8 +17,7 @@ The following Amazon SQS Queue types are supported.
 
 1. in the DuploCloud portal, navigate to **Cloud Services** -> **App Integration**.
 2. Click the **SQS** tab.
-3.  Click **Add**. The **Create a SQS Queue** pane displays.\
-
+3.  Click **Add**. The **Create a SQS Queue** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/sqs stansard.png" alt="" width="341"><figcaption><p>The <strong>Create a SQS Queue</strong> pane</p></figcaption></figure></div>
 4. Enter an SQS Queue **Name**.

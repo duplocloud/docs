@@ -15,7 +15,6 @@ To enable the billing feature in DuploCloud, ensure the following:
 ## Enabling Billing Data in DuploCloud
 
 1. In the DuploCloud Portal, go to **Administrator** -> **Billing**.
-2.  On the right side of the page, click **Enable Billing Feature**. Billing data will display after the next data sync.\
-
+2.  On the right side of the page, click **Enable Billing Feature**. Billing data will display after the next data sync.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (600) (1).png" alt=""><figcaption><p><strong>Billing</strong> page in the DuploCloud Portal with <strong>Enable Billing Feature</strong> option highlighted</p></figcaption></figure>

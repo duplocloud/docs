@@ -21,8 +21,7 @@ You can create, update, and manage Tenant firewall rules directly from the Duplo
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. From the **NAME** column, click the Tenant name where you want to add the firewall rule.
 3. Select the **Firewall Rules** tab.
-4.  Click the **Add** button. The **Add Firewall Rule** pane displays.\
-
+4.  Click the **Add** button. The **Add Firewall Rule** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (638).png" alt=""><figcaption><p><strong>Add Firewall Rule</strong> pane</p></figcaption></figure></div>
 5. Configure the fields, as described below:
@@ -44,7 +43,6 @@ Edit or delete firewall rules directly from the DuploCloud Portal.&#x20;
 5.  Choose one of the following options:
 
     * **Edit**: Opens the **Update Firewall Rule** pane to modify the firewall rule configuration.
-    * **Remove Rule**: Deletes the firewall rule after confirmation.\
-
+    * **Remove Rule**: Deletes the firewall rule after confirmation.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (613).png" alt=""><figcaption><p><strong>Firewall Rules</strong> tab in the DuploCloud Portal</p></figcaption></figure>

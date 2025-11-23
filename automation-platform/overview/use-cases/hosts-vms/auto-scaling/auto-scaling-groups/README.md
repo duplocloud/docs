@@ -13,8 +13,7 @@ For cluster autoscaling, [enable the Cluster Autoscaler option](../../../creatin
 ## Creating Autoscaling Groups (ASG)
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
-2.  In the **ASG** tab, click **Add**. The **Add ASG** page is displayed.\
-
+2.  In the **ASG** tab, click **Add**. The **Add ASG** page is displayed.<br>
 
     <figure><img src="../../../../../../.gitbook/assets/Screenshot (30).png" alt=""><figcaption><p><strong>Add ASG page</strong> with <strong>Use for Cluster Autoscaling</strong> enabled</p></figcaption></figure>
 3. In the **Friendly Name** field, enter the name of the ASG.
@@ -23,8 +22,7 @@ For cluster autoscaling, [enable the Cluster Autoscaler option](../../../creatin
 6. In the **Minimum Instances** field, enter the minimum number of instances. The Autoscaling group ensures that the total number of instances is always greater than or equal to the minimum number of instances.
 7. In the **Maximum Instances** field, enter the maximum number of instances. The Autoscaling group ensures that the total number of instances is always less than or equal to the maximum number of instances.
 8. Optionally, select **Use for Cluster Autoscaling**.
-9.  Select **Advanced Options**. The **Advanced Options** section displays.\
-
+9.  Select **Advanced Options**. The **Advanced Options** section displays.<br>
 
     <figure><img src="../../../../../../.gitbook/assets/Screenshot (32).png" alt=""><figcaption><p>The <strong>Add ASG Advanced Options</strong> </p></figcaption></figure>
 10. &#x20;Fill in additional fields as needed for your ASG.&#x20;
@@ -38,8 +36,7 @@ For cluster autoscaling, [enable the Cluster Autoscaler option](../../../creatin
 6. In the **Minimum Instances** field, enter the minimum number of instances. The Autoscaling group ensures that the total number of instances is always greater than or equal to the minimum number of instances.
 7. In the **Maximum Instances** field, enter the maximum number of instances. The Autoscaling group ensures that the total number of instances is always less than or equal to the maximum number of instances.
 8. Optionally, select **Use for Cluster Autoscaling**.
-9.  Optionally select **Advanced Options,** and complete additional fields as needed. \
-
+9.  Optionally select **Advanced Options,** and complete additional fields as needed. <br>
 
     <figure><img src="../../../../../../.gitbook/assets/asg3.png" alt=""><figcaption><p>ASG <strong>Advanced Options</strong> </p></figcaption></figure>
 10. Click **Add**. Your ASG is added and displayed in the **ASG** tab.

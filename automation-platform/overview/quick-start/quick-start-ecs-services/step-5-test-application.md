@@ -12,8 +12,8 @@ _Estimated time to complete Step 6 and finish tutorial: 5 minutes._
 
 Before testing your application, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* The **NONPROD** infrastructure has [ECS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [ECS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A [Task Definition](step-4-create-app-via-ecs.md) named **sample-task-def** has been created.
 * The [ECS Service (](step-5-create-the-ecs-service-and-load-balancer.md)**sample-httpd-app**) and Load Balancer have been created.
@@ -46,8 +46,8 @@ The application rendered a simple web page with text, coded in JavaScript, from 
 
 In the previous steps, you:
 
-* [Created a DuploCloud Infrastructure](../step-1-infrastructure.md) named **NONPROD**, a Virtual Private Cloud instance, backed by an ECS-enabled Kubernetes cluster.&#x20;
-* [Created a Tenant](../step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](../step-1-infrastructure.md)) to configure multiple AWS and Kubernetes components needed for your environment.
+* [Created a DuploCloud Infrastructure](../../../../overview/quick-start/step-1-infrastructure.md) named **NONPROD**, a Virtual Private Cloud instance, backed by an ECS-enabled Kubernetes cluster.&#x20;
+* [Created a Tenant](../step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](../../../../overview/quick-start/step-1-infrastructure.md)) to configure multiple AWS and Kubernetes components needed for your environment.
 * [Created a Task Definition](step-4-create-app-via-ecs.md) named **sample-task-def**, used to create a service to run your application.
 * [Created a Service](../quick-start-eks-services/step-5-create-app-via-k8s.md) named **sample-httpd-app** to connect the Docker containers and associated images, in which your application code resides, to the DuploCloud Tenant environment. In the same step, you c[reated an ALB Load Balancer Listener](step-5-create-the-ecs-service-and-load-balancer.md) to expose your application via ports and backend network configurations.&#x20;
 * [Verified that your web page rendered](step-5-test-application.md#testing-the-application) as expected by testing the DNS Name exposed by the  Load Balancer Listener.

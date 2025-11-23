@@ -12,8 +12,7 @@ You must create an App Service Plan before you can deploy a Web App.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Serverless**.
 2. Select the **App Service Plan** tab.
-3.  Click **Add**. The **Add App Service Plan** pane displays. \
-
+3.  Click **Add**. The **Add App Service Plan** pane displays. <br>
 
     <div align="left"><img src="../../../../.gitbook/assets/image (129).png" alt="The Add App Service Plan pane" width="363"></div>
 4. Complete the fields:&#x20;

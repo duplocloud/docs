@@ -18,8 +18,8 @@ _Estimated time to complete Step 8: 5 minutes._
 
 Before securing a Load Balancer, verify that you completed the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [EKS **Enabled**](../step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has [EKS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A Host named [**host01** has been created](step-3-create-host.md).
 * A Service named [**demo-service** has been created](step-5-create-app-via-k8s.md).
@@ -41,8 +41,7 @@ An entry for your new DNS name is now registered with **demo-service**.
 
 1. Navigate to **Kubernetes** -> **Services**.
 2. From the **Name** column, select **demo-service**.
-3.  Select the **Load Balancers** tab and verify that the **DNS Name** card displays your modified DNS Name.    \
-
+3.  Select the **Load Balancers** tab and verify that the **DNS Name** card displays your modified DNS Name.    <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (141).png" alt="" width="451"><figcaption><p>The <strong>DNS Name</strong> card on the <strong>Load Balancers</strong> tab</p></figcaption></figure></div>
 

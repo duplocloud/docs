@@ -26,8 +26,7 @@ Using OpenTelemetry with Grafana, you can collect and visualize traces alongside
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** (Administrator AOS Dashboard) **or Observability** -> **Advanced** -> **Dashboard** (Tenant AOS Dashboard). The AOS Dashboard displays.
 2. Select your Infrastructure from the **Infrastructure** list box (Administrator AOS Dashboard) or **Tenant** from the Tenant list box (Tenant AOS Dashboard).&#x20;
-3.  Click the **Traces** card button. The Grafana **Tracing** dashboard displays.\
-
+3.  Click the **Traces** card button. The Grafana **Tracing** dashboard displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/image (451).png" alt=""><figcaption><p>Grafana <strong>Tracing</strong> dashboard<br></p></figcaption></figure></div>
 4. Use the following functions on the Grafana **Tracing** dashboard to find and view relevant trace data. See the [Grafana documentation](https://grafana.com/docs/grafana/latest/datasources/tempo/query-editor/) for detailed instructions.&#x20;

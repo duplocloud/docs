@@ -8,8 +8,7 @@ Broker configurations define reusable settings for RabbitMQ and ActiveMQ brokers
 
 1. Navigate to **Cloud Services** → **App Integration** → **Amazon MQ**.
 2. Select the **Configurations** tab.
-3.  Click **Add**. The **Create Configuration** pane displays.\
-
+3.  Click **Add**. The **Create Configuration** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (745).png" alt=""><figcaption><p><strong>Create Configuration</strong> pane</p></figcaption></figure></div>
 4. Complete the following fields:
@@ -35,8 +34,7 @@ Once a configuration is created, you can view or manage it from the **Configurat
 
 To revise a preexisting broker configuration:&#x20;
 
-1.  In the **Configuration Details** tab, click **Edit** to update the configuration.\
-
+1.  In the **Configuration Details** tab, click **Edit** to update the configuration.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (759).png" alt=""><figcaption><p> <strong>Configuration Details</strong> tab showing broker configuration revision process</p></figcaption></figure></div>
 2. Optionally, add a **Description** for the revision.
@@ -49,8 +47,7 @@ DuploCloud allows you to create RabbitMQ brokers to handle messaging workloads. 
 
 1. Navigate to **Cloud Services** → **App Integration** → **Amazon MQ**.
 2. Select the **Brokers** tab.
-3.  Click **Add**. The **Add Broker** pane displays.\
-
+3.  Click **Add**. The **Add Broker** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (748).png" alt=""><figcaption><p><strong>Add Broker</strong> pane</p></figcaption></figure></div>
 4. Complete the required fields:

@@ -9,8 +9,7 @@ description: >-
 Configure readonly user access to both Kubernetes Secrets and ConfigMaps using the **AllowReadonlyK8sSecrets** flag. This setting applies to all readonly users, whether they are Administrators, Tenants, or Users.
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Systems Settings**.
-2.  Select the **System Config** tab, and click **Add**. The **Add Config** pane displays. \
-
+2.  Select the **System Config** tab, and click **Add**. The **Add Config** pane displays. <br>
 
 
 

@@ -20,8 +20,7 @@ When upgrading RDS versions, use the AWS Console and see your Cloud Provider for
 ## Creating an RDS database <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
-2.  Click **Add**. The **Create a RDS** page displays.\
-
+2.  Click **Add**. The **Create a RDS** page displays.<br>
 
     <figure><img src="../../../../../.gitbook/assets/RDS create.png" alt=""><figcaption><p>The <strong>Create a RDS</strong> page in the DuploCloud Portal</p></figcaption></figure>
 3. Complete the following fields:

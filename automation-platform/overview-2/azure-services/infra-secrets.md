@@ -9,8 +9,7 @@ Infra Secrets in DuploCloud are used to securely store sensitive information, su
 ## Adding an Infra Secret
 
 1. In the DuploCloud Portal, navigate to **Cloud Settings** → **Secrets**.
-2.  Click **Add**. The **Add Infra Secret** pane displays. \
-
+2.  Click **Add**. The **Add Infra Secret** pane displays. <br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (375).png" alt="" width="327"><figcaption><p>The <strong>Add Infra Secret</strong> pane</p></figcaption></figure></div>
 3. Complete the fields:

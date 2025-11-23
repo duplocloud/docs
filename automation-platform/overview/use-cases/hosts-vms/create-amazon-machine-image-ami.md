@@ -10,8 +10,7 @@ description: Add and view AMIs in AWS
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Hosts**. The **Hosts** page displays.
 2. In the **NAME** column, select the host you want to use as the basis for your AMI.
-3.  Click the **Actions** menu and select **Host Settings** → **Create AMI**. The **Create AMI** pane displays. \
-
+3.  Click the **Actions** menu and select **Host Settings** → **Create AMI**. The **Create AMI** pane displays. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (730).png" alt=""><figcaption><p><strong>Create AMI</strong> pane</p></figcaption></figure></div>
 4.  Complete the following fields:

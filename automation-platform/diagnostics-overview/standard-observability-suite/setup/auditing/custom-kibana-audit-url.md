@@ -10,8 +10,7 @@ DuploCloud provides a default Kibana URL for viewing audit logs, but if you want
 
 1. Log in to the **DuploCloud Portal**.
 2. Navigate to **Administrator** -> **System Settings** -> **System Config**.
-3.  Click **Add**. The **Add Config** pane displays.\
-
+3.  Click **Add**. The **Add Config** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (358).png" alt=""><figcaption><p>The <strong>Add Config</strong> pane</p></figcaption></figure></div>
 4. In the **Config Type** list box, select `AppConfig`.

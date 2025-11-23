@@ -26,7 +26,7 @@ GRC tools monitor compliance but do not implement the controls needed to maintai
 
 **Evidence for Auditors**: DuploCloud generates detailed, audit-ready evidence for cloud infrastructure compliance. This evidence can be used directly by auditors or integrated with GRC tools to simplify compliance reporting.
 
-For more information about how DuploCloud supports compliance, see the [Security and Compliance Workflow](../security-and-compliance/security-and-compliance-workflow.md).&#x20;
+For more information about how DuploCloud supports compliance, see the [Security and Compliance Workflow](security-and-compliance-workflow.md).&#x20;
 
 ## Do I Need a GRC Tool if I Use DuploCloud?
 
@@ -36,4 +36,4 @@ If your main goal is ensuring your cloud infrastructure meets compliance standar
 
 For external-facing compliance activities, such as preparing for audits and certifications like SOC 2, a GRC tool may be essential. These tools systematically and continuously monitor controls across organizational areas, including IT and HR, that are critical for certifications and beyond DuploCloud’s scope. They provide real-time pass/fail insights, offering immediate visibility into compliance status as changes are made to organization, practices, or infrastructure. This makes evidence collection and audit coordination much more efficient than manual tracking.
 
-Most customers use DuploCloud in conjunction with GRC tools, but some choose to manage their cloud infrastructure controls with DuploCloud while handling audits manually. This approach requires significant effort, including manually collecting evidence via spreadsheets and coordinating directly with the auditor.\
+Most customers use DuploCloud in conjunction with GRC tools, but some choose to manage their cloud infrastructure controls with DuploCloud while handling audits manually. This approach requires significant effort, including manually collecting evidence via spreadsheets and coordinating directly with the auditor.<br>

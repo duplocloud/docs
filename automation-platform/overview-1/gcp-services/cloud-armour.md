@@ -15,14 +15,12 @@ Before you can use DuploCloud with Cloud Armour, define a Security Policy in the
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Plan**. The **Plans** page displays.
 2. From the Name column, select the Plan that corresponds to your Infrastructure. When you create a DuploCloud Infrastructure, a Plan is created with the same name.
 3. Click the **Security Policy** tab.
-4.  Click **Add**. The **Add Security Policy** pane displays.\
-
+4.  Click **Add**. The **Add Security Policy** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/add-qa-deny-security-policy.png" alt=""><figcaption></figcaption></figure></div>
 5. In the **Name** field, enter an appropriate name for the Security Policy. This is the name used in the DuploCloud portal. It is convenient to keep it the same as the **Security Policy ID**, but not required.
 6. In the **Security Policy ID** field, enter the name of your GCP Cloud Armour Security Policy. This is the name used in the GCP console.
-7.  Click **Create**. The Security Policy that you specified is displayed in the **Security Policy** tab.\
-
+7.  Click **Create**. The Security Policy that you specified is displayed in the **Security Policy** tab.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/CA2.png" alt=""><figcaption><p><strong>Security Policy</strong> tab on the DuploCloud <strong>Nonprod Plan</strong> page</p></figcaption></figure></div>
 
@@ -33,8 +31,7 @@ Now that the Cloud Armour Security Policy has been defined in your DuploCloud Pl
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services** or **Docker** -> **Services**.
 2. Select the Service to which your Load Balancer is attached.
 3. Click the **Load Balancer** tab.
-4.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.\
-
+4.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/CA3.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> pane with <strong>Security Policy</strong> selected</p></figcaption></figure></div>
 5. From the Security Policy list box, select the [Security Policy you added in the previous step](cloud-armour.md#adding-a-security-policy-in-the-duplocloud-plan).
@@ -53,14 +50,12 @@ To change your Cloud Armour configuration to use a different security policy, ed
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**. The **Plans** page displays.
 2. From the **Name** column, select the Plan that corresponds to your Infrastructure.
-3.  Click the **Security Policy** tab.\
-
+3.  Click the **Security Policy** tab.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/GCPS1.png" alt=""><figcaption><p>Plan <strong>Security Policy</strong> tab</p></figcaption></figure></div>
 
 
-4.  In the row listing your security policy, click the Edit Icon ( <img src="../../../.gitbook/assets/square_edit_icon (5).png" alt="" data-size="line"> ) to change the Security Policy ID. The **Update Security Policy** pane displays.\
-
+4.  In the row listing your security policy, click the Edit Icon ( <img src="../../../.gitbook/assets/square_edit_icon (5).png" alt="" data-size="line"> ) to change the Security Policy ID. The **Update Security Policy** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/GCPS2.png" alt=""><figcaption><p><strong>Update Security Policy</strong> pane</p></figcaption></figure></div>
 

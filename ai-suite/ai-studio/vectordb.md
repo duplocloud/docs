@@ -53,8 +53,7 @@ To integrate a DuploCloud-managed VectorDB (Chroma or MilvusDB), add and then de
 #### Adding a Managed VectorDB&#x20;
 
 1. In the DuploCloud Platform, navigate to **AI Suite** → **Studio** → **VectorDBs**.
-2.  Click **Add**. The **Add Vector Database** pane displays.\
-
+2.  Click **Add**. The **Add Vector Database** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (476).png" alt=""><figcaption><p>The <strong>Add Vector Database</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 3. Complete the following fields:
@@ -96,8 +95,7 @@ Upload your source documents or data files to your AWS S3 storage to make your f
 1. In the DuploCloud portal, go to **AI Suite** → **Studio** → **Vector DBs**.
 2. Select the VectorDB you want to upload files to from the **NAME** column.
 3. Select the **Uploaded Files** tab.
-4.  Click **Browse**. This will open your AWS S3 console where you can select the files you want to upload.\
-
+4.  Click **Browse**. This will open your AWS S3 console where you can select the files you want to upload.<br>
 
     <figure><img src="../../.gitbook/assets/Screenshot (482) (1).png" alt=""><figcaption><p>The AWS S3 Console </p></figcaption></figure>
 5. Select the files to upload (**Click Upload Files** → **Add File**, select your file(s), and click **Open**).
@@ -112,8 +110,7 @@ Ingesting transforms your uploaded files into vector representations.&#x20;
 1. In the DuploCloud portal, go to **AI Suite** → **Studio** → **Vector DBs**.
 2. Select the **Uploaded Files** tab.
 3. Click the checkbox(s) to select one or more files you want to ingest.
-4.  Click **Ingest**. The **Trigger Build** pane displays.\
-
+4.  Click **Ingest**. The **Trigger Build** pane displays.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (485).png" alt="" width="420"><figcaption><p>The <strong>Trigger Build</strong> pane</p></figcaption></figure></div>
 5. Configure the fields as needed:
@@ -122,8 +119,7 @@ Ingesting transforms your uploaded files into vector representations.&#x20;
    * **Custom Meta Data (Optional):** Use key-value pairs to customize how the ingestion job processes your data. Common options include:
      * `chunk_size`: Size of each text chunk in characters (e.g., `1000`).
      * `chunk-overlap`: Number of overlapping characters between chunks (e.g., `100`).
-6.  Click **Submit** to trigger the ingestion job. Monitor the ingestion status on the **Ingested Jobs** tab.\
-
+6.  Click **Submit** to trigger the ingestion job. Monitor the ingestion status on the **Ingested Jobs** tab.<br>
 
     <figure><img src="../../.gitbook/assets/Screenshot (489).png" alt=""><figcaption><p><strong>Ingested Jobs</strong> tab in the DuploCloud Platform</p></figcaption></figure>
 
@@ -133,17 +129,14 @@ After uploading and ingesting documents into a VectorDB, you can monitor the sta
 
 * In the DuploCloud portal, go to **AI Suite** → **Studio** → **Vector DBs**.
 * Select the **Ingestion Jobs** tab.
-*   Click the **menu icon** (<img src="../../.gitbook/assets/menu icon (2) (1).avif" alt="" data-size="line">) next to the job you want to inspect.\
-
+*   Click the **menu icon** (<img src="../../.gitbook/assets/menu icon (2) (1).avif" alt="" data-size="line">) next to the job you want to inspect.<br>
 
     <figure><img src="../../.gitbook/assets/ingestion jobs1.png" alt=""><figcaption><p>The <strong>Ingestion Jobs</strong> tab with the <strong>Logs</strong> and <strong>Details</strong> menu options highlighted</p></figcaption></figure>
 * Choose one of the following options:
-  *   **Logs:** View output that includes source file paths, chunking progress, chunk IDs, and any success or error messages.\
-
+  *   **Logs:** View output that includes source file paths, chunking progress, chunk IDs, and any success or error messages.<br>
 
       <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (491).png" alt="" width="563"><figcaption><p>The <strong>Logs</strong> for an ingested job</p></figcaption></figure></div>
-  *   **Details:** Open a structured JSON summary showing VectorDB type and provider, API endpoint, file paths ingested, output directory, chunking configuration, embedding model, and other technical metadata.\
-
+  *   **Details:** Open a structured JSON summary showing VectorDB type and provider, API endpoint, file paths ingested, output directory, chunking configuration, embedding model, and other technical metadata.<br>
 
       <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (492).png" alt="" width="563"><figcaption><p>The <strong>Details</strong> for an ingested job</p></figcaption></figure></div>
 

@@ -25,8 +25,7 @@ Before creating your DuploCloud Load Balancer, ensure that:
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2. On the **Services** page, select the **nginx-service** you created.
 3. Select the **Load Balancers** tab.
-4.  Click **Add**. The **Add Load Balancer Listener** pane displays.\
-
+4.  Click **Add**. The **Add Load Balancer Listener** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Azure_GS_LBL_1.png" alt=""><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane<br></p></figcaption></figure></div>
 5. Fill the fields as shown in the following tables. Leave any default values for fields not specified.&#x20;
@@ -71,18 +70,15 @@ The Ingress object communicates with the Kubernetes NodePort that your Load Bala
 3. In the **Ingress Name** field, type `viewwebsite`.
 4. In the **Ingress Controller** list box, select **azure-application-gateway**.
 5. In the **Visibility** list box, select **Public**.
-6.  Click **Add Rule**. The **Add Ingress Rule** pane displays.\
-
+6.  Click **Add Rule**. The **Add Ingress Rule** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/ingress repaired.png" alt=""><figcaption></figcaption></figure>
 7. In the **Path** field, type **/** (forward-slash).
 8. In the **Service Name** field, select **nginx-service:80**.&#x20;
-9.  Click **Add Rule** to add the rule and to close the **Add Ingress Rule** pane. You should be back to viewing the **Add Kubernetes Ingress** page.\
-
+9.  Click **Add Rule** to add the rule and to close the **Add Ingress Rule** pane. You should be back to viewing the **Add Kubernetes Ingress** page.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Azure_GS_Ingressaddrule.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
-10. On the **Add Kubernetes Ingress** page, click **Add** to add Ingress. On the **Ingress** page, the **VIEWWEBSITE** Ingress that you defined, with an **Ingress Class** of **azure-application-gateway**, displays.\
-
+10. On the **Add Kubernetes Ingress** page, click **Add** to add Ingress. On the **Ingress** page, the **VIEWWEBSITE** Ingress that you defined, with an **Ingress Class** of **azure-application-gateway**, displays.<br>
 
     <figure><img src="../../../.gitbook/assets/goodingress.png" alt=""><figcaption><p> <strong>Ingress</strong> page displaying <strong>VIEWWEBSITE</strong> Ingress</p></figcaption></figure>
 

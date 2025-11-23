@@ -33,21 +33,18 @@ Only administrators can create permanent API tokens. Permanent tokens are always
 ### Creating a Permanent API token
 
 1. In the DuploCloud Portal, navigate to **Administrator -> Users**.&#x20;
-2.  Click the **Username** in the list. The user's page displays. \
-
+2.  Click the **Username** in the list. The user's page displays. <br>
 
     <figure><img src="../../.gitbook/assets/permapi.png" alt=""><figcaption><p><strong>Users</strong> page with <strong>Tokens</strong> tab</p></figcaption></figure>
 
 
 3. Click the **Tokens** tab.
-4.  Click **Add**. The **Create a new toke**n pane displays.\
-
+4.  Click **Add**. The **Create a new toke**n pane displays.<br>
 
     <div align="left"><img src="../../.gitbook/assets/Screen Shot 2022-02-24 at 2.27.12 PM.png" alt="Create a new token pane"></div>
 
 
-5.  Create a meaningful **Token Name** and click **Create**—a window containing the token displays.\
-
+5.  Create a meaningful **Token Name** and click **Create**—a window containing the token displays.<br>
 
     ![Window with Token and Copy button](<../../.gitbook/assets/Screen Shot 2022-02-24 at 2.29.53 PM.png>)
 
@@ -74,8 +71,7 @@ You can configure DuploCloud system settings to generate faults and send notific
 #### **Sending automatic notifications when API tokens are near expiration:**
 
 1. From the DuploCloud portal, navigate to **Administrator** -> **Systems Settings**. Select the **Config** tab, and click **Add.**&#x20;
-2.  For **Config Type,** select **App Config;** for **Key**, select **User Token Expiration Notification Emails;** and in the **Value** field, enter the **user email addresses** (separated by semicolons) to which notification emails will be sent. \
-
+2.  For **Config Type,** select **App Config;** for **Key**, select **User Token Expiration Notification Emails;** and in the **Value** field, enter the **user email addresses** (separated by semicolons) to which notification emails will be sent. <br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/token ex email.png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to send a notification email when API tokens will expire in 15 days. </p></figcaption></figure></div>
 3. Click **Submit**. DuploCloud will email the listed email address(es) when an API token is set to expire in a set number of days.

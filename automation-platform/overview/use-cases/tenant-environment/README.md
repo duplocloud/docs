@@ -13,8 +13,7 @@ For more information about DuploCloud Tenants, see the [Tenants](../../../../int
 1. Navigate to **Administrator** -> **Tenant** in the DuploCloud Portal and click **Add**. The **Create a Tenant** pane displays.
 2. In the **Name** field, enter a name for the Tenant. Choose unique names that are not substrings of one another, for example, if you have a Tenant named `dev`, you cannot create another named `dev2`. We recommend using distinct numerical suffixes like `dev01` and `dev02`.
 3. In the **Plan** list box, select the Plan to associate the Tenant with.&#x20;
-4.  Click **Create**. The Tenant is created. \
-
+4.  Click **Create**. The Tenant is created. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/create a Tenant.png" alt=""><figcaption><p>The <strong>Create a Tenant</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 

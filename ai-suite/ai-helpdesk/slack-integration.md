@@ -21,8 +21,7 @@ Configuring permissions lets AI Agents assume specific user identities for prope
 1. Navigate to **Administrator** ->**Tenants**.
 2. Select the **Tenant** name from the **NAME** column.
 3. Select the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane appears.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane appears.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (995).png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. In the **Select Feature** list, choose **Other**.
@@ -58,8 +57,7 @@ Once your Ticket is created, you can manage the Ticket and interact with the AI 
 Updating Ticket context lets you change the Portal, Tenant, Agent, or Default Permissions for your Ticket mid-conversation, without starting over. This ensures the AI Agent is always working with the correct environment and permissions.
 
 1. From the Ticket Slack thread, click the **menu icon** (<img src="../../.gitbook/assets/Screenshot (991).png" alt="" data-size="line">) and select **Update Context**.
-2.  Modify any of the following: **Portal**, **Tenant**, **Agent**, or **Permission**s.\
-
+2.  Modify any of the following: **Portal**, **Tenant**, **Agent**, or **Permission**s.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/Update Ticket screen.png" alt="" width="563"><figcaption></figcaption></figure></div>
 3. When updating the **Portal** or **Tenant**, specify the **Share Thread Context** and add a **New Message**, if needed:
@@ -77,8 +75,7 @@ Updating Ticket context lets you change the Portal, Tenant, Agent, or Default Pe
 
 Some operations may require direct Helpdesk access. Opening a ticket in the Helpdesk gives you access to the full interface in the correct portal, allowing you to perform advanced operations not available in Slack.
 
-1.  In your Slack thread, click **Open AI HelpDesk**.\
-
+1.  In your Slack thread, click **Open AI HelpDesk**.<br>
 
     <div align="left"><figure><img src="../../.gitbook/assets/helpdesk (1).png" alt="" width="563"><figcaption><p><strong>Open</strong> <strong>AI HelpDesk</strong> button in Slack</p></figcaption></figure></div>
 2. The Ticket opens in HelpDesk in the correct Portal, where you can view details, manage actions, and access additional HelpDesk features. For more information about using HelpDesk, see the [AI HelpDesk documentation](./).

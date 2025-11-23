@@ -47,8 +47,7 @@ After the upgrade process completes successfully, you can assign allocation tags
 
 1. Click **Administrator** -> **Infrastructure.**
 2. Select the Infrastructure with components you want to upgrade.
-3.  Select the **EKS** tab. If an upgrade is available for the Infrastructure components, an **Upgrade Components** link appears in the **Value** column.\
-
+3.  Select the **EKS** tab. If an upgrade is available for the Infrastructure components, an **Upgrade Components** link appears in the **Value** column.<br>
 
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-13_23_09.png" alt=""><figcaption><p>EKS tab with component <strong>Upgrade</strong> available</p></figcaption></figure>
 4. Click the **Upgrade** link. The **Upgrade EKS Cluster** **Components** pane displays.

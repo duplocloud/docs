@@ -9,8 +9,7 @@ Amazon Elastic Container Registry (ECR) is a fully managed Docker container regi
 ## Creating an ECR Repository <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage**.
-2.  Click the **ECR Repository** tab. The **ECR Repository** page displays.\
-
+2.  Click the **ECR Repository** tab. The **ECR Repository** page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/L3.png" alt="" width="357"><figcaption><p>The <strong>Create an ECR Repository</strong> pane</p></figcaption></figure></div>
 3. Click **Add**. The **Create an ECR Repository** page displays.
@@ -31,8 +30,7 @@ Refer to the [AWS Documentation](https://docs.aws.amazon.com/AmazonECR/latest/us
 2. Navigate to **Cloud Services** -> **Storage** in the DuploCloud Portal.
 3. Select the **ECR Repository** tab.
 4. In the row of the ECR repository you want to delete, click the menu icon (<img src="../../../../.gitbook/assets/menu icon (3).avif" alt="" data-size="line">).
-5.  Select **Update Settings**. The **Update ECR Repository Settings** pane displays.\
-
+5.  Select **Update Settings**. The **Update ECR Repository Settings** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (26).png" alt="" width="401"><figcaption><p>The <strong>Update ECR Repository Settings</strong> pane</p></figcaption></figure></div>
 6. Enable or disable **Image Tag Immutability** and **Scan Image On Push** settings as needed.&#x20;

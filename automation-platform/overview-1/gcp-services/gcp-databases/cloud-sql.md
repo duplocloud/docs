@@ -9,8 +9,7 @@ DuploCloud supports creating and managing Cloud SQL databases in Google Cloud Pl
 ## Creating a Cloud SQL database
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud SQL**.
-2.  Click **Add**. The **Add SQL DB** page displays. \
-
+2.  Click **Add**. The **Add SQL DB** page displays. <br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (843).png" alt=""><figcaption><p><strong>Add SQL DB</strong> page in the DuploCloud Portal</p></figcaption></figure>
 3.  Complete the fields as required.

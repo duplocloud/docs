@@ -30,8 +30,7 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 You can verify that ECS logging is enabled for a specific container.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **ECS**.
-2.  In the **Task Definitions** tab, select the **Task Definition Family Name** in which your container is defined. \
-
+2.  In the **Task Definitions** tab, select the **Task Definition Family Name** in which your container is defined. <br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-12_37_06.png" alt=""><figcaption><p>The Task Definition Family Name detail page with <strong>Task Definitions</strong> tab selected</p></figcaption></figure></div>
 3. Click the **Task Definitions** tab.

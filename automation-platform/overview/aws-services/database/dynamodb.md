@@ -10,8 +10,7 @@ When you write application code for DynamoDB in DuploCloud AWS, use the IAM role
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database.**
 2. Select the **DynamoDB** tab.
-3.  Click **Add**. The **Create a DynamoDB Table** pane displays.\
-
+3.  Click **Add**. The **Create a DynamoDB Table** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (480) (1).png" alt="" width="368"><figcaption><p>The <strong>Create a DynamoDB Table</strong> pane<br></p></figcaption></figure></div>
 4. Specify the DynamoDB name in the **Table Name** field, and complete the other required fields (**Primary Key**, **Key Type**, and **Attribute Type**).

@@ -17,8 +17,7 @@ To enable Host sharing, configure one Tenant to share its Hosts, and another Ten
 1. In the DuploCloud Portal, go to **Administrator** → **Tenant**.
 2. From the Tenant list box, select the Tenant that will share its Host.
 3. Click the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (482).png" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** list, select **Allow hosts to run K8S pods from other tenants**.
@@ -29,8 +28,7 @@ To enable Host sharing, configure one Tenant to share its Hosts, and another Ten
 1. In the DuploCloud Portal, go to **Administrator** → **Tenant**.
 2. Select the Tenant that will run Pods on the shared Host.
 3. Click the **Settings** tab.
-4.  Click **Add**. The **Add Tenant Feature** pane displays.\
-
+4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (483).png" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** list, select **Enable option to run K8S pods on any host**.
@@ -44,12 +42,10 @@ After configuring Tenant settings to allow Host sharing, create the resources yo
 
 1. From the Tenant list, select the Tenant that will run Pods on the Shared Host.
 2. Go to **Kubernetes → Services**.
-3.  Click **Add**. The **Add Service** page displays.\
-
+3.  Click **Add**. The **Add Service** page displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (153).png" alt=""><figcaption><p>The <strong>Add Service</strong> page</p></figcaption></figure>
-4.  Fill in the **Service Name**, **Cloud**, **Platform**, and **Docker Image** fields. Click **Next**.\
-
+4.  Fill in the **Service Name**, **Cloud**, **Platform**, and **Docker Image** fields. Click **Next**.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (154).png" alt=""><figcaption><p>The <strong>Add Service</strong> <strong>Advanced Options</strong> page</p></figcaption></figure>
 5. Enable **Run on Any Host**.

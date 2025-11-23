@@ -11,8 +11,7 @@ Enable and access shells for your DuploCloud Docker, EKS, and ECS containers dir
 ### Enabling the Shell for Docker&#x20;
 
 1. In the DuploCloud Portal, navigate to **Docker** -> **Services**.&#x20;
-2.  From the **Docker** list box, select **Enable Docker Shell**. The **Start Shell Service** pane displays.\
-
+2.  From the **Docker** list box, select **Enable Docker Shell**. The **Start Shell Service** pane displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (169) (1).png" alt=""><figcaption><p>The <strong>Services</strong> page with the <strong>Enable Docker Shell</strong> option highlighted</p></figcaption></figure>
 
