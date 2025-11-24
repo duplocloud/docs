@@ -8,12 +8,8 @@ Applications are written involving many AWS Services like S3 for Object Store, R
 
 Using DuploCloud you can pretty much create any service within the Tenant using basic app-centric inputs while the platform will make sure the lower-level nuances are programmed to best practices for security and compliance.&#x20;
 
-## Exposing Services to multiple Tenants (Cross-tenant Access)
-
-Every service within the Tenant will automatically be reachable to any application running within that tenant. If you need to expose some service from one Tenant to another, see [Allow Cross-tenant Access](../../access-control/tenant-access/cross-tenant-access.md).
-
 {% hint style="info" %}
-DuploCloud adds new AWS services to the platform on almost a weekly basis, if a certain service is not documented here please contact the DuploCloud Team. Even if the feature is currently available, the DuploCloud team will enable the feature in a matter of days.
+DuploCloud adds new AWS services to the platform frequently. If a certain service is not documented here please contact the DuploCloud Team. Often new features can be enabled in a matter of days.&#x20;
 {% endhint %}
 
 ## Supported Services for DuploCloud AWS
