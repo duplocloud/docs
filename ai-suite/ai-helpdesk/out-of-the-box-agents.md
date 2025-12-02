@@ -2,7 +2,7 @@
 description: An overview of DuploCloud's pre-built AI Agents
 ---
 
-# Out of the Box Agents
+# Agents
 
 DuploCloud AI Suite includes several Prebuilt, production-ready Agents that handle common DevOps and infrastructure management tasks. These Agents integrate seamlessly with your existing DuploCloud infrastructure and can be deployed immediately to automate routine operations and troubleshooting workflows.
 
@@ -53,7 +53,7 @@ Here’s a quick look at the Kubernetes AI Agent in action.
 
 {% embed url="https://drive.google.com/file/d/1GNhFXxoW5j0LtLqNSxLguhutb9mlBBtd/view?usp=drive_link" %}
 
-### Observability Agent - Coming Soon
+### Observability Agent
 
 The Observability Agent provides intelligent monitoring and troubleshooting capabilities through integration with your observability stack. It is currently optimized for OpenTelemetry-based environments using Grafana and helps teams quickly identify and resolve application performance issues.
 
@@ -105,7 +105,7 @@ Watch the Observability Agent in action below.&#x20;
 
 {% embed url="https://drive.google.com/file/d/1fAu6hrzAsTuJBhdzuhb9C4uyjzsRKQms/view?usp=drive_link" %}
 
-### CI/CD Agent - Coming Soon
+### CI/CD Agent
 
 The CI/CD Agent automates pipeline troubleshooting and failure resolution across your continuous integration and deployment workflows. Available for both Jenkins and GitHub Actions, this agent proactively engages when pipeline failures occur and provides intelligent assistance for resolution.
 
@@ -282,7 +282,7 @@ The PrivateGPT Agent provides a secure, enterprise-grade ChatGPT-like experience
 
 </details>
 
-### Database Explorer Agent - Coming Soon
+### Database Explorer Agent
 
 The Database Explorer Agent provides secure, controlled access to database operations through pre-defined query templates. This agent enables non-technical teams to access database information safely without SQL knowledge or direct database access.
 
