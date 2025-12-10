@@ -164,7 +164,7 @@
       * [AWS ElastiCache](automation-platform/overview/aws-services/database/elastic-cache.md)
       * [AWS DynamoDB database](automation-platform/overview/aws-services/database/dynamodb.md)
       * [AWS Timestream database](automation-platform/overview/aws-services/database/timestream-database.md)
-      * [RDS database](automation-platform/overview/aws-services/database/rds-database/README.md)
+      * [RDS database](aws-user-guide/aws-services/database/rds-database/README.md)
         * [IAM authentication](automation-platform/overview/aws-services/database/rds-database/iam-authentication.md)
         * [Backup and restore](automation-platform/overview/aws-services/database/rds-database/backup-and-restore.md)
         * [Sharing encrypted database](automation-platform/overview/aws-services/database/rds-database/sharing-encrypted-database.md)

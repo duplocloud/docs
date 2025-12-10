@@ -94,14 +94,14 @@ General
   * Support for [taints with EKS Hosts or Agent Pools](../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
   * [Download inventory reports of all AWS resources](/broken/pages/13ttpomLPJ9isKgMRgge) (for StateRAMP compliance).
   * Support for [Lambda JAR with S3](../automation-platform/overview/aws-services/lambda/#id-3-toc-title).
-  * Support for aurora-iopt1 storage type in [Aurora RDS](../automation-platform/overview/aws-services/database/rds-database/#id-0-toc-title).
+  * Support for aurora-iopt1 storage type in [Aurora RDS](../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
   * Force delete and update settings options added for [ECR repositories](../automation-platform/overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).&#x20;
-  * Select and update [Certificate Authorities for RDS instances](../automation-platform/overview/aws-services/database/rds-database/#managing-rds-certificate-authorities).
-  * Specify an initial database during [RDS instance creation](../automation-platform/overview/aws-services/database/rds-database/#id-0-toc-title).
+  * Select and update [Certificate Authorities for RDS instances](../aws-user-guide/aws-services/database/rds-database/#managing-rds-certificate-authorities).
+  * Specify an initial database during [RDS instance creation](../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
   * Support for [serverless Kafka clusters](../automation-platform/overview/aws-services/kafka-cluster.md#creating-a-kafka-cluster) for AWS users.
   * [Disable AWS JIT access for non-admin users](../automation-platform/overview/use-cases/jit-access.md#disabling-jit-access-for-non-admin-users).
   * Support for configuring [S3 bucket replication rules](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/~/changes/1184/overview/aws-services/s3-bucket/~/overview#s3-bucket-replication-rules).
-  * Update [RDS Performance Insights](../automation-platform/overview/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).
+  * Update [RDS Performance Insights](../aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).
   * Update [ECR repository settings](../automation-platform/overview/aws-services/elastic-container-registry-ecr/).&#x20;
   * [Enable delete protection for AWS Load Balancers.](../automation-platform/overview/aws-services/load-balancers/#additional-load-balancer-settings)
   * Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
@@ -381,7 +381,7 @@ General
 ## November 2022
 
 * [Ability to add Path-Based Routing rules](../automation-platform/overview/aws-services/load-balancers/#2d32): Configure path-based routing rules for application load balancers.
-* [Support for Aurora Serverless V2](../automation-platform/overview/aws-services/database/rds-database/#create-aurora-serverless-v2-cluster-database): User can create and manage Aurora Serverless V2 RDS.
+* [Support for Aurora Serverless V2](../aws-user-guide/aws-services/database/rds-database/#create-aurora-serverless-v2-cluster-database): User can create and manage Aurora Serverless V2 RDS.
 * [Billing License Usage](../automation-platform/overview/use-cases/cost-management/duplocloud-license-usage.md): Overview of DuploCloud License Usage according to current service usage.
 
 ## October 2022
