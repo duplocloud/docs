@@ -45,7 +45,7 @@ The platform is composed of two main components:
 Users can interface directly with the automation tools without going through the AI functionality using the APIs, Terraform provider, CLI and Browser workflows.
 {% endhint %}
 
-<figure><img src=".gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 
 

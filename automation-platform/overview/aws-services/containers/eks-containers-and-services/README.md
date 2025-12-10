@@ -29,7 +29,7 @@ For a Native Docker Services example, see [this tutorial](../../../quick-start/q
 1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
 2.  Select **All** to view all Services or **Select App** to view Services by **App Name** (this option is only available when one or more Services were created with an App Name).<br>
 
-    <div align="left"><figure><img src="../../../../../.gitbook/assets/image (480) (1) (1).png" alt=""><figcaption><p><strong>Kubernetes - Services</strong> page with the <strong>Select App</strong> list box<br></p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../../.gitbook/assets/image (480) (1).png" alt=""><figcaption><p><strong>Kubernetes - Services</strong> page with the <strong>Select App</strong> list box<br></p></figcaption></figure></div>
 3. Select the Service from the **NAME** column. The Service details page displays.
 4. Click **Actions** to choose from the following options:
 

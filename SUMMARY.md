@@ -518,6 +518,7 @@
   * [SSO Configuration](automation-platform/access-control/sso-configuration/README.md)
     * [Microsoft Entra ID SSO Configuration](automation-platform/access-control/sso-configuration/azure-ad-as-idp.md)
     * [Okta Identity Management](automation-platform/access-control/sso-configuration/okta-identity-management.md)
+    * [Okta Management Settings](automation-platform/access-control/sso-configuration/okta-management-settings.md)
   * [Login Banner/Button Customization](automation-platform/access-control/login-banner-customization.md)
   * [Multiple Portal Login Options](automation-platform/access-control/multiple-portal-login-options.md)
 * [Observability](automation-platform/diagnostics-overview/README.md)
