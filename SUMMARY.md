@@ -502,6 +502,7 @@
     * [Katkit config](automation-platform/introduction-to-ci-cd/katkit/katkit-config.md)
     * [Advanced functions](automation-platform/introduction-to-ci-cd/katkit/advanced-functions.md)
   * [ArgoCD](automation-platform/introduction-to-ci-cd/argocd.md)
+  * [Argo Workflows](automation-platform/introduction-to-ci-cd/argo-workflows.md)
 * [User Administration](automation-platform/access-control/README.md)
   * [User Logins](automation-platform/access-control/user-logins.md)
   * [User access to DuploCloud](automation-platform/access-control/add-edit-or-delete-a-user.md)
