@@ -57,6 +57,6 @@ Before creating a Kubernetes Job or CronJob to run on a Shared Host, [configure 
 
 Once Host sharing is enabled:
 
-1. Follow the steps in the DuploCloud documentation to [create a Kubernetes Job](../../../kubernetes-overview/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [create a Kubernetes CronJob](../../../kubernetes-overview/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).
+1. Follow the steps in the DuploCloud documentation to [create a Kubernetes Job](../../../kubernetes-overview/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [create a Kubernetes CronJob](../../../../kubernetes/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).
 2. On the **Add Kubernetes Job** or **Add Kubernetes CronJob** page, enable the **Run on Any Host** option.
 3. Click **Create** to deploy the Job or CronJob on a Shared Host.
