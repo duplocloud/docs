@@ -16,7 +16,7 @@ Create a [snapshot ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER
 
 ## Restoring a snapshot <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
-Once backups are available, you can restore them on the next instance creation when you [create an RDS](./#0-toc-title).
+Once backups are available, you can restore them on the next instance creation when you [create an RDS](../../../../../aws-user-guide/aws-services/database/rds-database/#0-toc-title).
 
 <figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_24_36.png" alt=""><figcaption><p><strong>Create a RDS</strong> page with <strong>Create from Snapshot</strong> option</p></figcaption></figure>
 

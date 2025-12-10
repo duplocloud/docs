@@ -20,31 +20,14 @@ When upgrading RDS versions, use the AWS Console and see your Cloud Provider for
 ## Creating an RDS database <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
-2.  Click **Add**. The **Create a RDS** page displays.<br>
+2. Click **Add**. The **Create a RDS** page displays.
 
-    <figure><img src="../../../../../.gitbook/assets/RDS create.png" alt=""><figcaption><p>The <strong>Create a RDS</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot (412).png" alt=""><figcaption><p>The <strong>Create a RDS</strong> page in the DuploCloud Portal</p></figcaption></figure>
+
 3. Complete the following fields:
-   * **RDS Name**: Enter a unique name for the RDS instance. DuploCloud suggests using the Tenant name as a prefix, e.g., `tenantname-db`_._
-   * **Create from Snapshot (Optional)**: Select an existing snapshot to restore from if applicable.
-   * **RDS Engine**: Choose the database engine (e.g., MySQL, PostgreSQL, MariaDB).
-   * **RDS Engine Version**: Select the engine version.
-   * **Encryption Key (Optional)**: Select an encryption key if needed for encryption at rest.
-   * **Storage Type (Optional)**: Choose the storage type (e.g., General Purpose SSD, Provisioned IOPS).
-   * **Storage Size in GB** **(Optional)**: Specify the storage size in GiB. _(Minimum: 20 GiB, Maximum: 65,536 GiB.)_
-   * **RDS Instance Size**: Choose an instance type based on performance needs.
-   * **DB Parameter Group (Optional)**: Select a custom database parameter group if needed.
-   * **DB Subnet Group (Optional)**: Choose a subnet group for the database network configuration.
-   * **Backup Retention Period in Days**: Enter a retention period between **1 and 35** days.
-   * **User Name**: Enter the database username. (Required)
-   * **User Password**: Enter a secure password for the database. (Required)
-   * Optionally, select **Enable Performance Insights.**
-   * **Performance Insights Retention in Days (Optional)**: Enter the retention period for Performance Insights data. (Default: 7 days, Maximum: 731 days.)
-   * **Performance Insights Encryption (Optional)**: Select an encryption key for encrypting Performance Insights data. (If not specified, AWS will use the default key.)
-   * **Enable Additional Features (Optional):**
-     * **Enable IAM Auth**
-     * **Store Credentials in Secrets Manager**
-     * **Enable Multi-AZ**
-     * **Enable Logging**
+
+<table data-header-hidden><thead><tr><th width="309.111083984375"></th><th></th></tr></thead><tbody><tr><td><strong>RDS Name</strong></td><td>Please provide a unique identifier for the RDS instance that is unique across all Tenants.</td></tr><tr><td><strong>Create from Snapshot</strong> <em>(Optional)</em></td><td>Select this when you want to create RDS instance from existing Snapshot.</td></tr><tr><td><strong>RDS Engine</strong></td><td>Select Database engine for creating RDS instance.</td></tr><tr><td><strong>RDS Engine Version</strong></td><td>Select database engine version. If not selected latest version will be used while creating database. Select type as 'Other' if you don't see desired option in dropdown list.</td></tr><tr><td><strong>Encryption Key</strong> <em>(Optional)</em></td><td>Choose to encrypt the given instance.</td></tr><tr><td><strong>RDS Instance Size</strong></td><td>Instance size for RDS. Select type as 'Other' if you don't see desired option in dropdown list.</td></tr><tr><td><strong>Backup Retention Period in Days</strong></td><td>Specify in days for automated backups. Valid values 1-35. (Optional). If not specified, by default Backup Retention Day would be set as 1.</td></tr><tr><td><strong>Availability Zone Master/Primary</strong> <em>(Optional)</em></td><td>Select an Availability Zone (AZ).</td></tr><tr><td><strong>Certificate Authority</strong></td><td>Select Certificate authority.</td></tr><tr><td><strong>User Name</strong></td><td>Specify an alphanumeric string that defines the login ID for the master user. </td></tr><tr><td><strong>User Password</strong></td><td>Specify a string that defines the password for the master user. Master Password must be at least eight characters long and listed characters are accepted <code>[a-z] [A-Z] [0-9] [- * ! $ % &#x26;]</code>.</td></tr><tr><td><strong>Storage Type</strong> <em>(Optional)</em></td><td>Select the Storage Type: e.g., <strong>Default</strong>, <strong>magnetic (standard)</strong>, <strong>gp2</strong>, <strong>gp3</strong>, <strong>io1</strong>. Default is <strong>gp3</strong>.</td></tr><tr><td><strong>Storage size in GB</strong> <em>(Optional)</em></td><td>Storage allocation for RDS instance in GB.</td></tr><tr><td><strong>DB Name</strong> <em>(Optional)</em></td><td>Specify a name for your Database.</td></tr><tr><td><strong>DB Parameter Group</strong> <em>(Optional)</em></td><td>Database parameters group name.</td></tr><tr><td><strong>DB Subnet Group</strong> <em>(Optional)</em></td><td>Choose a DB subnet group.</td></tr><tr><td><strong>Store Credentials in Secrets Manager</strong></td><td>Enable to store RDS password in AWS Secret Manager.</td></tr><tr><td><strong>Enable MultiAZ</strong></td><td>Enable Multi Availability Zone.</td></tr><tr><td><strong>Enable Logging</strong></td><td>Select to enable logging for the RDS instance.</td></tr><tr><td><strong>Enable Performance Insights</strong></td><td>Enable Performance Insights.</td></tr></tbody></table>
+
 4. Click **Create** to provision the RDS database.
 
 ## Creating an Aurora Serverless V2 Cluster database
@@ -85,10 +68,10 @@ Once you create the database, select it and use the **Instances** tab to view th
 
 For databases you intend to make publicly available, ensure proper security measures, including broad accessibility, are in place to protect your data.
 
-<figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_18_36.png" alt=""><figcaption><p>The <strong>Instances</strong> tab on the <strong>RDS</strong> details page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_18_36.png" alt=""><figcaption><p>The <strong>Instances</strong> tab on the <strong>RDS</strong> details page</p></figcaption></figure>
 
 {% hint style="info" %}
-Pass the endpoint, name, and credentials to your application [using environment variables](../../containers/passing-config-and-secrets.md) for maximum security.
+Pass the endpoint, name, and credentials to your application [using environment variables](../../../../automation-platform/overview/aws-services/containers/passing-config-and-secrets.md) for maximum security.
 {% endhint %}
 
 ## Updating performance insights for an existing RDS
