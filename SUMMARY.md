@@ -388,7 +388,7 @@
     * [Creating the SecretProviderClass Custom Resource to mount secrets](automation-platform/kubernetes-overview/configs-and-secrets/adding-secretproviderclass-custom-resource.md)
     * [Managing Secrets and ConfigMaps access for readonly users (AWS and GCP)](automation-platform/kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md)
   * [Jobs](automation-platform/kubernetes-overview/jobs.md)
-  * [CronJobs](automation-platform/kubernetes-overview/cronjobs.md)
+  * [CronJobs](kubernetes/cronjobs.md)
   * [DaemonSet](automation-platform/kubernetes-overview/daemonset.md)
   * [Helm](automation-platform/kubernetes-overview/helm/README.md)
     * [Helm Charts](automation-platform/kubernetes-overview/helm/helm-charts.md)

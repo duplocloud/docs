@@ -18,7 +18,7 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Tenant](../../automation-platform/overview/use-cases/tenant-environment/)
 * [Hosts](../../automation-platform/overview/use-cases/hosts-vms/) and [Snapshots](/broken/pages/DpvBTxjaJZbavmqcqjCe)
 * [Auto Scaling host groups](../../automation-platform/overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/)
-* [Kubernetes Jobs](../../automation-platform/kubernetes-overview/jobs.md) and [CronJobs](../../automation-platform/kubernetes-overview/cronjobs.md)
+* [Kubernetes Jobs](../../automation-platform/kubernetes-overview/jobs.md) and [CronJobs](../../kubernetes/cronjobs.md)
 * [Auditing](../../automation-platform/overview/use-cases/auditing.md)
 * [Logging](../../automation-platform/overview/use-cases/central-logging/)
 * [Diagnostics and Metrics](../../automation-platform/overview/use-cases/monitoring/)
