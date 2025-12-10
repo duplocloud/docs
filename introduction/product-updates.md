@@ -59,7 +59,7 @@ General
 
 * AWS
   * [External DNS Infra Setting](../automation-platform/overview/aws-systems-settings/aws-infrastructure-settings.md#infrastructure-settings) for managing DNS record behavior.
-  * Support for managing [Amazon CloudFront](../automation-platform/overview/aws-services/cloudfront.md) distributions through DuploCloud.
+  * Support for managing [Amazon CloudFront](../aws-user-guide/aws-services/cloudfront.md) distributions through DuploCloud.
 * GCP
   * Support for defining [GCP Maintenance Windows](../automation-platform/overview-1/use-cases/gke-maintenance-windows.md).
   * Support for [GCP Cloud Run Service](../automation-platform/overview-1/gcp-services/cloud-run-service.md).
