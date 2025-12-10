@@ -159,7 +159,7 @@
     * [API Gateway](automation-platform/overview/aws-services/api-gateway.md)
     * [App Runner](automation-platform/overview/aws-services/app-runner.md)
     * [Batch](automation-platform/overview/aws-services/batch.md)
-    * [CloudFront](automation-platform/overview/aws-services/cloudfront.md)
+    * [CloudFront](aws-user-guide/aws-services/cloudfront.md)
     * [Databases](automation-platform/overview/aws-services/database/README.md)
       * [AWS ElastiCache](automation-platform/overview/aws-services/database/elastic-cache.md)
       * [AWS DynamoDB database](automation-platform/overview/aws-services/database/dynamodb.md)

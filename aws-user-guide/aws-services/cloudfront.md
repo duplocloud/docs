@@ -10,7 +10,7 @@ description: Configuring a CloudFront distribution in DuploCloud
 
 Before creating a CloudFront distribution:
 
-* [Create an S3 bucket](s3-bucket.md#creating-an-s3-bucket)
+* [Create an S3 bucket](../../automation-platform/overview/aws-services/s3-bucket.md#creating-an-s3-bucket)
 * Upload your static assets to the S3 bucket.
 
 ## Creating a CloudFront distribution
@@ -18,11 +18,11 @@ Before creating a CloudFront distribution:
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **Networking**.
 2. Select the **CloudFront** tab, and click **Add**. The **Add Distribution** page displays.
 
-![The CloudFront Add Distribution page.](../../../.gitbook/assets/cloudfrontdistribution-form.jpg)
+![The CloudFront Add Distribution page.](../../.gitbook/assets/cloudfrontdistribution-form.jpg)
 
 1. In the **Name** field, enter a name for the distribution.
 2. In the **Root Object** field, specify the root object that will be returned when accessing the domain's root (in this example, "index.html"). The root object should not start with "/."
-3. From the **Certificate** list box, select the ACM certificate for distribution. Only certificates in US-East-1 can be used. If a certificate is not already present, request one in AWS and [add it to the DuploCloud Plan](../prerequisites/acm-certificate.md).
+3. From the **Certificate** list box, select the ACM certificate for distribution. Only certificates in US-East-1 can be used. If a certificate is not already present, request one in AWS and [add it to the DuploCloud Plan](../../automation-platform/overview/prerequisites/acm-certificate.md).
 4. In the **Certificate Protocol Version** item list, select the correct certificate protocol.
 5. Optionally, enter any alternate domain name(s) you want to connect to your CloudFront distribution in the **Aliases** section. For aliases managed by DuploCloud, CNAME mapping is done automatically. For other aliases, manually set up CNAME in your DNS management console.
 6. In the **Origins** area, enter the location(s) where the content is stored (e.g., an S3 bucket or HTTP server endpoint).
@@ -35,8 +35,10 @@ Before creating a CloudFront distribution:
    * **Path Pattern** - For requests matching the pattern, enter the specific origin and cache policy to be used. For example, if **api/\*** is entered, all requests that start with the prefix API will be routed to this origin.
    * **Target Origin** - Choose the origin that should be used for your custom path.
 
-{% hint style="info" %}
-Note: If the S3 bucket and CloudFront distribution are in the same Tenant, DuploCloud creates an Origin Access Identity and updates the bucket policy to allow GetObject for Cloudfront Origin Access Identity. You do not need to configure any additional S3 bucket permissions.
+{% hint style="warning" %}
+When creating a CloudFront distribution with restricted access to an S3 origin, DuploCloud now uses **Origin Access Control (OAC)** instead of the deprecated **Origin Access Identity (OAI)**. DuploCloud configures OAC automatically and manages the necessary S3 bucket permissions behind the scenes—no manual changes are required.
+
+Existing distributions that use OAI will continue to function as expected. Updating a distribution will not alter its origin access method unless you explicitly modify that setting.
 {% endhint %}
 
 When creating an AWS CloudFront distribution for a load balancer using Terraform in DuploCloud, ensure to include the `comment` field in your Terraform configuration as it acts as a required field for the resource name, despite being listed as optional in the documentation. This adjustment is crucial for successful deployment.
