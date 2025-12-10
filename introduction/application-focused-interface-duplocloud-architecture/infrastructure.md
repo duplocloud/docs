@@ -8,7 +8,7 @@ Infrastructures are abstractions that allow you to create a Virtual Private Clou
 
 For instructions to create an Infrastructure in the DuploCloud Portal, see:
 
-* [AWS Infrastructure](../../automation-platform/overview/use-cases/creating-an-infrastructure-and-plan-for-aws/)
+* [AWS Infrastructure](../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/)
 * [Azure Infrastructure](../../automation-platform/overview-2/use-cases/infrastructure-and-plan/)
 * [GCP Infrastructure](../../automation-platform/overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/)
 * [On-premises Infrastructure](../../automation-platform/kubernetes-overview/import-an-external-kubernetes-cluster.md#importing-your-kubernetes-cluster-to-duplocloud)

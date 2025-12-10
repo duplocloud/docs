@@ -10,7 +10,7 @@ Ingress controllers abstract the complexity of routed Kubernetes application tra
 
 ### Creating Services with EKS
 
-See the DuploCloud documentation for instructions to add [Tenants](../../overview/use-cases/tenant-environment/), [Hosts](../../overview/use-cases/hosts-vms/), and [Services](../../overview/aws-services/).&#x20;
+See the DuploCloud documentation for instructions to add [Tenants](../../automation-platform/overview/use-cases/tenant-environment/), [Hosts](../../automation-platform/overview/use-cases/hosts-vms/), and [Services](../../automation-platform/overview/aws-services/).&#x20;
 
 ### Enabling the AWS Application Load Balancer&#x20;
 
@@ -22,7 +22,7 @@ An administrator needs to enable the AWS Application Load Balancer controller fo
 4. Select **Enable**.
 5. Click **Set**. In the Settings tab, the **Enable ALB Ingress Controller** setting displays a value of **true**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/k8aws10.png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the <strong>Infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/k8aws10.png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the <strong>Infrastructure</strong> page</p></figcaption></figure>
 
 ## Adding a Load Balancer with Kubernetes NodePort
 
@@ -31,7 +31,7 @@ An administrator needs to enable the AWS Application Load Balancer controller fo
 3. Select the **Load Balancers** tab.
 4.  Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/k8aws.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../.gitbook/assets/k8aws.png" alt=""><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
 
 5. In the **Select Type** field, select **K8S Node Port**.&#x20;
@@ -42,18 +42,18 @@ An administrator needs to enable the AWS Application Load Balancer controller fo
 8. From the **Backend Protocol** list box, select **TCP** or **UDP**.
 9.  Kubernetes Health Check and Probes are enabled by default. To manually configure Health Check settings, select **Additional health check configs**.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/to edit.png" alt="" width="375"><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../../.gitbook/assets/to edit.png" alt="" width="375"><figcaption></figcaption></figure></div>
 10. If needed, enable and configure **Advanced Kubernetes settings**.&#x20;
 11. Click **Add**. The Load Balancer listener is displayed under **LB Listeners** on the **Load Balancers** tab.
 
-<figure><img src="../../../.gitbook/assets/Screenshot (234) (1).png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab for the Service</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (234) (1).png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab for the Service</p></figcaption></figure>
 
 ## Adding a Kubernetes Ingress
 
 1. Navigate to **Kubernetes** -> **Ingress**.
 2. Click **Add**. The **Add Kubernetes Ingress** page displays.
 
-<figure><img src="../../../.gitbook/assets/Screenshot (66).png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (66).png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 3. Complete the following fields to configure the Ingress.
 
@@ -69,7 +69,7 @@ Complete the following steps to add routing rules to the Ingress.
 
 1. On the **Add Kubernetes Ingress** page, click **Add Rule**. The **Add Ingress Rule pane** displays.&#x20;
 
-<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (711).png" alt="" width="380"><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (711).png" alt="" width="380"><figcaption><p>The <strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 
 2. Complete the fields to configure the rule.
 
@@ -82,13 +82,13 @@ With routing rules defined, you can now add certificates to secure your Ingress 
 
 ### Adding certificates to the Ingress
 
-Before attaching certificates to an Ingress, you must add the ACM certificates to your DuploCloud Plan. For detailed instructions, see the [DuploCloud ACM documentation](../../overview/prerequisites/acm-certificate.md#adding-an-acm-certificate-with-arn-to-a-duplocloud-plan).&#x20;
+Before attaching certificates to an Ingress, you must add the ACM certificates to your DuploCloud Plan. For detailed instructions, see the [DuploCloud ACM documentation](../../automation-platform/overview/prerequisites/acm-certificate.md#adding-an-acm-certificate-with-arn-to-a-duplocloud-plan).&#x20;
 
 Once your certificates have been added to the plan, complete the following steps to attach them to the Ingress configuration:
 
 1.  On the **Add Kubernetes Ingress** page, click **Add Certificate**. The **Add Certificate** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (708).png" alt="" width="355"><figcaption><p> <strong>Add Certificate</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (708).png" alt="" width="355"><figcaption><p> <strong>Add Certificate</strong> pane</p></figcaption></figure></div>
 2. In the **Certificate** list box, select the certificate to associate with this Ingress.
 3. To set the certificate as the default, enable the **Set as Default** toggle.&#x20;
    * **Note**: The first certificate you add is selected as the default automatically. You can change this option for additional certificates.
@@ -107,7 +107,7 @@ Now that the necessary certificates have been added, you can optionally configur
 
 1.  On the **Add Kubernetes Ingress** page, click **Add Redirect Config**. The **Add Redirect Config** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/redirect config.png" alt=""><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../.gitbook/assets/redirect config.png" alt=""><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure></div>
 2. In the **Name** field, enter a descriptive name for the Ingress redirect configuration.&#x20;
 3. &#x20;In the **Host** field, specify the domain name for which this redirect rule will apply.
 4. In the **Path** field, define the path that should trigger the redirect.
@@ -119,7 +119,7 @@ Now that the necessary certificates have been added, you can optionally configur
 10. Click **Add** to add the Kubernetes Ingress with defined rules and configurations.&#x20;
 11. On the **Add Kubernetes Ingress** page, click **Add Redirect Config**. The **Add Redirect Config** pane displays.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/redirect config.png" alt="" width="330"><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/redirect config.png" alt="" width="330"><figcaption><p>The <strong>Add Redirect Config</strong> pane</p></figcaption></figure></div>
 
 2. Complete the following fields.
 
@@ -131,7 +131,7 @@ After completing all required fields, adding rules and certificates, and optiona
 
 You will then see your new Ingress listed on the **Kubernetes** → **Ingress** page.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_57_51.png" alt=""><figcaption><p> <strong>The Ingress</strong> page displaying the added Ingress</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-14_57_51.png" alt=""><figcaption><p> <strong>The Ingress</strong> page displaying the added Ingress</p></figcaption></figure>
 
 ## Viewing an Ingress
 
@@ -140,11 +140,11 @@ You will then see your new Ingress listed on the **Kubernetes** → **Ingress** 
 1. View Ingress details by navigating to **Kubernetes** -> **Ingress** and selecting your Ingress from the **NAME** column. The Ingress details page displays.
 2. Use the tabs to view Ingress details:
    * In the **Configuration** tab, you can view the overall Ingress settings such as the Ingress controller, visibility, certificate details, listener ports, and target type. The DNS address displayed here is a clickable link that opens the ingress endpoint in a new browser tab, enabling you to quickly access the exposed service.
-   * In the **Ingress Rules** tab, you can review the list of rules that define how traffic is routed based on hostnames and paths. Each rule includes a clickable **Access Path** link (<img src="../../../.gitbook/assets/Screenshot (737).png" alt="" data-size="line">) that opens the full URL for that specific path in a new browser tab, allowing you to quickly verify and test routing behavior for individual paths.
+   * In the **Ingress Rules** tab, you can review the list of rules that define how traffic is routed based on hostnames and paths. Each rule includes a clickable **Access Path** link (<img src="../../.gitbook/assets/Screenshot (737).png" alt="" data-size="line">) that opens the full URL for that specific path in a new browser tab, allowing you to quickly verify and test routing behavior for individual paths.
 
-<figure><img src="../../../.gitbook/assets/Screenshot (740).png" alt=""><figcaption><p> <strong>Configuration</strong> tab on the <strong>Ingress</strong> details page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (740).png" alt=""><figcaption><p> <strong>Configuration</strong> tab on the <strong>Ingress</strong> details page</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Screenshot (739).png" alt=""><figcaption><p> <strong>Ingress Rules</strong> tab on the <strong>Ingress</strong> details page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (739).png" alt=""><figcaption><p> <strong>Ingress Rules</strong> tab on the <strong>Ingress</strong> details page</p></figcaption></figure>
 
 ### Viewing Ingress details using `curl` Commands
 

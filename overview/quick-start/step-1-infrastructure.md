@@ -24,8 +24,11 @@ Before starting this tutorial:
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Click **Add**. The **Add Infrastructure** page displays.
 3. Enter the values from the table below in the corresponding fields on the **Add Infrastructure** page. Accept default values for fields not specified.&#x20;
-4. Select either the **Enable EKS** or **Enable ECS Cluster** option. You will follow different paths in the tutorial for creating Services with [EKS](../../automation-platform/overview/quick-start/quick-start-eks-services/), [ECS](../../automation-platform/overview/quick-start/quick-start-ecs-services/), or [DuploCloud Docker](../../automation-platform/overview/quick-start/quick-start-duplocloud-docker-services/).
-5. Click **Create** to create the Infrastructure. DuploCloud begins creating and configuring your Infrastructure and EKS/ECS clusters using Kubernetes. It may take up to half an hour to create the Infrastructure. When creation completes, a status of **Complete** displays on the Infrastructure page.&#x20;
+4. This tutorial offers different paths in the tutorial for creating Services with [EKS](../../automation-platform/overview/quick-start/quick-start-eks-services/), [ECS](../../automation-platform/overview/quick-start/quick-start-ecs-services/), or [DuploCloud Docker](../../automation-platform/overview/quick-start/quick-start-duplocloud-docker-services/). For creating ECS or EKS Services, select the following options:
+   * **Enable ECS Cluster:** Choose this option to follow the ECS path in the tutorial.
+   * **Enable EKS Cluster**, and set **Cluster Mode** to **Standard** to follow the EKS path.\
+     If you prefer to use **Auto Mode**, which offers a fully managed EKS experience with no host access or custom AMIs, see the DuploCloud documentation for [EKS Auto Mode](../../automation-platform/overview/use-cases/eks-auto-mode.md).
+5. Click **Create** to create the Infrastructure. It may take up to half an hour to create the Infrastructure. While the Infrastructure is being created, a **Pending** status is displayed in the Infrastructure page **Status** column, often with additional information about what part of the Infrastructure DuploCloud is currently creating. When creation completes, a status of **Complete** displays.&#x20;
 
 | Add Infrastructure field    | Value                      |
 | --------------------------- | -------------------------- |
@@ -35,7 +38,7 @@ Before starting this tutorial:
 | **Subnet CIDR Bits**        | `20`                       |
 | **EKS Endpoint Visibility** | `Private`                  |
 
-<div align="left"><figure><img src="../../.gitbook/assets/infrastructure.png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (663).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page<br></p></figcaption></figure></div>
 
 {% hint style="info" %}
 It may take up to forty-five (45) minutes for your Infrastructure to be created and Kubernetes (EKS/ECS) enablement to be complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display **Enabled** when complete. You can also monitor progress using the **Kubernetes** tab.

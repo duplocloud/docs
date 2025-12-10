@@ -14,6 +14,6 @@ Several DuploCloud components are used with AWS, GCP, Azure, and hybrid/On-premi
 
 For instructions to implement these common components in your DuploCloud account, see the  documentation for your cloud provider:
 
-* &#x20;[AWS Use Cases](../../../automation-platform/overview/use-cases/)
+* &#x20;[AWS Use Cases](../../../overview/use-cases/)
 * [Azure Use Cases](../../../automation-platform/overview-2/use-cases/)
 * [GCP Use Cases](../../../automation-platform/overview-1/use-cases/)

@@ -67,4 +67,4 @@ In this tutorial, you created many artifacts for testing purposes. Now that you 
 
 The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
 
-Thanks for completing this tutorial and proceed to the next section to learn more about [using DuploCloud with AWS](../../use-cases/).
+Thanks for completing this tutorial and proceed to the next section to learn more about [using DuploCloud with AWS](../../../../overview/use-cases/).
