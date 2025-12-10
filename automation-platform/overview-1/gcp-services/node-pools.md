@@ -8,7 +8,7 @@ description: Create Node Pool for GCE in the DuploCloud Portal
 
 ## Prerequisites
 
-[Add a Tenant](../use-cases/tenant-environment/), specifying the DuploCloud **Plan** corresponding to a [GKE Standard Cluster](broken-reference).
+[Add a Tenant](../use-cases/tenant-environment/), specifying the DuploCloud **Plan** corresponding to a [GKE Standard Cluster](/broken/pages/30DoAjkzaRTATeeq673S).
 
 ## Adding a Node Pool
 

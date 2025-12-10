@@ -15,7 +15,7 @@ Before creating a Load Balancer, verify that you accomplished the tasks in the p
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name you created.
 * The Infrastructure you created has [GKE Enabled](../step-1-infrastructure.md).
 * A [Tenant](../../../overview-2/quick-start/step-2-tenant.md) with the name you chose has been created.
-* A [Node Pool](broken-reference) has been created.
+* A [Node Pool](/broken/pages/30DoAjkzaRTATeeq673S) has been created.
 * A [Service](../create-a-service-with-gke-autopilot/step-3-create-app-via-k8s.md) with the name you chose has been created.&#x20;
 * An [Application Load Balancer](../create-a-service-with-gke-autopilot/step-4-create-a-load-balancer.md) has been created.
 

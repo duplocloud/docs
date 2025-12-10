@@ -30,7 +30,7 @@ DuploCloud Helm Chart deployments are displayed in the list of Services, in read
 
 ### Creating a Load Balancer in DuploCloud: do I need Ingress?
 
-Yes. Refer to this document to create an [Ingress](../automation-platform/kubernetes-overview/ingress-loadbalancer/adding-ingress.md). Note the generated Ingress class. Refer to the [Helm ](https://helm.sh/docs/)documentation, for information about how to enable Ingress and add a class for the Ingress.&#x20;
+Yes. Refer to this document to create an [Ingress](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md). Note the generated Ingress class. Refer to the [Helm ](https://helm.sh/docs/)documentation, for information about how to enable Ingress and add a class for the Ingress.&#x20;
 
 {% hint style="info" %}
 For EKS, refer to the [EKS Ingress Annotations](https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.7/guide/ingress/annotations/) document for information on customizing annotations to your specific needs.

@@ -22,7 +22,7 @@ To allow ECS tasks to run on Hosts from another Tenant, both Tenants must have t
 
 {% columns %}
 {% column width="50%" %}
-<figure><img src="../../../../../.gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (480) (1).png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column width="50%" %}

@@ -12,7 +12,7 @@ In addition to these automatic taints, you can control workload distribution by 
 
 ## Adding Taints in the DuploCloud Portal
 
-1. When [Adding a Host](adding-hosts.md) in the DuploCloud Portal, click the **Add Taint** button at the bottom right of the Advanced Options section. The **Add Taint** pane displays.
+1. When [Adding a Host](../../../automation-platform/overview/use-cases/hosts-vms/adding-hosts.md) in the DuploCloud Portal, click the **Add Taint** button at the bottom right of the Advanced Options section. The **Add Taint** pane displays.
 2. Complete the following fields:
    * **Key**: Identifies the taint condition, e.g., `dedicated`, or `testing`.
    * **Value**: Additional context for the key, such as `dev`, `staging`, or `prod`.
@@ -21,7 +21,7 @@ In addition to these automatic taints, you can control workload distribution by 
      * **Prefer No Schedule**: Kubernetes will try to avoid scheduling the Pod on this node, but it may still schedule it if necessary.
      * **No Execute**: Immediately evicts existing Pods that don’t tolerate the taint and prevents new ones from being scheduled there.
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/Add taint.png" alt="" width="407"><figcaption><p>The Add Taint pane in the DuploCloud Portal</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Add taint.png" alt="" width="407"><figcaption><p>The Add Taint pane in the DuploCloud Portal</p></figcaption></figure></div>
 
 3. Click **Add Taint**. The taint is added to the node.&#x20;
 
@@ -31,6 +31,6 @@ In addition to these automatic taints, you can control workload distribution by 
 2. Navigate to the **EC2** or **ASG** tab, and check for Hosts with a status of **Stopped** and **Tainted**. The connection to the underlying node is lost if these statuses are present.&#x20;
 3. Click on the **Tainted** status to display the taints.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/taint success (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/taint success (1).png" alt=""><figcaption></figcaption></figure>
 
 See the [kubectl documentation](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#taint) for commands, flags, and examples to resolve taints.&#x20;

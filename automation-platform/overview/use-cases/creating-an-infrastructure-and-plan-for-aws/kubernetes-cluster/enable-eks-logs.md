@@ -6,7 +6,7 @@ description: Enable logging functionality for EKS
 
 ## Enabling EKS logging while creating an Infrastructure
 
-Follow the steps in the section [Creating an Infrastructure](../). In the **EKS Logging** list box, select one or more **ControlPlane Log** types.
+Follow the steps in the section [Creating an Infrastructure](../../../../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/). In the **EKS Logging** list box, select one or more **ControlPlane Log** types.
 
 <figure><img src="../../../../../.gitbook/assets/AWS_Infra_logs2.png" alt=""><figcaption><p><strong>EKS Logging</strong> field with several <strong>ControlPLane Log</strong> types selected</p></figcaption></figure>
 

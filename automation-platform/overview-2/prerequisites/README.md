@@ -6,7 +6,7 @@ description: Tasks to perform before you use Azure with DuploCloud
 
 * Read the [Access Control](../../access-control/) section to ensure at least one person has administrator access.
 * [Program DNS Entries](program-dns-entries.md)
-* [Set the AKS Cluster Version](broken-reference)
+* [Set the AKS Cluster Version](/broken/pages/4EfQXSsoa0ThiP6o9Hc2)
 * [Import SSL Certificates](import-ssl-certificates.md)
 * [Provision the VPN](vpn-setup.md)
 * [Connect to the VPN](connect-to-the-vpn.md)

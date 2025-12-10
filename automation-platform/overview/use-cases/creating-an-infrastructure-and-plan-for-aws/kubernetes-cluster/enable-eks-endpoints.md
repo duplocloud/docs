@@ -10,7 +10,7 @@ For more information about AWS Endpoints, see the [AWS documentation](https://do
 
 ## Specifying public and private endpoints
 
-1. Follow the steps in the section [Creating an Infrastructure](../). Before clicking **Create**, specify **EKS Endpoint Visibility**.
+1. Follow the steps in the section [Creating an Infrastructure](../../../../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/). Before clicking **Create**, specify **EKS Endpoint Visibility**.
 2. From the **EKS Endpoint Visibility** list box, select **Public**, **Private**, or **Both public and private**. If you select **private** or **Both public and private**, the **Allow VPN Access to the EKS Cluster** option is enabled.
 3. Click **Advanced Options.**
 4. Using the **Private Subnet CIDR** and **Public Subnet CIDR** fields, specify CIDRs for alternate public and private endpoints.&#x20;
@@ -22,7 +22,7 @@ For more information about AWS Endpoints, see the [AWS documentation](https://do
 
 ## Changing VPN visibility from public to private (optional)
 
-To change VPN visibility from public to private after you have [created an Infrastructure](../), follow these steps.
+To change VPN visibility from public to private after you have [created an Infrastructure](../../../../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/), follow these steps.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
 2. From the **NAME** column, select the Infrastructure.
@@ -34,7 +34,7 @@ To change VPN visibility from public to private after you have [created an Infra
 
 5. From the **Setting Name** list box, select **Enable VPN Access to EKS Cluster**.
 6. Select **Enable** to enable VPN.
-7.  Click **Set**. When you [create an Infrastructure](../), the **Allow VPN Access to the EKS Cluster** option will be enabled.<br>
+7.  Click **Set**. When you [create an Infrastructure](../../../../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/), the **Allow VPN Access to the EKS Cluster** option will be enabled.<br>
 
     <figure><img src="../../../../../.gitbook/assets/settings marked.png" alt=""><figcaption></figcaption></figure>
 

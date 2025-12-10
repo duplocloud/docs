@@ -6,7 +6,7 @@ description: >-
 
 # ECS Setup
 
-Setting up an Infrastructure that uses ECS is similar to creating an [Infrastructure that uses EKS](../kubernetes-cluster/), except that during creation, instead of selecting **Enable EKS**, you select **Enable ECS Cluster**.&#x20;
+Setting up an Infrastructure that uses ECS is similar to creating an [Infrastructure that uses EKS](../../../../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/kubernetes-cluster/), except that during creation, instead of selecting **Enable EKS**, you select **Enable ECS Cluster**.&#x20;
 
 <figure><img src="../../../../../.gitbook/assets/AWS_ECS.png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page with <strong>Enable ECS Cluster</strong> selected</p></figcaption></figure>
 
@@ -17,6 +17,6 @@ Up to one instance (0 or 1) of an ECS is supported for each DuploCloud Infrastru
 {% endhint %}
 
 {% hint style="info" %}
-Creating an Infrastructure with ECS can take some time. See the [Infrastructure ](../)section for details about other elements on the Add Infrastructure form.
+Creating an Infrastructure with ECS can take some time. See the [Infrastructure ](../../../../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/)section for details about other elements on the Add Infrastructure form.
 {% endhint %}
 

@@ -8,8 +8,8 @@ DuploCloud abstracts the complexity of container orchestration technologies, all
 
 Among the technologies supported are:
 
-* **Google Kubernetes Engine (GKE Autopilot)**: DuploCloud platform uses GKE Autopilot, providing you with a user-friendly interface that conceals the complexities of Kubernetes serverless workloads. Using the UI you can add K8S configurations around Pods, Containers, Secrets, and so on. See [here](broken-reference) on how to setup a Auto-Pilot cluster.
-* **Google Kubernetes Engine (GKE Standard)**: DuploCloud platform uses GKE Standard, providing the same user-friendly interface to manage underlying Kubernetes Cluster and Node Pools. See [here](broken-reference) on how to setup a standard cluster.
+* **Google Kubernetes Engine (GKE Autopilot)**: DuploCloud platform uses GKE Autopilot, providing you with a user-friendly interface that conceals the complexities of Kubernetes serverless workloads. Using the UI you can add K8S configurations around Pods, Containers, Secrets, and so on. See [here](/broken/pages/aFdBUGZR4vCo4dYWOuTP) on how to setup a Auto-Pilot cluster.
+* **Google Kubernetes Engine (GKE Standard)**: DuploCloud platform uses GKE Standard, providing the same user-friendly interface to manage underlying Kubernetes Cluster and Node Pools. See [here](/broken/pages/30DoAjkzaRTATeeq673S) on how to setup a standard cluster.
 * **Built-in (Docker Native)**: DuploCloud platform's built-in container management has the same interface as the `docker run` command, except that it can be scaled to hundreds of containers across many hosts, providing capabilities such as associated load balancers, DNS, and more.
 
 {% hint style="info" %}
