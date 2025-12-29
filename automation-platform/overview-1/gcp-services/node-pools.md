@@ -4,11 +4,11 @@ description: Create Node Pool for GCE in the DuploCloud Portal
 
 # Node Pools
 
-[GCP Node Pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools) are useful when you need to schedule Pods requiring more resources than others, such as more memory or local disk space.  Node Pools can be created for the DuploCloud Infrastructure with GKE Standard Cluster only.&#x20;
+[GCP Node Pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools) are useful when you need to schedule Pods requiring more resources than others, such as more memory or local disk space. Node Pools can be created for the DuploCloud Infrastructure with GKE Standard Cluster only.&#x20;
 
 ## Prerequisites
 
-[Add a Tenant](../use-cases/tenant-environment/), specifying the DuploCloud **Plan** corresponding to a [GKE Standard Cluster](/broken/pages/30DoAjkzaRTATeeq673S).
+[Add a Tenant](../use-cases/tenant-environment/), specifying the DuploCloud **Plan** corresponding to your GKE cluster.
 
 ## Adding a Node Pool
 
@@ -18,7 +18,15 @@ description: Create Node Pool for GCE in the DuploCloud Portal
 4. Provide **Name**, **Availability Zone**, **Instance Type**, and **Node Counts**.&#x20;
 5. Click **Submit**.
 
-<figure><img src="../../../.gitbook/assets/image (344).png" alt=""><figcaption><p><strong>Add Node Pool</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (1098).png" alt=""><figcaption><p><strong>Add Node Pool</strong> page</p></figcaption></figure>
+
+{% hint style="info" %}
+**Scaling GKE Node Pools to Zero**&#x20;
+
+When autoscaling is enabled, you can set the minimum node count to **0** allowing a GKE node pool to scale down to zero nodes when no workloads are running. Nodes are automatically recreated when workloads require capacity. A minimum node count of **0** can be configured when creating a node pool or by editing an existing node pool with autoscaling enabled.
+
+This applies only to GKE node pools. GCE VMs and BYOH hosts cannot be scaled to zero.
+{% endhint %}
 
 ### Adding a Node Pool with Advanced Options
 
@@ -36,7 +44,7 @@ Accelerator Types are not available in all regions.
 
 ![](<../../../.gitbook/assets/image (351).png>)
 
-### Configure a Service to use an Accelerator Type
+### Configuring a Service to use an Accelerator Type
 
 1. [Add a Service](containers/).
 2. In the Add Service page, click Next for Advanced Options.
@@ -61,7 +69,7 @@ For example, the following screen applies  a taint to a Node Pool  that has a **
 
 <div align="left"><figure><img src="../../../.gitbook/assets/image (347).png" alt=""><figcaption><p><strong>Add Taint</strong> pane</p></figcaption></figure></div>
 
-### Configure a Service to use Taints
+### Configuring a Service to use Taints
 
 You need to configure the correct `tolerations` in the Service to schedule the Pod in a Node Pool.
 
@@ -81,7 +89,7 @@ You can Edit or Delete a Taint by selecting the Node Pool **Name**, clicking the
 
 <figure><img src="../../../.gitbook/assets/image (350).png" alt=""><figcaption><p><strong>Edit Node Pools</strong> page</p></figcaption></figure>
 
-### View Node Pool
+### Viewing Node Pools
 
 View Node Pools by clicking the **Node Pool** tab and selecting the Node Pool **Name**.
 
