@@ -6,13 +6,13 @@ description: Create automatic alerts
 
 DuploCloud allows automatic alert generation for resources within a Tenant. This ensures that the defined monitoring baseline is applied to all current and new resources based on a set of rules.
 
-## Creating an Alert
+## **Enabling Alerting**
 
-As an Administrator:
+Enable automatic alerting for your Tenant.
 
-1. From the DuploCloud portal, navigate to **Administrator** -> **Tenants**, and click the **Alerting** tab
-2. Enable alerting, this will open an alerts template which has rules for each AWS namespace and Metric to be monitored.
-3. Review the alerts template and adjust the thresholds.
-4.  Click **Update.**<br>
+1. In the DuploCloud Portal, navigate to **Administrator** → **Tenants**.
+2. Select your **Tenant** from the **NAME** column.
+3. Select the **Alerting** tab.
+4. Click **Click Here** or **Enable Alerting**. Once enabled, DuploCloud’s predefined out-of-the-box alert rules are enabled for the Tenant.
 
-    <figure><img src="../../../.gitbook/assets/Screenshot (241).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (1085) (1).png" alt=""><figcaption></figcaption></figure>
