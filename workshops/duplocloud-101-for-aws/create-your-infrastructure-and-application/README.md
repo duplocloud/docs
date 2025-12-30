@@ -1,6 +1,6 @@
 ---
 description: >-
-  Creating an Infrastructure and deploy your application in the DuploCloud
+  Creating an Infrastructure and deploying your application in the DuploCloud
   Portal
 ---
 
