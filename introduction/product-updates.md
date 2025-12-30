@@ -232,7 +232,7 @@ General
   * Create [Node Pools](../automation-platform/overview-1/gcp-services/node-pools.md) with support for accelerators and taints.
   * Support for [GKE Ingress.](../automation-platform/kubernetes-overview/ingress-loadbalancer/gke-ingress.md)
 * CI/CD
-  * [Update a service with a stream-lined, read-to-use GitHub Actions script](../automation-platform/introduction-to-ci-cd/github-actions/update-a-service.md).
+  * [Update a service with a stream-lined, read-to-use GitHub Actions script](../introduction-to-ci-cd/github-actions/update-a-service.md).
 * Kubernetes
   * [Enable real-time alerts for autoscaling Kubernetes nodes.](../automation-platform/overview/use-cases/hosts-vms/auto-scaling/kubernetes-scaling-options.md#allowing-real-time-alerts-for-autoscaling-kubernetes-nodes)
 * General&#x20;
