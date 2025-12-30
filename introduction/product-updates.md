@@ -6,6 +6,17 @@ coverY: 0
 
 # Product Updates
 
+## Q4 2025
+
+AWS
+
+* [CloudFront Origin Access Control](../aws-user-guide/aws-services/cloudfront.md) — Use OAC instead of deprecated OAI for new distributions, with automatic permission management.
+* [EKS AutoMode](../automation-platform/overview/use-cases/eks-auto-mode.md) — Automatically configure node scaling and management for EKS clusters.
+
+General
+
+* [Okta Management](../automation-platform/access-control/sso-configuration/okta-management-settings.md) — Configure and manage Okta authentication settings directly in DuploCloud.
+
 ## Q3 2025
 
 AWS
@@ -18,7 +29,6 @@ AWS
 * [App Runner support](../automation-platform/overview/aws-services/app-runner.md) — Provision and manage AWS App Runner services.
 * [ECS launch and network mode](../automation-platform/overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition) — Select launch type and network mode for ECS tasks.
 * [OpenSearch upgrade support](../automation-platform/overview/aws-services/elasticsearch.md#managing-an-opensearch-instance) — Upgrade OpenSearch versions within DuploCloud.
-* [AWS Secrets Manager support](../automation-platform/overview/aws-services/aws-secrets-support.md) — Manage secrets using AWS Secrets Manager.
 * [EC2 Snapshots](../automation-platform/overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.
 * [Ingress: Multi-certificate support](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB–managed Ingress.
 
@@ -41,6 +51,7 @@ GCP
 
 Kubernetes
 
+* [Argo Workflows](../automation-platform/introduction-to-ci-cd/argo-workflows.md) — Run and manage Kubernetes-native workflows.
 * [Group and view services by App](../automation-platform/overview/aws-services/containers/eks-containers-and-services/#id-7-toc-title) — Organize Kubernetes services by  App Name.
 * [K8s secrets & ConfigMaps backup](../automation-platform/kubernetes-overview/configs-and-secrets/backing-up-and-restoring-kubernetes-secrets-and-configmaps.md) — Manage backups for K8s secrets and ConfigMaps.
 * [Helm Repo with OCI support](../automation-platform/kubernetes-overview/helm/oci-helm-repositories.md) — Support for adding Helm repositories from OCI-compliant registries.
@@ -50,14 +61,12 @@ General
 
 * [User groups in PermissionSets](../automation-platform/security-and-compliance/access-control-2/permission-sets.md#creating-a-user-group) — Apply PermissionSets to user groups for simplified access control.
 * [Billing Alerts](../automation-platform/diagnostics-overview/configure-billing-alerts.md) — Configure billing alerts across AWS, Azure, and GCP.
-* [Inventory page](../extras-overview/inventory.md#accessing-the-inventory-page) — View and track deployed resources across cloud providers.
-* [PermissionSet with Priority](../automation-platform/security-and-compliance/access-control-2/permission-sets.md) — Control policy precedence using numeric priority.
-* [Multiple portal logins](../automation-platform/access-control/multiple-portal-login-options.md)— Add and switch between portals on the login screen.
-* [Simpler logging navigation](../automation-platform/diagnostics-overview/standard-observability-suite/logs.md#viewing-service-specific-logs) — Navigate directly from service pages to logs.
+* [PermissionSet RBAC enhancements](../automation-platform/security-and-compliance/access-control-2/permission-sets.md) — Support priority-based and advanced role evaluation.
 
 ## Q2 2025
 
 * AWS
+  * [Tenant Security Group IPv6](../security-and-compliance/access-control/security-groups.md) — Support IPv6 rules in tenant-level security groups.
   * [External DNS Infra Setting](../automation-platform/overview/aws-systems-settings/aws-infrastructure-settings.md#infrastructure-settings) for managing DNS record behavior.
   * Support for managing [Amazon CloudFront](../aws-user-guide/aws-services/cloudfront.md) distributions through DuploCloud.
 * GCP
@@ -68,9 +77,11 @@ General
 * Azure
   * Support for managing [infra secrets in Azure](../automation-platform/overview-2/azure-services/infra-secrets.md).
 * Kubernetes
+  * [Cron Job Recent Job Link](../kubernetes/cronjobs.md) — Quickly navigate from a CronJob to its most recent execution.
   * Support for [ArgoCD integration](../automation-platform/introduction-to-ci-cd/argocd.md), enabling GitOps deployment and management workflows within DuploCloud.
   * Support for [ResourceQuota](../automation-platform/kubernetes-overview/resourcequotas.md) to manage namespace resource limits.
 * General
+  * [Custom Alert Emails](../automation-platform/access-control/user-email-notifications.md) — Add and manage custom email addresses for alert notifications.
   * [Pulumi integration support ](../automation-platform/pulumi-user-guide/)for managing DuploCloud infrastructure as code.
   * Usability improvements and a new Explain Flame Graph feature were added to [DuploCloud Advanced Observability Suite](../automation-platform/diagnostics-overview/advanced-observability-suite/).
   * Configure DuploCloud to [ignore DNS record prefixes](../automation-platform/duplocloud-prerequisites/resolving-dns-failures.md#configuring-duplocloud-to-ignore-dns-entries), allowing you to safely add custom entries without risk of deletion.
@@ -92,7 +103,7 @@ General
   * Support for [SNS with FIFO (First-In-First-Out) topics.](../automation-platform/overview/aws-services/sns-topic.md#creating-a-sns-topic)
   * Create scheduled snapshot windows for automated backups in [AWS Redis](../automation-platform/overview-2/azure-services/databases/redis-database.md).
   * Support for [taints with EKS Hosts or Agent Pools](../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
-  * [Download inventory reports of all AWS resources](/broken/pages/13ttpomLPJ9isKgMRgge) (for StateRAMP compliance).
+  * [Download inventory reports of all AWS resources](../extras-overview/inventory.md#downloading-an-inventory-report) (for StateRAMP compliance).
   * Support for [Lambda JAR with S3](../automation-platform/overview/aws-services/lambda/#id-3-toc-title).
   * Support for aurora-iopt1 storage type in [Aurora RDS](../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
   * Force delete and update settings options added for [ECR repositories](../automation-platform/overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).&#x20;
