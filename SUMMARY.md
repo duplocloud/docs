@@ -472,7 +472,7 @@
   * [GitHub Actions](automation-platform/introduction-to-ci-cd/github-actions/README.md)
     * [Configure GitHub](automation-platform/introduction-to-ci-cd/github-actions/configuring-github.md)
     * [Build a Docker image](automation-platform/introduction-to-ci-cd/github-actions/build-a-docker-image.md)
-    * [Update a Kubernetes Service](automation-platform/introduction-to-ci-cd/github-actions/update-a-service.md)
+    * [Update a Kubernetes Service](introduction-to-ci-cd/github-actions/update-a-service.md)
     * [Update an ECS Service](automation-platform/introduction-to-ci-cd/github-actions/update-a-service-1.md)
     * [Update a Lambda function](automation-platform/introduction-to-ci-cd/github-actions/update-a-lambda-function.md)
     * [Update CloudFront](automation-platform/introduction-to-ci-cd/github-actions/update-cloudfront.md)
