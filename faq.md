@@ -12,8 +12,8 @@ Use these FAQ documents to quickly find answers to popular questions about using
 [aws-faq.md](automation-platform/overview/aws-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="automation-platform/overview-2/azure-faq.md" %}
-[azure-faq.md](automation-platform/overview-2/azure-faq.md)
+{% content-ref url="overview-2/azure-faq.md" %}
+[azure-faq.md](overview-2/azure-faq.md)
 {% endcontent-ref %}
 
 {% content-ref url="automation-platform/overview-1/gcp-faq.md" %}

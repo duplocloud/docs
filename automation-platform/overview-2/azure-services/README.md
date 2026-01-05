@@ -23,7 +23,7 @@ Supported Services are listed in alphabetical order, following the core services
 
 * [Agent Pool](agent-pool/)
 * [Data Factory](data-factory.md)
-* [Databases](databases/)
+* [Databases](../../../overview-2/azure-services/databases/)
 * [Docker Web Application](docker-web-application.md)
 * [Functions](web-applications/functions.md)
 * [Ingress (Kubernetes)](../../kubernetes-overview/ingress-loadbalancer/aks-ingress/)
