@@ -38,7 +38,7 @@ Follow the [AWS instructions to create layers](https://docs.aws.amazon.com/lambd
 
 ## Adding Lambda Layers to a Lambda Function
 
-You can add layers to a new or existing [Lambda Function](./). For example, to add a layer to an existing function:
+You can add layers to a new or existing [Lambda Function](../../../../overview/aws-services/lambda/). For example, to add a layer to an existing function:
 
 1. In the DuploCloud Portal, navigate to C**loud Services** -> **Serverless**.
 2. In the **Lambda** tab, select the Lambda Function to which you want to add Lambda Layers.&#x20;

@@ -4,7 +4,7 @@ description: Creating SNS Topics
 
 # SNS Topic
 
-A SNS Topic is a logical access point that acts as a communication channel. It lets you group multiple _endpoints_ (such as [AWS Lambda](lambda/), [Amazon SQS](sqs-queue.md), HTTP/S, or an email address).
+A SNS Topic is a logical access point that acts as a communication channel. It lets you group multiple _endpoints_ (such as [AWS Lambda](../../../overview/aws-services/lambda/), [Amazon SQS](sqs-queue.md), HTTP/S, or an email address).
 
 ## Creating a SNS Topic
 

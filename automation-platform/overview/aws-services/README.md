@@ -36,7 +36,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [IoT (Internet of Things)](iot-internet-of-things.md)
 * [Kafka Cluster](kafka-cluster.md)
 * [Kinesis Stream](kinesis-stream.md)
-* [Lambda functions](lambda/)
+* [Lambda functions](../../../overview/aws-services/lambda/)
 * [Managed Airflow](managed-airflow.md)
 * [NAT Gateway for High Availability (HA)](nat-gateway-for-ha.md)
 * [OpenSearch](elasticsearch.md)
