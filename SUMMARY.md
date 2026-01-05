@@ -516,6 +516,7 @@
     * [Read-only access to a Tenant](automation-platform/access-control/tenant-access/read-only-access-to-a-tenant.md)
     * [Cross-tenant Access](automation-platform/access-control/tenant-access/cross-tenant-access.md)
     * [Deleting a Tenant](automation-platform/access-control/tenant-access/deleting-a-tenant.md)
+  * [Setting Tenant Topbar Color](automation-platform/access-control/setting-tenant-topbar-color.md)
   * [VPN access for users](automation-platform/access-control/add-and-delete-vpn-access-for-users.md)
   * [Database access for users](automation-platform/access-control/database-access-for-users.md)
   * [SSO Configuration](automation-platform/access-control/sso-configuration/README.md)
