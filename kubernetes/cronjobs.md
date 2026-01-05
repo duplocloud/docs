@@ -6,8 +6,6 @@ description: >-
 
 # CronJobs
 
-A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](../automation-platform/kubernetes-overview/jobs.md) you can schedule to run at periodic intervals.
-
 See the Kubernetes [CronJob documentation](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) for more information.
 
 ## Creating a Kubernetes CronJob in the DuploCloud portal
@@ -38,7 +36,27 @@ See the Kubernetes [CronJob documentation](https://kubernetes.io/docs/concepts/w
 
 11. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page. It will run according to the schedule you specified.&#x20;
 
-<figure><img src="../.gitbook/assets/cron final.png" alt=""><figcaption><p><strong>K8s CronJob</strong> tab displaying Kubernetes Job <strong>CALCULATEPI.</strong></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot (916).png" alt=""><figcaption><p><strong>K8s CronJob</strong> tab displaying Kubernetes Job <strong>CALCULATEPI.</strong></p></figcaption></figure>
+
+## Suspending a CronJob
+
+DuploCloud lets you temporarily suspend a CronJob, pausing the scheduling of new Jobs while allowing any existing Jobs to continue running. By default, the suspend setting is `false` and CronJob will continue scheduling new Jobs.
+
+To update the suspend setting:
+
+1. Navigate to **Kubernetes** → **CronJobs**.
+2. Click the menu icon (<img src="../.gitbook/assets/menu icon.avif" alt="" data-size="line">) for the CronJob you want to suspend.&#x20;
+3. In the **Other Spec Configuration** field, locate the `suspend` property.
+4.  Set the `suspend` value to `true` to suspend the CronJob or  `false` to resume scheduling.<br>
+
+    <div align="left"><figure><img src="../.gitbook/assets/Screenshot (915) (1).png" alt=""><figcaption></figcaption></figure></div>
+5. The CronJobs page displays the current state in the **Suspended** column as **Yes** or **No**.
+
+<figure><img src="../.gitbook/assets/Screenshot (918).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+**Note:** Suspending a CronJob only prevents new Jobs from being scheduled. Any Jobs that were already created continue running until completion.
+{% endhint %}
 
 ## Managing Kubernetes CronJobs faults
 
@@ -104,14 +122,6 @@ You can view the Kubernetes CronJobs associated with a specific container by fol
 ## Managing Kubernetes CronJobs
 
 You can view, edit, delete, or manually run a Kubernetes CronJob from the options menu on the CronJobs page.
-
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob**.
-2.  Click the menu icon ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) to the left of the Kubernetes CronJob name.<br>
-
-    <figure><img src="../.gitbook/assets/cron menu (1).png" alt=""><figcaption><p><strong>CronJob</strong> page with the menu options highlighted</p></figcaption></figure>
-3. Choose one of the following actions:
-
-<table data-header-hidden><thead><tr><th width="129.55560302734375"></th><th></th></tr></thead><tbody><tr><td><strong>View</strong></td><td>View CronJob configuration and details across the Overview, Schedule, and Details tabs.</td></tr><tr><td><strong>Edit</strong></td><td>Modify fields such as Cleanup After Finished, Other Spec Configuration, Metadata Annotations, and Labels.</td></tr><tr><td><strong>Run Now</strong></td><td>Trigger the CronJob immediately, outside of its scheduled interval.</td></tr><tr><td><strong>Delete</strong></td><td>Permanently remove the CronJob.</td></tr></tbody></table>
 
 ## Running CronJobs on Shared Hosts
 

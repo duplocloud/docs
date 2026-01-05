@@ -55,7 +55,7 @@ DuploCloud allows you to view, recover, and purge deleted Azure Key Vaults direc
 4.  Select **Manage Deleted Vaults**. A list of deleted key vaults displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (681).png" alt=""><figcaption><p><strong>Manage Deleted Vaults</strong> page with <strong>Recover</strong> and <strong>Purge</strong> options highlighted</p></figcaption></figure>
-5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (19).avif" alt="" data-size="line">) in the row of the vault you want to manage.
+5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (19) (1).avif" alt="" data-size="line">) in the row of the vault you want to manage.
 6. Select one of the following options:
    * **Recover**: Restore the deleted vault to active status so it can be used again.
    * **Purge**: Permanently delete the vault and all its contents. This action cannot be undone.
