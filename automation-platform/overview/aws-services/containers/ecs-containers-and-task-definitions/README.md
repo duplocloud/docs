@@ -43,12 +43,20 @@ Execute a single instance of a container based on your Task Definition. This opt
 1. Select the Tenant from the **Tenant** list box.&#x20;
 2. Navigate to **Cloud Services** -> **ECS**.
 3. Select the **Task Definition** tab
-4. From the **TASK DEFINITION FAMILY NAME** list, locate the Task Definition to run. Note that this is the Task Definition Name prepended by a unique identifier, which includes your Tenant name and part of your Infrastructure name.&#x20;
-5.  Click on the **Actions** menu, and select **Execute**. The **Run ECS Tasks** pane displays.<br>
+4. From the **TASK DEFINITION FAMILY NAME** list, click on the task to run. (Note that this is the Task Definition Name prepended by a unique identifier, which includes your Tenant name and part of your Infrastructure name.)
+5. Click on the **Actions** menu, and select **Execute**. The **Execute** pane displays.
 
-    <div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (328).png" alt="" width="415"><figcaption><p>The <strong>Run ECS Tasks</strong> pane</p></figcaption></figure></div>
-6. Select the **Version** and Specify the **No of Tasks**.
-7. Click **Create** to run the task.&#x20;
+<div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (1039).png" alt=""><figcaption><p>The <strong>Run ECS Tasks</strong> pane</p></figcaption></figure></div>
+
+6. Enter the basic execution information:
+
+<table data-header-hidden><thead><tr><th width="162.44439697265625"></th><th></th></tr></thead><tbody><tr><td><strong>No of Tasks</strong></td><td>Enter the number of ECS tasks to run. Default is <code>1</code>.</td></tr><tr><td><strong>Version</strong></td><td>Enter the Task Definition revision to use. Leave blank to use the latest revision.</td></tr></tbody></table>
+
+7. Optionally, to customize how tasks are distributed, click **Add** to configure **Capacity Providers**, **Placement Constraints**, or **Placement Strategy**:
+
+<table data-header-hidden><thead><tr><th width="214"></th><th></th></tr></thead><tbody><tr><td><strong>Capacity Providers</strong></td><td>- <strong>Provider</strong>: Select the capacity provider (e.g., <code>FARGATE</code>).<br>- <strong>Weight</strong>: Enter the relative weight for this provider when using multiple providers. Default is <code>1</code>.<br>- <strong>Base</strong>: Enter the minimum number of tasks to run on this provider. Default is <code>0</code>.</td></tr><tr><td><strong>Placement Constraints</strong></td><td>- <strong>Type</strong>: Choose constraints for task placement (e.g., <code>Distinct Instance</code> ensures tasks are placed on separate container instances).</td></tr><tr><td><strong>Placement Strategy</strong></td><td>- <strong>Type</strong>: Select the strategy for scheduling tasks (e.g., <code>Random</code> distributes tasks randomly across eligible instances).</td></tr></tbody></table>
+
+8. Click **Create** to run the task.&#x20;
 
 ## Creating an ECS Service
 
