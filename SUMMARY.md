@@ -19,7 +19,7 @@
   * [Getting Help with DuploCloud](introduction/welcome-to-duplocloud/duplocloud-support-model.md)
   * [Common Use Cases](introduction/welcome-to-duplocloud/what-duplocloud-does.md)
   * [Public Cloud Tutorials](introduction/welcome-to-duplocloud/public-cloud-tutorials.md)
-* [Product Updates](introduction/product-updates.md)
+* [Product Updates](product-updates.md)
 
 ## AI Suite
 
@@ -294,8 +294,8 @@
   * [Container Deployments](automation-platform/overview-2/container-deployments/README.md)
     * [Container Orchestration Features](automation-platform/overview-2/container-deployments/container-orchestrators.md)
     * [Key DuploCloud Concepts](automation-platform/overview-2/container-deployments/concepts.md)
-  * [Prerequisites](automation-platform/overview-2/prerequisites/README.md)
-    * [Program DNS Entries](automation-platform/overview-2/prerequisites/program-dns-entries.md)
+  * [Prerequisites](overview-2/prerequisites/README.md)
+    * [Program DNS Entries](overview-2/prerequisites/program-dns-entries.md)
     * [Import SSL Certificates](automation-platform/overview-2/prerequisites/import-ssl-certificates.md)
     * [Provision the VPN](automation-platform/overview-2/prerequisites/vpn-setup.md)
     * [Connect to the VPN](automation-platform/overview-2/prerequisites/connect-to-the-vpn.md)
@@ -340,7 +340,7 @@
     * [Agent Pools](automation-platform/overview-2/azure-services/agent-pool/README.md)
       * [Spot Instances for AKS Agent Pools](automation-platform/overview-2/azure-services/agent-pool/spot-instances-for-aks-agent-pools.md)
     * [Azure Container Registry (ACR)](automation-platform/overview-2/azure-services/azure-container-registry-acr.md)
-    * [Databases](automation-platform/overview-2/azure-services/databases/README.md)
+    * [Databases](overview-2/azure-services/databases/README.md)
       * [Microsoft SQL Server (MSSQL)](automation-platform/overview-2/azure-services/databases/sql-database.md)
       * [PostgreSQL database](automation-platform/overview-2/azure-services/databases/postgresql.md)
       * [PostgreSQL Flexible Server](automation-platform/overview-2/azure-services/databases/postgresql-flexible-server.md)
@@ -363,7 +363,7 @@
     * [Storage Account](automation-platform/overview-2/azure-services/storage-account.md)
     * [Subscription](automation-platform/overview-2/azure-services/subscription.md)
     * [VM Scale Sets](automation-platform/overview-2/azure-services/vm-scale-sets.md)
-  * [Azure FAQ](automation-platform/overview-2/azure-faq.md)
+  * [Azure FAQ](overview-2/azure-faq.md)
   * [Azure Systems Settings](automation-platform/overview-2/azure-systems-settings/README.md)
     * [Azure Infrastructure Settings](automation-platform/overview-2/azure-systems-settings/azure-infrastructure-settings.md)
     * [Azure Tenant Settings](automation-platform/overview-2/azure-systems-settings/azure-tenant-settings.md)

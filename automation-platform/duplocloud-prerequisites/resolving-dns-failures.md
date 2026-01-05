@@ -13,7 +13,7 @@ In most cases, DNS names are created automatically and can be customized within 
 * **Configure your DNS zones**: Make sure your DNS zones are properly configured in both DuploCloud and your cloud provider. This often involves setting up subdomain zones (like `apps.mycompany.com`) and connecting them to DuploCloud. See DNS setup instructions for your cloud provider:
   * AWS: [Configure Route 53 DNS Zones](../overview/prerequisites/route-53-hosted-zone.md)
   * GCP: [Configure Cloud DNS Zones](../overview-1/prerequisites/route-53-hosted-zone.md)
-  * Azure: [Program DNS Entries](../overview-2/prerequisites/program-dns-entries.md)
+  * Azure: [Program DNS Entries](../../overview-2/prerequisites/program-dns-entries.md)
 
 ## **Adding Custom DNS Names**
 

@@ -8,8 +8,8 @@ If you plan to use custom domain names with DuploCloud-hosted services, a subdom
 
 Once the DNS entries are configured, you can use your existing domain names with DuploCloud.
 
-For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../duplocloud-prerequisites/resolving-dns-failures.md).&#x20;
+For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../automation-platform/duplocloud-prerequisites/resolving-dns-failures.md).&#x20;
 
 {% hint style="warning" %}
-In order to add your DNS entries, contact DuploCloud via email or by using your private Slack channel.  Our support staff guides you through the process and assists you with completing other prerequisites in this section, such as providing CRT files and private keys for [importing SSL certificates](import-ssl-certificates.md).
+In order to add your DNS entries, contact DuploCloud via email or by using your private Slack channel.  Our support staff guides you through the process and assists you with completing other prerequisites in this section, such as providing CRT files and private keys for [importing SSL certificates](../../automation-platform/overview-2/prerequisites/import-ssl-certificates.md).
 {% endhint %}
