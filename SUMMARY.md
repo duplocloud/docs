@@ -556,7 +556,7 @@
     * [Automatic alert creation](automation-platform/diagnostics-overview/faults-and-alarms/automatic-alert-creation.md)
   * [Configuring Billing Alerts](automation-platform/diagnostics-overview/configure-billing-alerts.md)
   * [Auditing](automation-platform/diagnostics-overview/auditing.md)
-  * [Web App Firewall (WAF)](automation-platform/diagnostics-overview/web-application-firewall-waf.md)
+  * [Web App Firewall (WAF)](diagnostics-overview/web-application-firewall-waf.md)
 
 ***
 
