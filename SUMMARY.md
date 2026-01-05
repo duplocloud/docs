@@ -187,7 +187,7 @@
     * [IoT (Internet of Things)](automation-platform/overview/aws-services/iot-internet-of-things.md)
     * [Kafka Cluster](automation-platform/overview/aws-services/kafka-cluster.md)
     * [Kinesis Stream](automation-platform/overview/aws-services/kinesis-stream.md)
-    * [Lambda Functions](automation-platform/overview/aws-services/lambda/README.md)
+    * [Lambda Functions](overview/aws-services/lambda/README.md)
       * [Configure Lambda with Container Images](automation-platform/overview/aws-services/lambda/create-lambda-using-container-image.md)
       * [Lambda Layers](automation-platform/overview/aws-services/lambda/lambda-layers.md)
     * [Managed Airflow](automation-platform/overview/aws-services/managed-airflow.md)

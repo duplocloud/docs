@@ -10,7 +10,7 @@ Before setting up a notification, ensure the destination resource (SQS, SNS, or 
 
 * [SQS Queues](../sqs-queue.md#creating-sqs-queues): for receiving event messages asynchronously.
 * [SNS Topics](../sns-topic.md#creating-a-sns-topic): for publishing notifications to multiple subscribers.
-* [Lambda Functions](../lambda/#id-3-toc-title): to execute custom code in response to events.
+* [Lambda Functions](../../../../overview/aws-services/lambda/#id-3-toc-title): to execute custom code in response to events.
 
 ## Creating S3 Bucket Notifications
 

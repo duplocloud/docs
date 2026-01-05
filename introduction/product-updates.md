@@ -95,7 +95,7 @@ General
 * AWS
   * Create and manage [Target Groups for EC2 Instances, IPs, and ALB Load Balancers (AWS)](../automation-platform/overview/aws-services/load-balancers/target-groups.md).
   * Support for [ElastiCache Valkey](../automation-platform/overview/aws-services/database/elastic-cache.md#creating-a-redis-or-valkey-elasticache-instance).
-  * Set Retry and Expiration Limits for Asynchronous [Lambda](../automation-platform/overview/aws-services/lambda/) Invocations.
+  * Set Retry and Expiration Limits for Asynchronous [Lambda](../overview/aws-services/lambda/) Invocations.
   * Configure [SQS dead letter queues and redrive policies in AWS](../automation-platform/overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
   * Support for Modifying [ASG Launch Templates](../automation-platform/overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).
   * [Instance Refresh action for AWS Auto Scaling Groups (ASG)](../automation-platform/overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).
@@ -104,7 +104,7 @@ General
   * Create scheduled snapshot windows for automated backups in [AWS Redis](../automation-platform/overview-2/azure-services/databases/redis-database.md).
   * Support for [taints with EKS Hosts or Agent Pools](../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
   * [Download inventory reports of all AWS resources](../extras-overview/inventory.md#downloading-an-inventory-report) (for StateRAMP compliance).
-  * Support for [Lambda JAR with S3](../automation-platform/overview/aws-services/lambda/#id-3-toc-title).
+  * Support for [Lambda JAR with S3](../overview/aws-services/lambda/#id-3-toc-title).
   * Support for aurora-iopt1 storage type in [Aurora RDS](../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
   * Force delete and update settings options added for [ECR repositories](../automation-platform/overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).&#x20;
   * Select and update [Certificate Authorities for RDS instances](../aws-user-guide/aws-services/database/rds-database/#managing-rds-certificate-authorities).
@@ -167,7 +167,7 @@ General
   * [Set a maximum RDS instance size ](../automation-platform/overview/aws-services/database/rds-database/restrict-rds-instance-size.md)in Systems Settings.
   * [Support for editing in Apache Airflow](../automation-platform/overview/aws-services/managed-airflow.md).
   * Set up [Billing Alerts](../automation-platform/diagnostics-overview/configure-billing-alerts.md).
-  * [Specify a Lambda architecture](../automation-platform/overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
+  * [Specify a Lambda architecture](../overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
   * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.&#x20;
 * Azure
   * Support for [Azure VM Disk Controller](../automation-platform/overview-2/use-cases/hosts-vms/).
@@ -217,8 +217,8 @@ General
   * Create an [OpenSearch](../automation-platform/overview/aws-services/elasticsearch.md) domain. &#x20;
   * [Billing option is available per Tenant](../automation-platform/overview/use-cases/cost-management/#view-billing-details-by-tenant).
   * [Scale to or from zero (0) using Auto-Scaling Groups](../automation-platform/overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/scale-to-or-from-zero.md).&#x20;
-  * Create [Lambdas with Ephemeral Storage](../automation-platform/overview/aws-services/lambda/#id-3-toc-title).
-  * Support for [Lambda Dead Letter Queues](../automation-platform/overview/aws-services/lambda/#id-3-toc-title).
+  * Create [Lambdas with Ephemeral Storage](../overview/aws-services/lambda/#id-3-toc-title).
+  * Support for [Lambda Dead Letter Queues](../overview/aws-services/lambda/#id-3-toc-title).
   * [Set a delivery delay for SQS Queues](../automation-platform/overview/aws-services/sqs-queue.md#creating-a-standard-queue), using increments of seconds.
   * Configure [Vanta compliance controls](../automation-platform/overview/security-configuration-settings/vanta-compliance-controls.md) for DuploCloud Tenants.
   * Support for [OpenSearch storage options](../automation-platform/overview/aws-services/elasticsearch.md).

@@ -25,9 +25,9 @@ For detailed instructions on how to configure and use ECR with Lambda, refer to 
     <figure><img src="../../../../.gitbook/assets/Screenshot (62).png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page <br></p></figcaption></figure>
 4. In the **Name** field, enter the name of your Lambda Function.
 5. In the **Description** field, enter a useful description of the function.
-6. From the **Package Type** list box, select **Image**. For type **Zip**, see the [Lambda Functions](./) topic.
+6. From the **Package Type** list box, select **Image**. For type **Zip**, see the [Lambda Functions](../../../../overview/aws-services/lambda/) topic.
 7. Configure the remaining fields as needed for your specific function.
-8. If needed, [test the Lambda function](./#testing-a-lambda-function) to ensure it works properly.
+8. If needed, [test the Lambda function](../../../../overview/aws-services/lambda/#testing-a-lambda-function) to ensure it works properly.
 
 ## References
 
