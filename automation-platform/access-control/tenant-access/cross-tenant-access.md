@@ -51,7 +51,7 @@ To establish general non-IAM restricted Cross-tenant access, see [the previous s
 
 You can share access to the following Services between Tenants:
 
-* [S3 Buckets](../../overview/aws-services/s3-bucket.md)
+* [S3 Buckets](../../overview/aws-services/s3-bucket/)
 * [DynamoDB Tables](../../overview/aws-services/database/dynamodb.md)
 * KMS Keys
 
