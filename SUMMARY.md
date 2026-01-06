@@ -19,7 +19,8 @@
   * [Getting Help with DuploCloud](introduction/welcome-to-duplocloud/duplocloud-support-model.md)
   * [Common Use Cases](introduction/welcome-to-duplocloud/what-duplocloud-does.md)
   * [Public Cloud Tutorials](introduction/welcome-to-duplocloud/public-cloud-tutorials.md)
-* [Product Updates](product-updates.md)
+* [Product Updates](introduction/product-updates/README.md)
+  * [Product Update Archives](introduction/product-updates/product-update-archives.md)
 
 ## AI Suite
 
