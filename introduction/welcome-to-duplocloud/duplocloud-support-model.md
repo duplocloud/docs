@@ -41,6 +41,7 @@ We cover most of your DevOps needs, but there are some limitations. Examples of 
 * Monitoring alerts in a Network Operations Center (NOC)&#x20;
 * Troubleshooting application code
 * Database configuration
+* Application Functional, Stress and Load testing.
 
 ## How to get help from within the DuploCloud Portal
 
