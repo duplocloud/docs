@@ -8,7 +8,7 @@ coverY: 0
 
 _**Last Updated, January 6, 2026**_
 
-* AWS - [ECS Run Task](../../automation-platform/overview/aws-services/containers/ecs-containers-and-task-definitions/#running-a-task-optional) — Allow selecting a capacity provider strategy when running ECS tasks.
+* AWS - [ECS Run Task](../../aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#running-a-task-optional) — Allow selecting a capacity provider strategy when running ECS tasks.
 * AWS - [S3 Event Notifications](../../automation-platform/overview/aws-services/s3-bucket/s3-bucket-notifications.md) — Support for configuring Amazon S3 event notifications.
 * AWS - [Lambda Edit Menu Updates](../../overview/aws-services/lambda/#id-3-toc-title) — Add Maximum Retry Attempts and Maximum Event Age.
 * Kubernetes - Suspend [CronJobs](../../kubernetes/cronjobs.md#suspending-a-cronjob) using a suspend true/false setting.
@@ -24,7 +24,7 @@ _**Last Updated, January 6, 2026**_
 * AWS - [AMI enhancements](../../automation-platform/overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md) — Select, restrict, or share AMIs across Tenants.
 * AWS - [Amazon MQ support](../../automation-platform/overview/aws-services/amazon-mq.md) — Provision and manage AWS MQ brokers in DuploCloud.
 * AWS - [App Runner support](../../automation-platform/overview/aws-services/app-runner.md) — Provision and manage AWS App Runner services.
-* AWS - [ECS launch and network mode](../../automation-platform/overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition) — Select launch type and network mode for ECS tasks.
+* AWS - [ECS launch and network mode](../../aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#creating-a-task-definition) — Select launch type and network mode for ECS tasks.
 * AWS - [OpenSearch upgrade support](../../automation-platform/overview/aws-services/elasticsearch.md#managing-an-opensearch-instance) — Upgrade OpenSearch versions within DuploCloud.
 * AWS - [EC2 Snapshots](../../automation-platform/overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.
 * AWS - [Ingress: Multi-certificate support](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB Ingress.
@@ -91,7 +91,7 @@ _**Last Updated, January 6, 2026**_
 * AWS - [Enable delete protection for AWS Load Balancers.](../../automation-platform/overview/aws-services/load-balancers/#additional-load-balancer-settings)
 * AWS - Support for adding TLS Hosts and TLS Secrets fields when configuring an[ Ingress for EKS](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
 * AWS - Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).&#x20;
-* AWS - Support for [ECS with EC2 Capacity Provider](../../automation-platform/overview/aws-services/containers/ecs-containers-and-task-definitions/#configuring-ecs-with-ec2-capacity-provider).
+* AWS - Support for [ECS with EC2 Capacity Provider](../../aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#configuring-ecs-with-ec2-capacity-provider).
 * Azure - Add new secret versions in [Azure Key Vault](../../automation-platform/overview-2/azure-services/key-vault.md).
 * Azure - Support for [Azure Databricks](../../automation-platform/overview-2/azure-services/databricks.md).
 * Azure - Support for [Azure Container Registry](../../automation-platform/overview-2/azure-services/azure-container-registry-acr.md).
