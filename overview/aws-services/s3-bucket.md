@@ -7,7 +7,7 @@ description: Create an S3 bucket for AWS storage
 Amazon Simple Storage Service (Amazon S3) is an object-storage service offering scalability, data availability, security, and performance. You can store and protect any data for data lakes, cloud-native applications, and mobile apps. Read more about S3 and its capabilities [here](https://aws.amazon.com/s3/).
 
 {% hint style="info" %}
-To configure an S3 bucket for auditing, see the [Auditing](../../use-cases/auditing.md) topic.
+To configure an S3 bucket for auditing, see the [Auditing](../../automation-platform/overview/use-cases/auditing.md) topic.
 {% endhint %}
 
 ## Creating an S3 bucket
@@ -20,7 +20,7 @@ When creating an S3 bucket using the `duplocloud_s3_bucket` resource in Terrafor
 2. Click the **S3** tab.
 3.  Click **Add**. The **Create an S3 Bucket** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/S3BUCKET.png" alt="" width="362"><figcaption><p>The <strong>Create an S3 Bucket</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../.gitbook/assets/S3BUCKET.png" alt="" width="362"><figcaption><p><strong>Create an S3 Bucket</strong> pane</p></figcaption></figure></div>
 4. In the **Name** field, enter a name for the S3 bucket.
 5. In the **Region** list box, select the region. You can choose Region Tenant, **Default Region**, or **Global Region** and specify **Other Region** to enter a custom region you have defined.
 6. Optionally, select **Enable Bucket Versioning** or **Object Lock.** These settings are disabled by default unless you Enable Bucket Versioning Tenant-wide in **Tenant Settings**. For more information about S3 bucket versioning, see the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html). It's important to note that while DuploCloud supports enabling versioning, managing versions and the deletion of versioned objects may require manual steps through the AWS console or CLI, especially since DuploCloud's current Terraform operations perform only basic delete operations.
@@ -32,19 +32,19 @@ When creating an S3 bucket using the `duplocloud_s3_bucket` resource in Terrafor
 
 ### Enabling bucket versioning for S3 buckets at the Tenant level
 
-You can configure the [Tenant](../../use-cases/tenant-environment/#2-toc-title) to enable bucket versioning by default.
+You can configure the [Tenant](../../automation-platform/overview/use-cases/tenant-environment/#2-toc-title) to enable bucket versioning by default.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. Click on the **Tenant** name in the list.
-3. In the **Settings** tab, click **Add**. The **Add Tenant Feature** pane displays.
+3.  In the **Settings** tab, click **Add**. The **Add Tenant Feature** pane displays.<br>
+
+    <div align="left"><figure><img src="../../.gitbook/assets/add tenant feature.png" alt="" width="404"><figcaption><p><strong>Add Tenant Feature</strong> pane<br></p></figcaption></figure></div>
 4. Click **Add**. The **Create an S3 Bucket** pane displays.
 5. From the **Select Tenant Feature** list box, select **Default: Enable bucket versioning for new S3 buckets**.
-6.  Select **Enable**.<br>
+6. Select **Enable**.
+7.  Click **Add**. Bucket versioning will be enabled by default on the **Create an S3 Bucket** pane when [creating a new S3 bucket](s3-bucket.md#creating-an-s3-bucket).<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/add tenant feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane filled to enable bucket versioning for this Tenant.<br></p></figcaption></figure></div>
-7.  Click **Add**. Bucket versioning will be enabled by default on the **Create an S3 Bucket** pane when [creating a new S3 bucket](./#creating-an-s3-bucket).<br>
-
-    <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (257).png" alt=""><figcaption><p>The <strong>Settings</strong> tab on the <strong>Tenant</strong> page shows bucket versioning is enabled for new S3 buckets.</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (257).png" alt=""><figcaption><p><strong>Settings</strong> tab on the <strong>Tenant</strong> page shows bucket versioning is enabled</p></figcaption></figure></div>
 
 {% hint style="info" %}
 With this setting configured, all new S3 buckets in the Tenant will automatically enable bucket versioning.
@@ -90,13 +90,13 @@ Avoid specifying system-reserved prefixes such as `duploservices`.
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.
-3. Click **Add**. The **Add Config** pane displays.
+3.  Click **Add**. The **Add Config** pane displays.<br>
+
+    <div align="left"><figure><img src="../../.gitbook/assets/AWS_GCP_Bucket_prefix.png" alt="" width="361"><figcaption><p><strong>Add Config</strong> pane for <strong>Key Prefix all S3 Bucket Name</strong></p></figcaption></figure></div>
 4. From the **Config Type** list box, select **AppConfig**.
 5. From the **Key** list box, select **Prefix all S3 Bucket Names**.
 6. In the **Value** field, enter the custom prefix.
 7. Click **Submit**.
-
-<div align="left"><figure><img src="../../../../.gitbook/assets/AWS_GCP_Bucket_prefix.png" alt=""><figcaption><p><strong>Add Config</strong> pane for <strong>Key Prefix all S3 Bucket Name</strong></p></figcaption></figure></div>
 
 {% hint style="info" %}
 When attempting to delete S3 buckets, it's crucial to first empty the bucket. DuploCloud is planning to introduce a "force delete data" feature to simplify this process, including version deletions. Until then, manual deletion through the AWS console is a reliable method for smaller buckets. For managing versions, users may need to use the AWS CLI, as DuploCloud's Terraform operations currently only perform basic delete operations.
@@ -115,9 +115,7 @@ To create an S3 bucket replication rule in DuploCloud, follow these steps:
 3. In the **NAME** column, click the name of the bucket you want to create the replication rule for.
 4. Select the **Replication Rule** tab, and click **Add**. The **Add S3 Bucket Replication** pane displays.
 
-<figure><img src="../../../../.gitbook/assets/image (2) (5) (1).png" alt=""><figcaption><p>The <strong>Add S3 Bucket Replication</strong> pane in the DuploCloud Portal</p></figcaption></figure>
-
-
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (776).png" alt="" width="362"><figcaption><p><strong>Add S3 Bucket Replication</strong> pane</p></figcaption></figure></div>
 
 5. In the **Add S3 Bucket Replication** pane, complete the following fields:
 
@@ -137,4 +135,4 @@ To create an S3 bucket replication rule in DuploCloud, follow these steps:
 3. In the **NAME** column, click the name of the bucket you want to view replication rules for.
 4. Select the **Replication Rule** tab. The replication rules applied to the selected S3 bucket are displayed.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/view rules.png" alt=""><figcaption><p>The <strong>Replication Rule</strong> tab for an S3 bucket in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (777).png" alt=""><figcaption><p><strong>Replication Rule</strong> tab for an S3 bucket</p></figcaption></figure>

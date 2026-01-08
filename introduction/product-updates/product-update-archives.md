@@ -24,7 +24,7 @@ hidden: true
 * AWS
   * Support for [Amazon OpenSearch Service domain without EBS](../../automation-platform/overview/aws-services/elasticsearch.md#creating-an-opensearch-domain-without-ebs-storage) (Elastic Block Store).
   * Configure [admin-only access to the SSH key](../../automation-platform/overview/use-cases/hosts-vms/ssh-ec2-instance.md#configuring-admin-only-access-to-the-ssh-key).
-  * Support for[ secondary indexes](../../automation-platform/overview/aws-services/database/dynamodb.md#adding-dynamodb-database-tables) when using DynamoDB databases.
+  * Support for[ secondary indexes](../../aws-user-guide/aws-services/database/dynamodb.md#adding-dynamodb-database-tables) when using DynamoDB databases.
   * [Set a maximum RDS instance size ](../../automation-platform/overview/aws-services/database/rds-database/restrict-rds-instance-size.md)in Systems Settings.
   * [Support for editing in Apache Airflow](../../automation-platform/overview/aws-services/managed-airflow.md).
   * Set up [Billing Alerts](../../automation-platform/diagnostics-overview/configure-billing-alerts.md).
@@ -111,7 +111,7 @@ hidden: true
   * Implement [Kubernetes Lifecycle Hooks](../../automation-platform/kubernetes-overview/kubernetes-lifecycle-hooks.md) while Adding a DuploCloud EKS/Native Service.&#x20;
   * Enable [shared hosts](../../automation-platform/overview/use-cases/hosts-vms/adding-shared-hosts.md) to allow K8s Pods in a Tenant to run on Hosts in another Tenant.&#x20;
   * Set a [default automated backup retention period](../../automation-platform/overview/aws-services/database/rds-database/backup-and-restore.md#id-0-toc-title-1) for RDS databases.
-  * Enable bucket versioning when [creating an S3 bucket](../../automation-platform/overview/aws-services/s3-bucket/#creating-an-s3-bucket).&#x20;
+  * Enable bucket versioning when [creating an S3 bucket](../../overview/aws-services/s3-bucket.md#creating-an-s3-bucket).&#x20;
   * Create an [Amazon Machine Image (AMI)](../../automation-platform/overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md).
   * Use [dedicated hosts](../../automation-platform/overview/use-cases/hosts-vms/adding-dedicated-hosts.md) to launch Amazon EC2 instances and provide additional visibility and control over how instances are placed on a physical server.
   * [Automatically reboot a host](../../automation-platform/overview/use-cases/hosts-vms/configure-auto-reboot.md) upon Status Check faults or Host disconnection.
@@ -119,7 +119,7 @@ hidden: true
   * [Establish VPN connections for private endpoints](../../automation-platform/overview/use-cases/creating-an-infrastructure-and-plan-for-aws/kubernetes-cluster/enable-eks-endpoints.md#enabling-vpn-for-private-visibility-optional) when creating an Infrastructure.
   * Restore an [RDS to a particular point in time](../../automation-platform/overview/aws-services/database/rds-database/backup-and-restore.md#restoring-snapshots-to-a-point-in-time).
   * Dynamically [change the configuration of a Kafka Cluster](../../automation-platform/overview/aws-services/kafka-cluster.md#changing-the-configuration-of-a-kafka-cluster).
-  * Fields for Sort Key and Key Type are now available when [creating a DynamoDB](../../automation-platform/overview/aws-services/database/dynamodb.md).
+  * Fields for Sort Key and Key Type are now available when [creating a DynamoDB](../../aws-user-guide/aws-services/database/dynamodb.md).
 * Azure
   * Create a [MySQL Flexible Serve](../../automation-platform/overview-2/azure-services/databases/mysql-flexible-server.md)r managed database service.
   * Add an [Azure Service Bus](../../automation-platform/overview-2/azure-services/service-bus.md).
@@ -151,7 +151,7 @@ hidden: true
   * Set a [monitoring interval for an RDS](../../automation-platform/overview/aws-services/database/rds-database/add-monitoring-interval.md) database.
   * [Enable or disable logging for an RDS ](../../automation-platform/overview/aws-services/database/rds-database/enable-or-disable-rds-logging.md)database.
   * Add [custom Lambda image configurations](../../automation-platform/overview/aws-services/lambda/create-lambda-using-container-image.md) and URLs.
-  * Enable [Object Lock in S3 Buckets](../../automation-platform/overview/aws-services/s3-bucket/#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
+  * Enable [Object Lock in S3 Buckets](../../overview/aws-services/s3-bucket.md#creating-an-s3-bucket) to prevent objects from being deleted or overwritten.&#x20;
   * Configure a [custom S3 Bucket for auditing](../../automation-platform/overview/use-cases/creating-an-infrastructure-and-plan-for-aws/ecs-setup/enable-ecs-logging.md#configuring-a-custom-s3-bucket-for-auditing-in-another-aws-account).
   * Update [Lifecycle Policies for EFS storage](../../automation-platform/overview/aws-services/elastic-file-system-efs/#updating-efs-lifecycle-policies).
   * [Customize a Node Selector for EKS Services](../../automation-platform/overview/aws-services/containers/#adding-a-customized-node-selector-to-an-eks-service) to prevent overrides of specific configurations.
@@ -175,7 +175,7 @@ hidden: true
   * [Start, stop, and restart ](../../automation-platform/overview/aws-services/containers/#7-toc-title-3)up to twenty (20) services at one time.
   * [Add VPC Endpoints](../../automation-platform/overview/use-cases/creating-an-infrastructure-and-plan-for-aws/add-vpc-endpoints.md) to a DuploCloud Infrastructure to create a private connection to supported AWS services and VPC endpoint services powered by AWS PrivateLink.
   * [Enable logging for ECS containers](../../automation-platform/overview/use-cases/creating-an-infrastructure-and-plan-for-aws/ecs-setup/enable-ecs-logging.md).
-  * Define [S3 bucket policies](../../automation-platform/overview/aws-services/s3-bucket/#setting-s3-bucket-permissions-and-policies).
+  * Define [S3 bucket policies](../../overview/aws-services/s3-bucket.md#setting-s3-bucket-permissions-and-policies).
   * Support for [Lambda Layers](../../automation-platform/overview/aws-services/lambda/lambda-layers.md) has been added.
   * [CloudWatch EventBridge](/broken/pages/S87qQdzGqKAcEj8m6Kku) rules and targets are supported.
   * The CloudFront feature and associated UI tab have been relocated in the DuploCloud Portal from the **Cloud Services -> App Integration** menu item to the **Cloud Services -> Networking** menu item.
@@ -264,7 +264,7 @@ hidden: true
 ## September 2022
 
 * [Support for Amazon Managed Apache Airflow](../../automation-platform/overview/aws-services/managed-airflow.md): Ability to configure AWS Managed Airflow
-* [Configure custom prefix for S3](../../automation-platform/overview/aws-services/s3-bucket/#add-custom-prefix-for-s3-buckets):  Ability to configure a prefix for S3 bucket names.
+* [Configure custom prefix for S3](../../overview/aws-services/s3-bucket.md#add-custom-prefix-for-s3-buckets):  Ability to configure a prefix for S3 bucket names.
 * [Azure Support to add Storage account](../../automation-platform/overview-2/azure-services/storage-account.md): Create Storage Accounts, File Shares, and generate Shared Access Signature (SAS).&#x20;
 * Multiple [Azure User Enhancements](../../automation-platform/overview-2/azure-services/) were made.
 

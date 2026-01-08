@@ -18,4 +18,4 @@ Clicking the **Console** link launches the AWS console and gives you access to t
 
 Using the **Console** link, you don't need to set up permissions to create new resources in the AWS Console. You can perform any operations on resources that are created with DuploCloud.&#x20;
 
-For example, you can create an S3 bucket from the DuploCloud UI, and then launch the AWS Console with the **Console** link, removing files, setting up static web hosting, and so on. Similarly, you can create a [DynamoDB](../aws-services/database/dynamodb.md) in DuploCloud and use the AWS console to add and remove entries in a database table.
+For example, you can create an S3 bucket from the DuploCloud UI, and then launch the AWS Console with the **Console** link, removing files, setting up static web hosting, and so on. Similarly, you can create a [DynamoDB](../../../aws-user-guide/aws-services/database/dynamodb.md) in DuploCloud and use the AWS console to add and remove entries in a database table.

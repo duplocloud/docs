@@ -29,5 +29,5 @@ Topics in this section are covered in the order of typical usage. Use cases that
 * [Cost management for billing](../../automation-platform/overview/use-cases/cost-management/)
 * [Resource Quotas](../../automation-platform/overview/use-cases/resource-quotas.md)
 * [Big Data and ETL](../../automation-platform/overview/use-cases/big-data-and-etl.md)
-* [Custom Resource (CR) tags](../../automation-platform/overview/use-cases/custom-resource-tags.md)
+* [Custom Resource (CR) tags](custom-resource-tags.md)
 

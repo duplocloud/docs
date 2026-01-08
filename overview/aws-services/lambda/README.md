@@ -6,7 +6,7 @@ description: Use Lambda to deploy serverless functions in DuploCloud
 
 [Lambda ](https://aws.amazon.com/pm/lambda/?trk=73f686c8-9606-40ad-852f-7b2bcafa68fe\&sc_channel=ps\&ef_id=CjwKCAjwm4ukBhAuEiwA0zQxk0SFVZUD3BCwJFOwlrHAFxzGF6anGJulF49mrridyhHjXRxfSHnmGxoCQw0QAvD_BwE:G:s\&s_kwcid=AL!4422!3!651212652666!e!!g!!amazon%20lambda!909122559!45462427876)is a serverless computing platform provided by AWS that allows you to run code without provisioning or managing servers. It enables you to build and run applications in response to events or triggers from Lambda Functions.
 
-Lambda Functions are event-driven and designed to perform small, specific tasks or functions. They can be written in supported programming languages such as Python, JavaScript (`Node.js`), Java, C#, PowerShell, or Ruby. Once you create a Lambda function, you can configure it to respond to various types of events, such as changes in data stored in an Amazon [S3 bucket](../../../automation-platform/overview/aws-services/s3-bucket/), updates in an Amazon [DynamoDB](../../../automation-platform/overview/aws-services/database/dynamodb.md) table, incoming HTTP requests via Amazon API Gateway, or custom events triggered by other [AWS services](../../../automation-platform/overview/aws-services/).
+Lambda Functions are event-driven and designed to perform small, specific tasks or functions. They can be written in supported programming languages such as Python, JavaScript (`Node.js`), Java, C#, PowerShell, or Ruby. Once you create a Lambda function, you can configure it to respond to various types of events, such as changes in data stored in an Amazon [S3 bucket](../s3-bucket.md), updates in an Amazon [DynamoDB](../../../aws-user-guide/aws-services/database/dynamodb.md) table, incoming HTTP requests via Amazon API Gateway, or custom events triggered by other [AWS services](../../../automation-platform/overview/aws-services/).
 
 Using Lambda, you write your code and upload it to AWS. Lambda executes and scales the code as needed, abstracting away the underlying infrastructure, and allowing you to focus on writing the actual business logic of your application. Lambda Functions are the principal resource of the Lambda serverless platform.&#x20;
 
@@ -22,7 +22,7 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 
 ## Creating an S3 Bucket <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
-1. [Create an S3 Bucket](../../../automation-platform/overview/aws-services/s3-bucket/).
+1. [Create an S3 Bucket](../s3-bucket.md).
 2. Use [JIT ](../../../automation-platform/overview/use-cases/jit-access.md)to access the AWS Console.
 3. Upload the Zip package in the AWS Console.
 
@@ -40,7 +40,7 @@ Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/co
 8. From the the **Architecture** list box, select the correct Lambda Architecture.&#x20;
 9. To allocate a temporary file share, enter the value in megabytes (MB) in the **Ephemeral Storage** field. The minimum value is **512**; the maximum value is **10240**.
 10. In the **Function Handler** field, enter the handler: the handler setting is the file name and the name of the exported handler method, separated by a dot. For example, `index.handler`. This indicates the `handler` method that's exported from the `index.js` file.
-11. In the **S3 Bucket** list box, select an existing [S3 bucket](../../../automation-platform/overview/aws-services/s3-bucket/).
+11. In the **S3 Bucket** list box, select an existing [S3 bucket](../s3-bucket.md).
 12. In the **Function Package** field, enter the name of the **Zip** package containing your Lambda Function.&#x20;
     * DuploCloud Lambda supports Java-based function packages, such as **HelloWorld.jar**, stored in **S3**. Ensure that the JAR file is uploaded to the S3 bucket before configuring the Lambda function.
 13. In the **Dead Letter Queue** list box, select an Amazon Simple Queue Service (SQS) queue or Amazon Simple Notification Service (SNS) topic.

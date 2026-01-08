@@ -10,7 +10,7 @@ description: Configuring a CloudFront distribution in DuploCloud
 
 Before creating a CloudFront distribution:
 
-* [Create an S3 bucket](../../automation-platform/overview/aws-services/s3-bucket/#creating-an-s3-bucket)
+* [Create an S3 bucket](../../overview/aws-services/s3-bucket.md#creating-an-s3-bucket)
 * Upload your static assets to the S3 bucket.
 
 ## Creating a CloudFront distribution

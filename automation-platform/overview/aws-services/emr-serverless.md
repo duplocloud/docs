@@ -27,7 +27,7 @@ To create EMR Serverless applications you first need to create an EMR studio.
    \
    ![](<../../../.gitbook/assets/image (207).png>)<br>
 5. Enter a **Description** of the **Studio** for reference.
-6. Select an [S3 Bucket](s3-bucket/) that you previously defined from the **Logs Default S3 Bucket** list box.
+6. Select an [S3 Bucket](../../../overview/aws-services/s3-bucket.md) that you previously defined from the **Logs Default S3 Bucket** list box.
 7. Optionally, in the **Logs Default S3 Folder** field, specify the path to which logs are written.
 8. Click **Create**. The EMR Studio is created and displayed.&#x20;
 9.  Select the EMR Studio name in the **Name** column. The **EMR Studio** page displays. View the **Details** of the EMR Serverless Studio.<br>
@@ -78,7 +78,7 @@ If you are new to Spark, use the Info Tips (blue <img src="../../../.gitbook/ass
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_31_32.png" alt=""><figcaption><p><strong>EMR Serverless</strong> configuration wizard <strong>Basics</strong> step with <strong>EMR Serverless RunJob Name</strong> field</p></figcaption></figure>
 4. Click **Next**.
 5. In the **Job details** step, select a previously-defined **Spark Script S3 Bucket.**
-6. In the **Spark Script** [**S3 Bucket**](s3-bucket/) **File** field, enter a path to define where your scripts are stored.
+6. In the **Spark Script** [**S3 Bucket**](../../../overview/aws-services/s3-bucket.md) **File** field, enter a path to define where your scripts are stored.
 7. Optionally, in the **Spark Scripts** field, you can specify an array of arguments passed to your JAR or Python script. Each argument in the array must be separated by a comma (**,**). In the example below, a single argument of **"40000"** is entered.&#x20;
 8.  Optionally, in the **Spark Submit Parameters** field, you can specify Spark **`--conf`** parameters. See the example below. <br>
 

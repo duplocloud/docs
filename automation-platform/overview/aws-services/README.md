@@ -41,7 +41,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [NAT Gateway for High Availability (HA)](nat-gateway-for-ha.md)
 * [OpenSearch](elasticsearch.md)
 * [Probes and Health Check](../../kubernetes-overview/setting-up-probes.md)
-* [S3 Bucket](s3-bucket/)
+* [S3 Bucket](../../../overview/aws-services/s3-bucket.md)
 * [SNS Topic](sns-topic.md)
 * [SQS Queue](sqs-queue.md)
 * [Virtual Private Cloud (VPC) Peering ](virtual-private-cloud-vpc-peering.md)
