@@ -8,8 +8,7 @@ Create, configure, and manage RDS instances directly from the DuploCloud Portal.
 
 DuploCloud supports the following RDS databases in AWS:
 
-| <p></p><ul><li>MySQL</li><li>PostgreSQL</li><li>MariaDB</li><li>Microsoft SQL-Express</li><li>Microsoft SQL-We</li></ul> | <p></p><ul><li>Microsoft SQL-Standard</li><li>Aurora MySQL</li><li>Aurora MySQL Serverless</li><li>Aurora PostgreSQL</li><li>Aurora PostgreSQL Serverless</li></ul> |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+<table data-header-hidden><thead><tr><th width="270.00006103515625">Supported RDS databases</th><th></th></tr></thead><tbody><tr><td><p></p><ul><li>MySQL</li><li>PostgreSQL</li><li>MariaDB</li><li>Microsoft SQL-Express</li><li>Microsoft SQL-We</li></ul></td><td><p></p><ul><li>Microsoft SQL-Standard</li><li>Aurora MySQL</li><li>Aurora MySQL Serverless</li><li>Aurora PostgreSQL</li><li>Aurora PostgreSQL Serverless</li></ul></td></tr></tbody></table>
 
 \*Support for Aurora Serverless V1 database engines has been deprecated. Do not create V1 engines when using Terraform.
 
@@ -68,7 +67,7 @@ Once you create the database, select it and use the **Instances** tab to view th
 
 For databases you intend to make publicly available, ensure proper security measures, including broad accessibility, are in place to protect your data.
 
-<figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_18_36.png" alt=""><figcaption><p>The <strong>Instances</strong> tab on the <strong>RDS</strong> details page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot (769).png" alt=""><figcaption><p>The <strong>Instances</strong> tab on the <strong>RDS</strong> details page</p></figcaption></figure>
 
 {% hint style="info" %}
 Pass the endpoint, name, and credentials to your application [using environment variables](../../../../automation-platform/overview/aws-services/containers/passing-config-and-secrets.md) for maximum security.

@@ -8,7 +8,7 @@ description: Configure Apache Airflow for AWS
 
 ## Creating an S3 bucket for Managed Airflow
 
-Create a S3 bucket by following the steps [here](s3-bucket/).
+Create a S3 bucket by following the steps [here](../../../overview/aws-services/s3-bucket.md).
 
 ## Uploading DAGs to an S3 **Bucket**
 
