@@ -1,6 +1,6 @@
 ---
-description: An overview and demo of DuploCloud's comprehensive DevOps platform
-cover: .gitbook/assets/Linkedin-bannerV2 (1).png
+description: An overview and demo of DuploCloud's DevOps platform
+cover: .gitbook/assets/banner dark.png
 coverY: 0
 ---
 
