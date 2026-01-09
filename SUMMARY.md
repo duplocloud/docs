@@ -606,3 +606,8 @@
     * [DuploCloud GCP Product Demo](extras-overview/video-transcripts/duplocloud-gcp-product-demo.md)
     * [DevOps Deep Dive - Abstracting Cloud Complexity](extras-overview/video-transcripts/devops-deep-dive-abstracting-cloud-complexity.md)
     * [DuploCloud Uses Infrastructure-as-Code to Stitch Together DevOps Lifecycle](extras-overview/video-transcripts/duplocloud-uses-infrastructure-as-code-to-stitch-together-devops-lifecycle.md)
+
+## DuploCloud KBs
+
+* [DuploCloud KBs](duplocloud-kbs/duplocloud-kbs/README.md)
+  * [KB 1 Test](duplocloud-kbs/duplocloud-kbs/kb-1-test.md)
