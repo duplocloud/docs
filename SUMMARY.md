@@ -24,7 +24,6 @@
 
 ## AI Suite
 
-* [Reporting AI Concerns](ai-suite/reporting-ai-concerns.md)
 * [Overview](ai-suite/ai-suite.md)
 * [AI HelpDesk](ai-suite/ai-helpdesk/README.md)
   * [Tickets](ai-suite/ai-helpdesk/tickets.md)
@@ -44,6 +43,7 @@
     * [View Presidio Details](ai-suite/ai-studio/supporting-components/view-presidio-details.md)
 * [FAQ](ai-suite/faq.md)
 * [Product Updates](ai-suite/product-updates.md)
+* [Reporting AI Concerns](ai-suite/reporting-ai-concerns.md)
 
 ## Automation Platform
 
