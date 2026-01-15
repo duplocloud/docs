@@ -11,6 +11,8 @@ hidden: true
 
 ## Q3 2024
 
+* AWS
+  * Select and update [Certificate Authorities for RDS instances](../../aws-user-guide/aws-services/database/rds-database/#managing-rds-certificate-authorities).
 * Azure
   * [Set max number of Pods](../../automation-platform/overview-2/azure-services/agent-pool/) for Azure Agent Pools.
   * Support for [Table, Queue, and Container storage types](../../automation-platform/overview-2/azure-services/storage-account.md#create-storage-account) within Azure Storage Accounts.
@@ -31,6 +33,7 @@ hidden: true
   * [Specify a Lambda architecture](../../overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
   * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.&#x20;
 * Azure
+  * Support for [Azure Databricks](../../automation-platform/overview-2/azure-services/databricks.md).
   * Support for [Azure VM Disk Controller](../../automation-platform/overview-2/use-cases/hosts-vms/).
   * Specify the cluster type, node VM size, and outbound connectivity source when [creating an AKS cluster](../../automation-platform/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md#enabling-the-aks-kubernetes-cluster).
   * Support for [private DNS zones](../../overview-2/prerequisites/program-dns-entries.md).
