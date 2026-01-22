@@ -72,3 +72,6 @@ Kubernetes DaemonSets are controllers that manage Pod lifecycles, ensuring that 
  }
 ```
 
+{% hint style="info" %}
+**Hint:** To have a DaemonSet appear on the **Apps** dashboard and be grouped with related resources, add an app name label under both `metadata.labels` and `template.metadata.labels` using this format: `app.duplocloud.net/app-name: "<app name>"`. Use the same `<app name>` for any related Services, Deployments, or StatefulSets.
+{% endhint %}

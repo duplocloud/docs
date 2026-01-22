@@ -6,37 +6,50 @@ description: >-
 
 # CronJobs
 
+A [Kubernetes ](https://kubernetes.io/)CronJob is a variant of a [Kubernetes Job](jobs.md) scheduled to run at periodic intervals.
+
 See the Kubernetes [CronJob documentation](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) for more information.
 
-## Creating a Kubernetes CronJob in the DuploCloud portal
+## Creating a Kubernetes CronJob
 
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJob**.
+1. In the DuploCloud Portal, navigate to **Kubernetes** → **CronJob**.
 2. Click **Add**. The **Add Kubernetes CronJob** page displays.
-3. In the **Basic Options** step, specify the Kubernetes CronJob name.
-4. In the **Schedule** field, specify the Cron Schedule in Cron Format. Click the Info Tip icon for examples. When specifying a **Schedule** in Cron Format, ensure you separate each value with a space. For example, `0 0 * * 0` is a valid Cron Format input; `00**0` is not. See the [Kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/#writing-a-cronjob-spec) for detailed information about Cron Format.
-5. In the **Container - 1** area, specify the **Container Name** and associated **Docker Image**.
+3. Navigate to **Kubernetes** → **CronJob**.
+4.  Click **Add**. The **Add Kubernetes CronJob** page displays.<br>
 
-<figure><img src="../.gitbook/assets/cron 1.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with <strong>Container Nam</strong>e and <strong>Docker image</strong> fields filled.</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/cron 1.png" alt=""><figcaption><p><strong>Add Kubernetes CronJob</strong> - <strong>Basic Options</strong> page</p></figcaption></figure>
+5.  Complete the fields as follows:
 
-6. In the **Command** field, specify the command attributes for **Container - 1**. Click the Info Tip icon for examples. Select and copy commands as needed.
+    <table data-header-hidden><thead><tr><th width="230.888916015625"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter the CronJob name, e.g., <code>cronjob1</code>. Required.</td></tr><tr><td><strong>Schedule</strong></td><td>Enter the Cron schedule in standard format, e.g., <code>0 2 * * *</code>. Required.</td></tr><tr><td><strong>Cleanup After Finished in Seconds (TTL)</strong></td><td>Enter TTL in seconds, e.g., <code>86400</code>.</td></tr><tr><td><strong>Restart Policy</strong></td><td>Select the restart policy, e.g., <strong>Never</strong>.</td></tr><tr><td><strong>Backoff Limit</strong></td><td>Enter the maximum number of retries before the Job is marked failed.</td></tr><tr><td><strong>Allocation Tag</strong></td><td>Enter allocation tags if needed for resource organization or scheduling.</td></tr></tbody></table>
 
-<figure><img src="../.gitbook/assets/crom3.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with the <strong>Command</strong> field for <strong>Container - 1</strong> filled<strong>.</strong></p></figcaption></figure>
 
-7. To run the Kubernetes CronJob to completion, you must specify a Kubernetes [Init Container](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/).  Click the **Add Container** <img src="../.gitbook/assets/chevron_Down_arrow.png" alt="" data-size="line"> button and select the **Add Init Container** option. The **Init Container - 1** area displays.
+6. Enter the details for **Container 1** as needed (**Container Name**, **Docker Image**, **Command**, **Environment Variables**, **Arguments**, **Other Container Config**).
+   * If your CronJob requires **Init Containers**, click the caret next to **Add Container** and select **Add Init Container**. The **Init Container - 1** area displays.
+   * To add more containers, click **Add Container** as many times as needed and fill in their details.
 
-<figure><img src="../.gitbook/assets/cron4 (1).png" alt=""><figcaption><p><strong>Add Init Container</strong> area.</p></figcaption></figure>
+| **Container Name**         | Enter the container name, e.g., `main`. Required.       |
+| -------------------------- | ------------------------------------------------------- |
+| **Docker Image**           | Enter the Docker image, e.g., `nginx:latest`. Required. |
+| **Command**                | Enter any commands to run in the container.             |
+| **Environment Variables**  | Enter environment variables to set in the container.    |
+| **Arguments**              | Enter arguments for the container.                      |
+| **Other Container Config** | Enter any additional container configuration.           |
 
-8. In the **Init Container - 1** area, specify the **Container Name** and associated **Docker Image**.
-9. Click **Next** to open the **Advanced Configuration** step.
-10. In the **Other Spec Configuration** field, specify the Kubernetes CronJob spec (in YAML) for **Init Container - 1**. Click the Info Tip icon ( <img src="../.gitbook/assets/info_tip_black.png" alt="" data-size="line"> ) for examples. Select and copy commands as needed
+7. Click **Next**. The **Advanced Options** pane displays.&#x20;
 
-<figure><img src="../.gitbook/assets/cron6 (1).png" alt=""><figcaption><p>The <strong>Other Spec Configuration</strong> window on the <strong>Add Kubernetes CronJob, Advanced Configuration</strong> page<strong>.</strong></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/cron7.png" alt=""><figcaption><p><strong>Add Kubernetes CronJob</strong> - <strong>Advanced Options</strong> pane</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/cron7.png" alt=""><figcaption><p>The <strong>Add Kubernetes CronJob</strong> page with the <strong>Other Spec Configuration</strong> field completed<strong>.</strong></p></figcaption></figure>
+8. Complete the additional fields as needed:
 
-11. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page. It will run according to the schedule you specified.&#x20;
+<table data-header-hidden><thead><tr><th width="260"></th><th></th></tr></thead><tbody><tr><td><strong>Other Spec Configuration</strong></td><td>Enter any additional pod or container specifications as needed.</td></tr><tr><td><strong>Metadata Annotations</strong></td><td>Enter annotations in <code>key=value</code> format to add custom metadata to the CronJob or pods.</td></tr><tr><td><strong>Metadata Labels</strong></td><td>Enter labels in <code>key=value</code> format. To specify the App Name, use: <code>app.duplocloud.net/app-name: "&#x3C;your-app-name>"</code></td></tr></tbody></table>
+
+8. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page. It will run according to the schedule you specified.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot (916).png" alt=""><figcaption><p><strong>K8s CronJob</strong> tab displaying Kubernetes Job <strong>CALCULATEPI.</strong></p></figcaption></figure>
+
+{% hint style="info" %}
+**Tip:** Entering an app name in **Metadata Labels** allows the CronJob to be grouped under the specified App Name in the [Apps Dashboard](../automation-platform/kubernetes-overview/viewing-kubernetes-apps.md).
+{% endhint %}
 
 ## Suspending a CronJob
 
@@ -95,6 +108,8 @@ When the value is true and the CronJob fails, DuploCloud will generate a fault. 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJobs**.
 2. Select the Kubernetes CronJob you want to view from the **NAME** colunm.
 3. Select the **Overview, Schedule**, and **Details** tabs for information about the CronJob schedule and history.&#x20;
+
+### Using the Containers page to view linked Kubernetes CronJobs
 
 ### **Viewing the Latest Job from a CronJob**
 

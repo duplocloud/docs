@@ -41,7 +41,13 @@ Click **Add**. The **Add Kubernetes Persistent Volume Claim** page displays.
 <div align="left"><figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.16-15_13_10.png" alt=""><figcaption><p>The <strong>Add Kubernetes Persistent Volume Claim</strong> page</p></figcaption></figure></div>
 
 3. Define the PVC **Name**, **Storage Class Name**, **Volume Name**, **Volume Mode**, and other details such as volume **Access Modes**.
-4. Click **Add**.
+4.  Optionally, to group resources in the Kubernetes Apps dashboard, add an app name in the **Labels** field, in the following format:
+
+    ```
+    Key: app.duplocloud.net/app-name
+    Value: <app name>
+    ```
+5. Click **Add**.
 
 {% hint style="warning" %}
 If you are using K8s and PVCs to autoscale your storage groups and you encounter out-of-space conditions, simply adding new storage volumes may not resolve the issue. Instead, you must increase the size of the existing PVCs to accommodate your storage needs.

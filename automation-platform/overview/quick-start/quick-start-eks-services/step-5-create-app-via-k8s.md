@@ -35,7 +35,7 @@ Before creating a Service, verify that you completed the tasks in the previous t
 2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
 3.  Click **Add**. The **Add Service** page displays.<br>
 
-    <figure><img src="../../../../.gitbook/assets/Screenshot (126).png" alt=""><figcaption><p><strong>Add Service</strong> page</p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/Screenshot (1081).png" alt=""><figcaption><p><strong>Add Service</strong> page</p></figcaption></figure>
 4. From the table below, enter the values that correspond to the fields on the **Add Service** page. Accept all other default values for fields not specified.&#x20;
 5. Click **Next**. The **Advanced Options** page is displayed.
 6. At the bottom of the **Advanced Options** page, click **Create**. In about five (5) minutes, the Service will be created and initialized, displaying a status of **Running** in the **Containers** tab.&#x20;
