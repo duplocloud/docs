@@ -4,7 +4,7 @@ description: Configuration and Secret management in Azure
 
 # Passing Configs and Secrets
 
-There are many ways to pass configurations to containers at run-time. Although simple to set up, using Environmental Variables can become complex if there are too many configurations, especially files and certificates. In Kubernetes, you also have the option to populate environment variables from [Config Maps](../../../kubernetes-overview/configs-and-secrets/mounting-config-as-files.md#creating-a-kubernetes-configmap) or [Secrets](../../../kubernetes-overview/configs-and-secrets/setting-kubernetes-secrets.md#setting-kubernetes-secrets).
+There are many ways to pass configurations to containers at run-time. Although simple to set up, using Environmental Variables can become complex if there are too many configurations, especially files and certificates. In Kubernetes, you also have the option to populate environment variables from [Config Maps](../../../kubernetes-overview/configs-and-secrets/mounting-config-as-files.md#creating-a-kubernetes-configmap) or [Secrets](../../../../kubernetes-overview/configs-and-secrets/setting-kubernetes-secrets.md#setting-kubernetes-secrets).
 
 There are several methods for passing configurations to containers during runtime:.
 

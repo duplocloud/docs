@@ -54,8 +54,8 @@ hidden: true
   * Integrate DuploCloud-managed K8s clusters with [FluxCD](../../extras-overview/fluxcd.md).
   * Support for [migration from Flux v1 to Flux v2](../../extras-overview/fluxcd.md#migrating-from-flux-v1-to-flux-v2) for FluxCD users.&#x20;
   * Configure [read-only access to K8s Secrets](../../automation-platform/kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md).
-  * Create and manually run a [K8s Job](../../automation-platform/kubernetes-overview/jobs.md) from a Kubernetes CronJob.
-  * Configure faults for failed [Jobs](../../automation-platform/kubernetes-overview/jobs.md#jobs-level-kubernetes-jobs-faults) and [CronJobs ](../../kubernetes/cronjobs.md)at the Tenant level.
+  * Create and manually run a [K8s Job](../../kubernetes/jobs.md) from a Kubernetes CronJob.
+  * Configure faults for failed [Jobs](../../kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [CronJobs ](../../kubernetes/cronjobs.md)at the Tenant level.
   * Support for [DaemonSet](https://docs.duplocloud.com/docs/kubernetes-overview/daemonset#creating-a-daemonset-in-duplocloud-aws-or-gcp) with GCP or AWS.&#x20;
 * General
   * Enhanced access to [DuploCloud help options](../welcome-to-duplocloud/duplocloud-support-model.md#how-to-get-help-from-within-the-duplocloud-portal) from the DuploCloud Platform.&#x20;
@@ -129,7 +129,7 @@ hidden: true
 * Kubernetes
   * [Follow logs](../../automation-platform/overview/aws-services/containers/eks-containers-and-services/#kubernetes-containers) for K8s containers in real-time.&#x20;
   * Influence Pod scheduling by specifying K8s YAML for [Pod Toleration](../../automation-platform/kubernetes-overview/pod-toleration.md).&#x20;
-  * Create [Kubernetes Jobs (K8s Jobs)](../../automation-platform/kubernetes-overview/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
+  * Create [Kubernetes Jobs (K8s Jobs)](../../kubernetes/jobs.md) in AWS and GCP  to manage short-lived, batch workloads in a Kubernetes cluster.
   * Create [Kubernetes CronJobs](../../kubernetes/cronjobs.md) in AWS and GCP to schedule long-term K8s Jobs to run at preset intervals.
 *   General updates
 
