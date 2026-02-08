@@ -10,6 +10,54 @@ Agents work within DuploCloud's secure Tenant architecture, inheriting user perm
 
 ## Out-of-the-Box Agents
 
+### Site Reliability Engineer (SRE) Agent
+
+The Site Reliability Engineer (SRE) Agent is a central AI agent that orchestrates multiple specialized sub-agents to provide comprehensive support. When you interact with the SRE Agent, it automatically selects the appropriate sub-agent(s) to handle your queries, serving as a single point of interaction for all your operational questions.
+
+**Current integrations** include the following sub-agents:
+
+* **PrivateGPT Agent:** secure access to DuploCloud documentation and tenant-specific knowledge
+* **Kubernetes Agent:** real-time cluster monitoring, resource management, troubleshooting, and log analysis
+
+**Future Integrations** will include AWS, Observability, CI/CD, and additional sub-agents to provide end-to-end coverage for troubleshooting, diagnostics, monitoring, and observability.
+
+<details>
+
+<summary>View SRE (Master) Agent details</summary>
+
+#### Core Capabilities
+
+* **Automatic Sub-Agent Routing:** Dynamically determines which sub-agent(s) to engage for each query.
+* **Comprehensive Operational Support:** Covers troubleshooting, diagnostics, monitoring, and observability.
+* **Context-Aware Assistance:** Maintains awareness of tenant, cluster, and infrastructure context for precise answers.
+* **Security and Compliance:** Inherits sub-agent security and permission models (e.g., PrivateGPT Agent's in-tenant processing, Kubernetes Agent’s permission inheritance).
+
+#### Key Features
+
+* **Single Point of Interaction:** Users can ask questions without needing to know which sub-agent to consult.
+* **Real-Time Insights:** Retrieves live cluster data, documentation, or logs as required by the query.
+* **Dynamic Orchestration:** Combines outputs from multiple sub-agents for complex queries spanning documentation and operational state.
+* **Audit Logging:** All agent interactions are logged for traceability and compliance.
+
+#### Integration Workflow
+
+1. **User Query:** User submits a question or task via the HelpDesk interface.
+2. **Agent Routing:** The SRE Master Agent automatically routes queries to the appropriate sub-agent(s), currently including **PrivateGPT** and **Kubernetes** agents.
+3. **Sub-Agent Execution:** Selected sub-agent(s) process the request (e.g., PrivateGPT Agent answers documentation questions, Kubernetes Agent retrieves cluster metrics).
+4. **Aggregated Response:** SRE Master Agent consolidates results and presents a unified answer.
+5. **Logging & Auditing:** All interactions are captured for traceability.
+
+#### Future Integrations
+
+The SRE Agent will extend its operational coverage over time by incorporating additional sub-agents, such as:
+
+* **AWS Agent:** Infrastructure management and cloud resource queries.
+* **Observability Agent:** Logs, metrics, and alerting for full observability coverage.
+* **CI/CD Agent:** Pipeline monitoring, failure detection, and automated troubleshooting.
+* **Additional agents:** To provide end-to-end operational support across all DuploCloud-managed resources.
+
+</details>
+
 ### Kubernetes Agent
 
 The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes cluster management, maintenance, and troubleshooting. This Agent serves as your dedicated Kubernetes specialist, capable of handling everything from routine cluster health checks to complex resource deployments.
