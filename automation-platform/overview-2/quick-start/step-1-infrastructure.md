@@ -16,7 +16,7 @@ _Estimated time to complete Step 1: 40 minutes. Much of this time is consumed by
 
 Before starting this tutorial:
 
-* Learn more about DuploCloud [Infrastructure](../../../introduction/application-focused-interface-duplocloud-architecture/infrastructure.md)s, [Plan](../../../introduction/application-focused-interface-duplocloud-architecture/plan.md)s, and [Tenants](../../../introduction/application-focused-interface-duplocloud-architecture/tenant.md).
+* Learn more about DuploCloud [Infrastructure](../../application-focused-interface-duplocloud-architecture/infrastructure.md)s, [Plan](../../application-focused-interface-duplocloud-architecture/plan.md)s, and [Tenants](../../application-focused-interface-duplocloud-architecture/tenant.md).
 * Reference the [Access Control](../../access-control/) documentation to create User IDs with the **Administrator** role. In order to perform the tasks in this tutorial, you must have Administrator privileges.
 
 ## Creating a DuploCloud Infrastructure
@@ -54,7 +54,7 @@ Before starting this tutorial:
 
 ### Verifying a Plan Exists
 
-Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the [Tenants ](../../../introduction/application-focused-interface-duplocloud-architecture/tenant.md)or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
+Every DuploCloud Infrastructure generates a Plan. Plans are sets of templates that are used to configure the [Tenants ](../../application-focused-interface-duplocloud-architecture/tenant.md)or workspaces, in your Infrastructure. You will set up Tenants in the next tutorial step.
 
 Before proceeding, confirm that a Plan exists that corresponds to your newly created Infrastructure.
 

@@ -8,7 +8,7 @@ description: Allow multiple Tenants access to the same resources
 These features are currently only available for AWS.
 {% endhint %}
 
-You can configure the DuploCloud Portal to support various types of _Cross-tenant access_. Cross-tenant access enables you to share access to resources and services between two DuploCloud [Tenants](../../../introduction/application-focused-interface-duplocloud-architecture/tenant.md).
+You can configure the DuploCloud Portal to support various types of _Cross-tenant access_. Cross-tenant access enables you to share access to resources and services between two DuploCloud [Tenants](../../application-focused-interface-duplocloud-architecture/tenant.md).
 
 Configure Cross-tenant access to:
 

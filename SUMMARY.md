@@ -3,24 +3,15 @@
 ## Introduction
 
 * [Overview](README.md)
-* [Policy Model](introduction/application-focused-interface-duplocloud-architecture/README.md)
-  * [Infrastructure](introduction/application-focused-interface-duplocloud-architecture/infrastructure.md)
-  * [Plan](introduction/application-focused-interface-duplocloud-architecture/plan.md)
-  * [Tenant](introduction/application-focused-interface-duplocloud-architecture/tenant.md)
-  * [Hosts](introduction/application-focused-interface-duplocloud-architecture/hosts.md)
-  * [Services](introduction/application-focused-interface-duplocloud-architecture/app-service-and-cloud-services.md)
-  * [DuploCloud Tenancy Models](introduction/application-focused-interface-duplocloud-architecture/duplocloud-tenancy-models.md)
-  * [DuploCloud Common Components](introduction/application-focused-interface-duplocloud-architecture/duplocloud-common-components/README.md)
-    * [Diagnostics](introduction/application-focused-interface-duplocloud-architecture/duplocloud-common-components/diagnostics.md)
-  * [Management Portal Scope](introduction/application-focused-interface-duplocloud-architecture/management-portal-scope.md)
-* [Getting Started with DuploCloud](introduction/welcome-to-duplocloud/README.md)
-  * [Onboarding](introduction/welcome-to-duplocloud/duplocloud-onboarding.md)
-  * [Support Options: Standard vs. Managed Operations](introduction/welcome-to-duplocloud/duplocloud-support-options-standard-vs.-managed-operations.md)
-  * [Getting Help with DuploCloud](introduction/welcome-to-duplocloud/duplocloud-support-model.md)
-  * [Common Use Cases](introduction/welcome-to-duplocloud/what-duplocloud-does.md)
-  * [Public Cloud Tutorials](introduction/welcome-to-duplocloud/public-cloud-tutorials.md)
-* [Product Updates](introduction/product-updates.md)
-  * [Product Update Archives](introduction/product-updates/product-update-archives.md)
+* [AI Devops Policy Model](introduction/ai-devops-policy-model/README.md)
+  * [Providers](introduction/ai-devops-policy-model/providers.md)
+  * [MCP Servers](introduction/ai-devops-policy-model/mcp-servers.md)
+  * [Skills](introduction/ai-devops-policy-model/skills.md)
+  * [Personas](introduction/ai-devops-policy-model/personas.md)
+  * [Agents](introduction/ai-devops-policy-model/agents.md)
+  * [Engineers](introduction/ai-devops-policy-model/engineers.md)
+  * [Projects](introduction/ai-devops-policy-model/projects.md)
+  * [Incident Management](introduction/ai-devops-policy-model/incident-management.md)
 
 ## AI Suite
 
@@ -45,8 +36,30 @@
 * [Product Updates](ai-suite/product-updates.md)
 * [Reporting AI Concerns](ai-suite/reporting-ai-concerns.md)
 
+***
+
+* [Getting Started with DuploCloud](welcome-to-duplocloud/README.md)
+  * [Onboarding](welcome-to-duplocloud/duplocloud-onboarding.md)
+  * [Support Options: Standard vs. Managed Operations](welcome-to-duplocloud/duplocloud-support-options-standard-vs.-managed-operations.md)
+  * [Getting Help with DuploCloud](welcome-to-duplocloud/duplocloud-support-model.md)
+  * [Common Use Cases](welcome-to-duplocloud/what-duplocloud-does.md)
+  * [Public Cloud Tutorials](welcome-to-duplocloud/public-cloud-tutorials.md)
+
 ## Automation Platform
 
+* [Overview](automation-platform/readme.md)
+* [Policy Model](automation-platform/application-focused-interface-duplocloud-architecture/README.md)
+  * [Infrastructure](automation-platform/application-focused-interface-duplocloud-architecture/infrastructure.md)
+  * [Plan](automation-platform/application-focused-interface-duplocloud-architecture/plan.md)
+  * [Tenant](automation-platform/application-focused-interface-duplocloud-architecture/tenant.md)
+  * [Hosts](automation-platform/application-focused-interface-duplocloud-architecture/hosts.md)
+  * [Services](automation-platform/application-focused-interface-duplocloud-architecture/app-service-and-cloud-services.md)
+  * [DuploCloud Tenancy Models](automation-platform/application-focused-interface-duplocloud-architecture/duplocloud-tenancy-models.md)
+  * [DuploCloud Common Components](automation-platform/application-focused-interface-duplocloud-architecture/duplocloud-common-components/README.md)
+    * [Diagnostics](automation-platform/application-focused-interface-duplocloud-architecture/duplocloud-common-components/diagnostics.md)
+  * [Management Portal Scope](automation-platform/application-focused-interface-duplocloud-architecture/management-portal-scope.md)
+* [Product Updates](automation-platform/product-updates/README.md)
+  * [Product Update Archives](automation-platform/product-updates/product-update-archives.md)
 * [Container Orchestrators](automation-platform/container-orchestrators/README.md)
   * [Terminologies in Container Orchestration](automation-platform/container-orchestrators/concepts.md)
 * [DuploCloud Prerequisites](automation-platform/duplocloud-prerequisites/README.md)

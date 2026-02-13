@@ -6,7 +6,7 @@ description: Using DuploCloud Tenants for Azure
 
 In Azure, Microsoft cloud features such as Azure resource groups, Azure managed identity, Azure application security groups (ASG), KMS keys, and Kubernetes Namespaces are exposed in Tenants which reference their configurations.
 
-For more information about DuploCloud Tenants, see the [Tenants](../../../../introduction/application-focused-interface-duplocloud-architecture/tenant.md) topic in the Getting Started with DuploCloud section.&#x20;
+For more information about DuploCloud Tenants, see the [Tenants](../../../application-focused-interface-duplocloud-architecture/tenant.md) topic in the Getting Started with DuploCloud section.&#x20;
 
 ## Creating a Tenant <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 

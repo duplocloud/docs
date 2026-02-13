@@ -16,7 +16,7 @@ If there is a way to do something in the cloud, it can be done faster and more e
 
 ## 1. Turbo-Charging Infrastructure and Workspace Creation <a href="#id-1.-turbo-charging-infrastructure-and-workspace-creation" id="id-1.-turbo-charging-infrastructure-and-workspace-creation"></a>
 
-Did you know that DuploCloud can create a complete cloud infrastructure comprising virtually hundreds of components and sub-components in ten to fifteen minutes? This usually takes hours to develop in a native cloud portal and even longer when using native Kubernetes (K8s). Individual workspaces ([DuploCloud Tenants](../application-focused-interface-duplocloud-architecture/tenant.md)) can be created in less than a minute.
+Did you know that DuploCloud can create a complete cloud infrastructure comprising virtually hundreds of components and sub-components in ten to fifteen minutes? This usually takes hours to develop in a native cloud portal and even longer when using native Kubernetes (K8s). Individual workspaces ([DuploCloud Tenants](../automation-platform/application-focused-interface-duplocloud-architecture/tenant.md)) can be created in less than a minute.
 
 This acceleration is critical to many of the business value propositions DuploCloud offers. It is why we can perform cloud migrations at such an advanced pace, minimizing downtime and simultaneously ensuring security and compliance (and peace of mind).
 
