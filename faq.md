@@ -31,7 +31,7 @@ Use these FAQ documents to quickly find answers to popular questions about using
 
 ### What support features come with my DuploCloud subscription?
 
-See [DuploCloud Support](introduction/welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.&#x20;
+See [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.&#x20;
 
 For more detailed inquiries or assistance, including DuploCloud's DevOps automation platform capabilities, compliance, AWS services like Kinesis stream, and product updates, refer to the [official documentation](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/) and [whitepapers ](https://duplocloud.com/white-papers/)available on DuploCloud's website.
 
@@ -63,7 +63,7 @@ No. DuploCloud is a self-hosted solution deployed within the customer's cloud ac
 * Our engineers install the DuploCloud Portal and schedule a call to orient you and complete any additional configurations. You can complete the setup at this time or create some services and let DuploCloud engineers handle the rest. We also perform penetration testing and vulnerability assessments on your applications and Infrastructures using our SIEM solution.
 * Once your DuploCloud Portal is installed and configured, DuploCloud Infrastructures (VPCs) are operational; Kubernetes is enabled and configured; and logging, monitoring, alerting, CI/CD, and SOC 2 controls are implemented.
 
-Although the onboarding process can take thirty to seventy (30-70) hours, DuploCloud staff performs about 90% of the work. Contact [DuploCloud Support](introduction/welcome-to-duplocloud/duplocloud-support-model.md) with any additional questions.
+Although the onboarding process can take thirty to seventy (30-70) hours, DuploCloud staff performs about 90% of the work. Contact [DuploCloud Support](welcome-to-duplocloud/duplocloud-support-model.md) with any additional questions.
 
 ### How does the DuploCloud Portal access my cloud infrastructure, and how is it secured?
 

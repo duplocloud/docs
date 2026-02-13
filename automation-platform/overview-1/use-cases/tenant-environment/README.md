@@ -6,7 +6,7 @@ description: Using DuploCloud Tenants for GCP
 
 In GCP, cloud features such as Resource Groups, Identity and Access Management (IAM), Security Groups, Cloud KMS, as well as Kubernetes Namespaces, are exposed in Tenants which reference their configurations.
 
-For more information about DuploCloud Tenants, see the [Tenants](../../../../introduction/application-focused-interface-duplocloud-architecture/tenant.md) topic in the DuploCloud Common Components documentation.&#x20;
+For more information about DuploCloud Tenants, see the [Tenants](../../../application-focused-interface-duplocloud-architecture/tenant.md) topic in the DuploCloud Common Components documentation.&#x20;
 
 ## Creating a Tenant <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 

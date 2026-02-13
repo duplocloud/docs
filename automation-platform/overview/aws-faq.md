@@ -14,7 +14,7 @@ AWS Copilot is used only for ECS cluster management, which is a small subset of 
 
 ### What keys should I use in my application to connect to the AWS resources I have created in DuploCloud (S3, Dynamo, SQS)? <a href="#id-4-toc-title" id="id-4-toc-title"></a>
 
-If your application runs in a DuploCloud [Tenant](../../introduction/application-focused-interface-duplocloud-architecture/tenant.md), you do not need a long-term credential like an AWS access key. After your application runs in the Tenant, test your connection using the AWS CLI to verify access.   &#x20;
+If your application runs in a DuploCloud [Tenant](../application-focused-interface-duplocloud-architecture/tenant.md), you do not need a long-term credential like an AWS access key. After your application runs in the Tenant, test your connection using the AWS CLI to verify access.   &#x20;
 
 Use the AWS constructor that takes only the region (e.g., us-west-2) as the argument. DuploCloud setup links your instance profile and resources. The DuploCloud Host already has access to the resources within the Tenant. DuploCloud AWS resources are reachable only from DuploCloud Hosts on the same account.
 
@@ -100,7 +100,7 @@ No, enabling or disabling Amazon GuardDuty does not affect the vulnerabilities a
 
 CI/CD is the topmost layer of the DevOps stack. DuploCloud should be viewed as a deployment and monitoring solution invoked by your CI/CD pipelines, written with tools such as CircleCI, Jenkins, GitHub Actions, etc. You build images and push them to container registries without involving DuploCloud, but you invoke DuploCloud to update the container image. An example of this is in the [CI/CD](../introduction-to-ci-cd/circleci/) section. DuploCloud also offers its own CI/CD tool (KatKit).
 
-If your application runs in a DuploCloud [Tenant](../../introduction/application-focused-interface-duplocloud-architecture/tenant.md), you do not need a long-term credential, such as an AWS access key. After your application runs in the Tenant, test your connection using the AWS CLI to verify access.  &#x20;
+If your application runs in a DuploCloud [Tenant](../application-focused-interface-duplocloud-architecture/tenant.md), you do not need a long-term credential, such as an AWS access key. After your application runs in the Tenant, test your connection using the AWS CLI to verify access.  &#x20;
 
 ## Kubernetes FAQs
 

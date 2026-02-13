@@ -6,7 +6,7 @@ description: Key concepts for using DuploCloud with Docker and Azure
 
 Familiarize yourself with some key concepts and terminologies.
 
-For descriptions of other common DuploCloud concepts, like Infrastructures and Tenants, see the [Common Components documentation](../../../introduction/application-focused-interface-duplocloud-architecture/duplocloud-common-components/).
+For descriptions of other common DuploCloud concepts, like Infrastructures and Tenants, see the [Common Components documentation](../../application-focused-interface-duplocloud-architecture/duplocloud-common-components/).
 
 ## Hosts
 
