@@ -6,7 +6,7 @@ description: Working with Load Balancers using AWS ECS
 
 ## Prerequisites
 
-Before you create an ECS Service and Load Balancer, you must create a [Task Definition](../../../../aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md) to run the Service. You can define multiple containers in your Task Definition.
+Before you create an ECS Service and Load Balancer, you must create a [Task Definition](../containers/ecs-containers-and-task-definitions/) to run the Service. You can define multiple containers in your Task Definition.
 
 ## Adding an ECS Service and Load Balancer Listener
 
@@ -17,7 +17,7 @@ For an end-to-end example of deploying an application using an ECS Service, see 
 Tasks run until an error occurs or a user terminates the Task in the ECS Cluster.
 
 1. Navigate to **Cloud Services** -> **ECS**.
-2. In the **Task Definitions** tab, select the Task Definition Family Name. This is the [Task Definition **Name** that you created ](../../../../aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md)prepended by a unique DuploCloud identifier. &#x20;
+2. In the **Task Definitions** tab, select the Task Definition Family Name. This is the [Task Definition **Name** that you created ](../containers/ecs-containers-and-task-definitions/)prepended by a unique DuploCloud identifier. &#x20;
 3. In the **Service Details** tab, click the **Configure ECS Service** link. The **Add ECS Service** page displays.
 4. In the **Name** field, enter the Service name.
 5.  In the **LB Listeners** area, click **Add**. The **Add Load Balancer Listener** pane displays.<br>
