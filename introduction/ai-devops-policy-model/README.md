@@ -12,9 +12,7 @@ The DuploCloud AI Devops Policy Model lays down the foundational building blocks
 
 This diagram illustrates a hierarchical AI DevOps platform architecture where Admins define permissions and integrations, Engineers are configured with capabilities and boundaries, Projects break down requirements into executable plans and tasks, and specialized Agents handle the actual work through multi-agent orchestration in a ticket-based workflow.<br>
 
-<figure><img src="../../.gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (497).png" alt=""><figcaption></figcaption></figure>
 
 #### Core Concepts
 
@@ -40,25 +38,29 @@ A Persona serves as a logical container that organizes multiple Skills together.
 
 
 
-**4. Scope**
+**4. Provider**
 
-Scope defines what the Engineer can access within the infrastructure and tooling ecosystem. This includes cloud accounts and namespaces, repositories such as Git and other code or configuration repositories, and MCP servers which provide access to observability tools, SIEM systems, cloud platforms, and DuploCloud MCPs.
+A system that the Engineer can access, including cloud platforms (AWS, Azure, GCP), repositories, MCP servers and more. Each Provider includes the specific account/namespace and requires a Credential reference for authentication. Credentials can be stored in DuploCloud or referenced externally, enabling just-in-time, scoped access to resources without exposing sensitive authentication data.<br>
+
+**5. Scope**
+
+Scope defines what the Engineer can access within each Provider. Each Scope entry specifies a Provider with its credential, and includes granular access controls through regions, resource types, tags, or custom resource maps (key-value pairs for filtering specific resources like namespaces). Scope can also include MCP servers for extended system access.
 
 
 
-**5. Guardrails**
+**6. Guardrails**
 
 Guardrails define exceptions within the Scope, specifying what the Engineer cannot access or do. These restrictions can target specific resources to exclude, such as a production database instance, specific operations that should be restricted, or specific environments that should be avoided entirely. Guardrails provide fine-grained control over the Engineer's permissions within its broader Scope.
 
 
 
-**6. Quota / QoS**
+**7. Quota / QoS**
 
 Quota and Quality of Service settings control resource limits for the Engineer. These controls can include maximum concurrent projects, token limits, and cloud resource provisioning limits. The system is designed to accommodate additional options in future versions as requirements evolve.
 
 
 
-**7. Knowledge Base**
+**8. Knowledge Base**
 
 The Knowledge Base represents the Engineer's learned understanding of the environment. It captures architecture and topology information, relationships between systems, codebase structure, and historical context from completed work. This knowledge is stored both as files in customer repositories in markdown format and in a vector database within DuploCloud, enabling efficient retrieval and reference during operations.
 
