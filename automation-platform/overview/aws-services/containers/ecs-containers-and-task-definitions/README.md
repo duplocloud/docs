@@ -4,7 +4,7 @@ description: Managing Containers and Service with ECS
 
 # ECS Containers, Task Definitions and Services
 
-DuploCloud supports running containerized workloads using [Amazon Elastic Container Service (ECS)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html) on both **EC2** and **Fargate**. Using the DuploCloud Portal, you can define tasks, configure services, and manage container deployments without manually writing JSON task definitions or navigating the AWS Console. For a complete, step-by-step example of deploying an ECS Task Definition, Service, and Load Balancer, [see this tutorial](../../../automation-platform/overview/quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
+DuploCloud supports running containerized workloads using [Amazon Elastic Container Service (ECS)](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html) on both **EC2** and **Fargate**. Using the DuploCloud Portal, you can define tasks, configure services, and manage container deployments without manually writing JSON task definitions or navigating the AWS Console. For a complete, step-by-step example of deploying an ECS Task Definition, Service, and Load Balancer, [see this tutorial](../../../quick-start/quick-start-ecs-services/step-4-create-app-via-ecs.md).
 
 ## Creating a Task Definition
 
@@ -14,7 +14,7 @@ A Task Definition defines how your containers should run, including images, port
 2. Navigate to **Cloud Services** -> **ECS**.
 3. Select the **Task Definition** tab, click **Add**. The **Add Task Definition**-**Basic Options** pane displays.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (781).png" alt=""><figcaption><p> <strong>Add Task Definition</strong>-<strong>Basic Options</strong> page</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (781).png" alt=""><figcaption><p> <strong>Add Task Definition</strong>-<strong>Basic Options</strong> page</p></figcaption></figure></div>
 
 4. Complete the following fields:
 
@@ -22,7 +22,7 @@ A Task Definition defines how your containers should run, including images, port
 
 5. Click **Next**. The **Add Task Definition**-**Advanced Options** pane displays.&#x20;
 
-<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (103).png" alt=""><figcaption><p><strong>Add Task Definition</strong>-<strong>Advanced Options</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (103).png" alt=""><figcaption><p><strong>Add Task Definition</strong>-<strong>Advanced Options</strong> pane</p></figcaption></figure></div>
 
 6. Configure settings for **Container - 1** (primary):&#x20;
 7. and runtime options for the ECS task:
@@ -46,7 +46,7 @@ Execute a single instance of a container based on your Task Definition. This opt
 4. From the **TASK DEFINITION FAMILY NAME** list, click on the task to run. (Note that this is the Task Definition Name prepended by a unique identifier, which includes your Tenant name and part of your Infrastructure name.)
 5. Click on the **Actions** menu, and select **Execute**. The **Execute** pane displays.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (1039).png" alt=""><figcaption><p>The <strong>Run ECS Tasks</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (1039).png" alt=""><figcaption><p>The <strong>Run ECS Tasks</strong> pane</p></figcaption></figure></div>
 
 6. Enter the basic execution information:
 
@@ -68,13 +68,13 @@ Deploy a long-running ECS service that manages task replication, health checks, 
 4. Select the Task Definition from the **TASK DEFINITION FAMILY NAME** list. Note that this is the Task Definition Name prepended by a unique identifier, which includes your Tenant name and part of your Infrastructure name.&#x20;
 5. Select the **Service Details** tab, and click **Configure ECS Service**. The **Add ECS Service** page displays.
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_57_05.png" alt=""><figcaption><p>The <strong>Add ECS Service</strong> page</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-16_57_05.png" alt=""><figcaption><p>The <strong>Add ECS Service</strong> page</p></figcaption></figure>
 
-5. In the **Name** field, a name for the Service.
-6. Optionally, click **Add** in the **LB Listeners** area to add Load Balancer.
-   * Complete the required fields on the **Add Load Balancer Listener** pane, and click **Add**.&#x20;
-7. Complete additional fields, as needed, on the **Add ECS Service** page.
-8. Click **Submit**. The ECS Service is created.&#x20;
+5. Complete the following fields:
+
+<table data-header-hidden><thead><tr><th width="188.4443359375">Field</th><th>Enter / Select</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for your ECS service (e.g., <code>ECStestservice</code>).</td></tr><tr><td><strong>Task Version</strong></td><td>Select the task definition version from the dropdown (e.g., <code>duploservices-test2-testtaskdef:1</code>).</td></tr><tr><td><strong>Shared LB</strong></td><td>Select <strong>Yes</strong> or <strong>No</strong> depending on whether this service shares a Load Balancer.</td></tr><tr><td><strong>HC Grace Period</strong></td><td>Enter the health check grace period in seconds (e.g., <code>0</code>).</td></tr><tr><td><strong>Replicas</strong></td><td>Enter the number of task replicas to run (e.g., <code>1</code>).</td></tr><tr><td><strong>DNS Prefix</strong></td><td>Enter a DNS prefix for the service (e.g., <code>test2-testtaskdef</code>).</td></tr><tr><td><strong>Old Task Definitions Retention Count</strong></td><td>Enter the number of old task definitions to retain (default is <code>10</code>).</td></tr><tr><td><strong>Capacity Providers</strong></td><td>Optionally, select one or more capacity providers for the service. Determines which EC2 or Fargate resources tasks run on.</td></tr><tr><td><strong>Placement Constraints</strong></td><td>Optionally, click <strong>Add</strong> to define a constraint. Select <strong>Type</strong> from the dropdown (e.g., <code>Distinct Instance</code>Click <strong>Add</strong> to define a constraint. Select <strong>Type</strong>: <code>Distinct Instance</code> or <code>Member Of</code>. If using <code>Member Of</code>, complete the <strong>Expression</strong> field with the appropriate rule.</td></tr><tr><td><strong>Placement Strategy</strong></td><td>Optionally, click <strong>Add</strong> to define a strategy. Select <strong>Type</strong>: <code>Random</code>, <code>Spread</code>, or <code>Binpack</code>. For <code>Spread</code> or <code>Binpack</code>, select the <strong>Field</strong> that ECS should use for placement.</td></tr><tr><td><strong>LB Listeners</strong></td><td><p>Optionally, click <strong>Add</strong> in the <strong>LB Listeners</strong> area to add Load Balancer.</p><ul><li>Complete the required fields on the <strong>Add Load Balancer Listener</strong> pane, and click <strong>Add</strong>. </li></ul></td></tr></tbody></table>
+
+5. Click **Submit**. The ECS Service is created.&#x20;
 
 ## Managing ECS Tasks and Task Definitions
 
@@ -108,21 +108,21 @@ From the Task Definition detail page, select the **Tasks** tab, then click the *
 
 <table data-header-hidden><thead><tr><th width="182.00006103515625"></th><th></th></tr></thead><tbody><tr><td><strong>View JSON</strong></td><td>View the JSON configuration for the Task Definition family.</td></tr><tr><td><strong>Console</strong></td><td>Open the Task Definition in the AWS Console.</td></tr><tr><td><strong>Logs</strong></td><td>View logs associated with the Task Definition.</td></tr><tr><td><strong>Execute</strong></td><td>Run a one-off ECS Task from this Task Definition.</td></tr><tr><td><strong>Edit Task Definition</strong></td><td>Open the Task Definition in edit mode.</td></tr><tr><td><strong>Edit Service</strong></td><td>Modify the configuration of the ECS Service.</td></tr><tr><td><strong>Delete Service</strong></td><td>Deletes the selected ECS Service.</td></tr></tbody></table>
 
-<figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_47_39.png" alt=""><figcaption><p>Actions menu for ECS Service</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-18_47_39.png" alt=""><figcaption><p>Actions menu for ECS Service</p></figcaption></figure>
 
 ## **Configuring** ECS with EC2 Capacity Provider
 
 Set up a containerized environment where ECS uses EC2 instances to host containers. By leveraging an Auto Scaling Group (ASG), ECS can automatically launch and scale EC2 instances as needed to run your containers.
 
-1. [Create an ASG ](../../../automation-platform/overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-autoscaling-groups-asg)with the following specifications:
+1. [Create an ASG ](../../../use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-autoscaling-groups-asg)with the following specifications:
 
 | **Agent Platform**  | `ECS`                  |
 | ------------------- | ---------------------- |
 | **Image**           | `Other`                |
 | **Other Image ID**  | `ECS-Optimized AMI ID` |
 
-2. [Create a Task Definition](ecs-containers-and-task-definitions.md#creating-a-task-definition) following the steps shown above.&#x20;
-3. Add[ an ECS Service](ecs-containers-and-task-definitions.md#creating-an-ecs-service) to the Task Definition. During ECS Service creation, click **Capacity Provider** and select the ASG you created in step 1.
+2. [Create a Task Definition](./#creating-a-task-definition) following the steps shown above.&#x20;
+3. Add[ an ECS Service](./#creating-an-ecs-service) to the Task Definition. During ECS Service creation, click **Capacity Provider** and select the ASG you created in step 1.
 
 ## Elastic Container Service (ECS) Fargate <a href="#id-9-toc-title" id="id-9-toc-title"></a>
 

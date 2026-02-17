@@ -14,7 +14,7 @@ _**Last Updated, January 8, 2026**_
 * AWS - [ElastiCache Snapshot Retention](../overview/aws-services/database/elastic-cache.md#updating-snapshot-retention-limit) — Configure snapshot retention limits.¹
 * Cost Management - [Custom Resource Tagging](../../overview/use-cases/custom-resource-tags.md) — Apply custom tags to cloud resources.¹<sup>,</sup>²
 * Security & Compliance - [Compliance Documents](../security-and-compliance/compliance-reports.md) — Download DuploCloud compliance reports._¹_
-* AWS - [ECS Run Task](../../aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#running-a-task-optional) — Allow selecting a capacity provider strategy when running ECS tasks.¹<sup>,</sup>²
+* AWS - [ECS Run Task](../overview/aws-services/containers/ecs-containers-and-task-definitions/#running-a-task-optional) — Allow selecting a capacity provider strategy when running ECS tasks.¹<sup>,</sup>²
 * AWS - [S3 Event Notifications](../overview/aws-services/s3-bucket/s3-bucket-notifications.md) — Support for configuring Amazon S3 event notifications.²
 * AWS - [Lambda Edit Menu Updates](../../overview/aws-services/lambda/#id-3-toc-title) — Add Maximum Retry Attempts and Maximum Event Age.²
 * Kubernetes - [Suspend CronJobs](../../kubernetes/cronjobs.md#suspending-a-cronjob) using a suspend true/false setting.²
@@ -30,7 +30,7 @@ _**Last Updated, January 8, 2026**_
 * AWS - [AMI enhancements](../overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md) — Select, restrict, or share AMIs across Tenants.¹<sup>,</sup>²
 * AWS - [Amazon MQ support](../overview/aws-services/amazon-mq.md) — Provision and manage AWS MQ brokers in DuploCloud.¹<sup>,</sup>²
 * AWS - [App Runner support](../overview/aws-services/app-runner.md) — Provision and manage AWS App Runner services.¹<sup>,</sup>²
-* AWS - [ECS launch and network mode](../../aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#creating-a-task-definition) — Select launch type and network mode for ECS tasks.¹<sup>,</sup>²
+* AWS - [ECS launch and network mode](../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition) — Select launch type and network mode for ECS tasks.¹<sup>,</sup>²
 * AWS - [OpenSearch upgrade support](../overview/aws-services/elasticsearch.md#managing-an-opensearch-instance) — Upgrade OpenSearch versions within DuploCloud.¹<sup>,</sup>²
 * AWS - [EC2 Snapshots](../overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.¹<sup>,</sup>²
 * AWS - [Ingress: Multi-certificate support](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB Ingress.¹<sup>,</sup>²
@@ -96,7 +96,7 @@ _**Last Updated, January 8, 2026**_
 * AWS - [Enable delete protection for AWS Load Balancers.](../overview/aws-services/load-balancers/#additional-load-balancer-settings)¹&#x20;
 * AWS - Support for adding TLS Hosts and TLS Secrets fields when configuring[ Ingress for EKS](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
 * AWS - Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
-* AWS - Support for [ECS with EC2 Capacity Provider](../../aws-user-guide/aws-services/containers/ecs-containers-and-task-definitions.md#configuring-ecs-with-ec2-capacity-provider).²
+* AWS - Support for [ECS with EC2 Capacity Provider](../overview/aws-services/containers/ecs-containers-and-task-definitions/#configuring-ecs-with-ec2-capacity-provider).²
 * Azure - Add new secret versions in [Azure Key Vault](../overview-2/azure-services/key-vault.md).²
 * Azure - Support for [Azure Container Registry](../overview-2/azure-services/azure-container-registry-acr.md).²
 * Azure - Support for [Azure Availability Sets](../overview-2/use-cases/hosts-vms/availability-sets.md).¹

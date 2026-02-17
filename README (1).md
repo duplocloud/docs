@@ -1,6 +1,6 @@
 ---
 description: An overview and demo of DuploCloud's DevOps platform
-cover: ../.gitbook/assets/banner dark.png
+cover: .gitbook/assets/banner dark.png
 coverY: 0
 ---
 
@@ -13,7 +13,7 @@ DuploCloud is an agentic DevSecOps Automation platform that leverages AI for a w
 * Troubleshoot incidents
 * Perform several other functions like collect evidence for compliance audits, reporting, discover cloud resources to generate documentation and so on.&#x20;
 
-![The DuploCloud Platform Features Diagram](../.gitbook/assets/duplocloud-update-illustration-graphics-v2.png)
+![The DuploCloud Platform Features Diagram](.gitbook/assets/duplocloud-update-illustration-graphics-v2.png)
 
 {% hint style="info" %}
 Duplocloud platform is entirely self hosted in customer's cloud account. With an open architecture you can choose your own model, build your own agents and bring your own automation tools.
@@ -45,7 +45,7 @@ The platform is composed of two main components:
 Users can interface directly with the automation tools without going through the AI functionality using the APIs, Terraform provider, CLI and Browser workflows.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (488).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (488).png" alt=""><figcaption></figcaption></figure>
 
 
 
