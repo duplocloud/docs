@@ -496,6 +496,7 @@
     * [Update a Lambda function](automation-platform/introduction-to-ci-cd/github-actions/update-a-lambda-function.md)
     * [Update CloudFront](automation-platform/introduction-to-ci-cd/github-actions/update-cloudfront.md)
     * [Upload to S3 bucket](automation-platform/introduction-to-ci-cd/github-actions/upload-to-s3.md)
+    * [Self-Hosted Runners](automation-platform/introduction-to-ci-cd/github-actions/self-hosted-runners.md)
     * [Execute Terraform](automation-platform/introduction-to-ci-cd/github-actions/execute-terraform.md)
   * [CircleCI](automation-platform/introduction-to-ci-cd/circleci/README.md)
     * [Configure CircleCI](automation-platform/introduction-to-ci-cd/circleci/configure-circleci.md)
