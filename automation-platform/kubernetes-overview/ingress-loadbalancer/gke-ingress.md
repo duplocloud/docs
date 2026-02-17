@@ -80,7 +80,7 @@ The **Certificate ARN** field from previous versions has been removed. TLS is no
 *   Or annotations such as:
 
     ```
-    bashCopyEditnetworking.gke.io/managed-certificates=my-managed-cert
+    networking.gke.io/managed-certificates=my-managed-cert
     kubernetes.io/ingress.allow-http=false
     ```
 
