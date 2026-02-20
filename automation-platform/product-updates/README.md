@@ -98,7 +98,7 @@ _**Last Updated, January 8, 2026**_
 * AWS - Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
 * AWS - Support for [ECS with EC2 Capacity Provider](../overview/aws-services/containers/ecs-containers-and-task-definitions/#configuring-ecs-with-ec2-capacity-provider).²
 * Azure - Add new secret versions in [Azure Key Vault](../overview-2/azure-services/key-vault.md).²
-* Azure - Support for [Azure Container Registry](../overview-2/azure-services/azure-container-registry-acr.md).²
+* Azure - Support for [Azure Container Registry](../../overview-2/azure-services/azure-container-registry-acr.md).²
 * Azure - Support for [Azure Availability Sets](../overview-2/use-cases/hosts-vms/availability-sets.md).¹
 * Azure - Support for [Azure Data Factory](../overview-2/azure-services/data-factory.md).¹
 * Azure - [Enable autoscaling in the AKS default node pool](../overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md).¹
