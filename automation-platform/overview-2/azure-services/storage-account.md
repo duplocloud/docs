@@ -10,11 +10,12 @@ For more information about Azure Storage Accounts, refer to the [official Azure 
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage Account**.
 2. In the **Name** field, give the Storage Account a name.
-3. Click **Create**.
+3. Optionally, select **Enable** **Anonymous Access** to allow public (unauthenticated) read access to blobs in this storage account, subject to container-level access settings. Enable this option only for non-sensitive content.
+4. Click **Create**.
 
-<div align="left"><img src="../../../.gitbook/assets/image (35).png" alt="The Add Storage Account pane"></div>
+<div align="left"><img src="../../../.gitbook/assets/Screenshot (1133).png" alt="The Add Storage Account pane"></div>
 
-## Adding Data Storage Sources (**Container, File Share, Queue, Table, Private Endpoint, Alerts**)
+## Adding Data Storage Sources (Container, File Share, Queue, Table, Private Endpoint, Alerts)
 
 1. Navigate to **Cloud Services** -> **Storage Account**.
 2. From the **NAME** column, select the Storage Account to which you want to add a data source.
