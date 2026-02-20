@@ -26,7 +26,7 @@ Supported Services are listed in alphabetical order, following the core services
 
 * [API Gateway](api-gateway.md)
 * [Batch](batch.md)
-* [CloudFront](../../../aws-user-guide/aws-services/cloudfront.md)
+* [CloudFront](cloudfront/cloudfront.md)
 * [Databases](database/)
 * [Data Pipeline](data-pipeline.md)
 * [Elastic File System (EFS)](elastic-file-system-efs/)
