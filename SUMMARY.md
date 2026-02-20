@@ -382,6 +382,7 @@
   * [Azure Systems Settings](automation-platform/overview-2/azure-systems-settings/README.md)
     * [Azure Infrastructure Settings](automation-platform/overview-2/azure-systems-settings/azure-infrastructure-settings.md)
     * [Azure Tenant Settings](automation-platform/overview-2/azure-systems-settings/azure-tenant-settings.md)
+  * [Azure Security Standards](automation-platform/overview-2/azure-security-standards.md)
   * [Azure Security Settings](automation-platform/overview-2/security-configuration/README.md)
     * [Tenant Security Settings](automation-platform/overview-2/security-configuration/tenant-settings.md)
 * [Kubernetes User Guide](automation-platform/kubernetes-overview/README.md)
