@@ -25,15 +25,39 @@ For convenience, you can [create a link to the Azure Console](../azure-portal-li
 3. Select the **Host** tab.
 4. Click **Add**. The **Add Virtual Machine** pane displays.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption><p>The <strong>Add Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot (1122).png" alt=""><figcaption><p>The <strong>Add Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
-4. In the **Friendly Name** field, specify a unique name for the Host.
-5. Define the **Subnet** for the Host.
-6. Select the **Instance Type** that fits your requirements.
-7. Enter the **Username** and **Password** for the Host.
-8. Specify whether to enable a **Public IP** for the Host.
-9. Optionally, check the Advanced Options box and configure advanced settings.&#x20;
-10. Click **Add**.
+4. Complete the following fields:
+
+| **Friendly Name** | Enter a descriptive name for the VM in DuploCloud.                                                                                 |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Subnet**        | Select the subnet where the VM will reside.                                                                                        |
+| **Instance Type** | Select the VM size, e.g., **(2 CPU 8GB)**.                                                                                         |
+| **Username**      | Enter the administrator username for the VM.                                                                                       |
+| **Password**      | Enter the administrator password for the VM.                                                                                       |
+| **Public IP**     | Choose **Enable** to use a public IP address if you want to communicate with the virtual machine from outside the virtual network. |
+
+5. Optionally, check the **Advanced Options** box and configure advanced settings:
+
+| **Computer Name**                   | Enter the computer name (can be the same as the Host Name).                                                                                       |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Image Id**                        | Select the VM image (e.g., **Linux – Ubuntu20\_04**).                                                                                             |
+| **Fleet**                           | Choose deployment type (e.g., **Linux Docker**/**Native**).                                                                                       |
+| **Allocation Tag**                  | Enter an allocation tag for tracking or billing purposes.                                                                                         |
+| **Disk Controller Type**            | Select the disk controller type for the VM. The default value set is **SCSI**. If you want to set **NVME**, specify the supported Instance Size.  |
+| **Disk Type**                       | Select the disk type (**Standard HDD** **(Local Redundant)**).                                                                                    |
+| **Disk Size**                       | Enter the disk size in GB (e.g., **128**).                                                                                                        |
+| **Disk Encryption**                 | Turn disk encryption **Off** or **On**.                                                                                                           |
+| **Join Domain**                     | Select a Domain Type for the Host, if desired.                                                                                                    |
+| **Join Log Analytics**              | Select **Yes** to integrate with Log Analytics.                                                                                                   |
+| **Timezone**                        | Select the time zone for the Host.                                                                                                                |
+| **Availability Set**                | Select an availability set if applicable (or **None**).                                                                                           |
+| **Security Type**                   | Select the security type (e.g., **Standard**).                                                                                                    |
+| **Enable Encryption at Host**       | Select to enable encryption at Host.                                                                                                              |
+| **Base64 Data**                     | Enter any Base64-encoded data for VM initialization.                                                                                              |
+| **Install DuploCloud Native Agent** | Check to install the DuploCloud agent on the VM (supports only Linux/Ubuntu).                                                                     |
+
+6. Click **Add**.
 
 {% hint style="info" %}
 It is not necessary to explicitly define Hosts. Instead, you can use [Azure Agent Pools](../../azure-services/agent-pool/) and [VM Scale Sets](../../azure-services/vm-scale-sets.md)**.**
