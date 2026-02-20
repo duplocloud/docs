@@ -8,7 +8,11 @@ coverY: 0
 
 DuploCloud is an agentic DevOps automation platform that leverages AI to accomplish a wide range of DevOps tasks. At the core of this platform is DuploCloud's AI DevOps Engineer that organizations can leverage for complex DevOps projects. Unlike traditional AI coding assistants that merely enhance human capabilities, the AI DevOps Engineer is an autonomous worker with human in the loop that can be onboarded, trained, assigned tasks, and managed just like a human team member.
 
+{% hint style="info" %}
+DuploCloud AI Devops Engineer can be the next hire you make in your team. You onboard the AI, grant it access and start assigning work. You can communicate with it like you do with a colleague, in slack, teams, tickets or the web interface.&#x20;
 
+You will find it to be the best devops engineer that knows it all and is always on!
+{% endhint %}
 
 #### **What can an AI DevOps Engineer do for you?**&#x20;
 
