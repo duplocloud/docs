@@ -67,3 +67,17 @@ To download a token which you can use for IAM authentication:
 4. In the **RDS Credentials** window, click the Copy Icon ( <img src="../../../../../.gitbook/assets/copy_icon (3).png" alt="" data-size="line"> ) to copy the **Endpoint**, **Username**, and **Password** to your clipboard.
 5. Click **Close** to dismiss the window.
 
+{% hint style="danger" %}
+**PostgreSQL / Aurora PostgreSQL**
+
+To log in using an IAM token, the PostgreSQL database user must explicitly have IAM permission. Without this, the login will fail with `FATAL: password authentication failed`. Run the following commands to allow the `duplo_jit` to successfully log in using IAM tokens.
+
+1. Log in to the database using the **Master Username**.
+2. Run the following SQL commands:
+
+```sql
+CREATE USER "duplo_jit";
+GRANT rds_iam TO "duplo_jit";
+```
+{% endhint %}
+
