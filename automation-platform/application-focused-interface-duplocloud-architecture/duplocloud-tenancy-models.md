@@ -35,8 +35,8 @@ DuploCloud-supported tenancy models, outlined below, include:
 * **Use Case**: Suitable for older applications not designed for multi-tenancy, or security and compliance needs.
 * **Infrastructure**:
   * Shared network layer (VPC).
-  * Separate Tenants per customer with security boundaries (security group, KMS key, SSH key, Kubernetes namespace).
-  * Kubernetes cluster is shared and boundaries are through the namespace.
+  * Separate Tenants per customer with security boundaries (Security Group, KMS Key, SSH Key, Kubernetes Namespace).
+  * Kubernetes Cluster is shared and boundaries are through the Namespace.
 
 ### DuploCloud Infrastructure-per-Customer
 
@@ -45,9 +45,9 @@ DuploCloud-supported tenancy models, outlined below, include:
 * **Description**: Each customer gets a separate DuploCloud Infrastructure.
 * **Use Case**: Provides a higher security boundary at the network layer where customer access and data are separated.
 * **Infrastructure**:
-  * Separate VPC and network resources for each customer.
+  * Separate VPC and Network Resources for each customer.
   * Clusters are inherently separate through Tenants isolated in different Infrastructures.
-  * Higher cost due to duplicated resources and operational overhead.
+  * Higher cost due to duplicated resources and Operational Overhead.
 
 ### Cloud Account-per-Customer
 
@@ -76,7 +76,7 @@ DuploCloud-supported tenancy models, outlined below, include:
 * **Description**: DuploCloud imports existing Kubernetes clusters from external environments.
 * **Use Case**: A cluster and resources already exist, or customers require the application or services solution running inside their client's cloud account. Customers are comfortable creating their own Kubernetes environments.
 * **Infrastructure**:
-  * Customer's cloud account or On-premises cluster (EKS, AKS, GKE, Oracle, DOKS, etc.) in conjunction with a DuploCloud Infrastructure. This could be any Kubernetes cluster not created by DuploCloud.&#x20;
+  * Customer's Cloud Account or On-Premises Cluster (EKS, AKS, GKE, Oracle, DOKS, etc.) in conjunction with a DuploCloud Infrastructure. This could be any Kubernetes Cluster not created by DuploCloud.&#x20;
   * Manages both multi-Tenant and single-Tenant environments from the DuploCloud UI.
 
 ## Documentation and Support

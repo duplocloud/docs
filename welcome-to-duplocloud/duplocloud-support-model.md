@@ -12,43 +12,43 @@ DuploCloud offers hands-on 24/7 support for all customers via Slack or email. Au
 
 * Use the customer Slack or Microsoft Teams channel created during onboarding.
 * Email us at support@duplocloud.net.
-* Click the chat icon (<img src="../../.gitbook/assets/Screenshot (314) (1).png" alt="" data-size="line">) in the DuploCloud Portal to post your question. If we are unable to respond immediately, we will automatically create a ticket for you and someone from the Duplocloud engineering team will reach out to you ASAP
+* Click the chat icon (<img src="../.gitbook/assets/Screenshot (314) (1).png" alt="" data-size="line">) in the DuploCloud Portal to post your question. If we are unable to respond immediately, we will automatically create a ticket for you and someone from the DuploCloud engineering team will reach out to you ASAP
 
 ## DuploCloud Support Features
 
 Some of the support features we offer include:
 
-* Debuging agent performance and hullucinations.
-* Configuring changes in your public cloud infrastructures and associated Kubernetes (K8s) constructs managed by DuploCloud.
-* Setting up CI/CD pipelines.
+* Debugging Agent performance and hallucinations.
+* Configuring changes in your public cloud infrastructures and associated Kubernetes (K8s) Constructs managed by DuploCloud.
+* Setting up CI/CD Pipelines.
 * Cloud Migration from any existing platform.
-* Proactive, tailored EKS cluster upgrades designed for minimum downtime impact.
+* Proactive, tailored EKS Cluster Upgrades designed for minimum downtime impact.
 * Accelerated onboarding of existing Services.
 * Troubleshooting and debugging for:
   * Apps and Services crashing.&#x20;
-  * Slow of crashing OpenSearch or database instances.
+  * Slow of crashing OpenSearch or Database Instances.
   * Proof-of-Concepts (PoCs) for third-party integrations, including roll-out to the development environment.
   * Downtime during rolling Upgrades.
-  * Investigation and clarification of public cloud provider billing increases. Many times DuploCloud can suggest a more cost-effective alternative
+  * Investigation and clarification of public cloud provider billing increases. Many times DuploCloud can suggest a more cost-effective alternative.
   * Consolidation of third-party tools for which you currently subscribe that are included with your DuploCloud subscription.
-  * Adding a CI/CD pipeline for a new Service.
+  * Adding a CI/CD Pipeline for a new Service.
 
-### What DuploCloud Does Not Support or Supports Conditionally
+## Unsupported or Partially Supported Features
 
 We cover most of your DevOps needs, but there are some limitations. Examples of needs we do not or only partially support include:
 
-* Patching an application inside a Docker image
-* Monitoring alerts in a Network Operations Center (NOC)&#x20;
-* Troubleshooting application code
-* Database configuration
+* Patching an application inside a Docker image.
+* Monitoring alerts in a Network Operations Center (NOC).
+* Troubleshooting application code.
+* Database configuration.
 * Application Functional, Stress and Load testing.
 
-## How to get help from within the DuploCloud Portal
+## How to Get Help From Within the DuploCloud Portal
 
-From any page in the DuploCloud Portal, click the **Help** menu icon (![](<../../.gitbook/assets/help menu icon (1).png>)) in the upper right (next to your name and the person icon) to access a variety of tools and links for your self-service DevOps needs.&#x20;
+&#x20;From any page in the DuploCloud Portal, click the **Help** menu icon (<img src="../.gitbook/assets/help menu icon (1).png" alt="" data-size="line">) in the upper right (next to your name and person icon) to access a variety of tools and links for your self-service DevOps needs.
 
-<div align="left"><figure><img src="../../.gitbook/assets/Screenshot (304).png" alt=""><figcaption><p>The <strong>Help</strong> menu in the DuploCloud Portal</p></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/Screenshot (304).png" alt=""><figcaption><p>The <strong>Help</strong> menu in the DuploCloud Portal</p></figcaption></figure></div>
 
-* **What's New**: Stay informed about the latest features and updates in the DuploCloud platform.
+* **What's New**: Stay informed about the latest features and updates in the DuploCloud Platform.
 * **FAQs**: Access frequently asked questions to quickly find answers to common inquiries.
-* **Documentation**: Browse through our comprehensive product documentation to help you navigate the platform and optimize your usage.
+* **Documentation**: Browse through our comprehensive product documentation to help you navigate the Platform and optimize your usage.

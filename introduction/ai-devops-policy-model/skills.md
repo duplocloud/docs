@@ -1,42 +1,41 @@
 # Skills
 
-Skills are what your AI engineer knows how to do—think Kubernetes operations, CI/CD workflows, or security tasks. Create skills from scratch, link to external packages, or upload your own. To simplify, group multiple skills into Personas representing specific roles (like DevOps or Full Stack).&#x20;
+Skills define the tasks your AI Engineer can perform, like Kubernetes operations, CI/CD workflows, or security tasks. Multiple Skills can be grouped into Personas which represent specific roles (for example, DevOps Engineer or Full Stack Engineer).&#x20;
 
-At its core, a skill is a folder containing a SKILL.md file. This file includes metadata (name and description, at minimum) and instructions that tell an agent how to perform a specific task. Skills can also bundle scripts, templates, and reference materials.
+At its core, a Skill is a folder containing a `SKILL.md` file. This file includes required metadata (at minimum, name and description), and instructions that tell the Agent how to perform a specific task. A Skill can also include supporting assets such as scripts, templates, and reference materials. [Learn more about Skills here](https://agentskills.io/what-are-skills).
 
-[Learn more about skills here](https://agentskills.io/what-are-skills).
+There are three ways to assign Skills to an Engineer:
 
+**Pre-Built Skills**: The DuploCloud platform provides pre-built Skills that you can use to quickly create and configure your first Engineer.
 
+**External Skills**: You can use Skills from third-party vendors directly within the platform. Examples include:
 
-There are 3 ways to give your engineer skills:
+* [Pulumi Agent Skills](https://github.com/pulumi/agent-skills/)
+* [HashiCorp Agent Skills](https://github.com/hashicorp/agent-skills/)
+* [Azure Agent Skills](https://github.com/microsoft/skills/)
 
-1. Duplo Platform provides some pre-built skills that you can use to create your first engineer.&#x20;
-2.  Alternately, you can use skills from 3rd party vendors directly in the Duplo Platform. Here are some examples of skills you can use:&#x20;
+**Custom Skills**: You can create your own Skills from scratch to meet your organization’s specific requirements.
 
-    [Pulumi Agent Skills](https://github.com/pulumi/agent-skills/) | [HashiCorp Agent Skills](https://github.com/hashicorp/agent-skills/) | [Azure Agent Skills](https://github.com/microsoft/skills/)
-3. You can write your own skills from scratch to suit the needs of your organisation
+## Assigning Skills to an Engineer:&#x20;
 
-
-
-Steps to add skills to your Engineer:&#x20;
-
-**Step 1:** Head to the Skills section and add a new skill. Enter a name and detailed description.
+1. Navigate to **Skills** and click **Add**.&#x20;
+2. Enter a **Name** and detailed **Description**.
 
 <figure><img src="../../.gitbook/assets/unknown (8).png" alt=""><figcaption></figcaption></figure>
 
-
-
-**Step 2:** Choose the skill type—link an external package (URL) or upload a custom skill.
+3. Select the **Skill** **Type** (**External** or **Custom**).
+4. Optionally, add a **Description** for the Skill.
 
 <figure><img src="../../.gitbook/assets/unknown (9).png" alt=""><figcaption></figcaption></figure>
 
+5. Specify the Skills package:
 
+* &#x20;**External Packages:** Enter the link to the Skills package.
+* **Custom** **Packages:** upload/paste a [`Skill.md`](http://skill.md) file or a Skill Package in `.zip` format into the **Package File** field.
 
-**Step 3:** For Custom skills, you can either upload/ paste a [Skill.md](http://skill.md) file or you can upload a Skill Package in .zip format. Click update, when done.&#x20;
+6. Click **Update** to save.&#x20;
 
-
-
-A typical skill file would look something like this:
+#### Example: Typical `SKILL.md` File
 
 ````
 # Terraform Management Skill
@@ -73,9 +72,7 @@ terraform state list
 - Review dependency cycles
 ````
 
-
-
-A typical Skill folder would be structured like this:&#x20;
+#### Example: Typical Skill Folder Structure
 
 ```
 skills/
@@ -97,12 +94,3 @@ skills/
     ├── troubleshooting.md
     └── root-cause-analysis.md
 ```
-
-<br>
-
-
-
-<br>
-
-
-

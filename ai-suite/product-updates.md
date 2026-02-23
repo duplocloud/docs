@@ -4,7 +4,7 @@
 
 ### Overview
 
-We're excited to introduce **DuploCloud AI Suite**, a comprehensive artificial intelligence platform that transforms how you manage cloud infrastructure. This inaugural release brings intelligent automation to DevOps workflows through specialized AI agents that work alongside your team to solve complex infrastructure challenges.
+We're excited to introduce **DuploCloud AI Suite**, a comprehensive artificial intelligence platform that transforms how you manage cloud infrastructure. This inaugural release brings intelligent automation to DevOps workflows through specialized AI Agents that work alongside your team to solve complex infrastructure challenges.
 
 ### What's New
 
@@ -12,12 +12,12 @@ We're excited to introduce **DuploCloud AI Suite**, a comprehensive artificial i
 
 **Build and Deploy Custom AI Agents**
 
-AI Studio provides everything you need to create, customize, and deploy AI agents tailored to your organization's needs:
+AI Studio provides everything you need to create, customize, and deploy AI Agents tailored to your organization's needs:
 
-* **Agent Specification Builder** - Define your agent's capabilities and behavior
-* **Vector Database Support** - Enable agents to access and search your documentation and knowledge base
-* **One-Click Deployment** - Automatically deploy agents to Kubernetes
-* **Agent Registration** - Seamlessly register deployed agents into HelpDesk for immediate use
+* **Agent Specification Builder** - Define your Agent's capabilities and behavior
+* **Vector Database Support** - Enable Agents to access and search your documentation and knowledge base
+* **One-Click Deployment** - Automatically deploy Agents to Kubernetes
+* **Agent Registration** - Seamlessly register deployed Agents into HelpDesk for immediate use
 
 #### HelpDesk
 
@@ -27,15 +27,15 @@ HelpDesk transforms traditional IT support through AI-powered assistance while m
 
 **Smart Ticketing System**
 
-* Create tickets and get matched with the most appropriate AI agent
+* Create tickets and get matched with the most appropriate AI Agent
 * View, search, and filter tickets
-* Track agent assignments and ticket status in real-time
+* Track Agent assignments and ticket status in real time
 
 **Collaborative AI Assistance**
 
-* **Human-in-the-Loop Approval** - All agent actions require your explicit approval before execution
-* **Shared Canvas** - Work side-by-side with AI agents in a collaborative workspace
-* **Interactive Terminal** - Share a live terminal where both you and the agent can run commands
+* **Human-in-the-Loop Approval** - All Agent actions require your explicit approval before execution
+* **Shared Canvas** - Work side-by-side with AI Agents in a collaborative workspace
+* **Interactive Terminal** - Share a live terminal where both you and the Agent can run commands
 * **File Collaboration** - Agents can generate configuration files that you can edit and refine
 * **Rich Content Support** - Full Markdown rendering with interactive Mermaid diagrams
 
@@ -43,7 +43,7 @@ HelpDesk transforms traditional IT support through AI-powered assistance while m
 
 * **Double Approval** - Sensitive commands require additional confirmation for extra security
 * **Credential Proxying** - Agents use your permissions, never their own
-* **Smart Prompt Suggestions** - Get started quickly with agent-specific conversation starters
+* **Smart Prompt Suggestions** - Get started quickly with Agent-specific conversation starters
 
 **Flexible Access**
 
@@ -52,7 +52,7 @@ HelpDesk transforms traditional IT support through AI-powered assistance while m
 
 ### Available AI Agents
 
-#### **Kubernetes Agent**
+#### Kubernetes Agent
 
 Your intelligent Kubernetes troubleshooting companion that can:
 
@@ -61,16 +61,16 @@ Your intelligent Kubernetes troubleshooting companion that can:
 * Perform cluster maintenance and optimization tasks
 * Provide expert guidance on Kubernetes best practices
 
-#### **Observability Agent**
+#### Observability Agent
 
-Powered by DuploCloud's Advanced Observability Suite, this agent helps you:
+Powered by DuploCloud's Advanced Observability Suite, this Agent helps you:
 
 * Retrieve and analyze metrics and logs for any microservice
 * Identify performance bottlenecks and anomalies
 * Get intelligent insights from your OpenTelemetry data
-* _Coming soon: Trace analysis and performance profiling_
+* **Coming soon:** Trace analysis and performance profiling
 
-#### **CI/CD Agent**
+#### CI/CD Agent
 
 Intelligent pipeline support that automatically:
 
@@ -79,7 +79,7 @@ Intelligent pipeline support that automatically:
 * Attaches relevant logs, configuration, and error details
 * Provides expert troubleshooting assistance for pipeline issues
 
-#### **Architecture Diagram Agent**
+#### Architecture Diagram Agent
 
 Transform complex infrastructure into clear visuals:
 
@@ -87,7 +87,7 @@ Transform complex infrastructure into clear visuals:
 * Automatically map relationships between services, databases, and infrastructure
 * Create shareable Mermaid diagrams of your entire technology stack
 
-#### **Private GPT Agent**
+#### Private GPT Agent
 
 Secure AI assistance for security-conscious organizations:
 
@@ -97,21 +97,21 @@ Secure AI assistance for security-conscious organizations:
 
 ### Supporting Infrastructure
 
-#### **DuploCloud Cartography**
+#### DuploCloud Cartography
 
 * **Automatic Discovery** - Continuously maps your AWS, Kubernetes, and DuploCloud resources
 * **Relationship Mapping** - Understands dependencies between microservices and infrastructure
 * **Custom Dependencies** - Define application-specific relationships for complete visibility
 
-#### **DuploCloud Presidio**
+#### DuploCloud Presidio
 
 * **Data Protection** - Automatically redacts sensitive information in AI conversations
-* **Customizable Rules** - Configure what data should be protected based on your security policies
+* **Customizable Rules** - Configures what data should be protected based on your security policies
 * **Privacy-First** - Ensures sensitive data never leaves your environment
 
 ### Key Benefits
 
-**🤖 Intelligent Automation** - AI agents that understand your infrastructure and can take action with your approval
+**🤖 Intelligent Automation** - AI Agents that understand your infrastructure and can take action with your approval
 
 **🛡️ Security First** - Human oversight for all actions with your credentials, never autonomous access
 

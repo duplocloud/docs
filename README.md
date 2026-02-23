@@ -6,51 +6,41 @@ coverY: 0
 
 # Overview
 
-DuploCloud is an agentic DevOps automation platform that leverages AI to accomplish a wide range of DevOps tasks. At the core of this platform is DuploCloud's AI DevOps Engineer that organizations can leverage for complex DevOps projects. Unlike traditional AI coding assistants that merely enhance human capabilities, the AI DevOps Engineer is an autonomous worker with human in the loop that can be onboarded, trained, assigned tasks, and managed just like a human team member.
+DuploCloud is an agentic DevOps automation platform that leverages AI to accomplish a wide range of DevOps tasks. At the core of this platform is DuploCloud's AI DevOps Engineer that organizations can leverage for complex DevOps projects. Unlike traditional AI coding assistants that merely enhance human capabilities, the AI DevOps Engineer is an autonomous worker, with human-in-the loop governance, that can be onboarded, trained, assigned tasks, and managed just like a human team member.
 
-{% hint style="info" %}
-DuploCloud AI Devops Engineer can be the next hire you make in your team. You onboard the AI, grant it access and start assigning work. You can communicate with it like you do with a colleague, in slack, teams, tickets or the web interface.&#x20;
+## What Can an AI DevOps Engineer Do for You?&#x20;
 
-You will find it to be the best devops engineer that knows it all and is always on!
-{% endhint %}
+* Manage projects related to deployments, migrations, observability, security, and compliance.
+* Troubleshoot incidents end-to-end from setting up monitoring or alerting to responding in real time to outages and service degradations.
+* Help with everyday tasks like infrastructure health reviews, code deployment, IaC maintenance, rollbacks, and backups.&#x20;
+* Perform other functions like collecting evidence for compliance audits, reporting, discovering cloud resources to generate documentation, and more.<br>
 
-#### **What can an AI DevOps Engineer do for you?**&#x20;
-
-
-
-* Manage projects related to Deployments, Migrations, Observability, Security & Compliance
-* Troubleshoot Incidents end-to-end from setting up monitoring/ alerting to responding in real time to outages and service degradations
-* Help with everyday tasks like infrastructure health reviews, deploying code, maintaining IAC, rollbacks and backups.&#x20;
-* Perform several other functions like collect evidence for compliance audits, reporting, discover cloud resources to generate documentation and so on.<br>
-
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
-Duplocloud’s AI Engineer is highly customisable. You can use Duplo’s out-of the-box engineers, give these engineers new capabilities specific to your organisation, or create entirely new engineers with specialised skills. Think of this as a self-hosted claude-code with superpowers for DevOps - the possibilities are endless!
+DuploCloud’s AI DevOps Engineer is highly customizable. You can start with DuploCloud’s out-of-the-box engineers, extend them with specific capabilities tailored to your organization, or build entirely new engineers with specialized skills. Think of this as a self-hosted Claude Code, purpose-built for DevOps, with significantly more autonomy and control. The possibilities are endless!
 
+## Main Platform Components&#x20;
 
+### Engineer Hub
 
-### **The platform is composed of 3 main components:**
+The Engineer Hub is the home of all your specialized AI engineers, each capable of autonomously handling complex projects with a human-in-the-loop. In the hub, you can create Platform Engineers, CI/CD Engineers, SRE Engineers, and more, and manage your AI engineers' permissions, projects, and performance. Simply define your high-level project requirements and your AI engineer will convert them to a detailed plan coordinating a team of AI agents to complete the tasks to achieve your goals.
 
-#### Engineer Hub
+### Agentic AI Helpdesk
 
-This is the home of all your specialized AI engineers capable of autonomously handling complex projects with a human in the loop. The hub includes Platform Engineers, CI/CD Engineers, and SRE Engineers and more that users can create. Users can manage the permissions, projects and performance of their AI engineers from this hub. Users define high level project requirements, which the AI engineer then converts to a specification (plan) and uses a collection of AI agents to perform specific tasks in the plan to achieve the project goals.
+The Agentic AI Helpdesk is where you go to achieve task-level objectives with the help of specialized agents. These agents are designed to execute specific tasks and include SRE, K8s, AWS, GCP, Docs, and Architecture agents. Modeled on a traditional IT help desk and accessible through a web browser, Slack, or Teams chat, or directly within an IDE extension (offering a "Cursor-like" experience), it lets you create tickets and assign them to AI agents, which then execute tasks in real time.
 
-#### Agentic AI Helpdesk
+### Integrations
 
-The Helpdesk is where users go to achieve task level objectives through a collection of specialized agents. These agents include SRE, K8s, AWS, GCP, Docs, and Architecture agents that execute specific tasks. The primary user experience mirrors an IT Help Desk. Users can create tickets and assign them to AI agents, which execute tasks in real time. The help desk interface is accessible through a web browser, Slack or Teams chat thread, or directly within an IDE extension (offering a "Cursor-like" experience).
-
-#### Integrations
-
-A suite of integrations that the AI Engineer can leverage to accomplish tasks related to Cloud Infrastructure Provisioning, Observability, Security, Compliance, Cost, CI/CD, etc. These integrations provide real-world connectivity through tools and APIs. This includes:
+The AI DevOps Engineer comes with a suite of integrations that help you accomplish tasks across cloud infrastructure provisioning, observability, security, compliance, cost, CI/CD, etc. These integrations provide real-world connectivity through tools and APIs, including:
 
 * **Cloud Providers**: AWS, GCP, Azure
 * **Kubernetes**: EKS, AKS, GKE
-* **Git Repositories**: GitHub, GitLab, BitBucket
-* **Observability & Incident Management**: Datadog, Sentry, NewRelic, Pagerduty, OTEL, Grafana
+* **Git Repositories**: GitHub, GitLab, Bitbucket
+* **Observability & Incident Management**: Datadog, Sentry, New Relic, PagerDuty, OpenTelemetry, Grafana
 * **MCP Servers** and much more
 
 
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (8).png" alt=""><figcaption></figcaption></figure>
