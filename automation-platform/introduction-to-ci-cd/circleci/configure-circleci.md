@@ -14,13 +14,13 @@ CircleCI CI/CD is recommended only for upgrades of container images and to run t
 
 In order to call a DuploCloud API from CircleCI, you need to obtain and configure an API token.
 
-{% content-ref url="../../access-control/api-tokens.md" %}
-[api-tokens.md](../../access-control/api-tokens.md)
+{% content-ref url="../../../access-control/api-tokens.md" %}
+[api-tokens.md](../../../access-control/api-tokens.md)
 {% endcontent-ref %}
 
 1. **(Recommended)** Create a "service account" user in DuploCloud to own the API token.
 2. Give the DuploCloud user access to the desired Tenant. See [adding Tenants to a user](../../access-control/tenant-access/#adding-tenant-access-for-a-user).
-3. Create an API token for that user. See [creating API Tokens](../../access-control/api-tokens.md).
+3. Create an API token for that user. See [creating API Tokens](../../../access-control/api-tokens.md).
 4. Add a CircleCI Environment Variables in the Context created for the organization, to allow CircleCI pipelines to communicate with the DuploCloud Portal.
 
 {% hint style="info" %}

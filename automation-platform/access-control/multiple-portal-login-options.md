@@ -26,4 +26,4 @@ Follow these steps to add a new DuploCloud portal account that will appear as a 
 * [Management Portal Scope](../application-focused-interface-duplocloud-architecture/management-portal-scope.md)**:** Learn how each DuploCloud portal defines the environment and resources users can access.
 * [SSO Configuration](sso-configuration/): Set up Single Sign-On (SSO) options, like Okta or Google, for each login portal.
 * [User Access to DuploCloud](add-edit-or-delete-a-user.md): Control which users have access to each portal and what Tenants they can view or manage.
-* [API Tokens](api-tokens.md): Use permanent or temporary tokens to automate access for specific users or systems tied to a portal.
+* [API Tokens](../../access-control/api-tokens.md): Use permanent or temporary tokens to automate access for specific users or systems tied to a portal.

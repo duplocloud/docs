@@ -16,7 +16,7 @@ description: >-
 
 ## Create a Permanent Token for the Service Account User <a href="#create-permanent-token-for-service-account-user" id="create-permanent-token-for-service-account-user"></a>
 
-Create a [permanent token](../../access-control/api-tokens.md#permanent-api-tokens) for the service account [that you created](configure-azure-devops.md#create-cicd-service-account-user-in-duplocloud), using a token name that describes the CI/CD platform, such as `azure-devops`.
+Create a [permanent token](../../../access-control/api-tokens.md#permanent-api-tokens) for the service account [that you created](configure-azure-devops.md#create-cicd-service-account-user-in-duplocloud), using a token name that describes the CI/CD platform, such as `azure-devops`.
 
 ## Save the Token to Azure DevOps Pipelines Variable Group <a href="#save-token-to-azure-devops-pipelines-variable-group" id="save-token-to-azure-devops-pipelines-variable-group"></a>
 
