@@ -357,6 +357,7 @@
       * [Passing Configs and Secrets](automation-platform/overview-2/azure-services/containers-and-services/passing-config-and-secrets.md)
     * [Agent Pools](automation-platform/overview-2/azure-services/agent-pool/README.md)
       * [Spot Instances for AKS Agent Pools](automation-platform/overview-2/azure-services/agent-pool/spot-instances-for-aks-agent-pools.md)
+    * [Azure Container Apps](automation-platform/overview-2/azure-services/azure-container-apps.md)
     * [Azure Container Registry (ACR)](overview-2/azure-services/azure-container-registry-acr.md)
     * [Databases](overview-2/azure-services/databases/README.md)
       * [Microsoft SQL Server (MSSQL)](automation-platform/overview-2/azure-services/databases/sql-database.md)
