@@ -6,13 +6,13 @@ description: A conceptual overview of DuploCloud Tenants
 
 ## Tenant as a Logical Concept
 
-A Tenant is a project or a workspace and is a child of the Infrastructure. It is the most fundamental construct in DuploCloud. While Infrastructure is a VPC level isolation, Tenant is the next level of isolation implemented by segregating Tenants using concepts like Security Groups, IAM roles, Instance Profiles, K8S Namespaces, KMS Keys, etc.
+A Tenant is a project or a workspace and is a child of the Infrastructure. It is the most fundamental construct in DuploCloud. While Infrastructure provides VPC-level isolation, Tenant is the next level of isolation implemented by segregating Tenants using concepts like Security Groups, IAM roles, Instance Profiles, K8s Namespaces, KMS Keys, etc.
 
 **For instructions to create a Tenant in the DuploCloud Portal, see:**
 
-* [AWS Tenant](../../automation-platform/overview/use-cases/tenant-environment/)
-* [Azure Tenant](../../automation-platform/overview-2/use-cases/tenant-environment/)
-* [GCP Tenant](../../automation-platform/overview-1/use-cases/tenant-environment/)
+* [AWS Tenant](../overview/use-cases/tenant-environment/)
+* [Azure Tenant](../overview-2/use-cases/tenant-environment/)
+* [GCP Tenant](../overview-1/use-cases/tenant-environment/)
 
 \
 At the logical level, a Tenant is fundamentally four things:
@@ -21,7 +21,7 @@ At the logical level, a Tenant is fundamentally four things:
 * **Security Boundary:** All resources within the Tenant can talk to each other. For example, a Docker container deployed in an EC2 instance within a Tenant will have access to S3 buckets and RDS instances in the same Tenant. By default, RDS instances in other Tenants cannot be reached. Tenants can expose endpoints to each other via ELBs or explicit inter-Tenant SG and IAM policies.
 * **User Access Control:** Self-service is the bedrock of the DuploCloud Platform. To that end, users can be granted Tenant-level access. For example, an administrator may be able to access all Tenants while developers can only access the Dev Tenant and a data scientist the data-science Tenant.
 * **Billing Unit:** Since a Tenant is a container of resources, all resources in a Tenant are tagged with the Tenant's name in the cloud provider, making it easy to segregate usage by Tenant.
-* **Mechanism for Alerting:** Alerts generate faults for all of the resource within a Tenant.
+* **Mechanism for Alerting:** Alerts generate faults for all resources within a Tenant.
 * **Mechanism for Logging:** Each Tenant has a unique set of logs.
 * **Mechanism for metrics:** Each Tenant has a unique set of metrics.
 
@@ -31,9 +31,9 @@ Each Tenant is mapped to a Namespace in Kubernetes.
 
 When you create a Tenant in an Infrastructure, a Namespace called `duploservices-TENANT_NAME` is created in the Kubernetes cluster. For example, if a Tenant is called `Analytics` in DuploCloud, the Kubernetes Namespace is called `duploservices-analytics`.&#x20;
 
-All application components in the `Analytics` Tenant are placed in the `duploservices-analytics` Namespace. Since nodes cannot be part of a Kubernetes Namespace, DuploCloud creates a `tenantname` label for all the nodes launched within the Tenant. For example, a node launched in the Analytics Tenant is labeled `tenantname: duploservices-analytics`.&#x20;
+All application components in the `Analytics` Tenant are placed in the `duploservices-analytics` Namespace. Since Nodes cannot be part of a Kubernetes Namespace, DuploCloud creates a `tenantname` label for all the Nodes launched within the Tenant. For example, a Node launched in the Analytics Tenant is labeled `tenantname: duploservices-analytics`.&#x20;
 
-Any Pods launched using the DuploCloud UI have an appropriate Kubernetes `nodeSelector` that ties the Pod to the nodes within the Tenant. Ensure `kubectl` deployments use the proper `nodeSelector`.
+Any Pods launched using the DuploCloud UI have an appropriate Kubernetes `nodeSelector` that ties the Pod to the Nodes within the Tenant. Ensure `kubectl` deployments use the proper `nodeSelector`.
 
 ## Tenant Use Cases
 

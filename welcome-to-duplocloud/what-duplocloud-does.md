@@ -34,7 +34,7 @@ DuploCloud is an efficient, user-friendly means of helping developers automate t
 
 ## 3. Intuitive Self-Service DevOps for Developers <a href="#id-3.-intuitive-self-service-devops-for-developers" id="id-3.-intuitive-self-service-devops-for-developers"></a>
 
-DuploCloud's simplified UI guides developers and less savvy DevOps users in creating and managing DevOps components and constructs. Even advanced features such as AWS Batch, CloudFront, or setting up a Lambda function are simplified through procedural documentation, step-by-step UI panels, and even sample code blocks that can be accessed through info-tips in the UI.
+DuploCloud's simplified UI guides developers and less savvy DevOps users in creating and managing DevOps components and constructs. Even advanced features such as AWS Batch, CloudFront, or Lambda functions are simplified through procedural documentation, step-by-step UI panels, and sample code blocks that can be accessed through info-tips in the UI.
 
 Using a templatized approach, potentially complex Kubernetes constructs such as Ingress and Terraform scripting can be managed by developers with minimal exposure to such functionality. Experts who have invested time and money in creating custom solutions using such tools do not need to discard their work. DuploCloud can help integrate existing solutions and workflows, often automating them during onboarding at no additional cost.
 
@@ -42,11 +42,11 @@ Our website also features a comprehensive Chatbot ([Ask DuploCloud](https://dupl
 
 ## 4. Ease of Use and Expedited Navigation with JIT Access <a href="#id-4.-saving-time-through-ease-of-use-and-expedited-navigation" id="id-4.-saving-time-through-ease-of-use-and-expedited-navigation"></a>
 
-Complex navigation and workflows can be a huge headache for DevOps and cloud engineers. Using DuploCloud, you can minimize the time you spend logging in and out of AWS, Azure, and GCP consoles. Every DevOps and SecOps task can be completed from within the DuploCloud portal, often with significantly reduced clicks.
+Complex navigation and workflows can be a huge headache for DevOps and cloud engineers. Using DuploCloud, you can minimize the time you spend logging in and out of AWS, Azure, and GCP consoles. Every DevOps and SecOps task can be completed from within the DuploCloud Portal, often with significantly reduced clicks.
 
 Compare the keystrokes and navigation between DuploCloud and using a native cloud portal. Often, DevOps engineers "get used to the pain" inherent in many daily DevOps tasks, unaware they can gain back minutes, hours, and days by using DuploCloud.
 
-Some commonly used tools that can be accessed directly within DuploCloud include `kubectl`, shell access, and JIT access to cloud consoles.
+Some commonly used tools that can be accessed directly within DuploCloud include `kubectl`, shell access, and JIT cloud console access.
 
 ## 5. Turn-Key Compliance and Security
 
@@ -76,14 +76,14 @@ As with most platforms, the work required to set up and configure a Terraform en
 
 But here again, the power of ready-made templates in DuploCloud works to your advantage. DuploCloud contains its own Terraform provider, which can access DuploCloud constructs such as [Infrastructure](https://docs.duplocloud.com/docs/getting-started/application-focussed-interface/infrastructure) and [Tenant](https://docs.duplocloud.com/docs/getting-started/application-focussed-interface/tenant). This simplifies the creation of many cloud resources by assuming defaults for compliance and security. When you run DuploCloud, you’re already speeding up the creation of DevOps components, so adding another accelerator based on Terraform is a win-win proposition: less code, less maintenance, faster deployments, and faster time-to-market.
 
-Using DuploCloud’s proprietary Terraform provider removes the need to write specifically for one public cloud. You can effectively use the same DuploCloud Terraform code — as it maps to DuploCloud’s constructs, not one specific cloud — with several public clouds. You don’t need to worry about differentiating platform-specific specifications. DuploCloud handles all of this for you in a transparent, replicable manner. You use utilities such as DuploCloud’s Terraform Exporter to quickly clone Tenants and modify configuration details when needed for specific Infrastructures and Tenants.
+Using DuploCloud’s proprietary Terraform provider removes the need to write specifically for one public cloud. You can effectively use the same DuploCloud Terraform Code — as it maps to DuploCloud’s constructs, not one specific cloud — with several public clouds. You don’t need to worry about differentiating platform-specific specifications. DuploCloud handles all of this for you in a transparent, replicable manner. You use utilities such as DuploCloud’s Terraform Exporter to quickly clone Tenants and modify configuration details when needed for specific Infrastructures and Tenants.
 
 ## 9. Single Pane of Glass for Enhanced Observability
 
-Attempting to monitor your cloud infrastructure from the numerous UIs offered by public providers often obscures problems or causes confusion. DuploCloud's monitoring interfaces combine multiple functionalities on one screen; our SIEM dashboard is a primary example of such flexibility and comprehensiveness. Leveraging Wazuh, DuploCloud offers unprecedented insights from a single interface.
+Attempting to monitor your Cloud Infrastructure from the numerous UIs offered by public providers often obscures problems or causes confusion. DuploCloud's monitoring interfaces combine multiple functionalities on one screen; our SIEM Dashboard is a primary example of such flexibility and comprehensiveness. Leveraging Wazuh, DuploCloud offers unprecedented insights from a single interface.
 
 Using OpenSearch, Grafana, and Prometheus, you can get single snapshots of logging, auditing, compliance and security vulnerabilities, custom alerting, and fault lists with one click.
 
-## 10. Cost-reduction leveraging DuploCloud Third-Party tools
+## 10. Cost-Reduction Leveraging DuploCloud Third-Party Tools
 
 DuploCloud utilizes numerous [third-party tools](https://docs.duplocloud.com/docs/extras-overview/supported-third-party-tools), which are included in the cost of a DuploCloud subscription. Depending on what tools you already use and the capacity in which you use them, a DuploCloud subscription can sometimes make the need for additional licenses obsolete. Our team of Solutions Architects can verify functional overlaps and suggest an optimal strategy to deliver the required functionality at the most efficient cost.

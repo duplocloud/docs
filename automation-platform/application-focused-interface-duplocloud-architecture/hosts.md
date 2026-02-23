@@ -8,12 +8,12 @@ Hosts (VMs) are a cornerstone of cloud infrastructure, essential for providing i
 
 **For instructions to create a Host in DuploCloud, see the documentation for your specific cloud provider:**
 
-* [AWS Host](../../automation-platform/overview/use-cases/hosts-vms/adding-hosts.md)
-* [Azure Host](../../automation-platform/overview-2/use-cases/hosts-vms/#adding-a-host-vm)
-* [GCP Host](../../automation-platform/overview-1/use-cases/hosts-vms.md#id-3-toc-title)
+* [AWS Host](../overview/use-cases/hosts-vms/adding-hosts.md)
+* [Azure Host](../overview-2/use-cases/hosts-vms/#adding-a-host-vm)
+* [GCP Host](../overview-1/use-cases/hosts-vms.md#id-3-toc-title)
 
 In DuploCloud, Hosts are virtualized computing resources provided by your cloud service provider (e.g., AWS EC2, Google Compute Engine, Azure VMs) or your organization's data center and managed by the DuploCloud Platform. They are used to provision scalable, on-demand infrastructure. DuploCloud abstracts the complexities of provisioning, configuring, and managing these Hosts. DuploCloud supports the following Host contexts:
 
 * **Public Cloud**: VMs provided by cloud providers and managed through the DuploCloud Platform.
 * **Private Cloud**: Virtualized environments managed within an organization's data center.
-* **Combination of On-premises and Cloud**: A mix of physical hosts, VMs, and cloud-hosted instances.
+* **Combination of On-Premises and Cloud**: A mix of physical hosts, VMs, and cloud-hosted instances.

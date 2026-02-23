@@ -1,9 +1,7 @@
 # Incident Management
 
-An Incident is a logical entity for handling unplanned work. Each Incident includes a Title and Alerts or Context, which may come from incident management systems or be manually input. Incidents are assigned to a Team and have an Owner designated by a user. They track Start Time and End Time as marked by users, and the agent collects Background Information and generates Root Cause Analysis to support resolution efforts.
-
-
+An Incident is a logical entity for handling unplanned work. Each Incident includes a Title and Alerts or Context (sourced from incident management systems or manually input). Incidents are assigned to a team, owned by a user who is responsible for oversight, and tracked with Start Time and End Time, marked by users. During an Incident, the Agent collects Background Information and generates Root Cause Analysis to support resolution efforts.
 
 {% hint style="info" %}
-Stay tuned for updates on how Duplo's AI Engineers can automate incident detection, root cause analysis, and resolution workflows.
+Stay tuned for updates on how DuploCloud's AI DevOps Engineers can automate incident detection, root cause analysis, and resolution workflows.
 {% endhint %}
