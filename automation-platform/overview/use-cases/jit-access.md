@@ -62,7 +62,7 @@ When you make the first AWS call, a browser window will open with a prompt to au
 
 ### Using an API Token
 
-Use this pattern in CICD pipelines and other places where a human won't be present to click approve in the interactive prompt. You'll need an [API token](../../access-control/api-tokens.md).
+Use this pattern in CICD pipelines and other places where a human won't be present to click approve in the interactive prompt. You'll need an [API token](../../../access-control/api-tokens.md).
 
 In automation, it's also often helpful to use the `duploctl jit update_aws_config` [subcommand](https://cli.duplocloud.com/Jit/#duplo_resource.jit.DuploJit.update_aws_config) to update the config file dynamically.
 

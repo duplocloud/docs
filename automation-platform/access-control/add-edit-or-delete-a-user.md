@@ -35,7 +35,7 @@ Edit an existing user's permissions and role:
 View users and their permissions:
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**. The **Users** page displays.
-2.  From the **Username** column, select the user that you want to view. The user page displays information about [**Tenant Access**](tenant-access/), [**VPN** access](add-and-delete-vpn-access-for-users.md), and API [**Tokens**](api-tokens.md).<br>
+2.  From the **Username** column, select the user that you want to view. The user page displays information about [**Tenant Access**](tenant-access/), [**VPN** access](add-and-delete-vpn-access-for-users.md), and API [**Tokens**](../../access-control/api-tokens.md).<br>
 
     <figure><img src="../../.gitbook/assets/Screenshot (237).png" alt=""><figcaption><p>User page with <strong>Tenant Access</strong>, <strong>VPN</strong>, <strong>DevSpace</strong>, and <strong>Token</strong> tabs</p></figcaption></figure>
 

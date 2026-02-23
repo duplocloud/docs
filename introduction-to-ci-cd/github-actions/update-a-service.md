@@ -79,7 +79,7 @@ To update images for these container types, use the following API:
 
 ### **Authorization**
 
-Use a valid API token (`Bearer {token}`) in the Authorization header. You can generate a permanent API token from the DuploCloud Portal: see the [API Token](../../automation-platform/access-control/api-tokens.md#permanent-api-tokens) page for instructions.
+Use a valid API token (`Bearer {token}`) in the Authorization header. You can generate a permanent API token from the DuploCloud Portal: see the [API Token](../../access-control/api-tokens.md#permanent-api-tokens) page for instructions.
 
 ### **Request Body Format**
 
