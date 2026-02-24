@@ -74,7 +74,7 @@ Start a new workflow run from a Workflow Template.
 
 1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.&#x20;
 2. Select the **Workflow Templates** tab.
-3. Click the **m**enu icon (<img src="../../.gitbook/assets/menu icon (27).avif" alt="" data-size="line">) next to the template you want to run and select **Launch Workflow**.
+3. Click the **m**enu icon (<img src="../../.gitbook/assets/menu icon (27) (1).avif" alt="" data-size="line">) next to the template you want to run and select **Launch Workflow**.
 4.  The **Launch Workflow** pane displays. Click **Create** to launch the workflow.<br>
 
     <figure><img src="../../.gitbook/assets/Screenshot (1047).png" alt=""><figcaption><p><strong>Launch Workflow</strong> pane</p></figcaption></figure>

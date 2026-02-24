@@ -1,5 +1,5 @@
 ---
-description: An overview of DuploCloud container orchestration technologies
+description: An overview of the container orchestration technologies DuploCloud supports
 cover: ../../.gitbook/assets/banner dark.png
 coverY: 0
 ---

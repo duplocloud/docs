@@ -22,8 +22,8 @@ First you need a service account in your portal with the permissions.&#x20;
 
 ## Adding Tenant access for users
 
-{% content-ref url="../../access-control/tenant-access/" %}
-[tenant-access](../../access-control/tenant-access/)
+{% content-ref url="../../access-control/user-access-and-permissions/tenant-access/" %}
+[tenant-access](../../access-control/user-access-and-permissions/tenant-access/)
 {% endcontent-ref %}
 
 ![](<../../../.gitbook/assets/Screen Shot 2022-02-24 at 2.32.57 PM.png>)

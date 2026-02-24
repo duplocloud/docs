@@ -10,7 +10,7 @@ DuploCloud supports [Pulumi](https://www.pulumi.com/docs/) as a modern Infrastru
 
 Before getting started with Pulumi and DuploCloud, make sure you have the following:
 
-* A DuploCloud portal and API token ([How to create an API token](../../access-control/api-tokens.md)).
+* A DuploCloud portal and API token ([How to create an API token](../access-control/api-and-session-management/api-tokens.md)).
 * Familiarity with [Pulumi concepts like stacks and projects ](https://www.pulumi.com/docs/iac/concepts/projects/)(helpful but not required).
 
 ## Step 1: Install the Pulumi CLI
@@ -108,4 +108,4 @@ pulumi destroy   # Remove all resources created by this Pulumi stack
 
 * [DuploCloud Pulumi GitHub Repository](https://github.com/duplocloud/pulumi-duplocloud) – Code samples and provider documentation
 * [Pulumi Documentation](https://www.pulumi.com/docs/) – Reference for general Pulumi usage
-* [DuploCloud API Tokens](../../access-control/api-tokens.md) – How to create and manage your API tokens
+* [DuploCloud API Tokens](../access-control/api-and-session-management/api-tokens.md) – How to create and manage your API tokens

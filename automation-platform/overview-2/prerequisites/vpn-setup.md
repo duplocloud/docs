@@ -36,7 +36,7 @@ DuploCloud integrates with OpenVPN by provisioning VPN users that you add to the
 
 ### Deleting VPN Access for a User
 
-To remove VPN access for a user, refer to the section [Deleting a VPN user](../../access-control/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user) (Administrator privileges are required).&#x20;
+To remove VPN access for a user, refer to the section [Deleting a VPN user](../../access-control/user-access-and-permissions/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user) (Administrator privileges are required).&#x20;
 
 ## Opening a VPN Port
 

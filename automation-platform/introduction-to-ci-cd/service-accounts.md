@@ -10,11 +10,11 @@ When using a dedicated security account for pipeline access, you must make it av
 
 ## Duplocloud Service Account
 
-To call the DuploCloud API from a job, obtain an [API token](../../access-control/api-tokens.md). A good naming convention is to name it after the brand, so for Github just name the service account `github` or `gitlab` for Gitlab.&#x20;
+To call the DuploCloud API from a job, obtain an [API token](../access-control/api-and-session-management/api-tokens.md). A good naming convention is to name it after the brand, so for Github just name the service account `github` or `gitlab` for Gitlab.&#x20;
 
-1. [Create a Service Account user in DuploCloud](../access-control/add-edit-or-delete-a-user.md). Service Account users are usernames that are not an email address, such as `github-bot` or `my-api-user`. These users do not log in, but their account owns the API token.
-2. Give the DuploCloud user access to the desired Tenant. See [adding Tenant access for a user](../access-control/tenant-access/#adding-tenant-access-for-a-user). You could give admin permissions as well.&#x20;
-3. Create an API token for that user. See [creating API Tokens](../../access-control/api-tokens.md).
+1. [Create a Service Account user in DuploCloud](../access-control/user-access-and-permissions/add-edit-or-delete-a-user.md). Service Account users are usernames that are not an email address, such as `github-bot` or `my-api-user`. These users do not log in, but their account owns the API token.
+2. Give the DuploCloud user access to the desired Tenant. See [adding Tenant access for a user](../access-control/user-access-and-permissions/tenant-access/#adding-tenant-access-for-a-user). You could give admin permissions as well.&#x20;
+3. Create an API token for that user. See [creating API Tokens](../access-control/api-and-session-management/api-tokens.md).
 4. Add a the following repository variables/secrets to the CI/CD environment.&#x20;
    * `DUPLO_HOST` The full url to the duplocloud portal
    * `DUPLO_TOKEN` The API token from step 3

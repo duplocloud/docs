@@ -23,7 +23,7 @@ _**Last Updated, January 8, 2026**_
 * AI - [AI Slack Integration](../../ai-suite/ai-helpdesk/) — Support for integrating DuploCloud AI capabilities with Slack.²
 * AWS - [CloudFront Origin Access Control](../overview/aws-services/cloudfront/cloudfront.md) — Use OAC instead of deprecated OAI.¹<sup>,</sup>²
 * AWS - [EKS AutoMode](../overview/use-cases/eks-auto-mode.md) — Automatically configure EKS cluster node scaling and management.²
-* Identity/Access Management - [Okta Management](../access-control/sso-configuration/okta-management-settings.md) — Manage Okta authentication in DuploCloud.¹
+* Identity/Access Management - [Okta Management](../access-control/user-authentication/sso-configuration/okta-management-settings.md) — Manage Okta authentication in DuploCloud.¹
 * AWS - [ECS ASG sharing](../overview/aws-services/containers/ecs-containers-and-task-definitions/sharing-ec2-auto-scaling-groups-across-tenants-for-ecs.md) — Sharing EC2 Auto Scaling Groups across Tenants for ECS.¹<sup>,</sup>²
 * AWS - [KMS key management](../security-and-compliance/access-control-1/at-rest-encryption/kms-keys.md) — Manage AWS KMS keys at the Tenant level in DuploCloud.¹<sup>,</sup>²
 * AWS - [ElastiCache global datastore](../overview/aws-services/database/elastic-cache.md#creating-a-global-datastore) — Support for global ElastiCache clusters.¹<sup>,</sup>²
@@ -66,12 +66,12 @@ _**Last Updated, January 8, 2026**_
 * Kubernetes - [Cron Job Recent Job Link](../../kubernetes/cronjobs.md) — Navigate from a CronJob to most recent execution.¹<sup>,</sup>²
 * Kubernetes - [ArgoCD integration](../introduction-to-ci-cd/argocd.md) — Support for GitOps deployment and management workflows.¹
 * Kubernetes - [ResourceQuota](../kubernetes-overview/resourcequotas.md) — Manage namespace resource limits.¹
-* Notifications - [Custom Alert Emails](../access-control/user-email-notifications.md) — Manage custom email addresses for alert notifications.²
+* Notifications - [Custom Alert Emails](../access-control/user-access-and-permissions/user-email-notifications.md) — Manage custom email addresses for alert notifications.²
 * IaC - [Pulumi integration support ](../pulumi-user-guide/)for managing DuploCloud infrastructure as code.¹
 * Observability - Usability improvements/Flame Graph feature in [Advanced Observability Suite](../diagnostics-overview/advanced-observability-suite/).¹
 * Networking - [Ignore DNS record prefixes](../duplocloud-prerequisites/resolving-dns-failures.md#configuring-duplocloud-to-ignore-dns-entries) to safely add custom entries.¹
-* User Administration - [Customization for welcome emails](../access-control/user-email-notifications.md#customizing-welcome-emails-for-new-users) sent to new users.¹
-* User Administration - [Automatic email alerts when new Admin users are added.](../access-control/user-email-notifications.md#configuring-new-admin-user-email-notifications)²
+* User Administration - [Customization for welcome emails](../access-control/user-access-and-permissions/user-email-notifications.md#customizing-welcome-emails-for-new-users) sent to new users.¹
+* User Administration - [Automatic email alerts when new Admin users are added.](../access-control/user-access-and-permissions/user-email-notifications.md#configuring-new-admin-user-email-notifications)²
 * Security & Compliance - [Customizable Kibana URL for Audit Logs.](../diagnostics-overview/standard-observability-suite/setup/auditing/custom-kibana-audit-url.md)²
 * Observability - [Customizable Kibana URL for Logging Views.](../diagnostics-overview/standard-observability-suite/setup/logging-setup/custom-kibana-logging-url.md)²
 * AWS - Create and manage [Target Groups for EC2 Instances, IPs, and ALBs (AWS)](../overview/aws-services/load-balancers/target-groups.md).¹
@@ -112,10 +112,10 @@ _**Last Updated, January 8, 2026**_
 * Kubernetes - Support for [initContainers and additionalContainers (Sidecar Containers)](../kubernetes-overview/initcontainers-and-sidecar-containers.md).¹
 * Identity/Access Management - [Support for granular access control with new Permission Sets.](../security-and-compliance/access-control-2/permission-sets.md)²
 * Kubernetes- Support for [rolling back container images](../overview/aws-services/containers/container-rollback.md) for DuploCloud Services.¹
-* Identity/Access Management - [Manage automatic VPN access for new Okta users.](../access-control/add-and-delete-vpn-access-for-users.md#managing-vpn-access-for-okta-users)¹
-* Identity/Access Management - [Force sync Okta changes](../access-control/sso-configuration/okta-identity-management.md) to immediately apply updates.¹
+* Identity/Access Management - [Manage automatic VPN access for new Okta users.](../access-control/user-access-and-permissions/add-and-delete-vpn-access-for-users.md#managing-vpn-access-for-okta-users)¹
+* Identity/Access Management - [Force sync Okta changes](/broken/pages/yeRYLkYWOI0ef3Tgwdd6) to immediately apply updates.¹
 * UX - UI redesign: updates to navigation, breadcrumbs, menus, and general appearance.¹
-* User Administration - [Configure session timeout duration for user logins.](../access-control/session-timeout.md#configuring-session-timeout-for-duplocloud-users)¹
+* User Administration - [Configure session timeout duration for user logins.](../access-control/api-and-session-management/session-timeout.md#configuring-session-timeout-for-duplocloud-users)¹
 
 **Release Key**\
 ¹ Available from January 2025 release\

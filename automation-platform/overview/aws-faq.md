@@ -28,11 +28,11 @@ Duplo uses an IAM role, specifically an instance profile, to access AWS accounts
 
 ### If I have an S3 bucket in one Tenant, how would I give a DuploCloud Service in another Tenant access to it?
 
-See the DuploCloud documentation on [Cross-Tenant Access](../access-control/tenant-access/cross-tenant-access.md).
+See the DuploCloud documentation on [Cross-Tenant Access](../security-and-compliance/access-control-2/cross-tenant-access.md).
 
 ### How do I expose services to multiple Tenants (Cross-Tenant Access)?
 
-All Services within a Tenant are automatically reachable by any application running inside that same Tenant. If you need a Service in one Tenant to be accessible from another Tenant, use the [Allow Cross-Tenant Access feature](../access-control/tenant-access/cross-tenant-access.md).
+All Services within a Tenant are automatically reachable by any application running inside that same Tenant. If you need a Service in one Tenant to be accessible from another Tenant, use the [Allow Cross-Tenant Access feature](../security-and-compliance/access-control-2/cross-tenant-access.md).
 
 ### How do I allow DuploCloud Services to access an S3 bucket in a non-DuploCloud AWS account?
 

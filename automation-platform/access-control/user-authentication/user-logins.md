@@ -8,5 +8,5 @@ To integrate your identity and access-management service logins with your DuploC
 
 * Google SSO
 * Microsoft
-* Azure Active Directory (AD)
+* Azure Active Directory (AD) (Microsoft Entra ID)
 * Okta SSO

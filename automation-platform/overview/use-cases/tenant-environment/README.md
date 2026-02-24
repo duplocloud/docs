@@ -18,5 +18,5 @@ For more information about DuploCloud Tenants, see the [Tenants](../../../applic
     <div align="left"><figure><img src="../../../../.gitbook/assets/create a Tenant.png" alt=""><figcaption><p>The <strong>Create a Tenant</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 
 {% hint style="info" %}
-For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../access-control/tenant-access/cross-tenant-access.md).&#x20;
+For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../security-and-compliance/access-control-2/cross-tenant-access.md).&#x20;
 {% endhint %}
