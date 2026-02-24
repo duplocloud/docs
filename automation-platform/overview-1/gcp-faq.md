@@ -10,7 +10,7 @@ DuploCloud typically runs Kubernetes services in GCP on GKE in Autopilot mode. A
 
 ### One or more of my containers are showing as pending; how can I debug them? <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-[Click here for the details.](../../faq.md#one-or-more-of-my-containers-are-pending-how-can-i-debug)
+[Click here for the details.](../../faq/#one-or-more-of-my-containers-are-pending-how-can-i-debug)
 
 ### How do I give users access to only one Tenant in my GCP project?
 

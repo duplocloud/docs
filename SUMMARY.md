@@ -590,7 +590,10 @@
 
 ***
 
-* [FAQs](faq.md)
+* [FAQs](faq/README.md)
+  * [Solutions & How-Tos](faq/solutions-and-how-tos/README.md)
+    * [Setting Up a Persistent Volume Using EFS](faq/solutions-and-how-tos/setting-up-a-persistent-volume-using-efs.md)
+    * [Handling GitHub Deployment Errors Due to Expired DuploCloud Tokens](faq/solutions-and-how-tos/handling-github-deployment-errors-due-to-expired-duplocloud-tokens.md)
 * [Workshops](workshops/README.md)
   * [DuploCloud 101 for AWS](workshops/duplocloud-101-for-aws/README.md)
     * [Create Your Infrastructure and Application](workshops/duplocloud-101-for-aws/create-your-infrastructure-and-application/README.md)
