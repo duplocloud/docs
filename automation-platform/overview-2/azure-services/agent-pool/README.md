@@ -12,7 +12,7 @@ Autoscaling can be enabled when creating agent pools in the DuploCloud Portal. E
 
 ## Prerequisites
 
-To create an agent pool using availability zones, you must first create a [PostgreSQL Flexible Server subnet](../databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure. For agent pools not using availability zones, skip this step.&#x20;
+To create an agent pool using availability zones, you must first create a [PostgreSQL Flexible Server subnet](../../../../overview-2/azure-services/databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure. For agent pools not using availability zones, skip this step.&#x20;
 
 ## Adding an agent pool
 
@@ -25,7 +25,7 @@ Create an Azure agent pool for an existing Host in the DuploCloud Portal.
 
 1. Provide inputs for the **Id**, **Instance Type**, **Min Capacity**, **Max Capacity**, and **Desired Capacity** fields.
 2. Enter allocation tags in the **Allocation Tags** field, if required.
-3. Optionally, select one or more availability zones from the **Availability Zones** list box. If you select availability zones, you must create a [PostgreSQL Flexible Server subnet](../databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure before adding your agent pool. &#x20;
+3. Optionally, select one or more availability zones from the **Availability Zones** list box. If you select availability zones, you must create a [PostgreSQL Flexible Server subnet](../../../../overview-2/azure-services/databases/postgresql-flexible-server.md#create-a-postgresql-flexible-server-subnet-in-the-infrastructure) in the Infrastructure before adding your agent pool. &#x20;
 4. Optionally, select **Enable Autoscaling**.
 5. Select the **Scale Set** priority: **Regular** creates a regular agent pool node with standard priority and **Spot** creates Spot AKS agent pool nodes.
 6.  If needed, adjust the number of **Max Pods Per Node** from the default of 30.<br>

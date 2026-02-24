@@ -37,10 +37,10 @@ hidden: true
   * Support for [Azure VM Disk Controller](../overview-2/use-cases/hosts-vms/).
   * Specify the cluster type, node VM size, and outbound connectivity source when [creating an AKS cluster](../overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md#enabling-the-aks-kubernetes-cluster).
   * Support for [private DNS zones](../../overview-2/prerequisites/program-dns-entries.md).
-  * Configure private endpoints for [MSSQL Server databases](../overview-2/azure-services/databases/sql-database.md#creating-the-mssql-server).
+  * Configure private endpoints for [MSSQL Server databases](../../overview-2/azure-services/databases/sql-database.md#creating-the-mssql-server).
   * Support for [Azure agent pools](../overview-2/azure-services/agent-pool/#adding-an-agent-pool) with availability zones.&#x20;
   * Configure [Redis databases](../overview-2/azure-services/databases/redis-database.md#configure-public-network-access-for-databases-optional) with public network access.&#x20;
-  * Support for [PostgreSQL Flexible Server](../overview-2/azure-services/databases/postgresql-flexible-server.md) databases.
+  * Support for [PostgreSQL Flexible Server](../../overview-2/azure-services/databases/postgresql-flexible-server.md) databases.
   * Support for [Azure Application Gateway SSL policies with AKS Ingress](../kubernetes-overview/ingress-loadbalancer/aks-ingress/using-an-azure-application-gateway-ssl-policy-with-ingress.md) for ALB Load Balancers.
   * Support for [private endpoints ](../overview-2/azure-services/storage-account.md#create-a-private-endpoint)with Azure Storage Account.
   * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
