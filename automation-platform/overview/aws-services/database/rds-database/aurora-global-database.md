@@ -58,3 +58,15 @@ Each secondary cluster in a different region has its own reader endpoint.
 1. Select the appropriate tenant, go to **Cloud Services** → **Database** → **RDS**, and click on the secondary cluster name.
 2. Copy the **Reader** endpoint for that cluster.
 3. Use this endpoint for all read operations (`SELECT` queries) in that region.
+
+## Using Headless Aurora Clusters
+
+&#x20;Enabling headless mode allows a secondary cluster to exist without any running DB instances while continuing to replicate data from the primary cluster. This is useful for cost optimization when read capacity in the secondary region is not required.
+
+1. Go to **Cloud Services** → **Databases** → **RDS**.
+2. Select the primary Aurora cluster in the **NAME** column.
+3. Click the **Global Cluster** tab to see all clusters in the global setup.
+4. Click on the secondary cluster to open the secondary cluster detail page.
+5. Click **Actions** → **RDS Settings** → **Make Cluster Headless**.
+
+<div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (1135).png" alt=""><figcaption><p>Actions menu with headless cluster options highlighted</p></figcaption></figure></div>
