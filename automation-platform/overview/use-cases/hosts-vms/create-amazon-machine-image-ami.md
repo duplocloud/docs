@@ -38,7 +38,7 @@ description: Add and view AMIs in AWS
 
 You can create a new host based on an existing AMI to deploy a server with your custom configuration.&#x20;
 
-When [creating a host in DuploCloud](adding-hosts.md#adding-a-host-vm), check the box to display **Advanced Options**, and select your desired AMI from the **Image ID** dropdown.
+When [creating a host in DuploCloud](../../../../overview/use-cases/hosts-vms/adding-hosts.md#adding-a-host-vm), check the box to display **Advanced Options**, and select your desired AMI from the **Image ID** dropdown.
 
 <figure><img src="../../../../.gitbook/assets/image (472).png" alt=""><figcaption></figcaption></figure>
 

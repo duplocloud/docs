@@ -34,7 +34,7 @@ hidden: true
   * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.&#x20;
 * Azure
   * Support for [Azure Databricks](../overview-2/azure-services/databricks.md).
-  * Support for [Azure VM Disk Controller](../overview-2/use-cases/hosts-vms/).
+  * Support for [Azure VM Disk Controller](../../overview-2/use-cases/hosts-vms/).
   * Specify the cluster type, node VM size, and outbound connectivity source when [creating an AKS cluster](../overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md#enabling-the-aks-kubernetes-cluster).
   * Support for [private DNS zones](../../overview-2/prerequisites/program-dns-entries.md).
   * Configure private endpoints for [MSSQL Server databases](../../overview-2/azure-services/databases/sql-database.md#creating-the-mssql-server).
@@ -45,7 +45,7 @@ hidden: true
   * Support for [private endpoints ](../overview-2/azure-services/storage-account.md#create-a-private-endpoint)with Azure Storage Account.
   * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.&#x20;
   * Specify the [node resource group](../overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md) when configuring an AKS cluster.
-  * [Specify a computer name](../overview-2/use-cases/hosts-vms/#adding-a-host-vm) when creating a Host.&#x20;
+  * [Specify a computer name](../../overview-2/use-cases/hosts-vms/#adding-a-host-vm) when creating a Host.&#x20;
 * GCP
   * [Configure a friendly image name under Plan.](../overview-1/use-cases/hosts-vms.md#configuring-a-friendly-image-name)
   * Select [single, or multi-region data location types](../overview-1/gcp-services/s3-bucket-2.md#creating-a-gcp-cloud-storage-bucket) for GCP Storage buckets.&#x20;

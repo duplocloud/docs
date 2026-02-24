@@ -21,4 +21,4 @@ See [Advanced Observability Suite Logs](../../diagnostics-overview/advanced-obse
 **Container Logs**\
 For Kubernetes workloads, view logs per container:
 
-See the Azure [Managing Kubernetes Containers ](../azure-services/containers-and-services/aks-containers-and-services/#managing-kubernetes-containers)documentation.
+See the Azure [Managing Kubernetes Containers ](../../../overview-2/azure-services/containers-and-services/aks-containers-and-services/#managing-kubernetes-containers)documentation.

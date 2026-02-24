@@ -14,7 +14,7 @@ DuploCloud allows no more than one (1) Load Balancer per DuploCloud Service.
 
 Before adding a Load Balancer, you need to create the necessary services:
 
-* **For Kubernetes**: See the DuploCloud documentation for [creating an AKS Service](containers-and-services/aks-containers-and-services/#creating-a-duplocloud-aks-service).&#x20;
+* **For Kubernetes**: See the DuploCloud documentation for [creating an AKS Service](../../../overview-2/azure-services/containers-and-services/aks-containers-and-services/#creating-a-duplocloud-aks-service).&#x20;
 * **For Docker**: Ensure Docker containers are set up and accessible within your infrastructure. For detailed instructions, see the [DuploCloud documentation](docker-web-application.md#id-2-toc-title).&#x20;
 
 To create a **Shared Application Gateway** Load Balancer, refer to the [Shared Application Gateway](../../kubernetes-overview/ingress-loadbalancer/aks-ingress/) documentation
