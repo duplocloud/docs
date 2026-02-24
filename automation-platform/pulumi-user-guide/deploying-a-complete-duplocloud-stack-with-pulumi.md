@@ -441,4 +441,4 @@ These outputs can be used in other Pulumi stacks, referenced in CI/CD workflows,
 * [DuploCloud Pulumi Provider GitHub Repository](https://github.com/duplocloud/pulumi-duplocloud)
 * [Pulumi Documentation](https://www.pulumi.com/docs/)
 * [Getting Started with Pulumi and DuploCloud](getting-started-with-pulumi-for-duplocloud.md)
-* [Using API Tokens in DuploCloud](../../access-control/api-tokens.md)
+* [Using API Tokens in DuploCloud](../access-control/api-and-session-management/api-tokens.md)

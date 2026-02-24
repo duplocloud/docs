@@ -60,8 +60,8 @@ hidden: true
 * General
   * Enhanced access to [DuploCloud help options](../../welcome-to-duplocloud/duplocloud-support-model.md#how-to-get-help-from-within-the-duplocloud-portal) from the DuploCloud Platform.&#x20;
   * [Skip faults for stopped Tenant instances.](../diagnostics-overview/faults-and-alarms/#muting-faults-for-stopped-tenants)
-  * [Configure user access to multiple Tenants](../access-control/tenant-access/) with one step.
-  * [Configure Okta](../access-control/sso-configuration/okta-identity-management.md) as a user source for the DuploCloud Portal.
+  * [Configure user access to multiple Tenants](../access-control/user-access-and-permissions/tenant-access/) with one step.
+  * [Configure Okta](/broken/pages/yeRYLkYWOI0ef3Tgwdd6) as a user source for the DuploCloud Portal.
   * [Customize the text on the login button](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/automation-platform/access-control/login-banner-customization#adding-custom-login-banner-button-text) for custom banners.
 
 ## Q1 2024
@@ -102,7 +102,7 @@ hidden: true
 * General&#x20;
   * Restrict open access to public Load Balancers for [AWS](../overview/aws-services/load-balancers/#restricting-open-access-to-public-load-balancers),[ Azure](../overview-2/azure-services/load-balancers.md#restricting-open-access-to-public-load-balancers), and [GCP](../overview-1/gcp-services/step-4-create-a-load-balancer.md#restricting-open-access-to-public-load-balancers).&#x20;
   * Support for [NIST-800-171 compliance](../security-and-compliance/access-control-4.md).
-  * [Customize the DuploCloud login screen banner.](../access-control/login-banner-customization.md)
+  * [Customize the DuploCloud login screen banner.](../access-control/user-authentication/login-banner-customization.md)
   * [Set Tenants to expire](../overview/use-cases/tenant-environment/tenant-expiry.md) at specified dates and times.
   * Configure settings for all new Tenants under a Plan using [Tenant Config tab](../overview/use-cases/tenant-environment/tenant-config-settings.md).
   * SIEM - [Configure agents to install on specific Tenants.](../security-and-compliance/access-control-3/agent-management.md#agent-setup)
@@ -167,8 +167,8 @@ hidden: true
   * Support for [SQL databases](../overview-1/gcp-services/gcp-databases/cloud-sql.md).
   * Change [Cloud Armour Security Policies](../overview-1/gcp-services/cloud-armour.md#modifying-a-cloud-armour-configuration-security-policy).
 * General updates
-  * **Last Login** card available for determining the last user sign-in when [viewing user access](../access-control/add-edit-or-delete-a-user.md#view-users).
-  * [Grant access to specific databases](../access-control/database-access-for-users.md) to non-administrators.
+  * **Last Login** card available for determining the last user sign-in when [viewing user access](../access-control/user-access-and-permissions/add-edit-or-delete-a-user.md#view-users).
+  * [Grant access to specific databases](../security-and-compliance/access-control-2/database-access-for-users.md) to non-administrators.
 
 ## May 2023
 
@@ -193,7 +193,7 @@ hidden: true
   * Define [custom CIDRs](../overview/aws-services/load-balancers/#adding-a-network-load-balancer-nlb-listener-with-a-custom-cidr) for NLB Load Balancers.
   * Manage multiple Load Balancer settings using the **Load Balancer** tab's [**Other Settings** card](../overview/aws-services/load-balancers/#additional-load-balancer-settings). Settings include specifying a Web Application Firewall (WAF) Access Control List (ACL), enabling HTTP to HTTPS redirects, enabling Access Logs, setting an Idle Timeout, and an option to drop invalid headers.
   * Specify [custom public and private EKS endpoints](../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/kubernetes-cluster/enable-eks-endpoints.md) for your DuploCloud Infrastructure during or after creating an Infrastructure.&#x20;
-  * Gain [Cross-Tenant access to restricted policy-based resources](../access-control/tenant-access/cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
+  * Gain [Cross-Tenant access to restricted policy-based resources](../security-and-compliance/access-control-2/cross-tenant-access.md#cross-tenant-access-to-restricted-policy-based-resources).
   * [JIT Access to the AWS Console is redesigned](../overview/use-cases/jit-access.md#obtaining-aws-access-for-a-workstation) with several usability enhancements.
   * [Enable Control Plane logging for EKS clusters](../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/kubernetes-cluster/enable-eks-logs.md).
   * Enable [Read-only processing for ECS services](../overview/aws-services/containers/#enabling-read-only-processing-for-ecs-services).
@@ -202,7 +202,7 @@ hidden: true
 * Azure
   * [Add a direct link to the Azure Console ](../overview-2/use-cases/azure-portal-link.md)from the DuploCloud **Host** page.
 * General Updates
-  * [Set read-only access to specific Tenants](../access-control/tenant-access/read-only-access-to-a-tenant.md) for DuploCloud users.
+  * [Set read-only access to specific Tenants](../access-control/user-access-and-permissions/tenant-access/read-only-access-to-a-tenant.md) for DuploCloud users.
 
 ## March 2023
 
@@ -230,7 +230,7 @@ hidden: true
   * Enable Elastic Kubernetes Service (EKS) for your existing infrastructure. EKS versions 1.22 and 1.23 are supported.
   * [Timestream databases](../overview/aws-services/database/timestream-database.md) are now supported.
 * General updates
-  * [Delete VPN connections](../access-control/add-and-delete-vpn-access-for-users.md) for users.
+  * [Delete VPN connections](../access-control/user-access-and-permissions/add-and-delete-vpn-access-for-users.md) for users.
 
 ## December 2022 and January 2023
 

@@ -138,7 +138,7 @@ To remove a cluster from a Global Datastore:
 1. Navigate to **Cloud Services** → **Database** → **ElastiCache** → **Global Datastores**.
 2. Select the name of the Global Datastore.
 3. Select the **Regional Clusters** tab
-4. Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (19).avif" alt="" data-size="line">) in the row of the cluster you want to remove.
+4. Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (19) (2).avif" alt="" data-size="line">) in the row of the cluster you want to remove.
 5. Select **Remove**.
 
 {% hint style="warning" %}

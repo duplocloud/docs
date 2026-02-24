@@ -33,7 +33,7 @@ To support a growing team, you may need to increase the number of VPN connection
 
 ## Adding or Deleting a VPN User
 
-For instructions to add or delete a VPN user, refer to the DuploCloud [User Administration documentation](../../access-control/add-and-delete-vpn-access-for-users.md).
+For instructions to add or delete a VPN user, refer to the DuploCloud [User Administration documentation](../../access-control/user-access-and-permissions/add-and-delete-vpn-access-for-users.md).
 
 ## Opening a VPN Port
 

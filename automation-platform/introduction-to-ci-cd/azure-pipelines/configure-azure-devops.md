@@ -11,12 +11,12 @@ description: >-
 1. In the DuploCloud portal, navigate to **Administrator** -> **Users**. The **Users** page displays.
 2. Click **Add**.
 3. In the **Username** field, enter a non-email address username, such as **cicd**. The username cannot be a valid email address, as DuploCloud designates it as a service account.&#x20;
-4. From the **Roles** list box, select **Admin** for the fastest setup. If you select **User**, you must [give Tenant access to that user](../../access-control/tenant-access/).
+4. From the **Roles** list box, select **Admin** for the fastest setup. If you select **User**, you must [give Tenant access to that user](../../access-control/user-access-and-permissions/tenant-access/).
 5. Click **Submit**. Your service account is set up and can be viewed or modified from the **Users** page.
 
 ## Create a Permanent Token for the Service Account User <a href="#create-permanent-token-for-service-account-user" id="create-permanent-token-for-service-account-user"></a>
 
-Create a [permanent token](../../../access-control/api-tokens.md#permanent-api-tokens) for the service account [that you created](configure-azure-devops.md#create-cicd-service-account-user-in-duplocloud), using a token name that describes the CI/CD platform, such as `azure-devops`.
+Create a [permanent token](../../access-control/api-and-session-management/api-tokens.md#permanent-api-tokens) for the service account [that you created](configure-azure-devops.md#create-cicd-service-account-user-in-duplocloud), using a token name that describes the CI/CD platform, such as `azure-devops`.
 
 ## Save the Token to Azure DevOps Pipelines Variable Group <a href="#save-token-to-azure-devops-pipelines-variable-group" id="save-token-to-azure-devops-pipelines-variable-group"></a>
 

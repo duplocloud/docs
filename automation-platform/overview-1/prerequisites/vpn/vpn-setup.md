@@ -42,7 +42,7 @@ You can find the OpenVPN admin password in the cloud formation stack in your GCP
 
 ### Deleting VPN Access for a User
 
-See [Deleting a VPN user](../../../access-control/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user). To delete VPN access, you must have administrator privileges.&#x20;
+See [Deleting a VPN user](../../../access-control/user-access-and-permissions/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user). To delete VPN access, you must have administrator privileges.&#x20;
 
 ### Opening a VPN Port
 

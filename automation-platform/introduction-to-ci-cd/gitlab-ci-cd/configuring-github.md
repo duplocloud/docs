@@ -46,4 +46,4 @@ The rest of this documentation will assume all the variables needed for service 
 
 * [Gitlab CI/CD Docs](https://docs.gitlab.com/ee/topics/build_your_application.html)
 * [Using Gitlab Environments](https://docs.gitlab.com/ee/ci/environments/)
-* [Create Duplocloud Users](../../access-control/add-edit-or-delete-a-user.md)
+* [Create Duplocloud Users](../../access-control/user-access-and-permissions/add-edit-or-delete-a-user.md)
