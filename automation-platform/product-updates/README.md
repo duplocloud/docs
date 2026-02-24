@@ -35,7 +35,7 @@ _**Last Updated, January 8, 2026**_
 * AWS - [EC2 Snapshots](../overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.¹<sup>,</sup>²
 * AWS - [Ingress: Multi-certificate support](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB Ingress.¹<sup>,</sup>²
 * AWS - Amazon Linux 2023 support.¹<sup>,</sup>²
-* Azure - [MSSQL Backup retention](../overview-2/azure-services/databases/sql-database.md#updating-the-backup-retention-period-for-a-database) — Enable and manage Azure SQL Server backup retention.¹
+* Azure - [MSSQL Backup retention](../../overview-2/azure-services/databases/sql-database.md#updating-the-backup-retention-period-for-a-database) — Enable and manage Azure SQL Server backup retention.¹
 * Azure - [Deleted Key Vaults listing](../overview-2/azure-services/key-vault.md#managing-deleted-azure-key-vaults) — View and recover or purge deleted Azure Key Vaults.¹
 * Azure - [Azure CosmosDB support](../overview-2/azure-services/databases/cosmosdb.md) — Provision and manage CosmosDB resources in Azure.¹
 * GCP - [Cloud SQL edition attribute](../overview-1/gcp-services/gcp-databases/cloud-sql.md#creating-a-cloud-sql-database) — Add and manage edition attributes for Cloud SQL instances.¹
