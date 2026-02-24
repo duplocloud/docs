@@ -16,4 +16,4 @@ Create Virtual Machine (VM) snapshots in the DuploCloud Portal.
 
 ### Using VM Snapshot as an Image for creating a new host
 
-Once you take a VM Snapshot, the snapshot displays as an available **Image Id** when you [create a Host](./).
+Once you take a VM Snapshot, the snapshot displays as an available **Image Id** when you [create a Host](../../../../overview-2/use-cases/hosts-vms/).

@@ -30,7 +30,7 @@ In DuploCloud, Availability Sets can be configured when creating or managing hos
 
 ## Assigning an Availability Set to a Host
 
-When [creating a new host](./), you can assign an Availability Set by selecting it from the **Availability Set** list box.
+When [creating a new host](../../../../overview-2/use-cases/hosts-vms/), you can assign an Availability Set by selecting it from the **Availability Set** list box.
 
 ## Deleting an Availability Set
 

@@ -16,7 +16,7 @@ In DuploCloud, you can assign Kubernetes taints to EKS worker nodes to control h
 
 ### Adding Taints During Node Creation
 
-1.  When [Adding a Host](../../../automation-platform/overview/use-cases/hosts-vms/adding-hosts.md) in the DuploCloud Portal, click the **Add Taint** button at the bottom right of the Advanced Options section. The **Add Taint** pane displays.<br>
+1.  When [Adding a Host](adding-hosts.md) in the DuploCloud Portal, click the **Add Taint** button at the bottom right of the Advanced Options section. The **Add Taint** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Add taint.png" alt="" width="407"><figcaption><p>The Add Taint pane in the DuploCloud Portal</p></figcaption></figure></div>
 2. Complete the following fields:

@@ -13,7 +13,7 @@ Once we have the Infrastructure (Networking, Kubernetes cluster, and other commo
 * **BYOH (Bring Your Own Host)**: For users with pre-configured VMs or non-Azure infrastructure that they want to bring into DuploCloud. Use **BYOH** for any VM that is not an Azure Host.&#x20;
 
 {% hint style="info" %}
-For convenience, you can [create a link to the Azure Console](../azure-portal-link.md) from the Action Menu on the Host page to quickly access Azure-specific settings or configurations while managing your Hosts in DuploCloud.
+For convenience, you can [create a link to the Azure Console](../../../automation-platform/overview-2/use-cases/azure-portal-link.md) from the Action Menu on the Host page to quickly access Azure-specific settings or configurations while managing your Hosts in DuploCloud.
 {% endhint %}
 
 ## Adding Hosts in DuploCloud
@@ -25,7 +25,7 @@ For convenience, you can [create a link to the Azure Console](../azure-portal-li
 3. Select the **Host** tab.
 4. Click **Add**. The **Add Virtual Machine** pane displays.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/Screenshot (1122).png" alt=""><figcaption><p>The <strong>Add Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (1122).png" alt=""><figcaption><p>The <strong>Add Virtual Machine</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 4. Complete the following fields:
 
@@ -60,7 +60,7 @@ For convenience, you can [create a link to the Azure Console](../azure-portal-li
 6. Click **Add**.
 
 {% hint style="info" %}
-It is not necessary to explicitly define Hosts. Instead, you can use [Azure Agent Pools](../../azure-services/agent-pool/) and [VM Scale Sets](../../azure-services/vm-scale-sets.md)**.**
+It is not necessary to explicitly define Hosts. Instead, you can use [Azure Agent Pools](../../../automation-platform/overview-2/azure-services/agent-pool/) and [VM Scale Sets](../../../automation-platform/overview-2/azure-services/vm-scale-sets.md)**.**
 {% endhint %}
 
 ### Adding a VM Scale Set
@@ -86,13 +86,13 @@ It is not necessary to explicitly define Hosts. Instead, you can use [Azure Agen
 3. Select the **Azure Agent Pool** tab.
 4.  Click **Add**. The **Add Azure Agent Pool** pane displays.<br>
 
-    <figure><img src="../../../../.gitbook/assets/Screenshot (372).png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Screenshot (372).png" alt=""><figcaption><p>The <strong>Add Azure Agent Pool</strong> pane</p></figcaption></figure>
 5. In the **Name** field, enter a unique name for the agent pool.
 6. Choose the **Instance Type** (e.g., **2GB, 4GB**, etc.).
 7. Set the **Min Capacity**, specifying the minimum number of nodes in the agent pool.
 8. Set the **Max Capacity**, specifying the maximum number of nodes in the agent pool.
 9. Set the **Desired Capacity**, specifying the desired number of nodes.
-10. Select the **OS** for the agent pool (e.g., **Linux**, **Windows**).
+10. Select the **OS** for the agent pool (e.g., **Linux**, **Windows**). Windows agent pools require that **EnableK8sWindowsWorkload** is enabled in the infra settings. See the [Azure Infrastructure Settings](../../../automation-platform/overview-2/azure-systems-settings/azure-infrastructure-settings.md) page for instructions.
 11. Choose the **OS SKU**, (e.g., **Ubuntu**).
 12. Optionally, enter an **Allocation Tag** for organizational purposes.
 13. Specify the **Availability Zones** in which the agent pool nodes should be located.
@@ -112,7 +112,7 @@ For detailed instructions, see the [DuploCloud Azure Availability Set documentat
 3. Select the **BYOH** tab.
 4.  Click **Add**. The **Add BYOH** pane displays.<br>
 
-    <figure><img src="../../../../.gitbook/assets/Screenshot (374).png" alt=""><figcaption><p>The <strong>Add BYOH</strong> pane </p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/Screenshot (374).png" alt=""><figcaption><p>The <strong>Add BYOH</strong> pane </p></figcaption></figure>
 5. In the **Friendly Name** field, enter a unique name for the Host.
 6. In the **Direct Address** field, enter the direct IP address of the Host.
 7. In the **Fleet Type** field, select the appropriate fleet type (e.g., **Linux Docker/Native**).
@@ -125,26 +125,26 @@ For detailed instructions, see the [DuploCloud Azure Availability Set documentat
 
 To view your Hosts (VMs), navigate to **Cloud Services** -> **Hosts** and select the **Host** tab.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/newvm.png" alt=""><figcaption><p><strong>Azure VM</strong> <strong>Hosts</strong> page with <strong>Host</strong>, <strong>VM Scale Set</strong>, <strong>Azure Agent Pool</strong>, and <strong>BYOH</strong> options, as tabs</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/newvm.png" alt=""><figcaption><p><strong>Azure VM</strong> <strong>Hosts</strong> page with <strong>Host</strong>, <strong>VM Scale Set</strong>, <strong>Azure Agent Pool</strong>, and <strong>BYOH</strong> options, as tabs</p></figcaption></figure>
 
 ## Creating Kubernetes StorageClass and PVC constructs in the DuploCloud Portal.
 
-See [Kubernetes StorageClass and PVC](../../../kubernetes-overview/kubernetes-storageclass-and-pvc/).
+See [Kubernetes StorageClass and PVC](../../../automation-platform/kubernetes-overview/kubernetes-storageclass-and-pvc/).
 
 ## Host abstraction and isolation&#x20;
 
 While lower-level details such as IAM roles and security groups are abstracted, deriving instead from the Tenant, only the most application-centric inputs are required to set up Hosts.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/add vm.png" alt=""><figcaption><p><strong>Add Virtual Machine</strong> page </p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/add vm.png" alt=""><figcaption><p><strong>Add Virtual Machine</strong> page </p></figcaption></figure>
 
 Most of these inputs are optional and some are available as list box selections, set by the administrator in the Plan (for example, **Image ID**, in Host **Advanced Options**).&#x20;
 
 There are two additional parameters
 
-**Fleet**: This is applicable if the VM is to be used as a host for [container orchestration](../../container-deployments/container-orchestrators.md) by the platform. The choices are:
+**Fleet**: This is applicable if the VM is to be used as a host for [container orchestration](../../../automation-platform/overview-2/container-deployments/container-orchestrators.md) by the platform. The choices are:
 
-* **Linux Docker/Native**: To be used for hosting Linux containers using the [Built-in Container orchestration](../../container-deployments/).      &#x20;
-* **Docker Windows**: To be used for hosting Windows containers using the [Built-in Container orchestration](../../container-deployments/).
+* **Linux Docker/Native**: To be used for hosting Linux containers using the [Built-in Container orchestration](../../../automation-platform/overview-2/container-deployments/).      &#x20;
+* **Docker Windows**: To be used for hosting Windows containers using the [Built-in Container orchestration](../../../automation-platform/overview-2/container-deployments/).
 * **None**: To be used for non-Container Orchestration purposes and contents inside the VM are self-managed by the user.
 
 **Allocation Tags (Optional)**: If the VM is used for containers, you can optionally set a label on the VM. This label is specified during Docker application deployment to ensure that the application containers are pinned to a specific set of nodes, giving you the ability to split a tenant further into separate pools of servers and deploy applications on them.&#x20;
