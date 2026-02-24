@@ -631,6 +631,7 @@
   * [FluxCD](extras-overview/fluxcd.md)
   * [Inventory](extras-overview/inventory.md)
   * [Setting up SCPs (Service Control Policies) for DuploCloud](extras-overview/setting-up-scps-service-control-policies-for-duplocloud.md)
+  * [Scheduler](extras-overview/scheduler.md)
   * [Video Transcripts](extras-overview/video-transcripts/README.md)
     * [DuploCloud AWS Product Demo](extras-overview/video-transcripts/duplocloud-aws-product-demo.md)
     * [DuploCloud Azure Product Demo](extras-overview/video-transcripts/duplocloud-azure-product-demo.md)
