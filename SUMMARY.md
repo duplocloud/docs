@@ -161,7 +161,7 @@
     * [Containers and Services](automation-platform/overview/aws-services/containers/README.md)
       * [EKS Containers and Services](automation-platform/overview/aws-services/containers/eks-containers-and-services/README.md)
         * [Allocation Tagging](automation-platform/overview/aws-services/containers/eks-containers-and-services/creating-advanced-functions.md)
-      * [ECS Containers, Task Definitions and Services](automation-platform/overview/aws-services/containers/ecs-containers-and-task-definitions/README.md)
+      * [ECS Containers, Task Definitions and Services](overview/aws-services/containers/ecs-containers-and-task-definitions/README.md)
         * [Sharing EC2 Auto Scaling Groups Across Tenants for ECS](automation-platform/overview/aws-services/containers/ecs-containers-and-task-definitions/sharing-ec2-auto-scaling-groups-across-tenants-for-ecs.md)
       * [Passing Configs and Secrets](automation-platform/overview/aws-services/containers/passing-config-and-secrets.md)
       * [Container Rollback](automation-platform/overview/aws-services/containers/container-rollback.md)
