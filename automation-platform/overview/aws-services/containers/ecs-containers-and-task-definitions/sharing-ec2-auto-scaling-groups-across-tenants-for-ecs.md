@@ -44,9 +44,9 @@ In the Tenant that you want to run the hosts:
 
 In the Tenant that you want to run ECS tasks:
 
-1. [Create an ECS Task Definition](./#creating-a-task-definition).&#x20;
+1. [Create an ECS Task Definition](../../../../../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition).&#x20;
    * In the **Launch Type** field, select **EC2**.
-2. Using this task definition, [create an ECS Service](./#creating-an-ecs-service).&#x20;
+2. Using this task definition, [create an ECS Service](../../../../../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-an-ecs-service).&#x20;
    * Select the shared ASG from the **Capacity Provider** list box.
 
 {% hint style="info" %}
