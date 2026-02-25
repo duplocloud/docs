@@ -4,19 +4,19 @@ description: Create ElastiCache for Redis database and Memcache memory caching
 
 # AWS ElastiCache
 
-[Amazon ElastiCache](https://aws.amazon.com/elasticache/features/) is a serverless caching service delivering real-time, cost-optimized performance for modern applications. DuploCloud supports Memcached, Redis, and Valkey ElastiCache instances.
+[Amazon ElastiCache](https://aws.amazon.com/elasticache/features/) is a serverless caching service delivering real-time, cost-optimized performance for modern applications. DuploCloud supports Memcached, Redis, and Valkey ElastiCache instances, including a Serverless Valkey option.
 
 ## Creating a Memcached ElastiCache Instance
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database.**
 2.  Select the **ElastiCache** tab and click **Add**. The **Create a ElastiCache** page displays.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/memcache.png" alt=""><figcaption><p>The <strong>Create an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (1035).png" alt=""><figcaption><p>The <strong>Create a ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
 3. Enter a database **Name**.
-4. Specify the number of **Replicas**.&#x20;
-5. In the **Type** list box, select **Memcached.**
-6. Select the **Memcached Version**.&#x20;
-7. Select the node size in the **Size** list box.
+4. In the **Type** list box, select **Memcached.**
+5. Select the **Memcached Version**.&#x20;
+6. Select the node size in the **Size** list box.
+7. Specify the number of **Replicas**.&#x20;
 8. Click **Create**. The Memcached ElastiCache instance is created.
 
 {% hint style="info" %}
@@ -28,41 +28,22 @@ Pass the cache endpoint to your application through the [Environment Variables](
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database**.
 2. Select the **ElastiCache** tab and click **Add**. The **Create an ElastiCache** page displays.
 
-<figure><img src="../../../../.gitbook/assets/create a redis (1).png" alt=""><figcaption><p>The <strong>Create</strong> <strong>an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/Screenshot (1037).png" alt=""><figcaption><p>The <strong>Create</strong> <strong>an ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
-3. Enter a database **Name**.
-4. Specify the number of **Replicas**.
-5. Optionally, enable **Automatic Failover**: if the primary node in the cluster fails, one of the read replicas is automatically promoted. This setting requires at least two replicas.
-6. Optionally, enable **Cluster Mode** and specify the **No Of Shards**.&#x20;
-7. In the **Type** field, select **Redis** or **Valkey**.
-8. In the **Size** list box, select the node size.
-9. Optionally, complete the following fields:
+3. Complete the following fields as required for your Redis or Valkey instance:
 
-<table data-header-hidden><thead><tr><th width="230.79998779296875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Redis Version or Valkey Version</strong></td><td>Select the version number of the cache engine to be used. If not set, defaults to the latest version.</td></tr><tr><td><strong>Parameter Group Name</strong></td><td>Specify the name of the parameter group to associate with this cache cluster.</td></tr><tr><td><strong>KMS</strong></td><td>Select the KMS key.</td></tr><tr><td><strong>Encryption At Transit</strong></td><td>Select if Encryption at Transit is needed.</td></tr></tbody></table>
-
-10. Optionally, configure snapshots for backup:&#x20;
-
-<table data-header-hidden><thead><tr><th width="206.79998779296875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Snapshot Name</strong></td><td>Select the snapshot/backup you want to use for creating Redis/Valkey.</td></tr><tr><td><strong>Snapshot ARNs</strong></td><td>Specify the ARN of a Redis RDB snapshot file stored in Amazon S3. Example: <code>arn:aws:s3:::s3-backup-foldername/backupobject.rdb</code></td></tr><tr><td><strong>Snapshot Retention Limit</strong></td><td>Specify retention limit in days (<strong>1</strong> to <strong>35</strong> days).</td></tr><tr><td><strong>Snapshot Window Start Time</strong></td><td>Select the time when your automated snapshot process will begin.</td></tr><tr><td><strong>Snapshot Window Duration in hours</strong></td><td>Specify the length of time allowed for taking the snapshots automatically.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="225.5555419921875">Field</th><th>Instruction / Description</th></tr></thead><tbody><tr><td>Serverless</td><td>Select <strong>Yes</strong> or <strong>No</strong> to enable serverless mode.</td></tr><tr><td>Name</td><td>Enter a unique name for the cache. DuploCloud suggests using the tenant name as a prefix.</td></tr><tr><td>Type</td><td>Select <strong>Redis</strong> or <strong>Valkey</strong> from the dropdown.</td></tr><tr><td>Version</td><td>Select the appropriate Redis or Valkey version.</td></tr><tr><td>Size</td><td>Select the instance size for the cluster.</td></tr><tr><td>Log Delivery Configuration</td><td>Select or configure log delivery options.</td></tr><tr><td>Parameter Group Name</td><td>Enter a parameter group for the cluster.</td></tr><tr><td>Replicas</td><td>Specify the initial number of cache nodes that the cache cluster will have.</td></tr><tr><td>Automatic Failover</td><td>Enable or disable automatic failover to the secondary datastore if the primary region becomes unavailable.</td></tr><tr><td>Enable Cluster Mode</td><td>Enable to create Redis in Cluster mode.</td></tr><tr><td>KMS (Optional)</td><td>Select a KMS key for encryption if needed.</td></tr><tr><td>Encryption At Transit</td><td>Select if Encryption At Transit is needed.</td></tr><tr><td>Encryption At Rest</td><td><strong>Valkey only</strong> – Enable/disable encryption of data stored on disk using AWS-managed keys. Recommended for protecting sensitive data at rest.</td></tr><tr><td>Snapshot Name</td><td>Enter a name for a snapshot if desired.</td></tr><tr><td>Snapshot ARNs</td><td>Specify the ARN of a Redis RDB snapshot file stored in Amazon S3. Example- <code>arn:aws:s3:::s3-backup-foldername/backupobject.rdb</code></td></tr><tr><td>Snapshot Retention Limit</td><td>Enter the number of days to retain snapshots.</td></tr><tr><td>Snapshot Window Start Time</td><td>Enter the start time for the snapshot window (e.g., <code>12:00</code>).</td></tr><tr><td>Snapshot Window Duration (Hours)</td><td>Specify the duration of the snapshot window in hours.</td></tr></tbody></table>
 
 <div align="left"><figure><img src="../../../../.gitbook/assets/image (15) (1).png" alt="" width="563"><figcaption><p>The Snapshot fields on the <strong>Create an ElastiCache</strong> pane</p></figcaption></figure></div>
 
-11. Optionally, click the **CloudWatch** link above the **Log Delivery Configuration** field to enable exporting engine logs and slow logs to Amazon CloudWatch Logs.&#x20;
-    * Complete the fields to configure CloudWatch:&#x20;
-      * **Log Format**&#x20;
-      * **Log Type**&#x20;
-      * **Log Group**
-    * Click **Add Config**. The configuration is added to the **Log Delivery Configuration** field.
-
-<div align="left"><figure><img src="../../../../.gitbook/assets/cloudwatch logs pane.png" alt="" width="350"><figcaption><p>The <strong>Add CloudWatch Logs: Log Delivery Configuration</strong> pane</p></figcaption></figure></div>
-
-12. Click **Create**. The Redis or Valkey database instance is created.
+4. Click **Create** to create the Reds or Valkey instance.&#x20;
 
 ## Updating Snapshot Retention Limit
 
-After a Redis or Valkey ElastiCache instance is created, most settings cannot be changed without deleting and recreating the instance. However, you can update the Snapshot Retention Limit at any time.
+After a Redis or Valkey (standard) ElastiCache instance is created, most settings cannot be changed without deleting and recreating the instance. However, you can update the Snapshot Retention Limit at any time.
 
 {% hint style="warning" %}
-This setting is not available for Memcached. It applies only to Redis and Valkey instances, which support snapshot backups.
+This setting is not available for Memcached or Valkey Serverless. It applies only to Redis and standard Valkey instances.
 {% endhint %}
 
 To update the Snapshot Retention Limit:
@@ -76,13 +57,34 @@ To update the Snapshot Retention Limit:
 5. Select the desired **Snapshot Retention Limit (Days)** (between **1** and **35**).
 6. Click **Update** to save your changes.
 
+## **Creating a Serverless Valkey ElastiCache Instance**
+
+Serverless Valkey clusters automatically scale based on workload demand. Unlike standard Redis or Valkey clusters, node size, replicas, and cluster mode are automatically managed by the system.
+
+To create a Serverless Valkey instance, complete the following steps:
+
+1. In the DuploCloud Portal, navigate to **Cloud Services** → **Database** → **ElastiCache**
+2. Click **Add**. The **Create a ElastiCache** page displays.
+3.  Select the **Serverless** option at the top of the page.<br>
+
+    <figure><img src="../../../../.gitbook/assets/Screenshot (1036).png" alt=""><figcaption></figcaption></figure>
+4. &#x20;Complete the following fields:
+
+<table data-header-hidden><thead><tr><th width="194.89642333984375"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the Valkey Serverless cluster.</td></tr><tr><td><strong>Type</strong></td><td>Displays <code>Valkey</code>; no action needed as the cache engine is pre-selected.</td></tr><tr><td><strong>Valkey Version</strong></td><td>Select the version of the Valkey cache engine to deploy.</td></tr><tr><td><strong>KMS</strong></td><td>Select the KMS key to use for encryption at rest (e.g., <code>duploservices-sa-4nov</code>).</td></tr><tr><td><strong>Description</strong></td><td>Optionally enter a description for the cluster to help identify it.</td></tr></tbody></table>
+
+5. Click **Create**. DuploCloud provisions the Serverless Valkey cluster automatically and the system manages scaling, availability, and endpoints.
+
+{% hint style="info" %}
+Node size, number of replicas, and cluster mode fields are automatically managed and do not require configuration.
+{% endhint %}
+
 ## Creating an ElastiCache Global Datastore
 
-DuploCloud supports ElastiCache Global Datastores, which allow you to replicate a Redis cluster across AWS regions.&#x20;
+DuploCloud supports ElastiCache Global Datastores, which allow you to replicate standard Redis and standard Valkey clusters across multiple AWS regions. Memcached and Serverless Valkey clusters are not supported for Global Datastores.
 
 ### Creating a Global Datastore
 
-When you create a Global Datastore in DuploCloud, a primary Redis cluster, in the current Tenant, and a secondary cluster in a different region are created automatically as part of the process. You can then add additional secondary clusters in other regions as necessary.
+When you create a Global Datastore in DuploCloud, a primary Redis cluster in the current Tenant and a secondary cluster in a different region are created automatically. You can add additional secondary clusters in other regions as necessary.
 
 1. Navigate to to **Cloud Services** → **Database** → **ElastiCache** → **Global Datastores**.
 2.  Click **Add**. The **Create a Global Datastore** pane displays.<br>
