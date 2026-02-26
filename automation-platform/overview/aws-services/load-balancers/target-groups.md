@@ -4,7 +4,7 @@ description: Create and manage AWS Target Groups to control application traffic 
 
 # Target Groups
 
-Target Groups route traffic from a Load Balancer to specific backend resources, such as EC2 instances, IP addresses, or other Load Balancers (ALBs).  They’re helpful when you need precise control over traffic distribution, health check monitoring, or when consolidating traffic across multiple services behind a shared ALB.&#x20;
+Target Groups route traffic from a Load Balancer to specific backend resources, such as EC2 instances, IP addresses, ALBs, or Lambda functions. They’re helpful when you need precise control over traffic distribution, health check monitoring, or when consolidating traffic across multiple services behind a shared ALB.&#x20;
 
 ## Prerequisites
 
@@ -14,6 +14,7 @@ Supported backend resource types include:
 
 * **EC2 Instances**: Instances managed within DuploCloud.
 * **IP Addresses**: Static IPs for known resources, such as external systems.
+* **Lambda Functions**: Serverless functions deployed in AWS that can be invoked directly by an ALB Target Group.
 * **Internal ALBs (Application Load Balancers)**: ALBs created within DuploCloud. These must already exist and be configured appropriately. Supported internal ALBs include:
   * ALBs created under **Networking** → **Load Balancer**.
   * ALBs provisioned through **Kubernetes** → **Ingress Load Balancer**.
@@ -30,11 +31,8 @@ Follow these steps to create a Target Group:
 3.  Click **Add**. The **Create Target Group** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (313) (1).png" alt="" width="362"><figcaption><p>The <strong>Create Target Group</strong> pane<br></p></figcaption></figure></div>
-4. Complete the following fields:
 
-<table data-header-hidden><thead><tr><th width="204.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Target Group Name</strong></td><td>Provide a unique name for the target group.</td></tr><tr><td><strong>Target type</strong></td><td><p>Specify what kind of backend resource will receive traffic:</p><ul><li>Choose <strong>Instance</strong> to route traffic to EC2 instances.</li><li>Choose <strong>IP</strong> to route traffic to a static IP address.</li><li>Choose <strong>ALB</strong> to route traffic to another load balancer, such as one attached to a Kubernetes or Docker service. </li></ul><p><strong>Note:</strong> When using an ALB as a Target Type, the target group's <strong>port and protocol must match</strong> a listener on the selected ALB. For example, if the target group uses port 30080 with TCP, the ALB must have a listener on port 30080 using TCP.</p></td></tr><tr><td><strong>Port</strong></td><td>Specify the port on which backend resources are listening (must be between <strong>1</strong> and <strong>65535</strong>).</td></tr><tr><td><strong>Protocol</strong></td><td><p>Specify how traffic is routed to targets:</p><ul><li>Select <strong>HTTP</strong> or <strong>HTTPS</strong> if your backend supports Layer 7 routing (e.g., web services).</li><li>Select <strong>TCP</strong> for Layer 4 routing (common with internal ALBs or non-HTTP services).</li></ul></td></tr><tr><td><strong>Health Check Path</strong></td><td>Specify the URL path for health checks (e.g., <code>/health</code>).</td></tr><tr><td><strong>Health Check Protocol</strong></td><td>Select the protocol used for health checks (e.g., <strong>HTTPS</strong>, <strong>TCP</strong>, etc.).</td></tr><tr><td><strong>HTTP Success Code</strong></td><td>Enter the HTTP Success Code that indicates a healthy response (e.g., <code>200</code>, <code>200-299</code>).</td></tr></tbody></table>
-
-5. Click **Add** to create the Target Group.
+<table data-header-hidden><thead><tr><th width="204.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Port</strong></td><td>Specify the port on which backend resources are listening (must be between <strong>1</strong> and <strong>65535</strong>).</td></tr><tr><td><strong>Protocol</strong></td><td><p>Specify how traffic is routed to targets:</p><ul><li>Select <strong>HTTP</strong> or <strong>HTTPS</strong> if your backend supports Layer 7 routing (e.g., web services).</li><li>Select <strong>TCP</strong> for Layer 4 routing (common with internal ALBs or non-HTTP services).</li></ul></td></tr><tr><td><strong>Health Check Path</strong></td><td>Specify the URL path for health checks (e.g., <code>/health</code>).</td></tr><tr><td><strong>Health Check Protocol</strong></td><td>Select the protocol used for health checks (e.g., <strong>HTTPS</strong>, <strong>TCP</strong>, etc.).</td></tr><tr><td><strong>HTTP Success Code</strong></td><td>Enter the HTTP Success Code that indicates a healthy response (e.g., <code>200</code>, <code>200-299</code>).</td></tr></tbody></table>
 
 ## Step 2. Registering Targets
 
@@ -46,9 +44,10 @@ Register backend resources to your Target Group. Registered targets will receive
 4.  Select **Register Targets**. The **Register Targets** pane displays. <br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (117).png" alt="" width="344"><figcaption><p>The <strong>Register Targets</strong> pane with an Instance selected</p></figcaption></figure></div>
-5. In the **Register Targets** pane, specify the Targets you want to register:
+5. Specify the targets you want to register. The field name varies depending on the target type:
    * **Instance:** Select an EC2 Instance from the **Targets** list box.
-   * **IP Address:** Enter the IP Address in the **Add IP address** field.
+   * **IP:** Enter the IP Address in the **Add ip address**.
+   * **Lambda**: Select the function from the **Lambda function** list box.
    * **ALB:** Select an Application Load Balancer (ALB) from the **Targets** list box.
 6. Click **Register**. The target(s) are registered to the Target Group.
 
@@ -69,7 +68,7 @@ To route traffic to your Target Group, create an Application Load Balancer (ALB)
    * Click **Add**. The **Add Load Balancer Listener** page displays.
    * Complete the fields in the **Add Load Balancer Listener** page as shown below:
 
-<table data-header-hidden><thead><tr><th width="196.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Port</strong></td><td>Provide the Load Balancer Listener Port (e.g., <strong>80</strong> for HTTP or <strong>443</strong> for HTTPS).</td></tr><tr><td><strong>Protocol</strong></td><td>Choose the same protocol used by the Target Group (e.g., <strong>TCP</strong>, <strong>TLS</strong>, or <strong>UDP</strong>) to ensure compatibility.</td></tr><tr><td><strong>Action Type</strong></td><td>Choose <strong>Forward to target groups</strong>.</td></tr><tr><td><strong>Forward Target Group</strong></td><td>Select the Target Group created in step 1.  </td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="196.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Port</strong></td><td>Provide the Load Balancer Listener Port (e.g., <strong>80</strong> for HTTP or <strong>443</strong> for HTTPS).</td></tr><tr><td><strong>Protocol</strong></td><td>Choose the same protocol used by the Target Group (e.g., <strong>TCP</strong>, <strong>TLS</strong>, or <strong>UDP</strong>) to ensure compatibility.</td></tr><tr><td><strong>Action Type</strong></td><td>Choose <strong>Forward to target groups</strong>.</td></tr><tr><td><strong>Forward Target Group</strong></td><td>Select the Target Group created in step 1.  <br><br><strong>Note</strong>: Target Groups with Lambda targets can only be associated with ALBs using HTTP or HTTPS listeners. TCP/TLS listeners are not supported for Lambda targets.</td></tr></tbody></table>
 
 7. Click **Save** to create the listener. The Load Balancer will route traffic to the selected Target Group based on the configured listener rules and health checks.
 
