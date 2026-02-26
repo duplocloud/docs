@@ -13,9 +13,9 @@
   * [Projects](introduction/ai-devops-policy-model/projects.md)
   * [Incident Management](introduction/ai-devops-policy-model/incident-management.md)
 
-***
-
 * [FAQs](faqs.md)
+
+***
 
 ## AI Suite
 
