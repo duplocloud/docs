@@ -4,7 +4,7 @@ description: >-
   Portal
 ---
 
-# AWS Secrets Support
+# AWS Secrets Manager
 
 DuploCloud integrates with [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), enabling you to securely store and reference sensitive data such as API keys, passwords, and tokens within your applications and infrastructure.
 

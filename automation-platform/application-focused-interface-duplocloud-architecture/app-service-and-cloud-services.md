@@ -14,9 +14,9 @@ DuploCloud Services should not be confused with Kubernetes or ECS services. By S
 
 **For information on cloud-specific Services supported by DuploCloud, see:**
 
-* [AWS Services](../../automation-platform/overview/aws-services/)
-* [Azure Services](../../automation-platform/overview-2/azure-services/)
-* [GCP Services](../../automation-platform/overview-1/gcp-services/)
+* [AWS Services](../../overview/aws-services/)
+* [Azure Services](../../overview-2/azure-services/)
+* [GCP Services](../../overview-1/gcp-services/)
 
 DuploCloud supports a simple, application-specific interface to configure dozens of cloud services, such as S3, SNS, SQS, Kafka, Elasticsearch, Data Pipeline, EMR, SageMaker, Azure Redis, Azure SQL, Google Redis, etc. Almost all commonly used services are supported, and new ones are constantly added. DuploCloud Engineers fulfill most requests for new Services within days, depending on their complexity.
 
