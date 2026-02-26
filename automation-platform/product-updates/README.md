@@ -41,7 +41,7 @@ _**Last Updated, January 8, 2026**_
 * GCP - [Cloud SQL edition attribute](../overview-1/gcp-services/gcp-databases/cloud-sql.md#creating-a-cloud-sql-database) — Add and manage edition attributes for Cloud SQL instances.¹
 * GCP - [Ingress TLS annotation support](../kubernetes-overview/ingress-loadbalancer/gke-ingress.md#configuring-the-ingress) — Use annotations to configure TLS host and secret.¹
 * GCP - [PostgreSQL dedicated node types](../overview-1/gcp-services/gcp-databases/cloud-sql.md#creating-a-cloud-sql-database) — Use dedicated nodes for PostgreSQL deployments.¹
-* GCP - [Disable NAT during infra creation](../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/) — Option to skip NAT setup when creating infra.¹
+* GCP - [Disable NAT during infra creation](../../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/) — Option to skip NAT setup when creating infra.¹
 * GCP - [GCP Secret Manager support](../overview-1/gcp-services/gcp-secrets-manager.md) — Manage secrets using GCP Secret Manager service.¹
 * GCP - [Firewall rule support](../overview-1/security-configuration-settings/gcp-firewall-rules/) — Manage network rules at the infrastructure and tenant levels.¹
 * GCP - [Security Command Center](../overview-1/gcp-services/gcp-security-command-center.md) — Integration with GCP Security Command Center.¹
