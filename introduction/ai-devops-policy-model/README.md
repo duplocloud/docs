@@ -10,7 +10,7 @@ The DuploCloud AI DevOps Policy Model lays down the foundational building blocks
 
 This diagram illustrates a hierarchical AI DevOps platform architecture. Administrators define permissions and integrations, Engineers are configured with capabilities and boundaries, Projects break down requirements into executable plans and tasks, and specialized Agents carry out the actual work through multi-agent orchestration in a ticket-based workflow.
 
-<figure><img src="../../.gitbook/assets/image (498).png" alt=""><figcaption></figcaption></figure>
+<figure><picture><source srcset="../../.gitbook/assets/duplocloud-diagram-2-dark.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/duplocloud-diagram-2-light.png" alt=""></picture><figcaption></figcaption></figure>
 
 ## Core Concepts
 
