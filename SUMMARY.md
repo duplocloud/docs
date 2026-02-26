@@ -265,7 +265,7 @@
       * [Step 5: Create a Load Balancer](automation-platform/overview-1/quick-start/create-a-service-with-gke-standard/step-4-create-a-load-balancer.md)
       * [Step 6: Test the Application](automation-platform/overview-1/quick-start/create-a-service-with-gke-standard/step-5-test-the-application.md)
   * [GCP Use Cases](automation-platform/overview-1/use-cases/README.md)
-    * [Creating an Infrastructure and Plan for GCP](automation-platform/overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/README.md)
+    * [Creating an Infrastructure and Plan for GCP](overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/README.md)
       * [Kubectl token and config](automation-platform/overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/kubectl-token-and-config.md)
       * [Upgrading the GKE version](automation-platform/overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/upgrading-eks-version.md)
     * [Creating a Tenant (Environment)](automation-platform/overview-1/use-cases/tenant-environment/README.md)

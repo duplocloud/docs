@@ -10,7 +10,7 @@ For instructions to create an Infrastructure in the DuploCloud Portal, see:
 
 * [AWS Infrastructure](../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/)
 * [Azure Infrastructure](../overview-2/use-cases/infrastructure-and-plan/)
-* [GCP Infrastructure](../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/)
+* [GCP Infrastructure](../../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/)
 * [On-premises Infrastructure](../kubernetes-overview/import-an-external-kubernetes-cluster.md#importing-your-kubernetes-cluster-to-duplocloud)
 
 Each Infrastructure represents a network connection to a unique VPC/VNET, in a Region with a Kubernetes Cluster. For AWS, it can also include an ECS. An Infrastructure can be created with five basic inputs: Name, VPC CIDR, Number of AZs, Region, and a choice to enable or disable a K8s/ECS cluster. &#x20;
