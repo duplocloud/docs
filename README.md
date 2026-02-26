@@ -15,7 +15,7 @@ DuploCloud is an agentic DevOps automation platform that leverages AI to accompl
 * Help with everyday tasks like infrastructure health reviews, code deployment, IaC maintenance, rollbacks, and backups.&#x20;
 * Perform other functions like collecting evidence for compliance audits, reporting, discovering cloud resources to generate documentation, and more.<br>
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><picture><source srcset=".gitbook/assets/duplocloud-diagram-1-dark.png" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/duplocloud-diagram-1-light.png" alt=""></picture><figcaption></figcaption></figure>
 
 
 
@@ -43,4 +43,4 @@ The AI DevOps Engineer comes with a suite of integrations that help you accompli
 
 
 
-<figure><img src=".gitbook/assets/image (2) (8).png" alt=""><figcaption></figcaption></figure>
+<figure><picture><source srcset=".gitbook/assets/duplocloud-diagram-3-dark.png" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/duplocloud-diagram-3-light.png" alt=""></picture><figcaption></figcaption></figure>
