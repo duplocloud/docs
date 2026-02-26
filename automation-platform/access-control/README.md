@@ -23,3 +23,11 @@ For each of the access roles above, DuploCloud supports Read Only permissions, w
 The user name is meant to be an email address associated with an Identity provider. Currently, supported identity providers are Google and Microsoft Azure. Once a user is created in the DuploCloud portal, the user receives an account-creation email with login instructions. No passwords are involved, the user simply has to navigate to their DuploCloud environment and use SSO to log in to their account.
 
 ![](<../../.gitbook/assets/Screen Shot 2022-06-30 at 12.18.51 AM.png>)
+
+## Keycloak Integration
+
+DuploCloud supports using [Keycloak](https://www.keycloak.org/) to integrate with external identity providers. For example, integrating LDAP directories (such as Active Directory (AD) or OpenLDAP) provides centralized authentication and user federation without requiring local DuploCloud accounts. Additional identity providers (e.g., OpenID Connect (OIDC) and SAML systems) can be integrated as needed.
+
+{% hint style="info" %}
+**Note**: Keycloak integration requires setup and configuration. Please contact **DuploCloud Support** for assistance with enabling and connecting your identity provider.
+{% endhint %}
