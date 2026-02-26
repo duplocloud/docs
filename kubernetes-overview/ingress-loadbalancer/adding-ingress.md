@@ -10,7 +10,7 @@ Ingress controllers abstract the complexity of routed Kubernetes application tra
 
 ### Creating Services with EKS
 
-See the DuploCloud documentation for instructions to add [Tenants](../../automation-platform/overview/use-cases/tenant-environment/), [Hosts](../../automation-platform/overview/use-cases/hosts-vms/), and [Services](../../automation-platform/overview/aws-services/).&#x20;
+See the DuploCloud documentation for instructions to add [Tenants](../../automation-platform/overview/use-cases/tenant-environment/), [Hosts](../../automation-platform/overview/use-cases/hosts-vms/), and [Services](../../overview/aws-services/).&#x20;
 
 ### Enabling the AWS Application Load Balancer&#x20;
 

@@ -269,7 +269,7 @@ hidden: true
 * [Support for Amazon Managed Apache Airflow](../overview/aws-services/managed-airflow.md): Ability to configure AWS Managed Airflow
 * [Configure custom prefix for S3](../../overview/aws-services/s3-bucket.md#add-custom-prefix-for-s3-buckets):  Ability to configure a prefix for S3 bucket names.
 * [Azure Support to add Storage account](../overview-2/azure-services/storage-account.md): Create Storage Accounts, File Shares, and generate Shared Access Signature (SAS).&#x20;
-* Multiple [Azure User Enhancements](../overview-2/azure-services/) were made.
+* Multiple [Azure User Enhancements](../../overview-2/azure-services/) were made.
 
 ## August 2022
 

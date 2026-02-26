@@ -61,7 +61,7 @@ _**Last Updated, January 8, 2026**_
 * GCP - Support for defining [GCP Maintenance Windows](../overview-1/use-cases/gke-maintenance-windows.md).¹
 * GCP - Support for [GCP Cloud Run Service](../overview-1/gcp-services/cloud-run-service.md).¹
 * GCP - Support for [dynamic NAT port allocation](../overview-1/gcp-services/dynamic-nat-port-allocation.md) during GCP infrastructure creation.¹
-* GCP - Support for [Cloud Tasks](../overview-1/gcp-services/gcp-cloud-task-support.md) integration.²
+* GCP - Support for [Cloud Tasks](../overview-1/gcp-services/cloud-tasks.md) integration.²
 * Azure - Support for managing [infra secrets in Azure](../overview-2/azure-services/infra-secrets.md).¹
 * Kubernetes - [Cron Job Recent Job Link](../../kubernetes/cronjobs.md) — Navigate from a CronJob to most recent execution.¹<sup>,</sup>²
 * Kubernetes - [ArgoCD integration](../introduction-to-ci-cd/argocd.md) — Support for GitOps deployment and management workflows.¹

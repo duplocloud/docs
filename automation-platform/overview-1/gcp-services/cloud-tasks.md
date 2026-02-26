@@ -2,7 +2,7 @@
 description: Create and manage Google Cloud Task queues from the DuploCloud Portal
 ---
 
-# GCP Cloud Task Support
+# Cloud Tasks
 
 [Google Cloud Tasks](https://cloud.google.com/tasks/docs) is a fully managed service that enables you to run asynchronous background work using task queues. Queues help offload work from your application, manage retries, and control task execution rates, improving system efficiency and resilience.
 
