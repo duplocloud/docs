@@ -60,7 +60,7 @@ The SRE Agent will extend its operational coverage over time by incorporating ad
 
 ### AWS Agent
 
-The AWS Agent is an AWS infrastructure expert that helps you diagnose, troubleshoot, and manage cloud resources. It suggests and executes AWS CLI commands with user approval, helping teams inspect, analyze, and take action on AWS infrastructure without requiring deep CLI expertise.
+The AWS Agent is an AWS infrastructure expert that helps you diagnose, troubleshoot, and manage cloud resources across one or more AWS accounts. It suggests and executes AWS CLI commands with user approval, helping teams inspect, analyze, and take action on AWS infrastructure without requiring deep CLI expertise.
 
 <details>
 
@@ -69,25 +69,27 @@ The AWS Agent is an AWS infrastructure expert that helps you diagnose, troublesh
 #### Core Capabilities
 
 * **Resource Discovery**: List and inspect AWS resources across EC2, S3, RDS, Lambda, ECS, and more
+* **Multi-Account Support**: Work across multiple AWS accounts in a single conversation using Scopes
 * **Command Suggestions**: Recommends precise AWS CLI commands based on your query
 * **Command Execution**: Executes approved commands and returns results in real time
-* **Credential Handling**: Securely processes AWS credentials from your defined Providers
+* **Credential Handling**: Securely processes AWS credentials from your defined Providers — each Provider maps to a separate AWS account and region
 * **Context Awareness**: Maintains conversation history for more accurate, relevant responses
 
 #### Key Features
 
 * **Approval Workflow**: All suggested commands are presented for user review before execution
+* **Scoped Execution**: When multiple Providers are configured, the agent identifies which account to target and routes commands to the correct credentials automatically
 * **AWS Bedrock Backend**: Powered by Anthropic Claude via AWS Bedrock — processing stays within your AWS environment
 * **Isolated Execution**: Commands run in an isolated process per session
 * **Audit Logging**: All agent interactions and command executions are logged for traceability
 
 #### Use Cases
 
-* Investigating resource configuration and availability issues
+* Investigating resource configuration and availability issues across one or more AWS accounts
 * Discovering and inventorying resources within an Environment
 * Troubleshooting IAM permissions, security groups, and networking
 * Analyzing CloudWatch logs and metrics for performance issues
-* Auditing cost and usage patterns across AWS services
+* Auditing cost and usage patterns across AWS services and accounts
 * Root cause analysis for infrastructure incidents
 
 #### Security Model
