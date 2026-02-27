@@ -208,6 +208,14 @@ The IaC Agent autonomously implements infrastructure changes in your Terraform r
 * **PR Creation**: Automatically branches, commits, and opens a GitHub pull request with a full summary of changes
 * **Audit Trail**: Every step of the pipeline produces artifacts — plan, diff summary, verification results — retained per run
 
+#### Benefits
+
+* **Faster Implementation**: Infrastructure changes that would take hours to research, write, and validate manually can be completed in minutes
+* **Consistent Code Quality**: The agent follows your existing repo structure, naming conventions, and Terraform patterns — changes fit naturally into your codebase
+* **Reduced Errors**: Automated `terraform fmt`, `validate`, and `plan` checks catch mistakes before they ever reach a PR
+* **Human Oversight Without Manual Work**: Checkpoints give your team full control over what gets merged, without requiring them to write the code themselves
+* **Democratizes IaC**: Team members without deep Terraform expertise can contribute infrastructure changes safely
+
 #### Use Cases
 
 * Adding new cloud resources (compute, storage, databases, networking) via Terraform
