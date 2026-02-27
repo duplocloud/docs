@@ -100,6 +100,47 @@ The AWS Agent is an AWS infrastructure expert that helps you diagnose, troublesh
 
 </details>
 
+### GCP Agent
+
+The GCP Agent is a Google Cloud Platform infrastructure expert that helps you diagnose, troubleshoot, and manage GCP resources. It suggests and executes `gcloud` and `kubectl` commands with user approval, helping teams inspect, analyze, and take action on GCP infrastructure — including GKE clusters — without requiring deep CLI expertise.
+
+<details>
+
+<summary>View GCP Agent details</summary>
+
+#### Core Capabilities
+
+* **Resource Discovery**: List and inspect GCP resources across Compute Engine, GKE, Cloud Storage, IAM, Networking, and more
+* **Command Suggestions**: Recommends precise `gcloud` and `kubectl` commands based on your query
+* **Command Execution**: Executes approved commands and returns results in real time
+* **GKE Integration**: Full Kubernetes support for GKE clusters, including pod management, deployments, and log retrieval
+* **Credential Handling**: Securely processes GCP credentials from your defined Providers
+* **Context Awareness**: Maintains conversation history for more accurate, relevant responses
+
+#### Key Features
+
+* **Approval Workflow**: All suggested commands are presented for user review before execution
+* **Dual CLI Support**: Works across both `gcloud` for GCP resource management and `kubectl` for GKE workloads
+* **Isolated Execution**: Commands run in an isolated process per session
+* **Audit Logging**: All agent interactions and command executions are logged for traceability
+
+#### Use Cases
+
+* Investigating Compute Engine instance configuration and availability
+* Diagnosing GKE pod failures, crashes, and networking issues
+* Managing Cloud Storage buckets and IAM policies
+* Analyzing Cloud Logging and Cloud Monitoring data for performance issues
+* Troubleshooting VPC networking, firewall rules, and load balancers
+* Root cause analysis for GCP infrastructure incidents
+
+#### Security Model
+
+* **Permission Scope**: You define the permission boundary of the agent based on the Provider Scope you define
+* **Sandboxed Execution**: Commands run in an isolated process per session
+* **Audit Logging**: All agent interactions and command executions are logged for traceability and compliance
+
+</details>
+
 ### Kubernetes Agent
 
 The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes cluster management, maintenance, and troubleshooting. This Agent serves as your dedicated Kubernetes specialist, capable of handling everything from routine cluster health checks to complex resource deployments.
