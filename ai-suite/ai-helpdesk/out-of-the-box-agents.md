@@ -60,7 +60,7 @@ The SRE Agent will extend its operational coverage over time by incorporating ad
 
 ### AWS Agent
 
-The AWS Agent is a read-only AWS infrastructure expert specialized in diagnosing and troubleshooting cloud resource issues. It suggests and executes AWS CLI commands with user approval, helping teams quickly inspect, analyze, and resolve AWS infrastructure problems without requiring deep CLI expertise.
+The AWS Agent is an AWS infrastructure expert that helps you diagnose, troubleshoot, and manage cloud resources. It suggests and executes AWS CLI commands with user approval, helping teams inspect, analyze, and take action on AWS infrastructure without requiring deep CLI expertise.
 
 <details>
 
@@ -69,25 +69,22 @@ The AWS Agent is a read-only AWS infrastructure expert specialized in diagnosing
 #### Core Capabilities
 
 * **Resource Discovery**: List and inspect AWS resources across EC2, S3, RDS, Lambda, ECS, and more
-* **Tenant-Aware Filtering**: Automatically scopes queries to your DuploCloud Tenant using resource tags
 * **Command Suggestions**: Recommends precise AWS CLI commands based on your query
 * **Command Execution**: Executes approved commands and returns results in real time
-* **Credential Handling**: Securely processes AWS credentials from DuploCloud platform context
+* **Credential Handling**: Securely processes AWS credentials from your defined Providers
 * **Context Awareness**: Maintains conversation history for more accurate, relevant responses
 
 #### Key Features
 
-* **Read-Only Enforcement**: Strictly limited to `describe`, `get`, and `list` operations — no modifications allowed
 * **Approval Workflow**: All suggested commands are presented for user review before execution
-* **Tenant Scope by Default**: Filters resources by your DuploCloud Tenant unless explicitly asked to skip
 * **AWS Bedrock Backend**: Powered by Anthropic Claude via AWS Bedrock — processing stays within your AWS environment
-* **Isolated Execution**: Commands run in a sandboxed environment with process isolation per session
+* **Isolated Execution**: Commands run in an isolated process per session
 * **Audit Logging**: All agent interactions and command executions are logged for traceability
 
 #### Use Cases
 
 * Investigating resource configuration and availability issues
-* Discovering and inventorying resources within a Tenant
+* Discovering and inventorying resources within an Environment
 * Troubleshooting IAM permissions, security groups, and networking
 * Analyzing CloudWatch logs and metrics for performance issues
 * Auditing cost and usage patterns across AWS services
@@ -95,11 +92,9 @@ The AWS Agent is a read-only AWS infrastructure expert specialized in diagnosing
 
 #### Security Model
 
-* **Read-Only**: Cannot create, update, delete, or modify any AWS resource
-* **Permission Inheritance**: Operates using the requesting user's AWS credentials provided via DuploCloud platform context
-* **Tenant Isolation**: All queries are scoped to the user's DuploCloud Tenant by default
-* **Sandboxed Execution**: Commands run in an isolated container (bwrap) per session
-* **Blocked Commands**: Interactive and potentially destructive commands (e.g., `aws ssm start-session`, `aws logs tail --follow`) are blocked and must be run manually
+* **Permission Scope**: You define the permission boundary of the agent based on the Provider Scope you define
+* **Sandboxed Execution**: Commands run in an isolated process per session
+* **Audit Logging**: All agent interactions and command executions are logged for traceability and compliance
 
 </details>
 
