@@ -184,6 +184,45 @@ Here’s a quick look at the Kubernetes AI Agent in action.
 
 {% embed url="https://drive.google.com/file/d/1GNhFXxoW5j0LtLqNSxLguhutb9mlBBtd/view?usp=drive_link" %}
 
+### IaC Agent
+
+The IaC Agent autonomously implements infrastructure changes in your Terraform repositories and opens pull requests for review. Give it a task — such as "add an S3 bucket with KMS encryption" — and it clones your repo, maps its structure, plans the changes, implements them, verifies the result, and creates a PR. Cloud-agnostic by design, it supports AWS, GCP, and Azure Terraform configurations.
+
+<details>
+
+<summary>View IaC Agent details</summary>
+
+#### Core Capabilities
+
+* **Autonomous Terraform Implementation**: Clones your repo, plans changes, writes Terraform code, and opens a PR — end to end
+* **Multi-Cloud Support**: Works with AWS, GCP, and Azure Terraform repositories
+* **Repo Structure Discovery**: Automatically maps Terraform roots, modules, and CI patterns before making changes
+* **Clarification Q&A**: Pauses to ask questions when a task is ambiguous before proceeding
+* **Change Verification**: Runs `terraform fmt`, `init`, `validate`, and `plan` to verify changes before the PR is created
+* **Human Review Checkpoints**: Optionally pause at the planning or implementation stage for review and feedback before continuing
+
+#### Key Features
+
+* **Fully Autonomous Mode**: Submit a task and walk away — the agent handles the full pipeline without intervention
+* **Checkpoint Feedback Loop**: At any checkpoint, approve the plan, provide feedback for revision, or directly edit the artifact before continuing
+* **PR Creation**: Automatically branches, commits, and opens a GitHub pull request with a full summary of changes
+* **Audit Trail**: Every step of the pipeline produces artifacts — plan, diff summary, verification results — retained per run
+
+#### Use Cases
+
+* Adding new cloud resources (compute, storage, databases, networking) via Terraform
+* Modifying existing infrastructure configurations across environments
+* Automating repetitive IaC tasks that follow consistent patterns
+* Reviewing and approving AI-generated infrastructure changes before they reach your repo
+
+#### Security Model
+
+* **Credentials Never Persisted**: API keys, GitHub tokens, and cloud credentials are passed per request and never written to disk
+* **Isolated Execution**: Each run operates in its own isolated directory
+* **Human in the Loop**: Optional checkpoints ensure no changes land in your repo without review
+
+</details>
+
 ### Observability Agent
 
 The Observability Agent provides intelligent monitoring and troubleshooting capabilities through integration with your observability stack. It is currently optimized for OpenTelemetry-based environments using Grafana and helps teams quickly identify and resolve application performance issues.
