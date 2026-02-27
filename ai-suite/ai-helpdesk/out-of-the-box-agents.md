@@ -411,6 +411,50 @@ In short: data is strictly segmented by `tenantId`; users operate only within th
 
 </details>
 
+### Knowledgebase Agent
+
+The Knowledgebase Agent answers questions by searching a vector database of previously resolved support tickets and knowledge base articles. Rather than relying solely on general AI knowledge, it grounds responses in your organization's actual resolution history — surfacing relevant tickets, steps, and references that have worked before. Over time, it becomes a living repository of your team's tribal knowledge, making institutional expertise available to everyone on demand.
+
+<details>
+
+<summary>View Knowledgebase Agent details</summary>
+
+#### Core Capabilities
+
+* **Semantic Search**: Searches previously resolved tickets and knowledge base articles using vector similarity to find the most relevant matches for your query
+* **Result Reranking**: Applies a reranking model to optimize search results for accuracy before generating a response
+* **Grounded Responses**: Answers are based on your organization's real ticket history, with source references included
+* **Intelligent Fallback**: When no sufficiently relevant results are found, falls back gracefully to general AI knowledge
+* **PII Sanitization**: Optionally detects and redacts personally identifiable information from queries before processing
+
+#### Key Features
+
+* **Reference Links**: Responses include links to the source tickets or documentation used to formulate the answer
+* **Context Awareness**: Maintains conversation history for more accurate follow-up responses
+* **Context-Aware by Default**: Automatically interprets questions within the context of your configured knowledge base unless explicitly stated otherwise
+
+#### Benefits
+
+* **Preserves Tribal Knowledge**: Captures and surfaces institutional expertise that would otherwise live only in individuals' heads or be lost over time
+* **Faster Resolution**: Teams spend less time re-investigating known issues — past solutions are surfaced instantly
+* **Continuous Improvement**: The more tickets resolved and indexed, the more accurate and useful the agent becomes
+* **Self-Service Support**: Empowers team members to find answers independently without needing to escalate
+
+#### Use Cases
+
+* Troubleshooting known issues by surfacing how similar problems were previously resolved
+* Onboarding new team members with answers grounded in real operational history
+* Reducing repeat support tickets by making past resolutions searchable
+* Quick lookups for configuration guidance, error resolutions, and operational steps
+
+#### Security Model
+
+* **PII Protection**: Optional PII detection and redaction ensures sensitive data is sanitized before being processed
+* **Processing Within Your Environment**: All AI processing occurs within your own cloud environment — data does not leave your infrastructure
+* **Audit Logging**: All agent interactions are logged for traceability and compliance
+
+</details>
+
 ### PrivateGPT Agent
 
 The PrivateGPT Agent provides a secure, enterprise-grade ChatGPT-like experience for organizations concerned about data privacy and security. This agent ensures that sensitive organizational data never leaves your AWS environment while providing powerful AI assistance.
