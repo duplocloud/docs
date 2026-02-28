@@ -132,6 +132,16 @@ Long-running tasks like generating code reviews or large deployments use the pub
 
 <details>
 
+<summary>Is agent memory persistent, and can it be shared across agents?</summary>
+
+Agents themselves are stateless — each execution starts fresh with the context provided in the ticket. Persistence lives at the help desk layer: every ticket maintains a full history of the investigation, actions taken, and outcomes. This history is stored in the Engineer's Knowledge Base and is accessible to any agent working on related tickets.
+
+The result is shared, searchable memory at the system level without individual agents needing to carry state between runs. Agents working on a follow-up ticket can query prior work, and human team members can review or build on the full investigation history.
+
+</details>
+
+<details>
+
 <summary>Can we build custom agents or bring our own?</summary>
 
 Yes. There are three options:
@@ -234,6 +244,16 @@ Yes — DuploCloud has deployed Jenkins agents for multiple customers. The out-o
 <summary>Can we use our existing Terraform, Helm, or other IaC?</summary>
 
 Yes. The platform includes a Terraform Skill out of the box, covering plan, apply, state management, and error handling. Helm and Kubernetes deployments are handled by the Kubernetes Agent and Skills. External Skill packages from HashiCorp and Pulumi can also be made available to the agents. Your existing IaC files, modules, and conventions are used as-is — the agent works with your code, not a replacement for it.&#x20;
+
+</details>
+
+<details>
+
+<summary>Does DuploCloud support GitOps workflows (Flux, ArgoCD)?</summary>
+
+Yes. Custom agents and Skills can be built for GitOps tools like Flux and ArgoCD. The platform's core model — agents operating on your Git repositories with scoped access and a full audit trail of proposed changes — maps naturally to GitOps pull-based delivery.
+
+A GitOps-focused agent can manage Flux Kustomizations, HelmReleases, and GitRepository resources alongside your existing reconciliation workflow. Contact the team to scope a custom agent for your GitOps environment.
 
 </details>
 
