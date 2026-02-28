@@ -53,6 +53,18 @@ Every ticket maintains a full context and audit trail throughout its lifecycle �
 
 <details>
 
+<summary>What if a user accidentally pastes credentials or secrets into a prompt?</summary>
+
+DuploCloud applies a security validation Skill to all agents. When an agent detects that a prompt contains patterns consistent with secrets — API keys, access tokens, passwords, or cloud provider credentials — it refuses to process the request and returns a warning explaining why.
+
+More broadly, the platform is designed so that users never need to supply credentials in prompts at all. Credentials are managed at the Scope level and injected as temporary, just-in-time credentials at execution time. If a user tries to bypass this by pasting credentials directly, the security Skill acts as a catch.
+
+For stronger guarantees, Scopes can be configured to remove sensitive credential access from the user-facing layer entirely — the agent simply doesn't have the access to misuse.
+
+</details>
+
+<details>
+
 <summary>What compliance certifications does DuploCloud have?</summary>
 
 DuploCloud is SOC 2 certified. Full security documentation is available for procurement review. The platform is used by customers in regulated industries including fintech and healthcare. Contact [support@duplocloud.net](mailto:support@duplocloud.net) for compliance documentation.
@@ -120,6 +132,16 @@ Long-running tasks like generating code reviews or large deployments use the pub
 
 <details>
 
+<summary>Is agent memory persistent, and can it be shared across agents?</summary>
+
+Agents themselves are stateless — each execution starts fresh with the context provided in the ticket. Persistence lives at the help desk layer: every ticket maintains a full history of the investigation, actions taken, and outcomes. This history is stored in the Engineer's Knowledge Base and is accessible to any agent working on related tickets.
+
+The result is shared, searchable memory at the system level without individual agents needing to carry state between runs. Agents working on a follow-up ticket can query prior work, and human team members can review or build on the full investigation history.
+
+</details>
+
+<details>
+
 <summary>Can we build custom agents or bring our own?</summary>
 
 Yes. There are three options:
@@ -160,6 +182,18 @@ Yes. Dynamic Agents support AWS Bedrock as a first-class LLM provider, with addi
 
 </details>
 
+<details>
+
+<summary>Does my choice of container platform affect the quality of AI output?</summary>
+
+In practice, yes. LLMs perform better against widely adopted, open-standard platforms — such as Kubernetes (EKS, GKE, AKS) — than against proprietary or less common orchestration systems. This is because the volume of public documentation, community discussion, and training data is significantly higher for Kubernetes than for alternatives like ECS.
+
+This doesn't mean proprietary platforms aren't supported — they are. But for complex tasks like troubleshooting, cost optimisation, and infrastructure generation, you'll typically get more accurate and detailed output on Kubernetes-based environments.
+
+If you're choosing between platforms and AI-assisted operations is a priority, DuploCloud will factor this into its recommendation during the scoping phase.
+
+</details>
+
 ## Operations & Reliability
 
 <details>
@@ -172,6 +206,18 @@ There are two layers of protection:
 2. **Skills** — best practices and operational guardrails are encoded directly into the agent's Skills. Skills define not just what an agent can do, but how it should do it, including safety checks and approval steps.
 
 DuploCloud's human operations team also acts as a reliability layer — reviewing complex work and stepping in when something requires human judgment.&#x20;
+
+</details>
+
+<details>
+
+<summary>How do LLM model updates work, and will they affect my agents?</summary>
+
+DuploCloud is model-agnostic. Each agent is configured to use a specific model through your cloud provider's managed LLM service (e.g., AWS Bedrock, Azure OpenAI), which you control. Model updates are not applied automatically — you decide when to change the model an agent uses.
+
+DuploCloud monitors model performance across its customer base and makes recommendations when a newer model produces meaningfully better results for a specific task type (e.g., Kubernetes operations, Terraform plan analysis). These are recommendations, not forced updates.
+
+Because Skills encode best practices as explicit, versioned instructions, agent behavior remains consistent even as underlying models evolve — the guardrails don't change with the model.
 
 </details>
 
@@ -203,6 +249,30 @@ Yes. The platform includes a Terraform Skill out of the box, covering plan, appl
 
 <details>
 
+<summary>Does DuploCloud support GitOps workflows (Flux, ArgoCD)?</summary>
+
+Yes. Custom agents and Skills can be built for GitOps tools like Flux and ArgoCD. The platform's core model — agents operating on your Git repositories with scoped access and a full audit trail of proposed changes — maps naturally to GitOps pull-based delivery.
+
+A GitOps-focused agent can manage Flux Kustomizations, HelmReleases, and GitRepository resources alongside your existing reconciliation workflow. Contact the team to scope a custom agent for your GitOps environment.
+
+</details>
+
+<details>
+
+<summary>How does DuploCloud handle Terraform variable management across environments?</summary>
+
+Terraform variable management is addressed at three levels:
+
+1. **System of record** — variables and configuration are backed by your Git repositories. The platform treats your existing repo structure as the source of truth and works within it rather than replacing it.
+2. **Scope-based access control** — each environment (dev, staging, production) is modeled as a separate Scope with its own credentials and boundaries. Engineers only access the variables relevant to the Scope they're operating in, preventing cross-environment leakage.
+3. **Skills** — Terraform Skills encode best practices for module structure, variable organization, and environment promotion patterns, ensuring consistency across environments regardless of which team member or agent is making changes.
+
+If you're partway through a migration, the platform can scan your existing repositories and cloud accounts to identify gaps and generate a remediation plan.
+
+</details>
+
+<details>
+
 <summary>How does DuploCloud integrate with our existing CI/CD pipeline?</summary>
 
 Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](introduction/ai-devops-policy-model/providers.md) with scoped access. The out-of-the-box [CI/CD Agent](https://docs.duplocloud.com/docs/ai-suite/ai-helpdesk/out-of-the-box-agents) integrates with Jenkins and GitHub Actions for pipeline troubleshooting and automation. For deeper pipeline integration, custom agents or Skills can be configured to fit your specific workflow.
@@ -218,6 +288,16 @@ Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](introduc
 The platform is designed to be operational quickly. Setup involves deploying a few Docker containers, connecting your cloud and Git providers, and configuring an Engineer with the appropriate Skills and Scopes. All of which can be done in a few minutes, not days.&#x20;
 
 The 30-day PoC is structured to deliver measurable results against real infrastructure within the first sprint. Please contact the team to start scoping your onboarding.
+
+</details>
+
+<details>
+
+<summary>Can DuploCloud scan our existing infrastructure and identify what still needs to be done?</summary>
+
+Yes — this is the standard starting point for any project. When you create a Project Plan, you provide the platform with access to your Git repositories and cloud accounts (via Scopes). The planning phase scans what already exists and generates tasks only for what's missing or non-compliant with the target spec.
+
+If you're partway through a migration, the agent picks up from where your team left off — assessing the current state, identifying the remaining gaps, and producing a prioritized task list with code reviews for each delta. You don't start from scratch.
 
 </details>
 
