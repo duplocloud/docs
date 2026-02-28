@@ -100,6 +100,47 @@ The AWS Agent is an AWS infrastructure expert that helps you diagnose, troublesh
 
 </details>
 
+### GCP Agent
+
+The GCP Agent is a Google Cloud Platform infrastructure expert that helps you diagnose, troubleshoot, and manage GCP resources. It suggests and executes `gcloud` and `kubectl` commands with user approval, helping teams inspect, analyze, and take action on GCP infrastructure — including GKE clusters — without requiring deep CLI expertise.
+
+<details>
+
+<summary>View GCP Agent details</summary>
+
+#### Core Capabilities
+
+* **Resource Discovery**: List and inspect GCP resources across Compute Engine, GKE, Cloud Storage, IAM, Networking, and more
+* **Command Suggestions**: Recommends precise `gcloud` and `kubectl` commands based on your query
+* **Command Execution**: Executes approved commands and returns results in real time
+* **GKE Integration**: Full Kubernetes support for GKE clusters, including pod management, deployments, and log retrieval
+* **Credential Handling**: Securely processes GCP credentials from your defined Providers
+* **Context Awareness**: Maintains conversation history for more accurate, relevant responses
+
+#### Key Features
+
+* **Approval Workflow**: All suggested commands are presented for user review before execution
+* **Dual CLI Support**: Works across both `gcloud` for GCP resource management and `kubectl` for GKE workloads
+* **Isolated Execution**: Commands run in an isolated process per session
+* **Audit Logging**: All agent interactions and command executions are logged for traceability
+
+#### Use Cases
+
+* Investigating Compute Engine instance configuration and availability
+* Diagnosing GKE pod failures, crashes, and networking issues
+* Managing Cloud Storage buckets and IAM policies
+* Analyzing Cloud Logging and Cloud Monitoring data for performance issues
+* Troubleshooting VPC networking, firewall rules, and load balancers
+* Root cause analysis for GCP infrastructure incidents
+
+#### Security Model
+
+* **Permission Scope**: You define the permission boundary of the agent based on the Provider Scope you define
+* **Sandboxed Execution**: Commands run in an isolated process per session
+* **Audit Logging**: All agent interactions and command executions are logged for traceability and compliance
+
+</details>
+
 ### Kubernetes Agent
 
 The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes cluster management, maintenance, and troubleshooting. This Agent serves as your dedicated Kubernetes specialist, capable of handling everything from routine cluster health checks to complex resource deployments.
@@ -142,6 +183,53 @@ The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes clus
 Here’s a quick look at the Kubernetes AI Agent in action.
 
 {% embed url="https://drive.google.com/file/d/1GNhFXxoW5j0LtLqNSxLguhutb9mlBBtd/view?usp=drive_link" %}
+
+### IaC Agent
+
+The IaC Agent autonomously implements infrastructure changes in your Terraform repositories and opens pull requests for review. Give it a task — such as "add an S3 bucket with KMS encryption" — and it clones your repo, maps its structure, plans the changes, implements them, verifies the result, and creates a PR. Cloud-agnostic by design, it supports AWS, GCP, and Azure Terraform configurations.
+
+<details>
+
+<summary>View IaC Agent details</summary>
+
+#### Core Capabilities
+
+* **Autonomous Terraform Implementation**: Clones your repo, plans changes, writes Terraform code, and opens a PR — end to end
+* **Multi-Cloud Support**: Works with AWS, GCP, and Azure Terraform repositories
+* **Repo Structure Discovery**: Automatically maps Terraform roots, modules, and CI patterns before making changes
+* **Clarification Q&A**: Pauses to ask questions when a task is ambiguous before proceeding
+* **Change Verification**: Runs `terraform fmt`, `init`, `validate`, and `plan` to verify changes before the PR is created
+* **Human Review Checkpoints**: Optionally pause at the planning or implementation stage for review and feedback before continuing
+
+#### Key Features
+
+* **Fully Autonomous Mode**: Submit a task and walk away — the agent handles the full pipeline without intervention
+* **Checkpoint Feedback Loop**: At any checkpoint, approve the plan, provide feedback for revision, or directly edit the artifact before continuing
+* **PR Creation**: Automatically branches, commits, and opens a GitHub pull request with a full summary of changes
+* **Audit Trail**: Every step of the pipeline produces artifacts — plan, diff summary, verification results — retained per run
+
+#### Benefits
+
+* **Faster Implementation**: Infrastructure changes that would take hours to research, write, and validate manually can be completed in minutes
+* **Consistent Code Quality**: The agent follows your existing repo structure, naming conventions, and Terraform patterns — changes fit naturally into your codebase
+* **Reduced Errors**: Automated `terraform fmt`, `validate`, and `plan` checks catch mistakes before they ever reach a PR
+* **Human Oversight Without Manual Work**: Checkpoints give your team full control over what gets merged, without requiring them to write the code themselves
+* **Democratizes IaC**: Team members without deep Terraform expertise can contribute infrastructure changes safely
+
+#### Use Cases
+
+* Adding new cloud resources (compute, storage, databases, networking) via Terraform
+* Modifying existing infrastructure configurations across environments
+* Automating repetitive IaC tasks that follow consistent patterns
+* Reviewing and approving AI-generated infrastructure changes before they reach your repo
+
+#### Security Model
+
+* **Credentials Never Persisted**: API keys, GitHub tokens, and cloud credentials are passed per request and never written to disk
+* **Isolated Execution**: Each run operates in its own isolated directory
+* **Human in the Loop**: Optional checkpoints ensure no changes land in your repo without review
+
+</details>
 
 ### Observability Agent
 
@@ -328,6 +416,50 @@ For example, once we define a pods dependenices, we can ask our Architecture Dia
   * Diagram generation and analysis features apply `tenantId` filtering end-to-end.
 
 In short: data is strictly segmented by `tenantId`; users operate only within their Tenant; admins can operate broadly, but any concurrent user assignment forces least-privilege behavior, restricting access to the user’s Tenant.
+
+</details>
+
+### Knowledgebase Agent
+
+The Knowledgebase Agent answers questions by searching a vector database of previously resolved support tickets and knowledge base articles. Rather than relying solely on general AI knowledge, it grounds responses in your organization's actual resolution history — surfacing relevant tickets, steps, and references that have worked before. Over time, it becomes a living repository of your team's tribal knowledge, making institutional expertise available to everyone on demand.
+
+<details>
+
+<summary>View Knowledgebase Agent details</summary>
+
+#### Core Capabilities
+
+* **Semantic Search**: Searches previously resolved tickets and knowledge base articles using vector similarity to find the most relevant matches for your query
+* **Result Reranking**: Applies a reranking model to optimize search results for accuracy before generating a response
+* **Grounded Responses**: Answers are based on your organization's real ticket history, with source references included
+* **Intelligent Fallback**: When no sufficiently relevant results are found, falls back gracefully to general AI knowledge
+* **PII Sanitization**: Optionally detects and redacts personally identifiable information from queries before processing
+
+#### Key Features
+
+* **Reference Links**: Responses include links to the source tickets or documentation used to formulate the answer
+* **Context Awareness**: Maintains conversation history for more accurate follow-up responses
+* **Context-Aware by Default**: Automatically interprets questions within the context of your configured knowledge base unless explicitly stated otherwise
+
+#### Benefits
+
+* **Preserves Tribal Knowledge**: Captures and surfaces institutional expertise that would otherwise live only in individuals' heads or be lost over time
+* **Faster Resolution**: Teams spend less time re-investigating known issues — past solutions are surfaced instantly
+* **Continuous Improvement**: The more tickets resolved and indexed, the more accurate and useful the agent becomes
+* **Self-Service Support**: Empowers team members to find answers independently without needing to escalate
+
+#### Use Cases
+
+* Troubleshooting known issues by surfacing how similar problems were previously resolved
+* Onboarding new team members with answers grounded in real operational history
+* Reducing repeat support tickets by making past resolutions searchable
+* Quick lookups for configuration guidance, error resolutions, and operational steps
+
+#### Security Model
+
+* **PII Protection**: Optional PII detection and redaction ensures sensitive data is sanitized before being processed
+* **Processing Within Your Environment**: All AI processing occurs within your own cloud environment — data does not leave your infrastructure
+* **Audit Logging**: All agent interactions are logged for traceability and compliance
 
 </details>
 
