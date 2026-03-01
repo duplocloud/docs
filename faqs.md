@@ -142,6 +142,21 @@ The result is shared, searchable memory at the system level without individual a
 
 <details>
 
+<summary>How do you give AI agents context?</summary>
+
+Context is assembled from four layers and delivered to the agent as part of each ticket:
+
+1. **Graph database** — DuploCloud maintains a graph of your infrastructure that captures relationships between tenants, hosts, services, pods, dependencies, and cloud resources — giving agents a structured, queryable map of your environment rather than just flat text.
+2. **Knowledge Base retrieval** — the platform uses vector search over the Engineer's Knowledge Base (previous tickets, runbooks, architecture notes) to pull relevant prior work into the prompt.
+3. **Skills** — best practices, guardrails, and operational patterns are encoded as Skills and included in the agent's system prompt. This is how domain expertise is consistently applied without relying on the model to infer it.
+4. **Scope credentials** — the agent receives temporary, just-in-time credentials scoped to the exact resources it's permitted to access, so it has the access it needs without ever needing to ask for it.
+
+The result is a multi-layer context strategy: graph relationships for infrastructure awareness, vector retrieval for institutional knowledge, Skills for operational expertise, and Scopes for safe execution.
+
+</details>
+
+<details>
+
 <summary>Can we build custom agents or bring our own?</summary>
 
 Yes. There are three options:
@@ -184,6 +199,16 @@ Yes. Dynamic Agents support AWS Bedrock as a first-class LLM provider, with addi
 
 <details>
 
+<summary>What AI back-ends does DuploCloud use, and why?</summary>
+
+DuploCloud works with managed LLM services from major cloud providers — AWS Bedrock and GCP Vertex AI, for example — depending on your cloud environment. Using managed services means your data stays within your own cloud account and is not used to train third-party models. This is important for enterprise security and compliance requirements.
+
+The platform is model-agnostic at the agent level. DuploCloud's team continuously evaluates new models as they are released and updates default model assignments based on what performs best for each task type — reasoning-heavy tasks like Terraform plan analysis may use a different model than higher-volume tasks like log summarisation. Customers can always override the default and choose specific models for specific agents.
+
+</details>
+
+<details>
+
 <summary>Does my choice of container platform affect the quality of AI output?</summary>
 
 In practice, yes. LLMs perform better against widely adopted, open-standard platforms — such as Kubernetes (EKS, GKE, AKS) — than against proprietary or less common orchestration systems. This is because the volume of public documentation, community discussion, and training data is significantly higher for Kubernetes than for alternatives like ECS.
@@ -195,6 +220,22 @@ If you're choosing between platforms and AI-assisted operations is a priority, D
 </details>
 
 ## Operations & Reliability
+
+<details>
+
+<summary>What are the most unintuitive things you've learned from running DevOps agents in production?</summary>
+
+A few things that consistently surprise teams:
+
+**Agent statelessness is a feature, not a limitation.** Starting each task fresh from structured context — rather than accumulating session history — means agents are predictable and auditable. Stateful agents drift; stateless agents don't.
+
+**Skills matter more than model choice.** Swapping to a newer, larger model gives modest gains. Encoding the right operational patterns and guardrails into Skills — how to handle a rollback, when to stop and ask versus proceed, what a safe Terraform apply looks like — delivers far larger improvements in reliability and output quality.
+
+**LLMs perform significantly better on open standards.** Agents working against Kubernetes produce better results than agents working against proprietary orchestration systems, because the volume of training data, documentation, and community discussion is orders of magnitude higher for Kubernetes. Platform choice affects AI output quality in ways teams don't anticipate.
+
+**Human approval steps are reliability infrastructure, not bottlenecks.** The temptation is to automate approval away. In practice, keeping humans in the loop for consequential actions is what makes it possible to give agents broad access in the first place — it's the mechanism that lets you expand scope over time as trust is established.
+
+</details>
 
 <details>
 
@@ -280,6 +321,22 @@ Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](introduc
 </details>
 
 ## Getting Started
+
+<details>
+
+<summary>What does DuploCloud's infrastructure look like at a high level?</summary>
+
+DuploCloud runs within your own cloud account. The platform itself is a small footprint — a few Docker containers, a MongoDB instance, and a few S3 buckets.
+
+The product has three main layers:
+
+1. **Engineer Hub** — where you create and manage your AI DevOps Engineers (Platform Engineers, CI/CD Engineers, SRE Engineers, and more). You define high-level project requirements here; the Engineer converts them into a detailed plan and coordinates a team of agents to execute it.
+2. **Agentic AI Helpdesk** — the work surface for task-level objectives. Accessible via web browser, Slack, Teams, or directly in an IDE, this is where tickets are created, assigned to specialized agents, and completed. Agents include SRE, Kubernetes, cloud-specific, Docs, and Architecture agents.
+3. **Integrations** — the connectivity layer that links agents to your actual infrastructure through cloud providers (AWS, GCP, Azure), Kubernetes clusters (EKS, AKS, GKE), Git repositories (GitHub, GitLab, Bitbucket), observability tools, and MCP servers. Access is granted through Providers and Scopes, with temporary just-in-time credentials passed to agents at execution time.
+
+Your existing infrastructure — Terraform state, Kubernetes clusters, CI/CD pipelines — is not migrated or replaced. Agents connect to it through the integrations layer using the permissions you define.
+
+</details>
 
 <details>
 
