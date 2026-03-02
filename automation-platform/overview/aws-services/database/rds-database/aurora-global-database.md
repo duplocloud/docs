@@ -1,6 +1,6 @@
 # Aurora Global Database
 
-DuploCloud supports [Aurora Global Database](https://aws.amazon.com/rds/aurora/global-database/), a multi-region Aurora database that lets applications read from local copies if a region goes down. This setup improves application performance for global audiences and helps maintain availability during regional outages.
+DuploCloud supports [Aurora Global Database](https://aws.amazon.com/rds/aurora/global-database/), a multi-region Aurora database that lets applications read from local copies if a region goes down. This setup improves application performance for global audiences and helps maintain availability during regional outages.&#x20;
 
 ## Creating the Primary Aurora Cluster
 
@@ -61,12 +61,32 @@ Each secondary cluster in a different region has its own reader endpoint.
 
 ## Using Headless Aurora Clusters
 
-&#x20;Enabling headless mode allows a secondary cluster to exist without any running DB instances while continuing to replicate data from the primary cluster. This is useful for cost optimization when read capacity in the secondary region is not required.
+Enabling headless mode allows a secondary cluster to exist without any running DB instances while continuing to replicate data from the primary cluster.&#x20;
+
+This is useful for cost optimization when read capacity in the secondary region is not required.
+
+&#x20;For additional details, refer to the [Amazon Aurora Global Database documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-attach.console.headless.html).
+
+### Making a Secondary Cluster Headless
 
 1. Go to **Cloud Services** → **Databases** → **RDS**.
 2. Select the primary Aurora cluster in the **NAME** column.
 3. Click the **Global Cluster** tab to see all clusters in the global setup.
-4. Click on the secondary cluster to open the secondary cluster detail page.
+4. Click on the secondary cluster name to display the secondary cluster details page.
 5. Click **Actions** → **RDS Settings** → **Make Cluster Headless**.
 
+{% hint style="info" %}
+**Note:** You can add a reader instance back to a headless cluster later if read capacity is needed.
+{% endhint %}
+
 <div align="left"><figure><img src="../../../../../.gitbook/assets/Screenshot (1135).png" alt=""><figcaption><p>Actions menu with headless cluster options highlighted</p></figcaption></figure></div>
+
+#### Adding a Reader Instance Back to a Headless Cluster
+
+1. Navigate to **Cloud Services** → **Databases** → **RDS**.
+2. Select the primary Aurora cluster in the **NAME** column.
+3. Click the **Global Cluster** tab to view clusters in the global setup.
+4. Click on the secondary cluster name (the headless one) to display its details page.
+5. Click **Actions** → **RDS Settings** → **Add RDS Instance**.
+6. Configure the instance type, size, and any other required settings, then click **Add**.
+7. Wait a few minutes for the instance to become available. After that, it will act as a **reader endpoint** for read operations in that region.
