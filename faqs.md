@@ -146,7 +146,7 @@ The result is shared, searchable memory at the system level without individual a
 
 Context is assembled from four layers and delivered to the agent as part of each ticket:
 
-1. **Graph database** — DuploCloud maintains a graph of your infrastructure that captures relationships between tenants, hosts, services, pods, dependencies, and cloud resources — giving agents a structured, queryable map of your environment rather than just flat text.
+1. **Graph database** — DuploCloud maintains a graph of your infrastructure that captures relationships between hosts, services, pods, dependencies, and cloud resources — giving agents a structured, queryable map of your environment rather than just flat text.
 2. **Knowledge Base retrieval** — the platform uses vector search over the Engineer's Knowledge Base (previous tickets, runbooks, architecture notes) to pull relevant prior work into the prompt.
 3. **Skills** — best practices, guardrails, and operational patterns are encoded as Skills and included in the agent's system prompt. This is how domain expertise is consistently applied without relying on the model to infer it.
 4. **Scope credentials** — the agent receives temporary, just-in-time credentials scoped to the exact resources it's permitted to access, so it has the access it needs without ever needing to ask for it.
@@ -201,7 +201,7 @@ Yes. Dynamic Agents support AWS Bedrock as a first-class LLM provider, with addi
 
 <summary>What AI back-ends does DuploCloud use, and why?</summary>
 
-DuploCloud works with managed LLM services from major cloud providers — AWS Bedrock and GCP Vertex AI, for example — depending on your cloud environment. Using managed services means your data stays within your own cloud account and is not used to train third-party models. This is important for enterprise security and compliance requirements.
+DuploCloud works with managed LLM services from major cloud providers — AWS Bedrock, GCP Vertex AI, and Azure AI Foundry, for example — depending on your cloud environment. Using managed services means your data stays within your own cloud account and is not used to train third-party models. This is important for enterprise security and compliance requirements.
 
 The platform is model-agnostic at the agent level. DuploCloud's team continuously evaluates new models as they are released and updates default model assignments based on what performs best for each task type — reasoning-heavy tasks like Terraform plan analysis may use a different model than higher-volume tasks like log summarisation. Customers can always override the default and choose specific models for specific agents.
 
@@ -220,22 +220,6 @@ If you're choosing between platforms and AI-assisted operations is a priority, D
 </details>
 
 ## Operations & Reliability
-
-<details>
-
-<summary>What are the most unintuitive things you've learned from running DevOps agents in production?</summary>
-
-A few things that consistently surprise teams:
-
-**Agent statelessness is a feature, not a limitation.** Starting each task fresh from structured context — rather than accumulating session history — means agents are predictable and auditable. Stateful agents drift; stateless agents don't.
-
-**Skills matter more than model choice.** Swapping to a newer, larger model gives modest gains. Encoding the right operational patterns and guardrails into Skills — how to handle a rollback, when to stop and ask versus proceed, what a safe Terraform apply looks like — delivers far larger improvements in reliability and output quality.
-
-**LLMs perform significantly better on open standards.** Agents working against Kubernetes produce better results than agents working against proprietary orchestration systems, because the volume of training data, documentation, and community discussion is orders of magnitude higher for Kubernetes. Platform choice affects AI output quality in ways teams don't anticipate.
-
-**Human approval steps are reliability infrastructure, not bottlenecks.** The temptation is to automate approval away. In practice, keeping humans in the loop for consequential actions is what makes it possible to give agents broad access in the first place — it's the mechanism that lets you expand scope over time as trust is established.
-
-</details>
 
 <details>
 
