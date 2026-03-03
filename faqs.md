@@ -71,6 +71,14 @@ DuploCloud is SOC 2 certified. Full security documentation is available for proc
 
 </details>
 
+<details>
+
+<summary>Does the AI agent collect data in any capacity?</summary>
+
+No. Agents only access metrics and logs from within your own cloud account, and only with your approval before any action is taken. No data leaves your account, and no data collection occurs beyond what is needed to respond to your request.
+
+</details>
+
 ## Pricing & Billing
 
 <details>
@@ -157,6 +165,16 @@ The result is a multi-layer context strategy: graph relationships for infrastruc
 
 <details>
 
+<summary>Why use specialized personas rather than one agent with all skills?</summary>
+
+A single agent with all skills would have a very broad system prompt — which degrades LLM performance. Smaller, focused context windows produce more accurate and reliable outputs than large, all-encompassing ones.
+
+Specialized personas also make it easier to enforce security boundaries. An agent scoped to Kubernetes operations has no access to your Git credentials or AWS account — it can only do what its Scope allows. Mixing all capabilities into one agent would require broader permissions and increase the blast radius of any mistake.
+
+</details>
+
+<details>
+
 <summary>Can we build custom agents or bring our own?</summary>
 
 Yes. There are three options:
@@ -186,6 +204,16 @@ DuploCloud provides the following pre-built agents:
 | Database Explorer Agent    | Safe database queries via pre-approved templates                               |
 
 See the [full list of out-of-the-box agents](https://docs.duplocloud.com/docs/ai-suite/ai-helpdesk/out-of-the-box-agents).
+
+</details>
+
+<details>
+
+<summary>Are the prebuilt agents and skills built only by DuploCloud, or can others contribute?</summary>
+
+Prebuilt agents and skills are developed and maintained by DuploCloud, in close collaboration with customers and partners. They are not community-sourced in the open-source sense — this means every skill ships with a quality bar and has been validated against real workloads.
+
+That said, the platform is fully extensible. You can build your own skills, modify existing ones, or use skills published by third-party vendors. For example, Hashicorp publishes a Terraform skill that you can plug directly into your agents.
 
 </details>
 
