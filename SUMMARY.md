@@ -22,7 +22,6 @@
   * [Agents](ai-suite/ai-helpdesk/out-of-the-box-agents.md)
   * [Bring Your Own Agent](ai-suite/ai-helpdesk/bring-your-own-agent.md)
   * [Slack Integration](ai-suite/ai-helpdesk/slack-integration.md)
-  * [IDE Extension](ai-suite/ai-helpdesk/ide-extension.md)
   * [Webhooks](ai-suite/ai-helpdesk/webhooks.md)
 * [AI Studio](ai-suite/ai-studio/README.md)
   * [Agents](ai-suite/ai-studio/agents.md)

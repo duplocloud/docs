@@ -18,8 +18,9 @@ The Site Reliability Engineer (SRE) Agent is a central AI agent that orchestrate
 
 * **PrivateGPT Agent:** secure access to DuploCloud documentation and tenant-specific knowledge
 * **Kubernetes Agent:** real-time cluster monitoring, resource management, troubleshooting, and log analysis
+* **AWS Agent:** infrastructure inspection, diagnostics, and management across AWS resources
 
-**Future Integrations** will include AWS, Observability, CI/CD, and additional sub-agents to provide end-to-end coverage for troubleshooting, diagnostics, monitoring, and observability.
+**Future Integrations** will include Observability, CI/CD, and additional sub-agents to provide end-to-end coverage for troubleshooting, diagnostics, monitoring, and observability.
 
 <details>
 
@@ -42,7 +43,7 @@ The Site Reliability Engineer (SRE) Agent is a central AI agent that orchestrate
 #### Integration Workflow
 
 1. **User Query:** User submits a question or task via the HelpDesk interface.
-2. **Agent Routing:** The SRE Master Agent automatically routes queries to the appropriate sub-agent(s), currently including **PrivateGPT** and **Kubernetes** agents.
+2. **Agent Routing:** The SRE Master Agent automatically routes queries to the appropriate sub-agent(s), currently including **PrivateGPT**, **Kubernetes**, and **AWS** agents.
 3. **Sub-Agent Execution:** Selected sub-agent(s) process the request (e.g., PrivateGPT Agent answers documentation questions, Kubernetes Agent retrieves cluster metrics).
 4. **Aggregated Response:** SRE Master Agent consolidates results and presents a unified answer.
 5. **Logging & Auditing:** All interactions are captured for traceability.
@@ -51,7 +52,6 @@ The Site Reliability Engineer (SRE) Agent is a central AI agent that orchestrate
 
 The SRE Agent will extend its operational coverage over time by incorporating additional sub-agents, such as:
 
-* **AWS Agent:** Infrastructure management and cloud resource queries.
 * **Observability Agent:** Logs, metrics, and alerting for full observability coverage.
 * **CI/CD Agent:** Pipeline monitoring, failure detection, and automated troubleshooting.
 * **Additional agents:** To provide end-to-end operational support across all DuploCloud-managed resources.
