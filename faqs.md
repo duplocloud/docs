@@ -113,6 +113,18 @@ The PoC gives you a working AI Engineer running against your real infrastructure
 
 </details>
 
+<details>
+
+<summary>Does DuploCloud track ROI metrics — tickets resolved, PRs generated, time saved?</summary>
+
+Activity is tracked at the ticket level — every completed task records what was done, what commands were executed, what changes were proposed and approved, and how long it took. This data is queryable via the Analytics Agent: you ask in natural language and it queries project history directly, answering questions like "how many tickets were completed this sprint," "what was the infrastructure cost delta over this project," or "how does AI-assisted throughput compare to estimated manual effort."
+
+An analytics dashboard is on the roadmap. Agent-level observability is already built in: all agents emit OpenTelemetry traces and metrics (latency, failure rates, success rates) to your cloud's monitoring stack (e.g., AWS X-Ray), enabling benchmarking of individual agent performance over time.
+
+For PoC engagements, the team can structure the evaluation around specific KPIs — establishing a baseline before the PoC starts and measuring against it at the end. A common methodology is comparing the token cost and human oversight time for a given project done with distributed local AI tools against the same project run centrally through DuploCloud.
+
+</details>
+
 ## Agents & Customisation
 
 <details>
@@ -165,6 +177,20 @@ The result is a multi-layer context strategy: graph relationships for infrastruc
 
 <details>
 
+<summary>Does the agent ask clarifying questions when a task is underspecified?</summary>
+
+Yes — this is built into the Project flow. When you create a Project, the first step is a Spec: the agent interviews you, surfaces the configuration decisions that matter, and drafts a structured description of what it understands you want before doing anything.
+
+The spec phase exists precisely for the "I don't know what I don't know" problem — it prompts for choices you might not have thought to specify (retention policies, failover behaviour, access patterns, environment boundaries) rather than silently assuming defaults. Once you've reviewed and confirmed the spec, the agent generates a detailed plan and task list for your approval before any execution begins.
+
+On the first run of a new task type, the agent asks more questions to understand your environment and preferences. On subsequent similar tasks, it asks significantly fewer — the knowledge base retains what it learned about your setup, so you're not re-explaining your conventions from scratch each time.
+
+For one-off Help Desk tickets, the agent works with the context it has and follows up inline if clarification is needed before taking an action.
+
+</details>
+
+<details>
+
 <summary>Why use specialized personas rather than one agent with all skills?</summary>
 
 A single agent with all skills would have a very broad system prompt — which degrades LLM performance. Smaller, focused context windows produce more accurate and reliable outputs than large, all-encompassing ones.
@@ -209,11 +235,46 @@ See the [full list of out-of-the-box agents](https://docs.duplocloud.com/docs/ai
 
 <details>
 
+<summary>Can AI agents assist with compliance evidence collection and audit preparation?</summary>
+
+Yes — this is one of the platform's core use cases. Agents can run scheduled compliance checks across your cloud environments and produce structured evidence artifacts automatically.
+
+Specific capabilities include:
+- Cross-account scans against compliance controls (SOC 2, HITRUST, ISO 27001)
+- Continuous drift detection: agents flag resources that fall out of compliance between audit cycles, rather than discovering gaps at audit time
+- Evidence packaging for auditor review, drawn from ticket history, logs, and live environment state
+- GRC platform integration: agents keep controls green in platforms like Drata and Vanta by flagging issues as they arise
+- Persistent runbooks and control attestation in the knowledge base, making each subsequent audit cycle faster
+
+Agents operate with read-only scope by default. Remediation actions require explicit human approval before execution — the platform notifies; it does not auto-remediate.
+
+For teams who want DuploCloud to take accountability for compliance outcomes — evidence collection, ongoing control monitoring, and auditor liaison — this is available as a managed service.
+
+</details>
+
+<details>
+
 <summary>Are the prebuilt agents and skills built only by DuploCloud, or can others contribute?</summary>
 
 Prebuilt agents and skills are developed and maintained by DuploCloud, in close collaboration with customers and partners. They are not community-sourced in the open-source sense — this means every skill ships with a quality bar and has been validated against real workloads.
 
 That said, the platform is fully extensible. You can build your own skills, modify existing ones, or use skills published by third-party vendors. For example, Hashicorp publishes a Terraform skill that you can plug directly into your agents.
+
+</details>
+
+<details>
+
+<summary>How much work is it to set up and maintain agents and skills?</summary>
+
+Initial setup is handled by DuploCloud's team as part of onboarding — Engineers, personas, Skills, and Scopes are configured against your environment before you run your first task.
+
+Ongoing maintenance depends on which service model you choose:
+
+- **Fully managed** — DuploCloud's operations team owns the agents, keeps Skills updated, and is accountable for task outcomes. You direct the work (priorities, what to tackle next); the team handles the rest.
+- **Hybrid** — your team runs day-to-day tasks, with DuploCloud available for complex or sensitive work.
+- **Self-serve** — your team owns configuration and upkeep. Prebuilt agents and Skills are maintained by DuploCloud and require no ongoing effort from you, but custom agents you build yourself are your responsibility.
+
+Skills encode their logic as explicit, versioned instructions — not trained weights. Updating a Skill means editing text, not retraining a model. Prebuilt Skills don't accumulate drift over time.
 
 </details>
 
@@ -264,6 +325,23 @@ DuploCloud's human operations team also acts as a reliability layer — reviewin
 
 <details>
 
+<summary>Can AI agents be trusted to make compliance decisions, or does human judgment still have a role?</summary>
+
+For technically deterministic compliance work — scanning environments for misconfigurations, collecting evidence against a control, verifying that a resource meets a specific policy — agents perform reliably and can run autonomously within their defined Scope.
+
+For judgment-heavy decisions — interpreting ambiguous regulatory requirements, determining whether a specific implementation satisfies a regulator's intent, or navigating evolving frameworks like the EU AI Act or global data privacy laws — human expertise remains essential. The platform is built around this distinction: agents propose findings and actions, humans review and approve before anything is executed. DuploCloud's human operations team is available throughout for guidance on implementation decisions, not just execution.
+
+Three layers apply to every agent action:
+1. **Scoped access** — agents receive only the IAM permissions defined in the ticket's Scope and cannot act outside those boundaries.
+2. **Skills** — compliance patterns and guardrails are encoded as Skills and applied consistently, independent of model inference.
+3. **Human approvals** — changes to infrastructure or configuration require explicit sign-off before execution.
+
+The practical model: agents automate evidence collection, continuous monitoring, and remediation recommendations; humans review what those findings mean and decide what to do about them.
+
+</details>
+
+<details>
+
 <summary>How do LLM model updates work, and will they affect my agents?</summary>
 
 DuploCloud is model-agnostic. Each agent is configured to use a specific model through your cloud provider's managed LLM service (e.g., AWS Bedrock, Azure OpenAI), which you control. Model updates are not applied automatically — you decide when to change the model an agent uses.
@@ -297,6 +375,22 @@ Yes — DuploCloud has deployed Jenkins agents for multiple customers. The out-o
 <summary>Can we use our existing Terraform, Helm, or other IaC?</summary>
 
 Yes. The platform includes a Terraform Skill out of the box, covering plan, apply, state management, and error handling. Helm and Kubernetes deployments are handled by the Kubernetes Agent and Skills. External Skill packages from HashiCorp and Pulumi can also be made available to the agents. Your existing IaC files, modules, and conventions are used as-is — the agent works with your code, not a replacement for it.&#x20;
+
+</details>
+
+<details>
+
+<summary>Will AI-generated code follow our internal conventions and patterns?</summary>
+
+Yes. Two mechanisms ensure this:
+
+1. **Repository access** — agents with access to your infrastructure repository read your existing code before generating anything new. They infer your naming conventions, module structure, and organisational patterns and apply them to new output rather than falling back on generic defaults.
+
+2. **Skills** — you can explicitly encode your standards as a Skill (module naming conventions, required tags, resource organisation patterns). Skills are included in the agent's system prompt and applied consistently to every task regardless of who initiates it.
+
+For Terraform specifically, agents generate code within your existing directory structure and variable conventions. If the agent is uncertain about a convention, it surfaces the decision in the spec or plan phase for you to confirm before generating any code.
+
+Code review is part of the standard workflow. The platform presents the diff in the ticket interface alongside the agent's reasoning before any changes are applied — you're never committed to output you haven't reviewed.
 
 </details>
 
@@ -352,11 +446,55 @@ Your existing infrastructure — Terraform state, Kubernetes clusters, CI/CD pip
 
 <details>
 
+<summary>What makes DuploCloud different from using Claude Code or similar AI coding tools?</summary>
+
+DuploCloud is a multi-agent platform, not a single-user coding assistant. The key differences:
+
+**1. Shared system of intelligence — context doesn't live on individual laptops**
+With Claude Code or Cursor, every session starts from scratch. Work done by one engineer isn't visible to teammates, investigations can't be handed off mid-task, and the same context has to be re-established every time. DuploCloud centralises this: every ticket, investigation, and outcome is stored in a shared knowledge base. The second time a similar task runs — a migration, a compliance check, a cluster upgrade — the agent already knows your environment and asks significantly fewer questions.
+
+**2. Team collaboration and handoff**
+A task started by one engineer can be continued by another without losing context. Projects, tickets, and plans are visible across the team in a shared workspace, and agents can work in parallel across team members' tasks simultaneously.
+
+**3. Scale and security — credentials managed centrally, not tied to individual laptops**
+DuploCloud manages credentials at the platform level, generating scoped, temporary access per ticket. Because the platform runs in your cloud rather than on a developer's laptop, it isn't constrained by local machine availability, access, or session limits. Agents are also restricted to the specific repositories and cloud accounts defined in the Scope for that task — they cannot reach outside their boundaries to gather context, which is a common failure mode with local AI tools.
+
+**4. Always-on, not session-bound**
+A long-running task continues after hours, results are surfaced when complete, and the system keeps working while the team is offline.
+
+If your team already uses Claude Code or Cursor for local development, DuploCloud acts as the coordination and record-keeping layer on top — making individual AI work visible, auditable, and collaborative at the team level.
+
+</details>
+
+<details>
+
+<summary>Is DuploCloud similar to Heroku in terms of simplicity?</summary>
+
+Yes — the ease of use is comparable. Teams often start on Heroku for its simplicity and move to AWS for production scale; DuploCloud is designed to give you Heroku-like simplicity on top of AWS (and GCP and Azure), without the cost and limitations of Heroku at scale.
+
+The main differences: DuploCloud gives you access to the full breadth of cloud-native services that Heroku abstracts away, and DuploCloud plus your cloud provider is generally significantly more cost-effective at higher traffic volumes. The added flexibility does introduce some complexity, but DuploCloud's support and AI agents are there to absorb that complexity rather than pass it to your team.
+
+</details>
+
+<details>
+
 <summary>How long does it take to get started?</summary>
 
 The platform is designed to be operational quickly. Setup involves deploying a few Docker containers, connecting your cloud and Git providers, and configuring an Engineer with the appropriate Skills and Scopes. All of which can be done in a few minutes, not days.&#x20;
 
 The 30-day PoC is structured to deliver measurable results against real infrastructure within the first sprint. Please contact the team to start scoping your onboarding.
+
+</details>
+
+<details>
+
+<summary>What does DuploCloud set up for us during onboarding?</summary>
+
+DuploCloud's team handles the initial platform setup as part of onboarding. This includes deploying the platform to your cloud environment, connecting your cloud and Git providers, and configuring your first Engineers with personas, Skills, Scopes, and MCP server integrations for your ticketing and observability tools.
+
+The overall onboarding flow follows the same structure as before — dev deployment, evaluation, QA, production cutover — but the project plan is now managed inside the product rather than a spreadsheet, so your team can track and collaborate on it in real time.
+
+The team will also configure Skills to reflect your code conventions and operational standards before handoff, so agents are working to your patterns from day one.
 
 </details>
 
@@ -394,5 +532,17 @@ See [Providers](introduction/ai-devops-policy-model/providers.md) for the full l
 DuploCloud runs within your own cloud environment — your infrastructure, your accounts, your data. The PrivateGPT Agent, for example, uses AWS Bedrock to ensure sensitive data never leaves your AWS environment.&#x20;
 
 For customers with strict data residency or on-premise requirements, contact [support@duplocloud.net](mailto:support@duplocloud.net) to discuss deployment options.
+
+</details>
+
+<details>
+
+<summary>How are updates and security patches delivered for self-hosted deployments?</summary>
+
+Updates are delivered as new Helm chart versions and Docker image tags. The platform consists of 3–4 containers — updating means pulling the new images and running a Helm upgrade, with no data migration required in typical releases.
+
+DuploCloud maintains a regular release cadence and notifies customers when updates are available. Security patches are released on an accelerated schedule as needed. Because the platform is self-hosted, you control the timing of all updates — nothing is applied to your environment automatically.
+
+For teams who want automated update management, the platform can be configured to watch for new image tags and apply updates through your existing CD pipeline or GitOps workflow.
 
 </details>
