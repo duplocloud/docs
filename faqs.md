@@ -48,6 +48,18 @@ If your team already uses Claude Code or Cursor for local development, DuploClou
 
 <details>
 
+<summary>We already have DevOps engineers. Why would we use DuploCloud?</summary>
+
+The same reason companies with thousands of software engineers still give every developer Claude Code or Cursor: AI tools act as a force multiplier, not a replacement. Your engineers direct the work; DuploCloud's AI handles the repetitive and time-consuming parts — routine infrastructure tickets, compliance evidence collection, PR reviews, EKS optimisation passes, cost analysis — so your team can focus on higher-leverage work.
+
+For teams with lean or overloaded DevOps functions, this means eliminating the intake ticket backlog and reducing context-switching. For larger teams, it means running complex projects in parallel rather than sequentially, and removing single points of failure when engineers are unavailable.
+
+DuploCloud also handles work that falls between the cracks of typical DevOps tooling: tribal knowledge documentation, cross-environment compliance scanning, and ongoing infrastructure hygiene — work that's important but rarely urgent enough to get prioritised.
+
+</details>
+
+<details>
+
 <summary>Is DuploCloud similar to Heroku in terms of simplicity?</summary>
 
 Yes — the ease of use is comparable. Teams often start on Heroku for its simplicity and move to AWS for production scale; DuploCloud is designed to give you Heroku-like simplicity on top of AWS (and GCP and Azure), without the cost and limitations of Heroku at scale.
@@ -75,6 +87,18 @@ DuploCloud's team handles the initial platform setup as part of onboarding. This
 The overall onboarding flow follows the same structure as before — dev deployment, evaluation, QA, production cutover — but the project plan is now managed inside the product rather than a spreadsheet, so your team can track and collaborate on it in real time.
 
 The team will also configure Skills to reflect your code conventions and operational standards before handoff, so agents are working to your patterns from day one.
+
+</details>
+
+<details>
+
+<summary>Does deploying DuploCloud change or disrupt our existing infrastructure?</summary>
+
+No. DuploCloud deploys as a small set of containers inside your existing cloud account — it connects to your infrastructure rather than replacing it. Your Terraform state, Kubernetes manifests, CI/CD pipelines, and running workloads are not touched during onboarding.
+
+If you choose to stop using DuploCloud, your infrastructure continues running exactly as it was; nothing is locked in.
+
+Onboarding typically requires about one meeting per week from your side — DuploCloud's team handles the setup, configuration, and integration work.
 
 </details>
 
@@ -193,6 +217,18 @@ For one-off Help Desk tickets, the agent works with the context it has and follo
 
 <details>
 
+<summary>Does DuploCloud's AI actually execute tasks, or does it just give recommendations?</summary>
+
+It executes. When assigned a ticket, DuploCloud's agents run real commands against your infrastructure — `kubectl` operations, AWS CLI calls, Terraform plans and applies — and surface the results for your review before any changes are committed.
+
+The workflow is: the agent takes action, produces a diff or output, and presents it with an explanation. You approve or reject before anything is applied. For example, an EKS cost optimisation ticket might result in the agent analysing 12 nodes, identifying memory and CPU inefficiencies across workloads, and proposing specific resource adjustments — all executable in one click after your review.
+
+This is different from advisory tools that generate recommendations you implement manually. The work happens inside DuploCloud, with a human in the approval loop.
+
+</details>
+
+<details>
+
 <summary>Why use specialized personas rather than one agent with all skills?</summary>
 
 A single agent with all skills would have a very broad system prompt — which degrades LLM performance. Smaller, focused context windows produce more accurate and reliable outputs than large, all-encompassing ones.
@@ -277,6 +313,18 @@ Ongoing maintenance depends on which service model you choose:
 - **Self-serve** — your team owns configuration and upkeep. Prebuilt agents and Skills are maintained by DuploCloud and require no ongoing effort from you, but custom agents you build yourself are your responsibility.
 
 Skills encode their logic as explicit, versioned instructions — not trained weights. Updating a Skill means editing text, not retraining a model. Prebuilt Skills don't accumulate drift over time.
+
+</details>
+
+<details>
+
+<summary>Can we automate our existing runbooks and release processes?</summary>
+
+Yes — this is a direct use case. Documented processes (release checklists, hotfix procedures, incident runbooks) can be converted into Skills, which agents execute step-by-step with the same guardrails applied to any other task: scoped credentials, human approval before execution, and a full audit trail.
+
+The conversion is straightforward: your runbook becomes a structured Skill that the agent follows. On a release trigger, the agent works through the steps, surfaces any exceptions or decisions that require human input, and completes the process. Engineers stay in the loop without needing to run every command themselves.
+
+For teams running hotfixes and deployments every few days with a manual process, this is typically one of the first workflows automated after onboarding.
 
 </details>
 
@@ -376,6 +424,16 @@ Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](introduc
 
 </details>
 
+<details>
+
+<summary>We already use Drata, Vanta, or Thoropass. Does DuploCloud replace them?</summary>
+
+No — they're complementary. GRC platforms like Drata, Vanta, and Thoropass identify compliance gaps and manage the audit workflow. DuploCloud does the technical work to close those gaps: building controls into your infrastructure, remediating findings, and keeping them green as your environment evolves.
+
+A common pattern: your GRC platform flags a control as failing; DuploCloud's agents identify the root cause, propose a remediation, and execute it after your approval. DuploCloud integrates directly with GRC platforms to keep control statuses current.
+
+</details>
+
 ## Security & Access
 
 <details>
@@ -443,6 +501,18 @@ DuploCloud is SOC 2 certified. Full security documentation is available for proc
 
 <details>
 
+<summary>Does DuploCloud provide SOC 2 certification or conduct security audits?</summary>
+
+No — DuploCloud is not an auditor and does not issue certifications. What DuploCloud does is ensure your infrastructure meets SOC 2, HIPAA, HITRUST, PCI, and other framework requirements on an ongoing basis: compliance controls are built directly into every deployment, agents continuously scan for drift, and evidence is collected and packaged automatically for auditor review.
+
+When you're ready for formal attestation, you engage a qualified auditor directly (or through your GRC platform). DuploCloud can connect you with auditors and provides the infrastructure evidence and control documentation they need.
+
+Penetration testing is available as a DuploCloud service offering, which is typically the final step before audit submission.
+
+</details>
+
+<details>
+
 <summary>Does the AI agent collect data in any capacity?</summary>
 
 No. Agents only access metrics and logs from within your own cloud account, and only with your approval before any action is taken. No data leaves your account, and no data collection occurs beyond what is needed to respond to your request.
@@ -498,6 +568,16 @@ Because Skills encode best practices as explicit, versioned instructions, agent 
 <summary>What happens to our data if we stop using DuploCloud?</summary>
 
 Your infrastructure stays in your accounts — Terraform state, Kubernetes manifests, and all provisioned cloud resources remain fully under your control and continue operating. The Knowledge Base and audit trail are your data, stored in your own repositories (generally, as markdown files) and in DuploCloud's vector database, and can be exported at any time. DuploCloud does not own or lock in any of the artifacts produced.&#x20;
+
+</details>
+
+<details>
+
+<summary>How does DuploCloud help with cloud cost visibility and unexpected cost increases?</summary>
+
+DuploCloud agents can audit your cloud environment for common cost drivers — unused or oversized resources, missing VPC endpoints generating data egress charges, untagged infrastructure with no cost attribution, and instances left running after workloads moved to managed services.
+
+Cost savings are attributed to specific tickets in the audit trail, giving you a clear record of what was changed and why.
 
 </details>
 
