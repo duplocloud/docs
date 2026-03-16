@@ -18,10 +18,10 @@ Collect the list of call names and dates mentioned.
 
 ### 3. Pull full call details from #sales-momentum-notifications and #cs-momentum-notifications
 
-For each call found, search both the `#sales-momentum-notifications` channel (channel ID: `C07RBLTPA5Q`) and the `#cs-momentum-notifications` channel (channel ID: `C07R22S53BN`) to find the matching message. One of these channels will have the call. From the matching message extract:
+Use `slack_read_channel` (not search) on both the `#sales-momentum-notifications` channel (channel ID: `C07RBLTPA5Q`) and the `#cs-momentum-notifications` channel (channel ID: `C07R22S53BN`) with the `oldest` timestamp from step 2. Read through the messages to find each call. From the matching message extract:
 
 - Call title and date
-- Zoom recording link — this is the preauthenticated hyperlink embedded in the call title in the main message (e.g., `<https://duplocloud.zoom.us/...|Call Title>`)
+- Zoom recording link — this is the **full** preauthenticated URL embedded in the call title hyperlink in the parent message (e.g., `<https://duplocloud.zoom.us/rec/share/xxx?pwd=yyy|Call Title>`). The `?pwd=` query parameter is part of the authentication and **must not be truncated or omitted**.
 - Attendee names
 
 Then read the thread replies to extract:
