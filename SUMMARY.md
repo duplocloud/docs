@@ -12,38 +12,30 @@
   * [Engineers](introduction/ai-devops-policy-model/engineers.md)
   * [Projects](introduction/ai-devops-policy-model/projects.md)
   * [Incident Management](introduction/ai-devops-policy-model/incident-management.md)
-* [FAQs](faqs.md)
 
-## AI Suite
+## AI Helpdesk
 
-* [Overview](ai-suite/ai-suite.md)
-* [AI HelpDesk](ai-suite/ai-helpdesk/README.md)
-  * [Tickets](ai-suite/ai-helpdesk/tickets.md)
-  * [Agents](ai-suite/ai-helpdesk/out-of-the-box-agents.md)
-  * [Bring Your Own Agent](ai-suite/ai-helpdesk/bring-your-own-agent.md)
-  * [Slack Integration](ai-suite/ai-helpdesk/slack-integration.md)
-  * [Webhooks](ai-suite/ai-helpdesk/webhooks.md)
-* [AI Studio](ai-suite/ai-studio/README.md)
-  * [Agents](ai-suite/ai-studio/agents.md)
-  * [Tools](ai-suite/ai-studio/tools.md)
-  * [VectorDB](ai-suite/ai-studio/vectordb.md)
-  * [Developers](ai-suite/ai-studio/developers.md)
-  * [Supporting Components](ai-suite/ai-studio/supporting-components/README.md)
-    * [View Cartography Details](ai-suite/ai-studio/supporting-components/view-cartography-details/README.md)
-      * [YAML Dependenices Specification](ai-suite/ai-studio/supporting-components/view-cartography-details/yaml-dependenices-specification.md)
-    * [View Presidio Details](ai-suite/ai-studio/supporting-components/view-presidio-details.md)
-* [FAQ](ai-suite/faq.md)
-* [Product Updates](ai-suite/product-updates.md)
-* [Reporting AI Concerns](ai-suite/reporting-ai-concerns.md)
+* [Overview](ai-helpdesk-v2/ai-helpdesk-overview.md)
+* [HelpDesk Concepts](ai-helpdesk-v2/ai-helpdesk-overview.md)
+  * [Tickets](ai-helpdesk-v2/tickets.md)
+  * [Agents](ai-helpdesk-v2/out-of-the-box-agents.md)
+  * [Bring Your Own Agent](ai-helpdesk-v2/bring-your-own-agent.md)
+  * [Slack Integration](ai-helpdesk-v2/slack-integration.md)
+  * [Developers](ai-helpdesk-v2/developers.md)
 
 ***
+
+* [FAQs](faqs.md)
+* [Product Updates](ai-helpdesk-v2/product-updates.md)
+* [Reporting AI Concerns](ai-helpdesk-v2/reporting-ai-concerns.md)
+
+## Getting Started
 
 * [Getting Started with DuploCloud](welcome-to-duplocloud/README.md)
   * [Onboarding](welcome-to-duplocloud/duplocloud-onboarding.md)
   * [Support Options: Standard vs. Managed Operations](welcome-to-duplocloud/duplocloud-support-options-standard-vs.-managed-operations.md)
   * [Getting Help with DuploCloud](welcome-to-duplocloud/duplocloud-support-model.md)
   * [Common Use Cases](welcome-to-duplocloud/what-duplocloud-does.md)
-  * [Public Cloud Tutorials](welcome-to-duplocloud/public-cloud-tutorials.md)
 
 ## Automation Platform
 
@@ -64,6 +56,7 @@
   * [Terminologies in Container Orchestration](automation-platform/container-orchestrators/concepts.md)
 * [DuploCloud Prerequisites](automation-platform/duplocloud-prerequisites/README.md)
   * [DNS Configuration](automation-platform/duplocloud-prerequisites/resolving-dns-failures.md)
+* [Public Cloud Tutorials](welcome-to-duplocloud/public-cloud-tutorials.md)
 * [AWS User Guide](automation-platform/overview/README.md)
   * [Prerequisites](automation-platform/overview/prerequisites/README.md)
     * [Route 53 Hosted Zone](automation-platform/overview/prerequisites/route-53-hosted-zone.md)
