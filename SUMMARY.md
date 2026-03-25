@@ -15,7 +15,7 @@
 
 ## AI Helpdesk
 
-* [Overview](ai-helpdesk-v2/ai-helpdesk-overview.md)
+* [Overview](ai-helpdesk-v2/ai-helpdesk-concepts.md)
 * [HelpDesk Concepts](ai-helpdesk-v2/ai-helpdesk-overview.md)
   * [Tickets](ai-helpdesk-v2/tickets.md)
   * [Agents](ai-helpdesk-v2/out-of-the-box-agents.md)

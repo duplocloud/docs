@@ -92,6 +92,40 @@ The team will also configure Skills to reflect your code conventions and operati
 
 <details>
 
+<summary>What responsibilities remain with our team after onboarding?</summary>
+
+Your team retains ownership of the application layer — delivering containers, managing dependencies and patches within those containers, and making business decisions about what to build and prioritise. DuploCloud owns running the application and all associated cloud and infrastructure concerns: provisioning, scaling, compliance, cost management, and day-to-day operational work.
+
+In practice:
+- **Application ownership** — your team owns Docker containers, application code, and anything inside them.
+- **Infrastructure ownership** — DuploCloud manages cloud infrastructure, Kubernetes configuration, CI/CD pipeline setup, compliance controls, and operational runbooks.
+- **Decision authority** — your team retains final approval on every infrastructure change before it is executed. Engineers direct the work; agents and DuploCloud's operations team execute it.
+
+The platform is self-service once onboarded — your engineers can initiate and approve tickets directly — but the standard expectation during onboarding is that DuploCloud's team drives the work while your team reviews and approves.
+
+</details>
+
+<details>
+
+<summary>Who performs the day-to-day DevOps work — AI agents, DuploCloud engineers, or our team?</summary>
+
+All three, depending on the work and service model:
+
+**AI agents** handle execution — running commands, generating infrastructure plans, analysing logs, producing diffs, and surfacing results for approval. Every action requires human sign-off before it is applied.
+
+**DuploCloud's engineers** configure and maintain the agents, and handle work that requires human judgment — complex incidents, sensitive infrastructure changes, and anything outside the agents' defined Scope. Under the fully managed model, DuploCloud's team is accountable for outcomes, not just tooling.
+
+**Your engineers** direct priorities, review and approve proposed changes, and own the application layer. Once onboarded, the platform is designed to be self-service — your team can run tickets directly without going through DuploCloud.
+
+The balance shifts based on which service tier you choose:
+- **Fully managed** — DuploCloud's team owns day-to-day execution; your team sets direction and approves changes.
+- **Hybrid** — your team handles routine work; DuploCloud handles complex or sensitive tasks.
+- **Self-serve** — your team runs everything; DuploCloud provides the platform and support.
+
+</details>
+
+<details>
+
 <summary>Does deploying DuploCloud change or disrupt our existing infrastructure?</summary>
 
 No. DuploCloud deploys as a small set of containers inside your existing cloud account — it connects to your infrastructure rather than replacing it. Your Terraform state, Kubernetes manifests, CI/CD pipelines, and running workloads are not touched during onboarding.
@@ -481,6 +515,38 @@ Every ticket maintains a full context and audit trail throughout its lifecycle �
 
 <details>
 
+<summary>What visibility do we have into every action taken in our cloud environment?</summary>
+
+There are two complementary layers:
+
+**DuploCloud ticket history** — every ticket maintains a complete record of what the agent was asked to do, what commands it proposed, what was approved, and what was executed, including the full diff for any changes. This is accessible in the Engineer Hub per Engineer and searchable from the Knowledge Base.
+
+**Cloud-native audit trails** — all agent actions are executed through standard cloud and infrastructure interfaces, and appear in your existing audit infrastructure. Your cloud provider's audit logging records every API call the agent makes, including the identity it used and the timestamp. These records live in your account, independent of DuploCloud.
+
+If an incident needs investigation, you can trace through both layers: the DuploCloud ticket shows the intent, the approval, and the exact commands proposed; your cloud provider's logs show the corresponding API calls with credentials and timestamps.
+
+</details>
+
+<details>
+
+<summary>How do you protect our environment from your AI agents?</summary>
+
+Protection is enforced at the infrastructure level, not just the policy level — meaning the constraints are structural and cannot be bypassed by the agent regardless of what it's asked to do.
+
+Three layers apply:
+
+1. **Scoped credentials** — the agent receives temporary, just-in-time credentials generated from the Scope you assign to the ticket. Those credentials carry only the permissions you defined. If the Scope doesn't include permission to modify a particular resource or environment, the agent cannot do it — not because it's been instructed not to, but because the credentials don't allow it.
+
+2. **Skills as guardrails** — operational guardrails (safety checks, approval steps, resource boundaries) are encoded as Skills and applied to every task. Skills are explicit, versioned instructions evaluated before execution — not model-dependent inference that could vary between runs.
+
+3. **Human approval before every execution** — agents propose changes and wait for explicit human approval before applying anything. No action is taken autonomously on production infrastructure.
+
+The posture is: make bad outcomes structurally impossible first, then add Skills and approval flows as additional layers on top.
+
+</details>
+
+<details>
+
 <summary>What if a user accidentally pastes credentials or secrets into a prompt?</summary>
 
 DuploCloud applies a security validation Skill to all agents. When an agent detects that a prompt contains patterns consistent with secrets — API keys, access tokens, passwords, or cloud provider credentials — it refuses to process the request and returns a warning explaining why.
@@ -536,6 +602,25 @@ DuploCloud's human operations team also acts as a reliability layer — reviewin
 
 <details>
 
+<summary>What happens when an AI agent encounters an error during execution?</summary>
+
+The default behaviour when an agent hits an error is to stop, surface the error with an explanation, and wait for human review — not to attempt self-remediation or find an alternative path to completion.
+
+The agent presents:
+- What it was attempting to do
+- The specific error it encountered
+- What it believes the options are, and whether it can proceed safely
+
+For multi-step tasks (a Kubernetes upgrade, an infrastructure apply across environments), you can configure the agent to execute one step at a time, requiring explicit approval before each subsequent action — so you're never committed to a full sequence before reviewing each step individually.
+
+If the agent identifies that it lacks the prerequisites to complete a task — a missing dependency, insufficient permissions, a resource not in the expected state — it surfaces this during the plan phase before any execution begins. The intent is to fail fast and verbosely, not to proceed into a half-complete state.
+
+Agents don't take autonomous "best-effort" alternative paths. If you approved a specific plan and an error occurs, the agent stops at the point of failure and reports back. Any retry or alternative approach requires your explicit instruction.
+
+</details>
+
+<details>
+
 <summary>Can AI agents be trusted to make compliance decisions, or does human judgment still have a role?</summary>
 
 For technically deterministic compliance work — scanning environments for misconfigurations, collecting evidence against a control, verifying that a resource meets a specific policy — agents perform reliably and can run autonomously within their defined Scope.
@@ -568,6 +653,18 @@ Because Skills encode best practices as explicit, versioned instructions, agent 
 <summary>What happens to our data if we stop using DuploCloud?</summary>
 
 Your infrastructure stays in your accounts — Terraform state, Kubernetes manifests, and all provisioned cloud resources remain fully under your control and continue operating. The Knowledge Base and audit trail are your data, stored in your own repositories (generally, as markdown files) and in DuploCloud's vector database, and can be exported at any time. DuploCloud does not own or lock in any of the artifacts produced.&#x20;
+
+</details>
+
+<details>
+
+<summary>How quickly can we revoke DuploCloud's access if we stop using the platform?</summary>
+
+Immediately. Access is managed through standard cloud credentials and the Provider/Scope model — removing the access credentials your cloud and Git providers granted to DuploCloud is sufficient. There are no proprietary access mechanisms that require a support ticket or offboarding process from DuploCloud to remove.
+
+Your infrastructure continues operating normally after revocation. The platform doesn't hold runtime state that needs to be migrated — it operates as a coordination layer on top of your existing cloud, Kubernetes, and Git setup. Removing access doesn't disrupt deployed workloads, running pipelines, or any provisioned cloud resources.
+
+The Knowledge Base and ticket history are stored in your own repositories and can be exported at any time. Nothing is locked behind DuploCloud's access credentials.
 
 </details>
 
