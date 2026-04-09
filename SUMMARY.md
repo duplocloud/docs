@@ -3,7 +3,7 @@
 ## Introduction
 
 * [Overview](README.md)
-* [AI Devops Policy Model](introduction/ai-devops-policy-model/README.md)
+* [AI DevOps Policy Model](introduction/ai-devops-policy-model/README.md)
   * [Providers](introduction/ai-devops-policy-model/providers.md)
   * [MCP Servers](introduction/ai-devops-policy-model/mcp-servers.md)
   * [Skills](introduction/ai-devops-policy-model/skills.md)
