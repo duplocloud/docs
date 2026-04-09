@@ -15,6 +15,6 @@ Agents are AI-powered tools your Engineer uses on actual Project tasks, such as 
 
 <figure><img src="../../.gitbook/assets/Image (2)" alt=""><figcaption></figcaption></figure>
 
-The DuploCloud Platform already provides several pre-built Agents that you can leverage. [Find the full list here.](../../ai-suite/ai-helpdesk/out-of-the-box-agents.md#out-of-the-box-agents)&#x20;
+The DuploCloud Platform already provides several pre-built Agents that you can leverage. [Find the full list here.](/broken/pages/DGneE26z6b6HzAAzYofV#out-of-the-box-agents)&#x20;
 
-For more details on how to create custom Agents on DuploCloud, see the [AI Suite documentation](../../ai-suite/ai-studio/agents.md).
+For more details on how to create custom Agents on DuploCloud, see the [AI Suite documentation](../../ai-helpdesk-v2/out-of-the-box-agents.md).

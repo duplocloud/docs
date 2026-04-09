@@ -20,7 +20,7 @@ _**Last Updated, January 8, 2026**_
 * Kubernetes - [Suspend CronJobs](../../kubernetes/cronjobs.md#suspending-a-cronjob) using a suspend true/false setting.²
 * Security - [Attach a default Web Application Firewall (WAF)](../../diagnostics-overview/web-application-firewall-waf.md#setting-a-default-waf-in-a-plan) to all ALBs at the tenant level.²
 * General - [Tenant Indicator](../access-control/setting-tenant-topbar-color.md) — Customize the top bar color for individual Tenants.²
-* AI - [AI Slack Integration](../../ai-suite/ai-helpdesk/) — Support for integrating DuploCloud AI capabilities with Slack.²
+* AI - [AI Slack Integration](/broken/pages/f7OsXF1qUJXwekn2sry3) — Support for integrating DuploCloud AI capabilities with Slack.²
 * AWS - [CloudFront Origin Access Control](../overview/aws-services/cloudfront/cloudfront.md) — Use OAC instead of deprecated OAI.¹<sup>,</sup>²
 * AWS - [EKS AutoMode](../overview/use-cases/eks-auto-mode.md) — Automatically configure EKS cluster node scaling and management.²
 * Identity/Access Management - [Okta Management](../access-control/user-authentication/sso-configuration/okta-management-settings.md) — Manage Okta authentication in DuploCloud.¹
