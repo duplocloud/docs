@@ -9,7 +9,7 @@
   * [Skills](introduction/ai-devops-policy-model/skills.md)
   * [Personas](introduction/ai-devops-policy-model/personas.md)
   * [Agents](introduction/ai-devops-policy-model/agents.md)
-  * [Engineers](introduction/ai-devops-policy-model/engineers.md)
+  * [Workspaces](introduction/ai-devops-policy-model/engineers.md)
   * [Projects](introduction/ai-devops-policy-model/projects.md)
   * [Incident Management](introduction/ai-devops-policy-model/incident-management.md)
 

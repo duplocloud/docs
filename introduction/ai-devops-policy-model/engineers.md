@@ -1,26 +1,30 @@
-# Engineers
+---
+description: This is where it all comes together!
+---
 
-Adding an AI DevOps Engineer streamlines DevOps while keeping you in control. Assemble your AI DevOps Engineer by combining Providers, Skills/Personas, and Agents.
+# Workspaces
 
-## Creating an Engineer
+A Workspace is the central entity that ties everything together — attach any number of Scopes and Personas to it. You can create multiple Workspaces and invite users to each one, enabling clear separation of responsibilities across your organization.
 
-1. Navigate to **Engineers** and click **Add Engineer**.
+## Creating a Workspace
 
-<figure><img src="../../.gitbook/assets/unknown (13).png" alt=""><figcaption></figcaption></figure>
+1. Navigate to **Workspaces** and click **Add Workspace**.
 
-2. Give the Engineer a **Name** and **Description**.&#x20;
-3. Select the **Persona(s)** to equip the Engineer with the needed Skills, and click **Next**.&#x20;
+<figure><img src="../../.gitbook/assets/Workspaces-4.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/unknown (14).png" alt=""><figcaption></figcaption></figure>
+2. Give the Workspace a **Name** and **Description**.
+3. Select the **Persona(s)** to include in the Workspace, and click **Next**.
 
-3. Select the **Agent(s)** that you want this Engineer to use, and click **Next**.
+<figure><img src="../../.gitbook/assets/Workspaces.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/unknown (15).png" alt=""><figcaption></figcaption></figure>
+3. Select the **Agent(s)** that do the work in this Workspace, and click **Next**.
 
-4. Select the **Providers** and their respective **Scopes** for the Engineer.&#x20;
+<figure><img src="../../.gitbook/assets/Workspaces-1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/unknown (16).png" alt=""><figcaption></figcaption></figure>
+4. For each **Provider** screen, select the **Scopes** to include in the Workspace, then click **Next** until you have reviewed them all.
 
-5. Click **Create**.&#x20;
+<figure><img src="../../.gitbook/assets/Workspaces-2.png" alt=""><figcaption></figcaption></figure>
 
-**Congratulations!** Your Engineer is now ready to receive assignments, interpret goals, break down work, and provide a transparent audit trail—all with human oversight and control.
+5. Click **Create**.
+
+**Congratulations!** Your Workspace is now ready to receive assignments, interpret goals, break down work, and provide a transparent audit trail—all with human oversight and control.
