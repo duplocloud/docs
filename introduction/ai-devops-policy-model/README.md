@@ -4,49 +4,47 @@ description: >-
   Engineer
 ---
 
-# AI Devops Policy Model
+# AI DevOps Policy Model
 
 The DuploCloud AI DevOps Policy Model lays down the foundational building blocks of the system that orchestrates large and complex DevOps projects seamlessly—just as a human engineer would.&#x20;
 
-This diagram illustrates a hierarchical AI DevOps platform architecture. Administrators define permissions and integrations, Engineers are configured with capabilities and boundaries, Projects break down requirements into executable plans and tasks, and specialized Agents carry out the actual work through multi-agent orchestration in a ticket-based workflow.
+The diagram below illustrates this Policy Model.&#x20;
 
-<figure><picture><source srcset="../../.gitbook/assets/duplocloud-diagram-2-dark.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/duplocloud-diagram-2-light.png" alt=""></picture><figcaption></figcaption></figure>
+Administrators define access to IT systems by creating providers and supplying the right credentials and scopes. They also create "Workspaces" within which all DevOps work is orchestrated. Workspaces have access to skills via bundles called Personas and have access to the defined Provider scopes.&#x20;
+
+Users are granted access to specific workspaces and can accomplish their tasks within them. For simple one-off tasks, they can create "Tickets" on the HelpDesk and assign the task to an AI agent.  For large and complex work, they can create "Projects" that use a Spec Driven Development process.&#x20;
+
+
+
+<figure><picture><source srcset="../../.gitbook/assets/Policy_Model_Dark_V2.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/duplocloud-diagram-2-light (1).png" alt=""></picture><figcaption></figcaption></figure>
 
 ## Core Concepts
 
 Below are brief introductions to the core concepts of the AI DevOps Policy Model, which will be explained in detail in subsequent sections.
 
-### 1. Engineer
+### 1. Provider
 
-The Engineer is the primary entity representing an AI DevOps Engineer. Each Engineer has a unique name within your organization, is defined by a set of key attributes that govern its behavior and capabilities, and contains a container of Skills called a Persona. The Engineer operates within defined access boundaries called Scope, with specific exceptions managed through Guardrails. As it works, the Engineer builds a Knowledge Base of learned information about the environment. Resource usage is controlled through Quota settings, and the Engineer's performance is tracked through Health Metrics, which include analytics and cost data.
+A Provider is any IT system that you would like Duplo's Platform to access, including cloud platforms (AWS, Azure, GCP), Git repositories, MCP Servers, and more. Each Provider is associated with a specific account or namespace and requires credentials to be provided for authentication. Credentials are safely stored in DuploCloud or referenced externally, enabling just-in-time, scoped access to resources without exposing sensitive authentication data.
 
-### 2. Skill
+### **2. Scope**
 
-A Skill is an instruction or prompt that tells an agent how to behave or what capabilities it has. Skills represent the atomic unit of capability within the system. Examples include Kubernetes troubleshooting skills, Terraform provisioning skills, cost optimization skills, and custom skills tailored specifically to an organization's workflows or requirements.&#x20;
+Scope defines what the Duplo Platform can access within each Provider. Each Scope entry specifies a Provider and associated Credential, and includes granular access controls through regions, resource types, tags, or custom resource maps (key-value pairs for filtering specific resources like namespaces). Scope can also include MCP Servers for extended system access.
 
-### 3. Persona
+### 3. Agent
 
-A Persona serves as a logical container that organizes multiple Skills together. Personas help customers organize capabilities by role or function, making it easier to manage and deploy different sets of abilities. For instance, an SRE Persona might combine troubleshooting, monitoring, and incident response skills. Similarly, a Provisioning Persona could bundle Terraform skills with Kubernetes deployment skills, while a Security Persona might group compliance skills with security scanning skills.
+The DuploCloud platform includes a DevOps Agent that can perform complex DevOps tasks. It is built on Anthropic's Claude SDK and operates within the scopes assigned to it. The agent can inherit skills that extend its capabilities and adapt its behavior to organizational needs.
 
-### 4. Provider
+### 4. Skill
 
-A Provider is a system that an Engineer can access, including cloud platforms (AWS, Azure, GCP), repositories, MCP Servers, and more. Each Provider is associated with a specific account or namespace and requires a credential reference for authentication. Credentials can be stored in DuploCloud or referenced externally, enabling just-in-time, scoped access to resources without exposing sensitive authentication data.
+A Skill is an instruction or prompt that tells the Duplo Agent how to behave or what capabilities it has. Skills represent the atomic unit of capability within the system. Examples include Kubernetes troubleshooting skills, Terraform provisioning skills, cost optimization skills, and custom skills tailored specifically to an organization's workflows or requirements.&#x20;
 
-### **5. Scope**
+### 5. Persona
 
-Scope defines what an Engineer can access within each Provider. Each Scope entry specifies a Provider and associated Credential, and includes granular access controls through regions, resource types, tags, or custom resource maps (key-value pairs for filtering specific resources like namespaces). Scope can also include MCP Servers for extended system access.
+A Persona serves as a logical container that brings multiple Skills together. Personas help customers organize capabilities by role or function, making it easier to manage and deploy different sets of abilities. For instance, an SRE Persona might combine troubleshooting, monitoring, and incident response skills. Similarly, a Provisioning Persona could bundle Terraform skills with Kubernetes deployment skills, while a Security Persona might group compliance skills with security scanning skills.
 
-### 6. Guardrails
+### 6. Workspace
 
-Guardrails define exceptions within a Scope, specifying what an Engineer cannot access or perform. These restrictions can target specific resources to exclude—such as a production database instances—specific operations that should be restricted, or entire environments that should be avoided. Guardrails provide fine-grained control over the Engineer's permissions within its broader Scope.
-
-### 7. Quota and Quality of Service
-
-Quota and Quality of Service (QoS) settings control resource limits for the Engineer. These controls can include maximum concurrent projects, token limits, and cloud resource provisioning limits. The system is designed to accommodate additional options in future versions as requirements evolve.
-
-### 8. Knowledge Base
-
-The Knowledge Base represents the Engineer's learned understanding of the environment. It captures architecture and topology information, relationships between systems, codebase structure, and historical context from completed work. This knowledge is stored both as files in customer repositories in markdown format and in a vector database within DuploCloud, enabling efficient retrieval and reference during operations.
+A Workspace is where all of this comes together. It's a logical entity to which you can attach any number of Scopes and Personas. You can create multiple Workspaces and invite users to specific Workspaces, thereby creating a separation of responsibilities within the organization. For example, the L1 SRE workspace may have "read-only" access to your infrastructure and codebase, but can have write access to the incident management and observability systems. That workspace would include the SRE Persona with skills for troubleshooting cloud systems and Kubernetes.&#x20;
 
 ## Workflow concepts
 
@@ -54,16 +52,27 @@ Below are some of the workflow concepts in the AI DevOps Policy Model:&#x20;
 
 ### 1. Project
 
-A Project is a logical entity representing planned work. Each Project contains a Title and Summary. The heart of a Project are its requirements, which can be defined in plain English.
+A Project is a logical entity representing planned work. Each Project must contain a Name, Scopes and Skills. Optionally, it may also have a description, a system prompt, priority, start date and end dates. Think of a Project as a logical container where you can plan and execute large and complex DevOps work. Projects use a Spec Driven Development approach.&#x20;
 
-### 2. Requirements
+### 2. Spec
 
-Requirements are a user-generated document that enumerates a Project’s goals and objectives in natural language. Every Project includes associated user requirements, which may also specify how a Project’s goals are to be accomplished.
+A specification, or spec, is the Project document that defines a Project’s goals and requirements in natural language. The user provides high-level requirements, and the agent converts them into a detailed spec. The spec can also include preferences or instructions that guide the agent’s work. Users can edit the document directly or prompt the agent to revise it until they are satisfied.
 
 ### 3. Plan
 
-A Plan represents an execution plan containing tasks. It is an Agent-generated breakdown of how to accomplish a Project's Requirements. An Agent derives the Plan from the Requirements and requires human approval before execution. Plans are versioned whenever the underlying requirements change, ensuring full traceability. If you reject a Plan, you can provide feedback for regeneration, allowing iterative refinement until the Plan meets your requirements.
+Once the Spec has been finalised, the agent creates a Plan document. It contains a breakdown of how to accomplish the goals specified in the Spec. The requirements are converted into specific tasks and divided into "Phases". A general principle is that the tasks in each phase could be executed in parallel, thereby increasing the speed of project execution. A user can make edits to the plan document directly or by prompting the agent to make changes, until satisfied.&#x20;
 
 ### 4. Task
 
-A Task represents a unit of work within a Plan. An Agent generates Tasks from an approved Plan, and each Task is assigned to an Agent based on the Skill needed to complete it. Tasks require human approval before proceeding and become Tickets once approved. You have the flexibility to add new Tasks by providing feedback to the Agent and can override Task routing decisions within the Plan if needed.<br>
+A Task represents a unit of work within a Plan. The Duplo Agent generates Tasks from an approved Plan. Each Task can be converted into a "Ticket" and assigned to a user for execution. Tasks within a Phase can generally be processed in parallel. Users can add new tasks or modify existing ones. When required, the agent will automatically make suitable changes to the spec and plan to include these changes.
+
+### 5. Ticket
+
+A Ticket is a unit of record that stores work performed on the Duplo platform. It is similar to a Jira or Zendesk ticket. All interactions with the Duplo Agent happen within a ticket. You can create standalone tickets for small tasks in the DevOps HelpDesk or create a ticket for each task within a Project. Each ticket has its own scopes and skills that define the boundaries of the work.
+
+
+
+{% hint style="info" %}
+The following sections explain each concept in more detail and provide guidance for setting them up in your organization.
+{% endhint %}
+
