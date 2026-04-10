@@ -110,7 +110,7 @@ Once you have deployed Container Apps, you can manage them through the DuploClou
 
 1. Navigate to **Cloud Services** → **Serverless.**
 2. Select the **Container App** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/image (499).png" alt="" data-size="line">) in the row of the container app you want to manage.<br>
+3.  Click the menu icon (<img src="../../../.gitbook/assets/image (499) (1).png" alt="" data-size="line">) in the row of the container app you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Newest.png" alt=""><figcaption><p><strong>Container App</strong> tab with menu options highlighted</p></figcaption></figure>
 4. Select one of the following actions:
