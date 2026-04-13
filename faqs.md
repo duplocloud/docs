@@ -60,6 +60,20 @@ DuploCloud also handles work that falls between the cracks of typical DevOps too
 
 <details>
 
+<summary>We don't have a dedicated DevOps engineer. Is DuploCloud a viable alternative to hiring one?</summary>
+
+For many teams, yes. A dedicated DevOps engineer typically costs $150–200K or more per year in salary; DuploCloud starts at a fraction of that. Beyond cost, the platform works continuously — tickets can run after hours, agents can monitor your environment around the clock, and there's no on-call rotation.
+
+The clearest fit is teams where routine deployments, compliance evidence collection, cost optimisation, and incident triage consume significant engineering time that your existing team has to absorb.
+
+DuploCloud is not a substitute for a senior engineer making complex architectural decisions. But for the recurring, execution-heavy work that typically occupies most of a DevOps engineer's time, the platform handles it faster and at lower cost.
+
+If you're at the stage of considering your first DevOps hire, a 30-day PoC scoped to tasks from your actual backlog is a practical way to evaluate whether the platform covers what you'd be hiring for.
+
+</details>
+
+<details>
+
 <summary>Is DuploCloud similar to Heroku in terms of simplicity?</summary>
 
 Yes — the ease of use is comparable. Teams often start on Heroku for its simplicity and move to AWS for production scale; DuploCloud is designed to give you Heroku-like simplicity on top of AWS (and GCP and Azure), without the cost and limitations of Heroku at scale.
@@ -428,6 +442,21 @@ Code review is part of the standard workflow. The platform presents the diff in 
 
 <details>
 
+<summary>Can proposed infrastructure changes be delivered as a pull request before being applied?</summary>
+
+Yes. For infrastructure-as-code changes, the platform supports two execution modes:
+
+- **Direct apply** — the agent generates the plan, presents the diff for your approval in the ticket interface, and applies it after sign-off.
+- **Pull request mode** — the agent opens a PR with the proposed changes against your repository. The change is applied only after your team merges it through your standard review process.
+
+PR mode is the recommended approach for teams that want changes to flow through existing Git review workflows — code owners, required reviewers, branch protection rules, and CI checks all apply as normal.
+
+For teams using GitOps (Flux, ArgoCD), PR mode integrates naturally — the agent opens the PR, your pipeline detects the merge, and the change is applied by the reconciler in the usual way.
+
+</details>
+
+<details>
+
 <summary>Does DuploCloud support GitOps workflows (Flux, ArgoCD)?</summary>
 
 Yes. Custom agents and Skills can be built for GitOps tools like Flux and ArgoCD. The platform's core model — agents operating on your Git repositories with scoped access and a full audit trail of proposed changes — maps naturally to GitOps pull-based delivery.
@@ -455,6 +484,18 @@ If you're partway through a migration, the platform can scan your existing repos
 <summary>How does DuploCloud integrate with our existing CI/CD pipeline?</summary>
 
 Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](introduction/ai-devops-policy-model/providers.md) with scoped access. The out-of-the-box [CI/CD Agent](https://docs.duplocloud.com/docs/ai-suite/ai-helpdesk/out-of-the-box-agents) integrates with Jenkins and GitHub Actions for pipeline troubleshooting and automation. For deeper pipeline integration, custom agents or Skills can be configured to fit your specific workflow.
+
+</details>
+
+<details>
+
+<summary>Does DuploCloud integrate with project management tools like Jira, Notion, and GitHub?</summary>
+
+Yes. The platform connects to project management and documentation tools through the Provider and MCP server model.
+
+Jira and GitHub are supported as out-of-the-box integrations — agents can create, update, and link Jira tickets to DuploCloud tasks, and open pull requests on your repositories directly from a ticket. Documentation tools like Notion can be connected via MCP servers to provide agents with access to your specs and design documents during the planning phase.
+
+A common workflow: a spec lives in Notion, the agent reads it during the project planning phase, generates a detailed task breakdown, and creates corresponding Jira tickets. As tasks are completed, the Jira tickets update to reflect progress. The full project history is retained in DuploCloud, while your existing project tracking system remains the system of record.
 
 </details>
 
@@ -621,6 +662,23 @@ Agents don't take autonomous "best-effort" alternative paths. If you approved a 
 
 <details>
 
+<summary>Will our team lose visibility or skills if AI handles the day-to-day DevOps work?</summary>
+
+No — the platform is designed to make AI work transparent and inspectable, not to replace your team's understanding.
+
+Every ticket maintains a complete record of what the agent was asked to do, every command it proposed, the approval that preceded each step, and the outcome — including diffs for any infrastructure changes. Your engineers can follow every action in detail.
+
+Beyond passive visibility:
+- Agents explain their reasoning, or can be prompted to provide reasoning, in plain language before each approval step, so your team learns from the work as it happens rather than receiving a black-box result.
+- The Ticket History stores every investigation as a record — your team can review how a problem was previously solved or why a particular approach was taken.
+- Skills encode operational standards as readable text instructions, not trained model weights — your team can inspect exactly what guardrails govern the agent's behaviour.
+
+Your engineers remain in the approval loop for every proposed change. The platform doesn't execute autonomously unless explicitly asked to; it proposes and waits. Teams that want to validate everything the AI does can do so at the ticket level before any change is applied.
+
+</details>
+
+<details>
+
 <summary>Can AI agents be trusted to make compliance decisions, or does human judgment still have a role?</summary>
 
 For technically deterministic compliance work — scanning environments for misconfigurations, collecting evidence against a control, verifying that a resource meets a specific policy — agents perform reliably and can run autonomously within their defined Scope.
@@ -685,6 +743,18 @@ Cost savings are attributed to specific tickets in the audit trail, giving you a
 <summary>What is the limit on the number of tokens?</summary>
 
 There is no token-based billing. DuploCloud charges based on **tickets** (tasks completed) and **nodes under management** (infrastructure resources managed by the platform) — not on LLM token consumption. Think of it as the cost of a DevOps engineer for a fraction of the price. Contact the team for a business proposal with specific pricing assurances.
+
+</details>
+
+<details>
+
+<summary>Does using DuploCloud's AI result in additional LLM costs on top of the platform fee?</summary>
+
+Yes, but they are typically small and predictable. When agents run, they invoke LLMs through managed cloud services — AWS Bedrock, GCP Vertex AI, or Azure AI Foundry — that run within your own cloud account. Those token costs appear as standard cloud charges in your bill at the provider's listed rates. DuploCloud does not add a markup.
+
+DuploCloud's own billing model does not charge per token — you pay per ticket and per node under management, not per API call. This means your platform costs don't scale unpredictably with usage volume.
+
+For most workloads, the LLM charges per ticket are low relative to the engineering time saved. For teams with cost sensitivity, agents can be configured to start with minimal Skills and add them incrementally — a lower-token baseline for initial evaluation that can be extended as the platform proves value.
 
 </details>
 
