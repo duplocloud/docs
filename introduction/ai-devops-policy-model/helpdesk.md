@@ -1,31 +1,82 @@
 # HelpDesk
 
-The AI Helpdesk is the central interface through which you engage with DuploCloud's AI Engineer. It provides a structured, collaborative environment where DevOps tasks and infrastructure management operations can be executed with AI assistance while maintaining human oversight. The Helpdesk is designed to replicate the collaborative experience between engineers, offering visualization tools, command execution capabilities, and intuitive communication channels — making specialized AI assistance readily available regardless of technical background. You can also interact with the AI Helpdesk directly in Slack ([learn more here](additional-components/slack-integration.md)).
+The AI HelpDesk is where your AI-assisted DevOps work lives. It is the backend service that tracks and manages all of your tickets — whether standalone tasks or tickets that belong to a larger project — and acts as the central system of intelligence.
 
-## Key HelpDesk Features
+Tickets are the core unit of work in the HelpDesk. Each ticket represents a discrete task or request that the AI Agent works on alongside you. Through an intuitive interface, you can open tickets, interact with the Agent, visualize operations through a shared browser, and maintain oversight of AI-executed commands in production environments.
 
-### Tickets
+Because everything is ticket-based, the HelpDesk also serves as a collaboration layer — team members can work in parallel, hand off context between sessions, and maintain a complete audit trail. The result is a platform that enhances productivity, reduces operational overhead, and maintains the security and compliance standards intrinsic to DuploCloud.
 
-Tickets form the foundation of work within the AI Helpdesk. A ticket can be a standalone task or part of a larger project, and each one establishes a dedicated channel between you and an assigned AI Agent. Each ticket represents a specific task, request, or troubleshooting session that requires attention. When creating a ticket, users can select the appropriate AI Agent based on the nature of the task (such as Kubernetes troubleshooting, observability analysis, or deployment assistance). This ticketing system maintains context throughout the conversation, allowing for continuous collaboration until resolution while preserving a complete audit trail of actions and decisions for future reference.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (474).png" alt="" width="563"><figcaption><p>Creating a Ticket in the DuploCloud AI HelpDesk</p></figcaption></figure></div>
+It is accessible from the **HelpDesk** item in the left navigation sidebar, which expands to reveal two options: **Add Ticket** and **History**.
 
-### Canvas
+![HelpDesk nav](../../.gitbook/assets/helpdesk-step-01-nav.png)
 
-The Canvas is a dynamic, shared workspace within the HelpDesk Ticket that facilitates real-time collaboration between users and AI Agents. This interactive environment serves as a virtual "whiteboard" where both parties can visualize operations, execute commands, and share information seamlessly. This shared visual interface significantly enhances the effectiveness of human-AI interaction by providing transparency into the AI's reasoning and actions while allowing users to contribute their expertise when needed.
+---
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (477).png" alt="" width="563"><figcaption><p>The Canvas in DuploCloud's AI HelpDesk</p></figcaption></figure></div>
+## Add Ticket
 
-### AI Suggested Commands
+Click **Add Ticket** in the sidebar to open the ticket creation form.
 
-Within the Canvas, AI agents can analyze the current context and proactively suggest relevant terminal commands to address the task at hand. These suggested commands appear as interactive elements that users can approve, reject, ignore, or execute. This feature combines the AI's extensive knowledge of best practices with human judgment, preventing potentially harmful operations while expediting routine tasks. Each suggestion includes a brief explanation of its purpose and expected outcome, enabling users to learn while accomplishing their objectives efficiently.
+![Add Ticket nav item](../../.gitbook/assets/helpdesk-step-08-nav-add-ticket.png)
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (475).png" alt="" width="563"><figcaption><p>AI suggested command on the Canvas</p></figcaption></figure></div>
+The Add Ticket page lets you create a new AI DevOps request — selecting an agent, scopes, personas, and describing the task you want the AI to perform.
 
-### Terminal
+![Add Ticket page](../../.gitbook/assets/helpdesk-step-09-add-ticket-overview.png)
 
-The Terminal component embedded within the Canvas provides users with direct command-line access to their infrastructure. When a user interacts with the Terminal, the AI Agent can observe these interactions, providing context-aware assistance, explaining unexpected outputs, or suggesting follow-up commands. This bidirectional visibility creates a seamless experience where users can freely switch between AI-guided operations and manual intervention. The Terminal maintains appropriate permission boundaries based on the user's role while providing the familiar command-line interface that DevOps professionals expect.
+For a full walkthrough of creating a ticket, see the **Tickets** section.
 
-Users are also able to establish an interactive terminal session directly within a running application container from the HelpDesk Canvas. This capability is invaluable for troubleshooting application-specific issues, verifying configurations, or performing targeted diagnostics. The AI agent remains engaged during these application container shell sessions, offering assistance with application-specific commands and interpreting outputs in the context of the application's architecture. This deep level of access, combined with AI guidance, dramatically reduces the time required to identify and resolve application-level issues while maintaining security boundaries.
+---
 
-<figure><img src="../../.gitbook/assets/Screenshot (919).png" alt=""><figcaption><p>Canvas with the <strong>Admin Terminal</strong> on the right</p></figcaption></figure>
+## History
+
+Click **History** in the sidebar to view all tickets that have been created in this workspace.
+
+![History nav item](../../.gitbook/assets/helpdesk-step-02-nav-history.png)
+
+The History page displays a table of all tickets with the following columns:
+
+- **Title** — the question or task submitted to the AI
+- **Agent** — the AI agent assigned to the ticket
+- **Scopes** — the cloud scopes the agent has access to
+- **Cost** — total cost accumulated by the AI agent for this ticket
+- **Priority** — the ticket priority (Low, Medium, High, Critical)
+- **Status** — current state (Open, In Progress, or Closed)
+- **Created By** — the user who submitted the ticket
+- **Last Modified** — when the ticket was last updated
+
+![History overview](../../.gitbook/assets/helpdesk-step-03-history-overview.png)
+
+### Switching workspaces
+
+The **workspace selector** at the top of the page controls which workspace's tickets are shown. Click it to open a dropdown listing all workspaces you have access to.
+
+![Workspace selector](../../.gitbook/assets/helpdesk-step-10-workspace-selector.png)
+
+![Workspace dropdown](../../.gitbook/assets/helpdesk-step-11-workspace-dropdown.png)
+
+Select a workspace to switch to it. The History table immediately refreshes to show only the tickets belonging to that workspace.
+
+![Production-DevOps workspace selected](../../.gitbook/assets/helpdesk-step-13-proddevops-history.png)
+
+### Filtering tickets
+
+Use the **Priority** and **Status** filters at the top of the table to narrow down the list. The status tabs — **All**, **Open**, **In Progress**, and **Closed** — let you quickly focus on tickets at a particular stage.
+
+![Status filters](../../.gitbook/assets/helpdesk-step-05-history-filters.png)
+
+### Resuming a ticket
+
+Click any ticket title in the list to open that ticket and continue where you left off.
+
+![Clicking a ticket to resume](../../.gitbook/assets/helpdesk-step-14-pentest-ticket-highlight.png)
+
+The full conversation history with the AI agent is preserved. Scroll to the bottom to see where the agent left off, then type in the **Ask anything...** input to continue the conversation, ask follow-up questions, or direct the agent to pick up the next task.
+
+![Bottom of ticket conversation with input](../../.gitbook/assets/helpdesk-step-16-ticket-bottom.png)
+
+### Creating a new ticket from History
+
+The **Add** button in the top right of the table takes you directly to the Add Ticket page.
+
+![Add button](../../.gitbook/assets/helpdesk-step-06-history-add-btn.png)
+
