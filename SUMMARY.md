@@ -8,7 +8,7 @@
   * [MCP Servers](introduction/ai-devops-policy-model/mcp-servers.md)
   * [Skills](introduction/ai-devops-policy-model/skills.md)
   * [Personas](introduction/ai-devops-policy-model/personas.md)
-  * [Agents](introduction/ai-devops-policy-model/agents.md)
+  * [Duplo DevOps Agent](introduction/ai-devops-policy-model/agents.md)
   * [Workspaces](introduction/ai-devops-policy-model/engineers.md)
   * [Projects](introduction/ai-devops-policy-model/projects.md)
   * [HelpDesk](introduction/ai-devops-policy-model/helpdesk.md)

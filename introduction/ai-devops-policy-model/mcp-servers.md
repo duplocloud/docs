@@ -18,15 +18,15 @@ MCP Servers provide access to essential external systems and tools that aren't d
 
 3. Next, go to the **Providers** section, select the right provider type and click **Add**. If the provider type is not present, you can choose the "**Other**" provider type.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 4. Create the **credentials** for this Provider, if one is needed.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 5. Create the **Scope** to connect the Credentials to the **MCP server** and define any permission boundaries.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
