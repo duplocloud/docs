@@ -11,6 +11,7 @@
   * [Agents](introduction/ai-devops-policy-model/agents.md)
   * [Workspaces](introduction/ai-devops-policy-model/engineers.md)
   * [Projects](introduction/ai-devops-policy-model/projects.md)
+  * [Tickets](introduction/ai-devops-policy-model/tickets.md)
   * [Incident Management](introduction/ai-devops-policy-model/incident-management.md)
 
 ## AI Helpdesk
