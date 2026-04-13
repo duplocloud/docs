@@ -52,7 +52,7 @@ Some commonly used tools that can be accessed directly within DuploCloud include
 
 When you let DuploCloud manage your DevOps environment, a scalable and robust SecOps framework and implementation strategy are included. Aligned with industry best practices, our staff of SecOps experts analyzes how your data is stored and transmitted, helps identify the standards you must meet, and then constructs a detailed implementation strategy to meet and exceed those requirements. In addition, we create a scalable model that adapts as your customer base and workloads grow.&#x20;
 
-DuploCloud walks you through each process step during [onboarding](duplocloud-onboarding.md), then ensures each implementation phase results in smooth and secure operations, laying the foundation for a reliable and compliant system. &#x20;
+DuploCloud walks you through each process step during [onboarding](../getting-started/duplocloud-onboarding.md), then ensures each implementation phase results in smooth and secure operations, laying the foundation for a reliable and compliant system. &#x20;
 
 Using easy-to-access "Single Pane of Glass" dashboards, DuploCloud provides a granular view of all security issues and compliance controls. Completing questionnaires and passing audits is simple, especially with our 24/7 support.&#x20;
 

@@ -1,5 +1,6 @@
 ---
 description: An outline of the DuploCloud approach compared to existing DevOps
+hidden: true
 cover: ../.gitbook/assets/banner dark.png
 coverY: 0
 ---
