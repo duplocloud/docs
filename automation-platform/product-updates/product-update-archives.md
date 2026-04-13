@@ -58,7 +58,7 @@ hidden: true
   * Configure faults for failed [Jobs](../../kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [CronJobs ](../../kubernetes/cronjobs.md)at the Tenant level.
   * Support for [DaemonSet](https://docs.duplocloud.com/docs/kubernetes-overview/daemonset#creating-a-daemonset-in-duplocloud-aws-or-gcp) with GCP or AWS.&#x20;
 * General
-  * Enhanced access to [DuploCloud help options](../../welcome-to-duplocloud/duplocloud-support-model.md#how-to-get-help-from-within-the-duplocloud-portal) from the DuploCloud Platform.&#x20;
+  * Enhanced access to [DuploCloud help options](../../getting-started/duplocloud-support-model.md#how-to-get-help-from-within-the-duplocloud-portal) from the DuploCloud Platform.&#x20;
   * [Skip faults for stopped Tenant instances.](../diagnostics-overview/faults-and-alarms/#muting-faults-for-stopped-tenants)
   * [Configure user access to multiple Tenants](../access-control/user-access-and-permissions/tenant-access/) with one step.
   * [Configure Okta](/broken/pages/yeRYLkYWOI0ef3Tgwdd6) as a user source for the DuploCloud Portal.

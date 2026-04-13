@@ -11,32 +11,47 @@
   * [Agents](introduction/ai-devops-policy-model/agents.md)
   * [Workspaces](introduction/ai-devops-policy-model/engineers.md)
   * [Projects](introduction/ai-devops-policy-model/projects.md)
+  * [HelpDesk](introduction/ai-devops-policy-model/helpdesk.md)
   * [Tickets](introduction/ai-devops-policy-model/tickets.md)
   * [Incident Management](introduction/ai-devops-policy-model/incident-management.md)
-
-## AI Helpdesk
-
-* [Overview](ai-helpdesk-v2/ai-helpdesk-concepts.md)
-* [HelpDesk Concepts](ai-helpdesk-v2/ai-helpdesk-overview.md)
-  * [Tickets](ai-helpdesk-v2/tickets.md)
-  * [Agents](ai-helpdesk-v2/out-of-the-box-agents.md)
-  * [Bring Your Own Agent](ai-helpdesk-v2/bring-your-own-agent.md)
-  * [Slack Integration](ai-helpdesk-v2/slack-integration.md)
-  * [Developers](ai-helpdesk-v2/developers.md)
+  * [Additional Components](introduction/ai-devops-policy-model/additional-components/README.md)
+    * [Resources](introduction/ai-devops-policy-model/additional-components/resources.md)
+    * [Reports](introduction/ai-devops-policy-model/additional-components/reports.md)
+    * [Slack Integration](introduction/ai-devops-policy-model/additional-components/slack-integration.md)
+    * [Duplo Claude Plugin](introduction/ai-devops-policy-model/additional-components/duplo-claude-plugin.md)
 
 ***
 
+* [AI Dashboards](ai-dashboards.md)
+* [Access Control](access-control.md)
 * [FAQs](faqs.md)
 * [Product Updates](ai-helpdesk-v2/product-updates.md)
 * [Reporting AI Concerns](ai-helpdesk-v2/reporting-ai-concerns.md)
 
+## AI Helpdesk
+
+* [HelpDesk Concepts](ai-helpdesk-v2/ai-helpdesk-overview.md)
+  * [Tickets](ai-helpdesk-v2/tickets.md)
+  * [Agents](ai-helpdesk-v2/out-of-the-box-agents.md)
+  * [Bring Your Own Agent](ai-helpdesk-v2/bring-your-own-agent.md)
+  * [Developers](ai-helpdesk-v2/developers.md)
+
 ## Getting Started
 
+* [Installation](getting-started/installation.md)
+* [Integrating Providers](getting-started/integrating-providers.md)
+* [Onboarding](getting-started/duplocloud-onboarding.md)
+* [Support Options: Standard vs. Managed Operations](getting-started/duplocloud-support-options-standard-vs.-managed-operations.md)
+* [Getting Help with DuploCloud](getting-started/duplocloud-support-model.md)
 * [Getting Started with DuploCloud](welcome-to-duplocloud/README.md)
-  * [Onboarding](welcome-to-duplocloud/duplocloud-onboarding.md)
-  * [Support Options: Standard vs. Managed Operations](welcome-to-duplocloud/duplocloud-support-options-standard-vs.-managed-operations.md)
-  * [Getting Help with DuploCloud](welcome-to-duplocloud/duplocloud-support-model.md)
   * [Common Use Cases](welcome-to-duplocloud/what-duplocloud-does.md)
+
+## Common Use Cases
+
+* [How to manage large complex projects](common-use-cases/how-to-manage-large-complex-projects.md)
+* [Security and Compliance](common-use-cases/security-and-compliance.md)
+* [How Engineering and DevOps can work together](common-use-cases/how-engineering-and-devops-can-work-together.md)
+* [Developer Self Service via Slackbot](common-use-cases/developer-self-service-via-slackbot.md)
 
 ## Automation Platform
 

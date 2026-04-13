@@ -1,6 +1,6 @@
-# AI HelpDesk
+# HelpDesk
 
-The AI Helpdesk is the central interface through which you engage with DuploCloud's AI Engineer. It provides a structured, collaborative environment where DevOps tasks and infrastructure management operations can be executed with AI assistance while maintaining human oversight. The Helpdesk is designed to replicate the collaborative experience between engineers, offering visualization tools, command execution capabilities, and intuitive communication channels — making specialized AI assistance readily available regardless of technical background. You can also interact with the AI Helpdesk directly in Slack ([learn more here](slack-integration.md)).
+The AI Helpdesk is the central interface through which you engage with DuploCloud's AI Engineer. It provides a structured, collaborative environment where DevOps tasks and infrastructure management operations can be executed with AI assistance while maintaining human oversight. The Helpdesk is designed to replicate the collaborative experience between engineers, offering visualization tools, command execution capabilities, and intuitive communication channels — making specialized AI assistance readily available regardless of technical background. You can also interact with the AI Helpdesk directly in Slack ([learn more here](additional-components/slack-integration.md)).
 
 ## Key HelpDesk Features
 
@@ -14,13 +14,13 @@ Tickets form the foundation of work within the AI Helpdesk. A ticket can be a st
 
 The Canvas is a dynamic, shared workspace within the HelpDesk Ticket that facilitates real-time collaboration between users and AI Agents. This interactive environment serves as a virtual "whiteboard" where both parties can visualize operations, execute commands, and share information seamlessly. This shared visual interface significantly enhances the effectiveness of human-AI interaction by providing transparency into the AI's reasoning and actions while allowing users to contribute their expertise when needed.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (477).png" alt="" width="563"><figcaption><p>The Canvas in DuploCloud's AI HelpDesk </p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (477).png" alt="" width="563"><figcaption><p>The Canvas in DuploCloud's AI HelpDesk</p></figcaption></figure></div>
 
 ### AI Suggested Commands
 
 Within the Canvas, AI agents can analyze the current context and proactively suggest relevant terminal commands to address the task at hand. These suggested commands appear as interactive elements that users can approve, reject, ignore, or execute. This feature combines the AI's extensive knowledge of best practices with human judgment, preventing potentially harmful operations while expediting routine tasks. Each suggestion includes a brief explanation of its purpose and expected outcome, enabling users to learn while accomplishing their objectives efficiently.
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (475).png" alt="" width="563"><figcaption><p>AI suggested command on the Canvas </p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (475).png" alt="" width="563"><figcaption><p>AI suggested command on the Canvas</p></figcaption></figure></div>
 
 ### Terminal
 

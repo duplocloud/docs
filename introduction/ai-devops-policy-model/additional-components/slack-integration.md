@@ -18,33 +18,33 @@ Here’s a quick look at how DuploCloud AI Agents work inside Slack.
 
 1. In your Slack channel, mention the Slack Bot using `@DuploCloud AI`. One of the following things will happen:
    * **If the thread is already linked to a HelpDesk Ticket:** The AI Agent joins the conversation. You can interact with it directly to request updates, ask questions, or continue troubleshooting in the Slack thread.
-   * **If the thread is not yet linked to a ticket:** The Slack Bot will prompt you to create one. Click **Create Ticket**, and a panel prompting you to enter details about your request will appear.&#x20;
+   * **If the thread is not yet linked to a ticket:** The Slack Bot will prompt you to create one. Click **Create Ticket**, and a panel prompting you to enter details about your request will appear.
 
-<div align="left"><figure><img src="../../.gitbook/assets/Create Ticket.png" alt="" width="563"><figcaption><p>The <strong>Create Ticket</strong> panel in the Slack-HelpDesk integration</p></figcaption></figure></div>
+<div align="left"><figure><img src="/broken/files/jK58220yDkB5ISIjzrUt" alt="" width="563"><figcaption><p>The <strong>Create Ticket</strong> panel in the Slack-HelpDesk integration</p></figcaption></figure></div>
 
 2. Enter the following information to configure your Ticket:
 
 <table data-header-hidden><thead><tr><th width="170.5555419921875"></th><th></th></tr></thead><tbody><tr><td><strong>Portal</strong></td><td>Select the DuploCloud Portal where the Ticket should be created.</td></tr><tr><td><strong>Engineer</strong></td><td>Choose the Engineer within the selected Portal. Only Engineers you have access to will appear.</td></tr><tr><td><strong>Agent</strong></td><td>Pick the AI Agent to handle your request. Each Agent specializes in specific tasks (Kubernetes, deployments, etc.).</td></tr><tr><td><strong>Default</strong> <strong>Permissions</strong></td><td>Select the user identity the Agent should assume. Only users configured for the selected Engineer will appear. See the detailed steps for <a href="slack-integration.md#configuring-agent-permissions">Configuring Agent Permissions</a>.</td></tr></tbody></table>
 
-3. The Slack backend creates a Ticket for the selected Engineer and assigns it to the chosen AI Agent. You can now interact with the AI Agent directly in the Slack thread. For more information about Tickets, see the [Tickets page](tickets.md).
+3. The Slack backend creates a Ticket for the selected Engineer and assigns it to the chosen AI Agent. You can now interact with the AI Agent directly in the Slack thread. For more information about Tickets, see the [Tickets page](../../../ai-helpdesk-v2/tickets.md).
 
 ### Interacting with Tickets in Slack
 
 Once your Ticket is created, you can manage the Ticket and interact with the AI Agents directly in Slack.
 
-1. The AI Agent posts updates, responses, and command suggestions in the thread. Review each suggested command and choose **Approve**, **Reject**, or **Ignore**. For more information about interacting with Tickets, see the [Tickets documentation](tickets.md).
+1. The AI Agent posts updates, responses, and command suggestions in the thread. Review each suggested command and choose **Approve**, **Reject**, or **Ignore**. For more information about interacting with Tickets, see the [Tickets documentation](../../../ai-helpdesk-v2/tickets.md).
 2. Click **Submit**. Approved commands are executed in your connected DuploCloud Portal, with results shown directly in the Slack thread.
 
-<div align="left"><figure><img src="../../.gitbook/assets/Response options (2).png" alt="" width="563"><figcaption><p>A command suggestion and response options in the Slack-HelpDesk integration</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Response options (2).png" alt="" width="563"><figcaption><p>A command suggestion and response options in the Slack-HelpDesk integration</p></figcaption></figure></div>
 
 ### **Updating Ticket Context**
 
 Updating Ticket context lets you change the Portal, Engineer, Agent, or Default Permissions for your Ticket mid-conversation, without starting over. This ensures the AI Agent is always working with the correct environment and permissions.
 
-1. From the Ticket Slack thread, click the **menu icon** (<img src="../../.gitbook/assets/Screenshot (991).png" alt="" data-size="line">) and select **Update Context**.
+1. From the Ticket Slack thread, click the **menu icon** (<img src="../../../.gitbook/assets/Screenshot (991).png" alt="" data-size="line">) and select **Update Context**.
 2.  Modify any of the following: **Portal**, **Engineer**, **Agent**, or **Permissions**.<br>
 
-    <div align="left"><figure><img src="../../.gitbook/assets/Update Ticket screen.png" alt="" width="563"><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="/broken/files/A1qfDR4J107vV3brl8OY" alt="" width="563"><figcaption></figcaption></figure></div>
 3. When updating the **Portal** or **Engineer**, specify the **Share Thread Context** and add a **New Message**, if needed:
    * **New Message**: Optionally, add a note or instruction for the AI Agent.
    * **Share Thread Context**: Choose whether the AI should retain the existing thread conversation in the updated context:
@@ -62,7 +62,7 @@ Some operations may require direct Helpdesk access. Opening a ticket in the Help
 
 1.  In your Slack thread, click **Open AI HelpDesk**.<br>
 
-    <div align="left"><figure><img src="../../.gitbook/assets/helpdesk (1).png" alt="" width="563"><figcaption><p><strong>Open</strong> <strong>AI HelpDesk</strong> button in Slack</p></figcaption></figure></div>
-2. The Ticket opens in HelpDesk in the correct Portal, where you can view details, manage actions, and access additional HelpDesk features. For more information about using HelpDesk, see the [AI HelpDesk documentation](./).
+    <div align="left"><figure><img src="../../../.gitbook/assets/helpdesk (1).png" alt="" width="563"><figcaption><p><strong>Open</strong> <strong>AI HelpDesk</strong> button in Slack</p></figcaption></figure></div>
+2. The Ticket opens in HelpDesk in the correct Portal, where you can view details, manage actions, and access additional HelpDesk features. For more information about using HelpDesk, see the [AI HelpDesk documentation](../../../ai-helpdesk-v2/).
 
-<figure><img src="../../.gitbook/assets/Helpdesk open (2).png" alt=""><figcaption><p>DuploCloud AI HelpDesk for a Ticket generated in Slack</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Helpdesk open (2).png" alt=""><figcaption><p>DuploCloud AI HelpDesk for a Ticket generated in Slack</p></figcaption></figure>
