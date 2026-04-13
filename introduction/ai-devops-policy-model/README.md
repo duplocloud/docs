@@ -12,7 +12,7 @@ The diagram below illustrates this Policy Model.&#x20;
 
 Administrators define access to IT systems by creating providers and supplying the right credentials and scopes. They also create "Workspaces" within which all DevOps work is orchestrated. Workspaces have access to skills via bundles called Personas and have access to the defined Provider scopes.&#x20;
 
-Users are granted access to specific workspaces and can accomplish their tasks within them. For simple one-off tasks, they can create "Tickets" on the HelpDesk and assign the task to an AI agent.  For large and complex work, they can create "Projects" that use a Spec Driven Development process.&#x20;
+Users are granted access to specific workspaces and can accomplish their tasks within them. For simple one-off tasks, they can create "Tickets" on the HelpDesk and assign the task to an AI agent.  For large and complex work, they can create "Projects" that use a Spec Driven DevOps process.&#x20;
 
 
 
@@ -24,7 +24,7 @@ Below are brief introductions to the core concepts of the AI DevOps Policy Model
 
 ### 1. Provider
 
-A Provider is any IT system that you would like Duplo's Platform to access, including cloud platforms (AWS, Azure, GCP), Git repositories, MCP Servers, and more. Each Provider is associated with a specific account or namespace and requires credentials to be provided for authentication. Credentials are safely stored in DuploCloud or referenced externally, enabling just-in-time, scoped access to resources without exposing sensitive authentication data.
+A Provider is any IT system that you would like Duplo's Platform to access, including cloud platforms (AWS, Azure, GCP), Git repositories, MCP Servers, and more. Each Provider is associated with a specific account or namespace and requires credentials to be provided for authentication. Credentials are safely stored in DuploCloud, enabling just-in-time, scoped access to resources without exposing sensitive authentication data.
 
 ### **2. Scope**
 
@@ -32,7 +32,7 @@ Scope defines what the Duplo Platform can access within each Provider. Each Scop
 
 ### 3. Agent
 
-The DuploCloud platform includes a DevOps Agent that can perform complex DevOps tasks. It is built on Anthropic's Claude SDK and operates within the scopes assigned to it. The agent can inherit skills that extend its capabilities and adapt its behavior to organizational needs.
+The DuploCloud platform includes a DevOps Agent that can perform complex DevOps tasks. It operates within the scopes assigned to it and can inherit skills that extend its capabilities and adapt its behavior to organizational needs. It comes pre-packaged with skills to perform cloud and Kubernetes troubleshooting, project planning and execution, dashboard creation, reporting, etc.
 
 ### 4. Skill
 
@@ -52,7 +52,7 @@ Below are some of the workflow concepts in the AI DevOps Policy Model:&#x20;
 
 ### 1. Project
 
-A Project is a logical entity representing planned work. Each Project must contain a Name, Scopes and Skills. Optionally, it may also have a description, a system prompt, priority, start date and end dates. Think of a Project as a logical container where you can plan and execute large and complex DevOps work. Projects use a Spec Driven Development approach.&#x20;
+A Project is a logical entity representing planned work. Each Project must contain a Name, Scopes and Skills. Optionally, it may also have a description, a system prompt, priority, start date and end dates. Think of a Project as a logical container where you can plan and execute large and complex DevOps work. Projects use a Spec Driven DevOps approach.&#x20;
 
 ### 2. Spec
 
