@@ -23,7 +23,11 @@
 ***
 
 * [AI Dashboards](ai-dashboards.md)
-* [Access Control](access-control.md)
+* [Access Control](access-control/README.md)
+  * [Permission Sets](access-control/permission-sets.md)
+  * [Users](access-control/users.md)
+  * [User Groups](access-control/user-groups.md)
+  * [User Tokens](access-control/user-tokens.md)
 * [FAQs](faqs.md)
 * [Product Updates](ai-helpdesk-v2/product-updates.md)
 * [Reporting AI Concerns](ai-helpdesk-v2/reporting-ai-concerns.md)
