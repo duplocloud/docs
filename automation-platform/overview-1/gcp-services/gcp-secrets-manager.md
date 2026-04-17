@@ -25,7 +25,7 @@ DuploCloud integrates with **GCP Secrets Manager** to help you securely store an
 After creating a secret, view its details directly from the DuploCloud Portal.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Secrets.**
-2. Click on the secret name in the **NAME** column to open the details page.&#x20;
+2. Click on the secret name in the **NAME** column to open the details page.
 3. Select the **Details** or **YAML** tab to review the secret's metadata, value, labels, and configuration.
 
 <figure><img src="../../../.gitbook/assets/Screenshot (521).png" alt=""><figcaption><p><strong>Details</strong> tab for the <code>app-secret</code> secret</p></figcaption></figure>
@@ -39,7 +39,7 @@ Secret values may be masked depending on your access level.
 View, update, or delete existing secrets using the actions menu in the DuploCloud Portal.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Secrets**.
-2.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (12).avif" alt="" data-size="line">) in the row of the secret you want to manage.<br>
+2.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the secret you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (520).png" alt=""><figcaption><p><strong>Secrets</strong> page with menu options highlighted</p></figcaption></figure>
 3. Choose from the available actions:

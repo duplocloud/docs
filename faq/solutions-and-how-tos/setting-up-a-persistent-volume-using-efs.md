@@ -44,14 +44,14 @@ Configure an Amazon EFS volume in DuploCloud and connect it to Kubernetes worklo
 
 ### Step 4: Update Service Configuration
 
-Update your Service configuration to include the new PVC.&#x20;
+Update your Service configuration to include the new PVC.
 
 1. Navigate to **Kubernetes** -> **Services.**
-2. For the Service that needs the volume, click on the menu icon (<img src="../../.gitbook/assets/menu icon (32).avif" alt="" data-size="line">) and select **Edit**.
-3. Click **Next**.&#x20;
+2. For the Service that needs the volume, click on the menu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) and select **Edit**.
+3. Click **Next**.
 4.  Update the **Volumes** field as shown in the example YAML snippet below.<br>
 
-    <figure><img src="../../.gitbook/assets/Screenshot (962) (1).png" alt=""><figcaption><p><strong>Edit Service</strong> pane with PVC configurations in the <strong>Volumes</strong> field</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/Screenshot (962).png" alt=""><figcaption><p><strong>Edit Service</strong> pane with PVC configurations in the <strong>Volumes</strong> field</p></figcaption></figure>
 
 ```yaml
 volumes:

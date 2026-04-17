@@ -50,10 +50,10 @@ Following roles are needed:
 * Select **Source Type** as `Dataset Copy`
 * Schedule options: Choose **Start now**. Set the frequency option to every 12 hours.
 
-<figure><img src="../../../../.gitbook/assets/image (397).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (396).png" alt="" width="563"><figcaption></figcaption></figure>
 
 * Under the **Destination Settings**
-  * Put destination project dataset as **Dataset**&#x20;
+  * Put destination project dataset as **Dataset**
   * Put source project dataset as **Source Dataset**
   * Put source project ID as **Source Project**
   * Enable checkbox **Overwrite destination table**

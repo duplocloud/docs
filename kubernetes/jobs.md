@@ -40,7 +40,7 @@ You can also use a Kubernetes Job to run multiple Pods in [parallel](https://kub
 
 <table data-header-hidden><thead><tr><th width="229.77777099609375"></th><th></th></tr></thead><tbody><tr><td><strong>Other Spec Configuration</strong></td><td>Enter any additional container or pod specifications needed.</td></tr><tr><td><strong>Metadata Annotations</strong></td><td>Enter annotations in <code>key=value</code> format to add custom metadata to the Job or pods.</td></tr><tr><td><strong>Metadata Labels</strong></td><td>Enter labels in <code>key=value</code> format. To specify an App Name, use: <code>app.duplocloud.net/app-name: "&#x3C;your-app-name>"</code></td></tr></tbody></table>
 
-7. Click **Create**. The job is created and displayed on the **Job** page with a status of **Active**.&#x20;
+7. Click **Create**. The job is created and displayed on the **Job** page with a status of **Active**.
 
 <figure><img src="../.gitbook/assets/complete pi.png" alt=""><figcaption><p><strong>K8s Job</strong> tab showin<strong>g</strong> the Active <strong>CALCULATEPI</strong> Job.</p></figcaption></figure>
 
@@ -50,7 +50,7 @@ You can also use a Kubernetes Job to run multiple Pods in [parallel](https://kub
 
 ### Using Allocation Tags with Kubernetes Jobs
 
-Allocation tags for Kubernetes Jobs (labels, node selectors, or node affinity) help manage resources in a Kubernetes environment. They can be useful for:&#x20;
+Allocation tags for Kubernetes Jobs (labels, node selectors, or node affinity) help manage resources in a Kubernetes environment. They can be useful for:
 
 * **Resource Organization**
 * **Scheduling and Affinity Rules**
@@ -58,7 +58,7 @@ Allocation tags for Kubernetes Jobs (labels, node selectors, or node affinity) h
 * **Monitoring and Logging**
 * **Cost Allocation and Billing**
 
-You can add allocation tags in the Allocation Tag field when creating Kubernetes Jobs.&#x20;
+You can add allocation tags in the Allocation Tag field when creating Kubernetes Jobs.
 
 In the YAML below, the following act as allocation tags:
 
@@ -79,40 +79,40 @@ To learn more about allocation tags for Kubernetes Jobs, see the Kubernetes docu
 
 ## Managing Kubernetes Jobs faults
 
-You can manage/override Kubernetes Jobs faults on a Tenant or Job level. If a Job fails, and no Tenant- or Job-level fault setting is configured, DuploCloud will generate a fault by default.&#x20;
+You can manage/override Kubernetes Jobs faults on a Tenant or Job level. If a Job fails, and no Tenant- or Job-level fault setting is configured, DuploCloud will generate a fault by default.
 
 ### **Tenant-level Kubernetes Jobs faults**
 
 Enable or disable faults for failed Kubernetes Jobs in a specific Tenant.
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Tenant.**
-2. Click the Tenant name in the **NAME** column.&#x20;
-3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
-4. From the **Select Feature** list box, select **Enable K8s job fault logging by default**, and use the toggle switch to enable or disable the setting.&#x20;
-5.  Click **Add**. The Jobs fault setting is added. <br>
+2. Click the Tenant name in the **NAME** column.
+3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.
+4. From the **Select Feature** list box, select **Enable K8s job fault logging by default**, and use the toggle switch to enable or disable the setting.
+5.  Click **Add**. The Jobs fault setting is added.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/tenant faults feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane with <strong>Enable K8s Job fault logging by default</strong> enabled</p></figcaption></figure></div>
 
-You can view the Jobs fault setting on the **Tenants** page (Navigate to **Administrator** -> **Tenant**, select the Tenant name) under the **Settings** tab. If the value is **true**, DuploCloud will generate a fault. If the value is **false**, DuploCloud will not generate a fault.&#x20;
+You can view the Jobs fault setting on the **Tenants** page (Navigate to **Administrator** -> **Tenant**, select the Tenant name) under the **Settings** tab. If the value is **true**, DuploCloud will generate a fault. If the value is **false**, DuploCloud will not generate a fault.
 
 <figure><img src="../.gitbook/assets/tenant setting set.png" alt=""><figcaption><p>The <strong>Tenant</strong> details page, <strong>Setting</strong>s tab, showing the configured Jobs fault setting</p></figcaption></figure>
 
 ### **Jobs-level Kubernetes Jobs faults**
 
-You can configure the faults for a specific Job when creating the Job in DuploCloud. Fault settings added this way override Tenant-level settings. On the **Add Kubernetes Job** page, in the **Metadata Annotations** field, enter:&#x20;
+You can configure the faults for a specific Job when creating the Job in DuploCloud. Fault settings added this way override Tenant-level settings. On the **Add Kubernetes Job** page, in the **Metadata Annotations** field, enter:
 
-`duplocloud.net/fault/when-failed: true.` or&#x20;
+`duplocloud.net/fault/when-failed: true.` or
 
 `duplocloud.net/fault/when-failed: false.`
 
-When the value is true and the Job fails, DuploCloud will generate a fault. When the value is false and the Job fails, a fault will not be generated.&#x20;
+When the value is true and the Job fails, DuploCloud will generate a fault. When the value is false and the Job fails, a fault will not be generated.
 
-## Viewing a Kubernetes Job&#x20;
+## Viewing a Kubernetes Job
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Job**.
-2. Select the Kubernetes Job you want to view and click the **Overview**, **Containers**, and **Details** tabs for more information about the Job status and history.&#x20;
+2. Select the Kubernetes Job you want to view and click the **Overview**, **Containers**, and **Details** tabs for more information about the Job status and history.
 
-You can also view a Kubernetes Job's details by clicking the menu icon ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) icon to the left of the Job name and selecting **View**.
+You can also view a Kubernetes Job's details by clicking the menu icon ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and selecting **View**.
 
 <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-13_04_25.png" alt=""><figcaption><p><strong>Overview and Details</strong> tabs for a KubernetesJob<strong>.</strong></p></figcaption></figure>
 
@@ -120,7 +120,7 @@ You can also view a Kubernetes Job's details by clicking the menu icon ( <img sr
 
 ### Using the Containers page to view linked Kubernetes Jobs
 
-You can view K8s Jobs linked to Containers by clicking the Container **Name** on the **Containers** page (**Kubernetes** -> **Containers**).&#x20;
+You can view K8s Jobs linked to Containers by clicking the Container **Name** on the **Containers** page (**Kubernetes** -> **Containers**).
 
 <figure><img src="../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-13_26_18.png" alt=""><figcaption><p>Clicking the Container <strong>Name</strong> on the <strong>Containers</strong> page to view a linked K8s job</p></figcaption></figure>
 
@@ -131,8 +131,8 @@ You can filter container names by using the search field at the top of the page,
 ## Editing a Kubernetes Job
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Job**.
-2. Select the K8s Job you want to edit.&#x20;
-3. Click the options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) icon to the left of the K8s Job you want to edit and select **Edit**.
+2. Select the K8s Job you want to edit.
+3. Click the options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the K8s Job you want to edit and select **Edit**.
 
 You can edit and modify the following fields in the DuploCloud portal:
 
@@ -146,13 +146,13 @@ You can edit and modify the following fields in the DuploCloud portal:
 ## Deleting a Kubernetes Job
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Job**.
-2. Select the K8s Job you want to delete.&#x20;
-3. Click the Job options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots (1) (1).png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
+2. Select the K8s Job you want to delete.
+3. Click the Job options menu ( <img src="../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon to the left of the Job name and select **Delete**.
 
 <figure><img src="../.gitbook/assets/delete.png" alt=""><figcaption><p>Job options menu with <strong>Delete</strong> option highlighted</p></figcaption></figure>
 
 ## Running Jobs on Shared Hosts
 
-DuploCloud supports running Kubernetes Jobs on Shared Hosts in both AWS and Azure.&#x20;
+DuploCloud supports running Kubernetes Jobs on Shared Hosts in both AWS and Azure.
 
 For detailed steps, see the [Shared Hosts documentation for AWS](../automation-platform/overview/use-cases/hosts-vms/adding-shared-hosts.md) and [Shared Hosts documentation for Azure](../automation-platform/overview-2/use-cases/hosts-vms/shared-hosts.md).

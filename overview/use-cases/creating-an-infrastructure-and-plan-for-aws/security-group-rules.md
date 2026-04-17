@@ -6,20 +6,18 @@ description: >-
 
 # Infrastructure Security Group Rules
 
-Infrastructure Security Group rules let you manage traffic controls at the Infrastructure level.&#x20;
+Infrastructure Security Group rules let you manage traffic controls at the Infrastructure level.
 
-For security rules that apply to a specific Tenant, see the [Security Groups](../../../security-and-compliance/access-control/security-groups.md) page.&#x20;
+For security rules that apply to a specific Tenant, see the [Security Groups](../../../security-and-compliance/access-control/security-groups.md) page.
 
 ## Adding Security Group Rules
 
-1. &#x20;In the DuploCloud Portal, navigate to **Administrator -> Infrastructure**.
+1. In the DuploCloud Portal, navigate to **Administrator -> Infrastructure**.
 2. Select the Infrastructure for which you want to add or view Security Group rules from the **NAME** column.
 3. Select the **Security Group Rules** tab.
 4.  Click **Add**. The **Add Infrastructure Security** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/xtenant1.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane defining port range for Cross-tenant access</p></figcaption></figure></div>
-
-
 5. From the **Source Type** list box, select **Tenant** or **IP Address**.
 6. From the **Tenant** list box, select the Tenant for which you want to set up the Security Rule.
 7. Select the protocol from the **Protocol** list box.
@@ -40,4 +38,4 @@ For security rules that apply to a specific Tenant, see the [Security Groups](..
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select the Infrastructure from the **Name** column.
 3. Click the **Security Group Rules** tab. Security Rules are displayed in rows.
-4. In the first column of the Security Group row, click the Options Menu Icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (16).png" alt="" data-size="line"> ) and select **Delete**.
+4. In the first column of the Security Group row, click the Options Menu Icon ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) and select **Delete**.

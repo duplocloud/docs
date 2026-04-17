@@ -16,16 +16,16 @@ DuploCloud supports shared Hosts for:
 
 ## Configuring Tenants to allow Host sharing
 
-To enable Host sharing, configure one Tenant to share its Hosts, and another Tenant to run K8s Pods on any Host.&#x20;
+To enable Host sharing, configure one Tenant to share its Hosts, and another Tenant to run K8s Pods on any Host.
 
 ### Enabling a Tenant to share its Hosts
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenant**.
-2. From the **Tenant** list box, select the Tenant that will share its Host.&#x20;
+2. From the **Tenant** list box, select the Tenant that will share its Host.
 3. Click the **Settings** tab.
 4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/Tenantfeature.jpg" alt="" width="455"><figcaption><p>The <strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/Addfeature1.jpg" alt="" width="455"><figcaption><p>The <strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** item list, select **Allow hosts to run K8S pods from other tenants**.
 6. Select **Enable.**
 7. Click **Add**. This Tenant's Hosts can now run Pods from other Tenants.
@@ -44,7 +44,7 @@ To enable Host sharing, configure one Tenant to share its Hosts, and another Ten
 
 ## Creating Services, Jobs, and CronJobs on Shared Hosts
 
-After configuring Tenant settings to allow Host sharing, create the resources you want to run on the shared Hosts.&#x20;
+After configuring Tenant settings to allow Host sharing, create the resources you want to run on the shared Hosts.
 
 ### **Creating a Service to run on a shared Host**
 
@@ -54,16 +54,16 @@ After configuring Tenant settings to allow Host sharing, create the resources yo
 
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.18-13_00_08.png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Basic Options.</p></figcaption></figure>
 4. Fill in the **Service Name**, **Cloud**, **Platform**, and **Docker Image** fields. Click **Next**.
-5.  Enable **Run on Any Host**. <br>
+5.  Enable **Run on Any Host**.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure></div>
-6. Click **Create**. A Service running on the shared Host is created.&#x20;
+6. Click **Create**. A Service running on the shared Host is created.
 
 ### **Creating a Job or CronJob to run on a Shared Host**
 
 DuploCloud supports running Jobs and CronJobs on shared Hosts for AWS.
 
-1. Follow the steps in the DuploCloud documentation to create a [Kubernetes Job](../../../../kubernetes/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [Kubernetes CronJob](../../../../kubernetes/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).&#x20;
+1. Follow the steps in the DuploCloud documentation to create a [Kubernetes Job](../../../../kubernetes/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [Kubernetes CronJob](../../../../kubernetes/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).
 2. On the **Add Kubernetes Job** or **Add Kubernetes CronJob** page, enable **Run on Any Host**.
 3. Click **Create** to deploy the Job or CronJob on the shared Host.
 

@@ -23,13 +23,13 @@ Amazon EventBridge lets you easily ingest, filter, transform, and route events t
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Click the **EventBridge** tab.
-3. Select the menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (3).png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.
+3. Select the menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) icon in the **Actions** column for the rule you want to update, and click **Update**. The **Update EventBridge Rule page** displays.
 4. Edit the EventBridge rule configurations as needed.
 5. Click **Submit** to update the rule.
 
 ## Adding EventBridge targets
 
-A  [target ](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) is a resource where EventBridge sends an [event](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-events.html) that matches the pattern defined for a [rule](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rules.html). Each rule can send events to up to five targets. In DuploCloud, you can choose **ECS Task** or **Lambda** as the target type, and DuploCloud automatically handles the permissions needed to let EventBridge send the event.
+A [target ](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html)is a resource where EventBridge sends an [event](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-events.html) that matches the pattern defined for a [rule](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rules.html). Each rule can send events to up to five targets. In DuploCloud, you can choose **ECS Task** or **Lambda** as the target type, and DuploCloud automatically handles the permissions needed to let EventBridge send the event.
 
 Complete the following steps to add an EventBridge target in DuploCloud.
 

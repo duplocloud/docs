@@ -10,14 +10,14 @@ _Estimated time to complete Step 9 and finish tutorial: 10 minutes._
 
 ## Prerequisites
 
-Before testing your application, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
+Before testing your application, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has EKS[ **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
+* The **NONPROD** infrastructure has EKS[ **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A Host named [**host01** has been created](step-3-create-host.md).
 * A Service named [**demo-service** has been created](step-5-create-app-via-k8s.md).
-* An [HTTPS Application Load Balancer](step-6-create-a-load-balancer.md) has been created.&#x20;
+* An [HTTPS Application Load Balancer](step-6-create-a-load-balancer.md) has been created.
 
 ## Testing the Application
 
@@ -28,10 +28,10 @@ Note that if you skipped [Step 7](step-7-secure-the-load-balancer.md) and/or [St
 1. In the **Tenant** list box, select the **dev01** Tenant.
 2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. The **Services** page displays.
 3. From the **Name** column, select **demo-service**.
-4. Click the **Load Balancers** tab.&#x20;
-5.  In the **DNS** status card, click the Copy Icon ( <img src="../../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.<br>
+4. Click the **Load Balancers** tab.
+5.  In the **DNS** status card, click the Copy Icon ( <img src="../../../../.gitbook/assets/copy_icon.png" alt="" data-size="line"> ) to copy the DNS address displayed to your clipboard.<br>
 
-    <figure><img src="../../../../.gitbook/assets/configured new (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/configured new.png" alt=""><figcaption></figcaption></figure>
 6. Open a browser instance and **Paste** the DNS in the URL field of your browser.
 7. Press **ENTER**. A web page with the text **Hello World!** is displayed, from the JavaScript program residing in your Docker Container running in **demo-service**, which is exposed to the web by your Load Balancer.
 
@@ -45,17 +45,17 @@ Congratulations! You have just launched your first web service on DuploCloud!
 
 ## Reviewing What You Learned
 
-In this tutorial, your objective was to create a cloud environment to deploy an application for testing purposes, and to understand how the various components of DuploCloud work together.&#x20;
+In this tutorial, your objective was to create a cloud environment to deploy an application for testing purposes, and to understand how the various components of DuploCloud work together.
 
-The application rendered a simple web page with text, coded in JavaScript, from software application code residing in a Docker container. You can use this same procedure to deploy much more complex cloud applications.&#x20;
+The application rendered a simple web page with text, coded in JavaScript, from software application code residing in a Docker container. You can use this same procedure to deploy much more complex cloud applications.
 
 In the previous steps, you:
 
-* [Created a DuploCloud Infrastructure](../../../../overview/quick-start/step-1-infrastructure.md) named **NONPROD**: a Virtual Private Cloud instance backed by an EKS-enabled Kubernetes cluster.&#x20;
+* [Created a DuploCloud Infrastructure](../../../../overview/quick-start/step-1-infrastructure.md) named **NONPROD**: a Virtual Private Cloud instance backed by an EKS-enabled Kubernetes cluster.
 * [Created a Tenant](../step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](../../../../overview/quick-start/step-1-infrastructure.md)) to configure multiple AWS and Kubernetes components needed for your environment.
 * [Created an EC2 host](step-3-create-host.md) named **host01**, providing the application with storage resources.
 * [Created a Service](step-5-create-app-via-k8s.md) named **demo-service** to connect the Docker containers and associated images housing your application code to the DuploCloud Tenant environment.
-* [Created an ALB Load Balancer Listener](step-6-create-a-load-balancer.md) to expose your application via ports and backend network configurations.&#x20;
+* [Created an ALB Load Balancer Listener](step-6-create-a-load-balancer.md) to expose your application via ports and backend network configurations.
 * [Verified that your web page rendered](step-9-test-the-application.md#testing-the-application) as expected by testing the DNS Name exposed by the Load Balancer Listener.
 
 ## Cleaning Up Your Tutorial Environment
@@ -63,7 +63,7 @@ In the previous steps, you:
 In this tutorial, you created many artifacts for testing purposes. Now that you are finished, clean them up so others can run this tutorial using the same names for Infrastructure and Tenant.
 
 1. To delete the **dev01** tenant [follow these instructions](/broken/pages/5Hv1kjjuWKLmR6VU2dKG), then return to this page. As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant you created cleans up most of your artifacts.
-2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../../.gitbook/assets/image (156).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.&#x20;
+2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../../.gitbook/assets/image (96).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.
 
 The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
 

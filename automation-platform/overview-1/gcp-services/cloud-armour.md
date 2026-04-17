@@ -4,7 +4,7 @@ description: Implement GCP Cloud Armour in DuploCloud
 
 # Cloud Armour
 
-GCP Cloud Armour helps protect your applications and websites against denial of service, web breaches, and cyber-attacks.&#x20;
+GCP Cloud Armour helps protect your applications and websites against denial of service, web breaches, and cyber-attacks.
 
 Use DuploCloud to activate your GCP Cloud Armour software and monitor your cloud infrastructures and deployed services and applications.
 
@@ -38,7 +38,7 @@ Now that the Cloud Armour Security Policy has been defined in your DuploCloud Pl
 6. Select the **Enable HTTP to HTTPS Redirect** option.
 7. Select **Enable Access Logs** to view rule evaluations.
 8. In the **Idle Timeout** field, enter the number of minutes for timeout, in seconds.
-9. Click **Save**.&#x20;
+9. Click **Save**.
 
 The Security Policy displays in the Load Balancer's Other Settings card.
 
@@ -53,13 +53,9 @@ To change your Cloud Armour configuration to use a different security policy, ed
 3.  Click the **Security Policy** tab.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/GCPS1.png" alt=""><figcaption><p>Plan <strong>Security Policy</strong> tab</p></figcaption></figure></div>
-
-
-4.  In the row listing your security policy, click the Edit Icon ( <img src="../../../.gitbook/assets/square_edit_icon (5).png" alt="" data-size="line"> ) to change the Security Policy ID. The **Update Security Policy** pane displays.<br>
+4.  In the row listing your security policy, click the Edit Icon ( <img src="../../../.gitbook/assets/square_edit_icon.png" alt="" data-size="line"> ) to change the Security Policy ID. The **Update Security Policy** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/GCPS2.png" alt=""><figcaption><p><strong>Update Security Policy</strong> pane</p></figcaption></figure></div>
-
-
 5. Modify the Security Policy **Name** and the **Security Policy ID** as appropriate.
 6. Click **Update**. The changes are saved and displayed in the **Security Policy** tab.
 
@@ -72,4 +68,3 @@ To view Cloud Armor Security Policy logs:
 1. Locate the Security Policy in the GCP Console.
 2. Click the **Logs** tab.
 3. Click the **View policy logs** link on the Logs tab to view logs of the policy's rule evaluations.
-

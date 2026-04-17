@@ -12,7 +12,7 @@ DuploCloud offers hands-on 24/7 support for all customers via Slack or email. Au
 
 * Use the customer Slack or Microsoft Teams channel created during onboarding.
 * Email us at support@duplocloud.net.
-* Click the chat icon (<img src="../.gitbook/assets/Screenshot (314) (1).png" alt="" data-size="line">) in the DuploCloud Portal to post your question. If we are unable to respond immediately, we will automatically create a ticket for you and someone from the DuploCloud engineering team will reach out to you ASAP
+* Click the chat icon (<img src="../.gitbook/assets/Screenshot (314).png" alt="" data-size="line">) in the DuploCloud Portal to post your question. If we are unable to respond immediately, we will automatically create a ticket for you and someone from the DuploCloud engineering team will reach out to you ASAP
 
 ## DuploCloud Support Features
 
@@ -25,7 +25,7 @@ Some of the support features we offer include:
 * Proactive, tailored EKS Cluster Upgrades designed for minimum downtime impact.
 * Accelerated onboarding of existing Services.
 * Troubleshooting and debugging for:
-  * Apps and Services crashing.&#x20;
+  * Apps and Services crashing.
   * Slow of crashing OpenSearch or Database Instances.
   * Proof-of-Concepts (PoCs) for third-party integrations, including roll-out to the development environment.
   * Downtime during rolling Upgrades.
@@ -45,7 +45,7 @@ We cover most of your DevOps needs, but there are some limitations. Examples of 
 
 ## How to Get Help From Within the DuploCloud Portal
 
-&#x20;From any page in the DuploCloud Portal, click the **Help** menu icon (<img src="../.gitbook/assets/help menu icon (1).png" alt="" data-size="line">) in the upper right (next to your name and person icon) to access a variety of tools and links for your self-service DevOps needs.
+From any page in the DuploCloud Portal, click the **Help** menu icon (<img src="../.gitbook/assets/help menu icon.png" alt="" data-size="line">) in the upper right (next to your name and person icon) to access a variety of tools and links for your self-service DevOps needs.
 
 <div align="left"><figure><img src="../.gitbook/assets/Screenshot (304).png" alt=""><figcaption><p>The <strong>Help</strong> menu in the DuploCloud Portal</p></figcaption></figure></div>
 

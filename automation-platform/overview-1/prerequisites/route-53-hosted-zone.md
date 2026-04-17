@@ -6,7 +6,7 @@ description: Creating a Route 53 hosted zone to program DNS entries
 
 The DuploCloud Platform requires a unique GCP Cloud DNS zone to create DNS entries for the services you deploy. The domain must be registered with a domain provider and set in DuploCloud before configuration. We recommend creating a subdomain such as `apps.[MY-COMPANY].com` or `internal.[my-company].com`.
 
-For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../duplocloud-prerequisites/resolving-dns-failures.md).&#x20;
+For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../duplocloud-prerequisites/resolving-dns-failures.md).
 
 {% hint style="danger" %}
 Never use this subdomain for any other purpose, as DuploCloud owns all CNAME entries in this domain and will remove any entries it does not manage.
@@ -17,8 +17,8 @@ Never use this subdomain for any other purpose, as DuploCloud owns all CNAME ent
 Create a DNS Zone in the GCP Console:
 
 1. Log in to the [GCP console](http://console.cloud.google.com/).
-2. Select **Network Services** -> **Cloud DNS**. &#x20;
-3. Click **Create Zone**, as shown below, and note the Zone Name you create. You will need it to add to DuploCloud in a later step. &#x20;
+2. Select **Network Services** -> **Cloud DNS**.
+3. Click **Create Zone**, as shown below, and note the Zone Name you create. You will need it to add to DuploCloud in a later step.
 4. Access the zone and note the Nameserver names.
 
 ## Configuring NS Records
@@ -34,18 +34,18 @@ Create a DNS Zone in the GCP Console:
 
 Provision the zone in every DuploCloud Plan, starting with the Plan created in the previous step.
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**.&#x20;
-2. Select the Plan name from the **NAME** column.&#x20;
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**.
+2. Select the Plan name from the **NAME** column.
 3. Select the **DNS** tab, and click **Edit**. The **Set Plan DNS** pane displays.
 4. In the **Cloud DNS Zon**e field, enter the zone name.
 5. In the **External DNS Suffix** and **Internal DNS Suffix** fields, enter the domain name, preceded with a dot (**.**)
-6. Click **Submit**.&#x20;
+6. Click **Submit**.
 
 {% hint style="warning" %}
 Do not forget the dot (**.**) at the beginning of the DNS suffix, in the form as shown below.
 {% endhint %}
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (314).png" alt=""><figcaption><p>The <strong>Set Plan DNS</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (313).png" alt=""><figcaption><p>The <strong>Set Plan DNS</strong> pane</p></figcaption></figure></div>
 
 {% hint style="info" %}
 Note that this domain must be set in each new Plan you create in your DuploCloud Infrastructure.

@@ -12,8 +12,8 @@ If you haven't already done so, contact the DuploCloud support staff via email o
 
 ## Prerequisites
 
-* **Contact DuploCloud support**: Contact DuploCloud staff via email or your private Slack channel to request the following for SSL certificate setup and configuration:&#x20;
-  * Security Certificate (`.crt`) file&#x20;
+* **Contact DuploCloud support**: Contact DuploCloud staff via email or your private Slack channel to request the following for SSL certificate setup and configuration:
+  * Security Certificate (`.crt`) file
   * Certificate Private Key
   * Certificate Bundle (`.crt`) containing the Intermediate and Root Certificates. You can download the Certificate Bundle from [https://support.globalsign.com/ca-certificates/intermediate-certificates/alphassl-intermediate-certificates](https://support.globalsign.com/ca-certificates/intermediate-certificates/alphassl-intermediate-certificates).
 
@@ -38,14 +38,14 @@ When running this command, you will be prompted to create a password. Save it se
 
 After you generate the PFX file, import it to Azure Key Vault:
 
-1. Sign in to the Azure Portal and access Azure Key Vault.&#x20;
+1. Sign in to the Azure Portal and access Azure Key Vault.
 2.  Select the respective Azure Key Vault for your environment (for example, production versus test) to import the PFX file as shown below.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import1.png" alt=""><figcaption><p>Azure Key Vaults in the Azure Portal</p></figcaption></figure></div>
 3.  In Azure Key Vault, navigate to **Objects** -> **Certificates**.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import2.png" alt=""><figcaption><p><strong>Generate/Import</strong> option in Azure Key Vault</p></figcaption></figure></div>
-4. Click **Generate/Import**. The **Create a Certificate** form displays.&#x20;
+4. Click **Generate/Import**. The **Create a Certificate** form displays.
 5. In the **Method of Certificate Creation** field, select **Import**.
 6. Name the Certificate in the **Certificate Name** field.
 7. Upload the PFX file using the **Upload Certificate File** field.
@@ -57,7 +57,7 @@ After you generate the PFX file, import it to Azure Key Vault:
     <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import4.png" alt=""><figcaption><p><strong>There are no certificates available</strong> message in Azure Key Vault</p></figcaption></figure></div>
 10. On the **Certificates** page, select the certificate and open its **current version**.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import5 (1).png" alt=""><figcaption><p>CURRENT VERSION of certificate </p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/SSL_Import5 (1).png" alt=""><figcaption><p>CURRENT VERSION of certificate</p></figcaption></figure></div>
 11. Copy the **Secret Identifier** using the Copy Icon (![](<../../../.gitbook/assets/copy_icon (1).png>)). You will paste it when you [configure the certificate in DuploCloud](import-ssl-certificates.md#configuring-the-certificate-in-duplocloud) in the next step.
 
 <figure><img src="../../../.gitbook/assets/SSL_Import7.png" alt=""><figcaption><p><strong>Certificate Version</strong> form with <strong>Secret Identifier</strong> field and copy icon highlighted</p></figcaption></figure>
@@ -76,7 +76,7 @@ With the Secret Identifier copied to your clipboard, you are ready to configure 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (339).png" alt=""><figcaption><p><strong>Add a Certificate</strong> pane</p></figcaption></figure></div>
 5. Enter a **Name** for the certificate.
 6. Paste the Secret Identifier you copied from the Azure Portal into the **Certificate ARN** field.
-7. Click **Create**.&#x20;
+7. Click **Create**.
 
 ## 4. Using the SSL Certificate for Ingress in DuploCloud (Optional)
 
@@ -85,7 +85,7 @@ Before attaching SSL certificates to a Kubernetes Ingress resource in DuploCloud
 Once the Application Gateway is set up, you can attach the certificate to an Ingress resource:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Ingress**.
-2. Locate the Ingress associated with the Azure Application Gateway. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (9).avif" alt="" data-size="line">) on that row and select **Edit**. The **Edit Kubernetes Ingress** pane displays.&#x20;
+2. Locate the Ingress associated with the Azure Application Gateway. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) on that row and select **Edit**. The **Edit Kubernetes Ingress** pane displays.
 3. Select the certificate from the **Certificate ARN** dropdown.
 
 <figure><img src="../../../.gitbook/assets/newpicnewer.png" alt=""><figcaption></figcaption></figure>

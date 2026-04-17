@@ -10,7 +10,7 @@ In GCP, Cloud Storage Buckets are containers that hold your data. Everything in 
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Storage**. The **Buckets** page displays.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_39_31 (1).png" alt=""><figcaption><p><strong>Buckets</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_39_31.png" alt=""><figcaption><p><strong>Buckets</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
 
 2. In the **Buckets** tab, click **Add**. The **Create a Bucket** pane displays.
 
@@ -20,7 +20,7 @@ In GCP, Cloud Storage Buckets are containers that hold your data. Everything in 
 
 * **Name**: Provide a unique name for the bucket.
 * **Enable Versioning**: Optionally, enable this option to keep previous versions of uploaded files.
-* **Allow Public Access**: Optionally, enable to allow public access.&#x20;
+* **Allow Public Access**: Optionally, enable to allow public access.
 * **Labels**: Optionally, add labels to organize and categorize your bucket. For example:
   * Key: `env`, Value: `production`
 * **Location Type**: Choose the location type for the bucket:

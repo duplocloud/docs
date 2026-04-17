@@ -31,7 +31,7 @@ To create a Container App Environment in the DuploCloud Portal:
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (620).png" alt=""><figcaption><p><strong>Create Container App Environment</strong> pane</p></figcaption></figure></div>
 4. Fill out the fields as follows:
 
-<table data-header-hidden><thead><tr><th width="333.111083984375">Field</th><th>Description / Sample Value</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the environment.</td></tr><tr><td><strong>Workload Profile Name</strong></td><td>Select the compute profile name (e.g., <strong>default</strong>).</td></tr><tr><td><strong>Instance Min Count</strong></td><td>Specify the minimum number of instances (e.g., <strong>1</strong>).</td></tr><tr><td><strong>Instance Max Count</strong></td><td>Specify the  maximum number of instances (e.g., <strong>3</strong>).</td></tr><tr><td><p><strong>Add New Workload Profile</strong></p><p><em>(Optional)</em> </p></td><td>Click to add multiple profiles if needed.</td></tr><tr><td><strong>Log Configuration Destination</strong></td><td>Select the log destination (e.g., <strong>Log Analytics</strong>). Provide any additional required details, such as the Log Analytics Workspace name or equivalent configuration for other logging services.</td></tr><tr><td><strong>Subnet</strong></td><td>Select the Azure subnet for deployment (e.g., <code>subnet-containerapps-qa</code>).</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="333.111083984375">Field</th><th>Description / Sample Value</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the environment.</td></tr><tr><td><strong>Workload Profile Name</strong></td><td>Select the compute profile name (e.g., <strong>default</strong>).</td></tr><tr><td><strong>Instance Min Count</strong></td><td>Specify the minimum number of instances (e.g., <strong>1</strong>).</td></tr><tr><td><strong>Instance Max Count</strong></td><td>Specify the maximum number of instances (e.g., <strong>3</strong>).</td></tr><tr><td><p><strong>Add New Workload Profile</strong></p><p><em>(Optional)</em></p></td><td>Click to add multiple profiles if needed.</td></tr><tr><td><strong>Log Configuration Destination</strong></td><td>Select the log destination (e.g., <strong>Log Analytics</strong>). Provide any additional required details, such as the Log Analytics Workspace name or equivalent configuration for other logging services.</td></tr><tr><td><strong>Subnet</strong></td><td>Select the Azure subnet for deployment (e.g., <code>subnet-containerapps-qa</code>).</td></tr></tbody></table>
 
 4.  Click **Submit**. Once created, the environment will be available under the **Container App Environment** tab.<br>
 
@@ -58,7 +58,7 @@ After creating a Container App Environment, you can manage it in the DuploCloud 
 
 1. Navigate to **Cloud Services** → **Serverless.**
 2. Select the **Container App Environment** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (31).avif" alt="" data-size="line">) in the row of the environment you want to manage.<br>
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the environment you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/CAE menu options.png" alt=""><figcaption><p><strong>Container App Environment</strong> tab with menu options highlighted</p></figcaption></figure>
 4. Select one of the following actions:
@@ -77,7 +77,7 @@ After setting up the environment, you can deploy a container app.
     <figure><img src="../../../.gitbook/assets/Screenshot (622).png" alt=""><figcaption><p><strong>Create Container App</strong> - <strong>Basic Options</strong> pane</p></figcaption></figure>
 4. Complete the fields as follows:
 
-<table data-header-hidden><thead><tr><th width="276.22216796875">Field</th><th>What to Enter / Do</th></tr></thead><tbody><tr><td><strong>Container App Name</strong></td><td>Enter a unique name for your app.</td></tr><tr><td><strong>Container App Environment</strong></td><td>Select the container app environment you created.</td></tr><tr><td><strong>Workload Profile</strong></td><td>Select the workload profile to use (e.g., <code>default</code>).</td></tr><tr><td><strong>Ingress</strong></td><td><p>Select <code>Enabled</code> to expose the app publicly or <code>Disabled</code> otherwise. </p><p></p><p>If enabled, specify:<br>• <strong>Is External</strong>: <code>true</code> or <code>false</code><br>• <strong>Transport</strong>:  <code>http</code> or <code>https</code><br>• <strong>Target Port</strong>: Enter the target port, e.g., <code>80</code><br>• <strong>Allow Insecure</strong>: <code>true</code> or <code>false</code></p></td></tr><tr><td></td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="276.22216796875">Field</th><th>What to Enter / Do</th></tr></thead><tbody><tr><td><strong>Container App Name</strong></td><td>Enter a unique name for your app.</td></tr><tr><td><strong>Container App Environment</strong></td><td>Select the container app environment you created.</td></tr><tr><td><strong>Workload Profile</strong></td><td>Select the workload profile to use (e.g., <code>default</code>).</td></tr><tr><td><strong>Ingress</strong></td><td><p>Select <code>Enabled</code> to expose the app publicly or <code>Disabled</code> otherwise.</p><p>If enabled, specify:<br>• <strong>Is External</strong>: <code>true</code> or <code>false</code><br>• <strong>Transport</strong>: <code>http</code> or <code>https</code><br>• <strong>Target Port</strong>: Enter the target port, e.g., <code>80</code><br>• <strong>Allow Insecure</strong>: <code>true</code> or <code>false</code></p></td></tr><tr><td></td><td></td></tr></tbody></table>
 
 5.  Click **Next**. The **Create Container App** - **Advanced Options** pane displays.<br>
 
@@ -110,7 +110,7 @@ Once you have deployed Container Apps, you can manage them through the DuploClou
 
 1. Navigate to **Cloud Services** → **Serverless.**
 2. Select the **Container App** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/image (499) (1).png" alt="" data-size="line">) in the row of the container app you want to manage.<br>
+3.  Click the menu icon (<img src="../../../.gitbook/assets/image (460).png" alt="" data-size="line">) in the row of the container app you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Newest.png" alt=""><figcaption><p><strong>Container App</strong> tab with menu options highlighted</p></figcaption></figure>
 4. Select one of the following actions:

@@ -38,7 +38,7 @@ The high-level steps are:
 
 From the DuploCloud portal, navigate to **Cloud Services -> Hosts -> EC2.** Click **+Add** and check the **Advanced Options** box. Change the value of instance type to ‘`m4.xlarge`‘ and add an allocation tag ‘`sparkmaster`‘.
 
-<figure><img src="../../../.gitbook/assets/Screenshot (183) (1).png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (183).png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
 
 ### **Create a host for Spark worker**
 

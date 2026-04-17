@@ -8,8 +8,6 @@ Follow the sequence based on the Project (`admin-tenant`, `aws-services` and `ap
 Perform **plan** and **apply** actions in one project prior to switching another project.
 {% endhint %}
 
-
-
 Export following environment variables in the shell while running the terraform projects.
 
 Environment Details can be found [here](install-terraform-exporter.md#need-help-in-setting-environment-variables).
@@ -37,19 +35,19 @@ Execute Script in this sequence:
 
 > scripts/apply.sh \<new tenant name> **admin-tenant**
 
-![scripts/apply,sh execution in progress](<../../../.gitbook/assets/image (168).png>)
+![scripts/apply,sh execution in progress](<../../../.gitbook/assets/image (81).png>)
 
 ### Project: aws-services
 
 This project manages data services like Redis, RDS, Kafka, S3 buckets, Cloudfront, EMR and Elastic Search inside DuploCloud.
 
-![aws-services project apply execution ](<../../../.gitbook/assets/image (215).png>)
+![aws-services project apply execution](<../../../.gitbook/assets/image (215).png>)
 
 ### Project: app
 
 This project manages containerized applications inside DuploCloud like EKS Services, ECS, docker native service.
 
-![app project apply execution ](<../../../.gitbook/assets/image (107).png>)
+![app project apply execution](<../../../.gitbook/assets/image (107).png>)
 
 ### Delete the resources created using Utility
 

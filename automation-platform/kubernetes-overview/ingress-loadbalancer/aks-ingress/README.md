@@ -6,7 +6,7 @@ description: Application Routing with Shared Application Gateway (AKS)
 
 Azure's Shared Application Gateway provides a secure and scalable way to expose Kubernetes services to the internet or internal networks. DuploCloud integrates directly with the Azure Shared Application Gateway, allowing you to manage routing, SSL certificates, and health checks through the DuploCloud Portal.
 
-This integration abstracts the complexity of Kubernetes-native Ingress resources while providing similar capabilities. You can also configure access to container and pod shells via the DuploCloud Portal for both Docker-based and Kubernetes-based deployments.&#x20;
+This integration abstracts the complexity of Kubernetes-native Ingress resources while providing similar capabilities. You can also configure access to container and pod shells via the DuploCloud Portal for both Docker-based and Kubernetes-based deployments.
 
 {% hint style="info" %}
 **Note:** To add an SSL certificate when exposing a service through the Shared Application Gateway, see the . [SSL certificates](https://docs.duplocloud.com/docs/overview-2/prerequisites/import-ssl-certificates) documentation.
@@ -21,10 +21,10 @@ This integration abstracts the complexity of Kubernetes-native Ingress resources
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select the Infrastructure from the **NAME** column.
 3. Select the **Settings** tab, and click **Add**. The **Infra-Set Custom Data** pane displays.
-4. In the **Setting Name** list box, select **Enable App Gateway Ingress Controller**.&#x20;
+4. In the **Setting Name** list box, select **Enable App Gateway Ingress Controller**.
 5. Enable the setting and click **Set**. The value should be **true**. This enables the AKS Ingress controller to integrate with Azure’s Shared Application Gateway.
 
-<figure><img src="../../../../.gitbook/assets/Azure_Ingress_1.png" alt=""><figcaption><p>The <strong>Enable App Gateway Ingress Controller</strong> setting on the <strong>Settings</strong> tab</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (233).png" alt=""><figcaption><p>The <strong>Enable App Gateway Ingress Controller</strong> setting on the <strong>Settings</strong> tab</p></figcaption></figure>
 
 ## Adding a Load Balancer Listener (K8S NodePort)
 
@@ -34,7 +34,7 @@ To expose a service via NodePort using the Application Gateway:
 2. Select your Service from the **NAME** column.
 3. Select the **Load Balancers** tab.
 4. Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.
-5. In the **Select Type** field, select **K8S Node Port**.&#x20;
+5. In the **Select Type** field, select **K8S Node Port**.
 6. In the **Health Check** field, add the Kubernetes Health Check URL for the container (used for availability checks). Using a Kubernetes Health Check allows the Shared Application Gateway to monitor service health and route traffic accordingly.
 7. Fill in the remaining fields as appropriate.
 8. Click **Add** to create the Load Balancer listener.
@@ -67,9 +67,9 @@ To define routing rules for your Ingress:
     <div align="left"><figure><img src="../../../../.gitbook/assets/AKS_Ingress_add_ALB.png" alt=""><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 2. Enter a **Path**.
 3. In the **Path Type** list box, select **Exact**, **Prefix,** or **Implementation Specific**.
-4. In the **Service Name** field, select the Service (**s1-alb:80** in this example).&#x20;
+4. In the **Service Name** field, select the Service (**s1-alb:80** in this example).
 5. Click **Add Rule**.
-6. Repeat to define multiple routing rules or paths&#x20;
+6. Repeat to define multiple routing rules or paths
 
 {% hint style="info" %}
 The DuploCloud Platform supports defining multiple rules/paths in Ingress.
@@ -81,7 +81,7 @@ Port 80 is allowed by default. If using a custom port, add a security rule:
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select your Infrastructure from the **NAME** column.
-3. Select the **Security Group Rules** tab.&#x20;
+3. Select the **Security Group Rules** tab.
 4.  Click **Add**. The **Add Infrastructure Security** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/addazuresc.png" alt=""><figcaption><p><strong>Add Infrastructure Security</strong> pane</p></figcaption></figure></div>
@@ -111,13 +111,7 @@ For example:
 
 * **Command**: `curl http://ig-nev-ingress-ing-t2-1.duplopoc.net/path1/`
 * **Response:** `this is IG-NEV`
-
-
-
 * **Command**: `curl http://ing-doc-ingress-ing-t2-1.duplopoc.net/path2/`
 * **Response**: `this is ING-DOC`
-
-
-
 * **Command**: `curl http://ing-public-ingress-ing-t2.1.duplopoc.net/path3/`
 * **Response**: `this is ING2-PUBLIC`

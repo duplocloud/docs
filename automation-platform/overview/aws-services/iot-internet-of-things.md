@@ -10,7 +10,7 @@ Connect and manage billions of devices with AWS IoT, per Tenant. Collect, store,
 Use [Just-In-Time access](../use-cases/jit-access.md) to provision devices in your IoT.
 {% endhint %}
 
-## Enabling IoT for a Tenant&#x20;
+## Enabling IoT for a Tenant
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Tenants**.
 2. Select your Tenant in the **Name** column.
@@ -19,8 +19,8 @@ Use [Just-In-Time access](../use-cases/jit-access.md) to provision devices in yo
 
     <div align="left"><figure><img src="../../../.gitbook/assets/AWS_IOT_Create.png" alt=""><figcaption><p><strong>Add Tenant Feature</strong> pane with <strong>Enable AWS IoT</strong> feature selected</p></figcaption></figure></div>
 5. From the **Select Feature** list box, select **Enable AWS IoT** and **Enable**.
-6. Click **Add**. It takes approximately five minutes to enable IoT.&#x20;
-7. Navigate to **Cloud Services** -> **IoT**.  The IoT **Things** page displays.
+6. Click **Add**. It takes approximately five minutes to enable IoT.
+7. Navigate to **Cloud Services** -> **IoT**. The IoT **Things** page displays.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_30_26.png" alt=""><figcaption><p>IoT <strong>Things</strong> page</p></figcaption></figure>
 
@@ -30,16 +30,14 @@ Use [Just-In-Time access](../use-cases/jit-access.md) to provision devices in yo
 2. Click the **Things** tab.
 3.  Click **Add**. The **Create an IoT Thing** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/IOT_Create_Thing_Attr.png" alt="" width="563"><figcaption><p><strong>Create an IoT Thing</strong> pane with <strong>AttributesACtions</strong> </p></figcaption></figure></div>
-4. In the editable portion of the **Name** field, enter a Thing name.&#x20;
+    <div align="left"><figure><img src="../../../.gitbook/assets/IOT_Create_Thing_Attr.png" alt="" width="563"><figcaption><p><strong>Create an IoT Thing</strong> pane with <strong>AttributesACtions</strong></p></figcaption></figure></div>
+4. In the editable portion of the **Name** field, enter a Thing name.
 5. From the **IoT Certificate** list box, select an IoT Certificate.
 6. From the **IoT Thing Type** list box, select the Thing type that you want to create.
 7. In the **Attributes** field, add Thing Attributes in quotes, separated by a comma (**,**).
-8. Click **Create**. Your IoT Thing is created and displayed.&#x20;
+8. Click **Create**. Your IoT Thing is created and displayed.
 
 Select the Thing to view **Details** and **IoT Principals** (certificate information) for the Thing. Use the **Action** menu to **Edit** or **Delete** the Thing, **Attach IoT Certificate**, and **Download Device Package**.
-
-
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_32_37.png" alt=""><figcaption><p><strong>Details</strong> and <strong>IoT Principals</strong> tabs on IoT <strong>Things</strong> page</p></figcaption></figure>
 
@@ -57,13 +55,13 @@ Select the Thing to view **Details** and **IoT Principals** (certificate informa
 
 ## Download the Device Package for a Thing
 
-1. In the DuploCloud Portal, navigate to **Cloud Services -> IoT**.&#x20;
-2. Click the **Things** tab.&#x20;
-3. Select the Thing to which you want to attach a certificate from the **Name** column.&#x20;
-4.  Click the **Actions** menu and select **Download Device Package**. The **Download IoT Device Package** window displays. <br>
+1. In the DuploCloud Portal, navigate to **Cloud Services -> IoT**.
+2. Click the **Things** tab.
+3. Select the Thing to which you want to attach a certificate from the **Name** column.
+4.  Click the **Actions** menu and select **Download Device Package**. The **Download IoT Device Package** window displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/IOT_Download.png" alt=""><figcaption></figcaption></figure></div>
-5. From the **IoT Certificate** list box, select the IoT certificate associated with the Thing's Device Package.&#x20;
+5. From the **IoT Certificate** list box, select the IoT certificate associated with the Thing's Device Package.
 6. Click **Download**.
 
 ## Certificate management
@@ -77,13 +75,13 @@ Add, update, or manage an IoT certificate with the following procedures.
 3.  Click **Add**. The **Create an IoT Certificate** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/IOT_create_cert.png" alt=""><figcaption><p><strong>Create an IoT Certificate</strong> pane</p></figcaption></figure></div>
-4. Select **Activate the Certificate** and click **Create**. The certificate displays.&#x20;
+4. Select **Activate the Certificate** and click **Create**. The certificate displays.
 
 ### Updating a certificate
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **IoT**.
 2. Click the **Certificates** tab. The available certificates are displayed and listed by **ID**.
-3.  In the row for the certificate you want to update, click the **Actions** menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) and select **Edit**. The **Update an IoT Certificate** pane displays.<br>
+3.  In the row for the certificate you want to update, click the **Actions** menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) and select **Edit**. The **Update an IoT Certificate** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/IOT_update_cert.png" alt=""><figcaption></figcaption></figure></div>
 4. From the **Status** list box, select the new status of the certificate.
@@ -93,12 +91,10 @@ Add, update, or manage an IoT certificate with the following procedures.
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **IoT**.
 2. Click the **Certificates** tab. Available certificates are displayed and listed by **ID**.
-3. In the row for the certificate you want to update, click the menu (<img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (6).png" alt="" data-size="line">) icon in the **Actions** column.
+3. In the row for the certificate you want to update, click the menu (<img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line">) icon in the **Actions** column.
 4.  Select **Console**. The AWS Console launches so that you can manage your certificate using AWS.<br>
 
     <figure><img src="../../../.gitbook/assets/IOT_AWS_console.png" alt=""><figcaption><p>AWS Console for managing certificates</p></figcaption></figure>
-
-
 
 ## Using IoT Topic Rules
 
@@ -108,7 +104,7 @@ To learn more about IoT Topic Rules and how you define and manage them, see the 
 
 ### Adding IoT Topic Rules
 
-1. In the DuploCloud Portal, navigate to **Cloud Services -> IoT**.&#x20;
+1. In the DuploCloud Portal, navigate to **Cloud Services -> IoT**.
 2. Click the **Topic Rules** tab.
 3.  Click **Add**. The **Add** Topic Rules page displays.<br>
 
@@ -130,6 +126,6 @@ View the details of a rule by selecting the rule from the **Topic Rules** tab Na
 
 ### Editing a Topic Rule
 
-In the **Topic Rules** tab, edit a Topic Rule by clicking the **Actions** menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (5).png" alt="" data-size="line"> ) in the row listing your Topic Rule **Name**, and selecting **Edit**.
+In the **Topic Rules** tab, edit a Topic Rule by clicking the **Actions** menu ( <img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) in the row listing your Topic Rule **Name**, and selecting **Edit**.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-16_46_04.png" alt=""><figcaption><p><strong>Actions</strong> menu with <strong>Edit</strong> option on <strong>Topic Rules</strong> tab</p></figcaption></figure>

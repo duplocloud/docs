@@ -5,28 +5,28 @@ description: Managing Containers and Service with EKS and Native Docker Services
 # EKS Containers and Services
 
 {% hint style="info" %}
-For an end-to-end example of creating an EKS Service, see [this tutorial](../../../quick-start/quick-start-eks-services/).&#x20;
+For an end-to-end example of creating an EKS Service, see [this tutorial](../../../quick-start/quick-start-eks-services/).
 
-For a Native Docker Services example, see [this tutorial](../../../quick-start/quick-start-duplocloud-docker-services/). &#x20;
+For a Native Docker Services example, see [this tutorial](../../../quick-start/quick-start-duplocloud-docker-services/).
 {% endhint %}
 
 ## Creating a DuploCloud EKS Service
 
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2. Click **Add**. **The Add Service** pane displays.
 3. Complete the following fields:
 
-<table data-header-hidden><thead><tr><th width="211.111083984375">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Service Name</strong></td><td>Give the Service a name (without spaces).</td></tr><tr><td><strong>App Name</strong></td><td>Optionally, enter an <strong>App Name</strong> for the Service. You can use this label later to filter Services.</td></tr><tr><td><strong>Cloud</strong></td><td>Select <strong>AWS</strong> from the list box.</td></tr><tr><td><strong>Platform</strong></td><td>Select <strong>EKS Linux</strong> from the list box.</td></tr><tr><td><strong>Docker Image</strong></td><td>Enter the Docker image.</td></tr><tr><td><strong>Allocation Tag</strong></td><td>Optionally, enter any allocation tags.</td></tr><tr><td><strong>Replica Strategy</strong></td><td>Select a replication strategy. Refer to the informational ToolTip (<img src="../../../../../.gitbook/assets/image (482) (1).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Environmental Variables</strong></td><td>Optionally, enter variables.</td></tr><tr><td><strong>Replicas</strong></td><td>Specify the number of replicas (for <strong>Static</strong> replica strategy). The number must be less than or equal to the number of Hosts in the fleet.</td></tr><tr><td><strong>Replica Placement</strong></td><td>For <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies. Select <strong>First Available</strong>, <strong>Place on Different Hosts</strong>, <strong>Spread Across Zones</strong>, or <strong>Different Hosts and Spread Across Zones</strong>. Refer to the informational ToolTip (<img src="../../../../../.gitbook/assets/image (483) (1).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Force StatefulSets</strong></td><td>Select <strong>Yes</strong> or <strong>No</strong> (for <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies).</td></tr><tr><td><strong>Tolerate spot instances</strong></td><td>Optionally, select this option (for <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies).</td></tr><tr><td><strong>Use Fargate</strong></td><td>Select this option to run the Service on AWS Fargate instead of EC2-based worker nodes.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="211.111083984375">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Service Name</strong></td><td>Give the Service a name (without spaces).</td></tr><tr><td><strong>App Name</strong></td><td>Optionally, enter an <strong>App Name</strong> for the Service. You can use this label later to filter Services.</td></tr><tr><td><strong>Cloud</strong></td><td>Select <strong>AWS</strong> from the list box.</td></tr><tr><td><strong>Platform</strong></td><td>Select <strong>EKS Linux</strong> from the list box.</td></tr><tr><td><strong>Docker Image</strong></td><td>Enter the Docker image.</td></tr><tr><td><strong>Allocation Tag</strong></td><td>Optionally, enter any allocation tags.</td></tr><tr><td><strong>Replica Strategy</strong></td><td>Select a replication strategy. Refer to the informational ToolTip (<img src="../../../../../.gitbook/assets/image (482) (1).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Environmental Variables</strong></td><td>Optionally, enter variables.</td></tr><tr><td><strong>Replicas</strong></td><td>Specify the number of replicas (for <strong>Static</strong> replica strategy). The number must be less than or equal to the number of Hosts in the fleet.</td></tr><tr><td><strong>Replica Placement</strong></td><td>For <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies. Select <strong>First Available</strong>, <strong>Place on Different Hosts</strong>, <strong>Spread Across Zones</strong>, or <strong>Different Hosts and Spread Across Zones</strong>. Refer to the informational ToolTip (<img src="../../../../../.gitbook/assets/image (482) (1).png" alt="" data-size="line">) for more information.</td></tr><tr><td><strong>Force StatefulSets</strong></td><td>Select <strong>Yes</strong> or <strong>No</strong> (for <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies).</td></tr><tr><td><strong>Tolerate spot instances</strong></td><td>Optionally, select this option (for <strong>Static</strong> or <strong>Horizontal Pod Autoscaler</strong> strategies).</td></tr><tr><td><strong>Use Fargate</strong></td><td>Select this option to run the Service on AWS Fargate instead of EC2-based worker nodes.</td></tr></tbody></table>
 
 <figure><img src="../../../../../.gitbook/assets/Screenshot (936).png" alt=""><figcaption><p>The <strong>Add Service, Basic Options</strong> page</p></figcaption></figure>
 
 4. Click **Next.** The **Advanced Options** page displays.
-5. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).&#x20;
-6. Click **Create**. The Service is created.&#x20;
+5. Configure advanced options as needed. For example, you can implement [Kubernetes Lifecycle Hooks](../../../../kubernetes-overview/kubernetes-lifecycle-hooks.md) in the **Other Container Config** field (optional).
+6. Click **Create**. The Service is created.
 
 ## Viewing and Managing Services <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
+1. From the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2.  Select **All** to view all Services or **Select App** to view Services by **App Name** (this option is only available when one or more Services were created with an App Name).<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/image (480) (1).png" alt=""><figcaption><p><strong>Kubernetes - Services</strong> page with the <strong>Select App</strong> list box<br></p></figcaption></figure></div>
@@ -39,7 +39,7 @@ For a Native Docker Services example, see [this tutorial](../../../quick-start/q
 
 Using the Services page, you can start, stop, and restart multiple services simultaneously.
 
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2. Use the checkbox column to select the services you want to start or stop.
 3. From the **Service Actions** menu, select **Start Service**, **Stop Service**, or **Restart Service.** Your selected services are started, stopped, or restarted.
 
@@ -49,10 +49,10 @@ Using the Services page, you can start, stop, and restart multiple services simu
 
 Using the **Import Kubernetes Deployment** pane, you can add a Service to an existing Kubernetes namespace using Kubernetes YAML.
 
-1. In the DuploCloud Portal, select **Kubernetes -> Services** from the navigation pane.&#x20;
+1. In the DuploCloud Portal, select **Kubernetes -> Services** from the navigation pane.
 2. Click **Add**. The **Add Service** page displays.
-3. Click the **Import Kubernetes Deployment** button in the upper right. **The Import Kubernetes Deployment** pane displays.&#x20;
-4. Paste the deployment YAML code, as in the example below, into the **Import Kubernetes Deployment** pane.&#x20;
+3. Click the **Import Kubernetes Deployment** button in the upper right. **The Import Kubernetes Deployment** pane displays.
+4. Paste the deployment YAML code, as in the example below, into the **Import Kubernetes Deployment** pane.
 5. Click **Import**.
 6. In the **Add Service** page, click **Next.**
 7. Click **Create**. Your Native Kubernetes Service is created.
@@ -99,8 +99,6 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 5.  From the **Key** list box, select **Block Master VPC CIDR Allow in EKS SG**.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/image (383).png" alt=""><figcaption><p><strong>Add Config</strong> pane with <strong>Block Master VPC CIDR Allow in EKS SG</strong> setting</p></figcaption></figure></div>
-
-
 6. From the **Value** list box, select **True**.
 7.  Click **Submit**. The setting is displayed as **BlockMasterVpcCidrAllowInEksSg** in the **System Config** tab.<br>
 
@@ -108,10 +106,10 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 
 ## Managing Kubernetes Containers
 
-1. You can view and manage Containers from the DuploCloud Portal  by navigating to one of two locations:
+1. You can view and manage Containers from the DuploCloud Portal by navigating to one of two locations:
    * **Tenant-wide view**: Go to **Kubernetes** → **Containers**.
    * **Service-specific view**: Go to **Kubernetes** → **Services**, select the name of the Service, and select the **Containers** tab.
-2. Click the menu icon ( <img src="../../../../../.gitbook/assets/Kabab_three_Vertical_dots (1) (1) (1).png" alt="" data-size="line"> ) for a Container and select from the following options:&#x20;
+2. Click the menu icon ( <img src="../../../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ) for a Container and select from the following options:
 
 <table data-header-hidden><thead><tr><th width="243">Option</th><th>Functionality</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Displays container logs. When you select this option, the Container Logs window displays. Use the <strong>Follow Logs</strong> option (enabled by default) to monitor logging in real-time for a running container. See the graphic below for an example of the Container Logs window.</td></tr><tr><td><strong>State</strong></td><td><p>Displays container state information in a separate window, where you can select between two tabs:</p><ul><li><strong>Container State:</strong> Shows key runtime details such as start time, restart policy, termination grace period, container image, restart count, and current state.</li><li><strong>Details:</strong> Shows the full YAML definition of the container and Pod, including metadata, labels, annotations, volumes, and status conditions.</li></ul></td></tr><tr><td><strong>Container Shell</strong></td><td>Accesses the Container Shell. To access the <strong>Container Shell</strong> option, you must first set up <a href="../../../prerequisites/kubectl-shell.md">Shell access for Docker</a>.</td></tr><tr><td><strong>Host Shell</strong></td><td>Accesses the Host Shell.</td></tr><tr><td><strong>Delete</strong></td><td>Deletes the container.</td></tr></tbody></table>
 
@@ -119,16 +117,14 @@ You can supply advanced configuration options with EKS in the DuploCloud Portal 
 
 ### Downloading the Kubectl Token and KubeConfig <a href="#id-6-toc-title" id="id-6-toc-title"></a>
 
-DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen minutes, to access the `kubectl` cluster.&#x20;
+DuploCloud provides you with a Just-In-Time (JIT) security token, for fifteen minutes, to access the `kubectl` cluster.
 
-1. In the DuploCloud Portal, select **Administrator** -> **Infrastructure** from the navigation pane.&#x20;
+1. In the DuploCloud Portal, select **Administrator** -> **Infrastructure** from the navigation pane.
 2. Select the Infrastructure in the **Name** column.
-3. Click the **EKS** tab.&#x20;
+3. Click the **EKS** tab.
 4.  Copy the temporary **Token** and the **Server Endpoint** (Kubernetes URL) **Values** from the Infrastructure that you created. You can also download the complete configuration by clicking the **Download Kube Config** button.<br>
 
     <figure><img src="../../../../../.gitbook/assets/k8s3.png" alt=""><figcaption><p><strong>EKS</strong> tab with <strong>Download KubeConfig</strong> button</p></figcaption></figure>
-
-
 5. Run the following commands, in a local Bash shell instance:
 
 ```shell

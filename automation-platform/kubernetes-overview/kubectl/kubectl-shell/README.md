@@ -8,7 +8,7 @@ This feature provides an alternative to downloading a `kubeconfig` and installin
 
 ## Enabling `kubectl` shell in the DuploCloud Platform
 
-For EKS, `kubectl` is already enabled in the DuploCloud Platform. Once the EKS infrastructure is ready, you can navigate to **Kubernetes** -> **Services** in the DuploCloud platform and use the **KubeCtl** menu options to view the `kubectl` token, settings, and configuration details.&#x20;
+For EKS, `kubectl` is already enabled in the DuploCloud Platform. Once the EKS infrastructure is ready, you can navigate to **Kubernetes** -> **Services** in the DuploCloud platform and use the **KubeCtl** menu options to view the `kubectl` token, settings, and configuration details.
 
 To set up the `kubectl` shell in DuploCloud for GKE and AKS users, see the links below.
 
@@ -20,21 +20,20 @@ You can also obtain Just-In-Time (JIT) access to Kubernetes by using `duplo-jit`
 
 • Obtaining JIT access using the UI and CLI.
 
-• Installing `duplo-jit` using various tools.&#x20;
+• Installing `duplo-jit` using various tools.
 
-• Getting credentials for AWS access interactively or with an API token.&#x20;
+• Getting credentials for AWS access interactively or with an API token.
 
-• Accessing the AWS Console.&#x20;
+• Accessing the AWS Console.
 {% endhint %}
 
 ## Accessing `kubectl` Shell from the DuploCloud Portal
 
 Use `kubectl` to access the Kubernetes cluster for your Tenant namespace.
 
-1. From the **Tenant** list box, select the correct Tenant.&#x20;
+1. From the **Tenant** list box, select the correct Tenant.
 2. Navigate to **Kubernetes** -> **Services**.
 3. Click on the Service name from the **NAME** column.
 4. From the **KubeCtl** options, select **KubeCtl Shell**. A shell instance will launch, allowing you to interact with the Kubernetes cluster directly using `kubectl` commands.
 
-<figure><img src="../../../../.gitbook/assets/shell image.png" alt=""><figcaption></figcaption></figure>
-
+<figure><img src="../../../../.gitbook/assets/image (387).png" alt=""><figcaption></figcaption></figure>

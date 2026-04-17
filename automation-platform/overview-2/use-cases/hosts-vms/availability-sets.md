@@ -13,11 +13,11 @@ In DuploCloud, Availability Sets can be configured when creating or managing hos
 
 ## Creating an Availability Set in DuploCloud
 
-1. Select the Tenant from the **Tenant** list box.&#x20;
+1. Select the Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** -> **Hosts.**
 3. Select the **Availability Set** tab, and click **Add**. The **Add Azure Availability Set** pane displays.
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/Availability Set (1).png" alt="" width="375"><figcaption><p>The <strong>Add Azure Availability Set</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/Availability Set.png" alt="" width="375"><figcaption><p>The <strong>Add Azure Availability Set</strong> pane</p></figcaption></figure></div>
 
 4. Fill in the following details:
    * **Name**: Enter a descriptive name for the Availability Set.
@@ -34,7 +34,7 @@ When [creating a new host](../../../../overview-2/use-cases/hosts-vms/), you can
 
 ## Deleting an Availability Set
 
-1. Select the Tenant from the **Tenant** list box.&#x20;
+1. Select the Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** -> **Hosts.**
 3. Select the **Availability Set** tab.
-4. Click the menu icon (<img src="../../../../.gitbook/assets/image (460).png" alt="" data-size="line">) on the left side of the row for the Availability Set, and select **Delete**.&#x20;
+4. Click the menu icon (<img src="../../../../.gitbook/assets/image (460).png" alt="" data-size="line">) on the left side of the row for the Availability Set, and select **Delete**.

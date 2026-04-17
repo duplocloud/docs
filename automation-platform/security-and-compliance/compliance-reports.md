@@ -18,7 +18,7 @@ DuploCloud provides direct access to compliance documents, such as SOC2, from wi
     <div align="left"><figure><img src="../../.gitbook/assets/Screenshot (845).png" alt=""><figcaption><p>Cover of a SOC2 Type 2 Report downloaded from DuploCloud</p></figcaption></figure></div>
 
 {% hint style="info" %}
-### Notes
+#### Notes
 
 * Access to compliance reports may be restricted based on user role or permissions.
 * Additional compliance reports appear in the list as they become available.

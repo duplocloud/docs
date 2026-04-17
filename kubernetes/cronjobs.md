@@ -21,8 +21,6 @@ See the Kubernetes [CronJob documentation](https://kubernetes.io/docs/concepts/w
 5.  Complete the fields as follows:
 
     <table data-header-hidden><thead><tr><th width="230.888916015625"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter the CronJob name, e.g., <code>cronjob1</code>. Required.</td></tr><tr><td><strong>Schedule</strong></td><td>Enter the Cron schedule in standard format, e.g., <code>0 2 * * *</code>. Required.</td></tr><tr><td><strong>Cleanup After Finished in Seconds (TTL)</strong></td><td>Enter TTL in seconds, e.g., <code>86400</code>.</td></tr><tr><td><strong>Restart Policy</strong></td><td>Select the restart policy, e.g., <strong>Never</strong>.</td></tr><tr><td><strong>Backoff Limit</strong></td><td>Enter the maximum number of retries before the Job is marked failed.</td></tr><tr><td><strong>Allocation Tag</strong></td><td>Enter allocation tags if needed for resource organization or scheduling.</td></tr></tbody></table>
-
-
 6. Enter the details for **Container 1** as needed (**Container Name**, **Docker Image**, **Command**, **Environment Variables**, **Arguments**, **Other Container Config**).
    * If your CronJob requires **Init Containers**, click the caret next to **Add Container** and select **Add Init Container**. The **Init Container - 1** area displays.
    * To add more containers, click **Add Container** as many times as needed and fill in their details.
@@ -35,7 +33,7 @@ See the Kubernetes [CronJob documentation](https://kubernetes.io/docs/concepts/w
 | **Arguments**              | Enter arguments for the container.                      |
 | **Other Container Config** | Enter any additional container configuration.           |
 
-7. Click **Next**. The **Advanced Options** pane displays.&#x20;
+7. Click **Next**. The **Advanced Options** pane displays.
 
 <figure><img src="../.gitbook/assets/cron7.png" alt=""><figcaption><p><strong>Add Kubernetes CronJob</strong> - <strong>Advanced Options</strong> pane</p></figcaption></figure>
 
@@ -43,7 +41,7 @@ See the Kubernetes [CronJob documentation](https://kubernetes.io/docs/concepts/w
 
 <table data-header-hidden><thead><tr><th width="260"></th><th></th></tr></thead><tbody><tr><td><strong>Other Spec Configuration</strong></td><td>Enter any additional pod or container specifications as needed.</td></tr><tr><td><strong>Metadata Annotations</strong></td><td>Enter annotations in <code>key=value</code> format to add custom metadata to the CronJob or pods.</td></tr><tr><td><strong>Metadata Labels</strong></td><td>Enter labels in <code>key=value</code> format. To specify the App Name, use: <code>app.duplocloud.net/app-name: "&#x3C;your-app-name>"</code></td></tr></tbody></table>
 
-8. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page. It will run according to the schedule you specified.&#x20;
+8. Click **Create**. The Kubernetes CronJob is created and displayed on the **CronJob** page. It will run according to the schedule you specified.
 
 <figure><img src="../.gitbook/assets/Screenshot (916).png" alt=""><figcaption><p><strong>K8s CronJob</strong> tab displaying Kubernetes Job <strong>CALCULATEPI.</strong></p></figcaption></figure>
 
@@ -58,9 +56,9 @@ DuploCloud lets you temporarily suspend a CronJob, pausing the scheduling of new
 To update the suspend setting:
 
 1. Navigate to **Kubernetes** → **CronJobs**.
-2. Click the menu icon (<img src="../.gitbook/assets/menu icon (27).avif" alt="" data-size="line">) for the CronJob you want to suspend.&#x20;
+2. Click the menu icon (<img src="../.gitbook/assets/menu icon.avif" alt="" data-size="line">) for the CronJob you want to suspend.
 3. In the **Other Spec Configuration** field, locate the `suspend` property.
-4.  Set the `suspend` value to `true` to suspend the CronJob or  `false` to resume scheduling.<br>
+4.  Set the `suspend` value to `true` to suspend the CronJob or `false` to resume scheduling.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/Screenshot (915) (1).png" alt=""><figcaption></figcaption></figure></div>
 5. The CronJobs page displays the current state in the **Suspended** column as **Yes** or **No**.
@@ -73,50 +71,50 @@ To update the suspend setting:
 
 ## Managing Kubernetes CronJobs faults
 
-You can manage/override Kubernetes Jobs faults on a Tenant or CronJob level. If a CronJob fails, and no Tenant- or Job-level fault setting is configured, DuploCloud will generate a fault by default.&#x20;
+You can manage/override Kubernetes Jobs faults on a Tenant or CronJob level. If a CronJob fails, and no Tenant- or Job-level fault setting is configured, DuploCloud will generate a fault by default.
 
 ### **Tenant-level Kubernetes CronJobs faults**
 
 Enable or disable faults for failed Kubernetes CronJobs in a specific Tenant.
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **Tenant.**
-2. Click the Tenant name in the **NAME** column.&#x20;
-3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.&#x20;
-4. From the **Select Feature** list box, select **Enable K8s job fault logging by default**, and use the toggle switch to enable or disable the setting.&#x20;
-5.  Click **Add**. The CronJobs fault setting is added. <br>
+2. Click the Tenant name in the **NAME** column.
+3. Select the **Settings** tab, and click **Add**. The **Add Tenant Feature** pane displays.
+4. From the **Select Feature** list box, select **Enable K8s job fault logging by default**, and use the toggle switch to enable or disable the setting.
+5.  Click **Add**. The CronJobs fault setting is added.<br>
 
     <div align="left"><figure><img src="../.gitbook/assets/tenant faults feature.png" alt=""><figcaption><p>The <strong>Add Tenant Feature</strong> pane with <strong>Enable K8s Job fault logging by default</strong> enabled</p></figcaption></figure></div>
 
-You can view the CronJobs fault setting on the **Tenants** page (Navigate to **Administrator** -> **Tenant**, select the Tenant name) under the **Settings** tab. If the value is **true**, DuploCloud will generate a fault. If the value is **false**, DuploCloud will not generate a fault.&#x20;
+You can view the CronJobs fault setting on the **Tenants** page (Navigate to **Administrator** -> **Tenant**, select the Tenant name) under the **Settings** tab. If the value is **true**, DuploCloud will generate a fault. If the value is **false**, DuploCloud will not generate a fault.
 
 <figure><img src="../.gitbook/assets/tenant setting set.png" alt=""><figcaption><p>The <strong>Tenant</strong> details page, <strong>Setting</strong>s tab, showing the configured Jobs fault setting</p></figcaption></figure>
 
 ### **Jobs-level Kubernetes CronJobs faults**
 
-You can configure the faults for a specific CronJob when creating the CronJob in DuploCloud. Fault settings added this way override Tenant-level settings. On the **Add Kubernetes Job** page, in the **Metadata Annotations** field, enter:&#x20;
+You can configure the faults for a specific CronJob when creating the CronJob in DuploCloud. Fault settings added this way override Tenant-level settings. On the **Add Kubernetes Job** page, in the **Metadata Annotations** field, enter:
 
-`duplocloud.net/fault/when-failed: true.` or&#x20;
+`duplocloud.net/fault/when-failed: true.` or
 
 `duplocloud.net/fault/when-failed: false.`
 
-When the value is true and the CronJob fails, DuploCloud will generate a fault. When the value is false and the CronJob fails, a fault will not be generated.&#x20;
+When the value is true and the CronJob fails, DuploCloud will generate a fault. When the value is false and the CronJob fails, a fault will not be generated.
 
 ## Viewing Kubernetes CronJobs
 
-### Viewing CronJob Details&#x20;
+### Viewing CronJob Details
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **CronJobs**.
 2. Select the Kubernetes CronJob you want to view from the **NAME** colunm.
-3. Select the **Overview, Schedule**, and **Details** tabs for information about the CronJob schedule and history.&#x20;
+3. Select the **Overview, Schedule**, and **Details** tabs for information about the CronJob schedule and history.
 
 ### Using the Containers page to view linked Kubernetes CronJobs
 
 ### **Viewing the Latest Job from a CronJob**
 
-You can inspect the most recent CronJob execution from the link on the CronJob details page. This allows you to view the latest Job, including its logs, status, and container details, without manually browsing the Jobs list.&#x20;
+You can inspect the most recent CronJob execution from the link on the CronJob details page. This allows you to view the latest Job, including its logs, status, and container details, without manually browsing the Jobs list.
 
 1. Navigate to **Kubernetes** -> **CronJobs**.
-2. Select the CronJob you want to inspect from the **NAME** column.&#x20;
+2. Select the CronJob you want to inspect from the **NAME** column.
 3. Click the **Latest Scheduled Job** link in the heading. The Job details page displays, showing information about the most recent execution of the CronJob.
 
 <figure><img src="../.gitbook/assets/cron link.png" alt=""><figcaption><p>The CronJob details page with the <strong>Latest Scheduled Job</strong> link highlighted</p></figcaption></figure>
@@ -140,6 +138,6 @@ You can view, edit, delete, or manually run a Kubernetes CronJob from the option
 
 ## Running CronJobs on Shared Hosts
 
-DuploCloud supports running Kubernetes CronJobs on Shared Hosts in both AWS and Azure.&#x20;
+DuploCloud supports running Kubernetes CronJobs on Shared Hosts in both AWS and Azure.
 
 For detailed steps, see the [Shared Hosts documentation for AWS](../automation-platform/overview/use-cases/hosts-vms/adding-shared-hosts.md) and [Shared Hosts documentation for Azure](../automation-platform/overview-2/use-cases/hosts-vms/shared-hosts.md).

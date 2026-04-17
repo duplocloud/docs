@@ -4,7 +4,7 @@ description: Creating and Using a WAF in DuploCloud AWS
 
 # Web App Firewall (WAF)
 
-The creation of a Web Application Firewall (WAF) is a one-time process. Create a WAF in the public cloud Console, fetch the ID/ARN, and update the Plan in DuploCloud. Once updated, the WAF can be attached to the Load Balancer.&#x20;
+The creation of a Web Application Firewall (WAF) is a one-time process. Create a WAF in the public cloud Console, fetch the ID/ARN, and update the Plan in DuploCloud. Once updated, the WAF can be attached to the Load Balancer.
 
 ## Creating a Web Application Firewall (WAF)
 
@@ -34,7 +34,7 @@ Only ALB Load Balancers can be attached to a WAF.
 2.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/AWS_LB_WAF_Attach.png" alt=""><figcaption><p><strong>Other Load Balancer Settings</strong> for attaching a WAF (via the <strong>Web ACL</strong> field) to an ALB Load Balancer<br></p></figcaption></figure></div>
-3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).&#x20;
+3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).
 4. Complete the other required fields in the **Other Load Balancer Settings** pane.
 5. Click **Update**.
 
@@ -42,16 +42,16 @@ Only ALB Load Balancers can be attached to a WAF.
 
 1. From the DuploCloud portal, navigate to **Administrator** -> **Plans**.
 2. From the **Name** column, select the Plan associated with the WAF you want to update.
-3. Click the **WAF** tab.&#x20;
-4.  Click on the menu icon (<img src="../../../.gitbook/assets/menu icon.png" alt="" data-size="line">) in the row of the existing WAF that you want to update, and select **Edit**. The **Update WAF&#x20;**_**YOUR\_WAF\_NAME**_ pane displays. <br>
+3. Click the **WAF** tab.
+4.  Click on the menu icon (<img src="../../../.gitbook/assets/menu icon.png" alt="" data-size="line">) in the row of the existing WAF that you want to update, and select **Edit**. The **Update WAF&#x20;**_**YOUR\_WAF\_NAME**_ pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/updating WAF.png" alt=""><figcaption></figcaption></figure></div>
 5. Update the **Name** and/or **WAF ARN**.
-6. Update or add a **WAF Dashboard URL**.&#x20;
-7. Click **Update**. The WAF is updated.&#x20;
+6. Update or add a **WAF Dashboard URL**.
+7. Click **Update**. The WAF is updated.
 
 ## Analyzing inbound traffic with the WAF dashboard <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
 DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from the left navigation panel: **Observability** -> **WAF**.
 
-![WAF Dashboard](<../../../.gitbook/assets/waf (1).png>)
+![WAF Dashboard](../../../.gitbook/assets/waf.png)

@@ -8,7 +8,7 @@ Authenticate to **MySQL**, **PostgreSQL**, **Aurora MySQL**, **Aurora PostgreSQL
 
 Using IAM for authenticating an RDS instance offers the following benefits:
 
-* Network traffic to and from the database is encrypted using Secure Socket Layer (SSL) or Transport Layer Security (TLS).&#x20;
+* Network traffic to and from the database is encrypted using Secure Socket Layer (SSL) or Transport Layer Security (TLS).
 * Centrally manage access to your database resources, instead of managing access individually for each DB instance.
 * For applications running on Amazon EC2 hosts, you can use profile credentials specific to your EC2 instance to access your database, instead of using a password, for greater security.
 
@@ -29,9 +29,9 @@ Use the System Config tab to enable IAM authentication before enabling it for a 
 
 ## Enabling IAM for an RDS instance
 
-You can also enable IAM for any MySQL, PostgreSQL, and MariaDB instance during RDS creation or by updating the **RDS Settings** after RDS creation.&#x20;
+You can also enable IAM for any MySQL, PostgreSQL, and MariaDB instance during RDS creation or by updating the **RDS Settings** after RDS creation.
 
-### Enabling IAM when creating an RDS&#x20;
+### Enabling IAM when creating an RDS
 
 Select the **Enable IAM auth** option when you [create an RDS database](../../../../../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
 
@@ -45,11 +45,7 @@ Select the **Enable IAM auth** option when you [create an RDS database](../../..
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/IAM5.png" alt=""><figcaption><p><strong>Actions</strong> menu in <strong>RDS</strong> tab with <strong>RDS Settings</strong></p></figcaption></figure></div>
 
-
-
     <div align="left"><figure><img src="../../../../../.gitbook/assets/IAM4.png" alt=""><figcaption><p><strong>Update IAM Auth</strong> pane</p></figcaption></figure></div>
-
-
 4. Select **Enable IAM Auth**.
 5. Click **Update**.
 
@@ -62,9 +58,7 @@ To download a token which you can use for IAM authentication:
 3.  Click the **Actions** menu and select **View** -> **Get DB Auth Token**. The **RDS Credentials window** displays.
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/IAM6.png" alt=""><figcaption><p><strong>Actions</strong> menu in <strong>RDS</strong> tab with <strong>View</strong> -> <strong>Get DB Auto Token</strong> option</p></figcaption></figure></div>
-
-
-4. In the **RDS Credentials** window, click the Copy Icon ( <img src="../../../../../.gitbook/assets/copy_icon (3).png" alt="" data-size="line"> ) to copy the **Endpoint**, **Username**, and **Password** to your clipboard.
+4. In the **RDS Credentials** window, click the Copy Icon ( <img src="../../../../../.gitbook/assets/copy_icon.png" alt="" data-size="line"> ) to copy the **Endpoint**, **Username**, and **Password** to your clipboard.
 5. Click **Close** to dismiss the window.
 
 {% hint style="danger" %}
@@ -80,4 +74,3 @@ CREATE USER "duplo_jit";
 GRANT rds_iam TO "duplo_jit";
 ```
 {% endhint %}
-

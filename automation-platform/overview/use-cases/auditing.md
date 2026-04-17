@@ -14,14 +14,12 @@ The DuploCloud Portal provides a comprehensive audit trail, including reports an
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.21-14_33_18.png" alt=""><figcaption><p>The <strong>Audit</strong> page with <strong>Admin</strong> audit records selected using the <strong>Show Audit Records</strong> for list box</p></figcaption></figure>
 
-
-
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.21-14_35_02.png" alt=""><figcaption><p>The <strong>Audit</strong> page with audit records selected for the <strong>DEV01</strong> Tenant</p></figcaption></figure>
 
 ## Enabling Audit
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Settings,** and select the **Audit** tab. The **Audit** page displays.
-2. Click the **Enable Audit** link.&#x20;
+2. Click the **Enable Audit** link.
 
 <figure><img src="../../../.gitbook/assets/audit11.png" alt=""><figcaption><p><strong>Enable Audit</strong> link on the <strong>Audit</strong> page</p></figcaption></figure>
 
@@ -33,7 +31,7 @@ To view complete auditing reports and logs, navigate to the **Observability** ->
 
 ## Configuring a custom S3 bucket for auditing in another AWS account
 
-You can create an S3 bucket for auditing in another account, other than the DuploCloud Master Account.&#x20;
+You can create an S3 bucket for auditing in another account, other than the DuploCloud Master Account.
 
 ### Prerequisites
 
@@ -86,7 +84,7 @@ Continuing the example above, configure the **S3BUCKET** name.
 
 Your S3 bucket region and name configurations are displayed in the **System Config** tab. [View details on the Audit page](auditing.md#viewing-detailed-auditing-diagnostics) in the DuploCloud Portal.
 
-<figure><img src="../../../.gitbook/assets/RM1 (1).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>AppConfig</strong>s for S3 bucket region and name</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/RM1.png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>AppConfig</strong>s for S3 bucket region and name</p></figcaption></figure>
 
 {% hint style="info" %}
 Contact your DuploCloud Support team if you have additional questions or issues.
