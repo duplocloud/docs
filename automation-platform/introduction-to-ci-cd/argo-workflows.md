@@ -9,7 +9,7 @@ From the Argo Workflows page, you can:
 * Create and manage Workflow Templates (reusable workflow definitions).
 * Launch and monitor Workflows (actual workflow executions based on Workflow Templates).
 
-## Prerequisites&#x20;
+## Prerequisites
 
 ### **Configure Argo Workflows Infrastructure Settings**
 
@@ -28,16 +28,16 @@ Before using Argo Workflows in a Tenant, make sure the following infrastructure 
 <figure><img src="../../.gitbook/assets/argo settings.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-**Note:** Every Tenant that will use Argo Workflows must have the **Tenant** setting configured.&#x20;
+**Note:** Every Tenant that will use Argo Workflows must have the **Tenant** setting configured.
 {% endhint %}
 
 ## Adding a Workflow Template
 
 Workflow Templates define reusable workflows that can be executed multiple times. Complete the following steps to add a Workflow Template.
 
-1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.&#x20;
+1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.
 2. Select the **Workflow Templates** tab.
-3.  Click **Add**. The **Add Workflow Template** pane displays. <br>
+3.  Click **Add**. The **Add Workflow Template** pane displays.<br>
 
     <figure><img src="../../.gitbook/assets/Screenshot (1048).png" alt=""><figcaption><p><strong>Add Workflow Template</strong> pane</p></figcaption></figure>
 4. Click **Choose File** and select a YAML file containing your workflow definition (the file must follow Argo Workflow YAML specifications) or paste the YAML directly into the **Workflow Template Data** field.
@@ -56,15 +56,15 @@ View, edit, or delete Workflow Templates from directly in the DuploCloud Portal.
 
 ### Viewing and Editing a Workflow Template
 
-1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.&#x20;
+1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.
 2. Select the **Workflow Templates** tab.
 3. Click the Workflow Template name in the **NAME** column to display the details page. The **Description** field shows the YAML definition of the template, including the template name, entry point, workflow steps, container image, commands, arguments, and any input parameters.
-4. To modify workflow parameters, click **Actions** and select **Edit**.&#x20;
+4. To modify workflow parameters, click **Actions** and select **Edit**.
 5. Edit the Workflow as needed and click **Update** to save your changes.
 
 ### Deleting a Workflow Template
 
-1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.&#x20;
+1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.
 2. Select the **Workflow Templates** tab.
 3. Click the menu icon (three dots) in the row of the Workflow Template you want to delete, and select **Delete**.
 
@@ -72,9 +72,9 @@ View, edit, or delete Workflow Templates from directly in the DuploCloud Portal.
 
 Start a new workflow run from a Workflow Template.
 
-1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.&#x20;
+1. From the DuploCloud Portal, navigate to **CI/CD** -> **Argo Workflows**.
 2. Select the **Workflow Templates** tab.
-3. Click the **m**enu icon (<img src="../../.gitbook/assets/menu icon (27) (1).avif" alt="" data-size="line">) next to the template you want to run and select **Launch Workflow**.
+3. Click the **m**enu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the template you want to run and select **Launch Workflow**.
 4.  The **Launch Workflow** pane displays. Click **Create** to launch the workflow.<br>
 
     <figure><img src="../../.gitbook/assets/Screenshot (1047).png" alt=""><figcaption><p><strong>Launch Workflow</strong> pane</p></figcaption></figure>
@@ -96,6 +96,6 @@ View workflow executions in your Tenant from the **Workflows** tab.
 
 <figure><img src="../../.gitbook/assets/Screenshot (1078) (1).png" alt=""><figcaption><p><strong>Logs</strong> tab for an Argo Workflow in the DuploCloud Portal</p></figcaption></figure>
 
-* **Definition**: Displays the full YAML for the workflow run. This includes the executed entry point, steps, container images, commands, arguments, input parameters, and any runtime values.&#x20;
+* **Definition**: Displays the full YAML for the workflow run. This includes the executed entry point, steps, container images, commands, arguments, input parameters, and any runtime values.
 
 <figure><img src="../../.gitbook/assets/Screenshot (1079) (1).png" alt=""><figcaption><p><strong>Definition</strong> tab for an Argo Workflow in the DuploCloud Portal</p></figcaption></figure>

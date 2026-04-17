@@ -4,7 +4,7 @@ description: Integrate DuploCloud with OpenVPN by provisioning VPN users
 
 # Provision the VPN
 
-DuploCloud integrates with OpenVPN by provisioning VPN users that you add to the DuploCloud Portal. This integration allows users to securely access your cloud infrastructure. Below are the steps for setting up OpenVPN and managing VPN users.&#x20;
+DuploCloud integrates with OpenVPN by provisioning VPN users that you add to the DuploCloud Portal. This integration allows users to securely access your cloud infrastructure. Below are the steps for setting up OpenVPN and managing VPN users.
 
 ## Accepting OpenVPN in the Azure Marketplace
 
@@ -28,7 +28,7 @@ DuploCloud integrates with OpenVPN by provisioning VPN users that you add to the
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Users**.
 2.  Click **Add**. The **Create User** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (346) (2).png" alt="" width="370"><figcaption><p>The <strong>Create User</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (346) (1).png" alt="" width="370"><figcaption><p>The <strong>Create User</strong> pane</p></figcaption></figure></div>
 3. Enter a valid email address in the **Username** field.
 4. In the **Roles** field, select the appropriate role(s) for the User.
 5. Select **Provision VPN**.
@@ -36,7 +36,7 @@ DuploCloud integrates with OpenVPN by provisioning VPN users that you add to the
 
 ### Deleting VPN Access for a User
 
-To remove VPN access for a user, refer to the section [Deleting a VPN user](../../access-control/user-access-and-permissions/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user) (Administrator privileges are required).&#x20;
+To remove VPN access for a user, refer to the section [Deleting a VPN user](../../access-control/user-access-and-permissions/add-and-delete-vpn-access-for-users.md#deleting-a-vpn-user) (Administrator privileges are required).
 
 ## Opening a VPN Port
 

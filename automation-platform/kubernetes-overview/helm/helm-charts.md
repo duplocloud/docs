@@ -12,9 +12,9 @@ description: >-
 Helm Charts are only supported for administrator-level DuploCloud users.
 {% endhint %}
 
-## **Prerequisites**&#x20;
+## **Prerequisites**
 
-* Ensure you have a Kubernetes cluster set up in DuploCloud.&#x20;
+* Ensure you have a Kubernetes cluster set up in DuploCloud.
 * [Install Helm](https://github.com/helm/helm/releases) on your local machine or a machine with access to your Kubernetes cluster.
 
 ## **Creating Helm Charts**
@@ -23,7 +23,7 @@ Identify the Helm charts you want to use for deploying your applications or serv
 
 You can use community-maintained charts from public repositories like [Artifact Hub](https://artifacthub.io/), or you can create your own custom charts tailored to your specific needs.
 
-To create custom Helm charts, modify the values.yaml or create custom templates as necessary. This might involve configuring resource limits, environment variables, or other settings specific to your deployment.&#x20;
+To create custom Helm charts, modify the values.yaml or create custom templates as necessary. This might involve configuring resource limits, environment variables, or other settings specific to your deployment.
 
 You can also modify Helm Chart values using the node selector. This is the most common method. For example, to deploy a chart into the duploservices-mytenant Tenant using the node selector, give:
 
@@ -34,7 +34,7 @@ nodeSelector:
 ```
 {% endcode %}
 
-To specify which hosts the chart should run on using the node selector with  allocation tags, give:
+To specify which hosts the chart should run on using the node selector with allocation tags, give:
 
 ```yaml
 nodeSelector:
@@ -65,7 +65,7 @@ Once you've added a Helm repository, you can view its details, update its config
 
 1. Navigate to **Kubernetes** → **Helm.**
 2. Select the **Helm Repository** tab.
-3. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (14).avif" alt="" data-size="line">) in the row of the repository you want to manage.
+3. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the repository you want to manage.
 4. Choose one of the following actions:
 
 <table data-header-hidden><thead><tr><th width="146.4444580078125">Option</th><th>Description</th></tr></thead><tbody><tr><td><strong>View</strong></td><td>View the repository’s current configuration, sync status, and metadata.</td></tr><tr><td><strong>Update</strong></td><td>Edit the repository name, URL, sync interval, or authentication settings.</td></tr><tr><td><strong>Delete</strong></td><td>Remove the repository from DuploCloud. Releases that depend on it will no longer reconcile.</td></tr></tbody></table>
@@ -76,7 +76,7 @@ Deleting a Helm repository will not remove any releases that were deployed from 
 
 ## **Deploying a Helm Release**
 
-Deploy a Kubernetes cluster using a Helm Chart from the DuploCloud Platform.&#x20;
+Deploy a Kubernetes cluster using a Helm Chart from the DuploCloud Platform.
 
 1. From the DuploCloud Portal, navigate to **Kubernetes** → **Helm**.
 2. Select the **Release** tab, and click **Add**. The **Add Helm Release** page displays

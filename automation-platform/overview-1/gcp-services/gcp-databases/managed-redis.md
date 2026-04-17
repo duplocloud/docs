@@ -13,7 +13,7 @@ Redis delivers sub-millisecond response times, enabling millions of requests per
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Redis**.
 2. Click **Add**. The **Add Redis Instance** page displays.
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_22_23 (1).png" alt=""><figcaption><p><strong>Add Redis Instance</strong> page</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.15-12_22_23.png" alt=""><figcaption><p><strong>Add Redis Instance</strong> page</p></figcaption></figure></div>
 
 3. Enter the database **Name**.
 4. In the **Display Name** field, enter a useful database name for reference.

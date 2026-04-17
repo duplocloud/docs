@@ -10,12 +10,12 @@ _Estimated time to complete Step 5 and finish tutorial: 10 minutes._
 
 ## Prerequisites
 
-Before creating a Load Balancer, verify that you accomplished the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
+Before creating a Load Balancer, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name you created.
 * The Infrastructure you created has [GKE Enabled](../step-1-infrastructure.md).
 * A [Tenant](../../../overview-2/quick-start/step-2-tenant.md) with the name you chose has been created.
-* A [Service](step-3-create-app-via-k8s.md) with the name you chose has been created.&#x20;
+* A [Service](step-3-create-app-via-k8s.md) with the name you chose has been created.
 * An [Application Load Balancer](step-4-create-a-load-balancer.md) has been created.
 
 ### Select the Tenant you created
@@ -27,7 +27,7 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 1. In the DuploCloud Portal, navigate to Kubernetes -> Services. The **Services** page displays.
 2. From the **Name** column, click on the Service you created.
 3. Click the **Load Balancers** tab. The Application Load Balancer configuration is displayed.
-4. In the **LB Configuration** card, click the Copy Icon ( <img src="../../../../.gitbook/assets/copy_icon (2).png" alt="" data-size="line"> ) to copy the **IP Address** to your clipboard.
+4. In the **LB Configuration** card, click the Copy Icon ( <img src="../../../../.gitbook/assets/copy_icon.png" alt="" data-size="line"> ) to copy the **IP Address** to your clipboard.
 
 <figure><img src="../../../../.gitbook/assets/Screenshot (211).png" alt=""><figcaption></figcaption></figure>
 

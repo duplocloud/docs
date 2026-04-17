@@ -29,11 +29,11 @@ To create EMR Serverless applications you first need to create an EMR studio.
 5. Enter a **Description** of the **Studio** for reference.
 6. Select an [S3 Bucket](../../../overview/aws-services/s3-bucket.md) that you previously defined from the **Logs Default S3 Bucket** list box.
 7. Optionally, in the **Logs Default S3 Folder** field, specify the path to which logs are written.
-8. Click **Create**. The EMR Studio is created and displayed.&#x20;
+8. Click **Create**. The EMR Studio is created and displayed.
 9.  Select the EMR Studio name in the **Name** column. The **EMR Studio** page displays. View the **Details** of the EMR Serverless Studio.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/image (296).png" alt=""><figcaption><p>EMR Studio page with <strong>Basic</strong> and <strong>Details</strong> tabs.</p></figcaption></figure></div>
-10. Navigate to the **EMR Serverless** tab and click the menu (<img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (4).png" alt="" data-size="line">) icon in the **Actions** column. Use the **Actions** Menu to delete the studio if needed, as well as to view the studio in the AWS Console. <br>
+10. Navigate to the **EMR Serverless** tab and click the menu (<img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line">) icon in the **Actions** column. Use the **Actions** Menu to delete the studio if needed, as well as to view the studio in the AWS Console.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_17_15.png" alt=""><figcaption><p>EMR Serverless Studio Actions Menu</p></figcaption></figure>
 
@@ -49,13 +49,13 @@ The DuploCloud Portal supports `Hive` and `Spark` applications. In this example,
 3. Accept the defaults for the **Capacity**, **Limits**, and **Configure** pages by clicking **Next** on each page until you reach the **Confirm** page.
 4.  On the **Confirm** page, click **Submit**. Your created application instance (`DUPLOSERVICES-DEFAULT-APP1`, in this example) is displayed in the **EMR Serverless** tab with the **State** of **CREATED**.<br>
 
-    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_21_24.png" alt=""><figcaption><p><strong>EMR Serverless</strong> tab with <strong>CREATED</strong> application instance </p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_21_24.png" alt=""><figcaption><p><strong>EMR Serverless</strong> tab with <strong>CREATED</strong> application instance</p></figcaption></figure>
 
 Before you begin to create a job to run the application, clone an instance of it to run.
 
 ### Cloning an application
 
-1.  On the EMR Serverless page, click the menu (<img src="../../../.gitbook/assets/Kabab_three_Vertical_dots (4).png" alt="" data-size="line">) icon and select **Clone**.<br>
+1.  On the EMR Serverless page, click the menu (<img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line">) icon and select **Clone**.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_24_11.png" alt=""><figcaption><p><strong>Actions</strong> menu with <strong>Clone</strong> option on <strong>EMR Serverless</strong> tab</p></figcaption></figure>
 2. Make any desired changes while advancing through the **Basics**, **Capacity**, **Limits**, and **Configure** steps, clicking **Next** to advance the wizard to the next page. DuploCloud gives your cloned app a unique generated name by default (**app1-c-833**, in this example).
@@ -79,13 +79,13 @@ If you are new to Spark, use the Info Tips (blue <img src="../../../.gitbook/ass
 4. Click **Next**.
 5. In the **Job details** step, select a previously-defined **Spark Script S3 Bucket.**
 6. In the **Spark Script** [**S3 Bucket**](../../../overview/aws-services/s3-bucket.md) **File** field, enter a path to define where your scripts are stored.
-7. Optionally, in the **Spark Scripts** field, you can specify an array of arguments passed to your JAR or Python script. Each argument in the array must be separated by a comma (**,**). In the example below, a single argument of **"40000"** is entered.&#x20;
-8.  Optionally, in the **Spark Submit Parameters** field, you can specify Spark **`--conf`** parameters. See the example below. <br>
+7. Optionally, in the **Spark Scripts** field, you can specify an array of arguments passed to your JAR or Python script. Each argument in the array must be separated by a comma (**,**). In the example below, a single argument of **"40000"** is entered.
+8.  Optionally, in the **Spark Submit Parameters** field, you can specify Spark **`--conf`** parameters. See the example below.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_36_15.png" alt=""><figcaption><p><strong>EMR Serverless</strong> configuration wizard <strong>Job details</strong> step with <strong>Spark Script Arguments</strong> and <strong>Spark Submit Parameters</strong> fields</p></figcaption></figure>
 9. Click **Next**.
 10. Make any desired changes in the **Configure** step and click **Next** to advance the wizard to the **Confirm** page.
-11. On the **Confirm** page, click **Submit**. In the **Run Jobs** tab for your cloned application, your job **JOBFROMCLONEAPP** displays. <br>
+11. On the **Confirm** page, click **Submit**. In the **Run Jobs** tab for your cloned application, your job **JOBFROMCLONEAPP** displays.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_37_39.png" alt=""><figcaption><p><strong>Run Jobs</strong> tab for cloned application instance <strong>DUPLOSERVICES-DEFAULT-APP1-C-753</strong></p></figcaption></figure>
 

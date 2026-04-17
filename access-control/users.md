@@ -1,15 +1,15 @@
-# Create User Tutorial
+# Users
 
 This document explains how to create a new user in the DuploCloud AI Suite Access Control panel.
 
----
+***
 
 ## Prerequisites
 
-- Access to the DuploCloud AI Suite admin panel
-- Admin permissions on the Access Control section
+* Access to the DuploCloud AI Suite admin panel
+* Admin permissions on the Access Control section
 
----
+***
 
 ## Step 1 — Navigate to Access Control
 
@@ -17,7 +17,7 @@ Go to **AI Admin → Access Control** in the left-hand navigation. The page open
 
 ![Step 1 — Access Control page](../.gitbook/assets/users-step-01-access-control.png)
 
----
+***
 
 ## Step 2 — Click the "User" Tab
 
@@ -25,7 +25,7 @@ At the top of the Access Control page, click the **User** tab. This shows a tabl
 
 ![Step 2 — User tab](../.gitbook/assets/users-step-02-user-tab.png)
 
----
+***
 
 ## Step 3 — Click "Add"
 
@@ -33,7 +33,7 @@ In the top-right corner of the User tab, click the **+ Add** button. The Add Use
 
 ![Step 3 — Add User form](../.gitbook/assets/users-step-03-form-opened.png)
 
----
+***
 
 ## Step 4 — Enter the Email Address
 
@@ -43,7 +43,7 @@ In this example: `amal.kiran13@gmail.com`
 
 ![Step 4 — Email entered](../.gitbook/assets/users-step-04-email-typed.png)
 
----
+***
 
 ## Step 5 — Enter the Display Name
 
@@ -51,9 +51,9 @@ Click the **Display Name** field and type the user's name.
 
 In this example: `John`
 
-![Step 5 — Display name filled](../.gitbook/assets/users-step-05-name-filled.png)
+![Step 5 — Display name filled](../.gitbook/assets/users-step-06-role-set.png)
 
----
+***
 
 ## Step 6 — Set the Role
 
@@ -63,19 +63,19 @@ Available roles: `User`, `Administrator`
 
 ![Step 6 — Role set to User](../.gitbook/assets/users-step-06-role-set.png)
 
----
+***
 
 ## Step 7 — Review and Submit
 
 Confirm all fields are filled correctly, then click **Create User**.
 
-![Step 7 — Before submit](../.gitbook/assets/users-step-07-before-submit.png)
+![Step 7 — Before submit](../.gitbook/assets/users-step-06-role-set.png)
 
 A green **Success** toast appears confirming the user was saved.
 
-![Step 8 — After submit](../.gitbook/assets/users-step-08-after-submit.png)
+![Step 8 — After submit](../.gitbook/assets/users-step-09-final-list.png)
 
----
+***
 
 ## Step 8 — Verify the User in the List
 

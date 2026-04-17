@@ -8,7 +8,7 @@ VPC [peering ](https://en.wikipedia.org/wiki/Peering)is a networking connection 
 
 VPC peering facilitates the transfer of data. For example, if you have more than one AWS account, you can peer the VPCs across those accounts and create a file-sharing network.
 
-This procedure describes how to peer two VPCs, using subnet routes, and how to manage the peering connections and routes.&#x20;
+This procedure describes how to peer two VPCs, using subnet routes, and how to manage the peering connections and routes.
 
 ## Enable and peer VPCs
 
@@ -20,7 +20,7 @@ We will be referring following steps to peer 2 VPCs **VPC-A** and **VPC-B**.
 2. From the **Name** column, select the first Infrastructure (**VPC-A**) for which to enable peering. **VPC-A** and its defined subnet routes are displayed.
 3.  Click the **Peering** tab.<br>
 
-    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1 (2).png" alt=""><figcaption><p><strong>VPC Peering</strong> page for Infrastructure <strong>VPC-A</strong></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1.png" alt=""><figcaption><p><strong>VPC Peering</strong> page for Infrastructure <strong>VPC-A</strong></p></figcaption></figure>
 4. From the **Select a VPC to peer with VPCA** list box, select the VPC that you want to peer with **VPC-A**. In this example, we select **VPC-B**.
 5. Select the **Is Peered** checkbox.
 6.  Click **Save**.<br>
@@ -35,12 +35,12 @@ Now that your two VPCs (**VPC-A** and **VPC-B**) are connected, define the subne
 To begin, on the VPC Peering page for the first VPC that you set up (**VPC-A**), click **Peer again**. The **Infrastructure** page displays.
 
 1. Select the Infrastructure (**VPC-A**) containing the first VPC that you [enabled ](virtual-private-cloud-vpc-peering.md#enable-and-associate-vpcs-for-peering)for peering.
-2. Select the **Peering** tab.&#x20;
+2. Select the **Peering** tab.
 3. Select the **Select a VPC to peer with VPCA** list box. The second VPC (**VPC-B**) displays in the list box and the **Is Peered** checkbox is selected, indicating that you previously connected the first VPC (**VPC-A**) with the second VPC (**VPC-B**) for peering.
 4.  Select the subnet routes that you want to define for VPC peering communication between the two VPCs (**VPC-A** and **VPC-B**). In this example, we select the checkboxes for subnet routes **vpc-B-a-private** and **vpc-B-a-public**.<br>
 
     <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_3 (1).png" alt=""><figcaption><p>Defining subnet routes for use by VPC-A and VPC-B</p></figcaption></figure>
-5. Click **Save**.&#x20;
+5. Click **Save**.
 
 Click **Peer again** and repeat the numbered procedure above to peer the **VPC-B** Infrastructure.
 
@@ -62,12 +62,12 @@ To maintain accessibility, add Security Group rules for Tenant VPC zones:
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select the Infrastructure from the **Name** column.
-3.  Click the **Security Group Rules** tab. <br>
+3.  Click the **Security Group Rules** tab.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (149) (1).png" alt=""><figcaption><p><strong>Security Group Rules</strong> tab on Infrastructure page in the DuploCloud Portal</p></figcaption></figure>
 4.  Click **Add**. The **Add Tenant Security** pane opens.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/AWS_SG_Add_Tenant_Security (2).png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/AWS_SG_Add_Tenant_Security.png" alt=""><figcaption><p><strong>Add Tenant Security</strong> pane</p></figcaption></figure></div>
 5. Define the rule for your **Port Range** and click **Add**.
 
 ## Delete subnet routes for peered VPCs
@@ -78,7 +78,7 @@ Delete subnet routes that you defined for VPC peer-to-peer communication:
 2. Select one of the Infrastructures containing a VPC that you previously [enabled ](virtual-private-cloud-vpc-peering.md#enable-and-associate-vpcs-for-peering)for peering and for which you defined [subnet routes](virtual-private-cloud-vpc-peering.md#select-subnets-to-use-vpc-peering). Continuing the example above, in this case, we select **VPC-A**.
 3.  Click the **Peering** tab.<br>
 
-    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1 (1).png" alt=""><figcaption><p><strong>VPC Peering</strong> page for Infrastructure <strong>VPC-A</strong></p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1.png" alt=""><figcaption><p><strong>VPC Peering</strong> page for Infrastructure <strong>VPC-A</strong></p></figcaption></figure>
 4. In the **Select a VPC to peer with VPC-A** list box, select the corresponding VPC (in this case, VPC-B) The peered VPC (**VPC-B**) displays and the **Is Peered** checkbox is selected along with the associated subnet routes defined for communication.
 5.  Uncheck subnet routes you want to remove. Using the **CTRL** key, you can select multiple checkboxes and clear them with a single click. In this example, we remove the subnet route **VPC-B-A-private** by clearing its checkbox.<br>
 
@@ -96,7 +96,7 @@ Delete the peering connection between VPCs:
 
     <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_1.png" alt=""><figcaption><p>Click the <strong>Peering</strong> tab. The <strong>VPC Peering</strong> page displays for <strong>VPC-A</strong>.</p></figcaption></figure>
 4. Select the **Choose VPC** list box. The peered VPC (**VPC-B**) displays and the **Is Peered** checkbox is selected along with the associated subnet routes defined for communication.
-5.  Clear the **Is Peered** checkbox. <br>
+5.  Clear the **Is Peered** checkbox.<br>
 
     <figure><img src="../../../.gitbook/assets/AWS_VPC_Peering_6.png" alt=""><figcaption><p>After the <strong>Is Peered</strong> checkbox is cleared, the <strong>VPC-A</strong>/<strong>VPC-B</strong> peering connection is deleted when you click <strong>Save</strong>.</p></figcaption></figure>
 6. Click **Save**. The **Select Subnets** list no longer displays and the peering connection between **VPC-A** and **VPC-B** has been removed.

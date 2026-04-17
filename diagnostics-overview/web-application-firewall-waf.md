@@ -12,7 +12,7 @@ When you create a WAF in DuploCloud, it is added to the Web ACL list for the sel
 \
 Additionally, you have the option to set a WAF as the default for the Plan. When this option is selected, DuploCloud will automatically attach the WAF to all newly created public-facing load balancers, such as AWS Application Load Balancers (ALBs) or Azure Shared Application Gateways, providing consistent, automated protection across your infrastructure.
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**.&#x20;
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**.
 2. From the **NAME** column, select the Plan you want to update.
 3. Click the **WAF** tab.
 4.  Click **Add**. The **Add WAF** pane displays.<br>
@@ -44,8 +44,8 @@ Only ALB Load Balancers can be attached to a WAF.
 1. If you don't yet have an Application Load Balancer (ALB), [create one](../automation-platform/overview/aws-services/load-balancers/#adding-a-load-balancer).
 2.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.<br>
 
-    <div align="left"><figure><img src="../.gitbook/assets/Screenshot (273) (1).png" alt="" width="407"><figcaption><p>The <strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
-3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).&#x20;
+    <div align="left"><figure><img src="../.gitbook/assets/Screenshot (273).png" alt="" width="407"><figcaption><p>The <strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
+3. From the **Web ACL** list box, select a [WAF that you have added to DuploCloud](web-application-firewall-waf.md#creating-a-web-application-firewall-waf).
 4. Complete the other required fields in the **Other Load Balancer Settings** pane.
 5. Click **Update**.
 
@@ -53,4 +53,4 @@ Only ALB Load Balancers can be attached to a WAF.
 
 DuploCloud also provides a WAF Dashboard through which you can analyze the traffic that is coming in and the requests that are blocked. The Dashboard can be accessed from the left navigation panel: **Observability** -> **WAF**.
 
-![WAF Dashboard](<../.gitbook/assets/waf (1).png>)
+![WAF Dashboard](../.gitbook/assets/waf.png)

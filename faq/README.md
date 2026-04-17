@@ -1,6 +1,6 @@
 ---
 description: Popular and frequently asked questions about DuploCloud
-cover: ../.gitbook/assets/Linkedin-bannerV3 (1) (1).png
+cover: ../.gitbook/assets/Linkedin-bannerV3 (1).png
 coverY: 0
 ---
 
@@ -31,7 +31,7 @@ Use these FAQ documents to quickly find answers to popular questions about using
 
 ### What support features come with my DuploCloud subscription?
 
-See [DuploCloud Support](../getting-started/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.&#x20;
+See [DuploCloud Support](../getting-started/duplocloud-support-model.md) for examples of what we do and do not support and how to contact us.
 
 For more detailed inquiries or assistance, including DuploCloud's DevOps automation platform capabilities, compliance, AWS services like Kinesis stream, and product updates, refer to the [official documentation](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/) and [whitepapers ](https://duplocloud.com/white-papers/)available on DuploCloud's website.
 
@@ -157,7 +157,7 @@ About half of our customer base uses no-code, while the other half uses Terrafor
 
 ### Can you delete an application and all its resources with a single click and confirmation?
 
-Yes, deleting a DuploCloud Tenant, which requires only a single click and confirmation, deletes the associated application and all its resources.&#x20;
+Yes, deleting a DuploCloud Tenant, which requires only a single click and confirmation, deletes the associated application and all its resources.
 
 ### Can DuploCloud manage multiple cloud accounts in a single DuploCloud Portal instance?
 
@@ -191,7 +191,7 @@ OpenVPN connectivity issues (e.g., "hostname not found" errors when accessing re
 
 ### How do I edit the Service Description to update my Control Plane configuration?
 
-Once logging is enabled, the Service Description cannot be edited. To maintain the integrity and consistency of your logging setup, complete any Control Plane modifications before enabling central logging.&#x20;
+Once logging is enabled, the Service Description cannot be edited. To maintain the integrity and consistency of your logging setup, complete any Control Plane modifications before enabling central logging.
 
 ### How do you create a Host with a public IP?
 
@@ -221,7 +221,7 @@ If the connection from within the container works, exit the container and naviga
 
 No, Kubernetes is not required to use DuploCloud. DuploCloud supports AWS (ECS and EKS), Kubernetes, Azure, and GCP. Many customers use software from multiple vendors to create robust business solutions backed by DuploCloud's compliance assurance and automated low-code/no-code DevOps approach.
 
-The main advantage of Kubernetes is its broad-based, highly customizable, third-party, open-source community that supports it as a delivery platform. For example, Astronomer (managed Airflow), time series database, Istio service mesh, and Kong API Gateway all require a Kubernetes deployment. However, if your business needs and use cases are met with an AWS solution, you may not need Kubernetes. Choose the software that best aligns with your use cases and requirements.&#x20;
+The main advantage of Kubernetes is its broad-based, highly customizable, third-party, open-source community that supports it as a delivery platform. For example, Astronomer (managed Airflow), time series database, Istio service mesh, and Kong API Gateway all require a Kubernetes deployment. However, if your business needs and use cases are met with an AWS solution, you may not need Kubernetes. Choose the software that best aligns with your use cases and requirements.
 
 ### I want to have multiple replicas of my Model-View-Controller (MVC) service. How do I make sure that only one of them runs migration?
 
@@ -279,7 +279,7 @@ Use Terraform to set up cloud services and handle the initial deployment of appl
 
 DuploCloud automatically generates a wildcard SSL certificate in ACM for each DNS domain it manages and applies it to the relevant resources.
 
-To configure in-transit encryption, navigate to  “Administrator -> Plan -> Certificates” and add the SSL/TLS certificates you want DuploCloud to use.
+To configure in-transit encryption, navigate to “Administrator -> Plan -> Certificates” and add the SSL/TLS certificates you want DuploCloud to use.
 
 DuploCloud’s encryption capabilities help ensure your data is protected at rest and in transit, simplifying the management of encryption for your cloud infrastructure.
 

@@ -26,7 +26,7 @@ Enable automatic alerting for your Tenant.
 3. Select the **Alerting** tab.
 4. Click **Click Here** or **Enable Alerting**. Once enabled, DuploCloud’s predefined out-of-the-box alert rules are enabled for the Tenant.
 
-<figure><img src="../../.gitbook/assets/Screenshot (1085) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot (1085).png" alt=""><figcaption></figcaption></figure>
 
 ## Customizing Alerts by Excluding Resources
 

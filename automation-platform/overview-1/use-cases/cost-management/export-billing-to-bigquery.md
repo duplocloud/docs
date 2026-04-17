@@ -31,7 +31,7 @@ After setting up the export and access:
 1. In the DuploCloud Portal, navigate to **Administrator**-> **Billing**.
 2.  On the right side of the page, click **Enable Billing Feature**.<br>
 
-    <figure><img src="../../../../.gitbook/assets/Screenshot (600) (2).png" alt=""><figcaption><p><strong>Billing</strong> page in the DuploCloud Portal with the <strong>Enable Billing Feature</strong> option highlighted</p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/Screenshot (600) (1).png" alt=""><figcaption><p><strong>Billing</strong> page in the DuploCloud Portal with the <strong>Enable Billing Feature</strong> option highlighted</p></figcaption></figure>
 
 DuploCloud will display GCP billing data as it becomes available from the BigQuery export.
 

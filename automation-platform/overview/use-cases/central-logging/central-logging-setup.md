@@ -7,7 +7,7 @@ description: Set up central logging for the DuploCloud Default Tenant
 The Default Tenant in DuploCloud is the central management space for platform-wide resources and configurations, including monitoring and logging. Enabling logging in the Default Tenant deploys comprehensive Control Plane monitoring. This deployment uses OpenSearch and Kibana to retrieve and display log data. Once logging is enabled for the Default Tenant, you can [enable logging for non-Default Tenants](enable-non-default-tenant-logging.md) and [configure logging per Tenant](configure-logging-per-tenant.md).
 
 {% hint style="info" %}
-Central logging is typically set up during DuploCloud onboarding. Contact DuploCloud Support if you have questions about this process.&#x20;
+Central logging is typically set up during DuploCloud onboarding. Contact DuploCloud Support if you have questions about this process.
 {% endhint %}
 
 ## Prerequisites
@@ -22,27 +22,25 @@ Central logging is typically set up during DuploCloud onboarding. Contact DuploC
 3.  Click the **Enable Logging** link. The **Enable Logging** page displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/image (44).png" alt=""><figcaption><p>The <strong>Logging</strong> tab with the <strong>Enable Logging</strong> link</p></figcaption></figure></div>
-
-
 4. In the **Select Tenant** list box, select **Default**.
-5. In the **Cert ARN** field, enter the ARN certificate for the Default Tenant.&#x20;
+5. In the **Cert ARN** field, enter the ARN certificate for the Default Tenant.
 
 {% hint style="info" %}
 Find the ARN certificate by selecting the **Default** Tenant from the **Tenant** list box at the top of the DuploCloud Portal, navigating to **Administrator** -> **Plans**, selecting the Plan that matches your Infrastructure **Name**, clicking the **Certificates** tab, and copying the ARN from the Certificate ARN column.
 {% endhint %}
 
-6. Enter the number of days to retain logs in the **Log Retention in Index (Days)** field.&#x20;
-7. Click **Submit**. Data gathering takes about fifteen (15) minutes. When data gathering is complete, graphical logging data is displayed on the **Logging** tab.&#x20;
+6. Enter the number of days to retain logs in the **Log Retention in Index (Days)** field.
+7. Click **Submit**. Data gathering takes about fifteen (15) minutes. When data gathering is complete, graphical logging data is displayed on the **Logging** tab.
 
-<figure><img src="../../../../.gitbook/assets/new logging.png" alt=""><figcaption><p>The <strong>Enable Logging</strong> page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/newnew.png" alt=""><figcaption><p>The <strong>Enable Logging</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
-When you enable logging for a Tenant, an Elastic Filebeat Service starts and begins log collection. The [Elastic Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html) Service must be running for log collection to occur.&#x20;
+When you enable logging for a Tenant, an Elastic Filebeat Service starts and begins log collection. The [Elastic Filebeat](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html) Service must be running for log collection to occur.
 
 To view the Filebeat Service, navigate to **Kubernetes** -> **Services.** To view the Filebeat containers, navigate to **Kubernetes** -> **Containers**. In the row of the container, click on the menu icon and select **Logs**.
 {% endhint %}
 
-Once logging is enabled for the Default Tenant, you can [enable logging for other Tenants](enable-non-default-tenant-logging.md).&#x20;
+Once logging is enabled for the Default Tenant, you can [enable logging for other Tenants](enable-non-default-tenant-logging.md).
 
 ## How DuploCloud Configures Logging
 
@@ -52,9 +50,9 @@ When you perform the steps above to configure logging, DuploCloud does the follo
 
 1. **An EC2 Host is added** in the default Tenant, for example, **duploservices-default-oc-diagnostics**.
 2. **Services are added** in the default Tenant, one for OpenSearch and one for Kibana. Both services are pinned to the EC2 host using [allocation tags](../../aws-services/containers/eks-containers-and-services/creating-advanced-functions.md). Kibana is set up to point to ElasticSearch and exposed using an internal load balancer.
-3. **Security rules from within the internal network to port 443 are added** in the default Tenant to allow log collectors that run on Tenant hosts to send logs to ElasticSearch. &#x20;
+3. **Security rules from within the internal network to port 443 are added** in the default Tenant to allow log collectors that run on Tenant hosts to send logs to ElasticSearch.
 
 ### Log Collector deployment
 
-1. A Filebeat service (`filebeat-duploinfrasvc)` is deployed for each Tenant where central logging is enabled.&#x20;
-2. The `/var/lib/docker/Containers` are mounted from the Host into the Filebeat container. The Filebeat container references ElasticSearch, which runs in the **Default** Tenant. Inside the container, Filebeat is configured so that every log line is added with metadata information consisting of the Tenant name, Service names, Container ID, and Hostname, enabling ease of search using these parameters with ElasticSearch.   &#x20;
+1. A Filebeat service (`filebeat-duploinfrasvc)` is deployed for each Tenant where central logging is enabled.
+2. The `/var/lib/docker/Containers` are mounted from the Host into the Filebeat container. The Filebeat container references ElasticSearch, which runs in the **Default** Tenant. Inside the container, Filebeat is configured so that every log line is added with metadata information consisting of the Tenant name, Service names, Container ID, and Hostname, enabling ease of search using these parameters with ElasticSearch.

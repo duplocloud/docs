@@ -15,27 +15,25 @@ _Estimated time to complete Step 4: 10 minutes._
 Before creating an RDS, verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [ECS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
+* The **NONPROD** infrastructure has [ECS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 
 ## Creating a Task Definition
 
 1.  In the **Tenant** list box, select the **dev01 Tenant.**<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/tenant_dev01 (12).png" alt=""><figcaption><p>The DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure></div>
-
-
+    <div align="left"><figure><img src="../../../../.gitbook/assets/tenant_dev01.png" alt=""><figcaption><p>The DuploCloud <strong>Tenant</strong> list box with <strong>dev01</strong> selected</p></figcaption></figure></div>
 2. Navigate to **Cloud Services** -> **ECS**.
 3.  In the **Task Definition** tab, click **Add**. The **Add Task Definition-Basic Options** area displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (105).png" alt=""><figcaption><p>The <strong>Add Task Definition-Basic Options</strong> area</p></figcaption></figure>
-4. In the **Name** field, enter `sample-task-def`.&#x20;
+4. In the **Name** field, enter `sample-task-def`.
 5. From the **vCPU** list box, select **0.5 vCPU**.
 6. From the **Memory** list box, select **1 GB**.
-7.  Click Next. The **Advanced Options** area displays. <br>
+7.  Click Next. The **Advanced Options** area displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (106).png" alt=""><figcaption><p>The <strong>Add Task Definition-Advanced Options</strong> page</p></figcaption></figure>
-8. In the **Container - 1** section, enter **Container Name** `sample-task-def-c1`.&#x20;
+8. In the **Container - 1** section, enter **Container Name** `sample-task-def-c1`.
 9. In the **Image** field, enter `duplocloud/nodejs-hello:latest`.
-10. In the **Port Mappings** section, in the **Port** field, enter `3000`. Port mappings allow containers to access ports for the host container instance to send or receive traffic.&#x20;
+10. In the **Port Mappings** section, in the **Port** field, enter `3000`. Port mappings allow containers to access ports for the host container instance to send or receive traffic.
 11. Click **Create**.

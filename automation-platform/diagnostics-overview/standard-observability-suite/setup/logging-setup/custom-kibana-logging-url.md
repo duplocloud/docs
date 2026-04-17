@@ -17,7 +17,7 @@ DuploCloud provides a default Kibana URL for viewing Logging data, but if you wa
 4. In the **Config Type** list box, select **AppConfig**.
 5. In the **Key** list box, choose one of the following keys:
    * **Kibana Base URL**: This URL points to the proxy or direct access Kibana URL.
-   * **Kibana Logs URL Template**: This URL template links to Kibana’s Logs.&#x20;
+   * **Kibana Logs URL Template**: This URL template links to Kibana’s Logs.
 6. In the **Value** field, enter the custom URL for the selected key. For example:
    * **Kibana Base URL**: `/proxy/kibana`
    * **Kibana Logs URL Template**: `https://kibana.example.com/app/discover#/?_a=(query:(language:kuery,query:'log_type:"application"'))&_g=(time:(from:now-1h,to:now))`
@@ -35,7 +35,7 @@ You can customize the example URLs, replacing placeholders with your own values 
 
 7. Click **Submit** to save the configuration.
 
-<figure><img src="../../../../../.gitbook/assets/Screenshot (360) (1).png" alt=""><figcaption><p>The <strong>System Config</strong> page in the DuploCloud Platform</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/Screenshot (360).png" alt=""><figcaption><p>The <strong>System Config</strong> page in the DuploCloud Platform</p></figcaption></figure>
 
 After configuring the Kibana URL in DuploCloud, you can access the selected Kibana Logs data directly from the DuploCloud Portal:
 

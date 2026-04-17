@@ -19,9 +19,9 @@ To create a new secret in AWS Secrets Manager from the DuploCloud Portal:
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (605).png" alt=""><figcaption><p><strong>Create an AWS Secret</strong> form</p></figcaption></figure></div>
 4. Fill in the fields as described below:
 
-<table data-header-hidden><thead><tr><th width="229.11102294921875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for this secret.</td></tr><tr><td><strong>Secret value type (Json or plain text)</strong></td><td><p>Specify the secret type:<br></p><ul><li><strong>JSON Key/Value pairs</strong>: Store your secret as structured key-value pairs (e.g., credentials or connection settings).</li><li><strong>Plain text</strong>: Store your secret as a single unstructured plaintext string.</li></ul></td></tr><tr><td><strong>JSON (key value pair)</strong> <br><em>(if <strong>JSON Key/Value pairs</strong> selected)</em></td><td>Enter your secret data as JSON key/value pairs. <br><strong>Note</strong>: all values must be strings. This means you must enclose numbers and Booleans in double quotes. For example, use <code>"5432"</code> instead of <code>5432</code>, and <code>"true"</code> instead of <code>true</code>.</td></tr><tr><td><em><strong>Value</strong></em><br><em>(shown if <strong>Plain text</strong> selected)</em></td><td>Enter your secret as a plaintext string, e.g., <code>mysecretvalue123</code>.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="229.11102294921875">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for this secret.</td></tr><tr><td><strong>Secret value type (Json or plain text)</strong></td><td><p>Specify the secret type:<br></p><ul><li><strong>JSON Key/Value pairs</strong>: Store your secret as structured key-value pairs (e.g., credentials or connection settings).</li><li><strong>Plain text</strong>: Store your secret as a single unstructured plaintext string.</li></ul></td></tr><tr><td><strong>JSON (key value pair)</strong><br><em>(if <strong>JSON Key/Value pairs</strong> selected)</em></td><td>Enter your secret data as JSON key/value pairs.<br><strong>Note</strong>: all values must be strings. This means you must enclose numbers and Booleans in double quotes. For example, use <code>"5432"</code> instead of <code>5432</code>, and <code>"true"</code> instead of <code>true</code>.</td></tr><tr><td><em><strong>Value</strong></em><br><em>(shown if <strong>Plain text</strong> selected)</em></td><td>Enter your secret as a plaintext string, e.g., <code>mysecretvalue123</code>.</td></tr></tbody></table>
 
-5. Click **Create** to create the secret in AWS Secrets Manager. The secret will be created directly in AWS using the credentials associated with your DuploCloud environment.&#x20;
+5. Click **Create** to create the secret in AWS Secrets Manager. The secret will be created directly in AWS using the credentials associated with your DuploCloud environment.
 
 <figure><img src="../../../.gitbook/assets/Screenshot (606).png" alt=""><figcaption><p><strong>AWS Secrets</strong> tab in the DuploCloud Platform</p></figcaption></figure>
 
@@ -35,7 +35,7 @@ You can view, edit, or deletes directly from the DuploCloud Portal.
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** -> **App Integration**.
 2. Select the **AWS Secrets** tab
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the secret you want to manage.<br>
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the secret you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (607).png" alt=""><figcaption><p><strong>AWS Secrets</strong> tab with the secret menu options highlighted</p></figcaption></figure>
 4. Select one of the following options:

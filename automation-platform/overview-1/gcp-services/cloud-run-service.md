@@ -27,7 +27,7 @@ description: Create Google Cloud Run services in DuploCloud
     <figure><img src="../../../.gitbook/assets/Screenshot (370).png" alt=""><figcaption><p>The <strong>Add Cloud Run Service - Advanced Options</strong> pane</p></figcaption></figure>
 5. Optionally, update the **Advanced Options** fields:
 
-<table data-header-hidden><thead><tr><th width="178.4444580078125"></th><th></th></tr></thead><tbody><tr><td><strong>Traffic</strong></td><td>Specify how traffic is routed to the service (e.g., 100% of traffic to the latest version), if needed.</td></tr><tr><td><strong>Ports</strong></td><td><p>Configure the container ports for the service, if needed. Example: </p><ul><li>Name: <code>http1</code></li></ul><ul><li>Container Port: <code>8080</code></li></ul></td></tr><tr><td><strong>Other Specs</strong></td><td>Define additional service specifications, if needed.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="178.4444580078125"></th><th></th></tr></thead><tbody><tr><td><strong>Traffic</strong></td><td>Specify how traffic is routed to the service (e.g., 100% of traffic to the latest version), if needed.</td></tr><tr><td><strong>Ports</strong></td><td><p>Configure the container ports for the service, if needed. Example:</p><ul><li>Name: <code>http1</code></li><li>Container Port: <code>8080</code></li></ul></td></tr><tr><td><strong>Other Specs</strong></td><td>Define additional service specifications, if needed.</td></tr></tbody></table>
 
 7. Click **Create** to deploy your Cloud Run service. Cloud Run will automatically scale the service based on incoming traffic.
 
@@ -37,7 +37,7 @@ After you've deployed a Cloud Run service, you can view logs, edit configuration
 
 1. Select the appropriate Tenant in the **Tenant** list box.
 2. In the DuploCloud Portal, navigate to **Cloud Services** → **Cloud Run Service**.
-3. Click on the menu icon (<img src="../../../.gitbook/assets/menu icon (8).avif" alt="" data-size="line">) in the row of the Cloud Run service you want to manage.
+3. Click on the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the Cloud Run service you want to manage.
 4. Select one of the following actions:
 
 <table data-header-hidden><thead><tr><th width="193.5555419921875">Action</th><th>Description</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Opens a live log view of your Cloud Run service's stdout/stderr output.</td></tr><tr><td><strong>View</strong></td><td>Displays the current configuration of the service in read-only mode.</td></tr><tr><td><strong>Edit</strong></td><td>Allows you to update the container image, environment variables, resources, and other settings.</td></tr><tr><td><strong>GCP Console</strong></td><td>Opens the service directly in the Google Cloud Console. Useful for debugging or advanced configuration.</td></tr><tr><td><strong>Delete</strong></td><td>Removes the Cloud Run service from DuploCloud and GCP. This action is irreversible.</td></tr></tbody></table>

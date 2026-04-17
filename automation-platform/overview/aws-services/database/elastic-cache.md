@@ -14,9 +14,9 @@ description: Create ElastiCache for Redis database and Memcache memory caching
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (1035).png" alt=""><figcaption><p>The <strong>Create a ElastiCache</strong> page in the DuploCloud Portal</p></figcaption></figure></div>
 3. Enter a database **Name**.
 4. In the **Type** list box, select **Memcached.**
-5. Select the **Memcached Version**.&#x20;
+5. Select the **Memcached Version**.
 6. Select the node size in the **Size** list box.
-7. Specify the number of **Replicas**.&#x20;
+7. Specify the number of **Replicas**.
 8. Click **Create**. The Memcached ElastiCache instance is created.
 
 {% hint style="info" %}
@@ -36,7 +36,7 @@ Pass the cache endpoint to your application through the [Environment Variables](
 
 <div align="left"><figure><img src="../../../../.gitbook/assets/image (15) (1).png" alt="" width="563"><figcaption><p>The Snapshot fields on the <strong>Create an ElastiCache</strong> pane</p></figcaption></figure></div>
 
-4. Click **Create** to create the Reds or Valkey instance.&#x20;
+4. Click **Create** to create the Reds or Valkey instance.
 
 ## Updating Snapshot Retention Limit
 
@@ -50,7 +50,7 @@ To update the Snapshot Retention Limit:
 
 1. Navigate to **Cloud Services** -> **Database**.
 2. Select the **ElastiCache** tab.
-3. Click on the name of the ElastiCache instance in the **NAME** column.&#x20;
+3. Click on the name of the ElastiCache instance in the **NAME** column.
 4.  Click **Actions**, and select **Update Snapshot Retention Limit**. The **Update Snapshot Retention Limit** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (767).png" alt=""><figcaption><p><strong>Update Snapshot Retention Limit</strong> pane</p></figcaption></figure></div>
@@ -68,7 +68,7 @@ To create a Serverless Valkey instance, complete the following steps:
 3.  Select the **Serverless** option at the top of the page.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (1036).png" alt=""><figcaption></figcaption></figure>
-4. &#x20;Complete the following fields:
+4. Complete the following fields:
 
 <table data-header-hidden><thead><tr><th width="194.89642333984375"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the Valkey Serverless cluster.</td></tr><tr><td><strong>Type</strong></td><td>Displays <code>Valkey</code>; no action needed as the cache engine is pre-selected.</td></tr><tr><td><strong>Valkey Version</strong></td><td>Select the version of the Valkey cache engine to deploy.</td></tr><tr><td><strong>KMS</strong></td><td>Select the KMS key to use for encryption at rest (e.g., <code>duploservices-sa-4nov</code>).</td></tr><tr><td><strong>Description</strong></td><td>Optionally enter a description for the cluster to help identify it.</td></tr></tbody></table>
 
@@ -89,10 +89,10 @@ When you create a Global Datastore in DuploCloud, a primary Redis cluster in the
 1. Navigate to to **Cloud Services** → **Database** → **ElastiCache** → **Global Datastores**.
 2.  Click **Add**. The **Create a Global Datastore** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (868).png" alt=""><figcaption><p><strong>Create a Global Datastore</strong> pane </p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (868).png" alt=""><figcaption><p><strong>Create a Global Datastore</strong> pane</p></figcaption></figure></div>
 3. Complete the fields, as required for your configuration:
 
-<table data-header-hidden><thead><tr><th width="218.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the datastore. We recommend using the Tenant name as a prefix.</td></tr><tr><td><strong>Redis Version</strong></td><td>Select the Redis version to deploy.</td></tr><tr><td><strong>Size</strong></td><td>Select a node size. Only Large or larger nodes are supported, and burstable types (t-class) are not allowed.</td></tr><tr><td><strong>Global Replication Group</strong></td><td>Enter a name for the replication group.</td></tr><tr><td><strong>Global Replication Group Description</strong></td><td>Optionally, enter a description for the replication group.</td></tr><tr><td><strong>Secondary Cluster Region</strong></td><td>Select the Tenant/region where you want the secondary cluster to reside.</td></tr><tr><td><strong>Log Delivery Configuration</strong>  </td><td>Configure a log destination to capture Redis logs for monitoring and troubleshooting.</td></tr><tr><td><strong>Parameter Group Name</strong></td><td>Select the parameter group name for log delivery.</td></tr><tr><td><strong>Replicas</strong></td><td>Enter the number of replicas.</td></tr><tr><td><strong>No of Shards</strong></td><td>Specify the number of shards for the cluster.</td></tr><tr><td><strong>KMS (Optional)</strong></td><td>Select a KMS key to enable server-side encryption for the Global Datastore.</td></tr><tr><td><strong>Encryption in Transit</strong></td><td><p>Enable or disable in-transit encryption.</p><ul><li>When enabled, enter the password clients will use to authenticate to the cluster in the <strong>Auth Token (Optional)</strong> field.</li></ul></td></tr><tr><td><strong>Secondary Cluster KMS</strong></td><td>Select a KMS key to enable server-side encryption for any secondary clusters you add.</td></tr><tr><td><strong>Snapshot Retention Limit</strong></td><td>Enter retention period in days.</td></tr><tr><td><strong>Snapshot Window Start Time</strong></td><td>Enter the start time for the snapshot window.</td></tr><tr><td><strong>Snapshot Window Duration in Hours</strong></td><td>Enter the duration of the snapshot window in hours.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="218.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the datastore. We recommend using the Tenant name as a prefix.</td></tr><tr><td><strong>Redis Version</strong></td><td>Select the Redis version to deploy.</td></tr><tr><td><strong>Size</strong></td><td>Select a node size. Only Large or larger nodes are supported, and burstable types (t-class) are not allowed.</td></tr><tr><td><strong>Global Replication Group</strong></td><td>Enter a name for the replication group.</td></tr><tr><td><strong>Global Replication Group Description</strong></td><td>Optionally, enter a description for the replication group.</td></tr><tr><td><strong>Secondary Cluster Region</strong></td><td>Select the Tenant/region where you want the secondary cluster to reside.</td></tr><tr><td><strong>Log Delivery Configuration</strong></td><td>Configure a log destination to capture Redis logs for monitoring and troubleshooting.</td></tr><tr><td><strong>Parameter Group Name</strong></td><td>Select the parameter group name for log delivery.</td></tr><tr><td><strong>Replicas</strong></td><td>Enter the number of replicas.</td></tr><tr><td><strong>No of Shards</strong></td><td>Specify the number of shards for the cluster.</td></tr><tr><td><strong>KMS (Optional)</strong></td><td>Select a KMS key to enable server-side encryption for the Global Datastore.</td></tr><tr><td><strong>Encryption in Transit</strong></td><td><p>Enable or disable in-transit encryption.</p><ul><li>When enabled, enter the password clients will use to authenticate to the cluster in the <strong>Auth Token (Optional)</strong> field.</li></ul></td></tr><tr><td><strong>Secondary Cluster KMS</strong></td><td>Select a KMS key to enable server-side encryption for any secondary clusters you add.</td></tr><tr><td><strong>Snapshot Retention Limit</strong></td><td>Enter retention period in days.</td></tr><tr><td><strong>Snapshot Window Start Time</strong></td><td>Enter the start time for the snapshot window.</td></tr><tr><td><strong>Snapshot Window Duration in Hours</strong></td><td>Enter the duration of the snapshot window in hours.</td></tr></tbody></table>
 
 4. Click **Create** to provision the ElastiCache Global Datastore.
 
@@ -123,12 +123,12 @@ To view cluster details, including connection endpoints for a Global Datastore:
 2. Select the name of the Global Datastore.
 3. Select the **Regional Clusters** tab. A list of clusters in the Global Datastore displays.
 4. Click the name of the cluster you want to view details for.
-5. Use the tabs to explore cluster details:&#x20;
+5. Use the tabs to explore cluster details:
 
-<table data-header-hidden><thead><tr><th width="143.77777099609375">Tab</th><th>Description</th></tr></thead><tbody><tr><td><strong>Redis Cluster</strong></td><td>Displays cluster details, including the endpoint. </td></tr><tr><td><strong>Details</strong></td><td>Shows a JSON representation of the cluster configuration and status.</td></tr><tr><td><strong>Alerts</strong></td><td>Displays any alerts related to the cluster.</td></tr><tr><td><strong>Snapshots</strong></td><td>Lists available snapshots and backup information for the cluster.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="143.77777099609375">Tab</th><th>Description</th></tr></thead><tbody><tr><td><strong>Redis Cluster</strong></td><td>Displays cluster details, including the endpoint.</td></tr><tr><td><strong>Details</strong></td><td>Shows a JSON representation of the cluster configuration and status.</td></tr><tr><td><strong>Alerts</strong></td><td>Displays any alerts related to the cluster.</td></tr><tr><td><strong>Snapshots</strong></td><td>Lists available snapshots and backup information for the cluster.</td></tr></tbody></table>
 
 {% hint style="info" %}
-Each cluster provides a single endpoint. The primary endpoint handles **write operations**, and the secondary endpoint handles **read operations**.&#x20;
+Each cluster provides a single endpoint. The primary endpoint handles **write operations**, and the secondary endpoint handles **read operations**.
 {% endhint %}
 
 <figure><img src="../../../../.gitbook/assets/Screenshot (870).png" alt=""><figcaption><p>Cluster detail page with <strong>Redis Cluster</strong>, <strong>Details</strong>, <strong>Alerts</strong>, and <strong>Snapshots</strong> tabs.</p></figcaption></figure>
@@ -140,7 +140,7 @@ To remove a cluster from a Global Datastore:
 1. Navigate to **Cloud Services** → **Database** → **ElastiCache** → **Global Datastores**.
 2. Select the name of the Global Datastore.
 3. Select the **Regional Clusters** tab
-4. Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (19) (2).avif" alt="" data-size="line">) in the row of the cluster you want to remove.
+4. Click the menu icon (<img src="../../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the cluster you want to remove.
 5. Select **Remove**.
 
 {% hint style="warning" %}
@@ -155,6 +155,6 @@ To remove a cluster from a Global Datastore:
 
 When a Redis instance in an AWS environment is experiencing connection issues, ensure the Security Group (SG) configuration allows VPN traffic to port `6379`. Then, using the `nc` command, verify the Redis instance's accessibility.
 
-If you encounter local DNS resolution problems, consider changing your DNS provider or connecting directly using the Redis instance's IP address, which can be obtained via the `dig` command.&#x20;
+If you encounter local DNS resolution problems, consider changing your DNS provider or connecting directly using the Redis instance's IP address, which can be obtained via the `dig` command.
 
 For persistent DNS issues, resetting your router or using external DNS query tools may help. If other troubleshooting steps fail, exploring [AWS network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) can offer additional insights.

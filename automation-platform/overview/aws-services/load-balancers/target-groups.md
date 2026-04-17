@@ -4,11 +4,11 @@ description: Create and manage AWS Target Groups to control application traffic 
 
 # Target Groups
 
-Target Groups route traffic from a Load Balancer to specific backend resources, such as EC2 instances, IP addresses, ALBs, or Lambda functions. They’re helpful when you need precise control over traffic distribution, health check monitoring, or when consolidating traffic across multiple services behind a shared ALB.&#x20;
+Target Groups route traffic from a Load Balancer to specific backend resources, such as EC2 instances, IP addresses, ALBs, or Lambda functions. They’re helpful when you need precise control over traffic distribution, health check monitoring, or when consolidating traffic across multiple services behind a shared ALB.
 
 ## Prerequisites
 
-A Target Group routes traffic to one or more backend resources, which are the actual systems that process incoming requests. Before creating a Target Group, ensure the appropriate backend resource is already created.&#x20;
+A Target Group routes traffic to one or more backend resources, which are the actual systems that process incoming requests. Before creating a Target Group, ensure the appropriate backend resource is already created.
 
 Supported backend resource types include:
 
@@ -39,9 +39,9 @@ Follow these steps to create a Target Group:
 Register backend resources to your Target Group. Registered targets will receive traffic routed by the Load Balancer. You can register EC2 Instances, IP addresses, or ALB Load Balancers.
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** → **Networking** → **Load Balancers**.
-2. Select the **Target Groups** tab.&#x20;
-3. Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (4).avif" alt="" data-size="line">) in the row of the Target Group.
-4.  Select **Register Targets**. The **Register Targets** pane displays. <br>
+2. Select the **Target Groups** tab.
+3. Click the menu icon (<img src="../../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the Target Group.
+4.  Select **Register Targets**. The **Register Targets** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (117).png" alt="" width="344"><figcaption><p>The <strong>Register Targets</strong> pane with an Instance selected</p></figcaption></figure></div>
 5. Specify the targets you want to register. The field name varies depending on the target type:
@@ -60,15 +60,15 @@ To route traffic to your Target Group, create an Application Load Balancer (ALB)
 3. Click **Add**. The **Create a Load Balancer** pane displays.
 4. Complete the required fields as shown below:
 
-<table data-header-hidden><thead><tr><th width="174"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Provide a unique name for the Load Balancer. </td></tr><tr><td><strong>Type</strong></td><td>Choose your Load Balancer type (e.g., <strong>Network</strong> or <strong>Application</strong>).</td></tr><tr><td><strong>Visibility</strong></td><td>Select <strong>Public</strong> to make the Load Balancer accessible from the internet, or <strong>Internal</strong> to restrict access to within your private network or VPC.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="174"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Provide a unique name for the Load Balancer.</td></tr><tr><td><strong>Type</strong></td><td>Choose your Load Balancer type (e.g., <strong>Network</strong> or <strong>Application</strong>).</td></tr><tr><td><strong>Visibility</strong></td><td>Select <strong>Public</strong> to make the Load Balancer accessible from the internet, or <strong>Internal</strong> to restrict access to within your private network or VPC.</td></tr></tbody></table>
 
 5. Click **Create** to create the Load Balancer.
 6. Once the Load Balancer is created, add a listener:
-   * On the **Load Balancers** page, select your newly created Load Balancer, and click on the **Listeners** tab.&#x20;
+   * On the **Load Balancers** page, select your newly created Load Balancer, and click on the **Listeners** tab.
    * Click **Add**. The **Add Load Balancer Listener** page displays.
    * Complete the fields in the **Add Load Balancer Listener** page as shown below:
 
-<table data-header-hidden><thead><tr><th width="196.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Port</strong></td><td>Provide the Load Balancer Listener Port (e.g., <strong>80</strong> for HTTP or <strong>443</strong> for HTTPS).</td></tr><tr><td><strong>Protocol</strong></td><td>Choose the same protocol used by the Target Group (e.g., <strong>TCP</strong>, <strong>TLS</strong>, or <strong>UDP</strong>) to ensure compatibility.</td></tr><tr><td><strong>Action Type</strong></td><td>Choose <strong>Forward to target groups</strong>.</td></tr><tr><td><strong>Forward Target Group</strong></td><td>Select the Target Group created in step 1.  <br><br><strong>Note</strong>: Target Groups with Lambda targets can only be associated with ALBs using HTTP or HTTPS listeners. TCP/TLS listeners are not supported for Lambda targets.</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="196.22222900390625"></th><th></th></tr></thead><tbody><tr><td><strong>Port</strong></td><td>Provide the Load Balancer Listener Port (e.g., <strong>80</strong> for HTTP or <strong>443</strong> for HTTPS).</td></tr><tr><td><strong>Protocol</strong></td><td>Choose the same protocol used by the Target Group (e.g., <strong>TCP</strong>, <strong>TLS</strong>, or <strong>UDP</strong>) to ensure compatibility.</td></tr><tr><td><strong>Action Type</strong></td><td>Choose <strong>Forward to target groups</strong>.</td></tr><tr><td><strong>Forward Target Group</strong></td><td>Select the Target Group created in step 1.<br><br><strong>Note</strong>: Target Groups with Lambda targets can only be associated with ALBs using HTTP or HTTPS listeners. TCP/TLS listeners are not supported for Lambda targets.</td></tr></tbody></table>
 
 7. Click **Save** to create the listener. The Load Balancer will route traffic to the selected Target Group based on the configured listener rules and health checks.
 
@@ -78,9 +78,9 @@ You can update your Target Group configurations directly from Target Group menu:
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** → **Networking** → **Load Balancers**.
 2. Select the **Target Groups** tab.
-3. Click the **menu icon** (<img src="../../../../.gitbook/assets/image (466).png" alt="" data-size="line">) next to the Target Group you want to edit.
-4. Select from the following options:&#x20;
+3. Click the **menu icon** (<img src="../../../../.gitbook/assets/image (460).png" alt="" data-size="line">) next to the Target Group you want to edit.
+4. Select from the following options:
 
-<table data-header-hidden><thead><tr><th width="193.55560302734375"></th><th></th></tr></thead><tbody><tr><td><strong>Console</strong></td><td>Access the Azure Console </td></tr><tr><td><strong>Edit</strong></td><td>Modify the Target Group settings</td></tr><tr><td><strong>Register Targets</strong></td><td>Register target(s) from the Target Group</td></tr><tr><td><strong>Deregister Targets</strong></td><td>Deregister target(s) from the Target Group</td></tr><tr><td><strong>Delete</strong></td><td>Permanently removes the Target Group</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="193.55560302734375"></th><th></th></tr></thead><tbody><tr><td><strong>Console</strong></td><td>Access the Azure Console</td></tr><tr><td><strong>Edit</strong></td><td>Modify the Target Group settings</td></tr><tr><td><strong>Register Targets</strong></td><td>Register target(s) from the Target Group</td></tr><tr><td><strong>Deregister Targets</strong></td><td>Deregister target(s) from the Target Group</td></tr><tr><td><strong>Delete</strong></td><td>Permanently removes the Target Group</td></tr></tbody></table>
 
 6. Click **Update**. The changes are applied.

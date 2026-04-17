@@ -23,7 +23,7 @@ In DuploCloud, you can assign Kubernetes taints to EKS worker nodes to control h
 
 <table data-header-hidden><thead><tr><th width="139.3333740234375"></th><th></th></tr></thead><tbody><tr><td><strong>Key</strong></td><td>Identify the taint condition. Example values: <code>dedicated</code>, <code>testing</code>.</td></tr><tr><td><strong>Value</strong></td><td>Provide additional context for the key. Example values: <code>dev</code>, <code>staging</code>, <code>prod</code>.</td></tr><tr><td><strong>Effect</strong></td><td>Specify the action taken if a Pod does not tolerate the taint:<br><br>• <strong>NoSchedule</strong>: Prevents the Pod from being scheduled on the node unless it tolerates the taint.<br>• <strong>PreferNoSchedule</strong>: Kubernetes avoids scheduling the Pod on this node if possible, but may still allow it.<br>• <strong>NoExecute</strong>: Immediately evicts existing Pods that don’t tolerate the taint and blocks new ones.</td></tr></tbody></table>
 
-3. Click **Add Taint**. The taint is added to the node.&#x20;
+3. Click **Add Taint**. The taint is added to the node.
 
 ### Adding Taints After Node Creation
 
@@ -33,7 +33,7 @@ To add a taint to an existing node:
 2. Select the correct tab (**EC2**, **ASG**, etc.).
 3. Click the **Name** of the node to open its details page.
 4. Select the **Taints** tab.
-5. Click **Add**. The **Add Taint** pane displays.&#x20;
+5. Click **Add**. The **Add Taint** pane displays.
 6. Enter the **Key**, **Value**, and **Effect**.
 7. Click **Add Taint.** The new taint will appear in the list immediately.
 
@@ -63,8 +63,8 @@ If you're familiar with `kubectl`, you can also manage taints from the command l
 
 1. Navigate to **Kubernetes** -> **Nodes**.
 2. Click on the node in the **NAME** column.
-3. Select the **Taints** tab.&#x20;
-4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (29).avif" alt="" data-size="line">) next to the taint you want to manage.
-5. Select **Edit** to modify the taint **Key**, **Value**, or **Effect** of the taint or **Delete** to remove the taint from the node.&#x20;
+3. Select the **Taints** tab.
+4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the taint you want to manage.
+5. Select **Edit** to modify the taint **Key**, **Value**, or **Effect** of the taint or **Delete** to remove the taint from the node.
 
 <figure><img src="../../../.gitbook/assets/Screenshot (415).png" alt=""><figcaption><p>The <strong>Taints</strong> tab on the EC2 node details page</p></figcaption></figure>

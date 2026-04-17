@@ -8,7 +8,7 @@ DuploCloud provides a number of configurable components when running Microsoft A
 
 Applications involve many Azure Services like Storage Account, RDS for RDBS (MySQL), Redis, VM Scale Sets, Ingress, ALB/NLB load balancers, and so on. While each of their configurations needs a few application-centric inputs, there are scores of lower-level nuances around access control, security, and compliance.
 
-Using DuploCloud you can create virtually any service within the Tenant using basic application-centric inputs. At the same time, the platform will make sure the lower-level nuances are programmed to best practices for security and compliance.&#x20;
+Using DuploCloud you can create virtually any service within the Tenant using basic application-centric inputs. At the same time, the platform will make sure the lower-level nuances are programmed to best practices for security and compliance.
 
 ## Supported Services for DuploCloud Azure
 
@@ -17,7 +17,7 @@ Supported Services are listed in alphabetical order, following the core services
 ### Core Services
 
 * [Containers and Services](../../automation-platform/overview-2/azure-services/containers-and-services/)
-* [Load Balancers](https://app.gitbook.com/o/ojpRPRrP7bqrzOUuLmOz/s/68cb0s9ce5UIUKWPuYs8/~/diff/~/changes/1389/automation-platform/overview-2/azure-services/load-balancers)
+* [Load Balancers](../../automation-platform/overview-2/azure-services/load-balancers.md)
 
 ### Additional Services
 

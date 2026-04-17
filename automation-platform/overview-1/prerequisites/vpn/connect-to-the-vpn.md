@@ -12,15 +12,15 @@ The OpenVPN Access Server only forwards traffic intended for resources within Du
 
 ## Accessing VPN Credentials
 
-1. Click on your user name in the upper right corner of the DuploCloud Portal, and select **Profile**. Your **Profile** page displays.&#x20;
-2. VPN credentials are displayed in the **VPN Details** area of the **Profile** page. &#x20;
+1. Click on your user name in the upper right corner of the DuploCloud Portal, and select **Profile**. Your **Profile** page displays.
+2. VPN credentials are displayed in the **VPN Details** area of the **Profile** page.
 
-<figure><img src="../../../../.gitbook/assets/PROFILE (2).png" alt=""><figcaption><p>The <strong>VPN Details</strong> section of the user Profile page</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/PROFILE (1).png" alt=""><figcaption><p>The <strong>VPN Details</strong> section of the user Profile page</p></figcaption></figure>
 
 ## Setting up the OpenVPN User Profile and Client App
 
-1. Click on your user name in the upper right corner of the DuploCloud Portal, and select **Profile**. Your **Profile** page displays.&#x20;
-2. Click the **VPN URL** link in the **VPN Details** section. Browsers may call the link unsafe since it is using a self-signed certificate. Proceed to it anyway.&#x20;
+1. Click on your user name in the upper right corner of the DuploCloud Portal, and select **Profile**. Your **Profile** page displays.
+2. Click the **VPN URL** link in the **VPN Details** section. Browsers may call the link unsafe since it is using a self-signed certificate. Proceed to it anyway.
 3. Log in to the **OpenVPN Access Server** portal using the credentials from your **Profile** page.
 4. Click on the **OpenVPN Connect Recommended for your device** link to install the OpenVPN Connect application on your local machine.
 
@@ -29,9 +29,8 @@ The OpenVPN Access Server only forwards traffic intended for resources within Du
 5.  Click the link labeled **Yourself (user-locked profile)** to download your OpenVPN user profile.\
     <br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (202).png" alt="" width="375"><figcaption></figcaption></figure></div>
-6.  Open the **.ovpn** file and click **OK** in the **Import .ovpn profile** dialog. <br>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (165).png" alt="" width="375"><figcaption></figcaption></figure></div>
+6.  Open the **.ovpn** file and click **OK** in the **Import .ovpn profile** dialog.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (47).png" alt="" width="375"><figcaption></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/234.png" alt="" width="375"><figcaption></figcaption></figure></div>
 7. Click **Connect**. The OpenVPN user profile and client app are set up.
-

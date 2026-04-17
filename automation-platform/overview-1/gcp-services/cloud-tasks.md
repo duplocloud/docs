@@ -27,7 +27,7 @@ To manage an existing queue:
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud Tasks**.
 2. Select the **Queues** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (16).avif" alt="" data-size="line">) in the row of the queue you want to manage.<br>
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the queue you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (593).png" alt=""><figcaption><p><strong>Queues</strong> tab with menu options highlighted</p></figcaption></figure>
 4. Choose one of the following actions:
@@ -44,7 +44,7 @@ Once a queue is created, you can add individual tasks:
 4.  Click **Add**. The **Create Task** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (595).png" alt=""><figcaption><p><strong>Create Task</strong> pane</p></figcaption></figure></div>
-5. Complete the required fields:&#x20;
+5. Complete the required fields:
 
 <table data-header-hidden><thead><tr><th width="229.111083984375"></th><th></th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a unique name for the task. This field is required.</td></tr><tr><td><strong>Task Type</strong></td><td>Select the type of task, e.g., <strong>Http</strong> or <strong>AppEngine</strong>.</td></tr><tr><td><strong>URL</strong></td><td>Enter the full URL for the HTTP target. It must begin with <code>http://</code> or <code>https://</code>.</td></tr><tr><td><strong>HTTP Method</strong></td><td>Choose the HTTP method to use for the request, e.g., <strong>Post</strong>.</td></tr><tr><td><strong>Request Body</strong></td><td>Optionally, enter a payload to include in the request body. This is supported for most HTTP methods that allow a body, such as <code>POST</code>, <code>PUT</code>, and <code>PATCH</code>.</td></tr><tr><td><strong>Add a Header</strong></td><td>Optionally, select this option to include one or more custom HTTP headers. For each header, enter a <strong>Name</strong> and <strong>Value</strong>.</td></tr></tbody></table>
 
@@ -59,7 +59,7 @@ Once tasks have been created, you can manage them directly from the DuploCloud P
 1. Navigate to **Cloud Services** -> **Cloud Tasks**.
 2. Click the name of the queue that contains the task you want to manage.
 3. Select the **Tasks** tab.
-4.  In the row of the task you want to manage, click the menu icon (<img src="../../../.gitbook/assets/menu icon (17).avif" alt="" data-size="line">).<br>
+4.  In the row of the task you want to manage, click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">).<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (597).png" alt=""><figcaption><p><strong>Tasks</strong> tab with menu options highlighted</p></figcaption></figure>
 5. Choose one of the following actions:

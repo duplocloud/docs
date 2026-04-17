@@ -44,7 +44,7 @@ Adds custom text to the beginning of the login buttons on the DuploCloud login s
 
 1. Navigate to **Administrator** -> **Systems Settings**.
 2. Click on the **System Config** tab.
-3. Click on the **menu** **icon** (<img src="../../../.gitbook/assets/menu icon (1).png" alt="" data-size="line">) on the left of the **LoginBannerText** or **LoginButtonText** row and select **Update**.
+3. Click on the **menu** **icon** (<img src="../../../.gitbook/assets/menu icon.png" alt="" data-size="line">) on the left of the **LoginBannerText** or **LoginButtonText** row and select **Update**.
 
 <figure><img src="../../../.gitbook/assets/system config update.png" alt=""><figcaption><p>The <strong>System Config</strong> tab with the menu icon for the <strong>LoginBannerText</strong> row highlighted.</p></figcaption></figure>
 
@@ -54,4 +54,3 @@ Adds custom text to the beginning of the login buttons on the DuploCloud login s
 <div align="left"><figure><img src="../../../.gitbook/assets/appconfig upatded.png" alt=""><figcaption><p>The <strong>Update Config AppConfig</strong> pane.</p></figcaption></figure></div>
 
 6. The configuration is updated and the updated text displays on your DuploCloud login screen banner/button.
-
