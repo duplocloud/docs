@@ -4,19 +4,20 @@ Providers are the external systems and cloud services that DuploCloud AI Suite c
 
 ## Supported Providers
 
-| Category                | Provider                                                                                                                                          |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Cloud Accounts**      | [Amazon Web Services (AWS)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/amazon-web-services-aws)                        |
-| **Cloud Accounts**      | [Microsoft Azure](https://docs.duplocloud.com/docs/getting-started/integrating-providers/microsoft-azure)                                         |
-| **Cloud Accounts**      | [Google Cloud Platform (GCP)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/google-cloud-platform-gcp)                   |
+| Category                | Provider                                                                                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Cloud Accounts**      | [Amazon Web Services (AWS)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/amazon-web-services-aws)                             |
+| **Cloud Accounts**      | [Microsoft Azure](https://docs.duplocloud.com/docs/getting-started/integrating-providers/microsoft-azure)                                               |
+| **Cloud Accounts**      | [Google Cloud Platform (GCP)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/google-cloud-platform-gcp)                         |
 | **Kubernetes**          | [Amazon Elastic Kubernetes Service (EKS)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/amazon-elastic-kubernetes-service-eks) |
-| **Kubernetes**          | [Azure Kubernetes Service (AKS)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/azure-kubernetes-service-aks)             |
-| **Kubernetes**          | [Google Kubernetes Engine (GKE)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/google-kubernetes-engine-gke)             |
-| **Observability**       | [Datadog](https://docs.duplocloud.com/docs/getting-started/integrating-providers/datadog)                                                         |
-| **Observability**       | [NewRelic](https://docs.duplocloud.com/docs/getting-started/integrating-providers/newrelic)                                                       |
-| **Observability**       | [Sentry](https://docs.duplocloud.com/docs/getting-started/integrating-providers/sentry)                                                           |
-| **Incident Management** | [PagerDuty](https://docs.duplocloud.com/docs/getting-started/integrating-providers/pagerduty)                                                     |
-| **Source Control**      | [GitHub](https://docs.duplocloud.com/docs/getting-started/integrating-providers/github)                                                           |
-| **Source Control**      | [GitLab](https://docs.duplocloud.com/docs/getting-started/integrating-providers/gitlab)                                                           |
-| **Source Control**      | [BitBucket](https://docs.duplocloud.com/docs/getting-started/integrating-providers/bitbucket)                                                     |
-| **Others**              |                                                                                                                                                   |
+| **Kubernetes**          | [Azure Kubernetes Service (AKS)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/azure-kubernetes-service-aks)                   |
+| **Kubernetes**          | [Google Kubernetes Engine (GKE)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/google-kubernetes-engine-gke)                   |
+| **Observability**       | [Datadog](https://docs.duplocloud.com/docs/getting-started/integrating-providers/datadog)                                                               |
+| **Observability**       | [NewRelic](https://docs.duplocloud.com/docs/getting-started/integrating-providers/newrelic)                                                             |
+| **Observability**       | [Sentry](https://docs.duplocloud.com/docs/getting-started/integrating-providers/sentry)                                                                 |
+| **Incident Management** | [PagerDuty](https://docs.duplocloud.com/docs/getting-started/integrating-providers/pagerduty)                                                           |
+| **Source Control**      | [GitHub](https://docs.duplocloud.com/docs/getting-started/integrating-providers/github)                                                                 |
+| **Source Control**      | [GitLab](https://docs.duplocloud.com/docs/getting-started/integrating-providers/gitlab)                                                                 |
+| **Source Control**      | [BitBucket](https://docs.duplocloud.com/docs/getting-started/integrating-providers/bitbucket)                                                           |
+| **Others**              | [Notion](https://docs.duplocloud.com/docs/getting-started/integrating-providers/notion)                                                                 |
+| Others                  | [Jira](https://docs.duplocloud.com/docs/getting-started/integrating-providers/jira)                                                                     |
