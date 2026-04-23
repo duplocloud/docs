@@ -59,6 +59,8 @@
   * [BitBucket](getting-started/integrating-providers/bitbucket.md)
   * [Notion](getting-started/integrating-providers/notion.md)
   * [Jira](getting-started/integrating-providers/jira.md)
+* [Integrating MCP Servers](getting-started/integrating-mcp-servers/README.md)
+  * [Linear](getting-started/integrating-mcp-servers/linear.md)
 * [Onboarding](getting-started/duplocloud-onboarding.md)
 * [Support Options: Standard vs. Managed Operations](getting-started/duplocloud-support-options-standard-vs.-managed-operations.md)
 * [Getting Help with DuploCloud](getting-started/duplocloud-support-model.md)
