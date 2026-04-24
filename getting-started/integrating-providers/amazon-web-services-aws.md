@@ -2,7 +2,7 @@
 
 The AWS Cloud Provider lets DuploCloud AI agents interact with your AWS account — querying resources, running CLI commands, and managing infrastructure on your behalf. There are two ways to authenticate: using an **IAM Role** (recommended) or using an **Access Key**.
 
-> Use this [CloudFormation Template](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) to easily create the AWS and Kubernetes Credentials you can use to connect with DuploCloud.&#x20;
+> Use this [CloudFormation Template](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) to easily create the AWS and Kubernetes Credentials you can use to connect with DuploCloud. You can also [Download the CloudFormation Template](https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) for review. For more information, refer to [this public git repo](https://github.com/duplocloud/duplocloud-helpdesk-access).
 
 ***
 
