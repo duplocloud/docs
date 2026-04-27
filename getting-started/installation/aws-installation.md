@@ -19,7 +19,7 @@ The installation deploys the following components into a dedicated namespace in 
 | **Ingress (ALB)**      | AWS Application Load Balancer routing HTTPS traffic              |
 | **Persistent Storage** | EFS-backed shared volume for agent working directories           |
 
-All components run entirely within your AWS account.&#x20;
+All components run entirely within your AWS account.
 
 ***
 
@@ -51,9 +51,9 @@ If you prefer to install into an existing AWS account (e.g. alongside other work
 
 ***
 
-## Installation Requirements&#x20;
+## Installation Requirements
 
-In either of the scenarios above, we will need:&#x20;
+In either of the scenarios above, we will need:
 
 ### 1. AWS Access
 
@@ -76,12 +76,12 @@ In either of the scenarios above, we will need:&#x20;
 
 ### 3. Domain and DNS
 
-| Item                               | Required | Notes                                                                                                         |
-| ---------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------- |
-| Domain or subdomain for the portal | ✅        | e.g. `helpdesk.yourcompany.com`                                                                               |
-| xterm subdomain                    | ✅        | e.g. `xterm.helpdesk.yourcompany.com`                                                                         |
-| Access to DNS provider             | ✅        | Route 53, Cloudflare, or equivalent                                                                           |
-| Existing ACM certificate           | Optional | If not available, one will be requested during install                                                        |
+| Item                                                 | Required | Notes                                                  |
+| ---------------------------------------------------- | -------- | ------------------------------------------------------ |
+| Public domain or subdomain for the DuploCloud portal | ✅        | e.g. `helpdesk.yourcompany.com`                        |
+| xterm subdomain                                      | ✅        | e.g. `xterm.helpdesk.yourcompany.com`                  |
+| Access to DNS provider                               | ✅        | Route 53, Cloudflare, or equivalent                    |
+| Existing ACM certificate                             | Optional | If not available, one will be requested during install |
 
 ### 4. Administrator Emails
 
