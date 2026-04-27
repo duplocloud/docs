@@ -47,6 +47,7 @@
   * [Azure Installation](getting-started/installation/azure-installation.md)
   * [GCP Installation](getting-started/installation/gcp-installation.md)
   * [Helpdesk V1 to V2 Upgrade](getting-started/installation/v1-to-v2-upgrade.md)
+  * [Slack Bot Installation](getting-started/installation/slackbot-installation.md)
 * [Integrating Providers](getting-started/integrating-providers/README.md)
   * [Amazon Web Services (AWS)](getting-started/integrating-providers/amazon-web-services-aws.md)
   * [Microsoft Azure](getting-started/integrating-providers/microsoft-azure.md)
