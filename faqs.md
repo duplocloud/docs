@@ -152,6 +152,22 @@ Onboarding typically requires about one meeting per week from your side — Dupl
 
 <details>
 
+<summary>Why is a new namespace created during deployment? Will it interfere with our existing workloads?</summary>
+
+The new namespace is specifically designed to enforce isolation from your existing workloads. Your current services and infrastructure are unaffected.
+
+</details>
+
+<details>
+
+<summary>Why is HDv2 deployed in prod by default, even if I have multiple portals?</summary>
+
+A single HDv2 instance in your prod account can manage all of your environments — prod, nonprod, staging, and more — through its multi-provider model. This reduces operational overhead and aligns with HDv2's design as a unified control plane. Multiple deployments are available if explicitly required, but a single prod deployment is the recommended default.
+
+</details>
+
+<details>
+
 <summary>Can DuploCloud scan our existing infrastructure and identify what still needs to be done?</summary>
 
 Yes — this is the standard starting point for any project. When you create a Project Plan, you provide the platform with access to your Git repositories and cloud accounts (via Scopes). The planning phase scans what already exists and generates tasks only for what's missing or non-compliant with the target spec.
@@ -518,6 +534,22 @@ A common pattern: your GRC platform flags a control as failing; DuploCloud's age
 No. You don't need to grant any access to get started. DuploCloud's stack runs as a few Docker containers alongside a MongoDB instance and two S3 buckets — no privileged access to your environment is required upfront.
 
 Access is granted on your terms through [Providers](introduction/ai-devops-policy-model/providers.md) and Scopes. The platform uses IAM permissions defined in each Scope to generate temporary, just-in-time credentials that are passed to the agent as part of the ticket. You control exactly what the agent can and cannot touch.&#x20;
+
+</details>
+
+<details>
+
+<summary>The AI HelpDesk runs in our prod environment — does that mean it has full access to everything?</summary>
+
+No. Access is entirely determined by the permissions you choose to grant. For example, you can give the AI Suite Kubernetes-only access to a staging portal while withholding AWS access entirely. The platform operates as a single control plane that connects to multiple providers, each scoped to exactly what you allow.
+
+</details>
+
+<details>
+
+<summary>If HDv2 only runs in prod, how do nonprod users access it — and does adding them to prod give them prod access?</summary>
+
+Users are added to the prod portal but their access is strictly scoped within DuploCloud to allow only what is provided to it. Access is determined by assigned scopes, not by where the portal is deployed. A user can also be assigned to multiple Workspaces with different scopes — for example, read-only prod and full-access nonprod.
 
 </details>
 
