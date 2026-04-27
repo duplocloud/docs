@@ -92,9 +92,10 @@ DuploCloud handles the upgrade end-to-end:
 
 ## You're in Good Hands
 
-The upgrade is designed to be smooth and low-risk, with DuploCloud managing every step. HelpDesk V2 is already running in many customer environments — we know exactly what a clean upgrade looks like.
+The upgrade is designed to be smooth and low-risk, with DuploCloud managing every step.
 
 * **Your data stays in your account** — all tickets, configurations, and agent outputs remain in your own cloud environment
 * **Grows with your team** — after go-live, we can add more providers, build custom skills, or configure additional workspaces as your use cases expand
 
+HelpDesk V2 is already running in many customer environments. 
 To schedule your upgrade, reach out to your DuploCloud account team.
