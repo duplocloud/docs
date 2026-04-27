@@ -76,12 +76,12 @@ In either of the scenarios above, we will need:
 
 ### 3. Domain and DNS
 
-| Item                                                 | Required | Notes                                                  |
-| ---------------------------------------------------- | -------- | ------------------------------------------------------ |
-| Public domain or subdomain for the DuploCloud portal | ✅        | e.g. `helpdesk.yourcompany.com`                        |
-| xterm subdomain                                      | ✅        | e.g. `xterm.helpdesk.yourcompany.com`                  |
-| Access to DNS provider                               | ✅        | Route 53, Cloudflare, or equivalent                    |
-| Existing ACM certificate                             | Optional | If not available, one will be requested during install |
+| Item                                            | Required | Notes                                                  |
+| ----------------------------------------------- | -------- | ------------------------------------------------------ |
+| A domain or subdomain for the DuploCloud portal | ✅        | e.g. `helpdesk.yourcompany.com`                        |
+| xterm subdomain                                 | ✅        | e.g. `xterm.helpdesk.yourcompany.com`                  |
+| Access to DNS provider                          | ✅        | Route 53, Cloudflare, or equivalent                    |
+| Existing ACM certificate                        | Optional | If not available, one will be requested during install |
 
 ### 4. Administrator Emails
 
