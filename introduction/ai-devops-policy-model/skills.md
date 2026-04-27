@@ -22,38 +22,71 @@ There are three Skill types in the Duplo Platform:
 
 ## Creating a Skill
 
-### Method 1 — External or Custom Skill
+### Method 1 — External Skill
 
-1. Navigate to **Skills** and click **Add**.
+Use this method to add a skill hosted at a public or vendor-provided URL (e.g. a `.zip` package from HashiCorp or Pulumi).
+
+1. Navigate to **AI Admin → Skills** and click **+ Add**.
 
 <figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
 
-2. Enter a **Name**.
-3. Select the **Skill** **Type** (**External** or **Custom**).
-4. Optionally, add a **Description** for the Skill.
+2. Fill in the following fields:
+   - **Name** — a unique identifier for the skill (e.g. `Kubernetes-Troubleshooting`)
+   - **Type** — select **External**
+   - **Vendor** *(optional)* — the name of the skill provider (e.g. `DuploCloud`)
+   - **Package URL** — the URL to the skill package (e.g. `https://packages.duplocloud.com/skills/kubernetes-troubleshooting-1.0.0.zip`)
 
-<figure><img src="../../.gitbook/assets/Skills-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/skills-add-external.png" alt=""><figcaption></figcaption></figure>
 
-5. Specify the Skills package:
+3. Click **Create**.
 
-* **External Skills -** Enter the URL to the Skills package and optionally, the Vendor
-* **Custom** **Skills -** There are 2 formats:
-  * SKILL.md files can be pasted directly into the editor on this page (as shown above)
-  * Packages can be uploaded to the file system from the package explorer in the Kebab Menu of the Skills List page (as shown below)
+### Method 2 — Custom Skill
+
+Use this method to create your own skill from scratch. Custom skills can be added either as an uploaded package or as a `SKILL.md` file pasted directly into the editor.
+
+#### Package
+
+1. Navigate to **AI Admin → Skills** and click **+ Add**.
+
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
+
+2. Fill in the following fields:
+   - **Name** — a unique identifier for the skill
+   - **Type** — select **Custom**
+   - **Description** *(optional)* — a short description of what the skill does
+
+<figure><img src="../../.gitbook/assets/skills-add-custom-package.png" alt=""><figcaption></figcaption></figure>
+
+3. Click **Create**.
+4. Upload a zip file from the package explorer in the Kebab Menu of the Skills List page.
 
 <figure><img src="../../.gitbook/assets/Skills 3 (1).png" alt=""><figcaption></figcaption></figure>
 
-6. Click **Update** to save.
+#### SkillMd
 
-### Method 2 — From a Private Git Repository
+1. Navigate to **AI Admin → Skills** and click **+ Add**.
 
-The **Private Git Repository** skill type lets you store your skill files directly in a GitHub repository, giving you version control and easy updates without manual uploads.
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
+
+2. Fill in the following fields:
+   - **Name** — a unique identifier for the skill
+   - **Type** — select **Custom**
+   - **Description** *(optional)* — a short description of what the skill does
+3. Paste the `SKILL.md` file content directly into the editor on this page.
+
+<figure><img src="../../.gitbook/assets/Skills-1.png" alt=""><figcaption></figcaption></figure>
+
+4. Click **Create**.
+
+### Method 3 — From a Private Git Repository
+
+Use this method to pull a skill directly from a GitHub repository, giving you version control and easy updates without manual uploads.
 
 #### Step 1 — Navigate to Skills
 
 Go to **AI Admin → Skills** in the left sidebar. This page lists all skills available in your environment, including built-in skills and any custom ones you have added. Each skill shows its name, description, assigned personas, type, format, and package path.
 
-![](<../../.gitbook/assets/skills-private-git-step-01.png>)
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
 
 #### Step 2 — Add a New Skill
 
@@ -77,21 +110,25 @@ Your `SKILL.md` file should begin with a clear **name** and **description** so t
 
 ![](<../../.gitbook/assets/skills-private-git-step-04.png>)
 
-#### Step 3 — Skill Successfully Created
+#### Step 3 — Click Create
+
+Click **Create** to save the skill.
+
+#### Step 4 — Skill Successfully Created
 
 The Skills list now shows the new skill at the top with a **Last Modified** timestamp confirming it was just created. The total skill count increases by one. The skill is now available to be attached to any ticket or persona in the system.
 
 ![](<../../.gitbook/assets/skills-private-git-step-05.png>)
 
-#### Step 4 — Attach the Skill to a Ticket
+## Attaching a Skill to a Ticket
 
-When creating a new ticket, expand **Advanced Options** and open the **Additional Skills** dropdown. Select the skill you just created (e.g. `Jira-skill`). This instructs the agent to load and follow the skill's instructions for the duration of this ticket, in addition to its default persona behaviour.
+Once a skill has been created using any of the methods above, you can attach it when creating a new ticket.
+
+When creating a new ticket, expand **Advanced Options** and open the **Additional Skills** dropdown. Select the skill you want to use. This instructs the agent to load and follow the skill's instructions for the duration of this ticket, in addition to its default persona behaviour.
 
 ![](<../../.gitbook/assets/skills-private-git-step-15.png>)
 
-#### Step 5 — Skill Loaded and Confirmed in the Agent Session
-
-Once the ticket is created, the agent confirms that the skill has been loaded from the repository. The **Context Files** panel shows the `.claude/skills/jira-ticket-handler/` folder alongside other skills in the session. The agent explicitly confirms the skill is active and available in the system context for this ticket.
+Once the ticket is created, the agent confirms that the skill has been loaded. The **Context Files** panel shows the skill folder alongside other skills in the session. The agent explicitly confirms the skill is active and available in the system context for this ticket.
 
 ![](<../../.gitbook/assets/skills-private-git-step-16.png>)
 
