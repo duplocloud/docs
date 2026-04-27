@@ -57,11 +57,10 @@ Use this method to create your own skill from scratch. Custom skills can be adde
 
 <figure><img src="../../.gitbook/assets/skills-add-custom-package.png" alt=""><figcaption></figcaption></figure>
 
-3. Upload a zip file from the package explorer in the Kebab Menu of the Skills List page.
+3. Click **Create**.
+4. Upload a zip file from the package explorer in the Kebab Menu of the Skills List page.
 
 <figure><img src="../../.gitbook/assets/Skills 3 (1).png" alt=""><figcaption></figcaption></figure>
-
-4. Click **Create**.
 
 #### SkillMd
 
@@ -111,7 +110,11 @@ Your `SKILL.md` file should begin with a clear **name** and **description** so t
 
 ![](<../../.gitbook/assets/skills-private-git-step-04.png>)
 
-#### Step 3 — Skill Successfully Created
+#### Step 3 — Click Create
+
+Click **Create** to save the skill.
+
+#### Step 4 — Skill Successfully Created
 
 The Skills list now shows the new skill at the top with a **Last Modified** timestamp confirming it was just created. The total skill count increases by one. The skill is now available to be attached to any ticket or persona in the system.
 
