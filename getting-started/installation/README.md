@@ -14,23 +14,25 @@ DuploCloud deploys the AI Suite into your cloud environment using a Helm chart. 
 
 DuploCloud AI Suite runs on any of the following managed Kubernetes platforms:
 
-| Cloud | Kubernetes Service |
-|---|---|
-| **AWS** | Amazon EKS |
-| **Google Cloud** | GKE |
-| **Azure** | AKS |
+| Cloud | Kubernetes Service | Guide |
+|---|---|---|
+| **AWS** | Amazon EKS | [AWS Installation](aws-installation.md) |
+| **Google Cloud** | GKE | [GCP Installation](gcp-installation.md) |
+| **Azure** | AKS | [Azure Installation](azure-installation.md) |
 
 ---
 
 ## What You Need to Provide
 
-### 1. A Kubernetes Cluster
+### 1. An AWS Account (or Existing Cluster)
 
-You must have a managed Kubernetes cluster running in your cloud account. DuploCloud can assist with cluster setup if one does not already exist.
+The simplest path is to provide DuploCloud with a **fresh, dedicated AWS account**. Our team will create all required infrastructure — VPC, Kubernetes cluster, storage, certificates — from scratch with no risk of disrupting existing workloads.
 
-- **AWS:** Amazon EKS cluster
-- **GCP:** GKE cluster
-- **Azure:** AKS cluster
+If you already have a Kubernetes cluster and prefer to install into an existing account, that is fully supported. DuploCloud deploys into a dedicated namespace and does not modify resources outside of it.
+
+- **AWS:** Amazon EKS (existing cluster, or we create one)
+- **GCP:** GKE (existing cluster required)
+- **Azure:** AKS (existing cluster required)
 
 ### 2. Cloud Infrastructure
 
@@ -104,12 +106,16 @@ All components run inside a dedicated namespace in your cluster and are fully co
 
 ## Access DuploCloud Requires
 
-To perform the installation, our team will need:
+To perform the installation, our team will need admin-level access to your AWS account and Kubernetes cluster. The easiest way to grant this is by running our **CloudFormation template**, which creates a scoped IAM role our team can assume.
 
-- **Kubeconfig access** to your Kubernetes cluster (or a role with permissions to deploy Helm charts into the target namespace)
-- **Read access** to confirm the required infrastructure (load balancer, storage, certificates) is in place
+For AWS, the customer runs the [CloudFormation template](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) with the following options enabled:
 
-Access requirements are scoped to the installation namespace and can be revoked after deployment is complete.
+- `CreateAdminRole = true` — grants AWS resource creation permissions
+- `CreateEKSAdminRole = true` — grants kubectl access to the cluster (if one exists)
+
+The stack outputs a Role ARN that DuploCloud uses to assume access. This access can be revoked by deleting the CloudFormation stack after installation is complete.
+
+For full details, see the [AWS Installation guide](aws-installation.md).
 
 ---
 
