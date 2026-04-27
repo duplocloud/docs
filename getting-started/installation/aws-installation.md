@@ -78,7 +78,7 @@ In either of the scenarios above, we will need:&#x20;
 
 | Item                               | Required | Notes                                                                                                         |
 | ---------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------- |
-| Domain or subdomain for the portal | ✅        | e.g. `helpdesk.yourcompany.com` — does not need to be publicly accessible; a private hosted zone is supported |
+| Domain or subdomain for the portal | ✅        | e.g. `helpdesk.yourcompany.com`                                                                               |
 | xterm subdomain                    | ✅        | e.g. `xterm.helpdesk.yourcompany.com`                                                                         |
 | Access to DNS provider             | ✅        | Route 53, Cloudflare, or equivalent                                                                           |
 | Existing ACM certificate           | Optional | If not available, one will be requested during install                                                        |
@@ -111,41 +111,20 @@ Alternatively, if your organization uses IAM roles, you can create a role with `
 
 ***
 
-## Connecting AWS to DuploCloud (Post-Installation)
+## What DuploCloud Will Do
 
-Once the portal is live, you can connect AWS accounts to it so the AI agent can query and manage your infrastructure. This uses the **AWS Cloud Provider** feature inside the HelpDesk.
+Once credentials are shared, our team handles the full installation end-to-end:
 
-> Use the [CloudFormation Template](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) to automatically create the IAM role needed to connect an AWS account to HelpDesk. You can also [download the template](https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) for review.
+* **Provision infrastructure** (if starting fresh) — create the VPC, EKS cluster, node groups, EFS filesystem, security groups, and ACM certificate
+* **Deploy HelpDesk** — install all components via Helm chart into a dedicated namespace
+* **Configure networking** — set up the ALB ingress, SSL termination, and DNS records for your portal domain
+* **Set up your environment** — configure the first providers, skills, and workspaces so your team can get started right away
+* **Verify and hand off** — confirm all services are healthy and provide the application URL
 
-The `HelpdeskAccountId` parameter in the template is the AWS account ID **where Helpdesk is deployed**. This configures the IAM trust policy so the HelpDesk service can assume the created role and manage resources in your AWS accounts.
-
-There are two authentication methods:
-
-### IAM Role (Recommended)
-
-1. Log in to the Helpdesk portal → **Providers** → select your tenant → **Cloud** tab → **+ Add**
-2. Fill in **Name**, **Type** = `AWS`, **Account ID**
-3. Go to the **Credentials** tab → **+ Add** → **Credential Type** = `IAM Role`
-4. Enter the **IAM Role ARN** to assume
-5. Add a **Scope** — select region and resource types
-6. Use the scope in a ticket to have the agent act on your AWS account
-
-### Access Key
-
-1. Follow steps 1–2 above to create a provider
-2. Go to **Credentials** → **+ Add** → **Credential Type** = `Access Key`
-3. Enter the Access Key ID and Secret Access Key
-4. Add a **Scope** and use it in tickets
-
-For full step-by-step screenshots, see the [AWS Provider guide](../integrating-providers/amazon-web-services-aws.md).
+Total time is typically **30–60 minutes**.
 
 ***
 
-## Troubleshooting
+## Connecting AWS to DuploCloud (Post-Installation)
 
-| Issue                                  | Resolution                                                                                                    |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| EFS mount targets not available        | Wait up to 10 minutes — EFS creates one mount target per subnet                                               |
-| ALB not provisioned                    | Verify AWS Load Balancer Controller is installed: `kubectl get pods -n kube-system \| grep aws-load-balancer` |
-| Pods stuck in `Pending`                | Check EFS CSI driver: `kubectl get pods -n kube-system \| grep efs`                                           |
-| ACM cert stuck in `PENDING_VALIDATION` | DNS validation CNAME records have not been added or have not propagated yet                                   |
+Once the portal is live, you can connect AWS accounts to it so the AI agent can query and manage your infrastructure. See the [AWS Provider guide](../integrating-providers/amazon-web-services-aws.md) for full setup instructions, including using the CloudFormation template to create the required IAM roles.
