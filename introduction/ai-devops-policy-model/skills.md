@@ -20,7 +20,9 @@ There are three Skill types in the Duplo Platform:
 
 **Custom Skills**: You can create your own Skills from scratch to meet your organization’s specific requirements. These can be simple SKILL.md files or packages in zip files.
 
-## Creating a new Skill
+## Creating a Skill
+
+### Method 1 — External or Custom Skill
 
 1. Navigate to **Skills** and click **Add**.
 
@@ -42,6 +44,56 @@ There are three Skill types in the Duplo Platform:
 <figure><img src="../../.gitbook/assets/Skills 3 (1).png" alt=""><figcaption></figcaption></figure>
 
 6. Click **Update** to save.
+
+### Method 2 — From a Private Git Repository
+
+The **Private Git Repository** skill type lets you store your skill files directly in a GitHub repository, giving you version control and easy updates without manual uploads.
+
+#### Step 1 — Navigate to Skills
+
+Go to **AI Admin → Skills** in the left sidebar. This page lists all skills available in your environment, including built-in skills and any custom ones you have added. Each skill shows its name, description, assigned personas, type, format, and package path.
+
+![](<../../.gitbook/assets/skills-private-git-step-01.png>)
+
+#### Step 2 — Add a New Skill
+
+Click **+ Add** in the top right. Fill in the following fields:
+
+- **Name** — a unique identifier for the skill (e.g. `Jira-skill`)
+- **Type** — select **Private Git Repository**
+- **Scope** — select the GitHub provider you have already configured (e.g. `github1`)
+- **Organization Name** — your GitHub organization or username (e.g. `nariklama`)
+- **Repository Name** — the name of the repository containing your skill files (e.g. `DuploCloud-Skill-repo`)
+- **Ref** — the branch to pull from (e.g. `main`)
+- **Folder** *(optional)* — the subfolder within the repository where the skill file lives (e.g. `skill`)
+
+{% hint style="warning" %}
+The skill file inside your repository **must be named `SKILL.md`**. The agent will not be able to locate or load the skill if the file is named anything else.
+{% endhint %}
+
+{% hint style="info" %}
+Your `SKILL.md` file should begin with a clear **name** and **description** so the agent knows when and how to apply the skill. Without this, the agent may not activate the skill at the right time or understand its intended purpose.
+{% endhint %}
+
+![](<../../.gitbook/assets/skills-private-git-step-04.png>)
+
+#### Step 3 — Skill Successfully Created
+
+The Skills list now shows the new skill at the top with a **Last Modified** timestamp confirming it was just created. The total skill count increases by one. The skill is now available to be attached to any ticket or persona in the system.
+
+![](<../../.gitbook/assets/skills-private-git-step-05.png>)
+
+#### Step 4 — Attach the Skill to a Ticket
+
+When creating a new ticket, expand **Advanced Options** and open the **Additional Skills** dropdown. Select the skill you just created (e.g. `Jira-skill`). This instructs the agent to load and follow the skill's instructions for the duration of this ticket, in addition to its default persona behaviour.
+
+![](<../../.gitbook/assets/skills-private-git-step-15.png>)
+
+#### Step 5 — Skill Loaded and Confirmed in the Agent Session
+
+Once the ticket is created, the agent confirms that the skill has been loaded from the repository. The **Context Files** panel shows the `.claude/skills/jira-ticket-handler/` folder alongside other skills in the session. The agent explicitly confirms the skill is active and available in the system context for this ticket.
+
+![](<../../.gitbook/assets/skills-private-git-step-16.png>)
 
 #### Example: Sample `SKILL.md` file:
 
