@@ -6,6 +6,38 @@ The AWS Cloud Provider lets DuploCloud AI agents interact with your AWS account 
 
 ***
 
+## Setting Up IAM Access with CloudFormation (Recommended)
+
+Before adding credentials, you need an IAM role in your AWS account that HelpDesk can assume. The easiest way is the **DuploCloud Access CloudFormation template** — it takes 2–3 minutes and outputs Role ARNs you can use directly.
+
+> [Launch CloudFormation Stack](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) | [Download Template](https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) | [GitHub Repo](https://github.com/duplocloud/duplocloud-helpdesk-access)
+
+**What it creates** — four IAM roles, each independently enabled or disabled:
+
+| Role | Policy | Default |
+|---|---|---|
+| `DuploCloud-AWS-Admin` | `AdministratorAccess` | Off |
+| `DuploCloud-AWS-ReadOnly` | `ReadOnlyAccess` | **On** |
+| `DuploCloud-EKS-Admin-<ClusterName>` | `AmazonEKSClusterAdminPolicy` (via EKS Access Entry) | Off |
+| `DuploCloud-EKS-ReadOnly-<ClusterName>` | `AmazonEKSViewPolicy` (via EKS Access Entry) | **On** |
+
+**Parameters:**
+
+| Parameter | Default | Description |
+|---|---|---|
+| `EnableAWSAdmin` | `false` | Creates `DuploCloud-AWS-Admin` with `AdministratorAccess` |
+| `EnableAWSReadOnly` | `true` | Creates `DuploCloud-AWS-ReadOnly` with `ReadOnlyAccess` |
+| `EnableEKSAdmin` | `false` | Creates `DuploCloud-EKS-Admin-<ClusterName>` with cluster admin access |
+| `EnableEKSReadOnly` | `true` | Creates `DuploCloud-EKS-ReadOnly-<ClusterName>` with read-only cluster access |
+| `EKSClusterName` | *(empty)* | Required if either EKS role is enabled — must match the exact cluster name |
+| `HelpdeskAccountId` | *(empty)* | The AWS account ID where HelpDesk is deployed. Sets the IAM trust policy so HelpDesk can assume the created roles. Leave empty for same-account access only. |
+
+Once the stack shows `CREATE_COMPLETE`, copy the relevant Role ARN(s) from the **Outputs** tab and use them as IAM Role credentials in the steps below.
+
+> **Revoking access:** Delete the CloudFormation stack to remove all created roles and trust policies.
+
+***
+
 ## Step 1 — Add the AWS Provider
 
 Navigate to **Providers** in the left sidebar, select your tenant (e.g. **IT**), and click the **Cloud** tab. Click **+ Add** in the top-right corner.
