@@ -16,7 +16,7 @@ At its core, V2 introduces:
 * [**Providers**](../../introduction/ai-devops-policy-model/providers.md) — connections to any cloud or tool your team uses (AWS, Azure, GCP, GitHub, Jira, Linear, Slack, and more)
 * [**Skills and Personas**](../../introduction/ai-devops-policy-model/skills.md) — reusable AI capabilities that define how agents behave; combine them into Personas tailored to each team or role
 * [**Projects**](../../introduction/ai-devops-policy-model/projects.md) — a Spec-Driven DevOps process for large, complex work: the agent turns your requirements into a Spec, then a Plan, then executable Tasks
-* **Tickets** — the familiar conversational interface for quick, focused tasks, now backed by a far more capable agent
+* [**Tickets**](../../introduction/ai-devops-policy-model/tickets.md) — the familiar conversational interface for quick, focused tasks, now backed by a far more capable agent
 
 Everything runs in your own cloud account, fully secure and entirely within your control.
 
