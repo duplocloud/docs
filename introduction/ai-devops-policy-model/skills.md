@@ -36,7 +36,7 @@ Use this method to add a skill hosted at a public or vendor-provided URL (e.g. a
    - **Vendor** *(optional)* — the name of the skill provider (e.g. `DuploCloud`)
    - **Package URL** — the URL to the skill package (e.g. `https://packages.duplocloud.com/skills/kubernetes-troubleshooting-1.0.0.zip`)
 
-<figure><img src="../../.gitbook/assets/skills-add-external.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Skills-1.png" alt=""><figcaption></figcaption></figure>
 
 3. Click **Create**.
 
