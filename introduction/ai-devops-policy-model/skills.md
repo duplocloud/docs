@@ -42,7 +42,9 @@ Use this method to add a skill hosted at a public or vendor-provided URL (e.g. a
 
 ### Method 2 — Custom Skill
 
-Use this method to create your own skill from scratch using a `SKILL.md` file or a packaged zip.
+Use this method to create your own skill from scratch. Custom skills can be added either as an uploaded package or as a `SKILL.md` file pasted directly into the editor.
+
+#### Package
 
 1. Navigate to **AI Admin → Skills** and click **+ Add**.
 
@@ -53,13 +55,27 @@ Use this method to create your own skill from scratch using a `SKILL.md` file or
    - **Type** — select **Custom**
    - **Description** *(optional)* — a short description of what the skill does
 
-<figure><img src="../../.gitbook/assets/Skills-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/skills-add-custom-package.png" alt=""><figcaption></figcaption></figure>
 
-3. Specify the skill content using one of two formats:
-   - **SKILL.md** — paste the file content directly into the editor on this page
-   - **Package** — upload a zip file from the package explorer in the Kebab Menu of the Skills List page
+3. Upload a zip file from the package explorer in the Kebab Menu of the Skills List page.
 
 <figure><img src="../../.gitbook/assets/Skills 3 (1).png" alt=""><figcaption></figcaption></figure>
+
+4. Click **Create**.
+
+#### SkillMd
+
+1. Navigate to **AI Admin → Skills** and click **+ Add**.
+
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
+
+2. Fill in the following fields:
+   - **Name** — a unique identifier for the skill
+   - **Type** — select **Custom**
+   - **Description** *(optional)* — a short description of what the skill does
+3. Paste the `SKILL.md` file content directly into the editor on this page.
+
+<figure><img src="../../.gitbook/assets/Skills-1.png" alt=""><figcaption></figcaption></figure>
 
 4. Click **Create**.
 
@@ -71,7 +87,7 @@ Use this method to pull a skill directly from a GitHub repository, giving you ve
 
 Go to **AI Admin → Skills** in the left sidebar. This page lists all skills available in your environment, including built-in skills and any custom ones you have added. Each skill shows its name, description, assigned personas, type, format, and package path.
 
-![](<../../.gitbook/assets/skills-private-git-step-01.png>)
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
 
 #### Step 2 — Add a New Skill
 
