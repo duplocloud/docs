@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Slack Bot Installation
 
 ## Slack App Setup
@@ -8,19 +12,18 @@ Before using the bot, a Slack app must be created and installed to your workspac
 2. Click **Create New App** → **From a manifest**.
 3. Pick your workspace and select **DuploCloud**.
 4. Copy the manifest below into the JSON window, replacing `{customer-name}` with the customer's name, then click **Create**.
-5. Scroll down to **Display Information** and update the logo.
+5.  Scroll down to **Display Information** and update the logo.
 
-   ![DuploCloud logo for Slack](../../.gitbook/assets/ai-suite-duplo-logo.png)
-
+    ![DuploCloud logo for Slack](../../.gitbook/assets/ai-suite-duplo-logo.png)
 6. Go to **Collaborators** in the left sidebar and add collaborators.
 7. Go to **Install App** and request to install the app to the DuploCloud workspace.
 8. In the **Basic Information** tab, scroll to **App-Level Tokens** and click **Generate Token and Scope**.
-   - Name the token `slack`
-   - Add the scope `connections:write`
-   - Click **Generate** and save the app token
-9. Return to the **Install App** tab. Once your installation request is approved, install the app and save the bot token.
+   * Name the token `slack`
+   * Add the scope `connections:write`
+   * Click **Generate** and save the app token
+9.  Return to the **Install App** tab. Once your installation request is approved, install the app and save the bot token.
 
-   ![Slack bot install request approved](../../.gitbook/assets/ai-suite-slack-approval.png)
+    ![Slack bot install request approved](../../.gitbook/assets/ai-suite-slack-approval.png)
 
 ### Slack App Manifest
 
