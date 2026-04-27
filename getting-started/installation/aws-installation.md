@@ -149,7 +149,43 @@ These accounts receive full administrative access after installation.
 
 ## Granting Installer Access via CloudFormation
 
-The easiest way for a customer to grant DuploCloud installation access is to run the existing **DuploCloud Access CloudFormation template**. It takes under 5 minutes and outputs a Role ARN that we use to assume access into the account.
+### When to Use This Template
+
+The CloudFormation template is the **recommended access method for all customer deployments** — both fresh AWS accounts and existing accounts with an EKS cluster already in place.
+
+Use it when:
+- **Fresh AWS account** — the customer is providing a new, dedicated account for the Helpdesk installation. DuploCloud will create all infrastructure (VPC, EKS cluster, EFS, ALB, etc.) from scratch using the admin role.
+- **Existing EKS cluster** — the customer already has an EKS cluster. The template creates both an AWS admin role (for provisioning supporting resources) and an EKS admin role (for kubectl access to the cluster).
+- **Audit trail preferred** — the template and its created roles are visible in CloudFormation and IAM, making it easy for the customer to review what was created and remove access later by deleting the stack.
+
+The only alternative is manually creating IAM policies (see [Reference: Minimum IAM Policies](#reference-minimum-iam-policies-manual-alternative) below), which is appropriate only if the customer's security policy prohibits running CloudFormation.
+
+---
+
+### How Cross-Account Access Works
+
+The template creates IAM roles in the **customer's** AWS account. Each role includes a **trust policy** that allows DuploCloud's AWS account to assume the role via `sts:AssumeRole`.
+
+The `HelpdeskAccountId` parameter is DuploCloud's AWS account ID — setting it is what establishes this cross-account trust relationship. Without it, the created roles could only be assumed by principals within the customer's own account, which would not grant DuploCloud access.
+
+Once the roles are created, our team assumes them from our own AWS account using a local `~/.aws/config` profile — no long-lived credentials are ever shared with DuploCloud.
+
+---
+
+### What the Template Creates
+
+The template can create up to four IAM roles, all conditional on parameters:
+
+| Role Name | AWS Policy Attached | Purpose |
+|---|---|---|
+| `DuploCloud-AWS-Admin` | `AdministratorAccess` | Full AWS access — creates VPC, EKS, EFS, ALB, ACM, etc. |
+| `DuploCloud-AWS-ReadOnly` | `ReadOnlyAccess` | Read-only AWS access — for audits or monitoring without write permissions |
+| `DuploCloud-EKS-Admin-<ClusterName>` | `AmazonEKSClusterAdminPolicy` | Full `cluster-admin` kubectl access to a specific EKS cluster |
+| `DuploCloud-EKS-ReadOnly-<ClusterName>` | `AmazonEKSViewPolicy` | Read-only kubectl access to a specific EKS cluster |
+
+All roles trust the same `HelpdeskAccountId` (DuploCloud's account).
+
+---
 
 ### Step 1 — Deploy the CloudFormation Template
 
@@ -161,22 +197,30 @@ You can also [download the template](https://duploservices-ai-access-22712024136
 
 ### Step 2 — Set the Parameters
 
-When deploying the stack, the customer should configure the following parameters:
+| Parameter | Default | Recommended for Installation | Notes |
+|---|---|---|---|
+| `CreateAdminRole` | false | **true** | Creates `DuploCloud-AWS-Admin` with `AdministratorAccess` — required for all installations |
+| `CreateReadOnlyRole` | false | false | Creates `DuploCloud-AWS-ReadOnly` with `ReadOnlyAccess` — only needed if DuploCloud needs ongoing read-only monitoring access |
+| `CreateEKSAdminRole` | false | **true** if cluster exists | Creates `DuploCloud-EKS-Admin-<ClusterName>` with full kubectl access — required if an EKS cluster already exists |
+| `CreateEKSReadOnlyRole` | false | false | Creates `DuploCloud-EKS-ReadOnly-<ClusterName>` with read-only kubectl access — not needed for installation |
+| `ClusterName` | *(empty)* | `<eks-cluster-name>` if applicable | Required when either EKS role is enabled; must match the exact EKS cluster name |
+| `HelpdeskAccountId` | *(empty)* | **DuploCloud's account ID** | Sets the cross-account trust policy — DuploCloud will provide this value |
 
-| Parameter | Value | Notes |
-|---|---|---|
-| `CreateAdminRole` | **true** | Creates `DuploCloud-AWS-Admin` with `AdministratorAccess` — required for installation |
-| `CreateEKSAdminRole` | **true** (if EKS cluster exists) | Creates `DuploCloud-EKS-Admin-<ClusterName>` for kubectl access |
-| `ClusterName` | `<eks-cluster-name>` | Required if `CreateEKSAdminRole` is true |
-| `HelpdeskAccountId` | DuploCloud's account ID | Enables cross-account role assumption |
-| `CreateReadOnlyRole` | false | Not needed for installation |
-| `CreateEKSReadOnlyRole` | false | Not needed for installation |
+**Typical configurations:**
 
-> **No existing EKS cluster?** Leave `CreateEKSAdminRole` as false. EKS and VPC will be created during the installation using the admin role.
+| Scenario | Parameters to Enable |
+|---|---|
+| Fresh AWS account (no EKS yet) | `CreateAdminRole = true`, `HelpdeskAccountId = <duplo-account-id>` |
+| Existing EKS cluster | `CreateAdminRole = true`, `CreateEKSAdminRole = true`, `ClusterName = <cluster-name>`, `HelpdeskAccountId = <duplo-account-id>` |
 
-### Step 3 — Share the Role ARN
+> **No existing EKS cluster?** Leave `CreateEKSAdminRole` as false. The EKS cluster and VPC will be created during installation using the admin role.
 
-Once the stack is deployed, the customer shares the `DuploCloud-AWS-Admin` role ARN from the stack **Outputs** tab (e.g. `arn:aws:iam::774157348504:role/DuploCloud-AWS-Admin`).
+### Step 3 — Share the Role ARNs
+
+Once the stack status shows `CREATE_COMPLETE`, the customer opens the stack **Outputs** tab and shares the relevant ARNs:
+
+- `AdminRoleArn` — e.g. `arn:aws:iam::123456789012:role/DuploCloud-AWS-Admin`
+- `EKSAdminRoleArn` — e.g. `arn:aws:iam::123456789012:role/DuploCloud-EKS-Admin-my-cluster` (if applicable)
 
 ### Step 4 — Configure the Installer Profile
 
@@ -193,6 +237,10 @@ Verify it works:
 ```bash
 aws sts get-caller-identity --profile helpdesk-installer
 ```
+
+### Revoking Access After Installation
+
+To revoke DuploCloud's access, the customer simply **deletes the CloudFormation stack**. This removes all created IAM roles and their trust policies. No other cleanup is needed.
 
 ---
 
