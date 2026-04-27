@@ -9,7 +9,7 @@
   * [Skills](introduction/ai-devops-policy-model/skills.md)
   * [Personas](introduction/ai-devops-policy-model/personas.md)
   * [Duplo DevOps Agent](introduction/ai-devops-policy-model/agents.md)
-  * [Workspaces](introduction/ai-devops-policy-model/engineers.md)
+  * [Workspaces](introduction/ai-devops-policy-model/workspaces.md)
   * [Projects](introduction/ai-devops-policy-model/projects.md)
   * [HelpDesk](introduction/ai-devops-policy-model/helpdesk.md)
   * [Tickets](introduction/ai-devops-policy-model/tickets.md)
