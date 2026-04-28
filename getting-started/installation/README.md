@@ -1,18 +1,18 @@
 # Installation
 
-DuploCloud AI Suite is installed directly into your cloud account, running inside a Kubernetes cluster that you own and control. This document explains what you need to provide to DuploCloud, what we will set up, and what prerequisites your environment needs to meet before installation begins.
+DuploCloud HelpDesk is installed directly into your cloud account, running inside a Kubernetes cluster that you own and control. This document explains what you need to provide to DuploCloud, what we will set up, and what prerequisites your environment needs to meet before installation begins.
 
 ***
 
 ## How Installation Works
 
-DuploCloud deploys the AI Suite into your cloud environment using a Helm chart. We manage the deployment process on your behalf — you do not need to run any commands yourself. Once the prerequisites are in place and access is granted, our team handles the installation end-to-end.
+DuploCloud deploys the HelpDesk into your cloud environment using a Helm chart. We manage the deployment process on your behalf — you do not need to run any commands yourself. Once the prerequisites are in place and access is granted, our team handles the installation end-to-end.
 
 ***
 
 ## Supported Cloud Providers
 
-DuploCloud AI Suite runs on any of the following managed Kubernetes platforms:
+DuploCloud HelpDesk runs on any of the following managed Kubernetes platforms:
 
 | Cloud            | Kubernetes Service | Guide                                       |
 | ---------------- | ------------------ | ------------------------------------------- |
@@ -28,7 +28,7 @@ DuploCloud AI Suite runs on any of the following managed Kubernetes platforms:
 
 The simplest path is to provide DuploCloud with a **fresh, dedicated AWS account**. Our team will create all required infrastructure — VPC, Kubernetes cluster, storage, certificates — from scratch with no risk of disrupting existing workloads.
 
-If you already have a Kubernetes cluster and prefer to install into an existing account, that is fully supported. DuploCloud deploys into a dedicated namespace and does not modify any resource that was created outside of Duplo.
+If you already have a Kubernetes cluster and prefer to install into an existing account, that is fully supported. DuploCloud deploys into a dedicated namespace and does not modify any resource that was created outside of DuploCloud.
 
 
 
@@ -44,7 +44,7 @@ Depending on your cloud provider, the following infrastructure will be provision
 | **EFS Filesystem**               | Shared file storage for the backend (mount targets in each node subnet) |
 | **EFS CSI Driver**               | Connects the cluster to EFS                                             |
 | **ACM Certificate**              | TLS for the application domain                                          |
-| **IRSA Role**                    | IAM role for the backend service account with EFS permissions           |
+| **IRSA Role**                    | Required IAM permissions per service                                    |
 
 #### Google Cloud (GKE)
 
