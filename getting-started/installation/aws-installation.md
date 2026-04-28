@@ -67,7 +67,7 @@ In either of the scenarios above, we will need:
 
 | Item                    | Required | Notes                                  |
 | ----------------------- | -------- | -------------------------------------- |
-| EKS cluster             | ✅        | Kubernetes v1.21+                      |
+| EKS cluster             | ✅        | Kubernetes v1.33+                      |
 | Available node capacity | ✅        | Minimum 2 nodes, `t3a.large` or larger |
 
 > **No cluster yet?** If you don't have an EKS cluster, DuploCloud will create one. Full admin access to the account is required for this.
@@ -78,8 +78,8 @@ In either of the scenarios above, we will need:
 
 | Item                                            | Required | Notes                                                  |
 | ----------------------------------------------- | -------- | ------------------------------------------------------ |
-| A domain or subdomain for the DuploCloud portal | ✅        | e.g. `helpdesk.yourcompany.com`                        |
-| xterm subdomain                                 | ✅        | e.g. `xterm.helpdesk.yourcompany.com`                  |
+| A domain or subdomain for the DuploCloud portal | ✅        | e.g. `helpdesk.duplo.company.com`                      |
+| xterm subdomain                                 | ✅        | e.g. `xterm.duplo.company.com`                         |
 | Access to DNS provider                          | ✅        | Route 53, Cloudflare, or equivalent                    |
 | Existing ACM certificate                        | Optional | If not available, one will be requested during install |
 
