@@ -30,13 +30,7 @@ Agents can be configured with **prompt suggestions** and **prompt templates** to
 
 These are configured in the **Metadata** field when adding or editing an agent.
 
-### Step 1 — Navigate to Agents
-
-Go to **AI Admin → Agents** in the left sidebar. This page lists all agents configured in the system, showing their name, description, assigned workspaces, endpoint, path, and last modified date.
-
-![](<../../.gitbook/assets/agents-step-01.png>)
-
-### Step 2 — Add or Edit an Agent
+### Step 1 — Add or Edit an Agent
 
 Click **+ Add** to create a new agent, or open an existing one. Fill in the **Name**, **Description**, **Endpoint**, and **Path** fields as required. Then expand the **Metadata (Optional)** section at the bottom.
 
