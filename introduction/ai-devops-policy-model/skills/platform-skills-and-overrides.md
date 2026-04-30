@@ -22,17 +22,17 @@ Skill Mapping lets you override the platform default skills for a specific Origi
 
 Go to **AI Admin → Skill Mapping** and click **View Default Skills** to see the full table of default mappings. Each row shows an Origin Type, its Sub Type, and the platform default skill assigned to it.
 
-![](<../../.gitbook/assets/skill-mapping-step-01.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-01.png>)
 
 ### Why Override?
 
 Let's consider a scenario. The image shows a copy of the current project platform default skill, which covers three phases: Spec, Plan, and Execution.
 
-![](<../../.gitbook/assets/skill-mapping-step-02.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-02.png>)
 
 The team wants to use a skill that extends this workflow — like adding a dedicated **Review** phase — you can map it as an override so that project tickets automatically use the richer skill instead. This would not be possible without override.
 
-![](<../../.gitbook/assets/skill-mapping-step-03.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-03.png>)
 
 ### Guide to Skill Mapping
 
@@ -40,7 +40,7 @@ The team wants to use a skill that extends this workflow — like adding a dedic
 
 In **AI Admin → Skills**, open the **Skills** dropdown and select **Skill Mapping**. The page opens showing all active overrides — it is empty until the first override is added.
 
-![](<../../.gitbook/assets/skill-mapping-step-04.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-04.png>)
 
 ### Step 2 — Add a Skill Mapping Override
 
@@ -52,11 +52,11 @@ Click **+ Add**. In the form that appears:
 
 The platform default for the selected combination is shown for reference. Open the **Override Skills** dropdown and choose the skill to substitute.
 
-![](<../../.gitbook/assets/skill-mapping-step-05.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-05.png>)
 
 Select the override skill — here, `Project-lifecycle` — then click **Create**.
 
-![](<../../.gitbook/assets/skill-mapping-step-06.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-06.png>)
 
 ---
 
@@ -66,16 +66,16 @@ To confirm the override is active, create a project and open its AI Planner. The
 
 Create a new project under **Projects** with the relevant scopes.
 
-![](<../../.gitbook/assets/skill-mapping-step-07.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-07.png>)
 
 The project is created with the standard three-phase workflow (Specification, Plan, Execution). The override takes effect when the AI Planner session starts — the agent reads the overridden skill and follows its instruction set.
 
-![](<../../.gitbook/assets/skill-mapping-step-08.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-08.png>)
 
 Open the AI Planner and progress through the workflow. When you prompt the agent to move to the review phase, it transitions into the Review phase defined in the overridden skill — a phase that does not exist in the platform default.
 
-![](<../../.gitbook/assets/skill-mapping-step-09.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-09.png>)
 
 The agent generates a full review document — in this example covering observability, cost optimisation, and SOC2 security — confirming that the `duplo-project-lifecycle` skill is active and the override is working correctly.
 
-![](<../../.gitbook/assets/skill-mapping-step-10.png>)
+![](<../../../.gitbook/assets/skill-mapping-step-10.png>)
