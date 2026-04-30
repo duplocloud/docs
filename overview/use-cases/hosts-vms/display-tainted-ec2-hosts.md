@@ -18,7 +18,7 @@ In DuploCloud, you can assign Kubernetes taints to EKS worker nodes to control h
 
 1.  When [Adding a Host](adding-hosts.md) in the DuploCloud Portal, click the **Add Taint** button at the bottom right of the Advanced Options section. The **Add Taint** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/Add taint.png" alt="" width="407"><figcaption><p>The Add Taint pane in the DuploCloud Portal</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/add taint.png" alt="" width="407"><figcaption><p>The Add Taint pane in the DuploCloud Portal</p></figcaption></figure></div>
 2. Complete the following fields:
 
 <table data-header-hidden><thead><tr><th width="139.3333740234375"></th><th></th></tr></thead><tbody><tr><td><strong>Key</strong></td><td>Identify the taint condition. Example values: <code>dedicated</code>, <code>testing</code>.</td></tr><tr><td><strong>Value</strong></td><td>Provide additional context for the key. Example values: <code>dev</code>, <code>staging</code>, <code>prod</code>.</td></tr><tr><td><strong>Effect</strong></td><td>Specify the action taken if a Pod does not tolerate the taint:<br><br>• <strong>NoSchedule</strong>: Prevents the Pod from being scheduled on the node unless it tolerates the taint.<br>• <strong>PreferNoSchedule</strong>: Kubernetes avoids scheduling the Pod on this node if possible, but may still allow it.<br>• <strong>NoExecute</strong>: Immediately evicts existing Pods that don’t tolerate the taint and blocks new ones.</td></tr></tbody></table>

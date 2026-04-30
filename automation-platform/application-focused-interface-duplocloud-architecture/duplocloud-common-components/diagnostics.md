@@ -12,7 +12,7 @@ The DuploCloud platform automatically orchestrates the following main diagnostic
 
 A shared Elasticsearch cluster is deployed and Filebeat is installed in all worker nodes to fetch logs from various applications across Tenants. The logs are injected with metadata corresponding to the Tenant, Service, container ID, Host, etc. Further, each Tenant has a central logging dashboard which includes the Kibana view of logs from applications within the Service. See the screenshot below:
 
-<figure><img src="../../../.gitbook/assets/LOGGING.png" alt=""><figcaption><p>The <strong>Logging</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/logging.png" alt=""><figcaption><p>The <strong>Logging</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>
 
 ### Metrics
 
@@ -28,4 +28,4 @@ The Platform creates faults for many failures automatically. For example, health
 
 All system changes are logged in an audit trail in Elasticsearch where they can be sorted and viewed by Tenant, Service, change type, user, and dozens of other filters.
 
-<figure><img src="../../../.gitbook/assets/AUDIT.png" alt=""><figcaption><p>The <strong>Audit</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/audit.png" alt=""><figcaption><p>The <strong>Audit</strong> dashboard in the DuploCloud Portal</p></figcaption></figure>

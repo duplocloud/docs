@@ -104,7 +104,7 @@ Once you have deployed Container Apps, you can manage them through the DuploClou
      * **Stop** the container app.
      * **Delete** the container app. You must delete the Container App Environment before you can delete any Container Apps within it. Container Apps cannot be deleted while their environment still exists.
 
-<figure><img src="../../../.gitbook/assets/NEWNEW.png" alt=""><figcaption><p>Container App details with <strong>Actions</strong> menu options highlighted</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/newnew.png" alt=""><figcaption><p>Container App details with <strong>Actions</strong> menu options highlighted</p></figcaption></figure>
 
 ### Viewing, Editing, and Deleting from the List
 
