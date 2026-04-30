@@ -20,7 +20,7 @@ Skill Mapping lets you override the platform default skills for a specific Origi
 
 ### Viewing the Platform Defaults
 
-Go to **AI Admin → Skill Mapping** and click **View Default Skills** to see the full table of default mappings. Each row shows an Origin Type, its Sub Type, and the platform default skill assigned to it.
+Go to **AI Admin → Skills → Skill Mapping** and click **View Defaults** to see the full table of default mappings. Each row shows an Origin Type, its Sub Type, and the platform default skill assigned to it.
 
 ![](<../../../.gitbook/assets/skill-mapping-step-01.png>)
 
@@ -33,6 +33,12 @@ Let's consider a scenario. The image shows a copy of the current project platfor
 The team wants to use a skill that extends this workflow — like adding a dedicated **Review** phase — you can map it as an override so that project tickets automatically use the richer skill instead. This would not be possible without override.
 
 ![](<../../../.gitbook/assets/skill-mapping-step-03.png>)
+
+### Prerequisite — Create a Skill First
+
+Before you can set up an override, the skill you want to map must already exist in DuploCloud. The **Override Skills** dropdown in the mapping form only lists skills that have been created in your system.
+
+If you haven't created your custom skill yet, see [Creating a Skill](README.md) for the full guide. Once the skill is created, return here to map it as an override.
 
 ### Guide to Skill Mapping
 
@@ -64,7 +70,7 @@ Select the override skill — here, `Project-lifecycle` — then click **Create*
 
 To confirm the override is active, create a project and open its AI Planner. The agent will now load the overridden skill rather than the platform default.
 
-Create a new project under **Projects** with the relevant scopes.
+In this case we created a new project under **Projects** with the relevant scopes.
 
 ![](<../../../.gitbook/assets/skill-mapping-step-07.png>)
 
