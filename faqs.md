@@ -30,17 +30,13 @@ Your existing infrastructure — Terraform state, Kubernetes clusters, CI/CD pip
 
 DuploCloud is a multi-agent platform, not a single-user coding assistant. The key differences:
 
-**1. Shared system of intelligence — context doesn't live on individual laptops**
-With Claude Code or Cursor, every session starts from scratch. Work done by one engineer isn't visible to teammates, investigations can't be handed off mid-task, and the same context has to be re-established every time. DuploCloud centralises this: every ticket, investigation, and outcome is stored in a shared knowledge base. The second time a similar task runs — a migration, a compliance check, a cluster upgrade — the agent already knows your environment and asks significantly fewer questions.
+**1. Shared system of intelligence — context doesn't live on individual laptops** With Claude Code or Cursor, every session starts from scratch. Work done by one engineer isn't visible to teammates, investigations can't be handed off mid-task, and the same context has to be re-established every time. DuploCloud centralises this: every ticket, investigation, and outcome is stored in a shared knowledge base. The second time a similar task runs — a migration, a compliance check, a cluster upgrade — the agent already knows your environment and asks significantly fewer questions.
 
-**2. Team collaboration and handoff**
-A task started by one engineer can be continued by another without losing context. Projects, tickets, and plans are visible across the team in a shared workspace, and agents can work in parallel across team members' tasks simultaneously.
+**2. Team collaboration and handoff** A task started by one engineer can be continued by another without losing context. Projects, tickets, and plans are visible across the team in a shared workspace, and agents can work in parallel across team members' tasks simultaneously.
 
-**3. Scale and security — credentials managed centrally, not tied to individual laptops**
-DuploCloud manages credentials at the platform level, generating scoped, temporary access per ticket. Because the platform runs in your cloud rather than on a developer's laptop, it isn't constrained by local machine availability, access, or session limits. Agents are also restricted to the specific repositories and cloud accounts defined in the Scope for that task — they cannot reach outside their boundaries to gather context, which is a common failure mode with local AI tools.
+**3. Scale and security — credentials managed centrally, not tied to individual laptops** DuploCloud manages credentials at the platform level, generating scoped, temporary access per ticket. Because the platform runs in your cloud rather than on a developer's laptop, it isn't constrained by local machine availability, access, or session limits. Agents are also restricted to the specific repositories and cloud accounts defined in the Scope for that task — they cannot reach outside their boundaries to gather context, which is a common failure mode with local AI tools.
 
-**4. Always-on, not session-bound**
-A long-running task continues after hours, results are surfaced when complete, and the system keeps working while the team is offline.
+**4. Always-on, not session-bound** A long-running task continues after hours, results are surfaced when complete, and the system keeps working while the team is offline.
 
 If your team already uses Claude Code or Cursor for local development, DuploCloud acts as the coordination and record-keeping layer on top — making individual AI work visible, auditable, and collaborative at the team level.
 
@@ -86,7 +82,7 @@ The main differences: DuploCloud gives you access to the full breadth of cloud-n
 
 <summary>How long does it take to get started?</summary>
 
-The platform is designed to be operational quickly. Setup involves deploying a few Docker containers, connecting your cloud and Git providers, and configuring an Engineer with the appropriate Skills and Scopes. All of which can be done in a few minutes, not days.&#x20;
+The platform is designed to be operational quickly. Setup involves deploying a few Docker containers, connecting your cloud and Git providers, and configuring an Engineer with the appropriate Skills and Scopes. All of which can be done in a few minutes, not days.
 
 The 30-day PoC is structured to deliver measurable results against real infrastructure within the first sprint. Please contact the team to start scoping your onboarding.
 
@@ -111,9 +107,10 @@ The team will also configure Skills to reflect your code conventions and operati
 Your team retains ownership of the application layer — delivering containers, managing dependencies and patches within those containers, and making business decisions about what to build and prioritise. DuploCloud owns running the application and all associated cloud and infrastructure concerns: provisioning, scaling, compliance, cost management, and day-to-day operational work.
 
 In practice:
-- **Application ownership** — your team owns Docker containers, application code, and anything inside them.
-- **Infrastructure ownership** — DuploCloud manages cloud infrastructure, Kubernetes configuration, CI/CD pipeline setup, compliance controls, and operational runbooks.
-- **Decision authority** — your team retains final approval on every infrastructure change before it is executed. Engineers direct the work; agents and DuploCloud's operations team execute it.
+
+* **Application ownership** — your team owns Docker containers, application code, and anything inside them.
+* **Infrastructure ownership** — DuploCloud manages cloud infrastructure, Kubernetes configuration, CI/CD pipeline setup, compliance controls, and operational runbooks.
+* **Decision authority** — your team retains final approval on every infrastructure change before it is executed. Engineers direct the work; agents and DuploCloud's operations team execute it.
 
 The platform is self-service once onboarded — your engineers can initiate and approve tickets directly — but the standard expectation during onboarding is that DuploCloud's team drives the work while your team reviews and approves.
 
@@ -132,9 +129,10 @@ All three, depending on the work and service model:
 **Your engineers** direct priorities, review and approve proposed changes, and own the application layer. Once onboarded, the platform is designed to be self-service — your team can run tickets directly without going through DuploCloud.
 
 The balance shifts based on which service tier you choose:
-- **Fully managed** — DuploCloud's team owns day-to-day execution; your team sets direction and approves changes.
-- **Hybrid** — your team handles routine work; DuploCloud handles complex or sensitive tasks.
-- **Self-serve** — your team runs everything; DuploCloud provides the platform and support.
+
+* **Fully managed** — DuploCloud's team owns day-to-day execution; your team sets direction and approves changes.
+* **Hybrid** — your team handles routine work; DuploCloud handles complex or sensitive tasks.
+* **Self-serve** — your team runs everything; DuploCloud provides the platform and support.
 
 </details>
 
@@ -197,7 +195,7 @@ See [Providers](introduction/ai-devops-policy-model/providers.md) for the full l
 
 <summary>Do you support self-hosted or on-premise deployments?</summary>
 
-DuploCloud runs within your own cloud environment — your infrastructure, your accounts, your data. The PrivateGPT Agent, for example, uses AWS Bedrock to ensure sensitive data never leaves your AWS environment.&#x20;
+DuploCloud runs within your own cloud environment — your infrastructure, your accounts, your data. The PrivateGPT Agent, for example, uses AWS Bedrock to ensure sensitive data never leaves your AWS environment.
 
 For customers with strict data residency or on-premise requirements, contact [support@duplocloud.net](mailto:support@duplocloud.net) to discuss deployment options.
 
@@ -342,11 +340,12 @@ See the [full list of out-of-the-box agents](https://docs.duplocloud.com/docs/ai
 Yes — this is one of the platform's core use cases. Agents can run scheduled compliance checks across your cloud environments and produce structured evidence artifacts automatically.
 
 Specific capabilities include:
-- Cross-account scans against compliance controls (SOC 2, HITRUST, ISO 27001)
-- Continuous drift detection: agents flag resources that fall out of compliance between audit cycles, rather than discovering gaps at audit time
-- Evidence packaging for auditor review, drawn from ticket history, logs, and live environment state
-- GRC platform integration: agents keep controls green in platforms like Drata and Vanta by flagging issues as they arise
-- Persistent runbooks and control attestation in the knowledge base, making each subsequent audit cycle faster
+
+* Cross-account scans against compliance controls (SOC 2, HITRUST, ISO 27001)
+* Continuous drift detection: agents flag resources that fall out of compliance between audit cycles, rather than discovering gaps at audit time
+* Evidence packaging for auditor review, drawn from ticket history, logs, and live environment state
+* GRC platform integration: agents keep controls green in platforms like Drata and Vanta by flagging issues as they arise
+* Persistent runbooks and control attestation in the knowledge base, making each subsequent audit cycle faster
 
 Agents operate with read-only scope by default. Remediation actions require explicit human approval before execution — the platform notifies; it does not auto-remediate.
 
@@ -372,9 +371,9 @@ Initial setup is handled by DuploCloud's team as part of onboarding — Engineer
 
 Ongoing maintenance depends on which service model you choose:
 
-- **Fully managed** — DuploCloud's operations team owns the agents, keeps Skills updated, and is accountable for task outcomes. You direct the work (priorities, what to tackle next); the team handles the rest.
-- **Hybrid** — your team runs day-to-day tasks, with DuploCloud available for complex or sensitive work.
-- **Self-serve** — your team owns configuration and upkeep. Prebuilt agents and Skills are maintained by DuploCloud and require no ongoing effort from you, but custom agents you build yourself are your responsibility.
+* **Fully managed** — DuploCloud's operations team owns the agents, keeps Skills updated, and is accountable for task outcomes. You direct the work (priorities, what to tackle next); the team handles the rest.
+* **Hybrid** — your team runs day-to-day tasks, with DuploCloud available for complex or sensitive work.
+* **Self-serve** — your team owns configuration and upkeep. Prebuilt agents and Skills are maintained by DuploCloud and require no ongoing effort from you, but custom agents you build yourself are your responsibility.
 
 Skills encode their logic as explicit, versioned instructions — not trained weights. Updating a Skill means editing text, not retraining a model. Prebuilt Skills don't accumulate drift over time.
 
@@ -394,9 +393,9 @@ For teams running hotfixes and deployments every few days with a manual process,
 
 <details>
 
-<summary>Can we use our own LLM?</summary>
+<summary>What LLMs are supported</summary>
 
-Yes. Dynamic Agents support AWS Bedrock as a first-class LLM provider, with additional providers available. The platform is model-agnostic at the agent level — you can configure each agent to use the model that fits your requirements and data residency constraints.
+The DuploCloud DevOps agent uses LLMs from Anthropic.  Haiku, Sonnet, or Opus can be consumed from LLM Providers AWS Bedrock, GCP Vertex, or Azure Foundry.&#x20;
 
 </details>
 
@@ -436,7 +435,7 @@ Yes — DuploCloud has deployed Jenkins agents for multiple customers. The out-o
 
 <summary>Can we use our existing Terraform, Helm, or other IaC?</summary>
 
-Yes. The platform includes a Terraform Skill out of the box, covering plan, apply, state management, and error handling. Helm and Kubernetes deployments are handled by the Kubernetes Agent and Skills. External Skill packages from HashiCorp and Pulumi can also be made available to the agents. Your existing IaC files, modules, and conventions are used as-is — the agent works with your code, not a replacement for it.&#x20;
+Yes. The platform includes a Terraform Skill out of the box, covering plan, apply, state management, and error handling. Helm and Kubernetes deployments are handled by the Kubernetes Agent and Skills. External Skill packages from HashiCorp and Pulumi can also be made available to the agents. Your existing IaC files, modules, and conventions are used as-is — the agent works with your code, not a replacement for it.
 
 </details>
 
@@ -447,7 +446,6 @@ Yes. The platform includes a Terraform Skill out of the box, covering plan, appl
 Yes. Two mechanisms ensure this:
 
 1. **Repository access** — agents with access to your infrastructure repository read your existing code before generating anything new. They infer your naming conventions, module structure, and organisational patterns and apply them to new output rather than falling back on generic defaults.
-
 2. **Skills** — you can explicitly encode your standards as a Skill (module naming conventions, required tags, resource organisation patterns). Skills are included in the agent's system prompt and applied consistently to every task regardless of who initiates it.
 
 For Terraform specifically, agents generate code within your existing directory structure and variable conventions. If the agent is uncertain about a convention, it surfaces the decision in the spec or plan phase for you to confirm before generating any code.
@@ -462,8 +460,8 @@ Code review is part of the standard workflow. The platform presents the diff in 
 
 Yes. For infrastructure-as-code changes, the platform supports two execution modes:
 
-- **Direct apply** — the agent generates the plan, presents the diff for your approval in the ticket interface, and applies it after sign-off.
-- **Pull request mode** — the agent opens a PR with the proposed changes against your repository. The change is applied only after your team merges it through your standard review process.
+* **Direct apply** — the agent generates the plan, presents the diff for your approval in the ticket interface, and applies it after sign-off.
+* **Pull request mode** — the agent opens a PR with the proposed changes against your repository. The change is applied only after your team merges it through your standard review process.
 
 PR mode is the recommended approach for teams that want changes to flow through existing Git review workflows — code owners, required reviewers, branch protection rules, and CI checks all apply as normal.
 
@@ -533,7 +531,7 @@ A common pattern: your GRC platform flags a control as failing; DuploCloud's age
 
 No. You don't need to grant any access to get started. DuploCloud's stack runs as a few Docker containers alongside a MongoDB instance and two S3 buckets — no privileged access to your environment is required upfront.
 
-Access is granted on your terms through [Providers](introduction/ai-devops-policy-model/providers.md) and Scopes. The platform uses IAM permissions defined in each Scope to generate temporary, just-in-time credentials that are passed to the agent as part of the ticket. You control exactly what the agent can and cannot touch.&#x20;
+Access is granted on your terms through [Providers](introduction/ai-devops-policy-model/providers.md) and Scopes. The platform uses IAM permissions defined in each Scope to generate temporary, just-in-time credentials that are passed to the agent as part of the ticket. You control exactly what the agent can and cannot touch.
 
 </details>
 
@@ -609,9 +607,7 @@ Protection is enforced at the infrastructure level, not just the policy level �
 Three layers apply:
 
 1. **Scoped credentials** — the agent receives temporary, just-in-time credentials generated from the Scope you assign to the ticket. Those credentials carry only the permissions you defined. If the Scope doesn't include permission to modify a particular resource or environment, the agent cannot do it — not because it's been instructed not to, but because the credentials don't allow it.
-
 2. **Skills as guardrails** — operational guardrails (safety checks, approval steps, resource boundaries) are encoded as Skills and applied to every task. Skills are explicit, versioned instructions evaluated before execution — not model-dependent inference that could vary between runs.
-
 3. **Human approval before every execution** — agents propose changes and wait for explicit human approval before applying anything. No action is taken autonomously on production infrastructure.
 
 The posture is: make bad outcomes structurally impossible first, then add Skills and approval flows as additional layers on top.
@@ -669,7 +665,7 @@ There are two layers of protection:
 1. **Deterministic, permission-based controls** — the Scope you assign to an Engineer defines exactly what IAM permissions the agent gets. The platform uses those permissions to generate temporary credentials passed to the agent as part of the ticket. The agent cannot act outside those boundaries regardless of what it's asked to do.
 2. **Skills** — best practices and operational guardrails are encoded directly into the agent's Skills. Skills define not just what an agent can do, but how it should do it, including safety checks and approval steps.
 
-DuploCloud's human operations team also acts as a reliability layer — reviewing complex work and stepping in when something requires human judgment.&#x20;
+DuploCloud's human operations team also acts as a reliability layer — reviewing complex work and stepping in when something requires human judgment.
 
 </details>
 
@@ -680,9 +676,10 @@ DuploCloud's human operations team also acts as a reliability layer — reviewin
 The default behaviour when an agent hits an error is to stop, surface the error with an explanation, and wait for human review — not to attempt self-remediation or find an alternative path to completion.
 
 The agent presents:
-- What it was attempting to do
-- The specific error it encountered
-- What it believes the options are, and whether it can proceed safely
+
+* What it was attempting to do
+* The specific error it encountered
+* What it believes the options are, and whether it can proceed safely
 
 For multi-step tasks (a Kubernetes upgrade, an infrastructure apply across environments), you can configure the agent to execute one step at a time, requiring explicit approval before each subsequent action — so you're never committed to a full sequence before reviewing each step individually.
 
@@ -701,9 +698,10 @@ No — the platform is designed to make AI work transparent and inspectable, not
 Every ticket maintains a complete record of what the agent was asked to do, every command it proposed, the approval that preceded each step, and the outcome — including diffs for any infrastructure changes. Your engineers can follow every action in detail.
 
 Beyond passive visibility:
-- Agents explain their reasoning, or can be prompted to provide reasoning, in plain language before each approval step, so your team learns from the work as it happens rather than receiving a black-box result.
-- The Ticket History stores every investigation as a record — your team can review how a problem was previously solved or why a particular approach was taken.
-- Skills encode operational standards as readable text instructions, not trained model weights — your team can inspect exactly what guardrails govern the agent's behaviour.
+
+* Agents explain their reasoning, or can be prompted to provide reasoning, in plain language before each approval step, so your team learns from the work as it happens rather than receiving a black-box result.
+* The Ticket History stores every investigation as a record — your team can review how a problem was previously solved or why a particular approach was taken.
+* Skills encode operational standards as readable text instructions, not trained model weights — your team can inspect exactly what guardrails govern the agent's behaviour.
 
 Your engineers remain in the approval loop for every proposed change. The platform doesn't execute autonomously unless explicitly asked to; it proposes and waits. Teams that want to validate everything the AI does can do so at the ticket level before any change is applied.
 
@@ -718,6 +716,7 @@ For technically deterministic compliance work — scanning environments for misc
 For judgment-heavy decisions — interpreting ambiguous regulatory requirements, determining whether a specific implementation satisfies a regulator's intent, or navigating evolving frameworks like the EU AI Act or global data privacy laws — human expertise remains essential. The platform is built around this distinction: agents propose findings and actions, humans review and approve before anything is executed. DuploCloud's human operations team is available throughout for guidance on implementation decisions, not just execution.
 
 Three layers apply to every agent action:
+
 1. **Scoped access** — agents receive only the IAM permissions defined in the ticket's Scope and cannot act outside those boundaries.
 2. **Skills** — compliance patterns and guardrails are encoded as Skills and applied consistently, independent of model inference.
 3. **Human approvals** — changes to infrastructure or configuration require explicit sign-off before execution.
@@ -742,7 +741,7 @@ Because Skills encode best practices as explicit, versioned instructions, agent 
 
 <summary>What happens to our data if we stop using DuploCloud?</summary>
 
-Your infrastructure stays in your accounts — Terraform state, Kubernetes manifests, and all provisioned cloud resources remain fully under your control and continue operating. The Knowledge Base and audit trail are your data, stored in your own repositories (generally, as markdown files) and in DuploCloud's vector database, and can be exported at any time. DuploCloud does not own or lock in any of the artifacts produced.&#x20;
+Your infrastructure stays in your accounts — Terraform state, Kubernetes manifests, and all provisioned cloud resources remain fully under your control and continue operating. The Knowledge Base and audit trail are your data, stored in your own repositories (generally, as markdown files) and in DuploCloud's vector database, and can be exported at any time. DuploCloud does not own or lock in any of the artifacts produced.
 
 </details>
 
