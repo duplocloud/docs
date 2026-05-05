@@ -20,6 +20,7 @@
     * [Reports](introduction/ai-devops-policy-model/additional-components/reports.md)
     * [Slack Integration](introduction/ai-devops-policy-model/additional-components/slack-integration.md)
     * [Duplo Claude Plugin](introduction/ai-devops-policy-model/additional-components/duplo-claude-plugin.md)
+    * [Configuring the DuploCloud MCP Server](introduction/ai-devops-policy-model/additional-components/configuring-duplo-mcp-server.md)
 
 ***
 
