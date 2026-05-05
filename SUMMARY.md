@@ -33,6 +33,25 @@
 * [Product Updates](ai-helpdesk-v2/product-updates.md)
 * [Reporting AI Concerns](ai-helpdesk-v2/reporting-ai-concerns.md)
 
+## Extension Framework
+
+* [Overview](extension-framework/README.md)
+* [Building an Ops Application](extension-framework/building-an-ops-app/README.md)
+  * [Step 1: Define Your Policy Model](extension-framework/building-an-ops-app/step-1-policy-model.md)
+  * [Step 2: Write Your Skills](extension-framework/building-an-ops-app/step-2-skills.md)
+  * [Step 3: Connect Providers](extension-framework/building-an-ops-app/step-3-providers.md)
+  * [Step 4: Configure Workspaces](extension-framework/building-an-ops-app/step-4-workspaces.md)
+  * [Step 5: Deploy](extension-framework/building-an-ops-app/step-5-deploy.md)
+* [Case Studies](extension-framework/case-studies/README.md)
+  * [AI-Native DevOps Platform](extension-framework/case-studies/devops-platform.md)
+  * [AI-Powered SalesOps](extension-framework/case-studies/salesops-platform.md)
+* [Plugin Architecture](extension-framework/plugin-architecture/README.md)
+  * [Manifest & Registration](extension-framework/plugin-architecture/manifest-and-registration.md)
+  * [Storage API](extension-framework/plugin-architecture/storage-api.md)
+  * [Authentication](extension-framework/plugin-architecture/authentication.md)
+  * [Lifecycle States](extension-framework/plugin-architecture/lifecycle-states.md)
+  * [Schema Versioning](extension-framework/plugin-architecture/schema-versioning.md)
+
 ## AI Helpdesk
 
 * [HelpDesk Concepts](ai-helpdesk-v2/ai-helpdesk-overview.md)
@@ -72,25 +91,6 @@
 * [Getting Help with DuploCloud](getting-started/duplocloud-support-model.md)
 * [Getting Started with DuploCloud](welcome-to-duplocloud/README.md)
   * [Common Use Cases](welcome-to-duplocloud/what-duplocloud-does.md)
-
-## Extension Framework
-
-* [Overview](extension-framework/README.md)
-* [Building an Ops Application](extension-framework/building-an-ops-app/README.md)
-  * [Step 1: Define Your Policy Model](extension-framework/building-an-ops-app/step-1-policy-model.md)
-  * [Step 2: Write Your Skills](extension-framework/building-an-ops-app/step-2-skills.md)
-  * [Step 3: Connect Providers](extension-framework/building-an-ops-app/step-3-providers.md)
-  * [Step 4: Configure Workspaces](extension-framework/building-an-ops-app/step-4-workspaces.md)
-  * [Step 5: Deploy](extension-framework/building-an-ops-app/step-5-deploy.md)
-* [Case Studies](extension-framework/case-studies/README.md)
-  * [AI-Native DevOps Platform](extension-framework/case-studies/devops-platform.md)
-  * [AI-Powered SalesOps](extension-framework/case-studies/salesops-platform.md)
-* [Plugin Architecture](extension-framework/plugin-architecture/README.md)
-  * [Manifest & Registration](extension-framework/plugin-architecture/manifest-and-registration.md)
-  * [Storage API](extension-framework/plugin-architecture/storage-api.md)
-  * [Authentication](extension-framework/plugin-architecture/authentication.md)
-  * [Lifecycle States](extension-framework/plugin-architecture/lifecycle-states.md)
-  * [Schema Versioning](extension-framework/plugin-architecture/schema-versioning.md)
 
 ## Common Use Cases
 
