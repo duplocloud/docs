@@ -1,22 +1,28 @@
 # Extension Framework
 
-The Extension Framework lets teams build domain-specific Ops applications on top of the CaaS platform — applications that orchestrate existing tool chains (AWS, Salesforce, ServiceNow) through structured workflows, resource lifecycle management, and AI-powered execution. Rather than interacting with AI through open-ended conversations, end users work through forms and structured interfaces while the framework orchestrates the underlying platforms through tickets underneath.
+The Extension Framework lets teams build domain-specific Ops applications on top of the CaaS platform. These applications orchestrate existing tool chains — AWS, Salesforce, ServiceNow — through structured workflows and resource lifecycle management. End users work through forms and structured interfaces; the framework orchestrates the underlying platforms through tickets.
 
 ## The Three-Layer Stack
 
 The CaaS architecture is organized in three layers, each building on the one below it.
 
-**Layer 1: CaaS Platform** — The foundation layer provides multiplayer ticketing, connectors, workspaces, RBAC, cost management, and tokenless analytics. This is a complete product on its own; teams use it daily for HelpDesk tickets, Projects, dashboards, and cross-role collaboration in shared workspaces.
+### Layer 1: CaaS Platform
 
-**Layer 2: Extension Framework** — Built directly on top of CaaS, this layer adds domain-specific orchestration: a resource taxonomy, dependency enforcement, multi-step forms, REST APIs, and status lifecycle management. Every capability from the CaaS platform — multiplayer sessions, audit trails, cost tracking, RBAC — is inherited automatically. No rebuild required.
+The foundation layer provides multiplayer ticketing, connectors, workspaces, RBAC, cost management, and tokenless analytics. This is a complete product on its own; teams use it daily for HelpDesk tickets, Projects, dashboards, and cross-role collaboration in shared workspaces.
 
-**Layer 3: Developer Experience** — A hosted environment where you can build and ship a full Ops application in days, using a web browser or Claude Code with the DuploCloud plugin. DuploCloud hosts the running application, or you can download a Kubernetes manifest and self-host. There is no infrastructure to deploy.
+### Layer 2: Extension Framework
 
-Think of it this way: CaaS is a platform where users interact with AI through conversations and projects. The Extension Framework lets you build an application where users interact through forms and structured workflows — while AI orchestrates the underlying platforms through tickets underneath.
+Built directly on top of CaaS, this layer adds domain-specific orchestration: a resource taxonomy, dependency enforcement, multi-step forms, REST APIs, and status lifecycle management. Every capability from the CaaS platform — multiplayer sessions, audit trails, cost tracking, RBAC — is inherited automatically. No rebuild required.
+
+### Layer 3: Developer Experience
+
+A hosted environment where you can build and ship a full Ops application in days, using a web browser or Claude Code with the DuploCloud plugin. DuploCloud hosts the running application, or you can download a Kubernetes manifest and self-host. There is no infrastructure to deploy.
 
 ## Why Not Just Use CaaS Directly?
 
-CaaS works well as a general-purpose platform from the start. But as teams begin using it heavily for operational work, a pattern emerges. User needs turn out to be highly repetitive — deploying applications to a cluster, qualifying a sales prospect, troubleshooting a crash — and the underlying structure of each request and response is consistent. Expressing these workflows in natural language every time becomes laborious. Teams start wanting domain-specific forms, templates, and a consistent policy model for their resources. That is the inflection point where the Extension Framework becomes useful.
+CaaS works well as a general-purpose platform from the start. But as teams begin using it heavily for operational work, a pattern emerges. User needs turn out to be highly repetitive — deploying applications to a cluster, qualifying a sales prospect, troubleshooting a crash — and the underlying structure of each request and response is consistent.
+
+Expressing these workflows in natural language every time becomes laborious. Teams start wanting domain-specific forms, templates, and a consistent policy model for their resources. That is the inflection point where the Extension Framework becomes useful.
 
 ## The Policy Model
 
@@ -49,12 +55,12 @@ Resources form a hierarchy, and the framework enforces it. A Cluster requires a 
 Each resource type has a skill associated with it — a set of instructions that tell the agent how to provision, update, troubleshoot, and deprovision that resource. A Network skill might contain a CloudFormation template and tagging policies. A Sales Qualification skill might encode the organization's ICP criteria and web research instructions. Skills are user-owned and user-modifiable, not hardcoded by DuploCloud. If the LLM is capable enough to manage a resource from the spec alone, a skill is optional.
 
 {% hint style="info" %}
-For a full description of how skills are structured and managed, see the [Skills](../introduction/ai-devops-policy-model/skills/) pages in the Introduction section.
+For a full description of how skills are structured and managed, see the [Skills](../introduction/ai-devops-policy-model/skills/README.md) pages in the Introduction section.
 {% endhint %}
 
 ## What the Framework Provides Automatically
 
-Once you define a policy model and write skills for your resource types, the framework generates the following without any additional development:
+Once you define a policy model and write skills, the framework generates the following without any additional code:
 
 - Multi-step forms with validation for each resource type
 - REST APIs for every resource type
