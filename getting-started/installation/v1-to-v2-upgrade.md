@@ -1,12 +1,12 @@
-# Helpdesk V1 to V2 Upgrade
+# AI DevOps V1 to V2 Upgrade
 
-Your team is moving from the original DuploCloud AI HelpDesk to something far more powerful. HelpDesk V2 is not just an update — it's a completely new AI DevOps platform that can plan, execute, and manage complex cloud operations autonomously. This guide explains what's new, what changes for your team, and how the upgrade works.
+Your team is moving from the original deployment of DuploCloud AI DevOps to something far more powerful. The new V2 version is not just an update — it's a completely new AI DevOps platform that can plan, execute, and manage complex cloud operations autonomously. This guide explains what's new, what changes for your team, and how the upgrade works.
 
 ***
 
-## What is HelpDesk V2?
+## What is AI DevOps V2?
 
-HelpDesk V2 is DuploCloud's next-generation AI platform for DevOps teams. It replaces the original AI Studio and HelpDesk with a unified system built around a richer model of how AI and engineering teams work together.
+AI DevOps V2 is DuploCloud's next-generation AI platform for DevOps teams. It replaces the original AI Studio with a unified system built around a richer model of how AI and engineering teams work together.
 
 For a full overview of how the platform is structured, see the [AI DevOps Policy Model](../../introduction/ai-devops-policy-model/).
 
@@ -24,7 +24,7 @@ Everything runs in your own cloud account, fully secure and entirely within your
 
 ## What's New in V2
 
-![HelpDesk V2 — Create a new ticket](../../.gitbook/assets/v2-helpdesk-ticket.png)
+![AI DevOps — Create a new ticket](../../.gitbook/assets/v2-helpdesk-ticket.png)
 
 ### Autonomous AI Agent
 
@@ -71,10 +71,10 @@ The upgrade is focused on the AI layer. Here's what stays the same and what chan
 
 **What changes:**
 
-* The current **AI Suite** (AI Studio and AI HelpDesk) is replaced by **HelpDesk V2** — a significantly more capable platform
-* After the upgrade, your DuploCloud portal will include a **platform switcher** at the top of the interface, letting your team move between the Core Automation Platform and the new HelpDesk V2
+* The current **AI Suite** is replaced by **AI DevOps** — a significantly more capable platform
+* After the upgrade, your DuploCloud portal will include a **platform switcher** at the top of the interface, letting your team move between the Core Automation Platform and the new AI DevOps platform
 
-![Platform switcher — switch between Core Platform and HelpDesk V2](<../../.gitbook/assets/Infinite Screen Recording 2026-04-28 at 2.56.37 AM.gif>)
+![Platform switcher — Switch between Core Platform and AI DevOps](<../../.gitbook/assets/Infinite Screen Recording 2026-04-28 at 2.56.37 AM.gif>)
 
 ***
 
@@ -82,9 +82,9 @@ The upgrade is focused on the AI layer. Here's what stays the same and what chan
 
 DuploCloud handles the upgrade end-to-end:
 
-* **Decommission V1** — remove the legacy AI Studio and HelpDesk to make way for V2
+* **Decommission V1** — remove the legacy AI Studio to make way for V2
 * **Update the portal** — add the platform switcher so your team can access both platforms from one login
-* **Deploy HelpDesk V2** — install the new platform alongside your existing DuploCloud environment
+* **Deploy the new AI DevOps platform** — install the new platform alongside your existing DuploCloud environment
 * **Set up your environment** — configure workspaces, connect your providers, and load the first set of skills and personas so your team is ready to work on day one
 * Your team gets access to the new platform and our support engineers are available anytime to answer questions, run a walkthrough, or help set up custom workflows
 
@@ -97,4 +97,4 @@ The upgrade is designed to be smooth and low-risk, with DuploCloud managing ever
 * **Your data stays in your account** — all tickets, configurations, and agent outputs remain in your own cloud environment
 * **Grows with your team** — after go-live, we can add more providers, build custom skills, or configure additional workspaces as your use cases expand
 
-HelpDesk V2 is already running in many customer environments. To schedule your upgrade, reach out to your DuploCloud account team.
+The all new **AI DevOps** is already running in many customer environments. To schedule your upgrade, reach out to your DuploCloud account team.
