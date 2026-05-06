@@ -14,18 +14,11 @@ description: >-
 
 DuploCloud runs within your own cloud account. The platform itself is a small footprint — a few Docker containers, a MongoDB instance, and a few S3 buckets.
 
-DuploCloud organizes cloud infrastructure into three nested layers:
+The product has three main layers:
 
-Infrastructure
-The top-level construct. Each Infrastructure maps to a unique VPC in a cloud region and optionally includes a Kubernetes (EKS/GKE/AKS) or ECS cluster. When you create one, DuploCloud automatically provisions the underlying networking — VPC, public/private subnets per availability zone, NAT Gateway, Internet Gateway, route tables, and security groups. Most organizations create two: one for production, one for non-production.
-
-Plan
-Automatically created alongside each Infrastructure (with the same name). A Plan acts as a configuration template shared across all Tenants inside it — defining things like load balancer certificates, VM images, WAF rules, IAM policies, DNS domains, and resource quotas. Any setting in the Plan applies uniformly to every Tenant beneath it.
-
-Tenant
-The project-level workspace within an Infrastructure. All cloud resources (services, databases, storage, etc.) live inside a Tenant. Tenants provide isolation via security groups, IAM roles, Kubernetes namespaces, and KMS keys. Resources within the same Tenant communicate freely; cross-Tenant traffic requires explicit configuration. Tenants also drive billing, alerting, and access control — admins can grant developers access to specific Tenants only.
-
-In short: Infrastructure = network/region, Plan = shared config template, Tenant = project workspace.
+1. **Workspace** — the organizational unit where all DevOps work is orchestrated. Each Workspace bundles together Scopes (access to your infrastructure) and Personas (sets of Skills that define how the agent behaves). You can create multiple Workspaces and invite users to specific ones, giving different teams precisely the access and capabilities they need.
+2. **AI DevOps Platform** — the work surface for task-level and project-level objectives. Accessible via web browser, Slack, Teams, or directly in an IDE, this is where tickets are created and assigned to the agent. For simple one-off tasks, create a Ticket directly. For large, complex work, use Projects — which break the work into a Spec, Plan, and Tasks that the agent executes with your oversight.
+3. **Integrations** — the connectivity layer that links the agent to your actual infrastructure through cloud providers (AWS, GCP, Azure), Kubernetes clusters (EKS, AKS, GKE), Git repositories (GitHub, GitLab, Bitbucket), observability tools, and MCP servers. Access is granted through Providers and Scopes, with temporary just-in-time credentials passed to the agent at execution time.
 
 Your existing infrastructure — Terraform state, Kubernetes clusters, CI/CD pipelines — is not migrated or replaced. The agent connects to it through the integrations layer using the permissions you define.
 
@@ -89,7 +82,7 @@ The main differences: DuploCloud gives you access to the full breadth of cloud-n
 
 <summary>How long does it take to get started?</summary>
 
-The platform is designed to be operational quickly. Setup involves deploying a few Docker containers, connecting your cloud and Git providers, and configuring the Helpdesk Platform with the appropriate Skills and Scopes. All of which can be done in a few minutes, not days.
+The platform is designed to be operational quickly. Setup involves deploying a few Docker containers, connecting your cloud and Git providers, and configuring the AI DevOps Platform with the appropriate Skills and Scopes. All of which can be done in a few minutes, not days.
 
 The 30-day PoC is structured to deliver measurable results against real infrastructure within the first sprint. Please contact the team to start scoping your onboarding.
 
@@ -99,7 +92,7 @@ The 30-day PoC is structured to deliver measurable results against real infrastr
 
 <summary>What does DuploCloud set up for us during onboarding?</summary>
 
-DuploCloud's team handles the initial platform setup as part of onboarding. This includes deploying the platform to your cloud environment, connecting your cloud and Git providers, and configuring your Skills, Scopes, and MCP server integrations for your ticketing and observability tools.
+DuploCloud's team handles the initial platform setup as part of onboarding. This includes deploying the platform to your cloud environment, connecting your cloud and Git providers, and configuring your Workspaces, Skills, Scopes, and MCP server integrations for your ticketing and observability tools.
 
 The overall onboarding flow follows the same structure as before — dev deployment, evaluation, QA, production cutover — but the project plan is now managed inside the product rather than a spreadsheet, so your team can track and collaborate on it in real time.
 
@@ -202,7 +195,7 @@ See [Providers](introduction/ai-devops-policy-model/providers.md) for the full l
 
 <summary>Do you support self-hosted or on-premise deployments?</summary>
 
-DuploCloud runs within your own cloud environment — your infrastructure, your accounts, your data. The platform uses AWS Bedrock to ensure sensitive data never leaves your AWS environment.
+DuploCloud runs within your own cloud environment — your infrastructure, your accounts, your data. The platform ensures sensitive data never leaves your cloud environment.
 
 For customers with strict data residency or on-premise requirements, contact [support@duplocloud.net](mailto:support@duplocloud.net) to discuss deployment options.
 
@@ -553,7 +546,7 @@ Each Scope defines the exact resources the DevOps agent can access. Guardrails c
 
 <summary>What is the audit trail for AI actions?</summary>
 
-Every ticket maintains a full context and audit trail throughout its lifecycle — what the agent was asked to do, what it proposed, what was approved, and what was executed. The Engineer Hub surfaces this history for each DevOps agent, providing a transparent record of all completed work. Completed task history is also stored in the platform's Knowledge Base, queryable for future reference.
+Every ticket maintains a full context and audit trail throughout its lifecycle — what the agent was asked to do, what it proposed, what was approved, and what was executed. Completed task history is stored in the platform's Knowledge Base, queryable for future reference.
 
 </details>
 
@@ -563,7 +556,7 @@ Every ticket maintains a full context and audit trail throughout its lifecycle �
 
 There are two complementary layers:
 
-**DuploCloud ticket history** — every ticket maintains a complete record of what the agent was asked to do, what commands it proposed, what was approved, and what was executed, including the full diff for any changes. This is accessible in the Engineer Hub for each DevOps agent and searchable from the Knowledge Base.
+**DuploCloud ticket history** — every ticket maintains a complete record of what the agent was asked to do, what commands it proposed, what was approved, and what was executed, including the full diff for any changes. This history is searchable from the Knowledge Base.
 
 **Cloud-native audit trails** — all agent actions are executed through standard cloud and infrastructure interfaces, and appear in your existing audit infrastructure. Your cloud provider's audit logging records every API call the agent makes, including the identity it used and the timestamp. These records live in your account, independent of DuploCloud.
 
