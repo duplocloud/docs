@@ -12,8 +12,6 @@ DuploCloud is an agentic DevOps automation platform that uses AI to handle a bro
 
 AI handles the heavy lifting while humans maintain oversight. AI tools are already widely used today — from ChatGPT to desktop copilots like Claude Code — and have significantly boosted individual productivity. DuploCloud brings that same level of efficiency to the organizational level.
 
-
-
 With a centralized system, you get:
 
 1. A highly collaborative environment where all AI sessions are stored, serving as your central system of intelligence.
@@ -25,11 +23,7 @@ DuploCloud is fully self-hosted and deploys directly within your cloud account.
 
 You can interact with the platform through a web UI chat interface, Slack, your IDE via the Claude Code plugin, and more.
 
-
-
 ### **What can DuploCloud's AI DevOps Platform do for you?**
-
-
 
 * Manage projects related to deployments, migrations, observability, security, and compliance.
 * Troubleshoot incidents end-to-end, from configuring monitoring and alerting to responding in real time to outages and service degradations.
@@ -38,13 +32,13 @@ You can interact with the platform through a web UI chat interface, Slack, your 
 
 <figure><picture><source srcset=".gitbook/assets/Overview-Dark-1.png" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/Overview-Light-1.png" alt=""></picture><figcaption></figcaption></figure>
 
-
-
 ## Get acquainted with Duplo's AI DevOps Platform
 
 See how AI can help you ship faster, stay secure, and scale, without adding headcount.
 
-
-
 {% embed url="https://vimeo.com/1085542812" %}
+
+{% hint style="info" %}
+Explore many more DuploCloud Demos in our [Video Library](https://duplocloud.com/videos).&#x20;
+{% endhint %}
 
