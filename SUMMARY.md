@@ -641,7 +641,7 @@
       * [9. Deploy a Database](workshops/duplocloud-101-for-aws/create-your-infrastructure-and-application/8.-deploy-a-database.md)
       * [10. Create an Alarm](workshops/duplocloud-101-for-aws/create-your-infrastructure-and-application/9.-create-an-alarm.md)
     * [Daily Operations using DuploCloud](workshops/duplocloud-101-for-aws/daily-operations-using-duplocloud/README.md)
-      * [1. AI Suite](workshops/duplocloud-101-for-aws/daily-operations-using-duplocloud/1.-ai-suite.md)
+      * [1. AI DevOps Platform](workshops/duplocloud-101-for-aws/daily-operations-using-duplocloud/1.-ai-devops-platform.md)
       * [2. Host, Container, and Kubectl Shell](workshops/duplocloud-101-for-aws/daily-operations-using-duplocloud/1.-host-container-and-kubectl-shell.md)
       * [3. Observability](workshops/duplocloud-101-for-aws/daily-operations-using-duplocloud/3.-observability/README.md)
         * [Standard Observability](workshops/duplocloud-101-for-aws/daily-operations-using-duplocloud/3.-observability/standard-observability.md)
