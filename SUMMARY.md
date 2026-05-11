@@ -30,6 +30,7 @@
   * [Users](access-control/users.md)
   * [User Groups](access-control/user-groups.md)
   * [User Tokens](access-control/user-tokens.md)
+  * [Quotas](access-control/quotas.md)
 * [FAQs](faqs.md)
 * [Product Updates](ai-helpdesk-v2/product-updates.md)
 * [Reporting AI Concerns](ai-helpdesk-v2/reporting-ai-concerns.md)
