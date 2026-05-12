@@ -67,6 +67,7 @@
   * [BitBucket](getting-started/integrating-providers/bitbucket.md)
   * [Notion](getting-started/integrating-providers/notion.md)
   * [Jira](getting-started/integrating-providers/jira.md)
+  * [Heroku](getting-started/integrating-providers/heroku.md)
 * [Integrating MCP Servers](getting-started/integrating-mcp-servers/README.md)
   * [Linear](getting-started/integrating-mcp-servers/linear.md)
 * [Onboarding](getting-started/duplocloud-onboarding.md)
