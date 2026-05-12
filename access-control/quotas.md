@@ -6,7 +6,7 @@ Quotas let administrators set cost limits on LLM usage. A quota definition sets 
 
 ## Quota Definitions
 
-Go to **AI Admin → Access Control → Quota → Quota Definition**. This page lists all quota policies, showing their name, period type, USD limit, and buffer percentage.
+Go to **AI Admin → Access Control → Quota → Quota Definition**. This page lists all quota policies, showing their name, period type, and USD limit.
 
 ![](<../.gitbook/assets/quota-step-01.png>)
 

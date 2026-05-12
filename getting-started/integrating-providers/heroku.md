@@ -4,6 +4,28 @@ Connect a Heroku account as a provider so the DuploCloud agent can interact with
 
 ---
 
+## Prerequisites — Retrieve Your Heroku API Token
+
+You need a Heroku API token to authenticate the provider. You can retrieve it from the Heroku Dashboard or the Heroku CLI.
+
+**From the Heroku Dashboard:**
+
+1. Log in to [heroku.com](https://heroku.com) and go to **Account Settings**.
+2. Scroll down to the **API Key** section.
+3. Click **Reveal** to view your existing token, or **Regenerate API Key** to create a new one.
+4. Copy the token.
+
+**From the Heroku CLI:**
+
+```bash
+heroku login
+heroku auth:token
+```
+
+Copy the token output — this is the value you will use in the **Credentials** step below.
+
+---
+
 ## Step 1 — Navigate to Providers
 
 Go to **AI Admin → Providers** and click the **Other** tab.
