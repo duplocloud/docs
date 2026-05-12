@@ -1,6 +1,6 @@
 # Quotas
 
-Quotas let administrators set cost limits on AI agent usage. A quota definition sets the limit and period, and a quota mapping applies it to a specific scope — at the ticket level, workspace level, or across the entire platform. When a limit is reached, the agent stops processing and reports the overage. All limits reset at UTC midnight.
+Quotas let administrators set cost limits on LLM usage. A quota definition sets the limit and period, and a quota mapping applies it to a specific context — at the ticket level, workspace level, or across the entire platform. When a limit is reached, the agent stops processing and reports the overage. All limits reset at UTC midnight.
 
 ---
 
@@ -17,7 +17,6 @@ Click **+ Add**. Fill in the fields:
 - **Name** — a unique identifier for the quota policy
 - **Period Type** — how frequently the limit resets (e.g. Daily)
 - **Limit (USD)** — the maximum spend allowed within the period
-- **Buffer Percentage** — an optional overage allowance before enforcement triggers
 
 Click **Create**.
 
@@ -27,7 +26,7 @@ Click **Create**.
 
 ## Quota Mappings
 
-Click the **Quota Mapping** tab. Mappings bind a quota definition to a scope and type, determining which activity the limit applies to.
+Click the **Quota Mapping** tab. Mappings bind a quota definition to a context and an Apply to value, determining which activity the limit applies to.
 
 ![](<../.gitbook/assets/quota-step-03.png>)
 
@@ -39,13 +38,13 @@ Click **+ Add**. Fill in the fields:
 
 - **Name** — a label for this mapping
 - **Quota** — the quota definition to apply
-- **Scope** — whether this applies at the Workspace or Platform level
-- **Target Workspace** — the specific workspace (when Scope is Workspace)
-- **Type** — what the limit tracks: **Ticket**, **Workspace**, or **All**
+- **Context** — whether this applies at the Workspace or Platform level
+- **Target Workspace** — the specific workspace (when Context is Workspace)
+- **Apply to** — what the limit tracks: **Ticket**, **Workspace**, or **All**
 
 ### Ticket Quota
 
-When **Type** is set to **Ticket**, the quota limit applies per individual ticket. Each ticket has its own spend counter — one ticket reaching the limit does not affect other tickets in the same workspace.
+When **Apply to** is set to **Ticket**, the quota limit applies per individual ticket. Each ticket has its own spend counter — one ticket reaching the limit does not affect other tickets in the same workspace.
 
 ![](<../.gitbook/assets/quota-step-05.png>)
 
@@ -63,7 +62,7 @@ Because the quota is scoped to the individual ticket, a new ticket created in th
 
 ### Workspace Quota
 
-When **Type** is set to **Workspace**, the quota limit applies to all activity within a specific workspace. The cumulative spend across all tickets in that workspace counts toward a single shared limit.
+When **Apply to** is set to **Workspace**, the quota limit applies to all activity within a specific workspace. The cumulative spend across all tickets in that workspace counts toward a single shared limit.
 
 ![](<../.gitbook/assets/quota-step-11.png>)
 
@@ -85,7 +84,7 @@ A ticket in the new workspace runs successfully with its own independent cost co
 
 ### Platform Quota
 
-When **Scope** is set to **Platform**, the quota applies across all workspaces on the platform. Set **Type** to **All** to enforce it globally regardless of workspace.
+When **Context** is set to **Platform**, the quota applies across all workspaces on the platform. Set **Apply to** to **All** to enforce it globally regardless of workspace.
 
 ![](<../.gitbook/assets/quota-step-16.png>)
 
