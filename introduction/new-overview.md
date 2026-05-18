@@ -1,4 +1,8 @@
-# Overview
+---
+hidden: true
+---
+
+# NEW Overview
 
 DevOps teams today are drowning in complexity — too many tools, too much context-switching, and not enough time to focus on what matters. The DuploCloud Platform changes that by making AI a first-class participant in your operations: triaging incidents, tracking work, connecting systems, and helping teams ship faster. It's designed so any team can adopt it incrementally, from a single use case to a fully AI-native Ops practice.&#x20;
 
