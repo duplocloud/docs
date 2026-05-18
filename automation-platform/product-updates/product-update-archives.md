@@ -51,8 +51,8 @@ hidden: true
   * Select [single, or multi-region data location types](../overview-1/gcp-services/s3-bucket-2.md#creating-a-gcp-cloud-storage-bucket) for GCP Storage buckets.
   * Configure the [minimum number of ports per VM instance](../overview-1/use-cases/hosts-vms.md#increasing-minimum-ports-per-vm-instance-gke-standard).
 * Kubernetes
-  * Integrate DuploCloud-managed K8s clusters with [FluxCD](../../extras-overview/fluxcd.md).
-  * Support for [migration from Flux v1 to Flux v2](../../extras-overview/fluxcd.md#migrating-from-flux-v1-to-flux-v2) for FluxCD users.
+  * Integrate DuploCloud-managed K8s clusters with [FluxCD](../extras-overview/fluxcd.md).
+  * Support for [migration from Flux v1 to Flux v2](../extras-overview/fluxcd.md#migrating-from-flux-v1-to-flux-v2) for FluxCD users.
   * Configure [read-only access to K8s Secrets](../kubernetes-overview/configs-and-secrets/managing-secret-access-for-read-only-users-aws-and-gcp.md).
   * Create and manually run a [K8s Job](../../kubernetes/jobs.md) from a Kubernetes CronJob.
   * Configure faults for failed [Jobs](../../kubernetes/jobs.md#jobs-level-kubernetes-jobs-faults) and [CronJobs ](../../kubernetes/cronjobs.md)at the Tenant level.

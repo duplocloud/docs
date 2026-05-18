@@ -84,7 +84,7 @@ _**Last Updated, May 1, 2026**_
 * AWS - [SNS with FIFO (First-In-First-Out) topics.](../overview/aws-services/sns-topic.md#creating-a-sns-topic)¹
 * AWS - Create scheduled snapshot windows for automated backups in [AWS Redis](../overview-2/azure-services/databases/redis-database.md).¹
 * AWS - Support for [taints with EKS Hosts or Agent Pools](../../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).¹<sup>,</sup>²
-* AWS - [Download inventory reports of all AWS resources](../../extras-overview/inventory.md#downloading-an-inventory-report) (for StateRAMP compliance).¹
+* AWS - [Download inventory reports of all AWS resources](../extras-overview/inventory.md#downloading-an-inventory-report) (for StateRAMP compliance).¹
 * AWS - Support for [Lambda JAR with S3](../../overview/aws-services/lambda/#id-3-toc-title).¹
 * AWS - Support for aurora-iopt1 storage type in [Aurora RDS](../../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).¹
 * AWS - Force delete and update settings options added for [ECR repositories](../overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).¹
@@ -212,7 +212,7 @@ _**Last Updated, May 1, 2026**_
 * AWS - [SNS with FIFO (First-In-First-Out) topics.](../overview/aws-services/sns-topic.md#creating-a-sns-topic)¹
 * AWS - Create scheduled snapshot windows for automated backups in [AWS Redis](../overview-2/azure-services/databases/redis-database.md).¹
 * AWS - Support for [taints with EKS Hosts or Agent Pools](../../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).¹<sup>,</sup>²
-* AWS - [Download inventory reports of all AWS resources](../../extras-overview/inventory.md#downloading-an-inventory-report) (for StateRAMP compliance).¹
+* AWS - [Download inventory reports of all AWS resources](../extras-overview/inventory.md#downloading-an-inventory-report) (for StateRAMP compliance).¹
 * AWS - Support for [Lambda JAR with S3](../../overview/aws-services/lambda/#id-3-toc-title).¹
 * AWS - Support for aurora-iopt1 storage type in [Aurora RDS](../../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).¹
 * AWS - Force delete and update settings options added for [ECR repositories](../overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).¹
