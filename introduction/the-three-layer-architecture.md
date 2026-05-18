@@ -24,7 +24,7 @@ This chapter introduces the product that closes the gap. The Architecture is a t
 
 This chapter focuses on <mark style="color:$warning;">**ARMOR**</mark> — the foundational runtime that makes everything above it possible. Extensions and Studio are covered in subsequent chapters.
 
-![](<../.gitbook/assets/Unknown image (1)>)
+![](<../.gitbook/assets/image copy.png>)
 
 ## Architecture Overview
 
