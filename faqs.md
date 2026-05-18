@@ -187,7 +187,7 @@ If you're partway through a migration, the agent picks up from where your team l
 | Incident Management | Grafana Alert Manager, Datadog, New Relic, Sentry, PagerDuty, Incident.io |
 | Extended access     | MCP Servers (any system with an MCP endpoint)                             |
 
-See [Providers](introduction/ai-devops-policy-model/providers.md) for the full list and setup instructions.
+See [Providers](armor/providers.md) for the full list and setup instructions.
 
 </details>
 
@@ -221,7 +221,7 @@ For teams who want automated update management, the platform can be configured t
 
 It depends on the agent. For AWS and Kubernetes, the platform primarily uses the CLI — LLMs have strong CLI comprehension and it provides precise, auditable execution. For third-party systems that publish MCP servers (observability tools, ticketing systems, etc.), DuploCloud uses those MCP endpoints directly.
 
-The agent is flexible. DuploCloud's core value is in the overall orchestration layer — the agent can be modified or replaced for your specific environment. See [MCP Servers](introduction/ai-devops-policy-model/mcp-servers.md) for configuration details.
+The agent is flexible. DuploCloud's core value is in the overall orchestration layer — the agent can be modified or replaced for your specific environment. See [MCP Servers](armor/mcp-servers.md) for configuration details.
 
 </details>
 
@@ -361,7 +361,7 @@ For teams running hotfixes and deployments every few days with a manual process,
 
 <summary>What LLMs are supported</summary>
 
-The DuploCloud DevOps agent uses LLMs from Anthropic.  Haiku, Sonnet, or Opus can be consumed from LLM Providers AWS Bedrock, GCP Vertex, or Azure Foundry.&#x20;
+The DuploCloud DevOps agent uses LLMs from Anthropic. Haiku, Sonnet, or Opus can be consumed from LLM Providers AWS Bedrock, GCP Vertex, or Azure Foundry.
 
 </details>
 
@@ -463,7 +463,7 @@ If you're partway through a migration, the platform can scan your existing repos
 
 <summary>How does DuploCloud integrate with our existing CI/CD pipeline?</summary>
 
-Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](introduction/ai-devops-policy-model/providers.md) with scoped access. The DuploCloud DevOps agent integrates with Jenkins and GitHub Actions for pipeline troubleshooting and automation. For deeper pipeline integration, custom Skills can be configured to fit your specific workflow.
+Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](armor/providers.md) with scoped access. The DuploCloud DevOps agent integrates with Jenkins and GitHub Actions for pipeline troubleshooting and automation. For deeper pipeline integration, custom Skills can be configured to fit your specific workflow.
 
 </details>
 
@@ -497,7 +497,7 @@ A common pattern: your GRC platform flags a control as failing; DuploCloud's age
 
 No. You don't need to grant any access to get started. DuploCloud's stack runs as a few Docker containers alongside a MongoDB instance and two S3 buckets — no privileged access to your environment is required upfront.
 
-Access is granted on your terms through [Providers](introduction/ai-devops-policy-model/providers.md) and Scopes. The platform uses IAM permissions defined in each Scope to generate temporary, just-in-time credentials that are passed to the agent as part of the ticket. You control exactly what the agent can and cannot touch.
+Access is granted on your terms through [Providers](armor/providers.md) and Scopes. The platform uses IAM permissions defined in each Scope to generate temporary, just-in-time credentials that are passed to the agent as part of the ticket. You control exactly what the agent can and cannot touch.
 
 </details>
 
@@ -528,7 +528,7 @@ Git is modeled as a Provider — the same way AWS, Kubernetes, and observability
 3. Create a **Scope** — a named token with defined boundaries over specific repositories.
 4. When creating a ticket, select the appropriate Scope.
 
-See [Providers](introduction/ai-devops-policy-model/providers.md) for step-by-step instructions.
+See [Providers](armor/providers.md) for step-by-step instructions.
 
 </details>
 
@@ -538,7 +538,7 @@ See [Providers](introduction/ai-devops-policy-model/providers.md) for step-by-st
 
 Credentials are stored in DuploCloud or referenced from your own secrets manager. The platform uses them to generate scoped, temporary access at execution time — credentials are never passed to the agent directly or stored in session context.
 
-Each Scope defines the exact resources the DevOps agent can access. Guardrails can further restrict specific resources, operations, or environments within that Scope. See [AI DevOps Policy Model](introduction/ai-devops-policy-model/) — Provider and Scope.
+Each Scope defines the exact resources the DevOps agent can access. Guardrails can further restrict specific resources, operations, or environments within that Scope. See [AI DevOps Policy Model](armor/ai-devops-policy-model.md) — Provider and Scope.
 
 </details>
 

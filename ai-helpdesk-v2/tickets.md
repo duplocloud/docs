@@ -18,7 +18,7 @@ To create a Ticket, complete the following steps:
 <figure><img src="../.gitbook/assets/image (474).png" alt=""><figcaption><p>Initiating a new ticket in HelpDesk</p></figcaption></figure>
 
 {% hint style="info" %}
-Tickets can also be created and managed in Slack via the [HelpDesk Slack integration](../introduction/ai-devops-policy-model/additional-components/slack-integration.md).
+Tickets can also be created and managed in Slack via the [HelpDesk Slack integration](../armor/additional-components/slack-integration.md).
 {% endhint %}
 
 ## Collaborating in the Canvas

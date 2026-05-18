@@ -1,5 +1,6 @@
 ---
 description: An overview and demo of DuploCloud's AI DevOps Platform
+hidden: true
 cover:
   light: .gitbook/assets/Banner_Image_Light.png
   dark: .gitbook/assets/Banner_Image_Dark.png
@@ -39,6 +40,5 @@ See how AI can help you ship faster, stay secure, and scale, without adding head
 {% embed url="https://vimeo.com/1085542812" %}
 
 {% hint style="info" %}
-Explore many more DuploCloud Demos in our [Video Library](https://duplocloud.com/videos).&#x20;
+Explore many more DuploCloud Demos in our [Video Library](https://duplocloud.com/videos).
 {% endhint %}
-

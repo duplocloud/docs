@@ -6,7 +6,7 @@ description: >-
 
 # Helm Charts
 
-[Helm Charts](https://helm.sh/docs/topics/charts/) are packages of pre-configured Kubernetes resources that help you define, install, and upgrade Kubernetes applications. You can integrate Helm Charts with DuploCloud to deploy applications onto the Kubernetes clusters you've created in DuploCloud. For Helm Charts general guidance and best practices, see the [Helm Charts Info](../../../extras-overview/helm-charts.md) page in the DuploCloud Extras section.
+[Helm Charts](https://helm.sh/docs/topics/charts/) are packages of pre-configured Kubernetes resources that help you define, install, and upgrade Kubernetes applications. You can integrate Helm Charts with DuploCloud to deploy applications onto the Kubernetes clusters you've created in DuploCloud. For Helm Charts general guidance and best practices, see the [Helm Charts Info](../../extras-overview/helm-charts.md) page in the DuploCloud Extras section.
 
 {% hint style="info" %}
 Helm Charts are only supported for administrator-level DuploCloud users.
