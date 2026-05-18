@@ -1,6 +1,4 @@
 ---
-description: An overview and demo of DuploCloud's AI DevOps Platform
-hidden: true
 cover:
   light: .gitbook/assets/Banner_Image_Light.png
   dark: .gitbook/assets/Banner_Image_Dark.png
@@ -9,36 +7,16 @@ coverY: 0
 
 # Overview
 
-DuploCloud is an agentic DevOps automation platform that uses AI to handle a broad range of DevOps tasks. AI becomes your most capable DevOps resource, with expertise spanning infrastructure as code, Kubernetes, observability, CI/CD, incident management, cost management, compliance, security, and more. DuploCloud is a collaborative platform where humans and AI work side by side as a unified team.
+DevOps teams today are drowning in complexity — too many tools, too much context-switching, and not enough time to focus on what matters. The DuploCloud Platform changes that by making AI a first-class participant in your operations: triaging incidents, tracking work, connecting systems, and helping teams ship faster. It's designed so any team can adopt it incrementally, from a single use case to a fully AI-native Ops practice.&#x20;
 
-AI handles the heavy lifting while humans maintain oversight. AI tools are already widely used today — from ChatGPT to desktop copilots like Claude Code — and have significantly boosted individual productivity. DuploCloud brings that same level of efficiency to the organizational level.
+The DuploCloud Platform is organised into three-layers for building and running AI-native DevOps applications at scale.
 
-With a centralized system, you get:
+At the foundation is **ARMOR (Agent Runtime for Multiplayer Operations)** — Layer 1. ARMOR is a Multiplayer Claude-as-a-Service runtime that brings together ticketing, connections, intelligence, workspaces, RBAC, projects, analytics, and cost management into a unified core. Business users — whether accessing through a web browser, REST API, Claude Code plugin, or Slack/Teams — interact with a shared Workspace that enforces role-based access control and scoped project context, while an underlying CaaS agent (built on the Agent SDK) handles ingestion, moderation, and communication with the LLM layer beneath it.
 
-1. A highly collaborative environment where all AI sessions are stored, serving as your central system of intelligence.
-2. Shared context that reduces LLM cost per task by 50% compared to users running the same tasks individually through desktop copilots without session sharing.
-3. An always-on AI that functions like a 24/7 SRE, handling routine tickets and incidents automatically.
-4. Cloud-scale execution that removes the constraints of individual desktop environments.
+<figure><img src=".gitbook/assets/image copy.png" alt=""><figcaption></figcaption></figure>
 
-DuploCloud is fully self-hosted and deploys directly within your cloud account.
+Building on that foundation, the **Extension Framework** (Layer 2) lets teams define policy models, build skills, and compose full Ops applications with forms, APIs, and lifecycle management — turning the runtime's capabilities into governed, repeatable workflows.
 
-You can interact with the platform through a web UI chat interface, Slack, your IDE via the Claude Code plugin, and more.
+On top of that sits the **Developer Experience & Hosting** layer (Layer 3), which allows teams to build and ship Ops applications in days using either a web interface or Claude Code, with flexible hosting options (managed or self-hosted). Together, these layers give developers and operators a path from prototype to production without building infrastructure from scratch.
 
-### **What can DuploCloud's AI DevOps Platform do for you?**
-
-* Manage projects related to deployments, migrations, observability, security, and compliance.
-* Troubleshoot incidents end-to-end, from configuring monitoring and alerting to responding in real time to outages and service degradations.
-* Assist with everyday tasks such as infrastructure health reviews, code deployments, IaC maintenance, rollbacks, and backups.
-* Perform additional functions including collecting evidence for compliance audits, generating reports, discovering cloud resources, and producing documentation.
-
-<figure><picture><source srcset=".gitbook/assets/Overview-Dark-1.png" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/Overview-Light-1.png" alt=""></picture><figcaption></figcaption></figure>
-
-## Get acquainted with Duplo's AI DevOps Platform
-
-See how AI can help you ship faster, stay secure, and scale, without adding headcount.
-
-{% embed url="https://vimeo.com/1085542812" %}
-
-{% hint style="info" %}
-Explore many more DuploCloud Demos in our [Video Library](https://duplocloud.com/videos).
-{% endhint %}
+Continue reading for an in-depth look at the problem the DuploCloud platform was built to solve, and a detailed walkthrough of each of the three layers — what they do, how they fit together, and what they unlock.
