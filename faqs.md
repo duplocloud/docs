@@ -797,9 +797,9 @@ For PoC engagements, the team can structure the evaluation around specific KPIs 
 
 DuploCloud AI HelpDesk runs inside a Kubernetes cluster in your own cloud account. Infrastructure costs depend on whether you are deploying into a **dedicated new cluster** or an **existing cluster** with available capacity. Estimates below cover the DuploCloud platform components only — not your existing workloads or LLM usage.
 
-{% tabs %}
-{% tab title="AWS (EKS)" %}
-**Scenario 1 — Dedicated installation (new EKS cluster)**
+**AWS (EKS)**
+
+_Scenario 1 — Dedicated installation (new EKS cluster)_
 
 | Resource | Details | Estimated Monthly Cost |
 |---|---|---|
@@ -810,7 +810,7 @@ DuploCloud AI HelpDesk runs inside a Kubernetes cluster in your own cloud accoun
 | ACM certificate | TLS for your portal domain | Free |
 | **Total** | | **~$202–215/month** |
 
-**Scenario 2 — Existing EKS cluster**
+_Scenario 2 — Existing EKS cluster_
 
 If you already have an EKS cluster with available node capacity, only the incremental resources are added:
 
@@ -822,10 +822,12 @@ If you already have an EKS cluster with available node capacity, only the increm
 | **Total** | | **~$20–90/month** (excluding any new nodes) |
 
 Costs vary by region. `us-east-1` is typically the least expensive AWS region.
-{% endtab %}
 
-{% tab title="GCP (GKE)" %}
-**Scenario 1 — Dedicated installation (new GKE cluster)**
+***
+
+**GCP (GKE)**
+
+_Scenario 1 — Dedicated installation (new GKE cluster)_
 
 | Resource | Details | Estimated Monthly Cost |
 |---|---|---|
@@ -837,7 +839,7 @@ Costs vary by region. `us-east-1` is typically the least expensive AWS region.
 
 Cloud Filestore's 1 TB minimum provisioned size is the largest single cost driver on GCP.
 
-**Scenario 2 — Existing GKE cluster**
+_Scenario 2 — Existing GKE cluster_
 
 | Resource | Details | Estimated Monthly Cost |
 |---|---|---|
@@ -847,10 +849,12 @@ Cloud Filestore's 1 TB minimum provisioned size is the largest single cost drive
 | **Total** | | **~$222/month** (excluding any new nodes) |
 
 If your cluster already has an existing Filestore instance with available capacity, it can be shared — removing that $204 cost.
-{% endtab %}
 
-{% tab title="Azure (AKS)" %}
-**Scenario 1 — Dedicated installation (new AKS node pool)**
+***
+
+**Azure (AKS)**
+
+_Scenario 1 — Dedicated installation (new AKS node pool)_
 
 | Resource | Details | Estimated Monthly Cost |
 |---|---|---|
@@ -862,7 +866,7 @@ If your cluster already has an existing Filestore instance with available capaci
 
 Azure Application Gateway has a significant fixed hourly cost (~$0.246/hr) that dominates the estimate.
 
-**Scenario 2 — Existing AKS cluster**
+_Scenario 2 — Existing AKS cluster_
 
 | Resource | Details | Estimated Monthly Cost |
 |---|---|---|
@@ -872,8 +876,8 @@ Azure Application Gateway has a significant fixed hourly cost (~$0.246/hr) that 
 | **Total** | | **~$20–200/month** (depending on App Gateway sharing) |
 
 If your organization already runs an Azure Application Gateway, the HelpDesk ingress can be configured to share it — removing the largest cost item from the incremental estimate.
-{% endtab %}
-{% endtabs %}
+
+***
 
 **What is not included in these estimates:**
 
