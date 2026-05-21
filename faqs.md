@@ -790,3 +790,97 @@ An analytics dashboard is on the roadmap. Agent-level observability is already b
 For PoC engagements, the team can structure the evaluation around specific KPIs — establishing a baseline before the PoC starts and measuring against it at the end. A common methodology is comparing the token cost and human oversight time for a given project done with distributed local AI tools against the same project run centrally through DuploCloud.
 
 </details>
+
+<details>
+
+<summary>What does it cost to run DuploCloud in my cloud account?</summary>
+
+DuploCloud AI HelpDesk runs inside a Kubernetes cluster in your own cloud account. Infrastructure costs depend on whether you are deploying into a **dedicated new cluster** or an **existing cluster** with available capacity. Estimates below cover the DuploCloud platform components only — not your existing workloads or LLM usage.
+
+{% tabs %}
+{% tab title="AWS (EKS)" %}
+**Scenario 1 — Dedicated installation (new EKS cluster)**
+
+| Resource | Details | Estimated Monthly Cost |
+|---|---|---|
+| EKS control plane | Managed Kubernetes cluster | ~$72 |
+| Worker nodes | 2× `t3a.large` (minimum recommended) | ~$110 |
+| EFS filesystem | Shared storage for agent working directories | ~$10–15 |
+| Application Load Balancer | HTTPS ingress | ~$10–18 |
+| ACM certificate | TLS for your portal domain | Free |
+| **Total** | | **~$202–215/month** |
+
+**Scenario 2 — Existing EKS cluster**
+
+If you already have an EKS cluster with available node capacity, only the incremental resources are added:
+
+| Resource | Details | Estimated Monthly Cost |
+|---|---|---|
+| EFS filesystem | New filesystem provisioned for HelpDesk storage | ~$10–15 |
+| Application Load Balancer | New ALB for HelpDesk ingress | ~$10–18 |
+| Additional node capacity | Only if existing nodes cannot absorb HelpDesk pods | $0–$55/node |
+| **Total** | | **~$20–90/month** (excluding any new nodes) |
+
+Costs vary by region. `us-east-1` is typically the least expensive AWS region.
+{% endtab %}
+
+{% tab title="GCP (GKE)" %}
+**Scenario 1 — Dedicated installation (new GKE cluster)**
+
+| Resource | Details | Estimated Monthly Cost |
+|---|---|---|
+| GKE cluster management fee | Standard zonal cluster | ~$74 |
+| Worker nodes | 2× `e2-standard-2` | ~$98 |
+| Cloud Filestore | Shared NFS volume (1 TB minimum for basic tier) | ~$204 |
+| Cloud Load Balancing | HTTPS forwarding rule | ~$18 |
+| **Total** | | **~$394/month** |
+
+Cloud Filestore's 1 TB minimum provisioned size is the largest single cost driver on GCP.
+
+**Scenario 2 — Existing GKE cluster**
+
+| Resource | Details | Estimated Monthly Cost |
+|---|---|---|
+| Cloud Filestore | New instance for HelpDesk storage (1 TB minimum) | ~$204 |
+| Cloud Load Balancing | New forwarding rule for HelpDesk ingress | ~$18 |
+| Additional node capacity | Only if existing nodes cannot absorb HelpDesk pods | $0–$49/node |
+| **Total** | | **~$222/month** (excluding any new nodes) |
+
+If your cluster already has an existing Filestore instance with available capacity, it can be shared — removing that $204 cost.
+{% endtab %}
+
+{% tab title="Azure (AKS)" %}
+**Scenario 1 — Dedicated installation (new AKS node pool)**
+
+| Resource | Details | Estimated Monthly Cost |
+|---|---|---|
+| AKS cluster management | Managed Kubernetes control plane | Free |
+| Worker nodes | 2× `Standard_D2s_v3` (minimum recommended) | ~$140 |
+| Azure Application Gateway v2 | HTTPS ingress | ~$180 |
+| Azure Blob NFS Premium | Shared storage for agent working directories | ~$20 |
+| **Total** | | **~$340/month** |
+
+Azure Application Gateway has a significant fixed hourly cost (~$0.246/hr) that dominates the estimate.
+
+**Scenario 2 — Existing AKS cluster**
+
+| Resource | Details | Estimated Monthly Cost |
+|---|---|---|
+| Azure Blob NFS Premium | New storage account for HelpDesk | ~$20 |
+| Azure Application Gateway v2 | New gateway, or shared with existing if available | ~$0–$180 |
+| Additional node capacity | Only if existing nodes cannot absorb HelpDesk pods | $0–$70/node |
+| **Total** | | **~$20–200/month** (depending on App Gateway sharing) |
+
+If your organization already runs an Azure Application Gateway, the HelpDesk ingress can be configured to share it — removing the largest cost item from the incremental estimate.
+{% endtab %}
+{% endtabs %}
+
+**What is not included in these estimates:**
+
+* **LLM usage** — when the agent runs, it invokes models through AWS Bedrock, GCP Vertex AI, or Azure AI Foundry running inside your account. Those charges appear separately in your cloud bill at standard provider rates. See [Does using DuploCloud's AI result in additional LLM costs?](#does-using-duploclouds-ai-result-in-additional-llm-costs-on-top-of-the-platform-fee) for details.
+* **Your existing workloads** — DuploCloud deploys into a dedicated namespace and does not affect the cost of services already running in your account.
+* **DuploCloud platform fee** — the figures above are cloud infrastructure costs only; the DuploCloud subscription fee is separate.
+
+All figures are approximate and based on standard on-demand pricing in major regions. Actual costs vary by region, reserved instance discounts, and existing infrastructure that can be shared.
+
+</details>
