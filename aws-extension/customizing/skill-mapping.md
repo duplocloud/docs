@@ -1,5 +1,7 @@
 ---
-description: Override the default provisioning skill for a specific resource type with a custom skill.
+description: >-
+  Override the default provisioning skill for a specific resource type with a
+  custom skill.
 ---
 
 # Skill Mapping
@@ -34,19 +36,19 @@ Your organization requires that all AWS resources are tagged with `team`, `cost-
 
 {% stepper %}
 {% step %}
-## Fork the default skill
+### Fork the default skill
 
 Copy the `duplo-aws-infra` skill and add tagging instructions to the network and cluster provisioning sections.
 {% endstep %}
 
 {% step %}
-## Add a Skill Mapping override
+### Add a Skill Mapping override
 
 Navigate to **AI Admin → Skills → Skill Mapping** and add an override mapping the Network Baseline and Cluster Baseline origin types to your custom skill.
 {% endstep %}
 
 {% step %}
-## Verify
+### Verify
 
 Create a new Network Baseline provisioning ticket. The agent loads your custom skill and enforces the tagging requirement during provisioning.
 {% endstep %}

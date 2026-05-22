@@ -24,13 +24,11 @@ DuploCloud ships with a **comprehensive, battle-tested set of extensions for Clo
 
 The default extension includes coverage across every major DevOps function:
 
-<table><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Deployment</strong> </p><p>Infrastructure provisioning, application deployment, environment management. Networks, clusters, namespaces, workloads, configs, storage.</p></td><td valign="top"><p><strong>CI/CD</strong> </p><p>Build pipelines, deployment automation, release management. GitHub Actions, GitLab CI, Jenkins, ArgoCD.</p></td><td valign="top"><p><strong>Observability</strong> </p><p>Monitoring, logging, alerting, dashboards. Datadog, New Relic, CloudWatch, Prometheus, Grafana.</p></td></tr><tr><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr><tr><td valign="top"><p><strong>Compliance</strong> </p><p>SOC 2, HIPAA, PCI-DSS, ISO 27001. Policy enforcement, evidence collection, audit report generation.</p></td><td valign="top"><p><strong>Security</strong> </p><p>Vulnerability scanning, IAM management, secret rotation, network policy enforcement. SIEM integration.</p></td><td valign="top"><p><strong>Cost Optimization</strong> </p><p>Cloud spend analysis, right-sizing, reserved instance management, budget alerts across AWS, Azure, GCP.</p></td></tr></tbody></table>
-
-
+<table><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Deployment</strong></p><p>Infrastructure provisioning, application deployment, environment management. Networks, clusters, namespaces, workloads, configs, storage.</p></td><td valign="top"><p><strong>CI/CD</strong></p><p>Build pipelines, deployment automation, release management. GitHub Actions, GitLab CI, Jenkins, ArgoCD.</p></td><td valign="top"><p><strong>Observability</strong></p><p>Monitoring, logging, alerting, dashboards. Datadog, New Relic, CloudWatch, Prometheus, Grafana.</p></td></tr><tr><td valign="top"></td><td valign="top"></td><td valign="top"></td></tr><tr><td valign="top"><p><strong>Compliance</strong></p><p>SOC 2, HIPAA, PCI-DSS, ISO 27001. Policy enforcement, evidence collection, audit report generation.</p></td><td valign="top"><p><strong>Security</strong></p><p>Vulnerability scanning, IAM management, secret rotation, network policy enforcement. SIEM integration.</p></td><td valign="top"><p><strong>Cost Optimization</strong></p><p>Cloud spend analysis, right-sizing, reserved instance management, budget alerts across AWS, Azure, GCP.</p></td></tr></tbody></table>
 
 Customers adopt the platform in 3 modes:
 
-<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Use as-is</strong> </p><p>Deploy and start operating immediately. Hundreds of customers run production with out-of-box setup with no changes.</p></td><td valign="top"><p><strong>Customize</strong> </p><p>Fork skills, modify specs, add tagging policies, adjust compliance rules. User-owned — change without waiting for a vendor.</p></td><td valign="top"><p><strong>Build your own</strong> </p><p>Write a completely new extension for any operations function unique to your organization. Build any number of new extensions</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th valign="top"></th><th valign="top"></th><th valign="top"></th></tr></thead><tbody><tr><td valign="top"><p><strong>Use as-is</strong></p><p>Deploy and start operating immediately. Hundreds of customers run production with out-of-box setup with no changes.</p></td><td valign="top"><p><strong>Customize</strong></p><p>Fork skills, modify specs, add tagging policies, adjust compliance rules. User-owned — change without waiting for a vendor.</p></td><td valign="top"><p><strong>Build your own</strong></p><p>Write a completely new extension for any operations function unique to your organization. Build any number of new extensions</p></td></tr></tbody></table>
 
 ## How an Extension Works
 
@@ -44,9 +42,9 @@ The policy model is a taxonomy of **resources** — the domain-specific objects 
 
 Each resource type defines four things:
 
-| <p><strong>Spec — what the user wants</strong> </p><p>A typed specification capturing intent. For a Cluster: network source, cluster type, EKS version, API visibility, control plane logging. Becomes a form and an API contract.</p> | <p><strong>Result — what was produced</strong> </p><p>A typed output capturing the outcome. For a Cluster: EKS ARN, node groups, endpoint URL, kubeconfig. For an Environment: security groups, IAM roles, KMS keys.</p> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p><strong>Dependencies — what needs what</strong> </p><p>Resources form a hierarchy. A Cluster requires a Network. An Environment lives inside a Cluster. Dependencies are enforced — the UI shows only valid options.</p>            | <p><strong>Status lifecycle</strong> </p><p>Every resource: New → Provisioning → Ready (or Failed, Blocked). Updates trigger reconciliation. Deletes trigger deprovisioning. Framework manages state transitions.</p>    |
+| <p><strong>Spec — what the user wants</strong></p><p>A typed specification capturing intent. For a Cluster: network source, cluster type, EKS version, API visibility, control plane logging. Becomes a form and an API contract.</p> | <p><strong>Result — what was produced</strong></p><p>A typed output capturing the outcome. For a Cluster: EKS ARN, node groups, endpoint URL, kubeconfig. For an Environment: security groups, IAM roles, KMS keys.</p> |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><strong>Dependencies — what needs what</strong></p><p>Resources form a hierarchy. A Cluster requires a Network. An Environment lives inside a Cluster. Dependencies are enforced — the UI shows only valid options.</p>            | <p><strong>Status lifecycle</strong></p><p>Every resource: New → Provisioning → Ready (or Failed, Blocked). Updates trigger reconciliation. Deletes trigger deprovisioning. Framework manages state transitions.</p>    |
 
 ### 2. Skills for Each Resource Type
 
@@ -96,15 +94,13 @@ The spec captures everything the agent needs: network source, cluster type, EKS 
 
 <figure><img src="../.gitbook/assets/image (70).png" alt=""><figcaption><p><em>Cluster creation form — Network Source shows the dependency chain.</em></p></figcaption></figure>
 
-
-
 ### Example: Navigating an Environment
 
 Once a cluster is provisioned, teams create environments inside it. The environment is the deployment boundary — containing security groups, IAM roles, and KMS keys.
 
 The environment detail view shows the full resource tree in the left navigation: Overview, Micro Services, Kubernetes (Namespaces, Nodes, Workloads, Configs, Storage, Networks), and Cloud Resources (Hosts, Serverless, Storage, Databases, Networks, Configs). Each sub-resource has its own list view, create form, and detail view. Spec/Result tabs are available throughout. A “Track Provisioning Status” button links to the underlying ticket.
 
-<figure><img src="../.gitbook/assets/image (132).png" alt=""><figcaption><p><em>Full resource tree in the left nav. Security groups, IAM roles, KMS keys in the overview. Spec/Result tabs. Track Provisioning Status links to the underlying ticket.</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (111).png" alt=""><figcaption><p><em>Full resource tree in the left nav. Security groups, IAM roles, KMS keys in the overview. Spec/Result tabs. Track Provisioning Status links to the underlying ticket.</em></p></figcaption></figure>
 
 This is the pattern at work. The user fills out a form. The framework creates a ticket. The agent provisions the infrastructure. The user sees the result in a familiar enterprise UI. Every operation is multiplayer, auditable, and cost-tracked.
 
@@ -143,4 +139,3 @@ _DuploCloud doesn’t ship one rigid DevOps tool. It ships a comprehensive, batt
 #### What’s Next
 
 ARMOR provides the runtime. Extensions provide the applications. But building and deploying extensions should be as easy as the applications they create.
-

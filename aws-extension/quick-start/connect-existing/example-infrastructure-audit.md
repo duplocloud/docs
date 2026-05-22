@@ -1,12 +1,15 @@
 ---
-description: Connect an existing AWS service to DuploCloud and get it from zero observability to production-ready — with security hardening, cost controls, and automated pipelines.
+description: >-
+  Connect an existing AWS service to DuploCloud and get it from zero
+  observability to production-ready — with security hardening, cost controls,
+  and automated pipelines.
 ---
 
 # Example: Infrastructure Audit and Hardening
 
 This example shows how to connect an existing AWS workload to DuploCloud and systematically bring it up to production standards — adding observability, applying security controls, setting cost guardrails, and establishing automated deployment pipelines.
 
-For the end-to-end generic walkthrough, see [How to Manage Large Complex Projects](../../../../common-use-cases/how-to-manage-large-complex-projects.md).
+For the end-to-end generic walkthrough, see [How to Manage Large Complex Projects](../../../common-use-cases/how-to-manage-large-complex-projects.md).
 
 ## Prerequisites
 
@@ -20,7 +23,7 @@ An order service running on AWS EKS has no observability, no cost controls, no a
 
 {% stepper %}
 {% step %}
-## Connect your AWS and Kubernetes providers
+### Connect your AWS and Kubernetes providers
 
 Navigate to **AI Admin → Providers** and verify:
 
@@ -31,7 +34,7 @@ Confirm the connection is live by asking the agent to list running nodes and pod
 {% endstep %}
 
 {% step %}
-## Create a Project and define requirements
+### Create a Project and define requirements
 
 Navigate to **AI DevOps → Projects** and create a new Project. Open the **AI Planner** and provide a prompt describing your workload and goals:
 
@@ -41,7 +44,7 @@ The planner generates a structured spec with all tasks prioritised and sequenced
 {% endstep %}
 
 {% step %}
-## Set up observability
+### Set up observability
 
 With the plan approved, instruct the agent to set up observability:
 
@@ -51,7 +54,7 @@ The agent creates CloudWatch log groups, metric filters, alarms, and a dashboard
 {% endstep %}
 
 {% step %}
-## Security hardening
+### Security hardening
 
 Ask the agent to identify and resolve security gaps:
 
@@ -70,7 +73,7 @@ Security group changes can affect live traffic. Review the planned changes caref
 {% endstep %}
 
 {% step %}
-## Cost controls
+### Cost controls
 
 Ask the agent to identify cost optimisation opportunities:
 
@@ -80,7 +83,7 @@ The agent returns a breakdown of potential savings by resource type and recommen
 {% endstep %}
 
 {% step %}
-## CI/CD pipeline
+### CI/CD pipeline
 
 Ask the agent to set up or review your deployment pipeline:
 
@@ -90,12 +93,12 @@ Ask the agent to set up or review your deployment pipeline:
 
 ## What a typical audit covers
 
-| Area | What the agent checks |
-|---|---|
-| EKS | Node utilization, pod restarts, namespace RBAC, network policies |
-| EC2 | Instance sizing, idle instances, missing tags |
-| RDS | Multi-AZ status, backup retention, encryption at rest |
-| S3 | Public access, encryption, lifecycle policies, versioning |
-| IAM | Wildcard policies, unused roles, root account MFA |
-| Networking | Open security groups, public subnets with sensitive resources |
-| CloudTrail | Logging enabled in all regions, log file validation |
+| Area       | What the agent checks                                            |
+| ---------- | ---------------------------------------------------------------- |
+| EKS        | Node utilization, pod restarts, namespace RBAC, network policies |
+| EC2        | Instance sizing, idle instances, missing tags                    |
+| RDS        | Multi-AZ status, backup retention, encryption at rest            |
+| S3         | Public access, encryption, lifecycle policies, versioning        |
+| IAM        | Wildcard policies, unused roles, root account MFA                |
+| Networking | Open security groups, public subnets with sensitive resources    |
+| CloudTrail | Logging enabled in all regions, log file validation              |

@@ -10,7 +10,7 @@ Before using the AWS Extension, you need to install DuploCloud in your cloud env
 
 {% stepper %}
 {% step %}
-## Install DuploCloud on AWS
+### Install DuploCloud on AWS
 
 Follow the AWS installation guide to deploy DuploCloud into your AWS account.
 
@@ -20,24 +20,24 @@ Follow the AWS installation guide to deploy DuploCloud into your AWS account.
 {% endstep %}
 
 {% step %}
-## Connect Cloud Providers
+### Connect Cloud Providers
 
 Connect your AWS accounts, Kubernetes clusters, Git repositories, and other systems as Providers. Each Provider gives the AI scoped access to the resources inside it.
 
-{% content-ref url="../../getting-started/integrating-providers/README.md" %}
-[Integrating Providers](../../getting-started/integrating-providers/README.md)
+{% content-ref url="../../getting-started/integrating-providers/" %}
+[integrating-providers](../../getting-started/integrating-providers/)
 {% endcontent-ref %}
 {% endstep %}
 
 {% step %}
-## Connect MCP Servers
+### Connect MCP Servers
 
 {% hint style="info" %}
 This step is optional. Connect MCP Servers if you want to extend the AI's access to external tools and APIs — such as monitoring platforms, ticketing systems, or CI/CD pipelines.
 {% endhint %}
 
-{% content-ref url="../../getting-started/integrating-mcp-servers/README.md" %}
-[Integrating MCP Servers](../../getting-started/integrating-mcp-servers/README.md)
+{% content-ref url="../../getting-started/integrating-mcp-servers/" %}
+[integrating-mcp-servers](../../getting-started/integrating-mcp-servers/)
 {% endcontent-ref %}
 {% endstep %}
 {% endstepper %}

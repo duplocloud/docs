@@ -28,21 +28,21 @@ The Site Reliability Engineer (SRE) Agent is a central AI agent that orchestrate
 
 <summary>View SRE (Master) Agent details</summary>
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **Automatic Sub-Agent Routing:** Dynamically determines which sub-agent(s) to engage for each query.
 * **Comprehensive Operational Support:** Covers troubleshooting, diagnostics, monitoring, and observability.
 * **Context-Aware Assistance:** Maintains awareness of tenant, cluster, and infrastructure context for precise answers.
 * **Security and Compliance:** Inherits sub-agent security and permission models (e.g., PrivateGPT Agent's in-tenant processing, Kubernetes Agent’s permission inheritance).
 
-#### Key Features
+**Key Features**
 
 * **Single Point of Interaction:** Users can ask questions without needing to know which sub-agent to consult.
 * **Real-Time Insights:** Retrieves live cluster data, documentation, or logs as required by the query.
 * **Dynamic Orchestration:** Combines outputs from multiple sub-agents for complex queries spanning documentation and operational state.
 * **Audit Logging:** All agent interactions are logged for traceability and compliance.
 
-#### Integration Workflow
+**Integration Workflow**
 
 1. **User Query:** User submits a question or task via the HelpDesk interface.
 2. **Agent Routing:** The SRE Master Agent automatically routes queries to the appropriate sub-agent(s), currently including **PrivateGPT**, **Kubernetes**, and **AWS** agents.
@@ -50,7 +50,7 @@ The Site Reliability Engineer (SRE) Agent is a central AI agent that orchestrate
 4. **Aggregated Response:** SRE Master Agent consolidates results and presents a unified answer.
 5. **Logging & Auditing:** All interactions are captured for traceability.
 
-#### Future Integrations
+**Future Integrations**
 
 The SRE Agent will extend its operational coverage over time by incorporating additional sub-agents, such as:
 
@@ -68,7 +68,7 @@ The AWS Agent is an AWS infrastructure expert that helps you diagnose, troublesh
 
 <summary>View AWS Agent details</summary>
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **Resource Discovery**: List and inspect AWS resources across EC2, S3, RDS, Lambda, ECS, and more
 * **Multi-Account Support**: Work across multiple AWS accounts in a single conversation using Scopes
@@ -77,7 +77,7 @@ The AWS Agent is an AWS infrastructure expert that helps you diagnose, troublesh
 * **Credential Handling**: Securely processes AWS credentials from your defined Providers — each Provider maps to a separate AWS account and region
 * **Context Awareness**: Maintains conversation history for more accurate, relevant responses
 
-#### Key Features
+**Key Features**
 
 * **Approval Workflow**: All suggested commands are presented for user review before execution
 * **Scoped Execution**: When multiple Providers are configured, the agent identifies which account to target and routes commands to the correct credentials automatically
@@ -85,7 +85,7 @@ The AWS Agent is an AWS infrastructure expert that helps you diagnose, troublesh
 * **Isolated Execution**: Commands run in an isolated process per session
 * **Audit Logging**: All agent interactions and command executions are logged for traceability
 
-#### Use Cases
+**Use Cases**
 
 * Investigating resource configuration and availability issues across one or more AWS accounts
 * Discovering and inventorying resources within an Environment
@@ -94,7 +94,7 @@ The AWS Agent is an AWS infrastructure expert that helps you diagnose, troublesh
 * Auditing cost and usage patterns across AWS services and accounts
 * Root cause analysis for infrastructure incidents
 
-#### Security Model
+**Security Model**
 
 * **Permission Scope**: You define the permission boundary of the agent based on the Provider Scope you define
 * **Sandboxed Execution**: Commands run in an isolated process per session
@@ -110,7 +110,7 @@ The GCP Agent is a Google Cloud Platform infrastructure expert that helps you di
 
 <summary>View GCP Agent details</summary>
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **Resource Discovery**: List and inspect GCP resources across Compute Engine, GKE, Cloud Storage, IAM, Networking, and more
 * **Command Suggestions**: Recommends precise `gcloud` and `kubectl` commands based on your query
@@ -119,14 +119,14 @@ The GCP Agent is a Google Cloud Platform infrastructure expert that helps you di
 * **Credential Handling**: Securely processes GCP credentials from your defined Providers
 * **Context Awareness**: Maintains conversation history for more accurate, relevant responses
 
-#### Key Features
+**Key Features**
 
 * **Approval Workflow**: All suggested commands are presented for user review before execution
 * **Dual CLI Support**: Works across both `gcloud` for GCP resource management and `kubectl` for GKE workloads
 * **Isolated Execution**: Commands run in an isolated process per session
 * **Audit Logging**: All agent interactions and command executions are logged for traceability
 
-#### Use Cases
+**Use Cases**
 
 * Investigating Compute Engine instance configuration and availability
 * Diagnosing GKE pod failures, crashes, and networking issues
@@ -135,7 +135,7 @@ The GCP Agent is a Google Cloud Platform infrastructure expert that helps you di
 * Troubleshooting VPC networking, firewall rules, and load balancers
 * Root cause analysis for GCP infrastructure incidents
 
-#### Security Model
+**Security Model**
 
 * **Permission Scope**: You define the permission boundary of the agent based on the Provider Scope you define
 * **Sandboxed Execution**: Commands run in an isolated process per session
@@ -151,7 +151,7 @@ The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes clus
 
 <summary>View Kubernetes Agent details</summary>
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **Cluster Health Monitoring**: Assess overall cluster health and identify potential issues
 * **Resource Management**: Create, update, and manage Kubernetes resources (pods, services, deployments, etc.)
@@ -159,14 +159,14 @@ The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes clus
 * **Log Analysis**: Retrieve and analyze logs from specific pods or services
 * **Resource Inspection**: Detailed examination of Kubernetes objects and their configurations
 
-#### Key Features
+**Key Features**
 
 * **Permission Inheritance**: Operates with the requesting user's Kubernetes permissions - no additional access required
 * **kubectl Integration**: Executes kubectl commands securely within your cluster environment
 * **Multi-Level Support**: Handles both specific detailed requests (like "get logs for pod xyz") and high-level queries (like "assess cluster health")
 * **Real-time Troubleshooting**: Interactive problem-solving with immediate command execution
 
-#### Use Cases
+**Use Cases**
 
 * Investigating pod startup failures or crashes
 * Analyzing resource utilization and capacity planning
@@ -174,7 +174,7 @@ The Kubernetes Agent is an expert DevOps engineer specialized in Kubernetes clus
 * Troubleshooting networking and service connectivity issues
 * Performing routine maintenance tasks and health checks
 
-#### Security Model
+**Security Model**
 
 * No standalone permissions - inherits user's existing kubectl access
 * All actions are performed within DuploCloud's Tenant isolation
@@ -194,23 +194,23 @@ The IaC Agent autonomously implements infrastructure changes in your Terraform r
 
 <summary>View IaC Agent details</summary>
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **Autonomous Terraform Implementation**: Clones your repo, plans changes, writes Terraform code, and opens a PR — end to end
 * **Multi-Cloud Support**: Works with AWS, GCP, and Azure Terraform repositories
 * **Repo Structure Discovery**: Automatically maps Terraform roots, modules, and CI patterns before making changes
-* **Clarification Q&A**: Pauses to ask questions when a task is ambiguous before proceeding
+* **Clarification Q\&A**: Pauses to ask questions when a task is ambiguous before proceeding
 * **Change Verification**: Runs `terraform fmt`, `init`, `validate`, and `plan` to verify changes before the PR is created
 * **Human Review Checkpoints**: Optionally pause at the planning or implementation stage for review and feedback before continuing
 
-#### Key Features
+**Key Features**
 
 * **Fully Autonomous Mode**: Submit a task and walk away — the agent handles the full pipeline without intervention
 * **Checkpoint Feedback Loop**: At any checkpoint, approve the plan, provide feedback for revision, or directly edit the artifact before continuing
 * **PR Creation**: Automatically branches, commits, and opens a GitHub pull request with a full summary of changes
 * **Audit Trail**: Every step of the pipeline produces artifacts — plan, diff summary, verification results — retained per run
 
-#### Benefits
+**Benefits**
 
 * **Faster Implementation**: Infrastructure changes that would take hours to research, write, and validate manually can be completed in minutes
 * **Consistent Code Quality**: The agent follows your existing repo structure, naming conventions, and Terraform patterns — changes fit naturally into your codebase
@@ -218,14 +218,14 @@ The IaC Agent autonomously implements infrastructure changes in your Terraform r
 * **Human Oversight Without Manual Work**: Checkpoints give your team full control over what gets merged, without requiring them to write the code themselves
 * **Democratizes IaC**: Team members without deep Terraform expertise can contribute infrastructure changes safely
 
-#### Use Cases
+**Use Cases**
 
 * Adding new cloud resources (compute, storage, databases, networking) via Terraform
 * Modifying existing infrastructure configurations across environments
 * Automating repetitive IaC tasks that follow consistent patterns
 * Reviewing and approving AI-generated infrastructure changes before they reach your repo
 
-#### Security Model
+**Security Model**
 
 * **Credentials Never Persisted**: API keys, GitHub tokens, and cloud credentials are passed per request and never written to disk
 * **Isolated Execution**: Each run operates in its own isolated directory
@@ -241,7 +241,7 @@ The Observability Agent provides intelligent monitoring and troubleshooting capa
 
 <summary>View Observability Agent details</summary>
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **Log Retrieval and Analysis**: Fetch and summarize logs from Grafana with intelligent pattern recognition
 * **Metrics Analysis**: Query and interpret application and infrastructure metrics
@@ -249,20 +249,20 @@ The Observability Agent provides intelligent monitoring and troubleshooting capa
 * **Pattern Detection**: Identify anomalies and trends in log data
 * **Time-based Analysis**: Analyze data across specific time windows
 
-#### Current Implementation
+**Current Implementation**
 
 * **Backend**: OpenTelemetry with Grafana integration
 * **Data Types**: Logs and metrics (traces, spans, and profiles coming in future versions)
 * **Scope**: Namespace-aware operations
 
-#### Key Features
+**Key Features**
 
 * **Namespace Awareness**: Automatically understands user's operational context
 * **Natural Language Queries**: Ask questions like "show me errors in the payment service from the last hour"
 * **Pattern Recognition**: Automatically identifies common error patterns and anomalies
 * **Dashboard Navigation**: Guides users to relevant Grafana dashboards and visualizations
 
-#### Use Cases
+**Use Cases**
 
 * Investigating application errors and performance degradation
 * Analyzing traffic patterns and resource utilization
@@ -270,7 +270,7 @@ The Observability Agent provides intelligent monitoring and troubleshooting capa
 * Monitoring application health across environments
 * Root cause analysis for incidents
 
-#### Roadmap
+**Roadmap**
 
 Future versions will include support for:
 
@@ -281,7 +281,7 @@ Future versions will include support for:
 
 </details>
 
-Watch the Observability Agent in action below.&#x20;
+Watch the Observability Agent in action below.
 
 {% embed url="https://drive.google.com/file/d/1fAu6hrzAsTuJBhdzuhb9C4uyjzsRKQms/view?usp=drive_link" %}
 
@@ -293,26 +293,26 @@ The CI/CD Agent automates pipeline troubleshooting and failure resolution across
 
 <summary>View CI/CD Agent details</summary>
 
-#### Supported Platforms
+**Supported Platforms**
 
 * **Jenkins**: Full integration with Jenkins pipelines and build processes
 * **GitHub Actions**: Native GitHub Actions workflow support
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **Automatic Failure Detection**: Triggered automatically when pipeline failures occur
 * **Intelligent Troubleshooting**: Analyzes failure logs and provides resolution recommendations
 * **Deep Investigation**: Can retrieve additional logs, files, and context when needed
 * **Pipeline Context**: Full understanding of build history, dependencies, and configurations
 
-#### Integration Workflow
+**Integration Workflow**
 
 1. **Failure Detection**: Try-catch blocks in your pipelines automatically detect failures
 2. **Ticket Creation**: DuploCloud CLI (duploctl) creates HelpDesk Tickets with full context
 3. **Agent Assignment**: Tickets are automatically assigned to the CI/CD Agent
 4. **Resolution Process**: Agent analyzes logs and works with users to resolve issues
 
-#### Key Features
+**Key Features**
 
 * **Automatic Ticket Creation**: No manual intervention required for failure detection
 * **Rich Context**: Receives pipeline output, URLs, execution IDs, and failure details
@@ -320,7 +320,7 @@ The CI/CD Agent automates pipeline troubleshooting and failure resolution across
 * **Pipeline History**: Understands build trends and recurring failure patterns
 * **Seamless Integration**: Direct links from Jenkins/GitHub Actions to HelpDesk Tickets
 
-#### Use Cases
+**Use Cases**
 
 * Debugging build failures and compilation errors
 * Resolving deployment issues and rollback scenarios
@@ -340,14 +340,14 @@ The Architecture Diagram Agent leverages DuploCloud's cartography system to gene
 
 <summary>View Architecture Diagram Agent Details</summary>
 
-#### Core Technology
+**Core Technology**
 
 * **Backend**: Neo4j graph database populated by DuploCloud Cartography
 * **Real-time Updates**: Continuously synchronized with your cloud environment
 * **Multi-layer Mapping**: Covers AWS resources, Kubernetes objects, and application dependencies
 * **Visualization**: Mermaid.js diagram generation
 
-#### Key Features
+**Key Features**
 
 * **Developer-Centric Views**: Generate diagrams focused on specific microservices or applications
 * **Multi-Level Detail**: From high-level architecture overviews to detailed resource dependencies
@@ -355,7 +355,7 @@ The Architecture Diagram Agent leverages DuploCloud's cartography system to gene
 * **Real-time Accuracy**: Diagrams reflect current state of your infrastructure
 * **Contextual Filtering**: Scope diagrams to specific Tenants, namespaces, or applications
 
-#### Use Cases
+**Use Cases**
 
 * **New Developer Onboarding**: Help developers understand system architecture for unfamiliar services
 * **Impact Analysis**: Visualize dependencies before making changes
@@ -363,21 +363,21 @@ The Architecture Diagram Agent leverages DuploCloud's cartography system to gene
 * **Documentation**: Generate up-to-date architecture documentation
 * **Compliance Auditing**: Visualize data flows for security and compliance reviews
 
-#### AWS Resources
+**AWS Resources**
 
 Architecture Diagram Agent has insights into your AWS Resources. We currently support `AWSAccount`, `AWSRegion`, `EC2Instance`, `S3Bucket`, and `RDSInstance` to name a few. To see your AWS Resources ask the agent: `Can you create a diagram of the aws resources?`
 
-<figure><img src="../../.gitbook/assets/aws-resources.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/aws-resources.png" alt=""><figcaption></figcaption></figure>
 
-#### Kubernetes Aware
+**Kubernetes Aware**
 
-Architecture Diagram Agent has extensive knowledge of Kubernetes in your infrastructure.&#x20;
+Architecture Diagram Agent has extensive knowledge of Kubernetes in your infrastructure.
 
 For example, we can ask Architecture Diagram Agent `Can you create a diagram of the duploservices-ai namespace?` and it'll create a diagram.
 
-<figure><img src="../../.gitbook/assets/duploservices-ai-ns.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/duploservices-ai-ns.png" alt=""><figcaption></figcaption></figure>
 
-#### Custom Dependency Definition
+**Custom Dependency Definition**
 
 Organizations can optionally define custom application dependencies:
 
@@ -386,7 +386,7 @@ Organizations can optionally define custom application dependencies:
 
 For example, once we define a pods dependenices, we can ask our Architecture Diagram Agent: `Can you create a diagram of dependencies for my Architecture Diagram Agent?` and it will create a diagram of the dependencies:
 
-<figure><img src="../../.gitbook/assets/architecture-diagram-agent.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/architecture-diagram-agent.png" alt=""><figcaption></figcaption></figure>
 
 \
 **Architecture Diagram Agent — Role Boundaries and Scope**
@@ -429,7 +429,7 @@ The Knowledgebase Agent answers questions by searching a vector database of prev
 
 <summary>View Knowledgebase Agent details</summary>
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **Semantic Search**: Searches previously resolved tickets and knowledge base articles using vector similarity to find the most relevant matches for your query
 * **Result Reranking**: Applies a reranking model to optimize search results for accuracy before generating a response
@@ -437,27 +437,27 @@ The Knowledgebase Agent answers questions by searching a vector database of prev
 * **Intelligent Fallback**: When no sufficiently relevant results are found, falls back gracefully to general AI knowledge
 * **PII Sanitization**: Optionally detects and redacts personally identifiable information from queries before processing
 
-#### Key Features
+**Key Features**
 
 * **Reference Links**: Responses include links to the source tickets or documentation used to formulate the answer
 * **Context Awareness**: Maintains conversation history for more accurate follow-up responses
 * **Context-Aware by Default**: Automatically interprets questions within the context of your configured knowledge base unless explicitly stated otherwise
 
-#### Benefits
+**Benefits**
 
 * **Preserves Tribal Knowledge**: Captures and surfaces institutional expertise that would otherwise live only in individuals' heads or be lost over time
 * **Faster Resolution**: Teams spend less time re-investigating known issues — past solutions are surfaced instantly
 * **Continuous Improvement**: The more tickets resolved and indexed, the more accurate and useful the agent becomes
 * **Self-Service Support**: Empowers team members to find answers independently without needing to escalate
 
-#### Use Cases
+**Use Cases**
 
 * Troubleshooting known issues by surfacing how similar problems were previously resolved
 * Onboarding new team members with answers grounded in real operational history
 * Reducing repeat support tickets by making past resolutions searchable
 * Quick lookups for configuration guidance, error resolutions, and operational steps
 
-#### Security Model
+**Security Model**
 
 * **PII Protection**: Optional PII detection and redaction ensures sensitive data is sanitized before being processed
 * **Processing Within Your Environment**: All AI processing occurs within your own cloud environment — data does not leave your infrastructure
@@ -473,32 +473,32 @@ The PrivateGPT Agent provides a secure, enterprise-grade ChatGPT-like experience
 
 <summary>View PrivateGPT Agent details</summary>
 
-#### Security Architecture
+**Security Architecture**
 
 * **Data Locality**: All processing occurs within your AWS environment
 * **AWS Bedrock Backend**: Leverages AWS Bedrock for LLM capabilities
 * **Enhanced Privacy**: Stronger guarantees that input data won't be used for model training
 * **DuploCloud Interface**: Access through familiar HelpDesk interface
 
-#### Core Capabilities
+**Core Capabilities**
 
 * **General AI Assistance**: Natural language processing for various business needs
 * **Document Analysis**: Process and analyze internal documents securely
 
-#### Key Features
+**Key Features**
 
 * **Zero External Data Exposure**: All interactions remain within your cloud environment
 * **Familiar Interface**: ChatGPT-like experience through DuploCloud HelpDesk
 * **Enterprise Controls**: Full audit trail and access controls
 * **Compliance Ready**: Meets strict data residency and privacy requirements
 
-#### Use Cases
+**Use Cases**
 
 * Analyzing sensitive business documents
 * Internal knowledge base queries
 * Compliance and regulatory document review
 
-#### Benefits Over Public AI Services
+**Benefits Over Public AI Services**
 
 * **Data Sovereignty**: Complete control over where your data is processed
 * **Compliance Alignment**: Meets enterprise security and regulatory requirements
@@ -514,14 +514,14 @@ The Database Explorer Agent provides secure, controlled access to database opera
 
 <summary>View Database Explorer Agent details</summary>
 
-#### Core Architecture
+**Core Architecture**
 
 * **Template-Based Queries**: Uses pre-defined "fuzzy" SQL query templates
 * **Multi-Database Support**: Works with MySQL, PostgreSQL, and other relational databases
 * **Natural Language Interface**: Users interact using plain language requests
 * **Parameter Substitution**: Intelligently fills in query parameters based on user input
 
-#### Security Model
+**Security Model**
 
 * **Controlled Access**: Only pre-approved query patterns can be executed
 * **No Raw SQL**: Users cannot execute arbitrary database commands
@@ -535,20 +535,20 @@ The Database Explorer Agent provides secure, controlled access to database opera
 * **Query Execution**: Substitutes parameter and executes safe query
 * **Response**: Returns customer information in user-friendly format
 
-#### Key Features
+**Key Features**
 
 * **Template Library**: Maintain a collection of approved query patterns
 * **Parameter Validation**: Automatic validation of input parameters
 * **Result Formatting**: Present database results in user-friendly formats
 
-#### Use Cases
+**Use Cases**
 
 * **Customer Support**: Quick customer information lookup
 * **Data Analysis**: Self-service access to business intelligence data
 * **Report Generation**: Automated generation of standard reports
 * **Operational Queries**: Access to operational data without technical expertise
 
-#### Benefits
+**Benefits**
 
 * **Rapid Development**: Enable data access without building custom UIs
 * **Security**: Controlled access prevents unauthorized operations

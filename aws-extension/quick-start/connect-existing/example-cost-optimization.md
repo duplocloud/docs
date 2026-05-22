@@ -1,5 +1,7 @@
 ---
-description: A worked example — connect to an existing AWS account and run a cost optimization analysis using a HelpDesk ticket.
+description: >-
+  A worked example — connect to an existing AWS account and run a cost
+  optimization analysis using a HelpDesk ticket.
 ---
 
 # Example: Cost Optimization
@@ -13,23 +15,23 @@ This example shows how to connect DuploCloud to an existing AWS account and imme
 
 {% stepper %}
 {% step %}
-## Add your AWS account as a Provider
+### Add your AWS account as a Provider
 
 Navigate to **AI Admin → Providers** and add your AWS account. Supply an IAM role or access credentials with read access to your AWS resources, and set the scope to the regions you want the AI to analyze.
 
 {% hint style="info" %}
-For a full guide on connecting AWS as a Provider, see [Integrating Providers](../../../getting-started/integrating-providers/README.md).
+For a full guide on connecting AWS as a Provider, see [Integrating Providers](../../../getting-started/integrating-providers/).
 {% endhint %}
 {% endstep %}
 
 {% step %}
-## Create a Workspace
+### Create a Workspace
 
 Navigate to **AI Admin → Workspaces** and create a new Workspace. Attach the AWS Provider scope you just created. Assign a Persona that includes the relevant AWS skills.
 {% endstep %}
 
 {% step %}
-## Open the HelpDesk and create a Ticket
+### Open the HelpDesk and create a Ticket
 
 Navigate to **HelpDesk** and click **New Ticket**. Select the Workspace you created. In the ticket, describe what you want:
 
@@ -37,7 +39,7 @@ Navigate to **HelpDesk** and click **New Ticket**. Select the Workspace you crea
 {% endstep %}
 
 {% step %}
-## Review the results
+### Review the results
 
 The AI agent runs the analysis and returns a structured report inside the ticket — listing findings by category, estimated monthly savings, and recommended actions. You can ask follow-up questions or instruct the agent to take action directly from the ticket.
 {% endstep %}
