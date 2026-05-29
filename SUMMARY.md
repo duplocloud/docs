@@ -14,7 +14,8 @@
 
 * [ARMOR Policy Model](armor/ai-devops-policy-model.md)
 * [Providers](armor/providers.md)
-* [MCP Servers](armor/mcp-servers.md)
+* [MCP Servers](armor/mcp-servers/README.md)
+  * [Credential Masking For MCP Servers](armor/mcp-servers/credential-masking-for-mcp-servers.md)
 * [Skills](armor/skills/README.md)
   * [Platform Skills and Overrides](armor/skills/platform-skills-and-overrides.md)
 * [Personas](armor/personas.md)
