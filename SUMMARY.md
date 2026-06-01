@@ -32,6 +32,7 @@
   * [User Groups](armor/access-control/user-groups.md)
   * [User Tokens](armor/access-control/user-tokens.md)
   * [Quotas](armor/access-control/quotas.md)
+  * [AI Guardrails](armor/access-control/ai-guardrails.md)
 * [Additional Components](armor/additional-components/README.md)
   * [Resources](armor/additional-components/resources.md)
   * [Reports](armor/additional-components/reports.md)
