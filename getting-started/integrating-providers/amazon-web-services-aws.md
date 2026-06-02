@@ -10,6 +10,31 @@ The AWS Cloud Provider lets DuploCloud AI agents interact with your AWS account 
 
 Before adding credentials, you need an IAM role in your AWS account that HelpDesk can assume. The easiest way is the **DuploCloud Access CloudFormation template** — it takes 2–3 minutes and outputs Role ARNs you can use directly.
 
+### Prerequisites (EKS)
+
+If you plan to enable either EKS role (`EnableEKSAdmin` or `EnableEKSReadOnly`), you must first enable **EKS API access** on the target cluster. The template creates Kubernetes access using `AWS::EKS::AccessEntry`, which only works when the cluster's authentication mode includes the EKS API — either `API` or `API_AND_CONFIG_MAP`. Clusters in `CONFIG_MAP`-only mode will fail to deploy.
+
+**Complete this before launching the CloudFormation template.**
+
+**Via the AWS Console:**
+
+1. In the AWS Console, search for **EKS**.
+2. Select your cluster.
+3. Click the **Access** tab.
+4. Under **Access configuration**, click **Manage**.
+5. Set the authentication mode to **EKS API and ConfigMap**.
+6. Wait for the setting to propagate, then deploy the CloudFormation template.
+
+**Via the AWS CLI:**
+
+```bash
+aws eks update-cluster-config \
+  --name <EKSClusterName> \
+  --access-config authenticationMode=API_AND_CONFIG_MAP
+```
+
+***
+
 > [Launch CloudFormation Stack](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?templateURL=https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) | [Download Template](https://duploservices-ai-access-227120241369.s3.us-west-2.amazonaws.com/aws.yaml) | [GitHub Repo](https://github.com/duplocloud/duplocloud-helpdesk-access)
 
 **What it creates** — four IAM roles, each independently enabled or disabled:
