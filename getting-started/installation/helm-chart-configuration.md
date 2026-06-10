@@ -13,6 +13,64 @@ For the cloud infrastructure each environment requires, see the [Installation ov
 
 ***
 
+## Prerequisites
+
+The chart is cloud-agnostic and runs on any Kubernetes cluster — managed (EKS, AKS, GKE) or self-managed (on-premises, bare-metal, or VM-based). Before installing, the target cluster must provide the following.
+
+### Cluster access
+
+A Kubernetes cluster and a kubeconfig with permission to install into a namespace. Two worker nodes with roughly 2 vCPU and 8 GiB of memory each is sufficient for a standard deployment.
+
+### Storage
+
+Two kinds of persistent storage are required:
+
+| Need | Used by | Requirement |
+| ---- | ------- | ----------- |
+| **ReadWriteMany (RWX)** | Backend and Duplo Agent shared file volume | A StorageClass that provisions RWX volumes — NFS, AWS EFS, GCP Filestore, Azure Files, etc. |
+| **ReadWriteOnce (RWO)** | MongoDB data volume | Any RWO StorageClass. |
+| **ReadWriteOnce (RWO)** | MongoDB backup volume | Any RWO StorageClass. |
+
+The RWX requirement can be satisfied two ways:
+
+* Provide a StorageClass that dynamically provisions RWX volumes and set `backend.persistence.storageClass`.
+* Pre-create an RWX PersistentVolumeClaim and reference it with `backend.persistence.existingClaim` — the chart then skips PVC creation.
+
+{% hint style="info" %}
+If the cluster has no managed RWX StorageClass, the chart can deploy a bundled in-cluster NFS server provisioner — set `nfs-server.enabled=true`. See [Persistent storage](#persistent-storage).
+{% endhint %}
+
+### Ingress controller
+
+An ingress controller must already be installed in the cluster — for example, the NGINX ingress controller. The chart creates `Ingress` resources but does **not** install a controller. Pass the controller's class via `ingress.className` (e.g. `nginx` or `alb`).
+
+### DNS hostname
+
+The hostname (FQDN) must be **decided** before installation — the chart uses it to create the host-based ingress routing rules and to build OAuth redirect URIs. The DNS record itself does not need to resolve yet; it is created after the ingress controller is assigned an address.
+
+The deployment uses two hostnames:
+
+* The main application URL — set in `config.authFrontendBaseUrl` (e.g. `https://ai-helpdesk.example.com`).
+* The web terminal — set in `xterm.hostname` (e.g. `https://xterm.example.com`).
+
+The typical order is:
+
+1. Choose the hostnames and set them in the values file.
+2. Install the chart — the ingress controller is assigned an address (IP or VIP).
+3. Create DNS records pointing the chosen hostnames at that address.
+
+On a private or on-premises cluster the records point at the ingress address on your LAN subnet — they do not need to be internet-routable.
+
+### TLS certificate
+
+A valid TLS certificate matching the application DNS name, terminated at the ingress controller (or an upstream load balancer).
+
+{% hint style="warning" %}
+HTTPS is mandatory — the platform cannot be used over plain HTTP. External login via OAuth/SSO providers (Okta, Google, Microsoft) requires HTTPS redirect URIs, so a valid certificate must be in place before users can sign in.
+{% endhint %}
+
+***
+
 ## How values are organized
 
 Values are supplied through a values file. They fall into a few groups:
