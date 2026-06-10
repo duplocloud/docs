@@ -138,6 +138,7 @@
   * [AWS Installation](getting-started/installation/aws-installation.md)
   * [Azure Installation](getting-started/installation/azure-installation.md)
   * [GCP Installation](getting-started/installation/gcp-installation.md)
+  * [Helm Chart Configuration](getting-started/installation/helm-chart-configuration.md)
   * [AI DevOps V1 to V2 Upgrade](getting-started/installation/v1-to-v2-upgrade.md)
   * [Slack Bot Installation](getting-started/installation/slackbot-installation.md)
 * [Integrating Providers](getting-started/integrating-providers/README.md)
