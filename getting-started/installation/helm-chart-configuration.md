@@ -203,6 +203,25 @@ The chart configures two ingress resources: a public one for the UI and API, and
 | `ingress.tls` | `[]` | TLS blocks. Leave empty when TLS is terminated at the load balancer (e.g. ALB + ACM). |
 | `ingress.paths` | _(preset)_ | Path-to-service routing. The host is derived from `config.authFrontendBaseUrl`. `/api`, `/swagger`, and auth paths route to the backend; `/mcp` and `/core-mcp` route to the MCP servers; everything else routes to the frontend. |
 
+{% hint style="info" %}
+**Using the NGINX ingress controller?** The following annotations are required — `ssl-redirect` forces HTTPS, and the larger proxy buffers are needed to handle the application's auth response headers. Set `tls.secretName` to the Secret holding your certificate, and list every hostname the certificate covers.
+
+```yaml
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "128k"
+    nginx.ingress.kubernetes.io/proxy-buffers-number: "4"
+  tls:
+    - secretName: helpdesk-tls
+      hosts:
+        - duplo.example.net
+        - xterm.example.net
+```
+{% endhint %}
+
 ### Internal ingress (`internalIngress`)
 
 | Key | Default | Description |
