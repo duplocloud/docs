@@ -20,4 +20,5 @@ Providers are the external systems and cloud services that DuploCloud AI Suite c
 | **Source Control**      | [GitLab](https://docs.duplocloud.com/docs/getting-started/integrating-providers/gitlab)                                                                 |
 | **Source Control**      | [BitBucket](https://docs.duplocloud.com/docs/getting-started/integrating-providers/bitbucket)                                                           |
 | **Others**              | [Notion](https://docs.duplocloud.com/docs/getting-started/integrating-providers/notion)                                                                 |
-| Others                  | [Jira](https://docs.duplocloud.com/docs/getting-started/integrating-providers/jira)                                                                     |
+| **Others**              | [Jira](https://docs.duplocloud.com/docs/getting-started/integrating-providers/jira)                                                                     |
+| **Others**              | [Heroku](heroku.md)                                                                                                                                     |

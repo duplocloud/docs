@@ -10,13 +10,12 @@ DuploCloud typically runs Kubernetes services in GCP on GKE in Autopilot mode. A
 
 ### One or more of my containers are showing as pending; how can I debug them? <a href="#id-7-toc-title" id="id-7-toc-title"></a>
 
-[Click here for the details.](../../faq/#one-or-more-of-my-containers-are-pending-how-can-i-debug)
+[Click here for the details.](../faq/#one-or-more-of-my-containers-are-pending-how-can-i-debug)
 
 ### How do I give users access to only one Tenant in my GCP project?
 
-To give a user access to a specific Tenant, navigate the **Users** page. For a new user, click **Add** and enter the user's information. From the **Role** list box, select **User**. In the **Tenant** list box, select the **Tenant**. Click **Submit**. For an established user, navigate to the **Users** page and select the user. From the **Actions** menu, click **Update**. From the **Role** list box, select **User**, and from the **Tenant** list box, select the **Tenant**. Click **Submi**t.&#x20;
+To give a user access to a specific Tenant, navigate the **Users** page. For a new user, click **Add** and enter the user's information. From the **Role** list box, select **User**. In the **Tenant** list box, select the **Tenant**. Click **Submit**. For an established user, navigate to the **Users** page and select the user. From the **Actions** menu, click **Update**. From the **Role** list box, select **User**, and from the **Tenant** list box, select the **Tenant**. Click **Submi**t.
 
-### How do I create a Google Managed certificate to use with DuploCloud?&#x20;
+### How do I create a Google Managed certificate to use with DuploCloud?
 
 To create a Google Managed certificate to use with DuploCloud, see the [DuploCloud documentation](prerequisites/create-managed-ssl-certificates-for-gcp.md).
-

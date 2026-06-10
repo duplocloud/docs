@@ -4,12 +4,13 @@ description: Enable and view alert notifications in the DuploCloud Portal
 
 # Alert notifications
 
-DuploCloud supports viewing of Faults in the portal and sending notifications and emails to the following systems:&#x20;
+DuploCloud supports viewing of Faults in the portal and sending notifications to the following systems:
 
 * Sentry
 * PagerDuty
 * NewRelic
 * OpsGenie
+* Incident.io
 
 You will need to generate an keys from each of these vendor systems, and then provide that key to DuploCloud to enable integration.
 
@@ -18,11 +19,9 @@ You will need to generate an keys from each of these vendor systems, and then pr
 1. In the [Sentry ](https://sentry.io/welcome/?utm_source=google\&utm_medium=cpc\&utm_campaign=19655969969\&utm_content=g\&utm_term=sentry\&device=c\&gclid=CjwKCAjw5pShBhB_EiwAvmnNV2cqd7lWEuiy_n0HSuCc17JGB9vVYqdwm5_QiDgJEXIWuz34u9h18hoCpbEQAvD_BwE\&gclid=CjwKCAjw5pShBhB_EiwAvmnNV2cqd7lWEuiy_n0HSuCc17JGB9vVYqdwm5_QiDgJEXIWuz34u9h18hoCpbEQAvD_BwE)website, navigate to **Projects** -> **Create a New Project**.
 2. Click **Settings -> Projects ->&#x20;**_**project-name**_**&#x20;-> Client keys**. The **Client Keys** page displays.
 3. Complete the **DSN** fields on the screen.
-4.  Click **Generate New Key**. <br>
+4.  Click **Generate New Key**.<br>
 
     ![Client Keys page on Sentry website with DSN fields](https://duplocloud.com/wp-content/uploads/2021/11/sentry.png)
-
-
 5. In the DuploCloud Portal, navigate to **Observability** -> **Faults**.
 6. Click **Update Notifications Config**. The **Set Alert Notifications Config** pane displays.
 7. In the **Sentry - DSN** field, enter the key you received from Sentry.
@@ -44,7 +43,7 @@ You will need to generate an keys from each of these vendor systems, and then pr
 
 ## Generating an Integration Key from NewRelic
 
-1. In the [NewRelic](https://docs.newrelic.com/) website, use the [Event API](https://docs.newrelic.com/docs/data-apis/ingest-apis/event-api/introduction-event-api/) to generate an [API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/) to send events to NewRelic `Insights`.&#x20;
+1. In the [NewRelic](https://docs.newrelic.com/) website, use the [Event API](https://docs.newrelic.com/docs/data-apis/ingest-apis/event-api/introduction-event-api/) to generate an [API key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/) to send events to NewRelic `Insights`.
 2. In the DuploCloud Portal, navigate to **Observability** -> **Faults**.
 3. Click **Update Notifications Config**. The **Set Alert Notifications Config** pane displays.
 4. In the **NewRelic - API Key** field, enter the key you generated from NewRelic.
@@ -60,6 +59,24 @@ You will need to generate an keys from each of these vendor systems, and then pr
 5. In the **Alerts Frequency (Seconds)** field, enter a time interval in seconds when you want alerts to be displayed.
 6. Click **Update**.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/AWS_Set_notify_config.png" alt=""><figcaption><p><strong>Set Alert Notifications Config</strong> pane in DuploCloud Portal</p></figcaption></figure></div>
+## Generating an HTTP Event Source URL from Incident.io
 
-&#x20;                               &#x20;
+1. In the [Incident.io](https://incident.io/) website, use the [Custom HTTP alert sources](https://docs.incident.io/alerts/custom-http-sources) section to generate an event source URL.
+   1.  Choose Query authentication.<br>
+
+       <figure><img src="../../../.gitbook/assets/Screenshot 2026-03-20 at 1.33.56 PM.png" alt=""><figcaption></figcaption></figure>
+
+
+   2.  Use `$.deduplication_key` as the Deduplication key path. DuploCloud alerts Incident that a fault is resolved with this key.<br>
+
+       <figure><img src="../../../.gitbook/assets/Screenshot 2026-03-20 at 9.14.35 PM.png" alt=""><figcaption></figcaption></figure>
+2.  In the DuploCloud Portal:&#x20;
+
+    1. Navigate to **Observability** -> **Faults**.
+    2. Click **Update Notifications Config**. The **Set Alert Notifications Config** pane displays.
+    3. In the **Incident.io Alert Source URL** field, enter the URL you generated from Incident.io.
+    4. Click **Update**.
+
+
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2026-03-20 at 1.26.58 PM.png" alt=""><figcaption></figcaption></figure>

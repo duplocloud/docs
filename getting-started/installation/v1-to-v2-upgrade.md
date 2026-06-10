@@ -1,22 +1,22 @@
-# Helpdesk V1 to V2 Upgrade
+# AI DevOps V1 to V2 Upgrade
 
-Your team is moving from the original DuploCloud AI HelpDesk to something far more powerful. HelpDesk V2 is not just an update — it's a completely new AI DevOps platform that can plan, execute, and manage complex cloud operations autonomously. This guide explains what's new, what changes for your team, and how the upgrade works.
+Your team is moving from the original deployment of DuploCloud AI DevOps to something far more powerful. The new V2 version is not just an update — it's a completely new AI DevOps platform that can plan, execute, and manage complex cloud operations autonomously. This guide explains what's new, what changes for your team, and how the upgrade works.
 
 ***
 
-## What is HelpDesk V2?
+## What is AI DevOps V2?
 
-HelpDesk V2 is DuploCloud's next-generation AI platform for DevOps teams. It replaces the original AI Studio and HelpDesk with a unified system built around a richer model of how AI and engineering teams work together.
+AI DevOps V2 is DuploCloud's next-generation AI platform for DevOps teams. It replaces the original AI Studio with a unified system built around a richer model of how AI and engineering teams work together.
 
-For a full overview of how the platform is structured, see the [AI DevOps Policy Model](../../introduction/ai-devops-policy-model/).
+For a full overview of how the platform is structured, see the [AI DevOps Policy Model](../../armor/ai-devops-policy-model.md).
 
 At its core, V2 introduces:
 
-* [**Workspaces**](../../introduction/ai-devops-policy-model/workspaces.md) — dedicated environments where your team and AI agents collaborate, with fine-grained access controls and separation of responsibilities
-* [**Providers**](../../introduction/ai-devops-policy-model/providers.md) — connections to any cloud or tool your team uses (AWS, Azure, GCP, GitHub, Jira, Linear, Slack, and more)
-* [**Skills and Personas**](../../introduction/ai-devops-policy-model/skills/) — reusable AI capabilities that define how agents behave; combine them into Personas tailored to each team or role
-* [**Projects**](../../introduction/ai-devops-policy-model/projects.md) — a Spec-Driven DevOps process for large, complex work: the agent turns your requirements into a Spec, then a Plan, then executable Tasks
-* [**Tickets**](../../introduction/ai-devops-policy-model/tickets.md) — the familiar conversational interface for quick, focused tasks, now backed by a far more capable agent
+* [**Workspaces**](../../armor/workspaces.md) — dedicated environments where your team and AI agents collaborate, with fine-grained access controls and separation of responsibilities
+* [**Providers**](../../armor/providers.md) — connections to any cloud or tool your team uses (AWS, Azure, GCP, GitHub, Jira, Linear, Slack, and more)
+* [**Skills and Personas**](../../armor/skills/) — reusable AI capabilities that define how agents behave; combine them into Personas tailored to each team or role
+* [**Projects**](../../armor/projects.md) — a Spec-Driven DevOps process for large, complex work: the agent turns your requirements into a Spec, then a Plan, then executable Tasks
+* [**Tickets**](../../armor/tickets.md) — the familiar conversational interface for quick, focused tasks, now backed by a far more capable agent
 
 Everything runs in your own cloud account, fully secure and entirely within your control.
 
@@ -24,7 +24,7 @@ Everything runs in your own cloud account, fully secure and entirely within your
 
 ## What's New in V2
 
-![HelpDesk V2 — Create a new ticket](../../.gitbook/assets/v2-helpdesk-ticket.png)
+![AI DevOps — Create a new ticket](../../.gitbook/assets/v2-helpdesk-ticket.png)
 
 ### Autonomous AI Agent
 
@@ -32,11 +32,11 @@ V1 offered AI assistance for questions and suggestions. V2's agent acts. It reas
 
 ### Projects and Spec-Driven DevOps
 
-For large or complex work, V2 introduces [Projects](../../introduction/ai-devops-policy-model/projects.md). Describe what you want to accomplish in plain language. The agent turns it into a detailed Spec, creates a phased Plan, and breaks it into Tasks that can be executed in parallel. No more managing large initiatives ticket-by-ticket.
+For large or complex work, V2 introduces [Projects](../../armor/projects.md). Describe what you want to accomplish in plain language. The agent turns it into a detailed Spec, creates a phased Plan, and breaks it into Tasks that can be executed in parallel. No more managing large initiatives ticket-by-ticket.
 
 ### Skills and Personas
 
-[Skills](../../introduction/ai-devops-policy-model/skills/) are the building blocks of what your AI agent knows how to do — Kubernetes troubleshooting, Terraform provisioning, cost optimization, security scanning, and more. Personas group skills by role (SRE, DevOps, Security) so each workspace gets exactly the right capabilities.
+[Skills](../../armor/skills/) are the building blocks of what your AI agent knows how to do — Kubernetes troubleshooting, Terraform provisioning, cost optimization, security scanning, and more. Personas group skills by role (SRE, DevOps, Security) so each workspace gets exactly the right capabilities.
 
 ### Multi-Cloud and Multi-Tool Providers
 
@@ -48,7 +48,7 @@ Every ticket opens a Canvas — a live collaborative workspace where you see the
 
 ### Workspaces
 
-Create multiple [workspaces](../../introduction/ai-devops-policy-model/workspaces.md) for different teams or functions, each with its own provider access and persona. An L1 SRE workspace might have read-only cloud access; a platform engineering workspace might have full provisioning rights. Access is scoped at the workspace level.
+Create multiple [workspaces](../../armor/workspaces.md) for different teams or functions, each with its own provider access and persona. An L1 SRE workspace might have read-only cloud access; a platform engineering workspace might have full provisioning rights. Access is scoped at the workspace level.
 
 To get you started, DuploCloud sets up a default **DevOps workspace** with read-only access to your cloud account and Kubernetes cluster — so your team can explore and query resources from day one.
 
@@ -71,10 +71,10 @@ The upgrade is focused on the AI layer. Here's what stays the same and what chan
 
 **What changes:**
 
-* The current **AI Suite** (AI Studio and AI HelpDesk) is replaced by **HelpDesk V2** — a significantly more capable platform
-* After the upgrade, your DuploCloud portal will include a **platform switcher** at the top of the interface, letting your team move between the Core Automation Platform and the new HelpDesk V2
+* The current **AI Suite** is replaced by **AI DevOps** — a significantly more capable platform
+* After the upgrade, your DuploCloud portal will include a **platform switcher** at the top of the interface, letting your team move between the Core Automation Platform and the new AI DevOps platform
 
-![Platform switcher — switch between Core Platform and HelpDesk V2](<../../.gitbook/assets/Infinite Screen Recording 2026-04-28 at 2.56.37 AM.gif>)
+![Platform switcher — Switch between Core Platform and AI DevOps](<../../.gitbook/assets/Infinite Screen Recording 2026-04-28 at 2.56.37 AM.gif>)
 
 ***
 
@@ -82,9 +82,9 @@ The upgrade is focused on the AI layer. Here's what stays the same and what chan
 
 DuploCloud handles the upgrade end-to-end:
 
-* **Decommission V1** — remove the legacy AI Studio and HelpDesk to make way for V2
+* **Decommission V1** — remove the legacy AI Studio to make way for V2
 * **Update the portal** — add the platform switcher so your team can access both platforms from one login
-* **Deploy HelpDesk V2** — install the new platform alongside your existing DuploCloud environment
+* **Deploy the new AI DevOps platform** — install the new platform alongside your existing DuploCloud environment
 * **Set up your environment** — configure workspaces, connect your providers, and load the first set of skills and personas so your team is ready to work on day one
 * Your team gets access to the new platform and our support engineers are available anytime to answer questions, run a walkthrough, or help set up custom workflows
 
@@ -97,4 +97,4 @@ The upgrade is designed to be smooth and low-risk, with DuploCloud managing ever
 * **Your data stays in your account** — all tickets, configurations, and agent outputs remain in your own cloud environment
 * **Grows with your team** — after go-live, we can add more providers, build custom skills, or configure additional workspaces as your use cases expand
 
-HelpDesk V2 is already running in many customer environments. To schedule your upgrade, reach out to your DuploCloud account team.
+The all new **AI DevOps** is already running in many customer environments. To schedule your upgrade, reach out to your DuploCloud account team.
