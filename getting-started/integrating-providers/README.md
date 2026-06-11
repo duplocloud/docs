@@ -12,6 +12,7 @@ Providers are the external systems and cloud services that DuploCloud AI Suite c
 | **Kubernetes**          | [Amazon Elastic Kubernetes Service (EKS)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/amazon-elastic-kubernetes-service-eks) |
 | **Kubernetes**          | [Azure Kubernetes Service (AKS)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/azure-kubernetes-service-aks)                   |
 | **Kubernetes**          | [Google Kubernetes Engine (GKE)](https://docs.duplocloud.com/docs/getting-started/integrating-providers/google-kubernetes-engine-gke)                   |
+| **Kubernetes**          | [Self-Managed / On-Prem Kubernetes](https://docs.duplocloud.com/docs/getting-started/integrating-providers/self-managed-kubernetes)                     |
 | **Observability**       | [Datadog](https://docs.duplocloud.com/docs/getting-started/integrating-providers/datadog)                                                               |
 | **Observability**       | [NewRelic](https://docs.duplocloud.com/docs/getting-started/integrating-providers/newrelic)                                                             |
 | **Observability**       | [Sentry](https://docs.duplocloud.com/docs/getting-started/integrating-providers/sentry)                                                                 |

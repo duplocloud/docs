@@ -148,6 +148,7 @@
   * [Amazon Elastic Kubernetes Service (EKS)](getting-started/integrating-providers/amazon-elastic-kubernetes-service-eks.md)
   * [Azure Kubernetes Service (AKS)](getting-started/integrating-providers/azure-kubernetes-service-aks.md)
   * [Google Kubernetes Engine (GKE)](getting-started/integrating-providers/google-kubernetes-engine-gke.md)
+  * [Self-Managed / On-Prem Kubernetes](getting-started/integrating-providers/self-managed-kubernetes.md)
   * [Datadog](getting-started/integrating-providers/datadog.md)
   * [NewRelic](getting-started/integrating-providers/newrelic.md)
   * [Sentry](getting-started/integrating-providers/sentry.md)
