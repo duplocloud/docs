@@ -695,7 +695,7 @@ The practical model: the agent automates evidence collection, continuous monitor
 
 <summary>How do LLM model updates work, and will they affect the agent?</summary>
 
-DuploCloud is model-agnostic. Each agent is configured to use a specific model through your cloud provider's managed LLM service (e.g., AWS Bedrock, Azure OpenAI), which you control. Model updates are not applied automatically — you decide when to change the model the agent uses.
+DuploCloud is model-agnostic. Each agent is configured to use a specific model through your cloud provider's managed LLM service (e.g., AWS Bedrock, Azure Foundry, Google Vertex), which you control. Model updates are not applied automatically — you decide when to change the model the agent uses.
 
 DuploCloud monitors model performance across its customer base and makes recommendations when a newer model produces meaningfully better results for a specific task type (e.g., Kubernetes operations, Terraform plan analysis). These are recommendations, not forced updates.
 
