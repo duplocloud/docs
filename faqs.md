@@ -759,7 +759,7 @@ For most workloads, the LLM charges per ticket are low relative to the engineeri
 
 <summary>What exactly counts as a "ticket"?</summary>
 
-A ticket is a unit of work assigned to the AI agent. In the workflow, a human approves a Task generated from a Project Plan — at that point, the Task becomes a Ticket and is dispatched to the agent for execution. Each ticket corresponds to one discrete, agent-executed action or investigation. See [AI Helpdesk - Tickets](ai-suite/ai-helpdesk/tickets.md) for details.
+A ticket is a unit of work assigned to the AI agent. In the workflow, a human approves a Task generated from a Project Plan — at that point, the Task becomes a Ticket and is dispatched to the agent for execution. Each ticket corresponds to one discrete, agent-executed action or investigation. See [AI Helpdesk - Tickets](https://github.com/duplocloud/docs/blob/main/ai-suite/ai-helpdesk/tickets.md) for details.
 
 </details>
 

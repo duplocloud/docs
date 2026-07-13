@@ -1,4 +1,4 @@
-# Extension Framework
+# Overview
 
 The Extension Framework lets teams build domain-specific Ops applications on top of the CaaS platform. These applications orchestrate existing tool chains — AWS, Salesforce, ServiceNow — through structured workflows and resource lifecycle management. End users work through forms and structured interfaces; the framework orchestrates the underlying platforms through tickets.
 
@@ -32,9 +32,9 @@ The policy model is the core concept in the Extension Framework. It is a structu
 
 Each Ops application manages a taxonomy of domain-specific resources. The taxonomy reflects how the domain is actually organized:
 
-- **DevOps**: Network, Cluster, Environment, Namespace, Workload
-- **SalesOps**: Cohort, Account, Qualification, Engagement
-- **SecOps**: Policy, Scan, Finding, Remediation
+* **DevOps**: Network, Cluster, Environment, Namespace, Workload
+* **SalesOps**: Cohort, Account, Qualification, Engagement
+* **SecOps**: Policy, Scan, Finding, Remediation
 
 Resources form the navigational structure of the application. Each resource type gets its own list view, detail view, create form, and API endpoint.
 
@@ -55,19 +55,19 @@ Resources form a hierarchy, and the framework enforces it. A Cluster requires a 
 Each resource type has a skill associated with it — a set of instructions that tell the agent how to provision, update, troubleshoot, and deprovision that resource. A Network skill might contain a CloudFormation template and tagging policies. A Sales Qualification skill might encode the organization's ICP criteria and web research instructions. Skills are user-owned and user-modifiable, not hardcoded by DuploCloud. If the LLM is capable enough to manage a resource from the spec alone, a skill is optional.
 
 {% hint style="info" %}
-For a full description of how skills are structured and managed, see the [Skills](../introduction/ai-devops-policy-model/skills/README.md) pages in the Introduction section.
+For a full description of how skills are structured and managed, see the [Skills](https://github.com/duplocloud/docs/blob/main/introduction/ai-devops-policy-model/skills/README.md) pages in the Introduction section.
 {% endhint %}
 
 ## What the Framework Provides Automatically
 
 Once you define a policy model and write skills, the framework generates the following without any additional code:
 
-- Multi-step forms with validation for each resource type
-- REST APIs for every resource type
-- List views with status tracking
-- Detail views with Spec and Result tabs
-- Automatic ticket creation for every provisioning operation
-- Cost tracking per resource
-- RBAC inherited from workspaces
-- "Track Provisioning Status" links that drop users directly into the underlying ticket
-- Multiplayer collaboration and complete audit trails
+* Multi-step forms with validation for each resource type
+* REST APIs for every resource type
+* List views with status tracking
+* Detail views with Spec and Result tabs
+* Automatic ticket creation for every provisioning operation
+* Cost tracking per resource
+* RBAC inherited from workspaces
+* "Track Provisioning Status" links that drop users directly into the underlying ticket
+* Multiplayer collaboration and complete audit trails

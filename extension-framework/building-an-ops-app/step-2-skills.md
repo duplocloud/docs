@@ -39,5 +39,5 @@ Add a skill when you need one or more of the following: determinism (the agent m
 If the resource type is simple and the LLM handles it well without guidance, a skill is not necessary.
 
 {% hint style="info" %}
-For full skill authoring documentation — including `SKILL.md` schema, supported asset types, versioning, and skill testing — see [Skills in the Introduction](../introduction/ai-devops-policy-model/skills/README.md).
+For full skill authoring documentation — including `SKILL.md` schema, supported asset types, versioning, and skill testing — see [Skills in the Introduction](https://github.com/duplocloud/docs/blob/main/extension-framework/introduction/ai-devops-policy-model/skills/README.md).
 {% endhint %}
