@@ -16,7 +16,7 @@ Users can create their own agents and give them access to work within the DuploC
 
 1. Navigate to **Agents** and click **+ Add**.&#x20;
 
-![](<../../.gitbook/assets/agents-step-01.png>)
+![](<../../../.gitbook/assets/agents-step-01.png>)
 
 2. Provide a **Name**, **Description**, an endpoint where the agent can be accessed and an API path where messages will be sent to converse with the agent.&#x20;
 
@@ -35,7 +35,7 @@ prompt_templates: '[{"name":"Template Name","description":"Template description"
 The values for `prompt_suggestions` and `prompt_templates` must be valid JSON encoded as a YAML string — wrap each value in single quotes. Do **not** nest single quotes inside the value. Use double quotes for all JSON keys and strings inside the array.
 {% endhint %}
 
-![](<../../.gitbook/assets/agents-step-02.png>)
+![](<../../../.gitbook/assets/agents-step-02.png>)
 
 4. Click **Create** to add your Agent.
 
@@ -43,16 +43,16 @@ The values for `prompt_suggestions` and `prompt_templates` must be valid JSON en
 
 When a user creates a new ticket and selects this agent, the prompt suggestions appear as clickable chips below the input box under **"Try one of these to get started"**. The prompt templates appear below that under **"Or try a template"**.
 
-![](<../../.gitbook/assets/agents-step-03.png>)
+![](<../../../.gitbook/assets/agents-step-03.png>)
 
 Clicking any suggestion chip instantly populates the ticket input with that text. The user can edit it before submitting or click **Create Ticket** directly.
 
-![](<../../.gitbook/assets/agents-step-04.png>)
+![](<../../../.gitbook/assets/agents-step-04.png>)
 
 Each suggestion replaces whatever is currently in the input field. Clicking a new suggestion replaces the previous one — only one suggestion is active at a time.
 
-![](<../../.gitbook/assets/agents-step-05.png>)
+![](<../../../.gitbook/assets/agents-step-05.png>)
 
 Clicking a template pre-fills the input with the full template content including its `{{variable}}` placeholders. The user fills in the values before submitting.
 
-![](<../../.gitbook/assets/agents-step-06.png>)
+![](<../../../.gitbook/assets/agents-step-06.png>)
