@@ -13,7 +13,7 @@ For a full overview of how the platform is structured, see the [AI DevOps Policy
 At its core, V2 introduces:
 
 * [**Workspaces**](../../armor/workspaces.md) — dedicated environments where your team and AI agents collaborate, with fine-grained access controls and separation of responsibilities
-* [**Providers**](../../armor/providers.md) — connections to any cloud or tool your team uses (AWS, Azure, GCP, GitHub, Jira, Linear, Slack, and more)
+* [**Providers**](../../armor/providers/README.md) — connections to any cloud or tool your team uses (AWS, Azure, GCP, GitHub, Jira, Linear, Slack, and more)
 * [**Skills and Personas**](../../armor/skills/) — reusable AI capabilities that define how agents behave; combine them into Personas tailored to each team or role
 * [**Projects**](../../armor/projects.md) — a Spec-Driven DevOps process for large, complex work: the agent turns your requirements into a Spec, then a Plan, then executable Tasks
 * [**Tickets**](../../armor/tickets.md) — the familiar conversational interface for quick, focused tasks, now backed by a far more capable agent

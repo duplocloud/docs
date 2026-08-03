@@ -28,3 +28,15 @@ A Workspace is the central entity that ties everything together — attach any n
 5. Click **Create**.
 
 **Congratulations!** Your Workspace is now ready to receive assignments, interpret goals, break down work, and provide a transparent audit trail—all with human oversight and control.
+
+## Setting a System Prompt
+
+Each Workspace can define a **System Prompt** — free-text instructions injected directly into the agent's system prompt on every ticket in that Workspace.
+
+Open a workspace and go to the **Prompt** step (the same step where Prompt Suggestions and Prompt Templates are configured). Enter your instructions in the **System Prompt** field and save.
+
+![System Prompt field on the Prompt step](../../.gitbook/assets/workspaces-step-01-system-prompt.png)
+
+{% hint style="info" %}
+This is distinct from [Agent Memories](agents/agent-memories.md). The System Prompt is a single field that's always injected verbatim into every ticket in the workspace. Memory is a set of files the agent reads on demand, and can be turned off per ticket. If the two conflict, persona instructions take precedence over the System Prompt.
+{% endhint %}

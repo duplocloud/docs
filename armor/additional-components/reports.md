@@ -16,6 +16,25 @@ Click any report name to open a full inline preview.
 
 ![SOC 2 report preview](../../../.gitbook/assets/reports-step-04-soc2-preview.png)
 
+## Sharing a Report
+
+![Report in the list](../../../.gitbook/assets/reports-step-14-report-row.png)
+
+Every report can be shared as a direct link — from the list's **⋮** menu or from inside the preview.
+
+- **From the list** — click **⋮** on a report row and select **Copy Link**.
+- **From the preview** — click the link icon next to the close button.
+
+![Copy Link in the row menu](../../../.gitbook/assets/reports-step-15-copy-link-menu.png)
+
+Either way, the link is copied to your clipboard and opens straight to that report's preview, so the recipient doesn't have to navigate to Analytics > Reports and search for it manually.
+
+{% hint style="info" %}
+This is an in-app link, not a public one. Whoever opens it still needs to log into DuploCloud and have access to the workspace the report belongs to — if they don't, they'll see "Report not found or no access." The link has no expiry and can't be revoked; it stays valid for as long as the report exists and the recipient's access doesn't change.
+
+This is separate from **Share** in the same menu, which shares a report across workspaces rather than generating a link.
+{% endhint %}
+
 ## Adding a Report
 
 Reports are sourced from files that an agent deposited into a ticket during its work. To register a file as a report:

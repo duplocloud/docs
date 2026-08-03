@@ -38,13 +38,22 @@ Click **+ Add**. Fill in the fields:
 
 * **Name** — a label for this mapping
 * **Quota** — the quota definition to apply
-* **Context** — whether this applies at the Workspace or Platform level
-* **Target Workspace** — the specific workspace (when Context is Workspace)
-* **Apply to** — what the limit tracks: **Ticket**, **Workspace**, or **All**
+* **Context** — whether this applies at the **Workspace** or **System** level
+* **Target Workspace(s)** — one or more workspaces this mapping applies to (only shown when Context is Workspace — you can select multiple)
+* **Apply to** — what the limit tracks. The available options depend on Context:
+
+| Context | Apply to options | Meaning |
+|---|---|---|
+| System | All Workspaces And Users | Every workspace and every user, platform-wide |
+| System | All Workspaces | Every workspace, platform-wide |
+| System | All Users | Every user, regardless of workspace |
+| Workspace | Above Selected Workspaces | Shared limit across all activity in the selected workspace(s) |
+| Workspace | Per User In Selected Workspaces | A separate limit for each user, within the selected workspace(s) |
+| Workspace | Per Ticket In Selected Workspaces | A separate limit for each ticket, within the selected workspace(s) |
 
 ### Ticket Quota
 
-When **Apply to** is set to **Ticket**, the quota limit applies per individual ticket. Each ticket has its own spend counter — one ticket reaching the limit does not affect other tickets in the same workspace.
+When **Apply to** is set to **Per Ticket In Selected Workspaces**, the quota limit applies per individual ticket. Each ticket has its own spend counter — one ticket reaching the limit does not affect other tickets in the same workspace.
 
 ![](../../.gitbook/assets/quota-step-05.png)
 
@@ -62,7 +71,7 @@ Because the quota is scoped to the individual ticket, a new ticket created in th
 
 ### Workspace Quota
 
-When **Apply to** is set to **Workspace**, the quota limit applies to all activity within a specific workspace. The cumulative spend across all tickets in that workspace counts toward a single shared limit.
+When **Apply to** is set to **Above Selected Workspaces**, the quota limit applies to all activity within the selected workspace(s). The cumulative spend across all tickets in a given workspace counts toward that workspace's shared limit.
 
 ![](../../.gitbook/assets/quota-step-11.png)
 
@@ -82,12 +91,16 @@ A ticket in the new workspace runs successfully with its own independent cost co
 
 ![](../../.gitbook/assets/quota-step-15.png)
 
-### Platform Quota
+### User Quota
 
-When **Context** is set to **Platform**, the quota applies across all workspaces on the platform. Set **Apply to** to **All** to enforce it globally regardless of workspace.
+Set **Apply to** to **Per User In Selected Workspaces** (Context: Workspace) or **All Users** (Context: System) to give each user their own spend counter, independent of which ticket or workspace they're working in. One user hitting their limit doesn't affect any other user — including other users active in the same workspace or ticket.
+
+### System Quota
+
+When **Context** is set to **System**, the quota applies across the entire platform rather than specific workspaces. Set **Apply to** to **All Workspaces And Users** to enforce a single limit globally, or **All Workspaces**/**All Users** to cap just one of those dimensions platform-wide.
 
 ![](../../.gitbook/assets/quota-step-16.png)
 
-Once the platform-wide limit is reached, all agent requests across every workspace are blocked, regardless of which workspace or ticket they originate from.
+Once a system-wide limit is reached, all matching agent requests across every workspace are blocked, regardless of which workspace, user, or ticket they originate from.
 
 ![](../../.gitbook/assets/quota-step-17.png)

@@ -10,7 +10,7 @@ Providers represent the access you provide to your IT systems - including cloud 
 
 1. Navigate to **Providers** and select the tab for the Provider type you are trying to add, e.g., **Cloud**, **Kubernetes**, etc. The available Provider types are listed in the table below. To add a Provider type that is not listed, contact your DuploCloud Support team on Slack or via email at support@duplocloud.com.
 
-<figure><img src="../../.gitbook/assets/Provider 1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Provider 1.png" alt=""><figcaption></figcaption></figure>
 
 | Cloud Providers     | AWS, GCP, Azure                                                           |
 | ------------------- | ------------------------------------------------------------------------- |
@@ -23,21 +23,21 @@ Providers represent the access you provide to your IT systems - including cloud 
 2. Click **Add**. The **Add Provider** screen displays, showing the relevant inputs required for connecting to that Provider type.&#x20;
 3. Complete the required fields.&#x20;
 
-<figure><img src="../../.gitbook/assets/Provider 2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Provider 2.png" alt=""><figcaption></figcaption></figure>
 
 4. Click **Update** to finish granting access. This will return you to the Provider’s screen.&#x20;
 
-<figure><img src="../../.gitbook/assets/Provider 3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Provider 3.png" alt=""><figcaption></figcaption></figure>
 
 5. Select the **Credentials** tab and click **Add**. The **Add Credential** pane displays.
 6. Enter the credential specification, and click **Update**. This will return you to the Provider’s screen.&#x20;
 
-<figure><img src="../../.gitbook/assets/Provider 4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Provider 4.png" alt=""><figcaption></figcaption></figure>
 
 7. Click **Scope** and then **Add Scope**. Give the Scope a suitable name and description, select one of the added credentials and (optionally) select an MCP Server. Enter the resource map in **Key:Value** format.
 8. Click **Create**.
 
-<figure><img src="../../.gitbook/assets/Provider 5.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Provider 5.png" alt=""><figcaption></figcaption></figure>
 
 
 

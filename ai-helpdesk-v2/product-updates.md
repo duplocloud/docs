@@ -15,7 +15,7 @@ Changes in: `Backend`
 
 ---
 
-**2.** `Feature` — **User-Level Cloud Credentials**
+**2.** `Feature` — [**User-Level Cloud Credentials**](../armor/providers/user-level-credentials.md)
 
 Individual users can now hold their own scoped cloud credentials rather than sharing team-level credentials, including secure materialization into agent sandboxes.
 
@@ -68,7 +68,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**8.** `Feature` — **Slash-Command Skill Picker**
+**8.** `Feature` — [**Slash-Command Skill Picker**](../armor/skills/README.md#referencing-a-skill-with)
 
 Users can now browse and invoke skills via a "/" command picker in chat and ticket creation, including interactive skill browsing.
 
@@ -76,7 +76,7 @@ Changes in: `Agent` `Frontend`
 
 ---
 
-**9.** `Feature` — **Workspace Memory Management**
+**9.** `Feature` — [**Workspace Memory Management**](../armor/agents/agent-memories.md)
 
 Agent memory is now configurable per workspace and per ticket.
 - Admin page to view, edit, add, and delete agent memory files
@@ -87,7 +87,7 @@ Changes in: `Agent` `Backend` `Frontend`
 
 ---
 
-**10.** `Feature` — **Human-in-the-Loop Approval for MCP Tool Calls**
+**10.** `Feature` — [**Human-in-the-Loop Approval for MCP Tool Calls**](../armor/access-control/ai-guardrails.md#mcp-tool-call-approval)
 
 External MCP tool calls now route through a user approval gate before executing, with durable approval UI that survives across turns.
 - Approval/result UI surfaced directly in chat
@@ -138,7 +138,7 @@ Changes in: `Agent`
 
 ---
 
-**16.** `Feature` — **Workspace-Level Custom Instructions**
+**16.** `Feature` — [**Workspace-Level Custom Instructions**](../armor/workspaces.md#setting-a-system-prompt)
 
 Workspaces can now define custom instructions that are injected into the agent's system prompt, distinct from persisted workspace memory files.
 
@@ -146,7 +146,7 @@ Changes in: `Agent`
 
 ---
 
-**17.** `Feature` — **Project-Level Context for Tickets**
+**17.** `Feature` — [**Project-Level Context for Tickets**](../armor/projects.md)
 
 Tickets can now carry Project-level context in addition to Workspace, giving agents access to project-scoped configuration alongside workspace and platform settings.
 
@@ -356,7 +356,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**1.** `Feature` — **LLM Cost & Usage Quota Controls**
+**1.** `Feature` — [**LLM Cost & Usage Quota Controls**](../armor/access-control/quotas.md)
 
 A full quota enforcement system now governs LLM/agent usage costs, checked before every LLM call.
 - Six enforcement cases: workspace, per-user, per-ticket, and platform-wide caps with configurable defaults
@@ -375,7 +375,7 @@ Changes in: `Agent`
 
 ---
 
-**3.** `Feature` — **AWS Bedrock Guardrails Support**
+**3.** `Feature` — [**AWS Bedrock Guardrails Support**](../armor/access-control/ai-guardrails.md#aws-bedrock-guardrails)
 
 Bedrock-backed agent runs can now be configured with AWS Bedrock Guardrails for content/safety filtering.
 
@@ -383,7 +383,7 @@ Changes in: `Agent`
 
 ---
 
-**4.** `Feature` — **Context Compaction for Long-Running Conversations**
+**4.** `Feature` — [**Context Compaction for Long-Running Conversations**](../armor/tickets.md#long-conversations-context-compaction)
 
 Long conversations are now automatically compacted to stay within context limits, with live status feedback in chat.
 - Automatic detection of when a conversation needs compaction
@@ -402,7 +402,7 @@ Changes in: `Agent`
 
 ---
 
-**6.** `Feature` — **MCP Server Credential References**
+**6.** `Feature` — [**MCP Server Credential References**](../armor/mcp-servers/credential-masking-for-mcp-servers.md)
 
 MCP servers can now be configured with credential placeholders/references instead of hardcoded values.
 
@@ -410,7 +410,7 @@ Changes in: `Agent`
 
 ---
 
-**7.** `Feature` — **Live File Diff Streaming**
+**7.** `Feature` — [**Live File Diff Streaming**](../armor/tickets.md#live-file-diffs)
 
 When the agent writes or edits a file, a live diff now streams to chat instead of only a final summary.
 
@@ -418,7 +418,7 @@ Changes in: `Agent`
 
 ---
 
-**8.** `Feature` — **Prompt Suggestions & Templates for Workspaces**
+**8.** `Feature` — [**Prompt Suggestions & Templates for Workspaces**](../armor/agents/README.md)
 
 Admins can now configure suggested prompts and templates at the workspace level to guide ticket creation.
 
@@ -426,9 +426,9 @@ Changes in: `Frontend`
 
 ---
 
-**9.** `Feature` — **Shareable Links for File Previews & Analytics Reports**
+**9.** `Feature` — [**Shareable Links for Analytics Reports**](../armor/additional-components/reports.md#sharing-a-report)
 
-File previews and analytics reports can now be shared via a link instead of requiring platform access.
+Reports in Analytics > Reports can now be shared via a direct link that opens straight to the report's preview, instead of the recipient having to navigate and search for it manually. The recipient still needs to be logged in with access to the workspace the report belongs to — this is an in-app deep link, not a public link.
 
 Changes in: `Frontend`
 
