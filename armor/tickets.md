@@ -218,6 +218,31 @@ The **Activity Feed** on the left is where the conversation with the agent takes
 
 ---
 
+### Live File Diffs
+
+When the agent creates, edits, or overwrites a file, the change appears in the Activity Feed as a diff instead of only a closing summary. The header shows whether the file was **created**, **edited**, or **overwritten**, along with `+N`/`-N` line-count badges — expand it to see the full line-by-line diff, with additions and deletions color-coded like a code review.
+
+The diff appears once the file operation finishes — after the "Running tool" status, alongside the agent's usual explanation of what it changed and why — rather than streaming line-by-line as it's written.
+
+---
+
+### Long Conversations & Context Compaction
+
+Long-running conversations are automatically compacted as they approach the underlying model's context window limit. The agent summarizes the earlier turns of the conversation and continues from that summary, rather than losing history or failing outright once the limit is reached.
+
+While compaction is running, two things change in the ticket view:
+
+* The **Activity Feed** shows a status line — *"Compacting conversation history to fit the context window…"* — followed shortly by *"Compaction complete."* Click the completed line to expand it and see an excerpt of the summary the agent generated.
+* The chat input's placeholder changes to *"Compacting conversation history…"*, and the **Stop** button is disabled with the tooltip *"Compacting — cannot stop."*
+
+Compaction is fully automatic — there is no setting to configure or threshold to tune. It is triggered by the underlying model's context window, not by a DuploCloud-side limit.
+
+{% hint style="info" %}
+This is distinct from **Generate Summary** in the ticket's Summary panel, which produces a one-off, manually-triggered summary. Compaction happens automatically mid-conversation to keep the agent within its context limits — the two features are unrelated.
+{% endhint %}
+
+---
+
 ## Playwright Test
 
 ```

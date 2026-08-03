@@ -13,7 +13,8 @@
 ## ARMOR
 
 * [ARMOR Policy Model](armor/ai-devops-policy-model.md)
-* [Providers](armor/providers.md)
+* [Providers](armor/providers/README.md)
+  * [User-Level Credentials](armor/providers/user-level-credentials.md)
 * [MCP Servers](armor/mcp-servers/README.md)
   * [Credential Masking For MCP Servers](armor/mcp-servers/credential-masking-for-mcp-servers.md)
 * [Skills](armor/skills/README.md)

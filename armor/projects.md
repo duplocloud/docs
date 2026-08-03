@@ -14,7 +14,7 @@ Every Project consists of three building blocks:
 
 **Plan** — A step-by-step implementation plan derived from the approved spec. The plan is broken down into discrete tasks, organized into stages, and approved before execution starts.
 
-**Tickets** — The individual units of work that the AI Engineer executes. Each ticket corresponds to a task in the plan and tracks everything that happens during execution — commands run, decisions made, context carried forward.
+**Tickets** — The individual units of work that the AI Engineer executes. Each ticket corresponds to a task in the plan and tracks everything that happens during execution — commands run, decisions made, context carried forward. Tickets created under a Project automatically get access to that Project's shared context — its approved Spec and Plan — in addition to the usual Workspace and platform settings, so the agent can reference them directly during execution without being told to look them up.
 
 **Stages and Parallel Execution**
 

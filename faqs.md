@@ -187,7 +187,7 @@ If you're partway through a migration, the agent picks up from where your team l
 | Incident Management | Grafana Alert Manager, Datadog, New Relic, Sentry, PagerDuty, Incident.io |
 | Extended access     | MCP Servers (any system with an MCP endpoint)                             |
 
-See [Providers](armor/providers.md) for the full list and setup instructions.
+See [Providers](armor/providers/README.md) for the full list and setup instructions.
 
 </details>
 
@@ -463,7 +463,7 @@ If you're partway through a migration, the platform can scan your existing repos
 
 <summary>How does DuploCloud integrate with our existing CI/CD pipeline?</summary>
 
-Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](armor/providers.md) with scoped access. The DuploCloud DevOps agent integrates with Jenkins and GitHub Actions for pipeline troubleshooting and automation. For deeper pipeline integration, custom Skills can be configured to fit your specific workflow.
+Git repositories (GitHub, GitLab, Bitbucket) are modeled as [Providers](armor/providers/README.md) with scoped access. The DuploCloud DevOps agent integrates with Jenkins and GitHub Actions for pipeline troubleshooting and automation. For deeper pipeline integration, custom Skills can be configured to fit your specific workflow.
 
 </details>
 
@@ -497,7 +497,7 @@ A common pattern: your GRC platform flags a control as failing; DuploCloud's age
 
 No. You don't need to grant any access to get started. DuploCloud's stack runs as a few Docker containers alongside a MongoDB instance and two S3 buckets — no privileged access to your environment is required upfront.
 
-Access is granted on your terms through [Providers](armor/providers.md) and Scopes. The platform uses IAM permissions defined in each Scope to generate temporary, just-in-time credentials that are passed to the agent as part of the ticket. You control exactly what the agent can and cannot touch.
+Access is granted on your terms through [Providers](armor/providers/README.md) and Scopes. The platform uses IAM permissions defined in each Scope to generate temporary, just-in-time credentials that are passed to the agent as part of the ticket. You control exactly what the agent can and cannot touch.
 
 </details>
 
@@ -528,7 +528,7 @@ Git is modeled as a Provider — the same way AWS, Kubernetes, and observability
 3. Create a **Scope** — a named token with defined boundaries over specific repositories.
 4. When creating a ticket, select the appropriate Scope.
 
-See [Providers](armor/providers.md) for step-by-step instructions.
+See [Providers](armor/providers/README.md) for step-by-step instructions.
 
 </details>
 

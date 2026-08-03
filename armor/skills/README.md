@@ -136,6 +136,24 @@ Once the ticket is created, the agent confirms that the skill has been loaded. T
 
 ![](../../../.gitbook/assets/skills-private-git-step-16.png)
 
+### Referencing a Skill with `/`
+
+Once a skill is attached to a ticket — via **Additional Skills** above, or already active on an existing ticket — you can reference it inline instead of relying on it to run silently in the background. Type `/` at the start of your message, or after a space, to open a picker listing the skills already attached to that ticket.
+
+![Skill picker open in the ticket-creation textarea](../../../.gitbook/assets/skills-slash-picker-step-01-open.png)
+
+Keep typing to filter — it matches anywhere in the skill's name, not just the start. Use the arrow keys and **Enter** (or **Tab**) to select, or click a row. Selecting a skill inserts `/skill-name ` into your message at the cursor.
+
+![Skill name inserted into the message](../../../.gitbook/assets/skills-slash-picker-step-02-inserted.png)
+
+The picker works the same way in an existing ticket's chat input, not just when creating a new ticket.
+
+![Skill picker in an existing ticket's chat input](../../../.gitbook/assets/skills-slash-picker-step-03-existing-ticket.png)
+
+{% hint style="info" %}
+The `/` picker only lists skills **already attached** to the ticket — it's a quick way to reference one inline, not a way to attach a new skill. To make a skill available in the first place, add it under **Additional Skills** as described above.
+{% endhint %}
+
 #### Example: Sample `SKILL.md` file:
 
 {% code expandable="true" %}

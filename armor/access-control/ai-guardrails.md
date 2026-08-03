@@ -26,6 +26,18 @@ Every proposed command or infrastructure change is surfaced to an engineer for r
 
 For a full description of the approval flow, see [Human Approval Requirements](../tickets.md).
 
+### MCP Tool Call Approval
+
+External [MCP server](../mcp-servers/README.md) tool calls go through the same kind of gate — every call an agent wants to make to an MCP tool is surfaced in chat for approval first. Previously, MCP tools executed automatically the moment a scope granted access to them; there was no approval step at all.
+
+The card in chat shows **"I can run the following tools for you:"**, listing each tool with its name and an **MCP: `<server-name>`** badge. Expand **Details** to see the MCP server, description, and the exact inputs the agent wants to pass. Three actions are available: **Approve**, **Reject** (opens a reason field), or **Ignore**.
+
+{% hint style="info" %}
+There's no "always allow" option — every MCP tool call is gated individually, regardless of how many times that tool has been approved before. This is separate from the [Command Execution Permissions](../tickets.md) auto-approve/auto-reject patterns, which apply only to shell commands, not MCP tools.
+{% endhint %}
+
+If you don't act on a pending approval right away, it doesn't time out or error — it stays exactly as-is, actionable indefinitely, even across page reloads or if you come back days later. Approving it later picks the tool call back up without needing to repeat any context.
+
 ### RBAC
 
 Access is controlled at the Workspace and Scope level. Users are granted access only to the environments and resources assigned to them through [Permission Sets](permission-sets.md) and [User Groups](user-groups.md). A user with read-only access to a production Scope cannot escalate to write access within that session.
@@ -117,6 +129,7 @@ BEDROCK_GUARDRAIL_VERSION = 1
 | Scoped, just-in-time credentials | ✓ | |
 | Read-only by default | ✓ | |
 | Human approval before execution | ✓ | |
+| MCP tool call approval | ✓ | |
 | RBAC (Workspace and Scope level) | ✓ | |
 | Skills-based operational guardrails | ✓ | |
 | Audit logging (platform + cloud provider) | ✓ | |
