@@ -14,7 +14,7 @@ Users can create their own agents and give them access to work within the DuploC
 
 
 
-1. Navigate to **Agents** and click **+ Add**.&#x20;
+1. Navigate to **AI Admin → LLMs**, open the **Agent SDKs** tab, and click **+ Add**.&#x20;
 
 ![](<../../../.gitbook/assets/agents-step-01.png>)
 

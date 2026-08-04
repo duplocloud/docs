@@ -136,7 +136,7 @@ Once the ticket is created, the agent confirms that the skill has been loaded. T
 
 ![](../../../.gitbook/assets/skills-private-git-step-16.png)
 
-### Referencing a Skill with `/`
+### Referencing a Skill with the Slash Picker
 
 Once a skill is attached to a ticket — via **Additional Skills** above, or already active on an existing ticket — you can reference it inline instead of relying on it to run silently in the background. Type `/` at the start of your message, or after a space, to open a picker listing the skills already attached to that ticket.
 
