@@ -19,6 +19,7 @@ Providers represent the access you provide to your IT systems - including cloud 
 | Incident Management | Grafana Alert Manager, Datadog, New Relic, Sentry, PagerDuty, Incident.io |
 | Source Control      | GitHub, GitLab, Bitbucket                                                 |
 | GRC tools           | Vanta, Drata                                                              |
+| Notifications       | SMTP                                                                      |
 
 2. Click **Add**. The **Add Provider** screen displays, showing the relevant inputs required for connecting to that Provider type.&#x20;
 3. Complete the required fields.&#x20;

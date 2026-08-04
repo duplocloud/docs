@@ -2,6 +2,10 @@
 
 This document explains how to create a new user in the DuploCloud AI Suite Access Control panel.
 
+{% hint style="info" %}
+A user provisioned via [Azure AD & Okta User Sync](azure-ad-okta-user-sync.md) shows a lock badge here and can't be edited or deleted manually — their access is managed from the directory instead.
+{% endhint %}
+
 ***
 
 ## Prerequisites

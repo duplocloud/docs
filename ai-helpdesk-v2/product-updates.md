@@ -4,7 +4,7 @@
 
 ---
 
-**1.** `Feature` — **HelpDesk Audit Trail**
+**1.** `Feature` — [**HelpDesk Audit Trail**](../armor/helpdesk/audit-trail.md)
 
 All HelpDesk activity is now captured in a pluggable, configurable audit log.
 - Audit sinks support S3, local file, and console output
@@ -23,7 +23,7 @@ Changes in: `Agent` `Backend` `Frontend`
 
 ---
 
-**3.** `Feature` — **Azure AD & Okta User Sync**
+**3.** `Feature` — [**Azure AD & Okta User Sync**](../armor/access-control/azure-ad-okta-user-sync.md)
 
 User accounts can now be synced in from Azure AD or Okta instead of manual provisioning.
 
@@ -41,7 +41,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**5.** `Feature` — **GCP Vertex AI Support**
+**5.** `Feature` — [**GCP Vertex AI Support**](../armor/agents/gcp-vertex-ai-support.md)
 
 The agent runtime can now run against GCP Vertex AI in addition to existing providers, with GCP partner attribution wired through the CLI/SDK calls.
 
@@ -49,7 +49,7 @@ Changes in: `Agent` `Backend`
 
 ---
 
-**6.** `Feature` — **Platform Analytics Dashboard & Observability**
+**6.** `Feature` — [**Platform Analytics Dashboard & Observability**](../armor/analytics.md)
 
 A comprehensive analytics dashboard was added to AI Studio, backed by LangFuse tracing in the agent runtime.
 - Observability iframe with LangFuse configuration and a settings deep-link
@@ -60,7 +60,7 @@ Changes in: `Agent` `Backend` `Frontend`
 
 ---
 
-**7.** `Feature` — **Command Policy Admin**
+**7.** `Feature` — [**Command Policy Admin**](../armor/access-control/command-policy.md)
 
 Admins can now define command policies that are enforced during chat/ticket execution.
 
@@ -98,7 +98,7 @@ Changes in: `Agent` `Frontend`
 
 ---
 
-**11.** `Feature` — **Portal Notification Providers (incl. SMTP)**
+**11.** `Feature` — [**Portal Notification Providers (incl. SMTP)**](../armor/additional-components/notifications.md)
 
 Admins can now configure notification providers, including SMTP, and manage portal notification settings.
 
@@ -106,7 +106,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**12.** `Feature` — **AI Suite System Settings & Global Secrets**
+**12.** `Feature` — [**AI Suite System Settings & Global Secrets**](../armor/settings.md)
 
 A new admin surface for platform- and workspace-scoped system settings, plus a global, platform-wide secrets scope.
 
@@ -367,7 +367,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**2.** `Feature` — **Direct Anthropic API Support**
+**2.** `Feature` — [**Direct Anthropic API Support**](../armor/agents/direct-anthropic-api-support.md)
 
 The agent can now call the Anthropic API directly as a model provider, alongside existing Bedrock/Vertex routes.
 
