@@ -22,6 +22,7 @@
 * [Personas](armor/personas.md)
 * [Duplo DevOps Agent](armor/agents/README.md)
   * [Agent Memories](armor/agents/agent-memories.md)
+  * [LLM Models](armor/agents/llm-models.md)
 * [Workspaces](armor/workspaces.md)
 * [Projects](armor/projects.md)
 * [HelpDesk](armor/helpdesk.md)

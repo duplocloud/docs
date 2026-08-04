@@ -31,7 +31,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**4.** `Feature` — **LLM Model Registry & Configurable Model Mapping**
+**4.** `Feature` — [**LLM Model Registry & Configurable Model Mapping**](../armor/agents/llm-models.md)
 
 Model access is now governed by a central registry with an allow-list and resolution order (Project → Workspace → Platform), including SDK-aware pairing and first-deploy seeding.
 - User-configurable model selection in AI Studio
@@ -68,7 +68,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**8.** `Feature` — [**Slash-Command Skill Picker**](../armor/skills/README.md#referencing-a-skill-with)
+**8.** `Feature` — [**Slash-Command Skill Picker**](../armor/skills/README.md#referencing-a-skill-with-the-slash-picker)
 
 Users can now browse and invoke skills via a "/" command picker in chat and ticket creation, including interactive skill browsing.
 
@@ -383,7 +383,7 @@ Changes in: `Agent`
 
 ---
 
-**4.** `Feature` — [**Context Compaction for Long-Running Conversations**](../armor/tickets.md#long-conversations-context-compaction)
+**4.** `Feature` — [**Context Compaction for Long-Running Conversations**](../armor/tickets.md#long-conversations-and-context-compaction)
 
 Long conversations are now automatically compacted to stay within context limits, with live status feedback in chat.
 - Automatic detection of when a conversation needs compaction
@@ -418,7 +418,7 @@ Changes in: `Agent`
 
 ---
 
-**8.** `Feature` — [**Prompt Suggestions & Templates for Workspaces**](../armor/agents/README.md)
+**8.** `Feature` — [**Prompt Suggestions & Templates for Workspaces**](../armor/agents/README.md#prompt-suggestions-and-templates-on-the-ticket-screen)
 
 Admins can now configure suggested prompts and templates at the workspace level to guide ticket creation.
 

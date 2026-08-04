@@ -226,7 +226,7 @@ The diff appears once the file operation finishes — after the "Running tool" s
 
 ---
 
-### Long Conversations & Context Compaction
+### Long Conversations and Context Compaction
 
 Long-running conversations are automatically compacted as they approach the underlying model's context window limit. The agent summarizes the earlier turns of the conversation and continues from that summary, rather than losing history or failing outright once the limit is reached.
 
