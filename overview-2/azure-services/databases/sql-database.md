@@ -55,7 +55,7 @@ The default backup retention period for an SQL database is 7 days. You can updat
 2. Navigate to **Cloud Services** → **Database** → **MSSQLServer**.
 3. Select the MSSQL Server from the **NAME** column.
 4. Select the **Databases** tab.
-5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the database and select **Update Short Term Retention**. The **Update Backup Retention Period** pane displays.
+5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) next to the database and select **Update Short Term Retention**. The **Update Backup Retention Period** pane displays.
 
 <div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (761).png" alt="" width="406"><figcaption><p><strong>Update Backup Retention Period</strong> pane</p></figcaption></figure></div>
 
@@ -82,7 +82,7 @@ You can also use the **Actions** button at the top right of the page:
 
 <table data-header-hidden><thead><tr><th width="182.88885498046875">Action</th><th>Description</th></tr></thead><tbody><tr><td><strong>Azure Portal</strong></td><td>Open the server directly in the Azure Portal.</td></tr><tr><td><strong>Delete SQL Server</strong></td><td>Delete the server if no databases remain.</td></tr></tbody></table>
 
-To manage an individual database, go to the **Databases** tab and click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the database name:
+To manage an individual database, go to the **Databases** tab and click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) next to the database name:
 
 <table data-header-hidden><thead><tr><th width="189.99993896484375">Option</th><th>Description</th></tr></thead><tbody><tr><td><strong>Edit</strong></td><td>Update the database name or settings.</td></tr><tr><td><strong>Update Short Term Retention</strong></td><td>Configure the backup retention period for the database.</td></tr><tr><td><strong>Delete</strong></td><td>Remove the database from the server.</td></tr></tbody></table>
 

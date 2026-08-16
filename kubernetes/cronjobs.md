@@ -56,7 +56,7 @@ DuploCloud lets you temporarily suspend a CronJob, pausing the scheduling of new
 To update the suspend setting:
 
 1. Navigate to **Kubernetes** → **CronJobs**.
-2. Click the menu icon (<img src="../.gitbook/assets/menu icon.avif" alt="" data-size="line">) for the CronJob you want to suspend.
+2. Click the menu icon (<img src="../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) for the CronJob you want to suspend.
 3. In the **Other Spec Configuration** field, locate the `suspend` property.
 4.  Set the `suspend` value to `true` to suspend the CronJob or `false` to resume scheduling.<br>
 

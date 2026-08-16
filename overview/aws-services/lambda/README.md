@@ -86,7 +86,7 @@ To manage an existing Lambda function:
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Serverless.**
 2. Select the **Lambda** tab.
 3. Access the available actions one of two ways:
-   * In the row of the Lambda Function you want to manage, click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">).
+   * In the row of the Lambda Function you want to manage, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">).
    * Click the name of the Lambda Function, and then click **Actions**.
 4. Choose from the following available actions.
 

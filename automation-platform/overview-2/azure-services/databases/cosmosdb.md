@@ -35,7 +35,7 @@ This page describes how to provision and manage Azure CosmosDB accounts and reso
 After creating a CosmosDB account in DuploCloud, you can view, edit, or delete the account:
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Databases** → **CosmosDB**.
-2.  Click the menu icon (<img src="../../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the CosmosDB account you want to manage.<br>
+2.  Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the CosmosDB account you want to manage.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (577) (1).png" alt=""><figcaption><p><strong>CosmosDB</strong> page with the menu options highlighted</p></figcaption></figure></div>
 3.  Choose from the following options:

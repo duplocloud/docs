@@ -65,7 +65,7 @@ Once you've added a Helm repository, you can view its details, update its config
 
 1. Navigate to **Kubernetes** → **Helm.**
 2. Select the **Helm Repository** tab.
-3. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the repository you want to manage.
+3. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the repository you want to manage.
 4. Choose one of the following actions:
 
 <table data-header-hidden><thead><tr><th width="146.4444580078125">Option</th><th>Description</th></tr></thead><tbody><tr><td><strong>View</strong></td><td>View the repository’s current configuration, sync status, and metadata.</td></tr><tr><td><strong>Update</strong></td><td>Edit the repository name, URL, sync interval, or authentication settings.</td></tr><tr><td><strong>Delete</strong></td><td>Remove the repository from DuploCloud. Releases that depend on it will no longer reconcile.</td></tr></tbody></table>

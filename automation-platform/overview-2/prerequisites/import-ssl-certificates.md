@@ -85,7 +85,7 @@ Before attaching SSL certificates to a Kubernetes Ingress resource in DuploCloud
 Once the Application Gateway is set up, you can attach the certificate to an Ingress resource:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Ingress**.
-2. Locate the Ingress associated with the Azure Application Gateway. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) on that row and select **Edit**. The **Edit Kubernetes Ingress** pane displays.
+2. Locate the Ingress associated with the Azure Application Gateway. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) on that row and select **Edit**. The **Edit Kubernetes Ingress** pane displays.
 3. Select the certificate from the **Certificate ARN** dropdown.
 
 <figure><img src="../../../.gitbook/assets/newpicnewer.png" alt=""><figcaption></figcaption></figure>

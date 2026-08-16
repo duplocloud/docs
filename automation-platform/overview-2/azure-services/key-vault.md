@@ -40,7 +40,7 @@ After creating a Key Vault and adding secrets, you can update an existing secret
 1. In the DuploCloud Portal, go to **Cloud Services** -> **Key Vault**.
 2. Select the Key Vault you wish to manage from the **NAME** column.
 3. Select the **Secrets** tab.
-4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the secret you want to update.
+4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) next to the secret you want to update.
 5. From the menu options, select **Edit**. The **Update a Secret** pane displays.
 6. Update the **Value** field with the new data you want to store.
 7. Click **Update** to apply the changes. The updated secret will now be stored as a new version, and the old version will be moved to the secret's version history.
@@ -55,7 +55,7 @@ DuploCloud allows you to view, recover, and purge deleted Azure Key Vaults direc
 4.  Select **Manage Deleted Vaults**. A list of deleted key vaults displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (681).png" alt=""><figcaption><p><strong>Manage Deleted Vaults</strong> page with <strong>Recover</strong> and <strong>Purge</strong> options highlighted</p></figcaption></figure>
-5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the vault you want to manage.
+5. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the vault you want to manage.
 6. Select one of the following options:
    * **Recover**: Restore the deleted vault to active status so it can be used again.
    * **Purge**: Permanently delete the vault and all its contents. This action cannot be undone.
@@ -67,6 +67,6 @@ DuploCloud allows you to view, recover, and purge deleted Azure Key Vaults direc
 2. Select the Key Vault you wish to manage from the **NAME** column.
 3. In the DuploCloud Portal, go to **Cloud Services** -> **Key Vault**.
 4. Click the caret (<img src="../../../.gitbook/assets/Screenshot (111).png" alt="" data-size="line">) next to the secret's name. A list of available versions will appear.
-5. To view a specific version, click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the version and select **View**. The **JSON representation** of that version displays.
+5. To view a specific version, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) next to the version and select **View**. The **JSON representation** of that version displays.
 
 <figure><img src="../../../.gitbook/assets/Screenshot (110) (1).png" alt=""><figcaption></figcaption></figure>

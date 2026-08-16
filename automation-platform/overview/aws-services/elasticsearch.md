@@ -37,7 +37,7 @@ From the DuploCloud Portal, you can view OpenSearch instance details, open the A
 
 1. In the DuploCloud Portal, go to **Cloud Services** → **Analytics**.
 2. Select the **OpenSearch** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) at the end of the row for the OpenSearch instance you want to manage.<br>
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) at the end of the row for the OpenSearch instance you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (550).png" alt=""><figcaption><p><strong>OpenSearch</strong> tab with menu options highlighted</p></figcaption></figure>
 4. Choose one of the following actions:

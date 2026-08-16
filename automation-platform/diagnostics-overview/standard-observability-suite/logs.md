@@ -44,7 +44,7 @@ You can quickly access logs filtered for a Specific service directly from the Se
 To view logs for a Service:
 
 1. Navigate to **Kubernetes** → **Services** (or the relevant service list) in the DuploCloud Portal.
-2. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the Service you want to view logs for.
+2. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) next to the Service you want to view logs for.
 3. Select **Logs**. This will open a logs dashboard pre-filtered to show logs for that specific service.
 
 ## Application log retention policy

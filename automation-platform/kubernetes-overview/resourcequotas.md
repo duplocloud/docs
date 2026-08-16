@@ -31,7 +31,7 @@ You can view, modify, or delete ResourceQuota for a Tenant from within the Duplo
 1. In the DuploCloud Portal, navigate to **Administrator** → **Tenants**.
 2. Select the Tenant you want to manage from the **NAME** column.
 3. Select the **Resource Quota** tab.
-4. Click the menu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) at the end of the ResourceQuota’s row.
+4. Click the menu icon (<img src="../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) at the end of the ResourceQuota’s row.
 5. Choose one of the following actions:
 
 <table data-header-hidden><thead><tr><th width="146.4444580078125">Action</th><th>Description</th></tr></thead><tbody><tr><td><strong>JSON</strong></td><td>View the ResourceQuota as a JSON representation.</td></tr><tr><td><strong>Edit</strong></td><td>Open the <strong>Update Resource Quota</strong> pane to modify fields.</td></tr><tr><td><strong>Delete</strong></td><td>Permanently remove the ResourceQuota.</td></tr></tbody></table>

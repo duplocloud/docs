@@ -58,7 +58,7 @@ After creating a Container App Environment, you can manage it in the DuploCloud 
 
 1. Navigate to **Cloud Services** → **Serverless.**
 2. Select the **Container App Environment** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the environment you want to manage.<br>
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the environment you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/CAE menu options.png" alt=""><figcaption><p><strong>Container App Environment</strong> tab with menu options highlighted</p></figcaption></figure>
 4. Select one of the following actions:

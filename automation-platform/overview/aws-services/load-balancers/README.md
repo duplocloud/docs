@@ -172,7 +172,7 @@ You can use the **Other Settings** card in the DuploCloud Portal to set the foll
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Networking**.
 2. Select the **Load Balancers** tab.
-3.  Click the menu icon (<img src="../../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the Load Balancer for which you want to configure Other Settings, and select **Other Settings**. The **Other Load Balancer Settings** pane displays.<br>
+3.  Click the menu icon (<img src="../../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the Load Balancer for which you want to configure Other Settings, and select **Other Settings**. The **Other Load Balancer Settings** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (68).png" alt=""><figcaption><p>The <strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
 4. Configure the settings, as needed.

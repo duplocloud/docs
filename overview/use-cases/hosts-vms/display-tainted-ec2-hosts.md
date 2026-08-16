@@ -64,7 +64,7 @@ If you're familiar with `kubectl`, you can also manage taints from the command l
 1. Navigate to **Kubernetes** -> **Nodes**.
 2. Click on the node in the **NAME** column.
 3. Select the **Taints** tab.
-4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) next to the taint you want to manage.
+4. Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) next to the taint you want to manage.
 5. Select **Edit** to modify the taint **Key**, **Value**, or **Effect** of the taint or **Delete** to remove the taint from the node.
 
 <figure><img src="../../../.gitbook/assets/Screenshot (415).png" alt=""><figcaption><p>The <strong>Taints</strong> tab on the EC2 node details page</p></figcaption></figure>

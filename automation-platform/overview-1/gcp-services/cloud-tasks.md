@@ -27,7 +27,7 @@ To manage an existing queue:
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Cloud Tasks**.
 2. Select the **Queues** tab.
-3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the queue you want to manage.<br>
+3.  Click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the queue you want to manage.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (593).png" alt=""><figcaption><p><strong>Queues</strong> tab with menu options highlighted</p></figcaption></figure>
 4. Choose one of the following actions:
@@ -59,7 +59,7 @@ Once tasks have been created, you can manage them directly from the DuploCloud P
 1. Navigate to **Cloud Services** -> **Cloud Tasks**.
 2. Click the name of the queue that contains the task you want to manage.
 3. Select the **Tasks** tab.
-4.  In the row of the task you want to manage, click the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">).<br>
+4.  In the row of the task you want to manage, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">).<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (597).png" alt=""><figcaption><p><strong>Tasks</strong> tab with menu options highlighted</p></figcaption></figure>
 5. Choose one of the following actions:

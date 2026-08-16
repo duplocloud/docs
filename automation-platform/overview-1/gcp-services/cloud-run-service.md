@@ -37,7 +37,7 @@ After you've deployed a Cloud Run service, you can view logs, edit configuration
 
 1. Select the appropriate Tenant in the **Tenant** list box.
 2. In the DuploCloud Portal, navigate to **Cloud Services** → **Cloud Run Service**.
-3. Click on the menu icon (<img src="../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the Cloud Run service you want to manage.
+3. Click on the menu icon (<img src="../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the Cloud Run service you want to manage.
 4. Select one of the following actions:
 
 <table data-header-hidden><thead><tr><th width="193.5555419921875">Action</th><th>Description</th></tr></thead><tbody><tr><td><strong>Logs</strong></td><td>Opens a live log view of your Cloud Run service's stdout/stderr output.</td></tr><tr><td><strong>View</strong></td><td>Displays the current configuration of the service in read-only mode.</td></tr><tr><td><strong>Edit</strong></td><td>Allows you to update the container image, environment variables, resources, and other settings.</td></tr><tr><td><strong>GCP Console</strong></td><td>Opens the service directly in the Google Cloud Console. Useful for debugging or advanced configuration.</td></tr><tr><td><strong>Delete</strong></td><td>Removes the Cloud Run service from DuploCloud and GCP. This action is irreversible.</td></tr></tbody></table>

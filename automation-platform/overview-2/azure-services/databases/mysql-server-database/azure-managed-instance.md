@@ -26,7 +26,7 @@ Complete the steps to create an Azure Managed SQL Instance in the DuploCloud Por
 Navigate directly to the Azure Portal to manage and configure a Managed SQL instance or delete a Managed SQL Instance from within the DuploCloud Portal:
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Database** -> **Managed Instances**.
-2. Click the **menu icon** (<img src="../../../../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the Manages SQL Instance.
+2. Click the **menu icon** (<img src="../../../../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the Manages SQL Instance.
 3. Select from the following options:
 
 <table data-header-hidden><thead><tr><th width="130.77783203125"></th><th></th></tr></thead><tbody><tr><td><strong>Azure Portal</strong></td><td>Navigate to the Azure portal to manage and configure your Managed SQL instance</td></tr><tr><td><strong>Delete</strong></td><td>Delete the Managed SQL Instance</td></tr></tbody></table>

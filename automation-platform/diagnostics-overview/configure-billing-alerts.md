@@ -52,7 +52,7 @@ You can view billing alert details, edit alert configurations, or delete alerts 
 
 1. In the DuploCloud Portal, navigate to **Administrator** → **Billing** for Administrator-level alerts or **Cloud Services** → **Billing** for Tenant-level alerts.
 2. Select the **Billing Alerts** tab.
-3. Click the menu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">) in the row of the billing alert you want to manage.
+3. Click the menu icon (<img src="../../.gitbook/assets/menu icon (2).avif" alt="" data-size="line">) in the row of the billing alert you want to manage.
 4. Select one of the following options:
 
 <table data-header-hidden><thead><tr><th width="172.22216796875"></th><th></th></tr></thead><tbody><tr><td><strong>Details</strong></td><td>View the billing alert configuration in JSON format.</td></tr><tr><td><strong>Edit</strong></td><td>Open the <strong>Update Billing Alert Config</strong> pane to modify alert settings.</td></tr><tr><td><strong>Delete</strong></td><td>Permanently delete the billing alert (confirmation required).</td></tr></tbody></table>
