@@ -7,13 +7,13 @@ coverY: 0
 
 # Overview
 
-## From DevOps to Platform Engineering — and Why IDPs Stalled
+## From DevOps to Platform Engineering — and What Changed
 
-Platform engineering exists because DevOps didn't scale cleanly: once every product team owned its own infrastructure, the cognitive load of Kubernetes, Terraform, and compliance requirements became unmanageable team-by-team. The industry's answer was centralization — stand up a platform team, build an Internal Developer Platform (IDP), encode best practices into "golden paths," and let developers self-serve instead of filing tickets.
+Platform engineering exists to help DevOps scale: once every product team owns its own infrastructure, the combined weight of Kubernetes, Terraform, and compliance requirements is better handled with shared platform support than team-by-team. The industry's answer was centralization — stand up a platform team, build an Internal Developer Platform (IDP), encode best practices into "golden paths," and let developers self-serve instead of filing tickets.
 
-In practice, that mostly didn't happen. A real IDP — one with shared state, RBAC, audit trails, deterministic execution, and multi-engineer coordination — is a multi-year software build, and most platform teams never had the resources to deliver one. Despite years of industry advice and enterprise investment, many organizations ended up simply rebranding their DevOps team as a "platform team" without ever shipping the platform. Golden paths stayed theoretical; ticket volume didn't move.
+In practice, that's proven harder to deliver than the pitch suggests. A real IDP — one with shared state, RBAC, audit trails, deterministic execution, and multi-engineer coordination — is a multi-year software build, and delivering one at that depth takes more time and engineering investment than most platform teams have had available. Many organizations stood up a platform team well before the platform itself existed. Golden paths often stayed aspirational, and ticket volume held steady.
 
-AI's impact on this so far has been narrow. It's shown up meaningfully in troubleshooting, largely through SRE-focused tooling, but barely touched deployments, release management, or compliance. The AI tool that actually got adopted at scale is the individual coding assistant — a huge productivity boost for one engineer at a time, not a platform.
+AI's impact here has been concentrated in one area so far. It's shown up meaningfully in troubleshooting, largely through SRE-focused tooling, with more room to grow in deployments, release management, and compliance. The AI tool that got adopted at scale is the individual coding assistant — a huge productivity boost for one engineer at a time, and the next step is bringing that same boost to a whole team.
 
 The shift that changes this: AI has made the economics of building a real IDP different. That's the idea behind an **Agentic IDP** — an Internal Developer Platform where every workflow is delivered as an agent, rather than as a static golden-path portal.
 
@@ -27,9 +27,9 @@ An agent capable of covering this needs three things: a conversational interface
 
 <figure><img src=".gitbook/assets/idp-agent-anatomy.png" alt="Desired anatomy of an agent, layered from the UI down through cloud tools"><figcaption></figcaption></figure>
 
-### What Claude Code already solves — and what's missing
+### What Claude Code already solves — and what a platform adds
 
-Engineers can already build a personalized agent with Claude Code that combines skills across Terraform, Jenkins, Kubernetes, and observability tooling. What it doesn't have: a dedicated UI, APIs, token-less execution, or any of the multi-user, governance, or enterprise controls a platform team actually needs — because it's architected as a single-user, single-session tool. That forces a choice: let individual engineers keep building their own agents against sensitive systems with no shared controls, or move toward a centralized platform.
+Engineers can already build a personalized agent with Claude Code that combines skills across Terraform, Jenkins, Kubernetes, and observability tooling. What a platform adds on top: a dedicated UI, APIs, token-less execution, and the multi-user, governance, and enterprise controls a platform team needs — since a personalized agent is architected as a single-user, single-session tool. That's the choice in front of most organizations: let individual engineers keep building their own agents against sensitive systems, or move toward a centralized platform with shared controls.
 
 <figure><img src=".gitbook/assets/idp-claude-code-agent.png" alt="Agent anatomy for a personalized Claude Code agent, with the enterprise/multi-user layers crossed out"><figcaption></figcaption></figure>
 
@@ -37,9 +37,9 @@ Engineers can already build a personalized agent with Claude Code that combines 
 
 Most organizations sit at one of three stages:
 
-1. **Small-scale copilots** — AI lives on individual laptops. Chat-only, no collaboration, no enterprise controls, and engineers keep direct access to sensitive systems from personal devices.
-2. **Growing agentic** — Each use case reimplements its own multi-user plumbing from scratch: SSO, RBAC, access control, skill distribution, context management. Real capability, but duplicated per use case instead of shared.
-3. **At-scale, centralized Agentic IDP** — A platform team consolidates the overlapping point solutions into one system. Almost no organization has actually reached this stage yet.
+1. **Small-scale copilots** — AI lives on individual laptops. Chat-only and single-player — great for one engineer, but without shared collaboration or enterprise controls yet.
+2. **Growing agentic** — Each use case builds its own multi-user plumbing independently: SSO, RBAC, access control, skill distribution, context management. Real capability, just not yet shared across use cases.
+3. **At-scale, centralized Agentic IDP** — A platform team consolidates the overlapping point solutions into one system. Very few organizations have reached this stage yet — it's where the rest are headed.
 
 <figure><img src=".gitbook/assets/idp-maturity-spectrum.png" alt="Three-stage AI adoption maturity model for platform engineering"><figcaption></figcaption></figure>
 
