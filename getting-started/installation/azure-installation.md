@@ -1,10 +1,10 @@
-# Azure Installation Guide
+# Azure Installation
 
 This guide covers installing DuploCloud AI Helpdesk on **Azure Kubernetes Service (AKS)** using Terraform.
 
 > **Note:** The guided skill-based installation (like the AWS `helpdesk-install-skill`) is currently in development for Azure. The current method uses Terraform automation. Contact your DuploCloud account team to schedule an installation.
 
----
+***
 
 ## What Gets Deployed
 
@@ -14,63 +14,63 @@ Terraform provisions the following resources in order:
 AKS Node Pool → Storage Class (conditional) → Namespace → ConfigMap → Helm Release
 ```
 
-| Component | Azure Resource |
-|---|---|
-| **Backend** | ASP.NET Core API — tickets, projects, agent orchestration |
-| **Frontend** | React web UI served via nginx |
-| **MongoDB** | Kubernetes StatefulSet with Azure Blob NFS storage |
-| **Web Terminal** | Browser-based terminal for agent command execution |
-| **Duplo Agent** | Claude-powered AI agent (connects to Azure AI Foundry) |
-| **Ingress** | Azure Application Gateway routing HTTPS traffic |
+| Component              | Azure Resource                                                 |
+| ---------------------- | -------------------------------------------------------------- |
+| **Backend**            | ASP.NET Core API — tickets, projects, agent orchestration      |
+| **Frontend**           | Angular web UI served via nginx                                |
+| **MongoDB**            | Kubernetes StatefulSet with Azure Blob NFS storage             |
+| **Web Terminal**       | Browser-based terminal for agent command execution             |
+| **Duplo Agent**        | Claude-powered AI agent (connects to Azure AI Foundry)         |
+| **Ingress**            | Azure Application Gateway routing HTTPS traffic                |
 | **Persistent Storage** | Azure Blob NFS (`azureblob-nfs-premium`) for backend and agent |
 
 All components run inside a dedicated namespace in your AKS cluster within your Azure subscription.
 
----
+***
 
 ## Prerequisites
 
 ### Tools (DuploCloud Team)
 
-| Tool | Version | Install |
-|---|---|---|
-| `git` | Any | `brew install git` |
+| Tool        | Version  | Install                  |
+| ----------- | -------- | ------------------------ |
+| `git`       | Any      | `brew install git`       |
 | `terraform` | >= 1.5.0 | `brew install terraform` |
-| `azure-cli` | >= 2.50 | `brew install azure-cli` |
-| `kubectl` | >= 1.27 | `brew install kubectl` |
-| `helm` | >= 3.12 | `brew install helm` |
+| `azure-cli` | >= 2.50  | `brew install azure-cli` |
+| `kubectl`   | >= 1.27  | `brew install kubectl`   |
+| `helm`      | >= 3.12  | `brew install helm`      |
 
 ### Azure Access Required
 
-| Item | Required | Notes |
-|---|---|---|
-| Azure **Contributor** role on the AKS resource group | ✅ | Required for node pool creation |
-| Kubernetes **cluster-admin** RBAC | ✅ | Required for namespace and storage class creation |
-| Access to `oci://quay.io/duplocloud` Helm registry | ✅ | No credentials needed — public OCI registry |
+| Item                                                 | Required | Notes                                             |
+| ---------------------------------------------------- | -------- | ------------------------------------------------- |
+| Azure **Contributor** role on the AKS resource group | ✅        | Required for node pool creation                   |
+| Kubernetes **cluster-admin** RBAC                    | ✅        | Required for namespace and storage class creation |
+| Access to `oci://quay.io/duplocloud` Helm registry   | ✅        | No credentials needed — public OCI registry       |
 
----
+***
 
 ## What the Customer Must Provide
 
 Collect the following before starting:
 
-| Item | Required | Notes |
-|---|---|---|
-| Azure Subscription ID | ✅ | e.g. `82300ad4-6ef0-48ef-acee-a4d9e495e5a4` |
-| Resource group containing the AKS cluster | ✅ | e.g. `duploinfra-ai` |
-| AKS cluster name | ✅ | e.g. `ai` |
-| Azure region | ✅ | e.g. `westus`, `eastus` |
-| Azure AI Foundry resource name | ✅ | The subdomain before `.services.ai.azure.com` |
-| Azure AI Foundry API key | ✅ | From Keys and Endpoint in the Azure portal |
-| Portal domain | ✅ | e.g. `helpdesk.yourcompany.com` |
-| xterm subdomain | ✅ | e.g. `helpdesk-xterm.yourcompany.com` |
-| Internal agent hostname | ✅ | e.g. `helpdesk-agent.yourcompany.com` |
-| Google OAuth Client ID | ✅ | See [Google OAuth Credentials](#google-oauth-credentials) |
-| Google OAuth Client Secret | ✅ | See [Google OAuth Credentials](#google-oauth-credentials) |
-| Super-user email list | ✅ | Comma-separated admin emails |
-| SSL certificate name on App Gateway | ✅ | The name of the cert configured in Azure Application Gateway |
+| Item                                      | Required | Notes                                                                          |
+| ----------------------------------------- | -------- | ------------------------------------------------------------------------------ |
+| Azure Subscription ID                     | ✅        | e.g. `82300ad4-6ef0-48ef-acee-a4d9e495e5a4`                                    |
+| Resource group containing the AKS cluster | ✅        | e.g. `duploinfra-ai`                                                           |
+| AKS cluster name                          | ✅        | e.g. `ai`                                                                      |
+| Azure region                              | ✅        | e.g. `westus`, `eastus`                                                        |
+| Azure AI Foundry resource name            | ✅        | The subdomain before `.services.ai.azure.com`                                  |
+| Azure AI Foundry API key                  | ✅        | From Keys and Endpoint in the Azure portal                                     |
+| Portal domain                             | ✅        | e.g. `helpdesk.yourcompany.com`                                                |
+| xterm subdomain                           | ✅        | e.g. `helpdesk-xterm.yourcompany.com`                                          |
+| Internal agent hostname                   | ✅        | e.g. `helpdesk-agent.yourcompany.com`                                          |
+| Google OAuth Client ID                    | ✅        | See [Google OAuth Credentials](azure-installation.md#google-oauth-credentials) |
+| Google OAuth Client Secret                | ✅        | See [Google OAuth Credentials](azure-installation.md#google-oauth-credentials) |
+| Super-user email list                     | ✅        | Comma-separated admin emails                                                   |
+| SSL certificate name on App Gateway       | ✅        | The name of the cert configured in Azure Application Gateway                   |
 
----
+***
 
 ## Google OAuth Credentials
 
@@ -85,7 +85,7 @@ To create a Google OAuth client:
 5. Add `https://helpdesk.yourcompany.com/auth/callback` to **Authorized redirect URIs**
 6. Copy the **Client ID** and **Client Secret**
 
----
+***
 
 ## Azure AI Foundry Configuration
 
@@ -114,7 +114,7 @@ These values are set via Terraform sensitive variables — the API key is never 
 
 > **Managed Identity (future):** Managed Identity authentication is also supported using `AZURE_CLIENT_ID` instead of `AZURE_API_KEY`. Contact your DuploCloud account team if your Azure setup uses Managed Identity.
 
----
+***
 
 ## Step-by-Step Deployment
 
@@ -141,6 +141,7 @@ echo $KUBECONFIG                 # if set, use this path; if empty, default is ~
 ```
 
 Verify cluster access:
+
 ```bash
 kubectl get nodes
 ```
@@ -153,8 +154,8 @@ kubectl get nodes
 kubectl get storageclass azureblob-nfs-premium
 ```
 
-- **Found** → set `create_storage_class = false` in `terraform.tfvars`
-- **Not found** → set `create_storage_class = true`
+* **Found** → set `create_storage_class = false` in `terraform.tfvars`
+* **Not found** → set `create_storage_class = true`
 
 ### Step 4 — Edit `terraform.tfvars`
 
@@ -243,15 +244,15 @@ terraform output app_gateway_ip
 
 Add the following DNS records at your provider:
 
-| Record Type | Name | Points To |
-|---|---|---|
-| A | `helpdesk.<domain>` | App Gateway public IP |
-| A | `helpdesk-xterm.<domain>` | App Gateway public IP |
-| A | `helpdesk-agent.<domain>` | App Gateway **private** IP |
+| Record Type | Name                      | Points To                  |
+| ----------- | ------------------------- | -------------------------- |
+| A           | `helpdesk.<domain>`       | App Gateway public IP      |
+| A           | `helpdesk-xterm.<domain>` | App Gateway public IP      |
+| A           | `helpdesk-agent.<domain>` | App Gateway **private** IP |
 
 > The internal agent hostname uses the App Gateway's **private** IP — it is not publicly accessible.
 
----
+***
 
 ## Updating a Deployment
 
@@ -268,7 +269,7 @@ terraform plan -out=plan.tfplan
 terraform apply plan.tfplan
 ```
 
----
+***
 
 ## Multi-Client Deployments
 
@@ -281,7 +282,7 @@ terraform apply plan.tfplan
 
 > Without a remote backend, deploying a different client from the same directory will overwrite local state. Use a remote backend (Azure Storage or Terraform Cloud) for production multi-client setups.
 
----
+***
 
 ## Destroying a Deployment
 
@@ -291,7 +292,7 @@ terraform destroy
 
 > **Warning:** MongoDB data will be lost if the persistent volume reclaim policy is `Delete`. Back up data before destroying.
 
----
+***
 
 ## Ingress and SSL
 
@@ -311,16 +312,16 @@ ingress:
 
 The SSL certificate (`duplo` in the example above) must already be configured on the Azure Application Gateway before deployment. The customer must provide the certificate name.
 
----
+***
 
 ## Troubleshooting
 
-| Error | Resolution |
-|---|---|
-| `403 — cannot create namespaces/storageclasses` | Ensure `cluster-admin` RBAC is granted, or set `create_storage_class = false` |
-| Helm timeout (>600s) | Node pool still scaling — run `kubectl get nodes -w` to monitor |
-| `StorageClass already exists` | Set `create_storage_class = false` in tfvars |
-| Provider auth failure | Re-run `az aks get-credentials --overwrite-existing`, verify `kube_context` in tfvars |
-| `Namespace already exists` | Run `terraform import kubernetes_namespace_v1.helpdesk <namespace>` |
-| Pods stuck in `Pending` | Check node pool status in Azure portal — node provisioning may still be in progress |
-| 502 from App Gateway | Check pod health: `kubectl describe pods -n <namespace>` and verify health probe status codes annotation |
+| Error                                           | Resolution                                                                                               |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `403 — cannot create namespaces/storageclasses` | Ensure `cluster-admin` RBAC is granted, or set `create_storage_class = false`                            |
+| Helm timeout (>600s)                            | Node pool still scaling — run `kubectl get nodes -w` to monitor                                          |
+| `StorageClass already exists`                   | Set `create_storage_class = false` in tfvars                                                             |
+| Provider auth failure                           | Re-run `az aks get-credentials --overwrite-existing`, verify `kube_context` in tfvars                    |
+| `Namespace already exists`                      | Run `terraform import kubernetes_namespace_v1.helpdesk <namespace>`                                      |
+| Pods stuck in `Pending`                         | Check node pool status in Azure portal — node provisioning may still be in progress                      |
+| 502 from App Gateway                            | Check pod health: `kubectl describe pods -n <namespace>` and verify health probe status codes annotation |

@@ -11,7 +11,7 @@ The installation deploys the following components into a dedicated namespace in 
 | Component              | Description                                                      |
 | ---------------------- | ---------------------------------------------------------------- |
 | **Backend**            | ASP.NET Core API server — tickets, projects, agent orchestration |
-| **Frontend**           | React web UI served via nginx                                    |
+| **Frontend**           | Angular web UI served via nginx                                  |
 | **MongoDB**            | Embedded database (Kubernetes StatefulSet)                       |
 | **Web Terminal**       | Browser-based terminal for agent command execution               |
 | **Duplo Agent**        | Claude-powered AI agent runtime                                  |
