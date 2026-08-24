@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+  Source for the Policy Model diagram in README.md.
+  Renders both themes; the PNGs live in .gitbook/assets/policy-model-{light,dark}.png
+
+  To re-render (requires a headless Chrome and network access for the Poppins webfont):
+
+    CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    for t in light dark; do
+      "$CHROME" --headless --disable-gpu --hide-scrollbars \
+        --force-device-scale-factor=1.5 --window-size=1360,1160 \
+        --virtual-time-budget=3000 \
+        --screenshot="policy-model-$t.png" \
+        "file://$PWD/policy-model-diagram.source.html?theme=$t"
+    done
+-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+  /* ---------- Light (default) ---------- */
+  :root {
+    --page-bg:       linear-gradient(155deg, #efeef4 0%, #fbfbfd 55%, #f4f2f8 100%);
+    --panel-bg:      #ffffff;
+    --panel-border:  #ece8f6;
+    --panel-shadow:  0 24px 70px rgba(46,16,101,.07);
+    --title:         #2e1065;
+    --subtitle:      #6d5a91;
+
+    --box-fill:      linear-gradient(135deg, #fcf9ff 0%, #f5efFE 100%);
+    --box-edge:      linear-gradient(115deg, #a78bfa 0%, #c4a5f7 45%, #f3cd93 100%);
+    --box-title:     #2e1065;
+    --box-meta:      #5c4a80;
+    --box-shadow:    0 6px 18px rgba(76,29,149,.07);
+
+    --leaf-fill:     linear-gradient(135deg, #f9f5ff 0%, #f1ebfc 100%);
+
+    --stack-fill:    #f3ecfd;
+    --stack-edge:    #cbb6f2;
+
+    --plan-fill:     #faf8fd;
+    --plan-edge:     #2e1065;
+
+    --fault-fill:    #fdf3f7;
+    --fault-edge:    #e9a6c0;
+    --fault-line:    #dd7fa4;
+    --fault-text:    #2e1065;
+
+    --arrow:         #3b0764;
+    --legend-text:   #3b2a5c;
+    --note:          #7c6aa0;
+  }
+
+  /* ---------- Dark ---------- */
+  html[data-theme="dark"] {
+    --page-bg:       linear-gradient(155deg, #1c0a30 0%, #180827 55%, #200c38 100%);
+    --panel-bg:      linear-gradient(150deg, #2b1149 0%, #230e3c 55%, #2d1250 100%);
+    --panel-border:  rgba(167,139,250,.14);
+    --panel-shadow:  0 24px 70px rgba(0,0,0,.35);
+    --title:         #ffffff;
+    --subtitle:      #b9a7d8;
+
+    --box-fill:      linear-gradient(135deg, #4c2189 0%, #3a1769 100%);
+    --box-edge:      linear-gradient(115deg, #a78bfa 0%, #b79bfb 45%, #f5d79a 100%);
+    --box-title:     #ffffff;
+    --box-meta:      #d8c9f4;
+    --box-shadow:    0 8px 22px rgba(0,0,0,.28);
+
+    --leaf-fill:     linear-gradient(135deg, #5d3d8c 0%, #4a2f74 100%);
+
+    --stack-fill:    #3a1769;
+    --stack-edge:    #7c5cc4;
+
+    --plan-fill:     linear-gradient(135deg, #3a1a6c 0%, #2c1253 100%);
+    --plan-edge:     #b9a2fb;
+
+    --fault-fill:    linear-gradient(135deg, #4b2183 0%, #3a1769 100%);
+    --fault-edge:    #f0a3bd;
+    --fault-line:    #f0a3bd;
+    --fault-text:    #ffffff;
+
+    --arrow:         #c9bbfa;
+    --legend-text:   #d5c9f0;
+    --note:          #a894cf;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Poppins', 'Avenir Next', -apple-system, sans-serif;
+    background: var(--page-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #stage {
+    position: relative;
+    width: 1360px;
+    height: 1160px;
+    background: var(--page-bg);
+    overflow: hidden;
+  }
+
+  /* ---------- Header ---------- */
+  h1 {
+    position: absolute; top: 44px; left: 0; width: 100%;
+    text-align: center;
+    font-size: 38px; font-weight: 700; letter-spacing: -.4px;
+    color: var(--title);
+  }
+  .sub {
+    position: absolute; top: 100px; left: 0; width: 100%;
+    text-align: center;
+    font-size: 19px; font-weight: 400;
+    color: var(--subtitle);
+  }
+
+  /* ---------- Panel ---------- */
+  #panel {
+    position: absolute; left: 40px; top: 140px;
+    width: 1280px; height: 960px;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 26px;
+    box-shadow: var(--panel-shadow);
+  }
+
+  svg#wires {
+    position: absolute; inset: 0;
+    width: 1360px; height: 1160px;
+    pointer-events: none;
+  }
+  .wire      { stroke: var(--arrow);      stroke-width: 2.6; fill: none; }
+  .wire-dash { stroke: var(--arrow);      stroke-width: 2.6; fill: none; stroke-dasharray: 9 7; }
+  .wire-fault{ stroke: var(--fault-line); stroke-width: 2.6; fill: none; stroke-dasharray: 9 7; }
+  .mk-main   { fill: var(--arrow); }
+  .mk-fault  { fill: var(--fault-line); }
+  .junction  { fill: var(--arrow); }
+
+  .wire-label {
+    position: absolute;
+    font-size: 15px; font-weight: 400;
+    color: var(--note);
+    text-align: center;
+  }
+
+  /* ---------- Nodes ---------- */
+  .node {
+    position: absolute;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 8px;
+    padding: 0 22px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    background:
+      var(--box-fill) padding-box,
+      var(--box-edge) border-box;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+  }
+  .node .name {
+    font-size: 22px; font-weight: 600; letter-spacing: -.2px;
+    color: var(--box-title);
+    line-height: 1.15;
+  }
+  .node .meta {
+    font-size: 15.5px; font-weight: 400;
+    color: var(--box-meta);
+    line-height: 1.45;
+  }
+
+  .leaf {
+    background:
+      var(--leaf-fill) padding-box,
+      var(--box-edge) border-box;
+  }
+
+  .dashed-plan {
+    background: var(--plan-fill);
+    border: 2px dashed var(--plan-edge);
+    box-shadow: none;
+  }
+  .dashed-fault {
+    background: var(--fault-fill);
+    border: 2px dashed var(--fault-edge);
+    box-shadow: none;
+  }
+  .dashed-fault .name { color: var(--fault-text); }
+
+  /* stacked-card treatment: "a list of Resource Groups" */
+  .stack-back {
+    position: absolute;
+    border: 2px solid var(--stack-edge);
+    background: var(--stack-fill);
+    border-radius: 16px;
+  }
+
+  .badge {
+    position: absolute;
+    line-height: 1.45;
+    font-size: 14px; font-weight: 500;
+    color: var(--note);
+    text-align: center;
+  }
+
+  /* ---------- Legend ---------- */
+  #legend {
+    position: absolute; left: 96px; top: 1024px;
+    display: flex; align-items: center; gap: 54px;
+    font-size: 16px; font-weight: 400;
+  }
+  #legend .item { display: flex; align-items: center; gap: 12px; color: var(--legend-text); }
+  #legend .item.fault { color: var(--fault-line); }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <h1>AWS Extension — Policy Model</h1>
+  <div class="sub">Resource hierarchy and dependency relationships</div>
+
+  <div id="panel"></div>
+
+  <svg id="wires" viewBox="0 0 1360 1160">
+    <defs>
+      <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+              markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path class="mk-main" d="M 0 0 L 10 5 L 0 10 z"/>
+      </marker>
+      <marker id="ahf" viewBox="0 0 10 10" refX="8.5" refY="5"
+              markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path class="mk-fault" d="M 0 0 L 10 5 L 0 10 z"/>
+      </marker>
+    </defs>
+
+    <!-- Network Baseline -> Cluster Baseline -->
+    <path class="wire" d="M 680 273 V 327" marker-end="url(#ah)"/>
+    <!-- Cluster Baseline -> Environment -->
+    <path class="wire" d="M 680 421 V 475" marker-end="url(#ah)"/>
+    <!-- Environment -> Resource Group -->
+    <path class="wire" d="M 680 569 V 639" marker-end="url(#ah)"/>
+
+    <!-- Plan -> Environment -->
+    <path class="wire-dash" d="M 380 525 H 489" marker-end="url(#ah)"/>
+    <!-- Environment -> Faults -->
+    <path class="wire-fault" d="M 865 525 H 974" marker-end="url(#ahf)"/>
+
+    <!-- Resource Group -> fork -->
+    <path class="wire" d="M 680 741 V 800"/>
+    <path class="wire" d="M 350 800 H 1010"/>
+    <circle class="junction" cx="680" cy="800" r="5"/>
+    <path class="wire" d="M 350 800 V 854" marker-end="url(#ah)"/>
+    <path class="wire" d="M 1010 800 V 854" marker-end="url(#ah)"/>
+  </svg>
+
+  <!-- Network Baseline -->
+  <div class="node" style="left:445px; top:185px; width:470px; height:88px;">
+    <div class="name">Network Baseline</div>
+    <div class="meta">VPC · Subnets · NAT Gateways · Subnet Groups</div>
+  </div>
+
+  <!-- Cluster Baseline -->
+  <div class="node" style="left:445px; top:333px; width:470px; height:88px;">
+    <div class="name">Cluster Baseline</div>
+    <div class="meta">EKS Cluster · OIDC Provider · Auto Mode</div>
+  </div>
+
+  <!-- Plan -->
+  <div class="node dashed-plan" style="left:70px; top:481px; width:310px; height:88px;">
+    <div class="name">Plan</div>
+    <div class="meta">Hosted Zones · Certs · AMIs</div>
+  </div>
+  <div class="wire-label" style="left:355px; top:494px; width:160px;">provides to</div>
+
+  <!-- Environment -->
+  <div class="node" style="left:495px; top:481px; width:370px; height:88px;">
+    <div class="name">Environment</div>
+    <div class="meta">Logical grouping · Associated Plans</div>
+  </div>
+
+  <!-- Faults -->
+  <div class="node dashed-fault" style="left:980px; top:481px; width:310px; height:88px;">
+    <div class="name">Faults</div>
+    <div class="meta">Info · Warning · Error · Critical</div>
+  </div>
+  <div class="wire-label" style="left:840px; top:494px; width:160px;">reported on</div>
+
+  <!-- Resource Groups (stacked) -->
+  <div class="stack-back" style="left:504px; top:645px; width:400px; height:96px; opacity:.34;"></div>
+  <div class="stack-back" style="left:492px; top:645px; width:400px; height:96px; opacity:.6;"></div>
+  <div class="node" style="left:480px; top:645px; width:400px; height:96px;">
+    <div class="name">Resource Group</div>
+    <div class="meta">IAM Role · Security Groups · KMS Key · Key Pair</div>
+  </div>
+  <div class="badge" style="left:930px; top:686px; width:330px; text-align:left;">One or more<br>per Environment</div>
+
+  <!-- Kubernetes Resources -->
+  <div class="node leaf" style="left:110px; top:860px; width:480px; height:132px;">
+    <div class="name">Kubernetes Resources</div>
+    <div class="meta">
+      Namespaces · Workloads · Jobs · CronJobs<br>
+      Ingress · ConfigMaps · Secrets · Storage · Helm
+    </div>
+  </div>
+
+  <!-- Cloud Resources -->
+  <div class="node leaf" style="left:770px; top:860px; width:480px; height:132px;">
+    <div class="name">Cloud Resources</div>
+    <div class="meta">
+      S3 · RDS · ElastiCache · SNS · SQS · Lambda<br>
+      Secrets · SSM · EFS · MSK · ECR · EC2
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div id="legend">
+    <div class="item">
+      <svg width="46" height="14" viewBox="0 0 46 14">
+        <path class="wire" d="M 2 7 H 36" marker-end="url(#ah)"/>
+      </svg>
+      Required dependency
+    </div>
+    <div class="item">
+      <svg width="46" height="14" viewBox="0 0 46 14">
+        <path class="wire-dash" d="M 2 7 H 36" marker-end="url(#ah)"/>
+      </svg>
+      Provides resources to
+    </div>
+    <div class="item fault">
+      <svg width="46" height="14" viewBox="0 0 46 14">
+        <path class="wire-fault" d="M 2 7 H 36" marker-end="url(#ahf)"/>
+      </svg>
+      Cross-resource faults
+    </div>
+  </div>
+
+</div>
+<script>
+  var t = new URLSearchParams(location.search).get('theme');
+  if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+</script>
+</body>
+</html>
