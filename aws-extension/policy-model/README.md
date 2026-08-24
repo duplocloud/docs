@@ -12,13 +12,18 @@ The AWS Extension Policy Model defines the resources the extension manages and h
 
 The AWS Extension organizes infrastructure as a hierarchy. Each level depends on the one above it:
 
-**Network Baseline → Cluster Baseline → Environment → Workloads and Databases**
+**Network Baseline → Cluster Baseline → Environment → Resource Group → Kubernetes and Cloud Resources**
 
-<figure><picture><source srcset="../../.gitbook/assets/Policy Model Dark Final.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/image (20).png" alt=""></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../../.gitbook/assets/policy-model-dark.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/policy-model-light.png" alt="AWS Extension policy model — resource hierarchy and dependency relationships"></picture><figcaption></figcaption></figure>
 
-A **Network Baseline** establishes the VPC — the networking foundation everything else runs on. A **Cluster Baseline** provisions an EKS cluster inside that network. An **Environment** creates a deployment boundary inside a cluster, with its own security groups, IAM roles, and KMS keys. Workloads, databases, and other resources live inside environments.
+A **Network Baseline** establishes the VPC — the networking foundation everything else runs on. A **Cluster Baseline** provisions an EKS cluster inside that network. An **Environment** is a logical grouping that holds one or more **Resource Groups**, along with the Plans those resources can draw from.
 
-**Plans** catalog AWS account-level resources — hosted zones, ACM certificates, and AMIs — that environments and workloads can reference.
+A **Resource Group** is the isolation boundary. Each one provisions its own IAM role and policies, security groups, KMS key, and EC2 key pair, and every resource created inside it inherits those boundaries. A Resource Group holds two kinds of children:
+
+* **Kubernetes resources** — namespaces, workloads, jobs and cron jobs, ingress, config maps, secrets, storage, and Helm releases.
+* **Cloud resources** — S3 buckets, RDS instances and clusters, ElastiCache, SNS topics, SQS queues, Lambda functions, Secrets Manager secrets, SSM parameters, EFS, MSK, ECR, and EC2 hosts.
+
+**Plans** catalog AWS account-level resources — hosted zones, ACM certificates, and AMIs — that Environments associate and their resources can reference.
 
 **Faults** surface issues across any resource at any level of the hierarchy.
 
@@ -45,4 +50,4 @@ Every resource in the AWS Extension follows the same status lifecycle. Each reso
 
 ## Resource Types
 
-<table data-view="cards"><thead><tr><th>Title</th><th>Description</th><th data-card-target data-type="content-ref">Target</th></tr></thead><tbody><tr><td><strong>Network Baseline</strong></td><td>VPC with subnets, routing, and NAT — the networking foundation.</td><td><a href="network-baseline.md">network-baseline.md</a></td></tr><tr><td><strong>Cluster Baseline</strong></td><td>EKS cluster built on top of a Network Baseline.</td><td><a href="cluster-baseline.md">cluster-baseline.md</a></td></tr><tr><td><strong>Environment</strong></td><td>Deployment boundary inside a cluster, with IAM and security group isolation.</td><td><a href="environment.md">environment.md</a></td></tr><tr><td><strong>Plan</strong></td><td>AWS account-level catalog: hosted zones, certificates, and AMIs.</td><td><a href="plan.md">plan.md</a></td></tr><tr><td><strong>Faults</strong></td><td>Cross-resource issues detected across the hierarchy.</td><td><a href="faults.md">faults.md</a></td></tr><tr><td><strong>Kubernetes Resources</strong></td><td>Namespaces, workloads, configs, secrets, and storage inside an Environment.</td><td><a href="kubernetes/">kubernetes</a></td></tr><tr><td><strong>Databases</strong></td><td>RDS and ElastiCache instances inside an Environment.</td><td><a href="databases/">databases</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th>Title</th><th>Description</th><th data-card-target data-type="content-ref">Target</th></tr></thead><tbody><tr><td><strong>Network Baseline</strong></td><td>VPC with subnets, routing, and NAT — the networking foundation.</td><td><a href="network-baseline.md">network-baseline.md</a></td></tr><tr><td><strong>Cluster Baseline</strong></td><td>EKS cluster built on top of a Network Baseline.</td><td><a href="cluster-baseline.md">cluster-baseline.md</a></td></tr><tr><td><strong>Environment</strong></td><td>Logical grouping of Resource Groups inside a cluster, with associated Plans.</td><td><a href="environment.md">environment.md</a></td></tr><tr><td><strong>Plan</strong></td><td>AWS account-level catalog: hosted zones, certificates, and AMIs.</td><td><a href="plan.md">plan.md</a></td></tr><tr><td><strong>Faults</strong></td><td>Cross-resource issues detected across the hierarchy.</td><td><a href="faults.md">faults.md</a></td></tr><tr><td><strong>Kubernetes Resources</strong></td><td>Namespaces, workloads, configs, secrets, and storage inside a Resource Group.</td><td><a href="kubernetes/">kubernetes</a></td></tr><tr><td><strong>Databases</strong></td><td>RDS and ElastiCache instances inside a Resource Group.</td><td><a href="databases/">databases</a></td></tr></tbody></table>
