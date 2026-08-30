@@ -79,6 +79,7 @@
   * [Tickets](ai-helpdesk-v2/tickets.md)
   * [Agents](ai-helpdesk-v2/out-of-the-box-agents.md)
   * [Bring Your Own Agent](ai-helpdesk-v2/bring-your-own-agent.md)
+  * [Knowledge Base](ai-helpdesk-v2/knowledge-base.md)
   * [Developers](ai-helpdesk-v2/developers.md)
 
 ## AWS Extension
