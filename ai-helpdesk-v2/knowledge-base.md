@@ -8,52 +8,24 @@ This lets Agents answer from your runbooks, policies, and internal procedures in
 
 | Component | Description |
 | --------- | ----------- |
-| **Qdrant** | The vector database. Deployed in-cluster by the AI Helpdesk Helm chart. |
-| **Provider** | The registered connection to Qdrant — its endpoint URL and master API key. |
+| **Qdrant** | The vector database that stores your embedded documents. |
+| **Provider** | The registered connection to Qdrant — its endpoint URL and API key. |
 | **Collection** | An isolated set of documents sharing one embedding model. Backed by a Qdrant collection. |
 | **Scope** | What you attach to a Ticket. Each Collection gets a read-only Scope granting search access. |
 
-The Agent never receives the master API key. When a Collection is provisioned, the platform mints a **read-only, per-Collection token** and stores it on that Collection's Scope. Only that token reaches the Agent, and only for Collections attached to the Ticket.
-
-## Prerequisites
-
-Qdrant must be running and reachable from the AI Helpdesk backend and Agent. The Helm chart ships it as an opt-in component:
-
-```yaml
-qdrant:
-  enabled: true
-  persistence:
-    # Must be block storage (EBS / Persistent Disk / Azure Disk).
-    storageClass: <your-block-storage-class>
-    size: 10Gi
-```
-
-The chart generates the API key and preserves it across upgrades. Retrieve it when registering the Provider:
-
-```bash
-kubectl get secret <release>-helpdesk-qdrant -n <namespace> \
-  -o jsonpath='{.data.api-key}' | base64 -d
-```
-
-In-cluster, Qdrant is reachable at `http://<release>-helpdesk-qdrant:6333`.
-
-{% hint style="warning" %}
-Use block storage for the Qdrant volume, never NFS-family storage such as EFS, Filestore, or Azure Files. Qdrant relies on memory-mapped files and POSIX file locking, which those filesystems do not provide safely. The resulting index corruption appears only after a node disruption, at which point the index is unrecoverable.
-{% endhint %}
-
-{% hint style="info" %}
-Qdrant runs with JWT RBAC enabled. This is required — it is what allows the platform to mint scoped, read-only tokens instead of distributing the master API key.
-{% endhint %}
+The Agent never receives the Provider's API key. When a Collection is provisioned, the platform mints a **read-only, per-Collection token** and stores it on that Collection's Scope. Only that token reaches the Agent, and only for Collections attached to the Ticket.
 
 ## Registering the vector database
 
-To register Qdrant as a Knowledge Base Provider, complete the following steps:
+Your DuploCloud administrator provisions the vector database and provides its **endpoint URL** and **API key**.
+
+To register it as a Knowledge Base Provider, complete the following steps:
 
 1. Navigate to **AI Admin**, and select **Providers** > **IT**.
 2. Select the **Knowledge Base** tab.
 3. Click **Add**.
-4. In the **Account ID** field, enter the Qdrant endpoint URL including the port, for example `http://helpdesk-qdrant:6333`.
-5. In the **Credential** field, enter the master API key retrieved above.
+4. In the **Account ID** field, enter the endpoint URL including the port, for example `http://helpdesk-qdrant:6333`.
+5. In the **Credential** field, enter the API key.
 6. Click **Add** to register the Provider.
 
 <figure><img src="../.gitbook/assets/kb-providers-list.png" alt=""><figcaption><p>A registered Qdrant Provider in the Knowledge Base tab</p></figcaption></figure>
@@ -145,8 +117,8 @@ Retrieval quality depends on what you upload.
 
 | Symptom | Likely cause |
 | ------- | ------------ |
-| Collection stays in **Pending** | The platform cannot reach Qdrant. Verify the Provider endpoint URL and port, and that the Qdrant pod is Ready. |
-| Collection reaches **Failed** | Usually an incorrect API key, or JWT RBAC not enabled on Qdrant. |
+| Collection stays in **Pending** | The vector database cannot be reached. Verify the Provider's endpoint URL and port. If those are correct, contact your DuploCloud administrator. |
+| Collection reaches **Failed** | Usually an incorrect API key on the Provider. Re-enter the key your administrator provided. |
 | Scope missing from the Ticket picker | The Collection is not yet Ready, or the Ticket's Workspace neither owns the Collection nor has been shared it. |
 | Agent answers without searching | No Knowledge Base Scope was attached to the Ticket. |
-| `storage folder is already locked` in Qdrant logs | Qdrant is running on NFS-family storage. Move it to block storage. |
+| Agent cannot find something you uploaded | Confirm the document shows **Ready** with a non-zero point count, and that the Scope for its Collection is attached to the Ticket. |
