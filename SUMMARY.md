@@ -770,6 +770,10 @@
     * [DevOps Deep Dive - Abstracting Cloud Complexity](automation-platform/extras-overview/video-transcripts/devops-deep-dive-abstracting-cloud-complexity.md)
     * [DuploCloud Uses Infrastructure-as-Code to Stitch Together DevOps Lifecycle](automation-platform/extras-overview/video-transcripts/duplocloud-uses-infrastructure-as-code-to-stitch-together-devops-lifecycle.md)
 
+***
+
+* [Hackday](hackday.md)
+
 ## DuploCloud KBs
 
 * [DuploCloud KBs](duplocloud-kbs/duplocloud-kbs/README.md)
