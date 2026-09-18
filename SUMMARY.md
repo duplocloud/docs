@@ -772,7 +772,7 @@
 
 ***
 
-* [Hackday](hackday.md)
+* [Hackday Sponsor Tool Setup](hackday-sponsor-tool-setup.md)
 
 ## DuploCloud KBs
 

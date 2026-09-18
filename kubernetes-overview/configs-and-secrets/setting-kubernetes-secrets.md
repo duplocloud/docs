@@ -49,7 +49,7 @@ To use this Secret in your application, [mount it as a volume in a container](..
 ## Editing a Kubernetes Secret
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** → **Secrets**.
-2. Locate the Secret you want to edit and click the menu icon (<img src="../../.gitbook/assets/menu icon (1).avif" alt="" data-size="line">).
+2. Locate the Secret you want to edit and click the menu icon (<img src="../../.gitbook/assets/menu icon.avif" alt="" data-size="line">).
 3. Select **Edit**.
 4. Update the Secret values as needed.
 
