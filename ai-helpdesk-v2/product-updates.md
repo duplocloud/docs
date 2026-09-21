@@ -1,5 +1,367 @@
 # Product Updates
 
+## August 2026
+
+---
+
+**1.** `Feature` — **Angular 22 Upgrade with Runtime Extension Loading**
+
+The platform moved to Angular 22 with Native Federation, so extensions load at runtime instead of requiring a rebuild.
+- Extensions can be added and loaded without redeploying the portal
+- Faster page loads and smaller bundles across AI Studio
+- Includes a migration guide for teams with in-flight extension work
+
+Changes in: `Frontend`
+
+---
+
+**2.** `Feature` — **AWS AppRunner Support**
+
+AppRunner services can now be provisioned and managed from the platform.
+
+Changes in: `Frontend`
+
+---
+
+**3.** `Feature` — **AWS OpenSearch Domain Management**
+
+OpenSearch domains are now available as a managed resource under Analytics.
+
+Changes in: `Frontend`
+
+---
+
+**4.** `Feature` — **Amazon MQ Resource Support**
+
+Amazon MQ brokers can be created and managed as a first-class resource type.
+
+Changes in: `Frontend`
+
+---
+
+**5.** `Feature` — **EC2 Host Image Management**
+
+Image lifecycle actions are now available directly from a host.
+- Create an AMI or a snapshot from a running host
+- Share AMIs with other accounts
+
+Changes in: `Frontend`
+
+---
+
+**6.** `Feature` — **EC2 Instance Tags Tab**
+
+A dedicated Tags tab shows and edits AWS instance tags on EC2 hosts.
+
+Changes in: `Frontend`
+
+---
+
+**7.** `Feature` — **EKS Node Group Configuration**
+
+Node group creation and management gained substantially more control.
+- Autoscaler support, including cluster-proportional autoscaling
+- Disk encryption, volume configuration, and tags
+- Custom AMI selection
+
+Changes in: `Frontend`
+
+---
+
+**8.** `Feature` — **Per-Ticket MCP Tool Approval**
+
+Approval requirements for MCP tool calls can be set on an individual ticket.
+- Override the workspace default for a single ticket
+- Streamed commands preselect the default approval action
+
+Changes in: `Frontend`
+
+---
+
+**9.** `Feature` — **PPTX and DOCX Preview in AI Studio**
+
+PowerPoint and Word documents preview inline in Chat and Files without downloading.
+
+Changes in: `Frontend`
+
+---
+
+**10.** `Enhancement` — **Navigation Layout and Visibility Controls**
+
+The left navigation was reworked, and administrators gained control over what appears in it.
+- Scrollable nav with fixed-position flyouts for long menu lists
+- Settings to hide navbar icons, the workspace selector, the AI menu, and the tenant switcher
+- Security nested under Analytics; expand/collapse toggle moved to the bottom
+
+Changes in: `Frontend`
+
+---
+
+**11.** `Feature` — **Three-Tier KMS Key Selection**
+
+Customer-managed KMS keys can be chosen across account, plan, and resource-group scope from one picker.
+- Single picker resolves keys across all three scopes
+- KMS Keys moved into its own tab rather than appearing on every tab
+
+Changes in: `Frontend`
+
+---
+
+**12.** `Enhancement` — **Resource Deletion Safeguards**
+
+Destructive actions are harder to trigger accidentally.
+- Delete removed from resource views in favour of Deprovision
+- Deprovision and Delete disabled when delete protection is enabled
+- Deprovisioning an imported network asks for confirmation
+
+Changes in: `Frontend`
+
+---
+
+**13.** `Feature` — **Network Configuration Options**
+
+Networks gained several controls at creation and edit time.
+- Custom subnet CIDRs when creating a network
+- AWS security group ingress rules
+- HelpDesk VPC peering toggle on network add/edit
+
+Changes in: `Frontend`
+
+---
+
+**14.** `Feature` — **RDS Performance Insights and io2 Storage**
+
+RDS gained deeper monitoring and a higher-performance storage tier.
+- Performance Insights for both clusters and instances
+- io2 storage type support
+
+Changes in: `Frontend`
+
+---
+
+**15.** `Enhancement` — **EFS Backup and Storage Class Improvements**
+
+EFS defaults and storage class setup were improved.
+- Automatic backups default to on in the create form
+- File System ID dropdown when configuring Storage Class parameters
+
+Changes in: `Frontend`
+
+---
+
+**16.** `Enhancement` — **Azure Private Endpoint and Scope Configuration**
+
+Azure resource configuration was refined.
+- Private Endpoint UI refactored
+- Azure token-resource multiselect on the scope form
+
+Changes in: `Frontend`
+
+---
+
+**17.** `Feature` — **Resource Group Tags and Metadata**
+
+Resource groups can carry user-defined tags and metadata.
+- User-defined tags on resource groups
+- Metadata in the add/edit form, with a dedicated tab to manage it
+
+Changes in: `Frontend`
+
+---
+
+**18.** `Feature` — **AWS Provider Session Token Support**
+
+An optional Session Token field was added to AWS provider credentials, supporting temporary credentials.
+
+Changes in: `Frontend`
+
+---
+
+**19.** `Feature` — **Claude Sonnet 5 and Opus 5 Availability**
+
+The newest Claude models can be subscribed in any region.
+
+Changes in: `Helm`
+
+---
+
+**20.** `Enhancement` — **Deployment Configuration Options**
+
+Two options were added for self-hosted installations.
+- Optional custom branding via a ConfigMap mounted into the frontend
+- JWT shared secrets auto-generated instead of requiring manual setup
+
+Changes in: `Helm`
+
+---
+
+## September 2026
+
+---
+
+**1.** `Feature` — **Open SSM Session from EC2 Hosts**
+
+An SSM session can be opened against a host directly from the EC2 Hosts view, without leaving the platform.
+
+Changes in: `Frontend`
+
+---
+
+**2.** `Feature` — **Azure VM Resource Support**
+
+Azure virtual machines are now a supported resource type.
+
+Changes in: `Frontend`
+
+---
+
+**3.** `Enhancement` — **Selection-First MCP Tool Approval**
+
+MCP tool permissions were reworked around selecting tools first.
+- Browse tools by server with per-server drill-down
+- Replaces the previous flat approval list
+
+Changes in: `Frontend`
+
+---
+
+**4.** `Feature` — **SQS Dead Letter Queue Configuration**
+
+Dead letter queues can be configured directly on the queue form.
+
+Changes in: `Frontend`
+
+---
+
+**5.** `Feature` — **RDS Subnet Group Selection**
+
+A DB subnet group can be chosen when creating an RDS instance.
+
+Changes in: `Frontend`
+
+---
+
+**6.** `Enhancement` — **Secondary Cluster Reader Management**
+
+Reader instances on secondary clusters now behave correctly.
+- Readers can be added to a secondary cluster
+- Reader instances list correctly under the DB Instance table
+- Delete is kept off a global secondary's own cluster record
+
+Changes in: `Frontend`
+
+---
+
+**7.** `Enhancement` — **Amazon MQ Version and Configuration Visibility**
+
+Amazon MQ gained a newer broker version and clearer change handling.
+- RabbitMQ 4.2 added to the version dropdown
+- Pending configuration changes surfaced in the UI
+
+Changes in: `Frontend`
+
+---
+
+**8.** `Enhancement` — **Dashboard Creation and Inspection**
+
+AI Dashboards gained multi-scope creation and definition viewing.
+- Select multiple scopes when creating a dashboard
+- View the underlying YAML definition
+
+Changes in: `Frontend`
+
+---
+
+**9.** `Enhancement` — **Ticket Creation Flexibility**
+
+Two constraints on ticket creation were relaxed.
+- Tickets can be created in a project without a spec
+- Scope selection is optional rather than required
+
+Changes in: `Frontend`
+
+---
+
+**10.** `Feature` — **Extension Data Collection in HelpDesk**
+
+HelpDesk collectors now gather extension data as part of diagnostics.
+
+Changes in: `Helm`
+
+---
+
+**11.** `Enhancement` — **Product Analytics Made Opt-In**
+
+Mixpanel product analytics now requires explicit consent rather than being on by default.
+
+Changes in: `Frontend`
+
+---
+
+**12.** `Feature` — **EKS Node Group Custom User Data**
+
+Custom User Data can be supplied on EKS node group forms for bootstrap customization.
+
+Changes in: `Frontend`
+
+---
+
+**13.** `Enhancement` — **Provider Editing via Partial Update**
+
+Editing a provider now sends a partial update instead of a full replacement, preserving fields not being changed.
+
+Changes in: `Frontend`
+
+---
+
+**14.** `Enhancement` — **Agent Memory Enabled by Default**
+
+Agent memory is now on by default rather than requiring opt-in per agent.
+
+Changes in: `Frontend`
+
+---
+
+**15.** `Enhancement` — **Environment and Cluster List Columns**
+
+New columns were added to the environment and cluster list views for at-a-glance detail.
+
+Changes in: `Frontend`
+
+---
+
+**16.** `Feature` — **ALB Target Group Request-Count Scaling**
+
+Portal users can create ALB target group request-count based scaling policies.
+
+Changes in: `Frontend`
+
+---
+
+**17.** `Enhancement` — **Kubernetes Node Discovery**
+
+Discovered Kubernetes nodes carrying a tenant instance profile now appear in the node view.
+
+Changes in: `Frontend`
+
+---
+
+**18.** `Feature` — **Azure Certificate in Plan**
+
+Azure certificates can be managed at the plan level.
+
+Changes in: `Frontend`
+
+---
+
+**19.** `Enhancement` — **Live Agent Message Timestamps**
+
+Agent messages are stamped at response completion, so timestamps reflect when the response finished rather than when it started.
+
+Changes in: `Frontend`
+
+---
+
 ## June–July 2026
 
 ---
