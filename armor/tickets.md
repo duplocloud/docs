@@ -184,6 +184,8 @@ Inside the modal you can:
 - **Add pattern for auto-approval** — any command matching the pattern is automatically approved
 - **Add pattern for auto-rejection** — any command matching the pattern is always blocked
 
+MCP tool calls have their own approval settings alongside command execution. Auto-approve and blocklist rules can be set per ticket here, overriding the workspace-level defaults configured under **AI Admin → MCP Servers** for this ticket only.
+
 ---
 
 ### Context Files
