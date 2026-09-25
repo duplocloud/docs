@@ -1,5 +1,212 @@
 # Product Updates
 
+## August 2026
+
+---
+
+**1.** `Feature` — **Angular 22 Upgrade with Runtime Extension Loading**
+
+The platform moved to Angular 22 with Native Federation, so extensions load at runtime instead of requiring a rebuild.
+- Extensions can be added and loaded without redeploying the portal
+- Faster page loads and smaller bundles across AI Studio
+- Includes a migration guide for teams with in-flight extension work
+
+Changes in: `Frontend`
+
+---
+
+**2.** `Feature` — **Per-Ticket MCP Tool Approval**
+
+Approval requirements for MCP tool calls can be set on an individual ticket.
+- Override the workspace default for a single ticket
+- Streamed commands preselect the default approval action
+
+Changes in: `Frontend`
+
+---
+
+**3.** `Feature` — **PPTX and DOCX Preview in AI Studio**
+
+PowerPoint and Word documents preview inline in Chat and Files without downloading.
+
+Changes in: `Frontend`
+
+---
+
+**4.** `Enhancement` — **Navigation Visibility Controls**
+
+Administrators can control which navigation elements users see.
+- Settings to hide navbar icons and the workspace selector
+- Configurable AI menu and tenant switcher visibility
+- Security nested under Analytics in the AI Suite and AI Admin menus
+
+Changes in: `Frontend`
+
+---
+
+**5.** `Feature` — **RDS Performance Insights**
+
+Performance Insights can be enabled on RDS clusters and instances for deeper query-level monitoring.
+
+Changes in: `Frontend`
+
+---
+
+**6.** `Feature` — **RDS io2 Storage Support**
+
+RDS instances can use io2 provisioned-IOPS storage for high-performance workloads.
+
+Changes in: `Frontend`
+
+---
+
+**7.** `Feature` — **Resource Group Tags and Metadata**
+
+Resource groups can carry user-defined tags and metadata.
+- User-defined tags on resource groups
+- Metadata in the add/edit form, with a dedicated tab to manage it
+
+Changes in: `Frontend`
+
+---
+
+**8.** `Enhancement` — **Resource Deletion Safeguards**
+
+Destructive actions are harder to trigger accidentally.
+- Delete removed from resource views in favour of Deprovision
+- Deprovision and Delete disabled when delete protection is enabled
+- Deprovisioning an imported network asks for confirmation
+
+Changes in: `Frontend`
+
+---
+
+**9.** `Feature` — **AWS Provider Session Token Support**
+
+An optional Session Token field was added to AWS provider credentials, supporting temporary credentials.
+
+Changes in: `Frontend`
+
+---
+
+**10.** `Feature` — **Extension Studio Loading and Validation**
+
+Extension management gained a load action and better validation.
+- Load Extension action in the Extension Studio UI
+- Extension name validation no longer throws on invalid input
+
+Changes in: `Frontend`
+
+---
+
+**11.** `Feature` — **Claude Sonnet 5 and Opus 5 Availability**
+
+The newest Claude models can be subscribed in any region.
+
+Changes in: `Helm`
+
+---
+
+**12.** `Enhancement` — **Deployment Configuration Options**
+
+Two options were added for self-hosted installations.
+- Optional custom branding via a ConfigMap mounted into the frontend
+- JWT shared secrets auto-generated instead of requiring manual setup
+
+Changes in: `Helm`
+
+---
+
+## September 2026
+
+---
+
+**1.** `Enhancement` — **Selection-First MCP Tool Approval**
+
+MCP tool permissions were reworked around selecting tools first.
+- Browse tools by server with per-server drill-down
+- Replaces the previous flat approval list
+
+Changes in: `Frontend`
+
+---
+
+**2.** `Feature` — **RDS Subnet Group Selection**
+
+A DB subnet group can be chosen when creating an RDS instance.
+
+Changes in: `Frontend`
+
+---
+
+**3.** `Enhancement` — **Dashboard Creation and Inspection**
+
+AI Dashboards gained multi-scope creation and definition viewing.
+- Select multiple scopes when creating a dashboard
+- View the underlying YAML definition
+
+Changes in: `Frontend`
+
+---
+
+**4.** `Enhancement` — **Ticket Creation Flexibility**
+
+Two constraints on ticket creation were relaxed.
+- Tickets can be created in a project without a spec
+- Scope selection is optional rather than required
+
+Changes in: `Frontend`
+
+---
+
+**5.** `Enhancement` — **Agent Memory Enabled by Default**
+
+Agent memory is now on by default rather than requiring opt-in per agent.
+
+Changes in: `Frontend`
+
+---
+
+**6.** `Enhancement` — **Product Analytics Made Opt-In**
+
+Mixpanel product analytics now requires explicit consent rather than being on by default.
+
+Changes in: `Frontend`
+
+---
+
+**7.** `Enhancement` — **Provider Editing via Partial Update**
+
+Editing a provider now sends a partial update instead of a full replacement, preserving fields not being changed.
+
+Changes in: `Frontend`
+
+---
+
+**8.** `Feature` — **Extension Studio Deprovisioning**
+
+Extensions can be deprovisioned from Extension Studio, alongside general Studio improvements.
+
+Changes in: `Frontend`
+
+---
+
+**9.** `Feature` — **Extension Data Collection in HelpDesk**
+
+HelpDesk collectors now gather extension data as part of diagnostics.
+
+Changes in: `Helm`
+
+---
+
+**10.** `Enhancement` — **Live Agent Message Timestamps**
+
+Agent messages are stamped at response completion, so timestamps reflect when the response finished rather than when it started.
+
+Changes in: `Frontend`
+
+---
+
 ## June–July 2026
 
 ---
