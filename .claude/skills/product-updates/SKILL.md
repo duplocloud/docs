@@ -152,12 +152,12 @@ Before writing any file, present the full list of updates **in the exact `.md` f
   - `Enhancement` = improvement to an existing capability
 - Each item: numbered, label tag, bold title, one-liner, 3 bullet points (fewer if genuinely only 2 noteworthy points), `Changes in:` line
 - `Changes in:` uses backtick labels — pick from: `` `Backend` `` `` `Frontend` `` `` `Agent` `` `` `Helm` ``
-- **15–25 items per section, with 25 as a hard ceiling** at the current roughly-monthly cadence (a section covering only part of a period can be shorter; a much shorter cadence scales down proportionally). Merge minor related commits into one item.
+- **Up to 25 items per section — a hard ceiling, with no floor.** At the current roughly-monthly cadence a full month of AI-product work has run to about 10–12 items once core-platform work is correctly excluded (see the field-level test in Step 2), so a section in that range is normal and needs no explanation. Merge minor related commits into one item.
 - **If the list exceeds 25, the bar for inclusion is too low — raise it.** Do not publish an over-length section and flag it; fix it. In order:
   1. **Cut** the items that aren't really product news — small validation tweaks, field-level additions, copy and layout adjustments, consistency passes, internal refactors surfaced in the UI. If a reader wouldn't change what they do on learning it, it doesn't earn a numbered entry.
   2. **Merge** what remains into the capability it belongs to. Several changes to one feature area are one item with bullets, not three items.
   3. Only then check the count again.
-- The range is not a target to pad toward either. Never split one capability into multiple items, or promote excluded work (bug fixes, internal changes, reverted features), just to reach 15. A genuinely quiet period produces a short section.
+- **Never pad to reach a number.** Do not split one capability across several items, and never promote excluded work (bug fixes, internal changes, reverted features, anything whose backend hasn't shipped) to make a section look fuller. A short section is a correct section when the period was quiet or most of the work was out of scope.
 - When in doubt about a borderline item, leave it out — the changelog is a highlights document, not a complete record of every merge.
 - **No technical implementation details** — this is a customer-facing document. Describe *what* changed and *why it matters*, not *how* it was built. No mention of internal class names, API endpoints, database fields, test counts, or code-level specifics.
 
@@ -210,6 +210,8 @@ Place newest first, directly after the `# Product Updates` heading.
 **If a section with that heading already exists, append into it — do not create a second one.** A run covering part of a period will often be followed by another run covering the rest; the later run adds its items to the bottom of the existing section and continues its numbering, rather than opening a duplicate heading.
 
 If the range spans more than one period, split the items into one section per period by the date the work landed.
+
+**When one run produces several sections, order those newest-first too.** The whole page reads newest-first, and that applies within a single insert as much as between inserts — a run covering August and September writes **September above August**, not in chronological order. This is easy to get wrong: the natural way to draft is oldest-first, and inserting that block at the top leaves the newest section buried underneath. Check the final heading order before committing.
 
 **3. Commit, push, and create a PR**
 
