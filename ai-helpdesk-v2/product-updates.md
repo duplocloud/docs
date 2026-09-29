@@ -1,5 +1,95 @@
 # Product Updates
 
+## September 2026
+
+---
+
+**1.** `Enhancement` — **Selection-First MCP Tool Approval**
+
+MCP tool permissions were reworked around selecting tools first.
+- Browse tools by server with per-server drill-down
+- Replaces the previous flat approval list
+
+Changes in: `Frontend`
+
+---
+
+**2.** `Feature` — **RDS Subnet Group Selection**
+
+A DB subnet group can be chosen when creating an RDS instance.
+
+Changes in: `Frontend`
+
+---
+
+**3.** `Enhancement` — **Dashboard Creation and Inspection**
+
+AI Dashboards gained multi-scope creation and definition viewing.
+- Select multiple scopes when creating a dashboard
+- View the underlying YAML definition
+
+Changes in: `Frontend`
+
+---
+
+**4.** `Enhancement` — **Ticket Creation Flexibility**
+
+Two constraints on ticket creation were relaxed.
+- Tickets can be created in a project without a spec
+- Scope selection is optional rather than required
+
+Changes in: `Frontend`
+
+---
+
+**5.** `Enhancement` — **Agent Memory Enabled by Default**
+
+Agent memory is now on by default rather than requiring opt-in per agent.
+
+Changes in: `Frontend`
+
+---
+
+**6.** `Enhancement` — **Product Analytics Made Opt-In**
+
+Mixpanel product analytics now requires explicit consent rather than being on by default.
+
+Changes in: `Frontend`
+
+---
+
+**7.** `Enhancement` — **Provider Editing via Partial Update**
+
+Editing a provider now sends a partial update instead of a full replacement, preserving fields not being changed.
+
+Changes in: `Frontend`
+
+---
+
+**8.** `Feature` — **Extension Studio Deprovisioning**
+
+Extensions can be deprovisioned from Extension Studio, alongside general Studio improvements.
+
+Changes in: `Frontend`
+
+---
+
+**9.** `Feature` — **Extension Data Collection in HelpDesk**
+
+HelpDesk collectors now gather extension data as part of diagnostics.
+
+Changes in: `Helm`
+
+---
+
+**10.** `Enhancement` — **Live Agent Message Timestamps**
+
+Agent messages are stamped at response completion, so timestamps reflect when the response finished rather than when it started.
+
+Changes in: `Frontend`
+
+---
+
 ## August 2026
 
 ---
@@ -114,96 +204,6 @@ Two options were added for self-hosted installations.
 - JWT shared secrets auto-generated instead of requiring manual setup
 
 Changes in: `Helm`
-
----
-
-## September 2026
-
----
-
-**1.** `Enhancement` — **Selection-First MCP Tool Approval**
-
-MCP tool permissions were reworked around selecting tools first.
-- Browse tools by server with per-server drill-down
-- Replaces the previous flat approval list
-
-Changes in: `Frontend`
-
----
-
-**2.** `Feature` — **RDS Subnet Group Selection**
-
-A DB subnet group can be chosen when creating an RDS instance.
-
-Changes in: `Frontend`
-
----
-
-**3.** `Enhancement` — **Dashboard Creation and Inspection**
-
-AI Dashboards gained multi-scope creation and definition viewing.
-- Select multiple scopes when creating a dashboard
-- View the underlying YAML definition
-
-Changes in: `Frontend`
-
----
-
-**4.** `Enhancement` — **Ticket Creation Flexibility**
-
-Two constraints on ticket creation were relaxed.
-- Tickets can be created in a project without a spec
-- Scope selection is optional rather than required
-
-Changes in: `Frontend`
-
----
-
-**5.** `Enhancement` — **Agent Memory Enabled by Default**
-
-Agent memory is now on by default rather than requiring opt-in per agent.
-
-Changes in: `Frontend`
-
----
-
-**6.** `Enhancement` — **Product Analytics Made Opt-In**
-
-Mixpanel product analytics now requires explicit consent rather than being on by default.
-
-Changes in: `Frontend`
-
----
-
-**7.** `Enhancement` — **Provider Editing via Partial Update**
-
-Editing a provider now sends a partial update instead of a full replacement, preserving fields not being changed.
-
-Changes in: `Frontend`
-
----
-
-**8.** `Feature` — **Extension Studio Deprovisioning**
-
-Extensions can be deprovisioned from Extension Studio, alongside general Studio improvements.
-
-Changes in: `Frontend`
-
----
-
-**9.** `Feature` — **Extension Data Collection in HelpDesk**
-
-HelpDesk collectors now gather extension data as part of diagnostics.
-
-Changes in: `Helm`
-
----
-
-**10.** `Enhancement` — **Live Agent Message Timestamps**
-
-Agent messages are stamped at response completion, so timestamps reflect when the response finished rather than when it started.
-
-Changes in: `Frontend`
 
 ---
 

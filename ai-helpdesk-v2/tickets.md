@@ -30,6 +30,7 @@ In the Canvas you can:
 * Send messages to the AI Agent
 * View the agent’s reasoning and suggestions
 * Track task progress over time
+* Preview attached documents inline — including PowerPoint (`.pptx`) and Word (`.docx`) files — without downloading them
 
 <figure><img src="../.gitbook/assets/Screenshot (911).png" alt=""><figcaption><p>Canvas in the AI HelpDesk</p></figcaption></figure>
 

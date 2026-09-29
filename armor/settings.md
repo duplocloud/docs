@@ -29,6 +29,27 @@ Click **+ Add** and fill in:
 Settings created here are platform-wide (**Global** scope). A separate **Workspace Settings** page, available within a workspace's own settings, lets you define a same-named setting scoped to just that workspace — it overrides the global value for that workspace only, the same override pattern used by [LLM Mappings](agents/llm-models.md#llm-mappings) and [Quotas](access-control/quotas.md).
 {% endhint %}
 
+### Predefined settings
+
+These appear in the **Setting** dropdown rather than needing a custom name. Anything not listed here can still be added as a **Custom Setting**.
+
+| Setting | Type | Default | What it does |
+|---|---|---|---|
+| **Hidden Menu Items** | JSON | — | Sidebar menu item ids to hide, as a YAML list. A parent disappears once all of its children are hidden. Applies on the next page reload. |
+| **Hidden Header Icons** | JSON | all shown | Navbar icons to hide, as a YAML map of icon id to flag. Recognised ids are `faults-notification-non-admin`, `trust-center`, and `help`. |
+| **Hide Single Workspace Selector** | Bool | `false` | Hides the Workspace dropdown for users who only have one workspace. |
+| **Workspace Memory Default (New Tickets)** | Bool | `true` | The starting state of the **Workspace Memory** toggle on a new ticket. |
+| **Collapse Advanced Options (Add Helpdesk Ticket)** | Bool | — | Collapses the Advanced Options section by default when creating a ticket. |
+| **Disable Product Analytics** | Bool | — | Stops asking users for analytics consent and collects nothing. Users are asked for consent by default. |
+| **Allow kubectl/kubeconfig for static-token Kubernetes scopes** | Bool | off | Enables `kubectl` and **Download kubeconfig** for scopes backed by a static, long-lived credential. Off by default, because those credentials never expire on their own. |
+| **LangFuse URL** | String | — | Base URL of the LangFuse instance embedded on the **Observability → LangFuse** page. |
+
+{% hint style="info" %}
+**Hidden Menu Items** and **Workspace Memory Default** can be set globally or per workspace; the rest are platform-wide only. A workspace value **replaces** the global one rather than merging with it.
+
+The `-non-admin` suffix on a header icon id is load-bearing: `faults-notification-non-admin` hides that icon from User-role users only, never from administrators.
+{% endhint %}
+
 ## Global Secrets
 
 Global Secrets are name/value pairs available platform-wide — distinct from [Provider](providers/README.md) credentials, which are tied to a specific cloud/tool integration. A Global Secret is just a value your agents can reference, merged in alongside any Workspace-, Project-, or Ticket-level secrets.

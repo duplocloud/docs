@@ -2,114 +2,49 @@
 
 MCP (Model Context Protocol) servers extend the AI agent with external tool capabilities. Once an MCP server is registered in DuploCloud AI Suite, agents can call its tools from any ticket that includes the server's scope.
 
-MCP servers are configured at the workspace level under **AI Admin → MCP Servers**. Two configuration methods are available: **HTTP/SSE** for standard remote MCP endpoints, and **Raw** for full control via a custom JSON config blob.
+Setting one up takes two stages:
+
+1. **Register the MCP server** under **AI Admin → MCP Servers** — its endpoint and transport, or a raw JSON config.
+2. **Create a Provider, credential, and Scope** that bind the server to a set of credentials. The Scope is what you attach to a ticket.
 
 ---
 
-## Method 1: HTTP/SSE
+## Stage 1 — Register the MCP server
 
-### Step 1 — Add MCP Server
+Navigate to **AI Admin → MCP Servers**. The page lists every registered server as a card showing its transport and endpoint, with search, a provider-type filter, and sorting.
 
-Navigate to **AI Admin → MCP Servers** and click **+ Add Server**. The **Add MCP Server** form opens. Fill in:
+![MCP Servers list](../../.gitbook/assets/mcp-server-v2-step-01-mcp-servers-list.png)
 
-- **Name** — a display name for the server (e.g. `Linear`)
-- **Description** — optional
-- **Provider Type** — optional; links the server to a provider category for organizational purposes
-- **Config Type** — select `HTTP/SSE`
-- **API Endpoint** — the MCP server's HTTP endpoint URL (e.g. `https://mcp.linear.app/mcp`)
-- **Transport** — `http` for standard HTTP or `sse` for Server-Sent Events
+Click **+ Add MCP Server**. The form opens in two sections — **Basic** and **Metadata** — tracked in the rail on the right.
 
-Click **Create**.
+![Add MCP Server, empty](../../.gitbook/assets/mcp-server-v2-step-02-add-server-empty.png)
 
-![](<../../.gitbook/assets/mcp-server-step-01.png>)
+Fill in the **Basic** section:
 
-### Step 2 — Server Added
+* **Name** — a display name for the server
+* **Description** _(optional)_
+* **Provider Type** _(optional)_ — links the server to a provider category for organizational purposes
+* **Config Type** — **HTTP/SSE** for a standard remote endpoint, or **Raw** to supply a full JSON config
+* **API Endpoint** — the MCP server's HTTP endpoint URL
+* **Transport** — `http` for standard HTTP, or `sse` for Server-Sent Events
 
-A success banner confirms the server was saved. The MCP Servers page shows the new server as a card with its endpoint URL. It is now available to be linked to any scope across all workspaces.
+![Add MCP Server, filled in](../../.gitbook/assets/mcp-server-v2-step-03-add-server-filled.png)
 
-![](<../../.gitbook/assets/mcp-server-step-02.png>)
+Click **Next** for the optional **Metadata** section, where you can attach arbitrary key/value pairs to the server.
 
-### Step 3 — Navigate to Providers
+![Metadata section](../../.gitbook/assets/mcp-server-v2-step-04-add-server-metadata.png)
 
-To make the MCP server accessible to an agent you need a **Provider** with credentials and a **Scope** that links both. Navigate to **AI Admin → Providers** and select the relevant category tab (e.g. **Other** for tools like Linear).
+Click **Create**. The new server appears in the list and is available to be linked to a Scope.
 
-![](<../../.gitbook/assets/mcp-server-step-03.png>)
+![Server created](../../.gitbook/assets/mcp-server-v2-step-05-server-created.png)
 
-### Step 4 — Create Provider
+### Using a raw JSON config instead
 
-Click **+ Add**. Fill in the **Add Provider** form:
+Selecting **Config Type → Raw** replaces the endpoint and transport fields with a **Raw Config** editor, for servers that need a full configuration block rather than a single URL — for example a command-launched server.
 
-- **Name** — a name for this provider (e.g. `Linear`)
-- **Description** — optional
-- **Type** — the provider category (e.g. `Other`)
-- **Account ID** — an identifier for the provider account; can be any string if not required for routing
+![Config Type set to Raw](../../.gitbook/assets/mcp-server-v2-step-06-add-server-raw-config.png)
 
-Click **Create Provider**.
-
-![](<../../.gitbook/assets/mcp-server-step-04.png>)
-
-### Step 5 — Provider Created
-
-The provider detail page opens with the **Credentials** tab (empty) and **Scope** tab. The right panel confirms the category, type, and account ID.
-
-![](<../../.gitbook/assets/mcp-server-step-05.png>)
-
-### Step 6 — Add Credential
-
-Click **+ Add** on the Credentials tab. The **Add Credential** modal opens. Fill in:
-
-- **Name** — the credential set name (e.g. `Linear-credentials`)
-- **Credential Fields** — one or more key/value pairs for the secrets this provider requires:
-  - **Key** — the field name (e.g. `LINEAR_API_KEY`)
-  - **Value** — the actual secret value
-  - **Type** — `String` for most secrets
-  - **Sensitive** — toggle on to store the value encrypted and mask it in the UI
-
-Click **Create**.
-
-![](<../../.gitbook/assets/mcp-server-step-06.png>)
-
-### Step 7 — Add Scope
-
-Click **+ Add** on the **Scope** tab. The **Add Scope** modal opens. Fill in:
-
-- **Name** — the scope name used when creating tickets (e.g. `Linear-Test-MCP`)
-- **Credential** — select the credential set created in the previous step
-- **MCP Server** — select the MCP server to link (e.g. `Linear`)
-- **Resource Map** — optional key/value pairs for additional context passed to the agent
-
-Click **Create**.
-
-![](<../../.gitbook/assets/mcp-server-step-07.png>)
-
-### Step 8 — Agent Using the MCP Server
-
-With the scope configured, create a ticket and select the scope (e.g. `Linear-Test-MCP`). The agent automatically has access to the Linear MCP tools. When prompted it calls the relevant tool — here `mcp__Linear__list_issues` — using the credentials bound to the scope.
-
-![](<../../.gitbook/assets/mcp-server-step-08.png>)
-
-### Step 9 — Agent Response
-
-The agent returns structured data from the MCP tool. In this example it lists all 13 issues across the Linear workspace with their ID, title, status, priority, and team.
-
-![](<../../.gitbook/assets/mcp-server-step-09.png>)
-
----
-
-## Method 2: Raw JSON
-
-The Raw config type gives full control over the MCP server configuration as a JSON blob. This method supports **credential placeholders** so secrets and per-environment values are resolved at runtime rather than being stored inline in the config. See [Credential Placeholders](credential-masking-for-mcp-servers.md) for the full reference.
-
-### Step 1 — Add MCP Server with Raw Config
-
-Navigate to **AI Admin → MCP Servers** and click **+ Add Server**. Fill in:
-
-- **Name** — e.g. `Grafana`
-- **Provider Type** — optional; select the relevant category (e.g. `OpenTelemetry`)
-- **Config Type** — select `Raw`
-- **Raw Config** — paste the full MCP server JSON. Use `${credential.<key>}` placeholders for any values that should be resolved from the scope's bound credentials at runtime.
-
-For example:
+Raw configs support **credential placeholders**, so secrets and per-environment values are resolved at runtime rather than stored inline. Use `${credential.<key>}` for any value that should come from the Scope's bound credentials:
 
 ```json
 {
@@ -126,70 +61,99 @@ For example:
 }
 ```
 
-Click **Create**.
+See [Credential Placeholders](credential-masking-for-mcp-servers.md) for the full reference.
 
-![](<../../.gitbook/assets/mcp-server-step-10.png>)
+{% hint style="info" %}
+Placeholder keys are case-sensitive and must match the credential field names exactly — `${credential.token}` resolves a credential field named `token`, not `Token` or `TOKEN`.
+{% endhint %}
 
-### Step 2 — Navigate to Providers
+---
 
-Navigate to **AI Admin → Providers** and select the category tab matching your server's provider type (e.g. **Observability** for Grafana).
+## Stage 2 — Create the Provider, credential, and Scope
 
-![](<../../.gitbook/assets/mcp-server-step-11.png>)
+A **Provider** holds the credentials, and a **Scope** binds those credentials to the MCP server. Both are created in a single flow.
 
-### Step 3 — Create Provider
+Navigate to **AI Admin → Providers**, select the tab matching your server's category (for example **Other** for a generic tool, or **Observability** for Grafana), and click **+ Add Provider**.
 
-Click **+ Add**. Fill in the **Add Provider** form:
+The page walks through three sections in order — **Provider Details**, **Credentials**, and **Scope** — shown in the rail on the right.
 
-- **Name** — e.g. `Grafana`
-- **Type** — e.g. `OpenTelemetry`
-- **Account ID** — an identifier for the account (e.g. `grafana.com`)
+![Add Provider, Provider Details empty](../../.gitbook/assets/mcp-server-v2-step-07-provider-step1-empty.png)
 
-Click **Next** to proceed directly to the Credentials step, or **Create** to save and configure credentials separately.
+### Provider Details
 
-![](<../../.gitbook/assets/mcp-server-step-12.png>)
+* **Name** — a name for this provider
+* **Description** _(optional)_
+* **Type** — the provider category
+* **Account ID** — an identifier for the provider account; any string works if it isn't needed for routing
+* **Metadata** _(optional)_ — key/value pairs
 
-### Step 4 — Add Credentials
+![Provider Details filled in](../../.gitbook/assets/mcp-server-v2-step-08-provider-step1-filled.png)
 
-The **Credentials** step configures the secrets that will be injected into the Raw Config placeholders. Fill in:
+Click **Next**.
 
-- **Name** — the credential set name (e.g. `default`)
-- **Credential Fields** — add one field per placeholder key used in the Raw Config. The field names must **exactly match** the placeholder keys — case-sensitive:
-  - `token` → resolves `${credential.token}`
-  - `url` → resolves `${credential.url}`
+### Credentials
 
-Mark sensitive fields (like tokens and passwords) as **Sensitive** to store them encrypted.
+Give the credential set a **Name**. The fields below it depend on the provider **Type** you chose — an AWS provider asks for a credential type and access keys, a Kubernetes provider asks for a token or role, and a generic provider takes key/value pairs.
 
-Click **Create** then **Next**.
+![Credentials section](../../.gitbook/assets/mcp-server-v2-step-09-provider-step2-credentials.png)
 
-![](<../../.gitbook/assets/mcp-server-step-13.png>)
+For a raw-config MCP server, add one credential field per `${credential.*}` placeholder used in the config, matching the placeholder keys exactly.
 
-### Step 5 — Create Scope
+![Credentials filled in](../../.gitbook/assets/mcp-server-v2-step-10-provider-step2-filled.png)
 
-The **Scope** step links the credential set to the MCP server. Fill in:
+Click **Next**. You can also **Skip** this section and add credentials later from the provider's detail page.
 
-- **Name** — e.g. `Grafana-MCP`
-- **Credential** — pre-filled with the credential created in the previous step
-- **MCP Server** — select the Raw MCP server (e.g. `Grafana`)
-- **Resource Map** — optional
+### Scope
 
-Click **Create**.
+The Scope is what ties everything together and what you select when creating a ticket.
 
-![](<../../.gitbook/assets/mcp-server-step-14.png>)
+* **Name** — the scope name shown in the ticket form
+* **Description** _(optional)_
+* **MCP Server** — select the server registered in Stage 1
+* **Resource Map** _(optional)_ — **Key** plus one or more **Values**, passed to the agent as additional context
 
-### Step 6 — Provider Ready
+![Scope section](../../.gitbook/assets/mcp-server-v2-step-11-provider-step3-scope.png)
 
-The Providers list now shows the Grafana provider alongside other observability providers.
+The credential created in the previous section is carried forward automatically and shown read-only.
 
-![](<../../.gitbook/assets/mcp-server-step-15.png>)
+![Scope filled in](../../.gitbook/assets/mcp-server-v2-step-12-provider-step3-filled.png)
 
-### Step 7 — Agent Using the MCP Server
+Click **Create**. A confirmation appears, followed by an **Attach Scope to Workspaces** prompt — select the workspaces that should have access to this scope, or **Skip** to attach them later.
 
-Create a ticket with the `Grafana-MCP` scope. Before the session starts, the platform resolves all `${credential.*}` placeholders in the Raw Config using the bound credentials, then writes the resolved `.mcp.json` for the agent. The agent calls Grafana MCP tools transparently.
+![Provider created, attach scope to workspaces](../../.gitbook/assets/mcp-server-v2-step-13-provider-created.png)
 
-![](<../../.gitbook/assets/mcp-server-step-16.png>)
+---
 
-### Step 8 — Agent Response
+## Using the MCP server from a ticket
 
-The agent returns live data from Grafana via the MCP tool. In this example it lists all 38 Grafana dashboards found in the workspace.
+With the Scope configured, create a ticket and select that scope. The agent then has access to the server's tools for the life of that ticket, using the credentials bound to the scope — tools are named `mcp__<server>__<tool>`.
 
-![](<../../.gitbook/assets/mcp-server-step-17.png>)
+For a raw-config server, the platform resolves every `${credential.*}` placeholder from the bound credentials before the session starts, writes the resolved `.mcp.json` for the agent, and the agent calls the server's tools transparently. Secrets are never written into the stored config.
+
+### Controlling which tools the agent may call
+
+By default the agent asks before running any MCP tool. Each ticket's **Details** panel has an **MCP Tool Permissions** entry for changing that.
+
+![MCP Tool Permissions in the ticket Details panel](../../.gitbook/assets/mcp-tool-permissions-step-06-details-mcp-entry.png)
+
+It opens the **MCP Tool Approval Settings** dialog:
+
+![MCP Tool Approval Settings](../../.gitbook/assets/mcp-tool-permissions-step-07-mcp-modal-default.png)
+
+* **Approve All** / **Reject All** — blanket rules for every tool on every server
+* **Auto-approve these MCP servers** — every tool on a selected server runs without asking
+* **Auto-reject these MCP servers** — every tool on a selected server is refused without asking
+
+The server pickers list only the servers reachable from that ticket's scopes.
+
+![Selecting a server to auto-approve](../../.gitbook/assets/mcp-tool-permissions-step-08-approve-picker-open.png)
+
+For anything narrower than a whole server, expand **Advanced — edit raw patterns**. Patterns are regular expressions matched end to end against the full tool name, which always looks like `mcp__<server>__<tool>`; the `mcp__` prefix is required.
+
+![Advanced raw patterns](../../.gitbook/assets/mcp-tool-permissions-step-09-advanced-raw-patterns.png)
+
+{% hint style="warning" %}
+Rejection wins over approval — if a tool is covered by both an approval and a rejection rule, it is rejected.
+{% endhint %}
+
+These settings apply to the one ticket, overriding the workspace defaults for that conversation only.

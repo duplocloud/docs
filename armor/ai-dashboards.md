@@ -19,13 +19,13 @@ When building a template, the agent uses the built-in **Dashboarding skill** to 
 
 ## Viewing Dashboards
 
-Dashboards are accessible from the **Observability**, **Security**, or **Cost** sections in the left sidebar, depending on the category the dashboard belongs to. Navigate to the relevant section and select **Dashboards**. Each published and instantiated dashboard appears as a tab at the top of the page, letting you switch between dashboards for different environments or use cases at a glance.
+Dashboards are accessible under **Analytics** in the left sidebar, grouped by category — **Observability**, **Security**, or **Cost** — depending on which category the dashboard belongs to. Navigate to the relevant category and select **Dashboards**. Each published and instantiated dashboard appears as a tab at the top of the page, letting you switch between dashboards for different environments or use cases at a glance.
 
 ![Dashboards overview](../.gitbook/assets/dashboards-step-02.png)
 
 ## Dashboard Templates
 
-Templates define the panel structure, filters, and data-fetching script for a dashboard. Navigate to **Observability > Dashboard Templates** to see all available templates.
+Templates define the panel structure, filters, and data-fetching script for a dashboard. Navigate to **Analytics → Observability → Dashboard Templates** to see all available templates.
 
 ![Dashboard Templates list](../.gitbook/assets/dashboards-step-03.png)
 
@@ -103,18 +103,33 @@ Open the template detail page and click **Create Dashboard**.
 
 ![Template detail — Create Dashboard button](../.gitbook/assets/dashboards-step-28.png)
 
-In the **Create Dashboard** modal, provide a name for this dashboard instance, select the scope you want to connect (a cloud account, cluster, or other environment), and configure any filters such as date range. Click **Create Dashboard**.
+In the **Create Dashboard** modal, provide a name for this dashboard instance and select the **Scopes** you want to connect — a cloud account, cluster, or other environment. Scope selection accepts more than one, so a single dashboard can draw on several sources at once, and is optional if the template's panels don't need credentials. Configure any filters such as date range, then click **Create Dashboard**.
 
 ![Create Dashboard modal — filled](../.gitbook/assets/dashboards-step-30.png)
 
-The dashboard is instantiated and appears as a new tab on the Dashboards page, automatically populated with live data from the selected scope.
+The dashboard is instantiated and appears as a new tab on the Dashboards page, automatically populated with live data from the selected scopes.
 
 ![New dashboard tab with live data](../.gitbook/assets/dashboards-step-32.png)
 
 ## Reusing a Template Across Multiple Scopes
 
-Because the template and its fetch script are reusable, you can create as many dashboard instances as you need by repeating the **Create Dashboard** step and selecting a different scope each time. Each instance displays the same panel structure populated with data from its own environment — for example, one tab for a development environment and another for production — without any additional agent work.
+Because the template and its fetch script are reusable, one template can back as many dashboards as you need without any additional agent work. There are two ways to combine scopes:
+
+* **Several scopes on one dashboard** — select multiple scopes when creating the instance. The panels draw on all of them together, which suits an aggregate view across accounts or clusters.
+* **One dashboard per scope** — repeat the **Create Dashboard** step, selecting a different scope each time. Each instance shows the same panel structure populated from its own environment, for example one tab for development and another for production.
 
 ![Multiple dashboards from the same template](../.gitbook/assets/dashboards-step-37.png)
 
 This makes Dashboard Templates a scalable building block: define the structure once and connect it to as many environments as your organization needs.
+
+## Inspecting a Template's Definition
+
+Everything a template holds — its filters, system prompt, panel layout, and the metric definitions behind each panel — is stored as a structured document you can read directly. Open the template and click **View YAML**.
+
+![Template detail page](../.gitbook/assets/dashboards-v2-template-detail.png)
+
+The dialog shows the full saved definition, with a **YAML** / **JSON** toggle and buttons to copy or download it.
+
+![View YAML dialog](../.gitbook/assets/dashboards-v2-view-yaml.png)
+
+This is useful for reviewing exactly what the agent generated, for copying a panel definition between templates, or for keeping a copy of a template's structure outside the platform. Individual panels also have their own **Edit YAML** action for changing one panel without regenerating the whole template.
