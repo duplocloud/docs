@@ -96,7 +96,7 @@ These must be provided for every installation regardless of cloud provider.
 | `config.authFrontendBaseUrl` | Public URL where the app is hosted, e.g. `https://ai-helpdesk.yourcompany.com`. Also used to build OAuth redirect URIs and as the host for the main ingress rule. |
 | `config.authAllowedOrigins`  | Comma-separated list of origins allowed by CORS — typically the same value as `authFrontendBaseUrl`.                                                              |
 | `config.authSuperUsers`      | Comma-separated list of email addresses granted super-admin access.                                                                                               |
-| `secrets.jwtSharedSecret`    | Random secret used to sign internal JWTs. Generate with `openssl rand -base64 48`.                                                                                |
+| `secrets.jwtSharedSecret`    | Only required when using `secrets.existingSecret`. Otherwise auto-generated — see [Authentication and secrets](helm-chart-configuration.md#authentication-and-secrets-secrets).                                                                                |
 | `mongodb.auth.rootPassword`  | MongoDB root password (required when the embedded MongoDB is enabled).                                                                                            |
 
 {% hint style="warning" %}
@@ -135,7 +135,7 @@ To manage credentials outside the chart, set `secrets.existingSecret` to the nam
 
 | Key                               | Description                                                                                          |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `secrets.jwtSharedSecret`         | **Required.** Random secret for internal JWT signing.                                                |
+| `secrets.jwtSharedSecret`         | Random secret for internal JWT signing. Auto-generated when empty and reused across upgrades, so existing tokens stay valid. Must be supplied yourself when `secrets.existingSecret` is set, since the chart never manages that Secret's contents. |
 | `secrets.encryptionMasterKey`     | 96-byte base64 master key for field-level encryption. Auto-generated when empty (see warning above). |
 | `secrets.mongoDbConnectionString` | External MongoDB connection string. Used **only** when `mongodb.enabled=false`.                      |
 | `secrets.existingSecret`          | Name of a pre-existing Secret to use instead of creating one.                                        |
@@ -444,6 +444,32 @@ Common per-component keys: `replicaCount`, `resources.{requests,limits}.{cpu,mem
 {% hint style="info" %}
 **Node placement.** On clusters where component pods must land on specific nodes (for example, a DuploCloud tenant), set the global `nodeSelector` (e.g. `{ kubernetes.io/os: linux, tenantname: <namespace> }`). Per-component `nodeSelector` values merge on top of the global one, with the component value winning.
 {% endhint %}
+
+### Custom UI branding
+
+The frontend can serve a branding `config.json` that overrides logos, favicons, title text, and stylesheets. Disabled by default — the UI falls back to its built-in branding.
+
+| Key                             | Default | Description                                                     |
+| ------------------------------- | ------- | --------------------------------------------------------------- |
+| `frontend.customConfig.enabled` | `false` | Serve custom branding at `/custom-config/config.json`.          |
+| `frontend.customConfig.config`  | `{}`    | Branding JSON, rendered verbatim.                               |
+
+```yaml
+frontend:
+  customConfig:
+    enabled: true
+    config:
+      images:
+        headerLogoImage: https://cdn.example.com/header-logo.svg
+        favicons:
+          mainIcon: https://cdn.example.com/favicon.ico
+      text:
+        brandtitle: AcmeAI
+      styleUrls:
+        - https://cdn.example.com/theme-custom.css
+```
+
+Binary assets — logos, favicons, CSS — are referenced by absolute URL from external HTTPS storage such as S3 or CloudFront, not bundled into the chart. The ConfigMap is mounted read-only as a directory, so edits propagate without restarting the pod.
 
 ***
 

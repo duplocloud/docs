@@ -35,6 +35,10 @@ Providers represent the access you provide to your IT systems - including cloud 
 
 <figure><img src="../../../.gitbook/assets/Provider 4.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="info" %}
+AWS credentials accept an optional **Session Token** alongside the access key and secret. Supply it when using temporary STS credentials; leave it blank for long-lived IAM user keys.
+{% endhint %}
+
 7. Click **Scope** and then **Add Scope**. Give the Scope a suitable name and description, select one of the added credentials and (optionally) select an MCP Server. Enter the resource map in **Key:Value** format.
 8. Click **Create**.
 
