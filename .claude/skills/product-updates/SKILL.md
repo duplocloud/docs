@@ -287,7 +287,25 @@ Batch the drafts into one message where several pages are small, but keep each p
 For each page written:
 - Add the cross-link from the changelog entry in `ai-helpdesk-v2/product-updates.md` to the new/updated page, matching the existing link style.
 - If a new page is added, update `SUMMARY.md` to place it in the nav under the right parent.
-- If a new sub-page needs to nest under a currently-flat section, convert the section first (`git mv armor/x.md armor/x/README.md`) and fix that file's image paths for the new depth — see §17 of the Playwright skill, which documents this repo's unusual "one extra `../`" convention.
+- If a new sub-page needs to nest under a currently-flat section, convert the section first (`git mv armor/x.md armor/x/README.md`) and fix that file's image paths for the new depth (one more `../` than before). Follow the image-path rule below, not §17 of the Playwright skill — its "one extra `../`" convention is wrong for this repo.
+
+**Image-path depth rule (applies to every page you write or edit, text-only or screenshot).** A file N directories below the repo root reaches `.gitbook/assets/` with exactly N × `../` — `armor/x.md` → `../.gitbook/assets/`, `armor/sub/x.md` → `../../.gitbook/assets/`. Work this out from the file's own path; never copy the prefix from a sibling or existing page, because several pages here have carried an extra `../` that breaks the IDE preview (fixed in Sep 2026, but don't assume every page is clean). Before committing, check that every `.gitbook/assets/` reference in the changed pages resolves to an existing file:
+
+```bash
+python3 - <<'PY'
+import os,re,subprocess
+from urllib.parse import unquote
+pats=[r'src="([^"]*\.gitbook/assets/[^"]+)"', r'\]\(<([^>]*\.gitbook/assets/[^>]+)>\)', r'\]\(([^)<\s]*\.gitbook/assets/[^)\s]+)\)']
+for p in subprocess.run(['git','diff','--name-only','HEAD','--','*.md'],capture_output=True,text=True).stdout.split():
+    s=open(p).read(); d=p.count('/')
+    for pt in pats:
+        for r in re.findall(pt,s):
+            if r.split('.gitbook')[0].count('../')!=d: print('WRONG DEPTH',p,r)
+            elif not os.path.exists(unquote(os.path.normpath(os.path.join(os.path.dirname(p),r)))): print('MISSING',p,r)
+PY
+```
+
+No output means every image resolves. Fix anything it reports before committing.
 
 ### Step 4c — Updates that need screenshots
 
@@ -299,7 +317,7 @@ Work through screenshot items **one feature at a time**, not in parallel — eac
 
 For each:
 1. Read the Playwright skill first and follow it as written. The parts that matter most here: probe before writing the full test (§1), the interactive review loop showing each PNG for approval (§1), present the script before running anything that creates or modifies real data (§12), and the sensitivity review before publishing any screenshot of real content (§15).
-2. Draft in `Playwright-Documentation/Docs/<section>/` as that skill directs, then move the approved page into this repo following its §17 checklist (file layout, image-path depth, `SUMMARY.md`, copying only the referenced assets).
+2. Draft in `Playwright-Documentation/Docs/<section>/` as that skill directs, then move the approved page into this repo following its §17 checklist (file layout, `SUMMARY.md`, copying only the referenced assets) — but set image-path depth by the rule in Step 4b, not §17's convention.
 3. Cross-link the changelog entry to the finished page, same as 4b.
 
 If the live product isn't reachable, or a capture session can't be completed now, do not fake it or write the page without the screenshots. Report which items are still outstanding and leave them for a follow-up run — a text page that promises screenshots it doesn't have is worse than a deferred item.
