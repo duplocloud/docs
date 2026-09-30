@@ -23,7 +23,7 @@ Go to **AI Admin → Extensions**. The page has two tabs: **Installed Extensions
 
 Summary tiles across the top show how many extensions are installed, how many API resources they contribute, how many need attention, and when the set last changed. The table below lists each one with its extension id, version, status, resource count, the menus it adds, and whether it is tracked in source control.
 
-![Installed Extensions](../../.gitbook/assets/extensions-registry-step-01-registry-installed.png)
+![Installed Extensions](../.gitbook/assets/extensions-registry-step-01-registry-installed.png)
 
 Use the **All statuses / Active / Disabled / Failed** filters to narrow the list — **Failed** is the one to check when an extension's resources or menus aren't appearing.
 
@@ -31,7 +31,7 @@ Use the **All statuses / Active / Disabled / Failed** filters to narrow the list
 
 The **Extension Library** tab is the catalog of extensions available to install. Each entry shows its category, a short description, and whether it is **Available** or already **Installed**.
 
-![Extension Library](../../.gitbook/assets/extensions-registry-step-02-extension-library.png)
+![Extension Library](../.gitbook/assets/extensions-registry-step-02-extension-library.png)
 
 Click **Install** to add one, **Details** to read more first, or the link icon to open its source repository on GitHub. Versions come from the source repository's releases, so you can install a specific version rather than only the latest. **Refresh** re-reads the catalog.
 
@@ -39,7 +39,7 @@ Click **Install** to add one, **Details** to read more first, or the link icon t
 
 Opening an installed extension shows what it actually contributes to the platform.
 
-![Extension detail](../../.gitbook/assets/extensions-registry-step-03-catalog-entry-detail.png)
+![Extension detail](../.gitbook/assets/extensions-registry-step-03-catalog-entry-detail.png)
 
 The header carries its status, extension id, version, and last-updated time. Below that:
 
@@ -57,7 +57,7 @@ The **Actions** menu on the detail page lets you **Disable** an extension withou
 
 If an extension isn't in the catalog, click **Register** and upload its `extension.zip`.
 
-![Register extension](../../.gitbook/assets/extensions-registry-step-04-register-modal.png)
+![Register extension](../.gitbook/assets/extensions-registry-step-04-register-modal.png)
 
 Extensions registered this way show **Not tracked** under Source Control, since there's no repository behind them.
 

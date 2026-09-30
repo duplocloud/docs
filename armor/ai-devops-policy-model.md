@@ -16,7 +16,7 @@ Users are granted access to specific workspaces and can accomplish their tasks w
 
 
 
-<figure><picture><source srcset="../../.gitbook/assets/Policy_Model_Dark_V2.png" media="(prefers-color-scheme: dark)"><img src="../../.gitbook/assets/duplocloud-diagram-2-light (1).png" alt=""></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../.gitbook/assets/Policy_Model_Dark_V2.png" media="(prefers-color-scheme: dark)"><img src="../.gitbook/assets/duplocloud-diagram-2-light (1).png" alt=""></picture><figcaption></figcaption></figure>
 
 ## Core Concepts
 
