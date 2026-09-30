@@ -1,6 +1,8 @@
 # Linear
 
-This guide walks through connecting Linear to DuploCloud by registering the Linear MCP server, adding a provider, configuring credentials with your Linear API key, creating a scope, and querying Linear data through the AI agent.
+This guide walks through connecting Linear to DuploCloud — registering the Linear MCP server, creating a provider with your Linear API key, and querying Linear data through the AI agent.
+
+It covers the Linear-specific values you need. For the general mechanics of MCP servers, providers, credentials and scopes, see [MCP Servers](../../armor/mcp-servers/README.md).
 
 ***
 
@@ -18,84 +20,66 @@ Navigate to **Security & access** in the left sidebar. Scroll down to the **Pers
 
 ## Step 2 — Register the Linear MCP Server
 
-In DuploCloud, go to **AI Admin** → **MCP Servers** and click **+ Add Server**.
+In DuploCloud, go to **AI Admin → MCP Servers** and click **+ Add MCP Server**.
 
 ![MCP Servers list](../../.gitbook/assets/duplocloud-linear-step-01.png)
 
-Fill in the MCP server details:
+Fill in the **Basic** section:
 
 * **Name** — e.g. `Linear`
-* **Provider Type** — select **Other**, then type `other` in the **Specify Provider Type** field
+* **Provider Type** — select **Other**
+* **Config Type** — **HTTP/SSE**
 * **API Endpoint** — `https://mcp.linear.app/mcp`
+* **Transport** — `http`
 
 ![Add MCP Server form](../../.gitbook/assets/duplocloud-linear-step-02.png)
 
-Click **Create**.
+Click **Create**. (The **Metadata** section is optional — see [Registering an MCP server](../../armor/mcp-servers/README.md#stage-1-register-the-mcp-server).)
 
 ***
 
-## Step 3 — Add a Linear Provider
+## Step 3 — Create the Provider, Credential and Scope
 
-Go to **AI Admin** → **Providers** → **IT** and click the **Other** tab.
+Go to **AI Admin → Providers**, select the **Other** tab, and click **+ Add Provider**. The page walks through three sections in order — Provider Details, Credentials, and Scope — described in full under [Create the Provider, credential, and Scope](../../armor/mcp-servers/README.md#stage-2-create-the-provider-credential-and-scope).
 
-![Other providers list](../../.gitbook/assets/mcp-server-step-03.png)
+Use these values for Linear:
 
-Click **+ Add** and fill in:
+**Provider Details**
 
 * **Name** — e.g. `Linear`
-* **Type** — select **Other**
-* **Account ID** — any identifying label; Linear does not require a specific account ID so this field can be set to any value
+* **Type** — **Other**
+* **Account ID** — any identifying label; Linear does not require a specific account ID
 
-![Add Provider form](../../.gitbook/assets/mcp-server-step-04.png)
-
-Click **Create Provider**.
-
-***
-
-## Step 4 — Add Credentials
-
-The new provider opens on the **Credentials** tab. Click **+ Add** and fill in:
+**Credentials**
 
 * **Name** — e.g. `Linear-credentials`
-* **Key** — `LINEAR_API_KEY` (this is the only accepted key name for Linear credentials)
-* **Value** — paste the API key copied from Linear in Step 1
-* **Sensitive** — toggle on to store the key securely
+* **Key** — `LINEAR_API_KEY` (the only accepted key name for Linear credentials)
+* **Value** — the API key copied from Linear in Step 1
 
-![Add Credential form](../../.gitbook/assets/mcp-server-step-06.png)
-
-Click **Create**.
-
-***
-
-## Step 5 — Add a Scope
-
-Switch to the **Scope** tab and click **+ Add**. Fill in:
+**Scope**
 
 * **Name** — e.g. `Linear-Test-MCP`
-* **Credential** — select the credential created in Step 4
-* **MCP Server** — select the Linear MCP server registered in Step 2
+* **MCP Server** — the Linear server registered in Step 2
 * **Resource Map** — add two keys:
-  * `Authorization` → your Linear API key value (note: the key name is case-sensitive — use `Authorization` exactly as written)
+  * `Authorization` → your Linear API key value. The key name is case-sensitive; use `Authorization` exactly as written
   * `type` → `http`
 
-![Add Scope form](../../.gitbook/assets/mcp-server-step-07.png)
-
-Click **Create**.
+The credential created in the previous section is carried forward automatically. Click **Create**, then choose which workspaces the scope should be available to.
 
 ***
 
-## Step 6 — Use Linear in a Ticket
+## Step 4 — Use Linear in a Ticket
 
-Go to **AI DevOps** → **HelpDesk** → **Add Ticket**. Select **generic-agent** and choose your Linear scope from the scope dropdown.
+Go to **AI DevOps → HelpDesk → Add Ticket** and select your Linear scope from **Select Scopes**.
 
 ![Selecting the Linear scope in a ticket](../../.gitbook/assets/duplocloud-linear-step-08.png)
 
-Enter your request — for example, asking the agent to list your issues.
+Describe what you want — for example, asking the agent to list your issues.
 
 ![Ticket with Linear prompt entered](../../.gitbook/assets/duplocloud-linear-step-09.png)
 
-Click **Create Ticket**. The agent connects to Linear via the MCP server and returns the results.
+Submit the ticket. The agent connects to Linear through the MCP server and returns the results, calling tools named `mcp__Linear__<tool>` using the credentials bound to the scope.
 
-![Agent querying Linear issues](../../.gitbook/assets/mcp-server-step-08.png)
-
-![Linear issues listed by the agent](../../.gitbook/assets/mcp-server-step-09.png)
+{% hint style="info" %}
+By default the agent asks before running any MCP tool. To let Linear's tools run without prompting on a given ticket, set that under **MCP Tool Permissions** in the ticket's Details panel — see [Controlling which tools the agent may call](../../armor/mcp-servers/README.md#controlling-which-tools-the-agent-may-call).
+{% endhint %}
