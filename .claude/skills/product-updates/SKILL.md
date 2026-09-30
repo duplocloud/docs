@@ -273,6 +273,8 @@ Then present the full audit to the user as a table, and wait for approval before
 
 State the reasoning for every "No", and for every "Yes" say whether it's a new page or an edit to an existing one. The user may reclassify any row — a "No" can become a "Yes", and a screenshot call can go either way. Respect the reclassification rather than re-arguing it.
 
+**When the audit spans more than a handful of pages, keep a temporary tracker file** (e.g. `/tmp/<repo>-<audit-name>-pages.md`) listing every page with a `[ ]`/`[~]`/`[x]`/`[-]` checkbox, its embed/change count, and any open question specific to that page (a hold, a stale-text flag, a security note). Update its checkbox the moment a page's commit lands — don't batch the updates for later. This is what let A1 resume cleanly across sessions; without it, "which pages are left" has to be re-derived from scratch each time.
+
 ### Step 4b — Text-only updates (no screenshots)
 
 Handle these first — they're self-contained and don't need a browser.
