@@ -151,6 +151,7 @@
   * [Helm Chart Configuration](getting-started/installation/helm-chart-configuration.md)
   * [AI DevOps V1 to V2 Upgrade](getting-started/installation/v1-to-v2-upgrade.md)
   * [Slack Bot Installation](getting-started/installation/slackbot-installation.md)
+  * [Systems Integrator Installation Guide](getting-started/installation/systems-integrator-installation-guide.md)
 * [Integrating Providers](getting-started/integrating-providers/README.md)
   * [Amazon Web Services (AWS)](getting-started/integrating-providers/amazon-web-services-aws.md)
   * [Microsoft Azure](getting-started/integrating-providers/microsoft-azure.md)
