@@ -30,8 +30,8 @@ Replace every value in angle brackets, such as `<ADMIN_EMAIL>`, before applying 
 
 ## Obtain from DuploCloud before you begin
 
-* The Helm chart version to install. The latest tested release at the time of writing is `0.2.22`.
-* A **license token**. The backend refuses to start without a valid license — see [1.12 License token](systems-integrator-installation-guide.md#id-1.12-license-token).
+* The Helm chart version to install.
+* A **license token**. Without one the platform starts in a fail-closed state — see [1.12 License token](systems-integrator-installation-guide.md#id-1.12-license-token).
 * Access to the chart registry if your network restricts outbound access to `quay.io`.
 
 ```bash
@@ -54,10 +54,10 @@ Everything in this section must be in place **before** running `helm install`. T
 | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Distribution     | Any conformant Kubernetes distribution — managed (EKS, AKS, GKE) or self-managed (cloud VMs or on-premises)       |
 | Version          | 1.26 or later (tested through 1.36)                                                                               |
-| Architecture     | `amd64` nodes only (chart 0.2.x; multi-architecture images planned for 0.3.0+)                                    |
+| Architecture     | `amd64` (x86-64) nodes                                                                                            |
 | Nodes            | Minimum 2 for high availability; autoscaling to 6 or more recommended                                             |
 | Node size        | 2 vCPU / 4 GiB minimum per node. Plan a baseline of roughly **2.1 vCPU** and **2.2 GiB** for the stack, excluding workload growth |
-| Access           | A `cluster-admin` kubeconfig. Namespace-scoped credentials are not sufficient                                     |
+| Access           | A kubeconfig able to create the release namespace and all namespaced resources in it (Deployments, StatefulSets, Services, Ingress, PersistentVolumeClaims, Secrets, ConfigMaps, ServiceAccounts, CronJobs). The chart creates no cluster-scoped resources; cluster-wide permissions are needed only if you enable the optional bundled NFS server, which installs a `StorageClass` and `ClusterRole` |
 | Tooling          | `kubectl` 1.26 or later and Helm 3.12 or later on the machine performing the install                              |
 
 ### 1.2 Ingress controller
@@ -107,18 +107,14 @@ If the node pool autoscales, a cluster autoscaler must be installed and configur
 
 ### 1.6 TLS certificate
 
-HTTPS is mandatory; OAuth providers will not redirect to a plain-HTTP origin. Provide a certificate that covers **both** the application hostname and the web-terminal (xterm) hostname, using either:
+HTTPS is mandatory. Provide a certificate from a trusted certificate authority that covers **both** the application hostname and the web-terminal (xterm) hostname, using either:
 
 * A cloud-managed certificate (for example ACM, Google-managed, or Azure Key Vault) referenced through ingress annotations, or
-* A Kubernetes TLS `Secret` in the release namespace — issued by cert-manager, your corporate CA, or self-signed for testing — referenced through `ingress.tls`.
-
-If the certificate is not publicly trusted (private CA or self-signed), the agent must also trust it. See [Private or self-signed certificates](systems-integrator-installation-guide.md#private-or-self-signed-certificates).
+* A Kubernetes TLS `Secret` in the release namespace — for example issued through cert-manager — referenced through `ingress.tls`.
 
 ### 1.7 DNS
 
 Two hostnames are required: one for the application and one for the web terminal (`xterm.hostname`). Create the DNS records **after** `helm install`, because the load-balancer address is only available once the ingress controller has reconciled the `Ingress`.
-
-For testing without DNS control, [nip.io](https://nip.io) provides free wildcard DNS (`helpdesk.<IP>.nip.io`).
 
 ### 1.8 Identity provider
 
@@ -164,7 +160,14 @@ The agent runs each ticket in an isolated sandbox and needs the `SYS_ADMIN` and 
 
 ### 1.12 License token
 
-A license token issued by DuploCloud is **required**. The backend validates it at startup and refuses to start without one, so the install cannot succeed until it is set. Request the token from DuploCloud alongside the chart version and supply it as `secrets.licensingToken` (or as the `Licensing__Token` key when you manage secrets externally — see [2.2](systems-integrator-installation-guide.md#id-2.2-auto-generated-secrets)). Treat it like any other credential: keep it out of source control. A license can also be applied after install from the **License** tab under Access Control — see [License](../../armor/access-control/license.md) for how licensing works and the manual apply steps.
+A license token issued by DuploCloud is **required**. Without a valid license the platform starts but runs **fail-closed**: users can sign in, but creating tickets, workspaces, providers, users, and other licensed resources is refused until a license is applied. Request the token from DuploCloud alongside the chart version.
+
+There are two ways to apply it:
+
+* **Helm values** — set `secrets.licensingToken` in `values.yaml` before install (or supply the `Licensing__Token` key yourself when you manage secrets externally — see [2.2](systems-integrator-installation-guide.md#id-2.2-auto-generated-secrets)).
+* **From the UI** — after install, paste the token under **AI Admin → Access Control → License → Apply New License**. It takes effect immediately with no restart.
+
+See [License](../../armor/access-control/license.md) for how licensing works, the UI walkthrough, and troubleshooting. Treat the token like any other credential and keep it out of source control.
 
 ***
 
@@ -402,17 +405,7 @@ nfs-server:
   tolerations: *hdTolerations
 ```
 
-### 2.9 Standalone vs. integrated mode
-
-| Key                               | Standalone           | Integrated (with DuploCloud portal) |
-| --------------------------------- | -------------------- | ----------------------------------- |
-| `config.aiStudioIsMasterDisabled` | `true`               | `false`                             |
-| `config.duploMasterUrl`           | `""` (empty)         | `https://portal.example.com`        |
-| UI modes available                | AI Admin + AI DevOps | AI Admin + AI DevOps                |
-
-Both modes support AI DevOps once the platform is configured (agent, workspace, LLM).
-
-### 2.10 Reference values file
+### 2.9 Reference values file
 
 A platform-neutral starting point. Replace all `<PLACEHOLDER>` values before use, then layer on the ingress annotations and LLM settings for your environment.
 
@@ -541,20 +534,21 @@ curl -sI https://<APP_HOSTNAME> | head -5
 
 ### 3.4 Post-install platform configuration
 
-After pods are healthy and login works, configure the platform through the UI:
+After pods are healthy and login works, configure the platform through the UI. Each step links to the page that covers it in detail.
 
-| Step                  | Where                                        | Key details                                                                                                                                         |
-| --------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1. Login              | Browser → app URL                            | Sign in as a `config.authSuperUsers` email via your IdP                                                                                             |
-| 2. Create LLM Model   | AI Admin → LLMs → + Add                      | **Model ID must match the `CLAUDE_MODEL` env var exactly**                                                                                          |
-| 3. Create Agent       | AI Admin → Agents → + Add                    | Endpoint: `http://<RELEASE>-duplo-agent:8000` (base URL only). Set `endpointDetails.path: api/sendMessage`. Set `metaData.STREAMING_ENABLED: true`. |
-| 4. Create LLM Mapping | LLMs → LLM Mappings → + Add                  | Map model + agent pair. Scope: Workspace. Target: your workspace.                                                                                   |
-| 5. Create Skill       | AI Admin → Skills → + Add                    | Provide name + markdown description (`skillMd` field)                                                                                               |
-| 6. Create Persona     | AI Admin → Personas → + Add                  | Link skill(s)                                                                                                                                       |
-| 7. Create Provider    | AI Admin → Providers → + Add                 | For Kubernetes: type `eks`, `accountId` = cluster API endpoint, `metaData.base64certdata` = CA cert. Credential: SA token in `dataEx`.               |
-| 8. Create Scope       | During provider creation                     | Links credentials to a named scope                                                                                                                  |
-| 9. Create Workspace   | AI Admin → Workspaces → + Add                | Link persona(s), then add agent and scope(s)                                                                                                        |
-| 10. Test              | AI DevOps → select workspace → create ticket | Verify the agent responds with LLM-generated content                                                                                                |
+| Step                  | Where                                        | Key details                                                                                                                                         | Reference                                                              |
+| --------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| 1. Login              | Browser → app URL                            | Sign in as a `config.authSuperUsers` email via your IdP                                                                                             | [Access Control](../../armor/access-control/README.md)                 |
+| 2. Verify license     | AI Admin → Access Control → License          | Status should read **Active**. If not, apply the token here.                                                                                        | [License](../../armor/access-control/license.md)                       |
+| 3. Create LLM Model   | AI Admin → LLMs → + Add                      | **Model ID must match the `CLAUDE_MODEL` env var exactly**                                                                                          | [LLM Models](../../armor/agents/llm-models.md)                         |
+| 4. Create Agent       | AI Admin → Agents → + Add                    | Endpoint: `http://<RELEASE>-duplo-agent:8000` (base URL only). Set `endpointDetails.path: api/sendMessage`. Set `metaData.STREAMING_ENABLED: true`. | [Duplo DevOps Agent](../../armor/agents/README.md)                     |
+| 5. Create LLM Mapping | LLMs → LLM Mappings → + Add                  | Map model + agent pair. Scope: Workspace. Target: your workspace.                                                                                   | [LLM Models](../../armor/agents/llm-models.md)                         |
+| 6. Create Skill       | AI Admin → Skills → + Add                    | Provide name + markdown description (`skillMd` field)                                                                                               | [Skills](../../armor/skills/README.md)                                 |
+| 7. Create Persona     | AI Admin → Personas → + Add                  | Link skill(s)                                                                                                                                       | [Personas](../../armor/personas.md)                                    |
+| 8. Create Provider    | AI Admin → Providers → + Add                 | Connect the cloud account or Kubernetes cluster the agent will operate on                                                                           | [Integrating Providers](../integrating-providers/README.md)            |
+| 9. Create Scope       | During provider creation                     | Links credentials to a named scope                                                                                                                  | [Integrating Providers](../integrating-providers/README.md)            |
+| 10. Create Workspace  | AI Admin → Workspaces → + Add                | Link persona(s), then add agent and scope(s)                                                                                                        | [Workspaces](../../armor/workspaces.md)                                |
+| 11. Test              | AI DevOps → select workspace → create ticket | Verify the agent responds with LLM-generated content                                                                                                | [Tickets](../../armor/tickets.md)                                      |
 
 ***
 
@@ -569,7 +563,7 @@ The configurations below are ones DuploCloud has validated end to end. They are 
 
 | Topic             | Detail                                                                                                                      |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Tested**        | 2026-09-15, Kubernetes 1.35, chart 0.2.22                                                                                   |
+| **Tested**        | 2026-09-15, Kubernetes 1.35                                                                                                 |
 | **Ingress**       | AWS Load Balancer Controller. `ingress.className: alb` with ALB annotations (certificate ARN, scheme, subnets, target-type). |
 | **RWX storage**   | Amazon EFS via the EFS CSI driver, StorageClass with `provisioningMode: efs-ap`. The EFS CSI controller needs its own IRSA role. |
 | **RWO storage**   | EBS CSI driver (required as a separate add-on on Kubernetes 1.35+). Mark `gp2` or `gp3` as the default StorageClass.        |
@@ -583,12 +577,11 @@ The configurations below are ones DuploCloud has validated end to end. They are 
 
 | Topic                 | Detail                                                                                                                                                                    |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Tested**            | 2026-09-16, Kubernetes 1.35, chart 0.2.22                                                                                                                                 |
+| **Tested**            | 2026-09-16, Kubernetes 1.35                                                                                                                                               |
 | **Ingress**           | ingress-nginx installed via Helm; Azure Load Balancer assigns a public IP.                                                                                                |
 | **RWX storage**       | Azure Files NFS via the Azure Files CSI driver.                                                                                                                           |
 | **LLM**               | Azure AI Foundry (recommended) or Amazon Bedrock via static keys.                                                                                                         |
 | **Agent sandbox**     | The agent runs as UID 1001 by default — override with `runAsUser: 0` + `privileged: true` for the sandbox to work. Capabilities are dropped for non-root users even with `privileged` set. |
-| **Private certs**     | See [Private or self-signed certificates](systems-integrator-installation-guide.md#private-or-self-signed-certificates). Not needed with publicly trusted certificates.    |
 
 {% endtab %}
 
@@ -596,7 +589,7 @@ The configurations below are ones DuploCloud has validated end to end. They are 
 
 | Topic                  | Detail                                                                                                                                      |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Tested**             | 2026-09-17, Kubernetes 1.35, chart 0.2.22                                                                                                   |
+| **Tested**             | 2026-09-17, Kubernetes 1.35                                                                                                                 |
 | **Ingress**            | ingress-nginx installed via Helm, or the GKE Gateway API natively (`gateway.enabled: true`).                                                 |
 | **RWX storage**        | Google Filestore via the Filestore CSI driver.                                                                                              |
 | **LLM**                | Vertex AI (when Claude is enabled in your project) or Amazon Bedrock via static keys.                                                        |
@@ -611,14 +604,12 @@ Applies to any Kubernetes you operate yourself, whatever the distribution or whe
 
 | Topic             | Detail                                                                                                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Tested**        | 2026-09-16, Kubernetes 1.36, chart 0.2.22                                                                                                                          |
+| **Tested**        | 2026-09-16, Kubernetes 1.36                                                                                                                                        |
 | **Ingress**       | ingress-nginx. On clusters without a cloud load balancer, run the controller with `hostNetwork: true` as a `DaemonSet`, or front it with your own load balancer (MetalLB, hardware appliance, and so on). |
 | **RWX storage**   | Any RWX-capable StorageClass — an existing NFS appliance or server, CephFS, Longhorn, Portworx, or similar. If NFS-based, install NFS client utilities on every node. The chart's bundled NFS server is acceptable for evaluation only. |
 | **RWO storage**   | Any RWO StorageClass your distribution provides (local-path provisioner, Longhorn, SAN-backed CSI, and so on). Set it as the cluster default or reference it explicitly. |
 | **LLM**           | Amazon Bedrock via static keys, Azure AI Foundry, or the Anthropic API directly.                                                                                  |
 | **Agent sandbox** | `privileged: true` + `runAsUser: 0` required.                                                                                                                      |
-| **Private certs** | See [Private or self-signed certificates](systems-integrator-installation-guide.md#private-or-self-signed-certificates).                                            |
-| **DNS**           | Use [nip.io](https://nip.io) for testing (`helpdesk.<IP>.nip.io`).                                                                                                 |
 
 {% endtab %}
 {% endtabs %}
@@ -641,25 +632,13 @@ duploAgent:
         - NET_ADMIN
 ```
 
-### Private or self-signed certificates
-
-If the ingress certificate is not publicly trusted, the agent's callbacks to the backend fail TLS verification. Make the CA available to the agent:
-
-```bash
-kubectl create configmap helpdesk-ca-cert \
-  -n helpdesk \
-  --from-file=ca.crt=<CA_CERT_FILE>
-```
-
-Mount the ConfigMap into the agent container and set `NODE_EXTRA_CA_CERTS`, `SSL_CERT_FILE`, and `REQUESTS_CA_BUNDLE` to the mounted path (for example `/etc/ssl/custom-certs/ca.crt`). Restart the agent deployment and validate pod health, OAuth sign-in, and an agent request.
-
 ***
 
 ## 5. Troubleshooting
 
 | Symptom                               | Cause                                                              | Fix                                                                                  |
 | ------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| Backend pod crash-loops at startup    | Missing or invalid `secrets.licensingToken`                        | Set the license token issued by DuploCloud and upgrade the release                   |
+| Creates refused (tickets, workspaces) | No valid license in force — missing, expired, or issued for a different host | Apply the license from AI Admin → Access Control → License, or set `secrets.licensingToken` and upgrade the release |
 | Pods `Pending` on tolerations         | Node taint doesn't match the chart default `dedicated=hd:NoSchedule` | Set `tolerations: []` in values (and on each subchart) if no taints are used       |
 | Pods `Pending` on capacity            | Insufficient node resources                                        | Check node capacity and autoscaler configuration                                     |
 | PVC stuck `Pending`                   | No matching StorageClass, or `WaitForFirstConsumer` with no consumer | Verify the StorageClass exists and supports the required access mode; for the backup PVC, don't use `--wait` |
@@ -669,7 +648,6 @@ Mount the ConfigMap into the agent container and set `NODE_EXTRA_CA_CERTS`, `SSL
 | OAuth redirect error (400)            | Wrong redirect URI in the IdP                                      | Must be `https://<HOST>/signin-<provider>` exactly; CORS origin must match exactly   |
 | 502 Bad Gateway on login              | Proxy buffer too small for auth headers                            | Raise the ingress proxy buffer size to at least 16 KiB                               |
 | 413 or header errors                  | Ingress body size or buffer limits                                 | Allow a 50 MiB request body and a 16 KiB proxy buffer                                |
-| Agent callback TLS error              | Private or self-signed cert not trusted by the agent               | Inject the CA cert and set `NODE_EXTRA_CA_CERTS` / `SSL_CERT_FILE` / `REQUESTS_CA_BUNDLE` |
 | LLM `AccessDeniedException`           | Bedrock IAM missing `inference-profile/*`                          | Add both `foundation-model/*` and `inference-profile/*` to the IAM policy            |
 | Wrong `CLAUDE_MODEL` format           | Model ID doesn't match the provider                                | Bedrock: `us.anthropic.claude-*`; Azure/Anthropic: `claude-*`                        |
 | Agent 404 on ticket                   | Agent endpoint includes the full path                              | Endpoint should be the base URL only; set `endpointDetails.path: api/sendMessage`    |
