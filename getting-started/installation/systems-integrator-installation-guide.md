@@ -164,7 +164,7 @@ The agent runs each ticket in an isolated sandbox and needs the `SYS_ADMIN` and 
 
 ### 1.12 License token
 
-A license token issued by DuploCloud is **required**. The backend validates it at startup and refuses to start without one, so the install cannot succeed until it is set. Request the token from DuploCloud alongside the chart version and supply it as `secrets.licensingToken` (or as the `Licensing__Token` key when you manage secrets externally — see [2.2](systems-integrator-installation-guide.md#id-2.2-auto-generated-secrets)). Treat it like any other credential: keep it out of source control.
+A license token issued by DuploCloud is **required**. The backend validates it at startup and refuses to start without one, so the install cannot succeed until it is set. Request the token from DuploCloud alongside the chart version and supply it as `secrets.licensingToken` (or as the `Licensing__Token` key when you manage secrets externally — see [2.2](systems-integrator-installation-guide.md#id-2.2-auto-generated-secrets)). Treat it like any other credential: keep it out of source control. A license can also be applied after install from the **License** tab under Access Control — see [License](../../armor/access-control/license.md) for how licensing works and the manual apply steps.
 
 ***
 

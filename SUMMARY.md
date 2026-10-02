@@ -39,6 +39,7 @@
   * [Quotas](armor/access-control/quotas.md)
   * [AI Guardrails](armor/access-control/ai-guardrails.md)
   * [Command Policy](armor/access-control/command-policy.md)
+  * [License](armor/access-control/license.md)
 * [Settings](armor/settings.md)
 * [Extensions](armor/extensions.md)
 * [Additional Components](armor/additional-components/README.md)
