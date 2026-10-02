@@ -189,8 +189,6 @@ helm show readme oci://quay.io/duplocloud/helpdesk --version <VERSION> > helpdes
 Repeat this on every upgrade and diff against your values file. The tables below cover the values an integrator must decide on; treat the defaults shown as illustrative and defer to `helm show values` where they differ.
 {% endhint %}
 
-The [Helm Chart Configuration](helm-chart-configuration.md) page has a longer narrative walkthrough of the same values.
-
 ### 2.1 Required values
 
 | Key                          | Description                                                                        | Example                        |

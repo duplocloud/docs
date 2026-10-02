@@ -131,4 +131,4 @@ A banner above the table explains why rows are blocked when no valid license is 
 | `ConsoleRefused` / revoked banner           | DuploCloud has revoked the license                                                        | Contact DuploCloud                                                                                       |
 | Applied from the page, but Helm shows an older token | A License-page apply is persisted in the database and takes precedence over an older Helm value | Update `secrets.licensingToken` to the current token so the two stay in sync                        |
 
-For Helm-based installs, the full list of chart values is on the [Helm Chart Configuration](../../getting-started/installation/helm-chart-configuration.md) page, and licensing as an install prerequisite is covered in the [Systems Integrator Installation Guide](../../getting-started/installation/systems-integrator-installation-guide.md).
+Licensing as an install prerequisite, and how to supply the token through Helm values, is covered in the [Systems Integrator Installation Guide](../../getting-started/installation/systems-integrator-installation-guide.md).
