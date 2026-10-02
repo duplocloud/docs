@@ -1,874 +1,720 @@
 ---
 description: >-
-  Deploy DuploCloud AI HelpDesk on AWS EKS, on-premises k3s, Azure AKS, and GCP
-  GKE.
+  Cluster requirements, Helm values, and installation steps for systems
+  integrators deploying DuploCloud AI HelpDesk on any Kubernetes cluster.
 ---
 
 # Systems Integrator Installation Guide
 
-This guide provides deployment paths for AWS EKS, self-managed k3s, Azure AKS, and Google Kubernetes Engine (GKE), followed by platform-agnostic requirements and operational guidance.
+DuploCloud AI HelpDesk is distributed as a single Helm chart and runs on **any conformant Kubernetes cluster**. The Kubernetes distribution is irrelevant — Amazon EKS, Azure AKS, Google GKE, self-managed Kubernetes on cloud VMs, and self-managed Kubernetes on-premises are all supported, as long as the cluster meets the requirements in this guide.
 
-### Choose a deployment path
+{% hint style="success" %}
+**Bring your own Kubernetes.** This guide defines *what* the cluster must provide — an ingress controller, shared storage, block storage, TLS, DNS, an identity provider, and an LLM provider. *How* you satisfy each requirement is your decision. Where this guide names a specific product (Amazon EFS, ingress-nginx, Longhorn, and so on), it is an example of one way to meet the requirement, not a mandate.
+{% endhint %}
 
-| Environment                                       | Use this section                                                                                        |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| AWS EKS with Amazon Bedrock and IRSA              | [AWS EKS](systems-integrator-installation-guide.md#part-a--aws-eks-tested-walkthrough)                  |
-| Self-managed or on-premises Kubernetes            | [On-premises k3s](systems-integrator-installation-guide.md#part-a2--on-premises-k3s-tested-walkthrough) |
-| Azure Kubernetes Service with Azure AI            | [Azure AKS](systems-integrator-installation-guide.md#part-a3--azure-aks-tested-walkthrough)             |
-| Google Kubernetes Engine with Bedrock credentials | [GCP GKE](systems-integrator-installation-guide.md#part-a4--gcp-gke-tested-walkthrough)                 |
+## How this guide is organized
+
+| Section                                                                                             | Purpose                                                                 |
+| --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| [1. Requirements](systems-integrator-installation-guide.md#id-1.-requirements)                      | What must exist before `helm install`                                   |
+| [2. Helm values reference](systems-integrator-installation-guide.md#id-2.-helm-values-reference)    | How to configure the chart for your environment                         |
+| [3. Install and configure](systems-integrator-installation-guide.md#id-3.-install-and-configure)    | Install the chart, create DNS records, verify, and configure the platform |
+| [4. Tested configurations](systems-integrator-installation-guide.md#id-4.-tested-configurations)    | Worked examples per platform — informational, not prescriptive          |
+| [5. Troubleshooting](systems-integrator-installation-guide.md#id-5.-troubleshooting)                | Common symptoms and fixes                                               |
+| [6. Handoff and escalation](systems-integrator-installation-guide.md#id-6.-handoff-and-escalation)  | What to collect before contacting DuploCloud                            |
+| [7. Uninstall](systems-integrator-installation-guide.md#id-7.-uninstall)                            | Removing the release and what it leaves behind                          |
 
 {% hint style="info" %}
 Replace every value in angle brackets, such as `<ADMIN_EMAIL>`, before applying commands or values files. Do not commit credentials, OAuth secrets, or MongoDB passwords to source control.
 {% endhint %}
 
+## Obtain from DuploCloud before you begin
+
+* The Helm chart version to install. The latest tested release at the time of writing is `0.2.22`.
+* A **license token**. The backend refuses to start without a valid license — see [1.12 License token](systems-integrator-installation-guide.md#id-1.12-license-token).
+* Access to the chart registry if your network restricts outbound access to `quay.io`.
+
+```bash
+# Inspect the latest published chart
+helm show chart oci://quay.io/duplocloud/helpdesk
+
+# Inspect a specific version
+helm show chart oci://quay.io/duplocloud/helpdesk --version <VERSION>
+```
+
 ***
 
-### Part A — AWS EKS walkthrough
+## 1. Requirements
 
-#### A.1 Prerequisites and variables
+Everything in this section must be in place **before** running `helm install`. The chart creates Kubernetes resources such as `Ingress` and `PersistentVolumeClaim` objects, but it does **not** install the controllers and drivers that fulfill them. Providing those is the integrator's responsibility.
 
-#### Install the following:
+### 1.1 Kubernetes cluster
 
-* AWS CLI v2
-* `kubectl` 1.26 or later
-* Helm 3.12 or later
-* `eksctl` 0.165 or later
-* `jq` 1.6 or later
-* OpenSSL 3
-* AWS permissions to create EKS, IAM, EFS, and ACM resources
+| Requirement      | Detail                                                                                                            |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Distribution     | Any conformant Kubernetes distribution — managed (EKS, AKS, GKE) or self-managed (cloud VMs or on-premises)       |
+| Version          | 1.26 or later (tested through 1.36)                                                                               |
+| Architecture     | `amd64` nodes only (chart 0.2.x; multi-architecture images planned for 0.3.0+)                                    |
+| Nodes            | Minimum 2 for high availability; autoscaling to 6 or more recommended                                             |
+| Node size        | 2 vCPU / 4 GiB minimum per node. Plan a baseline of roughly **2.1 vCPU** and **2.2 GiB** for the stack, excluding workload growth |
+| Access           | A `cluster-admin` kubeconfig. Namespace-scoped credentials are not sufficient                                     |
+| Tooling          | `kubectl` 1.26 or later and Helm 3.12 or later on the machine performing the install                              |
 
-#### Before continuing, obtain:
+### 1.2 Ingress controller
 
-* An AWS account and a Bedrock-capable region&#x20;
-* Google OAuth client ID and secret
-* Frontend and API hostnames
-* A DNS zone and ACM certificate ARN
-* Two public subnet IDs for the internet-facing Application Load Balancer
+The chart creates `Ingress` resources for the application, the web terminal, and (optionally) an internal endpoint for the agent. The cluster must provide a Layer 7 ingress controller that supports:
 
-```bash
-aws configure
+* Host-based routing
+* WebSocket upgrades
+* Request bodies of at least **50 MiB**
+* Proxy buffers of at least **16 KiB** (OAuth callbacks carry large headers)
+* Long read/send timeouts (3600 seconds recommended) for interactive agent sessions
 
-# Or, with AWS IAM Identity Center:
-aws sso login --profile <PROFILE>
-export AWS_PROFILE=<PROFILE>
+Any controller that meets these requirements works. Set `ingress.className` and `ingress.annotations` to match the controller you choose. Examples that have been validated: AWS Load Balancer Controller (`alb`), ingress-nginx (`nginx`), and the GKE Gateway API (`gateway.enabled: true`).
 
-aws sts get-caller-identity
-export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-export AWS_REGION=us-west-2
-```
+### 1.3 Shared storage (ReadWriteMany)
 
-#### A.2 Create the EKS cluster
+The backend and the agent share files, so each needs a volume that can be mounted by more than one pod. The cluster must provide a `StorageClass` capable of provisioning **`ReadWriteMany` (RWX)** persistent volumes with:
 
-```bash
-eksctl create cluster \
-  --name=helpdesk \
-  --region=${AWS_REGION} \
-  --version=1.35 \
-  --nodegroup-name=hd-workers \
-  --node-type=t3a.medium \
-  --nodes=2 \
-  --nodes-min=2 \
-  --nodes-max=6 \
-  --managed \
-  --asg-access \
-  --with-oidc
+| Requirement        | Detail                                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------------- |
+| Access mode        | `ReadWriteMany`                                                                                   |
+| Filesystem         | POSIX semantics; files owned by UID/GID `1000` must be readable and writable by the pods          |
+| Capacity           | At least **10 GiB** each for `backend.persistence` and `duploAgent.persistence`                   |
+| Reclaim policy     | `Retain` recommended, so data survives accidental PVC deletion                                    |
+| Volume expansion   | Recommended (`allowVolumeExpansion: true`)                                                        |
+| Node prerequisites | If the storage is NFS-based, NFS client utilities (for example `nfs-common`) must be installed on every node |
 
-kubectl get nodes
-kubectl cluster-info
+Anything that satisfies these properties is acceptable — a cloud file service (Amazon EFS, Azure Files NFS, Google Filestore), an existing NFS appliance or server in your datacenter, a distributed filesystem (CephFS, Longhorn RWX, Portworx Sharedv4), or an NFS subdir provisioner backed by storage you already run.
 
-export OIDC_PROVIDER=$(aws eks describe-cluster \
-  --name helpdesk \
-  --region ${AWS_REGION} \
-  --query "cluster.identity.oidc.issuer" \
-  --output text | sed 's|https://||')
-
-export VPC_ID=$(aws eks describe-cluster \
-  --name helpdesk \
-  --region ${AWS_REGION} \
-  --query "cluster.resourcesVpcConfig.vpcId" \
-  --output text)
-```
-
-#### A.3 Install the AWS Load Balancer Controller
-
-```bash
-curl -o /tmp/alb-iam-policy.json \
-  https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.7.1/docs/install/iam_policy.json
-
-aws iam create-policy \
-  --policy-name AWSLoadBalancerControllerIAMPolicy \
-  --policy-document file:///tmp/alb-iam-policy.json
-
-eksctl create iamserviceaccount \
-  --cluster=helpdesk \
-  --region=${AWS_REGION} \
-  --namespace=kube-system \
-  --name=aws-load-balancer-controller \
-  --attach-policy-arn=arn:aws:iam::${AWS_ACCOUNT_ID}:policy/AWSLoadBalancerControllerIAMPolicy \
-  --approve \
-  --override-existing-serviceaccounts
-
-helm repo add eks https://aws.github.io/eks-charts
-helm repo update eks
-
-helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
-  --namespace kube-system \
-  --set clusterName=helpdesk \
-  --set serviceAccount.create=false \
-  --set serviceAccount.name=aws-load-balancer-controller \
-  --set region=${AWS_REGION} \
-  --set vpcId=${VPC_ID}
-```
-
-#### A.4 Configure shared EFS storage
-
-Create the EFS CSI service account and add-on:
-
-```bash
-eksctl create iamserviceaccount \
-  --cluster=helpdesk \
-  --region=${AWS_REGION} \
-  --namespace=kube-system \
-  --name=efs-csi-controller-sa \
-  --attach-policy-arn=arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy \
-  --approve \
-  --override-existing-serviceaccounts
-
-export EFS_CSI_ROLE_ARN=$(aws cloudformation describe-stacks \
-  --region ${AWS_REGION} \
-  --query "Stacks[?StackName=='eksctl-helpdesk-addon-iamserviceaccount-kube-system-efs-csi-controller-sa'].Outputs[0].OutputValue" \
-  --output text)
-
-aws eks create-addon \
-  --cluster-name helpdesk \
-  --region ${AWS_REGION} \
-  --addon-name aws-efs-csi-driver \
-  --service-account-role-arn ${EFS_CSI_ROLE_ARN}
-```
-
-Create an encrypted EFS file system, permit NFS from the VPC, and create mount targets:
-
-```bash
-export VPC_CIDR=$(aws ec2 describe-vpcs \
-  --vpc-ids ${VPC_ID} \
-  --query "Vpcs[0].CidrBlock" \
-  --output text)
-
-export EFS_SG_ID=$(aws ec2 create-security-group \
-  --group-name helpdesk-efs-sg \
-  --description "Security group for HelpDesk EFS" \
-  --vpc-id ${VPC_ID} \
-  --query "GroupId" \
-  --output text)
-
-aws ec2 authorize-security-group-ingress \
-  --group-id ${EFS_SG_ID} \
-  --protocol tcp \
-  --port 2049 \
-  --cidr ${VPC_CIDR}
-
-export EFS_FS_ID=$(aws efs create-file-system \
-  --creation-token helpdesk-efs \
-  --performance-mode generalPurpose \
-  --throughput-mode bursting \
-  --encrypted \
-  --region ${AWS_REGION} \
-  --tags Key=Name,Value=helpdesk-efs \
-  --query "FileSystemId" \
-  --output text)
-
-SUBNET_IDS=$(aws ec2 describe-subnets \
-  --filters "Name=vpc-id,Values=${VPC_ID}" \
-    "Name=tag:kubernetes.io/role/internal-elb,Values=1" \
-  --query "Subnets[*].SubnetId" \
-  --output text)
-
-for SUBNET_ID in ${SUBNET_IDS}; do
-  aws efs create-mount-target \
-    --file-system-id ${EFS_FS_ID} \
-    --subnet-id ${SUBNET_ID} \
-    --security-groups ${EFS_SG_ID} || true
-done
-```
-
-Create `efs-sc.yaml`:
-
-```yaml
-apiVersion: storage.k8s.io/v1
-kind: StorageClass
-metadata:
-  name: efs-sc
-provisioner: efs.csi.aws.com
-parameters:
-  provisioningMode: efs-ap
-  fileSystemId: "${EFS_FS_ID}"
-  directoryPerms: "700"
-  gidRangeStart: "1000"
-  gidRangeEnd: "2000"
-  basePath: "/helpdesk"
-mountOptions:
-  - tls
-```
-
-```bash
-kubectl apply -f efs-sc.yaml
-```
-
-#### A.5 Configure the EBS CSI driver
-
-MongoDB requires block storage. Install the EBS CSI driver and retain `gp2` as the default storage class.
-
-```bash
-eksctl create iamserviceaccount \
-  --cluster=helpdesk \
-  --region=${AWS_REGION} \
-  --namespace=kube-system \
-  --name=ebs-csi-controller-sa \
-  --attach-policy-arn=arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy \
-  --approve \
-  --override-existing-serviceaccounts
-
-export EBS_CSI_ROLE_ARN=$(aws cloudformation describe-stacks \
-  --region ${AWS_REGION} \
-  --query "Stacks[?StackName=='eksctl-helpdesk-addon-iamserviceaccount-kube-system-ebs-csi-controller-sa'].Outputs[0].OutputValue" \
-  --output text)
-
-aws eks create-addon \
-  --cluster-name helpdesk \
-  --region ${AWS_REGION} \
-  --addon-name aws-ebs-csi-driver \
-  --service-account-role-arn ${EBS_CSI_ROLE_ARN}
-
-kubectl annotate storageclass gp2 \
-  storageclass.kubernetes.io/is-default-class=true --overwrite
-
-kubectl annotate storageclass efs-sc \
-  storageclass.kubernetes.io/is-default-class=false --overwrite
-```
-
-#### A.6 Install Cluster Autoscaler
-
-```bash
-helm repo add autoscaler https://kubernetes.github.io/autoscaler
-helm repo update autoscaler
-
-helm install cluster-autoscaler autoscaler/cluster-autoscaler \
-  --namespace kube-system \
-  --set autoDiscovery.clusterName=helpdesk \
-  --set awsRegion=${AWS_REGION} \
-  --set rbac.serviceAccount.name=cluster-autoscaler \
-  --set rbac.serviceAccount.annotations."eks\.amazonaws\.com/role-arn"="" \
-  --set extraArgs.balance-similar-node-groups=true \
-  --set extraArgs.skip-nodes-with-system-pods=false
-```
-
-#### A.7 Create the Bedrock IRSA role
-
-Save the following trust policy as `/tmp/bedrock-trust-policy.json`.
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::${AWS_ACCOUNT_ID}:oidc-provider/${OIDC_PROVIDER}"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "${OIDC_PROVIDER}:aud": "sts.amazonaws.com"
-        },
-        "StringLike": {
-          "${OIDC_PROVIDER}:sub": "system:serviceaccount:helpdesk:*"
-        }
-      }
-    }
-  ]
-}
-```
-
-Save the following permissions policy as `/tmp/bedrock-permissions-policy.json`.
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "BedrockInvoke",
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:InvokeModel",
-        "bedrock:InvokeModelWithResponseStream"
-      ],
-      "Resource": [
-        "arn:aws:bedrock:*::foundation-model/*",
-        "arn:aws:bedrock:*:${AWS_ACCOUNT_ID}:inference-profile/*"
-      ]
-    },
-    {
-      "Sid": "BedrockList",
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:ListFoundationModels",
-        "bedrock:ListInferenceProfiles",
-        "bedrock:GetFoundationModel"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
-```
-
-```bash
-aws iam create-role \
-  --role-name helpdesk-bedrock-role \
-  --assume-role-policy-document file:///tmp/bedrock-trust-policy.json \
-  --description "IRSA role for HelpDesk duplo-agent Bedrock access"
-
-aws iam put-role-policy \
-  --role-name helpdesk-bedrock-role \
-  --policy-name BedrockInvokePolicy \
-  --policy-document file:///tmp/bedrock-permissions-policy.json
-
-export BEDROCK_ROLE_ARN="arn:aws:iam::${AWS_ACCOUNT_ID}:role/helpdesk-bedrock-role"
-```
-
-#### A.8 Create AWS Helm values
-
-Create `values.yaml`.
-
-```yaml
-config:
-  authFrontendBaseUrl: "https://<HELPDESK_FRONTEND_HOST>"
-  authAllowedOrigins: "https://<HELPDESK_FRONTEND_HOST>"
-  authSuperUsers: "<SUPER_ADMIN_EMAIL>"
-  infraRegion: "us-west-2"
-  aiStudioIsMasterDisabled: true
-secrets:
-  googleClientId: "<GOOGLE_CLIENT_ID>"
-  googleClientSecret: "<GOOGLE_CLIENT_SECRET>"
-mongodb:
-  auth:
-    enabled: true
-    rootUser: "root"
-    rootPassword: "<MONGODB_ROOT_PASSWORD>"
-mongodbBackup:
-  enabled: true
-backend:
-  persistence:
-    storageClass: "efs-sc"
-    accessModes:
-      - ReadWriteMany
-duploAgent:
-  persistence:
-    storageClass: "efs-sc"
-    accessModes:
-      - ReadWriteMany
-  serviceAccount:
-    irsaRoleArn: "arn:aws:iam::<AWS_ACCOUNT_ID>:role/helpdesk-bedrock-role"
-  extraEnv:
-    - name: CLAUDE_MODEL
-      value: "us.anthropic.claude-sonnet-4-20250514-v1:0"
-    - name: AWS_REGION
-      value: "us-west-2"
-ingress:
-  enabled: true
-  className: "alb"
-  annotations:
-    alb.ingress.kubernetes.io/certificate-arn: "<ACM_CERTIFICATE_ARN>"
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
-    alb.ingress.kubernetes.io/scheme: "internet-facing"
-    alb.ingress.kubernetes.io/ssl-redirect: "443"
-    alb.ingress.kubernetes.io/target-type: "ip"
-    alb.ingress.kubernetes.io/subnets: "<SUBNET_1>,<SUBNET_2>"
-  hosts:
-    - host: "<HELPDESK_FRONTEND_HOST>"
-      paths:
-        - path: /
-          pathType: Prefix
-    - host: "<HELPDESK_API_HOST>"
-      paths:
-        - path: /
-          pathType: Prefix
-internalIngress:
-  enabled: false
-bedrockSubscription:
-  enabled: true
-  serviceAccount:
-    irsaRoleArn: "arn:aws:iam::<AWS_ACCOUNT_ID>:role/helpdesk-bedrock-role"
-slackBackend:
-  enabled: false
-teamsBackend:
-  enabled: false
-collector:
-  enabled: false
-coreMcp:
-  enabled: false
-clickhouse:
-  enabled: false
-```
-
-#### A.9 Install and validate
-
-{% hint style="info" %}
-Do **not** use `--wait`; some components finish initialization asynchronously.
+{% hint style="warning" %}
+The chart bundles an optional in-cluster NFS server (`nfs-server.enabled: true`). It exists for evaluation and proof-of-concept installs only and is **not production-grade**. It is never required — if you already have RWX-capable storage, use it and leave `nfs-server.enabled` at its default of `false`.
 {% endhint %}
 
-```bash
-helm install helpdesk \
-  oci://quay.io/duplocloud/helpdesk \
-  --version 0.2.22 \
-  --namespace helpdesk \
-  --create-namespace \
-  --values values.yaml \
-  --timeout 10m
+### 1.4 Block storage (ReadWriteOnce)
 
-kubectl get pods -n helpdesk -w
-kubectl get ingress -n helpdesk
-```
+MongoDB, the MongoDB backup job, and ClickHouse (if enabled) each need a **`ReadWriteOnce` (RWO)** volume. Most clusters provide this through a default `StorageClass`; verify one exists, or set `mongodb.persistence.storageClass`, `mongodbBackup.storage.storageClass`, and `clickhouse.persistence.storageClass` explicitly.
 
-Create DNS records for the frontend and API hosts that target the ALB hostname. Configure the identity provider with the appropriate callback, for example `https://<HELPDESK_FRONTEND_HOST>/signin-google`, then sign in as the configured superuser.
+| Volume                  | Minimum size | Notes                                                        |
+| ----------------------- | ------------ | ------------------------------------------------------------ |
+| MongoDB data            | 8 GiB        | Pin to a zone if your block storage is zonal                 |
+| MongoDB backups         | 25 GiB       | Uses `WaitForFirstConsumer`; see the note on `--wait` below |
+| ClickHouse (optional)   | 20 GiB       | Only when `clickhouse.enabled: true`                         |
 
-#### A.10 AWS validation checklist
+### 1.5 Cluster autoscaler
 
-* All pods in `helpdesk` become `Running` or complete successfully.
-* Backend and agent persistent volumes bind to `efs-sc`.
-* MongoDB uses the EBS-backed default storage class.
-* The ALB has healthy targets and valid TLS.
-* The configured Bedrock model is enabled in the chosen AWS Region.
+If the node pool autoscales, a cluster autoscaler must be installed and configured for the cluster. This is not needed for fixed-size node pools.
+
+### 1.6 TLS certificate
+
+HTTPS is mandatory; OAuth providers will not redirect to a plain-HTTP origin. Provide a certificate that covers **both** the application hostname and the web-terminal (xterm) hostname, using either:
+
+* A cloud-managed certificate (for example ACM, Google-managed, or Azure Key Vault) referenced through ingress annotations, or
+* A Kubernetes TLS `Secret` in the release namespace — issued by cert-manager, your corporate CA, or self-signed for testing — referenced through `ingress.tls`.
+
+If the certificate is not publicly trusted (private CA or self-signed), the agent must also trust it. See [Private or self-signed certificates](systems-integrator-installation-guide.md#private-or-self-signed-certificates).
+
+### 1.7 DNS
+
+Two hostnames are required: one for the application and one for the web terminal (`xterm.hostname`). Create the DNS records **after** `helm install`, because the load-balancer address is only available once the ingress controller has reconciled the `Ingress`.
+
+For testing without DNS control, [nip.io](https://nip.io) provides free wildcard DNS (`helpdesk.<IP>.nip.io`).
+
+### 1.8 Identity provider
+
+At least one of Google, Microsoft Entra, Okta, or Keycloak. Register the application with the redirect URI `https://<APP_HOSTNAME>/signin-<provider>` and set the matching chart values:
+
+| Provider  | Redirect URI suffix | Helm values                                                                                                                              |
+| --------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Google    | `/signin-google`    | `secrets.googleClientId`, `secrets.googleClientSecret`                                                                                   |
+| Microsoft | `/signin-microsoft` | `secrets.microsoftClientId`, `secrets.microsoftClientSecret`, `secrets.microsoftTenantId`                                                |
+| Okta      | `/signin-okta`      | `secrets.oktaClientId`, `secrets.oktaClientSecret`, `secrets.oktaDomain`                                                                 |
+| Keycloak  | `/signin-keycloak`  | `secrets.keycloakAuthority`, `secrets.keycloakClientId`, `secrets.keycloakClientSecret`, `secrets.keycloakRealm`, `secrets.keycloakHost` |
+
+Set `config.authAllowedOrigins` to the exact public frontend origin, including the scheme, and configure at least one superuser in `config.authSuperUsers` before the first login.
+
+### 1.9 LLM provider
+
+Choose one. The provider does not need to run in the same cloud as the cluster — an on-premises cluster can use Amazon Bedrock with static credentials, for example.
+
+| Provider         | What is needed                                                                                                                                                                      | `CLAUDE_MODEL` format            |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| Amazon Bedrock   | IAM credentials (IRSA on EKS, or static access keys elsewhere) allowing `bedrock:InvokeModel` and `bedrock:InvokeModelWithResponseStream` on **both** `foundation-model/*` and `inference-profile/*` resources | `us.anthropic.claude-sonnet-4-6` |
+| Azure AI Foundry | Foundry endpoint plus a managed identity or API key                                                                                                                                 | `claude-sonnet-4-6`              |
+| GCP Vertex AI    | Claude enabled in the Vertex AI Model Garden (not yet fully supported)                                                                                                              | `claude-sonnet-4-6`              |
+| Anthropic direct | API key (`sk-ant-...`)                                                                                                                                                              | `claude-sonnet-4-6`              |
+
+{% hint style="warning" %}
+The `CLAUDE_MODEL` format differs per provider. Using the wrong format causes silent failures.
+{% endhint %}
+
+### 1.10 Network egress
+
+Pods need outbound access to:
+
+* `quay.io` (container images and the Helm chart), plus any other registries you configure
+* The chosen LLM provider's API endpoints
+* The identity provider
+
+Air-gapped deployment is not validated by this guide. Contact DuploCloud if you need to mirror images into a private registry.
+
+### 1.11 Agent container privileges
+
+The agent runs each ticket in an isolated sandbox and needs the `SYS_ADMIN` and `NET_ADMIN` Linux capabilities (the chart default). On some platforms the container must additionally run as root with `privileged: true` — see [Tested configurations](systems-integrator-installation-guide.md#id-4.-tested-configurations). Clusters enforcing Pod Security Admission need an exemption for the release namespace. Validate this with the cluster's security team before a production rollout.
+
+### 1.12 License token
+
+A license token issued by DuploCloud is **required**. The backend validates it at startup and refuses to start without one, so the install cannot succeed until it is set. Request the token from DuploCloud alongside the chart version and supply it as `secrets.licensingToken` (or as the `Licensing__Token` key when you manage secrets externally — see [2.2](systems-integrator-installation-guide.md#id-2.2-auto-generated-secrets)). Treat it like any other credential: keep it out of source control.
 
 ***
 
-### Part A2 — On-premises walkthrough
+## 2. Helm values reference
 
-#### A2.1 Install k3s and Helm
+All configuration lives in a single `values.yaml`. This section covers the values that matter for an integrator install; the full reference is on the [Helm Chart Configuration](helm-chart-configuration.md) page.
 
-The configuration is a single-server k3s deployment using NGINX Ingress, the chart-provided NFS server, a self-signed certificate, and static AWS credentials for Bedrock.
+### 2.1 Required values
 
-```bash
-curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--disable traefik --tls-san <SERVER_PUBLIC_IP>' sh -
+| Key                          | Description                                                                        | Example                        |
+| ---------------------------- | ---------------------------------------------------------------------------------- | ------------------------------ |
+| `config.authFrontendBaseUrl` | Public URL of the app. Used for OAuth redirects and CORS.                          | `https://helpdesk.example.com` |
+| `config.authAllowedOrigins`  | CORS allowed origin. Must match `authFrontendBaseUrl` exactly. Single origin only. | `https://helpdesk.example.com` |
+| `config.authSuperUsers`      | Comma-separated emails granted super-admin on first login.                         | `admin@example.com`            |
+| `config.infraRegion`         | Cloud region. Used for Bedrock endpoint routing.                                   | `us-west-2`                    |
+| `secrets.licensingToken`     | License token issued by DuploCloud. The backend refuses to start without it.       | `<LICENSE_TOKEN>`              |
+| `mongodb.auth.rootPassword`  | MongoDB root password.                                                             | `openssl rand -hex 16`         |
+| `xterm.hostname`             | Hostname for the web terminal (separate ingress rule).                             | `xterm.example.com`            |
 
-sudo kubectl get nodes
+### 2.2 Auto-generated secrets
 
-curl -sfL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+These generate automatically on first install and persist across upgrades. Do **not** set them unless you need deterministic values.
 
-sudo apt-get update
-sudo apt-get install -y nfs-common
+| Key                           | Behavior                                                                      | Warning                                                                        |
+| ----------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `secrets.jwtSharedSecret`     | Auto-generated (48-char alphanumeric). Persists via Secret lookup on upgrade. |                                                                                |
+| `secrets.encryptionMasterKey` | Auto-generated (96 bytes base64). Persists via Secret lookup on upgrade.      | **Never change after first install** — makes all encrypted data unrecoverable. |
+
+**External secret management:** set `secrets.existingSecret` to the name of a pre-existing Kubernetes `Secret` to skip chart-managed secret creation entirely. The external Secret must contain all required keys, including `Licensing__Token` (see the chart's `templates/secret.yaml` for exact key names). Use this with Vault, External Secrets Operator, or Sealed Secrets.
+
+### 2.3 Identity / SSO
+
+See [1.8 Identity provider](systems-integrator-installation-guide.md#id-1.8-identity-provider) for redirect URI patterns. Set the values for your chosen provider(s):
+
+```yaml
+secrets:
+  # Google
+  googleClientId: ""
+  googleClientSecret: ""
+  # Microsoft Entra
+  microsoftClientId: ""
+  microsoftClientSecret: ""
+  microsoftTenantId: ""
+  # Okta
+  oktaClientId: ""
+  oktaClientSecret: ""
+  oktaDomain: ""
+  # Keycloak
+  keycloakAuthority: ""
+  keycloakClientId: ""
+  keycloakClientSecret: ""
+  keycloakRealm: ""
+  keycloakHost: ""
 ```
 
-#### A2.2 Install NGINX Ingress
-
-```bash
-sudo helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-
-sudo helm install ingress-nginx ingress-nginx/ingress-nginx \
-  -n ingress-nginx \
-  --create-namespace \
-  --set controller.hostNetwork=true \
-  --set controller.service.type=ClusterIP \
-  --set controller.kind=DaemonSet \
-  --kubeconfig /etc/rancher/k3s/k3s.yaml
-```
-
-#### A2.3 Retrieve kubeconfig and create TLS material
-
-```bash
-scp user@<SERVER_IP>:/etc/rancher/k3s/k3s.yaml ./k3s-kubeconfig.yaml
-sed -i 's/127.0.0.1/<SERVER_PUBLIC_IP>/g' k3s-kubeconfig.yaml
-
-HOSTNAME="helpdesk.<SERVER_IP>.nip.io"
-XTERM_HOSTNAME="xterm.<SERVER_IP>.nip.io"
-
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-  -keyout onprem-tls.key \
-  -out onprem-tls.crt \
-  -subj "/CN=$HOSTNAME" \
-  -addext "subjectAltName=DNS:$HOSTNAME,DNS:$XTERM_HOSTNAME"
-
-kubectl --kubeconfig k3s-kubeconfig.yaml create namespace helpdesk
-
-kubectl --kubeconfig k3s-kubeconfig.yaml create secret tls helpdesk-tls \
-  -n helpdesk \
-  --cert=onprem-tls.crt \
-  --key=onprem-tls.key
-```
-
-#### A2.4 Create on-premises Helm values
-
-Create `values.yaml`. The AWS access keys must be permitted to invoke the selected Bedrock model.
+Optional IdP group sync:
 
 ```yaml
 config:
-  authFrontendBaseUrl: "https://helpdesk.<SERVER_IP>.nip.io"
-  authAllowedOrigins: "https://helpdesk.<SERVER_IP>.nip.io"
-  authSuperUsers: "<ADMIN_EMAIL>"
-  infraRegion: "us-west-2"
-  aiStudioIsMasterDisabled: true
-secrets:
-  googleClientId: "<GOOGLE_CLIENT_ID>"
-  googleClientSecret: "<GOOGLE_CLIENT_SECRET>"
-tolerations: []
-mongodb:
-  auth:
-    rootUser: "authuser"
-    rootPassword: "<MONGODB_PASSWORD>"
-  persistence:
-    enabled: true
-    size: 8Gi
-  tolerations: []
-mongodbBackup:
-  enabled: true
-  schedule: "0 2 * * *"
-  storage:
-    size: 25Gi
-  tolerations: []
-nfs-server:
-  enabled: true
-  storageClass:
-    name: "nfs"
-  tolerations: []
-backend:
-  persistence:
-    enabled: true
-    accessModes:
-      - ReadWriteMany
-    size: 10Gi
-duploAgent:
-  persistence:
-    storageClass: "nfs"
-  extraEnv:
-    - name: CLAUDE_MODEL
-      value: "us.anthropic.claude-sonnet-4-6"
-    - name: AWS_ACCESS_KEY_ID
-      value: "<AWS_ACCESS_KEY>"
-    - name: AWS_SECRET_ACCESS_KEY
-      value: "<AWS_SECRET_KEY>"
-    - name: AWS_REGION
-      value: "us-west-2"
-xterm:
-  hostname: "xterm.<SERVER_IP>.nip.io"
+  authIdpSyncAzureAdEnabled: "true"
+  authIdpSyncAzureAdAdminGroupName: "HelpDesk-Admin"
+  authIdpSyncAzureAdUserGroupPrefix: "HelpDesk-UG-"
+```
+
+### 2.4 Storage
+
+Point the chart at the `StorageClass` names you provisioned in [1.3](systems-integrator-installation-guide.md#id-1.3-shared-storage-readwritemany) and [1.4](systems-integrator-installation-guide.md#id-1.4-block-storage-readwriteonce).
+
+| Key                                   | Description                                                                          | Default                |
+| ------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------- |
+| `backend.persistence.enabled`         | Enable the shared RWX volume                                                         | `true`                 |
+| `backend.persistence.storageClass`    | RWX StorageClass name                                                                | `""` (cluster default) |
+| `backend.persistence.size`            | RWX volume size                                                                      | `10Gi`                 |
+| `backend.persistence.accessModes`     | Must be `[ReadWriteMany]`                                                            | `[ReadWriteMany]`      |
+| `duploAgent.persistence.storageClass` | Agent's own PVC StorageClass. Set to the RWX class to avoid `WaitForFirstConsumer` issues. | `""`             |
+| `mongodb.persistence.size`            | MongoDB data volume                                                                  | `8Gi`                  |
+| `mongodb.persistence.storageClass`    | RWO StorageClass                                                                     | `""` (cluster default) |
+| `mongodbBackup.enabled`               | Enable the backup CronJob                                                            | `true`                 |
+| `mongodbBackup.schedule`              | Cron schedule                                                                        | `0 0 * * *`            |
+| `mongodbBackup.storage.size`          | Backup volume size                                                                   | `25Gi`                 |
+| `nfs-server.enabled`                  | Enable the bundled NFS server (evaluation only; see [1.3](systems-integrator-installation-guide.md#id-1.3-shared-storage-readwritemany)) | `false` |
+| `nfs-server.storageClass.name`        | StorageClass name created by the bundled NFS server                                  | `nfs`                  |
+
+{% hint style="warning" %}
+The backup PVC uses `WaitForFirstConsumer`. Do **not** use `helm install --wait` — it will time out waiting for this PVC.
+{% endhint %}
+
+### 2.5 Ingress
+
+| Key                         | Description                                                           | Default                          |
+| --------------------------- | --------------------------------------------------------------------- | -------------------------------- |
+| `ingress.enabled`           | Enable the external Ingress                                           | `true`                           |
+| `ingress.className`         | Ingress class of the controller you installed                         | `alb`                            |
+| `ingress.annotations`       | Controller-specific annotations (certificate reference, buffer size, body size, timeouts) | `{}`         |
+| `ingress.tls`               | TLS config. Leave empty when TLS terminates at an upstream load balancer. | `[]`                         |
+| `internalIngress.enabled`   | Enable an internal-only Ingress for the agent                         | `true`                           |
+| `internalIngress.className` | Must match your internal ingress class                                | `alb`                            |
+| `gateway.enabled`           | Use the Kubernetes Gateway API instead of Ingress (GKE)               | `false`                          |
+| `gateway.className`         | GatewayClass name                                                     | `gke-l7-global-external-managed` |
+
+Whatever controller you use, make sure its configuration satisfies the limits in [1.2](systems-integrator-installation-guide.md#id-1.2-ingress-controller). For ingress-nginx, that looks like:
+
+```yaml
 ingress:
-  enabled: true
-  className: "nginx"
+  className: nginx
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
     nginx.ingress.kubernetes.io/proxy-buffer-size: "16k"
-  tls:
-    - secretName: "helpdesk-tls"
-      hosts:
-        - "helpdesk.<SERVER_IP>.nip.io"
-        - "xterm.<SERVER_IP>.nip.io"
-internalIngress:
-  enabled: false
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+```
+
+### 2.6 LLM provider
+
+{% tabs %}
+{% tab title="Amazon Bedrock (IRSA)" %}
+
+For clusters on EKS with an OIDC provider. The IAM policy must allow `foundation-model/*` **and** `inference-profile/*`.
+
+```yaml
+bedrockSubscription:
+  enabled: true
+  serviceAccount:
+    irsaRoleArn: "<ROLE_ARN>"
+
+duploAgent:
+  serviceAccount:
+    irsaRoleArn: "<ROLE_ARN>"
+  extraEnv:
+    - name: CLAUDE_MODEL
+      value: "us.anthropic.claude-sonnet-4-6"
+    - name: AWS_REGION
+      value: "us-west-2"
+```
+
+{% endtab %}
+
+{% tab title="Amazon Bedrock (static keys)" %}
+
+For any cluster not on AWS — on-premises, AKS, GKE, or self-managed.
+
+```yaml
 bedrockSubscription:
   enabled: false
-slackBackend:
-  enabled: false
-teamsBackend:
-  enabled: false
-collector:
-  enabled: false
-coreMcp:
-  enabled: false
-clickhouse:
-  enabled: false
+duploAgent:
+  extraEnv:
+    - name: CLAUDE_MODEL
+      value: "us.anthropic.claude-sonnet-4-6"
+    - name: AWS_ACCESS_KEY_ID
+      value: "<KEY>"
+    - name: AWS_SECRET_ACCESS_KEY
+      value: "<SECRET>"
+    - name: AWS_REGION
+      value: "us-west-2"
 ```
 
-#### A2.5 Install, grant agent privileges, and trust the certificate
+{% endtab %}
 
-```bash
-helm install helpdesk \
-  oci://quay.io/duplocloud/helpdesk \
-  --version 0.2.22 \
-  --namespace helpdesk \
-  --values values.yaml \
-  --kubeconfig k3s-kubeconfig.yaml \
-  --timeout 10m
-
-kubectl --kubeconfig k3s-kubeconfig.yaml patch deployment helpdesk-duplo-agent \
-  -n helpdesk \
-  --type=json \
-  -p '[
-    {
-      "op": "add",
-      "path": "/spec/template/spec/containers/0/securityContext/privileged",
-      "value": true
-    }
-  ]'
-
-kubectl --kubeconfig k3s-kubeconfig.yaml create configmap helpdesk-ca-cert \
-  -n helpdesk \
-  --from-file=ca.crt=onprem-tls.crt
-```
-
-Mount the CA ConfigMap into the agent and set `NODE_EXTRA_CA_CERTS`, `SSL_CERT_FILE`, and `REQUESTS_CA_BUNDLE` to `/etc/ssl/custom-certs/ca.crt`. Restart the agent deployment and validate pod health, OAuth sign-in, and an agent request.
-
-***
-
-### Part A3 — Azure AKS walkthrough
-
-#### A3.1 Create the AKS cluster
-
-```bash
-az login
-
-az group create \
-  --name helpdesk-si-test \
-  --location eastus
-
-az aks create \
-  --resource-group helpdesk-si-test \
-  --name helpdesk-aks \
-  --node-count 2 \
-  --node-vm-size Standard_B4ms \
-  --generate-ssh-keys \
-  --enable-managed-identity \
-  --network-plugin azure
-
-az aks get-credentials \
-  --resource-group helpdesk-si-test \
-  --name helpdesk-aks
-```
-
-#### A3.2 Install NGINX Ingress
-
-```bash
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-
-helm install ingress-nginx ingress-nginx/ingress-nginx \
-  -n ingress-nginx \
-  --create-namespace \
-  --set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-health-probe-request-path"="/healthz"
-```
-
-#### A3.3 Configure values for Azure AI
-
-Use the same NFS, MongoDB, ingress, and TLS configuration pattern as the on-premises deployment. Set the HelpDesk endpoint and Azure AI credentials as follows:
+{% tab title="Azure AI Foundry" %}
 
 ```yaml
 config:
-  authFrontendBaseUrl: "https://<HELPDESK_FRONTEND_HOST>"
-  authAllowedOrigins: "https://<HELPDESK_FRONTEND_HOST>"
-  authSuperUsers: "<ADMIN_EMAIL>"
-  infraRegion: ""
-  azureBaseUrl: "https://<RESOURCE_NAME>.services.ai.azure.com/anthropic"
+  azureBaseUrl: "https://<RESOURCE>.services.ai.azure.com/anthropic"
 secrets:
-  googleClientId: "<GOOGLE_CLIENT_ID>"
-  googleClientSecret: "<GOOGLE_CLIENT_SECRET>"
-  azureClientId: "<AZURE_CLIENT_ID>"
-  azureClientSecret: "<AZURE_CLIENT_SECRET>"
+  azureClientId: "<MANAGED_IDENTITY_CLIENT_ID>"   # Or azureApiKey for API-key auth
+bedrockSubscription:
+  enabled: false
 duploAgent:
   extraEnv:
     - name: CLAUDE_MODEL
       value: "claude-sonnet-4-6"
     - name: AZURE_BASE_URL
-      value: "https://<RESOURCE_NAME>.services.ai.azure.com/anthropic"
-    - name: AZURE_CLIENT_ID
-      value: "<AZURE_CLIENT_ID>"
+      value: "https://<RESOURCE>.services.ai.azure.com/anthropic"
 ```
 
-Install the chart using the standard Helm command, then grant the agent the permissions required to manage its workload:
+{% endtab %}
 
-```bash
-kubectl patch deployment helpdesk-duplo-agent \
-  -n helpdesk \
-  --type=json \
-  -p '[
-    {
-      "op": "replace",
-      "path": "/spec/template/spec/containers/0/securityContext",
-      "value": {
-        "privileged": true,
-        "runAsUser": 0,
-        "runAsGroup": 0,
-        "seccompProfile": {
-          "type": "Unconfined"
-        },
-        "capabilities": {
-          "add": [
-            "SYS_ADMIN",
-            "NET_ADMIN"
-          ]
-        }
-      }
-    }
-  ]'
+{% tab title="Anthropic direct" %}
 
-kubectl exec -n helpdesk deploy/helpdesk-duplo-agent -- \
-  sh -c "mkdir -p /home/appuser/.claude/projects && chown -R root:root /home/appuser"
+```yaml
+bedrockSubscription:
+  enabled: false
+duploAgent:
+  extraEnv:
+    - name: ANTHROPIC_API_KEY
+      value: "sk-ant-..."
+    - name: CLAUDE_MODEL
+      value: "claude-sonnet-4-6"
 ```
 
-### Part A4 — GCP GKE walkthrough
+{% endtab %}
+{% endtabs %}
 
-#### A4.1 Create the GKE cluster
+### 2.7 Components
 
-```bash
-gcloud auth login
-gcloud config set project <PROJECT_ID>
+| Component            | Default | Key                           |
+| -------------------- | ------- | ----------------------------- |
+| Backend              | always  | –                             |
+| Frontend             | always  | –                             |
+| MongoDB              | `true`  | `mongodb.enabled`             |
+| Agent                | `true`  | `duploAgent.enabled`          |
+| Helpdesk MCP         | `true`  | `helpdeskMcp.enabled`         |
+| Core MCP             | `false` | `coreMcp.enabled`             |
+| Slack Backend        | `true`  | `slackBackend.enabled`        |
+| Teams Backend        | `false` | `teamsBackend.enabled`        |
+| XTerm                | `true`  | `xterm.enabled`               |
+| Bedrock Subscription | `true`  | `bedrockSubscription.enabled` |
+| Collector            | `false` | `collector.enabled`           |
+| NFS Server           | `false` | `nfs-server.enabled`          |
+| ClickHouse           | `false` | `clickhouse.enabled`          |
+| Internal Ingress     | `true`  | `internalIngress.enabled`     |
+| Gateway API          | `false` | `gateway.enabled`             |
 
-gcloud container clusters create helpdesk-gke \
-  --region us-central1 \
-  --num-nodes 1 \
-  --machine-type e2-standard-4 \
-  --disk-size 100 \
-  --enable-ip-alias
+### 2.8 Tolerations and scheduling
 
-gcloud container clusters get-credentials helpdesk-gke \
-  --region us-central1
+The chart ships `dedicated=hd:NoSchedule` as the default toleration via a YAML anchor. Subcharts (MongoDB, NFS server, ClickHouse) do not inherit values from the parent, so overrides must be repeated on each.
+
+| Scenario                   | Configuration                                                                                                         |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Dedicated tainted nodes    | Leave the default — tolerations match automatically                                                                   |
+| Shared cluster (no taints) | Override `tolerations: []` at the top level **and** on each subchart (`mongodb.tolerations: []`, `nfs-server.tolerations: []`) |
+
+To use a different taint key and keep the subcharts aligned:
+
+```yaml
+tolerations: &hdTolerations
+  - key: "workload"
+    operator: "Equal"
+    value: "helpdesk"
+    effect: "NoSchedule"
+mongodb:
+  tolerations: *hdTolerations
+nfs-server:
+  tolerations: *hdTolerations
 ```
 
-#### A4.2 Install NGINX Ingress and HelpDesk
+### 2.9 Standalone vs. integrated mode
 
-```bash
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+| Key                               | Standalone           | Integrated (with DuploCloud portal) |
+| --------------------------------- | -------------------- | ----------------------------------- |
+| `config.aiStudioIsMasterDisabled` | `true`               | `false`                             |
+| `config.duploMasterUrl`           | `""` (empty)         | `https://portal.example.com`        |
+| UI modes available                | AI Admin + AI DevOps | AI Admin + AI DevOps                |
 
-helm install ingress-nginx ingress-nginx/ingress-nginx \
-  -n ingress-nginx \
-  --create-namespace
-```
+Both modes support AI DevOps once the platform is configured (agent, workspace, LLM).
 
-Use the on-premises values pattern for NFS-backed RWX storage and supply static AWS credentials to `duploAgent.extraEnv` for Amazon Bedrock access. Create a TLS secret for the public frontend and xterm hostnames, install the chart, then apply the same privileged-agent and custom-CA configuration used for on-premises deployments.
+### 2.10 Reference values file
 
-```bash
-gcloud container clusters delete helpdesk-gke \
-  --region us-central1 \
-  --quiet
+A platform-neutral starting point. Replace all `<PLACEHOLDER>` values before use, then layer on the ingress annotations and LLM settings for your environment.
+
+```yaml
+config:
+  authFrontendBaseUrl: "https://<APP_HOSTNAME>"
+  authAllowedOrigins: "https://<APP_HOSTNAME>"
+  authSuperUsers: "<ADMIN_EMAIL>"
+  infraRegion: "<REGION>"
+  aiStudioIsMasterDisabled: true
+
+secrets:
+  licensingToken: "<LICENSE_TOKEN>"          # required -- issued by DuploCloud
+  # jwtSharedSecret and encryptionMasterKey auto-generate -- do not set unless needed
+  googleClientId: "<GOOGLE_CLIENT_ID>"
+  googleClientSecret: "<GOOGLE_CLIENT_SECRET>"
+
+mongodb:
+  auth:
+    rootUser: authuser
+    rootPassword: "<MONGODB_PASSWORD>"       # openssl rand -hex 16
+  persistence:
+    enabled: true
+    size: 8Gi
+    storageClass: "<RWO_STORAGECLASS>"       # omit to use the cluster default
+
+mongodbBackup:
+  enabled: true
+  schedule: "0 2 * * *"
+  storage:
+    size: 25Gi
+
+backend:
+  persistence:
+    enabled: true
+    storageClass: "<RWX_STORAGECLASS>"       # the ReadWriteMany class you provisioned
+    accessModes: [ReadWriteMany]
+    size: 10Gi
+
+duploAgent:
+  persistence:
+    storageClass: "<RWX_STORAGECLASS>"
+  extraEnv:
+    # --- Choose ONE LLM provider (see 2.6) ---
+    - name: CLAUDE_MODEL
+      value: "us.anthropic.claude-sonnet-4-6"
+    - name: AWS_REGION
+      value: "<REGION>"
+
+xterm:
+  hostname: "<XTERM_HOSTNAME>"
+
+ingress:
+  enabled: true
+  className: "<INGRESS_CLASS>"               # the class of the controller you installed
+  annotations: {}                            # controller-specific annotations (see 1.2 and 2.5)
+  tls: []                                    # set when TLS terminates at the ingress
+
+internalIngress:
+  enabled: false                             # true if you need an internal load balancer for the agent
+
+bedrockSubscription:
+  enabled: true                              # false if not using Bedrock via IRSA
+
+slackBackend:
+  enabled: false
+teamsBackend:
+  enabled: false
+collector:
+  enabled: false
+coreMcp:
+  enabled: false
+clickhouse:
+  enabled: false
 ```
 
 ***
 
-### Part B — Platform-agnostic requirements and reference
+## 3. Install and configure
 
-#### B.1 Kubernetes and compute requirements
-
-* Kubernetes 1.26 or later is required;&#x20;
-* The Helm chart and images are `amd64`.
-* Plan approximately **2.1 vCPU** and **2.2 GiB** of memory as a baseline, excluding workload growth.
-* Start with at least two nodes where high availability is required. Configure autoscaling to a maximum of six or more nodes based on demand.
-
-#### B.2 Storage requirements
-
-HelpDesk backend and agent data require **ReadWriteMany (RWX)** storage. Plan at least 10 GiB with POSIX UID/GID `1000`; use a reclaim policy of `Retain` and volume expansion where supported. MongoDB requires a separate **ReadWriteOnce (RWO)** volume of at least 8 GiB, and backups require at least 25 GiB.
-
-Supported patterns include Amazon EFS, Google Filestore, Azure Files NFS, NFS subdir provisioners, CephFS, Portworx Sharedv4, and Longhorn RWX.
-
-#### B.3 Ingress, TLS, DNS, and egress
-
-Ingress must support host routing, WebSockets, a 50 MiB request body, and a 16 KiB proxy buffer. Set long timeouts for interactive agent requests:
-
-```yaml
-nginx.ingress.kubernetes.io/proxy-buffer-size: "16k"
-nginx.ingress.kubernetes.io/proxy-body-size: "50m"
-nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
-nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
-```
-
-TLS is mandatory. Provide distinct frontend and agent/xterm hostnames where applicable. Permit outbound access to Quay, Docker registries as needed, the configured LLM provider, and the identity provider. Air-gapped deployment is not validated by this guide.
-
-#### B.4 Identity provider configuration
-
-Google, Microsoft, Okta, and Keycloak are supported identity-provider patterns. Configure the callback URL exactly as:
-
-```
-https://<PRIMARY_HOSTNAME>/signin-<provider>
-```
-
-Set CORS origins to the exact public frontend origin, including the scheme, and configure at least one superuser before the first login.
-
-#### B.5 Agent permissions
-
-The agent needs `SYS_ADMIN` and `NET_ADMIN` capabilities. Some environments require a privileged container or an explicit Pod Security Admission exemption. Validate this requirement with the cluster security team before production rollout.
-
-#### B.6 Model identifiers
-
-Use the provider-specific model format:
-
-| Provider                            | Example model identifier                     |
-| ----------------------------------- | -------------------------------------------- |
-| Amazon Bedrock                      | `us.anthropic.claude-sonnet-4-20250514-v1:0` |
-| Azure AI / direct Anthropic pattern | `claude-sonnet-4-20250514`                   |
-
-For Bedrock, the IAM policy must allow both foundation-model and inference-profile resources.
-
-#### B.7 Taints and tolerations
-
-When using dedicated nodes, define matching tolerations in the values file:
-
-```yaml
-hdTolerations: &hdTolerations
-  - key: dedicated
-    value: hd
-    operator: Equal
-    effect: NoSchedule
-```
-
-To explicitly override inherited tolerations:
-
-```yaml
-hdTolerations: &hdTolerations []
-```
-
-#### B.8 Helm lifecycle operations
-
-Do not change an existing `encryptionMasterKey`. Preserve it through upgrades and restores.
+### 3.1 Install the Helm chart
 
 ```bash
-helm install si oci://quay.io/duplocloud/helpdesk \
-  --version 0.2.22 \
-  --namespace si \
-  --create-namespace \
-  -f values.yaml
+helm install helpdesk oci://quay.io/duplocloud/helpdesk \
+  --version <VERSION> \
+  --namespace helpdesk --create-namespace \
+  --values values.yaml \
+  --timeout 10m
 
-helm upgrade si oci://quay.io/duplocloud/helpdesk \
-  --version <NEW_VERSION> \
-  --namespace si \
-  -f values.yaml
-
-helm rollback si <REVISION> --namespace si
-
-helm uninstall si --namespace si
+kubectl get pods -n helpdesk -w
 ```
 
-#### B.9 Troubleshooting quick reference
+{% hint style="warning" %}
+Do **not** use `--wait`. The backup PVC uses `WaitForFirstConsumer` and will cause a timeout.
+{% endhint %}
 
-| Symptom                                    | Check                                                                            |
-| ------------------------------------------ | -------------------------------------------------------------------------------- |
-| Pods remain `Pending`                      | Node capacity, matching tolerations, and storage provisioning                    |
-| MongoDB cannot schedule                    | RWO storage class and zone affinity                                              |
-| Bedrock `AccessDenied`                     | Region access, model enablement, and inference-profile IAM resources             |
-| Ingress returns 413 or header errors       | 50 MiB body size and 16 KiB proxy buffer annotations                             |
-| Agent cannot perform privileged operations | Pod Security Admission policy, `privileged`, `SYS_ADMIN`, and `NET_ADMIN`        |
-| Certificate errors in the agent            | Mounted CA bundle and `NODE_EXTRA_CA_CERTS`/`SSL_CERT_FILE`/`REQUESTS_CA_BUNDLE` |
-| OAuth callback fails                       | Exact callback URL and exact CORS origin                                         |
-| Image pull failures                        | Egress access to Quay and required registries                                    |
+### 3.2 Create DNS records
 
-#### B.10 Support handoff commands
-
-Collect the following before escalating an installation issue:
+After install, read the load-balancer address and create DNS records:
 
 ```bash
-kubectl get events -n si --sort-by='.lastTimestamp'
-kubectl get pods -n si -o wide
-kubectl logs -n si <POD_NAME> --tail=200
-kubectl logs -n si <POD_NAME> --previous --tail=200
-kubectl describe pod -n si <POD_NAME>
-kubectl get pvc -n si
-helm status si -n si
-helm get values si -n si
-kubectl get ingress -n si -o yaml
+kubectl get ingress -n helpdesk -o jsonpath='{.items[0].status.loadBalancer.ingress[0].hostname}'
+# Or .ip for platforms that assign IPs
 ```
 
-Include the chart version, Kubernetes version, cloud region, sanitized values file, relevant events, and pod logs in the handoff.
+Create CNAME (or A) records for both hostnames pointing to this address.
 
-#### B.11 Where to Send It
+### 3.3 Verify infrastructure
 
-| Channel                             | Use When                                      |
+```bash
+# All pods Running
+kubectl get pods -n helpdesk
+
+# All PVCs Bound
+kubectl get pvc -n helpdesk
+
+# Backend health
+kubectl exec -n helpdesk deploy/helpdesk-backend -- curl -sf http://localhost:60021/healthz
+
+# Agent health
+kubectl exec -n helpdesk deploy/helpdesk-duplo-agent -- curl -sf http://localhost:8000/health
+
+# HTTPS responds
+curl -sI https://<APP_HOSTNAME> | head -5
+```
+
+### 3.4 Post-install platform configuration
+
+After pods are healthy and login works, configure the platform through the UI:
+
+| Step                  | Where                                        | Key details                                                                                                                                         |
+| --------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Login              | Browser → app URL                            | Sign in as a `config.authSuperUsers` email via your IdP                                                                                             |
+| 2. Create LLM Model   | AI Admin → LLMs → + Add                      | **Model ID must match the `CLAUDE_MODEL` env var exactly**                                                                                          |
+| 3. Create Agent       | AI Admin → Agents → + Add                    | Endpoint: `http://<RELEASE>-duplo-agent:8000` (base URL only). Set `endpointDetails.path: api/sendMessage`. Set `metaData.STREAMING_ENABLED: true`. |
+| 4. Create LLM Mapping | LLMs → LLM Mappings → + Add                  | Map model + agent pair. Scope: Workspace. Target: your workspace.                                                                                   |
+| 5. Create Skill       | AI Admin → Skills → + Add                    | Provide name + markdown description (`skillMd` field)                                                                                               |
+| 6. Create Persona     | AI Admin → Personas → + Add                  | Link skill(s)                                                                                                                                       |
+| 7. Create Provider    | AI Admin → Providers → + Add                 | For Kubernetes: type `eks`, `accountId` = cluster API endpoint, `metaData.base64certdata` = CA cert. Credential: SA token in `dataEx`.               |
+| 8. Create Scope       | During provider creation                     | Links credentials to a named scope                                                                                                                  |
+| 9. Create Workspace   | AI Admin → Workspaces → + Add                | Link persona(s), then add agent and scope(s)                                                                                                        |
+| 10. Test              | AI DevOps → select workspace → create ticket | Verify the agent responds with LLM-generated content                                                                                                |
+
+***
+
+## 4. Tested configurations
+
+{% hint style="info" %}
+The configurations below are ones DuploCloud has validated end to end. They are **worked examples**, not requirements. Any cluster that meets [Section 1](systems-integrator-installation-guide.md#id-1.-requirements) is supported, regardless of distribution or which products you choose to satisfy each requirement. The Helm values and post-install steps are the same everywhere — only the items listed here differ.
+{% endhint %}
+
+{% tabs %}
+{% tab title="Amazon EKS" %}
+
+| Topic             | Detail                                                                                                                      |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **Tested**        | 2026-09-15, Kubernetes 1.35, chart 0.2.22                                                                                   |
+| **Ingress**       | AWS Load Balancer Controller. `ingress.className: alb` with ALB annotations (certificate ARN, scheme, subnets, target-type). |
+| **RWX storage**   | Amazon EFS via the EFS CSI driver, StorageClass with `provisioningMode: efs-ap`. The EFS CSI controller needs its own IRSA role. |
+| **RWO storage**   | EBS CSI driver (required as a separate add-on on Kubernetes 1.35+). Mark `gp2` or `gp3` as the default StorageClass.        |
+| **LLM**           | Amazon Bedrock via IRSA. IAM policy must include `foundation-model/*` **and** `inference-profile/*` resources.               |
+| **Agent sandbox** | `SYS_ADMIN` + `NET_ADMIN` capabilities work without `privileged: true`.                                                     |
+| **OIDC**          | Must be enabled on the cluster for IRSA.                                                                                    |
+
+{% endtab %}
+
+{% tab title="Azure AKS" %}
+
+| Topic                 | Detail                                                                                                                                                                    |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tested**            | 2026-09-16, Kubernetes 1.35, chart 0.2.22                                                                                                                                 |
+| **Ingress**           | ingress-nginx installed via Helm; Azure Load Balancer assigns a public IP.                                                                                                |
+| **RWX storage**       | Azure Files NFS via the Azure Files CSI driver.                                                                                                                           |
+| **LLM**               | Azure AI Foundry (recommended) or Amazon Bedrock via static keys.                                                                                                         |
+| **Agent sandbox**     | The agent runs as UID 1001 by default — override with `runAsUser: 0` + `privileged: true` for the sandbox to work. Capabilities are dropped for non-root users even with `privileged` set. |
+| **Private certs**     | See [Private or self-signed certificates](systems-integrator-installation-guide.md#private-or-self-signed-certificates). Not needed with publicly trusted certificates.    |
+
+{% endtab %}
+
+{% tab title="Google GKE" %}
+
+| Topic                  | Detail                                                                                                                                      |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tested**             | 2026-09-17, Kubernetes 1.35, chart 0.2.22                                                                                                   |
+| **Ingress**            | ingress-nginx installed via Helm, or the GKE Gateway API natively (`gateway.enabled: true`).                                                 |
+| **RWX storage**        | Google Filestore via the Filestore CSI driver.                                                                                              |
+| **LLM**                | Vertex AI (when Claude is enabled in your project) or Amazon Bedrock via static keys.                                                        |
+| **Agent sandbox**      | Same as AKS — `runAsUser: 0` + `privileged: true` required.                                                                                 |
+| **GCP cloud provider** | **Not yet implemented.** The Kubernetes scope works for cluster operations. GCP-native resource queries (Compute Engine, GCS, etc.) are not supported. |
+
+{% endtab %}
+
+{% tab title="Self-managed (cloud VMs or on-premises)" %}
+
+Applies to any Kubernetes you operate yourself, whatever the distribution or where the nodes run.
+
+| Topic             | Detail                                                                                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Tested**        | 2026-09-16, Kubernetes 1.36, chart 0.2.22                                                                                                                          |
+| **Ingress**       | ingress-nginx. On clusters without a cloud load balancer, run the controller with `hostNetwork: true` as a `DaemonSet`, or front it with your own load balancer (MetalLB, hardware appliance, and so on). |
+| **RWX storage**   | Any RWX-capable StorageClass — an existing NFS appliance or server, CephFS, Longhorn, Portworx, or similar. If NFS-based, install NFS client utilities on every node. The chart's bundled NFS server is acceptable for evaluation only. |
+| **RWO storage**   | Any RWO StorageClass your distribution provides (local-path provisioner, Longhorn, SAN-backed CSI, and so on). Set it as the cluster default or reference it explicitly. |
+| **LLM**           | Amazon Bedrock via static keys, Azure AI Foundry, or the Anthropic API directly.                                                                                  |
+| **Agent sandbox** | `privileged: true` + `runAsUser: 0` required.                                                                                                                      |
+| **Private certs** | See [Private or self-signed certificates](systems-integrator-installation-guide.md#private-or-self-signed-certificates).                                            |
+| **DNS**           | Use [nip.io](https://nip.io) for testing (`helpdesk.<IP>.nip.io`).                                                                                                 |
+
+{% endtab %}
+{% endtabs %}
+
+### Agent sandbox override
+
+Where a platform requires the agent to run as root, set it in values rather than patching the deployment after install, so upgrades preserve it:
+
+```yaml
+duploAgent:
+  securityContext:
+    privileged: true
+    runAsUser: 0
+    runAsGroup: 0
+    seccompProfile:
+      type: Unconfined
+    capabilities:
+      add:
+        - SYS_ADMIN
+        - NET_ADMIN
+```
+
+### Private or self-signed certificates
+
+If the ingress certificate is not publicly trusted, the agent's callbacks to the backend fail TLS verification. Make the CA available to the agent:
+
+```bash
+kubectl create configmap helpdesk-ca-cert \
+  -n helpdesk \
+  --from-file=ca.crt=<CA_CERT_FILE>
+```
+
+Mount the ConfigMap into the agent container and set `NODE_EXTRA_CA_CERTS`, `SSL_CERT_FILE`, and `REQUESTS_CA_BUNDLE` to the mounted path (for example `/etc/ssl/custom-certs/ca.crt`). Restart the agent deployment and validate pod health, OAuth sign-in, and an agent request.
+
+***
+
+## 5. Troubleshooting
+
+| Symptom                               | Cause                                                              | Fix                                                                                  |
+| ------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| Backend pod crash-loops at startup    | Missing or invalid `secrets.licensingToken`                        | Set the license token issued by DuploCloud and upgrade the release                   |
+| Pods `Pending` on tolerations         | Node taint doesn't match the chart default `dedicated=hd:NoSchedule` | Set `tolerations: []` in values (and on each subchart) if no taints are used       |
+| Pods `Pending` on capacity            | Insufficient node resources                                        | Check node capacity and autoscaler configuration                                     |
+| PVC stuck `Pending`                   | No matching StorageClass, or `WaitForFirstConsumer` with no consumer | Verify the StorageClass exists and supports the required access mode; for the backup PVC, don't use `--wait` |
+| RWX mount fails (`bad option`)        | NFS client not installed on the node                               | Install NFS client utilities on every node (for example `nfs-common` on Debian/Ubuntu) |
+| MongoDB cannot schedule               | RWO volume pinned to a different zone than available nodes         | Check StorageClass zone affinity                                                     |
+| `bwrap` permission denied             | Agent needs `SYS_ADMIN` as root                                    | Set `runAsUser: 0`, `privileged: true` on the agent container                        |
+| OAuth redirect error (400)            | Wrong redirect URI in the IdP                                      | Must be `https://<HOST>/signin-<provider>` exactly; CORS origin must match exactly   |
+| 502 Bad Gateway on login              | Proxy buffer too small for auth headers                            | Raise the ingress proxy buffer size to at least 16 KiB                               |
+| 413 or header errors                  | Ingress body size or buffer limits                                 | Allow a 50 MiB request body and a 16 KiB proxy buffer                                |
+| Agent callback TLS error              | Private or self-signed cert not trusted by the agent               | Inject the CA cert and set `NODE_EXTRA_CA_CERTS` / `SSL_CERT_FILE` / `REQUESTS_CA_BUNDLE` |
+| LLM `AccessDeniedException`           | Bedrock IAM missing `inference-profile/*`                          | Add both `foundation-model/*` and `inference-profile/*` to the IAM policy            |
+| Wrong `CLAUDE_MODEL` format           | Model ID doesn't match the provider                                | Bedrock: `us.anthropic.claude-*`; Azure/Anthropic: `claude-*`                        |
+| Agent 404 on ticket                   | Agent endpoint includes the full path                              | Endpoint should be the base URL only; set `endpointDetails.path: api/sendMessage`    |
+| LLM dropdown empty in ticket UI       | No LLM Model + Mapping configured                                  | Create Model → LLM Mapping → link to workspace ([3.4](systems-integrator-installation-guide.md#id-3.4-post-install-platform-configuration)) |
+| Image pull failures                   | No egress to `quay.io` or required registries                      | Allow outbound access or mirror images                                               |
+| `helm install --wait` timeout         | Backup PVC `WaitForFirstConsumer`                                  | Don't use `--wait` on initial install                                                |
+| Encrypted data unreadable             | `encryptionMasterKey` was changed                                  | **Never change this key after first install**                                        |
+
+***
+
+## 6. Handoff and escalation
+
+When a step fails, collect:
+
+```bash
+kubectl get pods -n helpdesk -o wide
+kubectl get events -n helpdesk --sort-by='.lastTimestamp' | tail -50
+kubectl describe pod -n helpdesk <FAILING_POD>
+kubectl logs -n helpdesk <FAILING_POD> --tail=200
+kubectl logs -n helpdesk <FAILING_POD> --previous --tail=200
+kubectl get pvc -n helpdesk
+kubectl get ingress -n helpdesk -o yaml
+helm status helpdesk -n helpdesk
+helm get values helpdesk -n helpdesk
+```
+
+Include the chart version, Kubernetes version and distribution, cloud or datacenter environment, sanitized values file, relevant events, and pod logs.
+
+| Channel                             | Use when                                      |
 | ----------------------------------- | --------------------------------------------- |
 | DuploCloud Slack #si-support        | First-line support; most issues resolved here |
 | DuploCloud support portal           | Formal ticket with SLA tracking               |
 | GitHub Issues (duplocloud/helpdesk) | Bug reports with reproduction steps           |
 
-<br>
+***
+
+## 7. Uninstall
+
+```bash
+helm uninstall helpdesk --namespace helpdesk
+```
+
+**What uninstall leaves behind:**
+
+* Secrets with `helm.sh/resource-policy: keep` (JWT shared secret, encryption key)
+* The backup PVC (retained by the `Retain` reclaim policy)
+
+Clean up manually if performing a full teardown. Preserve the `encryptionMasterKey` secret if you intend to restore data later.
