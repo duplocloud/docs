@@ -54,7 +54,7 @@ Everything in this section must be in place **before** running `helm install`. T
 | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Distribution     | Any conformant Kubernetes distribution — managed (EKS, AKS, GKE) or self-managed (cloud VMs or on-premises)       |
 | Version          | 1.26 or later (tested through 1.36)                                                                               |
-| Architecture     | `amd64` (x86-64) nodes                                                                                            |
+| Architecture     | `amd64` (x86-64) or `arm64` nodes                                                                                 |
 | Nodes            | Minimum 2 for high availability; autoscaling to 6 or more recommended                                             |
 | Node size        | 2 vCPU / 4 GiB minimum per node. Plan a baseline of roughly **2.1 vCPU** and **2.2 GiB** for the stack, excluding workload growth |
 | Access           | A kubeconfig able to create the release namespace and all namespaced resources in it (Deployments, StatefulSets, Services, Ingress, PersistentVolumeClaims, Secrets, ConfigMaps, ServiceAccounts, CronJobs). The chart creates no cluster-scoped resources; cluster-wide permissions are needed only if you enable the optional bundled NFS server, which installs a `StorageClass` and `ClusterRole` |
@@ -173,7 +173,23 @@ See [License](../../armor/access-control/license.md) for how licensing works, th
 
 ## 2. Helm values reference
 
-All configuration lives in a single `values.yaml`. This section covers the values that matter for an integrator install; the full reference is on the [Helm Chart Configuration](helm-chart-configuration.md) page.
+All configuration lives in a single `values.yaml`.
+
+{% hint style="warning" %}
+**The chart is the source of truth for values, not this page.** Available values and their defaults change between chart releases. Before you write your values file, pull the annotated defaults and the README from the exact chart version you are installing:
+
+```bash
+# Full values.yaml with a comment describing every key
+helm show values oci://quay.io/duplocloud/helpdesk --version <VERSION> > helpdesk-values-defaults.yaml
+
+# The chart's README, including per-platform examples
+helm show readme oci://quay.io/duplocloud/helpdesk --version <VERSION> > helpdesk-README.md
+```
+
+Repeat this on every upgrade and diff against your values file. The tables below cover the values an integrator must decide on; treat the defaults shown as illustrative and defer to `helm show values` where they differ.
+{% endhint %}
+
+The [Helm Chart Configuration](helm-chart-configuration.md) page has a longer narrative walkthrough of the same values.
 
 ### 2.1 Required values
 
@@ -183,7 +199,7 @@ All configuration lives in a single `values.yaml`. This section covers the value
 | `config.authAllowedOrigins`  | CORS allowed origin. Must match `authFrontendBaseUrl` exactly. Single origin only. | `https://helpdesk.example.com` |
 | `config.authSuperUsers`      | Comma-separated emails granted super-admin on first login.                         | `admin@example.com`            |
 | `config.infraRegion`         | Cloud region. Used for Bedrock endpoint routing.                                   | `us-west-2`                    |
-| `secrets.licensingToken`     | License token issued by DuploCloud. The backend refuses to start without it.       | `<LICENSE_TOKEN>`              |
+| `secrets.licensingToken`     | License token issued by DuploCloud. Without it the platform starts fail-closed; an admin can still sign in and apply a license from the UI. | `<LICENSE_TOKEN>` |
 | `mongodb.auth.rootPassword`  | MongoDB root password.                                                             | `openssl rand -hex 16`         |
 | `xterm.hostname`             | Hostname for the web terminal (separate ingress rule).                             | `xterm.example.com`            |
 
@@ -407,7 +423,7 @@ nfs-server:
 
 ### 2.9 Reference values file
 
-A platform-neutral starting point. Replace all `<PLACEHOLDER>` values before use, then layer on the ingress annotations and LLM settings for your environment.
+A platform-neutral starting point. Replace all `<PLACEHOLDER>` values before use, then layer on the ingress annotations and LLM settings for your environment. Check it against `helm show values` for your chart version — keys can be added, renamed, or removed between releases.
 
 ```yaml
 config:
