@@ -1,6 +1,6 @@
 # Product Updates
 
-## September 2026
+## v0.2.23 — October 9, 2026
 
 ---
 
@@ -32,11 +32,9 @@ Changes in: `Frontend`
 
 ---
 
-**4.** `Enhancement` — **Ticket Creation Flexibility**
+**4.** `Enhancement` — **Create Tickets Without a Spec**
 
-Two constraints on ticket creation were relaxed.
-- Tickets can be created in a project without a spec
-- Scope selection is optional rather than required
+Tickets can now be created in a project without a spec.
 
 Changes in: `Frontend`
 
@@ -90,7 +88,7 @@ Changes in: `Frontend`
 
 ---
 
-## August 2026
+## v0.2.21 — September 2, 2026
 
 ---
 
@@ -142,15 +140,7 @@ Changes in: `Frontend`
 
 ---
 
-**6.** `Feature` — **RDS io2 Storage Support**
-
-RDS instances can use io2 provisioned-IOPS storage for high-performance workloads.
-
-Changes in: `Frontend`
-
----
-
-**7.** `Feature` — **Resource Group Tags and Metadata**
+**6.** `Feature` — **Resource Group Tags and Metadata**
 
 Resource groups can carry user-defined tags and metadata.
 - User-defined tags on resource groups
@@ -160,7 +150,7 @@ Changes in: `Frontend`
 
 ---
 
-**8.** `Enhancement` — **Resource Deletion Safeguards**
+**7.** `Enhancement` — **Resource Deletion Safeguards**
 
 Destructive actions are harder to trigger accidentally.
 - Delete removed from resource views in favour of Deprovision
@@ -171,7 +161,7 @@ Changes in: `Frontend`
 
 ---
 
-**9.** `Feature` — **AWS Provider Session Token Support**
+**8.** `Feature` — **AWS Provider Session Token Support**
 
 An optional Session Token field was added to AWS provider credentials, supporting temporary credentials.
 
@@ -179,11 +169,19 @@ Changes in: `Frontend`
 
 ---
 
-**10.** `Feature` — **Extension Studio Loading and Validation**
+**9.** `Feature` — **Extension Studio Loading and Validation**
 
 Extension management gained a load action and better validation.
 - Load Extension action in the Extension Studio UI
 - Extension name validation no longer throws on invalid input
+
+Changes in: `Frontend`
+
+---
+
+**10.** `Enhancement` — **Optional Scope on Ticket Creation**
+
+Scope selection is now optional rather than required when creating a ticket.
 
 Changes in: `Frontend`
 
@@ -207,7 +205,350 @@ Changes in: `Helm`
 
 ---
 
-## June–July 2026
+## v0.2.20 — August 7, 2026
+
+---
+
+**1.** `Feature` — **RDS io2 Storage Support**
+
+RDS instances can use io2 provisioned-IOPS storage for high-performance workloads.
+
+Changes in: `Frontend`
+
+---
+
+## v0.2.18 — July 28, 2026
+
+---
+
+**1.** `Feature` — [**User-Level Cloud Credentials**](../armor/providers/user-level-credentials.md)
+
+Individual users can now hold their own scoped cloud credentials rather than sharing team-level credentials, including secure materialization into agent sandboxes.
+
+Changes in: `Agent` `Backend` `Frontend`
+
+---
+
+**2.** `Feature` — [**LLM Model Registry & Configurable Model Mapping**](../armor/agents/llm-models.md)
+
+Model access is now governed by a central registry with an allow-list and resolution order (Project → Workspace → Platform), including SDK-aware pairing and first-deploy seeding.
+- User-configurable model selection in AI Studio
+- GCP Vertex model seeding alongside existing providers
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**3.** `Feature` — [**GCP Vertex AI Support**](../armor/agents/gcp-vertex-ai-support.md)
+
+The agent runtime can now run against GCP Vertex AI in addition to existing providers, with GCP partner attribution wired through the CLI/SDK calls.
+
+Changes in: `Agent` `Backend`
+
+---
+
+**4.** `Feature` — [**Slash-Command Skill Picker**](../armor/skills/README.md#referencing-a-skill-with-the-slash-picker)
+
+Users can now browse and invoke skills via a "/" command picker in chat and ticket creation, including interactive skill browsing.
+
+Changes in: `Agent` `Frontend`
+
+---
+
+**5.** `Feature` — [**Workspace Memory Management**](../armor/agents/agent-memories.md)
+
+Agent memory is now configurable per workspace and per ticket.
+- Admin page to view, edit, add, and delete agent memory files
+- Per-ticket opt-out toggle for workspace memory
+- Config precedence resolver (project/workspace > env > system)
+
+Changes in: `Agent` `Backend` `Frontend`
+
+---
+
+**6.** `Feature` — [**Human-in-the-Loop Approval for MCP Tool Calls**](../armor/access-control/ai-guardrails.md#mcp-tool-call-approval)
+
+External MCP tool calls now route through a user approval gate before executing, with durable approval UI that survives across turns.
+- Approval/result UI surfaced directly in chat
+- Silent approve/reject decisions honored without re-prompting
+- Pending approvals can time out gracefully without losing turn context
+
+Changes in: `Agent` `Frontend`
+
+---
+
+**7.** `Feature` — [**Portal Notification Providers (incl. SMTP)**](../armor/additional-components/notifications.md)
+
+Admins can now configure notification providers, including SMTP, and manage portal notification settings.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**8.** `Feature` — [**AI Suite System Settings & Global Secrets**](../armor/settings.md)
+
+A new admin surface for platform- and workspace-scoped system settings, plus a global, platform-wide secrets scope.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**9.** `Feature` — **Configurable UI Theming**
+
+AI Studio's look can now be customized via CSS custom properties instead of a fixed theme.
+
+Changes in: `Frontend`
+
+---
+
+**10.** `Feature` — [**Workspace-Level Custom Instructions**](../armor/workspaces.md#setting-a-system-prompt)
+
+Workspaces can now define custom instructions that are injected into the agent's system prompt, distinct from persisted workspace memory files.
+
+Changes in: `Agent`
+
+---
+
+**11.** `Feature` — [**Project-Level Context for Tickets**](../armor/projects.md)
+
+Tickets can now carry Project-level context in addition to Workspace, giving agents access to project-scoped configuration alongside workspace and platform settings.
+
+Changes in: `Agent` `Backend`
+
+---
+
+**12.** `Enhancement` — **Security Hardening — Auth, Access & Data**
+
+A broad round of security improvements across the platform.
+- JWT tokens are now revoked on logout, role change, and account deactivation
+- OAuth redirect URIs are validated against an allow-list to prevent open-redirect/token exfiltration
+- Fixed a cross-tenant IDOR issue on resource metadata and user credentials, and sanitized ticket title/description HTML input
+- Credential secrets are now masked in admin read paths and the Edit Credential dialog
+
+Changes in: `Agent` `Backend` `Frontend`
+
+---
+
+**13.** `Enhancement` — **Agent Runtime Hardening & Reliability**
+
+The agent execution sandbox and runtime got a reliability and security pass.
+- Agent now runs as a non-root user (uid 1001) in a capless sandbox
+- New /health/inflight endpoint enables graceful draining during rolling deploys
+- New /version endpoint exposes build provenance
+
+Changes in: `Agent` `Backend`
+
+---
+
+**14.** `Feature` — **Azure AD User Sync**
+
+User accounts can now be synced in from Azure AD instead of manual provisioning.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**15.** `Feature` — **AWS MSK (Kafka) Support**
+
+Managed Streaming for Kafka clusters can now be provisioned and managed from the platform.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**16.** `Feature` — **AWS SQS Queue Management**
+
+SQS queues are now a fully manageable resource, including encryption configuration.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**17.** `Feature` — **AWS SNS Topic Management**
+
+SNS topics can now be created and managed directly from the platform.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**18.** `Feature` — **AWS EventBridge Rule Management**
+
+EventBridge rules and their targets are now manageable, with targets handled through dedicated endpoints rather than being tied to the rule record.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**19.** `Feature` — **AWS ECR Repository Support**
+
+ECR repositories are now a manageable resource under Storage.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**20.** `Feature` — **AWS SSM Parameter Store Support**
+
+SSM Parameters, including SecureString values, can now be created and managed from the platform.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**21.** `Feature` — **Expanded RDS Management**
+
+RDS instances and clusters gained several operational capabilities.
+- On-demand snapshot creation with a dedicated Snapshots tab (instance and cluster)
+- Storage autoscaling, Secrets Manager integration, and CloudWatch log exports
+- IOPS configuration support for io1/io2/gp3 storage types
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**22.** `Feature` — **EC2 Hosts as a Managed Resource**
+
+EC2 hosts can now be added, viewed, and managed as environment resources.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**23.** `Feature` — **Kubernetes Horizontal Pod Autoscaler (HPA) Management**
+
+HPA resources can now be created and managed directly from the UI, with validation for External HPA resource requests.
+
+Changes in: `Frontend`
+
+---
+
+**24.** `Feature` — **Imported (Existing) Cluster Support**
+
+Customers can now bring an existing Kubernetes cluster into the platform rather than only provisioning new ones.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**25.** `Feature` — **Azure Kubernetes Cluster Support**
+
+Azure-hosted Kubernetes clusters are now supported alongside AWS.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**26.** `Feature` — **AWS S3 Bucket Management**
+
+S3 buckets are now a manageable resource type, including region selection at creation time.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**27.** `Feature` — **AWS Lambda Enhancements (Layers, DLQ, Runtime Config)**
+
+Lambda function management was extended with layers, dead-letter queue configuration, and additional runtime endpoints.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**28.** `Feature` — **Cloud Resource Groups Without a Kubernetes Cluster**
+
+Cloud-based Resource Groups no longer require a Kubernetes cluster, letting customers use cloud-only resources without provisioning K8s.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**29.** `Feature` — **Customer-Managed KMS Key (CMK) Support**
+
+Customer-managed KMS keys are now supported and validated across cluster and RDS resource creation.
+- CMK support for secondary clusters
+- KMS key field now conditionally shown based on RDS storage encryption settings
+- Centralized KMS key validation patterns across forms
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**30.** `Feature` — **PVC (Persistent Volume Claim) Management**
+
+Persistent Volume Claims gained edit support and better status visibility.
+- PVCs can now be edited directly in AI Studio
+- Storage size validation on PVC forms
+- PVC badge now reflects live Kubernetes phase instead of DuploCloud's cached status
+
+Changes in: `Backend` `Frontend`
+
+---
+
+## v0.2.17 — June 17, 2026
+
+---
+
+**1.** `Feature` — [**Platform Analytics Dashboard & Observability**](../armor/analytics.md)
+
+A comprehensive analytics dashboard was added to AI Studio, backed by LangFuse tracing in the agent runtime.
+- Observability iframe with LangFuse configuration and a settings deep-link
+- Agent traces enriched with helpdesk/ticket context
+- User last-login tracking on auth endpoints
+
+Changes in: `Agent` `Backend` `Frontend`
+
+---
+
+**2.** `Feature` — [**Command Policy Admin**](../armor/access-control/command-policy.md)
+
+Admins can now define command policies that are enforced during chat/ticket execution.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**3.** `Feature` — **Group Chat Mode for Multi-Party Conversations**
+
+The agent's group-chat handling was generalized to all multi-party origins (e.g. Slack channels, Teams groups), not just direct messages.
+
+Changes in: `Agent`
+
+---
+
+**4.** `Feature` — **Kubernetes Ingress Support**
+
+Kubernetes Ingress resources, including ingress groups, are now manageable from the platform.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+## v0.2.16 — June 11, 2026
+
+---
+
+**1.** `Feature` — **Slack Message Batching & Silence Detection**
+
+The agent now batches related Slack messages and detects conversational silence to respond more naturally instead of reacting to every message individually.
+
+Changes in: `Agent`
+
+---
+
+## v0.2.15 — June 11, 2026
+
+---
+
+**1.** `Feature` — **AWS EFS Support**
+
+Elastic File System is now a manageable resource type within environments.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+## v0.2.14 — June 10, 2026
 
 ---
 
@@ -222,169 +563,15 @@ Changes in: `Backend`
 
 ---
 
-**2.** `Feature` — [**User-Level Cloud Credentials**](../armor/providers/user-level-credentials.md)
+**2.** `Feature` — **Okta User Sync**
 
-Individual users can now hold their own scoped cloud credentials rather than sharing team-level credentials, including secure materialization into agent sandboxes.
-
-Changes in: `Agent` `Backend` `Frontend`
-
----
-
-**3.** `Feature` — [**Azure AD & Okta User Sync**](../armor/access-control/azure-ad-okta-user-sync.md)
-
-User accounts can now be synced in from Azure AD or Okta instead of manual provisioning.
+User accounts can now be synced in from Okta instead of manual provisioning.
 
 Changes in: `Backend` `Frontend`
 
 ---
 
-**4.** `Feature` — [**LLM Model Registry & Configurable Model Mapping**](../armor/agents/llm-models.md)
-
-Model access is now governed by a central registry with an allow-list and resolution order (Project → Workspace → Platform), including SDK-aware pairing and first-deploy seeding.
-- User-configurable model selection in AI Studio
-- GCP Vertex model seeding alongside existing providers
-
-Changes in: `Backend` `Frontend`
-
----
-
-**5.** `Feature` — [**GCP Vertex AI Support**](../armor/agents/gcp-vertex-ai-support.md)
-
-The agent runtime can now run against GCP Vertex AI in addition to existing providers, with GCP partner attribution wired through the CLI/SDK calls.
-
-Changes in: `Agent` `Backend`
-
----
-
-**6.** `Feature` — [**Platform Analytics Dashboard & Observability**](../armor/analytics.md)
-
-A comprehensive analytics dashboard was added to AI Studio, backed by LangFuse tracing in the agent runtime.
-- Observability iframe with LangFuse configuration and a settings deep-link
-- Agent traces enriched with helpdesk/ticket context
-- User last-login tracking on auth endpoints
-
-Changes in: `Agent` `Backend` `Frontend`
-
----
-
-**7.** `Feature` — [**Command Policy Admin**](../armor/access-control/command-policy.md)
-
-Admins can now define command policies that are enforced during chat/ticket execution.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**8.** `Feature` — [**Slash-Command Skill Picker**](../armor/skills/README.md#referencing-a-skill-with-the-slash-picker)
-
-Users can now browse and invoke skills via a "/" command picker in chat and ticket creation, including interactive skill browsing.
-
-Changes in: `Agent` `Frontend`
-
----
-
-**9.** `Feature` — [**Workspace Memory Management**](../armor/agents/agent-memories.md)
-
-Agent memory is now configurable per workspace and per ticket.
-- Admin page to view, edit, add, and delete agent memory files
-- Per-ticket opt-out toggle for workspace memory
-- Config precedence resolver (project/workspace > env > system)
-
-Changes in: `Agent` `Backend` `Frontend`
-
----
-
-**10.** `Feature` — [**Human-in-the-Loop Approval for MCP Tool Calls**](../armor/access-control/ai-guardrails.md#mcp-tool-call-approval)
-
-External MCP tool calls now route through a user approval gate before executing, with durable approval UI that survives across turns.
-- Approval/result UI surfaced directly in chat
-- Silent approve/reject decisions honored without re-prompting
-- Pending approvals can time out gracefully without losing turn context
-
-Changes in: `Agent` `Frontend`
-
----
-
-**11.** `Feature` — [**Portal Notification Providers (incl. SMTP)**](../armor/additional-components/notifications.md)
-
-Admins can now configure notification providers, including SMTP, and manage portal notification settings.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**12.** `Feature` — [**AI Suite System Settings & Global Secrets**](../armor/settings.md)
-
-A new admin surface for platform- and workspace-scoped system settings, plus a global, platform-wide secrets scope.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**13.** `Feature` — **Configurable UI Theming**
-
-AI Studio's look can now be customized via CSS custom properties instead of a fixed theme.
-
-Changes in: `Frontend`
-
----
-
-**14.** `Feature` — **Group Chat Mode for Multi-Party Conversations**
-
-The agent's group-chat handling was generalized to all multi-party origins (e.g. Slack channels, Teams groups), not just direct messages.
-
-Changes in: `Agent`
-
----
-
-**15.** `Feature` — **Slack Message Batching & Silence Detection**
-
-The agent now batches related Slack messages and detects conversational silence to respond more naturally instead of reacting to every message individually.
-
-Changes in: `Agent`
-
----
-
-**16.** `Feature` — [**Workspace-Level Custom Instructions**](../armor/workspaces.md#setting-a-system-prompt)
-
-Workspaces can now define custom instructions that are injected into the agent's system prompt, distinct from persisted workspace memory files.
-
-Changes in: `Agent`
-
----
-
-**17.** `Feature` — [**Project-Level Context for Tickets**](../armor/projects.md)
-
-Tickets can now carry Project-level context in addition to Workspace, giving agents access to project-scoped configuration alongside workspace and platform settings.
-
-Changes in: `Agent` `Backend`
-
----
-
-**18.** `Enhancement` — **Security Hardening — Auth, Access & Data**
-
-A broad round of security improvements across the platform.
-- JWT tokens are now revoked on logout, role change, and account deactivation
-- OAuth redirect URIs are validated against an allow-list to prevent open-redirect/token exfiltration
-- Fixed a cross-tenant IDOR issue on resource metadata and user credentials, and sanitized ticket title/description HTML input
-- Credential secrets are now masked in admin read paths and the Edit Credential dialog
-
-Changes in: `Agent` `Backend` `Frontend`
-
----
-
-**19.** `Enhancement` — **Agent Runtime Hardening & Reliability**
-
-The agent execution sandbox and runtime got a reliability and security pass.
-- Agent now runs as a non-root user (uid 1001) in a capless sandbox
-- New /health/inflight endpoint enables graceful draining during rolling deploys
-- New /version endpoint exposes build provenance
-
-Changes in: `Agent` `Backend`
-
----
-
-**20.** `Feature` — **Terraform-Managed Environments (Infrastructure as Code)**
+**3.** `Feature` — **Terraform-Managed Environments (Infrastructure as Code)**
 
 Environments can now be defined, planned, and applied as Terraform modules directly from the platform, with git-diff visibility before changes go live.
 - Full TfDeployment/TfEnvironment/TfState lifecycle with independent plan and apply flows
@@ -395,165 +582,12 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**21.** `Feature` — **AWS Just-in-Time (JIT) Access for Resource Groups**
+**4.** `Feature` — **AWS Just-in-Time (JIT) Access for Resource Groups**
 
 Users can now obtain temporary, scoped AWS access tied to a Resource Group instead of standing credentials.
 - Assume-role and federation-URL primitives scoped to the resource group
 - Read-only access enforcement option
 - Chained credentials support for nested scopes
-
-Changes in: `Backend` `Frontend`
-
----
-
-**22.** `Feature` — **AWS EFS Support**
-
-Elastic File System is now a manageable resource type within environments.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**23.** `Feature` — **AWS MSK (Kafka) Support**
-
-Managed Streaming for Kafka clusters can now be provisioned and managed from the platform.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**24.** `Feature` — **AWS SQS Queue Management**
-
-SQS queues are now a fully manageable resource, including encryption configuration.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**25.** `Feature` — **AWS SNS Topic Management**
-
-SNS topics can now be created and managed directly from the platform.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**26.** `Feature` — **AWS EventBridge Rule Management**
-
-EventBridge rules and their targets are now manageable, with targets handled through dedicated endpoints rather than being tied to the rule record.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**27.** `Feature` — **AWS ECR Repository Support**
-
-ECR repositories are now a manageable resource under Storage.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**28.** `Feature` — **AWS SSM Parameter Store Support**
-
-SSM Parameters, including SecureString values, can now be created and managed from the platform.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**29.** `Feature` — **Expanded RDS Management**
-
-RDS instances and clusters gained several operational capabilities.
-- On-demand snapshot creation with a dedicated Snapshots tab (instance and cluster)
-- Storage autoscaling, Secrets Manager integration, and CloudWatch log exports
-- IOPS configuration support for io1/io2/gp3 storage types
-
-Changes in: `Backend` `Frontend`
-
----
-
-**30.** `Feature` — **Kubernetes Ingress Support**
-
-Kubernetes Ingress resources, including ingress groups, are now manageable from the platform.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**31.** `Feature` — **EC2 Hosts as a Managed Resource**
-
-EC2 hosts can now be added, viewed, and managed as environment resources.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**32.** `Feature` — **Kubernetes Horizontal Pod Autoscaler (HPA) Management**
-
-HPA resources can now be created and managed directly from the UI, with validation for External HPA resource requests.
-
-Changes in: `Frontend`
-
----
-
-**33.** `Feature` — **Imported (Existing) Cluster Support**
-
-Customers can now bring an existing Kubernetes cluster into the platform rather than only provisioning new ones.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**34.** `Feature` — **Azure Kubernetes Cluster Support**
-
-Azure-hosted Kubernetes clusters are now supported alongside AWS.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**35.** `Feature` — **AWS S3 Bucket Management**
-
-S3 buckets are now a manageable resource type, including region selection at creation time.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**36.** `Feature` — **AWS Lambda Enhancements (Layers, DLQ, Runtime Config)**
-
-Lambda function management was extended with layers, dead-letter queue configuration, and additional runtime endpoints.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**37.** `Feature` — **Cloud Resource Groups Without a Kubernetes Cluster**
-
-Cloud-based Resource Groups no longer require a Kubernetes cluster, letting customers use cloud-only resources without provisioning K8s.
-
-Changes in: `Backend` `Frontend`
-
----
-
-**38.** `Feature` — **Customer-Managed KMS Key (CMK) Support**
-
-Customer-managed KMS keys are now supported and validated across cluster and RDS resource creation.
-- CMK support for secondary clusters
-- KMS key field now conditionally shown based on RDS storage encryption settings
-- Centralized KMS key validation patterns across forms
-
-Changes in: `Backend` `Frontend`
-
----
-
-**39.** `Feature` — **PVC (Persistent Volume Claim) Management**
-
-Persistent Volume Claims gained edit support and better status visibility.
-- PVCs can now be edited directly in AI Studio
-- Storage size validation on PVC forms
-- PVC badge now reflects live Kubernetes phase instead of DuploCloud's cached status
 
 Changes in: `Backend` `Frontend`
 
