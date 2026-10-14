@@ -1,16 +1,18 @@
 ---
 name: product-updates
-description: Use when the user asks for weekly product updates, weekly AI update summaries, or to "do the weekly updates". Covers fetching commits from GitHub, publishing the product updates changelog section, and then auditing and updating the product doc pages those updates affect (with screenshots via the Playwright skill where the UI changed).
+description: Use when the user asks for product updates, AI update summaries, release notes for a new helpdesk-helm chart version, or to "do the weekly updates" — anything that adds to ai-helpdesk-v2/product-updates.md or audits the doc pages its entries point at.
 ---
 
 # Product Update Workflow
 
-Runs periodically (nominally weekly, but resumes from wherever the last run left off — see Step 1). Two phases, each ending in its own PR:
+Runs whenever a new `helpdesk-helm` chart version has been tagged (resumes from the last tag it covered — see Step 1). Two phases, each ending in its own PR:
 
-1. **Changelog** (Steps 1–3) — a new section appended to the public-facing product updates page.
+1. **Changelog** (Steps 1–3) — one new section per chart version, added to the public-facing product updates page.
 2. **Docs** (Step 4) — for each published item, check whether the product docs need creating or correcting, and do it; screenshot-bearing pages go through the Playwright skill.
 
 Phase 2 is part of the job, not an optional extra. Announcing a feature in the changelog while leaving its doc page stale or absent is the failure mode this skill exists to prevent.
+
+**Sections are keyed to Helm chart versions, not calendar periods.** A customer reads `helm list`, sees `0.2.23`, and must be able to find exactly what that version contains. Nothing is published for work that is not yet in a GA chart tag — it waits for the next run.
 
 ---
 
@@ -26,9 +28,9 @@ Phase 2 is part of the job, not an optional extra. Announcing a feature in the c
 
 ---
 
-## Step 1 — Determine the Date Range
+## Step 1 — Determine the Tag Range
 
-There is no local state to read — this skill runs from inside the tracked `docs` repo and keeps no files of its own. The date range instead comes from **this skill's own past PRs on GitHub**, identified by a hidden marker (see Step 3b).
+There is no local state to read — this skill runs from inside the tracked `docs` repo and keeps no files of its own. The range comes from **this skill's own past PRs on GitHub**, identified by a hidden marker (see Step 3b), expressed as a chart tag.
 
 1. Find the docs repo's GitHub remote from the current directory: `gh repo view --json nameWithOwner -q .nameWithOwner` (do not hardcode an org/repo).
 2. Search merged PRs on that repo for the marker, most recent first:
@@ -36,34 +38,52 @@ There is no local state to read — this skill runs from inside the tracked `doc
    gh pr list --repo <owner/repo> --state merged --search "product-updates-skill-marker in:body" \
      --json number,title,mergedAt,body --limit 5
    ```
-3. Take the most recent result and extract the covered-through date from its hidden marker (format below) — this is the **start** of the new window.
-4. If no marker is found anywhere (first run, or the marker was never added before), work out the last point of genuine **coverage** and propose it, then confirm with the user before using it.
+3. Take the most recent result and read `covered_through_tag=vX.Y.Z` from its hidden marker. That tag is the **last version already published** — the new window starts at the tag after it.
+4. If no marker is found (first run, or a run before the marker carried a tag), the watermark is the **newest `## vX.Y.Z` heading already in the file** — read it, state it, and confirm with the user. Do not infer it from `git log` or from which PR last touched the file; the heading is the fact.
+5. List the GA tags that have landed since, oldest first. **GA tags are `v*` only — `rc-*` tags are release candidates and are never a section.** Sort with `sort -V`: plain string order puts `v0.2.9` after `v0.2.23`.
+   ```bash
+   gh api repos/duplocloud-internal/helpdesk-helm/tags --paginate --jq '.[].name' | grep '^v' | sort -V
+   ```
+   For each new tag, record its date — this is the section's date and the `until` bound for its commits:
+   ```bash
+   gh api repos/duplocloud-internal/helpdesk-helm/commits/<tag> --jq '.commit.committer.date[:10]'
+   ```
+6. **No new GA tag since the marker → stop.** Tell the user there is nothing to publish yet and which RC (if any) is in flight. Do not publish an "Unreleased" or "Upcoming" section, and do not fall back to a date range.
 
-   **Do not take the most recent PR that touched the changelog file.** Several kinds of PR touch `ai-helpdesk-v2/product-updates.md` without advancing coverage at all — doc-page passes that only add cross-links into existing entries, wording corrections, formatting fixes. The date that matters is when content was last *added*, not when the file was last edited.
+Before fetching any commits, state the tags you will cover (with dates) and the marker PR you resumed from, and confirm with the user.
 
-   To find it: read the newest `##` section heading actually present in the file — that is the real watermark — and cross-check it against the PR that introduced that section (`git log -- ai-helpdesk-v2/product-updates.md`, looking for the commit that added the heading rather than ones that modified entries under it).
+### One section per tag — unless the tag shipped nothing
 
-   Then propose a start date and say what you based it on. **If the watermark is ambiguous, ask the user rather than picking.** It frequently is: a heading like `## June–July 2026` names no end day, and the PR that added it may have merged before the month ended, so coverage could stop several days short of the heading's implied end. When in doubt prefer the earlier date — a duplicate item is visible in review and easy to drop, a silently missed feature is not.
-5. The **end** of the window is always today (`currentDate` from the system prompt). This is a "since the last run" range, not a fixed weekly cadence — if it's been two days or two months since the last covered PR, cover exactly that gap.
-6. Use `since=YYYY-MM-DD` and `until=YYYY-MM-DD` (today) when fetching commits.
+Each new GA tag normally gets its own `## vX.Y.Z — Month D, YYYY` section. The exception is a tag whose diff from the previous tag carries no app image bump:
 
-Before fetching any commits, state the inferred range and its source PR to the user and confirm it looks right (a PR from another workflow — e.g. a docs backfill — could theoretically carry similar text; the marker's exact key below avoids that, but a sanity check is still cheap insurance).
+```bash
+gh api repos/duplocloud-internal/helpdesk-helm/compare/<prev-tag>...<tag> \
+  --jq '.commits[].commit.message' | head -20
+```
+
+- Only `Bump version`, `.helmignore`, packaging, size-guard, `Chart.yaml` → **skip that tag; it has no section.** Its items belong to the previous tag. (Real case: v0.2.19 only fixed chart packaging after v0.2.18 — everything is listed under v0.2.18.)
+- Image bump for **one service only** (`Update DuploAgent image tag`, `bumping ui`) → that tag's section holds **only items whose `Changes in:` matches that service**. Agent image → `Agent` items; UI image → `Frontend` items; backend image → `Backend` items. (Real case: v0.2.15 bumped the UI, v0.2.16 only the agent — AWS EFS Support went under v0.2.15, Slack Message Batching under v0.2.16.)
+- Image bump for several services, or a generic `bumping image versions` → normal section, takes everything merged in its window.
+
+Say which tags you are skipping or restricting and why, as part of the confirmation above.
 
 ---
 
 ## Step 2 — Fetch Commits
 
-Use `mcp__plugin_github_github__list_commits` (NOT `mcp__github__list_commits` — that tool has auth issues).
+The commit window for a tag is **(previous tag's date, this tag's date]**. For the first new tag, the previous tag is the one in the marker. Use `since` = previous tag's date and `until` = this tag's date when fetching; a commit on the boundary day belongs to the tag whose date it matches.
 
-Fetch all 4 repos **in parallel** (single message, four tool calls):
+Fetch all 4 repos **in parallel** (single message, four tool calls), one window per tag:
 ```
 owner: duplocloud-internal
 repo: [each repo]
 sha: [branch per table above]
-since: YYYY-MM-DD  (start of week)
-until: YYYY-MM-DD  (end of week)
+since: YYYY-MM-DD  (previous tag's date)
+until: YYYY-MM-DD  (this tag's date)
 perPage: 100
 ```
+
+Use `mcp__plugin_github_github__list_commits` (NOT `mcp__github__list_commits` — that tool has auth issues).
 
 ### An item ships only when its WHOLE stack has shipped
 
@@ -75,13 +95,13 @@ For every candidate item, establish that its backend dependency has actually shi
 
 1. **Does it need a backend at all?** Pure presentation — layout, navigation, validation, display formatting — does not. Anything that reads or writes data, enforces a policy, or calls an endpoint does.
 2. **Which backend?** See "Two products, one UI" below. Ticket prefixes (`DUPLOAI-` vs `DUPLO-`/`CUST-`) are a weak hint that has been **wrong repeatedly** — never classify on prefix alone.
-3. **Has that backend shipped?** For `duplo-ai-helpdesk`, the test is whether the supporting code is on **`main`**, not merely on `dev`:
+3. **Has that backend shipped in this tag?** The chart's backend image is built from `main`, so for `duplo-ai-helpdesk` the test is whether the supporting code was on **`main` on or before the tag's date** — not merely on `dev`, and not on `main` today if it got there after the tag:
    ```bash
    gh api repos/duplocloud-internal/duplo-ai-helpdesk/contents/<path>?ref=main   # present on main?
-   gh api "repos/duplocloud-internal/duplo-ai-helpdesk/commits?sha=main&path=<path>"
+   gh api "repos/duplocloud-internal/duplo-ai-helpdesk/commits?sha=main&path=<path>&until=<tag-date>T23:59:59Z"
    ```
    Comparing `main...dev` shows what is still unreleased.
-4. **Not yet shipped → hold the item.** Do not publish it, and do not soften it into a vaguer entry. Say in the draft review which items were held and why, so the user can overrule if they know a release is imminent. A held item is picked up by a later run once its backend lands — which is exactly what the resume-from-marker mechanism is for.
+4. **Not yet shipped → hold the item.** Do not publish it, and do not soften it into a vaguer entry. Say in the draft review which items were held and why, so the user can overrule if they know a release is imminent. A held item is picked up by a later run once a tag carries its backend — which is exactly what the resume-from-marker mechanism is for.
 
 When a dependency genuinely can't be determined from the code, ask rather than assuming it shipped. The asymmetry matters: a deferred item is published a month late, a wrongly-published one tells customers a feature exists when it doesn't.
 
@@ -130,12 +150,14 @@ The pattern to internalise: **resource-type presence is necessary but not suffic
 
 **Filter out noise commits** — skip anything that looks like:
 - Version bumps (`Bump version from X to Y`)
-- Image tag updates (`Update container image tags`, `Update DuploAgent image tag`)
+- Image tag updates (`Update container image tags`, `Update DuploAgent image tag`) — these decide section boundaries in Step 1, but they are never items themselves
 - Merge branch commits (`Merge branch 'main' into feature/...`)
 - Build/CI-only changes unless there's a meaningful feature in the message
 - Fixing tests, fixing build issues (unless the underlying change is notable)
 
 Group remaining commits by feature/PR — multi-commit PRs count as one item.
+
+**A feature whose parts landed in different tag windows is two items, not one.** Write each half as its own entry under its own tag, with a title that stands alone (real case: "Ticket Creation Flexibility" became "Optional Scope on Ticket Creation" under v0.2.21 and "Create Tickets Without a Spec" under v0.2.23). Do not pull the earlier half forward into the later tag, and do not describe work the tag does not contain.
 
 ---
 
@@ -152,7 +174,7 @@ Before writing any file, present the full list of updates **in the exact `.md` f
   - `Enhancement` = improvement to an existing capability
 - Each item: numbered, label tag, bold title, one-liner, 3 bullet points (fewer if genuinely only 2 noteworthy points), `Changes in:` line
 - `Changes in:` uses backtick labels — pick from: `` `Backend` `` `` `Frontend` `` `` `Agent` `` `` `Helm` ``
-- **Up to 25 items per section — a hard ceiling, with no floor.** At the current roughly-monthly cadence a full month of AI-product work has run to about 10–12 items once core-platform work is correctly excluded (see the field-level test in Step 2), so a section in that range is normal and needs no explanation. Merge minor related commits into one item.
+- **Up to 25 items per section — a hard ceiling, with no floor.** Section size tracks how long the tag's window was: a tag a week after the last one may carry one or two items, and a tag after a six-week gap can carry twenty (v0.2.18 followed a 41-day gap). Both are normal and need no explanation. Merge minor related commits into one item.
 - **If the list exceeds 25, the bar for inclusion is too low — raise it.** Do not publish an over-length section and flag it; fix it. In order:
   1. **Cut** the items that aren't really product news — small validation tweaks, field-level additions, copy and layout adjustments, consistency passes, internal refactors surfaced in the UI. If a reader wouldn't change what they do on learning it, it doesn't earn a numbered entry.
   2. **Merge** what remains into the capability it belongs to. Several changes to one feature area are one item with bullets, not three items.
@@ -163,10 +185,10 @@ Before writing any file, present the full list of updates **in the exact `.md` f
 
 ### Format (copy exactly)
 
-The heading below is a placeholder — the actual section heading is agreed with the user in Step 3b. What must be copied exactly is the *item* format beneath it.
+The heading is the chart tag and its date — not a month, not a date range, never agreed ad hoc. What must be copied exactly is the *item* format beneath it.
 
 ```markdown
-## {section heading — see Step 3b}
+## v0.2.24 — November 3, 2026
 
 ---
 
@@ -195,30 +217,26 @@ cd "/Users/amal/Documents/github/duplocloud/docs"
 git fetch origin && git pull origin <current-branch>
 ```
 
-**2. Insert the section into the public-facing product updates doc**
+**2. Insert the section(s) into the public-facing product updates doc**
 
 **Additional rule:** Keep all bullet points at the capability/outcome level. If a bullet sounds like it belongs in a pull request description, rewrite it as a user benefit.
 
-**Ask the user how to head the section(s) — do not assume.** The right granularity depends on how often updates are being run, which changes over time:
-- Roughly monthly or less often → month-only headings are usually enough (`## August 2026`).
-- More frequent than monthly → headings need dates to stay distinguishable (`## August 4–18, 2026`).
-
-Propose the format that fits the range you just covered, show the exact heading(s) you intend to use, and let the user confirm or change it. Match whatever style the existing sections in the file already use unless the user says otherwise.
+Heading is `## vX.Y.Z — Month D, YYYY`, where the date is the tag's commit date from Step 1. The tag is written with its `v` prefix, exactly as GitHub lists it.
 
 Place newest first, directly after the `# Product Updates` heading.
 
-**If a section with that heading already exists, append into it — do not create a second one.** A run covering part of a period will often be followed by another run covering the rest; the later run adds its items to the bottom of the existing section and continues its numbering, rather than opening a duplicate heading.
+**If a section for that tag already exists, append into it — do not create a second one.** This happens when a run was interrupted after writing part of a tag, or when held items (Step 2) are later confirmed as shipped in a tag that is already published; the later run adds to the bottom of the existing section and continues its numbering.
 
-If the range spans more than one period, split the items into one section per period by the date the work landed.
+**When one run produces several sections, order those newest-first too.** The whole page reads newest-first, and that applies within a single insert as much as between inserts — a run covering v0.2.24 and v0.2.25 writes **v0.2.25 above v0.2.24**. This is easy to get wrong: the natural way to draft is oldest-first, and inserting that block at the top leaves the newest section buried underneath. Check the final heading order before committing.
 
-**When one run produces several sections, order those newest-first too.** The whole page reads newest-first, and that applies within a single insert as much as between inserts — a run covering August and September writes **September above August**, not in chronological order. This is easy to get wrong: the natural way to draft is oldest-first, and inserting that block at the top leaves the newest section buried underneath. Check the final heading order before committing.
+The month-based sections below `## May 2026` are historical and are never touched — they predate the first chart tag.
 
 **3. Commit, push, and create a PR**
 
 Stage only `ai-helpdesk-v2/product-updates.md`:
 ```bash
 git add ai-helpdesk-v2/product-updates.md
-git commit -m "Add product updates for {section period}"
+git commit -m "Add product updates for {vX.Y.Z, or vX.Y.Z–vX.Y.W for several}"
 git push origin <current-branch>
 ```
 
@@ -228,19 +246,19 @@ git push origin <current-branch>
 cat > /tmp/pr-body.md << 'EOF'
 ## Summary
 
-{list all items covered, grouped by label (Features / Enhancements)}
+{list all items covered, grouped by chart version, then by label (Features / Enhancements)}
 
 ---
-_Generated by the `product-updates` skill. This was the last update produced by this skill — covering commits through {until-date, YYYY-MM-DD}. The next run resumes from that date._
-<!-- product-updates-skill-marker: covered_through={until-date, YYYY-MM-DD} -->
+_Generated by the `product-updates` skill. This was the last update produced by this skill — covering helpdesk-helm chart versions through {newest tag}. The next run resumes from the tag after it._
+<!-- product-updates-skill-marker: covered_through_tag={newest tag, e.g. v0.2.24} -->
 EOF
 
-gh pr create --title "Product updates: {section period}" --body-file /tmp/pr-body.md
+gh pr create --title "Product updates: {vX.Y.Z, or vX.Y.Z–vX.Y.W}" --body-file /tmp/pr-body.md
 ```
 
-- `{until-date}` is the **end** of the range fetched in Step 1/2 (today's date at the time of the run), in `YYYY-MM-DD` — not the start, so the next run picks up exactly where this one left off with no gap or overlap.
+- `{newest tag}` is the **highest** GA tag this run published a section for, written with its `v` prefix. A tag skipped in Step 1 for shipping nothing (e.g. v0.2.19) still counts as covered — put the skipped tag in the marker if it is the newest, so the next run does not try to publish it again.
 - The HTML comment is invisible when the PR renders on GitHub; the italic line above it is the human-visible equivalent, so anyone reading the PR (not just the skill) can see it's the checkpoint.
-- Do not alter the exact key `product-updates-skill-marker:` — Step 1's search depends on it.
+- Do not alter the exact key `product-updates-skill-marker:` or the field name `covered_through_tag=` — Step 1's search depends on them. The older `covered_through={date}` form is retired; if Step 1 finds only that form, treat it as "no marker" and fall back to the newest `## vX.Y.Z` heading.
 
 Do not stop here. The changelog entry announces a feature; Step 4 makes sure the docs actually describe it.
 
