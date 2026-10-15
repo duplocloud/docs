@@ -157,6 +157,13 @@ The pattern to internalise: **resource-type presence is necessary but not suffic
 
 Group remaining commits by feature/PR — multi-commit PRs count as one item.
 
+**Place each item by its LAST required commit, not its first.** A ticket branch rarely lands in one commit, and the write-up describes the finished feature — every bullet, including a sub-capability named only in passing ("including ingress groups"). Before assigning a tag:
+1. Pull the full commit history for that ticket ID / feature branch / keyword across the **whole** candidate window, not just the first grep hit.
+2. Check every sentence and bullet you are about to write against that list. If a bullet's capability only exists as of a later commit, the item's date is that later commit's date — not the first one found.
+3. A genuine bug fix or polish commit after the described feature is already complete does not move the item (e.g. a "bug fix" PR title, or a refinement not named in the write-up's own text).
+
+Two real misses from the June–September backfill, both caught only by re-checking every bullet against the full history: "HelpDesk Audit Trail" listed 401/403/404/405 capture, which didn't exist until three weeks after the item's first commit; "Kubernetes Ingress Support" named "ingress groups" explicitly, which shipped one day after the tag the item was first placed under. Both moved forward one tag once checked properly.
+
 **A feature whose parts landed in different tag windows is two items, not one.** Write each half as its own entry under its own tag, with a title that stands alone (real case: "Ticket Creation Flexibility" became "Optional Scope on Ticket Creation" under v0.2.21 and "Create Tickets Without a Spec" under v0.2.23). Do not pull the earlier half forward into the later tag, and do not describe work the tag does not contain.
 
 ---
