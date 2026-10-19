@@ -168,7 +168,7 @@ Click **Create GitHub App**.
 
 On the App's **General** page, copy the **App ID**.
 
-Scroll to **Private keys** and click **Generate a private key**. GitHub downloads a `.pem` file. Store it securely, because GitHub doesn't keep a copy.
+In the App's left menu, click **Credentials**, then open the **Key pairs** tab and click **Generate a private key**. GitHub downloads a `.pem` file. Store it securely, because GitHub doesn't keep a copy.
 {% endstep %}
 
 {% step %}
