@@ -135,7 +135,7 @@ Use this section when you choose the **GitHub App** credential type in Step 3. Y
 
 In GitHub, go to your organization's **Settings** → **Developer settings** → **GitHub Apps** and click **New GitHub App**. Fill in:
 
-- **GitHub App name** — a unique name, e.g. `duplocloud-ai-<your-org>`
+- **GitHub App name** — `DuploCloud`
 - **Homepage URL** — any URL, e.g. your DuploCloud portal URL
 - **Callback URL** — leave blank. DuploCloud doesn't use the OAuth user flow.
 - **Webhook** — clear the **Active** checkbox. DuploCloud doesn't receive webhooks.
