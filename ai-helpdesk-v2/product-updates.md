@@ -203,6 +203,51 @@ Changes in: `Agent` `Backend` `Frontend`
 
 ---
 
+**12.** `Feature` — **Self-Service Audit Log Search**
+
+Audit logs can now be searched directly in AI Studio instead of requesting them from support.
+- Filter by user, action, status, and date range
+- Export results to CSV
+- Available to workspace admins
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**13.** `Feature` — **Workspace Files**
+
+Files stored in a workspace can now be browsed directly in AI Studio.
+- View workspace files without downloading them first
+- Read-only access for users without edit permissions
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**14.** `Feature` — **AWS SQS Dead Letter Queue Support**
+
+SQS queues can now be configured with a dead-letter queue for messages that fail processing.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**15.** `Feature` — **Azure Key Vault Certificate Selection for Ingress**
+
+When configuring SSL on an Azure Application Gateway ingress, a certificate can now be selected from Key Vault by name instead of entering it manually.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**16.** `Enhancement` — **SSO Configuration via Environment Variables**
+
+SSO behavior, previously hardcoded, can now be controlled per deployment through environment variables or app settings.
+
+Changes in: `Backend`
+
+---
+
 ## v0.2.21 — September 2, 2026
 
 ---
