@@ -1,5 +1,109 @@
 # Product Updates
 
+## v0.2.24 — October 14, 2026
+
+---
+
+**1.** `Feature` — **Drag-and-Drop File Attachments**
+
+Files can be attached to a conversation by dragging them into the chat instead of browsing for them.
+- Drop one or more files directly onto the chat to attach them
+- Works alongside the existing attach button
+
+Changes in: `Frontend`
+
+---
+
+**2.** `Feature` — **Install Extensions from the Available Tab**
+
+Extensions can be installed directly from the Available tab in Extension Studio, without leaving the catalogue view.
+- Install in one step from the listing
+- Removes the detour through a separate install flow
+
+Changes in: `Frontend`
+
+---
+
+**3.** `Feature` — **Quick Menu Search in the Environment Header**
+
+A search box in the environment header jumps straight to any resource type or page in that environment.
+- Type to filter the environment's menu and navigate in one step
+- Especially useful in environments with many resource types enabled
+
+Changes in: `Frontend`
+
+---
+
+**4.** `Feature` — **Knowledge Base Sharing Across Workspaces**
+
+A knowledge base can now be shared with other workspaces from a dedicated Shared Workspaces tab.
+- Grant read access to a knowledge base per workspace
+- Shared knowledge bases appear in the receiving workspace without re-uploading documents
+
+Changes in: `Frontend`
+
+---
+
+**5.** `Enhancement` — **Rename Workspaces, Providers, and Scopes**
+
+Workspaces, providers, and scopes can be renamed in place from the admin UI instead of being recreated.
+
+Changes in: `Frontend`
+
+---
+
+**6.** `Enhancement` — **Project Context Persists in the Ticket UI**
+
+The project context attached to a ticket is now persisted and shown in the UI, completing the project-level context support shipped in v0.2.18.
+
+Changes in: `Frontend`
+
+---
+
+**7.** `Enhancement` — **Attach a New Scope While Writing a Prompt**
+
+A new scope can be created from inside the Attach Scope modal, so prompt snippets can reference a scope that didn't exist a moment ago without leaving the editor.
+
+Changes in: `Frontend`
+
+---
+
+**8.** `Enhancement` — **Namespace Filter on Environment Kubernetes Lists**
+
+Kubernetes resource lists in an environment can be narrowed to a single namespace.
+- Applies across the Kubernetes resource types shown in an environment
+- Reduces noise in clusters that host many namespaces
+
+Changes in: `Frontend`
+
+---
+
+**9.** `Enhancement` — **AI Admin Sidebar Regrouped into Collapsible Sections**
+
+The AI Admin sidebar is organised into collapsible groups, and administrators can configure the order of sidebar menus and extensions.
+- Related admin pages are grouped and can be collapsed
+- Menu and extension ordering is configurable
+
+Changes in: `Frontend`
+
+---
+
+**10.** `Enhancement` — **Missing ALB Controller Warning**
+
+A banner now warns when an environment's cluster has no AWS Load Balancer Controller, so ingress resources that depend on it don't fail silently.
+
+Changes in: `Frontend`
+
+---
+
+**11.** `Enhancement` — **Permission Set Group Membership Management**
+
+Users can be added to and removed from a permission set group directly on the group's Users tab, and in integrated mode users can be mapped to a permission set from the user form.
+
+Changes in: `Frontend`
+
+---
+
 ## v0.2.23 — October 9, 2026
 
 ---
@@ -85,6 +189,62 @@ Changes in: `Helm`
 Agent messages are stamped at response completion, so timestamps reflect when the response finished rather than when it started.
 
 Changes in: `Frontend`
+
+---
+
+**11.** `Feature` — **Knowledge Base**
+
+Documents can be uploaded into a knowledge base that agents search when answering, so responses draw on your own documentation rather than general knowledge alone.
+- Upload PDF, Office, HTML and text documents; large files (up to 2 GB) are ingested in the background
+- Agents search the knowledge base automatically during a conversation
+- Knowledge bases are managed per workspace from AI Admin
+
+Changes in: `Agent` `Backend` `Frontend`
+
+---
+
+**12.** `Feature` — **Self-Service Audit Log Search**
+
+Audit logs can now be searched directly in AI Studio instead of requesting them from support.
+- Filter by user, action, status, and date range
+- Export results to CSV
+- Available to workspace admins
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**13.** `Feature` — **Workspace Files**
+
+Files stored in a workspace can now be browsed directly in AI Studio.
+- View workspace files without downloading them first
+- Read-only access for users without edit permissions
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**14.** `Feature` — **AWS SQS Dead Letter Queue Support**
+
+SQS queues can now be configured with a dead-letter queue for messages that fail processing.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**15.** `Feature` — **Azure Key Vault Certificate Selection for Ingress**
+
+When configuring SSL on an Azure Application Gateway ingress, a certificate can now be selected from Key Vault by name instead of entering it manually.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**16.** `Enhancement` — **SSO Configuration via Environment Variables**
+
+SSO behavior, previously hardcoded, can now be controlled per deployment through environment variables or app settings.
+
+Changes in: `Backend`
 
 ---
 
