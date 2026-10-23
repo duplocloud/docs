@@ -216,6 +216,14 @@ Changes in: `Agent`
 
 ---
 
+**20.** `Feature` — **Billing Dashboard and Admin Settings**
+
+A billing dashboard and admin settings give workspace admins visibility into usage and cost.
+
+Changes in: `Backend` `Frontend`
+
+---
+
 ## v0.2.21 — September 2, 2026
 
 ---
@@ -330,14 +338,6 @@ Two options were added for self-hosted installations.
 - JWT shared secrets auto-generated instead of requiring manual setup
 
 Changes in: `Helm`
-
----
-
-**13.** `Feature` — **Billing Dashboard and Admin Settings**
-
-A billing dashboard and admin settings give workspace admins visibility into usage and cost.
-
-Changes in: `Backend` `Frontend`
 
 ---
 
