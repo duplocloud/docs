@@ -168,14 +168,3 @@ Compaction is fully automatic — there is no setting to configure or threshold 
 This is distinct from **Ticket Summary** in the Details panel, which produces a one-off, manually-triggered summary. Compaction happens automatically mid-conversation to keep the agent within its context limits — the two features are unrelated.
 {% endhint %}
 
----
-
-## Playwright Test
-
-```
-tests/ticket-create-reshoot.spec.ts
-```
-
-```bash
-npx playwright test ticket-create-reshoot.spec.ts --project=chromium --workers=1 --timeout=1200000
-```
