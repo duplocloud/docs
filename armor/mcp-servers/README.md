@@ -26,7 +26,7 @@ Fill in the **Basic** section:
 * **Provider Type** _(optional)_ — links the server to a provider category for organizational purposes
 * **Config Type** — **HTTP/SSE** for a standard remote endpoint, or **Raw** to supply a full JSON config
 * **API Endpoint** — the MCP server's HTTP endpoint URL
-* **Transport** — `http` for standard HTTP, or `sse` for Server-Sent Events
+* **Transport** — the transport value, typically `http` for standard HTTP or `sse` for Server-Sent Events
 
 ![Add MCP Server, filled in](../../.gitbook/assets/mcp-server-v2-step-03-add-server-filled.png)
 

@@ -8,7 +8,7 @@ A System Setting is a name/type/value entry — not a fixed list. A small set of
 
 Go to **AI Admin → Settings → System Settings**.
 
-![System Settings, empty](../../.gitbook/assets/settings-step-01-system-settings-empty.png)
+![System Settings, empty](../.gitbook/assets/settings-step-01-system-settings-empty.png)
 
 Click **+ Add** and fill in:
 
@@ -19,11 +19,11 @@ Click **+ Add** and fill in:
 * **Labels** (optional) — free-form tags for grouping related settings
 * **Description** (optional)
 
-![Add System Setting form, empty](../../.gitbook/assets/settings-step-02-add-setting-empty.png)
+![Add System Setting form, empty](../.gitbook/assets/settings-step-02-add-setting-empty.png)
 
-![Add System Setting form, filled in](../../.gitbook/assets/settings-step-03-add-setting-filled.png)
+![Add System Setting form, filled in](../.gitbook/assets/settings-step-03-add-setting-filled.png)
 
-![System Setting added](../../.gitbook/assets/settings-step-04-setting-added.png)
+![System Setting added](../.gitbook/assets/settings-step-04-setting-added.png)
 
 {% hint style="info" %}
 Settings created here are platform-wide (**Global** scope). A separate **Workspace Settings** page, available within a workspace's own settings, lets you define a same-named setting scoped to just that workspace — it overrides the global value for that workspace only, the same override pattern used by [LLM Mappings](agents/llm-models.md#llm-mappings) and [Quotas](access-control/quotas.md).
@@ -56,18 +56,18 @@ Global Secrets are name/value pairs available platform-wide — distinct from [P
 
 Go to **AI Admin → Settings → Global Secrets**.
 
-![Global Secrets, empty](../../.gitbook/assets/settings-step-05-global-secrets-empty.png)
+![Global Secrets, empty](../.gitbook/assets/settings-step-05-global-secrets-empty.png)
 
 Click **+ Add** and fill in:
 
 * **Key\*** — the secret's name; cannot be changed after creation
 * **Value\*** — the secret value; hidden by default, with a show/hide toggle
 
-![Add Secret form, empty](../../.gitbook/assets/settings-step-06-add-secret-empty.png)
+![Add Secret form, empty](../.gitbook/assets/settings-step-06-add-secret-empty.png)
 
-![Add Secret form, filled in](../../.gitbook/assets/settings-step-07-add-secret-filled.png)
+![Add Secret form, filled in](../.gitbook/assets/settings-step-07-add-secret-filled.png)
 
-![Secret added, value masked](../../.gitbook/assets/settings-step-08-secret-added-masked.png)
+![Secret added, value masked](../.gitbook/assets/settings-step-08-secret-added-masked.png)
 
 {% hint style="info" %}
 Once saved, a secret's value is always masked in the list and API responses — only the last few characters are shown. If a Workspace, Project, or Ticket defines a secret with the same key, that more specific value takes precedence over the Global one.

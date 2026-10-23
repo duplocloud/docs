@@ -32,7 +32,7 @@ Use this method to add a skill hosted at a public or vendor-provided URL (e.g. a
 
 1. Navigate to **AI Admin → Skills** and click **+ Add**.
 
-<figure><img src="../../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
 
 2. Fill in the following fields:
    * **Name** — a unique identifier for the skill (e.g. `Kubernetes-Troubleshooting`)
@@ -40,7 +40,7 @@ Use this method to add a skill hosted at a public or vendor-provided URL (e.g. a
    * **Vendor** _(optional)_ — the name of the skill provider (e.g. `DuploCloud`)
    * **Package URL** — the URL to the skill package (e.g. `https://packages.duplocloud.com/skills/kubernetes-troubleshooting-1.0.0.zip`)
 
-<figure><img src="../../../.gitbook/assets/skills-add-external.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/skills-add-external.png" alt=""><figcaption></figcaption></figure>
 
 3. Click **Create**.
 
@@ -52,25 +52,25 @@ Use this method to create your own skill from scratch. Custom skills can be adde
 
 1. Navigate to **AI Admin → Skills** and click **+ Add**.
 
-<figure><img src="../../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
 
 2. Fill in the following fields:
    * **Name** — a unique identifier for the skill
    * **Type** — select **Custom**
    * **Description** _(optional)_ — a short description of what the skill does
 
-<figure><img src="../../../.gitbook/assets/skills-add-custom-package.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/skills-add-custom-package.png" alt=""><figcaption></figcaption></figure>
 
 3. Click **Create**.
 4. Upload a zip file from the package explorer in the Kebab Menu of the Skills List page.
 
-<figure><img src="../../../.gitbook/assets/Skills 3 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Skills 3 (1).png" alt=""><figcaption></figcaption></figure>
 
 #### SkillMd
 
 1. Navigate to **AI Admin → Skills** and click **+ Add**.
 
-<figure><img src="../../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
 
 2. Fill in the following fields:
    * **Name** — a unique identifier for the skill
@@ -78,7 +78,7 @@ Use this method to create your own skill from scratch. Custom skills can be adde
    * **Description** _(optional)_ — a short description of what the skill does
 3. Paste the `SKILL.md` file content directly into the editor on this page.
 
-<figure><img src="../../../.gitbook/assets/Skills-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Skills-1.png" alt=""><figcaption></figcaption></figure>
 
 4. Click **Create**.
 
@@ -90,7 +90,7 @@ Use this method to pull a skill directly from a GitHub repository, giving you ve
 
 Go to **AI Admin → Skills** in the left sidebar. This page lists all skills available in your environment, including built-in skills and any custom ones you have added. Each skill shows its name, description, assigned personas, type, format, and package path.
 
-<figure><img src="../../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
 
 #### Step 2 — Add a New Skill
 
@@ -112,7 +112,7 @@ The skill file inside your repository **must be named `SKILL.md`**. The agent wi
 Your `SKILL.md` file should begin with a clear **name** and **description** so the agent knows when and how to apply the skill. Without this, the agent may not activate the skill at the right time or understand its intended purpose. For more tips on how to create skills the right way, [please refer to this article here](https://agentskills.io/specification).&#x20;
 {% endhint %}
 
-![](../../../.gitbook/assets/skills-private-git-step-04.png)
+![](../../.gitbook/assets/skills-private-git-step-04.png)
 
 #### Step 3 — Click Create
 
@@ -122,7 +122,7 @@ Click **Create** to save the skill.
 
 The Skills list now shows the new skill at the top with a **Last Modified** timestamp confirming it was just created. The total skill count increases by one. The skill is now available to be attached to any ticket or persona in the system.
 
-![](../../../.gitbook/assets/skills-private-git-step-05.png)
+![](../../.gitbook/assets/skills-private-git-step-05.png)
 
 ## Attaching a Skill to a Ticket
 
@@ -130,25 +130,25 @@ Once a skill has been created using any of the methods above, you can attach it 
 
 When creating a new ticket, expand **Advanced Options** and open the **Additional Skills** dropdown. Select the skill you want to use. This instructs the agent to load and follow the skill's instructions for the duration of this ticket, in addition to its default persona behaviour.
 
-![](../../../.gitbook/assets/skills-private-git-step-15.png)
+![](../../.gitbook/assets/skills-private-git-step-15.png)
 
 Once the ticket is created, the agent confirms that the skill has been loaded. The **Context Files** panel shows the skill folder alongside other skills in the session. The agent explicitly confirms the skill is active and available in the system context for this ticket.
 
-![](../../../.gitbook/assets/skills-private-git-step-16.png)
+![](../../.gitbook/assets/skills-private-git-step-16.png)
 
 ### Referencing a Skill with the Slash Picker
 
 Once a skill is attached to a ticket — via **Additional Skills** above, or already active on an existing ticket — you can reference it inline instead of relying on it to run silently in the background. Type `/` at the start of your message, or after a space, to open a picker listing the skills already attached to that ticket.
 
-![Skill picker open in the ticket-creation textarea](../../../.gitbook/assets/skills-slash-picker-step-01-open.png)
+![Skill picker open in the ticket-creation textarea](../../.gitbook/assets/skills-slash-picker-step-01-open.png)
 
 Keep typing to filter — it matches anywhere in the skill's name, not just the start. Use the arrow keys and **Enter** (or **Tab**) to select, or click a row. Selecting a skill inserts `/skill-name ` into your message at the cursor.
 
-![Skill name inserted into the message](../../../.gitbook/assets/skills-slash-picker-step-02-inserted.png)
+![Skill name inserted into the message](../../.gitbook/assets/skills-slash-picker-step-02-inserted.png)
 
 The picker works the same way in an existing ticket's chat input, not just when creating a new ticket.
 
-![Skill picker in an existing ticket's chat input](../../../.gitbook/assets/skills-slash-picker-step-03-existing-ticket.png)
+![Skill picker in an existing ticket's chat input](../../.gitbook/assets/skills-slash-picker-step-03-existing-ticket.png)
 
 {% hint style="info" %}
 The `/` picker only lists skills **already attached** to the ticket — it's a quick way to reference one inline, not a way to attach a new skill. To make a skill available in the first place, add it under **Additional Skills** as described above.

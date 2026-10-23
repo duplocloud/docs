@@ -16,7 +16,7 @@ This document explains how to create a new ticket in the DuploCloud AI Suite Hel
 
 Go to **HelpDesk** in the left-hand navigation and click **Add Ticket**. The page asks a single question — *What should the agent work on?* — with the task description box, the controls for this ticket, and an **Agent loadout** summary beneath it.
 
-![Add Ticket page](../../.gitbook/assets/ticket-v2-step-01-add-ticket-page.png)
+![Add Ticket page](../.gitbook/assets/ticket-v2-step-01-add-ticket-page.png)
 
 ---
 
@@ -24,11 +24,11 @@ Go to **HelpDesk** in the left-hand navigation and click **Add Ticket**. The pag
 
 The button below the task box shows the model and SDK that will handle this ticket. Click it to pick a different one.
 
-![Model and SDK selector](../../.gitbook/assets/ticket-v2-step-02-model-picker-closed.png)
+![Model and SDK selector](../.gitbook/assets/ticket-v2-step-02-model-picker-closed.png)
 
 The list shows every model available to your workspace, with the underlying model ID and the SDK that runs it. Which models appear here is governed by the workspace's [LLM mappings](agents/llm-models.md#llm-mappings).
 
-![Model list open](../../.gitbook/assets/ticket-v2-step-03-model-picker-open.png)
+![Model list open](../.gitbook/assets/ticket-v2-step-03-model-picker-open.png)
 
 ---
 
@@ -36,11 +36,11 @@ The list shows every model available to your workspace, with the underlying mode
 
 Click **Select Scopes** to choose the credentials the agent may use. A **scope** defines the set of credentials and permissions the agent works with when it acts on your behalf — querying AWS, reaching a Kubernetes cluster, or calling an MCP server's tools.
 
-![Scopes dropdown](../../.gitbook/assets/ticket-v2-step-04-scopes-dropdown.png)
+![Scopes dropdown](../.gitbook/assets/ticket-v2-step-04-scopes-dropdown.png)
 
 Selected scopes appear in place of the **Select Scopes** button.
 
-![Scope selected](../../.gitbook/assets/ticket-v2-step-05-scope-selected.png)
+![Scope selected](../.gitbook/assets/ticket-v2-step-05-scope-selected.png)
 
 {% hint style="info" %}
 Scope selection is optional. A ticket created without a scope can still plan, answer questions, and reason about your setup — it just has no credentials to act with. Add a scope when the agent needs to reach real infrastructure.
@@ -52,13 +52,13 @@ Scope selection is optional. A ticket created without a scope can still plan, an
 
 The **Agent loadout** row summarises how this ticket is configured — permissions, memory, and personas — and expands into three cards.
 
-![Agent loadout](../../.gitbook/assets/ticket-v2-step-06-agent-loadout.png)
+![Agent loadout](../.gitbook/assets/ticket-v2-step-06-agent-loadout.png)
 
 ### Commands
 
 Shows whether this ticket uses the workspace's default command permissions or its own rules. Click **Edit permissions** to set per-ticket rules.
 
-![Command Execution Permission Settings](../../.gitbook/assets/ticket-v2-step-07-command-permissions-modal.png)
+![Command Execution Permission Settings](../.gitbook/assets/ticket-v2-step-07-command-permissions-modal.png)
 
 In the dialog you can:
 
@@ -73,13 +73,13 @@ MCP tool calls have their own equivalent settings, available from the ticket's D
 
 Personas decide what the agent knows how to do. Add individual skills on top when a persona doesn't already cover them.
 
-![Agent context](../../.gitbook/assets/ticket-v2-step-08-agent-context-modal.png)
+![Agent context](../.gitbook/assets/ticket-v2-step-08-agent-context-modal.png)
 
 ### Workspace memory
 
 When enabled, the agent reuses what earlier tickets in this workspace established — naming conventions, past runbooks, known-flaky nodes. **Memory is on by default**; switch it off for a one-off ticket where you don't want that context pulled in.
 
-![Workspace memory card](../../.gitbook/assets/ticket-v2-step-09-workspace-memory-card.png)
+![Workspace memory card](../.gitbook/assets/ticket-v2-step-09-workspace-memory-card.png)
 
 See [Agent Memories](agents/agent-memories.md) for how memories are written and maintained.
 
@@ -89,11 +89,11 @@ See [Agent Memories](agents/agent-memories.md) for how memories are written and 
 
 Type what the agent should do in plain language, then click the arrow to submit.
 
-![Task description entered](../../.gitbook/assets/ticket-v2-step-10-prompt-entered.png)
+![Task description entered](../.gitbook/assets/ticket-v2-step-10-prompt-entered.png)
 
 The system creates the ticket and opens it.
 
-![Ticket created](../../.gitbook/assets/ticket-v2-step-11-ticket-created.png)
+![Ticket created](../.gitbook/assets/ticket-v2-step-11-ticket-created.png)
 
 ---
 
@@ -101,7 +101,7 @@ The system creates the ticket and opens it.
 
 The conversation with the agent runs down the left. On the right, three tabs — **Details**, **Files**, and **Activity** — hold the ticket's metadata, its files, and a comment thread.
 
-![Ticket page with the Details panel](../../.gitbook/assets/ticket-v2-step-12-ticket-details-panel.png)
+![Ticket page with the Details panel](../.gitbook/assets/ticket-v2-step-12-ticket-details-panel.png)
 
 ### Details
 
@@ -127,13 +127,13 @@ The conversation with the agent runs down the left. On the right, three tabs —
 
 Files the agent created or read during the ticket.
 
-![Files tab](../../.gitbook/assets/ticket-v2-step-13-tab-files.png)
+![Files tab](../.gitbook/assets/ticket-v2-step-13-tab-files.png)
 
 ### Activity
 
 A comment thread on the ticket, separate from the agent conversation — use it to leave notes for colleagues working the same ticket.
 
-![Activity tab](../../.gitbook/assets/ticket-v2-step-14-tab-activity.png)
+![Activity tab](../.gitbook/assets/ticket-v2-step-14-tab-activity.png)
 
 ---
 

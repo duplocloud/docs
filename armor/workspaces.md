@@ -10,20 +10,20 @@ A Workspace is the central entity that ties everything together — attach any n
 
 1. Navigate to **Workspaces** and click **Add Workspace**.
 
-<figure><img src="../../.gitbook/assets/Workspaces-4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Workspaces-4.png" alt=""><figcaption></figcaption></figure>
 
 2. Give the Workspace a **Name** and **Description**.
 3. Select the **Persona(s)** to include in the Workspace, and click **Next**.
 
-<figure><img src="../../.gitbook/assets/Workspaces.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Workspaces.png" alt=""><figcaption></figcaption></figure>
 
 3. Select the **Agent(s)** that do the work in this Workspace, and click **Next**.
 
-<figure><img src="../../.gitbook/assets/Workspaces-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Workspaces-1.png" alt=""><figcaption></figcaption></figure>
 
 4. For each **Provider** screen, select the **Scopes** to include in the Workspace, then click **Next** until you have reviewed them all.
 
-<figure><img src="../../.gitbook/assets/Workspaces-2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Workspaces-2.png" alt=""><figcaption></figcaption></figure>
 
 5. Click **Create**.
 
@@ -35,7 +35,7 @@ Each Workspace can define a **System Prompt** — free-text instructions injecte
 
 Open a workspace and go to the **Prompt** step (the same step where Prompt Suggestions and Prompt Templates are configured). Enter your instructions in the **System Prompt** field and save.
 
-![System Prompt field on the Prompt step](../../.gitbook/assets/workspaces-step-01-system-prompt.png)
+![System Prompt field on the Prompt step](../.gitbook/assets/workspaces-step-01-system-prompt.png)
 
 {% hint style="info" %}
 This is distinct from [Agent Memories](agents/agent-memories.md). The System Prompt is a single field that's always injected verbatim into every ticket in the workspace. Memory is a set of files the agent reads on demand, and can be turned off per ticket. If the two conflict, persona instructions take precedence over the System Prompt.

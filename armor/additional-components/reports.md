@@ -6,26 +6,26 @@ The **Reports** section under **Analytics** stores and organizes document-based 
 
 Navigate to **Analytics** > **Reports** in the left sidebar.
 
-![Reports list](../../../.gitbook/assets/reports-step-01-list.png)
+![Reports list](../../.gitbook/assets/reports-step-01-list.png)
 
 The list shows every registered report. Use the **Compliance** and **Security** tabs at the top to filter by category. Each row shows the report name, its source, the entity (ticket) it came from, and the file path on disk.
 
-![SOC 2 report row highlighted](../../../.gitbook/assets/reports-step-03-soc2-row.png)
+![SOC 2 report row highlighted](../../.gitbook/assets/reports-step-03-soc2-row.png)
 
 Click any report name to open a full inline preview.
 
-![SOC 2 report preview](../../../.gitbook/assets/reports-step-04-soc2-preview.png)
+![SOC 2 report preview](../../.gitbook/assets/reports-step-04-soc2-preview.png)
 
 ## Sharing a Report
 
-![Report in the list](../../../.gitbook/assets/reports-step-14-report-row.png)
+![Report in the list](../../.gitbook/assets/reports-step-14-report-row.png)
 
 Every report can be shared as a direct link — from the list's **⋮** menu or from inside the preview.
 
 - **From the list** — click **⋮** on a report row and select **Copy Link**.
 - **From the preview** — click the link icon next to the close button.
 
-![Copy Link in the row menu](../../../.gitbook/assets/reports-step-15-copy-link-menu.png)
+![Copy Link in the row menu](../../.gitbook/assets/reports-step-15-copy-link-menu.png)
 
 Either way, the link is copied to your clipboard and opens straight to that report's preview, so the recipient doesn't have to navigate to Analytics > Reports and search for it manually.
 
@@ -43,37 +43,37 @@ Reports are sourced from files that an agent deposited into a ticket during its 
 
 Click the **Add** button in the top-right corner of the Reports list.
 
-![Add button](../../../.gitbook/assets/reports-step-05-add-btn.png)
+![Add button](../../.gitbook/assets/reports-step-05-add-btn.png)
 
 The **Add Report Files** modal opens. The **Source** field defaults to **Ticket**.
 
-![Add Report Files modal](../../../.gitbook/assets/reports-step-06-add-modal.png)
+![Add Report Files modal](../../.gitbook/assets/reports-step-06-add-modal.png)
 
 ### 2. Select the ticket
 
 Click the **Ticket** dropdown and type part of the ticket name to search. Select the ticket whose files you want to browse.
 
-![Ticket search dropdown](../../../.gitbook/assets/reports-step-07-ticket-search.png)
+![Ticket search dropdown](../../.gitbook/assets/reports-step-07-ticket-search.png)
 
 ### 3. Browse files
 
 Once a ticket is selected, the modal displays the agent's working directory. Expand folders to navigate to the file you want to add. The **Report** column shows a badge on any file that has already been registered as a report.
 
-![File browser with canvas-documents expanded](../../../.gitbook/assets/reports-step-09-canvas-open.png)
+![File browser with canvas-documents expanded](../../.gitbook/assets/reports-step-09-canvas-open.png)
 
 ### 4. Open the file menu
 
 Click the **⋮** icon on the row of the file you want to add, then select **Add to Reports**.
 
-![Kebab menu open on file row](../../../.gitbook/assets/reports-step-10-kebab-open.png)
+![Kebab menu open on file row](../../.gitbook/assets/reports-step-10-kebab-open.png)
 
 ### 5. Enter report details
 
 The **Add to Reports** dialog appears, pre-filled with the selected file name. Enter a **Name** for the report and, optionally, a **Category**. The category determines which tab the report appears under on the Reports list.
 
-![Add to Reports dialog — empty](../../../.gitbook/assets/reports-step-11-add-to-reports-modal.png)
+![Add to Reports dialog — empty](../../.gitbook/assets/reports-step-11-add-to-reports-modal.png)
 
-![Add to Reports dialog — filled in](../../../.gitbook/assets/reports-step-12-modal-filled.png)
+![Add to Reports dialog — filled in](../../.gitbook/assets/reports-step-12-modal-filled.png)
 
 Click **Add** to save the report.
 
@@ -81,12 +81,12 @@ Click **Add** to save the report.
 
 After saving, the report is immediately available in the Reports list. Click the tab that matches the category you entered to filter the view.
 
-![Reports list — Security tab](../../../.gitbook/assets/reports-step-10-security-tab.png)
+![Reports list — Security tab](../../.gitbook/assets/reports-step-10-security-tab.png)
 
 The new report appears in the list.
 
-![New report highlighted](../../../.gitbook/assets/reports-step-10b-new-report-highlight.png)
+![New report highlighted](../../.gitbook/assets/reports-step-10b-new-report-highlight.png)
 
 Click the report name to open the inline preview.
 
-![New report preview](../../../.gitbook/assets/reports-step-11-new-report-preview.png)
+![New report preview](../../.gitbook/assets/reports-step-11-new-report-preview.png)
