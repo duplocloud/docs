@@ -4,37 +4,7 @@
 
 ---
 
-**1.** `Feature` — **Drag-and-Drop File Attachments**
-
-Files can be attached to a conversation by dragging them into the chat instead of browsing for them.
-- Drop one or more files directly onto the chat to attach them
-- Works alongside the existing attach button
-
-Changes in: `Frontend`
-
----
-
-**2.** `Feature` — **Install Extensions from the Available Tab**
-
-Extensions can be installed directly from the Available tab in Extension Studio, without leaving the catalogue view.
-- Install in one step from the listing
-- Removes the detour through a separate install flow
-
-Changes in: `Frontend`
-
----
-
-**3.** `Feature` — **Quick Menu Search in the Environment Header**
-
-A search box in the environment header jumps straight to any resource type or page in that environment.
-- Type to filter the environment's menu and navigate in one step
-- Especially useful in environments with many resource types enabled
-
-Changes in: `Frontend`
-
----
-
-**4.** `Feature` — **Knowledge Base Sharing Across Workspaces**
+**1.** `Feature` — **Knowledge Base Sharing Across Workspaces**
 
 A knowledge base can now be shared with other workspaces from a dedicated Shared Workspaces tab.
 - Grant read access to a knowledge base per workspace
@@ -44,23 +14,7 @@ Changes in: `Frontend`
 
 ---
 
-**5.** `Enhancement` — **Rename Workspaces, Providers, and Scopes**
-
-Workspaces, providers, and scopes can be renamed in place from the admin UI instead of being recreated.
-
-Changes in: `Frontend`
-
----
-
-**6.** `Enhancement` — **Project Context Persists in the Ticket UI**
-
-The project context attached to a ticket is now persisted and shown in the UI, completing the project-level context support shipped in v0.2.18.
-
-Changes in: `Frontend`
-
----
-
-**7.** `Enhancement` — **Attach a New Scope While Writing a Prompt**
+**2.** `Enhancement` — **Attach a New Scope While Writing a Prompt**
 
 A new scope can be created from inside the Attach Scope modal, so prompt snippets can reference a scope that didn't exist a moment ago without leaving the editor.
 
@@ -68,7 +22,7 @@ Changes in: `Frontend`
 
 ---
 
-**8.** `Enhancement` — **Namespace Filter on Environment Kubernetes Lists**
+**3.** `Enhancement` — **Namespace Filter on Environment Kubernetes Lists**
 
 Kubernetes resource lists in an environment can be narrowed to a single namespace.
 - Applies across the Kubernetes resource types shown in an environment
@@ -78,17 +32,7 @@ Changes in: `Frontend`
 
 ---
 
-**9.** `Enhancement` — **AI Admin Sidebar Regrouped into Collapsible Sections**
-
-The AI Admin sidebar is organised into collapsible groups, and administrators can configure the order of sidebar menus and extensions.
-- Related admin pages are grouped and can be collapsed
-- Menu and extension ordering is configurable
-
-Changes in: `Frontend`
-
----
-
-**10.** `Enhancement` — **Missing ALB Controller Warning**
+**4.** `Enhancement` — **Missing ALB Controller Warning**
 
 A banner now warns when an environment's cluster has no AWS Load Balancer Controller, so ingress resources that depend on it don't fail silently.
 
@@ -96,7 +40,7 @@ Changes in: `Frontend`
 
 ---
 
-**11.** `Enhancement` — **Permission Set Group Membership Management**
+**5.** `Enhancement` — **Permission Set Group Membership Management**
 
 Users can be added to and removed from a permission set group directly on the group's Users tab, and in integrated mode users can be mapped to a permission set from the user form.
 
@@ -248,6 +192,30 @@ Changes in: `Backend`
 
 ---
 
+**17.** `Feature` — **AI Studio License Tab**
+
+A License tab in AI Studio shows the current license and its usage.
+
+Changes in: `Frontend`
+
+---
+
+**18.** `Feature` — **LangFuse Observability Session Search**
+
+Agent conversation sessions can now be searched and inspected directly from the observability dashboard, backed by LangFuse.
+
+Changes in: `Agent` `Backend` `Frontend`
+
+---
+
+**19.** `Feature` — **Agent Ask Human Tool**
+
+The agent can now ask a clarifying question mid-task instead of guessing, with support for multiple questions at once, a free-text answer, and resuming cleanly if the question times out waiting for a reply.
+
+Changes in: `Agent`
+
+---
+
 ## v0.2.21 — September 2, 2026
 
 ---
@@ -362,6 +330,14 @@ Two options were added for self-hosted installations.
 - JWT shared secrets auto-generated instead of requiring manual setup
 
 Changes in: `Helm`
+
+---
+
+**13.** `Feature` — **Billing Dashboard and Admin Settings**
+
+A billing dashboard and admin settings give workspace admins visibility into usage and cost.
+
+Changes in: `Backend` `Frontend`
 
 ---
 
