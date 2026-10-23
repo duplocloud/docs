@@ -621,11 +621,18 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-## v0.2.17 — June 17, 2026
+**31.** `Feature` — [**HelpDesk Audit Trail**](../armor/helpdesk/audit-trail.md)
+
+All HelpDesk activity is now captured in a pluggable, configurable audit log.
+- Audit sinks support S3, local file, and console output
+- Sensitive fields are automatically masked in audit records
+- Captures auth failures (401/403/404/405) and always logs even when an action throws
+
+Changes in: `Backend`
 
 ---
 
-**1.** `Feature` — [**Platform Analytics Dashboard & Observability**](../armor/analytics.md)
+**32.** `Feature` — [**Platform Analytics Dashboard & Observability**](../armor/analytics.md)
 
 A comprehensive analytics dashboard was added to AI Studio, backed by LangFuse tracing in the agent runtime.
 - Observability iframe with LangFuse configuration and a settings deep-link
@@ -636,7 +643,19 @@ Changes in: `Agent` `Backend` `Frontend`
 
 ---
 
-**2.** `Feature` — [**Command Policy Admin**](../armor/access-control/command-policy.md)
+**33.** `Feature` — **Kubernetes Ingress Support**
+
+Kubernetes Ingress resources, including ingress groups, are now manageable from the platform.
+
+Changes in: `Backend` `Frontend`
+
+---
+
+## v0.2.17 — June 17, 2026
+
+---
+
+**1.** `Feature` — [**Command Policy Admin**](../armor/access-control/command-policy.md)
 
 Admins can now define command policies that are enforced during chat/ticket execution.
 
@@ -644,7 +663,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**3.** `Feature` — **Group Chat Mode for Multi-Party Conversations**
+**2.** `Feature` — **Group Chat Mode for Multi-Party Conversations**
 
 The agent's group-chat handling was generalized to all multi-party origins (e.g. Slack channels, Teams groups), not just direct messages.
 
@@ -652,9 +671,12 @@ Changes in: `Agent`
 
 ---
 
-**4.** `Feature` — **Kubernetes Ingress Support**
+**3.** `Feature` — **AWS Just-in-Time (JIT) Access for Resource Groups**
 
-Kubernetes Ingress resources, including ingress groups, are now manageable from the platform.
+Users can now obtain temporary, scoped AWS access tied to a Resource Group instead of standing credentials.
+- Assume-role and federation-URL primitives scoped to the resource group
+- Read-only access enforcement option
+- Chained credentials support for nested scopes
 
 Changes in: `Backend` `Frontend`
 
@@ -688,18 +710,7 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**1.** `Feature` — [**HelpDesk Audit Trail**](../armor/helpdesk/audit-trail.md)
-
-All HelpDesk activity is now captured in a pluggable, configurable audit log.
-- Audit sinks support S3, local file, and console output
-- Sensitive fields are automatically masked in audit records
-- Captures auth failures (401/403/404/405) and always logs even when an action throws
-
-Changes in: `Backend`
-
----
-
-**2.** `Feature` — **Okta User Sync**
+**1.** `Feature` — **Okta User Sync**
 
 User accounts can now be synced in from Okta instead of manual provisioning.
 
@@ -707,23 +718,12 @@ Changes in: `Backend` `Frontend`
 
 ---
 
-**3.** `Feature` — **Terraform-Managed Environments (Infrastructure as Code)**
+**2.** `Feature` — **Terraform-Managed Environments (Infrastructure as Code)**
 
 Environments can now be defined, planned, and applied as Terraform modules directly from the platform, with git-diff visibility before changes go live.
 - Full TfDeployment/TfEnvironment/TfState lifecycle with independent plan and apply flows
 - Live git-diff view of pending infrastructure changes before applying
 - Multi-provider support, including the DuploCloud Terraform provider and GitLab
-
-Changes in: `Backend` `Frontend`
-
----
-
-**4.** `Feature` — **AWS Just-in-Time (JIT) Access for Resource Groups**
-
-Users can now obtain temporary, scoped AWS access tied to a Resource Group instead of standing credentials.
-- Assume-role and federation-URL primitives scoped to the resource group
-- Read-only access enforcement option
-- Chained credentials support for nested scopes
 
 Changes in: `Backend` `Frontend`
 
