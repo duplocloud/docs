@@ -39,6 +39,7 @@ Use this method to add a skill hosted at a public or vendor-provided URL (e.g. a
    * **Type** — select **External**
    * **Vendor** _(optional)_ — the name of the skill provider (e.g. `DuploCloud`)
    * **Package URL** — the URL to the skill package (e.g. `https://packages.duplocloud.com/skills/kubernetes-troubleshooting-1.0.0.zip`)
+   * **Metadata** _(optional)_ — any key/value pairs you want to attach to the skill
 
 <figure><img src="../../.gitbook/assets/skills-add-external.png" alt=""><figcaption></figcaption></figure>
 
@@ -58,6 +59,7 @@ Use this method to create your own skill from scratch. Custom skills can be adde
    * **Name** — a unique identifier for the skill
    * **Type** — select **Custom**
    * **Description** _(optional)_ — a short description of what the skill does
+   * **Metadata** _(optional)_ — any key/value pairs you want to attach to the skill
 
 <figure><img src="../../.gitbook/assets/skills-add-custom-package.png" alt=""><figcaption></figcaption></figure>
 
@@ -76,6 +78,7 @@ Use this method to create your own skill from scratch. Custom skills can be adde
    * **Name** — a unique identifier for the skill
    * **Type** — select **Custom**
    * **Description** _(optional)_ — a short description of what the skill does
+   * **Metadata** _(optional)_ — any key/value pairs you want to attach to the skill
 3. Paste the `SKILL.md` file content directly into the editor on this page.
 
 <figure><img src="../../.gitbook/assets/Skills-1.png" alt=""><figcaption></figcaption></figure>
@@ -88,7 +91,7 @@ Use this method to pull a skill directly from a GitHub repository, giving you ve
 
 #### Step 1 — Navigate to Skills
 
-Go to **AI Admin → Skills** in the left sidebar. This page lists all skills available in your environment, including built-in skills and any custom ones you have added. Each skill shows its name, description, assigned personas, type, format, and package path.
+Go to **AI Admin → Skills** in the left sidebar. This page lists your custom skills by default; toggle **Show Built-In** to add the platform's built-in skills to the list. Each skill shows its name, description, assigned personas, type, format, package path, whether it's built-in, and when it was last modified. Summary cards above the table show the total skill count, how many personas the catalogue serves, how many skills are unused, and the most recently modified skill.
 
 <figure><img src="../../.gitbook/assets/Skills.png" alt=""><figcaption></figcaption></figure>
 
@@ -103,6 +106,7 @@ Click **+ Add** in the top right. Fill in the following fields:
 * **Repository Name** — the name of the repository containing your skill files (e.g. `DuploCloud-Skill-repo`)
 * **Ref** — the branch to pull from (e.g. `main`)
 * **Folder** _(optional)_ — the subfolder within the repository where the skill file lives (e.g. `skill`)
+* **Metadata** _(optional)_ — any key/value pairs you want to attach to the skill
 
 {% hint style="warning" %}
 The skill file inside your repository **must be named `SKILL.md`**. The agent will not be able to locate or load the skill if the file is named anything else.
@@ -116,25 +120,21 @@ Your `SKILL.md` file should begin with a clear **name** and **description** so t
 
 #### Step 3 — Click Create
 
-Click **Create** to save the skill.
-
-#### Step 4 — Skill Successfully Created
-
-The Skills list now shows the new skill at the top with a **Last Modified** timestamp confirming it was just created. The total skill count increases by one. The skill is now available to be attached to any ticket or persona in the system.
-
-![](../../.gitbook/assets/skills-private-git-step-05.png)
+Click **Create** to save the skill. The scope's git connection must have access to the repository and branch you entered — an unauthorized or filtered scope returns an error instead of creating the skill. Once it succeeds, the new skill appears at the top of the Skills list, and is available to attach to any ticket or persona in the system.
 
 ## Attaching a Skill to a Ticket
 
 Once a skill has been created using any of the methods above, you can attach it when creating a new ticket.
 
-When creating a new ticket, expand **Advanced Options** and open the **Additional Skills** dropdown. Select the skill you want to use. This instructs the agent to load and follow the skill's instructions for the duration of this ticket, in addition to its default persona behaviour.
+Personas, not the ticket form directly, decide which skills are offered for manual attachment: a skill only appears in the picker below once it's assigned to at least one persona. A brand-new skill with no persona attached won't show up there until you add it to a persona.
 
-![](../../.gitbook/assets/skills-private-git-step-15.png)
+When creating a new ticket, expand the **Agent loadout** bar and click **Change personas and skills** under **Agent context**. This opens a modal with a **Personas** multi-select and, once a persona not covering every available skill is selected (or no persona is selected), an **Additional Skills** multi-select grouped by persona. Selecting a skill here instructs the agent to load and follow its instructions for the duration of this ticket, in addition to any selected persona's default behaviour.
 
-Once the ticket is created, the agent confirms that the skill has been loaded. The **Context Files** panel shows the skill folder alongside other skills in the session. The agent explicitly confirms the skill is active and available in the system context for this ticket.
+![Agent context modal, with a skill attached and no persona selected](../../.gitbook/assets/skills-private-git-step-15.png)
 
-![](../../.gitbook/assets/skills-private-git-step-16.png)
+Click **Save context**, then create the ticket. The ticket's **Details** panel confirms what's attached — its **Skills** field lists the skill by name, and **Personas** shows `No personas` if none were selected. You can also open **Files → Context Files** on the ticket to see what else is available to the agent in this session.
+
+![Ticket Details panel confirming the attached skill](../../.gitbook/assets/skills-private-git-step-16.png)
 
 ### Referencing a Skill with the Slash Picker
 
