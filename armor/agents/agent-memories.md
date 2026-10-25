@@ -29,7 +29,7 @@ Memories are managed from **AI Admin**, not from inside a specific agent's works
 
 ![](<../../.gitbook/assets/agent-memories-step-02-app-switcher-open.png>)
 
-In **AI Admin**, select **Memories** from the left sidebar.
+In **AI Admin**, expand the **LLM Settings** group in the left sidebar and select **Memories**.
 
 ![](<../../.gitbook/assets/agent-memories-step-04-sidebar-memories-highlight.png>)
 
@@ -86,7 +86,7 @@ Editing or deleting a memory works the same way — open the file to edit it and
 
 ## Step 5 — Turning memory off for a single ticket
 
-Workspace memory is used by default, but any individual ticket can opt out. When creating a ticket, expand **Advanced Options** and use the **Workspace Memory** toggle.
+Workspace memory is used by default, but any individual ticket can opt out. When creating a ticket, expand the **Agent loadout** bar and use the toggle on the **Workspace memory** tile.
 
 ![](<../../.gitbook/assets/agent-memories-step-17-ticket-create-memory-toggle.png>)
 
