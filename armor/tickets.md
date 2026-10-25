@@ -167,4 +167,3 @@ Compaction is fully automatic — there is no setting to configure or threshold 
 {% hint style="info" %}
 This is distinct from **Ticket Summary** in the Details panel, which produces a one-off, manually-triggered summary. Compaction happens automatically mid-conversation to keep the agent within its context limits — the two features are unrelated.
 {% endhint %}
-
