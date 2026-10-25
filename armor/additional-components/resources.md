@@ -12,7 +12,7 @@ Selecting **AWS** under Resources opens the AWS resource browser, displaying res
 
 ### EC2 Instances
 
-The default view shows **EC2 Instances** — virtual machines running in your cloud environment. The table displays each instance's name, instance ID, type, state, availability zone, private and public IP addresses, and VPC.
+The default view shows **EC2 Instances** — virtual machines running in your cloud environment. The table displays each instance's name, instance ID, type, state, availability zone, private IP address, public DNS name, VPC, and subnet.
 
 ![EC2 Instances overview](../../.gitbook/assets/resources-step-01-aws-ec2.png)
 
@@ -34,7 +34,7 @@ Select a different scope to view resources in that environment. The table immedi
 
 ### RDS Databases
 
-Click the **RDS DBInstance** tab to view managed relational database instances. The table shows each database's name, role, engine type, endpoint, status, and instance size.
+Click the **RDS DBInstance** tab to view managed relational database instances. The table shows each database's name, role, engine type, endpoint, status, instance size, and parameter group.
 
 ![RDS DBInstance tab](../../.gitbook/assets/resources-step-05-aws-rds.png)
 
@@ -54,7 +54,7 @@ Selecting **Kubernetes** under Resources opens the Kubernetes resource browser. 
 
 ### Pods
 
-The default Kubernetes view shows **Pods** — the basic unit of deployment in Kubernetes. The table displays each pod's name, namespace, containers, restart count, controlling resource, node, QoS class, and status.
+The default Kubernetes view shows **Pods** — the basic unit of deployment in Kubernetes. The table displays each pod's name, containers, restart count, controlling resource, node, QoS class, status, and age.
 
 ![Kubernetes Pods overview](../../.gitbook/assets/resources-step-07-k8s-pods.png)
 
@@ -91,9 +91,15 @@ Select a namespace to filter the displayed resources.
 
 ---
 
+### Kubectl Access
+
+The **Kubectl** button in the page header opens a dropdown with two options: a browser-based terminal with `kubectl` access to the selected cluster, scoped to the current namespace, or a short-lived kubeconfig file to download for use with your own local `kubectl`.
+
+---
+
 ### Deployments
 
-Click the **Deployments** tab to view Kubernetes Deployments. The table shows each deployment's name, namespace, pod count, replica count, status, and age.
+Click the **Deployments** tab to view Kubernetes Deployments. The table shows each deployment's name, pod count, replica count, status, and age.
 
 ![Kubernetes Deployments](../../.gitbook/assets/resources-step-12-k8s-deployments.png)
 
@@ -101,6 +107,6 @@ Click the **Deployments** tab to view Kubernetes Deployments. The table shows ea
 
 ### Services
 
-Click the **Services** tab to view Kubernetes Services. The table shows each service's name, namespace, type, cluster IP, ports, external IP, status, and age.
+Click the **Services** tab to view Kubernetes Services. The table shows each service's name, type, cluster IP, ports, external IP, status, and age.
 
 ![Kubernetes Services](../../.gitbook/assets/resources-step-13-k8s-services.png)
