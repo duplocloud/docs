@@ -50,7 +50,7 @@ After "Getting Started", before "Common Use Cases":
 ```
 ## Extension Framework
 
-* [Overview](extension-framework/README.md)
+* [Overview](extension-framework/extension-framework.md)
 * [Building an Ops Application](extension-framework/building-an-ops-app/README.md)
   * [Step 1: Define Your Policy Model](extension-framework/building-an-ops-app/step-1-policy-model.md)
   * [Step 2: Write Your Skills](extension-framework/building-an-ops-app/step-2-skills.md)

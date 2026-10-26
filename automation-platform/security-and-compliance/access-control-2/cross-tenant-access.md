@@ -19,7 +19,7 @@ These features are currently only available for AWS.
 
 Before you can use Cross-tenant access, you must do the following:
 
-* In the **Security Group** associated with each tenant, add a [Security Group rule](../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/security-group-rules.md) to allow the required port access between the tenants that need cross-tenant access.
+* In the **Security Group** associated with each tenant, add a [Security Group rule](../../automation-platform/overview/use-cases/creating-an-infrastructure-and-plan-for-aws/security-group-rules.md) to allow the required port access between the tenants that need cross-tenant access.
 * When accessing a resource in a tenant, include the full application namespace in the URL using this format:
 
 ```

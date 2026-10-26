@@ -8,7 +8,7 @@ Hosts (VMs) are a cornerstone of cloud infrastructure, essential for providing i
 
 **For instructions to create a Host in DuploCloud, see the documentation for your specific cloud provider:**
 
-* [AWS Host](../overview/use-cases/hosts-vms/adding-hosts.md)
+* [AWS Host](../automation-platform/overview/use-cases/hosts-vms/adding-hosts.md)
 * [Azure Host](../overview-2/use-cases/hosts-vms/#adding-a-host-vm)
 * [GCP Host](../overview-1/use-cases/hosts-vms.md#id-3-toc-title)
 

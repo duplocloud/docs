@@ -31,16 +31,16 @@ hidden: true
   * [Support for editing in Apache Airflow](../overview/aws-services/managed-airflow.md).
   * Set up [Billing Alerts](../diagnostics-overview/configure-billing-alerts.md).
   * [Specify a Lambda architecture](../overview/aws-services/lambda/#id-3-toc-title) when creating a Lambda function.
-  * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.
+  * Support for[ Instance (Worker Nodes) or IP (Pod IPs) target types](../automation-platform/kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-ingress-redirect-config-and-annotations) when creating an EKS Ingress.
 * Azure
   * Support for [Azure Databricks](../overview-2/azure-services/databricks.md).
   * Support for [Azure VM Disk Controller](../overview-2/use-cases/hosts-vms/).
   * Specify the cluster type, node VM size, and outbound connectivity source when [creating an AKS cluster](../overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md#enabling-the-aks-kubernetes-cluster).
-  * Support for [private DNS zones](../overview-2/prerequisites/program-dns-entries.md).
-  * Configure private endpoints for [MSSQL Server databases](../overview-2/azure-services/databases/sql-database.md#creating-the-mssql-server).
+  * Support for [private DNS zones](../automation-platform/overview-2/prerequisites/program-dns-entries.md).
+  * Configure private endpoints for [MSSQL Server databases](../automation-platform/overview-2/azure-services/databases/sql-database.md#creating-the-mssql-server).
   * Support for [Azure agent pools](../overview-2/azure-services/agent-pool/#adding-an-agent-pool) with availability zones.
   * Configure [Redis databases](../overview-2/azure-services/databases/redis-database.md#configure-public-network-access-for-databases-optional) with public network access.
-  * Support for [PostgreSQL Flexible Server](../overview-2/azure-services/databases/postgresql-flexible-server.md) databases.
+  * Support for [PostgreSQL Flexible Server](../automation-platform/overview-2/azure-services/databases/postgresql-flexible-server.md) databases.
   * Support for [Azure Application Gateway SSL policies with AKS Ingress](../kubernetes-overview/ingress-loadbalancer/aks-ingress/using-an-azure-application-gateway-ssl-policy-with-ingress.md) for ALB Load Balancers.
   * Support for [private endpoints ](../overview-2/azure-services/storage-account.md#create-a-private-endpoint)with Azure Storage Account.
   * [Specify the AKS version and Network plugin](https://docs.duplocloud.com/docs/overview-2/use-cases/infrastructure-and-plan/aks-initial-setup) when enabling the AKS cluster.
@@ -71,7 +71,7 @@ hidden: true
   * [Synch AWS Redis with Amazon CloudWatch Logs](../overview/aws-services/database/elastic-cache.md#creating-a-redis-elasticache-instance) for automatic log delivery.
   * Configure [AWS JIT session timeout](../overview/use-cases/jit-access.md#configuring-admin-jit-timeout-via-aws-iam-role) using an IAM role.
   * [Enable automatic AWS ACM (SSL) Certificates](../overview/prerequisites/acm-certificate.md#enabling-automatic-aws-acm-certificate-creation) for a Plan.
-  * [Configure K8s Ingress redirect ](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
+  * [Configure K8s Ingress redirect ](../automation-platform/kubernetes-overview/ingress-loadbalancer/adding-ingress.md#configure-ingress-with-redirect-config-and-annotations)using a container port name.
   * [Disable faults for Target Groups without instances.](../overview/use-cases/faults-and-alarms/system-settings-flags.md#disabling-faults-for-target-groups-without-instances)
   * [Enable UltraWarm Data nodes ](../overview/aws-services/elasticsearch.md)for OpenSearch domains.
   * Support for [upgrading EKS components](../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/upgrading-eks-version.md#updating-eks-components-add-ons) (add-ons).
@@ -87,7 +87,7 @@ hidden: true
   * Configure [Vanta compliance controls](../overview/security-configuration-settings/vanta-compliance-controls.md) for DuploCloud Tenants.
   * Support for [OpenSearch storage options](../overview/aws-services/elasticsearch.md).
   * [Security Configurations Settings](../overview/security-configuration-settings/) documentation section added.
-  * Cluster IP and Worker Node target types are supported when creating [EKS Ingress](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
+  * Cluster IP and Worker Node target types are supported when creating [EKS Ingress](../automation-platform/kubernetes-overview/ingress-loadbalancer/adding-ingress.md).
 * GCP
   * Additional supported actions for [Cloud SQL databases](../overview-1/gcp-services/s3-bucket-1.md#create-a-cloud-scheduler-job) (GCP Console, Edit, Delete, Stop, Restart, or Reset Password)
   * [GKE Standard mode](/broken/pages/30DoAjkzaRTATeeq673S) is supported when creating DuploCloud Infrastructures.
@@ -96,7 +96,7 @@ hidden: true
   * Create [Node Pools](../overview-1/gcp-services/node-pools.md) with support for accelerators and taints.
   * Support for [GKE Ingress.](../kubernetes-overview/ingress-loadbalancer/gke-ingress.md)
 * CI/CD
-  * [Update a service with a stream-lined, read-to-use GitHub Actions script](../introduction-to-ci-cd/github-actions/update-a-service.md).
+  * [Update a service with a stream-lined, read-to-use GitHub Actions script](../automation-platform/introduction-to-ci-cd/github-actions/update-a-service.md).
 * Kubernetes
   * [Enable real-time alerts for autoscaling Kubernetes nodes.](../overview/use-cases/hosts-vms/auto-scaling/kubernetes-scaling-options.md#allowing-real-time-alerts-for-autoscaling-kubernetes-nodes)
 * General
@@ -145,7 +145,7 @@ hidden: true
 
 * AWS
   * [Hibernate an EC2](../overview/use-cases/hosts-vms/hibernate-an-ec2-host.md) host instance.
-  * Display [Taints in ECS hosts on unreachable Nodes](../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
+  * Display [Taints in ECS hosts on unreachable Nodes](../automation-platform/overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).
 
 ## June 2023 and July 2023
 
@@ -237,7 +237,7 @@ hidden: true
 * AWS
   * [AWS ElastiCache](../overview/aws-services/database/elastic-cache.md), a managed caching service for Redis and Memcached, is now supported.
   * Monitor Tenant usage in [Cost Management for billing](../overview/use-cases/cost-management/) with weekly or monthly views. After clicking the **Spend by Tenant** tab, select the **shared** card to display tax and support costs.
-  * Maintain cluster stability with [Ingress Health Checks annotations](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).
+  * Maintain cluster stability with [Ingress Health Checks annotations](../automation-platform/kubernetes-overview/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport).
   * Use the [K8s Admin dashboard to monitor StatefulSets](../overview/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * [Force creation of StatefulSets](../overview/aws-services/containers/#5-toc-title).
 * Azure
@@ -248,7 +248,7 @@ hidden: true
   * Monitor Tenant usage in the [Cost Management for billing](../overview-1/use-cases/cost-management/) feature with weekly or monthly views.
 * Kubernetes (K8s)
   * Support for [Kubernetes Ingress in Azure](../kubernetes-overview/ingress-loadbalancer/aks-ingress/).
-  * Maintain cluster stability with [Ingress Health Checks annotations](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.
+  * Maintain cluster stability with [Ingress Health Checks annotations](../automation-platform/kubernetes-overview/ingress-loadbalancer/adding-ingress.md#add-load-balancer-with-kubernetes-nodeport) for AWS.
   * [Force creation of StatefulSets in AWS](../overview/aws-services/containers/#5-toc-title).
   * Use the K8s Admin dashboard to [monitor StatefulSets in AWS](../overview/use-cases/monitoring/kubernetes-administrator-dashboard.md).
   * Edit [Azure agent pools](../overview-2/azure-services/agent-pool/#editing-an-agent-pool), used to run Azure Kubernetes (AKS) workloads.
