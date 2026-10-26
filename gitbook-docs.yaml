@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Public Docs
+  structure:
+    - type: space
+      key: space-1
+      title: Overview
+      path: overview
+      default: true
+      content:
+        directory: ./
