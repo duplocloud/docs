@@ -41,7 +41,7 @@ The Dashboard shows a high-level overview of your Tenant’s cloud resources and
    * **Administrators:** Filter logs by Tenant using the **Tenant** list box.
    * **Tenant users:** Filter logs by Service using the **Service** list box.
 
-<figure><img src="../../../../../.gitbook/assets/image (492).png" alt=""><figcaption><p>Logging data for the nginx Service</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (487).png" alt=""><figcaption><p>Logging data for the nginx Service</p></figcaption></figure>
 
 ## Metrics
 
@@ -51,7 +51,7 @@ The Dashboard shows a high-level overview of your Tenant’s cloud resources and
    * **Resource-wide metrics for administrators:** navigate to **Administrator** → **Observability** → **Standard**, and click **Metrics**.
    * **Tenant-level metrics**: navigate to **Observability** → **Standard**, and click **Metrics**.
 
-<figure><img src="../../../../../.gitbook/assets/image (495).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (488).png" alt=""><figcaption></figcaption></figure>
 
 ## Other Observability Features
 

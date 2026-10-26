@@ -20,7 +20,7 @@ Configure the DuploCloud Portal to allow for the creation of Dedicated Hosts.
 6. In the **Value** field, select **true**.
 7. Click **Submit**. The configuration is displayed in the **System Config** tab.
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (291).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to <strong>Allow Dedicated Host Sharing</strong> </p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (306).png" alt=""><figcaption><p><strong>Add Config</strong> pane configured to <strong>Allow Dedicated Host Sharing</strong></p></figcaption></figure></div>
 
 ### Creating Dedicated Hosts to launch EC2 instances
 

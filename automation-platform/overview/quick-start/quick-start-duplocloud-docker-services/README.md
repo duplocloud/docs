@@ -4,7 +4,7 @@ description: Finish the Quick Start Tutorial by running a native Docker Service
 
 # Creating a Native Docker Service
 
-This section of the tutorial shows you how to deploy a web application with a DuploCloud Docker Service, by leveraging DuploCloud platform in-built container management capability. &#x20;
+This section of the tutorial shows you how to deploy a web application with a DuploCloud Docker Service, by leveraging DuploCloud platform in-built container management capability.
 
 {% hint style="info" %}
 Instead of creating a DuploCloud Docker Service, you can alternatively finish the tutorial by:
@@ -15,9 +15,9 @@ Instead of creating a DuploCloud Docker Service, you can alternatively finish th
 
 ## Deploying a DuploCloud Docker Service
 
-Instead of creating a DuploCloud Service using EKS or ECS, you can deploy your application with native Docker containers and services.&#x20;
+Instead of creating a DuploCloud Service using EKS or ECS, you can deploy your application with native Docker containers and services.
 
-To deploy your app with a DuploCloud Docker Service in this tutorial, you:&#x20;
+To deploy your app with a DuploCloud Docker Service in this tutorial, you:
 
 1. Create an EC2 host instance in DuploCloud.
 2. Create a native Docker application and Service.
@@ -30,4 +30,4 @@ _Estimated time to complete remaining tutorial steps: 30-40 minutes_
 
 Behind the scenes, the topology that DuploCloud creates resembles this low-level configuration in AWS.
 
-<figure><img src="../../../../.gitbook/assets/image (131).png" alt=""><figcaption><p>A diagram of the DuploCloud Docker Service topology</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (167).png" alt=""><figcaption><p>A diagram of the DuploCloud Docker Service topology</p></figcaption></figure>

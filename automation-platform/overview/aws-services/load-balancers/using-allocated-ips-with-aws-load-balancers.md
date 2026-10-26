@@ -23,11 +23,11 @@ Before you can assign allocated IPs to a load balancer, you must register the AW
 5. In the **MetaData Key** field, enter: `NLBEIPAllocationIds`.
 6. In the **Value** field, enter the **AWS Elastic IP Allocation IDs** for the addresses you want to use, separated by semicolons (`;`). For example: `eipalloc-0123456789abcdef0;eipalloc-0fedcba9876543210;eipalloc-0a1b2c3d4e5f67890`.
    * To find your Allocation IDs, go to the **AWS Management Console** and click **Elastic IPs** in the left-hand navigation. Each Elastic IP’s **Allocation ID** is listed in the **Allocation ID** column.
-7. Click **Create** to save the metadata.&#x20;
+7. Click **Create** to save the metadata.
 
 Once this metadata is added, you will be able to choose to use elastic IPs from this pool when creating eligible public NLBs.
 
-<figure><img src="../../../../.gitbook/assets/image (10) (3).png" alt=""><figcaption><p>Plan <strong>Metadata</strong> tab with allocated IP metadata highlighted</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (10).png" alt=""><figcaption><p>Plan <strong>Metadata</strong> tab with allocated IP metadata highlighted</p></figcaption></figure>
 
 ## Selecting Allocated IPs When Creating a Listener
 
@@ -37,6 +37,6 @@ After adding the Elastic IP Allocation IDs to your plan metadata, you can assign
 2. Click **Add Listener**. The **Add Load Balancer Listener** pane displays.
 3.  Select the **Use Elastic IPs from pool** option.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (11) (3).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (11).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 4. Configure the remaining fields, as required, for the listener.
 5. Click **Create** to add the listener.

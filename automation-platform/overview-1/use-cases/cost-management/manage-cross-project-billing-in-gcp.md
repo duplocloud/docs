@@ -29,7 +29,7 @@ NOTE: This documentation is an extension of [Export Billing to BigQuery](export-
 * Enter the dataset ID, choose a data location, and set other options as mentioned in the below screenshot.
 * Click **Create dataset**.
 
-<figure><img src="../../../../.gitbook/assets/image (399).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (402).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### 2. Give required permissions
 
@@ -50,7 +50,7 @@ Following roles are needed:
 * Select **Source Type** as `Dataset Copy`
 * Schedule options: Choose **Start now**. Set the frequency option to every 12 hours.
 
-<figure><img src="../../../../.gitbook/assets/image (396).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (400).png" alt="" width="563"><figcaption></figcaption></figure>
 
 * Under the **Destination Settings**
   * Put destination project dataset as **Dataset**
@@ -60,7 +60,7 @@ Following roles are needed:
   * Under **Service Account** select the destination `duplo-master` service account (which has the [permission to access the source project dataset](manage-cross-project-billing-in-gcp.md#id-2.-give-required-permissions))
   * Click **SAVE**
 
-<figure><img src="../../../../.gitbook/assets/image (398).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (401).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### 4. Monitor the Transfer Job
 

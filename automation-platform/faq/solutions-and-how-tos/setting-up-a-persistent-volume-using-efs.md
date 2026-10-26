@@ -11,7 +11,7 @@ Configure an Amazon EFS volume in DuploCloud and connect it to Kubernetes worklo
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Storage** → **EFS**.
 2.  Click **Add**. The **Add Elastic File System** pane displays.<br>
 
-    <figure><img src="../../../.gitbook/assets/image (500).png" alt=""><figcaption><p><strong>Add Elastic File System</strong> pane</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (496).png" alt=""><figcaption><p><strong>Add Elastic File System</strong> pane</p></figcaption></figure>
 3. Complete the fields as follows:
 
 <table data-header-hidden><thead><tr><th width="217.33331298828125">Field</th><th>Description</th></tr></thead><tbody><tr><td><strong>Name</strong></td><td>Enter a name for the EFS.</td></tr><tr><td><strong>Performance Mode</strong></td><td>Select <strong>General Purpose</strong>.</td></tr><tr><td><strong>Throughput Mode</strong></td><td>Select <strong>Bursting</strong>.</td></tr><tr><td><strong>Enable Backup</strong></td><td>Select <strong>Disabled</strong>.</td></tr><tr><td><strong>Enable Encryption</strong></td><td>Select <strong>Enable</strong>.</td></tr></tbody></table>

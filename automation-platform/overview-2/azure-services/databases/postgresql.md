@@ -11,7 +11,7 @@ description: Create a PostgreSQL database instance in DuploCloud
 3. Provide **Name**, Database **Username**, and **Password** with **Service Tier** details to create a PostgreSQL database. DuploCloud provides a configuration to support backup retention for your database when you complete the other fields in the pane.
 4. Click **Submit**.
 
-<div align="left"><img src="../../../../.gitbook/assets/image (161).png" alt="Create PostgreSQL Instance pane"></div>
+<div align="left"><img src="../../../../.gitbook/assets/image (192).png" alt="Create PostgreSQL Instance pane"></div>
 
 ## Viewing database details
 

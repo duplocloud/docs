@@ -6,9 +6,9 @@ description: Creating K8s PVCs and StorageClass constructs in the DuploCloud Por
 
 ## Configuring Kubernetes Storage
 
-You can configure the Storage Class and Persistent Volume Claims (PVCs) from the DuploCloud Portal.&#x20;
+You can configure the Storage Class and Persistent Volume Claims (PVCs) from the DuploCloud Portal.
 
-In the DuploCloud Portal, navigate to **Kubernetes** -> **Storage**. The **Kubernetes Storage** page displays.&#x20;
+In the DuploCloud Portal, navigate to **Kubernetes** -> **Storage**. The **Kubernetes Storage** page displays.
 
 You define your Kubernetes Persistent Volume Claims and Storage Classes from this page.
 
@@ -20,9 +20,9 @@ You define your Kubernetes Persistent Volume Claims and Storage Classes from thi
 4. Create a Storage Class, as in the example below.
 5. For EKS, you can create EFS following [these steps](../../overview/aws-services/elastic-file-system-efs/).
 
-<figure><img src="../../../.gitbook/assets/image (458).png" alt=""><figcaption><p><strong>Add Kubernetes Storage Class</strong> page for EKS in AWS</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (460).png" alt=""><figcaption><p><strong>Add Kubernetes Storage Class</strong> page for EKS in AWS</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (457).png" alt=""><figcaption><p><strong>Add Kubernetes Storage Class</strong> page for AKS in Azure</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (459).png" alt=""><figcaption><p><strong>Add Kubernetes Storage Class</strong> page for AKS in Azure</p></figcaption></figure>
 
 {% hint style="info" %}
 For information on using Native Azure StorageClasses, [see this section](storage-options.md).
@@ -30,11 +30,11 @@ For information on using Native Azure StorageClasses, [see this section](storage
 
 ## Creating Kubernetes Persistent Volume Claim
 
-DuploCloud Portal, navigate to **Kubernetes** -> **Storage**.&#x20;
+DuploCloud Portal, navigate to **Kubernetes** -> **Storage**.
 
 The **Persistent Volume Claims** option is selected by default.
 
-<figure><img src="../../../.gitbook/assets/Screenshot (235) (2).png" alt=""><figcaption><p>The <strong>Persistent Volume Claims</strong> option on the <strong>Kubernetes Storage</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (235) (1).png" alt=""><figcaption><p>The <strong>Persistent Volume Claims</strong> option on the <strong>Kubernetes Storage</strong> page</p></figcaption></figure>
 
 Click **Add**. The **Add Kubernetes Persistent Volume Claim** page displays.
 
@@ -59,4 +59,3 @@ For guidance on how to perform volume expansion in Kubernetes, refer to the foll
 * [Expanding Persistent Volume Claims in Kubernetes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#expanding-persistent-volumes-claims)
 * [Expanding Kubernetes Persistent Volumes on EKS](https://www.jeffgeerling.com/blog/2019/expanding-k8s-pvs-eks-on-aws)
 {% endhint %}
-

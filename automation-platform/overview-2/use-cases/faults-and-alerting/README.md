@@ -20,7 +20,7 @@ You can create Azure alerts for the resources from the DuploCloud portal. The su
 
 Alerts can also be configured from the **Observability** -> **Alerts** option.
 
-<div align="left"><img src="../../../../.gitbook/assets/image (179).png" alt=""></div>
+<div align="left"><img src="../../../../.gitbook/assets/image (209).png" alt=""></div>
 
 When the alert Threshold is crossed, a Fault is generated in the DuploCloud portal.
 

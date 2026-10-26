@@ -6,7 +6,7 @@ coverY: 0
 
 # Azure User Guide
 
-The DuploCloud platform installs a Virtual Machine resource within your Azure Subscription. It can be accessed using a web interface, API, or a Terraform provider. Log in to the DuploCloud Portal via SSO  through your GSuite or O365 login.&#x20;
+The DuploCloud platform installs a Virtual Machine resource within your Azure Subscription. It can be accessed using a web interface, API, or a Terraform provider. Log in to the DuploCloud Portal via SSO through your GSuite or O365 login.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ Before you begin, ensure that:
 
 * DuploCloud Portal has been set up, and you have access to it.
 * You can access your individual Slack channel for 24/7 support from the DuploCloud team.
-* Read the [DuploCloud Platform Overview](<../../README (1).md>) and learn about DuploCloud terms: [Infrastructure](../application-focused-interface-duplocloud-architecture/infrastructure.md), [Plan](../application-focused-interface-duplocloud-architecture/plan.md), and [Tenant](../application-focused-interface-duplocloud-architecture/tenant.md).
+* Read the [DuploCloud Platform Overview](../readme-1.md) and learn about DuploCloud terms: [Infrastructure](../application-focused-interface-duplocloud-architecture/infrastructure.md), [Plan](../application-focused-interface-duplocloud-architecture/plan.md), and [Tenant](../application-focused-interface-duplocloud-architecture/tenant.md).
 
 Behind the scenes, a topology is created similar to the following low-level configuration in Azure.
 

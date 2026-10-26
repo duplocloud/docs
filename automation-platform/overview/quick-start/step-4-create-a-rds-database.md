@@ -8,7 +8,7 @@ description: Creating an RDS database to integrate with your DuploCloud Service
 Creating an RDS database is not essential to running a DuploCloud Service. However, as most services also incorporate an RDS, this step is included to demonstrate the ease of creating a database in DuploCloud. To skip this step, proceed to creating an EKS or ECS Service.
 {% endhint %}
 
-An [AWS RDS](https://aws.amazon.com/free/database/?trk=83add82a-8e52-4837-bc73-c323da62d78c\&sc_channel=ps\&ef_id=CjwKCAjwp6CkBhB_EiwAlQVyxYi50yWfBj5SSxs6-gaDSqftnxbBO6Plfy0pYWyyxrZ3zI0goU6bLRoCGkQQAvD_BwE:G:s\&s_kwcid=AL!4422!3!610000101516!e!!g!!amazon%20database%20hosting!11086562318!108339552363) is a managed Relational Database Service that is easy to set up and maintain in DuploCloud for AWS public cloud environments. RDSs support many databases including MySQL, PostgreSQL, MariaDB, Oracle BYOL, or SQL Server. &#x20;
+An [AWS RDS](https://aws.amazon.com/free/database/?trk=83add82a-8e52-4837-bc73-c323da62d78c\&sc_channel=ps\&ef_id=CjwKCAjwp6CkBhB_EiwAlQVyxYi50yWfBj5SSxs6-gaDSqftnxbBO6Plfy0pYWyyxrZ3zI0goU6bLRoCGkQQAvD_BwE:G:s\&s_kwcid=AL!4422!3!610000101516!e!!g!!amazon%20database%20hosting!11086562318!108339552363) is a managed Relational Database Service that is easy to set up and maintain in DuploCloud for AWS public cloud environments. RDSs support many databases including MySQL, PostgreSQL, MariaDB, Oracle BYOL, or SQL Server.
 
 See the [DuploCloud AWS Database documentation](../aws-services/database/) for more information.
 
@@ -18,8 +18,8 @@ _Estimated time to complete Step 3: 5 minutes._
 
 Before creating an RDS, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../overview/quick-start/step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [Kubernetes (EKS or ECS) **Enabled**](step-1-infrastructure.md#check-your-work).
 * A Tenant with the name [**dev01** has been created](step-2-tenant.md).
 
 ## Creating an RDS Database <a href="#id-0-toc-title" id="id-0-toc-title"></a>
@@ -29,10 +29,8 @@ Before creating an RDS, verify that you accomplished the tasks in the previous t
 3.  Select the **RDS** tab, and click **Add**. The **Create a RDS** page displays.<br>
 
     <figure><img src="../../../.gitbook/assets/Screenshot (173).png" alt=""><figcaption><p>The <strong>Create a RDS</strong> page</p></figcaption></figure>
-
-
-4. From the table below, enter the values that correspond to the fields on the **Create a RDS** page. Accept default values for fields not specified.&#x20;
-5. Click **Create**. The database displays with a status of **Submitted** in the **RDS** tab. Database creation takes approximately ten (10) minutes.&#x20;
+4. From the table below, enter the values that correspond to the fields on the **Create a RDS** page. Accept default values for fields not specified.
+5. Click **Create**. The database displays with a status of **Submitted** in the **RDS** tab. Database creation takes approximately ten (10) minutes.
 
 {% hint style="info" %}
 DuploCloud prepends **DUPLO** to the name of your RDS database instance.
@@ -50,7 +48,7 @@ DuploCloud prepends **DUPLO** to the name of your RDS database instance.
 
 ## Validating RDS Database Creation <a href="#id-1-toc-title" id="id-1-toc-title"></a>
 
-You can monitor the status of database creation using the **RDS** tab and the **Status** column.&#x20;
+You can monitor the status of database creation using the **RDS** tab and the **Status** column.
 
 When the database status reads **Available** on the **RDS** tab on the **Database** page, the database's endpoint is ready for connection to a DuploCloud Service, which you create and start in the [next step](step-4-create-a-rds-database.md#checking-your-work).
 

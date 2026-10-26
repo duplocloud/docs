@@ -21,7 +21,7 @@ Central logging is typically set up during DuploCloud onboarding. Contact DuploC
 2. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings**, and select the **Logging** tab.
 3.  Click the **Enable Logging** link. The **Enable Logging** page displays.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (44).png" alt=""><figcaption><p>The <strong>Logging</strong> tab with the <strong>Enable Logging</strong> link</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (84).png" alt=""><figcaption><p>The <strong>Logging</strong> tab with the <strong>Enable Logging</strong> link</p></figcaption></figure></div>
 4. In the **Select Tenant** list box, select **Default**.
 5. In the **Cert ARN** field, enter the ARN certificate for the Default Tenant.
 

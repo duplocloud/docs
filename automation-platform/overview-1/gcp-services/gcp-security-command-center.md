@@ -6,7 +6,7 @@ description: Utilize GCP Security Command Center with DuploCloud
 
 The GCP Security Command Center (SCC) integration in DuploCloud provides key security insights—threats, vulnerabilities, and compliance benchmarks—in a unified interface. This page explains how to activate and configure GCP SCC with DuploCloud.
 
-## Prerequisites&#x20;
+## Prerequisites
 
 **Activate Security Command Center in GCP**: Before enabling SCC features in DuploCloud, activate the Security Command Center directly in your GCP account. GCP does not support enabling SCC via API.
 
@@ -25,7 +25,7 @@ The GCP Security Command Center (SCC) integration in DuploCloud provides key sec
 6. Click **Save Settings**. Security Command Center features are enabled for DuploCloud.
 
 {% hint style="info" %}
-&#x20;It may take approximately **24-48 hours** for security findings and data to populate in the DuploCloud Portal.
+It may take approximately **24-48 hours** for security findings and data to populate in the DuploCloud Portal.
 {% endhint %}
 
 ## Viewing GCP Security Insights in DuploCloud
@@ -44,13 +44,13 @@ To view the Vulnerabilities data in the DuploCloud Portal, navigate to **Securit
 
 The Vulnerabilities Dashboard provides an overview of your environment's security state. This overview helps you quickly gauge the scale and urgency of your security posture, prioritizing the most critical vulnerabilities and findings that need attention.
 
-<figure><img src="../../../.gitbook/assets/Screenshot (270) (1).png" alt=""><figcaption><p>The SCC <strong>Vulnerabilities</strong> Dashboard in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot (270).png" alt=""><figcaption><p>The SCC <strong>Vulnerabilities</strong> Dashboard in the DuploCloud Portal</p></figcaption></figure>
 
 The main Vulnerabilities dashboard also allows you to tab between **By Vulnerability** and **All Findings**:
 
-**By Vulnerability**: This tab lets you explore **Details** or **Findings** for each vulnerability.&#x20;
+**By Vulnerability**: This tab lets you explore **Details** or **Findings** for each vulnerability.
 
-* The **Details** tab provides an overview of the vulnerability, including its description, associated standards, and the total and active findings linked to the vulnerability.&#x20;
+* The **Details** tab provides an overview of the vulnerability, including its description, associated standards, and the total and active findings linked to the vulnerability.
 * The **Findings** tab gives a more granular view of each specific finding related to the vulnerability, showing the status, severity, category, and the affected resources.
 
 **All Findings:** This tab allows you to select individual findings to view a detailed summary. You can also view the data in a JSON View format for a detailed, structured, machine-readable representation.
@@ -73,6 +73,6 @@ Click on a specific rule for deeper insights including **Details** and **Finding
 
 <figure><img src="../../../.gitbook/assets/Screenshot (265).png" alt=""><figcaption><p>The <strong>Details</strong> tab for the <strong>BUCKET_POLICY_ONLY_DISABLED</strong> rule</p></figcaption></figure>
 
-**Findings:** This tab provides a detailed description of each finding associated with the rule, offering a granular view of compliance issues. It includes the finding Status (Active or Resolved), Severity (Critical, High, Medium, or Low), category (e.g., "Flow logs disabled"), the affected resource, timestamps, and more.&#x20;
+**Findings:** This tab provides a detailed description of each finding associated with the rule, offering a granular view of compliance issues. It includes the finding Status (Active or Resolved), Severity (Critical, High, Medium, or Low), category (e.g., "Flow logs disabled"), the affected resource, timestamps, and more.
 
 <figure><img src="../../../.gitbook/assets/Screenshot (264).png" alt=""><figcaption><p>The <strong>Findings</strong> tab for the <strong>BUCKET_POLICY_ONLY_DISABLED</strong> rule</p></figcaption></figure>

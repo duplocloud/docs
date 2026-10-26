@@ -36,4 +36,4 @@ Use `kubectl` to access the Kubernetes cluster for your Tenant namespace.
 3. Click on the Service name from the **NAME** column.
 4. From the **KubeCtl** options, select **KubeCtl Shell**. A shell instance will launch, allowing you to interact with the Kubernetes cluster directly using `kubectl` commands.
 
-<figure><img src="../../../../.gitbook/assets/image (387).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (391).png" alt=""><figcaption></figcaption></figure>

@@ -12,29 +12,29 @@ _Estimated time to complete Step 2: 10 minutes._
 
 ## Tenant use cases
 
-DuploCloud customers often create at least two Tenants for their production and non-production cloud environments (Infrastructures).&#x20;
+DuploCloud customers often create at least two Tenants for their production and non-production cloud environments (Infrastructures).
 
 For example:
 
-* Production Infrastructure &#x20;
+* Production Infrastructure
   * Pre-production Tenant - for preparing or reviewing production code
-  * Production Tenant - for deploying tested code&#x20;
+  * Production Tenant - for deploying tested code
 * Non-production Infrastructure
   * Development Tenant - for writing and reviewing code
   * Quality Assurance Tenant - for automated testing
 
-In larger organizations, some customers create Tenants based on application environments, such as creating one Tenant for Data Science applications and another Tenant for web applications, and so on.&#x20;
+In larger organizations, some customers create Tenants based on application environments, such as creating one Tenant for Data Science applications and another Tenant for web applications, and so on.
 
 Tenants are sometimes created to isolate a single customer workload, allowing more granular performance monitoring, scaling flexibility, or tighter security. This is referred to as a _single-Tenant_ setup.
 
 ## Prerequisites
 
-Before creating a Tenant, verify that you accomplished the tasks in the previous tutorial steps.  Using the DuploCloud Portal, confirm that:
+Before creating a Tenant, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
 * An [Infrastructure and Plan](step-1-infrastructure.md) exist, both with the name you created.
 * The Infrastructure has [Kubernetes (GKE) **Enabled**](step-1-infrastructure.md)**.**
 
-## Creating a Tenant&#x20;
+## Creating a Tenant
 
 Create a Tenant for your Infrastructure and Plan:
 
@@ -53,6 +53,6 @@ It may take 1-2 minutes for the Tenant to be set up. While the Tenant is setting
 
 ## Checking your work
 
-From the DuploCloud portal, navigate to **Administrator** -> **Tenants**, and verify that a Tenant exists with the name and Plan you created.&#x20;
+From the DuploCloud portal, navigate to **Administrator** -> **Tenants**, and verify that a Tenant exists with the name and Plan you created.
 
-<figure><img src="../../../.gitbook/assets/image (145).png" alt=""><figcaption><p>The <strong>Tenants</strong> page showing the Dev01 Tenant</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (178).png" alt=""><figcaption><p>The <strong>Tenants</strong> page showing the Dev01 Tenant</p></figcaption></figure>

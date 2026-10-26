@@ -61,28 +61,28 @@ Before performing this step, Contact DuploCloud Support to enable the configurat
 1. In the DuploCloud Portal, navigate to **Administrator -> Infrastructure**.
 2. Click **Add**. The **Add Infrastructure** page displays.
 3. From the **Cloud** list box, select **On-Premises**.
-4. Enter the details of the Kubernetes Cluster:&#x20;
+4. Enter the details of the Kubernetes Cluster:
    * Kubernetes Cluster **Name**
    * **Kubernetes Cluster Endpoint**
    * **Kubernetes** Token, which you retrieved when you [created a service account in the previous step](import-an-external-kubernetes-cluster.md#creating-a-service-account-in-the-k8s-cluster-with-admin-permissions).
-   * **Kubernetes Cluster Certificate Authority Data** (For an EKS cluster, this can be copied from the **EKS Cluster Overview** page from the AWS Console).&#x20;
+   * **Kubernetes Cluster Certificate Authority Data** (For an EKS cluster, this can be copied from the **EKS Cluster Overview** page from the AWS Console).
    * **Kubernetes Vendor** (Enter **EKS**, as in the example below).
 
-<figure><img src="../../.gitbook/assets/image (421).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (419).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
 
 ## Viewing Imported Kubernetes Cluster from DuploCloud
 
 Select the **Kubernetes** tab to display information about the imported Kubernetes Cluster.
 
-<figure><img src="../../.gitbook/assets/image (422).png" alt=""><figcaption><p>The <strong>Kubernetes</strong> tab</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (420).png" alt=""><figcaption><p>The <strong>Kubernetes</strong> tab</p></figcaption></figure>
 
-## Adding Existing Nodes for the imported cluster in DuploCloud&#x20;
+## Adding Existing Nodes for the imported cluster in DuploCloud
 
-1. Select the Tenant from the **Tenant** list box.&#x20;
+1. Select the Tenant from the **Tenant** list box.
 2. Navigate to **Kubernetes** -> **Nodes**. The **Nodes** page displays.
 3. Click the **On-Premises** Tab.
 4. Click **Add**. The **Add On-Premesis** Instance pane displays.
-5. Select the node from the **Kubernetes Node** list box.&#x20;
+5. Select the node from the **Kubernetes Node** list box.
 6. Supply an **Allocation Tag**.
 7.  Click **Add**.<br>
 
@@ -92,11 +92,11 @@ Select the **Kubernetes** tab to display information about the imported Kubernet
 
 Create a WebServer Service in the DuploCloud portal by selecting **OnPrem** from the **Cloud** list box while creating a [Kubernetes Service](../application-focused-interface-duplocloud-architecture/app-service-and-cloud-services.md).
 
-<figure><img src="../../.gitbook/assets/image (426).png" alt=""><figcaption><p>The <strong>Basic Options</strong> page to add a Kubernetes Service with the <strong>Cloud</strong> list box set to <strong>OnPrem</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (424).png" alt=""><figcaption><p>The <strong>Basic Options</strong> page to add a Kubernetes Service with the <strong>Cloud</strong> list box set to <strong>OnPrem</strong></p></figcaption></figure>
 
 Once the service is created, you should be able to access the [`kubectl` shell](kubectl/kubectl-shell/#accessing-the-kubectl-shell-in-the-duplocloud-portal), retrieve the [KubeCtl Token](kubectl/kubectl-token.md), [Host/Container shell, and Container logs](../overview/aws-services/containers/eks-containers-and-services/#kubernetes-containers) for the service you created.
 
-<figure><img src="../../.gitbook/assets/image (428).png" alt=""><figcaption><p><strong>Containers</strong> tab for a Kubernetes Service</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (426).png" alt=""><figcaption><p><strong>Containers</strong> tab for a Kubernetes Service</p></figcaption></figure>
 
 ## Importing External Kubernetes Cluster as Read-Only
 
@@ -143,7 +143,7 @@ type: kubernetes.io/service-account-token
 2. Run `kubectl apply -f service-account-readonly-setup.yaml`, creating a new service account with `readonly` permission.
 3. Run `kubectl -n kube-system describe secret duplo-readonly-token` to fetch the token for DuploCloud to use when importing the cluster.
 
-### Importing the Kubernetes cluster to DuploCloud&#x20;
+### Importing the Kubernetes cluster to DuploCloud
 
 Follow this step to [import](import-an-external-kubernetes-cluster.md#importing-your-kubernetes-cluster-to-duplocloud) and [view](import-an-external-kubernetes-cluster.md#viewing-imported-kubernetes-cluster-from-duplocloud) the cluster.
 

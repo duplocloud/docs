@@ -25,14 +25,14 @@ To create EMR Serverless applications you first need to create an EMR studio.
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_12_28.png" alt=""><figcaption><p><strong>Actions</strong> menu with <strong>EMR Studio</strong> option highlighted on <strong>EMR Serverless</strong> tab</p></figcaption></figure>
 4. Click **Add**. The **Add EMR Studio** pane displays.\
    \
-   ![](<../../../.gitbook/assets/image (207).png>)<br>
+   ![](<../../../.gitbook/assets/image (231).png>)<br>
 5. Enter a **Description** of the **Studio** for reference.
-6. Select an [S3 Bucket](../../../overview/aws-services/s3-bucket.md) that you previously defined from the **Logs Default S3 Bucket** list box.
+6. Select an [S3 Bucket](s3-bucket/) that you previously defined from the **Logs Default S3 Bucket** list box.
 7. Optionally, in the **Logs Default S3 Folder** field, specify the path to which logs are written.
 8. Click **Create**. The EMR Studio is created and displayed.
 9.  Select the EMR Studio name in the **Name** column. The **EMR Studio** page displays. View the **Details** of the EMR Serverless Studio.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (296).png" alt=""><figcaption><p>EMR Studio page with <strong>Basic</strong> and <strong>Details</strong> tabs.</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (311).png" alt=""><figcaption><p>EMR Studio page with <strong>Basic</strong> and <strong>Details</strong> tabs.</p></figcaption></figure></div>
 10. Navigate to the **EMR Serverless** tab and click the menu (<img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line">) icon in the **Actions** column. Use the **Actions** Menu to delete the studio if needed, as well as to view the studio in the AWS Console.<br>
 
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_17_15.png" alt=""><figcaption><p>EMR Serverless Studio Actions Menu</p></figcaption></figure>
@@ -68,7 +68,7 @@ Before you begin to create a job to run the application, clone an instance of it
 You have created and cloned the Spark application. Now you must create and clone a job to run it in EMR Serverless. In this example, we create a Spark job.
 
 {% hint style="info" %}
-If you are new to Spark, use the Info Tips (blue <img src="../../../.gitbook/assets/image (97).png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
+If you are new to Spark, use the Info Tips (blue <img src="../../../.gitbook/assets/image (135).png" alt="" data-size="line"> icon) when entering data in the EMR Serverless configuration wizard steps below.
 {% endhint %}
 
 1. Select the application instance that you previously cloned. This instance (**DUPLOSERVICES-DEFAULT-APP1-C-833**, in this example) has a **STATE** of **CREATED**.
@@ -78,7 +78,7 @@ If you are new to Spark, use the Info Tips (blue <img src="../../../.gitbook/ass
     <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-18_31_32.png" alt=""><figcaption><p><strong>EMR Serverless</strong> configuration wizard <strong>Basics</strong> step with <strong>EMR Serverless RunJob Name</strong> field</p></figcaption></figure>
 4. Click **Next**.
 5. In the **Job details** step, select a previously-defined **Spark Script S3 Bucket.**
-6. In the **Spark Script** [**S3 Bucket**](../../../overview/aws-services/s3-bucket.md) **File** field, enter a path to define where your scripts are stored.
+6. In the **Spark Script** [**S3 Bucket**](s3-bucket/) **File** field, enter a path to define where your scripts are stored.
 7. Optionally, in the **Spark Scripts** field, you can specify an array of arguments passed to your JAR or Python script. Each argument in the array must be separated by a comma (**,**). In the example below, a single argument of **"40000"** is entered.
 8.  Optionally, in the **Spark Submit Parameters** field, you can specify Spark **`--conf`** parameters. See the example below.<br>
 

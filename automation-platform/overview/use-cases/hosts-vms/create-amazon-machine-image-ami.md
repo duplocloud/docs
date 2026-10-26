@@ -10,7 +10,7 @@ description: Add and view AMIs in AWS
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** → **Hosts**. The **Hosts** page displays.
 2. In the **NAME** column, select the host you want to use as the basis for your AMI.
-3.  Click the **Actions** menu and select **Host Settings** → **Create AMI**. The **Create AMI** pane displays. <br>
+3.  Click the **Actions** menu and select **Host Settings** → **Create AMI**. The **Create AMI** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (730).png" alt=""><figcaption><p><strong>Create AMI</strong> pane</p></figcaption></figure></div>
 4.  Complete the following fields:
@@ -20,7 +20,7 @@ description: Add and view AMIs in AWS
 
 ## Viewing and Editing an AMI
 
-1. In the DuploCloud Portal, navigate to **Cloud Services** → **Hosts**.&#x20;
+1. In the DuploCloud Portal, navigate to **Cloud Services** → **Hosts**.
 2. Select the **AMI** tab.
 3. Click the **Name** of an AMI to open its details page and view overview information such as creation date, source host, and sharing scope.
 4. To update the AMI’s sharing settings, click **Actions** → **Edit** from the AMI details page. Here you can:
@@ -36,17 +36,17 @@ description: Add and view AMIs in AWS
 
 ## Launching a New Host from an AMI
 
-You can create a new host based on an existing AMI to deploy a server with your custom configuration.&#x20;
+You can create a new host based on an existing AMI to deploy a server with your custom configuration.
 
-When [creating a host in DuploCloud](../../../../overview/use-cases/hosts-vms/adding-hosts.md#adding-a-host-vm), check the box to display **Advanced Options**, and select your desired AMI from the **Image ID** dropdown.
+When [creating a host in DuploCloud](adding-hosts.md#adding-a-host-vm), check the box to display **Advanced Options**, and select your desired AMI from the **Image ID** dropdown.
 
-<figure><img src="../../../../.gitbook/assets/image (472).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (475).png" alt=""><figcaption></figcaption></figure>
 
 ## Disabling Host creation for custom AMIs
 
-You can disable host creation by non-administrators (Users) for custom AMIs by configuring the option in DuploCloud. &#x20;
+You can disable host creation by non-administrators (Users) for custom AMIs by configuring the option in DuploCloud.
 
-### Configuring the Disable Host Creation with Custom AMI option&#x20;
+### Configuring the Disable Host Creation with Custom AMI option
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Click the **System Config** tab.

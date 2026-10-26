@@ -46,4 +46,4 @@ Complete the following steps to add an EventBridge target in DuploCloud.
 8. In the **Task Version** field, enter a numeric version number.
 9. Click **Submit**. The target displays on the **Target** tab.
 
-<figure><img src="../../../.gitbook/assets/image (473).png" alt=""><figcaption><p><strong>Target</strong> tab for an EventBridge rule displaying targets for <strong>Target Type</strong> <strong>ECS Task</strong> and <strong>Lambda</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (477).png" alt=""><figcaption><p><strong>Target</strong> tab for an EventBridge rule displaying targets for <strong>Target Type</strong> <strong>ECS Task</strong> and <strong>Lambda</strong></p></figcaption></figure>

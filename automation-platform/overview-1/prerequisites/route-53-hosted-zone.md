@@ -45,7 +45,7 @@ Provision the zone in every DuploCloud Plan, starting with the Plan created in t
 Do not forget the dot (**.**) at the beginning of the DNS suffix, in the form as shown below.
 {% endhint %}
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (313).png" alt=""><figcaption><p>The <strong>Set Plan DNS</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (326).png" alt=""><figcaption><p>The <strong>Set Plan DNS</strong> pane</p></figcaption></figure></div>
 
 {% hint style="info" %}
 Note that this domain must be set in each new Plan you create in your DuploCloud Infrastructure.

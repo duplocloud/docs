@@ -6,14 +6,14 @@ description: Install published extensions, and build your own.
 
 Extensions add capabilities to the platform — API resources, menu entries, and skills — loaded at runtime without redeploying the portal. There are two places to work with them, and they do different jobs:
 
-| | Where | What it's for |
-|---|---|---|
-| **Extensions** (registry) | **AI Admin → Extensions** | Install and manage published extensions across the platform |
-| **Extension Studio** | **Studio** within a workspace | Build a new extension from a description |
+|                           | Where                         | What it's for                                               |
+| ------------------------- | ----------------------------- | ----------------------------------------------------------- |
+| **Extensions** (registry) | **AI Admin → Extensions**     | Install and manage published extensions across the platform |
+| **Extension Studio**      | **Studio** within a workspace | Build a new extension from a description                    |
 
 Start with the registry — installing something that already exists needs no source control and no build.
 
----
+***
 
 ## Installing an extension
 
@@ -61,7 +61,7 @@ If an extension isn't in the catalog, click **Register** and upload its `extensi
 
 Extensions registered this way show **Not tracked** under Source Control, since there's no repository behind them.
 
----
+***
 
 ## Building an extension in Extension Studio
 
@@ -86,7 +86,7 @@ Once built, an extension in Studio has two further actions on its detail page:
 Extension Studio needs a GitHub scope because it builds into a repository. If you only want to use an extension someone else has published, install it from the **Extension Library** instead — that needs no source control.
 {% endhint %}
 
----
+***
 
 ## Which one should I use?
 
@@ -94,4 +94,4 @@ Extension Studio needs a GitHub scope because it builds into a repository. If yo
 * **Register a zip** when you have a built extension that isn't published to the catalog.
 * **Build in Extension Studio** when you need something that doesn't exist yet and are prepared to maintain it in your own repository.
 
-For the concepts behind extensions — the plugin architecture, manifests, storage, and lifecycle — see the [Extension Framework](../extension-framework/README.md).
+For the concepts behind extensions — the plugin architecture, manifests, storage, and lifecycle — see the [Extension Framework](../extension-framework/extension-framework.md).

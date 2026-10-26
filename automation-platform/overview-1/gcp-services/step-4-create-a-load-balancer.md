@@ -8,7 +8,7 @@ All containers run inside a private network and cannot be accessed from an exter
 
 ## Creating a GKE Ingress
 
-To create an Ingress Load Balancer, refer to the [GKE Ingress](../../kubernetes-overview/ingress-loadbalancer/gke-ingress.md) page in the DuploCloud Kubernetes User Guide.&#x20;
+To create an Ingress Load Balancer, refer to the [GKE Ingress](../../kubernetes-overview/ingress-loadbalancer/gke-ingress.md) page in the DuploCloud Kubernetes User Guide.
 
 {% hint style="info" %}
 See the [GCP Quick Start](../quick-start/) for an end-to-end example of deploying an application using a GCP Service.
@@ -25,7 +25,7 @@ See the [GCP Quick Start](../quick-start/) for an end-to-end example of deployin
    * **Container Port**: Enter the port your container is listening on inside the application. Use **80** for HTTP or **443** for HTTPS. If you are using HTTPS, make sure you plan to configure SSL certificates later.
    * **External Port**: Enter the port that will be exposed to the internet. For HTTP traffic, use **80**, and for secure HTTPS traffic, use **443**. If you're using HTTPS, ensure that you configure SSL certificates accordingly.
    * **Visibility**: Select **Public** or **Private**
-   * **Application Mode**:&#x20;
+   * **Application Mode**:
      * **Docker Mode**: Choose this if your application is running inside containers (such as Docker or Kubernetes pods). This mode is optimized for containerized services.
      * **Native App Mode**: Choose this if your application is running on virtual machines (VMs) or on bare-metal infrastructure, rather than inside containers.
    * **Health Check**: This tells Kubernetes where to check the health of your application. Use `/` to check the root level of your service. If you have a custom health check endpoint, specify it here (e.g., `/health`).
@@ -33,22 +33,22 @@ See the [GCP Quick Start](../quick-start/) for an end-to-end example of deployin
      Choose **HTTP** for unencrypted traffic or **HTTPS** for encrypted traffic between the Load Balancer and your containerized service. HTTPS is highly recommended. If using HTTPS, SSL certificates are required.
    * **Certificate**: Select the SSL Certificate to use. If you're using HTTPS, it's important to configure SSL certificates to ensure secure communication. Follow the instructions to [add SSL certificates for your domain](../prerequisites/certificate-for-load-balancer-and-ingress.md).
 7. Optionally, enable and configure additional Load Balancer settings:
-   * **Advanced Kubernetes Settings:** Customize advanced Kubernetes configurations.&#x20;
-   * **Set Health Check annotations for Ingress**: Add annotations for Ingress.&#x20;
+   * **Advanced Kubernetes Settings:** Customize advanced Kubernetes configurations.
+   * **Set Health Check annotations for Ingress**: Add annotations for Ingress.
    * **Additional Health Check configs**: specify the URL path that the Load Balancer will use to check if your service is healthy. You can use the root (`/`) path for a simple health check, or for more detailed monitoring, configure paths like `/health` or `/status`
-   * **Additional GCP Settings**: Enable GCP-specific optimizations and settings.&#x20;
+   * **Additional GCP Settings**: Enable GCP-specific optimizations and settings.
 
 {% hint style="info" %}
 DuploCloud allows no more than one (0 or 1) Load Balancer per DuploCloud Service.
 {% endhint %}
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (82).png" alt="" width="363"><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (120).png" alt="" width="363"><figcaption><p>The <strong>Add Load Balancer</strong> pane.</p></figcaption></figure></div>
 
-8. Click **Add** to create the Load Balancer.&#x20;
+8. Click **Add** to create the Load Balancer.
 
 ## Adding a certificate for an internal Load Balancer in GCP
 
-For internal Load Balancers, you cannot use Google Managed Certificates. You can import a certificate from somewhere else or use a self-signed certificate. We recommend using the self-signed certificate option for internal Load Balancers because you control authentication at the IP level.&#x20;
+For internal Load Balancers, you cannot use Google Managed Certificates. You can import a certificate from somewhere else or use a self-signed certificate. We recommend using the self-signed certificate option for internal Load Balancers because you control authentication at the IP level.
 
 Here's an example Terraform code snippet to create a self-signed certificate for an internal Load Balancer in DuploCloud:
 
@@ -94,6 +94,6 @@ Restrict open access to your public Load Balancers by enforcing controlled acces
 <div align="left"><figure><img src="../../../.gitbook/assets/LB flag.png" alt="" width="364"><figcaption><p>The <strong>Add Config</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 
 3. From the **Config Type** list box, select **Flags**.
-4. From the **Key** list box, select **Deny Open Access To Public LB**.&#x20;
-5. In the **Value** list box, select **True**.&#x20;
-6. Click **Submit**. Open access to public Load Balancers is restricted.&#x20;
+4. From the **Key** list box, select **Deny Open Access To Public LB**.
+5. In the **Value** list box, select **True**.
+6. Click **Submit**. Open access to public Load Balancers is restricted.

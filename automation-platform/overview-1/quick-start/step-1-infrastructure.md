@@ -4,7 +4,7 @@ description: Creating the DuploCloud Infrastructure and a Plan
 
 # Step 1: Create Infrastructure and Plan
 
-Each DuploCloud Infrastructure is a connection to a unique Virtual Private Cloud (VPC) network that resides in a region that can host Kubernetes clusters.&#x20;
+Each DuploCloud Infrastructure is a connection to a unique Virtual Private Cloud (VPC) network that resides in a region that can host Kubernetes clusters.
 
 After you supply a few basic inputs, DuploCloud creates an Infrastructure for you within Google Cloud Platform (GCP) and DuploCloud, with a few clicks. Behind the scenes, DuploCloud does a lot with what little you supply — generating the VPC, Subnets, NAT Gateway, Routes, and Google Kubernetes Engine ([GKE](https://cloud.google.com/kubernetes-engine?hl=en)) cluster.
 
@@ -23,10 +23,10 @@ Before starting this tutorial:
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
 2. Click **Add**. The **Add Infrastructure** page displays.
-3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.&#x20;
+3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.
 4. Use the toggle switch to **Enable GKE**.
 5. Select either **GKE Autopilot** or **GKE Standard** options. You will follow different paths in the tutorial for creating clusters with GKE Autopilot or GKE Standard.
-6. Click **Create** to create the Infrastructure. DuploCloud begins creating and configuring your Infrastructure and GKE Cluster using Kubernetes. It may take up to twenty (20) minutes to create the Infrastructure. &#x20;
+6. Click **Create** to create the Infrastructure. DuploCloud begins creating and configuring your Infrastructure and GKE Cluster using Kubernetes. It may take up to twenty (20) minutes to create the Infrastructure.
 
 | Add Infrastructure page field | Value                      |
 | ----------------------------- | -------------------------- |
@@ -40,7 +40,7 @@ Before starting this tutorial:
 <figure><img src="../../../.gitbook/assets/Screenshot (295).png" alt=""><figcaption><p><strong>Add Infrastructure</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
-It may take up to twenty (20) minutes for your Infrastructure to be created and Kubernetes (GKE) enablement to be complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.&#x20;
+It may take up to twenty (20) minutes for your Infrastructure to be created and Kubernetes (GKE) enablement to be complete. Use the **Kubernetes** card in the Infrastructure screen to monitor the status, which should display as **Enabled** when completed. You can also monitor progress by using the **Kubernetes** tab, as DuploCloud generates your **Cluster Name**, **Default VM Size**, **Server Endpoint**, and **Token**.
 {% endhint %}
 
 ## Verifying that a Plan exists for your Infrastructure
@@ -58,13 +58,13 @@ You previously verified that your Infrastructure and Plan were created. Now veri
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
 2. From the **NAME** column, click on the name of the Infrastructure you created.
-3. Click the **GKE** tab. When Kubernetes has been **Enabled** for GKE, details are listed in the tab. The Infrastructure page displays the **Enabled** status on the **Kubernetes** card for GKE Clusters.&#x20;
+3. Click the **GKE** tab. When Kubernetes has been **Enabled** for GKE, details are listed in the tab. The Infrastructure page displays the **Enabled** status on the **Kubernetes** card for GKE Clusters.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (286).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (301).png" alt=""><figcaption></figcaption></figure></div>
 
 ### Viewing GKE Cluster details
 
-When an Infrastructure is created, a GKE Cluster is created by default. You can view the details and download the kubeconfig file from the DuploCloud portal.&#x20;
+When an Infrastructure is created, a GKE Cluster is created by default. You can view the details and download the kubeconfig file from the DuploCloud portal.
 
 From the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**. Click on the name of the Infrastructure, and select the **GKE** tab. To download the kubeconfig file, click **Download Kube Config**.
 

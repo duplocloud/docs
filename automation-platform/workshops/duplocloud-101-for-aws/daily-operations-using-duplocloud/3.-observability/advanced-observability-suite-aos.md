@@ -26,7 +26,7 @@ Navigate to:
 * **Administrator** → **Observability** → **Advanced** → **Dashboard** (Admin view)
 * **Observability** → **Advanced** → **Dashboard** (Tenant view)
 
-<figure><img src="../../../../../.gitbook/assets/image (489).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (484).png" alt=""><figcaption></figcaption></figure>
 
 ## Logging
 
@@ -34,7 +34,7 @@ Click the **Logs** card on the AOS Dashboard.
 
 The Grafana Logging dashboard opens, showing real-time logs for Services and Containers.
 
-<figure><img src="../../../../../.gitbook/assets/image (490).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (485).png" alt=""><figcaption></figcaption></figure>
 
 Adjust filters to refine your view, or leave defaults to see all logs.
 
@@ -50,7 +50,7 @@ Click the **Metrics** card on the AOS Dashboard.
 
 The Grafana Metrics dashboard opens, showing real-time performance metrics for your Services and Containers.
 
-<figure><img src="../../../../../.gitbook/assets/image (491).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (486).png" alt=""><figcaption></figcaption></figure>
 
 Adjust filters or time intervals to focus on specific resources or trends, or leave defaults to see all metrics.
 

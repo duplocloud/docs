@@ -12,11 +12,11 @@ Copy the Storage Account Key and File Share Name from the DuploCloud Portal to p
 
 ### **Creating Kubernetes Secret**
 
-Navigate to **Kubernetes** -> **Secrets**. Create a Kubernetes Secret Object using an Azure Storage Account.&#x20;
+Navigate to **Kubernetes** -> **Secrets**. Create a Kubernetes Secret Object using an Azure Storage Account.
 
 For more information, see [Kubernetes Configs and Secrets](./).
 
-<figure><img src="../../../.gitbook/assets/image (381).png" alt=""><figcaption><p>Kubernetes Storage Account Secret</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (386).png" alt=""><figcaption><p>Kubernetes Storage Account Secret</p></figcaption></figure>
 
 {% code title="SecretDetails example" %}
 ```
@@ -51,4 +51,4 @@ VolumesMounts:
 ```
 {% endcode %}
 
-<figure><img src="../../../.gitbook/assets/image (382).png" alt=""><figcaption><p>Service Deployment Screen with K8s Secret example</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (387).png" alt=""><figcaption><p>Service Deployment Screen with K8s Secret example</p></figcaption></figure>

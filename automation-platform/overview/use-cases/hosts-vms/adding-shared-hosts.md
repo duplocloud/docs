@@ -56,14 +56,14 @@ After configuring Tenant settings to allow Host sharing, create the resources yo
 4. Fill in the **Service Name**, **Cloud**, **Platform**, and **Docker Image** fields. Click **Next**.
 5.  Enable **Run on Any Host**.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (364).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (369).png" alt=""><figcaption><p>The filled <strong>Add Service</strong> page, Advanced Options.</p></figcaption></figure></div>
 6. Click **Create**. A Service running on the shared Host is created.
 
 ### **Creating a Job or CronJob to run on a Shared Host**
 
 DuploCloud supports running Jobs and CronJobs on shared Hosts for AWS.
 
-1. Follow the steps in the DuploCloud documentation to create a [Kubernetes Job](../../../../kubernetes/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [Kubernetes CronJob](../../../../kubernetes/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).
+1. Follow the steps in the DuploCloud documentation to create a [Kubernetes Job](../../../kubernetes-overview/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [Kubernetes CronJob](../../../kubernetes-overview/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).
 2. On the **Add Kubernetes Job** or **Add Kubernetes CronJob** page, enable **Run on Any Host**.
 3. Click **Create** to deploy the Job or CronJob on the shared Host.
 

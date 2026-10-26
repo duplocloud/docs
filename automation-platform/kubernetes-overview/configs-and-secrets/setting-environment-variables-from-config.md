@@ -9,15 +9,15 @@ In Kubernetes, you populate environment variables from application configuration
 ## Setting environment variables from a Kubernetes ConfigMap
 
 {% hint style="info" %}
-Before you create the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud [Service](../../../overview-2/azure-services/).&#x20;
+Before you create the Kubernetes [ConfigMap](https://kubernetes.io/docs/concepts/configuration/configmap/), you must create a DuploCloud [Service](../../overview-2/azure-services/).
 {% endhint %}
 
-### Creating the Kubernetes ConfigMap&#x20;
+### Creating the Kubernetes ConfigMap
 
-1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Config Maps**.&#x20;
-2. Click **Add**. The **Add Config Map** pane displays.&#x20;
-3. Name the ConfigMap you want to create, such as `my-config-map`.&#x20;
-4. Add a **Data** key/value pair for each file in your ConfigMap, separated by a colon (**`:`**). The key is the file name, and the value is the file's contents.&#x20;
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Config Maps**.
+2. Click **Add**. The **Add Config Map** pane displays.
+3. Name the ConfigMap you want to create, such as `my-config-map`.
+4. Add a **Data** key/value pair for each file in your ConfigMap, separated by a colon (**`:`**). The key is the file name, and the value is the file's contents.
 5. Click **Create**.
 
 <figure><img src="../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.14-14_51_55.png" alt=""><figcaption><p><strong>Add Config Maps</strong> pane.</p></figcaption></figure>
@@ -34,10 +34,10 @@ You can import the entire ConfigMap as environment variables or choose specific 
 
 #### Importing the entire ConfigMap as Environment Variables
 
-The most straightforward approach is to import the entire ConfigMap as environment variables.  Using this approach, your service will recognize each key in the ConfigMap defined as an environment variable.
+The most straightforward approach is to import the entire ConfigMap as environment variables. Using this approach, your service will recognize each key in the ConfigMap defined as an environment variable.
 
 1. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
-2. On the **Advanced Options** page, in the **Other Container Config** field, enter the configuration YAML to import environment variables from a ConfigMap.  For example, to import all environment variables from a ConfigMap named `my-env-vars`, use the following YAML:&#x20;
+2. On the **Advanced Options** page, in the **Other Container Config** field, enter the configuration YAML to import environment variables from a ConfigMap. For example, to import all environment variables from a ConfigMap named `my-env-vars`, use the following YAML:
 
 ```yaml
 EnvFrom:
@@ -45,7 +45,7 @@ EnvFrom:
     Name: my-env-vars
 ```
 
-![Defining Other Container Config on the Advanced Options page ](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.15.35 PM.png>)
+![Defining Other Container Config on the Advanced Options page](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.15.35 PM.png>)
 
 {% hint style="info" %}
 To import from additional ConfigMaps, duplicate the YAML from lines 2 and 3 in the above example for each ConfigMap you want to import from.
@@ -56,7 +56,7 @@ To import from additional ConfigMaps, duplicate the YAML from lines 2 and 3 in t
 Another approach is to select which keys to import from the ConfigMap as environment variables. This method gives you complete control over each environment variable and its name, but it requires more manual configuration.
 
 1. [Edit the DuploCloud Service](setting-environment-variables-from-config.md#editing-the-duplocloud-service).
-2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, in the **Environment Variables** field, enter the configuration for environment variables to import from a ConfigMap.  For example, to set a single environment variable (`ENV_VAR_ONE)` to the value of the `MY_ENV_VAR` key in the `my-env-vars` config map, use the following YAML:
+2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, in the **Environment Variables** field, enter the configuration for environment variables to import from a ConfigMap. For example, to set a single environment variable (`ENV_VAR_ONE)` to the value of the `MY_ENV_VAR` key in the `my-env-vars` config map, use the following YAML:
 
 ```yaml
 - Name: ENV_VAR_ONE
@@ -72,7 +72,7 @@ To add additional environment variables, duplicate the YAML from lines 2 through
 
 ## Setting Environment Variables from a Kubernetes Secret
 
-You can import Kubernetes Secrets as Environment Variables.&#x20;
+You can import Kubernetes Secrets as Environment Variables.
 
 ### Create the Kubernetes Secret
 
@@ -97,7 +97,7 @@ The most straightforward approach is to import the entire Secret as environment 
 
 1. [Edit the DuploCloud Service](setting-environment-variables-from-config.md#editing-the-duplocloud-service).
 2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, click **Next** to navigate to the **Advanced Options** page.
-3. On the **Advanced Options** page, in the **Other Container Config** field, enter the configuration YAML to import environment variables from a Secret.  For example, to import all environment variables from a secret named `my-env-vars`, use the following YAML:&#x20;
+3. On the **Advanced Options** page, in the **Other Container Config** field, enter the configuration YAML to import environment variables from a Secret. For example, to import all environment variables from a secret named `my-env-vars`, use the following YAML:
 
 ```yaml
 EnvFrom:
@@ -105,7 +105,7 @@ EnvFrom:
     Name: my-env-vars
 ```
 
-![Defining Other Container Config on the Advanced Options page ](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.39.58 PM.png>)
+![Defining Other Container Config on the Advanced Options page](<../../../.gitbook/assets/Screen Shot 2022-03-21 at 12.39.58 PM.png>)
 
 {% hint style="info" %}
 To import from additional secrets, duplicate the YAML from lines 2 and 3 in the above example for each secret that you want to import.
@@ -116,7 +116,7 @@ To import from additional secrets, duplicate the YAML from lines 2 and 3 in the 
 Another approach is to select which keys to import from the Secret as environment variables. This method gives you complete control over each environment variable and its name, but it requires more manual configuration.
 
 1. [Edit the DuploCloud Service](setting-environment-variables-from-config.md#editing-the-duplocloud-service).
-2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, in the **Environment Variables** field, enter the configuration for specific environment variables to import from a Secret.  For example, to set a single environment variable (`ENV_VAR_ONE)` to the value of the `SECRET_ENV_VAR` key in the `my-env-vars` secret, use the following YAML:
+2. On the **Edit Service:&#x20;**_**service\_name**_**&#x20;Basic Options** page, in the **Environment Variables** field, enter the configuration for specific environment variables to import from a Secret. For example, to set a single environment variable (`ENV_VAR_ONE)` to the value of the `SECRET_ENV_VAR` key in the `my-env-vars` secret, use the following YAML:
 
 ```yaml
 - Name: ENV_VAR_ONE

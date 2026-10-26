@@ -90,9 +90,9 @@ The cluster creation form demonstrates the dependency chain in action. The “Ne
 
 The spec captures everything the agent needs: network source, cluster type, EKS version, API server visibility, control plane logging, and cluster IP CIDR. The user clicks “Create & Provision” and the system creates a provisioning ticket. The agent provisions the entire EKS cluster in real time.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p><em>Completed network — VPC ID, CIDR, Region, Internet Gateway, Subnets and Routing tabs. Status: Ready.</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (502).png" alt=""><figcaption><p><em>Completed network — VPC ID, CIDR, Region, Internet Gateway, Subnets and Routing tabs. Status: Ready.</em></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (70).png" alt=""><figcaption><p><em>Cluster creation form — Network Source shows the dependency chain.</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (503).png" alt=""><figcaption><p><em>Cluster creation form — Network Source shows the dependency chain.</em></p></figcaption></figure>
 
 ### Example: Navigating an Environment
 
@@ -100,7 +100,7 @@ Once a cluster is provisioned, teams create environments inside it. The environm
 
 The environment detail view shows the full resource tree in the left navigation: Overview, Micro Services, Kubernetes (Namespaces, Nodes, Workloads, Configs, Storage, Networks), and Cloud Resources (Hosts, Serverless, Storage, Databases, Networks, Configs). Each sub-resource has its own list view, create form, and detail view. Spec/Result tabs are available throughout. A “Track Provisioning Status” button links to the underlying ticket.
 
-<figure><img src="../.gitbook/assets/image (111).png" alt=""><figcaption><p><em>Full resource tree in the left nav. Security groups, IAM roles, KMS keys in the overview. Spec/Result tabs. Track Provisioning Status links to the underlying ticket.</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (504).png" alt=""><figcaption><p><em>Full resource tree in the left nav. Security groups, IAM roles, KMS keys in the overview. Spec/Result tabs. Track Provisioning Status links to the underlying ticket.</em></p></figcaption></figure>
 
 This is the pattern at work. The user fills out a form. The framework creates a ticket. The agent provisions the infrastructure. The user sees the result in a familiar enterprise UI. Every operation is multiplayer, auditable, and cost-tracked.
 

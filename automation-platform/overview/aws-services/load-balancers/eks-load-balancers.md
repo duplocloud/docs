@@ -6,7 +6,7 @@ description: Working with Load Balancers using AWS EKS
 
 ## Creating an EKS Ingress
 
-If you need to create an Ingress Load Balancer, refer to the [EKS Ingress](../../../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md) page in the DuploCloud Kubernetes User Guide.
+If you need to create an Ingress Load Balancer, refer to the [EKS Ingress](../../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md) page in the DuploCloud Kubernetes User Guide.
 
 ## Adding a Load Balancer Listener
 
@@ -32,7 +32,7 @@ Before completing this task, you must [add a Load Balancer Listener of **Type Ne
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2. On the **Services** page, select the Service name in the **Name** column.
 3. Click the **Load Balancers** tab.
-4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../../.gitbook/assets/image (199).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
+4. In the **LB Listeners** area, select the Edit Icon (<img src="../../../../.gitbook/assets/image (226).png" alt="" data-size="line">) for the NLB Load Balancer you want to edit. The **Edit Load Balancer Listener** pane displays.
 5. Click **Add** in the **Custom CIDR** field of the **Edit Load Balancer Listener** pan&#x65;**.**
 6. Add the **Custom CIDR**(s) and press ENTER. In the example below **10.180.12.0/22** and **10.180.8.0/22** are added. After the CIDRs are added, you [add Security Groups for Custom CIDR(s)](eks-load-balancers.md#adding-security-groups-for-custom-cidrs).
 
@@ -103,7 +103,7 @@ The **Target Group Only** Service Load Balancer is displayed in the **LB Listene
 2. Select the **Load Balancer** tab.
 3.  Select the Shared Load Balancer you created from the **NAME** column. The **Load Balancer** details page displays.<br>
 
-    <figure><img src="../../../../.gitbook/assets/Screenshot (250) (2).png" alt=""><figcaption><p><strong>Load Balancers</strong> page with <strong>Listeners</strong> tab</p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/Screenshot (250) (1).png" alt=""><figcaption><p><strong>Load Balancers</strong> page with <strong>Listeners</strong> tab</p></figcaption></figure>
 4.  Select the **Listeners** tab, and click **Add**. The **Load Balancer Listener** pane displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (252).png" alt=""><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane with <strong>Target Group</strong> specified</p></figcaption></figure>
@@ -145,7 +145,7 @@ View the rules you defined for any Shared Load Balancer.
 1. In the DuploCloud portal, navigate to **Cloud Services** -> **Networking**.
 2. Select the **Load Balancer** tab.
 3. From the **Name** column, select the Load Balancer whose rules you want to view.
-4.  In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../../../.gitbook/assets/image (96).png" alt="" data-size="line"> ) and select **Manage Rules**.<br>
+4.  In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu (<img src="../../../../.gitbook/assets/image (134).png" alt="" data-size="line"> ) and select **Manage Rules**.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (261) (1).png" alt=""><figcaption><p><strong>Listener Rules</strong> page displaying Shared Load Balancer rules</p></figcaption></figure>
 
@@ -156,7 +156,7 @@ Update attributes for your defined Target Group.
 1. In the DuploCloud portal, navigate to **Cloud Services** -> **Networking**.
 2. Select the **Load Balancer** tab.
 3. From the **Name** column, select the Load Balancer whose defined Target Group attributes you want to modify.
-4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../../.gitbook/assets/image (96).png" alt="" data-size="line"> ) and select **Update Target Group attributes**.
+4. In the **Listeners** tab, in the appropriate **Target Group** row, click the **Actions** menu ( <img src="../../../../.gitbook/assets/image (134).png" alt="" data-size="line"> ) and select **Update Target Group attributes**.
 
 <figure><img src="../../../../.gitbook/assets/update target group.png" alt=""><figcaption><p>The <strong>LB Listener</strong> menu with the <strong>Update Target Group attributes</strong> option highlighted.</p></figcaption></figure>
 

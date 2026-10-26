@@ -12,8 +12,8 @@ Use these FAQ documents to quickly find answers to popular questions about using
 [aws-faq.md](../overview/aws-faq.md)
 {% endcontent-ref %}
 
-{% content-ref url="../../overview-2/azure-faq.md" %}
-[azure-faq.md](../../overview-2/azure-faq.md)
+{% content-ref url="../overview-2/azure-faq.md" %}
+[azure-faq.md](../overview-2/azure-faq.md)
 {% endcontent-ref %}
 
 {% content-ref url="../overview-1/gcp-faq.md" %}
@@ -263,7 +263,7 @@ No. DuploCloud is calling the cloud provider's API directly. Based on user requi
 
 The Terraform and DuploCloud Web UIs layer on top of the DuploCloud platform.
 
-![User Interaction with the DuploCloud Platform](<../../.gitbook/assets/image (124).png>)
+![User Interaction with the DuploCloud Platform](<../../.gitbook/assets/image (160).png>)
 
 DuploCloud provides Terraform with a Software Development Kit (SDK) called the [DuploCloud Terraform Provider](https://registry.terraform.io/providers/duplocloud/duplocloud/latest). This SDK allows users to configure their cloud infrastructure using DuploCloud constructs rather than lower-level cloud provider constructs. It enables users to benefit from Infrastructure-as-Code while significantly reducing the needed code. The DuploCloud Terraform Provider calls DuploCloud APIs. Our [DevOps white paper](https://duplocloud.com/white-papers/devops) provides detailed examples.
 

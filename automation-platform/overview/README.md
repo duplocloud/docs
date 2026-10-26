@@ -6,15 +6,15 @@ coverY: 0
 
 # AWS User Guide
 
-The DuploCloud platform installs in an EC2 instance within your AWS account. It can be accessed using a web interface, API, or Terraform provider.&#x20;
+The DuploCloud platform installs in an EC2 instance within your AWS account. It can be accessed using a web interface, API, or Terraform provider.
 
-You can log in to the DuploCloud portal, using single sign-on (SSO), with your GSuite or O365 login.&#x20;
+You can log in to the DuploCloud portal, using single sign-on (SSO), with your GSuite or O365 login.
 
 ## Before You Begin
 
 Before getting started, complete the following steps:
 
-* Read the [DuploCloud Platform Overview](<../../README (1).md>) and learn about DuploCloud terms like [Infrastructure](../application-focused-interface-duplocloud-architecture/infrastructure.md), [Plan](../application-focused-interface-duplocloud-architecture/plan.md), and [Tenant](../application-focused-interface-duplocloud-architecture/tenant.md)
+* Read the [DuploCloud Platform Overview](../readme-1.md) and learn about DuploCloud terms like [Infrastructure](../application-focused-interface-duplocloud-architecture/infrastructure.md), [Plan](../application-focused-interface-duplocloud-architecture/plan.md), and [Tenant](../application-focused-interface-duplocloud-architecture/tenant.md)
 * Set up the DuploCloud Portal
 * Read the [Access Control](../access-control/) section and ensure at least one person has administrator access
 * Connect to the DuploCloud Slack channel for support from the DuploCloud team

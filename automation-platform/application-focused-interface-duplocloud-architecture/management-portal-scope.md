@@ -14,11 +14,10 @@ Following is the scope of cloud provider resources (accounts) that a single Dupl
 
 **AWS**: In AWS a single DuploCloud Portal manages one and only one AWS account. This is inline with the AWS IAM implementation i.e. even in native AWS IAM model the building blocks like IAM Role, Instance Profiles do not span multiple accounts. The cross account SCP Policies are quite light weight. In fact AWS Organizations was added almost 10 years after the launch of AWS. For example, when a user logs in using AWS Identity Center, they have to choose an account and the session is scoped to that. See the picture below of the IAM login console.\
 \
-![](<../../.gitbook/assets/image (1) (3).png>)
+![](<../../.gitbook/assets/image (445).png>)
 
-We implement the same experience, providing an Account Switcher on the login page and inside the Portal, as shown below. For instructions on adding additional login portals to the DuploCloud login screen, see the [Multiple Portal Login Options page](../access-control/user-authentication/multiple-portal-login-options.md).\
-&#x20;&#x20;
+We implement the same experience, providing an Account Switcher on the login page and inside the Portal, as shown below. For instructions on adding additional login portals to the DuploCloud login screen, see the [Multiple Portal Login Options page](../access-control/user-authentication/multiple-portal-login-options.md).<br>
 
-<figure><img src="../../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>

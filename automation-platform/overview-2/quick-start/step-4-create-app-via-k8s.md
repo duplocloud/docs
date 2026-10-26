@@ -31,7 +31,7 @@ Before creating your DuploCloud Service, ensure that:
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 2.  Click **Add**. The **Add Service** page displays.<br>
 
-    <div align="left"><img src="../../../.gitbook/assets/image (42).png" alt="Add Service page to add nginx-service"></div>
+    <div align="left"><img src="../../../.gitbook/assets/image (82).png" alt="Add Service page to add nginx-service"></div>
 3. In the **Service Name** field, enter `nginx-service`.
 4. Specify the Docker image that you use to run the application. In the Docker Image field, enter `nginx:latest`.
 5. Click **Next**, accepting all other defaults. The **Advanced Options** page displays.

@@ -14,8 +14,8 @@ DuploCloud allows no more than one (1) Load Balancer per DuploCloud Service.
 
 Before adding a Load Balancer, you need to create the necessary services:
 
-* **For Kubernetes**: See the DuploCloud documentation for [creating an AKS Service](../../../overview-2/azure-services/containers-and-services/aks-containers-and-services/#creating-a-duplocloud-aks-service).&#x20;
-* **For Docker**: Ensure Docker containers are set up and accessible within your infrastructure. For detailed instructions, see the [DuploCloud documentation](docker-web-application.md#id-2-toc-title).&#x20;
+* **For Kubernetes**: See the DuploCloud documentation for [creating an AKS Service](containers-and-services/aks-containers-and-services/#creating-a-duplocloud-aks-service).
+* **For Docker**: Ensure Docker containers are set up and accessible within your infrastructure. For detailed instructions, see the [DuploCloud documentation](docker-web-application.md#id-2-toc-title).
 
 To create a **Shared Application Gateway** Load Balancer, refer to the [Shared Application Gateway](../../kubernetes-overview/ingress-loadbalancer/aks-ingress/) documentation
 
@@ -48,6 +48,6 @@ Restrict open access to your public Load Balancers by enforcing controlled acces
 <div align="left"><figure><img src="../../../.gitbook/assets/LB flag.png" alt="" width="364"><figcaption><p>The <strong>Add Config</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 
 3. From the **Config Type** list box, select **Flags**.
-4. From the **Key** list box, select **Deny Open Access To Public LB**.&#x20;
-5. In the **Value** list box, select **True**.&#x20;
-6. Click **Submit**. Open access to public Load Balancers is restricted.&#x20;
+4. From the **Key** list box, select **Deny Open Access To Public LB**.
+5. In the **Value** list box, select **True**.
+6. Click **Submit**. Open access to public Load Balancers is restricted.

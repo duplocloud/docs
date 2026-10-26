@@ -12,10 +12,10 @@ _Estimated time to complete Step 6: 10 minutes._
 
 ## Prerequisites
 
-Before creating a Load Balancer, verify that you completed the tasks in the previous tutorial steps.   Using the DuploCloud Portal, confirm that:
+Before creating a Load Balancer, verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [EKS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has [EKS **Enabled**](../step-1-infrastructure.md#check-your-work).
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A Host named [**host01** has been created](step-3-create-host.md).
 * A Service named [**demo-service** has been created](step-5-create-app-via-k8s.md).
@@ -23,7 +23,7 @@ Before creating a Load Balancer, verify that you completed the tasks in the prev
 ## Creating a Load Balancer
 
 1. In the **Tenant** list box, select the **dev01** Tenant.
-2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. &#x20;
+2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 3. From the **NAME** column, select **demo-service**.
 4. Click the **Load Balancers** tab.
 5. Click the **Configure Load Balancer** link. The **Add Load Balancer Listener** pane displays.
@@ -31,22 +31,21 @@ Before creating a Load Balancer, verify that you completed the tasks in the prev
 <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (128).png" alt="" width="344"><figcaption><p>The <strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
 6. From the **Type** list box, select **Application LB**.
-7. In the **Container Port** field, enter **3000**. This is the configured port on which the application inside the Docker Container Image `duplocloud/nodejs-hello:latest` is running.&#x20;
+7. In the **Container Port** field, enter **3000**. This is the configured port on which the application inside the Docker Container Image `duplocloud/nodejs-hello:latest` is running.
 8. In the **External Port** field, enter **80**. This is the port through which users will access the web application.
 9. From the **Visibility** list box, select **Public**.
 10. From the **Application Mode** list box, select **Docker Mode**.
 11. Type **/** (forward-slash) in the **Health Check** field to indicate that the cluster we want Kubernetes to perform Health Checks on is located at the `root` level.
 12. In the **Backend Protocol** list box, select **HTTP**.
-13. Click **Add**. The Load Balancer is created and initialized. Monitor the **LB Status** card on the **Services** page. The **LB Status** card displays **Ready** when the Load Balancer is ready for use.&#x20;
+13. Click **Add**. The Load Balancer is created and initialized. Monitor the **LB Status** card on the **Services** page. The **LB Status** card displays **Ready** when the Load Balancer is ready for use.
 
 ## Checking your work
 
 1. In the **Tenant** list box, select the **dev01** Tenant.
-2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**. &#x20;
+2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 3. From the **NAME** column, select **demo-service**.
-4. Verify that the **LB Status** card displays a status of **Ready**.&#x20;
-5. Note the **DNS** Name of the Load Balancer that you created.&#x20;
+4. Verify that the **LB Status** card displays a status of **Ready**.
+5. Note the **DNS** Name of the Load Balancer that you created.
 6. In the **LB Listeners** area of the **Services** page, note the configuration details of the Load Balancer's **HTTP** protocol, which you specified, when you added it above.
 
 <figure><img src="../../../../.gitbook/assets/Screenshot (134) (1).png" alt=""><figcaption><p>The <strong>Services</strong> details page with <strong>Ready LB Status</strong> highlighted</p></figcaption></figure>
-

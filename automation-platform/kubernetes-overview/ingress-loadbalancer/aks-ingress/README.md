@@ -24,7 +24,7 @@ This integration abstracts the complexity of Kubernetes-native Ingress resources
 4. In the **Setting Name** list box, select **Enable App Gateway Ingress Controller**.
 5. Enable the setting and click **Set**. The value should be **true**. This enables the AKS Ingress controller to integrate with Azure’s Shared Application Gateway.
 
-<figure><img src="../../../../.gitbook/assets/image (233).png" alt=""><figcaption><p>The <strong>Enable App Gateway Ingress Controller</strong> setting on the <strong>Settings</strong> tab</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (255).png" alt=""><figcaption><p>The <strong>Enable App Gateway Ingress Controller</strong> setting on the <strong>Settings</strong> tab</p></figcaption></figure>
 
 ## Adding a Load Balancer Listener (K8S NodePort)
 

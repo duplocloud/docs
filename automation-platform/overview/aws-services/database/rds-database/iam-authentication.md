@@ -25,7 +25,7 @@ Use the System Config tab to enable IAM authentication before enabling it for a 
 
 <div align="left"><figure><img src="../../../../../.gitbook/assets/iam1.png" alt=""><figcaption><p><strong>Add Config</strong> pane with the <strong>Enable RDS IAM auth</strong> <strong>Key</strong></p></figcaption></figure></div>
 
-<div align="left"><figure><img src="../../../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>EnableRdsIamAuth</strong> <strong>Key</strong> with <strong>Value</strong> of <strong>true</strong></p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><strong>System Config</strong> tab with <strong>EnableRdsIamAuth</strong> <strong>Key</strong> with <strong>Value</strong> of <strong>true</strong></p></figcaption></figure></div>
 
 ## Enabling IAM for an RDS instance
 
@@ -33,7 +33,7 @@ You can also enable IAM for any MySQL, PostgreSQL, and MariaDB instance during R
 
 ### Enabling IAM when creating an RDS
 
-Select the **Enable IAM auth** option when you [create an RDS database](../../../../../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).
+Select the **Enable IAM auth** option when you [create an RDS database](./#id-0-toc-title).
 
 <figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_20_02.png" alt=""><figcaption><p><strong>Create a RDS</strong> page with <strong>Enable IAM Auth</strong> option highlighted</p></figcaption></figure>
 

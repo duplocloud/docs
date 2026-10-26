@@ -6,7 +6,7 @@ description: Share EC2 Auto Scaling Groups Across Tenants for ECS
 
 DuploCloud supports sharing EC2 Auto Scaling Groups (ASGs) across Tenants for ECS services. This allows multiple Tenants to consume a common pool of ECS hosts, improving host utilization and centralizing infrastructure management. Tenant isolation is preserved, as each Tenant can only view and manage its own ECS tasks, even when those tasks are running on shared hosts.
 
-## Configuring EC2 ASG Sharing for ECS Services&#x20;
+## Configuring EC2 ASG Sharing for ECS Services
 
 ### Enabling Host Sharing Tenant Settings
 
@@ -22,11 +22,11 @@ To allow ECS tasks to run on Hosts from another Tenant, both Tenants must have t
 
 {% columns %}
 {% column width="50%" %}
-<figure><img src="../../../../../.gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column width="50%" %}
-<figure><img src="../../../../../.gitbook/assets/image (481).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 {% endcolumn %}
 {% endcolumns %}
 
@@ -44,9 +44,9 @@ In the Tenant that you want to run the hosts:
 
 In the Tenant that you want to run ECS tasks:
 
-1. [Create an ECS Task Definition](../../../../../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition).&#x20;
+1. [Create an ECS Task Definition](./#creating-a-task-definition).
    * In the **Launch Type** field, select **EC2**.
-2. Using this task definition, [create an ECS Service](../../../../../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-an-ecs-service).&#x20;
+2. Using this task definition, [create an ECS Service](./#creating-an-ecs-service).
    * Select the shared ASG from the **Capacity Provider** list box.
 
 {% hint style="info" %}

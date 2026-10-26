@@ -58,7 +58,7 @@ export AWS_PROFILE=duplo.cloud.mydomain.com
 
 When you make the first AWS call, a browser window will open with a prompt to authorize access.
 
-<figure><img src="../../../.gitbook/assets/image (89).png" alt="A prompt reads &#x22;The duplo-aws-credential-process application on your computer wants to access your Duplo credentials.&#x22; The options are a green button on the right for Authorize and a Red button on the left for Cancel."><figcaption><p><strong>Local Access Requested</strong> prompt</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (127).png" alt="A prompt reads &#x22;The duplo-aws-credential-process application on your computer wants to access your Duplo credentials.&#x22; The options are a green button on the right for Authorize and a Red button on the left for Cancel."><figcaption><p><strong>Local Access Requested</strong> prompt</p></figcaption></figure>
 
 ### Using an API Token
 

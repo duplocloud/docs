@@ -18,8 +18,6 @@ The default alerts include:
 
 <figure><img src="../../../.gitbook/assets/shot1.png" alt=""><figcaption></figcaption></figure>
 
-
-
 </details>
 
 <details>
@@ -69,7 +67,7 @@ These types of alerts can be defined directly in Grafana to suit your organizati
 1. From the DuploCloud Portal, navigate to one of the following dashboards:
    * Admin AOS Dashboard: **Administrator** → **Observability** → **Advanced** → **Dashboard**
    * Tenant AOS Dashboard: **Observability** → **Advanced** → **Dashboard**
-2. Click the **Alert** icon ( <img src="../../../.gitbook/assets/image (456).png" alt="" data-size="line">) on the right end of the **Observability** header.
-3. The Grafana **Alert rules** page displays, allowing you to view, add, delete, or modify alerts. For detailed instructions, see the [Grafana alert documentation](https://grafana.com/docs/grafana/latest/alerting/alerting-rules/).&#x20;
+2. Click the **Alert** icon ( <img src="../../../.gitbook/assets/image (458).png" alt="" data-size="line">) on the right end of the **Observability** header.
+3. The Grafana **Alert rules** page displays, allowing you to view, add, delete, or modify alerts. For detailed instructions, see the [Grafana alert documentation](https://grafana.com/docs/grafana/latest/alerting/alerting-rules/).
 
 <figure><img src="../../../.gitbook/assets/alerting page.png" alt=""><figcaption><p>Grafana <strong>Alert rules</strong> page</p></figcaption></figure>

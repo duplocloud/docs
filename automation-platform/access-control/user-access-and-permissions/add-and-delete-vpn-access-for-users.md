@@ -16,9 +16,9 @@ DuploCloud allows administrators to grant users secure access to tenant resource
 
 ## Adding VPN Access for a User
 
-1. Navigate to **Administrator** -> **Users**.&#x20;
-2. Select the name of the user that will have VPN access.&#x20;
-3. Click the **VPN** tab.&#x20;
+1. Navigate to **Administrator** -> **Users**.
+2. Select the name of the user that will have VPN access.
+3. Click the **VPN** tab.
 4.  Click **Set VPN**. The **Set VPN** pane displays.<br>
 
     <div align="left"><figure><img src="../../../.gitbook/assets/Set_VPN.png" alt=""><figcaption><p><strong>Set VPN</strong> pane</p></figcaption></figure></div>
@@ -29,8 +29,8 @@ DuploCloud allows administrators to grant users secure access to tenant resource
 
 1. Navigate to **Administrator** -> **Users**.
 2. Select the user name from the **USERNAME** column.
-3. Select the **VPN** tab.&#x20;
-4. Click **Remove VPN** and **Confirm**.&#x20;
+3. Select the **VPN** tab.
+4. Click **Remove VPN** and **Confirm**.
 
 VPN access is removed for the selected user.
 
@@ -39,14 +39,14 @@ VPN access is removed for the selected user.
 Admins can choose to enable VPN access by default for new Okta users or require manual approval before granting access. Admin users can still update VPN settings for individual users as needed.
 
 1. Navigate to **Administrator** -> **System Settings**.
-2.  Select **System Config**, and click **Add**. The **Update Config AppConfig** pane displays. <br>
+2.  Select **System Config**, and click **Add**. The **Update Config AppConfig** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (8).png" alt="" width="343"><figcaption><p><strong>Update Config AppConfig</strong> pane</p></figcaption></figure></div>
-3. In the **Config Type** list box, select **AppConfig**.&#x20;
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (8) (1).png" alt="" width="343"><figcaption><p><strong>Update Config AppConfig</strong> pane</p></figcaption></figure></div>
+3. In the **Config Type** list box, select **AppConfig**.
 4. In the **Key** field, enter `DisableOktaUsersVpnSync`.
 5. In the **Value** field, enter `true` or `false`:
    * `true`**:** VPN access is disabled by default for new Okta users.
    * `false`: VPN access is enabled for new Okta users.
-6. Click **Submit**. Okta users' VPN access is enabled or disabled.&#x20;
+6. Click **Submit**. Okta users' VPN access is enabled or disabled.
 
 For more details about using Okta with DuploCloud, refer to [Okta Identity Management](/broken/pages/yeRYLkYWOI0ef3Tgwdd6).

@@ -4,7 +4,7 @@ description: Create Node Pool for GCE in the DuploCloud Portal
 
 # Node Pools
 
-[GCP Node Pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools) are useful when you need to schedule Pods requiring more resources than others, such as more memory or local disk space. Node Pools can be created for the DuploCloud Infrastructure with GKE Standard Cluster only.&#x20;
+[GCP Node Pools](https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools) are useful when you need to schedule Pods requiring more resources than others, such as more memory or local disk space. Node Pools can be created for the DuploCloud Infrastructure with GKE Standard Cluster only.
 
 ## Prerequisites
 
@@ -12,16 +12,16 @@ description: Create Node Pool for GCE in the DuploCloud Portal
 
 ## Adding a Node Pool
 
-1. In the DuploCloud Portal, navigate to **Kubernetes**  -> **Nodes.**
+1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Nodes.**
 2. Click the **Node Pool** tab.
 3. Click **Add**. The **Add Node Pools** page displays.
-4. Provide **Name**, **Availability Zone**, **Instance Type**, and **Node Counts**.&#x20;
+4. Provide **Name**, **Availability Zone**, **Instance Type**, and **Node Counts**.
 5. Click **Submit**.
 
 <figure><img src="../../../.gitbook/assets/Screenshot (1098).png" alt=""><figcaption><p><strong>Add Node Pool</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
-**Scaling GKE Node Pools to Zero**&#x20;
+**Scaling GKE Node Pools to Zero**
 
 When autoscaling is enabled, you can set the minimum node count to **0** allowing a GKE node pool to scale down to zero nodes when no workloads are running. Nodes are automatically recreated when workloads require capacity. A minimum node count of **0** can be configured when creating a node pool or by editing an existing node pool with autoscaling enabled.
 
@@ -32,17 +32,17 @@ This applies only to GKE node pools. GCE VMs and BYOH hosts cannot be scaled to 
 
 DuploCloud Portal provides additional options when configuring a Node Pool, as depicted below. To use Advanced Options select **Advanced Options** in the **Add Node Pool** page.
 
-<figure><img src="../../../.gitbook/assets/image (346).png" alt=""><figcaption><p><strong>Add Node Pool</strong> with <strong>Advanced Options</strong> enabled</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (356).png" alt=""><figcaption><p><strong>Add Node Pool</strong> with <strong>Advanced Options</strong> enabled</p></figcaption></figure>
 
 ### Adding a Node Pool with Accelerator Type
 
-You can add Accelerator types for GPUs while creating a NodePool.  From the **Add Node Pool** page, click **Add Accelerator**.
+You can add Accelerator types for GPUs while creating a NodePool. From the **Add Node Pool** page, click **Add Accelerator**.
 
 {% hint style="info" %}
 Accelerator Types are not available in all regions.
 {% endhint %}
 
-![](<../../../.gitbook/assets/image (351).png>)
+![](<../../../.gitbook/assets/image (360).png>)
 
 ### Configuring a Service to use an Accelerator Type
 
@@ -53,9 +53,9 @@ Accelerator Types are not available in all regions.
 
 For additional details, refer to the documentation from Google Cloud [here](https://cloud.google.com/kubernetes-engine/docs/how-to/gpus#pods_gpus) .
 
-<figure><img src="../../../.gitbook/assets/image (355).png" alt=""><figcaption><p><strong>Add Service</strong> page, <strong>Basic Options</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (364).png" alt=""><figcaption><p><strong>Add Service</strong> page, <strong>Basic Options</strong></p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (356).png" alt=""><figcaption><p><strong>Add Service</strong> page, <strong>Advanced Options</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (365).png" alt=""><figcaption><p><strong>Add Service</strong> page, <strong>Advanced Options</strong></p></figcaption></figure>
 
 ### Adding a Taint to a Node Pool
 
@@ -65,9 +65,9 @@ For additional details, refer to the documentation from Google Cloud [here](http
 4. Enter the **Key**/**Value** pair and select the **Effect** from the list box.
 5. Click **Add Taint**.
 
-For example, the following screen applies  a taint to a Node Pool  that has a **Key**/**Value** of `dedicated=experimental`with a `NoSchedule` effect.
+For example, the following screen applies a taint to a Node Pool that has a **Key**/**Value** of `dedicated=experimental`with a `NoSchedule` effect.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (347).png" alt=""><figcaption><p><strong>Add Taint</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (357).png" alt=""><figcaption><p><strong>Add Taint</strong> pane</p></figcaption></figure></div>
 
 ### Configuring a Service to use Taints
 
@@ -83,17 +83,17 @@ tolerations:
     effect: NoSchedule
 ```
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (353).png" alt=""><figcaption><p>Configure <code>tolerations</code> using the <strong>Other Container Config</strong> in <strong>Add Service Advanced Options</strong> form</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (362).png" alt=""><figcaption><p>Configure <code>tolerations</code> using the <strong>Other Container Config</strong> in <strong>Add Service Advanced Options</strong> form</p></figcaption></figure></div>
 
 You can Edit or Delete a Taint by selecting the Node Pool **Name**, clicking the **Actions** menu, and selecting **Edit** or **Delete**. You edit the Node Pool using the **Edit Node Pool** page.
 
-<figure><img src="../../../.gitbook/assets/image (350).png" alt=""><figcaption><p><strong>Edit Node Pools</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (359).png" alt=""><figcaption><p><strong>Edit Node Pools</strong> page</p></figcaption></figure>
 
 ### Viewing Node Pools
 
 View Node Pools by clicking the **Node Pool** tab and selecting the Node Pool **Name**.
 
-<figure><img src="../../../.gitbook/assets/image (345).png" alt=""><figcaption><p>The <strong>Node Pool</strong> page</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (355).png" alt=""><figcaption><p>The <strong>Node Pool</strong> page</p></figcaption></figure>
 
 Nodes created as part of a Node Pool, are displayed in the **GCE VM** tab.
 

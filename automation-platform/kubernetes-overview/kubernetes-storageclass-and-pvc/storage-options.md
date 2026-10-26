@@ -8,7 +8,7 @@ description: Use Azure's built-in Kubernetes StorageClass constructs
 
 AKS provides a few out-of-the-box StorageClass objects. To mount the built-in storage classes, configure the **Volumes** field as shown below when [adding a Service](https://docs.duplocloud.com/docs/overview-2/azure-services/containers-and-services).
 
-<div align="left"><img src="../../../.gitbook/assets/image (136).png" alt="Service Deployment Page"></div>
+<div align="left"><img src="../../../.gitbook/assets/image (171).png" alt="Service Deployment Page"></div>
 
 <pre data-title="Volumes field"><code><strong>- AccessMode: ReadWriteMany
 </strong>  Name: data

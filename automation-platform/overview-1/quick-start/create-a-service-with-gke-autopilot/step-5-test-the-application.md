@@ -36,6 +36,6 @@ In the **Tenant** list box, on the upper-left side of the DuploCloud Portal, sel
 
 Congratulations! You have just launched your first web service on DuploCloud!
 
-<figure><img src="../../../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
 
 <br>

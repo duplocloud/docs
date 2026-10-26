@@ -114,7 +114,7 @@ The **Project Overview** tab shows the **Project Workflow** as three cards:
 
 **Git Diff** is available only when the project has Source Control configured.
 
-![Project Workflow on the Project Overview tab](../.gitbook/assets/projects-step-15-project-overview-tab.png)
+![Project Workflow on the Project Overview tab](../.gitbook/assets/projects-duplocloud-project-workflow.png)
 
 The **Execution** tab shows the project's stages as columns, each listing its tasks. Use the search box to find tasks, and the **All**, **Open**, **In Progress**, and **Closed** filters to narrow the board by status. Each filter shows its task count.
 
@@ -316,7 +316,7 @@ Once saved, the spec is immediately visible on the DuploCloud platform in the **
 
 ![Project Workflow showing the saved Specification and Plan](../.gitbook/assets/projects-duplocloud-project-workflow.png)
 
-![Spec content open in the DuploCloud AI Planner](../.gitbook/assets/projects-duplocloud-spec-preview.png)
+![Spec content open in the DuploCloud AI Planner](../.gitbook/assets/projects-step-25-spec-view.png)
 
 > All conversation messages from your local VSCode Claude session are automatically mirrored to the corresponding ticket on the DuploCloud platform once saved.
 
@@ -354,13 +354,13 @@ With both spec and plan approved, Claude can break the plan into granular, actio
 
 Ask Claude to create execution tasks: `Can you create execution tasks?` Claude processes the plan and generates a hierarchical breakdown of stages and tasks. Once saved, the tasks appear in the project on the DuploCloud platform.
 
-![Execution tasks in the DuploCloud AI Planner](../.gitbook/assets/projects-duplocloud-execution-tasks-live.png)
+![Execution tasks in the DuploCloud AI Planner](../.gitbook/assets/projects-step-29-execution-view.png)
 
 #### Create Tickets
 
 Once the execution tasks are saved, navigate to the project's **Execution** tab in DuploCloud and click **Create Tickets** at the bottom of a stage. In the **Create Stage Tickets** dialog, select the tasks, confirm the LLM and other ticket settings, and click **Create**. DuploCloud creates a dedicated ticket for each selected task with an Open status, visible to the whole team.
 
-![Create Stage Tickets dialog](../.gitbook/assets/projects-duplocloud-execution-create-tickets.png)
+![Create Stage Tickets dialog](../.gitbook/assets/projects-step-33b-create-stage-tickets.png)
 
 > You can add tasks with **Create New Task**, or edit a task from its **⋮** menu, on the Execution tab before creating tickets if you need to adjust the AI-generated breakdown.
 
@@ -400,8 +400,8 @@ Every conversation you have in your local VSCode Claude session is automatically
 * Plan generation conversations → Plan-Creation ticket
 * Execution task conversations → Individual task tickets
 
-![DuploCloud ticket showing the full conversation mirrored from VSCode](../.gitbook/assets/projects-duplocloud-ticket-mirrored.png)
+![DuploCloud ticket showing the full conversation mirrored from VSCode](../.gitbook/assets/projects-step-35-task1-overview.png)
 
-![Execution tab tracking task status](../.gitbook/assets/projects-duplocloud-execution-complete.png)
+![Execution tab tracking task status](../.gitbook/assets/projects-step-31-execution-tab-active.png)
 
 Team leads can review AI-generated specs and plans directly in DuploCloud without needing access to individual developer machines. All decisions and rationale are captured in the ticket conversation history.

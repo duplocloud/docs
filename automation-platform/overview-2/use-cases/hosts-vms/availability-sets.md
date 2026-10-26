@@ -30,11 +30,11 @@ In DuploCloud, Availability Sets can be configured when creating or managing hos
 
 ## Assigning an Availability Set to a Host
 
-When [creating a new host](../../../../overview-2/use-cases/hosts-vms/), you can assign an Availability Set by selecting it from the **Availability Set** list box.
+When [creating a new host](./), you can assign an Availability Set by selecting it from the **Availability Set** list box.
 
 ## Deleting an Availability Set
 
 1. Select the Tenant from the **Tenant** list box.
 2. Navigate to **Cloud Services** -> **Hosts.**
 3. Select the **Availability Set** tab.
-4. Click the menu icon (<img src="../../../../.gitbook/assets/image (460).png" alt="" data-size="line">) on the left side of the row for the Availability Set, and select **Delete**.
+4. Click the menu icon (<img src="../../../../.gitbook/assets/image (462).png" alt="" data-size="line">) on the left side of the row for the Availability Set, and select **Delete**.

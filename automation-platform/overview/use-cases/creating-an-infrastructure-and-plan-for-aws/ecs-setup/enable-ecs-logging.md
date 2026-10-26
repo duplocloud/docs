@@ -23,7 +23,7 @@ To generate logs for AWS ECS clusters, you must first create an Elasticsearch lo
 7. In the field below the **Configuration** field, enter **True**.
 8. Click **Add**. In the **Settings** tab, **Enable ECS ElasticSearch Logging** displays a **Value** of **True**.
 
-<div align="left"><figure><img src="../../../../../.gitbook/assets/image (378).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../../.gitbook/assets/image (383).png" alt=""><figcaption></figcaption></figure></div>
 
 ## Verifying ECS logging is enabled
 
@@ -44,4 +44,4 @@ In the **Container - 1** area, in the **Container Other Config** field, your `Lo
 
 In the **Container-2** area, another container is created by DuploCloud with the name `log_router`.
 
-<figure><img src="../../../../../.gitbook/assets/image (379).png" alt=""><figcaption><p><strong>Container - 2</strong> area of the Task Definition editor displaying configuration for <strong>log_router</strong> container, created by DuploCloud</p></figcaption></figure>
+<figure><img src="../../../../../.gitbook/assets/image (384).png" alt=""><figcaption><p><strong>Container - 2</strong> area of the Task Definition editor displaying configuration for <strong>log_router</strong> container, created by DuploCloud</p></figcaption></figure>

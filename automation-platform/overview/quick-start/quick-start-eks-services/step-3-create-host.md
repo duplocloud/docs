@@ -6,7 +6,7 @@ description: Creating a Host that acts as an EKS Worker node
 
 Creating an [AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html) Service uses technologies from AWS and the [Kubernetes ](kuberhttps://en.wikipedia.org/wiki/Kubernetesnetes)open-source container orchestration system.
 
-Kubernetes uses worker nodes to distribute workloads within a cluster. The cluster automatically distributes the workload among its nodes, enabling seamless scaling as required system resources expand to support your applications.&#x20;
+Kubernetes uses worker nodes to distribute workloads within a cluster. The cluster automatically distributes the workload among its nodes, enabling seamless scaling as required system resources expand to support your applications.
 
 _Estimated time to complete Step 4: 5 minutes._
 
@@ -14,8 +14,8 @@ _Estimated time to complete Step 4: 5 minutes._
 
 Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine)), verify that you completed the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [EKS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).&#x20;
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has [EKS **Enabled**](../step-1-infrastructure.md#check-your-work).
 * A [Tenant](../step-2-tenant.md) named **dev01** has been created.
 
 ### Select the Tenant You Created
@@ -36,16 +36,15 @@ In the **Tenant** list box, select the **dev01** Tenant that you created.
 <figure><img src="../../../../.gitbook/assets/Screenshot (829).png" alt=""><figcaption><p>The <strong>EC2 Add Host</strong> page</p></figcaption></figure>
 
 {% hint style="info" %}
-The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time. For this tutorial, the region is **us-west-2**, where the **NONPROD** Infrastructure was created.&#x20;
+The EKS **Image ID** is the image published by AWS specifically for an EKS worker in the version of Kubernetes deployed at Infrastructure creation time. For this tutorial, the region is **us-west-2**, where the **NONPROD** Infrastructure was created.
 
-If there is no Image ID with an EKS prefix, copy the AMI ID for the desired EKS version following this [AWS documentation](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html). Select **Other** from the **Image ID** list box and paste the  AMI ID in the **Other Image ID** field. Contact the DuploCloud Support team via your Slack channel if you have questions or issues.
+If there is no Image ID with an EKS prefix, copy the AMI ID for the desired EKS version following this [AWS documentation](https://docs.aws.amazon.com/eks/latest/userguide/eks-optimized-ami.html). Select **Other** from the **Image ID** list box and paste the AMI ID in the **Other Image ID** field. Contact the DuploCloud Support team via your Slack channel if you have questions or issues.
 {% endhint %}
 
 ## Checking Your Work
 
-1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.&#x20;
+1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Hosts**.
 2. Select the **EC2** tab.
 3. Verify that the Host status is **Running**.
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-15_20_43 (1).png" alt=""><figcaption><p>The <strong>EC2</strong> tab with Host status <strong>Running</strong></p></figcaption></figure>
-

@@ -25,11 +25,11 @@ Using OpenTelemetry with Grafana, you can collect and visualize traces alongside
 ## Exploring Traces in the DuploCloud Advanced Observability Suite
 
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Advanced** -> **Dashboard** (Administrator AOS Dashboard) **or Observability** -> **Advanced** -> **Dashboard** (Tenant AOS Dashboard). The AOS Dashboard displays.
-2. Select your Infrastructure from the **Infrastructure** list box (Administrator AOS Dashboard) or **Tenant** from the Tenant list box (Tenant AOS Dashboard).&#x20;
+2. Select your Infrastructure from the **Infrastructure** list box (Administrator AOS Dashboard) or **Tenant** from the Tenant list box (Tenant AOS Dashboard).
 3.  Click the **Traces** card button. The Grafana **Tracing** dashboard displays.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (451).png" alt=""><figcaption><p>Grafana <strong>Tracing</strong> dashboard<br></p></figcaption></figure></div>
-4. Use the following functions on the Grafana **Tracing** dashboard to find and view relevant trace data. See the [Grafana documentation](https://grafana.com/docs/grafana/latest/datasources/tempo/query-editor/) for detailed instructions.&#x20;
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (454).png" alt=""><figcaption><p>Grafana <strong>Tracing</strong> dashboard<br></p></figcaption></figure></div>
+4. Use the following functions on the Grafana **Tracing** dashboard to find and view relevant trace data. See the [Grafana documentation](https://grafana.com/docs/grafana/latest/datasources/tempo/query-editor/) for detailed instructions.
 
 * **Search Query Builder:** Use the search query builder to filter and find traces based on parameters like service name, duration, status codes, or custom tags. This lets you quickly narrow down the traces you're interested in and dive into specific details.
 * **TraceQL:** TraceQL is a powerful query language designed to provide advanced filtering and exploration of your trace data. It lets you run more complex queries for pinpointing specific traces or span data based on conditions like service dependencies, error rates, or trace attributes.
@@ -37,16 +37,15 @@ Using OpenTelemetry with Grafana, you can collect and visualize traces alongside
 
 ## Inspecting Traces
 
-When you have located a trace of interest using the steps above, you can inspect specific metrics or individual spans to understand the operations that occurred during the trace.&#x20;
+When you have located a trace of interest using the steps above, you can inspect specific metrics or individual spans to understand the operations that occurred during the trace.
 
-1.  From the Grafana **Tracing** dashboard, click on the trace of interest. The **Trace Timeline Viewer** displays on the right side of the screen. See the [Grafana Tracing documentation](https://grafana.com/docs/grafana/latest/datasources/tempo/tracing-best-practices/) for more details.\
-    &#x20;
+1.  From the Grafana **Tracing** dashboard, click on the trace of interest. The **Trace Timeline Viewer** displays on the right side of the screen. See the [Grafana Tracing documentation](https://grafana.com/docs/grafana/latest/datasources/tempo/tracing-best-practices/) for more details.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (452).png" alt=""><figcaption><p>The <strong>Trace Timeline Viewer</strong> in Grafana</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (455).png" alt=""><figcaption><p>The <strong>Trace Timeline Viewer</strong> in Grafana</p></figcaption></figure></div>
 
 ### Mapping Traces to Logs, Metrics, and Profiles for Debugging
 
-The Trace Timeline Viewer can be used to map traces with logs, metrics, and profiles. These details offer insights into timing, status, and metadata, which can help identify performance bottlenecks or failures.&#x20;
+The Trace Timeline Viewer can be used to map traces with logs, metrics, and profiles. These details offer insights into timing, status, and metadata, which can help identify performance bottlenecks or failures.
 
 * **Trace-to-Logs**: Navigate from a trace directly to relevant logs, allowing you to correlate trace details with log data.
 
@@ -54,10 +53,10 @@ The Trace Timeline Viewer can be used to map traces with logs, metrics, and prof
 
 * **Trace-to-Metrics**: Jump to metrics related to a particular exception/span to analyze rates, durations, and other key performance indicators.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>Close-up of the Grafana trace timeline with </p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption><p>Close-up of the Grafana trace timeline with</p></figcaption></figure></div>
 
 * **Trace-to-Profiles**: Link trace spans directly to profiling data for deeper analysis of resource usage and performance at the code level. This feature allows you to correlate traces with profiles, such as CPU or memory usage, providing fine-grained insights into your system’s behavior.
 
-For detailed instructions on inspecting traces, spans, and associated logs, see this \
+For detailed instructions on inspecting traces, spans, and associated logs, see this\
 [Grafana documentation page](https://grafana.com/docs/grafana/latest/explore/trace-integration/). For more information about logging with DuploCloud's AOS, see the\
-[DuploCloud Logging page](logging-with-loki.md).&#x20;
+[DuploCloud Logging page](logging-with-loki.md).

@@ -13,31 +13,31 @@ See the [AWS Documentation](https://docs.aws.amazon.com/efs/latest/ug/storage-cl
 Before you create an EFS, you must configure the EFS Volume Controller for your Infrastructure.
 
 1. In the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**. The **Infrastructure** page displays.
-2. Select your Infrastructure from the **Name** column.&#x20;
+2. Select your Infrastructure from the **Name** column.
 3. Click the **Settings** tab.
 4. Click **Add**. The **Infra - Set Custom Data** pane displays.
 5. From the **Settings Name** list box, select **Enable EFS Volume Controller**.
 6. Select **Enable**.
 7. Click **Set**.
 
-In the **Settings** tab, your configuration **Enable EFS Volume Controller** is set to **true**.&#x20;
+In the **Settings** tab, your configuration **Enable EFS Volume Controller** is set to **true**.
 
 <figure><img src="../../../../.gitbook/assets/EKS_VC.png" alt=""><figcaption><p>Infrastructure page Settings tab with configuration <strong>Enable EFS Volume Controller</strong> set to <strong>true</strong>.</p></figcaption></figure>
 
 ## Creating an EFS in the DuploCloud Portal
 
 1. In the DuploClod Portal, navigate to **Cloud Services** -> **Storage.**
-2. Click the **EFS** tab.&#x20;
+2. Click the **EFS** tab.
 3.  Click **Add**. The **Add Elastic File System** page displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_06_46.png" alt=""><figcaption><p><strong>Actions</strong> menu for a <strong>Timestream</strong> database, <strong>Table</strong> tab</p></figcaption></figure>
 4. In the **Name** field, enter a name for the EFS you want to create.
 5. In the **Creation Token** field, enter a string of up to 64 ASCII characters.
-6. From the **Performance Mode** list box, select **General** or **Max I/O**. Select General for most file systems. Selecting **Max I/O** allows scaling to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. You can not change this setting after the file system has been created.&#x20;
+6. From the **Performance Mode** list box, select **General** or **Max I/O**. Select General for most file systems. Selecting **Max I/O** allows scaling to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations. You can not change this setting after the file system has been created.
 7. From the **Throughput Mode** list box, select **Bursting** or **Provisioned**. If you select Provisioned, you must also set a value from **1** to **1024** for **Provisioned Throughput (in MiB)**. After you create the file system, you can decrease the file system's throughput in Provisioned mode or change between the throughput modes, as long as more than 24 hours have passed since the last decrease in throughput or throughput mode change.
 8.  Change other defaults as needed as click **Create**. The EFS is created and displayed in the **EFS** tab. Select the EFS from the **Name** column and view the configuration in the **Details** tab.<br>
 
-    ![EFS Details](<../../../../.gitbook/assets/image (122).png>)
+    ![EFS Details](<../../../../.gitbook/assets/image (158).png>)
 
 {% hint style="info" %}
 **Max I/O** mode is not supported on file systems using [One Zone storage classes](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html).
@@ -45,7 +45,7 @@ In the **Settings** tab, your configuration **Enable EFS Volume Controller** is 
 
 Information about EFS **Mount Targets** and **Access Points** is available in their respective tabs.
 
-![Mount Target tab details](<../../../../.gitbook/assets/image (63).png>)
+![Mount Target tab details](<../../../../.gitbook/assets/image (102).png>)
 
 ```bash
 btoa(`#!/bin/bash
@@ -70,7 +70,7 @@ If you want to disable an EFS Lifecycle Management Policy that you previously cr
 {% endhint %}
 
 1. In the DuploClod Portal, navigate to **Cloud Services** -> **Storage.**
-2. Click the **EFS** tab.&#x20;
+2. Click the **EFS** tab.
 3.  Select the EFS from the **Name** column. The EFS page displays.<br>
 
     <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.19-17_08_45.png" alt=""><figcaption><p>EFS page with <strong>Actions</strong> menu and <strong>Update Lifecycle Policies</strong> highlighted</p></figcaption></figure>

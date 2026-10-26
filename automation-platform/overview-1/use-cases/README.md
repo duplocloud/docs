@@ -6,14 +6,14 @@ description: Use Cases supported for DuploCloud GCP
 
 ## Organization of use cases
 
-Topics in this section are covered in the order of typical usage. Use cases that are foundational to DuploCloud such as **Infrastructure**, **Tenant**, and **Hosts** are listed at the beginning of this section; while supporting use cases such as **Logs**, **Metrics**, and **Faults and alerts** appear near the end.&#x20;
+Topics in this section are covered in the order of typical usage. Use cases that are foundational to DuploCloud such as **Infrastructure**, **Tenant**, and **Hosts** are listed at the beginning of this section; while supporting use cases such as **Logs**, **Metrics**, and **Faults and alerts** appear near the end.
 
 ## Supported use cases for DuploCloud GCP
 
-* [Infrastructure and Plan](../../../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/)
+* [Infrastructure and Plan](creating-an-infrastructure-and-plan-for-gcp/)
 * [Tenant](tenant-environment/)
 * [Hosts](hosts-vms.md)
-* [Kubernetes Jobs](../../../kubernetes/jobs.md) and [CronJobs](../../../kubernetes/cronjobs.md)
+* [Kubernetes Jobs](../../kubernetes-overview/jobs.md) and [CronJobs](../../kubernetes-overview/cronjobs.md)
 * [Logs](../../diagnostics-overview/standard-observability-suite/logs.md)
 * [Metrics](../../diagnostics-overview/standard-observability-suite/metrics-dashboard.md)
 * [Faults and alerts](../../diagnostics-overview/faults-and-alarms/)

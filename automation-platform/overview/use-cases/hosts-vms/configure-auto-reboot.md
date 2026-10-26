@@ -67,7 +67,7 @@ Configure the Auto Reboot feature on the Host level for Docker Native and EKS No
 2. Click the appropriate tab for your Host type and select the Host for which you want to configure Auto Reboot.
 3.  Click the **Actions** menu and select **Host Settings** -> **Update Auto Reboot Status Check**. The **Set Auto Reboot Status Check Time** pane displays.​<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/AR108 (2).png" alt=""><figcaption><p>Host <strong>Actions</strong> menu options <strong>Host Settings</strong> -> <strong>Update Auto Reboot Status Check</strong></p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/AR108 (1).png" alt=""><figcaption><p>Host <strong>Actions</strong> menu options <strong>Host Settings</strong> -> <strong>Update Auto Reboot Status Check</strong></p></figcaption></figure></div>
 4.  In the **Auto Reboot Status Check** field, enter the time interval in minutes after which the host automatically reboots after a `StatusCheck` fault is identified. Enter zero (**0**) to disable this configuration.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/AR106.png" alt=""><figcaption><p><strong>Set Auto Reboot Status Check Time</strong> pane with <strong>Auto Reboot Status Check</strong> field</p></figcaption></figure></div>

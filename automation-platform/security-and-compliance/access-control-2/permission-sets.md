@@ -31,7 +31,7 @@ After creating a Permission Set, assign specific users to it:
 2. Select the **Sets** tab.
 3.  Select the Permission Set from the **NAME** column. The Permission Set details page displays.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (462).png" alt=""><figcaption><p>Adding users to the permission set</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (466).png" alt=""><figcaption><p>Adding users to the permission set</p></figcaption></figure></div>
 4. Select the **Users** tab.
 5. Select the users to whom the Permission Set should apply.
 6. Click **Save**.

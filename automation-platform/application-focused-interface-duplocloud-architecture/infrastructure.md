@@ -4,18 +4,18 @@ description: A conceptual overview of DuploCloud Infrastructures
 
 # Infrastructure
 
-Infrastructures are abstractions that allow you to create a Virtual Private Cloud (VPC) instance in the DuploCloud Portal. When you create an Infrastructure, a [Plan](plan.md) (with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration.&#x20;
+Infrastructures are abstractions that allow you to create a Virtual Private Cloud (VPC) instance in the DuploCloud Portal. When you create an Infrastructure, a [Plan](plan.md) (with the same Infrastructure name) is automatically created and populated with the Infrastructure configuration.
 
 For instructions to create an Infrastructure in the DuploCloud Portal, see:
 
-* [AWS Infrastructure](../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/)
+* [AWS Infrastructure](../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/)
 * [Azure Infrastructure](../overview-2/use-cases/infrastructure-and-plan/)
-* [GCP Infrastructure](../../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/)
+* [GCP Infrastructure](../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/)
 * [On-premises Infrastructure](../kubernetes-overview/import-an-external-kubernetes-cluster.md#importing-your-kubernetes-cluster-to-duplocloud)
 
-Each Infrastructure represents a network connection to a unique VPC/VNET, in a Region with a Kubernetes Cluster. For AWS, it can also include an ECS. An Infrastructure can be created with five basic inputs: Name, VPC CIDR, Number of AZs, Region, and a choice to enable or disable a K8s/ECS cluster. &#x20;
+Each Infrastructure represents a network connection to a unique VPC/VNET, in a Region with a Kubernetes Cluster. For AWS, it can also include an ECS. An Infrastructure can be created with five basic inputs: Name, VPC CIDR, Number of AZs, Region, and a choice to enable or disable a K8s/ECS cluster.
 
-![The Add Infrastructure page in the DuploCloud Portal](<../../.gitbook/assets/image (69).png>)
+![The Add Infrastructure page in the DuploCloud Portal](<../../.gitbook/assets/image (108).png>)
 
 When you create an Infrastructure, DuploCloud automatically creates the following components:
 
@@ -26,7 +26,7 @@ When you create an Infrastructure, DuploCloud automatically creates the followin
 * Route tables
 * [VPC peering](../overview/aws-services/virtual-private-cloud-vpc-peering.md) with the master VPC, which is initially configured in DuploCloud
 
-Additional requirements like custom Private/Public Subnet CIDRs can be configured in the **Advanced Options** area.&#x20;
+Additional requirements like custom Private/Public Subnet CIDRs can be configured in the **Advanced Options** area.
 
 {% hint style="info" %}
 A common use case is two Infrastructures: one for Prod and one for Nonprod. Another is having an Infrastructure in a different region for disaster recovery or localized client deployments.

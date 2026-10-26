@@ -24,7 +24,7 @@ If there is a Target Group with no instances/targets, DuploCloud generates a fau
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.27-19_33_44.png" alt=""><figcaption><p>The <strong>System Config</strong> page with <strong>IgnoreTargetGroupWithNoInstances</strong> set.</p></figcaption></figure>
 
-## Exclude faults  in Sentry/PagerDuty based on Modules
+## Exclude faults in Sentry/PagerDuty based on Modules
 
 You can suppress fault notifications for specific modules to prevent noise in Sentry and PagerDuty. This is configured at the system level from the DuploCloud portal.
 
@@ -42,11 +42,9 @@ You can suppress fault notifications for specific modules to prevent noise in Se
 
 **Example: MinionsDisconnectedStatusCheck; kubernetes**
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (47).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (508).png" alt="" width="375"><figcaption></figcaption></figure></div>
 
-
-
-## Exclude faults  in Sentry/PagerDuty based on Messages
+## Exclude faults in Sentry/PagerDuty based on Messages
 
 You can suppress fault notifications for specific fault messages to prevent noise in Sentry and PagerDuty. This is configured at the system level from the DuploCloud portal.
 
@@ -64,4 +62,4 @@ You can suppress fault notifications for specific fault messages to prevent nois
 
 **Example: no sufficient memory available;Minion disconnected**
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (103).png" alt="" width="375"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (509).png" alt="" width="375"><figcaption></figcaption></figure></div>

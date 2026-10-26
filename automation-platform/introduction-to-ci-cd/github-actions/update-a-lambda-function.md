@@ -4,17 +4,17 @@ description: Use GitHub Actions to deploy a Lambda Image or S3 bucket update
 
 # Update a Lambda function
 
-Instead of deploying your Lambda code in the same pipeline as your infrastructure, you can use CI/CD and GitHub Actions pipelines. With DuploCloud's GitHub Actions integration, you can build and deploy [Lambda functions](../../../overview/aws-services/lambda/) in your AWS account by deploying a Lambda image or by a package uploaded to an S3 bucket.
+Instead of deploying your Lambda code in the same pipeline as your infrastructure, you can use CI/CD and GitHub Actions pipelines. With DuploCloud's GitHub Actions integration, you can build and deploy [Lambda functions](../../overview/aws-services/lambda/) in your AWS account by deploying a Lambda image or by a package uploaded to an S3 bucket.
 
 {% hint style="info" %}
 For general information about deploying serverless applications with GitHub Actions in AWS, reference this [blog](https://aws.amazon.com/blogs/compute/using-github-actions-to-deploy-serverless-applications/).
 {% endhint %}
 
-### Update a Function Using an Image&#x20;
+### Update a Function Using an Image
 
 Use the following code as a template to update a Lambda container image with GitHub Actions. In this example, the Lambda container image in the `dev01` The tenant is updated and redeployed.
 
-You must ensure the following are configured in your environment and your specific situation.&#x20;
+You must ensure the following are configured in your environment and your specific situation.
 
 * The name of lambda is set on the action to your actual lambda
 * Duplocloud context configured correctly
@@ -62,7 +62,7 @@ jobs:
 
 Use the following code as a template to deploy your Lambda functions to an S3 bucket with GitHub Actions. In this example, the Lambda in the `dev01` The tenant is updated using an S3 bucket that contains `mylambda-v1.zip`
 
-You must ensure the following are configured in your environment and your specific situation.&#x20;
+You must ensure the following are configured in your environment and your specific situation.
 
 * Duplocloud context configured correctly
 * `S3KEY`

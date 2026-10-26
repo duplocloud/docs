@@ -47,7 +47,7 @@ readinessProbe:
       - /etc/nginx/nginx.conf
 </code></pre>
 
-<div align="left"><figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption><p>Other Container Config</p></figcaption></figure></div>
 
 In addition to the `httpGet` example, TCP Probes can be configured from the **Other Container Config** field:
 
@@ -74,4 +74,3 @@ Complete details of this feature are available in the Kubernetes documentation [
 ## Health Check
 
 Enable Kubernetes Health by adding a [Load Balancer Listener with Health Check enabled](../overview/aws-services/load-balancers/#adding-a-load-balancer-listener).
-

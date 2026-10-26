@@ -25,7 +25,7 @@ Dashboards are accessible under **Analytics** in the left sidebar, grouped by ca
 
 The buttons on the right of the tab bar act on the selected dashboard:
 
-* **Settings** — change the dashboard's category, or how long panel results are cached (see [Dashboard Settings](#dashboard-settings)).
+* **Settings** — change the dashboard's category, or how long panel results are cached (see [Dashboard Settings](ai-dashboards.md#dashboard-settings)).
 * **Refresh** — re-run the dashboard's panels and fetch fresh data.
 * **Agent Help** — open the dashboard's agent session to ask questions about the data or refine the dashboard.
 * **Delete** — remove the dashboard. You confirm by typing the dashboard's name.
@@ -123,7 +123,7 @@ Click **Create Dashboard**.
 
 The dashboard appears as a new tab on the Dashboards page. Its panels show **Pending** while the fetch script runs, then fill in with live data from the selected scopes.
 
-![New dashboard tab with live data](../.gitbook/assets/dashboards-step-32.png)
+![New dashboard tab with live data](../.gitbook/assets/dashboards-step-02.png)
 
 ## Reusing a Template Across Multiple Scopes
 
@@ -132,7 +132,7 @@ Because the template and its fetch script are reusable, one template can back as
 * **Several scopes on one dashboard** — select multiple scopes when creating the dashboard. The panels draw on all of them together, which suits an aggregate view across accounts or clusters.
 * **One dashboard per scope** — repeat the **Create Dashboard** step, selecting a different scope each time. Each dashboard shows the same panel structure populated from its own environment, for example one tab for development and another for production.
 
-![Multiple dashboards from the same template](../.gitbook/assets/dashboards-step-37.png)
+![Multiple dashboards from the same template](../.gitbook/assets/dashboards-step-02.png)
 
 This makes Dashboard Templates a scalable building block: define the structure once and connect it to as many environments as your organization needs.
 
@@ -149,7 +149,7 @@ Select a dashboard and click **Settings** to change:
 
 Everything a template holds — its filters, system prompt, panel layout, and the metric definitions behind each panel — is stored as a structured document you can read directly. Open the template and click **View YAML**.
 
-![Template detail page](../.gitbook/assets/dashboards-v2-template-detail.png)
+![Template detail page](../.gitbook/assets/dashboards-step-25.png)
 
 The dialog shows the full saved definition, with a **YAML** / **JSON** toggle and buttons to copy or download it.
 

@@ -8,7 +8,7 @@ Lambda container images allow you to package and deploy Lambda functions as Dock
 
 ## Building Container Images <a href="#id-0-toc-title" id="id-0-toc-title"></a>
 
-Create and Build your Lambda code using `DockerFile`.  Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html) for detailed instructions on how to build and test container Images.
+Create and Build your Lambda code using `DockerFile`. Refer to the [AWS documentation](https://docs.aws.amazon.com/lambda/latest/dg/configuration-function-zip.html) for detailed instructions on how to build and test container Images.
 
 ## Using Amazon ECR with Lambda
 
@@ -22,12 +22,12 @@ For detailed instructions on how to configure and use ECR with Lambda, refer to 
 2. Click the **Lambda** tab. The **Lambda Function** page displays.
 3.  Click **Add**. The **Create a Lambda Function** page displays.<br>
 
-    <figure><img src="../../../../.gitbook/assets/Screenshot (62).png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page <br></p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/Screenshot (62).png" alt=""><figcaption><p><strong>Create a Lambda Function</strong> page<br></p></figcaption></figure>
 4. In the **Name** field, enter the name of your Lambda Function.
 5. In the **Description** field, enter a useful description of the function.
-6. From the **Package Type** list box, select **Image**. For type **Zip**, see the [Lambda Functions](../../../../overview/aws-services/lambda/) topic.
+6. From the **Package Type** list box, select **Image**. For type **Zip**, see the [Lambda Functions](./) topic.
 7. Configure the remaining fields as needed for your specific function.
-8. If needed, [test the Lambda function](../../../../overview/aws-services/lambda/#testing-a-lambda-function) to ensure it works properly.
+8. If needed, [test the Lambda function](./#testing-a-lambda-function) to ensure it works properly.
 
 ## References
 

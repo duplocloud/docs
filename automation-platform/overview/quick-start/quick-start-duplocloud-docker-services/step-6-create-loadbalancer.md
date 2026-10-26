@@ -14,10 +14,10 @@ _Estimated time to complete Step 6: 15 minutes._
 
 Before creating a Load Balancer, verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * An EC2 Host named [host01 has been created](step-4-create-ec2-host.md).
-* A Service named [**demo-service-d01** has been created](step-5-create-app-via-docker-native.md).&#x20;
+* A Service named [**demo-service-d01** has been created](step-5-create-app-via-docker-native.md).
 
 ## Creating a Load Balancer using Native Docker
 
@@ -47,6 +47,6 @@ If you want to secure the load balancer created, you can follow the steps specif
 
 ### Creating a Custom DNS Name
 
-You can modify the DNS name by clicking Edit in the DNS Name card in the Load Balancers tab. For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../../duplocloud-prerequisites/resolving-dns-failures.md).&#x20;
+You can modify the DNS name by clicking Edit in the DNS Name card in the Load Balancers tab. For more info about DNS setup and custom DNS names, see the [DNS Configuration documentation](../../../duplocloud-prerequisites/resolving-dns-failures.md).
 
 <div align="left"><figure><img src="../../../../.gitbook/assets/shitpic.png" alt="" width="563"><figcaption><p>The <strong>DNS Name</strong> card in the <strong>Load Balancers</strong> tab</p></figcaption></figure></div>

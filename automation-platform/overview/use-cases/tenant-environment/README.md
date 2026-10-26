@@ -15,7 +15,7 @@ For more information about DuploCloud Tenants, see the [Tenants](../../../applic
 3. In the **Plan** list box, select the Plan to associate the Tenant with.
 4.  Click **Create**. The Tenant is created.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (332).png" alt=""><figcaption><p>The <strong>Create a Tenant</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (344).png" alt=""><figcaption><p>The <strong>Create a Tenant</strong> pane in the DuploCloud Portal</p></figcaption></figure></div>
 
 {% hint style="info" %}
 For information about granting Cross-Tenant access to resources, see [this section in the User Administration section](../../../security-and-compliance/access-control-2/cross-tenant-access.md).

@@ -18,7 +18,7 @@ You should see the Host listed under the Hosts Listing table.
 
 ## Step 2: Create a service <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
-Next, we can create a Service. A Service is nothing but a container with user-specified image and environment variables.&#x20;
+Next, we can create a Service. A Service is nothing but a container with user-specified image and environment variables.
 
 1. Navigate to **Docker** -> **Services**.
 2. Click **Add**, the **Add Service** page displays.
@@ -39,6 +39,6 @@ Almost there. Since the hello-nodejs image serves on port 3000 we need to create
 
 Select the Test-service and click the plus icon on the load balancer configuration table. Fill the menu as shown below and click submit.
 
-<div align="left"><img src="../../../.gitbook/assets/image (55).png" alt=""></div>
+<div align="left"><img src="../../../.gitbook/assets/image (94).png" alt=""></div>
 
 Please wait for \~5 minutes as it can take a while for the Load Balancer to get provisioned.

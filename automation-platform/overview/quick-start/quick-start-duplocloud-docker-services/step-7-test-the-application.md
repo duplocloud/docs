@@ -8,7 +8,7 @@ _Estimated time to complete Step 7 and finish tutorial: 5 minutes._
 
 Before testing your application, verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * An EC2 Host named [host01 has been created](step-4-create-ec2-host.md).
 * A Service named [**demo-service-d01** has been created](step-5-create-app-via-docker-native.md).
@@ -43,8 +43,8 @@ The application rendered a simple web page with text, coded in JavaScript, from 
 
 In the previous steps, you:
 
-* [Created a DuploCloud Infrastructure](../../../../overview/quick-start/step-1-infrastructure.md) named **NONPROD**, a Virtual Private Cloud instance, backed by an AKS-enabled Kubernetes cluster.
-* [Created a Tenant](../step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](../../../../overview/quick-start/step-1-infrastructure.md)) to configure multiple Azure and Kubernetes components needed for your environment.
+* [Created a DuploCloud Infrastructure](../step-1-infrastructure.md) named **NONPROD**, a Virtual Private Cloud instance, backed by an AKS-enabled Kubernetes cluster.
+* [Created a Tenant](../step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](../step-1-infrastructure.md)) to configure multiple Azure and Kubernetes components needed for your environment.
 * [Created an EC2 host](step-4-create-ec2-host.md) named **host01**, so your application has storage resources.
 * [Created a Service](step-5-create-app-via-docker-native.md) named **demo-service-d01** to connect the Docker containers and associated images, in which your application code resides, to the DuploCloud Tenant environment.
 * [Created an ALB Load Balancer Listener](step-6-create-loadbalancer.md) to expose your application via ports and backend network configurations.
@@ -55,8 +55,8 @@ In the previous steps, you:
 In this tutorial, you created many artifacts for testing purposes. Clean them up so others can run this tutorial using the same names for Infrastructure and Tenant.
 
 1. To delete the **dev01** tenant [follow these instructions](/broken/pages/5Hv1kjjuWKLmR6VU2dKG), then return to this page. As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant that you created cleans up most of your artifacts.
-2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../../.gitbook/assets/image (96).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.
+2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../../.gitbook/assets/image (134).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.
 
 The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
 
-Thanks for completing this tutorial and proceed to the next section to learn more about [using DuploCloud with AWS](../../../../overview/use-cases/).
+Thanks for completing this tutorial and proceed to the next section to learn more about [using DuploCloud with AWS](../../use-cases/).

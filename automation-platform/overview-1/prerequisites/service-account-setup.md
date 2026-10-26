@@ -25,7 +25,7 @@ A service account and a key are created for each GCP project to be onboarded.
 3. Complete **Service Account Details**.
 4. In the **Grant this service account access to project** step, assign the **Owner** role as shown below, giving the account owner permission to the project. Complete the wizard, and click **Done**.
 
-<div align="center"><figure><img src="../../../.gitbook/assets/image (436) (1).png" alt=""><figcaption><p>Assign <strong>Owner</strong> role to grant account owner permission to the project</p></figcaption></figure></div>
+<div align="center"><figure><img src="../../../.gitbook/assets/image (432).png" alt=""><figcaption><p>Assign <strong>Owner</strong> role to grant account owner permission to the project</p></figcaption></figure></div>
 
 3. Select the Service Account you created and add a new **JSON** Key.
 4. Download the JSON file and give it a meaningful name, such as `my-gcp-project-sa-key.json`.
@@ -46,4 +46,4 @@ To add the private key to DuploCloud:
 4. Enter the **Project ID** and **Service Account Email** from the JSON key file you downloaded.
 5. Click **Submit**.
 
-<figure><img src="../../../.gitbook/assets/image (437).png" alt=""><figcaption><p>The <strong>Cloud Credentials</strong> page in the DuploCloud Portal</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (438).png" alt=""><figcaption><p>The <strong>Cloud Credentials</strong> page in the DuploCloud Portal</p></figcaption></figure>

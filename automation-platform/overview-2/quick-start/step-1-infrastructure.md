@@ -21,34 +21,34 @@ Before starting this tutorial:
 
 ## Creating a DuploCloud Infrastructure
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
-2.  Click **Add**. The **Add Infrastructure** page displays. <br>
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
+2.  Click **Add**. The **Add Infrastructure** page displays.<br>
 
     ![Add Infrastructure page for creating a DuploCloud Infrastructure](../../../.gitbook/assets/azureinfrare.png)
-3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.&#x20;
-4. Click **Create** to create the Infrastructure. It may take up to half an hour to create the Infrastructure. When creation completes, a status of **Complete** displays.&#x20;
+3. From the table below, enter the values that correspond to the fields on the **Add Infrastructure** page. Accept all other default values for fields not specified.
+4. Click **Create** to create the Infrastructure. It may take up to half an hour to create the Infrastructure. When creation completes, a status of **Complete** displays.
 
-| Add Infrastructure page field  | Value                            |
-| ------------------------------ | -------------------------------- |
-| **Name**                       | `nonprod`                        |
-| **Subscription**               | _`YOUR_AZURE_SUBSCRIPTION_NAME`_ |
-| **VNET CIDR**                  | `10.23.0.0/16`                   |
-| **Subnet CIDR**                | `10.23.0.0/20`                   |
-| **Cloud**                      | `Azure`                          |
-| **Region**                     | _`YOUR_GEOGRAPHIC_REGION`_       |
+| Add Infrastructure page field | Value                            |
+| ----------------------------- | -------------------------------- |
+| **Name**                      | `nonprod`                        |
+| **Subscription**              | _`YOUR_AZURE_SUBSCRIPTION_NAME`_ |
+| **VNET CIDR**                 | `10.23.0.0/16`                   |
+| **Subnet CIDR**               | `10.23.0.0/20`                   |
+| **Cloud**                     | `Azure`                          |
+| **Region**                    | _`YOUR_GEOGRAPHIC_REGION`_       |
 
-![Infrastructure creation with a status of Complete](<../../../.gitbook/assets/image (34).png>)
+![Infrastructure creation with a status of Complete](<../../../.gitbook/assets/image (74).png>)
 
 ## Enabling Kubernetes for Azure
 
-1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
+1. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**.
 2. Select the `nonprod` Infrastructure you created.
 3. Click the **Kubernetes** tab.
 4. Select the **Click Here** link. The **Configure AKS Cluster** pane displays.
 5. Enter a name in the **Cluster name** field.
 6. Select the node VM size from **Node VM Size** list box.
 7. To use Windows containers, Network plugin should be set to Azure. This config will make Kubernetes pods to get IP assigned from Subnets address space, Make sure Infrastructure default subnet use /18 for network prefix. At least /20 should be used or IP Address space might run out.
-8. Click **Create**. It may take some time to configure the cluster. The **Kubernetes** card on the Infrastructure page  shows **Enabled** when the cluster is complete. You can also monitor progress using the **Kubernetes** tab.&#x20;
+8. Click **Create**. It may take some time to configure the cluster. The **Kubernetes** card on the Infrastructure page shows **Enabled** when the cluster is complete. You can also monitor progress using the **Kubernetes** tab.
 
 ## Checking Your Work
 
@@ -61,7 +61,7 @@ Before proceeding, confirm that a Plan exists that corresponds to your newly cre
 1. In the DuploCloud Portal, navigate to **Administrator** -> **Plans**. The **Plans** page displays.
 2. Verify that a Plan exists with the name **NONPROD,** the name that you gave to the Infrastructure you created.
 
-DuploCloud begins creating and configuring an AKS cluster using Kubernetes. You receive an alert message when the Infrastructure has been updated.&#x20;
+DuploCloud begins creating and configuring an AKS cluster using Kubernetes. You receive an alert message when the Infrastructure has been updated.
 
 ### Verifying AKS is Enabled
 
@@ -69,6 +69,6 @@ You previously verified that your Infrastructure and Plan were created. Now, ver
 
 From the Infrastructure page, select the Infrastructure (**NONPROD**) that you created. When AKS has been **Enabled**, details are listed in the **Kubernetes** tab on the **Infrastructure** page. This page also displays the **Enabled** status on the **Kubernetes** card.
 
-![Kubernetes tab in the Infrastructure page with details about your configured AKS cluster ](<../../../.gitbook/assets/image (120).png>)
+![Kubernetes tab in the Infrastructure page with details about your configured AKS cluster](<../../../.gitbook/assets/image (156).png>)
 
 <figure><img src="../../../.gitbook/assets/Azure_GS_Infra_3_Verify.png" alt=""><figcaption><p><strong>NONPROD Infrastructure</strong> page with <strong>Kubernetes Enabled</strong> card</p></figcaption></figure>

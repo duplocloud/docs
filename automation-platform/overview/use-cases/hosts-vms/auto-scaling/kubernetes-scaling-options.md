@@ -21,16 +21,12 @@ You can configure HPA while creating a Deployment Service from the DuploCloud Po
 
 1. In the DuploCloud Portal, navigate **Kubernetes** -> **Services**, displaying the **Services** page.
 2. Create a new [Service](../../../aws-services/containers/) by clicking **Add**.
-3.  In **Add Service - Basic Options**, from the **Replication Strategy** list box, select **Horizontal Pod Scheduler**_._ <br>
+3.  In **Add Service - Basic Options**, from the **Replication Strategy** list box, select **Horizontal Pod Scheduler**_._<br>
 
     <div align="left"><img src="../../../../../.gitbook/assets/hpa1.png" alt="Basic Options on the Add Service page, with Replication Strategy list box and Horizontal Pod Autoscaler Config fields"></div>
-
-
-4.  In the **Horizontal Pod Autoscaler Config** field, add a sample configuration, as shown below. Update the minimum/maximum Replica Count in the `resource` attributes, based on your requirements. <br>
+4.  In the **Horizontal Pod Autoscaler Config** field, add a sample configuration, as shown below. Update the minimum/maximum Replica Count in the `resource` attributes, based on your requirements.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/hpa_Code_block.png" alt=""><figcaption><p><strong>Horizontal Pod Autoscaler Config</strong> field in <strong>Basic Options</strong>, on the <strong>Add Service</strong> page</p></figcaption></figure></div>
-
-
 5. Click **Next** to navigate to **Advanced Options**.
 6.  In **Advanced Options**, in the **Other Container Config** field, ensure your resource attributes, such as `Limits` and `Requests`, are set to work with your HPA configuration, as in the example below.<br>
 
@@ -43,36 +39,33 @@ For HPA Configures Services, **Replica** is set as _Auto_ in the DuploCloud Port
 
 When your services are running, **Replicas: Auto** is displayed on the Service page.
 
-<div align="left"><img src="../../../../../.gitbook/assets/image (140).png" alt="Service page with Replicas: Auto and Status: Running displayed"></div>
+<div align="left"><img src="../../../../../.gitbook/assets/image (174).png" alt="Service page with Replicas: Auto and Status: Running displayed"></div>
 
 ### Stopping a running Kubernetes service that is using an HPA
 
-If a Kubernetes Service is running with a Horizontal Pod AutoScaler (HPA), you cannot stop the Service by clicking **Stop** in the service's **Actions** menu in the DuploCloud Portal.&#x20;
+If a Kubernetes Service is running with a Horizontal Pod AutoScaler (HPA), you cannot stop the Service by clicking **Stop** in the service's **Actions** menu in the DuploCloud Portal.
 
 Instead, do the following to stop the service from running:
 
 1. In the DuploCloud Portal, navigate to **Kubernetes** -> **Containers** and select the Service you want to stop.
 2. From the **Actions** menu, select **Edit**.
 3. From the **Replication Strategy** list box, select **Static Count**.
-4. In the **Replicas** field, enter **0** (zero).&#x20;
+4. In the **Replicas** field, enter **0** (zero).
 5. Click **Next** to navigate to the **Advanced Options** page.
-6. Click **Update** to update the service.&#x20;
+6. Click **Update** to update the service.
 
 ### Allowing real-time alerts for autoscaling Kubernetes nodes
 
 When the **Cluster Autoscaler** flag is set and a Tenant has one or more ASGs, an unschedulable-pod alert will be delayed by five (5) minutes to allow for autoscaling. You can configure the Infrastructure settings to bypass the delay and send the alerts in real-time.
 
-1. From the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**.&#x20;
-2. Click on the Infrastructure you want to configure settings for in the **Name** list.&#x20;
+1. From the DuploCloud portal, navigate to **Administrator** -> **Infrastructure**.
+2. Click on the Infrastructure you want to configure settings for in the **Name** list.
 3. Select the **Settings** tab.
 4.  Click the **Add** button. The **Infra - Set Custom Data** pane displays.<br>
 
     <div align="left"><figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.01-16_40_53.png" alt=""><figcaption><p>The <strong>Infra - Set Custom Data</strong> pane with <strong>Enables faults prior to autoscaling Kubernetes nodes</strong> enabled</p></figcaption></figure></div>
-5. In the **Setting Name** list box, select **Enables faults prior to autoscaling Kubernetes nodes**.&#x20;
+5. In the **Setting Name** list box, select **Enables faults prior to autoscaling Kubernetes nodes**.
 6. Set the **Enable** toggle switch to enable the setting.
 7. Click **Set**. DuploCloud will now generate faults for unschedulable K8s nodes immediately (before autoscaling).
 
 <figure><img src="../../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.03.01-16_43_50.png" alt=""><figcaption><p>The <strong>Infrastructure-Settings</strong> tab with <strong>Enables faults prior to autoscaling Kubernetes nodes</strong> enabled</p></figcaption></figure>
-
-
-

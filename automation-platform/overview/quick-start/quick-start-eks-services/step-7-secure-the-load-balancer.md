@@ -5,9 +5,9 @@ description: Add a security layer and enable other Load Balancer options
 # Step 7: Enable Additional Load Balancer Options (Optional)
 
 {% hint style="warning" %}
-This step is optional and unneeded for the example application in this tutorial; however,  production cloud apps require an elevated level of protection.
+This step is optional and unneeded for the example application in this tutorial; however, production cloud apps require an elevated level of protection.
 
-To set up a Web Application Firewall (WAF) for a production application, follow the steps in the [Web Application Firewall procedure](../../aws-services/web-application-firewall-waf.md).&#x20;
+To set up a Web Application Firewall (WAF) for a production application, follow the steps in the [Web Application Firewall procedure](../../aws-services/web-application-firewall-waf.md).
 {% endhint %}
 
 In this tutorial step, for the Application Load Balancer (ALB) you created in [Step 6](../quick-start-duplocloud-docker-services/step-6-create-loadbalancer.md), you will:
@@ -21,8 +21,8 @@ _Estimated time to complete Step 7: 5 minutes._
 
 Before securing a Load Balancer, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has EKS[ **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has EKS[ **Enabled**](../step-1-infrastructure.md#check-your-work).
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A Host named [**host01** has been created](step-3-create-host.md).
 * A Service named [**demo-service** has been created](step-5-create-app-via-k8s.md).
@@ -31,12 +31,12 @@ Before securing a Load Balancer, verify that you accomplished the tasks in the p
 ## Securing the Load Balancer
 
 1. In the **Tenant** list box, select the **dev01** Tenant.
-2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
+2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 3. From the **NAME** column, select the Service (**demo-service**).
 4. Select the **Load Balancers** tab.
 5.  In the **Other Settings** card, click **Edit**. The **Other Load Balancer Settings** pane displays.<br>
 
-    <figure><img src="../../../../.gitbook/assets/Screenshot (134) (3).png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab with the <strong>Other Settings Edit</strong> option highlighted</p></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/Screenshot (134) (2).png" alt=""><figcaption><p>The <strong>Load Balancers</strong> tab with the <strong>Other Settings Edit</strong> option highlighted</p></figcaption></figure>
 6.  Select the **Enable Access Logs** and **Drop Invalid Headers** options.<br>
 
     <div align="left"><figure><img src="../../../../.gitbook/assets/Screenshot (138).png" alt=""><figcaption><p>The <strong>Other Load Balancer Settings</strong> pane</p></figcaption></figure></div>
@@ -45,7 +45,7 @@ Before securing a Load Balancer, verify that you accomplished the tasks in the p
 ## Checking Your Work
 
 1. In the **Tenant** list box, select the **dev01** Tenant.
-2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.&#x20;
+2. In the DuploCloud Portal, navigate to **Kubernetes** -> **Services**.
 3. From the **NAME** column, select the Service (**demo-service**).
 4. Select the **Load Balancers** tab.
 5. Verify that the **Other Settings** card contains the selections you made above for:

@@ -12,8 +12,8 @@ _Estimated time to complete Step 6 and finish tutorial: 5 minutes._
 
 Before testing your application, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both with the name **NONPROD**.
-* The **NONPROD** infrastructure has [ECS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both with the name **NONPROD**.
+* The **NONPROD** infrastructure has [ECS **Enabled**](../step-1-infrastructure.md#check-your-work).
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A [Task Definition](step-4-create-app-via-ecs.md) named **sample-task-def** has been created.
 * The [ECS Service (](step-5-create-the-ecs-service-and-load-balancer.md)**sample-httpd-app**) and Load Balancer have been created.
@@ -30,7 +30,7 @@ Before testing your application, verify that you accomplished the tasks in the p
 4. Open a browser and paste the DNS address in the URL field of your browser.
 5. Press **ENTER**. A web page with the text **It works!** displays, from the JavaScript program residing in your Docker Container that is running in **sample-httpd-app**, which is exposed to the web by your Application Load Balancer.
 
-<div align="left"><figure><img src="../../../../.gitbook/assets/image (118).png" alt=""><figcaption><p>Web page with <strong>Hello World!</strong> displayed</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../../.gitbook/assets/image (154).png" alt=""><figcaption><p>Web page with <strong>Hello World!</strong> displayed</p></figcaption></figure></div>
 
 {% hint style="info" %}
 It can take from five to fifteen (5-15) minutes for the Domain Name to become active once you launch your browser instance to test your application.
@@ -46,8 +46,8 @@ The application rendered a simple web page with text, coded in JavaScript, from 
 
 In the previous steps, you:
 
-* [Created a DuploCloud Infrastructure](../../../../overview/quick-start/step-1-infrastructure.md) named **NONPROD**, a Virtual Private Cloud instance, backed by an ECS-enabled Kubernetes cluster.
-* [Created a Tenant](../step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](../../../../overview/quick-start/step-1-infrastructure.md)) to configure multiple AWS and Kubernetes components needed for your environment.
+* [Created a DuploCloud Infrastructure](../step-1-infrastructure.md) named **NONPROD**, a Virtual Private Cloud instance, backed by an ECS-enabled Kubernetes cluster.
+* [Created a Tenant](../step-2-tenant.md) named **dev01** in Infrastructure **NONPROD**. While generating the Infrastructure, DuploCloud created a set of templates ([Plan](../step-1-infrastructure.md)) to configure multiple AWS and Kubernetes components needed for your environment.
 * [Created a Task Definition](step-4-create-app-via-ecs.md) named **sample-task-def**, used to create a service to run your application.
 * [Created a Service](../quick-start-eks-services/step-5-create-app-via-k8s.md) named **sample-httpd-app** to connect the Docker containers and associated images, in which your application code resides, to the DuploCloud Tenant environment. In the same step, you c[reated an ALB Load Balancer Listener](step-5-create-the-ecs-service-and-load-balancer.md) to expose your application via ports and backend network configurations.
 * [Verified that your web page rendered](step-5-test-application.md#testing-the-application) as expected by testing the DNS Name exposed by the Load Balancer Listener.
@@ -57,8 +57,8 @@ In the previous steps, you:
 In this tutorial, you created many artifacts. When you are ready, clean them up so others can run this tutorial using the same names for Infrastructure and Tenant.
 
 1. To delete the **dev01** tenant [follow these instructions](/broken/pages/5Hv1kjjuWKLmR6VU2dKG), and then return to this page. As you learned, the Tenant segregates all work in one isolated environment, so deleting the Tenant cleans up most of your artifacts.
-2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../../.gitbook/assets/image (96).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.
+2. Finish by deleting the **NONPROD** Infrastructure. In the DuploCloud Portal, navigate to **Administrator** -> **Infrastructure**. Click the **Action** menu icon (<img src="../../../../.gitbook/assets/image (134).png" alt="" data-size="line">) for the **NONPROD** row and select **Delete**.
 
 The **NONPROD** Infrastructure is deleted and you have completed the clean-up of your test environment.
 
-Thanks for completing this tutorial and proceed to the next section to learn more about [using DuploCloud with AWS](../../../../overview/use-cases/).
+Thanks for completing this tutorial and proceed to the next section to learn more about [using DuploCloud with AWS](../../use-cases/).

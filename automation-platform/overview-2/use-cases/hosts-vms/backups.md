@@ -12,8 +12,8 @@ Create Virtual Machine (VM) snapshots in the DuploCloud Portal.
 2. Select the **Host** you want to backup from the **Name** column.
 3. Click **Actions** and select **Snapshot**.
 
-<div align="left"><img src="../../../../.gitbook/assets/image (127).png" alt="Actions -> Snapshot option on Hosts page"></div>
+<div align="left"><img src="../../../../.gitbook/assets/image (163).png" alt="Actions -> Snapshot option on Hosts page"></div>
 
 ### Using VM Snapshot as an Image for creating a new host
 
-Once you take a VM Snapshot, the snapshot displays as an available **Image Id** when you [create a Host](../../../../overview-2/use-cases/hosts-vms/).
+Once you take a VM Snapshot, the snapshot displays as an available **Image Id** when you [create a Host](./).

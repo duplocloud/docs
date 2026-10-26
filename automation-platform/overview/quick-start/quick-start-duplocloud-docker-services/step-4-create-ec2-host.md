@@ -12,7 +12,7 @@ _Estimated time to complete Step 4: 5 minutes._
 
 Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org/wiki/Virtual_machine)), verify that you completed the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 
 ## Creating a Host
@@ -24,7 +24,7 @@ Before creating a Host (essentially a [Virtual Machine](https://en.wikipedia.org
 5. From the **Instance Type** list box, select **2 CPU 4 GB - t3a.medium**.
 6. Select the **Advanced Options** checkbox to display advanced configuration fields.
 7. From the **Agent Platform** list box, select **Linux/Docker Native**.
-8. From the **Image ID** list box, select any **Docker-Duplo** or **Ubuntu** image. &#x20;
+8. From the **Image ID** list box, select any **Docker-Duplo** or **Ubuntu** image.
 9. Click **Add**. The Host is created, initialized, and started. In a few minutes, when the **Status** displays **Running**, the Host is available for use.
 
 <figure><img src="../../../../.gitbook/assets/screenshot-nimbusweb.me-2024.02.17-17_39_57.png" alt=""><figcaption><p><strong>EC2 Add Hosts</strong> page</p></figcaption></figure>

@@ -4,23 +4,23 @@ description: Set up Storage Classes and PVCs in Kubernetes
 
 # Storage Class and PVCs
 
-### **Step 1:** Create an Amazon EFS &#x20;
+### **Step 1:** Create an Amazon EFS
 
-&#x20;Refer to steps [here](../elastic-file-system-efs/)
+Refer to steps [here](../elastic-file-system-efs/)
 
-### Step 2:  Create Storage Class with EFS Parameter
+### Step 2: Create Storage Class with EFS Parameter
 
-Navigate to  **Kubernetes** -> **Storage** -> **Storage Class**
+Navigate to **Kubernetes** -> **Storage** -> **Storage Class**
 
 Configure EFS parameter created at Step1 by clicking on EFS Parameter.
 
-![K8s Storage Class Page](<../../../../.gitbook/assets/image (166).png>)
+![K8s Storage Class Page](<../../../../.gitbook/assets/image (197).png>)
 
 ### Step 3: Create Persistent Volume (PVC) using Storage Class
 
 Here, we are configuring Kubernetes to use Storage Class created in Step 2 above, to create a Persistent Volume with 10Gi of storage capacity and ReadWriteMany access mode.
 
-![K8s Storage Class (Persistent Volume Claim Tab)](<../../../../.gitbook/assets/image (61).png>)
+![K8s Storage Class (Persistent Volume Claim Tab)](<../../../../.gitbook/assets/image (100).png>)
 
 {% hint style="warning" %}
 if you use K8s and PVCs to autoscale your storage groups and run out of space, simply adding new storage volumes may not resolve the issue. Instead, you must increase the size of the existing PVCs to accommodate your storage needs.
@@ -32,9 +32,9 @@ For guidance on how to perform volume expansion in Kubernetes, refer to the foll
 * [Expanding Kubernetes Persistent Volumes on EKS](https://www.jeffgeerling.com/blog/2019/expanding-k8s-pvs-eks-on-aws)
 {% endhint %}
 
-### Step 4:  Mount PVC to the POD Deployment
+### Step 4: Mount PVC to the POD Deployment
 
-Configure below in **Volumes** to create your application deployment using this PVC.&#x20;
+Configure below in **Volumes** to create your application deployment using this PVC.
 
 {% code title="Volumes field" %}
 ```

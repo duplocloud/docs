@@ -78,7 +78,7 @@ You can update your Target Group configurations directly from Target Group menu:
 
 1. From the DuploCloud Portal, navigate to **Cloud Services** → **Networking** → **Load Balancers**.
 2. Select the **Target Groups** tab.
-3. Click the **menu icon** (<img src="../../../../.gitbook/assets/image (460).png" alt="" data-size="line">) next to the Target Group you want to edit.
+3. Click the **menu icon** (<img src="../../../../.gitbook/assets/image (462).png" alt="" data-size="line">) next to the Target Group you want to edit.
 4. Select from the following options:
 
 <table data-header-hidden><thead><tr><th width="193.55560302734375"></th><th></th></tr></thead><tbody><tr><td><strong>Console</strong></td><td>Access the Azure Console</td></tr><tr><td><strong>Edit</strong></td><td>Modify the Target Group settings</td></tr><tr><td><strong>Register Targets</strong></td><td>Register target(s) from the Target Group</td></tr><tr><td><strong>Deregister Targets</strong></td><td>Deregister target(s) from the Target Group</td></tr><tr><td><strong>Delete</strong></td><td>Permanently removes the Target Group</td></tr></tbody></table>

@@ -14,7 +14,7 @@ The OpenVPN Access Server only forwards traffic destined for resources in the Du
 
 VPN credentials are listed on your user profile page in the DuploCloud Portal. It can be accessed by clicking the user icon (<img src="../../../.gitbook/assets/person icon.png" alt="" data-size="line">) and selecting **Profile**.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (187).png" alt=""><figcaption><p>The user menu accessible from the user icon in the upper right</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (215).png" alt=""><figcaption><p>The user menu accessible from the user icon in the upper right</p></figcaption></figure></div>
 
 ## Setting up the OpenVPN User Profile and Client App
 
@@ -25,7 +25,7 @@ VPN credentials are listed on your user profile page in the DuploCloud Portal. I
 
 3. Click on the **OpenVPN Connect Recommended for your device** icon to install the OpenVPN Connect app for your local machine.<br>
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (73).png" alt="" width="375"><figcaption><p>The OpenVPN Access Server pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (111).png" alt="" width="375"><figcaption><p>The OpenVPN Access Server pane</p></figcaption></figure></div>
 
 4. Navigate to your downloads folder, open the OpenVPN Connect file you downloaded in the previous step, and follow the prompts to finish the installation.
 5. In the **OpenVPN access server** dialog box, click on the blue **Yourself (user-locked profile)** link to download your OpenVPN user profile.

@@ -43,13 +43,13 @@ Access a read-only version of the template to view. To download an editable vers
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Select the **Templates** tab.
-3. In the row of the template you want to view, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).png" alt="" data-size="line">), and sele**ct View**.
+3. In the row of the template you want to view, click the menu icon (<img src="../../../.gitbook/assets/menu icon (1).png" alt="" data-size="line">), and sele**ct View**.
 
 ### Viewing a template uploaded to a specific Tenant
 
 1. Select the Tenant that will use the template from the **Tenant** list box.
 2. Navigate to **Automation** -> **Stacks**.
-3. In the row of the template you want to view, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).png" alt="" data-size="line">), and select **View**.
+3. In the row of the template you want to view, click the menu icon (<img src="../../../.gitbook/assets/menu icon (1).png" alt="" data-size="line">), and select **View**.
 
 ## Downloading a template
 
@@ -57,13 +57,13 @@ Access a read-only version of the template to view. To download an editable vers
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Select the **Templates** tab.
-3. In the row of the template you want to Download, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).png" alt="" data-size="line">), and select **Download**.
+3. In the row of the template you want to Download, click the menu icon (<img src="../../../.gitbook/assets/menu icon (1).png" alt="" data-size="line">), and select **Download**.
 
 ### Downloading a template uploaded to a specific Tenant
 
 1. Select the Tenant that will use the template from the **Tenant** list box.
 2. Navigate to **Automation** -> **Stacks**.
-3. In the row of the template you want to Download, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).png" alt="" data-size="line">), and select **Download**.
+3. In the row of the template you want to Download, click the menu icon (<img src="../../../.gitbook/assets/menu icon (1).png" alt="" data-size="line">), and select **Download**.
 
 ## Deleting a template
 
@@ -71,13 +71,13 @@ Access a read-only version of the template to view. To download an editable vers
 
 1. From the DuploCloud Portal, navigate to **Administrator** -> **System Settings**.
 2. Select the **Templates** tab.
-3. In the row of the template you want to delete, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).png" alt="" data-size="line">), and select **Delete**.
+3. In the row of the template you want to delete, click the menu icon (<img src="../../../.gitbook/assets/menu icon (1).png" alt="" data-size="line">), and select **Delete**.
 
 ### Deleting a template uploaded to a specific Tenant
 
 1. Select the Tenant that will use the template from the **Tenant** list box.
 2. Navigate to **Automation** -> **Stacks**.
-3. In the row of the template you want to delete, click the menu icon (<img src="../../../.gitbook/assets/menu icon (2).png" alt="" data-size="line">), and select **Delete**.
+3. In the row of the template you want to delete, click the menu icon (<img src="../../../.gitbook/assets/menu icon (1).png" alt="" data-size="line">), and select **Delete**.
 
 ## Deploying a Stacks template
 

@@ -12,17 +12,13 @@ You can look at Tenant-specific faults under **Observability** -> **Faults** or 
 
 ## Creating Alerts <a href="#id-2-toc-title" id="id-2-toc-title"></a>
 
-You can set the AWS Alerts for individual metrics.&#x20;
+You can set the AWS Alerts for individual metrics.
 
-1. From the DuploCloud portal, navigate to **Observability** -> **Alerts** and click **Add**. The **Create Alert** pane displays.&#x20;
-2. Enter the **Resource Type** and select the resource from the **Resource type** list box. Click **Nex**t.&#x20;
+1. From the DuploCloud portal, navigate to **Observability** -> **Alerts** and click **Add**. The **Create Alert** pane displays.
+2. Enter the **Resource Type** and select the resource from the **Resource type** list box. Click **Nex**t.
 3. Fill in the necessary information and click **Create**. The Alert is created.
 
-<div align="left"><img src="../../../../.gitbook/assets/image (263).png" alt=""></div>
-
-{% hint style="info" %}
-
-{% endhint %}
+<div align="left"><img src="../../../../.gitbook/assets/image (280).png" alt=""></div>
 
 ## Viewing Alerts
 

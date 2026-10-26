@@ -19,7 +19,7 @@ These features are currently only available for AWS.
 
 Before you can use Cross-tenant access, you must do the following:
 
-* In the **Security Group** associated with each tenant, add a [Security Group rule](../../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/security-group-rules.md) to allow the required port access between the tenants that need cross-tenant access.
+* In the **Security Group** associated with each tenant, add a [Security Group rule](../../overview/use-cases/creating-an-infrastructure-and-plan-for-aws/security-group-rules.md) to allow the required port access between the tenants that need cross-tenant access.
 * When accessing a resource in a tenant, include the full application namespace in the URL using this format:
 
 ```
@@ -53,8 +53,8 @@ To establish general non-IAM restricted Cross-tenant access, see [the previous s
 
 You can share access to the following Services between Tenants:
 
-* [S3 Buckets](../../../overview/aws-services/s3-bucket.md)
-* [DynamoDB Tables](../../../aws-user-guide/aws-services/database/dynamodb.md)
+* [S3 Buckets](../../overview/aws-services/s3-bucket/)
+* [DynamoDB Tables](../../overview/aws-services/database/dynamodb.md)
 * KMS Keys
 
 To configure cross-tenant access:

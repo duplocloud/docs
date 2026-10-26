@@ -19,7 +19,7 @@ To enable Host sharing, configure one Tenant to share its Hosts, and another Ten
 3. Click the **Settings** tab.
 4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (482).png" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (7).png" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** list, select **Allow hosts to run K8S pods from other tenants**.
 6. Select **Enable**, then click **Add**. This Tenant's Hosts (Azure VMs) can now run Pods from other Tenants.
 
@@ -30,7 +30,7 @@ To enable Host sharing, configure one Tenant to share its Hosts, and another Ten
 3. Click the **Settings** tab.
 4.  Click **Add**. The **Add Tenant Feature** pane displays.<br>
 
-    <div align="left"><figure><img src="../../../../.gitbook/assets/image (483).png" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../../.gitbook/assets/image (8).png" alt="" width="455"><figcaption><p><strong>Add Tenant Feature</strong> pane</p></figcaption></figure></div>
 5. From the **Select Feature** list, select **Enable option to run K8S pods on any host**.
 6. Select **Enable**, then click **Add**. This Tenant can now run Pods on other Tenant's Hosts.
 
@@ -53,10 +53,10 @@ After configuring Tenant settings to allow Host sharing, create the resources yo
 
 ### **Creating a Job or CronJob to Run on a Shared Host**
 
-Before creating a Kubernetes Job or CronJob to run on a Shared Host, [configure Tenant settings to allow Host sharing](../../../overview/use-cases/hosts-vms/adding-shared-hosts.md#configuring-tenants-to-allow-host-sharing).&#x20;
+Before creating a Kubernetes Job or CronJob to run on a Shared Host, [configure Tenant settings to allow Host sharing](../../../overview/use-cases/hosts-vms/adding-shared-hosts.md#configuring-tenants-to-allow-host-sharing).
 
 Once Host sharing is enabled:
 
-1. Follow the steps in the DuploCloud documentation to [create a Kubernetes Job](../../../../kubernetes/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [create a Kubernetes CronJob](../../../../kubernetes/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).
+1. Follow the steps in the DuploCloud documentation to [create a Kubernetes Job](../../../kubernetes-overview/jobs.md#creating-a-kubernetes-job-in-the-duplocloud-portal) or [create a Kubernetes CronJob](../../../kubernetes-overview/cronjobs.md#creating-a-kubernetes-cronjob-in-the-duplocloud-portal).
 2. On the **Add Kubernetes Job** or **Add Kubernetes CronJob** page, enable the **Run on Any Host** option.
 3. Click **Create** to deploy the Job or CronJob on a Shared Host.

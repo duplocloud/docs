@@ -14,18 +14,16 @@ Enable logging to deploy AWS Log Collector to collect logs for selected Tenant(s
 
 Configure AWS Log Collector to collect logs for non-Default Tenants.
 
-1. From the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings**. &#x20;
+1. From the DuploCloud Portal, navigate to **Administrator** -> **Observability** -> **Standard** -> **Settings**.
 2. Select the **Logging** tab, and click **Add**. The **Enable Logging** pane displays.
 
 <figure><img src="../../../../.gitbook/assets/newnew.png" alt=""><figcaption><p>The <strong>Enable Logging</strong> pane in the DuploCloud Portal</p></figcaption></figure>
 
-3. In the **Select Tenant** list box, select the Tenant for which you want to enable log collection.&#x20;
-4. In the **Cert ARN** list box, select the correct ARN.&#x20;
-5. In the **Log retention in Index(Days)** field, enter the number of days logs should be retained.&#x20;
+3. In the **Select Tenant** list box, select the Tenant for which you want to enable log collection.
+4. In the **Cert ARN** list box, select the correct ARN.
+5. In the **Log retention in Index(Days)** field, enter the number of days logs should be retained.
 6.  Click **Submit**. Log collection for the selected Tenant deploys based on the [Control Plane configuration](custom-log-collection.md#updating-the-control-plane-by-editing-the-service-description).<br>
 
-    <figure><img src="../../../../.gitbook/assets/image (257).png" alt=""><figcaption><p>The <strong>Logging</strong> tab on the <strong>Observability Settings</strong> page in the DuploCloud Portal</p></figcaption></figure>
-
-
+    <figure><img src="../../../../.gitbook/assets/image (274).png" alt=""><figcaption><p>The <strong>Logging</strong> tab on the <strong>Observability Settings</strong> page in the DuploCloud Portal</p></figcaption></figure>
 
 Once logging is enabled, you can [configure logging per Tenant](configure-logging-per-tenant.md).

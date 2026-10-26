@@ -10,18 +10,18 @@ GCP offers its own Ingress Controller, specifically created for Google Kubernete
 
 ## Container-native load balancing with GKE Ingress
 
-Container-native load balancing on Google Cloud Platform (GCP) allows Load Balancers to directly target Kubernetes Pods instead of using a node-based proxy. This approach improves performance by enabling more efficient routing, reducing latency by eliminating extra hops, and providing better health-checking capabilities.&#x20;
+Container-native load balancing on Google Cloud Platform (GCP) allows Load Balancers to directly target Kubernetes Pods instead of using a node-based proxy. This approach improves performance by enabling more efficient routing, reducing latency by eliminating extra hops, and providing better health-checking capabilities.
 
 It leverages the network endpoint groups (NEGs) feature to ensure that traffic is directed to the appropriate container instances, enabling more granular and efficient load distribution for applications running on GKE.
 
-<figure><img src="../../../.gitbook/assets/image (315).png" alt="" width="563"><figcaption><p><strong>GKE Container Native Load Balancing</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (327).png" alt="" width="563"><figcaption><p><strong>GKE Container Native Load Balancing</strong></p></figcaption></figure>
 
 ## Prerequisites
 
 Before you can create an Ingress, you must create the following DuploCloud resources:
 
 * **GKE Standard** users: create a DuploCloud **Tenant**, **Node Pool**, and **Service**.
-* **GKE Autopilot** users: create a DuploCloud **Tenant**, and **Service**.&#x20;
+* **GKE Autopilot** users: create a DuploCloud **Tenant**, and **Service**.
 
 See the [DuploCloud GCP User Guide](../../overview-1/) for steps on how to create Tenants, Node Pools and Services. Once your Tenant and Service are deployed, you can add and configure a Load Balancer listener.
 
@@ -32,9 +32,9 @@ See the [DuploCloud GCP User Guide](../../overview-1/) for steps on how to creat
 3. Click the **Load Balancers** tab.
 4. Click **Configure Load Balancer**. The **Add Load Balancer Listener** pane appears.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (316).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (328).png" alt="" width="375"><figcaption><p><strong>Add Load Balancer Listener</strong> pane</p></figcaption></figure></div>
 
-5. From the **Select Type** list box, select **K8s ClusterIP**.&#x20;
+5. From the **Select Type** list box, select **K8s ClusterIP**.
 6. Optionally, enable **Advanced Kubernetes Settings** and configure the **External Traffic Policy** and **Extra Selector Labels** fields.
 7. Optionally, select **Set HealthCheck annotations** (this ensures the Kubernetes Service is recognized by the GKE Ingress Controller).
 8. Optionally, enable **Additional health check configs**.
@@ -66,7 +66,7 @@ Once a Service and Load Balancer are deployed, complete the following steps to a
 1. Select **Kubernetes** -> **Ingress** from the navigation pane.
 2. Click **Add**. The **Add Kubernetes Ingress** page displays.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (670).png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page </p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/Screenshot (670).png" alt=""><figcaption><p>The <strong>Add Kubernetes Ingress</strong> page</p></figcaption></figure></div>
 
 1. Complete the fields to configure the Ingress:
 
@@ -89,7 +89,7 @@ This update reflects GCP’s native Ingress TLS behavior.
 
 4. Before you can save the Ingress, you must add at least one rule. In the **Ingress Rules** section, click **Add Rule**. The **Add Ingress Rule** pane displays.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/image (319).png" alt="" width="375"><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/image (331).png" alt="" width="375"><figcaption><p><strong>Add Ingress Rule</strong> pane</p></figcaption></figure></div>
 
 2. Complete the fields to configure the rule:
 
@@ -100,8 +100,8 @@ This update reflects GCP’s native Ingress TLS behavior.
 
 ## Viewing an Ingress
 
-You can view the Ingresses you have created by navigating to **Kubernetes** -> **Ingress**.&#x20;
+You can view the Ingresses you have created by navigating to **Kubernetes** -> **Ingress**.
 
 Click on an Ingress name in the **NAME** column to view Ingress details.
 
-<figure><img src="../../../.gitbook/assets/image (321).png" alt=""><figcaption><p><strong>Ingress</strong> page displaying the added Ingress</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (333).png" alt=""><figcaption><p><strong>Ingress</strong> page displaying the added Ingress</p></figcaption></figure>

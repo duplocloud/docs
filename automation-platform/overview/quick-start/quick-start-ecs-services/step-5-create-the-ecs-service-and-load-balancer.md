@@ -14,8 +14,8 @@ _Estimated time to complete Step 5: 10 minutes._
 
 Before creating the ECS Service and Load Balancer, verify that you accomplished the tasks in the previous tutorial steps. Using the DuploCloud Portal, confirm that:
 
-* An [Infrastructure and Plan](../../../../overview/quick-start/step-1-infrastructure.md) exist, both named **NONPROD**.
-* The **NONPROD** infrastructure has [ECS **Enabled**](../../../../overview/quick-start/step-1-infrastructure.md#check-your-work).
+* An [Infrastructure and Plan](../step-1-infrastructure.md) exist, both named **NONPROD**.
+* The **NONPROD** infrastructure has [ECS **Enabled**](../step-1-infrastructure.md#check-your-work).
 * A Tenant named [**dev01** has been created](../step-2-tenant.md).
 * A [Task Definition named **sample-task-def**](step-4-create-app-via-ecs.md) has been created.
 

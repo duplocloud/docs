@@ -29,4 +29,4 @@ Container Rollback in DuploCloud allows users to quickly revert a Kubernetes or 
 5. Set the **Value** to **True** to disable image history tracking (default is **False**).
 6.  Click **Submit**. The setting is saved.<br>
 
-    <figure><img src="../../../../.gitbook/assets/system config (2).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../../.gitbook/assets/system config (1).png" alt=""><figcaption></figcaption></figure>

@@ -16,10 +16,10 @@ User VPN credentials are accessible through the user profile page.
 
 1.  In the DuploCloud Portal, navigate to **Administrator** -> **Users** and select your user name, or click on the person icon (<img src="../../../.gitbook/assets/Screenshot (347).png" alt="" data-size="line">) in the upper-right corner, and select **Profile**.<br>
 
-    <div align="left"><figure><img src="../../../.gitbook/assets/image (187).png" alt="" width="261"><figcaption><p>The User menu</p></figcaption></figure></div>
+    <div align="left"><figure><img src="../../../.gitbook/assets/image (215).png" alt="" width="261"><figcaption><p>The User menu</p></figcaption></figure></div>
 2. You will find your VPN credentials in the **VPN Details** section of your profile.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/PROFILE (1).png" alt="" width="563"><figcaption><p>VPN Details section of the user profile</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/PROFILE.png" alt="" width="563"><figcaption><p>VPN Details section of the user profile</p></figcaption></figure></div>
 
 ## Setting up the OpenVPN User Profile and Client App
 
@@ -30,10 +30,10 @@ User VPN credentials are accessible through the user profile page.
    ![](../../../.gitbook/assets/666.png)
 4. Install the OpenVPN Connect app on your local machine.\
    \
-   ![](<../../../.gitbook/assets/image (73).png>)
+   ![](<../../../.gitbook/assets/image (111).png>)
 5. From the OpenVPN Access Server user portal, download your **user-locked profile** by clicking on the link labeled **Yourself** (this will generate the `.ovpn` file).\
    \
-   ![](<../../../.gitbook/assets/image (165).png>)
+   ![](<../../../.gitbook/assets/image (196).png>)
 6. Open the `.ovpn` file and click **OK** in the **Import .ovpn profile** dialog box.
 7. Once the profile is imported, click **Connect** to establish the VPN connection.\
    \

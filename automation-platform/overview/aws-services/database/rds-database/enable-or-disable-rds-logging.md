@@ -8,9 +8,9 @@ You can enable or disable logging for an RDS database at any time, using the Dup
 
 ## Prerequisites
 
-To update logging for an RDS, you must select the **Enable Logging** option when you [create the RDS](../../../../../aws-user-guide/aws-services/database/rds-database/).
+To update logging for an RDS, you must select the **Enable Logging** option when you [create the RDS](./).
 
-## Update RDS logging&#x20;
+## Update RDS logging
 
 1. In the DuploCloud Portal, navigate to **Cloud Services** -> **Databases**.
 2. In the **RDS** tab, from the **Name** column, select the database for which you want to enable or disable logging.

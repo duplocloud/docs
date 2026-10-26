@@ -12,13 +12,13 @@ _**Last Updated, May 1, 2026**_
 * AWS - [Aurora Global Database](../overview/aws-services/database/rds-database/aurora-global-database.md) — Support for globally distributed Aurora clusters.²
 * Kubernetes – [Image Update API](../kubernetes-overview/initcontainers-and-sidecar-containers.md) — Support image updates for additional and init containers.¹<sup>,</sup>²
 * AWS - [ElastiCache Snapshot Retention](../overview/aws-services/database/elastic-cache.md#updating-snapshot-retention-limit) — Configure snapshot retention limits.¹
-* Cost Management - [Custom Resource Tagging](../../overview/use-cases/custom-resource-tags.md) — Apply custom tags to cloud resources.¹<sup>,</sup>²
+* Cost Management - [Custom Resource Tagging](../overview/use-cases/custom-resource-tags.md) — Apply custom tags to cloud resources.¹<sup>,</sup>²
 * Security & Compliance - [Compliance Documents](../security-and-compliance/compliance-reports.md) — Download DuploCloud compliance reports._¹_
-* AWS - [ECS Run Task](../../overview/aws-services/containers/ecs-containers-and-task-definitions/#running-a-task-optional) — Allow selecting a capacity provider strategy when running ECS tasks.¹<sup>,</sup>²
+* AWS - [ECS Run Task](../overview/aws-services/containers/ecs-containers-and-task-definitions/#running-a-task-optional) — Allow selecting a capacity provider strategy when running ECS tasks.¹<sup>,</sup>²
 * AWS - [S3 Event Notifications](../overview/aws-services/s3-bucket/s3-bucket-notifications.md) — Support for configuring Amazon S3 event notifications.²
-* AWS - [Lambda Edit Menu Updates](../../overview/aws-services/lambda/#id-3-toc-title) — Add Maximum Retry Attempts and Maximum Event Age.²
-* Kubernetes - [Suspend CronJobs](../../kubernetes/cronjobs.md#suspending-a-cronjob) using a suspend true/false setting.²
-* Security - [Attach a default Web Application Firewall (WAF)](../../diagnostics-overview/web-application-firewall-waf.md#setting-a-default-waf-in-a-plan) to all ALBs at the tenant level.²
+* AWS - [Lambda Edit Menu Updates](../overview/aws-services/lambda/#id-3-toc-title) — Add Maximum Retry Attempts and Maximum Event Age.²
+* Kubernetes - [Suspend CronJobs](../kubernetes-overview/cronjobs.md#suspending-a-cronjob) using a suspend true/false setting.²
+* Security - [Attach a default Web Application Firewall (WAF)](../diagnostics-overview/web-application-firewall-waf.md#setting-a-default-waf-in-a-plan) to all ALBs at the tenant level.²
 * General - [Tenant Indicator](../access-control/setting-tenant-topbar-color.md) — Customize the top bar color for individual Tenants.²
 * AI - [AI Slack Integration](/broken/pages/f7OsXF1qUJXwekn2sry3) — Support for integrating DuploCloud AI capabilities with Slack.²
 * AWS - [CloudFront Origin Access Control](../overview/aws-services/cloudfront/cloudfront.md) — Use OAC instead of deprecated OAI.¹<sup>,</sup>²
@@ -30,18 +30,18 @@ _**Last Updated, May 1, 2026**_
 * AWS - [AMI enhancements](../overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md) — Select, restrict, or share AMIs across Tenants.¹<sup>,</sup>²
 * AWS - [Amazon MQ support](../overview/aws-services/amazon-mq.md) — Provision and manage AWS MQ brokers in DuploCloud.¹<sup>,</sup>²
 * AWS - [App Runner support](../overview/aws-services/app-runner.md) — Provision and manage AWS App Runner services.¹<sup>,</sup>²
-* AWS - [ECS launch and network mode](../../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition) — Select launch type and network mode for ECS tasks.¹<sup>,</sup>²
+* AWS - [ECS launch and network mode](../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition) — Select launch type and network mode for ECS tasks.¹<sup>,</sup>²
 * AWS - [OpenSearch upgrade support](../overview/aws-services/elasticsearch.md#managing-an-opensearch-instance) — Upgrade OpenSearch versions within DuploCloud.¹<sup>,</sup>²
 * AWS - [EC2 Snapshots](../overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.¹<sup>,</sup>²
-* AWS - [Ingress: Multi-certificate support](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB Ingress.¹<sup>,</sup>²
+* AWS - [Ingress: Multi-certificate support](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB Ingress.¹<sup>,</sup>²
 * AWS - Amazon Linux 2023 support.¹<sup>,</sup>²
-* Azure - [MSSQL Backup retention](../../overview-2/azure-services/databases/sql-database.md#updating-the-backup-retention-period-for-a-database) — Enable and manage Azure SQL Server backup retention.¹
+* Azure - [MSSQL Backup retention](../overview-2/azure-services/databases/sql-database.md#updating-the-backup-retention-period-for-a-database) — Enable and manage Azure SQL Server backup retention.¹
 * Azure - [Deleted Key Vaults listing](../overview-2/azure-services/key-vault.md#managing-deleted-azure-key-vaults) — View and recover or purge deleted Azure Key Vaults.¹
 * Azure - [Azure CosmosDB support](../overview-2/azure-services/databases/cosmosdb.md) — Provision and manage CosmosDB resources in Azure.¹
 * GCP - [Cloud SQL edition attribute](../overview-1/gcp-services/gcp-databases/cloud-sql.md#creating-a-cloud-sql-database) — Add and manage edition attributes for Cloud SQL instances.¹
 * GCP - [Ingress TLS annotation support](../kubernetes-overview/ingress-loadbalancer/gke-ingress.md#configuring-the-ingress) — Use annotations to configure TLS host and secret.¹
 * GCP - [PostgreSQL dedicated node types](../overview-1/gcp-services/gcp-databases/cloud-sql.md#creating-a-cloud-sql-database) — Use dedicated nodes for PostgreSQL deployments.¹
-* GCP - [Disable NAT during infra creation](../../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/) — Option to skip NAT setup when creating infra.¹
+* GCP - [Disable NAT during infra creation](../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/) — Option to skip NAT setup when creating infra.¹
 * GCP - [GCP Secret Manager support](../overview-1/gcp-services/gcp-secrets-manager.md) — Manage secrets using GCP Secret Manager service.¹
 * GCP - [Firewall rule support](../overview-1/security-configuration-settings/gcp-firewall-rules/) — Manage network rules at the infrastructure and tenant levels.¹
 * GCP - [Security Command Center](../overview-1/gcp-services/gcp-security-command-center.md) — Integration with GCP Security Command Center.¹
@@ -55,7 +55,7 @@ _**Last Updated, May 1, 2026**_
 * Cost Management - [Billing Alerts](../diagnostics-overview/configure-billing-alerts.md) — Configure billing alerts across AWS, Azure, and GCP.¹
 * Identity/Access Management – [PermissionSet RBAC](../security-and-compliance/access-control-2/permission-sets.md#configuring-permission-sets-in-duplocloud) — Priority-based role evaluation.¹
 * AWS - [EKS Taint Support](../overview/aws-services/containers/eks-containers-and-services/#creating-a-duplocloud-eks-service) — Support adding taints to EKS nodes after node creation.¹
-* AWS - [Tenant Security Group IPv6](../../security-and-compliance/access-control/security-groups.md) — Support IPv6 rules in Tenant-level security groups.¹
+* AWS - [Tenant Security Group IPv6](../security-and-compliance/access-control/security-groups.md) — Support IPv6 rules in Tenant-level security groups.¹
 * AWS - [External DNS Infra Setting](../overview/aws-systems-settings/aws-infrastructure-settings.md#infrastructure-settings) for managing DNS record behavior.¹
 * AWS - [Amazon CloudFront](../overview/aws-services/cloudfront/cloudfront.md) — Support for CloudFront distributions through DuploCloud.¹
 * GCP - Support for defining [GCP Maintenance Windows](../overview-1/use-cases/gke-maintenance-windows.md).¹
@@ -63,7 +63,7 @@ _**Last Updated, May 1, 2026**_
 * GCP - Support for [dynamic NAT port allocation](../overview-1/gcp-services/dynamic-nat-port-allocation.md) during GCP infrastructure creation.¹
 * GCP - Support for [Cloud Tasks](../overview-1/gcp-services/cloud-tasks.md) integration.²
 * Azure - Support for managing [infra secrets in Azure](../overview-2/azure-services/infra-secrets.md).¹
-* Kubernetes - [Cron Job Recent Job Link](../../kubernetes/cronjobs.md) — Navigate from a CronJob to most recent execution.¹<sup>,</sup>²
+* Kubernetes - [Cron Job Recent Job Link](../kubernetes-overview/cronjobs.md) — Navigate from a CronJob to most recent execution.¹<sup>,</sup>²
 * Kubernetes - [ArgoCD integration](../introduction-to-ci-cd/argocd.md) — Support for GitOps deployment and management workflows.¹
 * Kubernetes - [ResourceQuota](../kubernetes-overview/resourcequotas.md) — Manage namespace resource limits.¹
 * Notifications - [Custom Alert Emails](../access-control/user-access-and-permissions/user-email-notifications.md) — Manage custom email addresses for alert notifications.²
@@ -76,29 +76,29 @@ _**Last Updated, May 1, 2026**_
 * Observability - [Customizable Kibana URL for Logging Views.](../diagnostics-overview/standard-observability-suite/setup/logging-setup/custom-kibana-logging-url.md)²
 * AWS - Create and manage [Target Groups for EC2 Instances, IPs, and ALBs (AWS)](../overview/aws-services/load-balancers/target-groups.md).¹
 * AWS - Support for [ElastiCache Valkey](../overview/aws-services/database/elastic-cache.md#creating-a-redis-or-valkey-elasticache-instance).¹
-* AWS - [Set Retry and Expiration Limits for Asynchronous Lambda Invocations.](../../overview/aws-services/lambda/)¹
+* AWS - [Set Retry and Expiration Limits for Asynchronous Lambda Invocations.](../overview/aws-services/lambda/)¹
 * AWS - Configure [SQS dead letter queues and redrive policies in AWS](../overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).¹
 * AWS - Support for Modifying [ASG Launch Templates](../overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).¹
 * AWS - [Instance Refresh action for AWS Auto Scaling Groups (ASG)](../overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).¹
 * AWS - Customize CloudWatch metrics for [AWS Auto Scaling Groups (ASG)](../overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-autoscaling-groups-asg).¹
 * AWS - [SNS with FIFO (First-In-First-Out) topics.](../overview/aws-services/sns-topic.md#creating-a-sns-topic)¹
 * AWS - Create scheduled snapshot windows for automated backups in [AWS Redis](../overview-2/azure-services/databases/redis-database.md).¹
-* AWS - Support for [taints with EKS Hosts or Agent Pools](../../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).¹<sup>,</sup>²
+* AWS - Support for [taints with EKS Hosts or Agent Pools](../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).¹<sup>,</sup>²
 * AWS - [Download inventory reports of all AWS resources](../extras-overview/inventory.md#downloading-an-inventory-report) (for StateRAMP compliance).¹
-* AWS - Support for [Lambda JAR with S3](../../overview/aws-services/lambda/#id-3-toc-title).¹
-* AWS - Support for aurora-iopt1 storage type in [Aurora RDS](../../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).¹
+* AWS - Support for [Lambda JAR with S3](../overview/aws-services/lambda/#id-3-toc-title).¹
+* AWS - Support for aurora-iopt1 storage type in [Aurora RDS](../overview/aws-services/database/rds-database/#id-0-toc-title).¹
 * AWS - Force delete and update settings options added for [ECR repositories](../overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).¹
 * AWS - Support for [serverless Kafka clusters](../overview/aws-services/kafka-cluster.md#creating-a-kafka-cluster) for AWS users.¹
 * AWS - [Disable AWS JIT access for non-admin users](../overview/use-cases/jit-access.md#disabling-jit-access-for-non-admin-users).¹
-* AWS - Support for configuring [S3 bucket replication rules](../../overview/aws-services/s3-bucket.md#s3-bucket-replication-rules).¹
-* AWS - Update [RDS Performance Insights](../../aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).¹
+* AWS - Support for configuring [S3 bucket replication rules](../overview/aws-services/s3-bucket/#s3-bucket-replication-rules).¹
+* AWS - Update [RDS Performance Insights](../overview/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).¹
 * AWS - Update [ECR repository settings](../overview/aws-services/elastic-container-registry-ecr/).¹
 * AWS - [Enable delete protection for AWS Load Balancers.](../overview/aws-services/load-balancers/#additional-load-balancer-settings)¹
-* AWS - Support for adding TLS Hosts and TLS Secrets fields when configuring[ Ingress for EKS](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
-* AWS - Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
-* AWS - Support for [ECS with EC2 Capacity Provider](../../overview/aws-services/containers/ecs-containers-and-task-definitions/#configuring-ecs-with-ec2-capacity-provider).²
+* AWS - Support for adding TLS Hosts and TLS Secrets fields when configuring[ Ingress for EKS](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
+* AWS - Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
+* AWS - Support for [ECS with EC2 Capacity Provider](../overview/aws-services/containers/ecs-containers-and-task-definitions/#configuring-ecs-with-ec2-capacity-provider).²
 * Azure - Add new secret versions in [Azure Key Vault](../overview-2/azure-services/key-vault.md).²
-* Azure - Support for [Azure Container Registry](../../overview-2/azure-services/azure-container-registry-acr.md).²
+* Azure - Support for [Azure Container Registry](../overview-2/azure-services/azure-container-registry-acr.md).²
 * Azure - Support for [Azure Availability Sets](../overview-2/use-cases/hosts-vms/availability-sets.md).¹
 * Azure - Support for [Azure Data Factory](../overview-2/azure-services/data-factory.md).¹
 * Azure - [Enable autoscaling in the AKS default node pool](../overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md).¹
@@ -128,25 +128,25 @@ _**Last Updated, May 1, 2026**_
 * Azure -[ Maintenance Schedules](../overview-2/use-cases/azure-maintenance-schedules.md) — Configure Azure Maintenance Schedules within DuploCloud.¹
 * General - [Profile Page API Tokens](../access-control/api-and-session-management/api-tokens.md#creating-a-permanent-api-token-from-the-profile-page) — Create personal API tokens from the user Profile page.¹
 * Azure - [Container Apps support](../overview-2/azure-services/azure-container-apps.md) — Provision and manage Azure Container Apps.¹<sup>,</sup>²
-* AWS - [ECS Task Placement Strategy](../../overview/aws-services/containers/ecs-containers-and-task-definitions/) — Enable binpacking/task placement strategies for ECS.²
+* AWS - [ECS Task Placement Strategy](../overview/aws-services/containers/ecs-containers-and-task-definitions/) — Enable binpacking/task placement strategies for ECS.²
 * Azure - [Security Standard](../overview-2/azure-security-standards.md) — Apply and manage Azure Security Standard configurations.¹
 * AWS - [Customize Auto Alerts](../overview/use-cases/faults-and-alarms/automatic-alert-creation.md) — Configure custom alert thresholds for AWS resources.¹
 * Azure - [Storage Account: Anonymous Blob Access](../overview-2/azure-services/storage-account.md) — Enable anonymous blob access.²
 * AWS - [CloudFront Functions and KeyStore](../overview/aws-services/cloudfront/) — Provision CloudFront Functions and KeyStores.¹<sup>,</sup>²
-* Azure - [VM Disk Support](../../overview-2/use-cases/hosts-vms/) — Manage Azure VM disks via DuploCloud.²
+* Azure - [VM Disk Support](../overview-2/use-cases/hosts-vms/) — Manage Azure VM disks via DuploCloud.²
 * AI Suite - [SRE Master Agent](/broken/pages/DGneE26z6b6HzAAzYofV#site-reliability-engineer-sre-agent) — Use the SRE Master AI Agent for automated DevOps operations.²
 * CI/CD - [GitHub Actions Self-Hosted Runners](../introduction-to-ci-cd/github-actions/self-hosted-runners.md) — Provision self-hosted GitHub Actions runners.¹<sup>,</sup>²
 * GCP - [GKE Node Pool Scaling](../overview-1/gcp-services/node-pools.md#adding-a-node-pool) — Support scaling node pools down to zero.¹<sup>,</sup>²
 * AWS - [Aurora Global Database](../overview/aws-services/database/rds-database/aurora-global-database.md) — Support for globally distributed Aurora clusters.²
 * Kubernetes – [Image Update API](../kubernetes-overview/initcontainers-and-sidecar-containers.md) — Support image updates for additional and initContainers.¹<sup>,</sup>²
 * AWS - [ElastiCache Snapshot Retention](../overview/aws-services/database/elastic-cache.md#updating-snapshot-retention-limit) — Configure snapshot retention limits.¹
-* Cost Management - [Custom Resource Tagging](../../overview/use-cases/custom-resource-tags.md) — Apply custom tags to cloud resources.¹<sup>,</sup>²
+* Cost Management - [Custom Resource Tagging](../overview/use-cases/custom-resource-tags.md) — Apply custom tags to cloud resources.¹<sup>,</sup>²
 * Security & Compliance - [Compliance Documents](../security-and-compliance/compliance-reports.md) — Download DuploCloud compliance reports._¹_
-* AWS - [ECS Run Task](../../overview/aws-services/containers/ecs-containers-and-task-definitions/#running-a-task-optional) — Allow selecting a capacity provider strategy when running ECS tasks.¹<sup>,</sup>²
+* AWS - [ECS Run Task](../overview/aws-services/containers/ecs-containers-and-task-definitions/#running-a-task-optional) — Allow selecting a capacity provider strategy when running ECS tasks.¹<sup>,</sup>²
 * AWS - [S3 Event Notifications](../overview/aws-services/s3-bucket/s3-bucket-notifications.md) — Support for configuring Amazon S3 event notifications.²
-* AWS - [Lambda Edit Menu Updates](../../overview/aws-services/lambda/#id-3-toc-title) — Add Maximum Retry Attempts and Maximum Event Age.²
-* Kubernetes - [Suspend CronJobs](../../kubernetes/cronjobs.md#suspending-a-cronjob) using a suspend true/false setting.²
-* Security - [Attach a default Web Application Firewall (WAF)](../../diagnostics-overview/web-application-firewall-waf.md#setting-a-default-waf-in-a-plan) to all ALBs at the tenant level.²
+* AWS - [Lambda Edit Menu Updates](../overview/aws-services/lambda/#id-3-toc-title) — Add Maximum Retry Attempts and Maximum Event Age.²
+* Kubernetes - [Suspend CronJobs](../kubernetes-overview/cronjobs.md#suspending-a-cronjob) using a suspend true/false setting.²
+* Security - [Attach a default Web Application Firewall (WAF)](../diagnostics-overview/web-application-firewall-waf.md#setting-a-default-waf-in-a-plan) to all ALBs at the tenant level.²
 * General - [Tenant Indicator](../access-control/setting-tenant-topbar-color.md) — Customize the top bar color for individual Tenants.²
 * AI - [AI Slack Integration](/broken/pages/f7OsXF1qUJXwekn2sry3) — Support for integrating DuploCloud AI capabilities with Slack.²
 * AWS - [CloudFront Origin Access Control](../overview/aws-services/cloudfront/cloudfront.md) — Use OAC instead of deprecated OAI.¹<sup>,</sup>²
@@ -158,18 +158,18 @@ _**Last Updated, May 1, 2026**_
 * AWS - [AMI enhancements](../overview/use-cases/hosts-vms/create-amazon-machine-image-ami.md) — Select, restrict, or share AMIs across Tenants.¹<sup>,</sup>²
 * AWS - [Amazon MQ support](../overview/aws-services/amazon-mq.md) — Provision and manage AWS MQ brokers in DuploCloud.¹<sup>,</sup>²
 * AWS - [App Runner support](../overview/aws-services/app-runner.md) — Provision and manage AWS App Runner services.¹<sup>,</sup>²
-* AWS - [ECS launch and network mode](../../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition) — Select launch type and network mode for ECS tasks.¹<sup>,</sup>²
+* AWS - [ECS launch and network mode](../overview/aws-services/containers/ecs-containers-and-task-definitions/#creating-a-task-definition) — Select launch type and network mode for ECS tasks.¹<sup>,</sup>²
 * AWS - [OpenSearch upgrade support](../overview/aws-services/elasticsearch.md#managing-an-opensearch-instance) — Upgrade OpenSearch versions within DuploCloud.¹<sup>,</sup>²
 * AWS - [EC2 Snapshots](../overview/use-cases/hosts-vms/ec2-snapshots.md) — Support for managing and automating EC2 volume snapshots.¹<sup>,</sup>²
-* AWS - [Ingress: Multi-certificate support](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB Ingress.¹<sup>,</sup>²
+* AWS - [Ingress: Multi-certificate support](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md#adding-certificates-to-the-ingress) — Attach multiple TLS certs to AWS LB Ingress.¹<sup>,</sup>²
 * AWS - Amazon Linux 2023 support.¹<sup>,</sup>²
-* Azure - [MSSQL Backup retention](../../overview-2/azure-services/databases/sql-database.md#updating-the-backup-retention-period-for-a-database) — Enable and manage Azure SQL Server backup retention.¹
+* Azure - [MSSQL Backup retention](../overview-2/azure-services/databases/sql-database.md#updating-the-backup-retention-period-for-a-database) — Enable and manage Azure SQL Server backup retention.¹
 * Azure - [Deleted Key Vaults listing](../overview-2/azure-services/key-vault.md#managing-deleted-azure-key-vaults) — View and recover or purge deleted Azure Key Vaults.¹
 * Azure - [Azure CosmosDB support](../overview-2/azure-services/databases/cosmosdb.md) — Provision and manage CosmosDB resources in Azure.¹
 * GCP - [Cloud SQL edition attribute](../overview-1/gcp-services/gcp-databases/cloud-sql.md#creating-a-cloud-sql-database) — Add and manage edition attributes for Cloud SQL instances.¹
 * GCP - [Ingress TLS annotation support](../kubernetes-overview/ingress-loadbalancer/gke-ingress.md#configuring-the-ingress) — Use annotations to configure TLS host and secret.¹
 * GCP - [PostgreSQL dedicated node types](../overview-1/gcp-services/gcp-databases/cloud-sql.md#creating-a-cloud-sql-database) — Use dedicated nodes for PostgreSQL deployments.¹
-* GCP - [Disable NAT during infra creation](../../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/) — Option to skip NAT setup when creating infra.¹
+* GCP - [Disable NAT during infra creation](../overview-1/use-cases/creating-an-infrastructure-and-plan-for-gcp/) — Option to skip NAT setup when creating infra.¹
 * GCP - [GCP Secret Manager support](../overview-1/gcp-services/gcp-secrets-manager.md) — Manage secrets using GCP Secret Manager service.¹
 * GCP - [Firewall rule support](../overview-1/security-configuration-settings/gcp-firewall-rules/) — Manage network rules at the infrastructure and tenant levels.¹
 * GCP - [Security Command Center](../overview-1/gcp-services/gcp-security-command-center.md) — Integration with GCP Security Command Center.¹
@@ -183,7 +183,7 @@ _**Last Updated, May 1, 2026**_
 * Cost Management - [Billing Alerts](../diagnostics-overview/configure-billing-alerts.md) — Configure billing alerts across AWS, Azure, and GCP.¹
 * Identity/Access Management – [PermissionSet RBAC](../security-and-compliance/access-control-2/permission-sets.md#configuring-permission-sets-in-duplocloud) — Priority-based role evaluation.¹
 * AWS - [EKS Taint Support](../overview/aws-services/containers/eks-containers-and-services/#creating-a-duplocloud-eks-service) — Support adding taints to EKS nodes after node creation.¹
-* AWS - [Tenant Security Group IPv6](../../security-and-compliance/access-control/security-groups.md) — Support IPv6 rules in Tenant-level security groups.¹
+* AWS - [Tenant Security Group IPv6](../security-and-compliance/access-control/security-groups.md) — Support IPv6 rules in Tenant-level security groups.¹
 * AWS - [External DNS Infra Setting](../overview/aws-systems-settings/aws-infrastructure-settings.md#infrastructure-settings) for managing DNS record behavior.¹
 * AWS - [Amazon CloudFront](../overview/aws-services/cloudfront/cloudfront.md) — Support for CloudFront distributions through DuploCloud.¹
 * GCP - Support for defining [GCP Maintenance Windows](../overview-1/use-cases/gke-maintenance-windows.md).¹
@@ -191,7 +191,7 @@ _**Last Updated, May 1, 2026**_
 * GCP - Support for [dynamic NAT port allocation](../overview-1/gcp-services/dynamic-nat-port-allocation.md) during GCP infrastructure creation.¹
 * GCP - Support for [Cloud Tasks](../overview-1/gcp-services/cloud-tasks.md) integration.²
 * Azure - Support for managing [infra secrets in Azure](../overview-2/azure-services/infra-secrets.md).¹
-* Kubernetes - [Cron Job Recent Job Link](../../kubernetes/cronjobs.md) — Navigate from a CronJob to most recent execution.¹<sup>,</sup>²
+* Kubernetes - [Cron Job Recent Job Link](../kubernetes-overview/cronjobs.md) — Navigate from a CronJob to most recent execution.¹<sup>,</sup>²
 * Kubernetes - [ArgoCD integration](../introduction-to-ci-cd/argocd.md) — Support for GitOps deployment and management workflows.¹
 * Kubernetes - [ResourceQuota](../kubernetes-overview/resourcequotas.md) — Manage namespace resource limits.¹
 * Notifications - [Custom Alert Emails](../access-control/user-access-and-permissions/user-email-notifications.md) — Manage custom email addresses for alert notifications.²
@@ -204,29 +204,29 @@ _**Last Updated, May 1, 2026**_
 * Observability - [Customizable Kibana URL for Logging Views.](../diagnostics-overview/standard-observability-suite/setup/logging-setup/custom-kibana-logging-url.md)²
 * AWS - Create and manage [Target Groups for EC2 Instances, IPs, and ALBs (AWS)](../overview/aws-services/load-balancers/target-groups.md).¹
 * AWS - Support for [ElastiCache Valkey](../overview/aws-services/database/elastic-cache.md#creating-a-redis-or-valkey-elasticache-instance).¹
-* AWS - [Set Retry and Expiration Limits for Asynchronous Lambda Invocations.](../../overview/aws-services/lambda/)¹
+* AWS - [Set Retry and Expiration Limits for Asynchronous Lambda Invocations.](../overview/aws-services/lambda/)¹
 * AWS - Configure [SQS dead letter queues and redrive policies in AWS](../overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).¹
 * AWS - Support for Modifying [ASG Launch Templates](../overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/launch-templates.md).¹
 * AWS - [Instance Refresh action for AWS Auto Scaling Groups (ASG)](../overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/instance-refresh-for-asg.md).¹
 * AWS - Customize CloudWatch metrics for [AWS Auto Scaling Groups (ASG)](../overview/use-cases/hosts-vms/auto-scaling/auto-scaling-groups/#creating-autoscaling-groups-asg).¹
 * AWS - [SNS with FIFO (First-In-First-Out) topics.](../overview/aws-services/sns-topic.md#creating-a-sns-topic)¹
 * AWS - Create scheduled snapshot windows for automated backups in [AWS Redis](../overview-2/azure-services/databases/redis-database.md).¹
-* AWS - Support for [taints with EKS Hosts or Agent Pools](../../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).¹<sup>,</sup>²
+* AWS - Support for [taints with EKS Hosts or Agent Pools](../overview/use-cases/hosts-vms/display-tainted-ec2-hosts.md).¹<sup>,</sup>²
 * AWS - [Download inventory reports of all AWS resources](../extras-overview/inventory.md#downloading-an-inventory-report) (for StateRAMP compliance).¹
-* AWS - Support for [Lambda JAR with S3](../../overview/aws-services/lambda/#id-3-toc-title).¹
-* AWS - Support for aurora-iopt1 storage type in [Aurora RDS](../../aws-user-guide/aws-services/database/rds-database/#id-0-toc-title).¹
+* AWS - Support for [Lambda JAR with S3](../overview/aws-services/lambda/#id-3-toc-title).¹
+* AWS - Support for aurora-iopt1 storage type in [Aurora RDS](../overview/aws-services/database/rds-database/#id-0-toc-title).¹
 * AWS - Force delete and update settings options added for [ECR repositories](../overview/aws-services/elastic-container-registry-ecr/#updating-ecr-repository-settings).¹
 * AWS - Support for [serverless Kafka clusters](../overview/aws-services/kafka-cluster.md#creating-a-kafka-cluster) for AWS users.¹
 * AWS - [Disable AWS JIT access for non-admin users](../overview/use-cases/jit-access.md#disabling-jit-access-for-non-admin-users).¹
-* AWS - Support for configuring [S3 bucket replication rules](../../overview/aws-services/s3-bucket.md#s3-bucket-replication-rules).¹
-* AWS - Update [RDS Performance Insights](../../aws-user-guide/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).¹
+* AWS - Support for configuring [S3 bucket replication rules](../overview/aws-services/s3-bucket/#s3-bucket-replication-rules).¹
+* AWS - Update [RDS Performance Insights](../overview/aws-services/database/rds-database/#updating-performance-insights-for-an-existing-rds).¹
 * AWS - Update [ECR repository settings](../overview/aws-services/elastic-container-registry-ecr/).¹
 * AWS - [Enable delete protection for AWS Load Balancers.](../overview/aws-services/load-balancers/#additional-load-balancer-settings)¹
-* AWS - Support for adding TLS Hosts and TLS Secrets fields when configuring[ Ingress for EKS](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
-* AWS - Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
-* AWS - Support for [ECS with EC2 Capacity Provider](../../overview/aws-services/containers/ecs-containers-and-task-definitions/#configuring-ecs-with-ec2-capacity-provider).²
+* AWS - Support for adding TLS Hosts and TLS Secrets fields when configuring[ Ingress for EKS](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
+* AWS - Automatically redirect incoming HTTP requests to HTTPS for [EKS Ingress](../kubernetes-overview/ingress-loadbalancer/adding-ingress.md).¹
+* AWS - Support for [ECS with EC2 Capacity Provider](../overview/aws-services/containers/ecs-containers-and-task-definitions/#configuring-ecs-with-ec2-capacity-provider).²
 * Azure - Add new secret versions in [Azure Key Vault](../overview-2/azure-services/key-vault.md).²
-* Azure - Support for [Azure Container Registry](../../overview-2/azure-services/azure-container-registry-acr.md).²
+* Azure - Support for [Azure Container Registry](../overview-2/azure-services/azure-container-registry-acr.md).²
 * Azure - Support for [Azure Availability Sets](../overview-2/use-cases/hosts-vms/availability-sets.md).¹
 * Azure - Support for [Azure Data Factory](../overview-2/azure-services/data-factory.md).¹
 * Azure - [Enable autoscaling in the AKS default node pool](../overview-2/use-cases/infrastructure-and-plan/aks-initial-setup.md).¹
