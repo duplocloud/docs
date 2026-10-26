@@ -1,6 +1,6 @@
 ---
 name: product-updates
-description: Use when the user asks for product updates, AI update summaries, release notes for a new helpdesk-helm chart version, or to "do the weekly updates" — anything that adds to ai-helpdesk-v2/product-updates.md or audits the doc pages its entries point at.
+description: Use when the user asks for product updates, AI update summaries, release notes for a new helpdesk-helm chart version, or to "do the weekly updates" — anything that adds to product-updates.md or audits the doc pages its entries point at.
 ---
 
 # Product Update Workflow
@@ -233,9 +233,9 @@ The month-based sections below `## May 2026` are historical and are never touche
 
 **3. Commit, push, and create a PR**
 
-Stage only `ai-helpdesk-v2/product-updates.md`:
+Stage only `product-updates.md`:
 ```bash
-git add ai-helpdesk-v2/product-updates.md
+git add product-updates.md
 git commit -m "Add product updates for {vX.Y.Z, or vX.Y.Z–vX.Y.W for several}"
 git push origin <current-branch>
 ```
@@ -305,7 +305,7 @@ Same draft-then-approve rhythm as Step 3, **per page**:
 Batch the drafts into one message where several pages are small, but keep each page's destination explicit. Do not write any file before its draft is approved.
 
 For each page written:
-- Add the cross-link from the changelog entry in `ai-helpdesk-v2/product-updates.md` to the new/updated page, matching the existing link style.
+- Add the cross-link from the changelog entry in `product-updates.md` to the new/updated page, matching the existing link style.
 - If a new page is added, update `SUMMARY.md` to place it in the nav under the right parent.
 - If a new sub-page needs to nest under a currently-flat section, convert the section first (`git mv armor/x.md armor/x/README.md`) and fix that file's image paths for the new depth (one more `../` than before). Follow the image-path rule below, not §17 of the Playwright skill — its "one extra `../`" convention is wrong for this repo.
 
@@ -358,5 +358,5 @@ Stage deliberately: only the doc pages, `SUMMARY.md`, and the `.gitbook/assets/`
 
 | # | Output | Where |
 |---|--------|--------|
-| 1 | Changelog section (Step 3, own PR — carries the marker) | `ai-helpdesk-v2/product-updates.md` |
+| 1 | Changelog section (Step 3, own PR — carries the marker) | `product-updates.md` |
 | 2 | New/updated doc pages + nav + assets (Step 4, separate PR) | `armor/...`, `SUMMARY.md`, `.gitbook/assets/` |

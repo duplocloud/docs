@@ -39,7 +39,7 @@ Plugin architecture source is in `plans/2026-05-04-extension-framework-design.md
 ## Task 1: Create Directory Structure and Update SUMMARY.md
 
 **Files:**
-- Create: `extension-framework/README.md` (placeholder)
+- Create: `extension-framework/extension-framework.md` (placeholder)
 - Create: `extension-framework/building-an-ops-app/README.md` (placeholder)
 - Create: `extension-framework/case-studies/README.md` (placeholder)
 - Create: `extension-framework/plugin-architecture/README.md` (placeholder)
@@ -51,7 +51,7 @@ Plugin architecture source is in `plans/2026-05-04-extension-framework-design.md
 mkdir -p extension-framework/building-an-ops-app
 mkdir -p extension-framework/case-studies
 mkdir -p extension-framework/plugin-architecture
-touch extension-framework/README.md
+touch extension-framework/extension-framework.md
 touch extension-framework/building-an-ops-app/README.md
 touch extension-framework/case-studies/README.md
 touch extension-framework/plugin-architecture/README.md
@@ -64,7 +64,7 @@ Find the line `## Common Use Cases` in `SUMMARY.md` and insert the following blo
 ```markdown
 ## Extension Framework
 
-* [Overview](extension-framework/README.md)
+* [Overview](extension-framework/extension-framework.md)
 * [Building an Ops Application](extension-framework/building-an-ops-app/README.md)
   * [Step 1: Define Your Policy Model](extension-framework/building-an-ops-app/step-1-policy-model.md)
   * [Step 2: Write Your Skills](extension-framework/building-an-ops-app/step-2-skills.md)
@@ -92,11 +92,11 @@ git commit -m "chore: scaffold extension-framework directory and SUMMARY.md entr
 
 ---
 
-## Task 2: Write `extension-framework/README.md`
+## Task 2: Write `extension-framework/extension-framework.md`
 
 **Source:** Part 2 §1–2, Part 3 §2–3, Part 1 §3 (CaaS definition)
 
-**File:** `extension-framework/README.md`
+**File:** `extension-framework/extension-framework.md`
 
 **Required sections and content:**
 
@@ -181,7 +181,7 @@ From Part 2 §2 — bullet list:
 **Step 3: Commit**
 
 ```bash
-git add extension-framework/README.md
+git add extension-framework/extension-framework.md
 git commit -m "docs: add extension framework overview and policy model"
 ```
 
