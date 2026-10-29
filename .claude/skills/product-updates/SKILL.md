@@ -67,9 +67,31 @@ gh api repos/duplocloud-internal/helpdesk-helm/compare/<prev-tag>...<tag> \
 
 Say which tags you are skipping or restricting and why, as part of the confirmation above.
 
+Hotfix tags (`v0.2.24-hotfix.1`) are GA tags and get a section like any other; `sort -V` places them after their base release and before the next one. Release names differ by system: ClickUp and commit messages say `0.2.24.1`, the chart tag is `v0.2.24-hotfix.1`. The heading uses the tag exactly as GitHub lists it.
+
+### Step 1b — Ask for the release's ClickUp list and release-notes doc
+
+For each tag being covered, **ask the user whether a ClickUp release list or release-notes doc exists for it, and for the links.** Releases live in the AI Product space, `Releases` folder, one list per release (named like `0.2.24.1`). Do not skip the question because the commits look sufficient: commit and merge dates cannot tell you what was in the release cut, and that gap has already put six unreleased items into a published section.
+
+URL shapes: a list is `.../v/li/<list_id>`, a doc is `.../v/dc/<document_id>`.
+
+- **The release-notes doc** (`clickup_list_document_pages`, then `clickup_get_document_pages` with `text/md`) is **the primary source when it exists.** It is written at release time by the people who verified the release, so it states what actually shipped. Build the draft from its items; do not re-derive inclusion from commits.
+- **The release list** (`clickup_get_list`, `clickup_filter_tasks` with `include_closed`) is a release-process checklist (sync, build, regression, release), not a list of features. Use it to confirm the release exists, its exact name, and that its tasks are `released`. Do not expect feature content in it. If a list does hold feature tickets, treat them as candidates and check them against the doc.
+- **Neither exists** → say so and continue to Step 2 with commits as the only source. Then expect more mistakes in inclusion and mark the draft accordingly.
+
+Using the doc:
+- Skip its **Bug fixes** section. The public page has no bug section.
+- Map the remaining items to `Feature` or `Enhancement`, rewrite them in the Step 3 customer-facing style, and set `Changes in:` from what each item touches.
+- Items in the doc but not in the commits still go in the draft. Items in the commits but missing from the doc do **not** go in silently; list them for the user as "in commits, not in the release doc".
+- Run the two-products test from Step 2 only for items whose product is unclear. The doc comes from the AI Product space, so most items are in scope.
+
+For extra context on what customers are running, the channel pins in `duplocloud-internal/ai-release` (`release-channels/channels/*.yaml`) show which version each channel holds. A tag can be published while `stable` and `hd-stable` still point at an older one; mention that in the PR rather than treating it as a reason to withhold the section.
+
 ---
 
 ## Step 2 — Fetch Commits
+
+**When Step 1b found a release-notes doc, commits are a cross-check, not the source:** fetch them to find items that shipped but are missing from the doc, and report those to the user. They do not decide inclusion, and the placement and whole-stack tests below only apply to items taken from commits. **With no doc, commits are the only source** and every rule below applies in full.
 
 The commit window for a tag is **(previous tag's date, this tag's date]**. For the first new tag, the previous tag is the one in the marker. Use `since` = previous tag's date and `until` = this tag's date when fetching; a commit on the boundary day belongs to the tag whose date it matches.
 
