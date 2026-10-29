@@ -8,7 +8,7 @@ description: >-
 
 Infrastructure Security Group rules let you manage traffic controls at the Infrastructure level.
 
-For security rules that apply to a specific Tenant, see the [Security Groups](../../../automation-platform/security-and-compliance/access-control/security-groups.md) page.
+For security rules that apply to a specific Tenant, see the [Security Groups](../../../security-and-compliance/access-control/security-groups.md) page.
 
 ## Adding Security Group Rules
 
