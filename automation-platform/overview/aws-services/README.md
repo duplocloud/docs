@@ -37,7 +37,7 @@ Supported Services are listed in alphabetical order, following the core services
 * [Elastic File System (EFS)](elastic-file-system-efs/)
 * [EMR Serverless](emr-serverless.md)
 * [EventBridge](eventbridge.md)
-* [Ingress (Kubernetes)](../../automation-platform/kubernetes-overview/ingress-loadbalancer/adding-ingress.md)
+* [Ingress (Kubernetes)](../../kubernetes-overview/ingress-loadbalancer/adding-ingress.md)
 * [IoT (Internet of Things)](iot-internet-of-things.md)
 * [Kafka Cluster](kafka-cluster.md)
 * [Kinesis Stream](kinesis-stream.md)
