@@ -1,97 +1,74 @@
 # User Groups
 
-This document explains how to create a new Permission Set Group in the DuploCloud AI Suite Access Control panel, linking a user and a permission set together.
+This document explains how to create a new Permission Set Group in the DuploCloud AI Suite Access Control panel. A group is a named, reusable bundle of permission sets — creating one does not, by itself, add any users to it.
 
 ***
 
 ## Prerequisites
 
-* A user already created (e.g. `John` — see **create user tutorial**)
-* A permission set already created (e.g. `QA-Test-Permission-Set` — see **create permission set tutorial**)
+* At least one permission set already created (e.g. `QA-Test-Permission-Set`) — see [Permission Sets](permission-sets.md)
 * Admin permissions on the Access Control section
 
 ***
 
-## Step 1 — Navigate to Access Control
+## Step 1 — Navigate to the Group Tab
 
-Go to **AI Admin → Access Control** in the left-hand navigation.
+Go to **AI Admin → Access Control** in the left-hand navigation, then click the **Group** tab. This lists all existing groups and how many permission sets each one carries.
 
-![Step 1 — Access Control page](../../.gitbook/assets/groups-step-01-access-control.png)
-
-***
-
-## Step 2 — Click the "Group" Tab
-
-At the top of the Access Control page, click the **Group** tab. This lists all existing groups.
-
-![Step 2 — Group tab](../../.gitbook/assets/groups-step-02-group-tab.png)
+![Step 1 — Group tab](../../.gitbook/assets/groups-step-01-access-control.png)
 
 ***
 
-## Step 3 — Click "Add"
+## Step 2 — Click "Add"
 
-In the top-right corner, click the **+ Add** button. The Add Permission Set Group form slides in.
+In the top-right corner, click the **+ Add** button. The Add Permission Set Group page opens with **Name**, **Description**, and **Permission Sets** fields.
 
-![Step 3 — Add Group form](../../.gitbook/assets/groups-step-03-form-opened.png)
+![Step 2 — Add Group form](../../.gitbook/assets/groups-step-02-add-empty.png)
 
 ***
 
-## Step 4 — Enter a Group Name
+## Step 3 — Enter a Group Name
 
 Click the **Name** field and type a name for the group.
 
-In this example: `QA-Test-Group`
-
-![Step 4 — Name filled](../../.gitbook/assets/groups-step-04-name-filled.png)
+![Step 3 — Name filled](../../.gitbook/assets/groups-step-03-name-filled.png)
 
 ***
 
-## Step 5 — Enter a Description
+## Step 4 — Enter a Description
 
 Click the **Description** textarea and describe the group's purpose.
 
-![Step 5 — Description filled](../../.gitbook/assets/groups-step-05-description-filled.png)
+![Step 4 — Description filled](../../.gitbook/assets/groups-step-04-description-filled.png)
 
 ***
 
-## Step 6 — Select the Permission Set
+## Step 5 — Select One or More Permission Sets
 
-Click the **Permission Sets** dropdown. Type to filter, then select the permission set to assign to this group.
+Click the **Permission Sets** dropdown. Type to filter, then select every permission set this group should grant. You can select more than one.
 
-In this example: `QA-Test-Permission-Set`
-
-![Step 6 — Permission Sets dropdown open](../../.gitbook/assets/groups-step-06-permission-dropdown.png)
-
-![Step 6b — Permission set selected](../../.gitbook/assets/groups-step-06b-permission-selected.png)
+![Step 5 — Permission set selected](../../.gitbook/assets/groups-step-05-permissionsets-selected.png)
 
 ***
 
-## Step 7 — Select the User
+## Step 6 — Submit the Form
 
-Click the **Users** dropdown. Type to filter by email or display name, then select the user to add to this group.
+Review the completed group, then click **Create Group**. A green **Success** toast confirms the group was saved.
 
-In this example: `amal.kiran13@gmail.com` (John)
-
-![Step 7 — Users dropdown open](../../.gitbook/assets/groups-step-07-user-dropdown.png)
-
-![Step 7b — User selected](../../.gitbook/assets/groups-step-07b-user-selected.png)
+![Step 6 — Success toast](../../.gitbook/assets/groups-step-06-success-toast.png)
 
 ***
 
-## Step 8 — Review and Submit
+## Step 7 — Verify the Group in the List
 
-Review the completed group form — confirm the name, permission set, and user are all set correctly. Click **Create Group**.
+The new group appears in the Groups table with its permission-set count.
 
-![Step 8 — Before submit](../../.gitbook/assets/groups-step-08-before-submit.png)
-
-A green **Success** toast confirms the group was saved.
-
-![Step 9 — After submit](../../.gitbook/assets/groups-step-10-final-list.png)
+![Step 7 — Final groups list](../../.gitbook/assets/groups-step-07-final-list.png)
 
 ***
 
-## Step 9 — Verify the Group in the List
+## Adding Users to a Group
 
-The new group appears in the Groups table, showing the linked permission set count and user count.
+A group is only a bundle of permission sets — it does not carry a user list of its own. To add a user to a group, go to the **User** tab, and on that user's Add or Edit form, select this group in its **Permission Set Groups** field. See [Users](users.md).
 
-![Step 10 — Final groups list](../../.gitbook/assets/groups-step-10-final-list.png)
+A user who is a member of an identity-provider-synced group (see [Azure AD & Okta User Sync](azure-ad-okta-user-sync.md)) has that membership managed by the sync job instead, and it will be overwritten on the next sync cycle if changed manually.
