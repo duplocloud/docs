@@ -6,77 +6,100 @@ Tickets are the core unit of work in the HelpDesk. Each ticket represents a disc
 
 Because everything is ticket-based, the HelpDesk also serves as a collaboration layer — team members can work in parallel, hand off context between sessions, and maintain a complete audit trail. The result is a platform that enhances productivity, reduces operational overhead, and maintains the security and compliance standards intrinsic to DuploCloud.
 
+Open the HelpDesk from the **HelpDesk** item in the left navigation sidebar. It expands to two options: **Add Ticket** and **History**.
 
-It is accessible from the **HelpDesk** item in the left navigation sidebar, which expands to reveal two options: **Add Ticket** and **History**.
-
-![HelpDesk nav](../../.gitbook/assets/helpdesk-step-01-nav.png)
+![HelpDesk menu with Add Ticket and History](../../.gitbook/assets/helpdesk-v2-step-01-nav.png)
 
 ---
 
 ## Add Ticket
 
-Click **Add Ticket** in the sidebar to open the ticket creation form.
+Click **Add Ticket** to open a new ticket. The page asks *What should the agent work on?* Describe the task, optionally pick a model and scopes, review the **Agent loadout**, and submit.
 
-![Add Ticket nav item](../../.gitbook/assets/helpdesk-step-08-nav-add-ticket.png)
+![Add Ticket page](../../.gitbook/assets/helpdesk-v2-step-02-add-ticket.png)
 
-The Add Ticket page lets you create a new AI DevOps request — selecting an agent, scopes, personas, and describing the task you want the AI to perform.
+For a step-by-step walkthrough of every control on this page and of the ticket page that opens afterwards, see [Create a Ticket](../tickets.md).
 
-![Add Ticket page](../../.gitbook/assets/helpdesk-step-09-add-ticket-overview.png)
+The **Recent tickets** panel on the right lists the latest tickets in the workspace. Its **History** button opens the full ticket list.
 
-For a full walkthrough of creating a ticket, see the **Tickets** section.
+![History button in the Recent tickets panel](../../.gitbook/assets/helpdesk-v2-step-03-add-ticket-history-btn.png)
 
 ---
 
 ## History
 
-Click **History** in the sidebar to view all tickets that have been created in this workspace.
+Click **History** in the sidebar to see the tickets in the current workspace. The list opens on the **Helpdesk** tab, filtered to **Open** tickets and sorted by most recently modified.
 
-![History nav item](../../.gitbook/assets/helpdesk-step-02-nav-history.png)
+![History list](../../.gitbook/assets/helpdesk-v2-step-04-history-overview.png)
 
-The History page displays a table of all tickets with the following columns:
+The table has the following columns:
 
-- **Title** — the question or task submitted to the AI
-- **Agent** — the AI agent assigned to the ticket
-- **Scopes** — the cloud scopes the agent has access to
-- **Cost** — total cost accumulated by the AI agent for this ticket
-- **Priority** — the ticket priority (Low, Medium, High, Critical)
-- **Status** — current state (Open, In Progress, or Closed)
-- **Created By** — the user who submitted the ticket
+- **Title** — the task or question submitted to the agent
+- **LLM** — the model handling the ticket
+- **Scopes** — the credential scopes attached to the ticket, or *No scopes*
+- **Cost** — total cost the agent has accumulated on this ticket
+- **Priority** — `Low`, `Medium`, `High`, or `Critical`
+- **Status** — `Open`, `In Progress`, or `Closed`
+- **Created By** — the user (or *System*) that opened the ticket
 - **Last Modified** — when the ticket was last updated
 
-![History overview](../../.gitbook/assets/helpdesk-step-03-history-overview.png)
+**Priority** and **Status** are editable in place: click the badge in a row to change it without opening the ticket.
 
-### Switching workspaces
+The **Add** button above the table opens the [Add Ticket](#add-ticket) page.
 
-The **workspace selector** at the top of the page controls which workspace's tickets are shown. Click it to open a dropdown listing all workspaces you have access to.
+### Helpdesk and Linked tabs
 
-![Workspace selector](../../.gitbook/assets/helpdesk-step-10-workspace-selector.png)
+- **Helpdesk** shows tickets opened directly in the HelpDesk.
+- **Linked** shows tickets that were started from somewhere else — a Project, a Dashboard, a Dashboard Template, an external integration, or another source. This tab adds an **Origin** filter and an **Origin** column so you can see where each ticket came from.
 
-![Workspace dropdown](../../.gitbook/assets/helpdesk-step-11-workspace-dropdown.png)
+![Linked tab with the Origin filter](../../.gitbook/assets/helpdesk-v2-step-08-linked-tab.png)
 
-Select a workspace to switch to it. The History table immediately refreshes to show only the tickets belonging to that workspace.
+### Filtering and searching
 
-![Production-DevOps workspace selected](../../.gitbook/assets/helpdesk-step-13-proddevops-history.png)
+Use the filters above the table to narrow the list:
 
-### Filtering tickets
+- **Priority** — show only tickets of one priority.
+- **Status** — **All**, **Open**, **In Progress**, or **Closed**. Each option shows how many tickets it holds.
 
-Use the **Priority** and **Status** filters at the top of the table to narrow down the list. The status tabs — **All**, **Open**, **In Progress**, and **Closed** — let you quickly focus on tickets at a particular stage.
+The **Search** box matches ticket names, titles, models, scopes, creators, and cost.
 
-![Status filters](../../.gitbook/assets/helpdesk-step-05-history-filters.png)
+![Priority and Status filters](../../.gitbook/assets/helpdesk-v2-step-05-history-filters.png)
+
+### Row actions
+
+The **⋮** menu at the start of each row offers:
+
+- **Copy Ticket ID** and **Copy Ticket Name** — copy the identifier to the clipboard, to reference the ticket elsewhere
+- **Delete** — permanently remove the ticket, after a confirmation prompt
+
+![Row actions menu](../../.gitbook/assets/helpdesk-v2-step-06-row-menu.png)
 
 ### Resuming a ticket
 
-Click any ticket title in the list to open that ticket and continue where you left off.
+Click a ticket title to open it and continue where you left off.
 
-![Clicking a ticket to resume](../../.gitbook/assets/helpdesk-step-14-pentest-ticket-highlight.png)
+![Ticket title link](../../.gitbook/assets/helpdesk-v2-step-07-ticket-title.png)
 
-The full conversation history with the AI agent is preserved. Scroll to the bottom to see where the agent left off, then type in the **Ask anything...** input to continue the conversation, ask follow-up questions, or direct the agent to pick up the next task.
+The full conversation with the agent is preserved. Type in the **Ask anything...** box to ask a follow-up question or direct the agent to its next task.
 
-![Bottom of ticket conversation with input](../../.gitbook/assets/helpdesk-step-16-ticket-bottom.png)
+![Ticket conversation with the Ask anything input](../../.gitbook/assets/helpdesk-v2-step-09-ticket-bottom.png)
 
-### Creating a new ticket from History
+### Closing a ticket
 
-The **Add** button in the top right of the table takes you directly to the Add Ticket page.
+Set a ticket's **Status** to **Closed** to close it. A dialog asks whether the ticket was resolved. You can rate the experience and leave feedback before choosing **Yes, Resolved** or **No, Unresolved**.
 
-![Add button](../../.gitbook/assets/helpdesk-step-06-history-add-btn.png)
+![Close Ticket dialog](../../.gitbook/assets/helpdesk-v2-step-11-close-dialog.png)
 
+The answer is recorded as the ticket's **disposition** and shown next to its status. When the **Closed** status filter is selected, a **Disposition** filter appears.
+
+![Closed tickets with the Disposition filter](../../.gitbook/assets/helpdesk-v2-step-12-closed-disposition.png)
+
+Use it to show only **Resolved** or only **Unresolved** tickets.
+
+![Disposition filter options](../../.gitbook/assets/helpdesk-v2-step-13-disposition-options.png)
+
+### Switching workspaces
+
+Tickets belong to a workspace. To see another workspace's tickets, open the **Workspace** selector in the page header and pick a workspace, or type to search the list. The History table reloads with that workspace's tickets.
+
+![Workspace selector](../../.gitbook/assets/helpdesk-v2-step-10-workspace-selector.png)
