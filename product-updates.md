@@ -1,5 +1,60 @@
 # Product Updates
 
+## v0.2.24-hotfix.1 — October 26, 2026
+
+---
+
+**1.** `Feature` — **Whitelabel the Portal**
+
+Branding, links, and menus are now configurable through custom config, so a deployment can rebrand the portal without a code change.
+- Brand name, labels, documentation and other links, favicons, splash logo, and the web manifest can all be set
+- Help menu items can be hidden, relabeled, or re-pointed; AI Studio sidebar items can be hidden
+- AI sidebar menu order is configurable through config and extensions
+
+Changes in: `Backend` `Frontend`
+
+---
+
+**2.** `Enhancement` — **Platform-Integrated UI Redesign**
+
+Platform-Integrated now supports the new UI redesign.
+
+Changes in: `Frontend`
+
+---
+
+**3.** `Feature` — **AI Disclosure on Extension-Created Tickets**
+
+Extension forms that create a ticket now show a "This Platform uses AI" disclosure.
+
+Changes in: `Frontend`
+
+---
+
+**4.** `Enhancement` — **Agent Multi-Replica Support**
+
+The agent runtime can now run with multiple replicas; a stop request reaches the specific pod handling that conversation instead of any replica.
+
+Changes in: `Agent`
+
+---
+
+**5.** `Enhancement` — **Extension Description Character Limit Increased**
+
+Extension descriptions can now be up to 50,000 characters.
+
+Changes in: `Frontend`
+
+---
+
+**6.** `Enhancement` — **Security Hardening: Terminal Image**
+
+The in-ticket terminal now runs on a hardened base image, clearing the critical and high vulnerabilities previously flagged in it.
+
+Changes in: `Helm`
+
+---
+
 ## v0.2.24 — October 14, 2026
 
 ---
