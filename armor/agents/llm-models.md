@@ -1,6 +1,6 @@
 # LLM Models
 
-The **LLMs** section governs which models are available to agents, and which model a Workspace, Project, or the platform as a whole uses by default. It's reached from **AI Admin → LLMs**, and has three tabs: **Agent SDKs**, **LLMs**, and **LLM Mappings**.
+The **LLMs** page governs which models are available to agents, and which model a Workspace, Project, or the platform as a whole uses by default. Open it from **LLMs** in the AI Admin sidebar. It has three tabs: **Agent SDKs**, **LLMs**, and **LLM Mappings**. Each tab shows summary cards above its table, and the button in the page header adds whatever the open tab lists.
 
 ![LLMs tab — the model registry](../../.gitbook/assets/llm-models-step-01-overview.png)
 
@@ -10,7 +10,7 @@ An **Agent SDK** is a connection to a deployed agent runtime — the same entity
 
 ![Agent SDKs tab](../../.gitbook/assets/llm-models-step-02-agent-sdks-tab.png)
 
-Click **+ Add** to register another one.
+Click **Add Agent SDK** to register another one. Besides the Name, Description, Endpoint, and Path, the form has an optional **Metadata** section of key/value pairs. It starts with `STREAMING_ENABLED` set to `true`, which makes the agent stream its responses; set it to `false` for an agent that answers in a single request/response.
 
 ![Add Agent SDK form](../../.gitbook/assets/llm-models-step-03-add-sdk-empty.png)
 
@@ -22,11 +22,11 @@ Click **+ Add** to register another one.
 
 The **LLMs** tab is the model registry itself — every model an agent is allowed to use, paired with the Agent SDK(s) that can run it.
 
-Click **+ Add** and fill in:
+Click **Add LLM** and fill in:
 
 * **Agent SDKs\*** — which SDK(s) this model can run under
-* **Model ID\*** — the underlying model identifier (e.g. `claude-sonnet-5`)
-* **Display Name\*** — a human-readable name shown in ticket creation and elsewhere (e.g. `Sonnet 5`)
+* **Model ID\*** — the underlying model identifier, exactly as the Agent SDK's provider expects it (e.g. `claude-sonnet-4-6`, or `us.anthropic.claude-sonnet-4-6` on AWS Bedrock)
+* **Display Name\*** — a human-readable name shown in ticket creation and elsewhere (e.g. `Sonnet 4.6`)
 * **Description** — optional
 * **Enabled** — toggle it off to keep a model registered but unavailable for selection
 
@@ -46,13 +46,13 @@ A **Mapping** controls which registered models are actually usable — and which
 
 ![LLM Mappings tab](../../.gitbook/assets/llm-models-step-09-mappings-tab.png)
 
-Click **+ Add** and fill in:
+Click **Add Mapping** and fill in:
 
 * **Name\*** and **Description** — a label for this mapping
 * **Models\*** — the model + SDK pairs this mapping allows
 * **Scope\*** — **System**, **Workspace**, or **Project**
-* **Default model** — required for System scope; optional for Workspace/Project (falls back to the next broader scope's default if unset)
-* **Target Workspace(s)\*** / **Target Project(s)\*** — shown only for Workspace/Project scope; select one or more
+* **Default model** — appears once the mapping allows more than one model; with a single model, that model is the default. Required for System scope. Optional for Workspace and Project scope; if you leave it empty, the first model in the mapping is used.
+* **Target Workspace(s)\*** / **Target Project(s)\*** — shown only for Workspace/Project scope; select one or more. Each workspace or project can be covered by only one active mapping.
 
 ![Add Model Mapping form](../../.gitbook/assets/llm-models-step-10-add-mapping-empty.png)
 
@@ -61,5 +61,7 @@ Click **+ Add** and fill in:
 ![New mapping added](../../.gitbook/assets/llm-models-step-12-mapping-added.png)
 
 {% hint style="info" %}
-Resolution order is **Project → Workspace → System** — the most specific mapping that covers a given ticket wins. A fresh install seeds one **System**-scope mapping ("default models") automatically, so every workspace has a working default even before you add your own mappings.
+Resolution order is **Project → Workspace → System**: the most specific mapping that covers a ticket wins, and it replaces the broader ones entirely — mappings are never merged. A Workspace mapping can therefore allow more or fewer models than the System mapping. A model the user picks when creating the ticket takes precedence over the mapping's default, as long as it's still enabled and allowed.
+
+There's only ever one **System** mapping, and it can be edited but not deleted. A fresh install seeds it automatically when exactly one Agent SDK is registered, so every workspace has a working default before you add mappings of your own. With more than one Agent SDK, create the System mapping yourself.
 {% endhint %}
