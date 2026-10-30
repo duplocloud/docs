@@ -44,7 +44,7 @@ Copy the `duplo-aws-infra` skill and add tagging instructions to the network and
 {% step %}
 ### Add a Skill Mapping override
 
-Navigate to **AI Admin → Skills → Skill Mapping** and add an override mapping the Network Baseline and Cluster Baseline origin types to your custom skill.
+Navigate to **AI Admin → Skills → Skill Mapping**, click **Add Override**, and add an override mapping the Network Baseline and Cluster Baseline origin types to your custom skill.
 {% endstep %}
 
 {% step %}
