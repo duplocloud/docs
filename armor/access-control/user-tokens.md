@@ -1,86 +1,86 @@
 # User Tokens
 
-This document explains how to create a new API Token in the DuploCloud AI Suite, using the User Tokens tab and the Profile page.
+An API token lets an external application, script, or CI/CD pipeline authenticate with the DuploCloud AI Suite as you. Each user creates and manages their own tokens on their **Profile** page. Administrators can see every user's tokens, and revoke or delete them, from the **User Tokens** tab in Access Control.
 
 ***
 
 ## Prerequisites
 
-* Access to the DuploCloud AI Suite admin panel
-* An authenticated user account
+* An authenticated user account (any role can create its own tokens)
+* The **Administrator** role to view all users' tokens under **AI Admin → Access Control → User Tokens**
 
 ***
 
-## Step 1 — Navigate to Access Control → User Tokens
+## View All Tokens (Administrators)
 
-Go to **AI Admin → Access Control** in the left-hand navigation. Click the **User Tokens** tab at the top. This lists all existing API tokens with their name, token value, user, created date, last used, expiry, and status.
+Go to **AI Admin → Access Control** and click the **User Tokens** tab. The cards at the top summarize every issued token: how many there are and their status, which users own them, how many active tokens never expire, and when a token was last used. The table lists each token's name, the last four characters of its value, its owner, when it was created and last used, when it expires, and its status (**Active**, **Expired**, or **Revoked**).
 
-![Step 1 — User Tokens tab](../../.gitbook/assets/user-tokens-step-01-user-tokens-tab.png)
+![User Tokens tab](../../.gitbook/assets/user-tokens-step-01-user-tokens-tab.png)
 
-***
+Click the **⋮** menu on a row to **Revoke** an active token or **Delete** one that is revoked or expired. Tokens can't be created here: each user creates their own from their Profile page.
 
-## Step 2 — Click the Profile Icon (Top Right)
-
-In the top-right corner of the page, click the **profile avatar** icon. A dropdown menu appears showing your name and role.
-
-![Step 2 — Profile dropdown](../../.gitbook/assets/user-tokens-step-02-profile-dropdown.png)
+{% hint style="info" %}
+The **User Tokens** tab appears only in standalone AI Suite deployments. When the AI Suite runs integrated with the DuploCloud platform, the platform issues API tokens instead.
+{% endhint %}
 
 ***
 
-## Step 3 — Click "Profile"
+## Create an API Token
 
-In the dropdown, click **Profile**. This navigates to your Profile page which shows your User Info and the API Tokens table.
+### Step 1 — Open your Profile
 
-![Step 3 — Profile page](../../.gitbook/assets/user-tokens-step-03-profile-page.png)
+Click your name at the bottom of the left-hand sidebar, then click **Profile**.
+
+![Account menu with Profile highlighted](../../.gitbook/assets/user-tokens-step-02-account-menu.png)
+
+The Profile page shows your user info and, at the bottom, the **API Tokens** table with your own tokens.
+
+![Profile page](../../.gitbook/assets/user-tokens-step-03-profile-page.png)
+
+### Step 2 — Click Create Token
+
+In the **API Tokens** section, click **Create Token**. The **Create API Token** dialog opens with two fields: **Token Name** and **Expiry Date**.
+
+![Create API Token dialog](../../.gitbook/assets/user-tokens-step-04-create-token-modal.png)
+
+### Step 3 — Enter a Token Name
+
+Enter a name that describes what the token is for, such as the pipeline or integration that will use it. The name is required and must be unique among your tokens.
+
+![Token name filled](../../.gitbook/assets/user-tokens-step-05-name-filled.png)
+
+### Step 4 — Set the Expiry Date
+
+Pick an expiry date from the date picker. It must be later than today.
+
+If you leave the date blank, the token expires after the default period (365 days unless your administrator has changed it). The dialog shows the resulting date next to the field label.
+
+![Expiry date set](../../.gitbook/assets/user-tokens-step-06-expiry-set.png)
+
+### Step 5 — Click Create
+
+Review the name and expiry date, then click **Create**.
+
+![Ready to create](../../.gitbook/assets/user-tokens-step-07-ready-to-create.png)
+
+### Step 6 — Copy the Token
+
+The **Token Created** dialog shows the full token value. **Copy it now**: it is shown only once and can't be retrieved later.
+
+Click **Copy** to copy it to your clipboard, store it somewhere secure, then click **Close**.
+
+![Token Created dialog](../../.gitbook/assets/user-tokens-step-08-token-created.png)
+
+The new token appears in your **API Tokens** table with **Active** status and the expiry date you set. The **Token** column shows only its last four characters.
+
+![New token in the API Tokens table](../../.gitbook/assets/user-tokens-step-09-final-list.png)
 
 ***
 
-## Step 4 — Click "Create Token"
+## Revoke or Delete a Token
 
-On the Profile page, locate the **API Tokens** section. Click the **Create Token** button on the right side (shown in purple).
+On your Profile page, click **Revoke** next to an active token to stop it working immediately. Once a token is revoked or has expired, its button changes to **Delete**, which removes it from the list permanently.
 
-A **Create API Token** modal dialog opens with two fields: Token Name and Expiry Date.
-
-![Step 4 — Create API Token modal](../../.gitbook/assets/user-tokens-step-04-create-token-modal.png)
-
-***
-
-## Step 5 — Enter a Token Name
-
-Click the **Token Name** field and type a descriptive name for the token.
-
-In this example: `QA-Test-Token`
-
-![Step 5 — Token name filled](../../.gitbook/assets/user-tokens-step-05-name-filled.png)
-
-***
-
-## Step 6 — Set the Expiry Date
-
-Click the **Expiry Date** field and enter a future date in `YYYY-MM-DD` format.
-
-> **Important:** The expiry date must be greater than today's date or the form will reject it.
-
-In this example: `2026-04-11` (April 11, 2026)
-
-![Step 6 — Expiry date set](../../.gitbook/assets/user-tokens-step-06-expiry-set.png)
-
-***
-
-## Step 7 — Click "Create"
-
-Review the token name and expiry date, then click the **Create** button.
-
-![Step 7 — Ready to submit](../../.gitbook/assets/user-tokens-step-06-expiry-set.png)
-
-***
-
-## Step 8 — Copy the Token
-
-A **Token Created** confirmation dialog appears showing the full token value. **Copy the token now** — it will not be shown again.
-
-Click **Copy** to copy it to your clipboard, then click **Close**.
-
-![Step 8 — Token created, copy it now](../../.gitbook/assets/user-tokens-step-09-final-list.png)
-
-The new token appears in the API Tokens table with **Active** status and the expiry date you set.
+{% hint style="info" %}
+Each user can have up to 10 tokens at a time that haven't been revoked. Expired tokens count toward this limit until you delete them, so revoke or delete tokens you no longer use to free up a slot.
+{% endhint %}
