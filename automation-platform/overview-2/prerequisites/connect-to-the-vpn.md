@@ -19,7 +19,7 @@ User VPN credentials are accessible through the user profile page.
     <div align="left"><figure><img src="../../../.gitbook/assets/image (215).png" alt="" width="261"><figcaption><p>The User menu</p></figcaption></figure></div>
 2. You will find your VPN credentials in the **VPN Details** section of your profile.
 
-<div align="left"><figure><img src="../../../.gitbook/assets/PROFILE.png" alt="" width="563"><figcaption><p>VPN Details section of the user profile</p></figcaption></figure></div>
+<div align="left"><figure><img src="../../../.gitbook/assets/profile-connect-to-vpn.png" alt="" width="563"><figcaption><p>VPN Details section of the user profile</p></figcaption></figure></div>
 
 ## Setting up the OpenVPN User Profile and Client App
 
