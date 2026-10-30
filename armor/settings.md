@@ -4,7 +4,7 @@ The **Settings** section holds two platform-wide admin stores: **System Settings
 
 ## System Settings
 
-A System Setting is a name/type/value entry — not a fixed list. A small set of known settings (e.g. a LangFuse observability URL) show up as ready-made templates, but admins can also define any custom setting a workspace or the platform needs to read.
+A System Setting is a name/type/value entry — not a fixed list. A small set of known settings (e.g. a LangFuse observability URL) show up as ready-made templates, but admins can also define any custom setting a workspace or the platform needs to read. The list shows each setting's **Name**, **Type**, **Value**, **Description**, **Labels**, and **Last Modified** time.
 
 Go to **AI Admin → Settings → System Settings**.
 
@@ -12,12 +12,14 @@ Go to **AI Admin → Settings → System Settings**.
 
 Click **+ Add** and fill in:
 
-* **Type\*** — **String**, **Number**, **Bool**, or **JSON**
-* **Setting\*** — pick one of the predefined settings, or **Custom Setting** to define your own
-* **Name\*** — required for a custom setting; letters, numbers, `.`, `_`, `-` only
-* **Value\*** — the input control matches the chosen Type (text field, number field, toggle, or a JSON editor)
-* **Labels** (optional) — free-form tags for grouping related settings
-* **Description** (optional)
+* **Type\*** — **String**, **Number**, **Flag** (true/false), or **YAML** (a list or map). Pick the type first: it decides which predefined settings the **Setting** list offers.
+* **Setting\*** — **Custom Setting** to define your own, or one of the predefined settings of the chosen type. A predefined setting fills in its own name and description, and drops out of the list once it has been created.
+* **Name\*** — required for a custom setting; 2–100 characters, using letters, numbers, `.`, `_`, and `-` only. The name can't be changed after the setting is created.
+* **Value\*** — the input control matches the chosen Type: a text field, a number field, a True/False toggle, or a YAML editor
+* **Labels** (optional) — free-form tags for grouping related settings; pick an existing label or type a new one and press Enter
+* **Description** (optional) — up to 500 characters
+
+Click **Create**. To change or remove a setting later, use the **⋮** menu on its row (**Edit** or **Delete**). The type can't be changed when editing.
 
 ![Add System Setting form, empty](../.gitbook/assets/settings-step-02-add-setting-empty.png)
 
@@ -26,22 +28,22 @@ Click **+ Add** and fill in:
 ![System Setting added](../.gitbook/assets/settings-step-04-setting-added.png)
 
 {% hint style="info" %}
-Settings created here are platform-wide (**Global** scope). A separate **Workspace Settings** page, available within a workspace's own settings, lets you define a same-named setting scoped to just that workspace — it overrides the global value for that workspace only, the same override pattern used by [LLM Mappings](agents/llm-models.md#llm-mappings) and [Quotas](access-control/quotas.md).
+Settings created here are platform-wide (**Global** scope). A separate **Workspace Settings** page, under **Settings → Workspace Settings** in a workspace's sidebar, lets you define a same-named setting scoped to just that workspace — it overrides the global value for that workspace only, the same override pattern used by [LLM Mappings](agents/llm-models.md#llm-mappings) and [Quotas](access-control/quotas.md).
 {% endhint %}
 
 ### Predefined settings
 
-These appear in the **Setting** dropdown rather than needing a custom name. Anything not listed here can still be added as a **Custom Setting**.
+These appear in the **Setting** dropdown, under their own **Type**, rather than needing a custom name. Anything not listed here can still be added as a **Custom Setting**.
 
 | Setting | Type | Default | What it does |
 |---|---|---|---|
-| **Hidden Menu Items** | JSON | — | Sidebar menu item ids to hide, as a YAML list. A parent disappears once all of its children are hidden. Applies on the next page reload. |
-| **Hidden Header Icons** | JSON | all shown | Navbar icons to hide, as a YAML map of icon id to flag. Recognised ids are `faults-notification-non-admin`, `trust-center`, and `help`. |
-| **Hide Single Workspace Selector** | Bool | `false` | Hides the Workspace dropdown for users who only have one workspace. |
-| **Workspace Memory Default (New Tickets)** | Bool | `true` | The starting state of the **Workspace Memory** toggle on a new ticket. |
-| **Collapse Advanced Options (Add Helpdesk Ticket)** | Bool | — | Collapses the Advanced Options section by default when creating a ticket. |
-| **Disable Product Analytics** | Bool | — | Stops asking users for analytics consent and collects nothing. Users are asked for consent by default. |
-| **Allow kubectl/kubeconfig for static-token Kubernetes scopes** | Bool | off | Enables `kubectl` and **Download kubeconfig** for scopes backed by a static, long-lived credential. Off by default, because those credentials never expire on their own. |
+| **Hidden Menu Items** | YAML | — | Sidebar menu item ids to hide, as a YAML list. A parent disappears once all of its children are hidden. Applies on the next page reload. |
+| **Hidden Header Icons** | YAML | all shown | Navbar icons to hide, as a YAML map of icon id to flag. Recognised ids are `faults-notification-non-admin`, `trust-center`, and `help`. |
+| **Hide Single Workspace Selector** | Flag | `false` | Hides the Workspace dropdown for users who only have one workspace. |
+| **Workspace Memory Default (New Tickets)** | Flag | `true` | The starting state of the **Workspace Memory** toggle on a new ticket. |
+| **Collapse Advanced Options (Add Helpdesk Ticket)** | Flag | — | Collapses the Advanced Options section by default when creating a ticket. |
+| **Disable Product Analytics** | Flag | — | Stops asking users for analytics consent and collects nothing. Users are asked for consent by default. |
+| **Allow kubectl/kubeconfig for static-token Kubernetes scopes** | Flag | off | Enables `kubectl` and **Download kubeconfig** for scopes backed by a static, long-lived credential. Off by default, because those credentials never expire on their own. |
 | **LangFuse URL** | String | — | Base URL of the LangFuse instance embedded on the **Observability → LangFuse** page. |
 
 {% hint style="info" %}
@@ -63,6 +65,8 @@ Click **+ Add** and fill in:
 * **Key\*** — the secret's name; cannot be changed after creation
 * **Value\*** — the secret value; hidden by default, with a show/hide toggle
 
+Click **Add**. To replace a secret's value or remove it, use the **⋮** menu on its row (**Edit** or **Delete**). Editing keeps the key and asks for a new value.
+
 ![Add Secret form, empty](../.gitbook/assets/settings-step-06-add-secret-empty.png)
 
 ![Add Secret form, filled in](../.gitbook/assets/settings-step-07-add-secret-filled.png)
@@ -70,5 +74,5 @@ Click **+ Add** and fill in:
 ![Secret added, value masked](../.gitbook/assets/settings-step-08-secret-added-masked.png)
 
 {% hint style="info" %}
-Once saved, a secret's value is always masked in the list and API responses — only the last few characters are shown. If a Workspace, Project, or Ticket defines a secret with the same key, that more specific value takes precedence over the Global one.
+Once saved, a secret's value is always masked in the list and API responses: it shows as `********` followed by the last 4 characters, or as `********` alone for values shorter than 8 characters. Workspace-level secrets live under **Settings → Workspace Secrets** in a workspace's sidebar. If a Workspace, Project, or Ticket defines a secret with the same key, that more specific value takes precedence over the Global one.
 {% endhint %}
