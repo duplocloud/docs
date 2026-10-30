@@ -1,59 +1,89 @@
 # Command Policy
 
-Command Policies let administrators define, once, which shell commands an agent is allowed to auto-run and which are always denied — enforced platform-wide, per workspace, or per project, rather than set up manually on every ticket. It's a **Definition** (the regex rules) paired with a **Mapping** (where those rules apply).
+Command Policies let administrators define, once, which shell commands an agent may run without asking and which it may never run — applied platform-wide, per workspace, or per project, rather than set up by hand on every ticket. A **Command Policy Definition** holds the regex rules, and a **Command Policy Mapping** applies a definition to a scope.
 
 Go to **AI Admin → Access Control → Command Policy**.
 
-![Command Policy tab](../../.gitbook/assets/command-policy-step-02.png)
+![Command Policy tab](../../.gitbook/assets/command-policy-step-01-definitions.png)
 
 ***
 
-## Command Policy Definition
+## Command Policy Definitions
 
-A Definition holds two lists of regular expressions — one per line:
+The **Command Policy Definition** tab lists every definition. The cards at the top summarize them: how many there are, the total allow and block patterns, and the most recently modified. The table shows each definition's description and a preview of its allow and block patterns.
+
+A definition holds two lists of regular expressions, one per line:
 
 * **Allow List** — commands matching any pattern here are auto-approved
-* **Block List** — commands matching any pattern here are always denied, even if they also match an allow pattern
+* **Block List** — commands matching any pattern here are always denied
+
+### Add a Command Policy Definition
 
 Click **+ Add** and fill in:
 
-* **Name\*** — a label for the policy
+* **Name\*** — a label for the policy. It must start with a letter, and can't be changed after the policy is created.
 * **Description** — optional
 * **Allow List** — one regex per line
 * **Block List** — one regex per line
 
-![Add Command Policy form filled in](../../.gitbook/assets/command-policy-step-03.png)
+Click **Create**. Every pattern is checked when you save, and an invalid regex is rejected.
 
-![Command Policy added](../../.gitbook/assets/command-policy-step-04.png)
+![Add Command Policy form filled in](../../.gitbook/assets/command-policy-step-02-add-definition.png)
+
+![Command Policy added](../../.gitbook/assets/command-policy-step-03-definition-added.png)
 
 {% hint style="info" %}
-The Block List always wins — if a command matches both an allow and a block pattern, it's denied. A command that matches neither list isn't auto-decided either way; it falls through to manual approval in the ticket, the same **Command Permissions** approval prompt described in [Command Permissions](../tickets.md#command-permissions).
+Patterns are matched case-insensitively, and anywhere in the command — `kubectl get` also matches `sudo kubectl get pods`. Start a pattern with `^` to match only from the beginning of the command, as in `^kubectl get `.
 {% endhint %}
+
+A definition does nothing on its own until a mapping applies it. A definition can't be deleted while an active mapping still references it — delete the mapping first.
 
 ***
 
-## Command Policy Mapping
+## Command Policy Mappings
 
-A Mapping binds a Definition to the scope it should apply to.
+Click the **Command Policy Mapping** tab. A mapping binds a definition to a level and, for Workspace and Project levels, to one or more targets. The cards at the top show how many mappings there are, how many definitions they reference, and whether a System-wide mapping exists. The table shows each mapping's policy definition, level, and target.
 
-![Command Policy Mapping tab](../../.gitbook/assets/command-policy-step-05.png)
+![Command Policy Mapping tab](../../.gitbook/assets/command-policy-step-04-mappings.png)
+
+### Add a Command Policy Mapping
 
 Click **+ Add** and fill in:
 
 * **Name\*** — a label for the mapping
 * **Description** — optional
-* **Command Policy\*** — the Definition to apply
-* **Level\*** — **System**, **Workspace**, or **Project**
-* **Target Workspace(s)\*** / **Target Project(s)\*** — shown only for Workspace/Project level; select one or more
+* **Command Policy\*** — the definition to apply
+* **Level\*** — **System**, **Workspace**, or **Project**. The form opens with **System** selected, so change it before you click **Create** if you don't mean to apply the policy platform-wide.
+* **Target Workspace(s)\*** / **Target Project(s)\*** — shown only for Workspace or Project level; select one or more
 
-![Add Command Policy Mapping form — selecting a policy and level](../../.gitbook/assets/command-policy-step-07.png)
+![Add Command Policy Mapping form — Workspace level](../../.gitbook/assets/command-policy-step-05-add-mapping-workspace.png)
 
-![Add Command Policy Mapping form — target workspace selected](../../.gitbook/assets/command-policy-step-08.png)
+![Add Command Policy Mapping form — Project level](../../.gitbook/assets/command-policy-step-06-add-mapping-project.png)
 
-![Command Policy Mapping added](../../.gitbook/assets/command-policy-step-09.png)
+Click **Create**.
 
-Only one active mapping is allowed per level/target combination — for example, only one active System-level mapping platform-wide, and only one active mapping per workspace at the Workspace level.
+![Command Policy Mapping added](../../.gitbook/assets/command-policy-step-07-mapping-added.png)
 
-{% hint style="info" %}
-Command Policies are an admin-configured layer on top of the per-ticket **Command Permissions** patterns — both are combined when a command is evaluated. A command is denied if it matches a block pattern anywhere (the ticket's own patterns, or the System/Workspace/Project policy covering it); it's auto-approved only if it matches an allow pattern everywhere it's checked. Anything else is left for a person to approve on the ticket.
-{% endhint %}
+Only one active System mapping can exist, and each workspace or project can be covered by only one active mapping at its level. Adding a target that another mapping already covers fails with an error naming that mapping — remove the target from the existing mapping first.
+
+Click a mapping's name to open it. The **Details** tab shows its definition, level, targets, and the allow and block patterns it applies.
+
+![Command Policy Mapping details](../../.gitbook/assets/command-policy-step-08-mapping-view.png)
+
+***
+
+## How commands are evaluated
+
+Policies at different levels add up rather than override each other. When the agent asks to run commands on a ticket, the patterns that apply are:
+
+* the ticket's own **Commands** patterns (see [Create a Ticket](../tickets.md#commands))
+* the active **System** mapping's policy
+* the policy mapped to the ticket's **workspace**
+* the policy mapped to the ticket's **project**, if the ticket was started from a project
+
+These are evaluated in two steps:
+
+1. **Block** — if any command matches a block pattern from any of these sources, the whole request is rejected. Block always wins over allow.
+2. **Allow** — the allow patterns from all sources are pooled. If every command matches at least one of them, the request is approved without asking.
+
+Anything else waits for a person to approve it on the ticket, as described in [Approving commands as the agent works](../tickets.md#approving-commands-as-the-agent-works).
