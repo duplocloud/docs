@@ -43,7 +43,7 @@ Create an account-level catalog of Route 53 hosted zones, ACM certificates, and 
 {% step %}
 ### [Create an Environment](step-4-environment.md)
 
-Create a deployment boundary inside your cluster with dedicated security groups, IAM roles, and KMS keys. Attach your Plan to make hosted zones and certificates available to workloads.
+Group your Plan and Resource Groups in an Environment, then create a Resource Group that provisions its own security groups, IAM role and KMS key on your network and cluster.
 {% endstep %}
 
 {% step %}
