@@ -6,26 +6,27 @@ description: >-
 
 # Step 2: Create a Cluster
 
-A Cluster Baseline provisions an EKS cluster inside the Network you created in the previous step. The VPC, region, and subnets are inherited automatically from the Network Baseline.
+A Cluster Baseline provisions an EKS cluster inside the Network you created in the previous step. The cloud account, region, VPC and subnets are inherited automatically from the Network Baseline.
 
 ## What gets created
 
 * An EKS cluster with your chosen Kubernetes version
-* Cluster IAM role and service account configuration
-* OIDC provider for IAM Roles for Service Accounts (IRSA)
+* The EKS service IAM role, a cluster security group and an all-host security group
+* A default system node group in the network's private subnets (if **Add Default System Node Group** is enabled)
+* An OIDC identity provider for IAM Roles for Service Accounts (IRSA)
 * A Kubernetes Provider and Scope automatically connected to the new cluster
 
 ## Walkthrough
 
 ### Step 1 — Navigate to Cluster
 
-In the left sidebar, click **DevOps** and select **Cluster** from the submenu.
+In the left sidebar, open **DevOps** and select **Cluster**.
 
 ![](../../../../.gitbook/assets/cluster-step-01.png)
 
 ### Step 2 — Cluster List
 
-The Cluster page lists all existing clusters with their type, EKS version, status, and mode. When starting fresh the list is empty. Click **+ Create cluster** to begin.
+The **Clusters** page lists every cluster in the workspace, with summary cards for total, ready, in-progress and needs-attention clusters. Each row shows the cluster's cloud, network, type, Kubernetes version, status and mode (**Create** or **Import**). Use the cloud filters to narrow the list. Click **Create cluster** to begin.
 
 ![](../../../../.gitbook/assets/cluster-step-02.png)
 
@@ -33,10 +34,11 @@ The Cluster page lists all existing clusters with their type, EKS version, statu
 
 The **Create Cluster Baseline** wizard opens. Fill in the first page:
 
-* **Name** — a unique identifier for the cluster (e.g. `prod-eks-cluster`)
+* **Mode** — **Create new** to provision a new EKS cluster, or **Import existing** to register a cluster that already exists
+* **Cloud** — select **AWS**
+* **Name** — a unique identifier for the cluster (e.g. `prod-eks-cluster`). Letters, numbers and hyphens.
 * **Description** — optional
-* **Account (Scope)** — the cloud account scope to provision into (e.g. `full-access-us-east-1`)
-* **Skills** — optional; attach custom skills to this cluster
+* **Metadata** — optional key/value pairs to attach to the cluster
 
 Click **Next**.
 
@@ -44,127 +46,124 @@ Click **Next**.
 
 ### Step 4 — Cluster Spec
 
-Define the cluster configuration. Select **Create new** to provision a fresh EKS cluster, or **Import existing** to register an existing one.
+Define the cluster configuration:
 
-* **Network Source** — select **Choose Network** to inherit VPC and subnet details from a provisioned network baseline
-* **Network** — select the network (e.g. `prod-network-1`). Region, VPC ID, and subnet IDs are inherited automatically.
-* **Cluster Type** — `Standard`
-* **EKS Version** — the Kubernetes version to deploy (e.g. `1.33`). This field is required even if the UI labels it optional.
-* **API Server Visibility** — `Public` exposes the Kubernetes API endpoint publicly; `Private` restricts it to the VPC
-* **Control Plane Logging** — optional; select which EKS control plane log types to enable (API, Audit, Authenticator, etc.)
-* **Cluster IP CIDR** — optional; leave blank to use the EKS default (`172.20.0.0/16`)
+* **Network Source** — select **Choose Network** to inherit the cloud account, region, VPC and subnets from a provisioned network. **Choose VPC** lets you enter an account, VPC ID, region and subnet IDs directly instead.
+* **Network** — the network you created in Step 1 (e.g. `prod-network-1`)
+* **Cluster Type** — `Standard`, or `Auto` for EKS Auto Mode
+* **Version** — the Kubernetes version to deploy. Defaults to the latest stable release once a network is selected.
+* **API Server Visibility** — `Public` exposes the Kubernetes API endpoint publicly, `Private` restricts it to the VPC, and `Public and Private` enables both
+* **Control Plane Logging** — optional; select which EKS control plane log types to enable (API Server, Audit, Authenticator, Controller Manager, Scheduler)
+* **Cluster IP CIDR** — optional; the CIDR block for Kubernetes service IP addresses. Leave blank to use the EKS default.
 
-Click **Create & Provision**.
+If the selected network has no NAT gateway, the wizard warns you: EKS nodes need outbound internet access to join the cluster, so pick a NAT-enabled network before provisioning.
 
 ![](../../../../.gitbook/assets/cluster-step-04.png)
 
-### Step 5 — Provisioning Started
+### Step 5 — System Node Group and Domain Filter
 
-The cluster detail page opens immediately with **Status: Pending**. The spec summary confirms:
+Scroll down to finish the spec:
 
-* Cluster type: Standard
-* EKS version: 1.33
-* API server visibility: Public
-* Cluster IP CIDR: Default
-* Control plane logging: None
+* **Add Default System Node Group** — on by default (Standard clusters with **Choose Network** only). Provisions a managed node group named `<cluster>-system-nodes` in the network's private subnets. The cluster needs it to schedule EKS add-ons such as CoreDNS and kube-proxy.
+  * **Instance Type** — an x86\_64 instance type (e.g. `t3.medium`). ARM and GPU families aren't offered.
+  * **Min Size** / **Max Size** — the node group's scaling bounds (default `2` and `3`)
+* **Domain Name Filter** — optional; select one or more Route 53 hosted zones from the cloud account. When set, External DNS is enabled on the cluster automatically once it's Ready, scoped to these zones.
 
-Click **Track Provisioning Status** to open the agent ticket and follow the provisioning workflow in real time.
+Click **Create & Provision**.
 
 ![](../../../../.gitbook/assets/cluster-step-05.png)
 
-### Step 6 — Agent Ticket Opens
+### Step 6 — Cluster Detail Page
 
-The agent opens a ticket and begins the provisioning workflow using the `duplo-aws-infra` skill. The initial phases run immediately:
+DuploCloud creates the cluster and opens its detail page. The header shows the account and, once provisioned, the cluster ARN. Use the **Spec** / **Result** toggle to switch between the configuration you submitted and the provisioned cluster details. The **Provisioning** panel on the right tracks the cluster's status, and **Configuration** shows the cluster type and network.
 
-* **Phase 0 — Acknowledge**: The agent reads the `aws-cluster-baseline.json` skill file to load its provisioning instructions.
-* **Phase 0.5 — AWS\_PROFILE guard**: Confirms that AWS credentials are correctly configured for the target account before proceeding.
-* **Phase 1 — Parse & Validate**: Begins parsing the cluster specification passed from the UI.
+Provisioning runs as an agent ticket: click **Track Status** (or **Ask the Agent** in the header) to open it.
 
 ![](../../../../.gitbook/assets/cluster-step-06.png)
 
-### Step 7 — Phase 1: Parse & Validate
+### Step 7 — Agent Ticket Opens
 
-The agent extracts and validates all fields from the cluster object:
-
-* `name`, `vpcId`, `region`, `subnets` — inherited from the linked Network Baseline
-* `clusterType` — `Standard`
-* `eksVersion` — `1.33`
-* `apiServerVisibility` — normalized to lowercase (`public`)
-
-The agent then validates that the resolved region is accessible before advancing to computation.
+The agent uses the `duplo-aws-infra` skill and begins by reading the `aws-cluster-baseline.md` skill file to load its instructions. It then checks its environment, sets up AWS credentials for the target account and loads the cluster spec.
 
 ![](../../../../.gitbook/assets/cluster-step-07.png)
 
-### Step 8 — Phase 2: Compute & Phase 3: Provision
+### Step 8 — Phase 1: Parse & Validate
 
-**Phase 2 — Compute** derives the resources needed:
+The agent reads the cluster spec and validates each field before touching AWS:
 
-* EKS IAM role name (derived from the cluster name)
-* AMI type for managed node groups
-
-**Phase 3 — Provision via CloudFormation** then begins:
-
-* Derives the CloudFormation stack name from the cluster name
-* Checks whether the stack already exists to prevent duplicate provisioning
-* Deploys the CloudFormation template, creating the EKS cluster, IAM roles, and associated resources
-* Polls stack events in real time, reporting each resource as it is created
+* Name, VPC, region and subnets — inherited from the linked Network Baseline
+* Cluster type, Kubernetes version and API server visibility
+* Cluster IP CIDR and control plane logging, when set
+* At least two subnets are available for the cluster
+* The system node group's instance type and min/max size, when enabled
 
 ![](../../../../.gitbook/assets/cluster-step-08.png)
 
-### Step 9 — Stack Outputs & OIDC Provider
+### Step 9 — Phase 2: Compute
 
-Once the CloudFormation stack completes, the agent runs finalization steps:
+**Phase 2 — Compute** derives the resource names and counts without making any AWS calls:
 
-* **Step 4.2.3** — Reads all stack outputs: cluster ARN, API endpoint, certificate authority (CA) data, security group IDs, and subnet associations. Posts the full CA data and parses the result back to the controller.
-* **Step 4.2 — Create OIDC identity provider**: Registers the cluster's OIDC issuer URL as a trusted identity provider in IAM, enabling IAM Roles for Service Accounts (IRSA).
+* The CloudFormation stack name and the EKS service IAM role name, both derived from the cluster name
+* Whether an Auto Mode node role is needed
+* The total number of resources to create
+
+Then **Phase 3 — Provision** begins. Step 4.1 creates the Auto Mode node role (skipped for Standard clusters), and Step 4.2 starts deploying the CloudFormation stack.
 
 ![](../../../../.gitbook/assets/cluster-step-09.png)
 
-### Step 10 — Output Validation & Completion
+### Step 10 — Deploy the CloudFormation Stack
 
-The agent finalizes the provisioning:
+**Step 4.2 — Deploy CloudFormation stack**:
 
-* **Step 4.3** — Validates the assembled `output.json` against the skill's output schema to confirm all required fields are present and correctly typed.
-* **Step 5** — Posts the final results to the controller and sets the cluster status to **Complete**.
-* **Step 5.5** — Reports the provisioning completion summary with all key cluster details.
+* Copies the CloudFormation template and builds its parameters
+* Checks whether the stack already exists to prevent duplicate provisioning
+* Creates the stack — the EKS cluster, its IAM roles, security groups and, when enabled, the system node group — and follows the stack events until it completes (around 15 minutes)
 
 ![](../../../../.gitbook/assets/cluster-step-10.png)
 
-### Step 11 — Provisioning Complete
+### Step 11 — Stack Outputs and OIDC Provider
 
-The agent reports **Step 5.5 — Completion**. The EKS cluster is fully provisioned. The summary confirms:
+Once the stack completes:
 
-* **EKS Cluster ARN** — the full Amazon Resource Name for the cluster
-* **API Endpoint** — the Kubernetes API server URL
-* **OIDC Issuer URL** — the identity provider URL for IRSA configuration
-* **Cluster Security Group** — the security group attached to the EKS control plane
-* **All-Host Security Group** — the security group applied to all worker nodes
-* **CloudFormation Stack** — the stack name managing all provisioned resources
+* **Step 4.2.5** — Reads the stack outputs: cluster ARN, API endpoint, certificate authority data, OIDC issuer and security group IDs, and posts a partial result to DuploCloud
+* **Step 4.3** — Creates the OIDC identity provider, registering the cluster's OIDC issuer as a trusted identity provider in IAM so workloads can use IAM Roles for Service Accounts
 
 ![](../../../../.gitbook/assets/cluster-step-11.png)
 
-### Step 12 — Cluster List: Ready
+### Step 12 — Provisioning Complete
 
-After provisioning completes the Cluster list shows `prod-eks-cluster` with **Status: Ready**, type **Standard**, and EKS version **1.33**. The three-dot menu on any cluster row gives access to **View**, **Deprovision**, and **Delete**.
+**Phase 5 — Output** finishes the run:
+
+* **Step 5.1** — Writes `output.json`, used later for de-provisioning
+* **Step 5.2** — Posts the final results and sets the cluster status to **Complete**. DuploCloud then connects a Kubernetes Provider and Scope to the new cluster.
+* **Step 5.3** — Prints the completion summary: cluster name, type and version, cluster ARN, API endpoint, OIDC issuer URL and provider ARN, and the cluster and all-host security groups
 
 ![](../../../../.gitbook/assets/cluster-step-12.png)
 
-### Step 13 — Cluster Overview
+### Step 13 — Cluster Result
 
-Click into the cluster to open the detail page. The **Overview** tab displays all key cluster identifiers:
+Back on the cluster detail page, the status shows **Ready**. Select **Result** to see the provisioned cluster's identifiers:
 
-* **Cluster ARN** — `arn:aws:eks:us-east-1:813590939111:cluster/prod-eks-cluster`
-* **API Endpoint** — the Kubernetes API server URL (`*.gr7.us-east-1.eks.amazonaws.com`)
+* **Cluster ARN** — the Amazon Resource Name for the EKS cluster
+* **API Endpoint** — the Kubernetes API server URL
 * **OIDC Issuer URL** — used to configure IAM Roles for Service Accounts (IRSA)
 * **Certificate Authority** — the base64-encoded CA data for `kubectl` configuration
 
-The left sidebar exposes full cluster navigation: **Workloads** (Pods, Deployments, StatefulSets, DaemonSets, Jobs, CronJobs), **Configs**, **Network**, **Volumes**, and **Observe**.
+The **Actions** menu offers **Kubectl**, **Download Kubeconfig**, **Deprovision Cluster** and **Deprovision Attributes only**. The cluster's left-hand navigation gives access to **Attributes** and to its Kubernetes resources: **Workloads** (Pods, Deployments, StatefulSets, DaemonSets, Jobs, CronJobs), **Configs**, **Network**, **Volumes** and **Observe**.
 
 ![](../../../../.gitbook/assets/cluster-step-13.png)
 
-### Step 14 — Cluster Attributes
+### Step 14 — Cluster List: Ready
 
-Click **Attributes** in the sidebar to configure optional Kubernetes components and EKS add-ons. The **Configure Cluster Attributes** panel lists all available components:
+The Cluster list now shows the cluster with **Status: Ready**. The three-dot menu on a row offers **View** and **Deprovision**. Deprovisioning an AWS cluster tears down everything the platform created for it; **Delete** is only offered for Kubernetes-only clusters, which register an existing cluster without provisioning anything.
+
+![](../../../../.gitbook/assets/cluster-step-14.png)
+
+### Step 15 — Cluster Attributes
+
+Click **Attributes** in the cluster's left-hand navigation to manage optional Kubernetes components and EKS add-ons. On a new cluster this opens the **Configure Cluster Attributes** form; once attributes have been applied, it shows the attributes object (named `<cluster>-attributes`) with its own provisioning status. The **Components**, **AddOns** and **External DNS** tabs list what's installed.
+
+The available components are:
 
 * Cluster Autoscaler
 * Secret CSI Driver
@@ -175,41 +174,24 @@ Click **Attributes** in the sidebar to configure optional Kubernetes components 
 * Flux CD
 * External DNS
 
-Each component can be individually enabled. The **EKS Addons** section allows installing managed AWS add-ons via **+ Add Addon**. Click **Configure** to apply selections.
-
-![](../../../../.gitbook/assets/cluster-step-14.png)
-
-### Step 15 — Selecting Components
-
-Check the components you want enabled on the cluster. Each checkbox enables that controller or add-on during the next attributes provisioning run. Components can be enabled incrementally — you do not need to select all at once.
-
 ![](../../../../.gitbook/assets/cluster-step-15.png)
 
-### Step 16 — External DNS Domain Filters
+### Step 16 — Selecting Components
 
-When **External DNS** is enabled, a **Domain Filters** field appears requiring at least one domain. Enter the Route 53 hosted zone domain (e.g. `example.com`) and click **+ Add Domain** for additional domains. External DNS will only manage records within the specified domains.
+Check the components you want enabled on the cluster. On a new cluster, select them in the **Configure Cluster Attributes** form and click **Configure**; to change existing attributes, choose **Actions** > **Edit**, then **Save**. Components can be enabled incrementally — you don't need to select all at once.
+
+The **EKS Addons** section installs managed AWS add-ons: click **+ Add Addon** and select one.
 
 ![](../../../../.gitbook/assets/cluster-step-16.png)
 
-### Step 17 — Attributes Saved
+### Step 17 — External DNS Domain Filters
 
-After clicking **Configure**, the attributes are saved as a named configuration object (`prod-eks-cluster-attributes`) with **Status: New** while the agent applies the changes. The summary lists each component and its enabled/disabled state:
+When **External DNS** is enabled, a **Domain Filters** field appears and needs at least one domain. Enter the Route 53 hosted zone domain (e.g. `example.com`) and click **+ Add Domain** for additional domains. External DNS only manages records within the specified domains.
 
-| Component                    | Status   |
-| ---------------------------- | -------- |
-| Cluster Autoscaler           | Enabled  |
-| Secret CSI Driver            | Enabled  |
-| ALB Load Balancer Controller | Enabled  |
-| EFS Volumes                  | Enabled  |
-| Metrics Server               | Enabled  |
-| Kube State Metrics           | Enabled  |
-| Flux CD                      | Enabled  |
-| External DNS                 | Disabled |
-
-Click **Track Provisioning Status** to follow the agent as it installs the selected components into the cluster.
+Saving the attributes starts an agent ticket that installs the selected components into the cluster. Click **Track Status** to follow it.
 
 ![](../../../../.gitbook/assets/cluster-step-17.png)
 
 ## Next step
 
-Once the Cluster Baseline status shows **Ready**, proceed to [Step 3: Create an Environment](https://github.com/duplocloud/docs/blob/main/aws-extension/quick-start/provision-new/step-3-environment.md).
+Once the cluster's status shows **Ready**, proceed to [Step 3: Create a Plan](step-3-plan.md).
