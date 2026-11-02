@@ -6,7 +6,7 @@ The **LLMs** page governs which models are available to agents, and which model 
 
 ## Agent SDKs
 
-An **Agent SDK** is a connection to a deployed agent runtime — the same entity described in [Adding a Custom Agent](README.md#adding-a-custom-agent): a Name, Description, Endpoint, and Path. It's listed here because every model in the registry is registered under one.
+An **Agent SDK** is a connection to a deployed agent runtime: a Name, Description, Endpoint, and Path. This is also how you add your own agent to the platform. It's listed here because every model in the registry is registered under one.
 
 ![Agent SDKs tab](../../.gitbook/assets/llm-models-step-02-agent-sdks-tab.png)
 
