@@ -255,7 +255,7 @@ Changes in: `Frontend`
 
 ---
 
-**18.** `Feature` — **LangFuse Observability Session Search**
+**18.** `Feature` — [**LangFuse Observability Session Search**](armor/analytics.md#langfuse-sessions)
 
 Agent conversation sessions can now be searched and inspected directly from the observability dashboard, backed by LangFuse.
 
