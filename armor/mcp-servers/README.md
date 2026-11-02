@@ -110,11 +110,20 @@ The Scope is what ties everything together and what you select when creating a t
 * **Name** — the scope name shown in the ticket form
 * **Description** _(optional)_
 * **MCP Server** — select the server registered in Stage 1
-* **Resource Map** _(optional)_ — **Key** plus one or more **Values**, passed to the agent as additional context
+* **Resource Map** _(optional)_ — **Key** plus one or more **Values**
 
 ![Scope section](../../.gitbook/assets/mcp-server-v2-step-11-provider-step3-scope.png)
 
 The credential created in the previous section is carried forward automatically and shown read-only.
+
+{% hint style="info" %}
+**How the server authenticates depends on its Config Type.**
+
+* **HTTP/SSE** — the agent authenticates with the Resource Map. An `Authorization` key is sent as the request's `Authorization` header, with `Bearer ` added if the value doesn't already start with it. Other keys are added to the server's connection settings as-is, except `type`, which is ignored because the server's **Transport** decides it. The scope's credential is not used, so you can **Skip** the Credentials section. Resource Map values are not stored as secrets.
+* **Raw** — the credential is used, through the `${credential.<key>}` placeholders in the raw config.
+
+The MCP server's **Provider Type** must match the provider's **Type** exactly, or the scope fails to save. For a provider on the **Other** tab, register the server with provider type `other`.
+{% endhint %}
 
 ![Scope filled in](../../.gitbook/assets/mcp-server-v2-step-12-provider-step3-filled.png)
 
@@ -126,9 +135,9 @@ Click **Create**. A confirmation appears, followed by an **Attach Scope to Works
 
 ## Using the MCP server from a ticket
 
-With the Scope configured, create a ticket and select that scope. The agent then has access to the server's tools for the life of that ticket, using the credentials bound to the scope — tools are named `mcp__<server>__<tool>`.
+With the Scope configured, create a ticket and select that scope. The agent then has access to the server's tools for the life of that ticket, authenticated as described under [Scope](#scope) — tools are named `mcp__<server>__<tool>`.
 
-For a raw-config server, the platform resolves every `${credential.*}` placeholder from the bound credentials before the session starts, writes the resolved `.mcp.json` for the agent, and the agent calls the server's tools transparently. Secrets are never written into the stored config.
+Before each request it handles, the agent rebuilds its MCP configuration from the ticket's scopes. For a raw-config server, every `${credential.*}` placeholder is resolved from the bound credentials at that point; a server whose config references a credential key that doesn't exist is left out. The stored MCP server record keeps only the placeholders, never the resolved secrets.
 
 ### Controlling which tools the agent may call
 
