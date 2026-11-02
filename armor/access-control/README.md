@@ -56,8 +56,8 @@ A **User Token** (API Token) is a secure credential that allows a user or an ext
 Each token has:
 - A **name** to identify its purpose
 - An **expiry date** — tokens must have a future expiry date and become inactive after it passes
-- A **status** — either Active or Expired
+- A **status** — Active, Expired, or Revoked
 
 > **Important:** The full token value is only shown once at creation time. Copy and store it securely — it cannot be retrieved again.
 
-Tokens are managed on the **Profile** page, accessible from the profile icon in the top-right corner of the app.
+Each user creates and manages their own tokens on the **Profile** page, opened from their name at the bottom of the left-hand sidebar. Administrators can view, revoke, and delete every user's tokens under the **User Tokens** tab. See [User Tokens](user-tokens.md).
