@@ -15,6 +15,8 @@ Two forms are supported:
 
 Lookups are **flat, case-sensitive, and exact-match**. Placeholders can appear anywhere inside a string value in the raw config tree — in `url`, `command`, items in `args`, values in `env`, `headers`, or any other string field. Multiple placeholders in a single string are supported.
 
+Placeholders are resolved only in a raw config that defines exactly one server under `mcpServers`. A raw config with more than one server is skipped.
+
 ---
 
 ## Example
@@ -36,15 +38,15 @@ Lookups are **flat, case-sensitive, and exact-match**. Placeholders can appear a
 }
 ```
 
-![](<../../.gitbook/assets/mcp-server-step-10.png>)
+![Raw config with credential placeholders](<../../.gitbook/assets/credential-masking-step-01-raw-config.png>)
 
 **Bound credential on the scope:**
 
 The credential fields must match the placeholder keys exactly. For the config above, the credential must have a field named `token` and a field named `url`:
 
-![](<../../.gitbook/assets/mcp-server-step-13.png>)
+![Credential fields token and url](<../../.gitbook/assets/credential-masking-step-02-credential-fields.png>)
 
-**Resolved `.mcp.json` written for the session:**
+**Resolved `.mcp.json` written for the agent:**
 
 ```json
 {
@@ -53,7 +55,7 @@ The credential fields must match the placeholder keys exactly. For the config ab
       "command": "uvx",
       "args": ["mcp-grafana"],
       "env": {
-        "GRAFANA_URL": "https://system-svc-grafana-oc-default.ai-sandbox-apps.duplocloud.net",
+        "GRAFANA_URL": "https://grafana.example.com",
         "GRAFANA_SERVICE_ACCOUNT_TOKEN": "<resolved token value>"
       }
     }
@@ -61,7 +63,7 @@ The credential fields must match the placeholder keys exactly. For the config ab
 }
 ```
 
-The raw config stored on the server is never modified. Placeholder resolution happens in memory at session start and the resolved values exist only for the duration of that agent session.
+The raw config stored on the server is never modified and never contains the secrets. The resolved `.mcp.json`, which does contain them, is written fresh before every request to the agent, so a change to the credential or to the ticket's scopes takes effect on the next message.
 
 ---
 
@@ -79,7 +81,7 @@ The key after `credential.` or `credential.metadata.` must **exactly match** the
 
 If any placeholder references a key that does not exist on the bound credential:
 
-1. The **entire MCP server** is dropped from `.mcp.json` for that session
+1. The **entire MCP server** is dropped from `.mcp.json` for that request
 2. A `WARNING` is logged by the platform
 3. The system prompt's **`## Connected MCP Servers`** section marks the server as `(FAILED TO LOAD)`, listing the missing key names and the credential name
 
