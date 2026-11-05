@@ -1,107 +1,150 @@
-# Installation
+---
+description: Use Cloud Deploys in the DevKit to publish your own DuploCloud portal in your cloud account, step by step.
+---
 
-DuploCloud HelpDesk is installed directly into your cloud account, running inside a Kubernetes cluster that you own and control. This document explains what you need to provide to DuploCloud, what we will set up, and what prerequisites your environment needs to meet before installation begins.
+# Deploy Your Portal to Your Cloud
 
-***
+Cloud Deploys is an agent in the DevKit that publishes your own DuploCloud portal in **your** cloud account. You pick a connected cloud provider and answer a short wizard. You review exactly what will be created, then approve it. When it finishes, Cloud Deploys gives you the portal URL.
 
-## How Installation Works
+{% hint style="info" %}
+**Cloud Deploys is in preview.** It is not released yet, and the screens and steps on this page may change. AWS is the only cloud available today. Azure and Google Cloud appear in the wizard as **Coming soon**.
+{% endhint %}
 
-DuploCloud deploys the HelpDesk into your cloud environment using a Helm chart. We manage the deployment process on your behalf — you do not need to run any commands yourself. Once the prerequisites are in place and access is granted, our team handles the installation end-to-end.
+DuploCloud may also deploy the portal for you, case by case. If you would rather not run the wizard yourself, ask your DuploCloud contact.
 
-***
-
-## Supported Cloud Providers
-
-DuploCloud HelpDesk runs on any of the following managed Kubernetes platforms:
-
-| Cloud            | Kubernetes Service | Guide                                       |
-| ---------------- | ------------------ | ------------------------------------------- |
-| **AWS**          | Amazon EKS         | [AWS Installation](aws-installation.md)     |
-| **Google Cloud** | GKE                | [GCP Installation](gcp-installation.md)     |
-| **Azure**        | AKS                | [Azure Installation](azure-installation.md) |
+If you already run Kubernetes and want to install the portal with Helm yourself, use the [Systems Integrator Installation Guide](systems-integrator-installation-guide.md) instead.
 
 ***
 
-## What You Need to Provide
+## What you need first
 
-### 1. An AWS Account (or Existing Cluster)
+| Requirement | Details |
+| --- | --- |
+| **The DevKit** | Running on your machine, with Cloud Deploys loaded. See [Install the DevKit](../install-the-devkit.md). |
+| **A license** | The wizard registers a license for your portal's URL. By default it reuses your DevKit license. You can also paste a license token from the [DuploCloud Console](https://console.duplocloud.com). See [License](../licensing.md). |
+| **A connected cloud provider** | An AWS provider attached to your workspace, with permission to create and manage VPC, EKS, IAM, S3, EFS, ACM and Route 53 resources. See [Amazon Web Services (AWS)](../integrating-providers/amazon-web-services-aws.md). |
+| **A DNS zone or an existing certificate** | Either a Route 53 hosted zone that contains your portal's hostname, or an ACM certificate that covers it. You can also use a different DNS provider and add the records yourself. |
+| **Outbound HTTPS** | The DevKit must reach GitHub (to download OpenTofu once), `registry.opentofu.org` (provider downloads), your cloud's APIs and the DuploCloud Console. |
 
-The simplest path is to provide DuploCloud with a **fresh, dedicated AWS account**. Our team will create all required infrastructure — VPC, Kubernetes cluster, storage, certificates — from scratch with no risk of disrupting existing workloads.
+Nothing is created in your account until you review a plan and approve it.
 
-If you already have a Kubernetes cluster and prefer to install into an existing account, that is fully supported. DuploCloud deploys into a dedicated namespace and does not modify any resource that was created outside of DuploCloud.
-
-
-
-### 2. Cloud Infrastructure
-
-Depending on your cloud provider, the following infrastructure will be provisioned in your account for installation:
-
-#### AWS (EKS)
-
-| Resource                         | Purpose                                                                 |
-| -------------------------------- | ----------------------------------------------------------------------- |
-| **AWS Load Balancer Controller** | Routes external traffic to the application                              |
-| **EFS Filesystem**               | Shared file storage for the backend (mount targets in each node subnet) |
-| **EFS CSI Driver**               | Connects the cluster to EFS                                             |
-| **ACM Certificate**              | TLS for the application domain                                          |
-| **IRSA Role**                    | Required IAM permissions per service                                    |
-
-#### Google Cloud (GKE)
-
-| Resource                 | Purpose                                              |
-| ------------------------ | ---------------------------------------------------- |
-| **Ingress Controller**   | Routes external traffic (nginx or GKE built-in)      |
-| **Filestore CSI Driver** | Shared file storage for the backend                  |
-| **Workload Identity**    | Grants the backend service account access to storage |
-
-#### Azure (AKS)
-
-| Resource                    | Purpose                                                      |
-| --------------------------- | ------------------------------------------------------------ |
-| **Ingress Controller**      | Routes external traffic (nginx or Azure Application Gateway) |
-| **Azure Files CSI Driver**  | Shared file storage for the backend (built-in on AKS ≥ 1.21) |
-| **Azure Workload Identity** | Grants the backend service account access to storage         |
-
-### 3. A Domain Name and TLS Certificate
-
-You must provide:
-
-* A domain name (or subdomain) where the application will be hosted, e.g. `ai-helpdesk.yourcompany.com`&#x20;
-* A valid **TLS certificate** for that domain (ACM on AWS, or cert-manager/Let's Encrypt on GCP/Azure)
-
-### 4. Administrator Email Addresses
-
-Provide a list of email addresses that should have **super-admin access** to the platform. These users will have full administrative control and can manage other users after installation.
+Cloud-specific details are on the per-cloud pages: [AWS](aws-installation.md), [Azure](azure-installation.md) and [Google Cloud](gcp-installation.md).
 
 ***
 
-## What DuploCloud Installs
+## Deploy your portal
 
-Once the prerequisites are in place, DuploCloud deploys the following into your cluster:
+Open **Cloud Deploys** in the DevKit menu and start a new deployment. The wizard takes you through these steps in order. The left rail shows your progress and your answers so far.
 
-| Component              | Description                                                                                                                               |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Backend**            | ASP.NET Core API server that powers the AI HelpDesk, project management, and agent orchestration                                          |
-| **Frontend**           | React web application served via nginx — this is the UI your team interacts with                                                          |
-| **MongoDB**            | Embedded database (Kubernetes StatefulSet) for storing tickets, projects, reports, and configuration                                      |
-| **Web Terminal**       | Browser-based terminal integration for agent command execution                                                                            |
-| **Duplo Agent**        | AI agent                                                                                                                                  |
-| **MCP Server**         | Model Context Protocol server for tool integrations                                                                                       |
-| **Ingress**            | Load balancer / ingress resource routing HTTPS traffic to the application                                                                 |
-| **Persistent Storage** | Shared file volume (EFS / Filestore / Azure Files) mounted into the backend for storing agent working directories and generated artifacts |
+| Step | What you do |
+| --- | --- |
+| **1. Cloud** | Choose **Amazon Web Services**. Azure and Google Cloud are disabled and marked **Coming soon**. |
+| **2. Provider** | Choose one of the AWS providers attached to your workspace. The wizard connects to the account and shows the account ID. If none is listed, add a provider, then refresh. |
+| **3. Deployment** | Enter a **Deployment name**, an optional description and the **AWS region**. Everything is created in that region. |
+| **4. Network** | Create a new VPC (recommended) or use an existing one. |
+| **5. Cluster** | Create a new EKS cluster (recommended) or use an existing one. Set the Kubernetes version, worker instance type and node counts. |
+| **6. Storage** | Create or reuse an EFS file system and S3 bucket. |
+| **7. DNS & certificate** | Enter the portal URL and terminal URL, and choose how DNS and the HTTPS certificate are handled. |
+| **8. Cluster add-ons** | Install the add-ons the portal needs, or confirm that your cluster already has them. |
+| **9. Helpdesk** | Choose how the first admin signs in and list the admin emails. |
+| **10. License** | Get a license for your portal's URL automatically, or paste one. |
+| **11. Review** | Check every answer, then save. |
 
-All components run inside a dedicated namespace in your cluster and are fully contained within your cloud account — your data stays in your environment.
+{% hint style="info" %}
+The deployment name must be 3 to 32 characters: lowercase letters, digits and dashes, starting with a letter. It names your Terraform state and your license environment, so it **cannot be changed later**.
+{% endhint %}
+
+Each step with an existing-resource option shows a dropdown of what Cloud Deploys finds in your account. See [Use your existing network or cluster](#use-your-existing-network-or-cluster).
+
+### DNS and certificate
+
+You choose one of three modes on the **DNS & certificate** step:
+
+| Mode | What happens |
+| --- | --- |
+| **Route 53 (automatic)** | You pick a hosted zone. Cloud Deploys creates the certificate and its validation records, and creates the portal's DNS records for you. The portal URL must sit inside the zone you pick. |
+| **Use an existing certificate** | You pick an ACM certificate that covers both hostnames. Nothing is created in DNS. After the deploy you create the final DNS records yourself. |
+| **I'll use a different DNS provider** | Cloud Deploys creates the certificate only. You add the validation records and the final records at your DNS provider. |
+
+With a different DNS provider, the deployment pauses after the infrastructure is created. It shows the validation records to add, then waits for you to confirm. Validation usually takes a few minutes and can take up to 45.
+
+### First login
+
+On the **Helpdesk** step, choose how the first admin signs in:
+
+* **Admin email and password.** This is the default. The password must be at least 8 characters.
+* **Google sign-in.** Enter your Google client ID and client secret.
+* **Microsoft sign-in.** Enter your Microsoft client ID, tenant ID and client secret.
+
+Use **Admin emails** to list everyone who should get full administrative access. Passwords and client secrets are not shown in the review or the logs.
+
+### Review the plan
+
+After you save, Cloud Deploys works out what it will create and shows it to you first. **Nothing changes in your account until you approve.** The deployment runs in two stages, and each has its own plan:
+
+1. **Infrastructure plan.** The network, cluster, storage, certificate and DNS. Review it, then choose **Deploy infrastructure**.
+2. **Application plan.** The add-ons and the portal itself, installed on your cluster. Review it, then choose **Deploy Helpdesk**.
+
+If you change any answer after a plan, the plan is marked out of date and you review a new one. An apply always uses the plan you reviewed.
+
+### Apply and finish
+
+Each deploy runs inside the DevKit extension, not through an AI model. You can watch the live log and safely leave the page. When the second stage finishes, the page shows **Helpdesk is live** with your portal URL and how to sign in for the first time.
+
+If the load balancer is still starting, the page says so. Choose **Refresh** after a few minutes. If you chose a different DNS provider, the page lists the DNS records to create at your provider.
+
+If a run fails, the page shows what went wrong and nothing else happens until you choose what to do next. A failed apply is not retried. Fix the cause and review a new plan.
 
 ***
 
-## After Installation
+## What gets created
 
-Once the deployment is complete, DuploCloud will provide:
+With the recommended options, Cloud Deploys creates these resources in your account:
 
-* The **application URL** where your team can log in
-* Confirmation that all services are healthy
-* Onboarding guidance for creating your first workspace, inviting users, and configuring the AI agent
+| Resource | Purpose |
+| --- | --- |
+| **VPC** | Public and private subnets across three zones, with a NAT gateway |
+| **EKS cluster and node group** | Runs the portal |
+| **EFS file system** | Shared storage for agent working directories and generated files |
+| **S3 buckets** | Files and user data |
+| **ACM certificate** | HTTPS for the portal and terminal URLs |
+| **Route 53 records** | Only in Route 53 mode |
+| **Cluster add-ons** | AWS Load Balancer Controller, EFS CSI driver, external-dns (Route 53 mode only) and a storage class |
+| **The portal** | The DuploCloud portal installed with its Helm chart in its own namespace, with IAM roles for its services |
+| **A state bucket** | One S3 bucket per account holding the deployment's state |
 
+The state bucket is private, versioned and encrypted. It also stores the details that let you [find and take over the deployment](#take-over-an-existing-deployment) later. Everything stays in your account.
 
+***
 
-For questions about the installation process, please contact your DuploCloud account team.
+## Use your existing network or cluster
+
+Each infrastructure step offers an option to use something you already have instead of creating it: a VPC, an EKS cluster, an EFS file system, an S3 bucket, or the cluster add-ons. Resources you adopt are **used as-is and never modified**.
+
+Cloud Deploys checks an adopted resource before it plans. A failed check blocks you with an explanation and a **Re-check** button. Some checks only warn.
+
+| Resource | What is checked |
+| --- | --- |
+| **VPC** | The private subnets route to a NAT gateway, so worker nodes can reach the internet. |
+| **EKS cluster** | The provider has cluster-admin access, and the cluster has an IAM OIDC provider. A warning appears if the cluster is in a different VPC from the one you chose. |
+| **EFS file system** | It has mount targets in the private subnets you chose, and its security groups allow NFS (TCP 2049) from the cluster nodes. |
+| **Cluster add-ons** | The `ai-studio-efs` storage class exists. Warnings appear if the load balancer controller, EFS CSI driver or external-dns is missing. |
+
+***
+
+## Take over an existing deployment
+
+Each deployment records its details in the state bucket in your own account. That means you can manage it again after a DevKit reset, or from a colleague's DevKit.
+
+1. Open **Cloud Deploys**. Under **Found in your cloud**, the DevKit lists deployments it finds in the accounts of your connected providers. Choose **Scan again** to refresh the list.
+2. Choose **Manage** next to the deployment.
+3. Choose **Check for changes**. Cloud Deploys compares what is running with what the deployment describes. Nothing changes until you approve.
+
+Taking over does not register a new license. To stop managing a deployment from this DevKit without touching your cloud, choose **Stop managing**. To remove the infrastructure, choose **Destroy**.
+
+***
+
+## Other installation guides
+
+* [Systems Integrator Installation Guide](systems-integrator-installation-guide.md): install the portal with Helm into a Kubernetes cluster you manage.
+* [AI DevOps V1 to V2 Upgrade](v1-to-v2-upgrade.md): upgrade an existing installation.
