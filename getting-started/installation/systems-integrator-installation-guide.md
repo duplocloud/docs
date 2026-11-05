@@ -167,7 +167,7 @@ There are two ways to apply it:
 * **Helm values** — set `secrets.licensingToken` in `values.yaml` before install (or supply the `Licensing__Token` key yourself when you manage secrets externally — see [2.2](systems-integrator-installation-guide.md#id-2.2-auto-generated-secrets)).
 * **From the UI** — after install, paste the token under **AI Admin → Access Control → License → Apply New License**. It takes effect immediately with no restart.
 
-See [License](../../armor/access-control/license.md) for how licensing works, the UI walkthrough, and troubleshooting. Treat the token like any other credential and keep it out of source control.
+See [License](../licensing.md) for how licensing works, the UI walkthrough, and troubleshooting. Treat the token like any other credential and keep it out of source control.
 
 ***
 
@@ -553,7 +553,7 @@ After pods are healthy and login works, configure the platform through the UI. E
 | Step                  | Where                                        | Key details                                                                                                                                         | Reference                                                              |
 | --------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | 1. Login              | Browser → app URL                            | Sign in as a `config.authSuperUsers` email via your IdP                                                                                             | [Access Control](../../armor/access-control/README.md)                 |
-| 2. Verify license     | AI Admin → Access Control → License          | Status should read **Active**. If not, apply the token here.                                                                                        | [License](../../armor/access-control/license.md)                       |
+| 2. Verify license     | AI Admin → Access Control → License          | Status should read **Active**. If not, apply the token here.                                                                                        | [License](../licensing.md)                       |
 | 3. Create LLM Model   | AI Admin → LLMs → + Add                      | **Model ID must match the `CLAUDE_MODEL` env var exactly**                                                                                          | [LLM Models](../../armor/agents/llm-models.md)                         |
 | 4. Create Agent       | AI Admin → LLMs → Agent SDKs → + Add         | Endpoint: `http://<RELEASE>-duplo-agent:8000` (base URL only). Set `endpointDetails.path: api/sendMessage`. Set `metaData.STREAMING_ENABLED: true`. | [Agent SDKs](../../armor/agents/llm-models.md#agent-sdks)              |
 | 5. Create LLM Mapping | LLMs → LLM Mappings → + Add                  | Map model + agent pair. Scope: Workspace. Target: your workspace.                                                                                   | [LLM Models](../../armor/agents/llm-models.md)                         |

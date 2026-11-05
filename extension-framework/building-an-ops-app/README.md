@@ -18,4 +18,4 @@ A running Ops application where users interact through structured forms and stat
 2. [Write Your Skills](step-2-skills.md) — encode your domain expertise as skill instructions for each resource type.
 3. [Connect Providers](step-3-providers.md) — register the IT systems your application will orchestrate.
 4. [Configure Workspaces](step-4-workspaces.md) — create workspaces, assign scopes and personas, invite users.
-5. [Deploy](step-5-deploy.md) — choose hosted by DuploCloud or self-hosted in your own infrastructure.
+5. [Deploy](step-5-deploy.md) — get your application running in your portal.

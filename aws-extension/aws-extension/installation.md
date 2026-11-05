@@ -12,10 +12,10 @@ Before using the AWS Agent, you need to install DuploCloud in your cloud environ
 {% step %}
 ### Install DuploCloud on AWS
 
-Follow the AWS installation guide to deploy DuploCloud into your AWS account.
+Use Cloud Deploys in the DevKit to deploy your own DuploCloud portal into your AWS account.
 
-{% content-ref url="../../getting-started/installation/aws-installation.md" %}
-[aws-installation.md](../../getting-started/installation/aws-installation.md)
+{% content-ref url="../../getting-started/installation/README.md" %}
+[Deploy Your Portal to Your Cloud](../../getting-started/installation/README.md)
 {% endcontent-ref %}
 {% endstep %}
 

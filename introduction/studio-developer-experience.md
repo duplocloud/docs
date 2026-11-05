@@ -1,9 +1,5 @@
 # Studio: Developer Experience
 
+Studio is the developer experience for ARMOR. Think of it as Replit for DevOps. Its main tool is the **DevKit**, a local copy of the DuploCloud platform that runs on your laptop. You use it to build custom agents and test them against your own cloud accounts before you push them to your organization's DuploCloud portal. The DevKit includes an AI coding assistant that helps you write agents from a plain-language description.
 
-
-Studio is the Layer 3 developer experience for ARMOR — think of it as the Replit for DevOps. It is a coding assistant that let's team build custom agents (extensions). Using the studio the entire platform runs in your local laptop where you can build and test these agents before pushing them to your organization's DuploCloud.&#x20;
-
-{% hint style="info" %}
-Refer to the Studio / Dev-Kit repository's read me for instructions on how to set up the studio for extension development. Watch this [demo](https://duplocloud.com/use-cases/#platform-engineering)&#x20;
-{% endhint %}
+To get started, see [Install the DevKit](../getting-started/install-the-devkit.md). You can also watch this [demo](https://duplocloud.com/use-cases/#platform-engineering).
