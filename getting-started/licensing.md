@@ -165,7 +165,7 @@ The table below the cards lists each licensed dimension:
 | **Remaining**   | Headroom under the cap                                                                                                            |
 | **Enforcement** | `Enforced` — the cap is being applied; `Blocked — No Valid License` — every create in this dimension is refused until a valid license is applied; `Not Enforced` — this build applies no cap to the dimension |
 
-The agent limit appears in the current release as the **Extensions** row, with the claim name `max_extensions`. A later release relabels it **Agents** (`max_agents`).
+The agent limit appears as the **Agents** row, with the claim name `max_agents`.
 
 A banner above the table explains why rows are blocked when no valid license is in force, and a red alert appears if the DuploCloud Console has revoked the license.
 

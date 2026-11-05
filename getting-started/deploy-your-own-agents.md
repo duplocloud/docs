@@ -38,7 +38,7 @@ A free license limits how many agents a portal can run. The [License](licensing.
 {% step %}
 ### Open the Marketplace
 
-In your portal, go to **AI Admin → Marketplace** and click **Register**. If your sidebar still says **Extensions**, you're on a release from before the Extensions → Agents rename: go to **AI Admin → Extensions** instead. The screens are the same.
+In your portal, go to **AI Admin → Marketplace** and click **Register**.
 {% endstep %}
 
 {% step %}
@@ -50,7 +50,7 @@ Choose your `extension.zip` and click **Register**.
 {% endstep %}
 {% endstepper %}
 
-The agent loads straight away and appears under **Installed Extensions** (**Activated Agents** in the renamed portal). To update it later, register a zip with a higher `version` in its `manifest.json`. For managing installed agents (disabling, deleting, and checking what each one adds), see [Agents](../armor/extensions.md).
+The agent loads straight away and appears under **Activated Agents**. To update it later, register a zip with a higher `version` in its `manifest.json`. For managing installed agents (disabling, deleting, and checking what each one adds), see [Agents](../armor/extensions.md).
 
 ***
 
