@@ -39,7 +39,7 @@ The **Agent Marketplace** tab is the catalog of agents you can activate. Search 
 
 ![Agent Marketplace](../.gitbook/assets/extensions-step-02-agent-marketplace.png)
 
-Click an agent to open its details: what it does, its version and category, and **Where it lives in your nav** — the left-nav position it will take, which you can **Change** before activating. The details panel also lists the publisher, the **Manifest ID**, and the **Agent ID**.
+Click an agent to open its details: what it does, its version and category, and **Where it lives in your nav** — the left-nav position it will take, which you can **Change** before activating. The details panel also lists the publisher and the **Manifest ID**.
 
 ![Agent details](../.gitbook/assets/extensions-step-03-agent-details.png)
 
