@@ -34,7 +34,7 @@ Cloud-specific details are on the per-cloud pages: [AWS](aws-installation.md), [
 
 ## Deploy your portal
 
-Open **Cloud Deploys** in the DevKit menu and start a new deployment. The wizard takes you through these steps in order. The left rail shows your progress and your answers so far.
+Open **Cloud Deploys** in the DevKit menu and start a new deployment. The wizard takes you through these steps in order. The numbered steps across the top show your progress.
 
 | Step | What you do |
 | --- | --- |
@@ -49,6 +49,12 @@ Open **Cloud Deploys** in the DevKit menu and start a new deployment. The wizard
 | **9. Helpdesk** | Choose how the first admin signs in and list the admin emails. |
 | **10. License** | Get a license for your portal's URL automatically, or paste one. |
 | **11. Review** | Check every answer, then save. |
+
+<figure><img src="../../.gitbook/assets/cloud-deploys-wizard-cloud.png" alt="Cloud Deploys wizard, step 1 of 11, with Amazon Web Services selected and Microsoft Azure and Google Cloud marked Coming soon"><figcaption><p>Step 1: choose the cloud. Only AWS is available today.</p></figcaption></figure>
+
+If no AWS provider is attached to your workspace yet, the **Provider** step asks you to connect one first. Choose **Open Providers**, add the provider, then choose **Refresh**.
+
+<figure><img src="../../.gitbook/assets/cloud-deploys-wizard-provider.png" alt="Cloud Deploys wizard, step 2 of 11, showing Connect an AWS account first with Open Providers and Refresh buttons"><figcaption><p>Step 2 before a provider is connected.</p></figcaption></figure>
 
 {% hint style="info" %}
 The deployment name must be 3 to 32 characters: lowercase letters, digits and dashes, starting with a letter. It names your Terraform state and your license environment, so it **cannot be changed later**.
