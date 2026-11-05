@@ -1,5 +1,5 @@
 ---
-description: Free or paid, local or in your cloud: pick how you want to start with DuploCloud.
+description: Free or paid, local or in your own cloud — pick how you want to start with DuploCloud.
 ---
 
 # Choose Your Path
