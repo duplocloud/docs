@@ -1,130 +1,52 @@
-# AWS Installation
+---
+description: What Cloud Deploys needs from your AWS account and what it creates there.
+---
 
-This guide covers what you need to provide to install DuploCloud AI Helpdesk on AWS and what DuploCloud will set up in your environment.
+# AWS
 
-***
+AWS is the cloud Cloud Deploys supports today. This page lists what you need in your AWS account and what gets created. The steps themselves are in [Deploy Your Portal to Your Cloud](README.md).
 
-## Overview
-
-The installation deploys the following components into a dedicated namespace in your Kubernetes cluster:
-
-| Component              | Description                                                      |
-| ---------------------- | ---------------------------------------------------------------- |
-| **Backend**            | ASP.NET Core API server — tickets, projects, agent orchestration |
-| **Frontend**           | Angular web UI served via nginx                                  |
-| **MongoDB**            | Embedded database (Kubernetes StatefulSet)                       |
-| **Web Terminal**       | Browser-based terminal for agent command execution               |
-| **Duplo Agent**        | Claude-powered AI agent runtime                                  |
-| **MCP Server**         | Model Context Protocol server for tool integrations              |
-| **Ingress (ALB)**      | AWS Application Load Balancer routing HTTPS traffic              |
-| **Persistent Storage** | EFS-backed shared volume for agent working directories           |
-
-All components run entirely within your AWS account.
+{% hint style="info" %}
+Cloud Deploys is in preview and has not been released yet.
+{% endhint %}
 
 ***
 
-## Deployment Scenarios
+## Prerequisites
 
-### Ideal: Fresh AWS Account (Recommended)
+| Item | Notes |
+| --- | --- |
+| **A connected AWS provider** | Attached to your workspace in the DevKit. See [Amazon Web Services (AWS)](../integrating-providers/amazon-web-services-aws.md). |
+| **Permissions** | The provider's IAM identity must be able to create and manage VPC, EKS, IAM, S3, EFS, ACM and Route 53 resources. A dedicated, empty account is the simplest place to start, but any account works. |
+| **A region** | Everything is created in the region you choose. |
+| **Two hostnames** | One for the portal and one for the terminal, for example `helpdesk.example.com` and `xterm-helpdesk.example.com`. |
+| **A Route 53 hosted zone or an ACM certificate** | A hosted zone that contains the hostnames, or an ACM certificate that covers both. A different DNS provider also works, and you add the records yourself. |
+| **Capacity for the cluster** | The recommended cluster uses two worker nodes. The default worker size is `t3a.large`. |
 
-The cleanest path is to provide a **dedicated, empty AWS account** for DuploCloud AI HelpDesk. This gives DuploCloud full control to create all required infrastructure from scratch — VPC, EKS cluster, EFS, security groups, ACM certificates — with no risk of conflicting with existing workloads.
-
-**What you do:**
-
-1. Create a new AWS account (or sub-account in your AWS Organization)
-2. Create an IAM user with full admin access and share the credentials with DuploCloud
-3. DuploCloud handles everything from there
-
-This is the fastest path to a clean, reproducible installation.
-
-***
-
-### Alternative: Existing AWS Account
-
-If you prefer to install into an existing AWS account (e.g. alongside other workloads), this is fully supported. DuploCloud HelpDesk deploys into a dedicated Kubernetes namespace and does not modify any resource that was created outside of Duplo.
-
-**What you need to ensure:**
-
-* An existing EKS cluster with available node capacity
-* A VPC with public subnets for the ALB
-* Permission to create EFS, security groups, and ACM certificates in the account
+You do not need to share AWS credentials with DuploCloud. Cloud Deploys uses the provider you connected in your own DevKit.
 
 ***
 
-## Installation Requirements
+## What is created
 
-In either of the scenarios above, we will need:
+| Resource | Notes |
+| --- | --- |
+| VPC | Public and private subnets in three zones, with a NAT gateway. |
+| EKS cluster | With a managed node group. |
+| EFS file system | Mount targets in the private subnets. |
+| S3 buckets | For files and user data. |
+| ACM certificate | For both hostnames. |
+| Route 53 records | Only when you choose Route 53 mode. |
+| Cluster add-ons | AWS Load Balancer Controller, EFS CSI driver, external-dns (Route 53 mode only) and the `ai-studio-efs` storage class. |
+| The portal | Installed with its Helm chart in the `helpdesk` namespace, with IAM roles for its services. |
+| State bucket | `duplo-helpdesk-tfstate-<account ID>`: private, versioned and encrypted. |
 
-### 1. AWS Access
-
-| Item                              | Required | Notes                                                                                |
-| --------------------------------- | -------- | ------------------------------------------------------------------------------------ |
-| AWS Account ID                    | ✅        | 12-digit number (e.g. `774157348504`)                                                |
-| IAM credentials for the installer | ✅        | See [Granting Installer Access](aws-installation.md#granting-installer-access) below |
-| Target AWS region                 | ✅        | e.g. `us-east-1`                                                                     |
-
-### 2. Kubernetes Cluster
-
-| Item                    | Required | Notes                                  |
-| ----------------------- | -------- | -------------------------------------- |
-| EKS cluster             | ✅        | Kubernetes v1.33+                      |
-| Available node capacity | ✅        | Minimum 2 nodes, `t3a.large` or larger |
-
-> **No cluster yet?** If you don't have an EKS cluster, DuploCloud will create one. Full admin access to the account is required for this.
-
-> **Sharing a cluster:** Multiple applications can coexist in the same EKS cluster — each runs in its own namespace. HelpDesk deploys into `duploservices-<name>` by default.
-
-### 3. Domain and DNS
-
-| Item                                            | Required | Notes                                                  |
-| ----------------------------------------------- | -------- | ------------------------------------------------------ |
-| A domain or subdomain for the DuploCloud portal | ✅        | e.g. `helpdesk.duplo.company.com`                      |
-| xterm subdomain                                 | ✅        | e.g. `xterm.duplo.company.com`                         |
-| Access to DNS provider                          | ✅        | Route 53, Cloudflare, or equivalent                    |
-| Existing ACM certificate                        | Optional | If not available, one will be requested during install |
-
-### 4. Administrator Emails
-
-| Item                  | Required | Notes                                                     |
-| --------------------- | -------- | --------------------------------------------------------- |
-| Super-user email list | ✅        | Comma-separated, e.g. `admin@company.com,ops@company.com` |
-
-These accounts receive full administrative access to DuploCloud after installation.
+You can adopt an existing VPC, EKS cluster, EFS file system, S3 bucket or set of add-ons instead of creating them. Adopted resources are never modified. See [Use your existing network or cluster](README.md#use-your-existing-network-or-cluster).
 
 ***
 
-## Granting Installer Access
+## The Terraform behind it
 
-DuploCloud requires full admin access to your AWS account to perform the installation — this is needed to create the VPC, EKS cluster, EFS, load balancer, security groups, and ACM certificates.
+Cloud Deploys runs open-source Terraform modules that DuploCloud publishes. Read the module's README for the full list of resources and variables.
 
-The recommended approach is to create a dedicated IAM user with `AdministratorAccess` and share the credentials securely with DuploCloud:
-
-1. In the AWS Console → **IAM** → **Users** → **Create user**
-2. Name it `duplocloud-installer` (or similar)
-3. Attach the `AdministratorAccess` policy directly
-4. Under **Security credentials** → create an **Access Key** (for CLI use)
-5. Share the Access Key ID and Secret Access Key with DuploCloud
-
-Alternatively, if your organization uses IAM roles, you can create a role with `AdministratorAccess` and add DuploCloud's IAM identity as a trusted principal so we can assume it. DuploCloud will confirm the exact trust policy configuration.
-
-> **After installation:** Access can be revoked by deleting the IAM user or role. If you require tighter permission scoping, contact DuploCloud — scoped IAM policies are available for environments where full admin access is not permitted.
-
-***
-
-## What DuploCloud Will Do
-
-Once credentials are shared, our team handles the full installation end-to-end:
-
-* **Provision infrastructure** (if starting fresh) — create the VPC, EKS cluster, node groups, EFS filesystem, security groups, and ACM certificate
-* **Deploy HelpDesk** — install all components via Helm chart into a dedicated namespace
-* **Configure networking** — set up the ALB ingress, SSL termination, and DNS records for your portal domain
-* **Set up your environment** — configure the first providers, skills, and workspaces so your team can get started right away
-* **Verify and hand off** — confirm all services are healthy and provide the application URL
-
-Total time is typically **30–60 minutes**.
-
-***
-
-## Connecting AWS to DuploCloud (Post-Installation)
-
-Once the portal is live, you can connect AWS accounts to it so the AI agent can query and manage your infrastructure. See the [AWS Provider guide](../integrating-providers/amazon-web-services-aws.md) for full setup instructions, including using the CloudFormation template to create the required IAM roles.
+TODO(link): AWS Terraform repository README (repo is being made public; master to supply the URL).
