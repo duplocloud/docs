@@ -71,13 +71,13 @@ Use this when the deployment is already running — for example when the Helm va
 
 Go to **AI Admin → Access Control** in the left-hand navigation and click the **License** tab. The page shows the installed license (if any) at the top and the entitlement limits in the table below.
 
-![Step 1 — License tab](../../.gitbook/assets/license-step-01-license-tab.png)
+![Step 1 — License tab](../.gitbook/assets/license-step-01-license-tab.png)
 
 #### Step 2 — Click "Apply New License"
 
 Click the **Apply New License** button above the limits table. The **Apply New License** dialog opens with a single **License Token** field.
 
-![Step 2 — Apply New License dialog](../../.gitbook/assets/license-step-02-apply-dialog.png)
+![Step 2 — Apply New License dialog](../.gitbook/assets/license-step-02-apply-dialog.png)
 
 #### Step 3 — Paste the token and click "Apply"
 
@@ -131,4 +131,4 @@ A banner above the table explains why rows are blocked when no valid license is 
 | `ConsoleRefused` / revoked banner           | DuploCloud has revoked the license                                                        | Contact DuploCloud                                                                                       |
 | Applied from the page, but Helm shows an older token | A License-page apply is persisted in the database and takes precedence over an older Helm value | Update `secrets.licensingToken` to the current token so the two stay in sync                        |
 
-Licensing as an install prerequisite, and how to supply the token through Helm values, is covered in the [Systems Integrator Installation Guide](../../getting-started/installation/systems-integrator-installation-guide.md).
+Licensing as an install prerequisite, and how to supply the token through Helm values, is covered in the [Systems Integrator Installation Guide](installation/systems-integrator-installation-guide.md).
