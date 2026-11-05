@@ -36,9 +36,9 @@ A free license limits how many agents a portal can run. The [License](licensing.
 
 {% stepper %}
 {% step %}
-### Open Extensions
+### Open the Marketplace
 
-In your portal, go to **AI Admin → Extensions** and click **Register**.
+In your portal, go to **AI Admin → Marketplace** and click **Register**. If your sidebar still says **Extensions**, you're on a release from before the Extensions → Agents rename: go to **AI Admin → Extensions** instead. The screens are the same.
 {% endstep %}
 
 {% step %}
@@ -46,11 +46,11 @@ In your portal, go to **AI Admin → Extensions** and click **Register**.
 
 Choose your `extension.zip` and click **Register**.
 
-![Register extension](../.gitbook/assets/extensions-registry-step-04-register-modal.png)
+![Register extension](../.gitbook/assets/extensions-step-05-register-modal.png)
 {% endstep %}
 {% endstepper %}
 
-The agent loads straight away and appears under **Installed Extensions**. To update it later, register a zip with a higher `version` in its `manifest.json`. For managing installed agents (disabling, deleting, and checking what each one adds), see [Agents](../armor/extensions.md).
+The agent loads straight away and appears under **Installed Extensions** (**Activated Agents** in the renamed portal). To update it later, register a zip with a higher `version` in its `manifest.json`. For managing installed agents (disabling, deleting, and checking what each one adds), see [Agents](../armor/extensions.md).
 
 ***
 
@@ -95,7 +95,6 @@ The build downloads the portal's SDK from `DUPLO_HOST`, so the portal must be re
 
 The DevKit's release workflow, `.github/workflows/release.yml`, cuts a GitHub release with `extension.zip` attached each time you bump `version` in an agent's `manifest.json` and push to `main`. Portal admins can then install and update those releases from the **Extension Library** tab under **AI Admin → Extensions**, picking a version and reading its release notes before they install.
 
-![Extension Library](../.gitbook/assets/extensions-registry-step-02-extension-library.png)
 
 The Library lists the agents named in a registry file, `registry.yaml`, held in a GitHub repository. By default your portal reads DuploCloud's registry, so DuploCloud's own agents are listed. To list your own agents, point your portal at a registry repository of your own.
 
@@ -146,6 +145,10 @@ Apply the change with a Helm upgrade.
 Go to **AI Admin → Extensions → Extension Library** and click **Refresh**. Click **Install** on your agent, pick a version, and click **Install**.
 {% endstep %}
 {% endstepper %}
+
+{% hint style="info" %}
+The **Extension Library** tab is called **Agent Marketplace** in the renamed portal, and where it reads its list from is still changing. This route describes the current release.
+{% endhint %}
 
 {% hint style="info" %}
 Pointing a portal at your own registry is read from the product's source and hasn't been tested end to end. If a release doesn't appear, check that it carries an asset named exactly `extension.zip` and that the `github` scope's token can read its repository.

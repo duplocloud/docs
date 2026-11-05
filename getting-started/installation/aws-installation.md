@@ -47,6 +47,6 @@ You can adopt an existing VPC, EKS cluster, EFS file system, S3 bucket or set of
 
 ## The Terraform behind it
 
-Cloud Deploys runs open-source Terraform modules that DuploCloud publishes. Read the module's README for the full list of resources and variables.
+Cloud Deploys runs Terraform modules that DuploCloud publishes. Read the module's README for the full list of resources and variables.
 
 TODO(link): AWS Terraform repository README (repo is being made public; master to supply the URL).
