@@ -1,47 +1,61 @@
 ---
-description: Install published extensions, and build your own.
+description: Activate agents from the Agent Marketplace, and build your own in Agent Studio.
 ---
 
-# Extensions
+# Agents
 
-Extensions add capabilities to the platform — API resources, menu entries, and skills — loaded at runtime without redeploying the portal. There are two places to work with them, and they do different jobs:
+{% hint style="info" %}
+This page reflects an in-progress rename: **Extensions** is becoming **Agents** in the portal. The change is merged but not yet in a release. If your sidebar still says **Extensions** and **Studio**, the same screens are there under the old names.
+{% endhint %}
 
-|                           | Where                         | What it's for                                               |
-| ------------------------- | ----------------------------- | ----------------------------------------------------------- |
-| **Extensions** (registry) | **AI Admin → Extensions**     | Install and manage published extensions across the platform |
-| **Extension Studio**      | **Studio** within a workspace | Build a new extension from a description                    |
+Agents add capabilities to the platform — API resources, menu entries, and skills — loaded at runtime without redeploying the portal. What you build and activate is called an **agent** in the portal; the file you package and upload is still called an **extension** (for example, `extension.zip`), and each agent is made up of one or more extensions.
 
-Start with the registry — installing something that already exists needs no source control and no build.
+There are two places to work with agents, and they do different jobs:
+
+|                       | Where                               | What it's for                                                   |
+| --------------------- | ----------------------------------- | --------------------------------------------------------------- |
+| **Agent Marketplace** | **AI Admin → Marketplace**          | Activate published agents and manage what's running on the platform |
+| **Agent Studio**      | **Agent Studio** within a workspace | Build a new extension from a description                        |
+
+Start with the Marketplace — activating something that already exists needs no source control and no build.
 
 ***
 
-## Installing an extension
+## Activating an agent
 
-Go to **AI Admin → Extensions**. The page has two tabs: **Installed Extensions** and **Extension Library**.
+Go to **AI Admin → Marketplace**. The **Agents** page has two tabs: **Activated Agents** and **Agent Marketplace**.
 
-### Installed Extensions
+### Activated Agents
 
-Summary tiles across the top show how many extensions are installed, how many API resources they contribute, how many need attention, and when the set last changed. The table below lists each one with its extension id, version, status, resource count, the menus it adds, and whether it is tracked in source control.
+Summary tiles across the top show how many agents and extensions are activated, how many need attention, and when the set last changed. Extensions are grouped into a tab per agent; an extension that doesn't belong to any agent appears under **Other**. Each table lists the extension's name, extension ID, version, status, resource count, the menus it adds, and whether it is tracked in source control.
 
-![Installed Extensions](../.gitbook/assets/extensions-registry-step-01-registry-installed.png)
+![Activated Agents](../.gitbook/assets/extensions-step-01-activated-agents.png)
 
-Use the **All statuses / Active / Disabled / Failed** filters to narrow the list — **Failed** is the one to check when an extension's resources or menus aren't appearing.
+Use the search box and the **All statuses / Active / Disabled / Failed** filters to narrow the list — **Failed** is the one to check when an extension's resources or menus aren't appearing.
 
-### Extension Library
+### Agent Marketplace
 
-The **Extension Library** tab is the catalog of extensions available to install. Each entry shows its category, a short description, and whether it is **Available** or already **Installed**.
+The **Agent Marketplace** tab is the catalog of agents you can activate. Search agents by name, or filter by category, and use **Refresh** to re-read the catalog. **Recommended for you** highlights a few agents at the top. Each card shows the agent's category, a short description, its status, and an **Activate** button.
 
-![Extension Library](../.gitbook/assets/extensions-registry-step-02-extension-library.png)
+![Agent Marketplace](../.gitbook/assets/extensions-step-02-agent-marketplace.png)
 
-Click **Install** to add one, **Details** to read more first, or the link icon to open its source repository on GitHub. Versions come from the source repository's releases, so you can install a specific version rather than only the latest. **Refresh** re-reads the catalog.
+Click an agent to open its details: what it does, its version and category, and **Where it lives in your nav** — the left-nav position it will take, which you can **Change** before activating. The details panel also lists the publisher and the **Manifest ID**.
 
-### Inspecting an installed extension
+![Agent details](../.gitbook/assets/extensions-step-03-agent-details.png)
 
-Opening an installed extension shows what it actually contributes to the platform.
+Click **Activate** to add the agent. Once an agent is active, its details offer **Open** to go to it and **Deactivate** to turn it off, plus **Update** when a newer version is available.
 
-![Extension detail](../.gitbook/assets/extensions-registry-step-03-catalog-entry-detail.png)
+{% hint style="info" %}
+If the catalog shows **No agents are published yet**, or a banner says the agent catalog is unreachable or no license is installed, the platform can't load the catalog — check the platform's license and its connection to DuploCloud.
+{% endhint %}
 
-The header carries its status, extension id, version, and last-updated time. Below that:
+### Inspecting an activated extension
+
+Opening an extension from the **Activated Agents** table shows what it actually contributes to the platform.
+
+![Extension detail](../.gitbook/assets/extensions-step-04-extension-detail.png)
+
+The header carries its status, extension ID, version, and last-updated time. Below that:
 
 * **Load Context** — the fully-qualified identifier and version the platform loaded
 * **Source Control** — the repository it is tracked in, or **Not tracked** for a zip upload
@@ -51,47 +65,58 @@ The header carries its status, extension id, version, and last-updated time. Bel
 
 Three tabs give more detail: **Overview** (above), **Menu** (the navigation entries it adds), and **Manifest** (the raw declaration).
 
-The **Actions** menu on the detail page lets you **Disable** an extension without removing it — its resources and menus stop loading, and the status changes to Disabled — or **Enable** one that is currently disabled. Both ask for confirmation first.
+The **Actions** menu on the detail page lets you **Disable** an extension without removing it — its resources and menus stop loading, and the status changes to Disabled — or **Enable** one that is currently disabled. **Delete** unloads the extension and removes its record. Each asks for confirmation first. The same actions are on each row's menu in the table, where delete is labelled **Delete Extension**.
 
 ### Registering an extension from a file
 
-If an extension isn't in the catalog, click **Register** and upload its `extension.zip`.
+If you have a built extension that isn't in the catalog, click **Register** and upload its `extension.zip`.
 
-![Register extension](../.gitbook/assets/extensions-registry-step-04-register-modal.png)
+![Register extension](../.gitbook/assets/extensions-step-05-register-modal.png)
 
-Extensions registered this way show **Not tracked** under Source Control, since there's no repository behind them.
+The extension is hot-loaded without a restart. Extensions registered this way show **Not tracked** under Source Control, since there's no repository behind them.
 
 ***
 
-## Building an extension in Extension Studio
+## Building an extension in Agent Studio
 
-Extension Studio is the authoring side, scoped to a workspace rather than the platform. Go to **Studio** in the workspace navigation.
+Agent Studio is the authoring side, scoped to a workspace rather than the platform. Go to **Agent Studio** in the workspace navigation. It lists the extensions being built in the workspace, with tiles for how many are ready, in progress, or need attention.
 
-Click **New Extension** and provide:
+![Agent Studio](../.gitbook/assets/extensions-step-06-agent-studio.png)
 
-* **Extension name** and an **Icon**
-* **GitHub Scope** — the source-control scope the extension's code is written to. This is required; Studio builds into a repository
-* **Extra scopes** _(optional)_ — any further credentials the extension needs
-* **Use source control** — whether to track the extension in the selected repository
-* **Requirements** — a description of what the extension should do
+Click **New Extension**. The form has two steps.
 
-Clicking **Create & Build** starts an agent that writes the extension against your requirements. You can **Preview** the generated result and step **Back** to revise before building.
+**Details:**
 
-Once built, an extension in Studio has two further actions on its detail page:
+* **Extension name** — becomes the resource type, generated like a built-in resource
+* **Icon** — the menu icon for the generated resource
+* **Scopes** _(optional)_ — credentials the agent uses to test the new resource's APIs while building
+* **Use source control** — off by default. Off, the agent builds a throwaway copy and hot-loads it. On, the agent authors the extension inside your Git repository, and you also provide:
+  * **Repository scope** — a GitHub scope; the agent clones, commits, and pushes with its credentials
+  * **Git organization**, **Repository** (type a name to use one that doesn't exist yet), and **Branch**
 
-* **Load** — loads the built extension into the platform so its resources, menus, and skills become available
+![New Extension](../.gitbook/assets/extensions-step-07-new-extension.png)
+
+**Requirements:** describe what the extension should do, in Markdown, and optionally attach requirement files. Click **Next** to move from Details to Requirements, and **Back** to revise.
+
+Clicking **Create & Build** starts an agent that writes the extension against your requirements and loads it into the platform. You can refine the details with the agent in the provisioning ticket, where an **Extension Preview** shows the result once it's loaded.
+
+Once built, an extension's detail page in Agent Studio has:
+
+* **Spec / Result** — switch between what you asked for and what was built
+* **Ask the Agent** — reopen the provisioning ticket to keep working with the agent
+* **Source control** tab — review changes, then **Commit…**, **Push changes**, or **Resync** with the remote (when source control is on)
 * **Deprovision** — tears the extension back down, removing what it contributed
 
 {% hint style="info" %}
-Extension Studio needs a GitHub scope because it builds into a repository. If you only want to use an extension someone else has published, install it from the **Extension Library** instead — that needs no source control.
+Source control is optional. Turn it on when you want the extension's code kept in your own GitHub repository; leave it off to build and hot-load a copy without one. If you only want to use an agent someone else has published, activate it from the **Agent Marketplace** instead.
 {% endhint %}
 
 ***
 
 ## Which one should I use?
 
-* **Install from the Extension Library** when the capability already exists. No build, no repository, no scope.
+* **Activate from the Agent Marketplace** when the capability already exists. No build, no repository, no scope.
 * **Register a zip** when you have a built extension that isn't published to the catalog.
-* **Build in Extension Studio** when you need something that doesn't exist yet and are prepared to maintain it in your own repository.
+* **Build in Agent Studio** when you need something that doesn't exist yet — with source control on if you want to maintain it in your own repository.
 
-For the concepts behind extensions — the plugin architecture, manifests, storage, and lifecycle — see the [Extension Framework](../extension-framework/extension-framework.md).
+For the concepts behind agents — the plugin architecture, manifests, storage, and lifecycle — see the [Agent Framework](../extension-framework/extension-framework.md).
