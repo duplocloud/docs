@@ -151,7 +151,7 @@ The **Extension Library** tab is called **Agent Marketplace** in the renamed por
 {% endhint %}
 
 {% hint style="info" %}
-Pointing a portal at your own registry is read from the product's source and hasn't been tested end to end. If a release doesn't appear, check that it carries an asset named exactly `extension.zip` and that the `github` scope's token can read its repository.
+If a release doesn't appear in the Library, check that it carries an asset named exactly `extension.zip` and that the `github` scope's token can read its repository.
 {% endhint %}
 
 ***

@@ -49,4 +49,4 @@ You can adopt an existing VPC, EKS cluster, EFS file system, S3 bucket or set of
 
 Cloud Deploys runs Terraform modules that DuploCloud publishes. Read the module's README for the full list of resources and variables.
 
-TODO(link): AWS Terraform repository README (repo is being made public; master to supply the URL).
+The module is [duplocloud/terraform-aws-helpdesk](https://github.com/duplocloud/terraform-aws-helpdesk). Its README describes the resources, variables and ways to adopt existing infrastructure.

@@ -30,6 +30,6 @@ The deployment will include an AKS cluster (or your existing one), shared file s
 
 ## The Terraform behind it
 
-TODO(link): Azure Terraform repository README (repo is being made public; master to supply the URL).
+The Azure module is [duplocloud-internal/helpdesk-deployer-azure](https://github.com/duplocloud-internal/helpdesk-deployer-azure). Its README describes the resources and variables.
 
 Until Azure is supported in Cloud Deploys, you can install the portal on an existing AKS cluster with the [Systems Integrator Installation Guide](systems-integrator-installation-guide.md), or ask your DuploCloud contact about a deployment done for you.
