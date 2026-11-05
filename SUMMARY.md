@@ -60,7 +60,7 @@
   * [Command Policy](armor/access-control/command-policy.md)
   * [License](armor/access-control/license.md)
 * [Settings](armor/settings.md)
-* [Extensions](armor/extensions.md)
+* [Agents](armor/extensions.md)
 * [Additional Components](armor/additional-components/README.md)
   * [Resources](armor/additional-components/resources.md)
   * [Reports](armor/additional-components/reports.md)
