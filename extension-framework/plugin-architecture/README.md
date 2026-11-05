@@ -1,6 +1,6 @@
 # Plugin Architecture
 
-This reference documents the technical contract between the Extension Framework core and plugin services. It covers the two contracts a plugin must implement, the registration flow, storage namespacing, authentication tokens, and lifecycle states.
+This reference documents the technical contract between the Agent Framework core and plugin services. It covers the two contracts a plugin must implement, the registration flow, storage namespacing, authentication tokens, and lifecycle states.
 
 ## The Mental Model
 

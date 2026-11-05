@@ -63,7 +63,7 @@ At the foundation is **ARMOR (Agent Runtime for Multiplayer Operations)** — La
 
 <figure><img src=".gitbook/assets/image copy.png" alt=""><figcaption></figcaption></figure>
 
-Building on that foundation, the **Extension Framework** (Layer 2) lets teams define policy models, build skills, and compose full Ops applications with forms, APIs, and lifecycle management — turning the runtime's capabilities into governed, repeatable workflows. This is the platform's answer to the second requirement, **custom workflows with rich UX**, and to the third — blending AI-driven steps with plain, **token-less** API execution wherever a model isn't needed.
+Building on that foundation, the **Agent Framework** (Layer 2) lets teams define policy models, build skills, and compose full Ops applications with forms, APIs, and lifecycle management — turning the runtime's capabilities into governed, repeatable workflows. This is the platform's answer to the second requirement, **custom workflows with rich UX**, and to the third — blending AI-driven steps with plain, **token-less** API execution wherever a model isn't needed.
 
 On top of that sits the **Developer Experience & Hosting** layer (Layer 3), which allows teams to build and ship Ops applications in days using either a web interface or Claude Code, with flexible hosting options (managed or self-hosted). This is the **agent builder's** persona in practice — the specialized coding assistant for turning a new use case into a governed application on the shared platform, without building infrastructure from scratch.
 

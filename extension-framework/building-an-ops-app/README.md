@@ -1,6 +1,6 @@
 # Building an Ops Application
 
-This guide walks through five steps to define, build, and ship a domain-specific Ops application on the Extension Framework. By the end you will have a fully operational application built on the CaaS platform — with forms, status tracking, AI-powered execution, RBAC, cost management, and audit trails all inherited from the framework. The only work unique to your domain is defining your resource taxonomy and writing the skills that encode your operational expertise.
+This guide walks through five steps to define, build, and ship a domain-specific Ops application on the Agent Framework. By the end you will have a fully operational application built on the CaaS platform — with forms, status tracking, AI-powered execution, RBAC, cost management, and audit trails all inherited from the framework. The only work unique to your domain is defining your resource taxonomy and writing the skills that encode your operational expertise.
 
 ## What You'll End Up With
 
@@ -8,7 +8,7 @@ A running Ops application where users interact through structured forms and stat
 
 ## Prerequisites
 
-- DuploCloud account with the Extension Framework enabled.
+- DuploCloud account with the Agent Framework enabled.
 - Domain expertise sufficient to define a resource taxonomy and write skill instructions for each resource type.
 - Provider credentials for the IT systems your application will orchestrate (cloud accounts, CRM systems, observability platforms, etc.).
 

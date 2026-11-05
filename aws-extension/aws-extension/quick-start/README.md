@@ -1,12 +1,12 @@
 ---
 description: >-
-  Get up and running with the AWS Extension — two paths depending on where you
+  Get up and running with the AWS Agent — two paths depending on where you
   are starting from.
 ---
 
 # Quick Start
 
-The AWS Extension supports two starting points. Choose the path that matches your situation:
+The AWS Agent supports two starting points. Choose the path that matches your situation:
 
 {% columns %}
 {% column %}

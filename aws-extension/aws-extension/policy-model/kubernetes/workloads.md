@@ -4,7 +4,7 @@ description: Kubernetes workloads — Deployments, DaemonSets, StatefulSets, and
 
 # Workloads
 
-Workloads are the applications and services running inside your Kubernetes cluster. The AWS Extension supports the standard Kubernetes workload types: Deployments, DaemonSets, StatefulSets, and CronJobs.
+Workloads are the applications and services running inside your Kubernetes cluster. The AWS Agent supports the standard Kubernetes workload types: Deployments, DaemonSets, StatefulSets, and CronJobs.
 
 ## Spec
 

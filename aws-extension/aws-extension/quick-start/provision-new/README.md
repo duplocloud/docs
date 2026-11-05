@@ -6,7 +6,7 @@ description: >-
 
 # Provision New Infrastructure
 
-This guide walks through creating a complete AWS environment from scratch using the AWS Extension — from the VPC network up to running workloads and managed databases.
+This guide walks through creating a complete AWS environment from scratch using the AWS Agent — from the VPC network up to running workloads and managed databases.
 
 ## What you will build
 

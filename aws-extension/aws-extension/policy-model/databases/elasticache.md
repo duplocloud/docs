@@ -4,7 +4,7 @@ description: Amazon ElastiCache instances managed inside an Environment — Redi
 
 # ElastiCache
 
-Amazon ElastiCache provides managed in-memory data stores for caching and session management. The AWS Extension supports provisioning ElastiCache clusters inside an Environment.
+Amazon ElastiCache provides managed in-memory data stores for caching and session management. The AWS Agent supports provisioning ElastiCache clusters inside an Environment.
 
 ## Spec
 

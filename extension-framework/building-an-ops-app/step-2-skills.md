@@ -4,7 +4,7 @@ A skill tells the agent how to provision, update, troubleshoot, and deprovision 
 
 ## What a Skill Is
 
-A skill is a folder containing a `SKILL.md` file with metadata and instructions. Optionally it includes supporting assets: shell scripts, CloudFormation or Terraform templates, reference materials, API schemas, or any other artifacts the agent should use during execution. The skill is the atomic unit of business logic in the Extension Framework — it is user-owned, version-controlled, and modifiable without waiting for a vendor release.
+A skill is a folder containing a `SKILL.md` file with metadata and instructions. Optionally it includes supporting assets: shell scripts, CloudFormation or Terraform templates, reference materials, API schemas, or any other artifacts the agent should use during execution. The skill is the atomic unit of business logic in the Agent Framework — it is user-owned, version-controlled, and modifiable without waiting for a vendor release.
 
 When the framework creates a provisioning ticket for a resource, it resolves the skill associated with that resource type and stages the skill files in the ticket's working directory before the agent begins. The agent reads the skill instructions, reads the resource spec, and executes accordingly.
 
@@ -24,7 +24,7 @@ In every case, the skill is the place where your organization's specific standar
 
 There are three categories of skills:
 
-**Platform skills** ship pre-built with the Extension Framework. They cover common operational patterns: project management workflows, dashboard creation, troubleshooting patterns, and provider-specific infrastructure templates like `duplo-aws-infra`. Platform skills are a starting point — your team can fork any platform skill and customize it to add your own tagging policies, compliance requirements, or architectural standards.
+**Platform skills** ship pre-built with the Agent Framework. They cover common operational patterns: project management workflows, dashboard creation, troubleshooting patterns, and provider-specific infrastructure templates like `duplo-aws-infra`. Platform skills are a starting point — your team can fork any platform skill and customize it to add your own tagging policies, compliance requirements, or architectural standards.
 
 **Custom skills** are written by your own team. They encode workflows, policies, and operational practices that are specific to your organization. Custom skills are where competitive differentiation lives — the ICP criteria that your sales VP has refined over years, the deployment runbook your senior SRE wrote, the compliance checklist your auditor follows.
 

@@ -1,20 +1,20 @@
 ---
 description: >-
-  The building blocks of the AWS Extension — resources, their specs, results,
+  The building blocks of the AWS Agent — resources, their specs, results,
   and how they relate to each other.
 ---
 
 # Policy Model
 
-The AWS Extension Policy Model defines the resources the extension manages and how they relate to each other. Understanding this model helps you understand what the extension can do and why the creation flow follows the order it does.
+The AWS Agent Policy Model defines the resources the agent manages and how they relate to each other. Understanding this model helps you understand what the agent can do and why the creation flow follows the order it does.
 
 ## The Resource Hierarchy
 
-The AWS Extension organizes infrastructure as a hierarchy. Each level depends on the one above it:
+The AWS Agent organizes infrastructure as a hierarchy. Each level depends on the one above it:
 
 **Network Baseline → Cluster Baseline → Environment → Resource Group → Kubernetes and Cloud Resources**
 
-<figure><picture><source srcset="../../../.gitbook/assets/policy-model-dark.png" media="(prefers-color-scheme: dark)"><img src="../../../.gitbook/assets/policy-model-light.png" alt="AWS Extension policy model — resource hierarchy and dependency relationships"></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../../../.gitbook/assets/policy-model-dark.png" media="(prefers-color-scheme: dark)"><img src="../../../.gitbook/assets/policy-model-light.png" alt="AWS Agent policy model — resource hierarchy and dependency relationships"></picture><figcaption></figcaption></figure>
 
 A **Network Baseline** establishes the VPC — the networking foundation everything else runs on. A **Cluster Baseline** provisions an EKS cluster inside that network. An **Environment** is a logical grouping that holds one or more **Resource Groups**, along with the Plans those resources can draw from.
 
@@ -29,7 +29,7 @@ A **Resource Group** is the isolation boundary. Each one provisions its own IAM 
 
 ## Resource Lifecycle
 
-Every resource in the AWS Extension follows the same status lifecycle. Each resource has a **Spec** tab showing what was requested, a **Result** tab showing what was provisioned, and a link to the underlying ticket that executed the work. Updates trigger a reconciliation — the agent handles only the delta, not a full teardown and rebuild.
+Every resource in the AWS Agent follows the same status lifecycle. Each resource has a **Spec** tab showing what was requested, a **Result** tab showing what was provisioned, and a link to the underlying ticket that executed the work. Updates trigger a reconciliation — the agent handles only the delta, not a full teardown and rebuild.
 
 <details>
 

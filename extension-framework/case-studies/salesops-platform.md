@@ -1,6 +1,6 @@
 # AI-Powered SalesOps
 
-To demonstrate that the Extension Framework is domain-agnostic, a second application was built on the same CaaS platform: an AI-powered demand generation platform for sales teams. It uses identical framework mechanics — resource taxonomy, ticket-based execution, cost tracking per resource, RBAC inherited from workspaces — with a completely different domain. There is no infrastructure, no cloud provider, no Kubernetes. There are prospects, campaigns, qualification signals, and outreach sequences.
+To demonstrate that the Agent Framework is domain-agnostic, a second application was built on the same CaaS platform: an AI-powered demand generation platform for sales teams. It uses identical framework mechanics — resource taxonomy, ticket-based execution, cost tracking per resource, RBAC inherited from workspaces — with a completely different domain. There is no infrastructure, no cloud provider, no Kubernetes. There are prospects, campaigns, qualification signals, and outreach sequences.
 
 ## The Policy Model
 
@@ -18,7 +18,7 @@ When a user adds an account to a cohort, a Qualification resource is created aut
 - **DevOps Help Needed** — analysis of open job postings; example: 0 DevOps roles hiring → Verdict: LOW
 - **Funding** — funding history and recency; example: Series B $31,500,000 (2024), Tier: STRONG → Verdict: STRONG
 
-The result includes an Overall Verdict, a list of extracted leads with contact details, and the full signal breakdown. The ticket sidebar shows the running cost ($0.636 in the example above), company metadata (Industry, Location, Employees), and current status — the same sidebar layout used for every resource across every extension.
+The result includes an Overall Verdict, a list of extracted leads with contact details, and the full signal breakdown. The ticket sidebar shows the running cost ($0.636 in the example above), company metadata (Industry, Location, Employees), and current status — the same sidebar layout used for every resource across every agent.
 
 ## How Engagement Works
 

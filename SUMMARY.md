@@ -4,8 +4,27 @@
 
 * [Overview](README.md)
 * [The Three-Layer Architecture](introduction/the-three-layer-architecture.md)
-* [The Extension Framework](introduction/the-extension-framework.md)
+* [The Agent Framework](introduction/the-extension-framework.md)
 * [Studio: Developer Experience](introduction/studio-developer-experience.md)
+
+## Agent Framework
+
+* [Overview](extension-framework/extension-framework.md)
+* [Building an Ops Application](extension-framework/building-an-ops-app/README.md)
+  * [Step 1: Define Your Policy Model](extension-framework/building-an-ops-app/step-1-policy-model.md)
+  * [Step 2: Write Your Skills](extension-framework/building-an-ops-app/step-2-skills.md)
+  * [Step 3: Connect Providers](extension-framework/building-an-ops-app/step-3-providers.md)
+  * [Step 4: Configure Workspaces](extension-framework/building-an-ops-app/step-4-workspaces.md)
+  * [Step 5: Deploy](extension-framework/building-an-ops-app/step-5-deploy.md)
+* [Case Studies](extension-framework/case-studies/README.md)
+  * [AI-Native DevOps Platform](extension-framework/case-studies/devops-platform.md)
+  * [AI-Powered SalesOps](extension-framework/case-studies/salesops-platform.md)
+* [Plugin Architecture](extension-framework/plugin-architecture/README.md)
+  * [Manifest & Registration](extension-framework/plugin-architecture/manifest-and-registration.md)
+  * [Storage API](extension-framework/plugin-architecture/storage-api.md)
+  * [Authentication](extension-framework/plugin-architecture/authentication.md)
+  * [Lifecycle States](extension-framework/plugin-architecture/lifecycle-states.md)
+  * [Schema Versioning](extension-framework/plugin-architecture/schema-versioning.md)
 
 ## ARMOR
 
@@ -56,25 +75,6 @@
 * [Product Updates](product-updates.md)
 * [Reporting AI Concerns](reporting-ai-concerns.md)
 
-## Extension Framework
-
-* [Overview](extension-framework/extension-framework.md)
-* [Building an Ops Application](extension-framework/building-an-ops-app/README.md)
-  * [Step 1: Define Your Policy Model](extension-framework/building-an-ops-app/step-1-policy-model.md)
-  * [Step 2: Write Your Skills](extension-framework/building-an-ops-app/step-2-skills.md)
-  * [Step 3: Connect Providers](extension-framework/building-an-ops-app/step-3-providers.md)
-  * [Step 4: Configure Workspaces](extension-framework/building-an-ops-app/step-4-workspaces.md)
-  * [Step 5: Deploy](extension-framework/building-an-ops-app/step-5-deploy.md)
-* [Case Studies](extension-framework/case-studies/README.md)
-  * [AI-Native DevOps Platform](extension-framework/case-studies/devops-platform.md)
-  * [AI-Powered SalesOps](extension-framework/case-studies/salesops-platform.md)
-* [Plugin Architecture](extension-framework/plugin-architecture/README.md)
-  * [Manifest & Registration](extension-framework/plugin-architecture/manifest-and-registration.md)
-  * [Storage API](extension-framework/plugin-architecture/storage-api.md)
-  * [Authentication](extension-framework/plugin-architecture/authentication.md)
-  * [Lifecycle States](extension-framework/plugin-architecture/lifecycle-states.md)
-  * [Schema Versioning](extension-framework/plugin-architecture/schema-versioning.md)
-
 ## AI Helpdesk
 
 * [HelpDesk Concepts](ai-helpdesk/ai-helpdesk-overview/README.md)
@@ -83,9 +83,9 @@
   * [Bring Your Own Agent](ai-helpdesk/ai-helpdesk-overview/bring-your-own-agent.md)
   * [Developers](ai-helpdesk/ai-helpdesk-overview/developers.md)
 
-## AWS Extension
+## AWS Agent
 
-* [AWS Extension](aws-extension/aws-extension/README.md)
+* [AWS Agent](aws-extension/aws-extension/README.md)
   * [Policy Model](aws-extension/aws-extension/policy-model/README.md)
     * [Network Baseline](aws-extension/aws-extension/policy-model/network-baseline.md)
     * [Cluster Baseline](aws-extension/aws-extension/policy-model/cluster-baseline.md)
@@ -118,30 +118,10 @@
       * [Step 4: Create an Environment](aws-extension/aws-extension/quick-start/provision-new/step-4-environment.md)
       * [Step 5: Deploy Workloads](aws-extension/aws-extension/quick-start/provision-new/step-5-workloads.md)
       * [Step 6: Add Databases](aws-extension/aws-extension/quick-start/provision-new/step-6-databases.md)
-  * [Customizing the Extension](aws-extension/aws-extension/customizing/README.md)
+  * [Customizing the Agent](aws-extension/aws-extension/customizing/README.md)
     * [Skill Mapping](aws-extension/aws-extension/customizing/skill-mapping.md)
   * [Use Cases](aws-extension/aws-extension/use-cases.md)
   * [Services](aws-extension/aws-extension/services.md)
-
-## GCP Extension
-
-* [GCP Extension](gcp-extension/gcp-extension.md)
-
-## Azure Extension
-
-* [Azure Extension](azure-extension/azure-extension.md)
-
-## Observability Extension
-
-* [Observability Extension](observability-extension/observability-extension.md)
-
-## Security Extension
-
-* [Security Extension](security-extension/security-extension.md)
-
-## CI/CD Extension
-
-* [CI/CD Extension](ci-cd-extension/ci-cd-extension.md)
 
 ## Getting Started
 

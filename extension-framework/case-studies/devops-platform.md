@@ -1,10 +1,10 @@
 # AI-Native DevOps Platform
 
-DuploCloud's AI DevOps platform is the first production application built on the Extension Framework. It demonstrates how a complex, multi-resource, dependency-rich operational domain can be automated with AI while giving business users a traditional enterprise Ops application experience. Cloud infrastructure provisioning — historically the domain of senior engineers with deep AWS or Kubernetes expertise — becomes a structured, ticket-driven workflow that any authorized team member can initiate and monitor in real time.
+DuploCloud's AI DevOps platform is the first production application built on the Agent Framework. It demonstrates how a complex, multi-resource, dependency-rich operational domain can be automated with AI while giving business users a traditional enterprise Ops application experience. Cloud infrastructure provisioning — historically the domain of senior engineers with deep AWS or Kubernetes expertise — becomes a structured, ticket-driven workflow that any authorized team member can initiate and monitor in real time.
 
 ## The Policy Model
 
-The DevOps extension defines resources that mirror how cloud infrastructure is actually organized. Each layer depends on the one below it, and the framework enforces those dependencies at the UI level.
+The DevOps agent defines resources that mirror how cloud infrastructure is actually organized. Each layer depends on the one below it, and the framework enforces those dependencies at the UI level.
 
 - **Network** — the foundation. VPC, subnets, routing, internet gateways, NAT gateways. Everything else depends on a network.
 - **Cluster** — a Kubernetes cluster (EKS, AKS, GKE) provisioned inside a network. Inherits VPC and subnet configuration from its parent network automatically.
@@ -15,7 +15,7 @@ The dependency chain runs in one direction: Network → Cluster → Environment 
 
 ## Creating a Network
 
-The network creation workflow illustrates the full Extension Framework lifecycle from form submission through live agent execution to a browsable result.
+The network creation workflow illustrates the full Agent Framework lifecycle from form submission through live agent execution to a browsable result.
 
 1. The user clicks **Create Network Baseline** and fills out a two-step form. Step 1 collects the name, account (scope), and an optional skill override. Step 2 collects the spec: region, VPC CIDR, availability zones, NAT gateway toggle, and subnet prefix. The platform auto-computes subnet ranges from the CIDR and displays them in a preview table before the user submits.
 
@@ -45,6 +45,6 @@ Each sub-resource category has its own list view, create form, and detail view. 
 
 ## Skills in Action
 
-The DevOps extension ships with platform skills such as `duplo-aws-infra`, which contains CloudFormation templates, IAM policies, security group rules, and provisioning scripts. Users can view the skill files directly from the ticket sidebar at any point during or after execution.
+The DevOps agent ships with platform skills such as `duplo-aws-infra`, which contains CloudFormation templates, IAM policies, security group rules, and provisioning scripts. Users can view the skill files directly from the ticket sidebar at any point during or after execution.
 
 Because skills are user-modifiable, an organization can fork a platform skill and customize it — adding their own tagging policies, compliance requirements, or architectural standards — without waiting for DuploCloud to release an update. The skill is the business logic. The framework executes it; the organization owns it.

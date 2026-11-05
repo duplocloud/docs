@@ -1,6 +1,6 @@
 # Case Studies
 
-The following case studies show the Extension Framework in action across two production applications. Their purpose is to make one point concrete: the framework is domain-agnostic. The resource model, the ticketing system, the skill-driven execution engine, the RBAC, and the cost management system are all shared infrastructure. What differs between applications is only the policy model — the resource taxonomy — and the skills that encode each domain's operational logic.
+The following case studies show the Agent Framework in action across two production applications. Their purpose is to make one point concrete: the framework is domain-agnostic. The resource model, the ticketing system, the skill-driven execution engine, the RBAC, and the cost management system are all shared infrastructure. What differs between applications is only the policy model — the resource taxonomy — and the skills that encode each domain's operational logic.
 
 The two applications covered here could not be more different. One automates cloud infrastructure: VPCs, Kubernetes clusters, IAM roles, and workloads. The other automates sales demand generation: prospect cohorts, ICP qualification, and outreach sequencing. Both were built on the same CaaS platform, using identical framework mechanics. A team that understands how one application works can read the other and recognize every pattern immediately.
 
