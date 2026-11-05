@@ -1,12 +1,12 @@
 ---
-description: Override default skills and adapt the AWS Extension to your organization's standards.
+description: Override default skills and adapt the AWS Agent to your organization's standards.
 ---
 
-# Customizing the Extension
+# Customizing the Agent
 
-The AWS Extension ships with production-ready default skills that handle provisioning, updates, and deprovisioning for every resource type. These defaults work out of the box for most teams — but the platform is designed to be fully customizable.
+The AWS Agent ships with production-ready default skills that handle provisioning, updates, and deprovisioning for every resource type. These defaults work out of the box for most teams — but the platform is designed to be fully customizable.
 
-Organizations routinely adapt the extension to enforce:
+Organizations routinely adapt the agent to enforce:
 
 * **Tagging policies** — require specific tags on all provisioned AWS resources
 * **Network topology requirements** — custom CIDR conventions, subnet layouts, or VPC configurations

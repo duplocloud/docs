@@ -44,10 +44,10 @@ A Network Baseline has no dependencies — it is the root of the resource hierar
 
 ## Import Mode
 
-If you already have a VPC in AWS, use **Import** mode to attach it to the AWS Extension. The platform discovers the existing VPC's subnets, route tables, NAT gateways, and internet gateway without creating or modifying any resources. Once imported, the network appears in the extension like any provisioned resource — Clusters and Environments can be built on top of it.
+If you already have a VPC in AWS, use **Import** mode to attach it to the AWS Agent. The platform discovers the existing VPC's subnets, route tables, NAT gateways, and internet gateway without creating or modifying any resources. Once imported, the network appears in the agent like any provisioned resource — Clusters and Environments can be built on top of it.
 
 {% hint style="warning" %}
-Imported networks cannot be deprovisioned through the AWS Extension.
+Imported networks cannot be deprovisioned through the AWS Agent.
 {% endhint %}
 
 ## What's next

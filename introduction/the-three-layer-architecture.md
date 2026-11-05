@@ -4,7 +4,7 @@ description: 'From Automation to Cognition: Architecting an AI-Native DevOps Pla
 
 # The Three-Layer Architecture
 
-**The Three-Layer Architecture: ARMOR, Extensions, and Studio**
+**The Three-Layer Architecture: ARMOR, Agents, and Studio**
 
 An extensible AI-native platform purpose-built for multiplayer enterprise Devops.
 
@@ -18,11 +18,11 @@ This chapter introduces the product that closes the gap. The Architecture is a t
 
 <table data-header-hidden><thead><tr><th width="40"></th><th></th></tr></thead><tbody><tr><td></td><td><mark style="color:$warning;">LAYER 1 — ARMOR</mark><br><strong>Agent Runtime for Multiplayer Operations</strong> <br>The foundation. ARMOR implements all twelve enterprise requirements — ticketing (multi-user AI sessions), connectors (secure access to IT systems), intelligence (skills and business logic), centralized context (organizational memory), workspaces and RBAC, projects (spec-driven workflows), determinism, token less analytics, and cost management. Every interaction with AI happens inside a ticket.</td></tr></tbody></table>
 
-<table data-header-hidden><thead><tr><th width="40"></th><th></th></tr></thead><tbody><tr><td></td><td><p><mark style="color:$warning;">LAYER 2 — EXTENSION FRAMEWORK</mark></p><p><strong>Custom Automation Workflows</strong> <br>Build your own custom workflows based on specific business needs. Define a resource taxonomy (Network → Cluster → Environment → Workloads). Write skills for each resource type. The framework generates forms, REST APIs, list views, status tracking, dependency enforcement. All ARMOR capabilities are inherited automatically. DuploCloud comes with a default DevOps extension that includes everything from Deployment, Security, Observability to CI-CD. Multiple compliance standards are implemented out-of-box.</p></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="40"></th><th></th></tr></thead><tbody><tr><td></td><td><p><mark style="color:$warning;">LAYER 2 — AGENT FRAMEWORK</mark></p><p><strong>Custom Automation Workflows</strong> <br>Build your own custom workflows based on specific business needs. Define a resource taxonomy (Network → Cluster → Environment → Workloads). Write skills for each resource type. The framework generates forms, REST APIs, list views, status tracking, dependency enforcement. All ARMOR capabilities are inherited automatically. DuploCloud comes with a default DevOps agent that includes everything from Deployment, Security, Observability to CI-CD. Multiple compliance standards are implemented out-of-box.</p></td></tr></tbody></table>
 
 <table data-header-hidden><thead><tr><th width="40"></th><th></th></tr></thead><tbody><tr><td></td><td><p><mark style="color:$warning;">LAYER 3 — STUDIO</mark></p><p><strong>Developer Experience &#x26; Hosting</strong> </p><p>Imagine Replit for DevOps. With DuploCloud Studio Operators can build and deploy their automation platform in hours. Open a web interface or launch Claude Code with the DuploCloud plugin. Define your policy model, write skills, connect providers, configure workspaces, onboard users. Hosted by DuploCloud or self-hosted on your own Kubernetes infrastructure.</p></td></tr></tbody></table>
 
-This chapter focuses on <mark style="color:$warning;">**ARMOR**</mark> — the foundational runtime that makes everything above it possible. Extensions and Studio are covered in subsequent chapters.
+This chapter focuses on <mark style="color:$warning;">**ARMOR**</mark> — the foundational runtime that makes everything above it possible. Agents and Studio are covered in subsequent chapters.
 
 ![](<../.gitbook/assets/image copy.png>)
 

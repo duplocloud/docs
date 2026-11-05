@@ -1,6 +1,6 @@
 # Overview
 
-The Extension Framework lets teams build domain-specific Ops applications on top of the CaaS platform. These applications orchestrate existing tool chains — AWS, Salesforce, ServiceNow — through structured workflows and resource lifecycle management. End users work through forms and structured interfaces; the framework orchestrates the underlying platforms through tickets.
+The Agent Framework lets teams build domain-specific Ops applications on top of the CaaS platform. These applications orchestrate existing tool chains — AWS, Salesforce, ServiceNow — through structured workflows and resource lifecycle management. End users work through forms and structured interfaces; the framework orchestrates the underlying platforms through tickets.
 
 ## The Three-Layer Stack
 
@@ -10,7 +10,7 @@ The CaaS architecture is organized in three layers, each building on the one bel
 
 The foundation layer provides multiplayer ticketing, connectors, workspaces, RBAC, cost management, and tokenless analytics. This is a complete product on its own; teams use it daily for HelpDesk tickets, Projects, dashboards, and cross-role collaboration in shared workspaces.
 
-### Layer 2: Extension Framework
+### Layer 2: Agent Framework
 
 Built directly on top of CaaS, this layer adds domain-specific orchestration: a resource taxonomy, dependency enforcement, multi-step forms, REST APIs, and status lifecycle management. Every capability from the CaaS platform — multiplayer sessions, audit trails, cost tracking, RBAC — is inherited automatically. No rebuild required.
 
@@ -22,11 +22,11 @@ A hosted environment where you can build and ship a full Ops application in days
 
 CaaS works well as a general-purpose platform from the start. But as teams begin using it heavily for operational work, a pattern emerges. User needs turn out to be highly repetitive — deploying applications to a cluster, qualifying a sales prospect, troubleshooting a crash — and the underlying structure of each request and response is consistent.
 
-Expressing these workflows in natural language every time becomes laborious. Teams start wanting domain-specific forms, templates, and a consistent policy model for their resources. That is the inflection point where the Extension Framework becomes useful.
+Expressing these workflows in natural language every time becomes laborious. Teams start wanting domain-specific forms, templates, and a consistent policy model for their resources. That is the inflection point where the Agent Framework becomes useful.
 
 ## The Policy Model
 
-The policy model is the core concept in the Extension Framework. It is a structured description of the resources your Ops application manages — what they are, what the user provides, what the agent produces, how they relate to each other, and what instructions the agent follows to manage them.
+The policy model is the core concept in the Agent Framework. It is a structured description of the resources your Ops application manages — what they are, what the user provides, what the agent produces, how they relate to each other, and what instructions the agent follows to manage them.
 
 ### Resources
 

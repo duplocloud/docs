@@ -4,7 +4,7 @@ description: Managed databases inside an Environment — RDS and ElastiCache.
 
 # Databases
 
-The AWS Extension supports provisioning managed databases inside an Environment. Databases are provisioned into the private subnets of the Environment's Network Baseline, using the subnet groups created during network provisioning.
+The AWS Agent supports provisioning managed databases inside an Environment. Databases are provisioned into the private subnets of the Environment's Network Baseline, using the subnet groups created during network provisioning.
 
 ## Database Types
 

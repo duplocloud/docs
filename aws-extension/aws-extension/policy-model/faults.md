@@ -1,12 +1,12 @@
 ---
 description: >-
-  Cross-resource issues detected across the AWS Extension hierarchy — surfaced
+  Cross-resource issues detected across the AWS Agent hierarchy — surfaced
   with severity, context, and links to the originating ticket.
 ---
 
 # Faults
 
-Faults are issues detected by the platform across any resource in the AWS Extension — Networks, Clusters, Environments, workloads, or databases. They are surfaced centrally so teams can see and act on problems without hunting through individual resource views.
+Faults are issues detected by the platform across any resource in the AWS Agent — Networks, Clusters, Environments, workloads, or databases. They are surfaced centrally so teams can see and act on problems without hunting through individual resource views.
 
 Each Fault captures what went wrong, how severe it is, which resource is affected, and when it was detected. Where the fault originated from a ticket execution, a direct link to that ticket is included.
 

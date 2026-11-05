@@ -8,7 +8,7 @@ description: >-
 
 Skill Mapping lets you override the platform default skill for a specific ticket origin and sub type. When a ticket is created that matches the override, the AI agent loads your custom skill instead of the platform default — without any change to the resource configuration or ticket setup.
 
-For the AWS Extension, this means you can replace the default AWS infrastructure provisioning skill with one that incorporates your organization's specific requirements: custom tagging, different CloudFormation templates, additional compliance checks, or modified approval workflows.
+For the AWS Agent, this means you can replace the default AWS infrastructure provisioning skill with one that incorporates your organization's specific requirements: custom tagging, different CloudFormation templates, additional compliance checks, or modified approval workflows.
 
 ## How it works
 

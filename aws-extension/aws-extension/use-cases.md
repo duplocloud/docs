@@ -1,12 +1,12 @@
 ---
 description: >-
   Common AWS operational workflows and how to accomplish them with the AWS
-  Extension.
+  Agent.
 ---
 
 # Use Cases
 
-Common operational workflows using the AWS Extension — from cost optimization and compliance to developer self-service and troubleshooting.
+Common operational workflows using the AWS Agent — from cost optimization and compliance to developer self-service and troubleshooting.
 
 ## Connect to Existing Infrastructure
 

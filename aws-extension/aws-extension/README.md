@@ -4,11 +4,11 @@ description: >-
   provision new ones from scratch.
 ---
 
-# AWS Extension
+# AWS Agent
 
-The AWS Extension is DuploCloud's built-in application for AWS infrastructure lifecycle management. It gives teams a structured, AI-driven way to provision, operate, and troubleshoot AWS resources — from VPC networks and EKS clusters down to Kubernetes workloads and managed databases.
+The AWS Agent is DuploCloud's built-in application for AWS infrastructure lifecycle management. It gives teams a structured, AI-driven way to provision, operate, and troubleshoot AWS resources — from VPC networks and EKS clusters down to Kubernetes workloads and managed databases.
 
-Whether you are connecting to infrastructure that already exists or building a new environment from scratch, the AWS Extension provides a consistent, auditable interface for every operation.
+Whether you are connecting to infrastructure that already exists or building a new environment from scratch, the AWS Agent provides a consistent, auditable interface for every operation.
 
 ## What you can do
 
@@ -19,4 +19,4 @@ Whether you are connecting to infrastructure that already exists or building a n
 
 ## Sections
 
-<table data-view="cards"><thead><tr><th>Title</th><th>Description</th><th data-card-target data-type="content-ref">Target</th></tr></thead><tbody><tr><td><strong>Policy Model</strong></td><td>The building blocks of the AWS Extension — resources, their specs, results, and how they relate.</td><td><a href="policy-model/">policy-model</a></td></tr><tr><td><strong>Installation</strong></td><td>How to connect DuploCloud to your AWS accounts and cloud providers.</td><td><a href="installation.md">installation.md</a></td></tr><tr><td><strong>Quick Start</strong></td><td>Get started quickly — connect to existing infrastructure or provision new infrastructure step by step.</td><td><a href="quick-start/">quick-start</a></td></tr><tr><td><strong>Customizing the Extension</strong></td><td>Override default skills to match your organization's standards.</td><td><a href="customizing/">customizing</a></td></tr><tr><td><strong>Use Cases</strong></td><td>Common operational workflows and how to accomplish them.</td><td><a href="use-cases.md">use-cases.md</a></td></tr><tr><td><strong>Services</strong></td><td>AWS services available within your environments.</td><td><a href="services.md">services.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th>Title</th><th>Description</th><th data-card-target data-type="content-ref">Target</th></tr></thead><tbody><tr><td><strong>Policy Model</strong></td><td>The building blocks of the AWS Agent — resources, their specs, results, and how they relate.</td><td><a href="policy-model/">policy-model</a></td></tr><tr><td><strong>Installation</strong></td><td>How to connect DuploCloud to your AWS accounts and cloud providers.</td><td><a href="installation.md">installation.md</a></td></tr><tr><td><strong>Quick Start</strong></td><td>Get started quickly — connect to existing infrastructure or provision new infrastructure step by step.</td><td><a href="quick-start/">quick-start</a></td></tr><tr><td><strong>Customizing the Agent</strong></td><td>Override default skills to match your organization's standards.</td><td><a href="customizing/">customizing</a></td></tr><tr><td><strong>Use Cases</strong></td><td>Common operational workflows and how to accomplish them.</td><td><a href="use-cases.md">use-cases.md</a></td></tr><tr><td><strong>Services</strong></td><td>AWS services available within your environments.</td><td><a href="services.md">services.md</a></td></tr></tbody></table>

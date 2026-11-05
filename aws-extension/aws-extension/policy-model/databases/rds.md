@@ -4,7 +4,7 @@ description: Amazon RDS instances and clusters managed inside an Environment.
 
 # RDS
 
-Amazon RDS provides managed relational databases. The AWS Extension supports provisioning both single RDS instances and multi-node Aurora clusters inside an Environment.
+Amazon RDS provides managed relational databases. The AWS Agent supports provisioning both single RDS instances and multi-node Aurora clusters inside an Environment.
 
 ## Spec
 

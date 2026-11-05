@@ -4,7 +4,7 @@ description: The isolation boundary that holds Kubernetes and cloud resources.
 
 # Resource Group
 
-A Resource Group is the isolation boundary of the AWS Extension. Each one provisions its own IAM role and policies, security groups, KMS key, and EC2 key pair, and every resource created inside it inherits those boundaries.
+A Resource Group is the isolation boundary of the AWS Agent. Each one provisions its own IAM role and policies, security groups, KMS key, and EC2 key pair, and every resource created inside it inherits those boundaries.
 
 A Resource Group holds two kinds of children:
 
