@@ -1,300 +1,274 @@
 ---
-description: Deploy a workload into your Environment — create a Namespace and a Deployment.
+description: >-
+  Deploy a workload into your Resource Group: create a Namespace, add a Node
+  Group for compute, then deploy an App Service and optionally expose it through
+  a load balancer.
 ---
 
 # Step 5: Deploy Workloads
 
-With your Environment ready, you can now deploy applications. This step creates a Namespace and a Deployment inside it.
+With your Resource Group **Ready** (see [Step 4](step-4-environment.md)), you can deploy applications into it. Workloads run on the Kubernetes Cluster the Resource Group was created with, and every workload inherits the Resource Group's security boundary.
 
-## What you will do
+Open the Resource Group from its environment. The **Kubernetes** section of its sidebar holds **Namespaces**, **Nodes** and **Workloads**, and **Micro Services** holds your long-running applications.
 
-* Create a Namespace inside the Environment
-* Create a Node Group to provide compute capacity for the cluster
-* Create a Deployment with your container image
-* Optionally attach a load balancer to expose the application externally, using the hosted zone and certificate from your Plan
+## What gets created
+
+* A **Namespace** on the cluster, with a read-only and a read/write service account. Both are bound to the Resource Group's IAM role through IRSA.
+* An **EKS managed Node Group**, provisioned as a CloudFormation stack. It launches EC2 instances, so it incurs AWS charges.
+* An **App Service**: a Kubernetes Deployment or StatefulSet, with an optional Service and Ingress. An Ingress with the ALB ingress class creates an Application Load Balancer, which also incurs AWS charges.
 
 ## Walkthrough
 
-### Step 1 — Resource Group Ready
+### Step 1 — Namespaces List
 
-Once the Resource Group finishes provisioning its **Status** changes to **Ready**. The Overview tab shows the provisioned AWS resources — security groups, IAM role, and KMS key — that define the security boundary for this resource group. The left sidebar now shows the full resource group navigation tree including the **Kubernetes** section.
+In the Resource Group's sidebar, expand **Kubernetes** and click **Namespaces**. Summary cards show the total namespaces and how many are ready, in progress or need attention. The list shows each namespace's roles, service accounts, IAM role and status. Click **Create Namespace** to begin.
 
-![](../../../../.gitbook/assets/env-k8s-step-02.png)
+![](../../../../.gitbook/assets/workloads-step-01.png)
 
-### Step 2 — Namespaces List
-
-In the sidebar, expand **Kubernetes** and click **Namespaces**. The list shows all namespaces provisioned under this resource group with their roles, service accounts, IAM role binding, and status. When starting fresh the list is empty. Click **+ Create Namespace** to begin.
-
-![](../../../../.gitbook/assets/env-k8s-step-03.png)
-
-### Step 3 — Create Namespace
+### Step 2 — Create Namespace
 
 The **Create Namespace** form opens. Fill in:
 
-* **Name** — a DNS-1123 compliant identifier (lowercase letters, digits, and hyphens; max 63 chars). For example `prod-namespace`.
+* **Name** — DNS-1123: lowercase letters, digits and hyphens, starting and ending with a letter or digit, up to 63 characters (e.g. `prod-namespace`)
 * **Description** — optional
+* **Metadata** — optional key/value pairs
 
-The form explains what will be provisioned: a Kubernetes namespace under this Resource Group with a read-only and a read/write service account, both bound to the resource group's IAM role via IRSA.
+The namespace is created under this Resource Group with a read-only and a read/write service account, both bound to the Resource Group's IAM role via IRSA.
 
 Click **Create & Provision**.
 
-![](../../../../.gitbook/assets/env-k8s-step-04.png)
+![](../../../../.gitbook/assets/workloads-step-02.png)
 
-### Step 4 — Namespace Provisioning Started
+New namespaces are delete-protected by default. To deprovision one later, first set its `delete_protection` metadata to `false`.
 
-A success banner confirms **"Namespace 'prod-namespace' provisioning started"**. The namespace detail page opens with **Status: Provisioning**, showing the linked Resource Group ID and Environment ID. Click **Track Provisioning Status** to follow the agent.
+### Step 3 — Namespace Provisioning
 
-![](../../../../.gitbook/assets/env-k8s-step-05.png)
+DuploCloud opens the namespace's page. The **Spec** view shows the Resource Group and Environment it belongs to, and the **Provisioning Status** panel tracks it from **Created** through **Provisioning** to **Ready**. Click **Track Status** to open the agent ticket, titled **Namespace Resource Management - \<name\>**.
 
-### Step 5 — Agent: Credentials & kubectl Setup
+The agent uses the `duplo-kubernetes-infra` skill to run the namespace handler. The handler:
 
-The agent opens a ticket titled **Namespace Resource Management — prod-namespace** using the `duplo-kubernetes-infra` skill. It begins by reading the task file to locate the namespace handler, sets up AWS credentials, and locates the `kubectl` and kubeconfig scripts needed to communicate with the EKS cluster.
+* creates the namespace and its two service accounts
+* labels them with the workspace, environment and Resource Group
+* annotates both service accounts with the Resource Group's IAM role
+* adds the namespace to that role's trust policy
 
-![](../../../../.gitbook/assets/env-k8s-step-06.png)
+![](../../../../.gitbook/assets/workloads-step-03.png)
 
-### Step 6 — Agent: Namespace Handler
+### Step 4 — Namespace Ready
 
-The agent locates the correct task handler, reads the namespace spec, and runs the provisioning commands against the cluster. It creates the namespace and configures the two service accounts with their IRSA annotations.
+When provisioning completes, the status changes to **Ready**. Switch to the **Result** view to see the **Service-account role bindings**:
 
-![](../../../../.gitbook/assets/env-k8s-step-07.png)
+| Service account      | ClusterRole | Access     |
+| -------------------- | ----------- | ---------- |
+| `<name>-readonly`    | `view`      | Read-only  |
+| `<name>-readwrite`   | `edit`      | Read/write |
 
-### Step 7 — Agent: Namespace Complete
+Both service accounts map to the Resource Group's IAM role, so any pod that uses one of them can assume that role.
 
-Provisioning completes. The agent returns a summary of what was provisioned:
+![](../../../../.gitbook/assets/workloads-step-04.png)
 
-| Service Account            | ClusterRole | Access     | IAM Role ARN                                                                    |
-| -------------------------- | ----------- | ---------- | ------------------------------------------------------------------------------- |
-| `prod-namespace-readonly`  | view        | Read-only  | `arn:aws:iam::813590939111:role/duplo-rb-prod-environment-prod-resourcegroup-1` |
-| `prod-namespace-readwrite` | edit        | Read/write | `arn:aws:iam::813590939111:role/duplo-rb-prod-environment-prod-resourcegroup-1` |
+### Step 5 — Node Groups List
 
-Both service accounts are annotated for IRSA so any pod in the namespace can assume the resource group's IAM role.
+Click **Nodes** in the sidebar. Summary cards show the node groups, the number of nodes, spot capacity and health issues. The list shows each node group's instance types, its scaling (**Min / Desired / Max**) and its status. Click **Create Node Group** to begin.
 
-![](../../../../.gitbook/assets/env-k8s-step-08.png)
+![](../../../../.gitbook/assets/workloads-step-05.png)
 
-### Step 8 — Namespace Ready
+### Step 6 — Create Node Group: Basic Info
 
-The namespace detail page updates to **Status: Ready**. The Overview tab confirms the namespace name and displays the service-account role bindings table with both accounts, their ClusterRole, access level, and IAM Role ARN. A footer confirms **"Namespace 'prod-namespace' provisioned"**.
-
-![](../../../../.gitbook/assets/env-k8s-step-09.png)
-
-### Step 9 — Node Groups List
-
-Click **Nodes** in the sidebar to open the Node Groups list. This page lists all EKS managed node groups under the resource group with their instance types, scaling configuration (min/desired/max), live status, and overall status. When starting fresh the list is empty. Click **+ Create Node Group** to begin.
-
-![](../../../../.gitbook/assets/env-k8s-step-10.png)
-
-### Step 10 — Create Node Group: Basic Info
-
-The **Create EKS Node Group** wizard opens. Fill in the Basic Info page:
+The **Create EKS Node Group** wizard has three pages. On **Basic Info**, fill in:
 
 * **Name** — used as the EKS node group name (e.g. `prod-nodegroup-1`)
 * **Description** — optional
-* **AMI Type** — automatically selected based on the cluster's Kubernetes version. For EKS 1.33 this defaults to `AL2023 x86_64 Standard`. Changing the AMI family re-filters the available instance types.
-* **Instance Types** — select one or more from the available types in the region for the selected AMI architecture (e.g. `t3a.small`). Selecting multiple types improves availability.
-* **Instance Visibility** — `Internal (private subnets)` places nodes in private subnets; `Public` places them in public subnets.
+* **AMI Type** — selected automatically from the cluster's Kubernetes version. For 1.33 and later this is **AL2023 x86\_64 Standard**; earlier versions use AL2. You can also choose an ARM64 or NVIDIA GPU variant, or **Custom (bring your own AMI)**, which asks for an **AMI ID**. Changing the AMI type re-filters the instance types.
+* **User Data** — optional; extra EC2 user data merged with EKS's own bootstrap. Don't include commands that start or reconfigure `kubelet`.
+* **Instance Types** — one or more instance types (e.g. `t3a.small`). Selecting several improves availability.
+* **Instance Visibility** — **Internal (private subnets)** (the default) or **Public subnets**
 
 Click **Next**.
 
-![](../../../../.gitbook/assets/env-k8s-step-11.png)
+![](../../../../.gitbook/assets/workloads-step-06.png)
 
-### Step 11 — Create Node Group: Scaling & Config
+### Step 7 — Create Node Group: Storage & Encryption
 
-Configure the scaling policy and storage:
+Configure the nodes' storage:
 
-* **Min Size** — minimum number of nodes (e.g. `1`)
-* **Desired Size** — target number of nodes at creation (e.g. `2`)
-* **Max Size** — maximum nodes the autoscaler can scale to (e.g. `3`)
-* **Disk Size (GiB)** — root EBS volume size; minimum 20 GiB, encrypted gp3 (e.g. `50`)
-* **Capacity Type** — `On-Demand` for stable workloads, `Spot` for cost savings on fault-tolerant workloads
-* **Allocation Tag** — optional tag applied as `allocation-tag` on instances, volumes, and the node group; useful for cost allocation and chargeback reporting
+* **Disk Size (GiB)** — the root EBS volume (gp3). Minimum 20, default 50.
+* **Encrypt Disks** — **Yes** (the default) or **No**
+* **KMS Key** — optional. Leave it blank to use the Resource Group's default key, or the AWS-managed `aws/ebs` key if the Resource Group has none.
+* **Additional Volumes** — optional YAML list of extra EBS volumes (up to four), with snippets for a data volume, an encrypted data volume and a provisioned-IOPS volume
+
+Click **Next**.
+
+![](../../../../.gitbook/assets/workloads-step-07.png)
+
+### Step 8 — Create Node Group: Scaling & Config
+
+Configure scaling and tags:
+
+* **Min Size**, **Desired Size**, **Max Size** — defaults 1 / 2 / 3. Desired must lie between Min and Max.
+* **Capacity Type** — **On-Demand** for stable workloads, **Spot** for lower cost on fault-tolerant workloads
+* **Enable Cluster Autoscaler** — scales the group between Min and Max based on pending pods. Cluster Autoscaler must also be enabled on the cluster.
+* **Allocation Tag** — optional. Applied under the key `allocationtags` as a Kubernetes node label on every node, so workloads can target the group, and as an AWS tag on the node group, its EC2 instances and EBS volumes for cost reporting.
+* **Tags** — optional AWS tags for the node group, its Auto Scaling group and its instances and volumes
 
 Click **Create & Provision**.
 
-![](../../../../.gitbook/assets/env-k8s-step-12.png)
+![](../../../../.gitbook/assets/workloads-step-08.png)
 
-### Step 12 — Node Group Provisioning Started
+### Step 9 — Node Group Page
 
-A success banner confirms **"Node group 'prod-nodegroup-1' provisioning started"**. The node group detail page opens with **Status: Provisioning** and the spec summary:
+DuploCloud opens the node group's page. The **Spec** view shows its capacity type, AMI type, disk size and disk encryption, and the side panel shows its instance types and scaling. Once provisioned, the **Result** view adds the node group and CloudFormation stack ARNs, Kubernetes and release versions, AWS status, Auto Scaling group and subnets, with **Scaling**, **Nodes** and **Health Issues** tabs.
 
-* Resource Group: linked
-* Capacity Type: ON\_DEMAND
-* AMI Type: AL2023\_x86\_64\_STANDARD
-* Disk Size: 50 GiB
-* Instance Types: t3a.small
-* Scaling: 1 / 2 / 3 (min/desired/max)
+Click **Track Status** to follow the agent.
 
-Click **Track Provisioning Status** to follow the agent.
+![](../../../../.gitbook/assets/workloads-step-09.png)
 
-![](../../../../.gitbook/assets/env-k8s-step-13.png)
+### Step 10 — Agent: Preflight
 
-### Step 13 — Agent: Phase 0 & Phase 1
+The agent opens a ticket titled **AWSEksNodeGroup Resource Management - \<name\>** and uses the `duplo-kubernetes-infra` skill with its `aws-eks-nodegroup` sub-skill:
 
-The agent opens a ticket titled **AWSEksNodeGroup Resource Management — prod-nodegroup-1** using the `duplo-kubernetes-infra` skill. It reads the `aws-eks-node-group` skill file, loads the spec, and runs Phase 0 (LOAD\_PROFILE guard) and Phase 1 (parameter validation). All fields are validated and the CloudFormation stack name is derived.
+* **Phase 0** acknowledges the ticket.
+* **Phase 0.5** sets up the AWS environment.
+* **Phase 1 (Preflight)** reads the spec and validates the context. It checks that the Resource Group has a cluster, an IAM role and subnets of the chosen visibility. It then derives the CloudFormation stack name and checks whether the stack already exists.
 
-![](../../../../.gitbook/assets/env-k8s-step-14.png)
+![](../../../../.gitbook/assets/workloads-step-10.png)
 
-### Step 14 — Agent: Variables Resolved
+### Step 11 — Agent: Stack Submitted
 
-The agent exports all required shell variables — `WORKSPACE_ID`, `RESOURCE_ID`, region, VPC, subnet IDs, and node group configuration — and confirms validation passes. It then derives the stack name and checks for a pre-existing stack before proceeding to deployment.
+In **Phase 2** the agent submits the CloudFormation stack for the EKS managed node group. In **Phase 4** it polls the stack's events until the stack reaches `CREATE_COMPLETE`, then moves to **Phase 5** to collect the node group's details.
 
-![](../../../../.gitbook/assets/env-k8s-step-15.png)
+![](../../../../.gitbook/assets/workloads-step-11.png)
 
-### Step 15 — Agent: CloudFormation Submitted
+### Step 12 — Agent: Node Group Complete
 
-The AWS profile guard passes. The agent exports all session variables, submits the CloudFormation template for the EKS Managed Node Group, and enters Phase 4 — polling for stack completion. Stack events are streamed in real time as each resource is created.
+Phase 5 posts the result and marks the node group **Complete**. The summary lists:
 
-![](../../../../.gitbook/assets/env-k8s-step-16.png)
+* the node group name and ARN
+* the CloudFormation stack
+* the Kubernetes and release versions
+* the instance type and capacity type
+* the scaling configuration
+* the subnets
 
-### Step 16 — Agent: Node Group Complete
+The node group's status changes to **Ready**.
 
-The stack reaches `CREATE_COMPLETE`. Phase 5 collects full node group details and posts the final result. The completion summary confirms the node group name, ARN, CloudFormation stack, Kubernetes version, release version, instance type, scaling configuration, subnets, and final status.
+![](../../../../.gitbook/assets/workloads-step-12.png)
 
-![](../../../../.gitbook/assets/env-k8s-step-17.png)
+### Step 13 — Micro Services List
 
-### Step 17 — Node Group Ready
+Click **Micro Services** in the sidebar. Summary cards show the total services, requested replicas, and how many are exposed and autoscaled. The list shows each service's type, image and status. Click **Create App Service** to deploy an application.
 
-The node group detail page updates to **Status: Ready**. The Details tab shows:
+Micro Services, and **Kubernetes > Workloads** (Jobs and CronJobs), are available once the Resource Group has a namespace.
 
-* **Node Group ARN** and **CloudFormation Stack ARN**
-* **Kubernetes Version**: 1.33 / **Release Version**: 1.33.11-20268512
-* **AWS Status**: ACTIVE
-* **Autoscaling Group** name
-* **Subnets**: the two private subnet IDs the nodes are placed in
-* **Scaling**: 1 / 2 / 3 (min/desired/max)
+![](../../../../.gitbook/assets/workloads-step-13.png)
 
-Additional tabs — **Scaling**, **Nodes**, and **Health Issues** — provide live status of the autoscaling group and individual node health.
+### Step 14 — Add App Service: Workload Basics
 
-![](../../../../.gitbook/assets/env-k8s-step-18.png)
+The **Add App Service** wizard opens on **Workload Basics**. Fill in:
 
-### Step 18 — Workloads: Jobs
+* **Service Name** — DNS-1123, up to 63 characters (e.g. `helloworld-application`)
+* **Namespace** — the namespace to deploy into. It is pre-selected when the Resource Group has exactly one Ready namespace.
+* **Docker Image** — the container image to run (e.g. `nginx:1.27`)
+* **Allocation Tag** — optional; schedules the pods onto nodes with the matching `allocationtags` label
+* **Replication Type** — **Static** (a fixed **Replicas** count, default 1), **HPA (Managed)** (DuploCloud creates a Horizontal Pod Autoscaler from the configuration you enter) or **External HPA** (an initial replica count, with an autoscaler you manage)
+* **Workload Type** — **Deployment** for stateless services or **StatefulSet**, which adds volume claim templates. The type can't be changed after creation.
 
-In the sidebar, expand **Kubernetes > Workloads** and click **Jobs** to see the Jobs list. The list shows all Kubernetes Jobs with their namespace, image, succeeded count, and status. Click **+ Create Job** to define a one-shot or batch workload.
-
-![](../../../../.gitbook/assets/env-k8s-step-19.png)
-
-### Step 19 — Micro Services List
-
-Click **Micro Services** in the sidebar to see all long-running application services (Deployments, StatefulSets, etc.) in this resource group. The list shows name, type, image, and status. When starting fresh the list is empty. Click **+ Create App Service** to deploy an application.
-
-![](../../../../.gitbook/assets/env-k8s-step-20.png)
-
-### Step 20 — Add App Service: Workload Basics
-
-The **Add App Service** wizard opens. Fill in the **Workload Basics** page:
-
-* **Service Name** — DNS-1123 compliant name (e.g. `helloworld-application`)
-* **Namespace** — auto-selected from the resource group's provisioned namespace (`prod-namespace`)
-* **Docker Image** — the container image to run
-* **Replicas** — number of pod replicas (e.g. `1`)
-* **Allocation Tag** — optional cost allocation tag
-* **Workload Type** — `Deployment` for stateless services; other options include StatefulSet, DaemonSet
-
-The platform automatically attaches a read-only service account, resource group node selector, and resource tracking labels to every workload.
+The platform automatically attaches a read-only service account, a Resource Group node selector and resource-tracking labels to every workload.
 
 Click **Next**.
 
-![](../../../../.gitbook/assets/env-k8s-step-21.png)
+![](../../../../.gitbook/assets/workloads-step-14.png)
 
-### Step 21 — Pod Configuration
+### Step 15 — Pod Configuration
 
-The **Pod Configuration** page configures pod-level scheduling and security. Two tabs are available:
+**Pod Configuration** sets pod-level scheduling and security in YAML, on two tabs:
 
-* **Scheduling** — YAML editor for node affinity, pod anti-affinity, and tolerations. Insert snippets are provided for common patterns: **Required (linux)**, **Prefer spot nodes**, **Spread across nodes**, **Strict: 1 per node**, **Dedicated GPU**, and **Spot instances**.
+* **Scheduling** — node affinity, pod anti-affinity and tolerations. Snippets: **Required (linux)**, **Prefer spot nodes**, **Spread across nodes**, **Strict: 1 per node**, **Dedicated GPU** and **Spot instances**.
 * **Security & Other** — security context and other pod-level settings
 
-Leave blank for a standard deployment and click **Next**.
+Leave both blank for a standard deployment and click **Next**.
 
-![](../../../../.gitbook/assets/env-k8s-step-23.png)
+![](../../../../.gitbook/assets/workloads-step-15.png)
 
-### Step 22 — Environment Variables
+### Step 16 — Environment Variables
 
-The **Environment Variables** page configures environment variables for the main container. Two tabs are provided:
+**Environment Variables** configures the main container's environment, on two tabs:
 
-* **ENV** — inline variables; insert snippets for **Key/Value** literals or **Field Ref** (downward API)
-* **ENV from** — bulk import from a **SecretKeyRef** or **ConfigMapKeyRef**
+* **ENV** — individual variables. Snippets: **Key / Value** and **Field Ref**, plus **SecretKeyRef** and **ConfigMapKeyRef** to read single keys from a Secret or ConfigMap.
+* **ENV from** — import every key from a Secret or ConfigMap
 
-Leave blank if no environment variables are needed and click **Next**.
+Leave both blank if the container needs no variables and click **Next**.
 
-![](../../../../.gitbook/assets/env-k8s-step-24.png)
+![](../../../../.gitbook/assets/workloads-step-16.png)
 
-### Step 23 — Container Configuration
+### Step 17 — Container Configuration
 
-The **Container Configuration** page configures resources, ports, probes, and volume mounts for the main container. Four tabs are available:
+**Container Configuration** sets the main container's resources, ports, probes and mounts, on four tabs:
 
-* **Resources & Ports** — CPU/memory limits and requests; port definitions. Insert snippets: HTTP 8080, HTTPS 8443, Metrics 9090, and resource presets (1 CPU/1Gi, Medium workload).
-* **Probes** — liveness and readiness probe configuration
-* **Volumes & Mounts** — volume mount definitions
-* **Other** — additional container settings
+* **Resources & Ports** — CPU and memory requests and limits, and container ports. Snippets: **HTTP 8080**, **HTTPS 8443**, **Metrics 9090**, **Full Example**, **1 CPU / 1Gi** and **Medium workload**.
+* **Probes** — liveness and readiness probes
+* **Volumes & Mounts** — volume mounts
+* **Other** — other container settings
 
-Leave blank for default resource limits and click **Next**.
+Leave them blank for the defaults and click **Next**.
 
-![](../../../../.gitbook/assets/env-k8s-step-25.png)
+![](../../../../.gitbook/assets/workloads-step-17.png)
 
-### Step 24 — Extra Containers
+### Step 18 — Extra Containers
 
-The **Extra Containers** page adds init containers or sidecar containers alongside the main container. Two tabs are provided:
+**Extra Containers** adds containers alongside the main one, on two tabs:
 
-* **Init Containers** — run to completion before the main container starts. Insert snippets: **Wait for TCP port**, **Wait for HTTP**, **DB Migration**.
-* **Sidecar Containers** — run alongside the main container for the lifetime of the pod.
+* **Init Containers** — run to completion before the main container starts. Snippets: **Wait for TCP port**, **Wait for HTTP** and **DB Migration**.
+* **Sidecar Containers** — run alongside the main container for the life of the pod
 
-Leave blank if no auxiliary containers are needed and click **Next**.
+Leave both blank if you need no extra containers and click **Next**.
 
-![](../../../../.gitbook/assets/env-k8s-step-26.png)
+![](../../../../.gitbook/assets/workloads-step-18.png)
 
-### Step 25 — Load Balancer
+### Step 19 — Load Balancer
 
-The **Load Balancer** page configures the Kubernetes Service and optional Ingress for this workload. Click **+ Add Port** to define a port mapping, or leave blank to skip external exposure. Service annotations and labels can be edited via **Edit** under SERVICE SETTINGS.
+**Load Balancer** configures the Kubernetes Service and an optional Ingress. Click **Add Port** to expose a port, or leave the page empty to deploy without one. Under **Service Settings**, click **Edit** to set annotations and labels on the Service.
 
-Click **Save & Provision** when ready.
+![](../../../../.gitbook/assets/workloads-step-19.png)
 
-![](../../../../.gitbook/assets/env-k8s-step-27.png)
+### Step 20 — Add Port
 
-### Step 26 — Add Port
+The **Add Port** modal configures the port:
 
-The **Add Port** modal configures how the service is exposed:
-
-* **Service Type** — `ClusterIP` (internal), `NodePort`, or `LoadBalancer`
+* **Service Type** — **ClusterIP** (internal to the cluster) or **NodePort**
 * **Container Port** — the port the container listens on (e.g. `80`)
-* **Service Port** — the port exposed on the service (defaults to the container port)
-* **Protocol** — `TCP` or `UDP`
-* **Enable Ingress** — toggle on to create an ALB Ingress rule for this port
-  * **Certificate** — select an ACM certificate from the plan (e.g. `*.salesdemo-apps.duplocloud.net`)
-  * **Load Balancer Visibility** — `Public` or `Internal`
-  * **Host** — auto-populated from the service and resource group name
-  * **Path** — URL path prefix (e.g. `/`)
-  * **Path Type** — `Prefix` or `Exact`
+* **Service Port** — optional; defaults to the container port
+* **Protocol** — **TCP** or **UDP**
+* **Enable Ingress** — turn on to route external traffic to this port through an Ingress:
+  * **Certificate** — optional; one or more ACM certificates from the environment's Plans, or an ARN you enter
+  * **Load Balancer Visibility** — **Public** (internet-facing) or **Internal**
+  * **HTTP Port** and **HTTPS Port** — the listener ports. HTTPS and **Redirect HTTP → HTTPS** are available once a certificate is selected.
+  * **Ingress Annotations** — optional YAML, with snippets for common ALB, NGINX and GCP settings
+  * **Host** — optional; pre-filled as `<service>-<resource group>.<domain>` from the Plan's hosted zone
+  * **Path** — must start with `/` (default `/`)
+  * **Path Type** — **Prefix**, **Exact** or **ImplementationSpecific**
 
 Click **Add Port**, then **Save & Provision**.
 
-![](../../../../.gitbook/assets/env-k8s-step-28.png)
+![](../../../../.gitbook/assets/workloads-step-20.png)
 
-### Step 27 — App Service Ready
+### Step 21 — App Service Ready
 
-The app service detail page opens with **Status: Ready**. The Overview tab shows the full deployment summary:
+DuploCloud deploys the App Service directly to the cluster; no agent ticket is involved. Its page shows the status in the **Provisioning Status** panel and changes to **Ready** when the workload is up. The **Overview** shows:
 
-* **Namespace**: `prod-namespace`
-* **Workload**: `helloworld-application`
-* **Service**: `helloworld-application`
-* **Ingress**: `helloworld-application`
-* **Replicas Ready / Available**: 1 / 1
-* **Service Type**: ClusterIP
-* **Cluster IP**: `172.20.25.167`
+* the namespace, workload, Service and Ingress names
+* the ready and available replicas
+* the Service type and cluster IP
 
-The **Running pods** table lists each pod with its name, status, restart count, pod IP, and node. A **Diagnose** button provides quick access to pod logs and health checks.
+A **Running pods** table lists each pod's status, restarts, IP and node. The **Workload**, **Service** and **Ingress** tabs show each object, and **Ask the Agent** opens a diagnostic agent ticket for the service.
 
-![](../../../../.gitbook/assets/env-k8s-step-29.png)
+When the Ingress uses the ALB ingress class, the **Load balancer** section fills in with the ALB's hostname a few minutes later.
 
-### Step 28 — Load Balancer Provisioned
+![](../../../../.gitbook/assets/workloads-step-21.png)
 
-After a few minutes the ALB finishes provisioning. The **Load balancer** section of the Overview tab populates with the hostname:
-
-```
-k8s-prodname-hellowor-e9cc394637-1380267796.us-east-1.elb.amazonaws.com
-```
-
-The application is now accessible via HTTPS through the ALB using the configured certificate and ingress path.
-
-![](../../../../.gitbook/assets/env-k8s-step-32.png)
+{% hint style="info" %}
+DuploCloud doesn't create a DNS record for the Ingress host unless the external-dns component is enabled on the cluster. Without it, create a record pointing the host at the ALB hostname, or reach the application on the ALB hostname directly.
+{% endhint %}
 
 ## Next step
 
