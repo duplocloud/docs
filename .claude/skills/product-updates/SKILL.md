@@ -295,6 +295,19 @@ Do not stop here. The changelog entry announces a feature; Step 4 makes sure the
 
 ## Step 4 — Audit the Product Docs for Each Update
 
+### Pin the docs to a release (do this before reading any code)
+
+Docs describe what customers run, which is the **latest GA helm tag** — not `main`/`master`, which are ahead of it. Every code check, "does this control exist" test and screenshot in Step 4 is pinned to that release.
+
+1. Take the newest GA tag from Step 1 (the `v*` tag list; skip `rc-*`). For a standalone doc-refresh pass with no changelog run, take the newest `v*` tag from `gh api repos/duplocloud-internal/helpdesk-helm/tags`.
+2. Read the image tags that chart pins: `git show <tag>:values.yaml` in `helpdesk-helm` (backend `quay.io/duplocloud/backend`, UI `quay.io/duplocloud/duplo-ai-helpdesk-ui`, and the agent image).
+3. Find the source for each image tag in its repo, usually a `hotfix/<image-tag>` or release branch, otherwise a git tag. Check `git branch -r` and `git tag -l`. If none matches, stop and ask the user rather than falling back to `main`/`master`.
+4. Read code only from that ref (`git show <ref>:<path>`, `git grep ... <ref>`). Work merged to `main`/`master` after the cut is not shipped: don't document it, and don't treat its absence as a bug.
+5. Check what the capture environment (salesdemo or any other) actually runs against the chart tag. If it runs something different, write the text from the pinned release, take screenshots from the environment, and flag the gap to the user.
+6. State the pinned tag and refs at the top of the audit table, and record them in the tracker file. When a newer GA tag lands, previously finished pages don't need rework unless the user asks for it.
+
+As of 2026-11-16 the newest GA tag is `v0.2.24-hotfix.3` (released 2026-11-05; backend and UI image `0.2.24.3`), with source branch `hotfix/0.2.24.3` in all three repos. Release branches get deleted on the remote after a release (`hotfix/0.2.24.1` was), so always keep a local `pin/<image-tag>` branch that survives a `git fetch --prune`, and record its SHA here: `duplo-ui` `4489a8b67`, `duplo-ai-helpdesk` `89b9df93f`, and `claude-code-generic-ai-agent` `1a74fe2` (the agent image; include it whenever a claim is about what the agent does at runtime). The previous pin `pin/0.2.24.1` is still kept locally.
+
 A product update entry is an announcement, not documentation. Every item published in Step 3 may also need its own doc page created or corrected, and the changelog entry cross-linked to it (the established pattern — see the existing entries that link out, e.g. `[**HelpDesk Audit Trail**](../armor/helpdesk/audit-trail.md)`).
 
 ### Step 4a — Work out what each item needs
@@ -308,7 +321,7 @@ For every item in the section just published, determine one of three outcomes. *
 To decide, for each item:
 - Search the docs repo for existing coverage: `grep -ril "<feature keywords>" --include=*.md .`
 - Read the page that would own it and check whether it is actually accurate, not merely adjacent — an existing page mentioning the feature name is not the same as documenting the new behaviour.
-- Where the distinction matters, check the product source for whether the feature has admin UI at all. A feature with no UI surface is category 2 even if it sounds visual. Conversely, if the UI shipped but the described control doesn't exist in `main`, say so rather than documenting a draft that never shipped.
+- Where the distinction matters, check the product source for whether the feature has admin UI at all. A feature with no UI surface is category 2 even if it sounds visual. Conversely, if the UI shipped but the described control doesn't exist in the pinned release, say so rather than documenting a draft that never shipped.
 
 Then present the full audit to the user as a table, and wait for approval before changing anything:
 
