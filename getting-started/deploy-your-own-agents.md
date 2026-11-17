@@ -180,4 +180,4 @@ Until signing is enforced, the three routes above work with unsigned agents.
 
 * [Manage installed agents](../armor/extensions.md)
 * [Browse and buy agents from DuploCloud](marketplace.md)
-* [Learn the Agent Framework](../extension-framework/extension-framework.md)
+* [Build your own agent, step by step](build-your-own-agent/README.md)

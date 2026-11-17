@@ -153,4 +153,3 @@ Taking over does not register a new license. To stop managing a deployment from 
 ## Other installation guides
 
 * [Systems Integrator Installation Guide](systems-integrator-installation-guide.md): install the portal with Helm into a Kubernetes cluster you manage.
-* [AI DevOps V1 to V2 Upgrade](v1-to-v2-upgrade.md): upgrade an existing installation.

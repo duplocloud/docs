@@ -57,4 +57,6 @@ Stopping the DevKit keeps your data. Some reset commands delete the volumes but 
 | Fix a problem | [Troubleshooting](https://github.com/duplocloud/devkit/blob/main/docs/troubleshooting.md) and the [FAQ](https://github.com/duplocloud/devkit/blob/main/docs/faq.md) |
 | Look up a command or flag | [CLI reference](https://github.com/duplocloud/devkit/blob/main/docs/cli-reference.md) |
 
+**Next step in the Quick Start:** [Try a Marketplace Agent](try-a-marketplace-agent.md).
+
 When your agents are ready, [deploy your portal](installation/README.md) to your cloud and [deploy your own agents](deploy-your-own-agents.md) to it.
