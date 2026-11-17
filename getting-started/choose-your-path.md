@@ -34,13 +34,12 @@ Pick the platform you work on (AWS, Azure, GCP, Kubernetes, Git, or another tool
 | [**Agent Marketplace**](https://marketplace.duplocloud.com) | Browse the agents DuploCloud publishes, both included and paid, before you install anything. You activate agents from inside your portal. See [Agent Marketplace and Buying Agents](marketplace.md). |
 
 {% hint style="info" %}
-**DevOps engineer who wants to skip the DevKit?** You can install the DuploCloud portal straight into your own cloud with Terraform or Helm:
-
-* AWS: [terraform-aws-helpdesk](https://github.com/duplocloud/terraform-aws-helpdesk)
-* Azure: [helpdesk-deployer-azure](https://github.com/duplocloud-internal/helpdesk-deployer-azure)
-* GCP: [helpdesk-gcp](https://github.com/duplocloud/helpdesk-gcp)
-* Any Kubernetes cluster, with the Helm chart: [Systems Integrator Installation Guide](installation/systems-integrator-installation-guide.md)
+**DevOps engineer who wants to skip the DevKit?** You can install the DuploCloud portal straight into your own cloud with Terraform or Helm. See [Deploy to Your Cloud](deploy-to-your-cloud.md).
 {% endhint %}
+
+## When you're ready for your team
+
+The DevKit runs on your machine only. To give your team a shared portal in your own cloud account, see [Deploy to Your Cloud](deploy-to-your-cloud.md).
 
 ## Free and paid
 
