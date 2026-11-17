@@ -1,17 +1,67 @@
 # Table of contents
 
-## Introduction
+## Overview
 
 * [Overview](README.md)
-* [The Three-Layer Architecture](introduction/the-three-layer-architecture.md)
-* [The Agent Framework](introduction/the-extension-framework.md)
-* [Studio: Developer Experience](introduction/studio-developer-experience.md)
 
-## Getting Started
+## Quick Start
 
-* [Choose Your Path](getting-started/choose-your-path.md)
-* [Install the DevKit](getting-started/install-the-devkit.md)
+* [Quick Start](getting-started/choose-your-path.md)
+* [Step 1: Install the DevKit](getting-started/install-the-devkit.md)
+* [Step 2: Try a Marketplace Agent](getting-started/try-a-marketplace-agent.md)
+* [Step 3: Build Your Own Agent](getting-started/build-your-own-agent/README.md)
+  * [AWS](getting-started/build-your-own-agent/aws.md)
+  * [Azure](getting-started/build-your-own-agent/azure.md)
+  * [GCP](getting-started/build-your-own-agent/gcp.md)
+  * [Kubernetes](getting-started/build-your-own-agent/kubernetes.md)
+  * [Git: PR Code Review](getting-started/build-your-own-agent/git.md)
+  * [Other Tools: Jira or a Pipeline](getting-started/build-your-own-agent/other.md)
+
+## Agents
+
+* [Agents](armor/extensions.md)
+* [Agent Marketplace and Buying Agents](getting-started/marketplace.md)
+* [Deploy Your Own Agents](getting-started/deploy-your-own-agents.md)
+
+## Concepts
+
+* [Providers](armor/providers/README.md)
+  * [User-Level Credentials](armor/providers/user-level-credentials.md)
+  * [Connecting Providers](getting-started/integrating-providers/README.md)
+    * [Amazon Web Services (AWS)](getting-started/integrating-providers/amazon-web-services-aws.md)
+    * [Microsoft Azure](getting-started/integrating-providers/microsoft-azure.md)
+    * [Google Cloud Platform (GCP)](getting-started/integrating-providers/google-cloud-platform-gcp.md)
+    * [Amazon Elastic Kubernetes Service (EKS)](getting-started/integrating-providers/amazon-elastic-kubernetes-service-eks.md)
+    * [Azure Kubernetes Service (AKS)](getting-started/integrating-providers/azure-kubernetes-service-aks.md)
+    * [Google Kubernetes Engine (GKE)](getting-started/integrating-providers/google-kubernetes-engine-gke.md)
+    * [Self-Managed / On-Prem Kubernetes](getting-started/integrating-providers/self-managed-kubernetes.md)
+    * [Datadog](getting-started/integrating-providers/datadog.md)
+    * [NewRelic](getting-started/integrating-providers/newrelic.md)
+    * [Sentry](getting-started/integrating-providers/sentry.md)
+    * [PagerDuty](getting-started/integrating-providers/pagerduty.md)
+    * [GitHub](getting-started/integrating-providers/github.md)
+    * [GitLab](getting-started/integrating-providers/gitlab.md)
+    * [BitBucket](getting-started/integrating-providers/bitbucket.md)
+    * [Notion](getting-started/integrating-providers/notion.md)
+    * [Jira](getting-started/integrating-providers/jira.md)
+    * [Heroku](getting-started/integrating-providers/heroku.md)
+* [MCP Servers](armor/mcp-servers/README.md)
+  * [Credential Masking For MCP Servers](armor/mcp-servers/credential-masking-for-mcp-servers.md)
+  * [Connecting MCP Servers](getting-started/integrating-mcp-servers/README.md)
+    * [Linear](getting-started/integrating-mcp-servers/linear.md)
+* [Skills](armor/skills/README.md)
+  * [Platform Skills and Overrides](armor/skills/platform-skills-and-overrides.md)
+* [Personas](armor/personas.md)
+* [Duplo DevOps Agent](armor/agents/README.md)
+* [Workspaces](armor/workspaces.md)
+* [Projects](armor/projects.md)
+* [HelpDesk](armor/helpdesk/README.md)
+  * [Audit Trail](armor/helpdesk/audit-trail.md)
+* [Tickets](armor/tickets.md)
 * [Licensing](getting-started/licensing.md)
+
+## Advanced Topics
+
 * [Deploy Your Portal to Your Cloud](getting-started/installation/README.md)
   * [AWS](getting-started/installation/aws-installation.md)
   * [Azure](getting-started/installation/azure-installation.md)
@@ -19,77 +69,10 @@
   * [Systems Integrator Installation Guide](getting-started/installation/systems-integrator-installation-guide.md)
   * [Slack Bot Installation](getting-started/installation/slackbot-installation.md)
   * [AI DevOps V1 to V2 Upgrade](getting-started/installation/v1-to-v2-upgrade.md)
-* [Agent Marketplace and Buying Agents](getting-started/marketplace.md)
-* [Deploy Your Own Agents](getting-started/deploy-your-own-agents.md)
-* [Integrating Providers](getting-started/integrating-providers/README.md)
-  * [Amazon Web Services (AWS)](getting-started/integrating-providers/amazon-web-services-aws.md)
-  * [Microsoft Azure](getting-started/integrating-providers/microsoft-azure.md)
-  * [Google Cloud Platform (GCP)](getting-started/integrating-providers/google-cloud-platform-gcp.md)
-  * [Amazon Elastic Kubernetes Service (EKS)](getting-started/integrating-providers/amazon-elastic-kubernetes-service-eks.md)
-  * [Azure Kubernetes Service (AKS)](getting-started/integrating-providers/azure-kubernetes-service-aks.md)
-  * [Google Kubernetes Engine (GKE)](getting-started/integrating-providers/google-kubernetes-engine-gke.md)
-  * [Self-Managed / On-Prem Kubernetes](getting-started/integrating-providers/self-managed-kubernetes.md)
-  * [Datadog](getting-started/integrating-providers/datadog.md)
-  * [NewRelic](getting-started/integrating-providers/newrelic.md)
-  * [Sentry](getting-started/integrating-providers/sentry.md)
-  * [PagerDuty](getting-started/integrating-providers/pagerduty.md)
-  * [GitHub](getting-started/integrating-providers/github.md)
-  * [GitLab](getting-started/integrating-providers/gitlab.md)
-  * [BitBucket](getting-started/integrating-providers/bitbucket.md)
-  * [Notion](getting-started/integrating-providers/notion.md)
-  * [Jira](getting-started/integrating-providers/jira.md)
-  * [Heroku](getting-started/integrating-providers/heroku.md)
-* [Integrating MCP Servers](getting-started/integrating-mcp-servers/README.md)
-  * [Linear](getting-started/integrating-mcp-servers/linear.md)
-* [Onboarding](getting-started/duplocloud-onboarding.md)
-* [Support Options: Standard vs. Managed Operations](getting-started/duplocloud-support-options-standard-vs.-managed-operations.md)
-* [Getting Help with DuploCloud](getting-started/duplocloud-support-model.md)
-* [Getting Started with DuploCloud](getting-started/welcome-to-duplocloud/README.md)
-  * [Common Use Cases](getting-started/welcome-to-duplocloud/what-duplocloud-does.md)
-
-
-## Agent Framework
-
-* [Overview](extension-framework/extension-framework.md)
-* [Building an Ops Application](extension-framework/building-an-ops-app/README.md)
-  * [Step 1: Define Your Policy Model](extension-framework/building-an-ops-app/step-1-policy-model.md)
-  * [Step 2: Write Your Skills](extension-framework/building-an-ops-app/step-2-skills.md)
-  * [Step 3: Connect Providers](extension-framework/building-an-ops-app/step-3-providers.md)
-  * [Step 4: Configure Workspaces](extension-framework/building-an-ops-app/step-4-workspaces.md)
-  * [Step 5: Deploy](extension-framework/building-an-ops-app/step-5-deploy.md)
-* [Case Studies](extension-framework/case-studies/README.md)
-  * [AI-Native DevOps Platform](extension-framework/case-studies/devops-platform.md)
-  * [AI-Powered SalesOps](extension-framework/case-studies/salesops-platform.md)
-* [Plugin Architecture](extension-framework/plugin-architecture/README.md)
-  * [Manifest & Registration](extension-framework/plugin-architecture/manifest-and-registration.md)
-  * [Storage API](extension-framework/plugin-architecture/storage-api.md)
-  * [Authentication](extension-framework/plugin-architecture/authentication.md)
-  * [Lifecycle States](extension-framework/plugin-architecture/lifecycle-states.md)
-  * [Schema Versioning](extension-framework/plugin-architecture/schema-versioning.md)
-
-## ARMOR
-
-* [ARMOR Policy Model](armor/ai-devops-policy-model.md)
-* [Providers](armor/providers/README.md)
-  * [User-Level Credentials](armor/providers/user-level-credentials.md)
-* [MCP Servers](armor/mcp-servers/README.md)
-  * [Credential Masking For MCP Servers](armor/mcp-servers/credential-masking-for-mcp-servers.md)
-* [Skills](armor/skills/README.md)
-  * [Platform Skills and Overrides](armor/skills/platform-skills-and-overrides.md)
-* [Personas](armor/personas.md)
-* [Duplo DevOps Agent](armor/agents/README.md)
-  * [Agent Memories](armor/agents/agent-memories.md)
-  * [LLM Models](armor/agents/llm-models.md)
+* [Agent Memories](armor/agents/agent-memories.md)
+* [LLM Models](armor/agents/llm-models.md)
   * [Direct Anthropic API Support](armor/agents/direct-anthropic-api-support.md)
   * [GCP Vertex AI Support](armor/agents/gcp-vertex-ai-support.md)
-* [Workspaces](armor/workspaces.md)
-* [Projects](armor/projects.md)
-* [HelpDesk](armor/helpdesk/README.md)
-  * [Audit Trail](armor/helpdesk/audit-trail.md)
-* [Tickets](armor/tickets.md)
-* [Incident Management](armor/incident-management.md)
-* [AI Dashboards](armor/ai-dashboards.md)
-* [Analytics](armor/analytics.md)
 * [Access Control](armor/access-control/README.md)
   * [Permission Sets](armor/access-control/permission-sets.md)
   * [Users](armor/access-control/users.md)
@@ -100,7 +83,9 @@
   * [AI Guardrails](armor/access-control/ai-guardrails.md)
   * [Command Policy](armor/access-control/command-policy.md)
 * [Settings](armor/settings.md)
-* [Agents](armor/extensions.md)
+* [Incident Management](armor/incident-management.md)
+* [AI Dashboards](armor/ai-dashboards.md)
+* [Analytics](armor/analytics.md)
 * [Additional Components](armor/additional-components/README.md)
   * [Resources](armor/additional-components/resources.md)
   * [Reports](armor/additional-components/reports.md)
@@ -109,11 +94,18 @@
   * [Duplo Claude Plugin](armor/additional-components/duplo-claude-plugin.md)
   * [Configuring the DuploCloud MCP Server](armor/additional-components/configuring-duplo-mcp-server.md)
 
-***
+## Best Practices
+
+* [Policy Model](armor/ai-devops-policy-model.md)
+
+## Resources
 
 * [FAQs](faqs.md)
 * [Product Updates](product-updates.md)
 * [Reporting AI Concerns](reporting-ai-concerns.md)
+* [Onboarding](getting-started/duplocloud-onboarding.md)
+* [Support Options: Standard vs. Managed Operations](getting-started/duplocloud-support-options-standard-vs.-managed-operations.md)
+* [Getting Help with DuploCloud](getting-started/duplocloud-support-model.md)
 
 ## AI Helpdesk
 

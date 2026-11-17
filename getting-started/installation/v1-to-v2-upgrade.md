@@ -8,7 +8,7 @@ Your team is moving from the original deployment of DuploCloud AI DevOps to some
 
 AI DevOps V2 is DuploCloud's next-generation AI platform for DevOps teams. It replaces the original AI Studio with a unified system built around a richer model of how AI and engineering teams work together.
 
-For a full overview of how the platform is structured, see the [AI DevOps Policy Model](../../armor/ai-devops-policy-model.md).
+For a full overview of how the platform is structured, see the [Policy Model](../../armor/ai-devops-policy-model.md).
 
 At its core, V2 introduces:
 

@@ -1,12 +1,12 @@
 ---
 description: >-
-  A high-level overview of the building blocks of DuploCloud's AI DevOps
-  Engineer
+  The building blocks every DuploCloud agent works within: providers, scopes,
+  skills, personas, workspaces, tickets and projects.
 ---
 
-# AI DevOps Policy Model
+# Policy Model
 
-The DuploCloud AI DevOps Policy Model lays down the foundational building blocks of the system that orchestrates large and complex DevOps projects seamlessly—just as a human engineer would.&#x20;
+The DuploCloud Policy Model sets out the building blocks that every agent works within: what it can access, what it knows how to do, and where the work happens. Design your agents around it.
 
 The diagram below illustrates this Policy Model.&#x20;
 
@@ -20,7 +20,7 @@ Users are granted access to specific workspaces and can accomplish their tasks w
 
 ## Core Concepts
 
-Below are brief introductions to the core concepts of the AI DevOps Policy Model, which will be explained in detail in subsequent sections.
+Below are brief introductions to the core concepts of the Policy Model, which will be explained in detail in subsequent sections.
 
 ### 1. Provider
 
@@ -48,7 +48,7 @@ A Workspace is where all of this comes together. It's a logical entity to which 
 
 ## Workflow concepts
 
-Below are some of the workflow concepts in the AI DevOps Policy Model:&#x20;
+Below are some of the workflow concepts in the Policy Model:&#x20;
 
 ### 1. Project
 

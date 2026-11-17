@@ -119,4 +119,4 @@ Source control is optional. Turn it on when you want the extension's code kept i
 * **Register a zip** when you have a built extension that isn't published to the catalog.
 * **Build in Agent Studio** when you need something that doesn't exist yet — with source control on if you want to maintain it in your own repository.
 
-For the concepts behind agents — the plugin architecture, manifests, storage, and lifecycle — see the [Agent Framework](../extension-framework/extension-framework.md).
+To build your first agent step by step, see [Build Your Own Agent](../getting-started/build-your-own-agent/README.md).

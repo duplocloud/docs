@@ -1,6 +1,6 @@
 # Additional Components
 
-The AI DevOps Policy Model includes several additional components that extend its core capabilities. These tools help teams manage infrastructure visibility, generate compliance reports, collaborate in Slack, and integrate AI-assisted development directly into their local workflow.
+The Policy Model includes several additional components that extend its core capabilities. These tools help teams manage infrastructure visibility, generate compliance reports, collaborate in Slack, and integrate AI-assisted development directly into their local workflow.
 
 ## [Reports](reports.md)
 
