@@ -190,14 +190,6 @@
 * [Support Options: Standard vs. Managed Operations](getting-started/duplocloud-support-options-standard-vs.-managed-operations.md)
 * [Getting Help with DuploCloud](getting-started/duplocloud-support-model.md)
 
-## AI Helpdesk
-
-* [HelpDesk Concepts](ai-helpdesk/ai-helpdesk-overview/README.md)
-  * [Tickets](ai-helpdesk/ai-helpdesk-overview/tickets.md)
-  * [Agents](ai-helpdesk/ai-helpdesk-overview/out-of-the-box-agents.md)
-  * [Bring Your Own Agent](ai-helpdesk/ai-helpdesk-overview/bring-your-own-agent.md)
-  * [Developers](ai-helpdesk/ai-helpdesk-overview/developers.md)
-
 ## Platform Use Cases
 
 * [How to manage large complex projects](common-use-cases/how-to-manage-large-complex-projects.md)
