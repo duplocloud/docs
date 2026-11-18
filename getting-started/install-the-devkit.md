@@ -47,16 +47,19 @@ Stopping the DevKit keeps your data. Some reset commands delete the volumes but 
 
 ## Where to go next
 
+**Next step in the Quick Start:** [Try a Marketplace Agent](try-a-marketplace-agent.md).
+
+To connect your accounts and build in the DevKit:
+
 | To do this | Read |
 | --- | --- |
 | Connect an AWS account and ask the agent about it | [Connect AWS](https://github.com/duplocloud/devkit/blob/main/docs/getting-started/connect-aws.md) |
+| Connect Azure, GCP, or another cloud or tool | [Connecting Providers](integrating-providers/README.md) |
 | Connect a Kubernetes cluster | [Connect Kubernetes](https://github.com/duplocloud/devkit/blob/main/docs/getting-started/connect-kubernetes.md) |
-| Build your first agent | [Build your first extension](https://github.com/duplocloud/devkit/blob/main/docs/getting-started/build-your-first-extension.md) |
+| Build your first agent | [Build Your Own Agent](build-your-own-agent/README.md), or the DevKit guide [Build your first agent](https://github.com/duplocloud/devkit/blob/main/docs/getting-started/build-your-first-extension.md) |
 | Get a working setup fast | [Quickstart](https://github.com/duplocloud/devkit/blob/main/docs/quickstart.md) |
 | Upgrade to a newer DevKit | [Upgrading](https://github.com/duplocloud/devkit/blob/main/docs/upgrading.md) |
 | Fix a problem | [Troubleshooting](https://github.com/duplocloud/devkit/blob/main/docs/troubleshooting.md) and the [FAQ](https://github.com/duplocloud/devkit/blob/main/docs/faq.md) |
 | Look up a command or flag | [CLI reference](https://github.com/duplocloud/devkit/blob/main/docs/cli-reference.md) |
 
-**Next step in the Quick Start:** [Try a Marketplace Agent](try-a-marketplace-agent.md).
-
-When your agents are ready, [deploy your portal](installation/README.md) to your cloud and [deploy your own agents](deploy-your-own-agents.md) to it.
+When your team is ready to use your agents, see [Deploy to Your Cloud](deploy-to-your-cloud.md).
