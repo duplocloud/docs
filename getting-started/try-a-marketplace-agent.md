@@ -108,7 +108,7 @@ The agent only reads your account to find the cluster.
 1. Open the cluster and click **Add Upgrade Job**.
 2. Enter a **Name** for the job.
 3. Tick **Upgrade EKS control plane version** and choose a **Target K8s Version**. Each option shows how many steps it takes and whether it uses extended support.
-4. Tick **Upgrade EKS add-ons** to see which add-ons will move to which version.
+4. If your cluster uses EKS add-ons, tick **Upgrade EKS add-ons** to see which add-ons will move to which version. If it doesn't, skip this.
 5. Look at **Upgrade Path**. It lists every step the job would run, plus any blockers and warnings.
 6. Click **Create plan**.
 
@@ -119,7 +119,7 @@ Creating a plan runs pre-flight checks: EKS upgrade insights, add-on compatibili
 The job page shows **Review & approve the upgrade plan**, with:
 
 * the upgrade path, step by step
-* each add-on's current and target version
+* each add-on's current and target version, if you chose to upgrade add-ons
 * the result of every pre-flight check
 * whether DuploCloud can reach the cluster, and which permissions it has
 
