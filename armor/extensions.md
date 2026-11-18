@@ -27,11 +27,11 @@ Go to **AI Admin → Marketplace**. The **Agents** page has two tabs: **Activate
 
 ### Activated Agents
 
-Summary tiles across the top show how many agents and extensions are activated, how many need attention, and when the set last changed. Extensions are grouped into a tab per agent; an extension that doesn't belong to any agent appears under **Other**. Each table lists the extension's name, extension ID, version, status, resource count, the menus it adds, and whether it is tracked in source control.
+Summary tiles across the top show how many agents are activated (with how many are active, disabled or failed), how many need attention, and when the set last changed. The table is grouped into a tab per agent; anything that doesn't belong to an agent appears under **Other**. Each table lists the name, **Agent Id**, version, status, resource count, the menus it adds, whether it is tracked in source control, and when it was last updated.
 
 ![Activated Agents](../.gitbook/assets/extensions-step-01-activated-agents.png)
 
-Use the search box and the **All statuses / Active / Disabled / Failed** filters to narrow the list — **Failed** is the one to check when an extension's resources or menus aren't appearing.
+Use the search box and the **All statuses / Active / Disabled / Failed** filters to narrow the list — **Failed** is the one to check when an agent's resources or menus aren't appearing.
 
 ### Agent Marketplace
 
@@ -49,13 +49,13 @@ Click **Activate** to add the agent. Once an agent is active, its details offer 
 If the catalog shows **No agents are published yet**, or a banner says the agent catalog is unreachable or no license is installed, the platform can't load the catalog — check the platform's license and its connection to DuploCloud.
 {% endhint %}
 
-### Inspecting an activated extension
+### Inspecting an activated agent
 
-Opening an extension from the **Activated Agents** table shows what it actually contributes to the platform.
+Opening an agent from the **Activated Agents** table shows what it actually contributes to the platform.
 
-![Extension detail](../.gitbook/assets/extensions-step-04-extension-detail.png)
+![Agent detail](../.gitbook/assets/extensions-step-04-extension-detail.png)
 
-The header carries its status, extension ID, version, and last-updated time. Below that:
+The header carries its status, **Agent Id**, version, and last-updated time. Below that:
 
 * **Load Context** — the fully-qualified identifier and version the platform loaded
 * **Source Control** — the repository it is tracked in, or **Not tracked** for a zip upload
@@ -65,7 +65,7 @@ The header carries its status, extension ID, version, and last-updated time. Bel
 
 Three tabs give more detail: **Overview** (above), **Menu** (the navigation entries it adds), and **Manifest** (the raw declaration).
 
-The **Actions** menu on the detail page lets you **Disable** an extension without removing it — its resources and menus stop loading, and the status changes to Disabled — or **Enable** one that is currently disabled. **Delete** unloads the extension and removes its record. Each asks for confirmation first. The same actions are on each row's menu in the table, where delete is labelled **Delete Extension**.
+The **Actions** menu on the detail page lets you **Disable** an agent without removing it — its resources and menus stop loading, and the status changes to Disabled — or **Enable** one that is currently disabled. **Delete** unloads the agent and removes its record. Each asks for confirmation first. The same actions are on each row's menu in the table, where delete is labelled **Delete Agent**.
 
 ### Registering an extension from a file
 
