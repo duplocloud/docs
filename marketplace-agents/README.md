@@ -13,7 +13,7 @@ These agents are built by DuploCloud and published in the [Agent Marketplace](ht
 | [SRE Workbench](sre/README.md) | Investigate alerts and get a root-cause report. |
 | [DAST](dast/README.md) | Scan your running web apps and APIs for security flaws. |
 | [Standard Observability](standard-observability/README.md) | Set up monitoring for your Kubernetes cluster on AWS. |
-| [GitHub CI/CD Workflows](github-ci-cd-workflows/README.md) | Builds and runs GitHub CI/CD workflows for your repositories. |
+| [GitHub CI/CD Workflows](github-ci-cd-workflows/README.md) | Starts, approves and follows GitHub Actions workflow runs from DuploCloud. |
 | [Instance Scheduler](instance-scheduler/README.md) | Stop and start EC2 and RDS on a schedule, and stop paying for idle resources. |
 | [Kubernetes Upgrader](kubernetes-upgrade/README.md) | Upgrade Kubernetes clusters with a plan you approve first. |
 | [Infrastructure Agent](../aws-extension/aws-extension/README.md) | Provisions, operates and troubleshoots infrastructure on AWS, Azure and Oracle Cloud, from networks and Kubernetes clusters to workloads and databases. Google Cloud is coming soon. |

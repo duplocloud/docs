@@ -14,10 +14,10 @@ GitHub CI/CD Workflows starts real workflow runs in your repositories and can ap
 ## What it does
 
 1. **Starts runs.** Any workflow that declares `on: workflow_dispatch`, on a repository and branch your GitHub scope allows. The input form is built from the workflow file.
-2. **Holds runs on protected branches.** If GitHub marks the branch as protected, nothing is sent to GitHub until a second person approves the run in DuploCloud. The approved run uses exactly the commit that was requested.
+2. **Holds runs on protected branches.** If the branch has GitHub branch protection, nothing is sent to GitHub until a second person approves the run in DuploCloud. The approved run uses exactly the commit that was requested.
 3. **Reviews GitHub deployment gates.** When a run waits on a protected GitHub environment (for example `production`), approvers can approve or reject it from DuploCloud.
 4. **Follows each run.** Live status, each job and step, and the log text for users allowed to read logs.
-5. **Explains failures.** A failure summary names the job, the step and a likely cause. **Debug with AI** opens an AI helpdesk chat that investigates the failure, read-only.
+5. **Explains failures.** A failure summary names the job, the step and a likely cause. **Debug with AI** opens an AI helpdesk chat that investigates the failure without changing anything.
 6. **Measures.** A metrics page shows usage, success rate, approval wait, run time and anomalies for the workspace.
 7. **Manages approvers.** Administrators choose who can approve runs on the **GitHub Actions Settings** page.
 
@@ -48,7 +48,6 @@ Everything is per workspace.
 | Source control | GitHub (github.com) and GitHub Enterprise Server |
 | Workflows | GitHub Actions workflows that declare `on: workflow_dispatch` |
 | Credential | A GitHub source-control scope attached to the workspace, holding an access token |
-| Platform | DuploCloud portals on .NET 10 (SDK 1.2.x) need version 0.4.x of the agent. Older portals (.NET 8, SDK 1.0.x) need the .NET 8 build. |
 | Not covered | Starting runs from other triggers (push, pull request, schedule), cancelling or re-running a run, editing workflows, managing GitHub environments or secrets, and other CI systems. Do those in GitHub. |
 
 <!-- VERIFY: free or paid. Not in the code; decided by the Marketplace listing. -->
