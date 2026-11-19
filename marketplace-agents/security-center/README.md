@@ -1,5 +1,6 @@
 ---
 description: Checks your cloud accounts for security and compliance issues and helps you fix them.
+icon: robot
 ---
 
 # Security Center

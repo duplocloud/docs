@@ -1,5 +1,6 @@
 ---
 description: Helps your team troubleshoot production issues and find their root cause.
+icon: robot
 ---
 
 # SRE

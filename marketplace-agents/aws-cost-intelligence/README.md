@@ -1,5 +1,6 @@
 ---
 description: Shows where your AWS spend goes and where you can save.
+icon: robot
 ---
 
 # AWS Cost Intelligence

@@ -2,6 +2,7 @@
 description: >-
   AI-native AWS infrastructure management — connect to existing environments or
   provision new ones from scratch.
+icon: robot
 ---
 
 # AWS Agent

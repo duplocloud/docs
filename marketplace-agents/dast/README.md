@@ -1,5 +1,6 @@
 ---
 description: Runs dynamic application security testing (DAST) against your running applications.
+icon: robot
 ---
 
 # DAST

@@ -1,5 +1,6 @@
 ---
 description: Plans and runs Kubernetes cluster upgrades.
+icon: robot
 ---
 
 # Kubernetes Upgrade
