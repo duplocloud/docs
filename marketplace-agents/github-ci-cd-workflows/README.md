@@ -1,34 +1,44 @@
 ---
-description: Builds and runs GitHub CI/CD workflows for your repositories.
+description: Start, approve and follow GitHub Actions workflow runs from DuploCloud.
 ---
 
 # GitHub CI/CD Workflows
 
-Start your GitHub Actions workflows from DuploCloud, then watch each run without leaving the platform. You pick a repository, a workflow and a branch, fill in the workflow's inputs, and trigger the run. DuploCloud shows the live status, each job and step with its log output, and lets you approve or reject a run that is waiting on a protected GitHub environment.
+Start your GitHub Actions workflows from DuploCloud and follow each run until it finishes, without needing access to GitHub yourself. You pick a repository, a workflow and a branch, fill in the workflow's inputs, and start the run. DuploCloud permissions decide who can start runs, who can approve them and who can read the logs.
 
 {% hint style="warning" %}
-GitHub CI/CD Workflows starts real workflow runs in your repositories, and can approve deployments to protected environments. Those actions are performed with the credential of the GitHub scope you choose. See [Permissions and Safety](permissions-and-safety.md).
+GitHub CI/CD Workflows starts real workflow runs in your repositories and can approve GitHub deployment gates. GitHub sees every action as the account that owns the GitHub scope's token. DuploCloud records which user actually did it. See [Permissions and Safety](permissions-and-safety.md).
 {% endhint %}
-
-<!-- VERIFY: the repo has no role check of its own (no permission names, no approval gate in DuploCloud). Whether this is admin-only or open to users is the owner's decision (Kalpesh Suryawanshi, ClickUp 17twvjx4bm1). Confirm the warning and the audience once decided. -->
 
 ## What it does
 
-1. **Lists your repositories** that the GitHub scope's credential can see (up to 500), in a searchable list.
-2. **Lists the workflows** in the repository you choose (the first 100) and the branches for the branch picker (up to 500).
-3. **Builds the form from the workflow.** The workflow's manual-trigger inputs are read from its definition file and shown as fields: a choice becomes a dropdown, a boolean a switch, anything else a text box.
-4. **Triggers the run** on the branch or tag you choose, with your input values.
-5. **Tracks the run.** The status and result (such as success or failure) are refreshed from GitHub each time you open the run.
-6. **Shows logs.** A Logs tab lists each job and each step with its live status. Select a step to see its output.
-7. **Handles approvals.** If the run is waiting for a protected environment, an approval banner lets you approve or reject it, with an optional comment.
+1. **Starts runs.** Any workflow that declares `on: workflow_dispatch`, on a repository and branch your GitHub scope allows. The input form is built from the workflow file.
+2. **Holds runs on protected branches.** If GitHub marks the branch as protected, nothing is sent to GitHub until a second person approves the run in DuploCloud. The approved run uses exactly the commit that was requested.
+3. **Reviews GitHub deployment gates.** When a run waits on a protected GitHub environment (for example `production`), approvers can approve or reject it from DuploCloud.
+4. **Follows each run.** Live status, each job and step, and the log text for users allowed to read logs.
+5. **Explains failures.** A failure summary names the job, the step and a likely cause. **Debug with AI** opens an AI helpdesk chat that investigates the failure, read-only.
+6. **Measures.** A metrics page shows usage, success rate, approval wait, run time and anomalies for the workspace.
+7. **Manages approvers.** Administrators choose who can approve runs on the **GitHub Actions Settings** page.
 
-A workflow can only be triggered from here if it declares `on: workflow_dispatch` (GitHub's manual trigger).
+Nobody can approve a run they requested themselves. This applies to administrators too.
 
 ## Who it is for
 
-Developers and DevOps engineers who run builds and deployments with GitHub Actions and want to start, monitor and approve them from DuploCloud.
+- **Developers** who start builds and deployments.
+- **Approvers** who release runs on protected branches and review deployment gates.
+- **Administrators** who connect GitHub, limit what can be run, and choose approvers.
 
-<!-- VERIFY: audience wording is inferred from the extension README. Confirm with the owner, especially after the admin-only or user decision. -->
+## Where to find it
+
+Under **CI/CD** in the left menu:
+
+| Menu item | What it is | Who sees it |
+| --- | --- | --- |
+| **GitHub Actions** | The run list. Start runs and open any run. | Anyone who can read runs |
+| **GitHub Actions Metrics** | Usage and health numbers for the workspace. | Anyone who can read runs |
+| **GitHub Actions Settings** | Choose who can approve runs. | DuploCloud administrators only |
+
+Everything is per workspace.
 
 ## What it works with
 
@@ -36,17 +46,17 @@ Developers and DevOps engineers who run builds and deployments with GitHub Actio
 | --- | --- |
 | Source control | GitHub (github.com) and GitHub Enterprise Server |
 | Workflows | GitHub Actions workflows that declare `on: workflow_dispatch` |
-| Credential | A GitHub source-control scope attached to your workspace, holding an access token |
-| Not covered | Starting runs from other triggers (push, pull request, schedule), re-running or cancelling a run, and other CI systems |
+| Credential | A GitHub source-control scope attached to the workspace, holding an access token |
+| Platform | DuploCloud portals on .NET 10 (SDK 1.2.x) need version 0.4.x of the agent. Older portals (.NET 8, SDK 1.0.x) need the .NET 8 build. |
+| Not covered | Starting runs from other triggers (push, pull request, schedule), cancelling or re-running a run, editing workflows, managing GitHub environments or secrets, and other CI systems. Do those in GitHub. |
 
-<!-- VERIFY: free or paid. The repo does not say. The Release 1 listing and console decide this. -->
-<!-- VERIFY: "Not covered" row: the code has no re-run, cancel or non-dispatch trigger. Confirm none are planned for the first release. -->
+<!-- VERIFY: free or paid. Not in the code; decided by the Marketplace listing. -->
 
 ## In this section
 
 | Page | What it covers |
 | --- | --- |
-| [Set Up](set-up.md) | What you need before you start, how to activate GitHub CI/CD Workflows from the Agent Marketplace, and how to connect it to your accounts. |
-| [Use](use.md) | Step-by-step walkthroughs of the main things GitHub CI/CD Workflows does. |
-| [Permissions and Safety](permissions-and-safety.md) | What GitHub CI/CD Workflows can read and change, which actions need approval, and how it behaves for read-only, regular and admin users. |
-| [Troubleshooting and FAQ](troubleshooting.md) | Common problems with GitHub CI/CD Workflows and how to fix them. |
+| [Set Up](set-up.md) | What you need, how to activate the agent, connect GitHub, limit what can be run, and choose approvers. |
+| [Use](use.md) | Start a run, find and follow runs, approve runs and deployment gates, investigate failures, and read the metrics. |
+| [Permissions and Safety](permissions-and-safety.md) | What the agent can read and change, what needs approval, and what read-only users, regular users, approvers and administrators can do. |
+| [Troubleshooting and FAQ](troubleshooting.md) | Error messages and how to fix them. |

@@ -1,58 +1,104 @@
 ---
-description: What you need before you start, how to activate GitHub CI/CD Workflows from the Agent Marketplace, and how to connect it to your accounts.
+description: What you need before you start, how to activate GitHub CI/CD Workflows from the Agent Marketplace, and how to connect it to GitHub.
 ---
 
 # Set Up
 
+Setting up is a job for a DuploCloud administrator.
+
 ## Before you start
 
-- A **GitHub source-control scope** attached to your workspace. Its credential must hold an access token (a personal access token, a fine-grained token or an OAuth token). GitHub CI/CD Workflows acts on GitHub as the owner of that token.
-- A workflow in the repository that declares **`on: workflow_dispatch`**, on the branch you want to run. Without it GitHub rejects the trigger.
-- **Permissions** for the people who will use it (see [Permissions and Safety](permissions-and-safety.md)).
-
-{% hint style="info" %}
-Use a dedicated GitHub account, or a fine-grained token limited to the repositories you want to automate. Everyone who can use the scope in DuploCloud acts through that one GitHub identity.
-{% endhint %}
-
-### Which GitHub address it uses
-
-| Scope setting | Address used |
-| --- | --- |
-| Account ID is empty, or a plain name such as `my-org` | `api.github.com`. A plain name is treated as the organization whose repositories are listed first. |
-| Account ID is a host name (for example `github.mycompany.com`) | GitHub Enterprise Server at `https://<host>/api/v3`. |
-
-If the organization lists no repositories, the list falls back to the repositories of the token's own user.
-
-<!-- VERIFY: the exact scope fields in the DuploCloud console (provider type "github", "Account ID") and how a customer creates a GitHub scope. Screenshot GH-03. -->
-
-### GitHub token permissions
-
-The repo says the token needs `actions` and `contents` read access plus permission to dispatch workflows. It does not list fine-grained permission names. Based on what the code calls, the repository permissions below are the likely minimum.
-
-| Feature | GitHub repository permission (fine-grained token) |
-| --- | --- |
-| List repositories and branches | Metadata: Read (always included); Contents: Read |
-| Read a workflow's inputs | Contents: Read |
-| List workflows, run status, jobs and logs | Actions: Read |
-| Trigger a run | Actions: Read and write |
-| Approve or reject a deployment | Deployments: Read and write, and the token's GitHub user must be a required reviewer on the environment |
-
-For classic personal access tokens, the `repo` and `workflow` scopes.
-
-<!-- VERIFY: permission names above are inferred from the GitHub REST endpoints the code calls (repos, branches, contents, actions/workflows, actions/runs, job logs, workflow dispatches, pending_deployments). They are not stated in the repo. Test a fine-grained token with exactly these permissions against a test repository and correct the table. Also confirm the classic scopes and whether organization approval of fine-grained tokens is needed. -->
+- A **GitHub account or token** that can see the repositories you want to automate. Everyone who uses the scope in DuploCloud acts on GitHub through that one identity, so use a dedicated account or a fine-grained token limited to those repositories.
+- Workflows that declare **`on: workflow_dispatch`** (GitHub's manual trigger). Without it a workflow cannot be started from DuploCloud.
+- A DuploCloud portal on the matching platform version. Portals on .NET 10 (SDK 1.2.x) need agent version 0.4.x.
 
 ## Activate GitHub CI/CD Workflows
 
 1. Open the **Agent Marketplace** and find **GitHub CI/CD Workflows**.
 2. Select **Activate** and confirm.
-3. When it finishes, **GitHub Actions** appears under the **CI/CD** section of the menu.
+3. When it finishes, the **CI/CD** section of the menu shows **GitHub Actions** and **GitHub Actions Metrics**. Administrators also see **GitHub Actions Settings**.
 
-<!-- VERIFY: marketplace steps, button names and the listing name. The repo's manifest calls the extension "GitHub Actions Trigger"; the stub name is "GitHub CI/CD Workflows". Menu path CI/CD > GitHub Actions is from the manifest. Screenshots GH-01 and GH-02. -->
+<!-- VERIFY: Marketplace listing name, button names and activation flow are platform UI, not in the agent's code. Screenshots GH-01 and GH-02. -->
+
+## Connect GitHub
+
+### 1. Create a GitHub token
+
+The token needs these repository permissions:
+
+| Permission (fine-grained token) | Needed for |
+| --- | --- |
+| Metadata: Read | Listing repositories (always included) |
+| Contents: Read | Branches, tags, branch protection, and reading the workflow file to build the input form |
+| Actions: Read and write | Listing workflows, starting runs, run status, jobs and logs |
+| Pull requests: Read | Picking a pull request instead of a branch (optional) |
+| Deployments: Read and write | Reviewing GitHub deployment gates (only if you use them) |
+| Checks: Read | Better failure summaries from GitHub's error annotations (optional) |
+
+For a classic personal access token, use the `repo` and `workflow` scopes.
+
+If your organization requires approval of fine-grained tokens, an organization owner must approve the token before it works.
+
+### 2. Add a GitHub scope
+
+Register a GitHub source-control provider and a scope that holds the token, and attach the scope to the workspace. Users never see the token.
+
+The scope's **Account ID** decides which GitHub is used:
+
+| Account ID | GitHub used |
+| --- | --- |
+| Empty, or a plain name such as `my-org` | github.com. A plain name is treated as the organization whose repositories are listed. |
+| A host name, for example `github.mycompany.com` | GitHub Enterprise Server at `https://<host>/api/v3` |
+
+<!-- VERIFY: field names in the scope form (provider type, Account ID) are platform UI. Screenshot GH-03. -->
+
+### 3. Limit what can be run (recommended)
+
+Set the scope's **repository** and **branch allow-lists** (regular expressions). The agent applies them in every picker and again when a run is created, so a repository or branch outside the list cannot be run, even through the API.
+
+## Protect the branches that deploy
+
+The agent asks GitHub whether the chosen branch is protected:
+
+- **Protected branch:** the run is held in DuploCloud with **Waiting for approval**. Nothing reaches GitHub until a second person approves it.
+- **Unprotected branch:** the run starts straight away for anyone allowed to start runs.
+
+Turn on branch protection in GitHub for every branch that deploys.
+
+## Set up deployment gates (optional)
+
+If a workflow deploys to a GitHub **environment** (for example `production`) with required reviewers, GitHub pauses the run at that job. Approvers can review it from DuploCloud.
+
+In GitHub, for each environment:
+
+1. Go to **Settings > Environments** and open or create the environment.
+2. Turn on **Required reviewers** and add the GitHub account that owns the scope's token. DuploCloud reviews as that account.
+3. Leave **Prevent self-review** off. The same account starts the runs, so with it on GitHub refuses every review made from DuploCloud. DuploCloud applies its own four-eyes rule instead (see [Permissions and Safety](permissions-and-safety.md)).
+
+{% hint style="info" %}
+GitHub offers **Required reviewers** on private repositories only with GitHub Enterprise. On Free, Pro and Team plans it exists for public repositories only. Protected-branch approval in DuploCloud works on every plan.
+{% endhint %}
 
 ## Grant access
 
-Give the people who will use it the permissions described in [Permissions and Safety](permissions-and-safety.md), and make sure they can use the GitHub scope in the workspace.
+Access is set with DuploCloud permission sets. The agent adds four actions:
 
-<!-- VERIFY: the extension defines no permissions of its own. Which platform permission lets someone list, create and view these runs is inherited from the platform and is not in this repo. Confirm with the owner. -->
+| Action | Lets a user |
+| --- | --- |
+| `github-actions.dispatch` | Start runs |
+| `github-actions.approve-run` | Approve or reject runs held on protected branches |
+| `github-actions.approve-deployment` | Approve or reject GitHub deployment gates |
+| `github-actions.view-logs` | Read the full log text of jobs |
+
+Reading runs needs read (GET) access to the workspace's GitHub Action runs. Starting runs also needs create (POST) access to them and access to the GitHub scope. See [Permissions and Safety](permissions-and-safety.md) for the full table.
+
+## Choose approvers
+
+1. Open **CI/CD > GitHub Actions Settings** (administrators only).
+2. Type a name or email and pick a DuploCloud user.
+
+The first time you add someone, DuploCloud creates a permission set named `GitHub Actions approvers - <workspace>`. It lets approvers see the workspace's runs, approve or reject held runs and deployment gates, and use the workspace's scopes for that. It grants nothing else. To remove an approver, select **Remove** and type their email to confirm.
+
+The page also lists, read-only, the administrators and users who can approve through other permission sets.
 
 Next: [Use](use.md).
