@@ -1,15 +1,15 @@
 ---
-description: Activate the Kubernetes Upgrade agent from the Agent Marketplace, connect it to an Amazon EKS cluster, and get an upgrade plan without changing anything.
+description: Activate the Kubernetes Upgrader agent from the Agent Marketplace, connect it to an Amazon EKS cluster, and get an upgrade plan without changing anything.
 ---
 
 # Try a Marketplace Agent
 
-In this step you activate a ready-made agent, **Kubernetes Upgrade**, and use it to plan an upgrade of an Amazon EKS cluster. You'll see which versions you can move to, which add-ons need updating, and what could go wrong, all before anything in the cluster changes.
+In this step you activate a ready-made agent, **Kubernetes Upgrader**, and use it to plan an upgrade of an Amazon EKS cluster. You'll see which versions you can move to, which add-ons need updating, and what could go wrong, all before anything in the cluster changes.
 
 Everything on this page is read-only. The agent only changes a cluster after someone approves a plan, and you'll reject the plan at the end.
 
 {% hint style="info" %}
-Kubernetes Upgrade works with **Amazon EKS** clusters. If you don't use EKS, skip ahead to [Build Your Own Agent](build-your-own-agent/README.md) and pick your platform there.
+Kubernetes Upgrader works with **Amazon EKS** clusters. If you don't use EKS, skip ahead to [Build Your Own Agent](build-your-own-agent/README.md) and pick your platform there.
 {% endhint %}
 
 ## What you need
@@ -62,7 +62,7 @@ If a read permission is missing, the affected check shows **Unverified** instead
 
 Add your AWS account as a provider, then attach its scope to your workspace. See [Connecting Providers: Amazon Web Services (AWS)](integrating-providers/amazon-web-services-aws.md).
 
-## 2. Activate Kubernetes Upgrade
+## 2. Activate Kubernetes Upgrader
 
 {% stepper %}
 {% step %}
@@ -74,7 +74,7 @@ Go to **AI Admin → Agents** and open the **Agent Marketplace** tab.
 {% step %}
 ### Activate the agent
 
-Find **Kubernetes Upgrade** and click **Activate**.
+Find **Kubernetes Upgrader** and click **Activate**.
 {% endstep %}
 
 {% step %}
@@ -135,6 +135,6 @@ Don't click **Approve & start upgrade** on a cluster you care about. Approving u
 
 You activated an agent from the Marketplace, connected it to your AWS account, and used it to plan a change safely. Every Marketplace agent follows the same pattern: activate it, connect it, and review what it proposes before it acts.
 
-To learn more about this agent, including running a real upgrade, see [Kubernetes Upgrade](../marketplace-agents/kubernetes-upgrade/README.md).
+To learn more about this agent, including running a real upgrade, see [Kubernetes Upgrader](../marketplace-agents/kubernetes-upgrade/README.md).
 
 **Next step in the Quick Start:** [Build Your Own Agent](build-your-own-agent/README.md).
