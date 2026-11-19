@@ -6,6 +6,10 @@ description: >-
 
 # Plan
 
+{% hint style="info" %}
+Plans are used on **AWS** only.
+{% endhint %}
+
 A Plan catalogs AWS account-level resources that are shared across Environments — Route 53 hosted zones, ACM certificates, and AMIs. Rather than re-discovering these resources every time they are needed, a Plan captures them once and makes them available to any Environment that references the Plan.
 
 Plans are associated with Environments at creation time. A single Plan can be referenced by multiple Environments.

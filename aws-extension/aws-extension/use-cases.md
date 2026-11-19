@@ -4,9 +4,9 @@ description: >-
   Agent.
 ---
 
-# Use Cases
+# AWS Use Cases
 
-Common operational workflows using the AWS Agent — from cost optimization and compliance to developer self-service and troubleshooting.
+Common AWS operational workflows using the Infrastructure Agent — from cost optimization and compliance to developer self-service and troubleshooting.
 
 ## Connect to Existing Infrastructure
 

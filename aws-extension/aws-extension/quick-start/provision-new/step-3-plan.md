@@ -31,7 +31,7 @@ An Environment can attach more than one Plan. A Plan can't be deleted while an E
 
 ### Step 1 — Navigate to Plans
 
-In the left sidebar, open **DevOps** and select **Plans**.
+In the left sidebar, open **Infrastructure Agent** and select **Plans**.
 
 ![](../../../../.gitbook/assets/plan-step-01.png)
 

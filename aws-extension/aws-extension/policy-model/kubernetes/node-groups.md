@@ -4,6 +4,10 @@ description: EC2 node groups that provide compute capacity for your EKS cluster.
 
 # Node Groups
 
+{% hint style="info" %}
+Node Groups are used on **AWS** only. On Oracle Cloud (OCI), the Cluster Baseline creates a default node pool.
+{% endhint %}
+
 Node Groups are managed groups of EC2 instances that provide compute capacity for the EKS cluster. Each node group defines the instance type, scaling configuration, and optional taints or labels applied to its nodes.
 
 {% hint style="info" %}

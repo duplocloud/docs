@@ -4,7 +4,7 @@ description: Kubernetes resources managed inside an Environment — namespaces, 
 
 # Kubernetes Resources
 
-Once an Environment is provisioned, you can create and manage Kubernetes resources inside it. These resources live within the Environment's EKS cluster and inherit its IAM and network boundaries.
+Once an Environment is provisioned, you can create and manage Kubernetes resources inside it. These resources live within the Environment's cluster (EKS, AKS or OKE) and inherit its access and network boundaries.
 
 ## Resource Types
 
@@ -24,7 +24,7 @@ Once an Environment is provisioned, you can create and manage Kubernetes resourc
     </tr>
     <tr>
       <td><strong>Node Groups</strong></td>
-      <td>EC2 node groups that provide compute capacity for the cluster.</td>
+      <td>AWS only. EC2 node groups that provide compute capacity for an EKS cluster.</td>
       <td><a href="node-groups.md">Node Groups</a></td>
     </tr>
     <tr>

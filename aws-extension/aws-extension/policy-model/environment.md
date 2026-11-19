@@ -1,25 +1,25 @@
 ---
 description: >-
-  A deployment boundary inside a cluster — isolated with its own IAM roles,
-  security groups, and KMS keys.
+  A deployment boundary inside a cluster, isolating teams, applications, or
+  stages from each other.
 ---
 
 # Environment
 
-An Environment is a deployment boundary inside an EKS Cluster. It provides isolation between teams, applications, or stages (development, staging, production) by provisioning a dedicated set of AWS resources: security groups, IAM roles, and KMS encryption keys.
+An Environment is a deployment boundary inside a Cluster. It provides isolation between teams, applications, or stages (development, staging, production). On AWS, it provisions a dedicated set of resources: security groups, IAM roles, and KMS encryption keys.
 
-All workloads, Kubernetes resources, and databases created inside an Environment inherit its IAM and network boundaries.
+All workloads, Kubernetes resources, and databases created inside an Environment inherit its access and network boundaries.
 
 ## Spec
 
 | Field | Description |
 |---|---|
 | **Cluster** | The Cluster Baseline this Environment lives inside |
-| **Plans** | One or more Plans to associate with this Environment. Plans provide hosted zones, ACM certificates, and AMI references available to resources in the Environment |
+| **Plans** | AWS only. One or more Plans to associate with this Environment. Plans provide hosted zones, ACM certificates, and AMI references available to resources in the Environment |
 
 ## Result
 
-Once provisioned, the Environment result includes:
+On AWS, the Environment result includes:
 
 | Field | Description |
 |---|---|
@@ -45,4 +45,4 @@ An Environment cannot be deprovisioned while workloads or databases are running 
 With an Environment ready, you can create resources inside it:
 
 * [Kubernetes Resources](kubernetes/README.md) — Namespaces, Workloads, Configs, and Storage
-* [Databases](databases/README.md) — RDS and ElastiCache instances
+* [Databases](databases/README.md) — RDS and ElastiCache instances on AWS

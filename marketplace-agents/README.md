@@ -16,11 +16,11 @@ These agents are built by DuploCloud and published in the [Agent Marketplace](ht
 | [GitHub CI/CD Workflows](github-ci-cd-workflows/README.md) | Builds and runs GitHub CI/CD workflows for your repositories. |
 | [Instance Scheduler](instance-scheduler/README.md) | Stop and start EC2 and RDS on a schedule, and stop paying for idle resources. |
 | [Kubernetes Upgrader](kubernetes-upgrade/README.md) | Upgrade Kubernetes clusters with a plan you approve first. |
-| [AWS Agent](../aws-extension/aws-extension/README.md) | Provisions, operates and troubleshoots AWS infrastructure, from networks and EKS clusters to workloads and databases. |
+| [Infrastructure Agent](../aws-extension/aws-extension/README.md) | Provisions, operates and troubleshoots infrastructure on AWS, Azure and Oracle Cloud, from networks and Kubernetes clusters to workloads and databases. Google Cloud is coming soon. |
 
 ## What each agent's docs cover
 
-Every agent has the same five pages (the AWS Agent's docs predate this layout and keep their own structure for now):
+Every agent has the same five pages (the Infrastructure Agent's docs predate this layout and keep their own structure for now):
 
 | Page | What it covers |
 | --- | --- |

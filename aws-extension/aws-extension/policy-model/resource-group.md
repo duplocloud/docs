@@ -4,12 +4,18 @@ description: The isolation boundary that holds Kubernetes and cloud resources.
 
 # Resource Group
 
-A Resource Group is the isolation boundary of the AWS Agent. Each one provisions its own IAM role and policies, security groups, KMS key, and EC2 key pair, and every resource created inside it inherits those boundaries.
+A Resource Group is the isolation boundary of the Infrastructure Agent. Every resource created inside it inherits its boundaries. What it creates depends on the cloud:
+
+| Cloud | What the Resource Group creates |
+| --- | --- |
+| **AWS** | An IAM role and policies, security groups, a KMS key, and an EC2 key pair |
+| **Azure** | An Azure resource group, plus a managed identity that the group's resources use to deploy into it and to read and write Key Vault secrets |
+| **Oracle Cloud (OCI)** | A compartment. Access is granted by your tenancy's IAM policies, so no identity is created |
 
 A Resource Group holds two kinds of children:
 
 * **Kubernetes resources** — namespaces, workloads, jobs and cron jobs, ingress, config maps, secrets, storage, and Helm releases
-* **Cloud resources** — S3 buckets, RDS instances and clusters, ElastiCache, SNS topics, SQS queues, Lambda functions, Secrets Manager secrets, SSM parameters, EFS, MSK, ECR, and EC2 hosts
+* **Cloud resources** — on AWS: S3 buckets, RDS instances and clusters, ElastiCache, SNS topics, SQS queues, Lambda functions, Secrets Manager secrets, SSM parameters, EFS, MSK, ECR, and EC2 hosts. On Azure: Key Vaults, PostgreSQL flexible servers, Managed Redis, storage accounts, and virtual machines
 
 ## Spec
 
@@ -17,13 +23,13 @@ A Resource Group holds two kinds of children:
 |---|---|
 | **Name** | The name of the resource group |
 | **Environment** | The Environment this group belongs to |
-| **Cluster** | The Cluster Baseline whose EKS cluster the group's Kubernetes resources run on |
-| **Region** | The AWS region |
+| **Cluster** | The Cluster Baseline whose cluster the group's Kubernetes resources run on |
+| **Region** | The cloud region |
 | **Tags** | Optional. User-defined tags inherited by every resource in the group |
 
 ## Tags
 
-Tags set on a Resource Group are inherited by every resource inside it — applied as **AWS tags** on cloud resources and as **Kubernetes labels** on Kubernetes resources. Because a tag has to be valid in both systems, keys and values must satisfy the stricter of the two rule sets:
+Tags set on a Resource Group are inherited by every resource inside it — applied as cloud tags (for example, **AWS tags**) on cloud resources and as **Kubernetes labels** on Kubernetes resources. Because a tag has to be valid in both systems, keys and values must satisfy the stricter of the two rule sets:
 
 * A key may optionally carry a prefix, written `prefix/name`
 * Key names, prefixes, and values must be valid Kubernetes label segments

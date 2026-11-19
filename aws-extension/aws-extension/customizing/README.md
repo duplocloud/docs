@@ -1,17 +1,17 @@
 ---
-description: Override default skills and adapt the AWS Agent to your organization's standards.
+description: Override default skills and adapt the Infrastructure Agent to your organization's standards.
 ---
 
 # Customizing the Agent
 
-The AWS Agent ships with production-ready default skills that handle provisioning, updates, and deprovisioning for every resource type. These defaults work out of the box for most teams — but the platform is designed to be fully customizable.
+The Infrastructure Agent ships with production-ready default skills that handle provisioning, updates, and deprovisioning for every resource type. These defaults work out of the box for most teams — but the platform is designed to be fully customizable.
 
 Organizations routinely adapt the agent to enforce:
 
-* **Tagging policies** — require specific tags on all provisioned AWS resources
-* **Network topology requirements** — custom CIDR conventions, subnet layouts, or VPC configurations
+* **Tagging policies** — require specific tags on all provisioned cloud resources
+* **Network topology requirements** — custom CIDR conventions, subnet layouts, or network configurations
 * **Compliance guardrails** — controls specific to their regulatory environment (SOC 2, HIPAA, PCI-DSS)
-* **Architectural standards** — organizational decisions about EKS node types, database configurations, or security settings
+* **Architectural standards** — organizational decisions about Kubernetes node types, database configurations, or security settings
 
 Customizations are persistent and survive platform upgrades, because the skill layer is separated from the framework.
 

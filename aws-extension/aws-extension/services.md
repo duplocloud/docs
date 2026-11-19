@@ -4,9 +4,9 @@ description: >-
   documentation.
 ---
 
-# Services
+# AWS Services
 
-The following AWS services are available within the AWS Agent. Each service is provisioned and managed inside an [Environment](policy-model/environment.md). Full documentation for each service is maintained in the AWS User Guide.
+The following AWS services are available within the Infrastructure Agent. Each service is provisioned and managed inside an [Environment](policy-model/environment.md). Full documentation for each service is maintained in the AWS User Guide.
 
 ## Compute and Containers
 
