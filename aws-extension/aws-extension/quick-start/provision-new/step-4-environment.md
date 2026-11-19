@@ -23,7 +23,7 @@ Creating the Environment adds a record only. Creating a Resource Group in it pro
 
 ### Step 1 — Navigate to Environments
 
-In the left sidebar, open **DevOps** and select **Environments**. The **Environments** page lists every environment in the workspace with its cloud, attached Plans, description, Resource Group count, and created and last-modified dates. Summary cards show the totals for environments, Plans and Resource Groups. Click **Create environment** to begin.
+In the left sidebar, open **Infrastructure Agent** and select **Environments**. The **Environments** page lists every environment in the workspace with its cloud, attached Plans, description, Resource Group count, and created and last-modified dates. Summary cards show the totals for environments, Plans and Resource Groups. Click **Create environment** to begin.
 
 ![](../../../../.gitbook/assets/environment-step-01.png)
 

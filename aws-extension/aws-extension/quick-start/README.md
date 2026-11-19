@@ -1,12 +1,14 @@
 ---
 description: >-
-  Get up and running with the AWS Agent — two paths depending on where you
-  are starting from.
+  Get up and running with the Infrastructure Agent on AWS: connect existing
+  infrastructure, or provision new infrastructure step by step.
 ---
 
-# Quick Start
+# Get Started on AWS
 
-The AWS Agent supports two starting points. Choose the path that matches your situation:
+These guides use **AWS**. Guides for Azure and Oracle Cloud (OCI) are coming soon. See [Supported clouds](../README.md#supported-clouds).
+
+There are two starting points. Choose the path that matches your situation:
 
 {% columns %}
 {% column %}

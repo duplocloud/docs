@@ -23,7 +23,7 @@ A Network Baseline provisions the VPC that all other resources will run inside. 
 
 ### Step 1 — Navigate to Network
 
-In the left sidebar, open **DevOps** and select **Network**.
+In the left sidebar, open **Infrastructure Agent** and select **Network**.
 
 ![](../../../../.gitbook/assets/network-step-01.png)
 

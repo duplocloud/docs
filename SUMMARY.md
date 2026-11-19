@@ -61,7 +61,7 @@
   * [Use](marketplace-agents/kubernetes-upgrade/use.md)
   * [Permissions and Safety](marketplace-agents/kubernetes-upgrade/permissions-and-safety.md)
   * [Troubleshooting and FAQ](marketplace-agents/kubernetes-upgrade/troubleshooting.md)
-* [AWS Agent](aws-extension/aws-extension/README.md)
+* [Infrastructure Agent](aws-extension/aws-extension/README.md)
   * [Policy Model](aws-extension/aws-extension/policy-model/README.md)
     * [Network Baseline](aws-extension/aws-extension/policy-model/network-baseline.md)
     * [Cluster Baseline](aws-extension/aws-extension/policy-model/cluster-baseline.md)
@@ -79,7 +79,9 @@
       * [RDS](aws-extension/aws-extension/policy-model/databases/rds.md)
       * [ElastiCache](aws-extension/aws-extension/policy-model/databases/elasticache.md)
   * [Installation](aws-extension/aws-extension/installation.md)
-  * [Quick Start](aws-extension/aws-extension/quick-start/README.md)
+  * [Customizing the Agent](aws-extension/aws-extension/customizing/README.md)
+    * [Skill Mapping](aws-extension/aws-extension/customizing/skill-mapping.md)
+  * [Get Started on AWS](aws-extension/aws-extension/quick-start/README.md)
     * [Connect to Existing Infrastructure](aws-extension/aws-extension/quick-start/connect-existing/README.md)
       * [Example: Cost Optimization](aws-extension/aws-extension/quick-start/connect-existing/example-cost-optimization.md)
       * [Example: Security and Compliance](aws-extension/aws-extension/quick-start/connect-existing/example-security-compliance.md)
@@ -94,10 +96,8 @@
       * [Step 4: Create an Environment](aws-extension/aws-extension/quick-start/provision-new/step-4-environment.md)
       * [Step 5: Deploy Workloads](aws-extension/aws-extension/quick-start/provision-new/step-5-workloads.md)
       * [Step 6: Add Databases](aws-extension/aws-extension/quick-start/provision-new/step-6-databases.md)
-  * [Customizing the Agent](aws-extension/aws-extension/customizing/README.md)
-    * [Skill Mapping](aws-extension/aws-extension/customizing/skill-mapping.md)
-  * [Use Cases](aws-extension/aws-extension/use-cases.md)
-  * [Services](aws-extension/aws-extension/services.md)
+    * [AWS Use Cases](aws-extension/aws-extension/use-cases.md)
+    * [AWS Services](aws-extension/aws-extension/services.md)
 
 ## Deploy to Your Cloud
 

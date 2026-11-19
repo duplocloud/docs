@@ -218,7 +218,7 @@
 <body>
 <div id="stage">
 
-  <h1>AWS Agent — Policy Model</h1>
+  <h1>Infrastructure Agent — Policy Model</h1>
   <div class="sub">Resource hierarchy and dependency relationships</div>
 
   <div id="panel"></div>
@@ -258,19 +258,19 @@
   <!-- Network Baseline -->
   <div class="node" style="left:445px; top:185px; width:470px; height:88px;">
     <div class="name">Network Baseline</div>
-    <div class="meta">VPC · Subnets · NAT Gateways · Subnet Groups</div>
+    <div class="meta">VPC · VNet · VCN · Subnets · NAT</div>
   </div>
 
   <!-- Cluster Baseline -->
   <div class="node" style="left:445px; top:333px; width:470px; height:88px;">
     <div class="name">Cluster Baseline</div>
-    <div class="meta">EKS Cluster · OIDC Provider · Auto Mode</div>
+    <div class="meta">EKS · AKS · OKE</div>
   </div>
 
   <!-- Plan -->
   <div class="node dashed-plan" style="left:70px; top:481px; width:310px; height:88px;">
     <div class="name">Plan</div>
-    <div class="meta">Hosted Zones · Certs · AMIs</div>
+    <div class="meta">AWS only · Zones · Certs · AMIs</div>
   </div>
   <div class="wire-label" style="left:355px; top:494px; width:160px;">provides to</div>
 
@@ -292,7 +292,7 @@
   <div class="stack-back" style="left:492px; top:645px; width:400px; height:96px; opacity:.6;"></div>
   <div class="node" style="left:480px; top:645px; width:400px; height:96px;">
     <div class="name">Resource Group</div>
-    <div class="meta">IAM Role · Security Groups · KMS Key · Key Pair</div>
+    <div class="meta">Isolation boundary · Identity · Tags</div>
   </div>
   <div class="badge" style="left:930px; top:686px; width:330px; text-align:left;">One or more<br>per Environment</div>
 
@@ -309,8 +309,8 @@
   <div class="node leaf" style="left:770px; top:860px; width:480px; height:132px;">
     <div class="name">Cloud Resources</div>
     <div class="meta">
-      S3 · RDS · ElastiCache · SNS · SQS · Lambda<br>
-      Secrets · SSM · EFS · MSK · ECR · EC2
+      Databases · Caches · Object Storage · Queues<br>
+      Secrets · Functions · Virtual Machines
     </div>
   </div>
 

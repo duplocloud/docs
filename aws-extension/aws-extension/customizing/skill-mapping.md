@@ -8,15 +8,22 @@ description: >-
 
 Skill Mapping lets you override the platform default skill for a specific ticket origin and sub type. When a ticket is created that matches the override, the AI agent loads your custom skill instead of the platform default — without any change to the resource configuration or ticket setup.
 
-For the AWS Agent, this means you can replace the default AWS infrastructure provisioning skill with one that incorporates your organization's specific requirements: custom tagging, different CloudFormation templates, additional compliance checks, or modified approval workflows.
+For the Infrastructure Agent, this means you can replace a default infrastructure provisioning skill with one that incorporates your organization's specific requirements: custom tagging, different templates, additional compliance checks, or modified approval workflows.
 
 ## How it works
 
-The platform default skill for AWS infrastructure provisioning is **duplo-aws-infra**. It handles provisioning and deprovisioning for Networks, Clusters, and Environments. When a provisioning ticket is created for any of these resource types, the agent loads this skill automatically.
+Each cloud has its own platform default skill for infrastructure provisioning. It handles provisioning and deprovisioning for Networks, Clusters, and Resource Groups on that cloud:
+
+| Cloud | Default skill |
+| --- | --- |
+| AWS | `duplo-aws-infra` |
+| Azure | `duplo-azure-infra` |
+| Oracle Cloud (OCI) | `duplo-oci-infra` |
+ When a provisioning ticket is created for any of these resource types, the agent loads this skill automatically.
 
 With Skill Mapping, you can:
 
-* Create a custom skill that extends or replaces `duplo-aws-infra`
+* Create a custom skill that extends or replaces the default skill, for example `duplo-aws-infra`
 * Map it as an override for a specific resource type (e.g. Network Baseline provisioning only)
 * All subsequent provisioning tickets for that resource type will use your custom skill instead
 
@@ -32,7 +39,7 @@ For the full step-by-step guide, see [Platform Skills and Overrides](../../../ar
 
 ## Example: Enforcing a Tagging Policy
 
-Your organization requires that all AWS resources are tagged with `team`, `cost-center`, and `environment`. The platform default skill does not know about these requirements.
+This example uses AWS. Your organization requires that all AWS resources are tagged with `team`, `cost-center`, and `environment`. The platform default skill does not know about these requirements.
 
 {% stepper %}
 {% step %}

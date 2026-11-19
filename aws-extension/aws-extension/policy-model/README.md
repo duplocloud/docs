@@ -1,35 +1,48 @@
 ---
 description: >-
-  The building blocks of the AWS Agent — resources, their specs, results,
-  and how they relate to each other.
+  The building blocks of the Infrastructure Agent on every cloud: resources,
+  their specs, results, and how they relate to each other.
 ---
 
 # Policy Model
 
-The AWS Agent Policy Model defines the resources the agent manages and how they relate to each other. Understanding this model helps you understand what the agent can do and why the creation flow follows the order it does.
+The Infrastructure Agent Policy Model defines the resources the agent manages and how they relate to each other. Understanding this model helps you understand what the agent can do and why the creation flow follows the order it does.
 
 ## The Resource Hierarchy
 
-The AWS Agent organizes infrastructure as a hierarchy. Each level depends on the one above it:
+The Infrastructure Agent organizes infrastructure as a hierarchy. Each level depends on the one above it:
 
 **Network Baseline → Cluster Baseline → Environment → Resource Group → Kubernetes and Cloud Resources**
 
-<figure><picture><source srcset="../../../.gitbook/assets/policy-model-dark.png" media="(prefers-color-scheme: dark)"><img src="../../../.gitbook/assets/policy-model-light.png" alt="AWS Agent policy model — resource hierarchy and dependency relationships"></picture><figcaption></figcaption></figure>
+<figure><picture><source srcset="../../../.gitbook/assets/policy-model-dark.png" media="(prefers-color-scheme: dark)"><img src="../../../.gitbook/assets/policy-model-light.png" alt="Infrastructure Agent policy model: resource hierarchy and dependency relationships"></picture><figcaption></figcaption></figure>
 
-A **Network Baseline** establishes the VPC — the networking foundation everything else runs on. A **Cluster Baseline** provisions an EKS cluster inside that network. An **Environment** is a logical grouping that holds one or more **Resource Groups**, along with the Plans those resources can draw from.
+A **Network Baseline** is the networking foundation everything else runs on. A **Cluster Baseline** runs a managed Kubernetes cluster inside that network. An **Environment** is a logical grouping that holds one or more **Resource Groups**.
 
-A **Resource Group** is the isolation boundary. Each one provisions its own IAM role and policies, security groups, KMS key, and EC2 key pair, and every resource created inside it inherits those boundaries. A Resource Group holds two kinds of children:
+A **Resource Group** is the isolation boundary. Every resource created inside it inherits its boundaries. It holds two kinds of children:
 
-* **Kubernetes resources** — namespaces, workloads, jobs and cron jobs, ingress, config maps, secrets, storage, and Helm releases.
-* **Cloud resources** — S3 buckets, RDS instances and clusters, ElastiCache, SNS topics, SQS queues, Lambda functions, Secrets Manager secrets, SSM parameters, EFS, MSK, ECR, and EC2 hosts.
-
-**Plans** catalog AWS account-level resources — hosted zones, ACM certificates, and AMIs — that Environments associate and their resources can reference.
+* **Kubernetes resources**: namespaces, workloads, jobs and cron jobs, ingress, config maps, secrets, storage, and Helm releases.
+* **Cloud resources**: the managed services of the group's cloud, such as databases, storage and virtual machines.
 
 **Faults** surface issues across any resource at any level of the hierarchy.
 
+## On each cloud
+
+You choose the cloud when you create a Network Baseline. Everything built on that network uses the same cloud.
+
+| Resource | AWS | Azure | Oracle Cloud (OCI) |
+| --- | --- | --- | --- |
+| **Network Baseline** | VPC with subnets, NAT and route tables | VNet in its own resource group, with a network security group per subnet and NAT gateways | VCN |
+| **Cluster Baseline** | Amazon EKS | Azure Kubernetes Service (AKS) | Oracle Kubernetes Engine (OKE) |
+| **Resource Group** | IAM role and policies, security groups, KMS key and EC2 key pair | Azure resource group with a managed identity that its resources use | Compartment |
+| **Cloud resources** | S3, RDS, ElastiCache, SNS, SQS, Lambda, Secrets Manager, SSM parameters, EFS, MSK, ECR and EC2 hosts | Key Vault, Azure Database for PostgreSQL flexible server, Azure Managed Redis, storage accounts and virtual machines | None yet |
+| **Plan** | Hosted zones, ACM certificates and AMIs | Not available | Not available |
+| **Provisioned with** | CloudFormation | ARM deployments | OCI Resource Manager (Terraform) |
+
+Google Cloud (GCP) support is coming soon.
+
 ## Resource Lifecycle
 
-Every resource in the AWS Agent follows the same status lifecycle. Each resource has a **Spec** tab showing what was requested, a **Result** tab showing what was provisioned, and a link to the underlying ticket that executed the work. Updates trigger a reconciliation — the agent handles only the delta, not a full teardown and rebuild.
+Every resource follows the same status lifecycle. Each resource has a **Spec** tab showing what was requested, a **Result** tab showing what was provisioned, and a link to the underlying ticket that executed the work. Updates trigger a reconciliation — the agent handles only the delta, not a full teardown and rebuild.
 
 <details>
 
@@ -50,4 +63,4 @@ Every resource in the AWS Agent follows the same status lifecycle. Each resource
 
 ## Resource Types
 
-<table data-view="cards"><thead><tr><th>Title</th><th>Description</th><th data-card-target data-type="content-ref">Target</th></tr></thead><tbody><tr><td><strong>Network Baseline</strong></td><td>VPC with subnets, routing, and NAT — the networking foundation.</td><td><a href="network-baseline.md">network-baseline.md</a></td></tr><tr><td><strong>Cluster Baseline</strong></td><td>EKS cluster built on top of a Network Baseline.</td><td><a href="cluster-baseline.md">cluster-baseline.md</a></td></tr><tr><td><strong>Environment</strong></td><td>Logical grouping of Resource Groups inside a cluster, with associated Plans.</td><td><a href="environment.md">environment.md</a></td></tr><tr><td><strong>Plan</strong></td><td>AWS account-level catalog: hosted zones, certificates, and AMIs.</td><td><a href="plan.md">plan.md</a></td></tr><tr><td><strong>Faults</strong></td><td>Cross-resource issues detected across the hierarchy.</td><td><a href="faults.md">faults.md</a></td></tr><tr><td><strong>Kubernetes Resources</strong></td><td>Namespaces, workloads, configs, secrets, and storage inside a Resource Group.</td><td><a href="kubernetes/">kubernetes</a></td></tr><tr><td><strong>Databases</strong></td><td>RDS and ElastiCache instances inside a Resource Group.</td><td><a href="databases/">databases</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th>Title</th><th>Description</th><th data-card-target data-type="content-ref">Target</th></tr></thead><tbody><tr><td><strong>Network Baseline</strong></td><td>The networking foundation: a VPC, VNet or VCN.</td><td><a href="network-baseline.md">network-baseline.md</a></td></tr><tr><td><strong>Cluster Baseline</strong></td><td>A managed Kubernetes cluster (EKS, AKS or OKE) on top of a Network Baseline.</td><td><a href="cluster-baseline.md">cluster-baseline.md</a></td></tr><tr><td><strong>Environment</strong></td><td>Logical grouping of Resource Groups inside a cluster.</td><td><a href="environment.md">environment.md</a></td></tr><tr><td><strong>Plan</strong></td><td>AWS only. Account-level catalog of hosted zones, certificates, and AMIs.</td><td><a href="plan.md">plan.md</a></td></tr><tr><td><strong>Faults</strong></td><td>Cross-resource issues detected across the hierarchy.</td><td><a href="faults.md">faults.md</a></td></tr><tr><td><strong>Kubernetes Resources</strong></td><td>Namespaces, workloads, configs, secrets, and storage inside a Resource Group.</td><td><a href="kubernetes/">kubernetes</a></td></tr><tr><td><strong>Databases</strong></td><td>AWS RDS and ElastiCache inside a Resource Group.</td><td><a href="databases/">databases</a></td></tr></tbody></table>

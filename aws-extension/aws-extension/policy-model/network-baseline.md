@@ -1,16 +1,27 @@
 ---
 description: >-
-  Provision or import a well-architected AWS VPC network that serves as the
-  foundation for your cloud infrastructure.
+  Provision or import the network that everything else runs on: a VPC on AWS,
+  a VNet on Azure, or a VCN on Oracle Cloud.
 ---
 
 # Network Baseline
 
-A Network Baseline is the networking foundation of your AWS infrastructure. It provisions a VPC with public and private subnets spread across multiple availability zones, along with internet gateways, NAT gateways, route tables, and optional VPC flow logs.
+A Network Baseline is the networking foundation of your infrastructure. Every Cluster and Environment depends on one. It's the first resource you create when building new infrastructure from scratch.
 
-Every Cluster and Environment depends on a Network Baseline. It is the first resource you create when building new AWS infrastructure from scratch.
+When you create a Network Baseline, you choose its **Cloud**: **AWS**, **Azure**, or **Oracle Cloud (OCI)**. Everything you build on the network uses that cloud.
 
-## Spec
+| Cloud | What the Network Baseline creates |
+| --- | --- |
+| **AWS** | A VPC with public and private subnets across availability zones, internet and NAT gateways, route tables, and optional VPC flow logs |
+| **Azure** | A VNet in its own resource group, with subnets, a network security group per subnet, and NAT gateways |
+| **Oracle Cloud (OCI)** | A VCN and its subnets |
+
+## Spec on AWS
+
+{% hint style="info" %}
+The fields below are for **AWS**. Azure and Oracle Cloud (OCI) use the same resource with their own fields. Their details are coming soon.
+{% endhint %}
+
 
 | Field | Description |
 |---|---|
@@ -23,7 +34,7 @@ Every Cluster and Environment depends on a Network Baseline. It is the first res
 | **VPC Flow Logs** | Capture and store network traffic metadata for auditing and analysis |
 | **Mode** | **Create** — provision a new VPC. **Import** — attach an existing VPC without creating any new AWS resources |
 
-## Result
+## Result on AWS
 
 Once provisioned, the Network Baseline result includes:
 
@@ -44,12 +55,12 @@ A Network Baseline has no dependencies — it is the root of the resource hierar
 
 ## Import Mode
 
-If you already have a VPC in AWS, use **Import** mode to attach it to the AWS Agent. The platform discovers the existing VPC's subnets, route tables, NAT gateways, and internet gateway without creating or modifying any resources. Once imported, the network appears in the agent like any provisioned resource — Clusters and Environments can be built on top of it.
+If you already have a network, use **Import** mode to attach it to the Infrastructure Agent. On AWS, the platform discovers the existing VPC's subnets, route tables, NAT gateways, and internet gateway without creating or modifying any resources. Azure and OCI networks can be imported the same way. Once imported, the network appears in the agent like any provisioned resource — Clusters and Environments can be built on top of it.
 
 {% hint style="warning" %}
-Imported networks cannot be deprovisioned through the AWS Agent.
+Imported networks cannot be deprovisioned through the Infrastructure Agent.
 {% endhint %}
 
 ## What's next
 
-With a Network Baseline provisioned, create a [Cluster Baseline](cluster-baseline.md) to run an EKS cluster on top of it.
+With a Network Baseline provisioned, create a [Cluster Baseline](cluster-baseline.md) to run a Kubernetes cluster on top of it.

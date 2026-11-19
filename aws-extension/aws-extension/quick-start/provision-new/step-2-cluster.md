@@ -20,7 +20,7 @@ A Cluster Baseline provisions an EKS cluster inside the Network you created in t
 
 ### Step 1 — Navigate to Cluster
 
-In the left sidebar, open **DevOps** and select **Cluster**.
+In the left sidebar, open **Infrastructure Agent** and select **Cluster**.
 
 ![](../../../../.gitbook/assets/cluster-step-01.png)
 

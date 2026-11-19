@@ -1,10 +1,10 @@
 ---
-description: Connect DuploCloud to your AWS accounts and cloud providers.
+description: Deploy DuploCloud to your cloud and connect the accounts the Infrastructure Agent manages.
 ---
 
 # Installation
 
-Before using the AWS Agent, you need to install DuploCloud in your cloud environment and connect it to your AWS accounts and any additional providers you want the AI to access.
+Before using the Infrastructure Agent, you need to install DuploCloud in your cloud environment and connect it to your AWS, Azure, or Oracle Cloud accounts and any additional providers you want the AI to access.
 
 ## Steps
 

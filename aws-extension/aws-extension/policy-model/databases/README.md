@@ -1,10 +1,12 @@
 ---
-description: Managed databases inside an Environment — RDS and ElastiCache.
+description: Managed AWS databases inside an Environment — RDS and ElastiCache.
 ---
 
 # Databases
 
-The AWS Agent supports provisioning managed databases inside an Environment. Databases are provisioned into the private subnets of the Environment's Network Baseline, using the subnet groups created during network provisioning.
+The Infrastructure Agent supports provisioning managed databases inside an Environment. This section covers the AWS databases. On Azure, the agent also provisions Azure Database for PostgreSQL flexible servers and Azure Managed Redis; their pages are coming soon.
+
+On AWS, databases are provisioned into the private subnets of the Environment's Network Baseline, using the subnet groups created during network provisioning.
 
 ## Database Types
 

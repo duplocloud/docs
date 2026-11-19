@@ -1,23 +1,38 @@
 ---
 description: >-
-  AI-native AWS infrastructure management — connect to existing environments or
-  provision new ones from scratch.
+  One agent that provisions, operates and troubleshoots cloud infrastructure on
+  AWS, Azure and Oracle Cloud, with Google Cloud coming soon.
 icon: robot
 ---
 
-# AWS Agent
+# Infrastructure Agent
 
-The AWS Agent is DuploCloud's built-in application for AWS infrastructure lifecycle management. It gives teams a structured, AI-driven way to provision, operate, and troubleshoot AWS resources — from VPC networks and EKS clusters down to Kubernetes workloads and managed databases.
+The Infrastructure Agent manages your cloud infrastructure from end to end. You describe what you want, such as a network, a Kubernetes cluster, or a database, and the agent provisions it, reports back, and keeps it in step with your request. You can also connect infrastructure you already run, then operate and troubleshoot it with AI.
 
-Whether you are connecting to infrastructure that already exists or building a new environment from scratch, the AWS Agent provides a consistent, auditable interface for every operation.
+It's one agent for every supported cloud. You pick the cloud when you create a network, and everything you build on that network uses the same resource model, statuses and approval flow.
+
+{% hint style="info" %}
+In the portal, this agent's section of the left nav is being renamed from **DevOps** to **Infrastructure Agent**. Until your portal has the update, look for **DevOps**.
+{% endhint %}
+
+## Supported clouds
+
+| Cloud | Kubernetes | Status | Step-by-step guide |
+| --- | --- | --- | --- |
+| **AWS** | Amazon EKS | Supported | [Get Started on AWS](quick-start/README.md) |
+| **Azure** | Azure Kubernetes Service (AKS) | Supported | Coming soon |
+| **Oracle Cloud (OCI)** | Oracle Kubernetes Engine (OKE) | Supported | Coming soon |
+| **Google Cloud (GCP)** | Google Kubernetes Engine (GKE) | Coming soon | Coming soon |
+
+The [Policy Model](policy-model/README.md) pages apply to every cloud and note where a cloud works differently. The walkthroughs and examples are written for AWS for now.
 
 ## What you can do
 
-* **Connect to existing AWS environments** — attach your AWS accounts as Providers and immediately begin using AI to operate, troubleshoot, and optimize your infrastructure.
-* **Provision new AWS infrastructure** — create VPC networks, EKS clusters, and environments through structured forms. The AI agent handles provisioning end-to-end and reports back with the results.
-* **Deploy and manage applications** — create Kubernetes workloads, manage namespaces, configure secrets, and deploy managed databases inside your environments.
-* **Customize to your standards** — override the default provisioning skills with your own to enforce organizational tagging policies, compliance requirements, or architectural patterns.
+* **Connect existing infrastructure.** Attach your cloud accounts as Providers and start using AI to operate, troubleshoot and optimize what's already running.
+* **Provision new infrastructure.** Create networks, Kubernetes clusters and environments through structured forms. The agent provisions them and reports the results.
+* **Deploy and manage applications.** Create Kubernetes workloads, namespaces, secrets and managed databases inside your environments.
+* **Customize to your standards.** Override the default provisioning skills with your own to enforce tagging policies, compliance requirements or architectural patterns.
 
 ## Sections
 
-<table data-view="cards"><thead><tr><th>Title</th><th>Description</th><th data-card-target data-type="content-ref">Target</th></tr></thead><tbody><tr><td><strong>Policy Model</strong></td><td>The building blocks of the AWS Agent — resources, their specs, results, and how they relate.</td><td><a href="policy-model/">policy-model</a></td></tr><tr><td><strong>Installation</strong></td><td>How to connect DuploCloud to your AWS accounts and cloud providers.</td><td><a href="installation.md">installation.md</a></td></tr><tr><td><strong>Quick Start</strong></td><td>Get started quickly — connect to existing infrastructure or provision new infrastructure step by step.</td><td><a href="quick-start/">quick-start</a></td></tr><tr><td><strong>Customizing the Agent</strong></td><td>Override default skills to match your organization's standards.</td><td><a href="customizing/">customizing</a></td></tr><tr><td><strong>Use Cases</strong></td><td>Common operational workflows and how to accomplish them.</td><td><a href="use-cases.md">use-cases.md</a></td></tr><tr><td><strong>Services</strong></td><td>AWS services available within your environments.</td><td><a href="services.md">services.md</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th>Title</th><th>Description</th><th data-card-target data-type="content-ref">Target</th></tr></thead><tbody><tr><td><strong>Policy Model</strong></td><td>The resources the agent manages, on every cloud, and how they relate.</td><td><a href="policy-model/">policy-model</a></td></tr><tr><td><strong>Installation</strong></td><td>Deploy DuploCloud to your cloud and connect your accounts.</td><td><a href="installation.md">installation.md</a></td></tr><tr><td><strong>Customizing the Agent</strong></td><td>Override default skills to match your organization's standards.</td><td><a href="customizing/">customizing</a></td></tr><tr><td><strong>Get Started on AWS</strong></td><td>Connect existing AWS infrastructure, or provision new infrastructure step by step.</td><td><a href="quick-start/">quick-start</a></td></tr></tbody></table>
