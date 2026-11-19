@@ -1,10 +1,10 @@
 ---
-description: What you need before you start, how to activate SRE from the Agent Marketplace, and how to connect it to your accounts.
+description: What you need before you start, how to activate SRE Workbench from the Agent Marketplace, and how to connect it to your accounts.
 ---
 
 # Set Up
 
-What you need before you start, how to activate SRE from the Agent Marketplace, and how to connect it to your accounts.
+What you need before you start, how to activate SRE Workbench from the Agent Marketplace, and how to connect it to your accounts.
 
 {% hint style="info" %}
 This page is being written.

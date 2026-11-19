@@ -1,11 +1,11 @@
 ---
-description: Starts and stops cloud instances on a schedule to cut idle cost.
+description: Stop and start EC2 and RDS on a schedule, and stop paying for idle resources.
 icon: robot
 ---
 
 # Instance Scheduler
 
-Starts and stops cloud instances on a schedule to cut idle cost.
+Stop and start EC2 and RDS on a schedule, and stop paying for idle resources.
 
 {% hint style="info" %}
 This page is being written.

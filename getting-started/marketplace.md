@@ -16,7 +16,7 @@ Go to [marketplace.duplocloud.com](https://marketplace.duplocloud.com). You don'
 
 ![The Agent Marketplace](../.gitbook/assets/agent-marketplace-home.png)
 
-You can search agents by name, filter them by category, or show only **Free** or **Paid** agents. **Recommended for you** highlights a few agents to start with. Each card shows the agent's categories, a short description, its status, and whether it's free or paid. Paid agents show their price when one is set.
+You can search agents by name, filter them by category, or show only **Free** or **Paid** agents. **Recommended for you** highlights a few agents to start with. Each card shows the agent's categories, a one-line summary of what it does, its status, and whether it's free or paid. Paid agents show their price when one is set.
 
 Click an agent to open its details: what it does, its main features, its status and price, and links to its documentation or demo video when it has them. If the agent has published versions, the details also show the latest version and the release notes for each one. Every agent has its own link (`/agents/<id>`), so you can copy the address and share it.
 
@@ -36,7 +36,7 @@ Only DuploCloud can list an agent in the public catalog. An agent your company b
 | --- | --- | --- |
 | **Shown as** | **Free** | **Paid**, with a price when one is set |
 | **Cost** | Included with your DuploCloud license | A price in US dollars, billed through the console |
-| **To install** | Activate it in your portal | Buy it for your company, then activate it in your portal |
+| **To install** | Activate it in your portal. The first time, you accept the Marketplace terms in the console | Buy it for your company, then activate it in your portal |
 
 A paid agent's price has four parts:
 
