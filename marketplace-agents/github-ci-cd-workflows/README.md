@@ -1,5 +1,6 @@
 ---
 description: Builds and runs GitHub CI/CD workflows for your repositories.
+icon: robot
 ---
 
 # GitHub CI/CD Workflows

@@ -1,5 +1,6 @@
 ---
 description: Starts and stops cloud instances on a schedule to cut idle cost.
+icon: robot
 ---
 
 # Instance Scheduler

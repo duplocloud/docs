@@ -1,5 +1,6 @@
 ---
 description: Gives your workloads a standard set of metrics, logs and dashboards.
+icon: robot
 ---
 
 # Standard Observability

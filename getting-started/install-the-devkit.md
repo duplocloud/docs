@@ -28,7 +28,7 @@ You clone the repository and run its start script. The commands are in [Install 
 4. **You sign in** to the portal at `http://localhost:4210`.
 
 {% hint style="warning" %}
-DuploCloud issues **one license per email address**. The DevKit reuses or recovers the license it already has, so you shouldn't need another. If you already hold a license token, pass it with `--license <jwt>` to skip the trial request. To renew an expired trial, contact **sales@duplocloud.net**.
+DuploCloud issues **one license per email address**. The DevKit reuses or recovers the license it already has, so you shouldn't need another. If you already hold a license token, pass it with `--license <jwt>` to skip the trial request.
 {% endhint %}
 
 How the DevKit handles licenses is in [Configuration: Licensing](https://github.com/duplocloud/devkit/blob/main/docs/configuration.md#licensing). For how licenses work across DuploCloud, see [License](licensing.md).
