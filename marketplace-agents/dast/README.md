@@ -1,11 +1,11 @@
 ---
-description: Runs dynamic application security testing (DAST) against your running applications.
+description: Scan your running web apps and APIs for security flaws.
 icon: robot
 ---
 
 # DAST
 
-Runs dynamic application security testing (DAST) against your running applications.
+Scan your running web apps and APIs for security flaws.
 
 {% hint style="info" %}
 This page is being written.

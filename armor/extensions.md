@@ -35,7 +35,7 @@ Use the search box and the **All statuses / Active / Disabled / Failed** filters
 
 ### Agent Marketplace
 
-The **Agent Marketplace** tab is the catalog of agents you can activate. Search agents by name, or filter by category, and use **Refresh** to re-read the catalog. **Recommended for you** highlights a few agents at the top. Each card shows the agent's category, a short description, its status, and an **Activate** button.
+The **Agent Marketplace** tab is the catalog of agents you can activate. Search agents by name, or filter by category, and use **Refresh** to re-read the catalog. **Recommended for you** highlights a few agents at the top. Each card shows the agent's category, a one-line summary of what it does, its status, and an **Activate** button.
 
 ![Agent Marketplace](../.gitbook/assets/extensions-step-02-agent-marketplace.png)
 
@@ -43,7 +43,9 @@ Click an agent to open its details: what it does, its version and category, and 
 
 ![Agent details](../.gitbook/assets/extensions-step-03-agent-details.png)
 
-Click **Activate** to add the agent. Once an agent is active, its details offer **Open** to go to it and **Deactivate** to turn it off, plus **Update** when a newer version is available.
+Click **Activate** to add the agent. On a portal connected to the DuploCloud console, the first **Activate** of a free agent opens the console in a new tab, where you accept the Marketplace terms. The console then sends you back to the portal to choose where the agent appears in your nav, and the install starts. In the DevKit, free agents activate straight from the portal.
+
+Once an agent is active, its details offer **Open** to go to it and **Deactivate** to turn it off, plus **Update** when a newer version is available.
 
 {% hint style="info" %}
 If the catalog shows **No agents are published yet**, or a banner says the agent catalog is unreachable or no license is installed, the platform can't load the catalog — check the platform's license and its connection to DuploCloud.

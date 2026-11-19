@@ -26,6 +26,7 @@ You clone the repository and run its start script. The commands are in [Install 
 2. **DuploCloud requests a trial license for that email** and sends you a verification link. The run waits for you to click it, then continues on its own. If the wait times out, click the link anyway and run the script again; it picks up the same request.
 3. **You set a password and choose your LLM provider.** The script then starts the platform and creates a workspace for you to build in.
 4. **You sign in** to the portal at `http://localhost:4210`.
+5. **You land on Get your first agent.** While no agents are installed, the portal opens on this page instead of an empty ticket list. It offers the same paths as this Quick Start: **Install an agent** from the Marketplace, **Create your own agent** with the DevKit or Agent Studio, or **Move to your own cloud**. Click **Skip for now** or **Don't show this again** to go straight to the portal.
 
 {% hint style="warning" %}
 DuploCloud issues **one license per email address**. The DevKit reuses or recovers the license it already has, so you shouldn't need another. If you already hold a license token, pass it with `--license <jwt>` to skip the trial request.

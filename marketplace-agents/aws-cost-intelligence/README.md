@@ -1,11 +1,11 @@
 ---
-description: Shows where your AWS spend goes and where you can save.
+description: Understand AWS spend across all your accounts.
 icon: robot
 ---
 
 # AWS Cost Intelligence
 
-Shows where your AWS spend goes and where you can save.
+Understand AWS spend across all your accounts.
 
 {% hint style="info" %}
 This page is being written.

@@ -8,14 +8,14 @@ These agents are built by DuploCloud and published in the [Agent Marketplace](ht
 
 | Agent | What it does |
 | --- | --- |
-| [Security Center](security-center/README.md) | Checks your cloud accounts for security and compliance issues and helps you fix them. |
-| [AWS Cost Intelligence](aws-cost-intelligence/README.md) | Shows where your AWS spend goes and where you can save. |
-| [SRE](sre/README.md) | Helps your team troubleshoot production issues and find their root cause. |
-| [DAST](dast/README.md) | Runs dynamic application security testing (DAST) against your running applications. |
-| [Standard Observability](standard-observability/README.md) | Gives your workloads a standard set of metrics, logs and dashboards. |
+| [Security Center](security-center/README.md) | Check your AWS accounts against the SOC 2 Security criteria. |
+| [AWS Cost Intelligence](aws-cost-intelligence/README.md) | Understand AWS spend across all your accounts. |
+| [SRE Workbench](sre/README.md) | Investigate alerts and get a root-cause report. |
+| [DAST](dast/README.md) | Scan your running web apps and APIs for security flaws. |
+| [Standard Observability](standard-observability/README.md) | Set up monitoring for your Kubernetes cluster on AWS. |
 | [GitHub CI/CD Workflows](github-ci-cd-workflows/README.md) | Builds and runs GitHub CI/CD workflows for your repositories. |
-| [Instance Scheduler](instance-scheduler/README.md) | Starts and stops cloud instances on a schedule to cut idle cost. |
-| [Kubernetes Upgrade](kubernetes-upgrade/README.md) | Plans and runs Kubernetes cluster upgrades. |
+| [Instance Scheduler](instance-scheduler/README.md) | Stop and start EC2 and RDS on a schedule, and stop paying for idle resources. |
+| [Kubernetes Upgrader](kubernetes-upgrade/README.md) | Upgrade Kubernetes clusters with a plan you approve first. |
 | [AWS Agent](../aws-extension/aws-extension/README.md) | Provisions, operates and troubleshoots AWS infrastructure, from networks and EKS clusters to workloads and databases. |
 
 ## What each agent's docs cover

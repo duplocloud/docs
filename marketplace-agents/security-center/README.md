@@ -1,11 +1,11 @@
 ---
-description: Checks your cloud accounts for security and compliance issues and helps you fix them.
+description: Check your AWS accounts against the SOC 2 Security criteria.
 icon: robot
 ---
 
 # Security Center
 
-Checks your cloud accounts for security and compliance issues and helps you fix them.
+Check your AWS accounts against the SOC 2 Security criteria.
 
 {% hint style="info" %}
 This page is being written.

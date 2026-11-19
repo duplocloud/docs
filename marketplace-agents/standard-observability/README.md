@@ -1,11 +1,11 @@
 ---
-description: Gives your workloads a standard set of metrics, logs and dashboards.
+description: Set up monitoring for your Kubernetes cluster on AWS.
 icon: robot
 ---
 
 # Standard Observability
 
-Gives your workloads a standard set of metrics, logs and dashboards.
+Set up monitoring for your Kubernetes cluster on AWS.
 
 {% hint style="info" %}
 This page is being written.
