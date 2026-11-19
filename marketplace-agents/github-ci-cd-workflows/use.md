@@ -4,68 +4,93 @@ description: Step-by-step walkthroughs of the main things GitHub CI/CD Workflows
 
 # Use
 
-## Trigger a workflow run
+## Start a run
 
 1. Open **CI/CD > GitHub Actions** and select **Trigger Run**.
-2. On step **1. Repository & Workflow**:
-   - Enter a **Name** for this run record: 2 to 60 letters, numbers or hyphens, starting and ending with a letter or number.
-   - Choose the **GitHub Scope**. The **Repository** list loads from it.
-   - Choose the **Repository**. The **Workflow** list loads from it.
-   - Choose the **Workflow** and select **Next**.
-3. On step **2. Branch & Parameters**:
-   - Choose the **Branch / Ref**. It starts as the repository's default branch. You can also type a branch or tag name.
-   - Fill in the workflow's inputs. Required inputs are marked with an asterisk, and defaults from the workflow are pre-filled.
-4. Select **Trigger Run**.
+2. Fill in the form:
+   - **Name**: 2 to 60 letters, numbers or hyphens, starting and ending with a letter or number. For example `deploy-staging`.
+   - **GitHub Scope**: the scope whose token runs the workflow.
+   - **Repository**: only repositories the scope allows are listed.
+   - **Workflow**: the repository's workflows.
+   - **Branch / Ref**: pick or type a branch or tag, or pick a pull request to run its branch.
+3. Fill in the workflow's inputs. Each input the workflow declares is shown with its type, default and whether it is required: a choice is a dropdown, a boolean a switch, anything else a text box.
+4. Select the button at the bottom.
 
-If the workflow does not declare `on: workflow_dispatch`, the form shows a warning and **Trigger Run** stays disabled. If it takes no inputs, the form says so.
+The form checks the branch as you pick it:
 
-{% hint style="info" %}
-There is no confirmation step after **Trigger Run**. The workflow starts as soon as you select it.
-{% endhint %}
+- **Unprotected branch:** the button reads **Trigger Run**. The workflow starts as soon as you select it.
+- **Protected branch:** the form warns you and the button reads **Request Run**. Nothing is sent to GitHub until an approver releases the run.
 
-<!-- VERIFY: field labels against the live form (screenshots GH-04 to GH-07). -->
+If the workflow does not declare `on: workflow_dispatch`, it cannot be started. If you do not have permission to start runs, the form and the button are greyed out and say why.
 
-After you trigger the run, DuploCloud starts it on GitHub and records the run number and link. The run record shows **Complete** once GitHub has accepted the trigger. That does not mean the workflow finished. Its own result is shown separately.
+## Find a run
 
-<!-- VERIFY: record status wording. "Complete" is the code's value for "trigger accepted". If GitHub shows the run only after a delay, the run number can be empty for a short time; the code allows about 60 seconds to find it. -->
+**CI/CD > GitHub Actions** lists the workspace's runs, newest first.
 
-## See your runs
+- **Cards** (default): each run is a full-width row with a coloured edge and icon for its state, the name and workflow, repository and branch, run number and duration, who requested it and when, the approval state and a status badge. Select a row to open the run.
+- **Table**: a classic table. Switch with **Cards | Table**. Your choice is remembered in this browser.
+- **Search** by run name, repository, branch, workflow, requester or status.
+- **Filter chips**: **All**, **In progress**, **Needs approval**, **Failed**, **Succeeded**, each with a count.
+- **Row actions**: the GitHub icon opens the run in GitHub. The menu has **View**, **View provisioning ticket** and **Delete**.
 
-The list shows each run with its **Name**, **Repository**, **Workflow**, **Run** number (a link to GitHub), **Run Status** and the record **Status**. From the row menu choose **View**, **Open in GitHub** or **Track Provisioning**.
+The list shows 24 runs at a time. Runs still in progress refresh from GitHub when you open the list.
 
 ## Follow a run
 
-Open a run to see three panels:
+Open a run to see its header, three tabs and a lifecycle rail.
 
-- **Spec**: the repository, workflow, branch and the input values you used.
-- **Run**: the run number, status, conclusion, branch, trigger time and last refresh, with a link to the run on GitHub.
-- **Logs**: each job and its steps with a status icon. Select a step to open its output. The panel refreshes about every 4 seconds while the run is in progress, and **Refresh** reloads it on demand.
+- **Header:** name, live status, who requested it and when, and **Open in GitHub**.
+- **Overview tab:** anything the run is waiting on comes first (an approval or a deployment gate). A failed run shows its failure summary next. Then panels for **Run** (run number, status, duration, commit, with GitHub links), **Request** (workflow file, requested commit, requester, scope, whether approval was needed), **Workflow inputs**, **Jobs**, and **GitHub** (an **Open in GitHub** button).
+- **Logs tab:** each job is a section and each step a row with its status. The tab updates by itself while the run is in progress, and **Refresh** updates it now. Users with log permission can open a step to read its log. Others see step status and a note. A failed step opens by itself.
+- **Approvals tab:** the protected-branch approval, GitHub deployment gates, and a timeline of every decision.
+- **Lifecycle rail:** **Requested > Approval > Dispatched > Running > Succeeded / Failed**, with the current stage highlighted.
 
-GitHub publishes a step's log text only after its job finishes, so a running step shows "log appears once the job finishes". Step status still updates live. Very long logs are cut to the last 200,000 characters.
+GitHub publishes a job's log text only when the job finishes. Very long logs are cut to the last 200,000 characters.
 
-<!-- VERIFY: panel names and refresh behaviour against the live UI (screenshots GH-08 to GH-10). -->
+**View provisioning ticket**, under every tab, opens the helpdesk ticket that sent the run to GitHub. Use it to see what the agent did.
 
-## Approve or reject a deployment
+## Approve a run on a protected branch
 
-When a run is waiting for a protected environment, the **Logs** panel shows a banner naming the environment or environments.
+A run requested on a protected branch shows **Waiting for approval**.
 
-1. Optionally enter a comment.
-2. Select **Approve** or **Reject**.
+1. Open the run. It opens on the **Approvals** tab.
+2. Check what will run: workflow, repository, branch, the exact commit and who requested it.
+3. Optionally add a comment, select **Approve** or **Reject**, and type the run name to confirm.
 
-All environments currently waiting for that run are approved or rejected together. If GitHub says the token's user cannot approve, both buttons are disabled and the banner says "You are not a required reviewer."
+- Approval runs exactly the requested commit. If someone pushed to the branch since, approval is refused. Reject the run and request a new one.
+- If you requested the run, **Approve** is greyed out. If you are an approver, **Reject** reads **Withdraw**, so you can cancel your own request. A requester who is not an approver asks an approver to reject it.
+- The Approvals tab records who decided, when, how long it waited, the approved commit and the comment.
 
-{% hint style="warning" %}
-Approving here is done as the GitHub account behind the scope's token, not as you. See [Permissions and Safety](permissions-and-safety.md) before you rely on this for separation of duties.
-{% endhint %}
+## Review GitHub deployment gates
 
-<!-- VERIFY: screenshot GH-11. -->
+When a run waits on a GitHub environment gate, the Overview tab says so and the Approvals tab is marked.
 
-## Remove a run record
+1. On the **Approvals** tab, under **Deployment gates**, tick the environments to review.
+2. Optionally add a comment and select **Approve selected** or **Reject selected**, then confirm.
+3. **Check again** reloads the gate list.
 
-Deleting a run record removes only the DuploCloud tracking record. The run and its history stay in GitHub.
+The person who requested the run can reject its gates but not approve them. Reviews made directly in GitHub also appear in the timeline, with the channel **GitHub**.
 
-<!-- VERIFY: the list and run pages in the code show no Delete action; delete comes from the platform's standard behaviour. Confirm where the Delete action appears in the UI. -->
+## When a run fails
 
-## Track the trigger
+The Overview tab starts with a failure banner, for example "Failed at Test > Integration tests: tests failed." It shows the job and step, a cause category (missing secret or input, authentication or permission, network, timeout, dependency install, tests failed, cancelled, or exit code), a hint, and up to 10 log lines around the error if you have log permission.
 
-**Track Provisioning** (list) or **Track Provisioning Status** (run page) opens the DuploCloud ticket that started the run, which is where to look if the trigger failed.
+**Debug with AI** opens an AI helpdesk chat that starts by itself. The AI gets the repository, branch, commit, workflow, inputs, failed step and summary. If you have log permission it also gets access to the run's GitHub scope, reads the failed job's log, the workflow file and the last successful run, and reports the root cause, the evidence, a fix and whether it is safe to re-run. Without log permission it works from the summary only. The AI is told not to re-run, dispatch, approve or change anything.
+
+## Metrics
+
+**CI/CD > GitHub Actions Metrics** (or **View metrics** on the run list). Pick **7d**, **30d** or **90d**. **CSV** downloads the daily numbers.
+
+- **KPI tiles:** runs requested, success rate, failure rate, median run time, lead time (request to finish) and approval wait, each with a daily trend and the change against the previous period.
+- **Overview:** runs per day by outcome, an outcome donut, the success-rate trend, a weekday-by-hour heatmap, and top failure causes.
+- **Reliability:** workflows failing right now, time to recover, dispatch reliability.
+- **Approvals:** held, approved and waiting counts, approval-wait distribution, top approvers and requesters.
+- **Repositories & workflows:** runs, failures, success rate and run time per repository, and the most-run workflows.
+- **Run time:** total, median, 90th percentile and lead time, minutes per day, and spread per workflow.
+- **Anomalies:** failure spikes, often-failing repositories, unusually slow runs, approvals waiting over a day, failing dispatches.
+
+Days and hours are UTC. Run time is wall-clock time, not GitHub billed minutes.
+
+## Delete a run record
+
+**Delete** removes only the DuploCloud record. You confirm by typing the run name. The run, its logs and artifacts stay in GitHub.
