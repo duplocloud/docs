@@ -48,9 +48,8 @@ Everything is per workspace.
 | Source control | GitHub (github.com) and GitHub Enterprise Server |
 | Workflows | GitHub Actions workflows that declare `on: workflow_dispatch` |
 | Credential | A GitHub source-control scope attached to the workspace, holding an access token |
+| Cost | Free. It is included with DuploCloud at no extra charge. See [Agent Marketplace and Buying Agents](../../getting-started/marketplace.md). |
 | Not covered | Starting runs from other triggers (push, pull request, schedule), cancelling or re-running a run, editing workflows, managing GitHub environments or secrets, and other CI systems. Do those in GitHub. |
-
-<!-- VERIFY: free or paid. Not in the code; decided by the Marketplace listing. -->
 
 ## In this section
 
