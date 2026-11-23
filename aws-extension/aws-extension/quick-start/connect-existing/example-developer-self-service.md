@@ -8,7 +8,6 @@ description: >-
 
 This example shows how developers on your team can request AWS resources — an S3 bucket, RDS instance, or SQS queue — directly from Slack, without filing a DevOps ticket or waiting for manual provisioning.
 
-For the full generic walkthrough, see [Developer Self-Service via Slackbot](../../../../common-use-cases/developer-self-service-via-slackbot.md).
 
 ## Prerequisites
 

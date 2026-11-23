@@ -140,7 +140,7 @@
 * [Skills](armor/skills/README.md)
   * [Platform Skills and Overrides](armor/skills/platform-skills-and-overrides.md)
 * [Personas](armor/personas.md)
-* [Duplo DevOps Agent](armor/agents/README.md)
+* [Duplo Agent](armor/agents/README.md)
 * [Workspaces](armor/workspaces.md)
 * [Projects](armor/projects.md)
 * [HelpDesk](armor/helpdesk/README.md)
@@ -189,13 +189,6 @@
 * [Onboarding](getting-started/duplocloud-onboarding.md)
 * [Support Options: Standard vs. Managed Operations](getting-started/duplocloud-support-options-standard-vs.-managed-operations.md)
 * [Getting Help with DuploCloud](getting-started/duplocloud-support-model.md)
-
-## Platform Use Cases
-
-* [How to manage large complex projects](common-use-cases/how-to-manage-large-complex-projects.md)
-* [Security and Compliance](common-use-cases/security-and-compliance.md)
-* [How Engineering and DevOps can work together](common-use-cases/how-engineering-and-devops-can-work-together.md)
-* [Developer Self Service via Slackbot](common-use-cases/developer-self-service-via-slackbot.md)
 
 ## Automation Platform
 

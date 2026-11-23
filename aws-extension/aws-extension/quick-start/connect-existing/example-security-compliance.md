@@ -9,7 +9,6 @@ description: >-
 
 This example shows how to connect DuploCloud to an existing AWS account and run a compliance-driven remediation workflow — from fetching your current SOC 2 posture to fixing GuardDuty gaps and applying Terraform-managed logging changes.
 
-For the full generic walkthrough, see [Security and Compliance with GRC Integration](../../../../common-use-cases/security-and-compliance.md).
 
 ## Prerequisites
 
