@@ -83,6 +83,15 @@ The provider appears in the list with a success notification.
 
 ![Provider created successfully](../../.gitbook/assets/aws-step-03.png)
 
+### Use your own common IAM policy
+
+Every Resource Group role in the account carries a shared IAM policy, `duplo-rg-common`, which DuploCloud creates and keeps up to date (see [Shared IAM policy](../../aws-extension/aws-extension/quick-start/provision-new/step-4-environment.md#shared-iam-policy-duplo-rg-common)). If your account's IAM rules don't allow DuploCloud to create or change IAM policies, supply your own instead:
+
+1. In AWS, create a customer-managed IAM policy with the permissions your Resource Group roles need.
+2. In the **Add Provider** form (or when editing the provider), add a **Metadata** entry with the key `rgCommonPolicyArn` and the policy's full ARN as the value, for example `arn:aws:iam::123456789012:policy/my-rg-common`.
+
+DuploCloud then attaches your policy to each new Resource Group role and never creates, edits, attaches or detaches `duplo-rg-common` in that account. You own the policy and its attachment to existing roles. DuploCloud only checks that the ARN still points to a policy that exists.
+
 ***
 
 ## Method 1 — IAM Role

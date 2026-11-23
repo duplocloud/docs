@@ -8,7 +8,7 @@ A Resource Group is the isolation boundary of the Infrastructure Agent. Every re
 
 | Cloud | What the Resource Group creates |
 | --- | --- |
-| **AWS** | An IAM role and policies, security groups, a KMS key, and an EC2 key pair |
+| **AWS** | An IAM role and policies (including the account-wide `duplo-rg-common` policy), security groups, a KMS key, and an EC2 key pair |
 | **Azure** | An Azure resource group, plus a managed identity that the group's resources use to deploy into it and to read and write Key Vault secrets |
 | **Oracle Cloud (OCI)** | A compartment. Access is granted by your tenancy's IAM policies, so no identity is created |
 

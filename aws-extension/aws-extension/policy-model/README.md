@@ -33,7 +33,7 @@ You choose the cloud when you create a Network Baseline. Everything built on tha
 | --- | --- | --- | --- |
 | **Network Baseline** | VPC with subnets, NAT and route tables | VNet in its own resource group, with a network security group per subnet and NAT gateways | VCN |
 | **Cluster Baseline** | Amazon EKS | Azure Kubernetes Service (AKS) | Oracle Kubernetes Engine (OKE) |
-| **Resource Group** | IAM role and policies, security groups, KMS key and EC2 key pair | Azure resource group with a managed identity that its resources use | Compartment |
+| **Resource Group** | IAM role and policies (including the account-wide `duplo-rg-common` policy), security groups, KMS key and EC2 key pair | Azure resource group with a managed identity that its resources use | Compartment |
 | **Cloud resources** | S3, RDS, ElastiCache, SNS, SQS, Lambda, Secrets Manager, SSM parameters, EFS, MSK, ECR and EC2 hosts | Key Vault, Azure Database for PostgreSQL flexible server, Azure Managed Redis, storage accounts and virtual machines | None yet |
 | **Plan** | Hosted zones, ACM certificates and AMIs | Not available | Not available |
 | **Provisioned with** | CloudFormation | ARM deployments | OCI Resource Manager (Terraform) |
