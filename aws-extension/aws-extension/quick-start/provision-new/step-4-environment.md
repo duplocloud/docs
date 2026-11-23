@@ -16,6 +16,7 @@ Creating the Environment adds a record only. Creating a Resource Group in it pro
 
 * A security group for the Resource Group's resources, and a second security group for load balancers
 * IAM policies and an IAM role scoped to the Resource Group, with a matching instance profile
+* The account-wide `duplo-rg-common` IAM policy, attached to the Resource Group's role (see [Shared IAM policy](#shared-iam-policy-duplo-rg-common))
 * A KMS key and alias
 * An EC2 key pair
 
@@ -116,8 +117,23 @@ In **Phase 4** the agent reads the stack outputs, looks up the security group an
 | **ALB Security Group** | `duplo-rb-prod-environment-prod-resourcegroup-1-alb`            |
 | **IAM Role**           | `arn:aws:iam::…/duplo-rb-prod-environment-prod-resourcegroup-1` |
 | **KMS Key**            | `arn:aws:kms:us-east-1:…`                                       |
+| **Common IAM Policy**  | `arn:aws:iam::…:policy/duplo-rg-common`                         |
 
 AWS resource names follow the pattern `duplo-rb-<environment>-<resource-group>`. The Resource Group's status changes to **Ready**, and the environment is ready for workload deployment.
+
+### Shared IAM policy (`duplo-rg-common`)
+
+Each Resource Group role gets its own `duplo-rb-<environment>-<resource-group>` policies plus one shared policy, `duplo-rg-common`. There is one `duplo-rg-common` per AWS account, and every Resource Group role in that account carries it. It grants the permissions every workload needs whatever its Resource Group, including what EKS nodes need to join a cluster (`eks:DescribeCluster`, ECR image pulls, network interface and IP address actions) and Bedrock guardrail actions.
+
+DuploCloud creates the policy the first time it provisions a Resource Group in the account, and keeps it attached to every Resource Group role from then on. It replaces `duplo-tenantscommon`, the policy that older Resource Groups used. DuploCloud detaches `duplo-tenantscommon` from those roles automatically.
+
+A Resource Group that uses your own existing IAM role instead of one DuploCloud creates doesn't get `duplo-rg-common`. Those permissions are then yours to grant.
+
+You can add your own statements to `duplo-rg-common` in AWS. DuploCloud only updates the statements whose `Sid` starts with `Duplo` and keeps the rest as they are.
+
+{% hint style="info" %}
+If your account doesn't allow DuploCloud to create or change IAM policies, create the policy yourself and give its ARN to the AWS Provider. See [Use your own common IAM policy](../../../../getting-started/integrating-providers/amazon-web-services-aws.md#use-your-own-common-iam-policy).
+{% endhint %}
 
 ![](../../../../.gitbook/assets/environment-step-11.png)
 
