@@ -1,6 +1,12 @@
-# Duplo DevOps Agent
+---
+description: The built-in agent that works on your tickets and projects, within the Scopes of each Workspace.
+---
 
-The DuploCloud platform ships with the Duplo DevOps Agent out of the box. This is the Agent that carries out all the DevOps work inside the platform. The Agent integrates seamlessly with your existing infrastructure and can be deployed immediately to automate routine operations and troubleshooting workflows.
+# Duplo Agent
+
+The Duplo Agent is the built-in agent that works on your tickets and projects. It comes with every portal, so you don't install it, and it uses your existing infrastructure through the Providers you connect. Teams use it to automate routine operations and to troubleshoot.
+
+It's not the same as the agents you activate from the Marketplace, such as the [Infrastructure Agent](../../aws-extension/aws-extension/README.md). Those add their own pages and workflows to the portal.
 
 The Agent operates within the boundaries defined by Providers and Scopes. Providers store the credentials for your cloud accounts, Kubernetes clusters, observability tools, and other services. Scopes define exactly which resources within those Providers an Agent can access. Each [Workspace](../workspaces.md) is granted a set of Scopes, and a ticket in that Workspace can only use those Scopes — the ones selected on the ticket, out of the Workspace's set. Which model the Agent runs on is set by the Workspace's [LLM Mappings](llm-models.md#llm-mappings).
 
@@ -10,7 +16,7 @@ The Agent is used both for ad hoc tasks in [Tickets](../tickets.md) and as a par
 
 ## Adding Your Own Agent
 
-You can also connect your own agent runtime to the platform and let it work alongside the Duplo DevOps Agent. Agents are registered as **Agent SDKs** under **AI Admin → LLMs**; see [Agent SDKs](llm-models.md#agent-sdks) for the form and its settings.
+You can also connect your own agent runtime to the platform and let it work alongside the Duplo Agent. Agents are registered as **Agent SDKs** under **AI Admin → LLMs**; see [Agent SDKs](llm-models.md#agent-sdks) for the form and its settings.
 
 ## Prompt Suggestions and Templates on the Ticket Screen
 

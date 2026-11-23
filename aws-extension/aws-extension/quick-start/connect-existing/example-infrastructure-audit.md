@@ -9,7 +9,6 @@ description: >-
 
 This example shows how to connect an existing AWS workload to DuploCloud and systematically bring it up to production standards — adding observability, applying security controls, setting cost guardrails, and establishing automated deployment pipelines.
 
-For the end-to-end generic walkthrough, see [How to Manage Large Complex Projects](../../../../common-use-cases/how-to-manage-large-complex-projects.md).
 
 ## Prerequisites
 
