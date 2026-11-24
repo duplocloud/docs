@@ -63,6 +63,7 @@ Replace all instances of `{customer-name}` before creating the app.
                 "groups:history",
                 "im:history",
                 "users:read",
+                "users:read.email",
                 "files:write"
             ]
         }
@@ -82,6 +83,16 @@ Replace all instances of `{customer-name}` before creating the app.
     }
 }
 ```
+
+### App already installed
+
+A backend that resolves the sender's email needs `users:read.email` on the bot token installed in the workspace.
+
+1. Open the app at [api.slack.com/apps](https://api.slack.com/apps).
+2. Under **OAuth & Permissions**, add the bot scope `users:read.email`.
+3. Reinstall the app to the workspace.
+4. If Slack shows a new **Bot User OAuth Token**, put it in `SLACK_BOT_TOKEN`.
+5. Restart the Slack backend. The process caches the profile lookup for 10 minutes, so a running process keeps the missing email until it restarts.
 
 ### Backend Helm Installation
 
