@@ -4,110 +4,183 @@ description: What you need before you start, how to activate AWS Cost Intelligen
 
 # Set Up
 
+Setup takes six steps. An AWS administrator does the first two in the AWS console, signed in to your payer (management) account. A DuploCloud administrator does the rest in DuploCloud. Allow about an hour, plus up to a day if Cost Explorer has never been used in the account.
+
 ## Before you start
 
-- **Cost Explorer** turned on in your AWS payer (management) account, or in the single account you want to cover. It can take up to 24 hours to fill the first time.
-- **Resource-level data at daily granularity** turned on in the Cost Management preferences. Without it, Resource Explorer is empty and the Action Center cannot confirm savings.
-- **Cost Optimization Hub** enabled (include member accounts). Without it, the Optimisation tab and most Action Center items are empty.
-- **Cost allocation tags** activated in Billing for the tags you report on (for example `Team`, `Owner`).
-- An **AWS read-only role or user** for billing (see below), registered in DuploCloud as an AWS provider with a scope attached to your workspace.
-- A DuploCloud **platform administrator** to add the cost data source. See [Permissions and Safety](permissions-and-safety.md).
-- An **AI model** available in your workspace, only if you want Ask AI, custom dashboards, adding a policy or Helpdesk analysis.
+| What | Who | Needed? |
+| --- | --- | --- |
+| The **platform identity ARN**: the AWS identity your DuploCloud platform runs as. The billing role trusts it. | Your DuploCloud contact | Required |
+| An AWS administrator who can create IAM roles and CloudFormation stacks in the payer account | You | Required |
+| A DuploCloud administrator, and the workspace where the dashboards will live | You | Required |
+| AWS Cost Intelligence installed: **FinOps** > **Cost Intelligence** shows in the left menu | Your DuploCloud contact | Required |
+| A Jira service account or a ClickUp bot member, to send savings tickets there instead of Helpdesk | A Jira or ClickUp administrator | Optional |
+| Roles in each member account, for the Resource Ownership dashboard and Helpdesk analysis | Your AWS administrator | Optional |
+| An AI model in the workspace, for Ask AI, custom dashboards and adding policies | Your DuploCloud contact | Optional |
 
-{% hint style="info" %}
-Missing AWS permissions do not fail the sync. The tab that needs the missing action shows a notice naming it, and the source page lists the warnings.
-{% endhint %}
+Your DuploCloud contact also gives you the two CloudFormation templates used below: the billing template and the member account template.
 
-<!-- VERIFY: Setup takes about an hour plus up to 24 hours for Cost Explorer (docs/SETUP.md). Confirm this estimate is still right before publishing. -->
+## 1. Turn on Cost Explorer
 
-### Running cost in AWS
+In the AWS console, open **Billing and Cost Management** > **Cost Explorer**. Opening it once turns it on. AWS can take up to 24 hours to fill it the first time.
 
-AWS Cost Intelligence only calls AWS from a background sync, never when someone views a page. Almost all of the cost is Cost Explorer API requests, which AWS bills at about US$0.01 per request. The extension's own estimate is about US$70 a month for a 45-account organisation with every dashboard on the default 6-hour refresh, about US$37 for a single account, plus a one-time US$1 to US$10 while history fills in. Refreshing once a day roughly halves it. Each source page shows the Cost Explorer requests and estimated spend so far.
+Also turn these on, from the same page's left menu:
 
-<!-- VERIFY: figures are from docs/RUNNING-COST.md, which cites sync code 0.56.64 and prices as of November 2026; the manifest is 0.58.7. Confirm they still hold for the release. The repo does not say whether the agent itself is free or paid. -->
+| Setting | Where | Without it |
+| --- | --- | --- |
+| **Resource-level data at daily granularity** | **Cost Management preferences** | Resource Explorer is empty, and the Action Center can't confirm that a resolved item's cost stopped. |
+| **Cost Optimization Hub**, including member accounts | **Cost Optimization Hub** > **Enable** | The Optimisation tab and most Action Center items are empty. |
+| **Cost allocation tags** you want to report on, such as `Team` or `Owner` | **Cost allocation tags** > **Activate** | Tag Attribution and item owners have no tag data. A tag appears only after AWS's backfill. |
+| A **Cost Anomaly Detection** monitor | **Cost Anomaly Detection** | The Cost Anomalies dashboard is empty. The billing template can create one for you. |
 
-### AWS permissions by feature
+## 2. Create the billing role
 
-All of these are read actions.
+1. In the payer account, open **CloudFormation** > **Create stack** > **With new resources (standard)**.
+2. Choose **Upload a template file**, pick the billing template (`cost-intelligence-billing.yaml`), and select **Next**.
+3. Name the stack, for example `cost-intelligence-billing`.
+4. Keep **Credential type** as `IamRole`, and paste the platform identity ARN into **DuploCloud platform identity ARNs**. Leave the rest as it is, unless you want the optional parts below.
+5. Select **Next** twice, acknowledge that the stack creates IAM resources, and select **Submit**.
+6. When the stack shows **CREATE_COMPLETE**, open **Outputs** and copy **RoleArn** and **AccountId**.
 
-| Feature | AWS actions |
+The role can only read billing data. It can't change anything in AWS.
+
+| Optional parameter | What it adds |
 | --- | --- |
-| Billing source role (required) | `sts:GetCallerIdentity`, `ce:GetCostAndUsage`, `ce:GetCostForecast`, `ce:GetTags`, `ce:ListCostAllocationTags`, `ce:ListCostAllocationTagBackfillHistory` |
+| Resource Ownership | Inventory and CloudTrail reads in this account, and lets the role assume the member account role in the organization's other accounts. |
+| Helpdesk analysis | Configuration and metrics reads (never data or secrets) so Helpdesk analysis tickets can check resources in this account. |
+| Create a Cost Anomaly Detection monitor | An AWS services monitor for the Cost Anomalies dashboard. Leave it off if the account already has one. |
+
+To cover a single account instead of an organization, deploy the same template in that account. Its dashboards then cover only that account.
+
+### Member accounts (optional)
+
+The cost dashboards need only the billing role. Resource Ownership and Helpdesk analysis also need a role in each member account. To create them, deploy the member account template (`cost-intelligence-member.yaml`) as a **StackSet** from the management account, to the organizational units you want. It creates a read role that trusts only the billing role and, if you choose, an analysis role. New accounts in those units get the roles automatically.
+
+### What the billing role can read
+
+All of these are read actions. AWS's managed `AWSBillingReadOnlyAccess` policy covers most of them, but not the Budgets, Organizations or `ec2:DescribeTags` actions.
+
+| For | AWS actions |
+| --- | --- |
+| Cost data (required) | `sts:GetCallerIdentity`, `ce:GetCostAndUsage`, `ce:GetCostForecast`, `ce:GetTags`, `ce:ListCostAllocationTags`, `ce:ListCostAllocationTagBackfillHistory` |
 | Resource costs and Action Center confirmation | `ce:GetCostAndUsageWithResources` |
 | Commitments | `ce:GetSavingsPlansUtilization`, `ce:GetSavingsPlansUtilizationDetails`, `ce:GetSavingsPlansCoverage`, `ce:GetSavingsPlansPurchaseRecommendation`, `ce:GetReservationUtilization`, `ce:GetReservationCoverage`, `ce:GetReservationPurchaseRecommendation` |
 | Anomalies and recommendations | `ce:GetAnomalies`, `cost-optimization-hub:ListRecommendations`, `cost-optimization-hub:GetPreferences`, `cost-optimization-hub:ListRecommendationSummaries`, `cost-optimization-hub:GetRecommendation` |
 | Budgets and invoices | `budgets:ViewBudget`, `invoicing:ListInvoiceSummaries` |
-| Accounts and names | `organizations:DescribeOrganization`, `organizations:ListAccounts`, `organizations:ListTagsForResource`, `ec2:DescribeTags` |
-| Resource Ownership (optional) | `cloudtrail:LookupEvents`, `cloudtrail:DescribeTrails`, `cloudtrail:GetEventSelectors`, `cloudtrail:GetTrailStatus`, `cloudtrail:ListTags`, `ec2:Describe*` for instances, volumes, snapshots, images, addresses, NAT gateways, VPCs, endpoints and network interfaces, `eks:ListClusters`, `eks:DescribeCluster`, `eks:ListNodegroups`, `eks:DescribeNodegroup`, `autoscaling:DescribeAutoScalingGroups`, `rds:DescribeDBInstances`, `rds:DescribeDBClusters`, `rds:DescribeDBSnapshots`, `rds:DescribeDBClusterSnapshots`, `cloudwatch:GetMetricData`, and read-only calls to CloudWatch Logs, Elastic Load Balancing, ECR, KMS, Route 53 and S3 for the account scan |
-| Helpdesk analysis (optional) | A separate analysis role per account with `Describe*` and `List*` on the services Action Center items are about, CloudWatch metrics, and cost and recommendation reads. It explicitly denies reading data and secrets |
+| Accounts and resource names | `organizations:DescribeOrganization`, `organizations:ListAccounts`, `organizations:ListTagsForResource`, `ec2:DescribeTags` |
 
-<!-- VERIFY: source is docs/ROLES.md (complete JSON policies). Confirm with the owner that the list is current, and whether the CloudFormation templates are published to customers. The Resource Ownership row is abbreviated; the full policy has more S3, KMS, ECR and ELB read actions. -->
+A missing action doesn't fail the sync. The tab that needs it shows a notice naming the action, and the source page lists it as a warning.
 
-AWS's managed `AWSBillingReadOnlyAccess` policy covers most of the billing role but not Budgets, Organizations or `ec2:DescribeTags`. For the analysis role, do not use AWS's managed `ReadOnlyAccess`: it also reads data such as S3 objects and Lambda environment variables.
+## 3. Connect AWS to DuploCloud
 
-### Create the roles
+Register the billing role as an AWS provider with an IAM role credential and a scope, as described in [Amazon Web Services (AWS)](../../getting-started/integrating-providers/amazon-web-services-aws.md). Use the **AccountId** and **RoleArn** from step 2. A region of `us-east-1` is fine.
 
-The extension ships two CloudFormation templates that create only IAM roles with read-only policies.
+When **Attach Scope to Workspaces** opens, choose the workspace where the cost dashboards will live and select **Attach**. Don't skip it: AWS Cost Intelligence lists only scopes attached to the workspace you are in.
 
-1. In the payer account (or the single account), deploy the **billing** template. Choose `IamRole` as the credential type and give it the ARN of the identity your DuploCloud platform runs as. Note the **RoleArn** and **AccountId** outputs.
-2. In an organisation that uses Resource Ownership or Helpdesk analysis, deploy the **member** template as a StackSet from the management account to the organisational units you want. It creates a member read role (trusted only by the billing role) and, if chosen, an analysis role in every member account.
+{% hint style="warning" %}
+Use an IAM role credential. Credentials that hold temporary session keys fail on current platform versions.
+{% endhint %}
 
-A single account needs only step 1. You can also create the same roles by hand.
+## 4. Add the cost data source
 
-<!-- VERIFY: template file names (cost-intelligence-billing.yaml, cost-intelligence-member.yaml) and where customers get them. Ask the owner how customers receive them after activation. -->
+A cost data source is one AWS billing connection. Only a platform administrator can add one.
 
-## Activate AWS Cost Intelligence
+1. In the workspace, open **FinOps** > **Cost Intelligence** and select **Add Cost Data Source**.
+2. Enter a **Name** and pick the **AWS Scope** you attached in step 3. The other fields can stay as they are:
 
-1. Open the **Agent Marketplace** and find **AWS Cost Intelligence**.
-2. Select **Activate** and confirm.
-3. When it finishes, it appears in the menu under **FinOps** as **Cost Intelligence**.
+| Field | Default | What it does |
+| --- | --- | --- |
+| Home Region | `us-east-1` | The region the AWS calls use. Commercial regions only. |
+| Cost Metric | Amortized | Amortized spreads upfront commitment fees over their term. Unblended shows them when billed. |
+| Accounts covered | Auto | Organization or single account. Auto decides from what the sync finds. |
+| Lookback Months | 13 | How much history the dashboards hold, from 1 to 38. Longer windows fill in over several syncs. |
+| Cost Allocation Tag Keys | None | Extra cost allocation tags to pull, up to 20. |
 
-<!-- VERIFY: marketplace steps and button names are copied from the pilot and are not in this repo. The menu path FinOps > Cost Intelligence comes from the manifest. Screenshots CI-01 and CI-02. -->
+3. **Advanced** is closed by default, and most sources need none of it:
 
-## Register the AWS credential
-
-1. Open the app switcher, then **AI Admin > Providers > IT > Cloud** and select **Add**.
-2. **Provider Details**: a name, type **AWS**, and the account ID of the payer (or single) account. Select **Next**.
-3. **Credentials**: for an IAM role, enter the role ARN. Select **Next**.
-4. **Scope**: a name and a region (`us-east-1` is fine). Select **Create**.
-5. When **Attach Scope to Workspaces** opens, pick the workspace that will hold the cost data and select **Attach**. Do not skip this step. The extension only lists scopes attached to the workspace you are in.
-
-<!-- VERIFY: wizard labels from docs/SETUP.md B1, not checked against the live UI (screenshots CI-03, CI-04). -->
-
-## Grant access
-
-Give people the permissions in [Permissions and Safety](permissions-and-safety.md). Refreshing cost data and exporting cost rows are separate named actions (`finops.sync`, `finops.export`) and are not part of ordinary read or edit access.
-
-## Add your first cost data source
-
-1. A platform administrator opens **FinOps > Cost Intelligence** and selects **Add Cost Data Source**.
-2. Fill in the form:
-
-| Field | What to enter |
+| Field | What it does |
 | --- | --- |
-| Name | Anything, 2 to 60 letters, numbers and hyphens |
-| AWS Scope | The scope you attached. If it is missing, it is not attached to this workspace |
-| Home Region | `us-east-1` unless you have a reason not to. Commercial regions only |
-| Cost Metric | Amortized (default) or Unblended |
-| Accounts covered | Auto (default), Organization or Single account |
-| Lookback Months | 13 by default, up to 38 |
-| Cost Allocation Tag Keys | Tags you activated, up to 20 |
+| Refresh Schedule | When syncs run on their own: a five-field cron in UTC, at most hourly. The default, `0 */6 * * *`, is every 6 hours. |
+| Member Account Role | The role to assume in each member account. Only Resource Ownership needs it. Use the name the member account template created. |
+| Member Role External ID | Sent when assuming the member account role, if its trust policy requires one. |
+| Connect member accounts for Helpdesk analysis automatically | On by default. After each sync, connects each member account's analysis role to the workspace, so Helpdesk analysis tickets can inspect resources there. Organizations only. |
+| Analysis Role Name | The analysis role in each member account. Leave it blank to use `CostIntelligenceAnalysis`, the name the member account template creates. |
+| Assume Role ARN | Only when the scope's credential is in another account and must assume a billing role in the payer account. Leave it blank otherwise. |
 
-3. Under **Advanced** (closed by default) you can set the **Refresh Schedule** (a five-field cron in UTC, at most hourly, default every 6 hours), the **Member Account Role** and **Member Role External ID** (only for Resource Ownership), whether to **connect member accounts for Helpdesk analysis automatically**, and an **Assume Role ARN** if the scope's credential is in another account.
-4. Select **Create**. The first sync starts straight away. The current and previous month are ready after it; older months fill in over the next few syncs.
+4. Select **Create**. The first sync starts straight away. The current and previous month are ready after it. Older months fill in over the next few syncs, and a box on the source page shows the progress.
 
-<!-- VERIFY: field names and defaults come from docs/USER-GUIDE.md and the form code; confirm the live form (screenshots CI-05, CI-06). -->
+![The Add Cost Data Source form with Advanced open, showing Refresh Schedule, Member Account Role, Member Role External ID, Connect member accounts for Helpdesk analysis automatically, Analysis Role Name and Assume Role ARN](../../.gitbook/assets/cost-intel-01-add-source.png)
+
+## 5. Add your first dashboard
+
+On the source, select **Add dashboard** and choose **Cost and Usage**. See [Use](use.md#add-a-dashboard) for the other dashboards.
+
+## 6. Give people access
+
+In **AI Admin** > **Access Control**, give each group a permission set on the workspace:
+
+| Who | Grant | They can |
+| --- | --- | --- |
+| Viewers, such as finance and team leads | Read on the workspace | View every dashboard and download PDF and CSV. |
+| FinOps owners | Read on the workspace, Post on the cost data source and Put on its dashboards | Also add dashboards, use Ask AI, work Action Center items and create tickets. |
+
+Two rights are granted separately, by name. Add them only to people who need them:
+
+* **`finops.sync`**, to refresh data on demand and to add the Tag Attribution, Action Center and Resource Ownership dashboards. Each of these adds AWS requests.
+* **`finops.export`**, to pull raw cost rows through the API.
+
+See [Permissions and Safety](permissions-and-safety.md#who-can-do-what) for the full list.
 
 ## Check it works
 
-- The source page shows status **Complete**, with accounts and billing months listed.
-- Warnings on the source page name any action the role could not call.
-- Last month's total on **Cost and Usage > Billing Summary** matches Cost Explorer for the same cost metric.
+| Check | Where | You should see |
+| --- | --- | --- |
+| The sync worked | The source page | Status **Complete**, the accounts and billing months listed, and no warnings. |
+| The numbers are right | **Cost and Usage** > **Billing Summary** | Last month's total matches Cost Explorer for the same cost metric. |
+| Viewers can't change anything | Sign in as a viewer | The dashboards load. Add, edit and refresh are greyed out, with the reason on hover. |
 
-## Optional: Jira or ClickUp tickets
+![A cost data source with status Complete, Organization with 45 accounts, and the Accounts tab listing the payer and member accounts with their spend](../../.gitbook/assets/cost-intel-02-source-accounts.png)
 
-Action Center tickets go to Helpdesk by default. To use Jira or ClickUp, a DuploCloud administrator registers a provider in **AI Admin > Providers** (category **Other**) and attaches its scope to the workspace. Use an Atlassian service account (Jira Cloud) or a dedicated bot member (ClickUp), never a person's own token, with access to the one project or List only. Then choose it in the Action Center **Settings**.
+## Optional: send tickets to Jira or ClickUp
 
-<!-- VERIFY: the exact credential keys and scopes are in the extension README (Integrating ClickUp and Jira). Decide whether to include them here or on a separate reference page. Note that DuploCloud does not use Jira internally; this is for customers. -->
+Action Center tickets go to Helpdesk unless you choose otherwise. To use Jira or ClickUp, a DuploCloud administrator registers it as a provider and attaches its scope to the workspace that holds the cost data source. Then you choose it in the Action Center's **Settings** (see [Use](use.md#choose-where-tickets-go)).
+
+Use an identity that exists only for this, never a person's own token. Tickets are created as that identity, and a person's token would carry all their access and stop working when they leave.
+
+{% tabs %}
+{% tab title="Jira" %}
+**Identity**, best first:
+
+| Jira | Identity | Credential keys |
+| --- | --- | --- |
+| Cloud (recommended) | Atlassian service account with an OAuth 2.0 credential (client credentials) | `clientId`, `clientSecret`, `siteUrl` (or `cloudId`) |
+| Cloud | Atlassian service account with a scoped API token | `apiToken`, `siteUrl` (or `cloudId`), optionally the service account's `email` |
+| Data Center or Server | A dedicated bot user with a personal access token that expires | `personalAccessToken`, `siteUrl` |
+
+**Rights**, in the target project only:
+
+* OAuth or API token scopes: `read:jira-work`, `write:jira-work` and `read:jira-user`.
+* Project permissions: **Browse projects**, **Create issues**, **Add comments**, **Transition issues**, and optionally **Assign issues**.
+* Product access to Jira on the site. No administrator rights are needed.
+
+**Register it:** in **AI Admin** > **Providers**, add a provider in the **Other** category, of type `jira` if offered, otherwise `other` with "Jira" in its name. Add the credential keys above and mark the secrets sensitive. Create a scope and attach it to the workspace.
+{% endtab %}
+
+{% tab title="ClickUp" %}
+**Identity:** ClickUp has no service accounts, so create a dedicated bot member (for example `finops-bot@your-company.com`) and use its API token only here.
+
+**Rights:**
+
+* Membership of the ClickUp Workspace, with access to the target List only. Use a guest with **Can edit** on that List where your plan allows it, otherwise a member added to that Space alone.
+* Permission to create and edit tasks, and to comment, in that List.
+* Permission to use tags in that Space, if you want tickets tagged.
+
+ClickUp tokens don't expire. Rotate the token on a schedule by regenerating it and updating the provider.
+
+**Register it:** in **AI Admin** > **Providers**, add a provider in the **Other** category, of type `clickup`, or `other` with "ClickUp" in its name. Add a credential with the key `apiToken` holding the token, marked sensitive. Create a scope and attach it to the workspace.
+{% endtab %}
+{% endtabs %}
+
+The links back to the Action Center in Jira, ClickUp and Helpdesk tickets need the portal's address to be configured on the platform. Without it, tickets are created without that link. Ask your DuploCloud contact if the link is missing.
 
 Next: [Use](use.md).
