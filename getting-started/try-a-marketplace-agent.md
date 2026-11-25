@@ -1,12 +1,12 @@
 ---
-description: Activate the free DAST agent from the Agent Marketplace, point it at a web app, and run a passive security scan with AI-triaged findings.
+description: Activate the DAST agent from the Agent Marketplace, point it at a web app, and run a passive security scan with AI-triaged findings.
 ---
 
 # Try a Marketplace Agent
 
 In this step you activate a ready-made agent, **DAST**, and use it to scan a running web app for security flaws. DAST runs [OWASP ZAP](https://www.zaproxy.org/) against the app, then the agent triages what ZAP found: it flags false positives, re-rates severities, and explains each finding.
 
-DAST only needs the URL of a running web app. You don't need to connect a cloud account. DAST is **Free** in the Marketplace.
+DAST only needs the URL of a running web app. You don't need to connect a cloud account.
 
 You'll run a **baseline** scan. A baseline scan crawls the app and only watches its traffic. It doesn't send attacks, so it's safe for any environment.
 
@@ -43,7 +43,7 @@ When you're done with the walkthrough, remove the app with `docker rm -f juice-s
 
 Go to **AI Admin → Marketplace** and open the **Agent Marketplace** tab. Find the **DAST** card, under **Security & Compliance**, and click **Activate**.
 
-<figure><img src="../.gitbook/assets/qs-step2-01-marketplace.png" alt="Agent Marketplace with the DAST card marked Free and an Activate button"><figcaption><p>DAST in the Agent Marketplace</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/qs-step2-01-marketplace.png" alt="Agent Marketplace with the DAST card and an Activate button"><figcaption><p>DAST in the Agent Marketplace</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
