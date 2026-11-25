@@ -1,91 +1,187 @@
 ---
-description: Step-by-step walkthroughs of the main things Instance Scheduler does.
+description: Schedule EC2 instances, Auto Scaling groups and RDS databases, approve requests, and check what ran.
 ---
 
 # Use
 
-## Schedule an EC2 power action
+If you are not an administrator, every form below ends with **Submit for Approval** instead of the usual button, and nothing is scheduled until an administrator approves it. See [Approve or reject a request](#approve-or-reject-a-request).
 
-1. Open **Scheduler > EC2** and select **Schedule Action**.
-2. Under **Details**, enter a **Name** (for example `nightly-shutdown-dev`) and choose the **AWS Scope**.
-3. Under **Target**, choose how to select instances:
-   - **Instance IDs**: a fixed list. Instances added later are not included automatically.
-   - **Tags**: filter by tag key and value pairs, then choose the matched instances.
-   - **Auto Scaling Group**: see [Schedule an Auto Scaling group change](#schedule-an-auto-scaling-group-change).
-   Instances that belong to an Auto Scaling group are shown but disabled in the instance list. Use the Auto Scaling Group tab for them.
-4. Choose an action: **Stop**, **Start** or **Reboot**.
-5. Optional: turn on the paired action ("Also schedule a Start to power back on" or "Also schedule a Stop to power off") and enter its time. Reboot has no pair.
-6. Under **Schedule**, choose **One-time** (pick a date and time) or **Recurring**. For recurring, choose a frequency (hourly, daily, weekly, monthly) or enter a custom cron expression.
-7. Optional: select **Dry run** to see what the schedule would affect.
-8. Select **Schedule action**.
+## Schedule EC2 instances
 
-Times you enter are shown in your local timezone and converted for you. A custom cron expression is entered in UTC.
+{% stepper %}
+{% step %}
+## Open the form
 
-<!-- VERIFY: button and section names come from the form source (screenshots IS-05 to IS-08). Whether the paired option and "auto-tag instances" appear for every target type is inferred from the template. -->
+Open **Scheduler > EC2** and select **Schedule Action**.
+{% endstep %}
 
-If you are not an administrator, the button reads **Submit for Approval** and a notice says an administrator must approve the request before anything is scheduled. See [Approve a request](#approve-a-request).
+{% step %}
+## Name it and pick the scope
 
-## Schedule an Auto Scaling group change
+Under **Details**, choose the **AWS Scope** for the account, and enter a **Name**: lowercase letters, numbers and hyphens, for example `nightly-stop-dev`.
+{% endstep %}
 
-1. Open **Scheduler > EC2**, select **Schedule Action**, and choose the **Auto Scaling Group** tab (or **Tags**, then show results as Auto Scaling groups).
-2. Select the groups. A **CA** badge marks groups with Cluster Autoscaler enabled. Scale its Deployments to zero before setting minimum and maximum to 0.
-3. Enter **Min size**, **Max size** and **Desired**.
-4. Optional: turn on the restore option and enter a **Restore at** time to return capacity to the original values.
-5. Choose **Execute now**, **One-time** or **Recurring**, and select **Schedule action**.
+{% step %}
+## Choose the instances
 
-<!-- VERIFY: restore behaviour (ScheduleRestoreAction / RestoreAt) is read from field names only; confirm in the setup script that a restore schedule is actually created in AWS scope mode. -->
+Under **Target**, choose how to pick them:
 
-## Schedule an RDS stop or start
+- **Instance IDs:** tick instances from the list of every instance the scope can see, in all regions.
+- **Tags:** enter tag keys and values, then tick from the instances that match. The schedule keeps the instances you ticked. Instances tagged later are not added.
 
-1. Open **Scheduler > RDS** and select **Schedule Action**.
-2. Enter a **Schedule Name** and choose the **AWS Credential Scope**.
-3. Select **Load DB Instances**, then tick the RDS instances and Aurora clusters you want. Databases already in the requested state are flagged and are skipped when the schedule runs.
-4. Choose **Stop** or **Start**. For Stop, you can turn on **Take snapshot before stopping**.
-5. Choose when it runs: now, a one-time date and time (UTC), or recurring.
-6. Optional: for recurring schedules, add a paired Start or Stop at a second time.
-7. Review the **Summary** and select **Create Schedule** (**Submit for Approval** if you are not an administrator).
+Instances that belong to an Auto Scaling group are shown but can't be ticked, because the group would replace them. Schedule the group instead (see [Resize an Auto Scaling group](#resize-an-auto-scaling-group)).
 
-{% hint style="info" %}
-AWS restarts a stopped RDS instance automatically after 7 days. To keep a database stopped longer, use a recurring Stop. The form shows this warning.
+![The EC2 schedule form with a scope and name filled in and one instance ticked on the Instance IDs tab](../../.gitbook/assets/instance-scheduler-02-ec2-form-target.png)
+{% endstep %}
+
+{% step %}
+## Choose the action
+
+Under **Action**, pick **Stop**, **Start** or **Reboot**. If every selected instance is already in that state (for example a stop on stopped instances), the form warns you and won't save the schedule. Try the other action instead.
+
+For **Stop** and **Start** on instances picked by ID, you can turn on **Also schedule a Start to power back on** (or **Also schedule a Stop to power off**) and give it its own time. This creates a second schedule named after the first, ending in `-start` or `-stop`.
+{% endstep %}
+
+{% step %}
+## Choose when
+
+Under **Schedule**, pick:
+
+- **One-time:** a date and time in the future.
+- **Recurring:** **Hourly**, **Daily**, **Weekly**, **Monthly**, or **Custom cron** (a five-field cron expression: minute, hour, day of month, month, day of week).
+
+The form shows the time zone it uses at the top of this section.
+
+![A Stop action with a paired Start at 07:00, recurring daily at 21:00](../../.gitbook/assets/instance-scheduler-03-ec2-form-action-schedule.png)
+{% endstep %}
+
+{% step %}
+## Check and save
+
+Select **Dry run** to see each instance the schedule would affect and its current state. Then select **Schedule action**.
+
+![The dry run result: one instance will stop](../../.gitbook/assets/instance-scheduler-04-ec2-dry-run.png)
+
+The schedule shows **New** while DuploCloud creates it in AWS, then **Complete**.
+{% endstep %}
+{% endstepper %}
+
+## Resize an Auto Scaling group
+
+Use this to scale a group down overnight, for example to zero, and back up in the morning.
+
+1. Open **Scheduler > EC2**, select **Schedule Action**, pick the **AWS Scope** and enter a **Name**.
+2. Under **Target**, select **Auto Scaling Group** and tick the groups. Each shows its current minimum, maximum and desired size.
+
+   ![The Auto Scaling Group tab listing groups with their current sizes](../../.gitbook/assets/instance-scheduler-05-ec2-form-asg.png)
+
+3. Under **Action**, enter the new **Min size**, **Max size** and **Desired** size.
+4. To bring the old size back later, turn on **Also schedule a restore action to bring capacity back later** and enter when. This creates a second schedule, ending in `-restore`, with the sizes the group had when you filled in the form.
+5. Under **Schedule**, pick **Execute now**, **One-time** or **Recurring**, and select **Execute now** or **Schedule action**.
+
+{% hint style="warning" %}
+A group with a **CA** badge runs the Kubernetes Cluster Autoscaler. Scale its workloads down first before you set the group's minimum and maximum to 0, or the autoscaler works against the schedule.
 {% endhint %}
 
-When a recurring schedule falls inside a database's maintenance window, the form warns you.
+## Schedule RDS databases
 
-<!-- VERIFY: screenshots IS-09 to IS-12. Exact wording of the maintenance-window warning. -->
+{% stepper %}
+{% step %}
+## Open the form
 
-## Approve a request
+Open **Scheduler > RDS** and select **Schedule Action**.
+
+![The RDS schedule form](../../.gitbook/assets/instance-scheduler-06-rds-form.png)
+{% endstep %}
+
+{% step %}
+## Name it and pick the scope
+
+Enter a **Schedule Name** and choose the **AWS Credential Scope**. The scope's credential must be an access key (see [Set Up](set-up.md#before-you-start)).
+{% endstep %}
+
+{% step %}
+## Choose the databases
+
+Select **Load DB Instances**, then tick RDS instances and Aurora clusters. Each shows its engine, region and state. Use the filter box to narrow the list.
+{% endstep %}
+
+{% step %}
+## Choose the action
+
+Pick **Stop** or **Start**. Only databases in the opposite state are affected: a stop skips stopped databases.
+
+For **Stop**, you can turn on **Take snapshot before stopping**.
+{% endstep %}
+
+{% step %}
+## Choose when
+
+Pick **Immediate** (runs as soon as it is created), **One-time** (a date and time), or **Recurring (cron)** (**Hourly**, **Daily**, **Weekly**, **Monthly** or **Custom cron**).
+
+For a recurring schedule you can turn on **Add paired Start schedule** (or **Stop**) and give it its own time, for example stop at 21:00 and start at 08:00.
+
+If a recurring schedule overlaps a database's maintenance window, the form warns you. AWS may restart or patch the database during that window.
+{% endstep %}
+
+{% step %}
+## Check and save
+
+Review the **Summary** and select **Create Schedule**.
+{% endstep %}
+{% endstepper %}
+
+{% hint style="info" %}
+AWS starts a stopped RDS instance again by itself after 7 days, and this can't be turned off. To keep a database stopped longer, use a recurring stop, for example every night. To get rid of a database for good, delete it in AWS instead.
+{% endhint %}
+
+**About snapshots.** A recurring stop takes one snapshot of each database when the schedule is created. With **Take snapshot before stopping** on, it also takes one before every stop and keeps the latest seven per database. Snapshot names start with `rds-sched-`. Taking a snapshot can make the stop take longer.
+
+## Approve or reject a request
 
 Administrators only.
 
-1. Open **Scheduler > EC2** or **Scheduler > RDS**. Requests show the status **Waiting for Approval**.
-2. Open the row menu (or the schedule's page) and select **Approve** or **Reject**.
-3. **Approve** asks you to confirm ("This will start real provisioning against AWS") and then creates the schedule. **Reject** lets you give an optional reason that the requester sees.
+1. Open **Scheduler > EC2** or **Scheduler > RDS**. Requests show **Waiting for Approval** and **Requested by** with the requester's email. On EC2, the **Waiting For Approval** filter lists only these.
+2. Open the row's menu, or the schedule's page, and select **Approve** or **Reject**.
+   - **Approve** asks you to confirm ("This will start real provisioning against AWS"), then creates the schedule.
+   - **Reject** asks for an optional reason, which the requester sees.
 
-A one-time request whose time has already passed cannot be approved. Ask the requester to resubmit with a new time.
+A rejected request stays in the list as **Rejected**, with who rejected it and the reason.
 
-A rejected request stays in the list with the status **Failed** and the rejection reason. Rejecting an edit does not restore the earlier version; edit the schedule back yourself if needed.
+![A rejected request's page, showing the requester, the administrator who rejected it, and the reason](../../.gitbook/assets/instance-scheduler-10-ec2-view-rejected.png)
 
-Deletion requests work the same way. A request to delete a live schedule shows **Pending Deletion**, and an administrator selects **Approve Deletion** or **Reject Deletion**.
+Rejecting a change to a live schedule does not undo the change. Edit the schedule back if you need to.
 
-<!-- VERIFY: the "Waiting for Approval" status label is from the code enum, and the request and review flow is on one page (requester and reviewer use the same list). The Slack note described request on the AI DevOps side and review on the AI Admin side; the code has no such split. Confirm with Yash. -->
+A one-time request whose time has already passed can't be approved. Edit the time first, or ask the requester to submit it again.
 
-## Edit, run now, pause or delete
+**Deletion requests** work the same way. A schedule a regular user asked to delete shows **Pending Deletion** and keeps running. Select **Approve Deletion** to remove it from AWS, or **Reject Deletion** to keep it.
+
+## Run, pause, edit or delete a schedule
 
 | Task | Who | Where |
 | --- | --- | --- |
-| View schedules, status, execution history, logs, health | Everyone | Schedule list and detail page |
-| **Edit** | Administrator applies it. Other users submit a change for approval (**Edit (request)**). | Row menu or detail page |
-| **Delete** | Administrator deletes (the schedule's roles and EventBridge schedules are removed). Other users submit a request (**Delete (request)**). | Row menu or detail page |
-| **Execute Now** | Administrator only | Detail page (RDS: one-time schedules; EC2: row or detail menu) |
-| **Pause** and **Resume** a recurring RDS schedule | Administrator only | RDS list or detail page |
-| **Delete** an RDS snapshot | Administrator only | Snapshots table on the RDS detail page |
+| **Execute Now** (run a one-time or immediate RDS schedule straight away) | Administrators | The RDS schedule's page |
+| **Pause** and **Resume** a recurring RDS schedule | Administrators | The RDS row menu (**Pause Schedule**, **Resume Schedule**) or the schedule's page |
+| **Edit** | Administrators apply it. Other users select **Edit (request)**, which waits for approval. | Row menu or the schedule's page |
+| **Delete** | Administrators delete it and its AWS resources. Other users select **Delete (request)**. Users can delete their own requests that were never approved. | Row menu or the schedule's page |
+| **Delete a snapshot** | Administrators | **Snapshots** on the RDS schedule's page |
 
-<!-- VERIFY: whether Pause and Resume exist for EC2 schedules (the code shows them for RDS only), and where Execute Now appears on the EC2 list. -->
+![The row menu of an EC2 schedule: View, Track Provisioning, Edit and Delete](../../.gitbook/assets/instance-scheduler-08-ec2-row-menu.png)
+
+A paired or restore schedule (ending in `-start`, `-stop` or `-restore`) is a schedule of its own. Delete it separately.
 
 ## Check what happened
 
-- **Status and Exec Status** columns show whether the schedule was created and what the last run did.
-- The detail page shows **Execution History**, the last executed time and, for RDS, **Snapshots**, **Health** and **Logs** (default window 24 hours, shown in your local time).
-- RDS runs record the outcome as success, skipped or error.
+![The EC2 schedule list with Rejected, Failed and Complete schedules](../../.gitbook/assets/instance-scheduler-07-ec2-list.png)
 
-<!-- VERIFY: EC2 logs: the page states logs are available only for DuploCloud-mode recurring schedules that use Lambda. For AWS scope mode EC2 schedules there may be no logs panel content. Check IS-13. -->
+- The **Status** column shows where each schedule is: **New**, **Complete**, **Waiting for Approval**, **Rejected**, **Failed** and so on. **Exec Status** on EC2 shows **Scheduled** once the schedule exists in AWS, or **Success** after a change that ran straight away.
+- Select a schedule's name to open its page. The **Result** tab shows the EventBridge schedule and IAM role created for each region.
+
+  ![An EC2 schedule's Result tab, showing the schedule and role ARNs](../../.gitbook/assets/instance-scheduler-09-ec2-view-complete.png)
+
+  **Track Provisioning** (or **View Provisioning Ticket**) opens the provisioning ticket, which shows each step DuploCloud took in AWS and any AWS error.
+- An RDS schedule's page shows:
+  - **Upcoming Schedule:** the next runs of a recurring schedule.
+  - **Recent Executions:** each run, with the database, the result (success, skipped or error) and the snapshot taken.
+  - **Snapshots:** the `rds-sched-` snapshots of the schedule's databases.
+  - **Lambda Execution Logs:** the log lines of the scheduler's Lambda functions for a time window you choose.

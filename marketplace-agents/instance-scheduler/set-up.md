@@ -1,59 +1,74 @@
 ---
-description: What you need before you start, how to activate Instance Scheduler from the Agent Marketplace, and how to connect it to your accounts.
+description: What you need before you start, how to activate Instance Scheduler from the Agent Marketplace, and how to connect it to your AWS account.
 ---
 
 # Set Up
 
+Setting up is a job for a DuploCloud administrator.
+
 ## Before you start
 
-- An **AWS credential scope** in your workspace that points to the AWS account with the instances and databases you want to schedule. Instance Scheduler acts with that scope's credentials.
-- **IAM permissions** on that scope's identity for the actions listed below. Instance Scheduler creates IAM roles and EventBridge schedules (and, for RDS, Lambda functions and a Secrets Manager secret) in that account, so the identity needs more than read access.
-- An **administrator** in your workspace to approve schedules requested by other users (see [Permissions and Safety](permissions-and-safety.md)).
-
-<!-- VERIFY: the repo README only says the credentials "need permission for EC2/RDS, IAM, EventBridge Scheduler, Lambda and STS (GetCallerIdentity)" and gives no policy. The list below is derived from the aws commands in the two setup scripts. Confirm it is complete, and whether DuploCloud publishes a ready-made policy or CloudFormation template. -->
-
-### AWS permissions for the scope identity
-
-| Feature | AWS actions |
-| --- | --- |
-| Find targets in the forms | `ec2:DescribeInstances`, `ec2:DescribeRegions`, `autoscaling:DescribeAutoScalingGroups`, `rds:DescribeDBInstances`, `rds:DescribeDBClusters`, `sts:GetCallerIdentity` |
-| EC2 and Auto Scaling schedules | `scheduler:CreateSchedule`, `scheduler:DeleteSchedule`, `iam:CreateRole`, `iam:GetRole`, `iam:PutRolePolicy`, `iam:ListRolePolicies`, `iam:DeleteRolePolicy`, `iam:ListAttachedRolePolicies`, `iam:DetachRolePolicy`, `iam:DeleteRole`, `iam:PassRole` |
-| Run now (EC2 and Auto Scaling) | `ec2:StopInstances`, `ec2:StartInstances`, `ec2:RebootInstances`, `autoscaling:UpdateAutoScalingGroup` |
-| RDS schedules | The schedule and role actions above, plus `lambda:CreateFunction`, `lambda:GetFunction`, `lambda:UpdateFunctionCode`, `lambda:UpdateFunctionConfiguration`, `lambda:AddPermission`, `lambda:RemovePermission`, `lambda:DeleteFunction`, `secretsmanager:CreateSecret`, `secretsmanager:PutSecretValue`, `secretsmanager:DescribeSecret`, `secretsmanager:DeleteSecret` |
-| RDS run now, snapshots and clean-up | `rds:StopDBInstance`, `rds:StartDBInstance`, `rds:StopDBCluster`, `rds:StartDBCluster`, `rds:CreateDBSnapshot`, `rds:CreateDBClusterSnapshot`, `rds:DescribeDBSnapshots`, `rds:DescribeDBClusterSnapshots`, `rds:DeleteDBSnapshot`, `rds:DeleteDBClusterSnapshot` |
-| Logs in the RDS view | Read access to the `/aws/lambda/rds-` CloudWatch log groups |
-
-<!-- VERIFY: assembled from the setup scripts. iam:PassRole, the Describe actions used by the forms and the log-read action are inferred, not named in the repo. Confirm each with the owner and test with a least-privilege identity. -->
-
-### Roles Instance Scheduler creates in your account
-
-| Role | Trusted by | What it can do |
-| --- | --- | --- |
-| EC2 scheduler role (one per schedule and region) | EventBridge Scheduler | Run only the chosen action (`ec2:StopInstances`, `ec2:StartInstances` or `ec2:RebootInstances`) on exactly the instances in that schedule. |
-| Auto Scaling scheduler role (one per Auto Scaling group) | EventBridge Scheduler | `autoscaling:UpdateAutoScalingGroup` on that one group. |
-| RDS Lambda execution role (one per schedule and region) | Lambda | Stop, start and snapshot that schedule's databases, delete the `rds-sched-` snapshots, write CloudWatch Logs, and read one Secrets Manager secret. |
-| RDS scheduler roles | EventBridge Scheduler | Invoke that schedule's Lambda functions. Paired schedules can also run RDS start or stop directly. |
-
-Role names start with `duplo-ec2-`, `duplo-asg-` or `rds-` so you can find them. Roles are created if missing and updated in place if you re-provision.
-
-<!-- VERIFY: the repo README lists a Python Lambda named duplo-ec2-{ID} for recurring EC2 schedules. The setup script's AWS scope path creates only an EventBridge Scheduler schedule and a role for EC2 and Auto Scaling (no Lambda). Lambdas are created for RDS (names start rds-snap- and rds-paired-). Confirm which description is current. -->
+- An **AWS account** with the EC2 instances, Auto Scaling groups or RDS databases you want to schedule.
+- An **AWS identity** (an IAM role or user) that DuploCloud can use in that account, with the permissions listed in [AWS permissions](#aws-permissions). Instance Scheduler creates IAM roles, EventBridge schedules and, for RDS, Lambda functions and a Secrets Manager secret in the account, so the identity needs more than read access.
+- For **RDS** schedules, the scope's credential must be an **access key** (access key ID and secret access key). RDS schedules do not work with a scope that assumes an IAM role. EC2 schedules work with either.
 
 ## Activate Instance Scheduler
 
-1. Open the **Agent Marketplace** and find **Instance Scheduler**.
-2. Select **Activate** and confirm.
-3. When it finishes, a **Scheduler** section with **EC2** and **RDS** entries appears in the menu.
+1. Open **Marketplace > Agent Marketplace** and find **Instance Scheduler**. The **Cost Optimization** filter shows it, or search for `Instance Scheduler`.
+2. Select **Activate**. See [Agent Marketplace and Buying Agents](../../getting-started/marketplace.md) for what happens next.
+3. When it finishes, a **Scheduler** section with **EC2** and **RDS** appears in the left menu.
 
-<!-- VERIFY: exact marketplace steps and button names. The manifest defines a "Scheduler" menu section with EC2 and RDS items (registered as a DevOps resource); confirm the final menu location. Screenshots IS-01 and IS-02. -->
+![The Agent Marketplace filtered to Cost Optimization, showing the Instance Scheduler card](../../.gitbook/assets/instance-scheduler-01-marketplace.png)
+
+## Connect your AWS account
+
+Add AWS as a cloud provider, add a credential, and create a scope, as described in [Connecting AWS to DuploCloud](../../getting-started/integrating-providers/amazon-web-services-aws.md). Then attach the scope to the workspace. Both schedule forms list the scopes attached to the workspace, and a scope from another workspace is refused.
+
+Instance Scheduler finds instances and databases in every region the scope's identity can see, so one scope covers all regions of an account.
+
+## AWS permissions
+
+Give the scope's identity these actions. Most write actions only ever touch resources whose names start with the prefixes in [What it creates in your account](#what-it-creates-in-your-account), so you can limit them with resource ARNs if you prefer.
+
+| Used for | AWS actions |
+| --- | --- |
+| Listing instances, groups and databases in the forms | `ec2:DescribeRegions`, `ec2:DescribeInstances`, `autoscaling:DescribeAutoScalingGroups`, `rds:DescribeDBInstances`, `rds:DescribeDBClusters` |
+| Creating EC2 and Auto Scaling group schedules | `sts:GetCallerIdentity`, `iam:GetRole`, `iam:CreateRole`, `iam:PutRolePolicy`, `iam:PassRole`, `scheduler:CreateSchedule` |
+| Resizing an Auto Scaling group now (**Execute now**) | `autoscaling:UpdateAutoScalingGroup` |
+| The EC2 dry run and the **Execute Now** button on an EC2 schedule's page | `ec2:DescribeInstances`, `ec2:StartInstances`, `ec2:StopInstances` |
+| Creating RDS schedules | `sts:GetCallerIdentity`, `iam:GetRole`, `iam:CreateRole`, `iam:PutRolePolicy`, `iam:DetachRolePolicy`, `iam:PassRole`, `lambda:GetFunction`, `lambda:CreateFunction`, `lambda:UpdateFunctionCode`, `lambda:UpdateFunctionConfiguration`, `lambda:AddPermission`, `lambda:RemovePermission`, `secretsmanager:CreateSecret`, `secretsmanager:PutSecretValue`, `secretsmanager:DescribeSecret`, `scheduler:CreateSchedule` |
+| RDS stops and starts that run straight away, and snapshots | `rds:StopDBInstance`, `rds:StartDBInstance`, `rds:StopDBCluster`, `rds:StartDBCluster`, `rds:CreateDBSnapshot`, `rds:CreateDBClusterSnapshot`, `rds:DescribeDBSnapshots`, `rds:DescribeDBClusterSnapshots` |
+| The RDS schedule page (upcoming runs, pause and resume, snapshots, logs) | `scheduler:GetSchedule`, `scheduler:UpdateSchedule`, `iam:PassRole`, `rds:DescribeDBSnapshots`, `rds:DescribeDBClusterSnapshots`, `rds:DeleteDBSnapshot`, `rds:DeleteDBClusterSnapshot`, `logs:DescribeLogGroups`, `logs:FilterLogEvents` |
+| Deleting schedules | `scheduler:DeleteSchedule`, `iam:ListRolePolicies`, `iam:DeleteRolePolicy`, `iam:ListAttachedRolePolicies`, `iam:DetachRolePolicy`, `iam:DeleteRole`, `lambda:DeleteFunction`, `secretsmanager:DeleteSecret`, `autoscaling:DeleteScheduledAction` |
+
+If you only schedule EC2, you can leave out the Lambda, Secrets Manager, RDS and CloudWatch Logs actions.
+
+## What it creates in your account
+
+Each schedule gets its own roles, with permissions limited to that schedule's targets:
+
+| Resource | Name starts with | Trusted by | Allowed to |
+| --- | --- | --- | --- |
+| EC2 schedule (one per region) | `duplo-ec2-sched-` | | Run the chosen action at the chosen time |
+| EC2 scheduler role | `duplo-ec2-role-` | EventBridge Scheduler | Only the chosen action (`ec2:StopInstances`, `ec2:StartInstances` or `ec2:RebootInstances`) on only the schedule's instances |
+| Auto Scaling group schedule | `duplo-asg-sched-` | | Set the group's size at the chosen time |
+| Auto Scaling group role | `duplo-asg-role-` | EventBridge Scheduler | `autoscaling:UpdateAutoScalingGroup` on that one group |
+| RDS schedules | `rds-sched-`, `rds-paired-` | | Invoke the schedule's Lambda function, or start the database directly |
+| RDS Lambda functions | `rds-snap-`, `rds-paired-` | | Stop or start the database and take snapshots |
+| RDS roles | `rds-scheduler-`, `rds-paired-`, `rds-snap-exec-` | EventBridge Scheduler or Lambda | Stop and start only the schedule's databases, create and delete only `rds-sched-` snapshots, write logs, and read the schedule's one secret |
+| RDS secret | `rds-snap-exec/` | | Holds the credential the Lambda function uses to record each run back in DuploCloud |
+| RDS snapshots | `rds-sched-` | | Snapshots taken before a stop |
+
+Deleting a schedule removes its schedules, roles, Lambda functions and secret. Snapshots and the Lambda functions' CloudWatch log groups (`/aws/lambda/rds-`) are kept. See [Troubleshooting](troubleshooting.md#if-something-is-left-behind).
 
 ## Grant access
 
-Everyone who can open the workspace can view schedules. Only administrators can create schedules that run directly, run them now, pause or resume them, or delete snapshots. Other users can submit requests that an administrator approves. See [Permissions and Safety](permissions-and-safety.md).
+Instance Scheduler does not add permissions of its own. It uses each user's DuploCloud role:
 
-## Choose your credentials
+- **Administrators** create schedules that go live straight away, and approve or reject other users' requests.
+- **Regular users** submit schedules, edits and deletions for an administrator to approve.
+- **Read-only users** can only view.
 
-Both create forms ask for an AWS scope. Pick the scope that points to the account you want to schedule. A scope that belongs to another workspace is refused.
-
-<!-- VERIFY: field labels are "AWS Scope" on the EC2 form and "AWS Credential Scope" on the RDS form. Confirm in QA (IS-03, IS-04). -->
+Users also need access to the workspace and to the AWS scope. See [Permissions and Safety](permissions-and-safety.md).
 
 Next: [Use](use.md).

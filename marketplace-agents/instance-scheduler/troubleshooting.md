@@ -8,42 +8,52 @@ description: Common problems with Instance Scheduler and how to fix them.
 
 | What you see | What it means | What to do |
 | --- | --- | --- |
-| **Status "Waiting for Approval"** | A regular user submitted a request and no administrator has approved it. Nothing exists in AWS yet. | Ask an administrator to approve or reject it (see [Use](use.md#approve-a-request)). |
-| **Status "Failed" with "Rejected by administrator"** | An administrator rejected the request. | Read the reason, then submit a new request. |
-| **"Only Administrators can ..."** (403) | You tried an action that only administrators can do: approve, reject, execute now, pause or resume, or delete a snapshot. | Ask an administrator. |
-| **"Read-only users cannot make changes to this resource."** | Your user is read-only. | Ask for a role that can submit requests or administer schedules. |
-| **"Cannot approve, the scheduled time (...) has already passed"** | A one-time request waited past its time. | Ask the requester to resubmit with a new time. |
-| **"ScheduledAt ... is in the past"** | The one-time date and time is not in the future. | Pick a future time. |
-| **"CronExpression ... must be a 5-field cron expression"** or **"invalid field"** | The custom cron expression is malformed. | Use five fields (minute, hour, day of month, month, day of week) with digits and `* / , -` only. Times are UTC. |
-| **"Timezone ... is not a recognized IANA timezone name"** | The timezone is not valid. | Use a name such as `America/New_York`. |
-| **A schedule is created but the status is "Failed"** | Creating the AWS resources failed. The most common cause is missing IAM permissions on the scope identity. | Check the provisioning ticket for the AWS error, and compare the identity with [Set Up](set-up.md#aws-permissions-for-the-scope-identity). |
-| **A scope cannot be used** | The scope belongs to another workspace, or you do not have access to it. | Pick a scope attached to your workspace. |
-| **A database or instance does not appear in the list** | The scope's credentials cannot see it, or the region is not covered. Instances in an Auto Scaling group are shown disabled. | Check the scope's permissions, or use the Auto Scaling Group tab. |
-| **RDS run shows "skipped"** | The database was already in the requested state (for example Stop on a stopped database). | None. This is expected. |
-| **Stopped RDS instance started again by itself** | AWS restarts stopped RDS instances after 7 days. | Use a recurring Stop. |
-| **Schedule ran at the wrong hour** | Custom cron is in UTC, and the forms convert from your local timezone. | Check the cron preview and the timezone shown on the form. |
-| **Deleted schedule still listed as "Pending Deletion"** | A regular user requested the deletion and an administrator has not approved it. | An administrator selects **Approve Deletion** or **Reject Deletion**. |
+| **Waiting for Approval** | A regular user submitted the schedule and no administrator has approved it. Nothing exists in AWS yet. | Ask an administrator to approve or reject it (see [Use](use.md#approve-or-reject-a-request)). |
+| **Rejected**, with "Rejected by" an administrator's email and a reason | An administrator rejected the request. | Read the reason, then submit a new request. |
+| **Pending Deletion** | A regular user asked to delete the schedule. It keeps running. | An administrator selects **Approve Deletion** or **Reject Deletion**. |
+| **Failed** after the schedule was created or approved | Creating it in AWS failed, most often because the scope's identity is missing a permission. | Open **Track Provisioning** to read the AWS error, and compare the identity's permissions with [AWS permissions](set-up.md#aws-permissions). Then delete the schedule and create it again. |
+| **Scope is missing AWS credential keys.** (RDS form) | The scope's credential assumes an IAM role. RDS schedules need an access key credential. | Use a scope whose credential is an access key. |
+| **Scope '...' is not found or not accessible from this workspace.** | The scope isn't attached to this workspace, or you can't use it. | Pick a scope attached to the workspace, or ask an administrator to attach it. |
+| **ScheduledAt '...' is in the past — pick a future date/time.** | The one-time date and time has passed. | Pick a time in the future. |
+| **Cannot approve — the scheduled time (...) has already passed.** | A one-time request waited past its time. | Edit the time before approving, or ask the requester to submit it again. |
+| **... must be a 5-field cron expression** or **... has an invalid field** | The custom cron expression is malformed. | Use five fields (minute, hour, day of month, month, day of week) with digits and `* / , -` only. |
+| **Timezone '...' is not a recognized IANA timezone name.** | The time zone sent with the schedule isn't valid. | Check your browser's time zone setting, which the form uses. |
+| **Use only lowercase letters, numbers, and hyphens.** | The name has other characters. | Rename it, for example `nightly-stop-dev`. |
+| **Read-only users cannot make changes to this resource.** | Your DuploCloud role is read-only. | Ask an administrator for a role that can submit requests. |
+| **Only Administrators can ...** | You tried to approve, reject, run, pause or resume a schedule, or delete a snapshot. | Ask an administrator. |
+| An instance can't be ticked | It belongs to an Auto Scaling group. | Schedule the group on the **Auto Scaling Group** tab. |
+| An instance or database is missing from the list | The scope's identity can't see it, or lacks a Describe permission in that region. | Check the identity's permissions (see [AWS permissions](set-up.md#aws-permissions)). |
+| An RDS run shows **skipped** | The database was already in the requested state. | Nothing. This is expected. |
+| A stopped RDS instance started again by itself | AWS starts stopped RDS instances again after 7 days. | Use a recurring stop. |
 
-<!-- VERIFY: the messages above are copied from the backend and form source. Confirm wording in QA. The cause of "Failed" after approval is inferred from the setup script's IAM calls. -->
+This is how a provisioning failure looks on the schedule's page. The reason names the AWS action the identity is missing:
 
-## If something was left behind
+![A Failed schedule whose reason says the identity is not authorized to perform scheduler:CreateSchedule](../../.gitbook/assets/instance-scheduler-11-ec2-view-failed.png)
 
-Deleting a schedule removes its EventBridge schedules, Lambda functions and IAM roles. If a deletion failed part way, look in the AWS account for leftovers with these name prefixes: `duplo-ec2-`, `duplo-asg-`, `rds-snap-`, `rds-paired-`, `rds-scheduler-`, `rds-paired-` and Secrets Manager secrets under `rds-snap-exec/`. RDS snapshots named `rds-sched-...` are kept (the last 7 per database) and are not removed when you delete the schedule unless an administrator deletes them.
+## If something is left behind
 
-<!-- VERIFY: snapshot behaviour on schedule deletion is inferred. Confirm what a deprovision removes, and the exact leftover resource names. -->
+Deleting a schedule removes what it created in AWS. If a deletion failed part way, look in the AWS account for resources whose names start with:
+
+- EventBridge Scheduler schedules: `duplo-ec2-sched-`, `duplo-asg-sched-`, `rds-sched-`, `rds-paired-`
+- IAM roles: `duplo-ec2-role-`, `duplo-asg-role-`, `rds-scheduler-`, `rds-paired-`, `rds-snap-exec-`
+- Lambda functions: `rds-snap-`, `rds-paired-`
+- Secrets Manager secrets: `rds-snap-exec/`
+
+These are always kept, by design:
+
+- RDS snapshots named `rds-sched-...`. Delete them from the schedule's page before you delete the schedule, or in AWS.
+- CloudWatch log groups named `/aws/lambda/rds-...`.
 
 ## FAQ
 
-**Can a regular user schedule instances?** They can submit a request. An administrator must approve it before anything is created.
+**Can a regular user schedule instances?** They can submit a request. Nothing is created in AWS until an administrator approves it.
 
-**Does it run in my account or DuploCloud's?** In your AWS account, using the scope you chose. The schedules, roles and (for RDS) Lambda functions are created there.
+**Does it run in my AWS account or DuploCloud's?** In yours. The schedules, roles and Lambda functions are created in the account of the scope you choose, and AWS runs them there.
 
-**Can I schedule an Auto Scaling group?** Yes, you can change its minimum, maximum and desired size on a schedule. <!-- VERIFY: see README note on ASG scope for release 1. -->
+**Does a schedule pick up instances I tag later?** No. A schedule keeps the instances that were ticked when it was saved. Edit the schedule to add more. An Auto Scaling group schedule acts on whatever instances the group has at the time.
 
-**Does stopping a database take a backup?** Only if you turn on **Take snapshot before stopping**. For recurring schedules, the snapshot is taken once when the schedule is created and later runs do not snapshot again. <!-- VERIFY: from the repo README (RDS mode 3); confirm. -->
+**Does stopping a database take a backup?** A recurring stop takes one snapshot of each database when the schedule is created. Turn on **Take snapshot before stopping** for a snapshot before every stop. The latest seven per database are kept.
 
-**How many snapshots are kept?** The last 7 per database, with the prefix `rds-sched-`.
+**Can I pause an EC2 schedule?** No. Pause and resume are for RDS schedules. To stop an EC2 schedule, delete it.
 
-**What time zone are schedules in?** Times in the forms are your local timezone and are converted; custom cron is UTC.
-
-<!-- VERIFY: FAQ is a first guess. Owner to add the questions customers actually ask, and whether pricing, EC2 logs and pause for EC2 belong here. -->
+**Can I schedule an Auto Scaling group?** Yes. You set its minimum, maximum and desired size, and can add a restore schedule that brings back the earlier sizes.
