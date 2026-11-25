@@ -1,3 +1,7 @@
+---
+description: Control who can use the platform, what they can do, and which workspaces and resources they and their agents can reach.
+---
+
 # Access Control
 
 ## What is Access Control?

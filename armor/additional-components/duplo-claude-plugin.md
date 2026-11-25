@@ -1,12 +1,10 @@
-# Duplo Claude Plugin
-
 ---
 description: >-
   Use Claude Code in your terminal or IDE to work on DuploCloud projects
   with ticket-driven workflow enforcement.
 ---
 
-# Claude Code Plugin
+# Duplo Claude Plugin
 
 The DuploCloud Claude Code Plugin connects Claude Code — whether you run it in the terminal or inside your IDE — directly to DuploCloud's AI Helpdesk. It enforces a ticket-driven development workflow: every session is tied to an active project or ticket, and all work proceeds through a spec and an implementation plan that are stored and approved on the DuploCloud platform.
 

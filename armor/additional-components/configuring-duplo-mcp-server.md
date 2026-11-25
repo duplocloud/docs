@@ -1,3 +1,7 @@
+---
+description: Connect the Claude desktop app or Claude Code to the DuploCloud MCP server so they can create tickets and manage your portal.
+---
+
 # Configuring the DuploCloud MCP Server
 
 The DuploCloud MCP (Model Context Protocol) server exposes your DuploCloud HelpDesk as a set of tools that AI assistants can call directly. Once configured, the assistant can create tickets, manage workspaces, agents, skills, environments, providers, and more — without leaving the chat interface.

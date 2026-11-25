@@ -282,8 +282,8 @@ hidden: true
 
 ## July 2022
 
-* [Ability to Automatically generate Alert](https://docs.duplocloud.com/docs/aws/use-cases/alerting-and-notifications/automatic-alert-creation): Users can now configure automated alarm creation in AWS, to ensure new resources are included in monitoring.
+* [Ability to Automatically generate Alert](../overview/use-cases/faults-and-alarms/automatic-alert-creation.md): Users can now configure automated alarm creation in AWS, to ensure new resources are included in monitoring.
 * [Ability to set resource allocation quotas by an Admin](https://docs.duplocloud.com/docs/aws/use-cases/resource-quotas): Administrators would often like to restrict the type of resources that should or should not be provisioned in their environments. This feature allows them to configure those rules via a DuploCloud Plan.
-* [Support for Kubernetes Ingress Controller](https://docs.duplocloud.com/docs/aws/aws-services/containers): Support for the K8s Ingress controller has been added, this is a key piece of functionality for traffic routing to a K8s cluster.
+* [Support for Kubernetes Ingress Controller](../overview/aws-services/containers/README.md): Support for the K8s Ingress controller has been added, this is a key piece of functionality for traffic routing to a K8s cluster.
 * [RDS Snapshot Management](https://docs.duplocloud.com/docs/aws/aws-services/rds-database/manage-rds-snapshots): Support for RDS database snapshots was added to the DuploCloud Portal, accessible through the RDS page.
 * [Terraform Provider updates](https://registry.terraform.io/providers/duplocloud/duplocloud/latest/docs): Expanded support for more resources in the DuploCloud terraform provider, specifically for Microsoft Azure.

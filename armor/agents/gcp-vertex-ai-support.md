@@ -1,3 +1,7 @@
+---
+description: Run an Agent SDK with GCP Vertex AI as its model backend.
+---
+
 # GCP Vertex AI Support
 
 An Agent SDK can run against GCP Vertex AI as its model backend, alongside the existing AWS Bedrock, Azure AI Foundry, and direct Anthropic API options.

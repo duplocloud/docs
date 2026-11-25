@@ -1,3 +1,7 @@
+---
+description: Connect GitHub with a personal access token or a GitHub App so agents can work with your repositories.
+---
+
 # Connecting GitHub to DuploCloud
 
 This guide walks through adding GitHub as a Source Control provider in DuploCloud, configuring credentials (a Personal Access Token or a GitHub App), creating a scope, and querying GitHub repositories through the AI agent.

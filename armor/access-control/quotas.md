@@ -1,3 +1,7 @@
+---
+description: Set spending limits on LLM usage per ticket, user, workspace or the whole platform.
+---
+
 # Quotas
 
 Quotas let administrators set cost limits on LLM usage. A quota definition sets the limit and the period it covers, and a quota mapping applies it to a context: each ticket, each user, a whole workspace, or the entire platform.

@@ -1,3 +1,7 @@
+---
+description: Set up an SMTP provider and choose which notifications the portal sends through it.
+---
+
 # Notifications
 
 Portal notifications are configured in two places: an **SMTP provider** (the credentials for sending mail) under **Providers**, and **Notifications** (which use case gets routed to which provider) under its own top-level section.

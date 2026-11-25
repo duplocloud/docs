@@ -1,3 +1,7 @@
+---
+description: Give agents facts, conventions and preferences about a workspace that they remember on every ticket.
+---
+
 # Agent Memories
 
 Agent Memories give your DuploCloud AI agents **persistent, shared knowledge about a workspace** — facts, conventions, and preferences that the agent should already know every time it works on a ticket in that workspace, without you having to repeat them.

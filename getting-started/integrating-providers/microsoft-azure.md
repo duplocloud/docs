@@ -1,3 +1,7 @@
+---
+description: Connect an Azure subscription through an app registration so agents can query and manage its resources.
+---
+
 # Setting Up an Azure Cloud Provider
 
 The Azure Cloud Provider lets DuploCloud AI agents interact with your Azure subscription — querying resources, running `az` commands, and managing infrastructure on your behalf. Setup involves registering an application in Azure, creating a client secret, and assigning the application a role on your subscription.

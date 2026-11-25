@@ -61,6 +61,6 @@ From the Grafana **Logging** Dashboard, there are several ways to explore logs a
 
 <figure><img src="../../../.gitbook/assets/Screenshot (485) (1).png" alt=""><figcaption></figcaption></figure>
 
-**Log Context**: Click the context icon ( ![](https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252FX58Pxdm6agJUZP30GiWm%252Fc1.png%3Falt%3Dmedia%26token%3D77f48d2a-fe61-4130-aeef-78371a715dc2\&width=300\&dpr=4\&quality=100\&sign=64ddabcf\&sv=2) ) to open the **Log context** window for contextual details about the log entry.
+**Log Context**: Click the context icon ( ![](../../../.gitbook/assets/c1.png) ) to open the **Log context** window for contextual details about the log entry.
 
-<figure><img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252Fu5QP9EOvzLfyecGU7o4x%252Fc2.png%3Falt%3Dmedia%26token%3Debdb05f5-d877-45d0-b387-6f1efb5e42d1&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=1b20fe6d&#x26;sv=2" alt=""><figcaption><p>The <strong>Log Context</strong> window for a log entry in the Grafana dashboard</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/c2.png" alt=""><figcaption><p>The <strong>Log Context</strong> window for a log entry in the Grafana dashboard</p></figcaption></figure>

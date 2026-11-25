@@ -1,3 +1,7 @@
+---
+description: Connect GitLab so agents can work with your repositories.
+---
+
 # Connecting GitLab to DuploCloud
 
 This guide walks through adding GitLab as a Source Control provider in DuploCloud, configuring credentials, creating a scope, and querying GitLab repositories through the AI agent.

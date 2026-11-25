@@ -1,3 +1,7 @@
+---
+description: The HelpDesk is where you and the agent work through tickets, on their own or as part of a project.
+---
+
 # HelpDesk
 
 The AI HelpDesk is where your AI-assisted DevOps work lives. It is the backend service that tracks and manages all of your tickets — whether standalone tasks or tickets that belong to a larger project — and acts as the central system of intelligence.

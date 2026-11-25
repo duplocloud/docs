@@ -1,3 +1,7 @@
+---
+description: Keep secrets out of MCP server configs with placeholders that are filled from the scope's credential when a session starts.
+---
+
 # MCP Credential Placeholders
 
 Raw MCP server configs support credential placeholders — named variables that are resolved from the scope's bound credential immediately before the `.mcp.json` session file is written. This keeps secrets and per-environment values out of the server config entirely.

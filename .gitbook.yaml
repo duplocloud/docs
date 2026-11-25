@@ -1,0 +1,54 @@
+root: ./
+
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+
+# Old URLs that GitBook didn't redirect on its own when the nav was restructured
+# (Nov 2026). Keys are old URL paths after /docs/; values are the files they now
+# point to. GitBook already redirects most moved pages itself, so only add an
+# entry here when an old URL returns 404.
+redirects:
+  # Pages that moved to Resources
+  armor/faqs: faqs.md
+  armor/product-updates: product-updates.md
+  armor/reporting-ai-concerns: reporting-ai-concerns.md
+
+  # Licensing moved out of Access Control
+  armor/access-control/license: getting-started/licensing.md
+
+  # Old Introduction and Welcome pages, replaced by the Overview
+  introduction/the-extension-framework: README.md
+  introduction/the-three-layer-architecture: README.md
+  introduction/studio-developer-experience: README.md
+  getting-started/welcome-to-duplocloud: README.md
+  getting-started/welcome-to-duplocloud/what-duplocloud-does: README.md
+
+  # V1 to V2 upgrade, dropped from the nav
+  getting-started/installation/v1-to-v2-upgrade: getting-started/deploy-to-your-cloud.md
+
+  # AI Helpdesk section, replaced by Concepts
+  ai-helpdesk/ai-helpdesk-overview: armor/helpdesk/README.md
+  ai-helpdesk/ai-helpdesk-overview/tickets: armor/tickets.md
+  ai-helpdesk/ai-helpdesk-overview/out-of-the-box-agents: armor/agents/README.md
+  ai-helpdesk/ai-helpdesk-overview/bring-your-own-agent: armor/agents/llm-models.md
+  ai-helpdesk/ai-helpdesk-overview/developers: getting-started/deploy-your-own-agents.md
+
+  # Agent Framework section: the Ops-app walkthrough and case studies are moving
+  # to the blog, and building agents is now covered by the Quick Start
+  agent-framework/extension-framework: getting-started/build-your-own-agent/README.md
+  agent-framework/case-studies: getting-started/build-your-own-agent/README.md
+  agent-framework/case-studies/devops-platform: getting-started/build-your-own-agent/README.md
+  agent-framework/case-studies/salesops-platform: getting-started/build-your-own-agent/README.md
+  agent-framework/building-an-ops-app: getting-started/build-your-own-agent/README.md
+  agent-framework/building-an-ops-app/step-1-policy-model: getting-started/build-your-own-agent/README.md
+  agent-framework/building-an-ops-app/step-2-skills: getting-started/build-your-own-agent/README.md
+  agent-framework/building-an-ops-app/step-3-providers: getting-started/build-your-own-agent/README.md
+  agent-framework/building-an-ops-app/step-4-workspaces: getting-started/build-your-own-agent/README.md
+  agent-framework/building-an-ops-app/step-5-deploy: getting-started/build-your-own-agent/README.md
+  agent-framework/plugin-architecture: getting-started/deploy-your-own-agents.md
+  agent-framework/plugin-architecture/authentication: getting-started/deploy-your-own-agents.md
+  agent-framework/plugin-architecture/lifecycle-states: getting-started/deploy-your-own-agents.md
+  agent-framework/plugin-architecture/schema-versioning: getting-started/deploy-your-own-agents.md
+  agent-framework/plugin-architecture/storage-api: getting-started/deploy-your-own-agents.md
+  agent-framework/plugin-architecture/manifest-and-registration: getting-started/deploy-your-own-agents.md

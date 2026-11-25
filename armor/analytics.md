@@ -1,3 +1,7 @@
+---
+description: Platform-wide usage, cost and ticket metrics, and searchable traces of agent sessions.
+---
+
 # Analytics
 
 The **Analytics** section covers two admin-only screens: the **Platform Analytics** dashboard (usage/cost/ticket metrics across the whole platform) and **Observability** (LangFuse agent traces, embedded in the portal and searchable by session).

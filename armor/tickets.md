@@ -1,3 +1,7 @@
+---
+description: Create a ticket, choose its model, scopes and permissions, and work with the agent on it.
+---
+
 # Create a Ticket Tutorial
 
 This document explains how to create a new ticket in the DuploCloud AI Suite HelpDesk, configure the agent's model, scopes, permissions and context, and work with the agent on the resulting ticket page.

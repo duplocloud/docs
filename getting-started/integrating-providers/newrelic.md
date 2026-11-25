@@ -1,3 +1,7 @@
+---
+description: Connect New Relic so agents can query your monitoring data.
+---
+
 # Connecting New Relic to DuploCloud
 
 This guide walks through adding New Relic as a provider in DuploCloud, configuring credentials, creating a scope, and querying New Relic data through the AI agent.

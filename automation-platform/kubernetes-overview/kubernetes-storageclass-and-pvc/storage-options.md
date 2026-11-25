@@ -6,7 +6,7 @@ description: Use Azure's built-in Kubernetes StorageClass constructs
 
 ## Mounting Native Azure Built-In Storage Classes
 
-AKS provides a few out-of-the-box StorageClass objects. To mount the built-in storage classes, configure the **Volumes** field as shown below when [adding a Service](https://docs.duplocloud.com/docs/overview-2/azure-services/containers-and-services).
+AKS provides a few out-of-the-box StorageClass objects. To mount the built-in storage classes, configure the **Volumes** field as shown below when [adding a Service](../../overview-2/azure-services/containers-and-services/README.md).
 
 <div align="left"><img src="../../../.gitbook/assets/image (171).png" alt="Service Deployment Page"></div>
 

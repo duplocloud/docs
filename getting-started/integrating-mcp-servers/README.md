@@ -1,3 +1,7 @@
+---
+description: Connect MCP servers so agents can work with your observability, incident, source control and other tools.
+---
+
 # DuploCloud MCP Integration
 
 DuploCloud's AI platform supports the **Model Context Protocol (MCP)**, an open standard that enables AI agents to connect directly to external tools and services. Through the DuploCloud AI Studio, administrators can register any MCP-compatible server as a provider integration, giving the AI agent live, contextual access to third-party observability, incident management, source control, and other platforms.

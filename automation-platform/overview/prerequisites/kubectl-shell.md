@@ -27,7 +27,7 @@ Enable and access shells for your DuploCloud Docker, EKS, and ECS containers dir
 ### Accessing the Shell for Docker
 
 1. From the DuploCloud portal, navigate to **Docker** -> **Containers**.
-2. In the row of the container you want to access, click the options menu icon (<img src="https://docs.duplocloud.com/~gitbook/image?url=https%3A%2F%2F2471407984-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F68cb0s9ce5UIUKWPuYs8%252Fuploads%252F1bULWx4HFiK9TRFeLpk4%252FKabab_three_Vertical_dots.png%3Falt%3Dmedia%26token%3De0fb9551-05e2-4e66-ac2b-c50a23f66acc&#x26;width=20&#x26;dpr=4&#x26;quality=100&#x26;sign=d18bec42&#x26;sv=1" alt="" data-size="line"> ).&#x20;
+2. In the row of the container you want to access, click the options menu icon (<img src="../../../.gitbook/assets/Kabab_three_Vertical_dots.png" alt="" data-size="line"> ).&#x20;
 3. Select **Container Shell.** A shell session launches directly into the running container.
 
 ## EKS Shell Access

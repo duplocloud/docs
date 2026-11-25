@@ -1,3 +1,7 @@
+---
+description: Connect Jira so agents can read, create and update your issues.
+---
+
 # Integrating Jira with DuploCloud
 
 Connecting Jira to DuploCloud lets the AI agent read tickets, create issues, update statuses, and act on Jira data on your behalf. You will need an Atlassian API token, your account email, and your Jira Cloud ID.

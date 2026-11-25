@@ -1,3 +1,7 @@
+---
+description: Create API tokens so scripts and pipelines can call DuploCloud as you, and manage every user's tokens as an admin.
+---
+
 # User Tokens
 
 An API token lets an external application, script, or CI/CD pipeline authenticate with the DuploCloud AI Suite as you. Each user creates and manages their own tokens on their **Profile** page. Administrators can see every user's tokens, and revoke or delete them, from the **User Tokens** tab in Access Control.

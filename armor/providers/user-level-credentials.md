@@ -1,3 +1,7 @@
+---
+description: Let a user act with their own credential on a shared scope, without changing it for anyone else.
+---
+
 # User-Level Credentials
 
 A Scope's credential is normally shared by everyone who uses it — a team-level secret set on the Provider. **User-Level Credentials** let an individual user override that shared credential with their own, for a specific Scope, without affecting anyone else using the same Scope.

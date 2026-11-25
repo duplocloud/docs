@@ -1,3 +1,7 @@
+---
+description: Connect Linear through its MCP server so agents can read and update your Linear issues.
+---
+
 # Linear
 
 This guide walks through connecting Linear to DuploCloud — registering the Linear MCP server, creating a provider and scope that carry your Linear API key, and querying Linear data through the AI agent.

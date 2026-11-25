@@ -1,3 +1,7 @@
+---
+description: Search the record of who did what across the HelpDesk and AI Studio, and send it to cloud storage for long-term retention.
+---
+
 # Audit Trail
 
 The Audit Trail records who did what across the HelpDesk and AI Studio: every change made through the API, failed and denied requests, and live-session activity. Administrators can search it from the admin portal, and operators can also ship the same records to cloud storage for long-term retention.

@@ -1,3 +1,7 @@
+---
+description: Connect Datadog so agents can query your monitoring data.
+---
+
 # Connecting Datadog to DuploCloud
 
 This guide walks through adding Datadog as a provider in DuploCloud, configuring credentials, creating a scope, and querying Datadog data through the AI agent.

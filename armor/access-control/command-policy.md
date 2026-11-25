@@ -1,3 +1,7 @@
+---
+description: Set which shell commands agents may run without asking and which they may never run, for the whole platform, a workspace or a project.
+---
+
 # Command Policy
 
 Command Policies let administrators define, once, which shell commands an agent may run without asking and which it may never run — applied platform-wide, per workspace, or per project, rather than set up by hand on every ticket. A **Command Policy Definition** holds the regex rules, and a **Command Policy Mapping** applies a definition to a scope.

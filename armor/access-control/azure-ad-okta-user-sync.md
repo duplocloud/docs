@@ -1,3 +1,7 @@
+---
+description: Create and remove HelpDesk users automatically from groups in your Azure AD or Okta directory.
+---
+
 # Azure AD & Okta User Sync
 
 User Sync provisions and deprovisions HelpDesk user accounts directly from your Azure AD or Okta directory, instead of an admin adding each [User](users.md) by hand.

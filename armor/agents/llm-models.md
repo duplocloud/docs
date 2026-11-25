@@ -1,3 +1,7 @@
+---
+description: Choose which models agents can use, connect Agent SDKs, and set the default model for each workspace, project or the platform.
+---
+
 # LLM Models
 
 The **LLMs** page governs which models are available to agents, and which model a Workspace, Project, or the platform as a whole uses by default. Open it from **LLMs** in the AI Admin sidebar. It has three tabs: **Agent SDKs**, **LLMs**, and **LLM Mappings**. Each tab shows summary cards above its table, and the button in the page header adds whatever the open tab lists.

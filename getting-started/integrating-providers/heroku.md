@@ -1,3 +1,7 @@
+---
+description: Connect a Heroku account so agents can work with your apps and dynos.
+---
+
 # Heroku Integration
 
 Connect a Heroku account as a provider so the DuploCloud agent can interact with your Heroku apps, dynos, and resources using your API credentials.

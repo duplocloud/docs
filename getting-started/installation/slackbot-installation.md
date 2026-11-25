@@ -1,4 +1,5 @@
 ---
+description: Create and install the DuploCloud Slack app so your team can use the AI bot from Slack.
 hidden: true
 ---
 

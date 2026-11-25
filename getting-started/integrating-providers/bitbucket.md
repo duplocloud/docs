@@ -1,3 +1,7 @@
+---
+description: Connect Bitbucket so agents can work with your repositories.
+---
+
 # Connecting Bitbucket to DuploCloud
 
 This guide walks through adding Bitbucket as a Source Control provider in DuploCloud, configuring credentials, creating a scope, and querying Bitbucket repositories through the AI agent.
