@@ -2,3 +2,7 @@ Temp/
 .duplocloud/
 faqs-draft.md
 ai-helpdesk-v2/product-updates-cleaned.md
+
+# Working notes for agent docs (review notes, screenshot lists). Keep them in .claude/agent-docs/, not next to the pages.
+marketplace-agents/**/_*.md
+marketplace-agents/**/screenshots.md
