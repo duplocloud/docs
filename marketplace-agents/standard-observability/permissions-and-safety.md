@@ -6,76 +6,78 @@ description: What Standard Observability can read and change, which actions need
 
 ## What it can read and change
 
-Standard Observability acts with the IAM identity of the AWS scope and the Kubernetes identity of the Kubernetes scope you choose. In DevOps extension mode some changes are made through the DuploCloud platform (node pool, S3 bucket, ingresses) instead of the AWS command line.
+Standard Observability acts with the IAM role behind the stack's AWS scope and the Kubernetes identity behind its Kubernetes scope. It can only do what those identities allow.
 
 | | What it does |
 | --- | --- |
-| **Reads** | Your EKS cluster and its VPC, route tables, subnets and security group rules, the EC2 instances in the cluster, ACM certificates and EKS clusters (for the wizard lists), the cluster's add-ons, StorageClasses, existing Prometheus Operators, and the state of its own Helm releases. |
-| **Changes in AWS** | Creates an EKS node group (`<cluster>-observability-nodepool`). Adds security group rules (one source group and one port each, described `standard-observability ...`). Creates an S3 gateway VPC endpoint, or adds route tables to an existing one. Creates an S3 log bucket. Creates load balancers through Kubernetes Ingresses: a public (internet-facing) one for Grafana and optional internal ones for Loki and Prometheus. |
-| **Changes in IAM (standalone mode)** | Creates a node IAM role (`<cluster>-observability-node`, with the three standard EKS node policies) unless you supply one. Creates the cluster's IAM OIDC provider if it is missing. Creates or updates a role `<cluster>-observability-s3` that trusts only the `observability-s3` service account and is limited to the log bucket. If that role already exists, its trust policy and its inline policy `observability-logs-s3` are rewritten on every run. |
-| **Changes in DNS** | None directly. With **Create it automatically (external-dns)** the ingress carries an external-dns hostname annotation and external-dns on your cluster creates the Route 53 record. Otherwise you create the record yourself. |
-| **Changes in Kubernetes** | Creates the namespace (default `observability`) if missing. Applies Flux Helm repositories and releases for Loki, Grafana, the log collectors and (if enabled) Prometheus. Creates Secrets (`grafana-admin`, `grafana-proxy`), a NetworkPolicy so only the sign-in proxy reaches Grafana, the sign-in proxy deployment and service, Ingresses and, in standalone mode, the `observability-s3` service account. In DevOps extension mode it also turns on the FluxCD flag in the cluster's settings. It never turns add-ons off. |
-| **Never** | It does not edit or remove existing security group rules. It does not delete your log bucket, S3 VPC endpoint, namespace, metric volume, shared add-ons or the OIDC provider. It does not touch an existing object it did not create (an existing role, node group, bucket or namespace you supplied is used as is and is never deleted). It does not install the load balancer controller, autoscaler or external-dns. |
+| **Reads** | The EKS cluster, its VPC, subnets, route tables, security group rules and instances. ACM certificates and EKS clusters, to fill the wizard's lists. The cluster's add-ons, StorageClasses and any existing Prometheus Operator. The state of its own Helm releases. |
+| **Changes in AWS** | Creates an EKS node group and its IAM role, unless you use existing nodes. Adds security group rules, each allowing one source on one port. Creates an S3 gateway VPC endpoint, or adds route tables to an existing one. Creates the log bucket, encrypted with public access blocked, unless you supply one. Creates the cluster's IAM OIDC provider if missing, and an IAM role that only Loki's service account can use, limited to the log bucket. The template also creates a permissions boundary, `<RoleName>-irsa-boundary`, and that role can only be created under it, so it can never reach more than the log buckets. |
+| **Changes in Kubernetes** | Creates the namespace if it doesn't exist. Applies Flux Helm repositories and releases for Loki, Grafana, the log collectors and Prometheus. Creates the `grafana-admin` Secret, the sign-in proxy, a NetworkPolicy so only the proxy reaches Grafana, a service account, and Ingresses. Through the Ingresses, the AWS Load Balancer Controller creates a public load balancer for Grafana and the optional internal ones. |
+| **Changes in DuploCloud** | Creates the stack record and its ticket. Adds a workspace setting so your portal can sign people in to Grafana. Creates a Grafana provider and scope, and attaches the scope to the workspace. |
+| **Never** | Edits or removes existing security group rules. Overwrites a Kubernetes object it didn't create. Changes or deletes anything you supplied (a bucket, node group, role, namespace or OIDC provider). Installs or turns off cluster add-ons. Deletes your log bucket or metric volume. |
 
 {% hint style="warning" %}
-The Grafana load balancer is internet-facing. Access is controlled by sign-in through your DuploCloud portal, and a NetworkPolicy keeps other pods away from Grafana. Choose your certificate and DNS name with that in mind.
+Grafana's load balancer is **internet-facing**, and there is no internal-only option. Sign-in goes through your DuploCloud portal, and a NetworkPolicy stops other pods reaching Grafana directly. Choose the hostname and certificate with that in mind.
 {% endhint %}
 
-<!-- VERIFY: "internet-facing" comes from the ingress annotation scheme for non-internal endpoints. Confirm there is no way to make Grafana internal-only. -->
-<!-- VERIFY: QA on 2026-11-18 saw Route 53 record-set permissions and iam:UpdateAssumeRolePolicy needed. The IAM update is confirmed in standalone code (role rewrite above). Route 53 is not called by the extension code; confirm whether the platform or external-dns makes those calls. -->
+### AWS permissions
+
+The CloudFormation template in [Set Up](set-up.md#create-the-iam-role) creates a role with exactly these permissions:
+
+| Area | Actions | Used for |
+| --- | --- | --- |
+| Identity | `sts:GetCallerIdentity` | The check every run starts with |
+| EKS | `ListClusters`, `DescribeCluster`, `DescribeNodegroup`, `CreateNodegroup`, `DeleteNodegroup`, `TagResource`, `AccessKubernetesApi` | The node pool, Kubernetes API access, and the wizard's cluster list |
+| ACM | `ListCertificates` | The wizard's certificate list |
+| EC2 | `DescribeSubnets`, `DescribeRouteTables`, `DescribeInstances`, `DescribeVpcEndpoints`, `DescribeSecurityGroupRules`, `CreateVpcEndpoint`, `ModifyVpcEndpoint`, `AuthorizeSecurityGroupIngress`, `CreateTags` | The S3 VPC endpoint and the security group rules. There is no delete or revoke permission, so teardown never removes either. |
+| IAM | `GetRole`, `ListAttachedRolePolicies`, `ListRolePolicies`, `CreateRole`, `TagRole`, `DeleteRole`, `AttachRolePolicy` and `DetachRolePolicy` (only the three AWS EKS node policies), `PutRolePolicy`, `PutRolePermissionsBoundary`, `DeleteRolePolicy`, `UpdateAssumeRolePolicy`, `GetPolicy`, `ListOpenIDConnectProviders`, `CreateOpenIDConnectProvider`, and `PassRole` only for the node role and only to `eks.amazonaws.com` | The node role, the OIDC provider and the log-access role. The roles it can create are limited to names ending `-observability-node` and `-observability-s3`. |
+| S3 | `ListBucket`, `CreateBucket`, `PutBucketPublicAccessBlock`, `PutEncryptionConfiguration` | Creating the log bucket |
+
+Route 53 isn't in the list, because the agent doesn't create DNS records itself. If you choose **Create it automatically (external-dns)**, external-dns on the cluster creates the record with its own permissions.
+
+### Kubernetes access
+
+If you set **EksClusterName** in the template, the role gets **cluster-admin** on that cluster. For narrower access, apply the scoped RBAC manifest that ships with the agent (`standard-observability-rbac.yaml`) instead. It grants a namespaced role for the objects the stack manages, plus read-only cluster access for the add-on check.
 
 ## Who can do what
 
-The extension does not define its own permission names. Its screens and actions rely on the DuploCloud platform permissions for workspace resources, plus two places where it needs the Administrator role.
+Stacks belong to a workspace, and DuploCloud permission sets decide who can see and change them. On top of that, Standard Observability checks every scope a request uses. The scope must be attached to the workspace, and a user who isn't an administrator must also be granted the scope by their permission sets.
 
-| Action | Who | Notes |
-| --- | --- | --- |
-| View stacks, the stack page and dashboards | Anyone with access to the workspace resource | The platform decides this. |
-| Create, edit, deprovision or delete a stack | Users the platform permits to write this resource type | Starts or re-runs provisioning, which changes AWS and Kubernetes. |
-| Recheck the DNS endpoint | Anyone who can see the stack | Read-only probe, then updates the stack status. |
-| Associate an existing Grafana scope | Anyone who can see the stack | Records a scope id on the stack only. |
-| Create the Grafana scope | **Administrator** | Creating the provider and scope is an administrator-only platform write. Others get a 403 and are sent to "Associate an existing scope". |
-| Allow-list the Grafana host for sign-in | **Administrator** | Done once in System Config. |
-| Curate favourites | Anyone who can edit the stack | Does not re-run provisioning. |
+| Capability | Read-only user | Regular user | Administrator |
+| --- | :---: | :---: | :---: |
+| See stacks, stack pages and dashboards | Yes | Yes | Yes |
+| Create, edit or deprovision a stack | No | Yes, with scopes granted to them | Yes |
+| Delete a stack record | No | Yes | Yes |
+| Re-check the endpoint, change favourites | No | Yes | Yes |
+| Use the setup page (default scopes, create scopes) | No | No | Yes |
 
-| User | What they can do |
-| --- | --- |
-| **Read-only** | UNKNOWN. The extension has no read-only handling of its own: its create, edit, deprovision, delete and favourites controls are not disabled by role in the code. Whether the platform blocks a read-only user depends on the platform's permission model for this resource type. |
-| **Regular user** | What the platform's permission sets grant for this resource type in the workspace. Cannot create a Grafana scope; can associate an existing one. |
-| **Administrator** | Everything, including creating the Grafana scope and the sign-in allow-list entry. |
+"Read-only" and "regular" mean what your DuploCloud permission sets grant on stacks in the workspace. A regular user can only pick scopes attached to the workspace and granted to them. Other scopes are refused with "You cannot use the selected scope here".
 
-<!-- VERIFY: the whole role table. The repo has no [AccessControl] attributes, no permission verbs, no UI disabled states by role and no administrator override. The only role logic is the 401/403 handling for the admin-only Grafana scope calls (the Create button disappears after the first refusal). Pankaj Akhade and Srikar Naramsetty decide admin-only versus user on ClickUp 17twvjx4bm3. Rewrite after that decision and test with read-only, regular and admin users in QA (screenshots SO-18 to SO-21). -->
-<!-- VERIFY: the Grafana local admin password is stored on the stack record and shown on the stack page with Reveal and Copy to anyone who can open the page. Confirm whether that should be limited to administrators. The extension README claims no shared admin password is in circulation, which this contradicts. -->
+## What needs confirmation
 
-## What needs approval
-
-- **Submitting the wizard.** Nothing is created until you submit on the Review step. There is no separate plan approval step.
-- **Deprovision.** The portal asks you to confirm twice and shows what is removed and what is kept. The provisioning agent is also instructed to print a dry run and wait for your written confirmation in the ticket chat; a repeated generic "Deprovision this resource" message does not count as confirmation.
-- **Editing a stack.** Saving re-runs provisioning with no extra prompt.
-- **The agent.** The agent that runs the work is instructed to run only the bundled script, and, if it fails, to report and stop: no manual `kubectl delete`, `helm uninstall`, AWS writes, or hand-made fixes to DNS, IAM, node groups or security groups.
-
-<!-- VERIFY: the teardown confirmation and the "report and stop" rule are instructions to the AI agent in the skill, not enforced by code. In the script, the real teardown runs when started without the dry-run flag. Confirm whether the platform adds a hard approval gate. -->
+- **Creating a stack.** Nothing is created until you submit on the wizard's **Review & Submit** step.
+- **Editing a stack.** Saving runs provisioning again, with no extra prompt.
+- **Tearing down a stack.** DuploCloud shows what will be removed and kept, and asks you to confirm. Then the agent previews the teardown in the ticket and waits for you to confirm again in a new message. The teardown runs only if the plan still matches the preview you confirmed, so a stale preview can't be approved.
 
 ## Safety checks
 
-- **Fail before creating.** The S3 VPC endpoint is checked with an EC2 dry run first. If it cannot be created, the stack fails with nothing created. There is no fallback to the NAT gateway.
-- **Narrow security group rules.** The stack only adds single-source, single-port ingress rules it needs, and fails listing them if the role cannot add them.
-- **Foreign objects are protected.** Before applying any object, the stack checks whether one with the same name already exists and is not its own; if so it stops and names it.
-- **Created-by-this-stack ledger (standalone).** Teardown deletes only objects recorded as created by the stack, in reverse order, and resumes if interrupted.
-- **Existing namespace is respected.** An existing namespace is used as is, not relabelled and never deleted.
-- **Logs and metrics are kept.** Teardown keeps the log bucket and the Prometheus volume, and prints the command to delete the volume yourself.
-- **Prometheus conflict check.** An active cluster-wide Prometheus Operator elsewhere fails the run before anything is installed; a paused one is a warning.
-- **Admin password is not placed in chart values.** It is written to the `grafana-admin` Secret.
-- **One run at a time per stack.** A second run reports "another run already in progress" and stops.
+- **Fails before creating anything** if the S3 VPC endpoint can't be set up. There is no fallback to the NAT gateway.
+- **Fails before installing anything** if another active cluster-wide Prometheus Operator is in the cluster, or there's no usable StorageClass.
+- **Never overwrites.** Before applying any Kubernetes object, the stack checks whether one with the same name exists and isn't its own. If so, it stops and names it.
+- **Only removes what it created.** Teardown works from the stack's list of created resources, in reverse order. Anything you supplied isn't on that list.
+- **Keeps your data.** Teardown keeps the log bucket and the Prometheus volume.
+- **Keeps the admin password out of sight.** The password goes into the `grafana-admin` Kubernetes Secret, not chart values, and DuploCloud never shows it or returns it from the API. Reading it needs access to that Secret in the cluster.
+- **One run at a time.** A second run on the same stack stops without changing anything.
 
-## Limits you should know
+## AI safety
 
-- Standard Observability does not roll back: a failed run leaves what it created. Fix the cause and run it again.
-- The node pool, load balancers, EBS volumes and S3 storage are billed by AWS.
-- Teardown keeps the log bucket, S3 VPC endpoint, namespace, Prometheus volume and shared add-ons. Remove them yourself if you no longer need them.
-- Prometheus has no Alertmanager: alerts are visible in Prometheus and Grafana but are not sent anywhere.
-- Mode, cluster, environment, resource group and namespace cannot be changed after creation.
+The provisioning agent runs the agent's built-in script and reports the result. If the script fails, the agent reports the reason and stops. It doesn't make AWS or Kubernetes changes by hand, retry with workarounds, or widen permissions.
 
-## AI data handling
+The agent treats everything it reads as data, never as instructions. That covers ticket messages, cluster output and file contents. If any of it asks the agent to run a command, skip a step or reveal a credential, the agent quotes it in the ticket and carries on as before. It never opens or prints the credential files or the Grafana password.
 
-<!-- VERIFY: the repo does not describe what is sent to the AI model beyond the ticket the provisioning agent works in. The agent reads the stack's settings and scope credentials in its working directory and is told not to open or print them. Ask the owners what data goes to the model and how long tickets are kept before writing this section. -->
+## Limits
+
+- Failed runs aren't rolled back. Whatever was created stays until you fix the cause and run again (edit and save), or tear the stack down.
+- Teardown keeps the log bucket, Prometheus volume, S3 VPC endpoint, security group rules, namespace and OIDC provider. Remove them yourself if you no longer need them.
+- No Alertmanager. Alerts are visible in Prometheus and Grafana but aren't sent anywhere.
+- The mode, cluster and namespace can't be changed after creation.

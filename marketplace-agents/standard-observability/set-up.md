@@ -4,72 +4,77 @@ description: What you need before you start, how to activate Standard Observabil
 
 # Set Up
 
+Setting up is a job for a DuploCloud administrator. Once it is done, workspace users can create stacks themselves.
+
 ## Before you start
 
-- An **EKS cluster** with **FluxCD** and the **AWS Load Balancer Controller** running. The wizard checks these for you on the Cluster Add-ons step.
-- Optional on the cluster: the **cluster autoscaler**, and **external-dns** if you want DNS records created for you.
-- An **AWS scope** whose IAM identity has the permissions listed below.
-- A **Kubernetes scope** for the cluster (needed in both modes, to check add-ons and to apply Kubernetes objects).
-- In DevOps extension mode: an **Environment** and **Resource Group** in the workspace (existing, or created by the wizard), and a **Network Baseline** and **Kubernetes cluster** if the wizard must create the Resource Group.
-- An **ACM certificate** in the cluster's region that covers the Grafana hostname (and the internal Loki hostname, if you turn that on).
-- A **DNS zone** you control for the Grafana hostname (`<prefix>.<DNS suffix>`).
-- A default **StorageClass** on the cluster for the Loki, Grafana and Prometheus volumes.
-- **Permissions** for the people who will use it (see [Permissions and Safety](permissions-and-safety.md)).
+You need:
 
-{% hint style="info" %}
-If something required is missing, provisioning fails early and tells you what. The S3 VPC endpoint is checked first, before anything is created.
+- An **EKS cluster** with these add-ons running. The stack does not install them, because every workload on the cluster shares them.
+
+  | Add-on | Needed? | Why |
+  | --- | --- | --- |
+  | FluxCD | **Required** | Every part of the stack is installed as a Flux Helm release. |
+  | AWS Load Balancer Controller | **Required** | Gives Grafana (and the optional internal endpoints) a load balancer. |
+  | Cluster autoscaler | Optional | Without it the node pool stays at its desired size. |
+  | external-dns | Optional | Only needed if you want the Grafana DNS record created for you. |
+
+- An **ACM certificate** in the cluster's region that covers the Grafana hostname you will use, for example `*.example.com`.
+- A **DNS zone** you control for that hostname.
+- A **default StorageClass** on the cluster for the Loki, Grafana and Prometheus volumes. If none is marked default, the stack picks EBS gp3 or gp2 itself.
+- An **IAM role** that DuploCloud can assume, registered as an **AWS scope** and a **Kubernetes scope** for the cluster. The next section shows how to create it.
+
+## Create the IAM role
+
+One IAM role can serve as both the AWS scope and the Kubernetes scope. Standard Observability provides a CloudFormation template that creates a role with only the permissions the stack needs. The easiest way to run it is from the setup page (see [Choose the default scopes](#choose-the-default-scopes)): **Create the IAM role in AWS (CloudFormation)** opens the AWS console's quick-create page with the template loaded and DuploCloud's account filled in. You can also download the template and upload it yourself under **CloudFormation > Create stack > With new resources**.
+
+1. Sign in to the AWS console in the account the stack will use, and open the template as described above.
+2. Check the parameters:
+
+   | Parameter | What to enter |
+   | --- | --- |
+   | **HelpdeskAccountId** | Filled in by the setup page link. The AWS account DuploCloud runs in, if it isn't this one. Leave it blank if DuploCloud runs in this same account. |
+   | **ExternalId** | Optional. The external ID DuploCloud uses when it assumes the role, if any. |
+   | **RoleName** | Defaults to `duplocloud-standard-observability`. |
+   | **LogBucketNamePattern** | Defaults to `*-logs-*`, which matches the buckets the stack creates. If a stack will use an existing log bucket with another name, enter that name. |
+   | **EksClusterName** | The cluster's name, so the same role can reach the Kubernetes API. Leave it blank to set up Kubernetes access another way. |
+
+3. When the stack shows `CREATE_COMPLETE`, copy the **RoleArn** output.
+
+{% hint style="warning" %}
+With **EksClusterName** set, the template adds the role to the cluster's EKS access entries with **cluster-admin** access (`AmazonEKSClusterAdminPolicy`). If you want narrower access, leave **EksClusterName** blank and apply the scoped Kubernetes RBAC manifest that ships with the agent (`standard-observability-rbac.yaml`) to each stack's namespace instead. The cluster's authentication mode must be `API` or `API_AND_CONFIG_MAP` for an access entry to work.
 {% endhint %}
 
-<!-- VERIFY: "default StorageClass" is a warning, not a failure, in the code (volumes stay Pending until one is marked default). Confirm the wording you want here. -->
-
-### AWS permissions by feature
-
-The code and README name these actions. In DevOps extension mode some work (node pool, S3 bucket, load balancers) goes through the DuploCloud platform with the scope's role; in standalone mode the AWS CLI makes the calls directly.
-
-| Feature | AWS actions | Mode |
-| --- | --- | --- |
-| Identify the account | `sts:GetCallerIdentity` | Standalone |
-| Read the cluster | `eks:DescribeCluster` | Both |
-| S3 gateway VPC endpoint (mandatory) | `ec2:DescribeInstances`, `ec2:DescribeRouteTables`, `ec2:DescribeVpcEndpoints`, `ec2:CreateVpcEndpoint`, `ec2:ModifyVpcEndpoint` | Both |
-| Node networking (security group rules) | `ec2:DescribeSecurityGroupRules`, `ec2:AuthorizeSecurityGroupIngress` (also `ec2:DescribeInstances`, `eks:DescribeCluster`) | Both |
-| Observability node pool | `eks:CreateNodegroup`, `eks:DescribeNodegroup`, `eks:DeleteNodegroup`, `ec2:DescribeSubnets`, `ec2:DescribeRouteTables` | Standalone |
-| Node IAM role (if you do not supply one) | `iam:GetRole`, `iam:CreateRole`, `iam:AttachRolePolicy`, `iam:DetachRolePolicy`, `iam:DeleteRole` | Standalone |
-| Log bucket | `s3:CreateBucket`, `s3:ListBucket` (existence check), `s3:PutBucketPublicAccessBlock`, `s3:PutEncryptionConfiguration` | Standalone |
-| Workload identity for Loki (IRSA) | `iam:ListOpenIDConnectProviders`, `iam:CreateOpenIDConnectProvider`, `iam:GetRole`, `iam:CreateRole`, `iam:UpdateAssumeRolePolicy`, `iam:PutRolePolicy`, `iam:DeleteRolePolicy` | Standalone |
-| Browse certificates and clusters in the wizard | read-only ACM and EKS list calls made by the platform with the AWS scope | Both |
-
-<!-- VERIFY: the list is derived from the AWS CLI calls in the provisioning script and the extension README, not from a published policy. A CloudFormation role template is planned (sub-ticket) and does not exist in the repo. Confirm the full list, including iam:PassRole for the node role, iam:TagRole, S3 permissions for the platform-created bucket, and the ACM list permission. -->
-<!-- VERIFY: QA on 2026-11-18 also needed Route 53 record-set permissions and iam:UpdateAssumeRolePolicy. UpdateAssumeRolePolicy is in the standalone code (see table). Route 53 is NOT called by the extension itself; it is used by external-dns on the cluster (and possibly the platform). Confirm who needs it and on which identity. -->
-<!-- VERIFY: the QA S3 role named like <infra>-observability-s3 matches the standalone role name {cluster}-observability-s3. Confirm what the DevOps mode role is called. -->
-
-### Permissions on the cluster and for DNS
-
-- The Kubernetes scope's identity applies Flux Helm objects, Secrets, a service account, Ingresses, a NetworkPolicy and a Namespace in the stack's namespace, and reads cluster add-ons.
-- If you choose **Create it automatically (external-dns)** for DNS, external-dns on the cluster creates the record in Route 53, so the cluster's external-dns identity needs permission on the zone. If you choose **I will create it**, you create the record yourself.
-
-<!-- VERIFY: exact Kubernetes RBAC the Kubernetes scope needs. The repo only says the scope applies the objects; it lists no least-privilege role. -->
-
-### One-time setup for Grafana sign-in
-
-DuploCloud hands users to Grafana through its Authenticate URL page, which only posts the user's session to allow-listed hosts. A DuploCloud **Administrator** must add the Grafana host once per stack: **Administrator > System Settings > System Config**, type `AppConfig/otel`, value `https://<grafana hostname>`. Without it the browser stops at "Redirecting to .../duplo_auth/bridge".
-
-<!-- VERIFY: menu path and setting name come from the extension README. Confirm in QA and whether this is still needed in the released version. Screenshot SO-12. -->
+What the role can do in AWS is listed in [Permissions and Safety](permissions-and-safety.md#aws-permissions).
 
 ## Activate Standard Observability
 
-1. Open the **Agent Marketplace** and find **Standard Observability**.
-2. Select **Activate** and confirm.
-3. When it finishes, **Observability > Standard Observability** appears in the menu.
+1. Open **Marketplace > Agent Marketplace** and find **Standard Observability**. The **Observability** filter shows it, or search for `Observability`.
+2. Select **Activate**. See [Agent Marketplace and Buying Agents](../../getting-started/marketplace.md) for what happens next.
+3. When it finishes, **Observability > Standard Observability** appears in the workspace menu.
 
-<!-- VERIFY: marketplace steps and button names are not in the repo. The menu path comes from the extension manifest: section "Observability", item "Standard Observability". The README also mentions "Observability > Monitoring"; the manifest has no such item (the Monitoring page is a route of the same item). Screenshots SO-01 and SO-02. -->
+![The Agent Marketplace showing the Standard Observability card](../../.gitbook/assets/std-obs-01-marketplace-card.png)
+
+## Choose the default scopes
+
+The setup page sets which AWS scope and Kubernetes scope new stacks start with, across every workspace. A user can still pick another scope in the wizard. If a stack's cluster already points at a scope, that scope is used instead.
+
+1. In the Administrator area, open **Agent Setup > Standard Observability**.
+2. Under **Default AWS Scope**, choose an existing scope, or select **+ Create new scope**:
+   1. Optionally enter the **EKS cluster name**, so the role also covers the Kubernetes scope. Then select **Create the IAM role in AWS (CloudFormation)**, or **or download the template**, and run it as described in [Create the IAM role](#create-the-iam-role).
+   2. Choose the **Workspace** the scope belongs to, and enter a **Scope name** and the **IAM Role ARN** (the stack's **RoleArn** output). **AWS Account Id** and **Region** are optional.
+   3. Select **Create scope**. The scope is created and attached to that workspace.
+3. Under **Default Kubernetes Scope**, choose an existing scope, or select **+ Create new scope** and enter the **same IAM Role ARN** with a **Workspace** and **Scope name**. You don't need to run anything new, because the template already gave the role access to the cluster.
+4. Select **Save**. If you just created a scope, DuploCloud opens that workspace's **Create Stack** wizard with the scope already selected.
+
+![The Standard Observability setup page with a default AWS scope and Kubernetes scope](../../.gitbook/assets/std-obs-02-setup-page.png)
+
+You can also create the scopes by hand. Register the role as an IAM Role credential, then create a scope for it, as described in [Amazon Web Services (AWS)](../../getting-started/integrating-providers/amazon-web-services-aws.md) and [Amazon Elastic Kubernetes Service (EKS)](../../getting-started/integrating-providers/amazon-elastic-kubernetes-service-eks.md). Then attach both scopes to the workspace.
 
 ## Grant access
 
-Give the people who will use it the permissions described in [Permissions and Safety](permissions-and-safety.md). Creating the Grafana scope and the Grafana sign-in allow-list entry also need a DuploCloud Administrator.
+Workspace users who should create and manage stacks need access to the scopes they will use. A user who is not an administrator can only pick a scope that is attached to the workspace and granted to them by their permission sets. See [Permissions and Safety](permissions-and-safety.md#who-can-do-what).
 
-## Create your first stack
+## Next
 
-1. Open **Observability > Standard Observability**. With no stack yet you see **Create Observability Stack**.
-2. Follow the eight wizard steps: **Basics**, **Cluster Add-ons**, **Node Pool**, **Log Storage**, **Monitoring**, **Grafana**, **Endpoints** and **Review & Submit**. See [Use](use.md).
-
-Next: [Use](use.md).
+[Create your first stack](use.md#create-a-stack).
