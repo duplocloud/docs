@@ -13,11 +13,11 @@ Setting up is a job for a DuploCloud administrator.
 
 ## Activate GitHub CI/CD Workflows
 
-1. Open the **Agent Marketplace** and find **GitHub CI/CD Workflows**.
-2. Select **Activate** and confirm.
+1. Open **Marketplace > Agent Marketplace** and find **GitHub CI/CD Workflows**. The **CI/CD Pipelines** filter shows it, or search for `GitHub`. It is marked **Free**.
+2. Select **Activate**. See [Agent Marketplace and Buying Agents](../../getting-started/marketplace.md) for what happens next.
 3. When it finishes, the **CI/CD** section of the menu shows **GitHub Actions** and **GitHub Actions Metrics**. Administrators also see **GitHub Actions Settings**.
 
-<!-- VERIFY: Marketplace listing name, button names and activation flow are platform UI, not in the agent's code. Screenshots GH-01 and GH-02. -->
+![The Agent Marketplace filtered to CI/CD Pipelines, showing the GitHub CI/CD Workflows card marked Free](../../.gitbook/assets/gha-marketplace-card.png)
 
 ## Connect GitHub
 
@@ -39,25 +39,27 @@ If your organization requires approval of fine-grained tokens, an organization o
 
 ### 2. Add a GitHub scope
 
-Register a GitHub source-control provider and a scope that holds the token, and attach the scope to the workspace. Users never see the token.
+Add GitHub as a source-control provider, add the token as a credential, and create a scope, as described in [Connecting GitHub to DuploCloud](../../getting-started/integrating-providers/github.md). Then attach the scope to the workspace. Users never see the token.
 
-The scope's **Account ID** decides which GitHub is used:
+The provider's **GitHub Hostname** (shown as **Account** in the Scopes list) decides which GitHub is used:
 
-| Account ID | GitHub used |
+| GitHub Hostname | GitHub used |
 | --- | --- |
-| Empty, or a plain name such as `my-org` | github.com. A plain name is treated as the organization whose repositories are listed. |
-| A host name or URL, for example `github.mycompany.com` | GitHub Enterprise Server at `https://<host>/api/v3` |
+| Empty, `github.com`, or a plain name such as `my-org` | github.com. A plain name is treated as the organization whose repositories are listed. |
+| Another host name or URL, for example `github.mycompany.com` | GitHub Enterprise Server at `https://<host>/api/v3` |
 
 If no organization is set, or the organization lists no repositories, the token's own repositories are listed.
 
-<!-- VERIFY: field names in the scope form (provider type, Account ID) are platform UI. Screenshot GH-03. -->
+The scope then appears under **Scopes > Source Control** with the type **GITHUB**.
+
+![The Source Control tab of Scopes, listing one GitHub scope](../../.gitbook/assets/gha-scope-list.png)
 
 ### 3. Limit what can be run (recommended)
 
-Set the scope's **repository** and **branch allow-lists** (regular expressions). The agent applies them in every picker and again when a run is created, so a repository or branch outside the list cannot be run, even through the API.
+Set the scope's **Repository Names RegEx** and **Branch Names RegEx**. The agent applies them in every picker and again when a run is created, so a repository or branch outside them cannot be run, even through the API.
 
 - Matching ignores case and is not anchored: `main` also matches `not-main`. Write `^main$` to match one branch exactly.
-- An empty list allows everything. A pattern that is not a valid regular expression blocks everything.
+- A blank field allows everything for this agent. A pattern that is not a valid regular expression blocks everything.
 
 ## Protect the branches that deploy
 
@@ -103,5 +105,7 @@ Reading runs needs read (GET) access to the workspace's GitHub Action runs and a
 The first time you add someone, DuploCloud creates a permission set named `GitHub Actions approvers - <workspace>`. It lets approvers see the workspace's runs, approve or reject held runs and deployment gates, and use the workspace's scopes for that. It grants nothing else. To remove an approver, select **Remove** and type their email to confirm.
 
 The page also lists, read-only, the administrators and users who can approve through other permission sets.
+
+![GitHub Actions Settings with one approver and the read-only list of others who can approve](../../.gitbook/assets/gha-settings.png)
 
 Next: [Use](use.md).
