@@ -4,65 +4,87 @@ description: What you need before you start, how to activate SRE Workbench from 
 
 # Set Up
 
+Setting up is a job for a DuploCloud administrator.
+
 ## Before you start
 
-- **At least one observability scope** in your workspace (for example OpenTelemetry, Datadog, New Relic or Sentry). The hub form requires one: investigations start from metrics, logs and traces.
-- **Optional scopes** for the other places the agent should look: a Kubernetes scope, a cloud scope (AWS, GCP, Azure or on-prem), and source control scopes (GitHub, GitLab or Bitbucket) for your infrastructure-as-code and application repositories.
-- **An alert source** that can send webhooks, such as Prometheus Alertmanager or Grafana.
-- **Permissions** for the people who will use it, and for the identity your alert source uses (see [Permissions and Safety](permissions-and-safety.md)).
-- **Optional:** a Slack app and channel for notifications, and a runbook location (GitHub repository, Confluence space, Google Drive folder, Notion page or a web page).
+- **At least one observability scope** in your workspace, for example Datadog, New Relic, Sentry, Grafana or Prometheus. A hub cannot be created without one, because investigations start from metrics, logs and traces.
+- **Optional scopes** for the other places the agent should look: a Kubernetes cluster, a cloud account (AWS, GCP or Azure), and source-control scopes (GitHub, GitLab or Bitbucket) that reach your infrastructure-as-code and application repositories. See [Integrating Providers](../../getting-started/integrating-providers/README.md) for each provider's fields.
+- **An alert source** that can send a JSON webhook, such as Prometheus Alertmanager, Grafana or Amazon CloudWatch.
+- **Optional:** a Slack app and channel for notifications, and a place where your runbooks live (a GitHub repository, Confluence space, Google Drive folder, Notion workspace or web pages).
 
 {% hint style="info" %}
-SRE acts with the access of the scopes you attach to the hub. Attach the least access that still lets the agent find root causes. Read-only credentials are a good start.
+The agent acts with the access of the scopes you attach to the hub, and can see only what those scopes allow. Start with read-only credentials, and add write access only to the scopes used for fixes.
 {% endhint %}
 
-<!-- VERIFY: the repo does not list specific cloud IAM actions, Kubernetes roles or API scopes, because access comes from the scopes you choose. Confirm with the owner whether we recommend a ready-made read-only policy per scope type (for example an AWS read-only policy and a Kubernetes view role) and add it here if so. -->
+## Activate SRE Workbench
 
-### Slack (optional)
-
-Notifications use a Slack bot, not an incoming webhook.
-
-| Item | Value |
-| --- | --- |
-| Slack app | A Slack app with the `chat:write` **bot** token scope, installed to your Slack workspace and invited to the channel (or `chat:write.public` for public channels). |
-| Provider type | `slack` |
-| Credential fields | The bot token (starts with `xoxb-`) and the channel ID (starts with `C`). Field names do not matter; they are recognised by their shape. |
-| Scope | A scope bound to that credential. You pick it as the hub's notification scope. |
-
-<!-- VERIFY: the hub form's Notifications page still says "webhook URL" and "Incoming Webhooks", but the backend and the Slack setup guide in the repo use a bot token and channel ID through chat.postMessage. This draft follows the code. Confirm which is shipped before publishing. -->
-
-## Activate SRE
-
-1. Open the **Agent Marketplace** and find **SRE**.
-2. Select **Activate** and confirm.
-3. When it finishes, **SRE** appears in the **Observability** section of the menu.
-
-<!-- VERIFY: marketplace steps, button names and card name ("SRE", "SRE Workbench" or "AI SRE") are not in the repo. The menu path Observability > SRE comes from the manifest. Screenshots SR-01 and SR-02. -->
+1. Open **Marketplace > Agent Marketplace** and find **SRE Workbench**.
+2. Select **Activate**. See [Agent Marketplace and Buying Agents](../../getting-started/marketplace.md) for what happens next.
+3. When it finishes, the **Observability** section of the menu shows **SRE**.
 
 ## Grant access
 
-Give the people who will use it the permissions in [Permissions and Safety](permissions-and-safety.md). Several actions (investigate, skip, run a recommended action, edit the root cause, create runbooks, manage rules, split) are granted separately. The "all" permission does not include them.
+Give the people who will use SRE Workbench the permissions in [Permissions and Safety](permissions-and-safety.md). Starting investigations, skipping alerts, running fixes, editing the root cause, managing rules, splitting, and drafting, saving or scanning runbooks are each granted separately. Ordinary read and write access does not include them.
 
-## Create your first alert hub
+## Create an alert hub
 
-1. Open **Observability > SRE**. If you have no hub yet, select **Create your first alert hub**. Otherwise select **Manage alert hubs** and add one.
-2. **Basics.** Enter a hub name (2 to 60 characters: lowercase letters, numbers and dashes) and choose where alerts come from. A description is optional.
-3. **Investigations.** Pick the scopes the agent can use while investigating, grouped as Observability (required), Kubernetes, Cloud, Infrastructure as code and Application code. Choose what the agent may run without asking a person: **Read-only** (the default for a new hub), **Custom**, or **Full access**.
-4. **Remediation.** Choose what a recommended fix may do. By default a fix uses the same scopes as investigations. You can give fixes their own scopes and their own command rules. New hubs start with Custom rules, where anything not on the allow list asks a person.
-5. **Advanced options (optional).** **Skills** (notes about your system), **Runbooks** (where your runbooks live and how new ones are added) and **Notifications** (the Slack scope).
-6. Select **Create**.
+1. Open **Observability > SRE**. The first time, select **Create your first alert hub**. After that, open the hub list next to the current hub's name and select **+ New alert hub**. You can also select **Manage alert hubs** there, then **Add Hub**.
+2. **Basics.** Enter a **Hub name** (2 to 60 characters: lowercase letters, numbers and dashes, starting and ending with a letter or number). Choose where **Alerts come from**: Prometheus, Datadog, CloudWatch, Grafana, PagerDuty or Other (webhook). A description is optional. Select **Next: Investigations**.
+3. **Investigations.** Pick the scopes the agent signs in with while it investigates. **Observability** is required. **Kubernetes**, **Cloud**, **Infrastructure as code** and **Application code** are optional. Then choose what the agent may run without asking anyone. New hubs start on **Read-only**, which is the safest choice for unattended runs. See [Command rules](permissions-and-safety.md#command-rules). Select **Next: Remediation**.
+4. **Remediation.** Choose what a recommended fix may do when someone runs it. By default **Same access as investigations** is on, so fixes sign in with the same scopes. Turn it off to give fixes their own scopes, for example a scope that can restart deployments. Fixes start on **Custom** rules, where anything not on the allow list asks a person first.
+5. Select **Create hub**. The hub's **Overview** tab opens. Setting the hub up takes a moment. When it is done, the status shows **Complete** and the message reads **Alert hub ready**.
 
-<!-- VERIFY: step names and button labels come from the frontend source (Basics, Investigations, Remediation, Skills, Runbooks, Notifications); confirm on the live form (screenshots SR-03 to SR-07). -->
+![The first step of the new alert hub form, with the hub name and the Alerts come from list](../../.gitbook/assets/sre-01-new-hub-basics.png)
+
+![The Investigations step, with an Observability scope picked and the other scope groups optional](../../.gitbook/assets/sre-02-new-hub-investigations.png)
+
+![The command permission presets Read-only, Custom and Full access, with the rules in use shown below](../../.gitbook/assets/sre-02b-command-presets.png)
 
 ## Connect your alert source
 
-1. When the hub is ready, the page shows its **Webhook URL**. It can take a few seconds to appear.
-2. In your alert source (for example Prometheus Alertmanager or Grafana), add that URL as a webhook receiver.
-3. Select **Send a test alert** to run a first investigation end to end.
+![A new hub's Overview tab, showing it is ready, its ingestion endpoint and its command permissions](../../.gitbook/assets/sre-03-hub-ready.png)
 
-The identity your alert source uses to call the webhook needs only the **Ingest alerts into a hub** permission (`sreworkbench.ingest`). Do not give it anything else.
+1. On the hub's **Overview** tab, copy the **Ingestion Endpoint** and add it as a webhook receiver in your alert source.
+2. The endpoint accepts only authenticated DuploCloud calls. Have your alert source send a DuploCloud API token for a user whose only SRE Workbench permission is **Ingest alerts into a hub** (`sreworkbench.ingest`) on this hub. See [User Tokens](../../armor/access-control/user-tokens.md).
+3. To try the hub before your alert source is connected, send it an alert by hand with **Ingest Alert**, then investigate it. See [Send an alert by hand](use.md#send-an-alert-by-hand). The investigation runs the AI agent with the hub's scopes.
 
-<!-- VERIFY: how an external alert source authenticates to the webhook (which token or credential type it sends) is not described in the repo. Confirm with the owner and document it here, and confirm that the source's identity really is a platform identity with the ingest permission. -->
-<!-- VERIFY: the "Send a test alert" button runs a real investigation (agent run, LLM usage). Confirm it is acceptable to recommend it as a first step. -->
+{% hint style="warning" %}
+Use a token that can only ingest alerts. Anyone who holds it can post alerts into the hub, and with matching [rules](use.md#start-investigations-automatically) those alerts start investigations.
+{% endhint %}
+
+## Optional settings
+
+Select **Hub settings** on the hub's **Overview** tab. The optional settings are under **Advanced options**:
+
+- **Skills.** Notes about your architecture and its known failure modes. Every investigation from this hub reads the skills you pick. Skills are written under **Admin > Skills**.
+- **Runbooks.** Where your runbooks live and how the agent should use them. See [Runbooks](#runbooks).
+- **Notifications.** A Slack channel for results. See [Slack](#slack).
+
+Changes to hub settings apply to new investigations, not ones already running.
+
+### Runbooks
+
+1. Under **Where do your runbooks live?**, choose **GitHub**, **Confluence**, **Google Docs**, **Notion** or **Web links**. Choose **I don't have any yet** to let the agent start them.
+2. Enter the location (for GitHub, a repository as `owner/repo`, plus an optional folder and branch) and choose the scope the agent signs in with.
+3. Under **How should the agent learn your runbooks?**, either write the answers yourself, or select **Scan runbooks** to have the agent read your runbooks and draft the answers for you to check. Scanning changes nothing, takes about a minute, and needs the **Scan runbooks with the agent** permission.
+4. Answer **How should the agent find the runbook for an alert?** and **How should new runbooks be added?** (for example, by pull request).
+5. Select **Save changes**.
+
+The location fields are checked when you save. A GitHub repository must be written as `owner/repo` or pasted as a GitHub link, a folder must be a relative path, and Confluence, Google Drive and Notion locations must be a single link.
+
+### Slack
+
+Notifications are posted by a Slack bot to one channel.
+
+1. Create a Slack app with the `chat:write` bot scope, install it to your Slack workspace, and invite it to the channel. For a public channel you can add `chat:write.public` instead of inviting it.
+2. In DuploCloud, add a provider of type `slack` whose credential holds the bot token (it starts with `xoxb-`) and the channel ID (it starts with `C`), and create a scope for it.
+3. On the hub's **Notifications** settings, choose that scope as the **Notification scope** and select **Save changes**.
+
+{% hint style="info" %}
+The Notifications settings page still describes a Slack incoming-webhook URL. SRE Workbench posts with a bot token and channel ID, so set up the credential as described above.
+{% endhint %}
+
+The token stays in the scope's credential. It is not shown on the hub, not returned by the API, and never reaches the investigating agent.
 
 Next: [Use](use.md).
