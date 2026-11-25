@@ -1,3 +1,7 @@
+---
+description: Group permission sets so you can give several users the same access at once.
+---
+
 # User Groups
 
 This document explains how to create a new Permission Set Group in the DuploCloud AI Suite Access Control panel. A group is a named, reusable bundle of permission sets — creating one does not, by itself, add any users to it.

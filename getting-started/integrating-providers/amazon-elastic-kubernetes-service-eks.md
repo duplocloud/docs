@@ -1,3 +1,7 @@
+---
+description: Connect an Amazon EKS cluster with an IAM role or a service account token so agents can work with its Kubernetes resources.
+---
+
 # Amazon Elastic Kubernetes Service (EKS)
 
 The EKS provider lets DuploCloud AI agents interact with your Amazon EKS clusters — querying pods, nodes, deployments, and other Kubernetes resources. There are two ways to authenticate: using an **IAM Role** (recommended) or a **Kubernetes Service Account Token**.

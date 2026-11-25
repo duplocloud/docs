@@ -1,3 +1,7 @@
+---
+description: How to report unexpected, biased, unsafe or harmful behavior from a DuploCloud AI product.
+---
+
 # Reporting AI Concerns
 
 DuploCloud is committed to the responsible development and deployment of AI systems. If you have experienced or observed an adverse impact from any DuploCloud AI product — including unexpected behavior, bias, privacy concerns, security issues, or other harmful outcomes—we encourage you to report it.

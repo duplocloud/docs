@@ -1,3 +1,7 @@
+---
+description: Connect a Google Cloud project with a service account key so agents can query and manage its resources.
+---
+
 # Setting Up a GCP Cloud Provider
 
 The GCP Cloud Provider lets DuploCloud AI agents interact with your Google Cloud account — querying resources, running `gcloud` commands, and managing infrastructure on your behalf. Authentication uses a **Service Account** key.

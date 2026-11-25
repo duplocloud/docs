@@ -1,3 +1,7 @@
+---
+description: Plan larger pieces of work as a spec, an implementation plan and a set of tickets the agent carries out.
+---
+
 # Projects
 
 ## Projects

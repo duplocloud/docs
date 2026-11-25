@@ -1,3 +1,7 @@
+---
+description: New features and changes to DuploCloud, newest first.
+---
+
 # Product Updates
 
 ## v0.2.24-hotfix.1 — October 26, 2026

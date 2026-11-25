@@ -1,3 +1,7 @@
+---
+description: The platform-level controls that apply to every agent action, and the optional guardrails your LLM provider can add.
+---
+
 # AI Guardrails
 
 DuploCloud enforces multiple layers of guardrails on every agent interaction. These controls are designed to make bad outcomes structurally impossible rather than relying solely on model-level instruction-following.

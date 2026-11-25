@@ -1,3 +1,7 @@
+---
+description: Platform-wide System Settings and Global Secrets that admins manage in one place.
+---
+
 # Settings
 
 The **Settings** section holds two platform-wide admin stores: **System Settings** (arbitrary, typed configuration values) and **Global Secrets** (arbitrary name/value secrets available platform-wide).

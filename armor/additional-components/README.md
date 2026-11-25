@@ -1,3 +1,7 @@
+---
+description: Resources, Reports, Notifications, Slack, the Claude Code plugin and the DuploCloud MCP server.
+---
+
 # Additional Components
 
 The Policy Model includes several additional components that extend its core capabilities. These tools help teams manage infrastructure visibility, generate compliance reports, collaborate in Slack, and integrate AI-assisted development directly into their local workflow.

@@ -1,3 +1,7 @@
+---
+description: Have the agent build dashboards from any connected provider, for observability, cost, security and more.
+---
+
 # AI Dashboards
 
 DuploCloud's agentic dashboarding lets you create purpose-built dashboards for any data source connected as a provider — cloud accounts, Kubernetes clusters, incident management systems, cost tracking platforms, and more. Dashboards are organized into categories — **Observability**, **Cost**, **Security**, and **Others** — and can be scoped to a single workspace or shared globally across your organization.

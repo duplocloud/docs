@@ -1,6 +1,6 @@
 ---
 description: >-
-  Common AWS operational workflows and how to accomplish them with the AWS
+  Common AWS operational workflows and how to accomplish them with the Infrastructure
   Agent.
 ---
 

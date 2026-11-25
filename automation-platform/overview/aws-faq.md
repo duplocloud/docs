@@ -140,7 +140,7 @@ You can create AWS secrets from within the DuploCloud Portal and the Tenant-scop
 
 ### Where can I find documentation for using AWS Secrets Manager in DuploCloud?
 
-The documentation for using AWS Secrets Manager in DuploCloud can be found [here](https://docs.duplocloud.com/docs/overview/aws-services/containers/passing-config-and-secrets); however, this documentation does not provide instructions on how to use Tenant-specific AWS Secrets Manager.
+The documentation for using AWS Secrets Manager in DuploCloud can be found [here](aws-services/containers/passing-config-and-secrets.md); however, this documentation does not provide instructions on how to use Tenant-specific AWS Secrets Manager.
 
 ### Is there documentation available for using Tenant-specific AWS Secrets Manager in DuploCloud?
 

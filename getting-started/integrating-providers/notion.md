@@ -1,3 +1,7 @@
+---
+description: Connect Notion so agents can read and update your pages and databases.
+---
+
 # Integrating Notion with DuploCloud
 
 Connecting Notion to DuploCloud lets the AI agent read, create, and update pages and databases in your Notion workspace. You create an internal integration in Notion to generate an API token, then register it as a provider in DuploCloud.

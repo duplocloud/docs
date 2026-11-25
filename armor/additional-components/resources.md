@@ -1,3 +1,7 @@
+---
+description: See the cloud and Kubernetes resources discovered across the providers you have connected.
+---
+
 # Resources
 
 The Resources section gives you a unified view of infrastructure resources managed across your cloud providers. From the left navigation sidebar, expand **Resources** to access provider sub-sections.

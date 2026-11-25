@@ -1,3 +1,7 @@
+---
+description: Register an MCP server and give it a provider, credential and scope so agents can call its tools from tickets.
+---
+
 # MCP Server
 
 MCP (Model Context Protocol) servers extend the AI agent with external tool capabilities. Once an MCP server is registered in DuploCloud AI Suite, agents can call its tools from any ticket that includes the server's scope.

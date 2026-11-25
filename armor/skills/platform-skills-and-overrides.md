@@ -1,3 +1,7 @@
+---
+description: The built-in skills the platform loads for resources and projects, and how to replace them with your own.
+---
+
 # Platform Skills and Overrides
 
 ## Platform Default Skills

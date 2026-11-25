@@ -1,3 +1,7 @@
+---
+description: Add users to the platform and give them roles and access.
+---
+
 # Users
 
 This document explains how to create a new user in the DuploCloud AI Suite Access Control panel.

@@ -283,7 +283,7 @@ To configure in-transit encryption, navigate to “Administrator -> Plan -> Cert
 
 DuploCloud’s encryption capabilities help ensure your data is protected at rest and in transit, simplifying the management of encryption for your cloud infrastructure.
 
-[https://docs.duplocloud.com/docs/welcome-to-duplocloud/security-and-compliance](https://docs.duplocloud.com/docs/welcome-to-duplocloud/security-and-compliance)
+[Security and Compliance](../security-and-compliance/README.md)
 
 ### How can I set up Multi-Factor Authentication (MFA) for OpenVPN authentication?
 

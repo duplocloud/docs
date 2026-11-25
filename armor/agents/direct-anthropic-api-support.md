@@ -1,3 +1,7 @@
+---
+description: Run an Agent SDK against the Anthropic API directly instead of AWS Bedrock, GCP Vertex AI or Azure AI Foundry.
+---
+
 # Direct Anthropic API Support
 
 An Agent SDK can call the Anthropic API directly, instead of routing through AWS Bedrock, GCP Vertex AI, or Azure AI Foundry.

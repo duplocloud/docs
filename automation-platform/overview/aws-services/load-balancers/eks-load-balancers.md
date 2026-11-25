@@ -110,7 +110,7 @@ The **Target Group Only** Service Load Balancer is displayed in the **LB Listene
 5. In the **Port** field, enter the port number for incoming traffic (e.g., `80` or `443`).
 6. In the **Protocol** list box, select the protocol to use (e.g., **HTTP** or **HTTPS**).
 7. In the **Action Type** list box, select **Forward to Target Group**.
-   * In the **Forward Target Group** list box, select the Target Group that was created when you [added a Load Balancer with the **Type Target Group Only** in the previous step](https://docs.duplocloud.com/docs/overview/aws-services/load-balancers#creating-a-service-load-balancer-with-the-type-target-group-only).
+   * In the **Forward Target Group** list box, select the Target Group that was created when you [added a Load Balancer with the **Type Target Group Only** in the previous step](README.md#creating-a-service-load-balancer-with-the-type-target-group-only).
 8.  Click **Save**. The Shared Load Balancer for the Target Group displays in the **Listeners** tab.<br>
 
     <figure><img src="../../../../.gitbook/assets/Screenshot (253) (1).png" alt=""><figcaption><p>Shared Load Balancer for the Target Group</p></figcaption></figure>

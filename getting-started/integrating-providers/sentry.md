@@ -1,3 +1,7 @@
+---
+description: Connect Sentry so agents can query your errors and issues.
+---
+
 # Connecting Sentry to DuploCloud
 
 This guide walks through adding Sentry as a provider in DuploCloud, configuring credentials, creating a scope, and querying Sentry data through the AI agent.

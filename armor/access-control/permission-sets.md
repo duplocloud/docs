@@ -1,3 +1,7 @@
+---
+description: Create reusable bundles of access rules that allow or deny workspaces and resources, then attach them to users or groups.
+---
+
 # Permission Sets
 
 This document explains how to create a new Permission Set in the DuploCloud AI Suite Access Control panel.

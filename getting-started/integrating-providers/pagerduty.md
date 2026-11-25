@@ -1,3 +1,7 @@
+---
+description: Connect PagerDuty so agents can query and work on your incidents.
+---
+
 # Connecting PagerDuty to DuploCloud
 
 This guide walks through adding PagerDuty as an Incident Management provider in DuploCloud, configuring credentials, creating a scope, and querying PagerDuty incidents through the AI agent.

@@ -1,3 +1,7 @@
+---
+description: Group related skills by role, such as SRE or Security, and give them to workspaces.
+---
+
 # Personas
 
 A Persona is a logical container that groups related Skills by role or function. For example, an SRE Persona combines troubleshooting, monitoring, and incident response skills, a Provisioning Persona bundles Terraform and Kubernetes deployment skills, and a Security Persona groups compliance and security scanning skills.

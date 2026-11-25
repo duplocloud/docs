@@ -1,3 +1,7 @@
+---
+description: Connect an AWS account with an IAM role or an access key so agents can query and manage its resources.
+---
+
 # Amazon Web Services (AWS)
 
 The AWS Cloud Provider lets DuploCloud AI agents interact with your AWS account — querying resources, running CLI commands, and managing infrastructure on your behalf. There are two ways to authenticate: using an **IAM Role** (recommended) or using an **Access Key**.

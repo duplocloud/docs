@@ -1,3 +1,7 @@
+---
+description: Ask the DuploCloud AI bot questions and run tasks from Slack. It creates the ticket and replies in the thread.
+---
+
 # Using the DuploCloud AI Bot in Slack
 
 The DuploCloud AI bot lets you interact with DuploCloud directly from Slack — ask questions, run queries, and manage resources without leaving your workspace. The bot creates a ticket in DuploCloud HelpDesk on your behalf and returns the results back in the same Slack thread.
