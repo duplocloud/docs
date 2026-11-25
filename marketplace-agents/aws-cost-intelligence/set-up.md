@@ -1,5 +1,5 @@
 ---
-description: What you need before you start, the AWS and DuploCloud steps, and how to add your first cost data source.
+description: What you need before you start, how to activate AWS Cost Intelligence from the Agent Marketplace, and how to connect it to your accounts.
 ---
 
 # Set Up
