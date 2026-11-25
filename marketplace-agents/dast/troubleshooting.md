@@ -4,53 +4,54 @@ description: Common problems with DAST and how to fix them.
 
 # Troubleshooting and FAQ
 
-## Common problems
+## Error messages
 
 | What you see | What it means | What to do |
 | --- | --- | --- |
-| **"Target URL must be an absolute http(s) URL."** | The Application URL is missing the scheme or is not `http` or `https`. | Enter the full URL, for example `https://app.example.com`. |
-| **"An API definition (OpenAPI) URL is required for the 'api' scan type."** | You chose API without an API definition URL. In Run scan the API option is disabled for the same reason. | Add the OpenAPI or Swagger URL to the target. |
+| **"Target URL must be an absolute http(s) URL."** | The Application URL has no scheme, or isn't `http` or `https`. | Enter the full URL, for example `https://app.example.com`. |
+| **"An API definition (OpenAPI) URL is required for the 'api' scan type."** | You chose API without an API definition URL. In **Run scan**, the API option is unavailable for the same reason. | Add the OpenAPI or Swagger URL to the target. |
 | **"Max duration must be between 1 and 240 minutes."** | The value is out of range. | Enter 1 to 240. |
-| **"Repository must be 'organization/repository'"** or **"Select a GitHub scope to access the listed repositories."** | A repository is not in `org/repo` form, or repositories are listed without a GitHub scope. | Fix the entry, or choose a GitHub scope. |
-| **"The authentication scope must belong to an 'other' provider holding the app login."** or **"The source-control scope must be a GitHub scope."** | The wrong kind of scope was selected. | Pick an "other" scope for the login, and a GitHub scope for code. Other source-control providers are not supported. |
-| **"No repositories visible to this token"** | The GitHub credential cannot list repositories. | Check the credential, then select **Refresh**. You can still type `org/repo`. |
-| **Scan fails: "Docker daemon not reachable from the agent"** | The agent's host cannot run Docker. | Ask your administrator to fix Docker on the agent host. |
-| **Scan fails: "cannot pull ghcr.io/zaproxy/zaproxy:stable and it is not present locally"** | The host cannot download the ZAP image. | Allow access to `ghcr.io` from the agent host, or ask your administrator to pre-load the image. |
-| **Scan fails: "auth scope ... has no usable login"** or **"is set to authType=form but lacks username/password"** | The login scope is missing keys. The message lists the key names it found. | Add the missing keys (see [Set Up](set-up.md)), or turn off **Scan as a signed-in user** on the target. |
-| **Scan fails: "auth scope ... is not materialized"** | The login scope is not attached to this workspace. | Attach the scope to the workspace and run again. |
-| **"ZAP did not finish within N min ... raise it or narrow includePaths"** | The scan hit its time limit. | Raise Max duration, or narrow Include paths. |
-| **"ZAP exited N without a report"** or **"ZAP finished but produced no report"** | ZAP failed. | Open the **Artifacts** tab and read the end of the ZAP log. Full and API scans are not retried automatically. |
-| **Zero or very few findings** | A single-page application may expose few URLs, or the scan is anonymous. The log shows "Job spider ... warning" lines. This is not a failure. | Add a login, an API definition, or include paths. Zero findings is a valid result. |
-| **Findings show "Triaging..."** | ZAP finished and the agent is still reviewing. ZAP's own ratings are shown meanwhile. | Wait. The list updates by itself. |
-| **No Fix buttons, or "The target has no GitHub scope/repositories — add them to the target and re-scan."** | Fix needs a GitHub scope and repositories on the target, and findings that are not false positives. | Edit the target, add them, and run a new scan. |
-| **"This scan has no provisioning ticket yet — wait for it to complete, then Fix."** | The scan has not started its chat yet. | Wait a moment and try again. |
-| **A warning banner on the scan** | A setting was not applied, with a one-line reason. | Read it, fix the setting on the target, and run again. |
-| **A duplicate scan name error** | Scan names must be unique. | Change the name. |
-| **Buttons refused, or "Access denied"** | You lack the permission. | Ask an administrator (see [Permissions and Safety](permissions-and-safety.md)). |
+| **"Repository must be 'organization/repository'"** or **"Select a GitHub scope to access the listed repositories."** | A repository isn't in `org/repo` form, or repositories are listed without a GitHub scope. | Fix the entry, or choose a GitHub scope. |
+| **"The authentication scope must belong to an 'other' provider holding the app login."** or **"The source-control scope must be a GitHub scope."** | The wrong kind of scope was chosen. | Choose an **Other** scope for the login and a GitHub scope for the code. Other source-control providers aren't supported. |
+| Scan fails: **"Docker daemon not reachable from the agent"** | The agent can't run the ZAP container. | Ask your administrator to check Docker for the agent. |
+| Scan fails: **"cannot pull ghcr.io/zaproxy/zaproxy:stable and it is not present locally"** | The agent can't download the ZAP image. | Allow the agent to reach `ghcr.io`, or ask your administrator to pre-load the image. |
+| Scan fails: **"auth scope … has no usable login"** or **"is set to authType=form but lacks username/password"** | The login is missing keys. The message lists the key names it found. | Add the missing keys (see [Set Up](set-up.md#add-an-application-login-optional)), or clear **Scan as a signed-in user** on the target. |
+| Scan fails: **"auth scope … is not materialized"** | The login scope isn't attached to this workspace. | Attach the scope to the workspace and run the scan again. |
+| **"ZAP did not finish within N min … raise it or narrow includePaths"** | The scan hit its time limit. | Raise **Max duration**, or narrow **Include paths**. |
+| **"ZAP exited N without a report"** or **"ZAP finished but produced no report"** | ZAP failed. | Open the **Artifacts** tab and read the end of `zap.log`. Full and API scans aren't retried automatically. |
+| **"The target has no GitHub scope/repositories — add them to the target and re-scan."** | Fixing needs a GitHub scope and repositories on the target. | Edit the target, add them, and run a new scan. |
+| **"This scan has no provisioning ticket yet — wait for it to complete, then Fix."** | The scan's chat hasn't started yet. | Wait a moment and try again. |
 
-<!-- VERIFY: messages are copied from the backend validation and the scan scripts; confirm the exact wording users see in QA. -->
-<!-- VERIFY: the duplicate scan name message text and the "Access denied" wording come from the UI comments and platform behaviour, not from a message in this repo. -->
+## Other problems
+
+| What you see | What it means | What to do |
+| --- | --- | --- |
+| A scan stays at **Ticket created**, or shows **Running…** in the history, and never moves on | The agent couldn't start work, usually because it can't reach its AI model (for example an expired key or a used-up usage limit). | Ask your administrator to check the agent's AI model settings, then run a new scan. |
+| The scan can't reach the application, or finds almost nothing, when the URL uses `localhost` | ZAP runs in its own container next to the agent, where `localhost` isn't your computer. | Use an address the agent can reach, such as the machine's network IP address or a real host name. |
+| Your login or GitHub scope isn't in the target's drop-down | The scope isn't attached to the current workspace. | Attach the scope to the workspace, then reopen the form. |
+| The **Repositories** list is empty, or doesn't show your repository | The GitHub token can't list it. | Check the token's access, then click **Refresh**. You can also type `org/repo`. |
+| Zero or very few findings | A single-page application may expose few URLs, or the scan is anonymous. This isn't a failure. | Add a login, an API definition, or include paths. Zero findings is a valid result. |
+| Findings show ZAP's ratings and **Needs review** | ZAP has finished and the agent is still triaging. | Wait. The list updates by itself. |
+| No **Fix** buttons | Fixing needs a GitHub scope and repositories on the target, the **Fix DAST findings via pull request** permission, and findings that aren't false positives. | Add what's missing, then run a new scan if you changed the target. |
+| A banner of notes above the scan's tabs | The agent's notes about this scan, such as settings it couldn't apply or limits of a passive scan. | Read them. Fix the target's settings if needed, and run again. |
+| An action is refused | You don't have the permission. | Ask an administrator. See [Permissions and Safety](permissions-and-safety.md). |
 
 ## FAQ
 
-**Is a scan safe to run in production?** Only Baseline, and even then you should exclude destructive paths. Do not run Full or API scans in production. See [Permissions and Safety](permissions-and-safety.md).
+**Is a scan safe to run in production?** Only a Baseline scan, and even then exclude destructive paths. Don't run Full or API scans against production. See [Permissions and Safety](permissions-and-safety.md).
 
-**Do I have to prove I own the application?** Not today in this draft. <!-- VERIFY: the review said active scans require proof of domain ownership; the repo has no such check. Rewrite once confirmed. -->
+**Do I have to prove I own the application?** No. DAST doesn't check ownership, so it's up to you to scan only applications you own or have written permission to test.
 
 **Which scan type should I start with?** Baseline. It only observes traffic.
 
-**Do I need to link my code?** No. Without it you still get triaged findings, but no code locations or fix pull requests.
+**Do I need to link my code?** No. Without it you still get triaged findings, just no code locations or fix pull requests.
 
-**Can I scan behind a login?** Yes, with an "other" scope that holds a test account. Use a dedicated account, never a real user.
+**Can I scan behind a login?** Yes, with an **Other** scope that holds a test account. Use a dedicated test account, never a real user's.
 
 **Does the agent merge its fixes?** No. It opens a pull request for you to review.
 
-**Can I get the raw ZAP report?** Yes, on the **Artifacts** tab: HTML report, JSON report and log. They are available as soon as ZAP writes them.
+**Can I get the raw ZAP report?** Yes, on the **Artifacts** tab: the HTML report, the JSON report and the log, as soon as ZAP writes them.
 
-**Why did a finding get a different severity than in ZAP?** The agent adjusts severity for your application (exposure, authentication needed, compensating controls) and gives its reason on the finding.
+**Why does a finding have a different severity than in ZAP?** The agent rates severity for your application, taking into account exposure, whether authentication is needed, and compensating controls. Its reason is on the finding, and ZAP's original rating is shown under the new one.
 
-**Does it work with GitLab or Bitbucket?** No, GitHub only.
-
-**Is it free?** <!-- VERIFY: pricing is not in the repo. -->
-
-<!-- VERIFY: FAQ list is a first guess. The owner to add the questions customers actually ask. -->
+**Does it work with GitLab or Bitbucket?** No, only GitHub.
