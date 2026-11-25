@@ -1,140 +1,127 @@
 ---
-description: Activate the Kubernetes Upgrader agent from the Agent Marketplace, connect it to an Amazon EKS cluster, and get an upgrade plan without changing anything.
+description: Activate the free DAST agent from the Agent Marketplace, point it at a web app, and run a passive security scan with AI-triaged findings.
 ---
 
 # Try a Marketplace Agent
 
-In this step you activate a ready-made agent, **Kubernetes Upgrader**, and use it to plan an upgrade of an Amazon EKS cluster. You'll see which versions you can move to, which add-ons need updating, and what could go wrong, all before anything in the cluster changes.
+In this step you activate a ready-made agent, **DAST**, and use it to scan a running web app for security flaws. DAST runs [OWASP ZAP](https://www.zaproxy.org/) against the app, then the agent triages what ZAP found: it flags false positives, re-rates severities, and explains each finding.
 
-Everything on this page is read-only. The agent only changes a cluster after someone approves a plan, and you'll reject the plan at the end.
+DAST only needs the URL of a running web app. You don't need to connect a cloud account. DAST is **Free** in the Marketplace.
 
-{% hint style="info" %}
-Kubernetes Upgrader works with **Amazon EKS** clusters. If you don't use EKS, skip ahead to [Build Your Own Agent](build-your-own-agent/README.md) and pick your platform there.
+You'll run a **baseline** scan. A baseline scan crawls the app and only watches its traffic. It doesn't send attacks, so it's safe for any environment.
+
+{% hint style="warning" %}
+Only scan apps you own or have written permission to test. Even a passive scan crawls every page it can find.
 {% endhint %}
 
 ## What you need
 
 * The DevKit running, and signed in as the admin user. See [Install the DevKit](install-the-devkit.md).
-* An AWS account with an EKS cluster in it. Any cluster works, since you won't change it.
-* AWS credentials that can read the cluster. The policy below is enough for this walkthrough.
+* The URL of a web app you own or are authorized to test.
 
 <details>
 
-<summary>Read-only IAM policy for this walkthrough</summary>
+<summary>No app handy? Run a practice app on your computer</summary>
 
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "KubernetesUpgradePlanReadOnly",
-      "Effect": "Allow",
-      "Action": [
-        "sts:GetCallerIdentity",
-        "ec2:DescribeRegions",
-        "ec2:DescribeInstances",
-        "ec2:DescribeInstanceTypes",
-        "ec2:DescribeSubnets",
-        "eks:ListClusters",
-        "eks:DescribeCluster",
-        "eks:DescribeClusterVersions",
-        "eks:ListInsights",
-        "eks:ListAddons",
-        "eks:DescribeAddon",
-        "eks:DescribeAddonVersions",
-        "eks:ListNodegroups",
-        "eks:DescribeNodegroup",
-        "autoscaling:DescribeAutoScalingGroups",
-        "servicequotas:GetServiceQuota",
-        "servicequotas:GetAWSDefaultServiceQuota"
-      ],
-      "Resource": "*"
-    }
-  ]
-}
+[OWASP Juice Shop](https://owasp.org/www-project-juice-shop/) is an intentionally insecure web app made for security training. Run it next to the DevKit:
+
+```bash
+docker run -d --name juice-shop -p 3000:3000 bkimminich/juice-shop
 ```
 
-If a read permission is missing, the affected check shows **Unverified** instead of failing, so you can still finish the walkthrough.
+The scanner runs in its own container inside the DevKit, so `localhost` there isn't your computer. Use your computer's network IP address instead, for example `http://192.168.1.20:3000`. On macOS, `ipconfig getifaddr en0` prints it.
+
+When you're done with the walkthrough, remove the app with `docker rm -f juice-shop`.
 
 </details>
 
-## 1. Connect your AWS account
-
-Add your AWS account as a provider, then attach its scope to your workspace. See [Connecting Providers: Amazon Web Services (AWS)](integrating-providers/amazon-web-services-aws.md).
-
-## 2. Activate Kubernetes Upgrader
+## 1. Activate DAST
 
 {% stepper %}
 {% step %}
 ### Open the Agent Marketplace
 
-Go to **AI Admin → Agents** and open the **Agent Marketplace** tab.
-{% endstep %}
+Go to **AI Admin → Marketplace** and open the **Agent Marketplace** tab. Find the **DAST** card, under **Security & Compliance**, and click **Activate**.
 
-{% step %}
-### Activate the agent
-
-Find **Kubernetes Upgrader** and click **Activate**.
+<figure><img src="../.gitbook/assets/qs-step2-01-marketplace.png" alt="Agent Marketplace with the DAST card marked Free and an Activate button"><figcaption><p>DAST in the Agent Marketplace</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Choose where it appears
 
-The portal asks **Where should it appear in your left nav?** Keep the recommended section, or pick another one, then choose its position. Your choice is kept when the agent is upgraded, and you can change it any time in the Marketplace.
+The portal asks **Where should it appear in your left nav?** Keep the recommended option, or pick another section. The preview on the right shows where the agent will go. Click **Activate**.
+
+<figure><img src="../.gitbook/assets/qs-step2-02-activate.png" alt="Activate DAST dialog with left-nav placement options and a preview"><figcaption><p>Choose the agent's place in the left nav</p></figcaption></figure>
 {% endstep %}
 
 {% step %}
 ### Wait for it to install
 
-Progress shows on the page. It usually takes under a minute. When it finishes, the agent appears in your left nav under **Kubernetes Upgrader**.
+The card shows its progress: **Queued**, **Downloading**, then **Verifying**. It usually takes under a minute.
+
+<figure><img src="../.gitbook/assets/qs-step2-03-installing.png" alt="DAST card showing Downloading while the agent installs"><figcaption><p>DAST installing</p></figcaption></figure>
 {% endstep %}
 {% endstepper %}
 
-## 3. Add your EKS cluster
+## 2. Add a target
 
-1. In the left nav, open **Kubernetes Upgrader → Kubernetes Clusters**.
-2. Click **Add Kubernetes Cluster**.
-3. Fill in the form. Each field appears once the one before it is filled:
-   * **Name**: a name for the cluster in DuploCloud.
-   * **Scope**: the AWS scope you attached in step 1.
-   * **Region**: the region your cluster is in.
-   * **Kubernetes Cluster**: pick your cluster from the list the agent found.
-4. Click **Create**.
+A **DAST target** is the app you want to scan. It only stores settings. Nothing runs until you start a scan.
 
-The agent only reads your account to find the cluster.
+1. Switch to your workspace and open **DAST (ZAP)** in the left nav. With the default placement it's under **Security**.
 
-## 4. Plan an upgrade
+   <figure><img src="../.gitbook/assets/qs-step2-04-target-list.png" alt="Empty DAST target list with an Add DAST Target button"><figcaption><p>The DAST target list</p></figcaption></figure>
+2. Click **Add DAST Target**.
+3. On the **Target** step, fill in:
+   * **Name**: a short name, such as `my-web-app`.
+   * **Application URL**: the app's full `http://` or `https://` address.
+   * **Default scan type**: keep **Baseline (passive)**.
 
-1. Open the cluster and click **Add Upgrade Job**.
-2. Enter a **Name** for the job.
-3. Tick **Upgrade EKS control plane version** and choose a **Target K8s Version**. Each option shows how many steps it takes and whether it uses extended support.
-4. If your cluster uses EKS add-ons, tick **Upgrade EKS add-ons** to see which add-ons will move to which version. If it doesn't, skip this.
-5. Look at **Upgrade Path**. It lists every step the job would run, plus any blockers and warnings.
-6. Click **Create plan**.
+   <figure><img src="../.gitbook/assets/qs-step2-05-add-target.png" alt="Add DAST Target form with a name, application URL, and Baseline selected"><figcaption><p>The minimum a target needs</p></figcaption></figure>
+4. Click **Next** through **Authentication** and **Source code** without changing anything, then click **Create** on **Review**.
 
-Creating a plan runs pre-flight checks: EKS upgrade insights, add-on compatibility, container image availability, and EC2 quota and subnet IPs. Nothing in the cluster changes yet.
+The other steps let you scan as a signed-in user, link the app's GitHub repositories, and limit which paths are scanned. See [DAST: Set Up](../marketplace-agents/dast/set-up.md).
 
-## 5. Review the plan, then reject it
+## 3. Run a baseline scan
 
-The job page shows **Review & approve the upgrade plan**, with:
+1. Open your target and click **Run scan**.
+2. Keep the suggested **Scan name** and **Baseline (passive)**, then click **Run scan**.
 
-* the upgrade path, step by step
-* each add-on's current and target version, if you chose to upgrade add-ons
-* the result of every pre-flight check
-* whether DuploCloud can reach the cluster, and which permissions it has
+   <figure><img src="../.gitbook/assets/qs-step2-06-run-scan.png" alt="Run scan dialog with Baseline (passive) selected"><figcaption><p>Start a baseline scan</p></figcaption></figure>
 
-This is the agent's result: a full, checked plan for your upgrade.
+The scan page opens. The **Lifecycle** panel shows where the scan is: **Queued**, **Scanning** while ZAP runs, then **Triaging** while the agent reviews the results. **Mapping to code** is skipped, because you didn't link a repository.
 
-To finish the walkthrough without changing anything, click **Reject**. If you do nothing, the plan expires after 5 minutes and is cancelled on its own.
+<figure><img src="../.gitbook/assets/qs-step2-07-scan-running.png" alt="Scan page with the Lifecycle panel at Scanning, ZAP is running"><figcaption><p>A scan in progress</p></figcaption></figure>
 
-{% hint style="danger" %}
-Don't click **Approve & start upgrade** on a cluster you care about. Approving upgrades the control plane, which **can't be undone**, and can drain and replace worker nodes.
-{% endhint %}
+A baseline scan of a small app usually takes a few minutes. Findings appear in two passes. First you see ZAP's raw alerts, with triage still pending. Then the agent replaces them with triaged findings and a summary.
+
+## 4. Review the findings
+
+When the scan reaches **Complete**, the **Findings** tab shows:
+
+* how many findings are **Actionable**, and whether any are critical or high
+* the triage result: how many the agent **Confirmed**, marked **Needs review**, or flagged as **False positives**
+* a list you can filter by triage result and by severity
+
+<figure><img src="../.gitbook/assets/qs-step2-08-findings.png" alt="Findings tab with actionable count, triage totals, severity filters, and the findings list"><figcaption><p>Triaged findings</p></figcaption></figure>
+
+Click a finding's title to open its details. Next to ZAP's own description, solution and references, the agent adds:
+
+* **Triage**: what it checked, and whether it agrees with ZAP
+* **Why this severity**: why it kept or changed ZAP's rating
+* **Where**: the requests that showed the problem
+
+<figure><img src="../.gitbook/assets/qs-step2-09-finding-detail.png" alt="Finding detail with Triage, Why this severity, Description, Where, Solution and References"><figcaption><p>One finding, explained</p></figcaption></figure>
+
+The **Artifacts** tab holds ZAP's own output: `zap-report.html`, `zap-report.json` and `zap.log`. Select one to view it, or click **Download**.
+
+<figure><img src="../.gitbook/assets/qs-step2-10-zap-report.png" alt="Artifacts tab showing the ZAP HTML report and a Download button"><figcaption><p>The ZAP report</p></figcaption></figure>
+
+If you link the app's GitHub repositories to the target, the agent also points each finding to the file and line that causes it, and can open a pull request that fixes the findings you select. See [DAST: Use](../marketplace-agents/dast/use.md).
 
 ## What you just did
 
-You activated an agent from the Marketplace, connected it to your AWS account, and used it to plan a change safely. Every Marketplace agent follows the same pattern: activate it, connect it, and review what it proposes before it acts.
+You activated an agent from the Marketplace, gave it a target, and got a scan with every finding already triaged. You didn't need a cloud account. Every Marketplace agent follows the same pattern: activate it, give it what it works on, and review what it reports.
 
-To learn more about this agent, including running a real upgrade, see [Kubernetes Upgrader](../marketplace-agents/kubernetes-upgrade/README.md).
+To learn more about this agent, including authenticated scans and fix pull requests, see [DAST](../marketplace-agents/dast/README.md).
 
 **Next step in the Quick Start:** [Build Your Own Agent](build-your-own-agent/README.md).
