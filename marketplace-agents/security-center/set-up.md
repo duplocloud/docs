@@ -18,7 +18,7 @@ Setting up Security Center is a job for a DuploCloud administrator. Administrato
 1. Open **Marketplace > Agent Marketplace** and find **Security Center**. The **Security & Compliance** filter shows it, or search for `Security`.
 2. Select **Activate**. See [Agent Marketplace and Buying Agents](../../getting-started/marketplace.md) for what happens next.
 
-   ![The Agent Marketplace filtered to Security & Compliance, showing the Security Center card](../../.gitbook/assets/security-center-01-marketplace.png)
+   ![The Security & Compliance agents in the Agent Marketplace, with Activate on the Security Center card](../../.gitbook/assets/security-center-01-marketplace.png)
 3. When it finishes, the workspace menu has a **Compliance** entry. Under it, **Security Center** has **Overview**, **Impact analyses**, **Data flow**, **Gaps & Remediation**, **CVEs**, **Plans and fixes**, **Compliance** and **Settings**. In **AI Admin**, a **Security Center** entry has **Settings** and **Cloud accounts**.
 
    ![The Security Center menu under Compliance, open on an Overview where nothing has run yet](../../.gitbook/assets/security-center-02-menu.png)

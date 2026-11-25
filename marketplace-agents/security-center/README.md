@@ -49,7 +49,6 @@ Each AWS account belongs to exactly one workspace, and only that workspace can s
 | Criteria | SOC 2 Security (CC-series). Availability, Confidentiality, Processing Integrity and Privacy are coming. |
 | Fix pull requests | Terraform (state in an S3 backend) and CloudFormation (YAML templates), through a GitHub connection |
 | Integrations (optional) | GitHub for fix pull requests, Slack for alerts and the CVE digest, and Jira for a ticket per gap |
-| Cost | Paid: listed in the Agent Marketplace at $1,000/month. See [Agent Marketplace and Buying Agents](../../getting-started/marketplace.md). |
 
 ## In this section
 
