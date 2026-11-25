@@ -1,5 +1,5 @@
 ---
-description: What Security Center can read and change, which actions need approval, and how it behaves for read-only, regular and admin users.
+description: What Security Center can read and change, the permissions that gate each action, and what read-only, regular and admin users can do.
 ---
 
 # Permissions and Safety
@@ -8,101 +8,125 @@ description: What Security Center can read and change, which actions need approv
 
 | | What it does |
 | --- | --- |
-| **Reads** | Configuration of your AWS accounts through `describe`, `list` and `get` calls (compliance scans), findings from Security Hub, AWS Config, GuardDuty and Inspector, CloudTrail logs for impact analyses, and which CloudFormation stack or Terraform resource manages a flagged resource. |
-| **Changes in AWS: account profiles** | When you apply an account security profile, it turns on the AWS services you chose (Security Hub, AWS Config, CloudTrail, GuardDuty, Inspector, the IAM password policy) and creates an event rule and queue per region, plus log storage. Needs the apply-profile permission. |
-| **Changes in AWS: fixes** | Only the one AWS CLI command a fix proposed, only after someone approves it with the execute-fix permission, and only with the account's write connection. |
-| **Changes in AWS: containment** | Only the containment action you select on an impact analysis, with the write connection, after a confirmation, and needing the contain permission. Each action can be undone. |
-| **Changes in GitHub** | For a Terraform or CloudFormation fix it creates a new branch and opens a pull request. It pushes the branch directly to the repository when the GitHub connection allows it, and otherwise to a fork. It never merges. |
-| **Changes in Jira and Slack** | Creates and updates Jira tickets and posts Slack messages, when you connect them and turn the features on. |
-| **Never** | A compliance scan or impact analysis never creates, changes or deletes anything in your account. Impact analysis refuses secret values, SSM parameters, credential and token `get` calls, Lambda environment variables and code links, EC2 user data and ECS task definitions. A pull request is never merged. Templates are never deployed. |
+| **Reads** | The configuration of your AWS accounts, through `describe`, `list` and `get` calls. Findings from Security Hub, AWS Config, GuardDuty and Inspector. CloudTrail logs, for impact analyses. Which CloudFormation stack or Terraform resource manages a resource that has a gap. |
+| **Changes in AWS: security services** | Applying an account's security profile turns on the services an administrator chose (Security Hub, AWS Config, CloudTrail, GuardDuty, Inspector, the IAM password policy), and creates log storage and an event rule and queue in each region. Only administrators can do this. |
+| **Changes in AWS: fixes** | Only the AWS CLI command a fix proposed, run once, only after someone approves it, and only with the account's write connection. |
+| **Changes in AWS: containment** | Only the containment action you select and confirm on an impact analysis, with the account's write connection. Most actions can be undone; delete and terminate actions can't. |
+| **Changes in GitHub** | For a Terraform or CloudFormation fix, it creates a branch and opens a pull request. It pushes the branch to the repository, and uses a fork only if that push fails. It never merges. |
+| **Changes in Jira and Slack** | Creates and updates Jira tickets and posts Slack messages, when an administrator connects them and turns them on. |
+| **Never** | A compliance scan or impact analysis never creates, changes or deletes anything in your account. An impact analysis doesn't read secret values, SSM parameters, Lambda environment variables or code, EC2 user data or ECS task definitions. Pull requests are never merged, and templates are never deployed. |
 
 {% hint style="warning" %}
-The read-only promise applies to scans and analyses. Applying a profile, approving a CLI fix and applying a containment action change your AWS account, and each is a separate permission.
+Scans and analyses only read. Applying a security profile, running an approved AWS CLI fix and containment change your AWS account, and each is gated separately.
 {% endhint %}
 
-<!-- VERIFY: "pushes the branch directly to the repository when the connection allows it". The fix skill documentation says it pushes straight to the named repository and uses a fork only if that push fails. Confirm that is the shipped behaviour and wording for customers. -->
-<!-- VERIFY: the extension reads Inspector, Security Hub, GuardDuty and Config findings on a schedule and from an event queue in the customer's account. Confirm the customer-facing description. -->
+## Each AWS account belongs to one workspace
+
+An administrator assigns each AWS account to one workspace, in **AI Admin > Security Center > Cloud accounts**. Only that workspace can scan the account, plan fixes for it or investigate it. A request from another workspace is refused, even if that workspace has a connection to the account.
+
+Everything that changes an account's settings in Security Center (turning services on or off, re-applying a profile, choosing frameworks and standards, and fix access) is **administrator-only**. People without the Administrator role are refused, whatever their permission sets say. In a workspace, the account pages are view-only.
 
 ## How permissions work
 
-Security Center does not ship fixed roles. It joins the platform's permission sets. Admins build permission sets from the **Security Center** branch under the workspace and assign them to groups. A set holds rules that name a resource, the verbs it allows (`GET`, `PUT`, `POST`, `DELETE`), the named actions it allows, and whether the rule covers everything under it. A user in several groups gets the union of their sets, and a refusal wins.
+Security Center doesn't ship fixed roles. It adds a **Security Center** branch under **Workspace** in the platform's permission sets. A set holds rules that each name a resource, the verbs it allows (`GET`, `PUT`, `POST`, `DELETE`), any named actions, and whether the rule covers everything under it. A user in several groups gets everything their sets allow.
 
-Seven operations are **named actions**. A verb grant never covers one, not even `ALL`. A rule must list the action or carry the wildcard `*`.
+| Resource | What it covers |
+| --- | --- |
+| `PostureAssessment` | Compliance scans |
+| `Gap` (with `PostureRemediation` and `ScopeAnalysis` under it) | Gaps, their fixes and scope analyses |
+| `GapIgnore` | Ignore rules |
+| `AccountSecurityProfile` | An account's security services (read-only outside AI Admin) |
+| `AccountFixAccess` | An account's read and write connections (read-only outside AI Admin) |
+| `SecurityCenterSettings` | The workspace's own settings: its Slack channel, Jira project key, repositories and always-attached connections |
+| `ImpactAnalysis` (with `Containment` under it) | Impact analyses and containment records |
+| `Cve` | CVEs |
 
-| Action | What it allows | Changes your cloud |
-| --- | --- | --- |
-| `security-center.propose-fix` | Open a fix (a pull request or a proposed CLI command) and answer its follow-up question. Open a scope analysis. | No |
-| `security-center.execute-fix` | Approve and run a proposed AWS CLI command. | Yes |
-| `security-center.grant-write` | Attach the account's write connection to a fix so it can run. | Yes |
-| `security-center.apply-profile` | Apply an account security profile to the AWS account. Also needed to save frameworks, standards or the workspace override in Settings. | Yes |
-| `security-center.contain` | Apply or undo a containment action on a resource in an impact analysis. | Yes |
-| `security-center.create-tickets` | Create Jira tickets for selected gaps. | No |
-| `security-center.run-impact-analysis` | Start an impact analysis, widen its window, or ask for more history. Each uses AI credits. | No |
+### Named actions
 
-Propose and execute are separate on purpose, so one person can prepare a fix and another approve and run it. Nothing in the code forces two different people: a person who holds both can do both.
+Some operations are **named actions**. A verb grant never covers one, not even all verbs: a rule must list the action.
 
-Some actions are enforced as an edit (`PUT`) even though they are sent as a POST: ignore, un-ignore and close a gap, re-assess a scan, and the Slack and Jira test sends. There is no separate permission for ignoring a gap: anyone who may edit gaps may ignore them.
+| Action | Shown as | What it allows | Grant it on |
+| --- | --- | --- | --- |
+| `security-center.propose-fix` | Propose a fix | Plan and create a fix, answer its follow-up question, and start a scope analysis. | `Gap` (whole subtree) |
+| `security-center.execute-fix` | Execute a fix | **Approve and run** a proposed AWS CLI command. Changes your AWS account. | `Gap` (whole subtree) |
+| `security-center.grant-write` | Grant write access for a fix | **Attach write access** to a fix so its command can run. | `Gap` (whole subtree) |
+| `security-center.contain` | Contain a resource | Apply or undo a containment action. Changes your AWS account. | `ImpactAnalysis` (whole subtree) |
+| `security-center.create-tickets` | Create Jira tickets for gaps | **Create N Jira tickets**. | The **Workspace** node itself, with whole subtree off |
+| `security-center.run-impact-analysis` | Run an impact analysis | Start an impact analysis, widen its window, or compare it against more history. Each uses AI credits. | The **Workspace** node itself, with whole subtree off |
 
-Every endpoint is enforced by the platform's access filter. The screens also hide or disable controls a user cannot use, with a message that says why, but that is a convenience, not the enforcement.
+Proposing a fix and running it are separate permissions, so one person can prepare a fix and another can approve it. Security Center doesn't force them to be different people: someone who holds both can do both.
 
-<!-- VERIFY: all of this comes from the extension's access declarations and README (SecurityCenterAccess.cs, the [AccessControl] attributes on each controller). The platform filter itself is not in this repo. Confirm in QA with real test users (screenshots SC-25 to SC-28). -->
+There's no separate permission for ignoring or closing a gap: anyone who can edit (`PUT`) gaps can do it. Running a compliance scan again is also an edit of the scan.
+
+The platform checks every request. The pages also hide or disable controls you can't use, with a message saying why, but that is a convenience, not the protection.
+
+{% hint style="danger" %}
+A rule whose Actions field holds the wildcard `*` grants every named action under it, whatever its verbs. A set whose rules allow only `GET` but carry the wildcard is not read-only: its users can create and run fixes and contain resources. For a read-only or limited set, leave each rule's Actions field empty and add only the actions the set should have.
+{% endhint %}
 
 ## Who can do what
 
-The extension defines what each permission allows. Which users hold which permissions is decided by the permission sets you create. The rows below describe a user whose sets match the sets suggested in the extension documentation.
+What a user can do depends on the permission sets you give them. These are suggested sets:
 
-| User | What they can do |
-| --- | --- |
-| **Read-only** | A set with `GET` on compliance scans, gaps (with everything under them, so fixes and scope analyses are readable), impact analyses and CVEs, and no actions. They can view every page, filter and export what they can see. They cannot add or re-assess a scan, ignore or close a gap, open a fix, answer a fix question, approve or run a fix, start or widen an impact analysis, contain anything, create Jira tickets, or change settings. |
-| **Regular user** | Whatever their sets grant. A typical triage user adds `PUT` and `POST` on gaps (ignore, un-ignore, close, rename and refresh a fix), `PUT` on compliance scans (re-assess) and on impact analyses (narrow or reset a window, mark nodes expected), and optionally `create-tickets` and `run-impact-analysis`. A remediator adds `propose-fix`, `execute-fix` and `grant-write` on gaps, and `contain` on impact analyses. An account owner adds `GET` and `PUT` on account profiles and `apply-profile`. A settings manager adds `GET`, `PUT` and `POST` on settings. |
-| **Administrator** | Administrators (the platform role) bypass every grant, named actions included, without any set being configured. Some things are administrator-only: the platform policy (AI Admin > Security Center > Settings), turning a service off in AWS from an account page, and, unless a set names it, the fix access allowlist. |
+| Set | Grant | What they can do |
+| --- | --- | --- |
+| **Read-only** | `GET` on `PostureAssessment`, `Gap` (whole subtree), `ImpactAnalysis` and `Cve`. No actions. | View every page and filter what they see. They can't run a scan, ignore or close a gap, plan or run a fix, start an impact analysis, contain anything, create Jira tickets or change settings. |
+| **Triage** | Read-only, plus `PUT` and `POST` on `Gap`, `PUT` on `PostureAssessment` and on `ImpactAnalysis`. Optionally `create-tickets` and `run-impact-analysis` on the Workspace node. | Also ignore, close and reopen gaps, run scans again, narrow an analysis window and mark nodes as expected; with the optional actions, create Jira tickets and run impact analyses. |
+| **Remediator** | Triage, plus `propose-fix`, `execute-fix` and `grant-write` on `Gap` (whole subtree) and `contain` on `ImpactAnalysis` (whole subtree). | Also plan fixes, attach write access, approve and run commands, and contain resources. |
+| **Settings manager** | `GET`, `PUT` and `POST` on `SecurityCenterSettings`. No actions. | Change the workspace's Slack channel, Jira project key, repositories and always-attached connections. |
+| **Administrator** | The platform's Administrator role. | Everything, without any set: administrators bypass every grant, named actions included. Only administrators can assign accounts, change account settings and fix access, and set the platform policy in AI Admin. |
 
-{% hint style="danger" %}
-A rule with `actions: ["*"]` grants every named action under it, whatever its verbs. A set whose rules are all `GET` but also carry the action wildcard is not read-only: its users can propose and run fixes, grant write access and apply profiles. For a read-only or limited set, leave each rule's Actions field empty and add only the specific actions the set should have. Check the stored rule, not the screen.
-{% endhint %}
+A simple read-only base for any of these sets is one rule on the **Workspace** node with `GET`, whole subtree on, and the Actions field empty. Add the other rules on top of it.
 
-<!-- VERIFY: the three rows. They follow the "Suggested permission sets" in the extension README and the per-endpoint access declarations; none of it has been run with real read-only, regular and admin test users. -->
-<!-- VERIFY: "Administrators bypass everything" is stated in the README as confirmed on a live host. It is platform behaviour, not code in this extension. Confirm with the platform team. -->
-<!-- VERIFY: Zafar's rule (2026-11-19, admin-only or approval flow). In the code: execute-fix, grant-write, apply-profile and contain are separate, destructive named actions that "ALL" never grants, and Approve and run is bound to the exact command. Not enforced: a second person approving, a confirmation dialog on Approve and run (the button sends the request directly), and an admin-only default for any of the four. Decision needed from Zafar and Darren whether to also make these admin-only by default or require a different person to approve than propose. -->
+### What each user sees
+
+Controls a user can't use are hidden. A read-only user sees a gap with no **Plan a fix** and no **More actions**:
+
+![A gap seen by a read-only user, with no Plan a fix or More actions button](../../.gitbook/assets/security-center-21-readonly-gap.png)
+
+A Triage user also gets **More actions**, with **Ignore in this account…** and **Close**, but still no **Plan a fix**:
+
+![A gap seen by a Triage user, with the More actions menu open and no Plan a fix button](../../.gitbook/assets/security-center-22-triage-gap-more-actions.png)
+
+A user with **Propose a fix** also gets **Plan a fix**. Without **Execute a fix** and **Grant write access for a fix**, they can prepare a fix but not attach write access or run it:
+
+![A gap seen by a user who can propose fixes, with Plan a fix and More actions](../../.gitbook/assets/security-center-23-proposer-gap.png)
+
+Someone who opens a page they don't have access to, for example a Plan a fix link without **Propose a fix**, sees why:
+
+![The No access page: You don't have access to planning fixes](../../.gitbook/assets/security-center-24-no-access-plan.png)
 
 ## What needs approval
 
-- **AWS CLI fixes.** A fix is proposed first. Running it needs **Attach write access** and then **Approve and run**, each a separate permission. The page sends a fingerprint of the command on screen. If the stored command has changed since you loaded the page, the request is refused. The approved fingerprint and the approver's email are recorded, and the agent runs only a command that matches it. A command runs once.
-- **Account profiles.** Applying one needs `apply-profile`. Saving frameworks, standards or the workspace override also needs it, because it re-applies every account profile and costs money.
-- **Containment.** Every action and every undo asks for confirmation and lists what will change. Destructive actions are flagged. Targets that are the read or write connection's own identity are refused.
-- **Pull requests.** Opening one needs `propose-fix`. You review and merge it yourself.
+- **AWS CLI fixes.** A fix is created first. Running it needs **Attach write access** and then **Approve and run**, each its own permission. You approve the exact command on screen: if the stored command changed after you loaded the page, the run is refused. Security Center records who approved and which command, and runs only a command that matches. Each command runs once. **Approve and run** has no second confirmation.
+- **Security profiles.** Only administrators can apply, change or remove one, and saving an account's frameworks and standards applies its profile again.
+- **Containment.** Every action and every undo asks you to confirm and lists what will change. Actions that can't be undone say so. Security Center refuses to contain the identity of its own read or write connection.
+- **Pull requests.** You review and merge them yourself.
 
 ## Safety checks
 
-- **Scans are read-only in code.** The collector refuses any AWS call that is not `describe`, `list`, `get`, generating the credential report, or Inspector's account status check.
-- **A failed read is never a pass.** Access denied, an unsupported operation, an opted-out region or a throttle all show as **Error**, keep their weight in the score, and appear first on the Coverage tab.
-- **Raw configuration stays on disk.** It is not written to the result or the ticket log.
-- **One command, once, as approved.** A drafted command must be one `aws ...` invocation with no operators, redirects, substitutions or wildcards. It is checked when proposed and again before it runs. A command that does not match the approved fingerprint does not run.
-- **Connections must belong to the workspace.** A new scan, fix or manual gap may only name connections attached to its own workspace.
-- **The read and write connections are separate** and must be different. A fix always opens with the read-only connection.
-- **Disabling is narrow.** Security Center turns off only AWS Config, GuardDuty or Inspector, only where it turned them on itself, and only when an administrator confirms. Security Hub and CloudTrail are never turned off.
-- **Impact analysis is read-only** and has limits: at most 40 follow-up AWS queries and 15 minutes for the agent, a result of at most 5,000 events.
-- **Scan scope is frozen.** Accounts, regions, criteria and the tag filter cannot change after create.
-
-<!-- VERIFY: the repo has no automated test run here. Statements about the command guard come from cli_guard.py and resolve.sh. Curated commands from the fix library are not passed through the guard (they are written by DuploCloud). Confirm that is intended. -->
-<!-- VERIFY: the background scan, fix and impact skills post their results as the ticket identity, which needs PUT on the resource. The README says this is "not yet confirmed for non-admin flows". Test with a non-admin user. -->
-<!-- VERIFY: background workers (monitoring, account reconciler) call services directly and are assumed not to be subject to permission checks, according to the README. Confirm they cannot be triggered by a user without the matching permission. -->
+- **Scans can only read.** The scan refuses any AWS call that isn't a `describe`, `list` or `get` call, generating the credential report, or Inspector's account status check.
+- **A failed read is never a pass.** Access denied, an unsupported operation, an opted-out region or throttling all show as **Error**, still count in the score, and appear first on the Coverage tab.
+- **Drafted commands are restricted.** A command the agent wrote itself must be a single `aws ...` call, with no operators, redirects, substitutions or wildcards. It is checked when it's drafted and again just before it runs. Commands written by DuploCloud can have more than one step.
+- **The approved command is the one that runs.** The page checks the command before running it, which needs a secure (HTTPS) connection to DuploCloud.
+- **Connections must belong to the workspace.** A scan, fix or manual gap can only use connections attached to its own workspace, for an account assigned to that workspace.
+- **Read and write connections are separate**, and every fix starts with the read-only one.
+- **Turning services off is narrow.** Security Center turns off only what it turned on itself, and only an administrator can do it.
+- **Impact analysis has limits:** the agent may make at most 40 follow-up AWS queries in 15 minutes, and a result holds at most 5,000 events.
+- **Scan scope is fixed.** An assessment's accounts, regions, criteria and tag filter can't change after it's created.
 
 ## Limits you should know
 
-- A clean result is clean against these checks. It is not SOC 2 compliance and it covers the Security criteria only. It reads AWS only, so source control rules, identity provider MFA and endpoint controls are outside it. Several areas have no check, such as Organizations service control policies, network ACLs, API Gateway, CloudFront and OpenSearch.
-- Compliance history keeps counts and scores only. Findings from older runs are not kept.
-- Not every failing check has an automated fix. Several can only be reported.
-- Impact analysis needs a CloudTrail trail bucket it can read. There is no event-history fallback. IAM and STS calls are made in `us-east-1`, so GovCloud and China partitions are not supported.
-- Deleting a user or role through containment is several calls. A failure part-way is reported as failed even though some parts were removed.
-- Deleting a scan or a fix removes the record only. It does not close pull requests and does not undo a command that ran.
+- A clean result is clean against Security Center's checks. It is not SOC 2 compliance, and it covers the Security criteria only. It reads AWS only, so source control rules, identity provider MFA and endpoint controls are outside it. Some areas have no check yet, such as Organizations service control policies, network ACLs, API Gateway, CloudFront and OpenSearch.
+- Compliance history keeps counts and scores only. Findings from older runs aren't kept.
+- Not every failing check has an automated fix. Some can only be reported.
+- An impact analysis needs a CloudTrail trail whose bucket it can read. There is no fallback to CloudTrail event history. GovCloud and China partitions aren't supported.
+- Deleting a user or role through containment takes several AWS calls. If one fails part-way, the action is reported as failed even though some parts were removed.
+- Deleting a plan or fix removes the record only. It doesn't close its pull request or undo a command that already ran.
 
 ## AI data handling
 
-- **What runs:** AI agents run the compliance scan, the fix proposal, scope analysis and the impact analysis review. An agent can draft a fix command or an infrastructure-as-code edit, and these are marked as drafted. Deterministic rules build the attack graph first; the agent can add to it but never remove what the rules found.
-- **What stays on disk:** raw AWS configuration and collected CloudTrail files stay in the run's working directory.
-- **What is published:** findings with trimmed evidence, resource identifiers and account IDs in the results. Event request and response data in an impact analysis is trimmed to 2 KB per event.
-- **Geographic data:** IP location comes from a bundled offline database. There are no live threat-intelligence lookups.
-- **Credentials:** each connection used by a run is made available to that ticket, and the ticket token only allows updates to its own resource.
-
-<!-- VERIFY: which model and region the agents use, whether findings (resource names, account IDs) are sent to the model, and retention. Not in the repo. Ask Darren and the platform team. -->
+- **What the agent does:** AI agents run the compliance scan, plan fixes, run scope analyses and review impact analyses. An agent can draft a fix command or an infrastructure-as-code edit; these are marked as drafted. In an impact analysis, fixed rules build the attack graph first; the agent can add to it but never removes what the rules found.
+- **What stays in the run:** raw AWS configuration and collected CloudTrail files stay in the run's working directory and aren't written to the results.
+- **What is kept in results:** findings with trimmed evidence, resource identifiers and account IDs. Request and response data of each CloudTrail event in an impact analysis is trimmed to 2 KB.
+- **IP locations** come from a bundled offline database. There are no live threat-intelligence lookups.

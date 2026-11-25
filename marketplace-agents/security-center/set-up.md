@@ -1,98 +1,132 @@
 ---
-description: What you need before you start, how to activate Security Center, connect an AWS account, and the AWS permissions it needs.
+description: What you need before you start, how to activate Security Center, connect and assign AWS accounts in AI Admin, and set the policy every workspace follows.
 ---
 
 # Set Up
 
+Setting up Security Center is a job for a DuploCloud administrator. Administrators decide which AWS accounts it works on and what it does there. People in a workspace then use it on the accounts assigned to their workspace.
+
 ## Before you start
 
-- An **AWS connection (scope)** in your workspace for each AWS account you want to cover. Until one is connected, every Security Center page except Settings shows "Security Center isn't set up yet. Ask your administrator to connect a cloud account".
-- **Read permissions** on that connection (see below). A missing read permission does not fail a scan. The check that needs it shows as **Error** and lowers the score.
-- Optional, to turn on continuous monitoring: permission to change account-level security settings in AWS (see "Permissions to turn on continuous monitoring").
-- Optional, for fixes as pull requests: a **GitHub connection** and the repositories that hold your Terraform or CloudFormation. Repositories are listed in Settings, in order, and must all be reachable with the same GitHub connection.
-- Optional, for fixes as AWS CLI commands: a separate **write connection** for the account (see "Fix access").
-- Optional: a Slack connection, and a Jira connection.
-- **Permissions** for the people who will use it. Security Center uses the platform's permission sets, and ships none of its own. See [Permissions and Safety](permissions-and-safety.md).
-
-<!-- VERIFY: exact prerequisites for the Slack connection (the settings page shows numbered setup steps) and GitHub connection rights. Darren to add the customer-facing steps. -->
+- **An AWS connection for each account** you want to cover: an AWS provider, a credential and a scope, as described in [Amazon Web Services (AWS)](../../getting-started/integrating-providers/amazon-web-services-aws.md). The scope must be attached to the **Admin Workspace** and to the workspace that will use the account.
+- **Read access in AWS** on that connection. The AWS managed policies `ReadOnlyAccess` and `SecurityAudit` together cover what Security Center reads. A missing read permission does not stop a scan: the check that needs it shows as **Error** and counts against the score.
+- **Optional:** a second AWS connection to the same account, used only to run AWS CLI fixes that someone has approved (see [Fix access](#fix-access)).
+- **Optional:** connections for GitHub (fix pull requests), Slack (alerts) and Jira (tickets). See [Connect GitHub, Slack and Jira](#connect-github-slack-and-jira-optional).
 
 ## Activate Security Center
 
-1. Open the **Agent Marketplace** and find **Security Center**.
-2. Select **Activate** and confirm.
-3. When it finishes, a **Security Center** section appears in the left navigation with Overview, Impact analyses, Data flow, Gaps & Remediation, CVEs, Plans and fixes, Compliance and Settings.
+1. Open **Marketplace > Agent Marketplace** and find **Security Center**. The **Security & Compliance** filter shows it, or search for `Security`.
+2. Select **Activate**. See [Agent Marketplace and Buying Agents](../../getting-started/marketplace.md) for what happens next.
 
-<!-- VERIFY: exact marketplace steps and button names (screenshots SC-01 and SC-02). The manifest also adds a "Security Center > Settings" entry under the Admin menu for the platform policy (admin only). -->
+   ![The Agent Marketplace filtered to Security & Compliance, showing the Security Center card](../../.gitbook/assets/security-center-01-marketplace.png)
+3. When it finishes, the workspace menu has a **Compliance** entry. Under it, **Security Center** has **Overview**, **Impact analyses**, **Data flow**, **Gaps & Remediation**, **CVEs**, **Plans and fixes**, **Compliance** and **Settings**. In **AI Admin**, a **Security Center** entry has **Settings** and **Cloud accounts**.
 
-## Connect an AWS account
+   ![The Security Center menu under Compliance, open on an Overview where nothing has run yet](../../.gitbook/assets/security-center-02-menu.png)
 
-1. Open **Security Center > Settings > Cloud accounts**. It lists every AWS account connected to the workspace with a status (Protected, Not set up, Problem, Applying).
-2. Open an account to see its regions, one card per service (Security Hub, AWS Config, CloudTrail, GuardDuty, Inspector, IAM password policy, continuous monitoring), and its **Fix access** card.
-3. Turn on the services you want and save. Saving applies the profile to the AWS account.
+## Assign each AWS account to a workspace
+
+Security Center works on an AWS account only from the one workspace the account is assigned to. Another workspace that has a connection to the same account cannot scan it, fix it or set it up, and an account with no workspace cannot be used at all. This stops two workspaces scanning and fixing the same account.
+
+1. Open **AI Admin > Security Center > Cloud accounts**. It lists every AWS account that the Admin Workspace's connections reach, one row per account, even if several connections reach it.
+2. For each account, choose the workspace in **Findings go to**. Assigning does not change anything in AWS.
+3. The workspace also needs a connection to the account attached to it. The row tells you when it has none.
+
+![AI Admin Cloud accounts, with one AWS account assigned to a workspace](../../.gitbook/assets/security-center-03-admin-cloud-accounts.png)
+
+You can't move an account to another workspace while its current workspace still has security services set up for it.
+
+### Choose frameworks and standards
+
+Frameworks and standards are chosen for each account, here and nowhere else. An account nobody has chosen for gets none, not even SOC 2. Workspaces see the choice but can't change it.
+
+1. On the account's row, under **Frameworks & standards**, select **Change**. The button appears once the account is assigned to a workspace.
+2. Tick what the account is responsible for: **SOC 2**, **PCI DSS**, **AWS Foundational Security Best Practices v1.0.0** or **CIS AWS Foundations Benchmark v1.4.0**. Leave all unticked for none.
+3. Select **Save**.
+
+![The frameworks and standards panel open under an account's row, with SOC 2, PCI DSS and the two Security Hub standards](../../.gitbook/assets/security-center-04-frameworks.png)
+
+SOC 2 is checked by the built-in scan and by AWS Config and Security Hub results. The other three are marked **Changes your AWS accounts**: PCI DSS deploys the AWS Config PCI DSS conformance pack, and the other two are run by Security Hub. AWS bills for each of them.
 
 {% hint style="warning" %}
-Applying a profile changes the AWS account: it turns services on and creates resources there. It needs the separate **Apply an account security profile** permission. Turning a service off in Security Center does not turn it off in AWS, with one exception for administrators described in [Permissions and Safety](permissions-and-safety.md).
+Saving applies the account's security profile again. That can change what is turned on in AWS, for example a PCI DSS conformance pack or Security Hub standards.
 {% endhint %}
 
-<!-- VERIFY: the Cloud accounts page labels and statuses (screenshots SC-03 and SC-04). -->
+## Turn on security services in an account
 
-### Permissions to turn on continuous monitoring
+Continuous monitoring and CVE tracking need AWS security services turned on in the account. Security Center can turn them on for you.
 
-Applying a profile uses these AWS actions, from the code that does the work. Grant only what you need for the services you turn on.
+1. Open **Cloud accounts** and select the account's **Settings** link. You can also reach it from a workspace, in **Security Center > Settings > Cloud accounts**, where it is view-only.
+2. Choose the regions, and turn on the services you want. There is one card per service: **Security Hub**, **AWS Config**, **CloudTrail**, **GuardDuty**, **Inspector**, **IAM password policy** and **Continuous monitoring**. Turning on Security Hub turns on AWS Config as well, because Security Hub needs it.
+3. Confirm **I understand this changes live security services in this AWS account**, and save.
+
+The account list shows each account's status: **Protected**, **Not set up**, **Problem** or **Applying**.
+
+![An account's page seen from a workspace: view-only, marked Managed by your administrator, with the account Not set up](../../.gitbook/assets/security-center-05-account-page.png)
+
+{% hint style="danger" %}
+Applying a profile changes the AWS account. It turns services on and creates resources there, such as a CloudTrail trail, an encrypted S3 bucket for its logs, a KMS key, and EventBridge rules with SQS queues that carry events to Security Center. These services cost money in AWS. Only an administrator can create, change, re-apply or remove a profile.
+{% endhint %}
+
+Turning a service off in Security Center only touches what Security Center turned on. Anything that was already on in AWS stays on, and only an administrator can turn services off.
+
+### AWS permissions to turn on services
+
+The connection that applies the profile needs these AWS actions, for the services you turn on.
 
 | Service | AWS actions |
 | --- | --- |
-| Security Hub | `securityhub:EnableSecurityHub`, `securityhub:DescribeHub`, `securityhub:BatchEnableStandards`, `securityhub:GetEnabledStandards`, `securityhub:CreateMembers`, `securityhub:InviteMembers`, `securityhub:ListMembers`, `securityhub:ListInvitations`, `securityhub:AcceptAdministratorInvitation`, `securityhub:GetAdministratorAccount` |
+| Security Hub | `securityhub:EnableSecurityHub`, `securityhub:DescribeHub`, `securityhub:BatchEnableStandards`, `securityhub:GetEnabledStandards`, and for an administrator account with members `securityhub:CreateMembers`, `securityhub:InviteMembers`, `securityhub:ListMembers`, `securityhub:ListInvitations`, `securityhub:AcceptAdministratorInvitation`, `securityhub:GetAdministratorAccount` |
 | AWS Config | `config:PutConfigurationRecorder`, `config:StartConfigurationRecorder`, `config:StopConfigurationRecorder`, `config:PutDeliveryChannel`, `config:PutConformancePack`, `config:DescribeConfigurationRecorders`, `config:DescribeConfigurationRecorderStatus`, `config:DescribeDeliveryChannels` |
 | CloudTrail | `cloudtrail:CreateTrail`, `cloudtrail:StartLogging`, `cloudtrail:DescribeTrails`, `cloudtrail:GetTrailStatus` |
 | GuardDuty | `guardduty:CreateDetector`, `guardduty:UpdateDetector`, `guardduty:GetDetector`, `guardduty:ListDetectors` |
-| Inspector | `inspector2:Enable`, `inspector2:Disable`, `inspector2:BatchGetAccountStatus`, `inspector2:ListFindings` |
-| IAM password policy | `iam:GetAccountPasswordPolicy`, `iam:UpdateAccountPasswordPolicy`, `iam:CreateServiceLinkedRole` |
+| Inspector | `inspector2:Enable`, `inspector2:Disable`, `inspector2:BatchGetAccountStatus` |
+| IAM password policy | `iam:GetAccountPasswordPolicy`, `iam:UpdateAccountPasswordPolicy` |
+| Service-linked roles | `iam:CreateServiceLinkedRole` |
 | Log storage | `s3:CreateBucket`, `s3:PutBucketPolicy`, `s3:PutEncryptionConfiguration`, `s3:PutBucketPublicAccessBlock`, `kms:CreateKey`, `kms:CreateAlias`, `kms:DescribeKey`, `kms:EnableKeyRotation`, `kms:PutKeyPolicy`, `kms:ListAliases` |
-| Event stream | `events:PutRule`, `events:PutTargets`, `events:RemoveTargets`, `events:DeleteRule`, `sqs:CreateQueue`, `sqs:GetQueueUrl`, `sqs:SetQueueAttributes`, `sqs:DeleteQueue`, `ec2:DescribeRegions` |
-
-<!-- VERIFY: this list is the AWS SDK calls found in the account setup code (AwsSdkSecurityApi.cs), converted to IAM action names by hand. The extension has no ready-made IAM policy. Darren to confirm the exact action names and whether a policy or CloudFormation template is published for customers. -->
-<!-- VERIFY: which of these resources the extension creates in the customer account and what they are called (a trail, a log bucket, a KMS key, an EventBridge rule and an SQS queue per region). Not described by name in the code read. -->
-
-## Permissions for compliance scans (read-only)
-
-A scan makes `describe`, `list` and `get` calls and generates the IAM credential report. It needs read access to the services in the table.
-
-| Area | AWS actions |
-| --- | --- |
-| Identity | `iam:GetAccountSummary`, `iam:GetAccountPasswordPolicy`, `iam:GenerateCredentialReport`, `iam:GetCredentialReport`, `iam:ListUsers`, `iam:ListMFADevices`, `iam:ListAccessKeys`, `iam:GetAccessKeyLastUsed`, `iam:ListAttachedUserPolicies`, `iam:ListRoles`, `iam:ListEntitiesForPolicy`, `iam:ListPolicies`, `iam:GetPolicyVersion`, `iam:ListGroups`, `iam:ListUserPolicies`, `iam:GetUserPolicy`, `iam:ListRolePolicies`, `iam:GetRolePolicy`, `iam:ListGroupPolicies`, `iam:GetGroupPolicy`, `access-analyzer:ListAnalyzers`, `access-analyzer:ListFindings` |
-| Logging and monitoring | `cloudtrail:DescribeTrails`, `cloudtrail:GetTrailStatus`, `cloudtrail:GetEventSelectors`, `config:DescribeConfigurationRecorders`, `config:DescribeConfigurationRecorderStatus`, `config:DescribeDeliveryChannels`, `config:DescribeConfigRules`, `config:DescribeComplianceByConfigRule`, `ec2:DescribeFlowLogs`, `logs:DescribeLogGroups`, `cloudwatch:DescribeAlarms`, `guardduty:ListDetectors`, `guardduty:GetDetector`, `guardduty:ListFindings`, `securityhub:GetEnabledStandards`, `securityhub:GetFindings` |
-| Data protection | `s3:GetAccountPublicAccessBlock`, `s3:ListAllMyBuckets`, `s3:GetBucketPublicAccessBlock`, `s3:GetBucketPolicyStatus`, `s3:GetEncryptionConfiguration`, `s3:GetBucketVersioning`, `s3:GetBucketLogging`, `s3:GetLifecycleConfiguration`, `s3:GetBucketPolicy`, `ec2:GetEbsEncryptionByDefault`, `rds:DescribeDBInstances`, `rds:DescribeDBSnapshots`, `rds:DescribeDBSnapshotAttributes`, `kms:ListKeys`, `kms:DescribeKey`, `kms:GetKeyRotationStatus`, `kms:GetKeyPolicy`, `secretsmanager:ListSecrets`, `secretsmanager:DescribeSecret` |
-| Network and compute | `ec2:DescribeVpcs`, `ec2:DescribeSecurityGroups`, `ec2:DescribeSecurityGroupRules`, `ec2:DescribeInstances`, `ec2:DescribeVolumes`, `ec2:DescribeSnapshots`, `ec2:DescribeImages`, `elasticloadbalancing:DescribeLoadBalancers`, `elasticloadbalancing:DescribeListeners`, `elasticloadbalancing:DescribeTags`, `eks:ListClusters`, `eks:DescribeCluster`, `lambda:ListFunctions`, `lambda:GetFunctionUrlConfig`, `lambda:GetPolicy`, `ecr:DescribeRepositories`, `ecr:GetRegistryScanningConfiguration`, `ecr:GetRepositoryPolicy` |
-| Patching and other | `ssm:DescribeInstanceInformation`, `ssm:DescribeInstancePatchStates`, `inspector2:BatchGetAccountStatus`, `sns:ListTopics`, `sns:GetTopicAttributes`, `sqs:ListQueues`, `sqs:GetQueueAttributes`, `elasticfilesystem:DescribeFileSystems`, `redshift:DescribeClusters`, `acm:ListCertificates`, `account:GetAlternateContact` |
-| Which stack created a resource | `cloudformation:DescribeStacks`, `cloudformation:ListStackResources`, `cloudformation:GetTemplate` |
-| Only with the tag filter | `s3:GetBucketTagging`, `rds:ListTagsForResource`, `iam:ListUserTags` |
-
-<!-- VERIFY: rebuilt by hand from the scan skill documentation (check library 2026.10.6). The polled-calls table in the skill is cut off in places, so the list may be incomplete. Darren to confirm against collect.sh. -->
+| Event delivery | `events:PutRule`, `events:PutTargets`, `events:RemoveTargets`, `events:DeleteRule`, `sqs:CreateQueue`, `sqs:GetQueueUrl`, `sqs:SetQueueAttributes`, `sqs:DeleteQueue`, `ec2:DescribeRegions` |
 
 ## Fix access
 
-Each account page has a **Fix access** card with two connections that must be different:
+Each account's page has a **Fix access** card with two connections:
 
-- A **read-only connection**: used to investigate. Every fix opens with it, and impact analyses read with it.
-- A **write connection**: used only to run approved AWS CLI commands and containment actions. It is never offered on the **Get a fix** form.
+- **Read-only connection (investigation)**: every fix starts by investigating with it, and impact analyses read with it.
+- **Write connection (runs approved AWS CLI commands)**: used only to run an AWS CLI fix after someone approves it, and for containment actions. It is never offered when someone asks for a fix.
 
-Both must be AWS connections that belong to that account. Pull-request fixes (Terraform and CloudFormation) need no write access.
+The two must be different connections, both to that account. Fixes delivered as pull requests need no write connection. Only an administrator can change fix access.
 
-<!-- VERIFY: the platform permissions needed to read or change Fix access (it is its own access node; only admins or a set that names it can change it). Confirm in QA (screenshot SC-05). -->
+![The Fix access card with a read-only connection for investigation and a separate write connection](../../.gitbook/assets/security-center-06-fix-access.png)
+
+## Set the policy every workspace follows
+
+Open **AI Admin > Security Center > Settings**. What you save here applies to every workspace. Until you save, each workspace keeps the settings in its own row.
+
+![AI Admin Security Center settings, marked Not saved yet, with the Automation card](../../.gitbook/assets/security-center-07-admin-settings.png)
+
+| Card | What you set |
+| --- | --- |
+| **Automation** | What happens when a new gap is found: **Tell me in Slack**, or **Prepare a fix automatically** (the agent proposes a pull request or AWS CLI command; nothing changes until someone approves it). |
+| **Alert thresholds** | For each source (SOC 2 scan, Security Hub, AWS Config, GuardDuty), the lowest severity that sends an alert, a ticket or an agent run. Lower findings are still listed. Nothing is sent during a source's first 24 hours. |
+| **Scanning** | **Run the SOC 2 scan on a schedule** (runs as an agent task and uses AI credits) and **Full re-check every (hours)**. |
+| **Remediation SLAs** | How many days you have to patch a CVE of each severity once a fix is released, or **No SLA**. |
+| **Notifications** | The **Slack connection** and the **Channel**. |
+| **Daily CVE digest** | One Slack message a day per workspace listing the CVEs that need fixing. |
+| **Jira tickets** | **Create a Jira ticket for each new gap**, and the **Jira connection**. |
+| **Code repositories** | The **GitHub connection** and the Terraform and CloudFormation repositories every workspace searches first, in order. |
+
+Saving these settings does not change anything in AWS.
 
 ## Connect GitHub, Slack and Jira (optional)
 
-In **Settings > General**:
+Each connection is one for the whole platform. Add it as a provider, attach it to the **Admin Workspace**, and then pick it on **AI Admin > Security Center > Settings**. Each card shows the steps.
 
-- **Code repositories**: add the Terraform or CloudFormation repositories in the order they should be checked, each with its GitHub connection.
-- **Notifications**: connect Slack and send a test message. Turn on the daily CVE digest if you want it.
-- **Jira tickets**: pick the Jira connection and a project key, then **Test connection**. The Jira connection is a provider connection with a service-account API token that can read the project and create, comment on and transition issues.
+- **GitHub**, for fixes delivered as pull requests: create a GitHub App for your organization, install it on your Terraform and CloudFormation repositories, and add it as a source control provider (see [GitHub](../../getting-started/integrating-providers/github.md)). Also attach it to each workspace that uses repositories. A workspace can add its own repositories after the platform's.
+- **Slack**, for alerts and the CVE digest: create a provider of type **Other** with metadata `slack` = `true` and a credential `botToken` holding a Slack app's bot token with the `chat:write` scope. Invite the app to the channel. A workspace can add a channel of its own; messages go to both.
+- **Jira**, for tickets: create a provider of type **Other** with your Jira site URL as the account ID (for example `https://acme.atlassian.net`), metadata `ticketing` = `true`, and a credential `api_token` holding an Atlassian service-account token. See [Jira](../../getting-started/integrating-providers/jira.md) for adding the provider. Turn on **Create a Jira ticket for each new gap**. Each workspace sets its own Jira project key in **Security Center > Settings > Jira tickets**; a workspace without one opens no tickets.
 
-<!-- VERIFY: step names, and exactly how a customer registers the Jira provider connection (provider type "Other", metadata ticketing=true, account id = site URL, credential api_token, according to the README). Darren to give customer wording. -->
+![The Jira tickets card in AI Admin Security Center settings](../../.gitbook/assets/security-center-08-admin-settings-jira.png)
 
 ## Grant access
 
-Give the people who will use it permission sets that cover Security Center. The extension ships no permission sets. See [Permissions and Safety](permissions-and-safety.md) for what to grant and the pitfall with the action wildcard.
+Give the people who will use Security Center permission sets that cover it. See [Permissions and Safety](permissions-and-safety.md) for what to grant.
 
 Next: [Use](use.md).
