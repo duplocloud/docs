@@ -1,71 +1,81 @@
 ---
-description: What Kubernetes Upgrader can read and change, which actions need approval, and how it behaves for read-only, regular and admin users.
+description: What Kubernetes Upgrader can read and change, who can use it, and which actions need approval.
 ---
 
 # Permissions and Safety
 
 ## What it can read and change
 
-Kubernetes Upgrader acts with the IAM identity of the AWS scope you registered the cluster with.
+Kubernetes Upgrader acts with the identity of the scope the cluster was registered with.
 
 | | What it does |
 | --- | --- |
-| **Reads** | Clusters, add-ons, node groups, Auto Scaling groups, launch templates and AMIs, EC2 quotas and subnets, ECR images, and the cluster's Kubernetes objects (nodes, pods, workloads, PodDisruptionBudgets, volumes, events). |
-| **Changes (only after approval)** | The EKS control-plane version, EKS add-on versions, EKS managed node group versions, launch templates and Auto Scaling group capacity, and the cluster's nodes (cordon, drain, terminate old nodes). It also restarts workloads to move them, and pauses cluster-autoscaler during a node swap. |
-| **Never** | It does not roll back a finished step, edit a job after the plan is made, or touch groups created after you approved the plan. |
+| **Reads** | Clusters, add-ons, node groups, Auto Scaling groups, launch templates and AMIs, EC2 quotas and subnets, ECR images, EKS upgrade insights, and the cluster's Kubernetes objects (nodes, pods, workloads, PodDisruptionBudgets, volumes, events). |
+| **Changes, only after approval** | The EKS control-plane version, EKS add-on versions, EKS managed node group versions, launch templates (a new default version) and Auto Scaling group size, and the cluster's nodes (cordon, drain, and terminate the old ones). It restarts workloads to move them off old nodes, pauses the cluster autoscaler during a node swap, and attaches a temporary guard policy to the Duplo-Master role. |
+| **Never** | Rolls back a finished step, edits a job after its plan is made, terminates a node it didn't cordon and drain, or touches node groups the plan doesn't rotate. |
 
-## Who can do what
+## Who can use it
 
-Access follows the DuploCloud platform permission model. The cluster and job pages sit under your workspace. Three actions are granted separately, and the "all" permission does not include them.
+Kubernetes Upgrader is for DuploCloud administrators only, because it upgrades clusters with cloud credentials.
 
-| Action | Permission | What it allows |
-| --- | --- | --- |
-| Approve, reject, cancel, resume a job | `eks-upgrade.approve` (marked destructive) | Starts the control-plane upgrade and node termination. Grant it separately from creating a job, so a different person can approve. |
-| Use the `kubectl` console | `eks-upgrade.kubectl` | Reads the cluster with the scope's identity, which may see every namespace. |
-| Discover clusters | `eks-upgrade.discover` | Lists the clusters an AWS scope can see. |
+| | Read-only user | Regular user | Administrator |
+| --- | :---: | :---: | :---: |
+| See Kubernetes Upgrader in the menu | No | No | Yes, in **AI Admin** |
+| See clusters, jobs and plans | No | No | Yes |
+| Register clusters, create, approve, reject, cancel and resume jobs | No | No | Yes |
+| Use **Ask AI** and the `kubectl` console | No | No | Yes |
 
-| User | What they can do |
-| --- | --- |
-| **Read-only** | View clusters and jobs. Cannot add or delete a cluster, create a job, approve, reject, cancel, resume or use `kubectl`. The buttons are disabled with a message. |
-| **Regular user** | Whatever their permission sets grant in the workspace: for example create a job, but not approve it. |
-| **Administrator** | Everything, including approving upgrades. Each use through the administrator role is recorded in the audit log. |
+Users without the Administrator role are refused every request, even if a permission set grants them the clusters, the upgrade jobs or the `eks-upgrade.*` actions. The permission editor still lists those actions, but today they don't give access.
 
-<!-- VERIFY: read-only and regular rows are derived from Permissions.cs and the README access-control table. Confirm against QA with a read-only and a regular test user (screenshots KU-12 to KU-14). -->
-<!-- VERIFY: Zafar and Bhushan decided on 2026-11-19 that Kubernetes Upgrader is admin-only and moves from the DevOps menu to the Admin menu (DUPLOAI-5602). Rewrite this table to match the shipped behaviour. -->
+Being an administrator doesn't skip the safety checks:
 
-A user can only use scopes their permission sets allow in the workspace. Administrators can use any scope attached to the workspace. A scope from another workspace is always refused, and the message says why.
+- **Scopes.** You can only use a scope attached to the cluster's workspace. Each use is logged.
+- **Approval.** You approve the exact plan, within its approval window, by typing the cluster name. If the cluster changed since the plan was made, you approve the new plan instead.
+- **One job per cluster**, and no deleting a cluster while its job runs.
+
+Any administrator can approve a plan, including the one who made it. Kubernetes Upgrader can't require a second person.
+
+The `kubectl` console and Ask AI read the cluster with the scope's identity, which may see every namespace.
 
 ## What needs approval
 
-- **Every upgrade.** A job runs only after someone with `eks-upgrade.approve` approves the exact plan within **5 minutes** and types the cluster name. A plan that changes before approval has to be reviewed again.
-- **Risks.** An unavailable image or too little EC2 capacity is a risk you must accept in the form, and again when you approve. Acceptances are written to the audit log.
-- **Ask AI.** Anything other than plain read-only commands needs your approval in the panel.
+- **Every upgrade.** A job runs only after an administrator approves the exact plan, within its approval window (5 minutes by default), by typing the cluster name. If the cluster changed in the meantime, the new plan has to be approved instead.
+- **Risks.** An image that can't be pulled, or too little EC2 capacity, is a risk you must accept when you create the plan and again when you approve. Acceptances are written to the job's audit log.
+- **Ask AI commands.** Anything other than plain read-only commands waits for you to approve it in the panel.
 
 ## Safety checks
 
-Rotating worker nodes is the destructive part, so it is guarded:
+The plan is **blocked**, and no job can be created, when:
 
-- **Only what was cordoned and drained is terminated.** Each instance is terminated explicitly. The Auto Scaling group never chooses what to remove.
-- **New nodes must be Ready** before old nodes are touched. If the check fails, nothing is touched.
-- **Drain must finish** before old nodes are terminated. A PodDisruptionBudget that never allows eviction, or a drain that times out (30 minutes by default), keeps the old nodes and lists the blocking pods.
-- **Add-on health gate.** A degraded or failed add-on stops the job before the next step.
-- **Auto Scaling guard.** During a node swap, an inline policy that denies `autoscaling:*` on the cluster's groups is attached to the Duplo-Master role, then always removed when the job ends. cluster-autoscaler is paused and restored.
-- **Plan integrity.** The job re-checks that the stored plan matches the approved plan and that the cluster still matches before the first step.
-- **Image and OS checks.** New nodes must match the Kubernetes version, OS family, CPU architecture and accelerator type. Otherwise the group is skipped, never converted.
-- **One active job per cluster.** A second job on the same cluster is refused.
+- the target is a downgrade, or skips a minor version,
+- nodes the job doesn't rotate (standalone, Karpenter or skipped groups) would end up more than three minor versions behind the control plane,
+- a managed node group isn't active, or an add-on has no version compatible with the target,
+- EKS upgrade insights report an error,
+- the Kubernetes API can't be reached and self-managed groups need rotating, or
+- the scope's identity lacks a required Kubernetes permission.
+
+While a job runs, rotating worker nodes is the destructive part, so it is guarded:
+
+- **New nodes must be Ready first.** Each group needs as many new Ready nodes as it had old ones before any old node is touched.
+- **Only drained nodes are terminated.** Each old node is cordoned and drained, then that exact instance is terminated. The Auto Scaling group never picks what to remove.
+- **Drains honour PodDisruptionBudgets.** A budget that never allows eviction, or a drain that times out, stops the swap and lists the blocking pods. Old nodes stay in place.
+- **Pods without a controller are not evicted.** They would not be recreated, so they block the drain until you move or delete them.
+- **Matching images only.** New nodes must keep the same OS family, CPU architecture and accelerator type. Otherwise the group is skipped, never converted.
+- **Add-on health.** A degraded or failed add-on stops the job before the next step.
+- **Auto Scaling guard.** During a self-managed swap, a temporary inline policy on the Duplo-Master role stops DuploCloud from changing the cluster's Auto Scaling groups. The job's own session is exempt. The cluster autoscaler is paused and restored. Both are cleaned up automatically if a job is interrupted.
+- **Plan integrity.** The job checks that the stored plan matches the approved one, and that the cluster still matches it, before the first step.
+- **One job per cluster.** A second active job on the same EKS cluster is refused, even if the cluster is registered twice.
 
 ## Limits you should know
 
-- There is **no rollback**. A control-plane upgrade is irreversible. Cancel stops at the next safe point and does not undo finished steps.
-- A node swap temporarily doubles the capacity of each rotated group. Check quotas and free IP addresses.
-- Strict PodDisruptionBudgets (for example `maxUnavailable: 0`) block the drain.
-- Bare pods are evicted like any pod. One whose image risk you accepted is deleted and not recreated.
+- **There is no rollback.** A control-plane upgrade can't be undone. Cancel stops at the next safe point and leaves finished steps applied.
+- **Swaps need spare capacity.** A self-managed group temporarily runs twice its nodes during the swap; EKS managed node groups add a smaller surge. Check EC2 quotas and free IP addresses. The pre-flight check warns you.
+- **Strict PodDisruptionBudgets** (for example `maxUnavailable: 0`) block the drain.
+- **Launch template versions stay.** The new default launch template version created for a swap is kept, even if the job is cancelled.
 
 ## AI data handling (Ask AI)
 
-- **What is sent:** the job's state and plan as text (cluster name, region, versions, steps, node, workload and image names, pre-flight results, and the recent audit log, which contains approvers' email addresses) plus your questions. It goes to the AI agent configured for the workspace. Kubernetes Upgrader does not call a model itself.
-- **Where it is kept:** each job's conversation is a platform ticket, stored like any HelpDesk ticket. **New chat** closes it.
-- **Credentials:** the cluster scope is attached to the session so the agent can run `kubectl` and `aws` commands. Your session token is passed in the request context, never in the message text.
-- **Guardrails:** commands that change the cluster or AWS need your approval. Without approval only plain read-only commands run: `kubectl get`, `describe`, `logs`, `top` and `events` (never secrets), and `aws ... describe-`, `list-` and `get-` calls (nothing secret or credential related).
-
-<!-- VERIFY: all text above comes from the extension README (Safety model, Known limitations, AI data handling). Bhushan to confirm it matches the shipped version (0.9.15 or later). -->
+- **What is sent:** the job's state and plan as text (cluster name, region, versions, steps, node, workload and image names, pre-flight results, and the recent audit log, which contains the email addresses of the people who approved or cancelled) and your questions. It goes to the AI agent configured for the workspace. Kubernetes Upgrader doesn't call a model itself.
+- **Where it is kept:** each conversation is a platform ticket, stored like any HelpDesk ticket. **New chat** closes it.
+- **Credentials:** the cluster's scope is attached to the session so the agent can run `kubectl` and `aws` commands, and the agent acts with your DuploCloud session. Credentials are never put in the message text.
+- **Guardrails:** without your approval, the agent can only run read-only commands: `kubectl get`, `describe`, `logs`, `top`, `events`, `explain`, `version` and similar (never on secrets), `aws` `describe-`, `list-` and `get-` calls (nothing that reads secrets, parameters or credentials), and reads of this job and cluster. Everything else waits for **Approve & run**.
