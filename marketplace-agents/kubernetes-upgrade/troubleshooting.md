@@ -13,7 +13,9 @@ description: Common problems with Kubernetes Upgrader and how to fix them.
 | **`PLAN_EXPIRED`** | You did not approve within the approval window (5 minutes by default). Nothing changed. | Create a new plan and approve it in time. |
 | **`PLAN_CHANGED`** | The cluster changed while you reviewed. | Review the new plan and approve it. |
 | **A second job is refused (409)** | Only one active job is allowed per cluster, even if the cluster is registered twice. | Wait for the active job to finish or cancel it. |
-| **"Access denied" on the form, or buttons are disabled** | Your user lacks the permission. | Ask an administrator for the permission (see [Permissions and Safety](permissions-and-safety.md)). |
+| **No Kubernetes Upgrader in the menu**, or **"available to platform Administrators only"** (`ADMIN_ONLY`) | Kubernetes Upgrader is administrator-only. People without the Administrator role can't see or use it, whatever their permission sets say. | Sign in as an administrator, and look under **AI Admin**, not a workspace's menu. See [Permissions and Safety](permissions-and-safety.md). |
+| **Your clusters are missing from the list** | The list shows the clusters of one workspace at a time. | Choose the cluster's workspace in **Workspace** at the top of the list. |
+| **"Access denied" with a scope reason** | The cluster's AWS scope isn't attached to its workspace any more, or belongs to another workspace. | Attach the scope to the workspace again, or register the cluster with a scope of that workspace. |
 | **"did not answer within 10 s (private endpoint...)"** | The cluster's Kubernetes API is private-only or not reachable from DuploCloud. | Plans finish with warnings, or block a node swap. Make the API reachable, or skip node swapping. |
 | **Job is "Paused, waiting for a valid token"** | The scope's credential expired, was revoked or the portal was unreachable. | Update the credential on the scope. The job resumes within about 30 seconds. |
 | **Drain blocked** | A PodDisruptionBudget never allows eviction, or a pod has no controller. The job lists the blocking pods. | Fix the PodDisruptionBudget or move the pod. The job retries by itself. If it ends Failed, run `kubectl uncordon` on the old nodes to go back, or create a new job to finish. |
@@ -40,8 +42,10 @@ These are normally cleaned up automatically, within 15 minutes for the guard pol
 
 **Does it upgrade Karpenter or Fargate nodes?** No. They are listed in the plan and checked for version skew, but not rotated here.
 
-**Can someone else approve my plan?** Yes. Grant `eks-upgrade.approve` to a different person than the one who creates jobs.
+**Can someone else approve my plan?** Yes, another administrator. Kubernetes Upgrader is administrator-only, so whoever approves must be an administrator too.
 
 **Does Ask AI change my cluster?** Only if you approve a command in the panel.
+
+**Why can't my team see Kubernetes Upgrader?** It is administrator-only and lives in **AI Admin**. Upgrades change clusters and terminate nodes, so only administrators can run them.
 
 <!-- VERIFY: FAQ list is a first guess. Bhushan to add the questions customers actually ask. -->

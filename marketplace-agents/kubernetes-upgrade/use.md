@@ -6,7 +6,7 @@ description: Step-by-step walkthroughs of the main things Kubernetes Upgrader do
 
 ## Upgrade a cluster
 
-1. Open **Kubernetes Upgrader > Kubernetes Clusters** and select a cluster.
+1. In **AI Admin**, open **Kubernetes Upgrader > Kubernetes Clusters**, choose the cluster's **Workspace** at the top of the list, and select the cluster.
 2. Select **Add Job** (Add Upgrade Job).
 3. Choose what to upgrade. Select at least one:
    - **Control Plane Upgrade**: pick the target version. Every version EKS offers above the current one is listed with its support status. Multi-version targets are planned as one step per minor version.
@@ -40,7 +40,7 @@ The job page refreshes about every 5 seconds until the job finishes. It shows:
 - an **Upgrade Path** stepper with each step's status and duration,
 - a card per phase ("step i of n", "round r of R"),
 - a live node table,
-- a read-only `kubectl` console, for users who have the permission.
+- a read-only `kubectl` console.
 
 A full upgrade usually takes 15 to 40 minutes. Multi-version upgrades take longer.
 

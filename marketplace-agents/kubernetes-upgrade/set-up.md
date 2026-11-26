@@ -1,5 +1,5 @@
 ---
-description: What you need before you start, how to activate Kubernetes Upgrader from the Agent Marketplace, and how to connect it to your accounts.
+description: What you need before you start, how to activate Kubernetes Upgrader from the Agent Marketplace, and how to register your first cluster.
 ---
 
 # Set Up
@@ -9,7 +9,7 @@ description: What you need before you start, how to activate Kubernetes Upgrader
 - An **AWS scope** in your workspace that points to the AWS account with your EKS clusters. Kubernetes Upgrader acts with that scope's IAM identity.
 - An **IAM policy** on that identity that allows the AWS actions listed below.
 - An **EKS access entry** for that identity on each cluster you want to upgrade, so Kubernetes Upgrader can cordon and drain nodes. `AmazonEKSClusterAdminPolicy` covers everything. See the least-privilege list below.
-- **Permissions** for the people who will use it (see [Permissions and Safety](permissions-and-safety.md)).
+- A DuploCloud **Administrator** account. Only administrators can use Kubernetes Upgrader (see [Permissions and Safety](permissions-and-safety.md)).
 
 {% hint style="info" %}
 Missing read permissions only make a check show as "Unverified". Missing write permissions stop the step that needs them, with the AWS error.
@@ -52,22 +52,24 @@ The same identity, mapped through an EKS access entry or `aws-auth`, needs `Amaz
 
 ## Activate Kubernetes Upgrader
 
-1. Open the **Agent Marketplace** and find **Kubernetes Upgrader**.
-2. Select **Activate** and confirm.
-3. When it finishes, the agent appears in the **Admin** menu as **Kubernetes Upgrader**.
+1. Switch to **AI Admin**, open **Marketplace**, and select the **Agent Marketplace** tab.
+2. Find **Kubernetes Upgrader**, select **Activate** and confirm.
+3. When it finishes, it appears in the **AI Admin** menu as **Kubernetes Upgrader > Kubernetes Clusters**. It isn't added to a workspace's menu.
 
-<!-- VERIFY: exact marketplace steps, button names and the menu location (Admin vs DevOps) after DUPLOAI-5602. Screenshots KU-01 and KU-02. -->
+<!-- VERIFY: exact marketplace button names. Screenshots KU-01 and KU-02. -->
 
-## Grant access
+## Who can use it
 
-Give the people who will use it the permissions in [Permissions and Safety](permissions-and-safety.md). The approve, `kubectl` and discover actions are granted separately; the "all" permission does not include them.
+Only administrators. There is nothing to grant: people without the Administrator role can't see or use Kubernetes Upgrader, whatever their permission sets say. See [Permissions and Safety](permissions-and-safety.md).
 
 ## Register your first cluster
 
-1. Open **Kubernetes Upgrader > Kubernetes Clusters** and select **Add Kubernetes Cluster**.
-2. Choose the **AWS scope** and the **region**.
-3. Choose the cluster from the list. Kubernetes Upgrader discovers the clusters that scope can see.
-4. Give the registration a unique label and save.
+1. In **AI Admin**, open **Kubernetes Upgrader > Kubernetes Clusters**.
+2. In **Workspace** at the top of the list, choose the workspace whose AWS scope reaches the cluster. Kubernetes Upgrader remembers your choice.
+3. Select **Add Kubernetes Cluster**.
+4. Choose the **AWS scope** and the **region**.
+5. Choose the cluster from the list. Kubernetes Upgrader discovers the clusters that scope can see.
+6. Give the registration a unique label and save.
 
 <!-- VERIFY: field names against the live form (screenshots KU-03, KU-04). -->
 

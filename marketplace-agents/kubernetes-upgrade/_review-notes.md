@@ -10,9 +10,9 @@ Not for the docs repo. Tells Raman and Bhushan what to check.
 
 ## Marked VERIFY in the drafts (inferred, not seen running)
 1. Free or paid (README overview). Not in the repo.
-2. Admin-only decision (Zafar and Bhushan, 2026-11-19; ClickUp DUPLOAI-5602): the menu is still a DevOps menu in the manifest (`DevOpsResource` registrar). The permission tables describe the current permission model and need rewriting to the shipped admin-only behaviour.
-3. Read-only and regular user rows: derived from code, not tested with real test users.
-4. Marketplace activation steps and the exact menu path after the move.
+2. ~~Admin-only decision (DUPLOAI-5602)~~ **Done in 0.9.22 (2026-11-26):** the menu is in AI Admin (manifest `"scope": "admin"`, with a Workspace picker on the cluster list) and every endpoint refuses non-administrators (`ADMIN_ONLY`). README, Permissions and Safety, Set Up, Use and Troubleshooting are rewritten to match.
+3. ~~Read-only and regular user rows~~ **Replaced and verified:** non-administrators can't use it at all. The permission matrix in CI (qa01, 2026-11-26) refused read-only, regular and approver test users on all 17 endpoints and let the Administrator through (extension repo `tests/api/results/permission-matrix-qa01-ci-2026-11-26.md`).
+4. Marketplace activation button names (the menu path is now AI Admin > Kubernetes Upgrader > Kubernetes Clusters).
 5. UI wording of the buttons and banners (README and component text, not a live run).
 6. AWS and Kubernetes permission lists: copied from the README. A customer-ready policy or CloudFormation template does not exist in the repo.
 7. FAQ is a first guess.
